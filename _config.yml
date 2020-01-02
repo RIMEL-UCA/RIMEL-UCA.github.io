@@ -11,7 +11,7 @@ exclude: [ _posts/source/, _posts/_private/ ]
 gems:
   - jekyll-pandoc
 
-markdown: pandoc
+#markdown: pandoc
 pandoc:
    extensions:
       - mathjax
