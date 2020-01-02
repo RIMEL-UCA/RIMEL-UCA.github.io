@@ -13,6 +13,8 @@
         <ul class="nav">
           {% if page.url == "/index.html" %}<li class="active">{% else %}<li>{% endif %}
           <a href="{{ site.url }}/index.html">Home</a></li>
+          {% if page.url == "/chapters.md" %}<li class="active">{% else %}<li>{% endif %}
+          <a href="{{ site.url }}/chapters.md">Chapters</a></li>
           {% if page.url == "/code.html" %}<li class="active">{% else %}<li>{% endif %}
           <a href="{{ site.url }}/code.html">Repository</a></li>
           {% if page.url == "/teaching.html" %}<li class="active">{% else %}<li>{% endif %}
