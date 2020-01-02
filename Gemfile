@@ -4,8 +4,8 @@ source "https://rubygems.org/"
 
 gem "rack", ">= 2.0.8"
 gem "rake"#  , "~> 10.2.1"
-
-gem "jekyll"          
+       
+gem "jekyll", ">= 3.8.4"
 gem "jekyll-assets"   #, "~> 0.7.6"
 gem "jekyll-scholar"  #, "~> 2.0.0"
 gem "jekyll-pandoc"
@@ -16,7 +16,7 @@ gem "json"            #, '~> 1.8.3'
 gem "octokit"#, "~> 2.0"   # Github API (octokit plugin)
 gem "twitter"#, "~> 5.8.0" # Twitter API
 #gem "nokogiri"            # HTML / XML parser
-gem "nokogiri", ">= 1.10.4"  # HTML / XML parser
+gem "nokogiri", "~> 1.10.4"  # HTML / XML parser
 gem "feedjira"            # Atom/RSS parser
 gem "chronic"             # Natural language time parser
 
