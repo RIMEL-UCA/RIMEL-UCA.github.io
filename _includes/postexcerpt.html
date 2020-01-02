@@ -1,0 +1,11 @@
+<div id="postsum">
+<h3><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></h3>
+<p style="text-align:left; font-style:italic">{{ post.subtitle }}
+<span style="float:right; font-style:italic"> {{ post.date | date_to_string }}</span></p>
+{{ post.content | strip_html | truncate:400 }} 
+<!-- note that post.content is pulled in with html formatting --> 
+<!--    </ul> </ol> </code> </strong> </em> </pre>  force close any open tags? --> 
+<p> <a href="{{ site.url }}{{ post.url }}"> <em>Read more</em></a> </p>
+<br />
+</div>
+
