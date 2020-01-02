@@ -144,7 +144,7 @@ $ mvn jacoco:report
 ```
 
 For each project, we had a report like the following :  
-![JUnit4 JaCoCo report](./assets/junit.png)  
+![JUnit4 JaCoCo report](./assets/JUnit.png)  
 Figure 2 : JUnit4 JaCoCo report
 
 This report allows us to know the code coverage of each project, a metric we need to compare TDD and TL methods.
