@@ -9,7 +9,7 @@ module Jekyll
     def initialize(tag_name, text, tokens)
       super
       @text = text
-      @address = "ketch/"+"#{@text}"
+      @address = "RIMEL-UCA/"+"#{@text}"
     end
 
 
@@ -51,7 +51,7 @@ module Jekyll
     def initialize(tag_name, text, tokens)
       super
       @text = text
-      @address = "ketch/"+"#{@text}"
+      @address = "RIMEL-UCA/"+"#{@text}"
     end
     def render(context)
       day = context.environments.first["page"]["date"]
