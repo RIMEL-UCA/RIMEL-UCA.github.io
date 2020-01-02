@@ -15,8 +15,11 @@ categories: chapters
 ###  [Comment identifier les zones "sensibles" d'un projet Open Source ?]({{ site.url }}/chapters/2019/code-quality-in-open-source-projects-xwiki-2019/contents-1)
 
 ## 2018
-###  [Comment est organisé le développement d'un projet Open Source de Machine Learning ? machine-learning-explorations-2018]({{ site.url }}/chapters/2018/machine-learning-explorations-2018/comment-est-organise-le-developpement-dun-projet-open-source-de-machine-learning)
+###  [Comment est organisé le développement d'un projet Open Source de Machine Learning ?]({{ site.url }}/chapters/2018/machine-learning-explorations-2018/comment-est-organise-le-developpement-dun-projet-open-source-de-machine-learning)
 ###  [Impact des contributeurs minoritaires sur la qualité du code des projets open-source]({{ site.url }}/chapters/2018/git-make-merging-great-again-2019/contents-2)
 ###  [Est-il possible de déterminer à l’avance qu’un merge risque de poser problème ?]({{ site.url }}/chapters/2018/git-make-merging-great-again-2019/contents)
 ###  [Etude sur l'agilité d'un projet de start-up d'état]({{ site.url }}/chapters/2018/analyzing-pix-ecosystem-2018/etude-sur-lagilite-dun-projet-de-start-up-detat)
 ###  [Caractériser et mesurer l'évolutivité d'une base de code]({{ site.url }}/chapters/2018/analyzing-pix-ecosystem-2018/caracteriser-et-mesurer-levolutivite-dune-base-de-code)
+
+## 2017
+###  [TITRE ?]({{ site.url }}/chapters/2017/serie/contents)
