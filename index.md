@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Science in the Sands
-subtitle: Mathematics and computation from the shores of the Red Sea
+title: RIMEL BOOK
+subtitle: Reverse Engineering
 ---
 
 <div class="span12">
@@ -18,23 +18,7 @@ subtitle: Mathematics and computation from the shores of the Red Sea
 
 <div class="span4">
 
-<b>David I. Ketcheson</b></br>
-<img src="assets/img/davidketcheson.jpg" align="right"></img>
-I am an associate professor of
-<a href="http://cemse.kaust.edu.sa/academic/programs/applied-mathematics-computational-science/default.aspx">applied mathematics</a> at King Abdullah University
-of Science and Technology (<a href="http://www.kaust.edu.sa">KAUST</a>), where
-I lead the <a href="http://numerics.kaust.edu.sa">Numerical Mathematics Group</a>.
-
-My <a href="http://numerics.kaust.edu.sa/research.html">research</a> involves
-analysis and development of numerical methods for integration of ordinary
-and partial differential equations, as well as the implementation of such methods
-in <a href="code.html">open source, accessible, high performance software</a>
-and its application to understanding behavior of nonlinear waves in heterogeneous materials.
-
-<ul class="unstyled" style="font-size:.8em;line-height=.8em">
-<li style="margin:-6px"> Office: 4202 Al-Khawarizmi Building 
-<li style="margin:-6px"> Email &amp; online networks: linked from icons below. </li>
-</ul>
+<b>RIMEL</b></br>
 
 <span>
   {% include sidebar_footer.html %}
