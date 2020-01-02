@@ -286,7 +286,7 @@ Figure 13 : Proportions of commits. TDD compared to TL
 
 As expected, using a Test-Last method implies to have more fixes \(and so, have more bugs\). However, Spoon has falsified our data, it proves that we need more data to have a concrete representation of the Test-Driven Method and the Test-Last method. Also, the first metric shows that in Test-Driven Development we got less tests than in Test-Last. This metric is only a study of their commits and not representing the test coverage. Yet, due to the way TDD works, with phases of test and phases of refactoring, we expected TDD projects to have a higher percentage of refactor commits.
 
-![](../.gitbook/assets/mean_revisions.png)
+![](./assets/mean_revisions.png)
 
 Figure 14 : Stability of files
 
