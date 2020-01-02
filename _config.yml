@@ -12,11 +12,8 @@ gems:
   - jekyll-pandoc
 
 #markdown: pandoc
-pandoc:
-   extensions:
-      - mathjax
 
-highlighter: pygments
+highlighter: rouge
 source: .
 lsi: True
 
