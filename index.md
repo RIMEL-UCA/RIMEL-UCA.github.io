@@ -11,7 +11,6 @@ subtitle: Reverse Engineering
 {% for post in site.posts limit:4 %}
 {% include postsummary.html %}
 {% endfor %}
-<h2><a href="archives.html">Older Posts</a><h2>
 </div>
 </span>
 
