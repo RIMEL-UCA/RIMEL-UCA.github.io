@@ -58,6 +58,5 @@ Précisez votre utilisation des outils ou les développements \(e.g. scripts\) r
 
 ## VI. References
 
-1.
-
-1. 
+1. ref1
+1. ref2
