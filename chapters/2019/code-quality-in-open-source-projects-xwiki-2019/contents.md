@@ -431,9 +431,9 @@ Les deux premières parties du questionnaire sont surtout des questions pour fil
 
 La première partie avec la question "Êtes-vous développeur ou avez vous déjà codé ?" fait passer les nombres de personnes interrogées qui nous intéressent de 189 à 175.
 
-![Diagramme de la situation des personnes interrog&#xE9;es, certains ont le sens de l&apos;humour, des chatons et des poilus notamment]({{ site.url }}/chapters/2019/assets/1%20%281%29.png)
+![Diagramme de la situation des personnes interrog&#xE9;es, certains ont le sens de l&apos;humour, des chatons et des poilus notamment](./assets/1%20%281%29.png)
 
-![Premi&#xE8;re question de filtrage]({{ site.url }}/chapters/2019/assets/2%20%281%29.png)
+![Premi&#xE8;re question de filtrage](./assets/2%20%281%29.png)
 
 La répartition des niveaux des personnes interrogées est assez uniforme, ainsi notre sondage touche plusieurs catégories de développeurs sans pour autant donner les résultats d'une majorité.
 
@@ -443,7 +443,7 @@ La seconde partie contient une question sur le niveau d'expérience en développ
 
 ![Diagramme de la r&#xE9;partition de l&apos;exp&#xE9;rience en tant que d&#xE9;veloppeur des personnes interrog&#xE9;es](./assets/3.png)
 
-![Seconde question de ciblage]({{ site.url }}/chapters/2019/assets/4%20%281%29.png)
+![Seconde question de ciblage](./assets/4%20%281%29.png)
 
 Nous avons utilisé cette seconde question pour filtrer notre panel de personnes interrogées et ainsi n'avoir que l'avis des personnes ayant déjà contribué, au moins une fois, à un projet open source. Notre échantillon passe alors à 139 personnes.
 
@@ -451,11 +451,11 @@ Nous avons utilisé cette seconde question pour filtrer notre panel de personnes
 
 Nous exposons uniquement ici les résultats permettant de confimer ou infirmer notre seconde hypothèse. Cette hypothèse envisage la complexité d'un projet et l'attitude de la communauté comme principaux freins à la contribution.
 
-![Apparemment l&apos;attitude des mainteneurs a une importance pour la majorit&#xE9; des personnes interrog&#xE9;es]({{ site.url }}/chapters/2019/assets/7%20%281%29.png)
+![Apparemment l&apos;attitude des mainteneurs a une importance pour la majorit&#xE9; des personnes interrog&#xE9;es](./assets/7%20%281%29.png)
 
-![4 obstacles &#xE0; la contribution ressortent principalement avec la complexit&#xE9; du projet, l&apos;attitude des mainteneurs des projets, le manque de documentation et du code peu lisible.]({{ site.url }}/chapters/2019/assets/9_4.png)
+![4 obstacles &#xE0; la contribution ressortent principalement avec la complexit&#xE9; du projet, l&apos;attitude des mainteneurs des projets, le manque de documentation et du code peu lisible.](./assets//9_4.png)
 
-![Apparemment notre premi&#xE8;re hypoth&#xE8;se &#xE9;tant loin d&apos;&#xEA;tre vraie, le social semble plus important dans la vie d&apos;un projet open source que la rigueur de son d&#xE9;veloppement.]({{ site.url }}/chapters/2019/assets/9_5.png)
+![Apparemment notre premi&#xE8;re hypoth&#xE8;se &#xE9;tant loin d&apos;&#xEA;tre vraie, le social semble plus important dans la vie d&apos;un projet open source que la rigueur de son d&#xE9;veloppement.](./assets//9_5.png)
 
 ## VI. Conclusion
 
