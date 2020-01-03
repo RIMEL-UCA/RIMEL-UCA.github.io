@@ -482,5 +482,5 @@ Cependant, nous nous sommes rapidement aperçus que ces KPIs n'étaient pas asse
 * [https://promyze.com/themis/](https://promyze.com/themis/)
 * [https://dev.to/nirousseau/poll--open-source-contributions-and-motivation-factors-3o4l](https://dev.to/nirousseau/poll--open-source-contributions-and-motivation-factors-3o4l)
 
-![UCA : University C&#xF4;te d&apos;Azur \(french Riviera University\)](../.gitbook/assets/entete-3.png)
+![UCA : University C&#xF4;te d&apos;Azur \(french Riviera University\)](./assets/entete-3.png)
 

@@ -146,9 +146,9 @@ Par conséquent, nous avons essayé de faire une analyse du projet ROCKFlows pou
 
 Ainsi, nous pouvons observer qu'il en ressort deux parties critiques qui sont :
 
-![SonarQube : D&#xE9;p&#xF4;t Splar]({{ site.url }}/chapters/2019/assets/capture-de-cran-2019-02-19-a-11.03.04.png)
+![SonarQube : D&#xE9;p&#xF4;t Splar](./assets/capture-de-cran-2019-02-19-a-11.03.04.png)
 
-![SonarQube : D&#xE9;p&#xF4;t ROCKFlows]({{ site.url }}/chapters/2019/assets/capture-de-cran-2019-02-19-a-11.00.46.png)
+![SonarQube : D&#xE9;p&#xF4;t ROCKFlows](./assets/capture-de-cran-2019-02-19-a-11.00.46.png)
 
   
 Cette première étape dans notre démarche suggère donc aux nouveaux arrivants de commencer par s'intéresser à ces parties car elles sont très probablement des parties importantes du projet notamment dû à la dette technique exposé dans le tableau précédent. Cependant, l'analyse de SonarQube est loin d'être suffisante. En effet, le projet ROCKFlows est confronté au problème "du plat de spaghetti". Il nous fallait donc corréler la partie de l'analyse faite ci-dessus avec un graphe de dépendance pour confirmer si les deux dépôts sont bel et bien des parties critiques mais également si de nouvelle partie critique émerge dû à leur haute dépendance par exemple au dépôt "rockflow-core" exposé précédemment.
@@ -159,7 +159,7 @@ Cette première étape dans notre démarche suggère donc aux nouveaux arrivants
 
 Pour pouvoir visualiser les dépendances au sein d'un projet, nous avons utilisé _Pom-Explorer_ un outil qui permet de visualiser les dépendances entres différents projets _Maven_. Cet outil nous permet de voir les dépendances sous forme de graphe entre tous les projets _Maven_ aussi bien internes qu'externes. __Cette visualisation n'est utilisable que pour les projets qui ont un nombre de sous-projets _Maven_ inférieur à environ 80 projets. Au-delà, le graphe est illisible. Le graphe nous permet de filtrer les projets affichés et de les colorer pour une meilleure visibilité.
 
-![Figure n&#xB0;1 : Graphe de ROCKFlows g&#xE9;n&#xE9;r&#xE9; par Pom-Explorer]({{ site.url }}/chapters/2019/assets/graph.png)
+![Figure n&#xB0;1 : Graphe de ROCKFlows g&#xE9;n&#xE9;r&#xE9; par Pom-Explorer](./assets/graph.png)
 
 _Pom-Explorer_ permet également de trouver des problèmes de dépendances qui peuvent survenir lors du développement. En effet, _Pom-Explorer_ permet de trouver les dépendances qui sont utilisées avec des versions multiples. Cet outil permet aussi de trouver les dépendances qui n'ont pas de version spécifiée, ce qui est une mauvaise pratique.
 
@@ -168,7 +168,7 @@ _Pom-Explorer_ permet également de trouver des problèmes de dépendances qui p
 _Pom-Explorer_ ne permet que de voir les dépendances entre projets _Maven._ De plus _Pom-Explorer_ analyse aussi les sous projets ce qui peut donner un trop grand nombre de projets affichés pour être vraiment utile dans la visualisation.   
 Pour voir à plus gros grain des dépendances entre différents projets nous avons créé un script _Python_ _qui_ va analyser les _Dockerfile_ des projets et produit un fichier qui va être analysé par un script _Javascript_ qui va produire une visualisation avec des graphes de ces dépendances. Cela nous permet aussi de voir des liens entre projets que nous n'aurions pas pu détecter autrement.
 
-![Figure n&#xB0;2 : Graphe de ROCKFlows g&#xE9;n&#xE9;r&#xE9; par notre script]({{ site.url }}/chapters/2019/assets/image%20%286%29.png)
+![Figure n&#xB0;2 : Graphe de ROCKFlows g&#xE9;n&#xE9;r&#xE9; par notre script](./assets/image%20%286%29.png)
 
 Comme l'on peut le voir sur la _figure n°2_ les dépendances externes sont en rouge et celles du projet sont en bleu. Ici on a choisi de regrouper les images d'un même dépôt ensemble pour voir les dépendances des dépôts entre eux. Cela nous permet de savoir comment sont organisés les dépôts et avoir une idée générale de l'organisation du projet.
 
