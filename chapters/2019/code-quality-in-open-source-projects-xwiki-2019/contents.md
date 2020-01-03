@@ -215,7 +215,7 @@ Une KPI qui n'a pas vraiment été prise en compte est la complexité du projet,
 
 A l'instar du comportement des mainteneurs relevées dans le papier "Dear Open Source Project Leader: Quit Being A Jerk", Nous avons décidé d'étudier quelques commentaires de certains membres de l'équipe JUnit à l'égard de nouveaux contributeurs. Les réponses données à certains contributeurs qui demandent s'il peuvent essayer d'implémenter une fonctionnalité ne sont pas très encourageantes. Ce qui a pour effet de créer une sorte de "syndrome de la tour d'ivoire", ou en tout cas on relève un certain manque de tact.
 
-![Pas de r&#xE9;ponse pour les questions de ce pauvre contributeur]{{ site.url }}(../assets/no-answer-to-question-issue.png)
+![Pas de r&#xE9;ponse pour les questions de ce pauvre contributeur]({{ site.url }}../assets/no-answer-to-question-issue.png)
 
 ![Pull request ferm&#xE9;e, mainteneur &quot;qui n&apos;a pas le temps&quot; de review le code](./assets/denied-pull-request.png)
 
