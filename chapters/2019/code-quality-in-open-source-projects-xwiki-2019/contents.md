@@ -215,11 +215,11 @@ Une KPI qui n'a pas vraiment été prise en compte est la complexité du projet,
 
 A l'instar du comportement des mainteneurs relevées dans le papier "Dear Open Source Project Leader: Quit Being A Jerk", Nous avons décidé d'étudier quelques commentaires de certains membres de l'équipe JUnit à l'égard de nouveaux contributeurs. Les réponses données à certains contributeurs qui demandent s'il peuvent essayer d'implémenter une fonctionnalité ne sont pas très encourageantes. Ce qui a pour effet de créer une sorte de "syndrome de la tour d'ivoire", ou en tout cas on relève un certain manque de tact.
 
-![Pas de r&#xE9;ponse pour les questions de ce pauvre contributeur]({{ site.url }}../assets/no-answer-to-question-issue.png)
+![Pas de r&#xE9;ponse pour les questions de ce pauvre contributeur]({{ site.url }}chapters/assets/no-answer-to-question-issue.png)
 
-![Pull request ferm&#xE9;e, mainteneur &quot;qui n&apos;a pas le temps&quot; de review le code](./assets/denied-pull-request.png)
+![Pull request ferm&#xE9;e, mainteneur &quot;qui n&apos;a pas le temps&quot; de review le code](chapters/assets/denied-pull-request.png)
 
-![Pas tr&#xE8;s encourageant de dire &quot;on promet rien&quot;](../assets/essaie-mais-on-promet-rien.png)
+![Pas tr&#xE8;s encourageant de dire &quot;on promet rien&quot;](chapters/assets/essaie-mais-on-promet-rien.png)
 
 Pour confirmer mes propos je me suis rendu sur le **Gitter** de l'équipe JUnit, me suis fait passé pour un nouveau contributeur qui aimerait contribuer mais qui ne sait pas par où commencer. Le résultat est assez décevant... les membres de l'équipe JUnit ne m'ont pas répondu et ont continué leur discussion. C'est un contributeur externe qui m'a aiguillé sur une de ses _issues_ qu'il a fait il y'a quelques années et qui s'est proposé de m'aider si j'en avais besoin.
 
