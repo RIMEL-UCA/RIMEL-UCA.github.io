@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: chapters
 title:  "Chapters"
 date:   2020-01-02 22:00:00 +0100
 ---
@@ -7,7 +7,7 @@ date:   2020-01-02 22:00:00 +0100
 ## 
 
 ## 2019
-###  [How to improve contributors onboarding]({{ site.url }}/chapters/2019/code-quality-in-open-source-projects-xwiki-2019/contents)
+### [How to improve contributors onboarding]({{ site.url }}/chapters/2019/code-quality-in-open-source-projects-xwiki-2019/contents)
 ### [Les feature toggles créent-ils de la dette technique ?]({{ site.url }}/chapters/2019/code-analysis-2019/contents-1)
 ### [Où et comment sont utilisées les Java properties ?]({{ site.url }}/chapters/2019/code-analysis-2019/contents)
 ### [En quoi les dépendances influent la complexité d'un projet : Étude du projet ROCKFlows]({{ site.url }}/chapters/2019/architecture-analysis-rockflows-2019/contents)
