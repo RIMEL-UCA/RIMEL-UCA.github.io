@@ -9,7 +9,7 @@ This course aims to introduce Software maintenance by illustrative examples and 
 This work draws heavily on : [2016](https://www.gitbook.com/book/delftswa/desosa2016/details) \(et new ones [2018](https://legacy.gitbook.com/book/delftswa/desosa2018/details)\)
 
 
-<span>
+
 <div class="span7">
 {% for post in site.posts limit:4 %}
 {% include postsummary.html %}
