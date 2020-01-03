@@ -17,7 +17,7 @@ Pour notre étude nous nous intéressons aux merges car c’est la synchronisati
 
 Voici un schéma pour illustrer un merge :
 
-![1. Sch&#xE9;ma d&#x2019;un merge](./assets/image%20%284%29.png)
+![1. Sch&#xE9;ma d&#x2019;un merge](../assets/image%20%284%29.png)
 
 
 

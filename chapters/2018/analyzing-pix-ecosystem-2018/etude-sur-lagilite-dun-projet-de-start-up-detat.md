@@ -53,7 +53,7 @@ Cependant, après avoir contacté l'équipe PIX, nous n'avons pas pu avoir accè
 
 Avant d'attaquer l'étude des indicateurs, nous avons voulu situer chronologiquement le projet, afin de faire la correspondance entre certains événements et l'évolutions des indicateurs. En voici la timeline:
 
-![](./assets/timeline.png)
+![](../assets/timeline.png)
 
 Nous nous sommes donc concentrés sur les indicateurs suivants:
 
@@ -66,7 +66,7 @@ Nous nous sommes donc concentrés sur les indicateurs suivants:
 
   On peut aussi se poser la question de savoir si ils n'ont pas boosté leur couverture de test en appelant des méthodes qui ne sont pas vraiment testés dans le détail afin de faire bonne figure vu le nombre très important d'utilisateurs pendant cette beta. Néanmoins en étudiant certains de leurs tests \(de manière aléatoire et non exhaustive\), nous n'avons jamais rencontré de cas semblables.
 
-* ![](./assets/coverage.png)
+* ![](../assets/coverage.png)
 * **Commits**
 
   * Outil : [RepoDriller](http://repodriller.org/)
@@ -74,19 +74,19 @@ Nous nous sommes donc concentrés sur les indicateurs suivants:
 
   **La langue:**  
   Nous avons très vite repéré que certains commits étaient en anglais, et d'autres en français. C'est une des premières remarques que nous avons faites en analysant leur projet. Le problème étant qu'il est compliqué d'automatiser la détection d'une langue dans un script RepoDriller. Par manque de temps, nous avons donc étudié à la main un échantillon aléatoire de 100 commits récupérés par RepoDriller. En voici le résultat par langue:  
-  ![](./assets/import.png)  
+  ![](../assets/import.png)  
   On voit donc que même si la langue principale est le français, l'anglais est très présent, nous avons donc cherché à comprendre pourquoi certains commits étaient en anglais et en allant dans le détail, nous avons remarqué un certain type de commits que nous avons appelé les commits "automatisés".  
   En effet, dans les IDE les plus récents, quand on réalise des actions nécessitant un commit \(Merge, Release etc\), l'IDE prend la liberté de créer lui même un message résumant l'action que l'on vient de faire. Par exemple :
 
-  ![](./assets/commit.png)
+  ![](../assets/commit.png)
 
   Nous avons donc revu les mêmes commits en retirant ces commits automatisés et voici le résultat sur les 88 commits restant:
 
-  ![](./assets/88com.png)
+  ![](../assets/88com.png)
 
   Il restait donc des commits issus d’êtres humains étant rédigés en anglais. Nous avons donc voulu voir l'implication des membres dans cette incohérence en prenant un échantillon de commits aléatoires des contributeurs majoritaires. En voici le résultat:
 
-  ![](./assets/contrib.png)
+  ![](../assets/contrib.png)
 
   On voit donc que globalement la répartition des commits anglais est bien répartie sur chacun et non pas sur un seul contributeur étranger comme nous le pensions avant de récupérer ces chiffres.
 
@@ -107,11 +107,11 @@ Nous nous sommes donc concentrés sur les indicateurs suivants:
 
   Voici le résultat: \(En retirant les commits Automatisés qui n'ont pas de taches associées dans tout les cas\)
 
-  ![](./assets/format.png)
+  ![](../assets/format.png)
 
   La majorité des commits sont donc bien formatés. Nous avons donc chercher à comprendre ce qui poussait l'équipe à ne pas respecter les critères d'un commit au bon format. On a pu observer que pour la majorité de ces commits, on est sur des petits correctifs très mineurs pour lesquels il n'y a pas de taches associés et où ils n'ont même pas pris la peine d'ajouter un tag comme on peut le voir sur les commits ci-dessous:
 
-  ![](./assets/commit2.png)![](./assets/commit3import.png)
+  ![](../assets/commit2.png)![](../assets/commit3import.png)
 
   C'est une des limites pour nous de l'agilité. En effet, il faudrait que chaque commit soit associé à une tache, mais quand créer la tache prends plus de temps que de la réaliser, on peut se poser la question de l’intérêt de la créer.
 
@@ -119,7 +119,7 @@ Nous nous sommes donc concentrés sur les indicateurs suivants:
   * Outil : [CircleCI](https://circleci.com/)
   * Résultat : L'un des principes de bases de l'agilité est de livrer de la valeur de façon continue et sans régression. CircleCI nous permet de voir sur chacun des commits, si une erreur de build \(test non passé, erreur de compil etc\). L’intérêt ici est de voir si il est fréquent d'avoir une régression sur un commit chez pix et si ce problème est réglé rapidement. Voici donc la proportion de builds avec erreurs.
 
-    ![](./assets/buildpassed.png)
+    ![](../assets/buildpassed.png)
 
     On voit donc que la proportion d'erreurs de builds sont très faibles. On peut donc déjà imaginer que les erreurs de builds ne restent à priori pas sur de nombreux commits et qu'ils sont rapidement fixés en terme de commits. Nous avons cependant voulu savoir combien de temps restait une erreur de build en moyenne. Nous avons obtenu une moyenne de moins d'un jour.
 * **Dette technique**
@@ -129,13 +129,13 @@ Nous nous sommes donc concentrés sur les indicateurs suivants:
 
     La dette technique a été étudié en fonction du temps. On voit très clairement qu'un effort constant et très important est consenti par l’équipe PIX sur la dette technique. En effet, elle est en constante baisse depuis près d'un an et elle s'est stabilisée à 14 jours ces 4 derniers mois. C'est d'autant plus un exploit car la base de code augmente. En effet, de nombreuses recherches s'accordent à dire que la dette technique est vouée à augmenter au fur et à mesure qu'un projet grandit en lignes de codes \(cf: The Evolution of Technical Debt in the Apache Ecosystem\).
 
-  ![](./assets/dtech.png)
+  ![](../assets/dtech.png)
 
 * * **Releases**
   * Outil: [RepoDriller](http://repodriller.org/)
   * Résultat: Nous avons étudié la fréquence des releases afin d'observer d'éventuelles inconsistances ou des comportements réguliers. Il se trouve que leurs releases se font à une fréquence assez irrégulière sur une représentation par semaine mais qu'une certaine régularité peut être constatée chaque mois. Seuls les mois d'octobre et de décembre se trouvent pourvus de plus de releases. Cela est du au fait que certaines bugs se sont retrouvés sur la production et qu'ils ont du effectuer des fixs très rapidement.
 
-  ![](./assets/releases.png)
+  ![](../assets/releases.png)
 
   La fréquence des releases est importante pour assurer l'agilité d'un projet mais il faut aussi faire attention à ce que les releases ne soient pas faite par obligation mais aient une vraie valeur pour le projet. Nous avons défini que 2 releases par mois est une bonne fréquence et que sortir plusieurs releases dans la même journée est un mauvais point car indique que certaines releases contiennent des problèmes.
 

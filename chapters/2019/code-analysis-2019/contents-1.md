@@ -186,15 +186,15 @@ Comme nous pouvons le voir sur la Figure 1, la complexité ajoutée par un commi
 
 Déjà, en observant la répartition de la complexité, on s'aperçoit que les commits ajoutant une feature toggle complexifie plus souvent le projet que les commits normaux. Cependant, les commits ajoutant une feature toggle implique un gros changement de complexité. Cela est d'autant plus flagrant sur cette représentation de l'évolution de la complexité ci dessous. \(Fig.2\)
 
-![Figure 2: &#xE9;volution de la complexit&#xE9; de Chromium en fonction des ajouts de feature toggle dans le temps](./assets/image%20%2811%29.png)
+![Figure 2: &#xE9;volution de la complexit&#xE9; de Chromium en fonction des ajouts de feature toggle dans le temps](../assets/image%20%2811%29.png)
 
 
 
-![Figure 3: &#xE9;volution de la complexit&#xE9; de Chromium sur 1000 commits se suivant](./assets/image%20%2820%29.png)
+![Figure 3: &#xE9;volution de la complexit&#xE9; de Chromium sur 1000 commits se suivant](../assets/image%20%2820%29.png)
 
 Pour comprendre l'évolution de cette complexité, nous nous sommes concentrés sur les commits qui impliquaient des gros changements. Dans les faits, ces grosses différences sont au lié au guide des contributions de Chromium: Lors de l'ajout d'une fonctionnalité ou lors d'un changement profond d'une existante, le contributeur doit créer un feature toggle avec la nouvelle fonctionnalité, vérifier son bon fonctionnement en laissant les deux versions cohabiter, pour ensuite supprimer l'ancienne version quand la stabilité du changement a fait ces preuves. Par exemple, le commit ci dessous \([https://github.com/chromium/chromium/commit/6beb0cec0f47 ](https://github.com/chromium/chromium/commit/6beb0cec0f47)\) diminue la complexité globale de chromium en supprimant une version dépassé d'un algorithme qui n'était plus utilisé. Ce commit diminue de 300 la complexité cyclomatique, mais la complexité induite par la nouvelle version a été intégrée en plusieurs fois et ne transparaît pas dans notre analyse.
 
-![Figure 4: Exemple de commit qui supprime une ancienne fonctionnalit&#xE9;  ](./assets/image%20%2810%29.png)
+![Figure 4: Exemple de commit qui supprime une ancienne fonctionnalit&#xE9;  ](../assets/image%20%2810%29.png)
 
 ### V.5 Conclusion de notre analyse
 

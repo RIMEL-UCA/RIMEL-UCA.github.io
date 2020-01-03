@@ -140,7 +140,7 @@ Sur cette figure qui affiche les projets qui utilisent ou non un wrapper externe
 
 Pour répondre à cette question nous devons dans un premier temps si dans les projets nous utilisons bien les properties dans les codes comme dans les tests.
 
-![](./assets/image%20%2817%29.png)
+![](../assets/image%20%2817%29.png)
 
 Sur cette figure on constate bien que sur 60 % des projets de notre dataset c’est le cas. Même si nous n’avons pas un nombre assez conséquent de projets pour l'affirmer on peut supposer que de manière générale les projets utilisent les properties dans les tests et le code. Certains projets utilisent les properties uniquement dans le code et enfin peu de projets utilisent les properties uniquement dans les tests. Sur notre dataset nous avons les proportions suivantes :
 
@@ -150,7 +150,7 @@ Sur cette figure on constate bien que sur 60 % des projets de notre dataset c’
 
 Maintenant pour répondre à notre hypothèse initiale : seules quelques properties sont présentes dans les tests, on peut regarder ces données que nous avons extraites de notre csv où nous avons uniquement conservé les projets qui utilisent les properties dans le code et les tests et les colonnes qui dénombrent le nombre de properties dans le code et les tests.
 
-![](./assets/image%20%288%29.png)
+![](../assets/image%20%288%29.png)
 
 Ce que l’on peut constater c’est que contrairement à notre hypothèse aucune tendance ne se dégage des autres 42% de ces projets utilisent plus de properties dans le code que dans les tests et à l’inverse 58% en utilisent plus dans les tests. De plus les écarts peuvent être importants comme avec le projet hazelcast qui contient 39% de properties dans ses tests que dans son code. Ou encore swagger-core dont la différence entre le nombre de properties dans le code et les tests n’est que 33%. Alors que dans joda-time nous n’avons qu’une seul property en plus dans les tests que dans le code.
 
@@ -178,5 +178,5 @@ Cependant nous pouvons dire qu’aucun de nos projets analysés n’utilise de w
 
 Quant à la dernière question de façon générale les projets utilisent les properties afin de répondre à des besoins qui leur sont propres, mais un sous ensemble de properties peut se retrouver dans plusieurs projets et ce sont des properties de configuration comme celles concernant les paramètres d’un logger.
 
-![](./assets/image%20%2819%29.png)
+![](../assets/image%20%2819%29.png)
 

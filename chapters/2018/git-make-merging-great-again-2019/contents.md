@@ -13,7 +13,7 @@ Nous sommes 4 étudiants en dernière année à Polytech' Nice-Sophia en informa
 
 ### III. Collecte d'information
 
-![M&#xE9;thodologie d&apos;extraction de la qualit&#xE9; logicielle](./assets/methodologie.svg)
+![M&#xE9;thodologie d&apos;extraction de la qualit&#xE9; logicielle](../assets/methodologie.svg)
 
 ### Introduction
 
@@ -59,7 +59,7 @@ Pour répondre à cette question, nous avons choisi de répartir notre travail �
 
 Avec ces deux questions, on souhaite voir si la corrélation qu'on cherche à démontrer a plus ou moins d'impact dans un sens ou dans un autre.
 
-![](./assets/logo_uns%20%288%29.png) UCA : University Côte d'Azur \(french Riviera University\)
+![](../assets/logo_uns%20%288%29.png) UCA : University Côte d'Azur \(french Riviera University\)
 
 
 
@@ -168,31 +168,31 @@ Afin de pouvoir observer un résultat, nous avons donc dû rassembler l'ensemble
 
 Les différents graphiques ci-dessous présentent les résultats que nous avons obtenus en sur un ensemble de 50 dépôts Github. Il est important de noter que dans les graphiques suivants, sauf pour le premier, les valeurs présentées sont pondérées par le nombre de ligne contenu dans les fichiers.
 
-![](./assets/lines.png)
+![](../assets/lines.png)
 
 Si on regarde la tendance que présente ce graphique on peut voir qu'en moyenne un fichier qui a plus de _merge conflict_ dans son historique contient plus de lignes.
 
  
 
-![](./assets/bugs%20%281%29.png)
+![](../assets/bugs%20%281%29.png)
 
 Tendance : `f(x) = 0.132x + 0.255` Comme on peut le voir sur le graphique le nombre de _bugs_ augmente peu lorsque le nombre de _merge conflicts_ augmente. Ceci est confirmé par la courbe de tendance dont le coefficient directeur est `a = 0.132`, ce qui assez proche de 0.
 
  
 
-![](./assets/code_smells.png)
+![](../assets/code_smells.png)
 
 Tendance : `f(x) = 0.322x + 16.972` Comme on peut le voir sur ce graphique, la courbe de tendance est quasiment constante. En effet, le coefficient directeur est de 0.322 ce qui encore une fois est très faible. Ceci signifie donc que le nombre de _code smells_ n'augmente presque pas lorsque le nombre de _merge conflicts_ augmente.
 
  
 
-![](./assets/cognitive_complexity.png)
+![](../assets/cognitive_complexity.png)
 
 Tendance : `f(x) = 12.661x + 55.691` On peut remarquer, ici, que le _merges conflicts_ ont une forte influence sur la complexité cognitive d'un fichier, en effet, le coefficient directeur est de 12.661.
 
  
 
-![](./assets/complexity.png)
+![](../assets/complexity.png)
 
 Tendance : `f(x) = 1.56x + 50.803` Pour ce dernier graphique, le coefficient est certes bien moins important que sur le précédent, mais il n'en reste pas moins significatif.
 
@@ -206,7 +206,7 @@ Enfin, une observation intéressante que notre analyse de nombreux projets a per
 
 Pour répondre à cette deuxième question nous avons analysé 57 projets contenant 186 conflits sur 328 fichiers. Pour chacun des conflits nous avons analysé les fichiers concernés avant et après le merge conflict. Les graphiques suivants présentent les résultats que nous avons obtenus.
 
-![](./assets/before-after.png)
+![](../assets/before-after.png)
 
 La couleur des barres indique si la métrique a une évolution positive en vert \(moins de bugs, plus de documentation...\) ou une évolution négative en rouge \(plus de complexité, plus de lignes de code\) du point de vue qualité. On a en gris les métriques n'indiquant pas réellement une variation dans la qualité du code \(nombre de lignes et de commentaires\).
 
@@ -216,7 +216,7 @@ On peut donc conclure \(sur le dataset analysé\) que nous avons bien une corré
 
 Les graphes ci-dessous présentent l'ensemble des mesures de différence des métriques mesurées avant et après un conflit de merge.
 
-![](./assets/lines%20%281%29.png)
+![](../assets/lines%20%281%29.png)
 
 | Métrique | Ajout de lignes | Ajout de lignes commentées |
 | :--- | :--- | :--- |

@@ -67,7 +67,7 @@ En dernier lieu, nous aurions essayé d'établir une corrélation entre les poin
 
 Malheureusement, plusieurs imprévus ont entravé la mise en œuvre de cette méthodologie.
 
-![Figure 0 : R&#xE9;ponse d&apos;un des contributeur de XWiki &#xE0; notre question sur les &quot;zones chaudes&quot; connues.](./assets/responsexwiki.png)
+![Figure 0 : R&#xE9;ponse d&apos;un des contributeur de XWiki &#xE0; notre question sur les &quot;zones chaudes&quot; connues.](../assets/responsexwiki.png)
 
 Tout d'abord, nous avons rencontré une impossibilité à identifier les "points chauds" des utilisateurs lambdas. En effet, le cœur de _XWiki_ étant composé d’un bundle d’extension, il n’y a malheureusement aucun moyen de savoir quelles parties sont les plus utilisées par l’utilisateur moyen. Faire une carte de chaleur à la main perd alors de son intérêt : en procédant uniquement de cette façon et en utilisant uniquement les données récupérées de nos propre parcours, nous ne serions capable de ne collecter qu’une faible quantité de données. Celles-ci seraient biaisées et peu représentatives car nos utilisations de _XWiki_ ne seraient pas exhaustives.
 
@@ -169,7 +169,7 @@ En suivant la méthodologie présentée plus tôt, nous pouvons discerner cinq e
 
 Vous trouverez ci-dessous un schéma résumant notre démarche.
 
-![Figure 1 : Sch&#xE9;ma r&#xE9;sumant nos diff&#xE9;rentes exp&#xE9;riences](./assets/schemaexperiences.png)
+![Figure 1 : Sch&#xE9;ma r&#xE9;sumant nos diff&#xE9;rentes exp&#xE9;riences](../assets/schemaexperiences.png)
 
 ### 4.2.1. Expériences 1-2-3 <a id="docs-internal-guid-51382e29-7fff-2108-5bbb-1ef6c6d7fddd"></a>
 
@@ -205,19 +205,19 @@ Nous présentons dans cette partie les résultats de nos différentes expérienc
 
 Les données recueillies lors de cette expérience sont réparties par sous-projet. Elles indiquent le nombre actifs de bugs relevés lors de notre étude. Vous trouverez ci-dessous un  schéma retranscrivant nos résultats. 
 
-![Figure 2 : R&#xE9;sultats de l&apos;exp&#xE9;rience 1 - Pourcentage de bugs en fonction des sous-projets](./assets/bugs.png)
+![Figure 2 : R&#xE9;sultats de l&apos;exp&#xE9;rience 1 - Pourcentage de bugs en fonction des sous-projets](../assets/bugs.png)
 
 On remarque, sur la figure ci-dessus, que la majorité des bugs actifs semble liée au sous-projet _XWiki_ _Platform_. Nous pouvons également noter qu'une proportion non négligeable des bugs n'étant pas situés dans _XWiki_ _Platform_ se trouvent dans les deux sous-projets _XWiki_ _Rendering_ et _XWiki_ _Commons_. Il pourrait donc être intéressant d'analyser chacun de ces sous-projets.
 
 Cependant, comme indiqué plus haut, nous avons fait le choix de ne traiter qu'un seul sous-projet dans le cadre de cette étude.
 
-![Figure 3 : Les trois principaux sous-projets \(repositories\) de XWiki. ](./assets/commits.png)
+![Figure 3 : Les trois principaux sous-projets \(repositories\) de XWiki. ](../assets/commits.png)
 
 Comme nous pouvons le voir sur la _`Figure 3`_, _XWiki_ _Platform_ semble être de loin le sous-projet le plus populaire et important parmi ceux mentionnés plus haut. Étant également celui comportant le plus de bugs, nous nous sommes naturellement tournés vers celui-ci afin d'effectuer notre étude. 
 
 Vous trouverez ci-dessous sur la _`Figure 4`_  les types de bugs qui composent _XWiki Platform._
 
-![Figure 4 : Repr&#xE9;sentation des types de bugs pr&#xE9;sents dans XWiki Platform.](./assets/typesbug.png)
+![Figure 4 : Repr&#xE9;sentation des types de bugs pr&#xE9;sents dans XWiki Platform.](../assets/typesbug.png)
 
 Grâce à la _`Figure 4`_, nous pouvons noter qu'une grande partie des bugs présents dans _XWiki Platform_ sont majeurs. Des bugs majeurs pouvant donc indiquer l'apparition d’éléments bloquants venant entraver l'expérience utilisateur. Identifier la provenance de ces bugs pourraient donc nous aider à identifier les zones sensibles du sous-projet _XWiki Platform_. 
 
@@ -225,7 +225,7 @@ Grâce à la _`Figure 4`_, nous pouvons noter qu'une grande partie des bugs pré
 
 Suite aux résultats obtenus dans l'**expérience 1**, nous avons analysé les bugs des composants du sous-projet _XWiki_ _Platform_. Voici, ci-dessous, les résultats que nous obtenons
 
-![Figure 5 : R&#xE9;sultats de l&apos;exp&#xE9;rience 2.](./assets/image%20%287%29.png)
+![Figure 5 : R&#xE9;sultats de l&apos;exp&#xE9;rience 2.](../assets/image%20%287%29.png)
 
 Dans une première approche de ces données, nous pourrions identifier les composants **OldCore**, **Web** et **WYSWIG** comme ceux posant le plus de problèmes. En effet, en étudiant la _`Figure 5`_,  nous pouvons constater que ce sont ceux présentant le plus de bugs dans la ligne _"Total"_  \(803 pour **OldCore**, 948 pour **Web**, etc...\).
 
@@ -235,7 +235,7 @@ Grâce à ces deux métriques, nous en avons créé une nouvelle : l'indice de s
 
 Ce sont les composants au fort indice de sensibilité que nous avons pris en compte pour la suite de ces expériences.  
 
-![Figure 6 : Indice de sensibilit&#xE9; des diff&#xE9;rents composants de XWiki Platform.](./assets/image.png)
+![Figure 6 : Indice de sensibilit&#xE9; des diff&#xE9;rents composants de XWiki Platform.](../assets/image.png)
 
 La _`Figure 6`_ ci-dessus nous permet de visualiser de façon plus claire les composants affichés en fonction de leur indice de sensibilité.  
 
@@ -251,7 +251,7 @@ L'objectif principal de cette expérience est de récupérer la complexité ains
 
 Tout comme **l'expérience trois**, il s'agit principalement d'une collecte de données menant à **l'expérience cinq.** Cependant, avec ces dernières nous avons tout de même tenté d'établir une corrélation entre complexité et couverture de code.
 
-![Figure 7 : Recherche de corr&#xE9;lation entre complexit&#xE9; et couverture de code](./assets/codecoverage.png)
+![Figure 7 : Recherche de corr&#xE9;lation entre complexit&#xE9; et couverture de code](../assets/codecoverage.png)
 
 En étudiant la _`Figure 7`_,  on dénote une importante couverture de code pour les méthodes de complexité faible. Cependant, les couvertures étant réparties de manière équivalente pour des méthodes plus complexes, il nous est difficile de tirer une conclusion en nous basant uniquement sur cette expérience.
 
@@ -263,7 +263,7 @@ Les données récoltées grâce à l'**expérience 3** nous ont permis de récup
 
 Cette répartition nous permet d'obtenir la _`Figure 8`_ se trouvant ci-dessous.
 
-![Figure 8 : R&#xE9;sultats de l&#x2019;exp&#xE9;rience 5 - R&#xE9;partition des bugs par composants de XWiki Platform.](./assets/image%20%2815%29.png)
+![Figure 8 : R&#xE9;sultats de l&#x2019;exp&#xE9;rience 5 - R&#xE9;partition des bugs par composants de XWiki Platform.](../assets/image%20%2815%29.png)
 
 La _`Figure 8`_ présente la répartition des bugs pour les composants identifiés après que nos différentes classes aient été regroupées. 
 
@@ -271,7 +271,7 @@ Ainsi, en partant d'une approche différente nous obtenons des résultats sembla
 
 De la même façon, nous distinguons sur la _`Figure 8`_ qu'il s'agit d'un composant dont le nombre de bugs est beaucoup plus important que la moyenne. Nos données venant cette fois d'une approche différente \(en se basant sur des classes\), nous pouvons confirmer que notre indice de sensibilité est une métrique fiable pour les expériences effectuées.
 
-![Figure 9 : Nombre de bugs, complexit&#xE9; et couverture de code des composants de la Figure 8](./assets/image%20%2822%29.png)
+![Figure 9 : Nombre de bugs, complexit&#xE9; et couverture de code des composants de la Figure 8](../assets/image%20%2822%29.png)
 
 La _`Figure 9`_ se trouvant ci-dessus répertorie le nombre de bugs, la couverture de code et la complexité estimée par composant. Nous remarquons que le composant **OldCore** a une couverture de code parmi les plus **faibles** \(~60%, la moyenne étant de 77.6%\).
 
@@ -313,7 +313,7 @@ Ainsi, cette étude n'est donc pas une conclusion en soit mais plutôt une porte
 * Le [système](https://jira.xwiki.org/secure/Dashboard.jspa) de tickets utilisé par _XWiki_.
 * Les [extensions](https://extensions.xwiki.org/xwiki/bin/view/Main/WebHome) _XWiki_.
 
-![](./assets/logo_uns_epu_uca.png)
+![](../assets/logo_uns_epu_uca.png)
 
 
 
