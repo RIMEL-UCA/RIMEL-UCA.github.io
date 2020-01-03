@@ -1,6 +1,6 @@
-# Format 2019
+# Format 2020
 
-**Date de rendu finale : March 2018 au plus tard**
+**Date de rendu finale : March 2020 au plus tard**
 
 > Respecter la structure pour que les chapitres soient bien indépendants
 
@@ -23,6 +23,9 @@ We are four students in last year of Polytech' Nice-Sophia specialized in Softwa
 Préciser ici votre contexte.
 
 Pourquoi c'est intéressant.
+
+![Figure 1: Logo UCA](../assets/model/UCAlogoQlarge.png)
+
 
 ## II. Observations/General question
 
@@ -55,6 +58,5 @@ Précisez votre utilisation des outils ou les développements \(e.g. scripts\) r
 
 ## VI. References
 
-1.
-
-1. 
+1. ref1
+1. ref2
