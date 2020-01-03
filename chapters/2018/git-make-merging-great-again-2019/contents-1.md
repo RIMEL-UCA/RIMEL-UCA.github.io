@@ -17,7 +17,7 @@ Pour notre étude nous nous intéressons aux merges car c’est la synchronisati
 
 Voici un schéma pour illustrer un merge :
 
-![1. Sch&#xE9;ma d&#x2019;un merge](../.gitbook/assets/image%20%284%29.png)
+![1. Sch&#xE9;ma d&#x2019;un merge](./assets/image%20%284%29.png)
 
 
 
@@ -223,21 +223,27 @@ Notre code : [https://github.com/huangshiyang/RIMEL](https://github.com/huangshi
 
 Sonarqube: [https://github.com/SonarSource/sonarqube](https://github.com/SonarSource/sonarqube)
 
-heron: [https://github.com/apache/incubator-heron](https://github.com/apache/incubator-heron
+heron: [https://github.com/apache/incubator-heron
+](https://github.com/apache/incubator-heron
 )
 
-RxJava: [https://github.com/ReactiveX/RxJava](https://github.com/ReactiveX/RxJava
+RxJava: [https://github.com/ReactiveX/RxJava
+](https://github.com/ReactiveX/RxJava
 )
 
-mockito: [https://github.com/mockito/mockito](https://github.com/mockito/mockito
+mockito: [https://github.com/mockito/mockito
+](https://github.com/mockito/mockito
 )
 
-dubbo: [https://github.com/apache/incubator-dubbo](https://github.com/apache/incubator-dubbo
+dubbo: [https://github.com/apache/incubator-dubbo
+](https://github.com/apache/incubator-dubbo
 )
 
-shardingshere: [https://github.com/apache/incubator-shardingsphere](https://github.com/apache/incubator-shardingsphere
+shardingshere: [https://github.com/apache/incubator-shardingsphere
+](https://github.com/apache/incubator-shardingsphere
 )
 
-skywaling: [https://github.com/apache/incubator-skywalking](https://github.com/apache/incubator-skywalking
+skywaling: [https://github.com/apache/incubator-skywalking
+](https://github.com/apache/incubator-skywalking
 )
 

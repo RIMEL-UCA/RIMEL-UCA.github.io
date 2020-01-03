@@ -90,7 +90,7 @@ Dans l’espoir de confirmer ces découvertes encourageante, nous avons donc dé
 ![](https://lh4.googleusercontent.com/V249v-ocYB2HrEwSN_-YWeWSFW4PVS1XorwnpaJXVIBXRqI9HKaNm5RiJvZfv8-a7VJe73ohsEwgOCNyCqa54SHF5sMJ0606QvjfyYaFFeQwBtIR2ssyKv1WaWbhWLUaDbzoq33p)_Figure 4 - Durée de vie de branches à partir d'une analyse CodeScene_
 
 En utilisant CodeScene et RepoDriller, on a aussi pu identifier d’autres points qui paraissaient contraires aux hypothèses que nous avions posés.  
-![](../.gitbook/assets/2.png)_Figure 5 - Couplage temporel de différentes composants du système_
+![](./assets/2.png)_Figure 5 - Couplage temporel de différentes composants du système_
 
 On a notamment, identifié un fort couplage de fichier nommés assessment-\*.js. On peut d’ailleur voire sur l’autre schéma sur le couplage temporel \(présenté dans la partie suivante\) que ces fichiers semblent être un véritable goulot d’étranglement des qu’ils doivent être modifié. Parmis les autres points négatifs, on a trouvé un faible nombre de collaborateurs actifs, une complexité exponentielle des fichiers de test \(observable sur le schéma extrait de CodeCity dans la partie suivante\) et des variations de complexité pour le moins étrange.
 
@@ -108,33 +108,33 @@ Pour l’utilisation de CodeScene, on commence par “fork”le GitHub du reposi
 
 Après connexion de notre compte et l’importation des projets dans CodeScene nous obtenons le panneau suivant avec les différents projets analysable :
 
-![](../.gitbook/assets/1.png)
+![](./assets/1.png)
 
 _Figure 6 - Vue de l'outil CodeScene_
 
 On peut donc procéder à l’analyse de l’un des projets, ce qui va nous diriger vers le dashboard général récapitulant les informations générales :
 
-![](../.gitbook/assets/3%20%281%29.png)
+![](./assets/3%20%281%29.png)
 
 _Figure 7 - Vue de l'outil CodeScene_
 
 Nous avons, à partir de la, accès à l’ensemble du menu qui nous permet d’approfondir notre analyse. Nous avons à disposition différentes rubriques pour pouvoir se focaliser sur un aspect précis :
 
-![](../.gitbook/assets/4.png)
+![](./assets/4.png)
 
 _Figure 8 - Vues de l'outil CodeScene_
 
 Nous pouvons donc nous focaliser pour analyser la complexité fichier par fichier ou bien le couplage entre les différents classes du projet. Il ne reste plus qu'à bien structurer nos processus d’investigation afin d’en extraire le maximum d’information rentable :
 
-![](../.gitbook/assets/5.png)
+![](./assets/5.png)
 
 _Figure 9 - Couplage interclasses_
 
-![](../.gitbook/assets/6.png)
+![](./assets/6.png)
 
 _Figure 10 - Complexité temporelle d'une classe extraite du système_
 
-Nous avons par exemple après exécution de CodeCity sur le projet PIX \(respectivement JSCity puisque c'est le langage principal du projet\), la représentation suivante :![](../.gitbook/assets/7.png)_Figure 11 - JSCity \(CodeCity\) sur l'ensemble du projet PIX_
+Nous avons par exemple après exécution de CodeCity sur le projet PIX \(respectivement JSCity puisque c'est le langage principal du projet\), la représentation suivante :![](./assets/7.png)_Figure 11 - JSCity \(CodeCity\) sur l'ensemble du projet PIX_
 
 CodeCity nous permet d'analyser des logiciels, dans lequel les projets sont visualisés en tant que des villes en 3D. C’est un outils clé dans notre analyse de PIX dans la mesure ou on peut constater, selon la forme de la ville, la complexité et la modularité du projet qui sont deux éléments clé dans l’étude de l’évolutivité. Les classes sont représentées comme des bâtiments dans la ville, tandis que les paquets sont représentés comme les districts dans lesquels les bâtiments résident. La hauteur des bâtiment est mappé sur le nombre de méthodes pour une classe en question et le nombre d'attributs sur la taille de base. Le niveau d'imbrication d'un paquet quand à elle est mappé sur la saturation des couleurs du quartier, c'est-à-dire que les paquets profondément imbriqués sont colorés en bleu foncé, tandis que les paquets peu profonds sont en bleu clair. Pour son utilisation, rien de plus simple. Il suffit de cloner le repository que nous voulons investiguer sur notre ordinateur et lancer le programme CodeCity avec la source le chemin du projet en question. Pour une analyse plus poussé, CodeCity nous propose de multitude option qui peuvent nous permettre d’approfondir les résultats si nécessaire.
 

@@ -19,7 +19,7 @@ Ce chapitre présente le travail de recherche produit par notre groupe dans le c
 
 L'**apprentissage automatique** \(Machine Learning, ML\) est une science sous-jacente à l'intelligence artificielle qui définit des méthodes pour prédire des caractéristiques à partir d'un ensemble de données.
 
-Cette discipline ne cesse d'intéresser de nouveaux adeptes, autant les entreprises qui souhaitent exploiter les très grands volumes de données qu'elles génèrent, que les chercheurs qui ne cessent de publier de nouveaux travaux à ce sujet.![](../.gitbook/assets/machine_learning_trends.png)
+Cette discipline ne cesse d'intéresser de nouveaux adeptes, autant les entreprises qui souhaitent exploiter les très grands volumes de données qu'elles génèrent, que les chercheurs qui ne cessent de publier de nouveaux travaux à ce sujet.![](./assets/machine_learning_trends.png)
 
 _Figure 1 - Intérêt croissant pour le Machine Learning lors des cinq dernières années_
 
@@ -78,13 +78,13 @@ Ils sont au nombre de trente-quatre : _scikit-learn_, _theano_, _keras_, _scikit
 
 Ces projets sont différents entre eux notamment au niveau des domaines auxquels ils sont dédiés \(certains sont généralistes, d'autres spécifiques à un domaine\) ainsi que de leur maturité \(en terme de nombre de contributions, nombre de contributeurs\).
 
-![](../.gitbook/assets/contributions_per_project.png)
+![](./assets/contributions_per_project.png)
 
 _Figure 2 - Grandes disparités de la maturité des projets étudiés_
 
 Nous observerons néanmoins que ces projets très actifs pour la plupart. La _Figure 3_ présente la fonction de répartition cumulative \(Cumulative Distribution Function - CDF\) des contributions apportés aux projets en 2017 et montre que, nonobstant de rares projets qui n'évoluent plus ou très peu, les projets évoluent en continu dans l'année \(la plupart des courbes sont approximativement linéaires\).
 
-![](../.gitbook/assets/contributions_cdf.png)
+![](./assets/contributions_cdf.png)
 
 _Figure 3 - Évolution perpétuelle de la plupart des projets_
 
@@ -256,7 +256,7 @@ L'approche avec les adresses mails a conclu que 527 contributeurs étaient des c
 
 #### V.1.1. _Les contributeurs sont majoritairement des chercheurs._ <a id="contrib"></a>
 
-![](../.gitbook/assets/researchers_per_project.png)
+![](./assets/researchers_per_project.png)
 
 _Figure 4 - Une minorité de projets compte une majorité de chercheurs_
 
@@ -274,13 +274,13 @@ Pour une partie de ces projets \(_spearmint_, _simpleai_, _metric-learn_, _astro
 
 #### V.1.2. _Les contributions viennent majoritairement de chercheurs._
 
-![](../.gitbook/assets/researchers_commits.png)
+![](./assets/researchers_commits.png)
 
 _Figure 5 - Une majorité de_ commits _proviennent de chercheurs dans la majorité des projets étudiés_
 
 La _Figure 5_ montre que, malgré la minorité de chercheurs dans ces projets établie en [V.1.1](comment-est-organise-le-developpement-dun-projet-open-source-de-machine-learning.md#contrib), ils produisent la majorité des _commits_ qui constituent les projets de Machine Learning étudiés.
 
-![](../.gitbook/assets/researchers_modified_lines.png)
+![](./assets/researchers_modified_lines.png)
 
 _Figure 6 - Les chercheurs produisent également la majorité des ajouts et retraits de lignes dans la majorité des projets_
 
@@ -298,17 +298,17 @@ Pour limiter l'influence de la taille des projets sur nos mesures, nous avons no
 
 Dans un premier temps, nous étudions cette hypothèse en observant le nombre de _commits_. Le nombre de commits permet d'inférer l'investissement sur le long terme d'un contributeur, en supposant que ces contributions sont étalées sur la durée. Ceci constitue un biais de notre méthode, qui pourrait être corrigé en utilisant un outil statistique \(dont nous n'avons pour l'instant pas connaissance\) qui nous permettrait de croiser le nombre de _commits_ et la répartition de ces _commits_ dans le temps.
 
-![](../.gitbook/assets/commits_median.png)
+![](./assets/commits_median.png)
 
 _Figure 7 - La majorité des contributeurs, aussi bien chercheurs que non-chercheurs, contribuent peu_
 
 La _Figure 7_ montre que la majorité des contributeurs, indépendamment de leur type, sont des contributeurs ponctuels \(un ou deux _commits_\). Le grand écart-type sur la boîte des chercheurs est dû aux petits projets qui comptent peu de contributeurs mais une grande proportion de chercheurs.
 
-![](../.gitbook/assets/commits_third_quartile.png)
+![](./assets/commits_third_quartile.png)
 
 _Figure 8 - Il y a proportionnellement moins de chercheurs ponctuels que de non-chercheur ponctuels_
 
-![](../.gitbook/assets/commits_mean.png)
+![](./assets/commits_mean.png)
 
 _Figure 9 - En moyenne, les chercheurs fournissent beaucoup plus de \_commits_ que les non-chercheurs\_
 
@@ -318,13 +318,13 @@ La _Figure 8_ montre qu'en proportion il y a moins de chercheurs ponctuels \(dan
 
 Notre hypothèse de travail est qu'un contributeur qui a modifié de nombreuses lignes \(ajout, retrait\) dans le code du projet est un contributeur qui a une bonne maîtrise du projet et qui se l'est approprié.
 
-![](../.gitbook/assets/modified_lines_third_quartile.png)
+![](./assets/modified_lines_third_quartile.png)
 
 _Figure 10 - Les chercheurs sont plus nombreux à s'approprier leur projet que les autres contributeurs_
 
 Si la médiane des nombres de lignes modifiées par contributeur est proche de zéro avec un faible écart-type pour les deux classes de contributeurs, la _Figure 10_ montre que cet écart-type augmente au troisième quartile, ce qui signifie qu'à proportion égale les chercheurs s'approprient plus le projet que les non-chercheurs, de par une plus grande contribution en lignes de code. La _Figure 11_ renforce cette analyse en montrant que le volume moyen de lignes modifiées par un chercheur est bien plus grand que celui des autres types de contributeurs. En d'autres termes, **un chercheur qui contribue est un chercheur qui s'approprie plus le projet que les autres contributeurs**.
 
-![](../.gitbook/assets/modified_lines_mean.png)
+![](./assets/modified_lines_mean.png)
 
 _Figure 11 - En moyenne, les chercheurs contribuent plus en volume que les autres contributeurs_
 
@@ -350,7 +350,7 @@ Le nombre d'algorithmes pour _scikit-learn_ et _scikit-image_ nous paraîssent f
 
 Outre le résultat pour les conditions que nous avons posé, nous avons évalué l'hypothèse en faisant varier le seuil de la proportion de ligne de code possédées à partir duquel nous considérons qu'un contributeur est un contributeur majeur de l'algorithme.
 
-![](../.gitbook/assets/algorithms_have_major_contributor.png)
+![](./assets/algorithms_have_major_contributor.png)
 
 _Figure 12 - Les algorithmes de_ scikit-image _et de_ nltk _présentent un fort_ code ownership
 
@@ -364,7 +364,7 @@ Nous observons que pour notre définition d'un contributeur majeur \(50% de _cod
 
 À nouveau, nous avons étudié l'évolution des résultats obtenus en variant le seuil de _algorithm ownership_.
 
-![](../.gitbook/assets/contributors_have_multiple_algorithms.png)
+![](./assets/contributors_have_multiple_algorithms.png)
 
 _Figure 13 - Peu importe le seuil, il existe des contributeurs qui sont contributeurs majeurs de plusieurs algorithmes dans les projets étudiés_
 
@@ -390,11 +390,11 @@ Le montant de dette technique est représenté sous SonarQube par l'indice SQALE
 
 #### V.3.1. _**La dette technique grandit en même temps que le projet.**_
 
-Nous pouvons observer plusieurs tendances. Les projets _nilearn, scikit-image et scikit-learn_ suivent la courbe que nous avions supposé, c'est-à-dire une dette technique globalement croissante dans le temps.![](../.gitbook/assets/scikit-learn-loc.png)_Figure 14 - Courbes de l'évolution des lignes de codes et de l'index SQALE de scikit-learn. ncloc représente le nombre de lignes de code non commentées_
+Nous pouvons observer plusieurs tendances. Les projets _nilearn, scikit-image et scikit-learn_ suivent la courbe que nous avions supposé, c'est-à-dire une dette technique globalement croissante dans le temps.![](./assets/scikit-learn-loc.png)_Figure 14 - Courbes de l'évolution des lignes de codes et de l'index SQALE de scikit-learn. ncloc représente le nombre de lignes de code non commentées_
 
 Néanmoins, sur les projets _pattern, pybrain et theano_, nous pouvons observer une courbe stagnante voire décroissante de la dette technique sur cinq ans.
 
-![](../.gitbook/assets/theano-loc.png)_Figure 15 - Courbes de l'évolution des lignes de codes et de l'index SQALE de theano. On observe une tendance décroissante de la dette technique dans le temps._
+![](./assets/theano-loc.png)_Figure 15 - Courbes de l'évolution des lignes de codes et de l'index SQALE de theano. On observe une tendance décroissante de la dette technique dans le temps._
 
 Nous observons, sur la courbe de l'indice SQALE \(verte\), deux _refactors_ ayant eu pour but de réduire la dette technique, une en 2015 et une en 2017. Celui de 2017 est accompagné d'une importante baisse du nombre de lignes de code \(courbe bleue\).
 
@@ -402,7 +402,7 @@ Nous voyons que la dette technique était plus importante en 2013, quand le nomb
 
 Afin de comparer les tendances des différents projets, nous effectuons un test de Mann-Kendall sur les évolutions des différentes dettes techniques. Un valeur fortement positive indique une croissance monotone, une valeur fortement positive indique une décroissance monotone, et une valeur dont la valeur absolue est en deça d'un seuil \(ici, le seuil choisi est 3\) indique que la série temporelle n'a pas de tendance particulière.
 
-![](../.gitbook/assets/mann-kendall-td.png)
+![](./assets/mann-kendall-td.png)
 
 _Figure 16 - Représentation des tendances d'évolution de la dette technique pour les différents projets._
 
@@ -420,25 +420,25 @@ D'après les lois de Lehman, nous faisons cette observation si un effort est pro
 
 Nous allons maintenant observer la dette technique normalisée au nombre de lignes de code, c'est-à-dire observer si la dette technique grandit à la même vitesse que le nombre de lignes de code.
 
-Pour les quatre projets étudiés qui ont une dette technique décroissante dans le temps, nous nous attendons à ce que la dette technique normalisée diminue.![](../.gitbook/assets/theano-sqale.png)_Figure 17 - Dette technique normalisée du projet Theano._ 
+Pour les quatre projets étudiés qui ont une dette technique décroissante dans le temps, nous nous attendons à ce que la dette technique normalisée diminue.![](./assets/theano-sqale.png)_Figure 17 - Dette technique normalisée du projet Theano._ 
 
 Nous pouvons observer une grande chute au milieu de 2015, là où a eu lieu un des deux _refactors_ mentionnés auparavant. C'est parce que la dette technique a soudainement chuté sans que le nombre de lignes de code ne diminue. Le _refactor_ de 2017 n'apparaît pas aussi clairement car la chute de la dette technique a été accompagnée d'une baisse du nombre de lignes de code tout aussi importante.
 
 Les courbes de _pattern, pybrain et pyhsmm_ sont similaires.
 
-Il est plus intéressant de regarder les courbes des dettes techniques normalisées des trois projets ayant une dette technique croissante dans le temps.![](../.gitbook/assets/scikit-learn-sqale.png)_Figure 18 - Dette technique normalisée du projet scikit-learn._ 
+Il est plus intéressant de regarder les courbes des dettes techniques normalisées des trois projets ayant une dette technique croissante dans le temps.![](./assets/scikit-learn-sqale.png)_Figure 18 - Dette technique normalisée du projet scikit-learn._ 
 
 Le projet _scikit-learn_, bien qu'ayant une dette croissante dans le temps, présente une dette normalisée décroissante dans le temps. Cela signifie que la technique de développement assure que la dette ne grandit pas au même rythme que le projet, et qu'elle est de plus en plus petite relativement à la taille du projet.
 
-En revanche, les dettes techniques normalisées des projets _scikit-image et nilearn_ ne décroissent pas.![](../.gitbook/assets/nilearn-sqale.png)_Figure 19 - Dette technique normalisée du projet nilearn._ 
+En revanche, les dettes techniques normalisées des projets _scikit-image et nilearn_ ne décroissent pas.![](./assets/nilearn-sqale.png)_Figure 19 - Dette technique normalisée du projet nilearn._ 
 
-Nous observons que la dette technique relative à la taille du projet ne décroit pas ni n'augmente sur cinq ans.![](../.gitbook/assets/scikit-image-sqale.png)_Figure 20 - Dette technique normalisée du projet scikit-image._ 
+Nous observons que la dette technique relative à la taille du projet ne décroit pas ni n'augmente sur cinq ans.![](./assets/scikit-image-sqale.png)_Figure 20 - Dette technique normalisée du projet scikit-image._ 
 
 Le seul projet avec dont la dette technique suit une tendance croissante, _scikit-image_, possède une dette technique normalisée croissante dans le temps. Cela signifie que si cette tendance se poursuit, éventuellement la dette technique pourra arriver à un point critique \(car la dette technique grandit plus vite que le code\). Cependant, cette dette normalisée se situe entre 0,07 et 0,105, ce qui est très inférieur à la dette technique d'autre projets open source, tel que Apache Sling, pour lequel elle se situe en 0,55 et 0,45 \[3\]. Donc bien qu'elle soit croissante, cette croissance est très faible.
 
 Nous réalisons un autre test Mann-Kendall pour observer les tendances de la dette technique normalisée.
 
-![](../.gitbook/assets/mann-kendall-normalized-td.png)
+![](./assets/mann-kendall-normalized-td.png)
 
 _Figure 21 - Représentation des tendances d'évolution de la dette technique normalisée pour les différents projets._
 

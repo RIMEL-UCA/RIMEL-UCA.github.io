@@ -135,19 +135,19 @@ Après avoir obtenu nos résultats, nous arrivons aux données suivantes :
 
 **A. Bug**
 
-![](../.gitbook/assets/git04.png)
+![](./assets/git04.png)
 
 Pour ce qui est des bugs, nous pouvons constater sur les 8 projets analysés, 75% contiennent un ratio bug/ligne amplement supérieur pour les commits des contributeurs minoritaires par rapport aux majoritaires.
 
 **B. Vulnérabilités**
 
-![](../.gitbook/assets/git03.png)
+![](./assets/git03.png)
 
 Au niveau des vulnérabilités introduites, on reste sur un constat plus négligé, avec une répartition égale entre les groupes de contributeurs. Cependant, on note une différence très nette, dans un sens ou dans l'autre entre nos groupes de contributeurs sur cette métrique.
 
 **C. Code smell**
 
-![](../.gitbook/assets/git02.png)
+![](./assets/git02.png)
 
 Pour ce qui est du code smell par ligne de code, on repasse sur des contributions négatives effectuées en premier lieu \(75%\) par les contributeurs minoritaires. Il est intéressant de constater que la différence entre les 2 groupes est très forte si le ratio est dominé par les contributeurs minoritaires alors qu'à l'inverse, elle est presque négligeable si ce sont les contributeurs majoritaires qui apportent le moins bon ratio.
 
@@ -155,7 +155,7 @@ Cela met en avant une rigueur moins forte des contributeurs minoritaires sur ce 
 
 **D. Code dupliqué**
 
-![](../.gitbook/assets/git01.png)
+![](./assets/git01.png)
 
 Enfin, cette dernière métrique apporte des constatations très similaires avec pour un projet près d'une ligne sur 4 qui est dupliquée par les contributeurs minoritaires.
 
@@ -198,5 +198,5 @@ Pour reproduire cette expérimentation, il faut suivre les explications de chaqu
 4. C. Bird, N. Nagappan, P. Devanbu, H. Gall, and B. Murphy. Does distributed development affect software quality? an empirical case study of windows vista. In Proc. of the International Conference on Software Engineering, 2009
 5. A Wheeler, David. \(2001\). Why Open Source Software/Free Software \(OSS/FS\)? Look at the Numbers!.
 
-![](../.gitbook/assets/logo_uns%20%285%29.png) UCA : University Côte d'Azur \(french Riviera University\)
+![](./assets/logo_uns%20%285%29.png) UCA : University Côte d'Azur \(french Riviera University\)
 

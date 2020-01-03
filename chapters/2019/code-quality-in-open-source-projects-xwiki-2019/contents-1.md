@@ -313,7 +313,7 @@ Ainsi, cette étude n'est donc pas une conclusion en soit mais plutôt une porte
 * Le [système](https://jira.xwiki.org/secure/Dashboard.jspa) de tickets utilisé par _XWiki_.
 * Les [extensions](https://extensions.xwiki.org/xwiki/bin/view/Main/WebHome) _XWiki_.
 
-![](../.gitbook/assets/logo_uns_epu_uca.png)
+![](./assets/logo_uns_epu_uca.png)
 
 
 
