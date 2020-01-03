@@ -3,10 +3,9 @@ layout: default
 title:  "Chapters"
 date:   2020-01-02 22:00:00 +0100
 ---
-{% for chapter in site.chapters limit:4 %} {% include postsummary.html %} {% endfor %}
 
 ## 2020
-## 
+## [Model]({{ site.url }}/chapters/2020/Model/model2020)
 
 ## 2019
 ### [How to improve contributors onboarding]({{ site.url }}/chapters/2019/code-quality-in-open-source-projects-xwiki-2019/contents)
