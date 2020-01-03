@@ -1,3 +1,8 @@
+---
+layout: chapter
+date:   2020-01-03 22:00:00 +0100
+---
+
 # En quoi les dépendances influent la complexité d'un projet : Étude du projet ROCKFlows
 
 ## Auteurs
