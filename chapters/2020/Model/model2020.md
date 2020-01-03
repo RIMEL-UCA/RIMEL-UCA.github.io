@@ -24,7 +24,7 @@ Préciser ici votre contexte.
 
 Pourquoi c'est intéressant.
 
-![Figure 1: Logo UCA](../assets/model/UCAlogoQlarge.png=100x)
+![Figure 1: Logo UCA](../assets/model/UCAlogoQlarge.png){ width: 200px; }
 
 
 ## II. Observations/General question
