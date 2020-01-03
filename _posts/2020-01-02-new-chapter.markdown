@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "En quoi les dépendances influent la complexité d'un projet : Étude du projet ROCKFlows"
+date:   2020-02-2 23:31:04 +0100
+categories: jekyll update
+---
+
 # En quoi les dépendances influent la complexité d'un projet : Étude du projet ROCKFlows
 
 ## Auteurs
