@@ -12,8 +12,11 @@ This course aims to introduce Software maintenance by illustrative examples and 
 
 This work draws heavily on : <a href="https://www.gitbook.com/book/delftswa/desosa2016/details">2016</a>  and 
 <a href="https://legacy.gitbook.com/book/delftswa/desosa2018/details">2018</a> 
+<br/>
+<br/>
+<br/>
 </div>
-</span>
+
 
 
 <div class="span7">
