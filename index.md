@@ -15,13 +15,8 @@ subtitle: Reverse Engineering
 </span>
 
 
-<div class="span4">
-
-<b>RIMEL</b></br>
-
 <span>
   {% include sidebar_footer.html %}
 </span>
-</div>
 
 </div>
