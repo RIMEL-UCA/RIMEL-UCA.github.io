@@ -1,8 +1,10 @@
 ---
-layout: chapters
+layout: default
 title:  "Chapters"
 date:   2020-01-02 22:00:00 +0100
 ---
+{% for chapter in site.chapters limit:4 %} {% include postsummary.html %} {% endfor %}
+
 ## 2020
 ## 
 
