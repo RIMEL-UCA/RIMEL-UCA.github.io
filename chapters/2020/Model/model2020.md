@@ -1,3 +1,8 @@
+---
+layout: chapter
+date:   2020-01-03 22:00:00 +0100
+---
+
 # Format 2020
 
 **Date de rendu finale : March 2020 au plus tard**
