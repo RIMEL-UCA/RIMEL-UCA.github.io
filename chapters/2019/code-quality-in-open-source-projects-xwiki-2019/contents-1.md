@@ -205,19 +205,19 @@ Nous présentons dans cette partie les résultats de nos différentes expérienc
 
 Les données recueillies lors de cette expérience sont réparties par sous-projet. Elles indiquent le nombre actifs de bugs relevés lors de notre étude. Vous trouverez ci-dessous un  schéma retranscrivant nos résultats. 
 
-![Figure 2 : R&#xE9;sultats de l&apos;exp&#xE9;rience 1 - Pourcentage de bugs en fonction des sous-projets](../.gitbook/assets/bugs.png)
+![Figure 2 : R&#xE9;sultats de l&apos;exp&#xE9;rience 1 - Pourcentage de bugs en fonction des sous-projets](./assets/bugs.png)
 
 On remarque, sur la figure ci-dessus, que la majorité des bugs actifs semble liée au sous-projet _XWiki_ _Platform_. Nous pouvons également noter qu'une proportion non négligeable des bugs n'étant pas situés dans _XWiki_ _Platform_ se trouvent dans les deux sous-projets _XWiki_ _Rendering_ et _XWiki_ _Commons_. Il pourrait donc être intéressant d'analyser chacun de ces sous-projets.
 
 Cependant, comme indiqué plus haut, nous avons fait le choix de ne traiter qu'un seul sous-projet dans le cadre de cette étude.
 
-![Figure 3 : Les trois principaux sous-projets \(repositories\) de XWiki. ](../.gitbook/assets/commits.png)
+![Figure 3 : Les trois principaux sous-projets \(repositories\) de XWiki. ](./assets/commits.png)
 
 Comme nous pouvons le voir sur la _`Figure 3`_, _XWiki_ _Platform_ semble être de loin le sous-projet le plus populaire et important parmi ceux mentionnés plus haut. Étant également celui comportant le plus de bugs, nous nous sommes naturellement tournés vers celui-ci afin d'effectuer notre étude. 
 
 Vous trouverez ci-dessous sur la _`Figure 4`_  les types de bugs qui composent _XWiki Platform._
 
-![Figure 4 : Repr&#xE9;sentation des types de bugs pr&#xE9;sents dans XWiki Platform.](../.gitbook/assets/typesbug.png)
+![Figure 4 : Repr&#xE9;sentation des types de bugs pr&#xE9;sents dans XWiki Platform.](./assets/typesbug.png)
 
 Grâce à la _`Figure 4`_, nous pouvons noter qu'une grande partie des bugs présents dans _XWiki Platform_ sont majeurs. Des bugs majeurs pouvant donc indiquer l'apparition d’éléments bloquants venant entraver l'expérience utilisateur. Identifier la provenance de ces bugs pourraient donc nous aider à identifier les zones sensibles du sous-projet _XWiki Platform_. 
 
