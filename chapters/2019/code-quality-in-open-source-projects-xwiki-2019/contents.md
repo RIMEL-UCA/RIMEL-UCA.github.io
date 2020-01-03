@@ -215,15 +215,15 @@ Une KPI qui n'a pas vraiment été prise en compte est la complexité du projet,
 
 A l'instar du comportement des mainteneurs relevées dans le papier "Dear Open Source Project Leader: Quit Being A Jerk", Nous avons décidé d'étudier quelques commentaires de certains membres de l'équipe JUnit à l'égard de nouveaux contributeurs. Les réponses données à certains contributeurs qui demandent s'il peuvent essayer d'implémenter une fonctionnalité ne sont pas très encourageantes. Ce qui a pour effet de créer une sorte de "syndrome de la tour d'ivoire", ou en tout cas on relève un certain manque de tact.
 
-![Pas de r&#xE9;ponse pour les questions de ce pauvre contributeur](../.gitbook/assets/no-answer-to-question-issue.png)
+![Pas de r&#xE9;ponse pour les questions de ce pauvre contributeur](./assets/no-answer-to-question-issue.png)
 
-![Pull request ferm&#xE9;e, mainteneur &quot;qui n&apos;a pas le temps&quot; de review le code](../.gitbook/assets/denied-pull-request.png)
+![Pull request ferm&#xE9;e, mainteneur &quot;qui n&apos;a pas le temps&quot; de review le code](./assets/denied-pull-request.png)
 
-![Pas tr&#xE8;s encourageant de dire &quot;on promet rien&quot;](../.gitbook/assets/essaie-mais-on-promet-rien.png)
+![Pas tr&#xE8;s encourageant de dire &quot;on promet rien&quot;](./assets/essaie-mais-on-promet-rien.png)
 
 Pour confirmer mes propos je me suis rendu sur le **Gitter** de l'équipe JUnit, me suis fait passé pour un nouveau contributeur qui aimerait contribuer mais qui ne sait pas par où commencer. Le résultat est assez décevant... les membres de l'équipe JUnit ne m'ont pas répondu et ont continué leur discussion. C'est un contributeur externe qui m'a aiguillé sur une de ses _issues_ qu'il a fait il y'a quelques années et qui s'est proposé de m'aider si j'en avais besoin.
 
-![Capture d&apos;&#xE9;cran de la discussion sur Gitter](../.gitbook/assets/snobe.png)
+![Capture d&apos;&#xE9;cran de la discussion sur Gitter](./assets/snobe.png)
 
 Avec tous ces exemples, on peut en déduire que les contributions externes ne semble pas être une priorité pour l'équipe.
 
@@ -391,7 +391,7 @@ Le projet XWiki est composé de 8 dépôts. Nous avons choisi de concentrer notr
 
 Le dépôt de XWiki Platform comporte un community profile qui permet de mesurer à quel point le dépôt est conforme aux attentes standards de la communauté :
 
-![XWiki Platform community profile](../.gitbook/assets/xwiki-platform-community-standards.png)
+![XWiki Platform community profile](./assets/xwiki-platform-community-standards.png)
 
 #### Analyse des contributions
 
@@ -433,7 +433,7 @@ La première partie avec la question "Êtes-vous développeur ou avez vous déj�
 
 ![Diagramme de la situation des personnes interrog&#xE9;es, certains ont le sens de l&apos;humour, des chatons et des poilus notamment](../.gitbook/assets/1%20%281%29.png)
 
-![Premi&#xE8;re question de filtrage](../.gitbook/assets/2%20%281%29.png)
+![Premi&#xE8;re question de filtrage](./assets/2%20%281%29.png)
 
 La répartition des niveaux des personnes interrogées est assez uniforme, ainsi notre sondage touche plusieurs catégories de développeurs sans pour autant donner les résultats d'une majorité.
 
@@ -441,9 +441,9 @@ La répartition des niveaux des personnes interrogées est assez uniforme, ainsi
 
 La seconde partie contient une question sur le niveau d'expérience en développement de ces personnes ainsi qu'une question de filtrage.
 
-![Diagramme de la r&#xE9;partition de l&apos;exp&#xE9;rience en tant que d&#xE9;veloppeur des personnes interrog&#xE9;es](../.gitbook/assets/3.png)
+![Diagramme de la r&#xE9;partition de l&apos;exp&#xE9;rience en tant que d&#xE9;veloppeur des personnes interrog&#xE9;es](./assets/3.png)
 
-![Seconde question de ciblage](../.gitbook/assets/4%20%281%29.png)
+![Seconde question de ciblage](./assets/4%20%281%29.png)
 
 Nous avons utilisé cette seconde question pour filtrer notre panel de personnes interrogées et ainsi n'avoir que l'avis des personnes ayant déjà contribué, au moins une fois, à un projet open source. Notre échantillon passe alors à 139 personnes.
 
@@ -451,11 +451,11 @@ Nous avons utilisé cette seconde question pour filtrer notre panel de personnes
 
 Nous exposons uniquement ici les résultats permettant de confimer ou infirmer notre seconde hypothèse. Cette hypothèse envisage la complexité d'un projet et l'attitude de la communauté comme principaux freins à la contribution.
 
-![Apparemment l&apos;attitude des mainteneurs a une importance pour la majorit&#xE9; des personnes interrog&#xE9;es](../.gitbook/assets/7%20%281%29.png)
+![Apparemment l&apos;attitude des mainteneurs a une importance pour la majorit&#xE9; des personnes interrog&#xE9;es](./assets/7%20%281%29.png)
 
-![4 obstacles &#xE0; la contribution ressortent principalement avec la complexit&#xE9; du projet, l&apos;attitude des mainteneurs des projets, le manque de documentation et du code peu lisible.](../.gitbook/assets/9_4.png)
+![4 obstacles &#xE0; la contribution ressortent principalement avec la complexit&#xE9; du projet, l&apos;attitude des mainteneurs des projets, le manque de documentation et du code peu lisible.](./assets/9_4.png)
 
-![Apparemment notre premi&#xE8;re hypoth&#xE8;se &#xE9;tant loin d&apos;&#xEA;tre vraie, le social semble plus important dans la vie d&apos;un projet open source que la rigueur de son d&#xE9;veloppement.](../.gitbook/assets/9_5.png)
+![Apparemment notre premi&#xE8;re hypoth&#xE8;se &#xE9;tant loin d&apos;&#xEA;tre vraie, le social semble plus important dans la vie d&apos;un projet open source que la rigueur de son d&#xE9;veloppement.](./assets/9_5.png)
 
 ## VI. Conclusion
 
