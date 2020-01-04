@@ -1,5 +1,5 @@
 ---
-layout: chapter
+layout: default
 title : Modèle de chapitre pour 2020
 date:   2020-01-03 22:00:00 +0100
 ---
