@@ -14,7 +14,7 @@ date:   2020-01-03 22:00:00 +0100
     - Utilisez des références pour justifier votre argumentaire, vos choix etc.
 ---
 
-_janvier 2020_
+**_janvier 2020_**
 
 ## Authors
 
