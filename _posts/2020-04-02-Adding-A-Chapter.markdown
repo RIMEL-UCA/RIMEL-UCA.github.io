@@ -7,5 +7,5 @@ categories: jekyll update
 
 Pour ajouter un nouveau chapitre en 2020
  - Vous devez auparavant vous inscrire comme un membre de l'équipe github : Rimel 2020 @RIMEL-UCA/rimel-2020
-- Le livre sous github : ![github](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io)
+- Le livre sous ![github](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io)
 - Puis sous **chapters/2020** créer votre chapitre en suivant les instructions.
