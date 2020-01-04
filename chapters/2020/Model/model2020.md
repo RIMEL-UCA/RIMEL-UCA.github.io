@@ -4,9 +4,22 @@ title : Modèle de chapitre pour 2020
 date:   2020-01-03 22:00:00 +0100
 ---
 
+---
 
+**Date de rendu finale : March 2020 au plus tard**
 
-## janvier 2020
+> Respecter la structure pour que les chapitres soient bien indépendants
+
+Remarques :
+
+Les titres peuvent changer pour etre en adéquation avec votre étude.
+
+De même il est possible de modifier la structure, celle qui est proposée ici est là pour vous aider.
+
+Utilisez des références pour justifier votre argumentaire, vos choix etc.
+---
+
+_janvier 2020_
 
 ## Authors
 
