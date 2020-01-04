@@ -6,7 +6,7 @@ date:   2020-01-03 22:00:00 +0100
 
 ---
 
-> **Date de rendu finale : March 2020 au plus tard**
+> **Date de rendu finale : Mars 2020 au plus tard**
 > - Respecter la structure pour que les chapitres soient bien indépendants
 > - Remarques :
 >>    - Les titres peuvent changer pour etre en adéquation avec votre étude.
