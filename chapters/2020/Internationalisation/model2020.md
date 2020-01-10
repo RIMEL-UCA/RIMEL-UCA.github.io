@@ -23,7 +23,7 @@ We are four students in last year of Polytech' Nice-Sophia specialized in Softwa
 
 - prune.pillone@etu.unice.fr
 - gregoire.peltier@etu.unice.fr
-- hugo.françois@etu.unice.fr
+- hugo.francois@etu.unice.fr
 - marion.marguerettaz@etu.unice.fr
 
 ## I. Research context /Project
