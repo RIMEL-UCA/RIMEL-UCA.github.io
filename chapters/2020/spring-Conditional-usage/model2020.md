@@ -1,7 +1,7 @@
 ---
 layout: default
-title : Modèle de chapitre pour 2020
-date:   2020-01-03 22:00:00 +0100
+title : Comment est auto-configuré un projet Spring via les @Conditional ?
+date:   2020-01-11 22:00:00 +0100
 ---
 
 ---
