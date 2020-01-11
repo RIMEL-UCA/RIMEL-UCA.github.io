@@ -23,7 +23,7 @@ We are four students in last year of Polytech' Nice-Sophia specialized in Softwa
 
 * Romain GARNIER &lt;romain.garnier@etu.univ-cotedazur.fr&gt;
 * Enzo ROSTAING &lt;enzo.rostaing@etu.univ-cotedazur.fr&gt;
-* Sherine SOUMARE DIT SABAHTIER &lt;sherine.soumare-dit-sabathier@etu.univ-cotedazur.fr&gt;
+* Sherine SOUMARE DIT SABATHIER &lt;sherine.soumare-dit-sabathier@etu.univ-cotedazur.fr&gt;
 * Nadeur MOSBAH &lt;nadeur.mosbah@etu.univ-cotedazur.fr&gt;
 
 ## I. Research context /Project
