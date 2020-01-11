@@ -1,7 +1,7 @@
 ---
 layout: default
-title : Modèle de chapitre pour 2020
-date:   2020-01-03 22:00:00 +0100
+title : Comment est configuré un projet Spring via les @Conditional ?
+date:   2020-01-11 22:00:00 +0100
 ---
 
 ---
@@ -21,7 +21,10 @@ date:   2020-01-03 22:00:00 +0100
 
 We are four students in last year of Polytech' Nice-Sophia specialized in Software Architecture :
 
-* .... &lt;xxx@gmail.com&gt;
+* Brandon Fontany-Legall &lt;brandon.fontany--legall@etu.unice.fr&gt;
+* Thomas Mahe &lt;thomas.mahe@etu.unice.fr&gt;
+* Aymeric Valdenaire &lt;aymeric.valdenaire@etu.unice.fr&gt;
+* Michel Marmone--Marini &lt;michel.marmone--marini@etu.univ-cotedazur.fr&gt;
 
 ## I. Research context /Project
 
@@ -44,7 +47,13 @@ Cette première étape nécessite beaucoup de réflexion pour se définir la bon
 Préciser vos zones de recherches en fonction de votre projet,
 
 1. les articles ou documents utiles à votre projet
+
+Pour commencer nos recherches, nous avons prévu de trouver quelques projets open source (les plus conséquents possible) dans lesquels le framework Spring est utilisé. Nous avons commencé nos recherches de projets sur Github et Gitlab.
+
 2. les outils
+
+ Après avoir trouvé ces projets, nous prévoyons d'appliquer des scripts qui analyseront le code et d'autres qui analyseront des repo git pour trouver des informations telles que des mots clefs dans des fichiers (utilisation de @Conditional, @Resource, @Value) et d'autres mots clefs dans par exemple des messages de commit, titre d'issue pour pouvoir voir dans quels cas et pour quels besoins ces annotations ont été utilisées.
+ Nous avons aussi prévu de nous appuyer sur des outils d'analyse statique de code sur les projets trouvés précédemment tel que SonarQube.
  
 ## IV. Hypothesis & Experiences
 
@@ -63,5 +72,5 @@ Précisez votre utilisation des outils ou les développements \(e.g. scripts\) r
 
 ## VI. References
 
-1. ref1
+1. https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Conditional.html 
 1. ref2
