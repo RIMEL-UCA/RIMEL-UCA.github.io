@@ -49,6 +49,7 @@ Préciser vos zones de recherches en fonction de votre projet,
 1. les articles ou documents utiles à votre projet
 
 Pour commencer nos recherches, nous avons prévu de trouver quelques projets open source (les plus conséquents possible) dans lesquels le framework Spring est utilisé. Nous avons commencé nos recherches de projets sur Github et Gitlab.
+
 2. les outils
 
  Après avoir trouvé ces projets, nous prévoyons d'appliquer des scripts qui analyseront le code et d'autres qui analyseront des repo git pour trouver des informations telles que des mots clefs dans des fichiers (utilisation de @Conditional, @Resource, @Value) et d'autres mots clefs dans par exemple des messages de commit, titre d'issue pour pouvoir voir dans quels cas et pour quels besoins ces annotations ont été utilisées.
