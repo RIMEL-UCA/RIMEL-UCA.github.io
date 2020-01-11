@@ -21,7 +21,10 @@ date:   2020-01-03 22:00:00 +0100
 
 We are four students in last year of Polytech' Nice-Sophia specialized in Software Architecture :
 
-* .... &lt;xxx@gmail.com&gt;
+* Brandon Fontany-Legall &lt;brandon.fontany--legall@etu.unice.fr&gt;
+* Thomas Mahe &lt;thomas.mahe@etu.unice.fr&gt;
+* Aymeric Valdenaire &lt;aymeric.valdenaire@etu.unice.fr&gt;
+* Michel Marmone--Marini &lt;michel.marmone--marini@etu.univ-cotedazur.fr&gt;
 
 ## I. Research context /Project
 
