@@ -8,7 +8,7 @@ date:   2020-01-03 22:00:00 +0100
 
 We are four students in last year of Polytech' Nice-Sophia specialized in Software Architecture :
 
-* Laura LOPEZ &lt;laura.lopez@etu.unice.fr&gt;
+* Laura Lopez &lt;laura.lopez1@etu.unice.fr&gt;
 * Alexis Gardin &lt;alexis.gardin@etu.unice.fr&gt;
 * Hugo Croenne &lt;hugo.croenne@etu.unice.fr&gt;
 * Mathieu Paillart &lt;mathieu.paillart@etu.unice.fr&gt;
