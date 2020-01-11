@@ -1,6 +1,6 @@
 ---
 layout: default
-title : Comment est auto-configuré un projet Spring via les @Conditional ?
+title : Comment est configuré un projet Spring via les @Conditional ?
 date:   2020-01-11 22:00:00 +0100
 ---
 
