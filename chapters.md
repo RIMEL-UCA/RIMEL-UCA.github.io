@@ -6,7 +6,7 @@ date:   2020-01-02 22:00:00 +0100
 
 ## 2020
 ### [Model]({{ site.url }}/chapters/2020/Model/model2020)
-
+### [Quels problèmes résout l'utilisation de profils Maven dans les logiciels Open Source ?]({{ site.url }}/chapters/2020/MavenProfileInProjectTimeline/content)
 ## 2019
 ### [How to improve contributors onboarding]({{ site.url }}/chapters/2019/code-quality-in-open-source-projects-xwiki-2019/contents)
 ### [Les feature toggles créent-ils de la dette technique ?]({{ site.url }}/chapters/2019/code-analysis-2019/contents-1)

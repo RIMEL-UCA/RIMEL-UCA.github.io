@@ -21,7 +21,10 @@ date:   2020-01-03 22:00:00 +0100
 
 We are four students in last year of Polytech' Nice-Sophia specialized in Software Architecture :
 
-* .... &lt;xxx@gmail.com&gt;
+- prune.pillone@etu.unice.fr
+- gregoire.peltier@etu.unice.fr
+- hugo.francois@etu.unice.fr
+- marion.marguerettaz@etu.unice.fr
 
 ## I. Research context /Project
 
