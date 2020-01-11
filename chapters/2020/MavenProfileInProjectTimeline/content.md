@@ -1,10 +1,4 @@
-
----
-layout: chapter
-date:   2020-01-11 22:00:00 +0100
----
-
-# Quels problèmes résout l’utilisation de profils Maven dans les logicielsOpen Source ?
+# Quels problèmes résout l’utilisation de profils Maven dans les logiciels Open Source ?
 
 ## Auteurs
 
