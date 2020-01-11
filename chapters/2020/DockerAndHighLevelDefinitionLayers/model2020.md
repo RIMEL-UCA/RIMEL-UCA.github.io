@@ -19,9 +19,12 @@ date:   2020-01-03 22:00:00 +0100
 
 ## Authors
 
-We are four students in last year of Polytech' Nice-Sophia specialized in Software Architecture :
+Nous somme quatre étudiants en dernière année d'architecture logicielle à Polytech Nice-Sophia : 
 
-* .... &lt;xxx@gmail.com&gt;
+* BENAZET-LACARRE Laurent-Jérôme&lt;laurent-jerome.benazet-lacarre@etu.univ-cotedazur.fr&gt;
+* FRERE Baptiste &lt;baptiste.frere@etu.univ-cotedazur.fr&gt;
+* MENARD Noé &lt;noe.menard@etu.univ-cotedazur.fr&gt;
+* SALORD Florian &lt;florian.salord@etu.univ-cotedazur.fr&gt;
 
 ## I. Research context /Project
 
