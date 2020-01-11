@@ -72,5 +72,5 @@ Précisez votre utilisation des outils ou les développements \(e.g. scripts\) r
 
 ## VI. References
 
-1. ref1
+1. https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Conditional.html 
 1. ref2
