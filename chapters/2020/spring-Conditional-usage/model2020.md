@@ -40,6 +40,35 @@ En effet, Spring a essayé d'induire les cas d'utilisation des utilisateurs pour
 > 2. Préciser bien pourquoi cette question est intéressante de votre point de vue et éventuellement en quoi la question est plus générale que le contexte de votre projet \(ex: Choisir une libraire de code est un problème récurrent qui se pose très différemment cependant en fonction des objectifs\)
 > Cette première étape nécessite beaucoup de réflexion pour se définir la bonne question afin de poser les bonnes bases pour la suit.
 
+### Question Générale ...
+
+#### Est ce que conditionnal a été adopté ? 
+
+L'ajout de @Conditional en Spring 4 est la résultante d'une demande de la communauté.
+Il est donc intéressant de voir, à postériori, si cette annotation a été adopté par la communauté.
+
+#### Comment et pourquoi sont utilisés les différent type de @Conditional ?
+
+Il existe une multitude de variantes à l'annotation @Conditional
+- @ConditionalOnProperty
+- @ConditionalOnWebApplication
+- @ConditionalOnClass
+- @ConditionalOnMissingBean
+- @ConditionalOnExpression
+
+Il est intéressant de voir pourquoi autant de variantes existent et dans quelle context elles sont utilisés.
+
+#### Pourquoi @Profile a été remplacé par @Conditional , donc quelles sont leurs différences ?
+
+En version 3.1, Spring a intégré une nouvelle annotation qui est @Profiles. Cette annotation est utilisée pour initialiser des Beans en fonction des variables d'environnements.
+Après demande de la communauté, Spring a intégré en version 4 l'annotation @Conditional qui permet au développeurs de définir des stratégies pour ces conditions avec par exemple des conditions booléennes.
+
+Il est donc intéressant de voir pourquoi cette nouvelle annotation a été introduite pour remplacé une annotation déjà existante.
+
+#### Est-ce que @Conditional est vraiment utile et dans quel cas ? Comment configurer son projet sans l'utiliser ?
+
+
+
 ## III. information gathering
 
 > Préciser vos zones de recherches en fonction de votre projet,
@@ -72,3 +101,4 @@ Pour commencer nos recherches, nous avons prévu de trouver quelques projets ope
 
 1. https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Conditional.html 
 1. ref2
+
