@@ -4,19 +4,6 @@ title : Comment est configuré un projet Spring via les @Conditional ?
 date:   2020-01-11 22:00:00 +0100
 ---
 
----
-
-> **Date de rendu finale : Mars 2020 au plus tard**
-> - Respecter la structure pour que les chapitres soient bien indépendants
-> - Remarques :
->>    - Les titres peuvent changer pour etre en adéquation avec votre étude.
->>    - De même il est possible de modifier la structure, celle qui est proposée ici est là pour vous aider.
->>    - Utiliser des références pour justifier votre argumentaire, vos choix etc.
-
----
-
-**_janvier 2020_**
-
 ## Authors
 
 We are four students in last year of Polytech' Nice-Sophia specialized in Software Architecture :
@@ -44,39 +31,46 @@ Nous allons donc, dans notre étude, nous concentré sur cette nouvelle annotati
 
 
 ## II. Observations/General question
+### Comment sont configurés les projets Spring à l'aide de l'annotation @Conditionnal
 
+Nous nous sommes alors intéressé à ce changement effectué de @Profile vers @Conditional et notamment pourquoi @Profile a été remplacé par @Conditional.
+D'après ce que nous avons vu dans nos recherches, ce changement a été possé par une demande de la part de la communauté, il nous parrait donc intéressant quels sont les cas d'usage qui permettent une telle modification.
 
-> 1. Commencez par formuler une question sur quelque chose que vous observez ou constatez ou encore une idée émergente. Attention pour répondre à cette question vous devrez être capable de quantifier vos réponses.
-> 2. Préciser bien pourquoi cette question est intéressante de votre point de vue et éventuellement en quoi la question est plus générale que le contexte de votre projet \(ex: Choisir une libraire de code est un problème récurrent qui se pose très différemment cependant en fonction des objectifs\)
-> Cette première étape nécessite beaucoup de réflexion pour se définir la bonne question afin de poser les bonnes bases pour la suit.
+Pour ce faire, nous nous sommes poser plusieurs sous-questions 
 
-### Question Générale ...
+#### 1. Est-ce que le @Conditional à été adopté ?
 
-#### Est ce que conditionnal a été adopté ? 
+L'annotation a été poussée par la communauté, comme vu précédemment. 
+Il est donc, d'après nous, interessant de savoir si cette dernière à été adopté par la communauté.
+En effet, ceci permettrais de savoir si cette nouvelle annotation répond bien aux attentes qui ont entraîné sa création.
 
-L'ajout de @Conditional en Spring 4 est la résultante d'une demande de la communauté.
-Il est donc intéressant de voir, à postériori, si cette annotation a été adopté par la communauté.
+Pour se faire, nous pouvons regarder dans les projets Github utilisant Spring le taux d'appartion de l'annotation @Conditional
 
-#### Comment et pourquoi sont utilisés les différent type de @Conditional ?
+#### Comparaison de l’utilisation de @Profile et @Conditional
 
-Il existe une multitude de variantes à l'annotation @Conditional
-- @ConditionalOnProperty
-- @ConditionalOnWebApplication
-- @ConditionalOnClass
-- @ConditionalOnMissingBean
-- @ConditionalOnExpression
+Après l'introduction de la nouvelle annotation, il est interessant de savoir si l'ancienne annotation @Profile est remplacée par @Conditional.
 
-Il est intéressant de voir pourquoi autant de variantes existent et dans quelle context elles sont utilisés.
+Nous pouvons donc, pour faire ceci, récupérer la liste des git dif dans chaque projet Spring utilisant l'une des deux annotations.
+Nous aurons donc la liste des ajouts et retrait de chacune des annotations.
 
-#### Pourquoi @Profile a été remplacé par @Conditional , donc quelles sont leurs différences ?
+#### Comment sont utilisés les différentes variantes de @Conditional ?
 
-En version 3.1, Spring a intégré une nouvelle annotation qui est @Profiles. Cette annotation est utilisée pour initialiser des Beans en fonction des variables d'environnements.
-Après demande de la communauté, Spring a intégré en version 4 l'annotation @Conditional qui permet au développeurs de définir des stratégies pour ces conditions avec par exemple des conditions booléennes.
+Nous avons observer que l'annotation @Conditional n'a pas été seul. 
+En effet, une multitude de variantes ont été introduites qui sont :
+- @ConditionalOnProperty : @Conditional qui check si une propriété, qui par défaut est présente dans l'environnement a une valeur spécifique
+- @ConditionalOnWebApplication : @Conditional qui est valide dans le cas où l'application courante est une application web. Cette application web peut notamment être de type spécifique, dont le mode servlet ou réactive.
+- @ConditionalOnClass : @Conditional qui est valide uniquement si la classe spécifiée est présente dans le classpath.
+- @ConditionalOnMissingBean: @Conditional qui est valide uniquement quand aucun autre bean n'est pas déjà instancié.
+- @ConditionalOnExpression : @Conditional en basé sur les résultats SpEL (Spring Expression Language)
 
-Il est donc intéressant de voir pourquoi cette nouvelle annotation a été introduite pour remplacé une annotation déjà existante.
+Il est donc intéressant de savoir comment la communauté Spring utilise ces annotations. 
+Pour ce faire, nous allons regarder les occurences dans les différents projets Spring de chaque variantes et voir dans quel contexte avec les raisons d'ajout/remplacement.
 
-#### Est-ce que @Conditional est vraiment utile et dans quel cas ? Comment configurer son projet sans l'utiliser ?
+#### Quels autres mécanismes peuvent remplacer @Conditional ?
 
+#### Est-ce que @Conditional est vraiment utile et dans quels cas ?  Comment configurer son projet sans @Conditional ?
+
+#### Comparaison de l’utilisation de @Conditional dans le code et dans les tests
 
 
 ## III. information gathering
