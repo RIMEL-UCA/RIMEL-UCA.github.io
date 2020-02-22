@@ -75,17 +75,23 @@ Pour ce faire, nous allons regarder les occurences dans les différents projets 
 
 ## III. information gathering
 
-> Préciser vos zones de recherches en fonction de votre projet,
+### La récupération des projets
+Pour la base de nos recherches, nous avons utilisé les projets Github que nous allons récupérer par clonnagede façon automatique.
+Bien évidemment, tout les projets Github ne sont pas interessant pour nous et c'est pourquoi nous devons mettre des règles de filtrage et notamment en utilisant l'API de Github.
+- Pour commencer, le projet doit contenir du java ce qui va permettre d'écarter énormément de projets
+- De plus, nous avons, trier par mot clé à l'aide du mot clé "spring"
+- Pour finir, nous avons prit les projets avec le plus d'étoiles pour prendre les projets qui ont le plus d'étoile et qui sont donc susceptiblement plus intéressant à étudier
 
-1. les articles ou documents utiles à votre projet
+### La récupération de données dans les projets
+Une fois les projets récupérés, nous avons utilisé des scripts Python pour récupérer les différentes données.
 
-Pour commencer nos recherches, nous avons prévu de trouver quelques projets open source (les plus conséquents possible) dans lesquels le framework Spring est utilisé. Nous avons commencé nos recherches de projets sur Github et Gitlab.
+#### Pydriller
+Pydriller est un framework Python qui permet d'analyser les répositories Git.
+Nous pouvons faire notamment des analises de commits ou encore de diffs par exemple.
 
-2. les outils
+#### Autre scripts
+En addition à Pydriller, nous avons effectué de multiples codes python pour analyser le code des différents projets.
 
- Après avoir trouvé ces projets, nous prévoyons d'appliquer des scripts qui analyseront le code et d'autres qui analyseront des repo git pour trouver des informations telles que des mots clefs dans des fichiers (utilisation de @Conditional, @Resource, @Value) et d'autres mots clefs dans par exemple des messages de commit, titre d'issue pour pouvoir voir dans quels cas et pour quels besoins ces annotations ont été utilisées.
- Nous avons aussi prévu de nous appuyer sur des outils d'analyse statique de code sur les projets trouvés précédemment tel que SonarQube.
- 
 ## IV. Hypothesis & Experiences
 
 > 1. Il s'agit ici d'énoncer sous forme d' hypothèses ce que vous allez chercher à démontrer. Vous devez définir vos hypothèses de façon à pouvoir les _mesurer facilement._ Bien sûr, votre hypothèse devrait être construite de manière à v_ous aider à répondre à votre question initiale_.Explicitez ces différents points.
@@ -97,12 +103,11 @@ Pour commencer nos recherches, nous avons prévu de trouver quelques projets ope
 
 > 1. Analyse des résultats & construction d’une conclusion : Une fois votre expérience terminée, vous récupérez vos mesures et vous les analysez pour voir si votre hypothèse tient la route. 
 
-## VI. Tools \(facultatif\)
-
-> Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à \(1\) pouvoir reproduire vos expériementations, \(2\) partager/expliquer à d'autres l'usage des outils.
-
 ## VI. References
 
-1. https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Conditional.html 
-1. ref2
+1. https://docs.spring.io/spring-framework/docs/current/javadoc-api/overview-summary.html
+2. https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/context/annotation/Conditional.html 
+3. https://github.com
+4. https://blog.ippon.fr/2014/01/07/conditional-de-spring-4-au-coeur-de-lauto-configuration-de-spring-boot/
+5. https://javapapers.com/spring/spring-conditional-annotation/ 
 
