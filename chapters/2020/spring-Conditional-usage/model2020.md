@@ -94,10 +94,32 @@ En addition à Pydriller, nous avons effectué de multiples codes python pour an
 
 ## IV. Hypothesis & Experiences
 
-> 1. Il s'agit ici d'énoncer sous forme d' hypothèses ce que vous allez chercher à démontrer. Vous devez définir vos hypothèses de façon à pouvoir les _mesurer facilement._ Bien sûr, votre hypothèse devrait être construite de manière à v_ous aider à répondre à votre question initiale_.Explicitez ces différents points.
-> 2. Test de l’hypothèse par l’expérimentation. 1. Vos tests d’expérimentations permettent de vérifier si vos hypothèses sont vraies ou fausses. 2. Il est possible que vous deviez répéter vos expérimentations pour vous assurer que les premiers résultats ne sont pas seulement un accident.
-> 3. Explicitez bien les outils utilisés et comment.
-> 4. Justifiez vos choix
+### Première analyse 
+Nous avons prit comme hypothèse de départ que l'annotation avait été adoptée.
+Pour vérifier cette hypothèse nous avons récupérer des projets et regarder le nombre d'apparition dans ces projets.
+
+Dans cette première expérimentation, nous avons prit 12 projets choisit au préalable. 
+![Projet par commits](./assets/projectsByCommits.png)
+
+Nous avons notamment, dans les plus remarquable, BroadleafCommerce qui est un framework de site e-commerce, Spring security qui fournit un service de sécurité pour Spring ou encore Spring IDE qui améliore Eclipse avec des outils pour créer des applications basées sur Spring.
+
+Avec ce dataset, nous avons analysé le nombre d'occurence de @Conditional. 
+![Occurences des Conditional](./assets/firstProjectsConditionalOccurences.png)
+
+Nous nous sommes donc apercu que, au niveau du datase choisit, l'utilisation des annotations dépend du projet et donc du contexte.
+Nous avons aussi analysé les différentes variantes dans le projet BroadLeafCommerce qui utilise le plus de Conditional de notre dataset.
+
+![Occurences des variantes de Conditional](./assets/firstProjectsConditionalVariants.png)
+
+Nous nous sommes apperçu qu'une annotation en particulière dans ce projet est utilisée (@ConditionalOnTemplating).
+Or, cette annotation n'est pas une annotation existante dans Spring mais une annotation créée par BroadLeafCommerce.
+Cette fameuse annotation créée utilise une classe de mathcher qui correspond à l'ancienne implémentation via @Profile.
+Nous avons donc déjà une première réponse à notre questionnement.
+
+Cependant, ce dataset n'est pas assez grand pour en sortir des conclusions.
+
+### Agrandissement du dataset
+ 
 
 ## V. Result Analysis and Conclusion
 
@@ -110,4 +132,7 @@ En addition à Pydriller, nous avons effectué de multiples codes python pour an
 3. https://github.com
 4. https://blog.ippon.fr/2014/01/07/conditional-de-spring-4-au-coeur-de-lauto-configuration-de-spring-boot/
 5. https://javapapers.com/spring/spring-conditional-annotation/ 
+6. https://github.com/BroadleafCommerce/BroadleafCommerce
+7. https://github.com/spring-projects/spring-security
+8. https://github.com/spring-projects/spring-ide
 
