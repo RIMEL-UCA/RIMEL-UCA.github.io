@@ -28,13 +28,23 @@ We are four students in last year of Polytech' Nice-Sophia specialized in Softwa
 
 ## I. Research context /Project
 
-Spring étant de plus en plus utilisé dans le monde de l'entreprise, il est intéressant de voir comment créer et configurer les projets Spring. En effet, @Conditional permet la mise en place de conditions pour la création de Bean.
-En effet, Spring a essayé d'induire les cas d'utilisation des utilisateurs pour la création de Bean. Il est donc intéressant de voir son adoption par la communauté Spring.
+Spring est un framework qui permet de concevoir des applications Java plus simplement. Spring fournit un ensemble d'annotation pour aider le développeur dans la confection de son application. 
+Spring nous permet notamment de créer des composant et de les faire communiquer simplement. 
+
+Dans ce context, il est intéressant de voir comment créer et configurer les dit composant dans les projets Spring. 
+Nous allons plus spécifiquement étudier comment configurer la création de beans en fonction de conditions au préalable défini.
+
+Dans cette optique, Spring 3.1 a introduit l'annotation @Profile qui permet de créer des beans en fonction des profils qui sont en général défini dans les fichiers de configuration xml.
+Dans Spring 4, l'annotation @Profile existe toujours cependant une nouvelle anotation a été introduite qui est @Conditional. Cette annotation permet, tout comme @Profile, de configurer les beans. 
+Cependant, @Conditional permet de créer une configuration sans profile préalable, notamment basé sur des stratégies sous format booléennes. Cette nouvelle approche permet une plus grande liberté de création de stratégie, notamment, n'importe quelle statégie peut être utilisée tant qu'elle est testable par valeur booléenne.
+
+Nous allons donc, dans notre étude, nous concentré sur cette nouvelle annotation @Conditional et quels sont les impacts de cette annotation sur les projets Srping.
 
 ![Figure 1: Logo UCA](../assets/model/UCAlogoQlarge.png){:height="50px" }
 
 
 ## II. Observations/General question
+
 
 > 1. Commencez par formuler une question sur quelque chose que vous observez ou constatez ou encore une idée émergente. Attention pour répondre à cette question vous devrez être capable de quantifier vos réponses.
 > 2. Préciser bien pourquoi cette question est intéressante de votre point de vue et éventuellement en quoi la question est plus générale que le contexte de votre projet \(ex: Choisir une libraire de code est un problème récurrent qui se pose très différemment cependant en fonction des objectifs\)
