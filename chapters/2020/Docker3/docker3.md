@@ -54,7 +54,7 @@ Commençons par définir ce qu'est pour nous la simplicité :
 Un code simple est un code lisible, c'est-à-dire structuré; mais c'est aussi un code maintenable, donc flexible et extensible.
 
 Afin de faciliter notre étude, nous avons restreint notre analyse en étudiant l'influence d'un seul type de configuration haut-niveau de Docker : les variables d'environnements; 
-qui parmi toutes les autres façons de configurer des containers Docker (Volumes, Ports, Restart Policies, File Systems...), à le plus de chance d'être utilisée dans le code, 
+qui parmi toutes les autres façons de configurer des containers Docker (Volumes, Ports, Restart Policies, File Systems...), ont le plus de chance d'être utilisée dans le code, 
 et donc d'influencer directement nos critères de simplicité.  
 
 ## III. Rassemblement d'informations
@@ -117,10 +117,17 @@ Damien, Soufiane s'exprimera ...
 
 ## IV. Hypothèse et Démarche
 
-1. Il s'agit ici d'énoncer sous forme d' hypothèses ce que vous allez chercher à démontrer. Vous devez définir vos hypothèses de façon à pouvoir les _mesurer facilement._ Bien sûr, votre hypothèse devrait être construite de manière à v_ous aider à répondre à votre question initiale_.Explicitez ces différents points.
-2. Test de l’hypothèse par l’expérimentation. 1. Vos tests d’expérimentations permettent de vérifier si vos hypothèses sont vraies ou fausses. 2. Il est possible que vous deviez répéter vos expérimentations pour vous assurer que les premiers résultats ne sont pas seulement un accident.
-3. Explicitez bien les outils utilisés et comment.
-4. Justifiez vos choix
+Avec la réduction de scope décrite précédemment, l'hypothèse que nous allons essayer de vérifier est la suivante :
+
+**_Hypothèse_ : L'ajout de variables d'environnements rend le code moins complexe** 
+
+Expliquer pourquoi on choisit cette hypothèse ...
+
+Pour prouver cette hypothèse, nous avons établi le protocole suivant :
+
+Description du protocole ... Etablir le lien avec les outils utilisés (et comment). Justifier en quoi ce protocole permettra de vérifier 
+ou pas l'hypothèse.
+
 
 ## V. Présentations des résultats et de l'analyse
 
