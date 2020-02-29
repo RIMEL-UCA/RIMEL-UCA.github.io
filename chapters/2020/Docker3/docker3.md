@@ -134,7 +134,7 @@ ou pas l'hypothèse.
 1. Analyse des résultats & construction d’une conclusion : Une fois votre expérience terminée, vous récupérez vos mesures et vous les analysez pour voir si votre hypothèse tient la route. 
 2. Conclusion de l'analyse
 
-## VII. Description de la partie automatisée
+## VI. Description de la partie automatisée
 
 1. **Automatisation de la détection des variables d'environnement**
 
@@ -153,12 +153,30 @@ A partir de ce script, on peut extraire la liste de variables d'environnements d
 
 2. 
 
-## VIII. Menaces à la validité
+## VII. Menaces à la validité
 
 1. Peu de projets analysés
 2. Peu de données
 Peu d'utilisation concrètes de variables d'environnement dans le code trouvées dans les projets
 3. Plus de visualisation
+
+## VIII. Recul sur le projet
+
+Tout d'abord, ce projet (par extension, cette matière) a été très enrichissant pour nous car il nous a permis de nous initier
+aux problématiques de recherche, et on a pu avoir un avant-goût de ce qui peut être réalisé durant
+un doctorat par exemple.
+
+En prenant un peu de recul sur la manière dont nous avons apréhender le projet et la problématique, nous aurions pu diriger notre analyse 
+non pas sur la qualité du code business, mais sur la qualité du code d'infrastructure.
+
+En effet, nous mettons en avant la différence entre ces deux types de code car nous nous sommes aperçus que les configurations Docker ne peuvent avoir qu'un impact limité (et indirect)
+sur la qualité du code business. 
+
+En revanche, il aurait été intéressant d'évaluer la qualité du code qui décrit l'infrastructure conteneurisée, c'est-à-dire, essayer de mesurer la simplicité, la qualité des Dockerfiles, docker-compose, 
+en établissant et utilisant des métriques spécifiques pour mesurer la qualité d'un code d'infrastructure. 
+
+Globalement, l'idée serait de traduire chaque docker-compose par exemple en un graphe décrivant toutes les configurations Docker présentes et comment est-ce que ces derniers lient les conteneurs;
+et à partir de ce graphe, réaliser des études sur sa forme et sa compléxité, en utilisant pourquoi pas du machine learning pour entraîner un modèle qui determinera la qualité d'un code d'infrastructure. 
 
 ## IX. References
 
