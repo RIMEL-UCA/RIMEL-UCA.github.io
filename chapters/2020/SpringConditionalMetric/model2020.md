@@ -6,7 +6,7 @@ date:   2020-01-03 22:00:00 +0100
 
 ## Authors
 
-We are four students in last year of Polytech' Nice-Sophia specialized in Software Architecture :
+Nous sommes quatre étudiants en dernière année à Polytech Nice Sophia en architecture logicielle :
 
 * Laura Lopez &lt;laura.lopez1@etu.unice.fr&gt;
 * Alexis Gardin &lt;alexis.gardin@etu.unice.fr&gt;
@@ -49,7 +49,7 @@ Apportant un ensemble de questions sous-jacentes
 
 ### Quelle annotation de configuration est la plus utilisée parmi les existantes ? 
 
-Nous avons pu relever plusieurs annotations de configuration, celle qui nous intéress pour cette étude est @Conditional mais nous avons tout de suite pensé qu'il serait intéressant de la mettre en corrélation avec ses semblables. 
+Nous avons pu relever plusieurs annotations de configuration, celle qui nous intéressée pour cette étude est @Conditional mais nous avons tout de suite pensé qu'il serait intéressant de la mettre en corrélation avec ses semblables. 
 
 ### Pour quel type de configuration est utilisé chaque annotation ? 
 
@@ -123,9 +123,9 @@ Les projets utilisés pour cette étude sont les suivants:
  'zalando/riptide',
  'spring-projects/spring-framework',
  'eugenp/tutorials',
- 'INRIA/spoon'
- spring-cloud-projects
- spring-boot projects
+ 'INRIA/spoon',
+ 'spring-cloud-projects',
+ 'spring-boot projects'
 
 Afin d'optimiser nos recherches, nous les avons automatisées à l'aide de scripts en Python. Le développement python était effectué sur l'outil Jupyter Notebook. 
 
@@ -140,5 +140,20 @@ Nous avons choisi cette application car elle apportait plusieurs avantages :
 
 ## VI. References
 
-1. ref1
-1. ref2
+[Mining Implicit Design Templates for Actionable Code Reuse](http://linyun.info/micode/micode.pdf)  
+[Are Developers Aware of the Architectural Impact of Their Change](http://www0.cs.ucl.ac.uk/staff/j.krinke/publications/ase17.pdf)  
+[Titan: A Toolset That Connects Software Architecture with Quality Analysis](https://www.cs.drexel.edu/~lx52/LuXiao/papers/FSE-TD-14.pdf)  
+[https://github.com/naver/pinpoint](https://github.com/naver/pinpoint)  
+[https://github.com/permazen/permazen](https://github.com/permazen/permazen)  
+[https://github.com/jeremylong/DependencyCheck](https://github.com/jeremylong/DependencyCheck)  
+[https://github.com/micronaut-projects/micronaut-core](https://github.com/micronaut-projects/micronaut-core)  
+[https://github.com/zkoss/zk](https://github.com/zkoss/zk)  
+[https://github.com/spring-projects/spring-boot](https://github.com/spring-projects/spring-boot)  
+[https://github.com/typetools/checker-framework](https://github.com/typetools/checker-framework)  
+[https://github.com/debezium/debezium](https://github.com/debezium/debezium)  
+[https://github.com/spring-io/sagan](https://github.com/spring-io/sagan)  
+[https://github.com/eclipse/hawkbit](https://github.com/eclipse/hawkbit)  
+[https://github.com/zalando/riptide](https://github.com/zalando/riptide)  
+[https://github.com/spring-projects/spring-framework](https://github.com/spring-projects/spring-framework)  
+[https://github.com/eugenp/tutorials](https://github.com/eugenp/tutorials)
+[https://github.com/INRIA/spoon](https://github.com/INRIA/spoon)
