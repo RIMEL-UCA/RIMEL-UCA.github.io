@@ -63,9 +63,6 @@ Préciser vos zones de recherches en fonction de votre projet,
 
 1. les articles ou documents utiles à votre projet
 
-Afin de mener à bien notre étude nos avons tout d'abord dû 
-python + jupyter notebook + github
- 
 ## IV. Hypothesis & Experiences
 
 ### Hypothèse n°1 : L'annotation @Conditional est utilisée dans des fichiers de configuration. 
@@ -88,13 +85,6 @@ La je vais, par projet, regarder la répartition des Annotation @Conditional et 
 pour voir si on peut dire
 Sur les 14 projet analyser le taux de @Conditional était Superieur pour les libs et @Value pour les projet concret
 
-Hypothèses émises : 
-Nous avions l'intuition dès le départ que l'annotation @Conditional était utilisée principalement au niveau de fichiers de configuration.
-Nous avions l'intuition que l'annotation @Conditional était très utilisée au sein de framework.
-Nous avions l'intuition que potentiellement plusieurs @Value identiques étaient utilisées au sein d'un même projet de manière transverse.
-
-Pour démontrer ces hypothèses, nous avons effectuer des expérimentations automtisées sous forme de scripts python et également des expérimentations à la main dans certains cas. 
-
 Tout d'abord, nous avons cherché à savoir quelle annotation @Conditional était la plus utilisée et où. 
 
 Ensuite, nous avons souhaité comparer sa fréquence avec d'autres annotations de configuration.
@@ -115,9 +105,38 @@ Pour finir, comparaison de @Value/@Profile/@Conditional/@Ressource
 
 à ne pas oublier : le biais d'utiliser uniquement github (modifié) 
 
-## VI. Tools \(facultatif\)
+## VI. Tools
 
-Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à \(1\) pouvoir reproduire vos expériementations, \(2\) partager/expliquer à d'autres l'usage des outils.
+Afin de mener à bien notre étude nous avons eu besoin de constituer un dataset de projets utilisant Spring. Pour cela, nous nous sommes servis de la plateforme d'hébergement et de développement, basée sur le gestionnaire de version Git : Github. La plateforme contient des milions de projets qui nous ont permis d'établir un dataset complet et exhaustif. 
+
+Les projets utilisés pour cette étude sont les suivants:  
+'naver/pinpoint',
+ 'permazen/permazen',
+ 'jeremylong/DependencyCheck',
+ 'micronaut-projects/micronaut-core',
+ 'zkoss/zk',
+ 'spring-projects/spring-boot',
+ 'typetools/checker-framework',
+ 'debezium/debezium',
+ 'spring-io/sagan',
+ 'eclipse/hawkbit',
+ 'zalando/riptide',
+ 'spring-projects/spring-framework',
+ 'eugenp/tutorials',
+ 'INRIA/spoon'
+ spring-cloud-projects
+ spring-boot projects
+
+Afin d'optimiser nos recherches, nous les avons automatisées à l'aide de scripts en Python. Le développement python était effectué sur l'outil Jupyter Notebook. 
+
+### Jupyter Notebook 
+
+Nous avons choisi cette application car elle apportait plusieurs avantages :
+
+* visualisation des résultats
+* mémoire en cache des exécutions des scripts, ce qui a permi d'accélérer le développement car les scripts n'ont pas besoin d'être relancés à chaque fois
+* scripts partagés avec Jupyter Notebook Collaboration au sein desquels le stockage des projets clonés se fait directement dans le cloud (Google Drive). 
+
 
 ## VI. References
 
