@@ -1,7 +1,7 @@
 ---
 layout: default
 title : Modèle de chapitre pour 2020
-date:   2020-01-03 22:00:00 +0100
+date:   2020-02-28 22:00:00 +0100
 ---
 
 ---
@@ -21,7 +21,10 @@ date:   2020-01-03 22:00:00 +0100
 
 We are four students in last year of Polytech' Nice-Sophia specialized in Software Architecture :
 
-* .... &lt;xxx@gmail.com&gt;
+* Corentin Artaud &lt;corentin.artaud@etu.unice.fr&gt;
+* Théos Mariani &lt;theos.mariani@etu.unice.fr&gt;
+* Elena Moron Vidal &lt;elena.moron-vidal@etu.unice.fr&gt;
+* Alexandre Bolot &lt;alexandre.bolot@etu.unice.fr&gt;
 
 ## I. Research context /Project
 
@@ -29,8 +32,7 @@ Préciser ici votre contexte.
 
 Pourquoi c'est intéressant.
 
-![Figure 1: Logo UCA](../assets/model/UCAlogoQlarge.png){:height="50px" }
-
+![Figure 1: Logo UCA](../assets/model/UCAlogoQlarge.png)
 
 ## II. Observations/General question
 
