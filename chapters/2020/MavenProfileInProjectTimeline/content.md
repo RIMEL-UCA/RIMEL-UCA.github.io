@@ -60,7 +60,7 @@ La zone de recherche se situe dans un ensemble de projet *Open Source*. Nous avo
 ### Recherche de POM sur GitHub
 
 Notre objectif est d'obtenir un *dataset* assez conséquent pour pouvoir essayer d'atteindre une analyse complète de nos questions. Il faut donc rechercher sur GitHub des fichiers `pom.xml` contenant une balise `<profile>`. Cette recherche peut s'effectuer manuellement via l'interface de GitHub : 
-https://github.com/search?l=Maven+POM&q=profile+filename%3Apom.xml&type=Code
+<a href="https://github.com/search?l=Maven+POM&q=profile+filename%3Apom.xml&type=Code">https://github.com/search?l=Maven+POM&q=profile+filename%3Apom.xml&type=Code</a>
 Cette requête peut également se faire de manière automatique grâce à l'API et pourra donc être intégré dans un script automatique de récupération de ces POMs.
 
 Cette recherche nous donne donc les résultats attendus. Cependant, l'API de recherche GitHub limite la réponse à 1000 résultats dû à la grande quantité de données qu'elle pourrait nous renvoyer. Ce qui reste assez bloquant car cela ne nous donne pas un *dataset* assez conséquent.
@@ -107,21 +107,16 @@ Afin de réduire l'espace de recherche de notre premier *dataset*, nous avons d�
 - Nombre de contributeurs au dépôt
 - Nombre de releases GitHub
 
-Afin de pouvoir facilement récupérer des statistiques, nous avons utilisé un script en R.
+Afin de pouvoir facilement récupérer des statistiques, nous avons utilisé un script en R. Voici la commande que nous avons utilisé pour avoir ces résultats : 
+`cat results/stats.csv | cut -d ';' -f1 | ./stats.r` (indiquant `-f1`, `-f2`, `-f3` pour faire varier les critères)
 
-| Critère       | Min | Q1 | Médiane | Moyenne | Q3 | Max   | Écart-type |
-|---------------|:---:|:--:|:-------:|:-------:|:--:|:-----:|:----------:|
-| Contributeurs |  0  | 1  |    1    | 5.05    | 2  | 100   | 15.87988   |
-| Commits       |  0  | 2  |    9    | 477.3   | 48 | 37501 | 2766.255   |
-| Releases      |  0  | 0  |    0    | 0.5469  | 0  | 100   | 4.527333   |
+![table_decile_stats.png](../assets/MavenProfileInProjectTimeline/table_criteria_stats.png)
 
 Le critère intéressant ici est sur le nombre de commits. En effet, on remarque que la notion de releases beaucoup utilisé sur notre dataset et donc peu pertinent pour nous. Et le nombre de contributeurs varie très peu avec seulement en moyenne 5 contributeurs par projets. Nous allons donc nous concentrer sur le nombre de commits dans un projet.
 
 Cependant, ces statistiques aggrégés ne suffisent pas à correctement filtrer les dépôts par leur nombre de commits : À partir de quelle limite on peut raisonnablement choisir un dépôt ? Pour répondre à cela, nous avons décidé de calculer le décile sur ce critère : 
 
-| 0% | 10% | 20% | 30% | 40% | 50% | 60% | 70%  | 80%   | 90% | 100%  |
-|:--:|:---:|:---:|:---:|:---:|:---:|:---:|:----:|:-----:|:---:|:-----:|
-| 0  |  0  |  0  |  1  |  3  |  7  | 18  | 49.1 | 188.4 | 407 | 37501 |
+![table_decile_stats.png](../assets/MavenProfileInProjectTimeline/table_decile_stats.png)
 
 Ainsi, nous pouvons voir que 90% de notre *dataset* comporte plus de 407 commits. Ce qu'ils nous parez raisonnable pour réduire notre dataset, en sachant que celui et à plus de 5000 POMs, nous allons donc obtenir 500 POMs pour notre *dataset* réduit.
 
@@ -170,29 +165,44 @@ Les technologies recherchées sont :
 
 ### Question 1 : Quels sont les différents types de Maven profiles dans les projets Open Source ?
 
+*Rappel : Les analyses de cette question ont été réalisées sur la base de données contenant 5323 POMs et possèdant en tout 18 431 Maven profiles (base numéro 1).* <br/>
 Nous avons choisi d'établir des catégories en fonction des noms majoritaires des *profiles*. En effet, ces derniers peuvent avoir des noms très différents, mais certains ne sont en fait que très peu utilisés comparé au nombre total de *profiles*. Les noms qui ressortaient le plus nous ont servi de catégories afin de regrouper par exemple "dev" et "development" ou encore "include-java-sources" et "include-binaries". On peut le constater sur le diagramme de répartition des noms : 
 
-![profiles-names.png](https://raw.githubusercontent.com/RIMEL-UCA/RIMEL-UCA.github.io/maven-profile-timeline/chapters/2020/assets/MavenProfile_Timeline_Profile-names.png)
+![profiles-names.png](../assets/MavenProfileInProjectTimeline/Profile-names.png)
 
-A partir de ce diagramme, nous les avons regroupés par catégorie. Nous avons fait le choix d'établir des ensembles disjoints pour ne pas avoir d'ambigüité, c'est-à-dire que si un *profile* est dans une catégorie, il ne peut pas figurer dans une autre.
+À partir de ce diagramme, nous les avons regroupés par catégorie. Nous avons fait le choix d'établir des ensembles disjoints pour ne pas avoir d'ambigüité, c'est-à-dire que si un *profile* est dans une catégorie, il ne peut pas figurer dans une autre.
 
 Le diagramme ci-dessous montre le résultat de nos expérimentations, en pourcentage par rapport au 18 431 profiles stockés, leur répartition selon s'ils contiennent les différents termes dans leur nom.
 
-![profiles-categories.png](https://raw.githubusercontent.com/RIMEL-UCA/RIMEL-UCA.github.io/maven-profile-timeline/chapters/2020/assets/MavenProfile_Timeline_profiles-categories.png)
+![profiles-categories.png](../assets/MavenProfileInProjectTimeline/profiles-categories.png)
 
 
 Parmi ces catégories, nous remarquons que les différentes phases de développement sont très présentes avec les catégories ```dev``` et ```prod```. Ces *profiles* servent donc à configurer les *build* en fonction du type de phase de développement dans lequel il est utilisé. Des profiles servent aussi beaucoup à lancer des actions particulières comme ```release``` et ```test```. Ensuite, on remarque que les *profiles* sont beaucoup utilisés afin d'ajuster le build en fonction de la version de Maven voulait être utilisée. En effet, avec la catégorie ```maven```, nous avons pu regrouper des profiles nommés la plupart du temps "maven3" ou "maven2". Enfin la catégorie la plus importante, ```include``` sert elle à ajouter certaines parties très spécifiques du projet, notamment des bibliothèques, des mappings xml ou encore des fichiers de configuration. Nous nous attendions pas a une telle proportion de *profiles* *include* dans notre *dataset*
 
 La deuxième expérimentation faite pour répondre à cette question nous a fournis le graphe ci-dessous, qui permet d'identifier les différents contenus des *profiles* :
 
-![category-config.png](https://raw.githubusercontent.com/RIMEL-UCA/RIMEL-UCA.github.io/maven-profile-timeline/chapters/2020/assets/MavenProfile_Timeline_category-config.png)
+![category-config.png](../assets/MavenProfileInProjectTimeline/category-config.png)
 
 On remarque que dans toutes les catégories, sauf ```release```, les ```properties``` sont le moyen de configuration le plus utilisé. Ce type de configuration permet de modifier des éléments internes au projet tandis que les ```dependencies``` et ```plugins``` vont permettre, dans le cas de l'utilisation de ces profiles d'ajouter certains éléménts extérieurs. On voit donc que les *profiles* sont configurés plus souvent afin de "modifier" l'existant, dans les catégories les plus importantes sur notre *dataset*.
 
-+ Graph + Conclusion
+Enfin, nous avons décidé d'étudier certaines de ces catégories en détails. Nous avons donc récupéré les trois éléments de configuration (```properties```,```dependencies``` et ```plugins```) les plus utilisés dans chaque catégorie.
+
+![top3-include.png](../assets/MavenProfileInProjectTimeline/top3-include.png)
+![top3-dev.png](../assets/MavenProfileInProjectTimeline/top3-dev.png)
+![top3-metrics.png](../assets/MavenProfileInProjectTimeline/top3-metrics.png)
+
+Pour ```metrics```, on remarque que seul les deux premiers éléments sont utilisés. Ce sont les plugins *pmd* et *findbugs* qui permettent de calculer des métriques de code. La catégorie de *profiles* ```metrics``` est donc bien définie autour de ces éléments.
+
+Nous avons trouvé intéressant d'étudier la catégorie ```dev``` car nous avons vu précédemment qu'elle contenait une grande variété d'éléments. Les trois les plus utilisés sont des propriétés. Nous n'avons pas réussi à comprendre la sémantique exacte de leur utilisation mis à part la première qui permet de spécifier un fichier de properties. Nous pensons donc que ces éléments sont aussi spécifiques aux projets car leur utilisation n'est pas très fréquente. Globalement, cela rejoint l'idée que le contenu d'un *profile* `dev` dépend fortement du projet.
+
+Enfin, pour la catégorie ```include```, nous avons trouvé plusieurs `properties` permettant de spécifier des dossiers spécifiques, ce qui parait logique car d'après leurs noms, ces *profiles* permettent d'inclure des ressources dans le *build*. Nous avons trouvé surprenant que les `properties` aient le même nombre d'utilisation. Nous avons donc observé le graphe des POMs utilisant des *profiles* `include`. 
+
+![include-graphe.png](../assets/MavenProfileInProjectTimeline/include-graphe.png)
+
+En rouge les POMs et en vert les *profiles*. On remarque que les POMs sont liés à de nombreux *profiles*. Nous pensons donc que nous avons récupéré un groupe de projets semblables qui utilisent tous des configurations similaires. C'est donc peut être un biais sur notre base de données.
 
 ### Question 2 : Au cours de quels événements les développeurs implémentent-ils des *Maven Profiles* dans un projet ?
-
+*Rappel : Les analyses de cette question ont été réalisées sur la base de données contenant 550 POMs (base numéro 2).* <br/>
 *Attention, les résultats présentés dans cet section sont biaisés par les problématiques détaillées dans la section <a href="#quels-sont-les-principaux-problèmes-résolus-par-l’utilisation-des-maven-profiles-">IV. Hypothèses et Expérimentations</a> de cette question.*
 
 Du fait des problèmes rencontrés lors de l'expérimentation, nous ne pouvons pas exploiter les informations sur les branches des commits et sur leur nature (merge ou non merge).
@@ -200,12 +210,12 @@ Nous pouvons utiliser le tag et le commit message.
 
 De plus, nous pensons qu'il serait préférable de ne pas prendre en compte le type de *diff* (ajouts, modifications ou suppressions de lignes de codes dans un *profile*), car il a été très complexe d'évaluer cette métrique et qu'en réalisant la distribution de ces types sur notre jeu de données on obtient le diagramme suivant : 
 
-![graph-add-modify-remove-loc.png](https://raw.githubusercontent.com/RIMEL-UCA/RIMEL-UCA.github.io/maven-profile-timeline/chapters/2020/assets/MavenProfile_Timeline_Diff_type_distribution.png)
+![graph-add-modify-remove-loc.png](../assets/MavenProfileInProjectTimeline/Diff_type_distribution.png)
 
 Or on voit ici qu'il y a plus de *REMOVE* que d'*ADD* donc il y a une incohérence dans le relevé des données. Nous ne pouvons donc pas poursuivre cette piste.
 
 Nous avons donc étudié les messages de commit et les *tags*. En cherchant les événements suivants : `release`, `fix`, `feature`, `bug`, `test`.
-![graph-tag-commit-message.png](https://raw.githubusercontent.com/RIMEL-UCA/RIMEL-UCA.github.io/maven-profile-timeline/chapters/2020/assets/MavenProfile_Timeline_Average-commit-tag-messages.png)
+![graph-tag-commit-message.png](../assets/MavenProfileInProjectTimeline/Average-commit-tag-messages.png)
 Comme on peut l'imaginer, les *tags* de `fix`, `bug` et `test` seraient étonnants, et effectivement, on n'en trouve aucun. Uniquement le tag de `release`, qui lui a du sens, est trouvé. 
 Pour ce qui est des messages de `commits`, les modifications des *profiles* arrivent dans les mêmes proportions sur des `commits` contenant `release`, `fix`, `test` dans leur message, mais moins pour contenant `bug` ou `feature`. On peut interprété cela comme montrant que les modifications (pouvant être des créations ou suppressions) sont moins faites lors d'un commit lié à un `bug` ou à l'ajout d'une `feature`. 
 Au vu du nombre de commits n'utilisant pas ces mots clés dans leur tag ou message, les évènements que nous pensions majoritaires ne représentent qu'une petite partie sur notre jeu de données.
@@ -214,12 +224,12 @@ Ainsi, d'après nos résultats nous estimons qu'il est légitime de penser que n
 
 
 ### Question 3 : L'environnement technique du projet influence-t-il l’utilisation des Maven Profiles ?
-
+*Rappel : Les analyses de cette question ont été réalisées sur la base de données contenant 550 POMs (base numéro 2).* <br/>
 Pour rappel, tous les POMs analysés ici possèdent des *profiles*. Nous avons structuré le résultat de cette question en deux parties principales. 
 
 Dans la première partie, nous avons calculé le pourcentage de POMs qui utilisent chaque technologie parmi des technologies de CI, Docker, le framework Spring ou au moins un des ORMs importants de l'éco-système Java. Pour avoir les différents ensembles en fonction des usages des technologies, nous avons représenté ces résultats sous forme de diagramme de Venn : 
 
-![Percentage-Pom-using-techno.png](https://raw.githubusercontent.com/RIMEL-UCA/RIMEL-UCA.github.io/maven-profile-timeline/chapters/2020/assets/MavenProfile_Timeline_Percentage-Pom-using-techno.png){:height="500px" }
+![Percentage-Pom-using-techno.png](../assets/MavenProfileInProjectTimeline/Percentage-Pom-using-techno.png){:height="500px" }
 
 Ici figure donc le détail par technologie seule mais aussi toutes les intersections entre les ensembles. 
 Tout d'abord, en additionnant ces pourcentages, on remarque que **65,8%** des 550 dépôts que nous analysons utilisent seules ou plusieurs de ces technologies. 
@@ -228,10 +238,18 @@ Dans l'ensemble, les outils de type CI sont utilisés par presque un projet sur 
 
 La deuxième partie des résultats de cette question est le nombre moyen de *profiles* dans les POMs des dépôts utilisants les technologies que nous recherchions. Nous avons ici aussi eu recours à un diagramme de Venn pour visualiser tous les ensembles :
 
-![Average-profiles-per-techno.png](https://raw.githubusercontent.com/RIMEL-UCA/RIMEL-UCA.github.io/maven-profile-timeline/chapters/2020/assets/MavenProfile_Timeline_Average-profiles-per-techno.png){:height="500px"}
+![Average-profiles-per-techno.png](../assets/MavenProfileInProjectTimeline/Average-profiles-per-techno.png){:height="500px"}
 
 Les résultats de cette analyse vont encore une fois à l'inverse de notre intuition. Car quand Docker est utilisé dans un projet, le nombre de *profiles* moyens est tout à fait comparable aux taux de *profiles* des autres technologies, si ce n'est ORM, qui possède relativement peu de *profiles*.
 Cependant, pour la CI notre intuition était bonne car le nombre de *profiles* moyens est toujours supérieur à 1.
+
+Enfin, nous avons voulu comprendre quels sont les *profiles* les plus utilisés en fonction des technologies, pour comprendre le type d'utilisation des *profiles* avec celles-ci.
+
+![top-profiles-by-techno.png](../assets/MavenProfileInProjectTimeline/top-profiles-by-techno.png){:height="500px"}
+
+Cette question s'est donc confirmée être pertinente car on constate une corrélation entre la *stack* technique d'un projet et l'utilisation des *profiles*. En effet, les technologies utilisées influencent le nombre, mais aussi le type de *profiles*. Par exemple avec CI, la configuration de la release ou encore la distribution du serveur de container sont très importantes, alors que pour Docker et Spring, l'ommission des tests ou encore l'OS de la machine hôte (par exemple Docker pour Windows) vont être des critères importants. Concernant les projets avec des ORM, nous avions l'intuition qu'ils utilisaient plusieurs *profiles* pour configurer leur connexion à la base de données, en *dev* et en *prod* mais aussi les *drivers* SQL. L'étude sur notre *dataset* confirme notre intuition, on voit que *dev* arrive en troisième position et en étudiant les profiles n'apparaissant pas dans le top 3, nous trouvons beaucoup de `development`, `postgres` ou encore `MySQL`.
+Ceci nous amène à conclure que sur notre jeu de données, les technologies impactent les *profiles* utilisés dans les POMs.
+
 ### Conclusion
 
 Dans la première question, nous avons pu identifier les familles de *profiles* les plus utilisées sur un ensemble de 5300 poms. Nous avons eu des surprises sur des catégories comme *include* qui est utilisé par presque un quart des projets. Nous avons ensuite tenté de caractériser ces familles de *profiles* par utilisation de plugins, properties et dependencies. Pour beaucoup de POMs, les *profiles* sont utilisés dans le cycle de vie du projet : *dev*, *release*, *test*. Grâce aux noms des *profiles* nous avons pu déterminer le type de problème qu'ils résolvent.
@@ -298,6 +316,16 @@ Nous voulions obtenir le nombre d'utilisation de plugins pour certains *profiles
 
 #### Question 2 : Au cours de quels événements les développeurs implémentent-ils des Maven Profiles dans un projet ?
 
+Nous voulions rechercher le nombre d'événements contenant des mot-clés spécifiques comme `release`,`fix`,`bug`,`test`,`feature` que nous allons nommer `$KEYWORD` dans nos requêtes.
+
+La requête suivante permet de compter le nombre d'occurence avec un événement contenant un mot-clé : 
+`MATCH (m:Pom)-[l:EVENTS]->(e:Event) WHERE toLower(e.tag) CONTAINS '$KEYWORD' return COUNT(e)`
+
+La requête suivante permet de compter le nombre d'apparition pour un événement de type ADD/MODIFY/REMOVE de *LoC* :
+`MATCH (m:Pom)-[l:EVENTS]->(e:Event) WHERE e.diffType='ADD' RETURN COUNT(e)`
+
+
+
 #### Question 3 : L’environnement technique du projet influence-t-il l’utilisation des Maven Profiles ?
 
 Nous avons fait deux requêtes ici pour les quatres technologies donc huit requêtes. Pour simplifier, nous allons indiquer ici `$STACK` comme variable qui peut prendre comme valeur `DOCKER`, `ORM`, `CI`, `SPRING`.
@@ -312,3 +340,5 @@ La requête suivante permet de trouver les POM qui sont associés à une technol
 
 
 ![Polytech Nice-Sophia (UCA - Université C&#xF4;te d&apos;Azur)](../assets/MavenProfileInProjectTimeline/logoPolytechUCA.png){:height="200px" }
+
+
