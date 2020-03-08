@@ -21,7 +21,7 @@ Nous sommes trois étudiants en dernière année à Polytech Nice Sophia Antipol
 Le sujet de notre recherche en rétro-ingénierie porte sur les *Maven profiles*. 
 Maven est un outil d'automatisation et de configuration de production de projets Java, construit sous forme de document XML. La configuration passe notamment par l'utilisation d'un mécanisme propre à Maven appelé _profile_. Un *profile* permet de paramétrer certains éléments. Par exemple à spécifier l'utilisation de nouveaux plugins, de nouvelles propriétés ou encore de nouvelles dépendances. Les *profiles* peuvent être activés lors du *build*, ainsi ce mécanisme facilite la configuration et la modularité de ce dernier au sein d'un projet.
 
-Afin d'avoir une base de projets à étudier, nous avons effectué nos recherches sur la plateforme GitHub où sont disponibles de nombreux codes sources Java qui utilisent la technologie Maven (Cf. <a href="#iii-collecte-d’informations">III. Collecte d’informations</a>).
+Afin d'avoir une base de projets à étudier, nous avons effectué nos recherches sur la plateforme GitHub où sont disponibles de nombreux codes sources Java qui utilisent la technologie Maven (Cf. <a href="#iii-collecte-dinformations">III. Collecte d’informations</a>).
 
 Ce contexte de recherche est particulièrement intéressant pour nous, car nous utilisons majoritairement des technologies de l'éco-système Java, dont Maven. Nous avons donc déjà été amenés à utiliser les *Maven profiles*, et avons donc certaines intuitions quant à la question principale de notre sujet. Cela rend donc cette recherche encore plus pertinente afin de voir si ces intuitions se confirment ou non dans des projets *Open Source*, potentiellement de bien plus grande taille que nos projets. 
 
@@ -181,15 +181,17 @@ Parmi ces catégories, nous remarquons que les différentes phases de développe
 
 La deuxième expérimentation faite pour répondre à cette question nous a fournis le graphe ci-dessous, qui permet d'identifier les différents contenus des *profiles* :
 
-![category-config.png](../assets/MavenProfileInProjectTimeline/category-config.png)
+![category-config.png](../assets/MavenProfileInProjectTimeline/category-config.png){:height="400px" }
 
 On remarque que dans toutes les catégories, sauf ```release```, les ```properties``` sont le moyen de configuration le plus utilisé. Ce type de configuration permet de modifier des éléments internes au projet tandis que les ```dependencies``` et ```plugins``` vont permettre, dans le cas de l'utilisation de ces profiles d'ajouter certains éléménts extérieurs. On voit donc que les *profiles* sont configurés plus souvent afin de "modifier" l'existant, dans les catégories les plus importantes sur notre *dataset*.
 
 Enfin, nous avons décidé d'étudier certaines de ces catégories en détails. Nous avons donc récupéré les trois éléments de configuration (```properties```,```dependencies``` et ```plugins```) les plus utilisés dans chaque catégorie.
 
-![top3-include.png](../assets/MavenProfileInProjectTimeline/top3-include.png)
-![top3-dev.png](../assets/MavenProfileInProjectTimeline/top3-dev.png)
-![top3-metrics.png](../assets/MavenProfileInProjectTimeline/top3-metrics.png)
+![top3-include.png](../assets/MavenProfileInProjectTimeline/top3-include.png){:height="400px" }
+<br/>
+![top3-dev.png](../assets/MavenProfileInProjectTimeline/top3-dev.png){:height="400px" }
+<br/>
+![top3-metrics.png](../assets/MavenProfileInProjectTimeline/top3-metrics.png){:height="400px" }
 
 Pour ```metrics```, on remarque que seul les deux premiers éléments sont utilisés. Ce sont les plugins *pmd* et *findbugs* qui permettent de calculer des métriques de code. La catégorie de *profiles* ```metrics``` est donc bien définie autour de ces éléments.
 
@@ -197,25 +199,26 @@ Nous avons trouvé intéressant d'étudier la catégorie ```dev``` car nous avon
 
 Enfin, pour la catégorie ```include```, nous avons trouvé plusieurs `properties` permettant de spécifier des dossiers spécifiques, ce qui parait logique car d'après leurs noms, ces *profiles* permettent d'inclure des ressources dans le *build*. Nous avons trouvé surprenant que les `properties` aient le même nombre d'utilisation. Nous avons donc observé le graphe des POMs utilisant des *profiles* `include`. 
 
-![include-graphe.png](../assets/MavenProfileInProjectTimeline/include-graphe.png)
+![include-graphe.png](../assets/MavenProfileInProjectTimeline/include-graphe.png){:height="600px" }
 
 En rouge les POMs et en vert les *profiles*. On remarque que les POMs sont liés à de nombreux *profiles*. Nous pensons donc que nous avons récupéré un groupe de projets semblables qui utilisent tous des configurations similaires. C'est donc peut être un biais sur notre base de données.
 
 ### Question 2 : Au cours de quels événements les développeurs implémentent-ils des *Maven Profiles* dans un projet ?
 *Rappel : Les analyses de cette question ont été réalisées sur la base de données contenant 550 POMs (base numéro 2).* <br/>
-*Attention, les résultats présentés dans cet section sont biaisés par les problématiques détaillées dans la section <a href="#quels-sont-les-principaux-problèmes-résolus-par-l’utilisation-des-maven-profiles-">IV. Hypothèses et Expérimentations</a> de cette question.*
+*Attention, les résultats présentés dans cet section sont biaisés par les problématiques détaillées dans la section <a href="#quels-sont-les-principaux-problèmes-résolus-par-lutilisation-des-maven-profiles-">IV. Hypothèses et Expérimentations</a> de cette question.*
 
 Du fait des problèmes rencontrés lors de l'expérimentation, nous ne pouvons pas exploiter les informations sur les branches des commits et sur leur nature (merge ou non merge).
 Nous pouvons utiliser le tag et le commit message.
 
 De plus, nous pensons qu'il serait préférable de ne pas prendre en compte le type de *diff* (ajouts, modifications ou suppressions de lignes de codes dans un *profile*), car il a été très complexe d'évaluer cette métrique et qu'en réalisant la distribution de ces types sur notre jeu de données on obtient le diagramme suivant : 
 
-![graph-add-modify-remove-loc.png](../assets/MavenProfileInProjectTimeline/Diff_type_distribution.png)
+![graph-add-modify-remove-loc.png](../assets/MavenProfileInProjectTimeline/Diff_type_distribution.png){:height="400px" }
 
 Or on voit ici qu'il y a plus de *REMOVE* que d'*ADD* donc il y a une incohérence dans le relevé des données. Nous ne pouvons donc pas poursuivre cette piste.
 
 Nous avons donc étudié les messages de commit et les *tags*. En cherchant les événements suivants : `release`, `fix`, `feature`, `bug`, `test`.
-![graph-tag-commit-message.png](../assets/MavenProfileInProjectTimeline/Average-commit-tag-messages.png)
+![graph-tag-commit-message.png](../assets/MavenProfileInProjectTimeline/Average-commit-tag-messages.png){:height="400px" }
+<br/>
 Comme on peut l'imaginer, les *tags* de `fix`, `bug` et `test` seraient étonnants, et effectivement, on n'en trouve aucun. Uniquement le tag de `release`, qui lui a du sens, est trouvé. 
 Pour ce qui est des messages de `commits`, les modifications des *profiles* arrivent dans les mêmes proportions sur des `commits` contenant `release`, `fix`, `test` dans leur message, mais moins pour contenant `bug` ou `feature`. On peut interprété cela comme montrant que les modifications (pouvant être des créations ou suppressions) sont moins faites lors d'un commit lié à un `bug` ou à l'ajout d'une `feature`. 
 Au vu du nombre de commits n'utilisant pas ces mots clés dans leur tag ou message, les évènements que nous pensions majoritaires ne représentent qu'une petite partie sur notre jeu de données.
@@ -245,7 +248,7 @@ Cependant, pour la CI notre intuition était bonne car le nombre de *profiles* m
 
 Enfin, nous avons voulu comprendre quels sont les *profiles* les plus utilisés en fonction des technologies, pour comprendre le type d'utilisation des *profiles* avec celles-ci.
 
-![top-profiles-by-techno.png](../assets/MavenProfileInProjectTimeline/top-profiles-by-techno.png){:height="500px"}
+![top-profiles-by-techno.png](../assets/MavenProfileInProjectTimeline/top-profiles-by-techno.png){:height="600px"}
 
 Cette question s'est donc confirmée être pertinente car on constate une corrélation entre la *stack* technique d'un projet et l'utilisation des *profiles*. En effet, les technologies utilisées influencent le nombre, mais aussi le type de *profiles*. Par exemple avec CI, la configuration de la release ou encore la distribution du serveur de container sont très importantes, alors que pour Docker et Spring, l'ommission des tests ou encore l'OS de la machine hôte (par exemple Docker pour Windows) vont être des critères importants. Concernant les projets avec des ORM, nous avions l'intuition qu'ils utilisaient plusieurs *profiles* pour configurer leur connexion à la base de données, en *dev* et en *prod* mais aussi les *drivers* SQL. L'étude sur notre *dataset* confirme notre intuition, on voit que *dev* arrive en troisième position et en étudiant les profiles n'apparaissant pas dans le top 3, nous trouvons beaucoup de `development`, `postgres` ou encore `MySQL`.
 Ceci nous amène à conclure que sur notre jeu de données, les technologies impactent les *profiles* utilisés dans les POMs.
@@ -340,5 +343,4 @@ La requête suivante permet de trouver les POM qui sont associés à une technol
 
 
 ![Polytech Nice-Sophia (UCA - Université C&#xF4;te d&apos;Azur)](../assets/MavenProfileInProjectTimeline/logoPolytechUCA.png){:height="200px" }
-
 
