@@ -15,8 +15,9 @@ Nous sommes quatre étudiants en dernière année à Polytech Nice Sophia en arc
 
 ## I. Contexte de la récherche
 
-Préciser ici votre contexte.
-Pourquoi c'est intéressant.
+Spring est un framework open-source qui facilite la mise en place et le développement d'applications Java. Son fonctionnement se base sur un système d'annotations. 
+
+L'annotation de paramétrage *@Conditional* a été introduite dans la version *Spring 5.2.3* afin de répoondre à des problématiques de condition de chargement de classe en fonction d'un contexte. 
 
 bullshit sur la variabilité.
 les nouvelles/anciennes annotations 
@@ -33,13 +34,18 @@ contexte :
 Cette première étape nécessite beaucoup de réflexion pour se définir la bonne question afin de poser les bonnes bases pour la suite.
 
 
-Nous avions tous au sein de l'équipe déjà utilisé Spring, mais aucun de nous n'avais utilisé l'annotation Conditional et nous étions peu qualifiés sur les outils de paramétrage de Spring. La première question émergeant de nos réflexions était donc :
+Nous avions tous au sein de l'équipe déjà utilisé Spring lors de projets Polytech, mais aucun de nous n'avais utilisé l'annotation *Conditional* et nous étions peu qualifiés sur les outils de paramétrage de Spring. La première question émergeant de nos réflexions était donc :
 
-Comment les outils de paramètrage de Spring sont t-il utilisés et à quelle fréquence ?
+**Comment les outils de paramètrage de Spring sont t-il utilisés et à quelle fréquence ?**
 
 Cette question d'ordre général a été notre première étape afin d'orienter nos recherches vers d'autres questions plus précises. Au fil de nos découvertes, nous avons pu cibler un ensemble de nouvelles questions qu'il nous semblait pertinent et intéressant d'étudier.
 
 ### Comment l'annotation @Conditional est-elle utilisée ? 
+
+N'étant pas familier avec l'annotation, il était important pour nous dans un premier temps de rassembler le plus d'informations possible sur *@Conditional*. Pour cela, nous nous sommes concentrés sur sa présence au sein des fichiers, des projets et sur sa fréquence d'apparition au sein d'un même fichier.
+L'annotation de paramétrage que l'on appelle *@Conditional* possède plusieurs déclinaisons : *@ConditionalOnMissingBean*, 
+
+Nous souhaitons également nous intéresser à la fréquence d'usage de chacune de ces annotations au sein de projets afin d'en déduire qu'elles sont les annotations les plus utilisées et dans quel contexte d'usage. 
 
 Apportant un ensemble de questions sous-jacentes
 -> dans quels fichiers ? -> configuration
@@ -49,29 +55,27 @@ Apportant un ensemble de questions sous-jacentes
 
 ### Comment et à quelle fréquence est-elle testée ? 
 
-bonne pratique ? 
+Il nous paraissait d'autre part intéressant d'étudier la fréquence de test de l'annotation étudiée. En effet, cela nous permettrait de nous renseigner sur la facilité de tests de l'annotation, mais également potentiellement en déduire que son utilisation est une bonne pratique et n'affecte pas la couverture de tests d'un projet. D'autre part, nous trouvions également intéressant de savoir si celle-ci était utilisée au sein de fichiers tests dans le but de tester d'autres fonctionnalités afin d'avoir une vue d'ensemble plus large de son utilisation. 
 
-### Quelle annotation de configuration est la plus utilisée parmi les existantes (Conditional, Value, Ressources) ? 
+### Quelle annotation de configuration est la plus utilisée parmi les existantes (Conditional, Profile, Value, Ressources) ? 
 
-Nous avons pu relever plusieurs annotations de configuration, celle qui nous intéressée pour cette étude est @Conditional mais nous avons tout de suite pensé qu'il serait intéressant de la mettre en corrélation avec ses semblables. 
+Nous avons pu remarquer lors de nos recherches, l'existance de plusieurs annotations de configuration autres que *@Conditional*. Nous avons tout de suite pensé qu'il serait intéressant de la mettre en corrélation avec ses équivalents. Les autres annotations sont : 
+1
+- *@Profile* qui est le prédécesseur de *@Conditional*, cette annotation est apparue dans *Spring 3.1* et est principalement utilisée afin de gérer des profils définit selon des fichiers de configuration (par exemple un fichier *".properties*). Un exemple d'utilisation serait la mise en place de profils de développement (dev), production (prod) et test. Le type de *Bean* chargé pourrait ensuite dépendre du profil sélectionné. 
+- *@Ressource* 
+- *@Value* cette annotation a pour but d'assigner des valeurs à des variables et des paramètres de méthodes.
 
-### A quelle fréquence sont utilisées chacune des annotations ? 
-ressource -> 
-profile -> 
-value -> 
-conditional -> 
-se fier aux graphes
+Il serait intéressant dans le cadre de cette étude d'étudier la fréquence d'utilisation de chacune de ces annotations, de constater dans quel type de projet elles apparaissent le plus souvent et de constater comment elles sont utilisées au sein de ces projets. 
 
 ### Comment est utilisée l'annotation @Value ? 
 
--> tangling ou spreading ? -> chiffres 
--> quelle fréquence ? -> graphes
-Principale concurrente de @Conditional en terme de popularité, il nous paraissait intéressant d'en savoir plus sur son utilisation et son fonctionnement. 
+Lors de nos recherches, une seconde annotation a particulièrement attiré notre attention, il s'agit de l'annotation *@Value*. Celle-ci peut être utilisée à la fois au niveau de méthodes, de paramètres de méthodes, de variables de classes. 
+
+Sa modularité et la diversité de sa portée nous a amenés à nous demander si son mode d'utilisation se confirmait à du *tangling* (signifiant ) ou du *spreading* (signifiant ). 
 
 ## III. Récolte d'informations
 
-Préciser vos zones de recherches en fonction de votre projet,
-
+Afin de 
 la doc de spring très important
 doc des annotations
 le paramétrage
