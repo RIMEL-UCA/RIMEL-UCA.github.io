@@ -228,7 +228,7 @@ Nous avons réalisé des scripts Python permettant de comptabiliser la présence
 
 Nous avons pu vérifier nos intuitions, notamment l'hypothèse émise "la répartition des annotations de paramétrage n'est pas homogène". Nous avons constaté que les annotation *@Profile* et *@Resource* sont très peu présente à l'échelle du *dataset*. En revanche les annotations *@Conditional* et *@Value* sont très présente, principalement cette dernière. Nous avions supposé que de par son ancienneté, *@Value* serait probablement la plus fréquente et nos résultats prouvent ce postulat. 
 
-D'autre part, nous avons également pu valider nos deux hypothèses suivantes : "l'annotation est fréquemment utilisée au sein de projets lambdas, mais moins utilisée que *@Conditional* au sein de librairies" et "l'annotation @Conditional est particulièrement utilisée dans les frameworks et bibliothèques" car nous observons une répartition des *@Value* forte au sein de projet lambdas. Celle-ci s'efface néanmoins au profit des *@Conditional* dans les bibliothèques (notamment 
+D'autre part, nous avons également pu valider nos deux hypothèses suivantes : **"l'annotation est fréquemment utilisée au sein de projets lambdas, mais moins utilisée que *@Conditional* au sein de librairies"** et **"l'annotation @Conditional est particulièrement utilisée dans les frameworks et bibliothèques"** car nous observons une répartition des *@Value* forte au sein de projet lambdas. Celle-ci s'efface néanmoins au profit des *@Conditional* dans les bibliothèques.
 
 Nous avons également pu nous apercevoir que les déclinaisons de *@Conditional* les plus utilisées au sein de ce *dataset* sont identiques à celles précédemment relevés au sein des projets Spring, ce qui confirme notre analyse en terme d'utilisation de l'annotation. 
 
@@ -251,7 +251,7 @@ Nous nous sommes intéressés à l'étalement des conditions *if* d'un *@Value* 
 
 ![alt text](../assets/SpringConditionalMetric/valueDistribution.png)
 
-On remarque notamment que le @Value le plus présent est dans 15 fichiers différents. Cette étude confirme une utilisation de l'annotation *@Value* en mode *spreading* au sein des projets.  Notre hypothèse "l'annotation @Value utilisée dans les *if* fonctionne en *spreading* au sein d'un projet" est vérifiée. 
+On remarque notamment que le @Value le plus présent est dans 15 fichiers différents. Cette étude confirme une utilisation de l'annotation *@Value* en mode *spreading* au sein des projets.  Notre hypothèse **"l'annotation @Value utilisée dans les *if* fonctionne en *spreading* au sein d'un projet" est vérifiée.**  
 
 ## VIII. Synthèse
 
@@ -266,7 +266,6 @@ Nous remarquons donc que la fréquence d'utilisation des annotations varie selon
 
 Nous concluons cette étude en ayant appris beaucoup sur l'utilisation des annotations de paramétrages de Spring en général mais aussi plus particulièrement concernant *@Conditional* et *@Value* sur lesquelles nous nous sommes concentrés. Nos hypothèses ont pu être vérifiées ou réfutées grâce à des expériences mises en place sur un *dataset*. Ces expériences ont été aussi bien manuelle, qu'automatiques grâce à l'utilisation de scripts Python.
 Il est important de noter que nos résultats sont à pondérer, tout d'abord compte tenu du nombre de projets évalués. Nous avons sélectionné 111 projets relatifs à Spring puis 14 projets d'organisations diverses. Ce *dataset* est assez restreint et pourrait ne pas être assez représentatif des projets Java utilisant les annotations de paramétrage fournies par Spring. De plus, les projets récoltés sont uniquement issus de la plateforme Github, cela constitue également un biais non négligeable bien qu'il s'agisse d'une plateforme extrêmement populaire, utilisée dans l'hébergement de projets.
-
 
 ## IX. Références
 
