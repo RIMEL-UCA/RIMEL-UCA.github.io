@@ -70,18 +70,13 @@ Il serait intéressant dans le cadre de cette étude d'étudier la fréquence d'
 
 Lors de nos recherches, une seconde annotation a particulièrement attiré notre attention, il s'agit de l'annotation *@Value*. Celle-ci peut être utilisée à la fois au niveau de méthodes, de paramètres de méthodes, de variables de classes. 
 
-Sa modularité et la diversité de sa portée nous a amenés à nous demander si son mode d'utilisation se confirmait à du *tangling* (signifiant ) ou du *spreading* (signifiant ). 
+Sa modularité et la diversité de sa portée nous a amenés à nous demander si son mode d'utilisation se confirmait à du *tangling* (signifiant enchevêtré) ou du *spreading* (signifiant diffusé). 
 
 ## III. Collecte d'informations
 
-Nous avons également durant cette phase, lu plusieurs articles qui nous ont permis d'être plus familiers avec les concepts de rétro-ingénieurie et de réutilisabilité du code. Ces concepts nous ont apporté une approche différente de la tâche d'analyse, notamment en mettant en avant des processus d'automatisation. 
-
-la doc de spring très important
-doc des annotations
-le paramétrage
-[Mining Implicit Design Templates for Actionable Code Reuse](http://linyun.info/micode/micode.pdf)  
-[Are Developers Aware of the Architectural Impact of Their Change](http://www0.cs.ucl.ac.uk/staff/j.krinke/publications/ase17.pdf)  
-[Titan: A Toolset That Connects Software Architecture with Quality Analysis](https://www.cs.drexel.edu/~lx52/LuXiao/papers/FSE-TD-14.pdf)  
+N'étant pas familiers avec les annotations de paramétrage de Spring, nous avons durant cette phase essayés de nous documenter autant que possible.
+Pour cela, nous avons lu plusieurs articles qui nous ont permis d'être plus en phase avec les concepts de rétro-ingénieurie et de ré-utilisabilité du code. Ces concepts nous ont apporté une approche différente de la tâche d'analyse, notamment en mettant en avant des processus d'automatisation. Les articles que nous avons trouvés particulièrement pertinents sont les suivants : 'Mining Implicit Design Templates for Actionable Code Reuse', 'Are Developers Aware of the Architectural Impact of Their Change', 'Titan: A Toolset That Connects Software Architecture with Quality Analysis' et son listés dans les références. 
+Nous avons également longuement lu la documentation fournie par Spring, principalement au niveau de l'utilisation des annotations. Nous avons également étudié de nombreux projets hébergés par Spring sur Github. Nous avons pu trouver un grand nombre d'informations notamment au niveau des fichiers de *.changelog*, *release notes* ou au niveau des messages de *commits* des développeurs. Ces informations étaient d'ordre plus techniques, elles nous ont permis de comprendre à plus fin grain les problématiques relatives à l'utilisation de l'annotation et son utilité au sein de projets. 
 
 ## IV. Hypothèses émises et expériences réalisées
 
@@ -146,23 +141,15 @@ Sur les 14 projet analyser le taux de @Conditional était Superieur pour les lib
 ## V. Ressources utilisées
 
 Afin de pouvoir fournir des réponses à nous questions, nous avons constitué un *dataset* de projets Java utilisant Spring. Pour cela, nous avons procédé en deux étapes. 
-Tout d'abord, le premier *dataset* était constitué uniquement de projets Spring. Ne sachant pas comment l'annotation était utilisée et son utilité précise au sein de projets, nous pensions qu'acquérir des données de reneignement au niveau du créateur de l'annotation pourrait être très enrichissant pour cette étude. Pour cela, nous avons utilisé les projets de Spring : Spring Projects (comptant 48 projets analysés) et Spring Cloud (comptant 63 projets analysés).
+Tout d'abord, le premier *dataset* était constitué uniquement de projets Spring. Ne sachant pas comment l'annotation était utilisée et son utilité précise au sein de projets, nous pensions qu'acquérir des données de reneignement au niveau du créateur de l'annotation pourrait être très enrichissant pour cette étude. Pour cela, nous avons utilisé un ensemble de projets hébergés par Spring, décrit dans le tableau suivant.
 
-| Frameworks                  | Bibliothèques        | Autres                            |
-|-----------------------------|----------------------|-----------------------------------|
-| spring-projects             | permazen/permazen    | naver/pinpoint                    |
-| typetools/checker-framework | zalando/riptide      | jeremylong/DependencyCheck        |
-|                             | jmrozanec/cron-utils | micronaut-projects/micronaut-core |
-|                             | line/armeria         | debezium/debezium                 |
-|                             | INRIA/spoon          | spring-io/sagan                   |
-|                             |                      | eclipse/hawkbit                   |
-|                             | 
+| Organisation                  | Nombre de projets        | 
+|-----------------------------|----------------------|
+| Spring Projects             | 48
+| Spring Cloud             | 63
 
 
-'spring-projects/spring-boot',
-'spring-projects/spring-framework'
-
-Nous avons par la suite constitué un second *set*, uniquement constitué de projets utilisant Spring mais n'appartenant pas à Spring. En effet, se limiter aux projets Spring n'aurait pas reflété l'utilisation réelle de l'annotation au sein de projets lambdas. Nous les avons classés dans le tableau suivant en fonction de leur type : 
+Nous avons par la suite constitué un second *set*, uniquement constitué de projets utilisant Spring mais n'appartenant pas à Spring. En effet, se limiter aux projets Spring n'aurait pas reflété l'utilisation réelle de l'annotation au sein de projets lambdas. Nous les avons classés dans le tableau suivant en fonction de leur type.
 
 | Frameworks                  | Bibliothèques        | Autres                            |
 |-----------------------------|----------------------|-----------------------------------|
@@ -258,6 +245,7 @@ Vérifiée par nos expérimentations
 
 ## IX. Références
 
+https://spring.io/docs
 [Mining Implicit Design Templates for Actionable Code Reuse](http://linyun.info/micode/micode.pdf)  
 [Are Developers Aware of the Architectural Impact of Their Change](http://www0.cs.ucl.ac.uk/staff/j.krinke/publications/ase17.pdf)  
 [Titan: A Toolset That Connects Software Architecture with Quality Analysis](https://www.cs.drexel.edu/~lx52/LuXiao/papers/FSE-TD-14.pdf)  
