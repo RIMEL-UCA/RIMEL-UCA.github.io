@@ -95,11 +95,11 @@ D’un autre côté, nous avions débuté l’approfondissement de divers articl
 
 Nous avions débuté la prise en main de l’outil d’analyse des profils afin d’extraire quelques métriques. Nous avions ainsi observé si les profils contenaient des balises “properties". Cela signifiait que les propriétés d'un projet (comme des URL, des identifiants) pouvaient varier.
 
-![properties-count](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/blob/maven-profile-usage-project-type/chapters/2020/assets/MavenProfileUsageAndProjectType/images/PROP.png)
+![properties-count](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/blob/maven-profile-usage-project-type/chapters/2020/assets/MavenProfileUsageAndProjectType/PROP.png)
 
 Nous avions également constaté que des profils étaient utilisés principalement pour mettre en place des livraisons (“release”), et nous avons tenté de quantifier le nombre de profils mettant en oeuvre cette tâche.
 
-![release-count](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/blob/maven-profile-usage-project-type/chapters/2020/assets/MavenProfileUsageAndProjectType/images/RELEASE.png)
+![release-count](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/blob/maven-profile-usage-project-type/chapters/2020/assets/MavenProfileUsageAndProjectType/RELEASE.png)
 
 Les recherches de métriques étaient variées mais il nous était encore difficile de caractériser avec précision des métriques qui étaient étroitement liées à des processus de portabilisation d’un projet.
 
@@ -109,7 +109,7 @@ Après avoir obtenu plus de maîtrise sur notre sujet et découvert ce qu’il �
 
 La préoccupation de notre revue concerne premièrement la constitution d’un nouveau dataset. Pour réaliser cela, deux recherches différentes ont été mise en place. D’un côté, nous avons “amélioré” la première expérience qui consistait en une recherche manuelle des utilisateurs correspondant à des profils d’entreprise. Cette fois-ci, nous avons tout simplement concentré nos recherches sur les sociétés qui sont les plus actives sur les dépôts git comme GitHub.
 
-![ranking-companies](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/blob/master/chapters/2020/assets/MavenProfileUsageAndProjectType/images/companies.png)
+![ranking-companies](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/blob/master/chapters/2020/assets/MavenProfileUsageAndProjectType/companies.png)
 
 Classement des entreprises les plus actives dans l’open-source (https://solutionshub.epam.com/osci)
 
@@ -118,7 +118,7 @@ L’autre recherche constituait en l’analyse d’archive de GitHub qui dataien
 
 Nous avons alors pu récupérer la requête SQL que l’utilisateur a réalisé pour récupérer cela. Nous avons tenté de modifier cette requête pour obtenir les informations qui nous intéressaient, basé sur les archives de GitHub en 2019. Nous avons ainsi pu ajouter un filtre sur les projets qui étaient développés en Java. 
 
-![big-query](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/blob/master/chapters/2020/assets/MavenProfileUsageAndProjectType/images/BIG-QUERY.png)
+![big-query](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/blob/master/chapters/2020/assets/MavenProfileUsageAndProjectType/BIG-QUERY.png)
 
 L’interface BigQuery se présente sous la forme suivante. A noter que plus d’1,5 To de données ont été traités pour obtenir les projets, qui en cas de résultats concluants pouvaient constituer notre dataset. Le principe de la requête est de rechercher les projets en filtrant par les contributeurs qui ont des adresses mail professionnelles, et qui ont tendance à souvent contribuer. L’approche de la recherche semble étonnant mais les résultats sont particulièrement pertinents.
 
@@ -143,11 +143,11 @@ Une fois les projets récoltés à partir des deux méthodes, il fallait s’ass
 
 Suite aux observations citées précédemment, nous nous sommes intéressés aux balises “<Activation>” qui sont un des moyens, si ce n’est le moyen, recommandé par Maven pour faire de la portabilité. Par conséquent nous avons tout d’abord compté le nombre de projets au sein de notre dataset utilisant ce mécanisme. Les résultats sont probants. Sur 565 profils Maven analysés, plus de 350 (354 exactement) contiennent des balises d’activations. De plus, si nous comparons ces chiffres avec les précédentes métriques, nous pouvons constater le compte des balises d’activations est supérieur ou très supérieur aux autres comptes au niveau notamment des différentes propriétés. Nous pouvons donc ainsi penser que ces balises sont utilisés par les grandes entreprises.
 
-![profiles-analyse](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/blob/maven-profile-usage-project-type/chapters/2020/assets/MavenProfileUsageAndProjectType/images/METRIC_NUMBER_TOTAL.png)
+![profiles-analyse](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/blob/maven-profile-usage-project-type/chapters/2020/assets/MavenProfileUsageAndProjectType/METRIC_NUMBER_TOTAL.png)
 
 Ces résultats nous ont motivés à approfondir l’utilisation de ce mécanisme. Ainsi en lisant la documentation de référence, nous avons ajouté des métriques sur les moyens possibles de mettre en place les activations.
 
-![activations-analyse](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/blob/maven-profile-usage-project-type/chapters/2020/assets/MavenProfileUsageAndProjectType/images/ACTIVATIONCAMEMBERT.png)
+![activations-analyse](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/blob/maven-profile-usage-project-type/chapters/2020/assets/MavenProfileUsageAndProjectType/ACTIVATIONCAMEMBERT.png)
 
 Sur 354 activations, nous observons donc que le mécanisme est, pour 54% des balises, mis en place via des propriétés. La moitié des activations de profils dépendent donc des propriétés systèmes. Pour 160 profils, une activation est définie par défaut. Nous pouvons donc constater avec ce graphique que les balises d’activations sont effectivement utilisées à des fins de portabilité. Cette expérience ne nous permet pas de valider notre ressenti car il faudrait analyser plus précisément d’une part les valeurs des conditions et des propriétés dans ces balises d’activations. D’autre part, il faudrait également étudier les liens entre les différentes balises dans différents profils d’un même fichier pom.xml.
 
