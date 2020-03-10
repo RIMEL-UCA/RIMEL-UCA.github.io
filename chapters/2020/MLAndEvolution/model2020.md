@@ -9,7 +9,7 @@ Ce groupe est composé de 4 étudiants de Master :
 * Sherine SOUMARE DIT SABATHIER &lt;sherine.soumare-dit-sabathier@etu.univ-cotedazur.fr&gt; (IHM)
 * Nadeur MOSBAH &lt;nadeur.mosbah@etu.univ-cotedazur.fr&gt; (AL)
 
-![Figure 1: Logo UCA](../assets/model/UCAlogoQlarge.png){:height="50px" }
+![Figure 1: Logo UCA](../assets/model/UCAlogoQlarge.png)
 
 
 ## Introduction :
@@ -149,6 +149,7 @@ Nos expériences introduisent les notions de qualité de code. Cette notion peut
 ### 4.2 - Problématique 1 : Evolution des types de contribution
 
 Dans un premier temps, nous avons observé l'évolution du nombre de commits au sein du projet depuis 2010 à 2019. Bien que le projet ait été créé en 2007, Les premiers commits sur le répertoire actuel commencent en 2010. Pour cette analyse, nous n'avons pas récupéré les commits de 2020 car, étant en début d'années, ils ne sont actuellement pas significatifs.
+
 ![](https://i.imgur.com/K43t7Et.png)
 
 Comme nous pouvons le voir sur le graphique précédent, l'évolution du nombre de commits ne correspond pas à ce à quoi nous nous attendions. En effet, le nombres de commits a pratiquement doublé entre 2010 (2601 commits) et 2011 (4845 commits). Mais, le plus surprenant est que le nombre de commits a diminué progressivement depuis 2011 jusqu'à arriver à environ 896 commits en 2017.
@@ -175,6 +176,7 @@ En ce qui concerne l'évolution en détails des types de contributions, nous avo
 
 Pour donner suite à notre démarche présentée plus tôt, nous avons pu tracer le diagramme circulaire suivant.
 Il s'agit d'une représentation de la part des fichiers ayant subi une baisse de leur complexité et des fichiers ayant été supprimés au moins une fois. Une fois ces deux types "d'actions" extraites, nous pouvons avoir la part de fichiers *autre*, il pourra s'agir de fichier dont la complexité a augmenté ou n'a simplement pas évolué. 
+
 ![](https://i.imgur.com/1xHd52z.png)
 
 Nous pouvons constater que seul 12,8% des fichiers ont eu une baisse de leur complexité, c'est moins que ce que nous pensions pour un projet aussi important. 
@@ -188,7 +190,9 @@ Etant donné que nous n'avons pas les causes de ces suppressions, nous ne pouvon
 #### Restauration
 Nous avons 13,3% des fichiers qui ont été restaurés deux fois ou plus. Ce nombre reste faible si nous considérons *Scikit-learn* la part de fichiers supprimés.
 Pour pousser un peu plus notre recherche sur la restauration des fichiers, nous avons cherché les fréquences communes de restauration.
+
 ![](https://i.imgur.com/KCRC1NE.png)
+
 Nous pouvons nous rendre compte que les fichiers restaurés deux fois sont les plus communs. En effet, parmi les 251 fichiers restaurés, plus de 100 l'ont été deux fois.
 Nous remarquerons cependant des comportements anormaux (88 restaurations pour un fichier) qu'il aurait été intéressant de comprendre.
 
@@ -209,12 +213,16 @@ D'après ce que nous avons pu constater, de nombreux fichiers sont entretenus. N
 La documentation fait partie des axes essentiels d'un projet Open Source, sans elle, la collaboration serait extrêmement compliquée et elle pourrait mener à des erreurs ou des duplications de fonction.
 
 Nécessaire au bon fonctionnement, nous avons tout d'abord cherché quelle était la part de documentation dans le code.
+
 ![](https://i.imgur.com/ThuKpC6.png)
+
 Comme nous pouvons le constater sur le graphe ci-dessus, la présence de documentation est restée stable pendant les dix dernières années.
 En effet, par rapport à la quantité de code ajoutée, la documentation occupe au moins 35% du code.
 
 Nous avons alors voulu savoir quelle était la part de documentation "pure" ou *docstrings* servant à associer de la documentation *Python* à des modules/fonctions et la part de commentaires, laissés par les utilisateurs pour expliquer une chose précise dans la fonction.
+
 ![](https://i.imgur.com/U1oKQ5q.png)
+
 Comme nous pouvons le constater, à l'aide du diagramme ci-dessus, la *docstrings* prévaut énormément avec une moyenne supérieure à 80%.
 De plus, les commentaires, s'ils ne sont pas utilisés correctement, peuvent aussi servir à créer de la documentation. La différence avec la documentation "pure" est qu'elle ne sera pas associée aux différents modules et fonctions.
 
@@ -226,11 +234,15 @@ Nous pouvons dire qu'une bonne utilisation de la documentation est faite depuis 
 ### 4.4 - Problématique 3 : Les méthodes de Machine Learning
 Après avoir lancé le script servant à détecter les mentions des algorithmes dans les messages de commits, nous avons pu réduire la liste de plus de 60 algorithmes à seulement 30. En effet, plus de la moitié des algorithmes que nous avions listé n'apparaissait pas dans l'ensemble des messages des 25000 commits. Pour la clarté de l'affichage des résultats nous avons trouvé plus judicieux de nous en défaire et de ne montrer que ceux ayant au moins une occurrence.
  Les résultats obtenus sont présentés dans le schéma ci-dessous. 
+ 
 ![](https://i.imgur.com/fv5LXBn.png)
+
 Comme nous pouvons voir, la technique de Machine Learning ayant le plus d'occurrence dans les messages des commits est celle des *Support-Vector Machines* (SVM) avec environ 650 occurrences. Nous avons ensuite celle de *Least Absolute Shrinkage and Selection Operator* (LASSO) et de *Principal Component Analysis* (PCA) avec environ 300 occurrences. 
 Même si nous n'arrivons pas à savoir pourquoi ces algorithmes ci ressortent plus que les autres (bien qu'ils apparaissent souvent dans les tops 10 des techniques de Machine Learning les plus populaires), cela nous permet tout de même d'observer un groupe de techniques/algorithmes (SVM, LASSO, PCA, LARS, LDA) bien plus présent que les autres. 
 D'une manière similaire à la précédente, nous avons essayé de savoir quels types/catégories d'algorithmes sont les plus concernés par les contributions. Nous avons obtenu la figure suivante :
+
 ![](https://i.imgur.com/o5WjTd5.png)
+
 Nous pouvons clairement voir que les techniques de régression sont celles qui ont plus de contribution.
 Dans les deux cas étudiés (occurrences des algorithmes/techniques et occurrences des types de techniques), nous ne nous attendions pas à voir une telle disparité apparaître.
 
