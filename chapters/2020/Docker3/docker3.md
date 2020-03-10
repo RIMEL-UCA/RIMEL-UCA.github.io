@@ -146,11 +146,31 @@ Pour prouver cette hypothèse, nous avons établi le protocole suivant :
 - Pour chaque variable d'environnement :
 -> **Détecter les commits** ayant utilisé la variable d'environnement, et leur **commit précédent**.
 -> **Détecter les fichiers** (dans le code) dans lesquels les variables d'environnements ont été ajoutées
--> **Calculer l'évolution de la complexité cyclomatique** de ces fichiers entre le commit précédent 
-      et le commit où la variable d'environnement a été utilisée.
+-> **Calculer l'évolution de la complexité cyclomatique** de ces fichiers entre le commit précédent  et le commit où la variable d'environnement a été utilisée.
 
-Description du protocole ... Etablir le lien avec les outils utilisés (et comment). Justifier en quoi ce protocole permettra de vérifier 
-ou pas l'hypothèse.
+### Protocole
+
+Nous avons choisi dans un premier temps de tester d'appliquer notre démarche sur un seul projet (ThingsBoard). Par la suite, nous avons améliorer nos scripts de manières incrémentales afin qu'ils puissent s'appliquer aux différents projets. Enfin, nous avons automatisé notre protocole, afin de l'appliquer rapidement sur différents projets. 
+
+**Objectif Step 1** :  Obtenir pour chaque VE le commit ou elle a été utilisée ou ajoutée et le commit précédent le commit en question
+
+**Objectif Step 2** : Obtenir les fichiers ou les variables d'environnement ont été modifiées entre le commit et son précédent.
+
+**Objectif Step 3** : Analyser (calculs de complexité) les fichiers au niveau de chaque commit pour pouvoir comparer si l'ajout des VE a un impact sur la complexité et le nombre de lignes.
+
+**Objectif Step 4** : Récupérer les résultats des analyses et construire des statistiques (moyenne, delta avant/après) puis créer des visualisations. 
+
+Le schéma ci-dessous décrit plus en détails les différentes étapes (automatisée) de notre démarche : 
+
+ 
+
+![pipeline](https://image.noelshack.com/fichiers/2020/11/2/1583871891-floz-page-1-1.png)
+
+
+
+
+
+Justifier en quoi ce protocole permettra de vérifier ou pas l'hypothèse.
 
 ## V. Mauvaises pistes explorées
 
@@ -172,9 +192,9 @@ Avant de fixer définitivement le protocole utilisé durant cette étude, nous a
 
    - Colonne 1 : Les variables d'environnements trouvées
 
-   - Colonne 2 : La complexité (number line of code) dans le commit précédent l'ajout de la variable
+   - Colonne 2 : Le nombre de ligne dans le commit précédent l'ajout de la variable
 
-   - Colonne 3 : La complexité (number line of code) dans le commit d'ajout de la variable
+   - Colonne 3 : Le nombre de ligne dans le commit d'ajout de la variable
 
    - Colonne 4 : La différence de complexité entre les deux commits 
 
@@ -195,8 +215,8 @@ Avant de fixer définitivement le protocole utilisé durant cette étude, nous a
    L'image ci-dessus montre : 
 
       - Colonne 1 : Les variables d'environnements trouvées
-      - Colonne 2 : La complexité (number line of code) dans le commit précédent l'ajout de la variable
-      - Colonne 3 : La complexité (number line of code) dans le commit d'ajout de la variable
+      - Colonne 2 : La complexité cyclomatique (CCN) dans le commit précédent l'ajout de la variable
+      - Colonne 3 : La complexité cyclomatique (CCN) dans le commit d'ajout de la variable
       - Colonne 4 : La différence de complexité entre les deux commits 
 
       ![Image](https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/88979522_2621295381441641_3173252310801317888_n.png?_nc_cat=106&_nc_sid=b96e70&_nc_ohc=l4MliccmlQwAX_83DjZ&_nc_ht=scontent-cdt1-1.xx&oh=d2effbfa389e358632d07f4d912f64ca&oe=5E95441D)
@@ -205,32 +225,39 @@ Avant de fixer définitivement le protocole utilisé durant cette étude, nous a
 
    
 
+   Interprétation : 
+
+   Nous observons que la complexité cyclomatique diminue sur plusieurs variables (MYSQL_USER, MYSQL_PASSWORD). 
+
    
 
-   **B. Apache Skywalking** 
+   **B. Apache Skywalking**
+
+
+   **NLOC**
+
+   ![Image](https://scontent-cdg2-1.xx.fbcdn.net/v/t1.15752-9/89178863_624830931670773_5962046804559134720_n.png?_nc_cat=110&_nc_sid=b96e70&_nc_ohc=0cOptgeu1yEAX_gWjus&_nc_ht=scontent-cdg2-1.xx&oh=660f87f1f5f8ade34858411a3fecaf97&oe=5EA5AE80)
+
+   ![Image2](https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/89024668_2476373432676814_8035139346954715136_n.png?_nc_cat=101&_nc_sid=b96e70&_nc_ohc=3v8DN2J4GoMAX9uHGai&_nc_ht=scontent-cdt1-1.xx&oh=966f8278ae501ed1e391078d59bd0472&oe=5E928B8A)
+
+   Interprétation : 
+
+   Nous observons, comme sur le projet précédent que plus on ajoute de variables d'environnement plus le nombre de ligne augmente.
 
    
+
+   **Complexité cyclomatique** 
+
+![Image](https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/89384401_2557079704620209_5055113946898366464_n.png?_nc_cat=101&_nc_sid=b96e70&_nc_ohc=4yhvJKtkomYAX9Dn6Dl&_nc_ht=scontent-cdt1-1.xx&oh=6155a4e282687756f818e831a90fba1e&oe=5E8DFFFC)
+    
+![Image2](https://scontent-cdg2-1.xx.fbcdn.net/v/t1.15752-9/88357402_540906743205371_2543530115736797184_n.png?_nc_cat=102&_nc_sid=b96e70&_nc_ohc=KqH2ZFGUW78AX-cPi6f&_nc_ht=scontent-cdg2-1.xx&oh=ac873ee116ba692ed39644e54c336f86&oe=5EA50623)
+
+   Interprétation : 
+
+   Nous observons que la complexité cyclomatique a diminué lors de l'ajout de la variable TAG. La variable SW_STORAGE, n'a pas eu d'impact sur la complexité. Enfin, la variable COLLECTORS_SERVER a légèrement augmenté la complexité. 
 
 2. Conclusion de l'analyse
 
-
-## VI. Description de la partie automatisée
-
-Nous avons choisi dans un premier temps de tester d'appliquer notre démarche sur un seul projet (ThingsBoard). Par la suite, nous avons améliorer nos scripts de manières incrémentales afin qu'ils puissent s'appliquer aux différents projets. 
-
-**Objectif Step 1** :  Obtenir pour chaque VE le commit ou elle a été utilisée ou ajoutée et le commit précédent le commit en question
-
-**Objectif Step 2** : Obtenir les fichiers ou les variables d'environnement ont été modifiées entre le commit et son précédent.
-
-**Objectif Step 3** : Analyser (calculs de complexité) les fichiers au niveau de chaque commit pour pouvoir comparer si l'ajout des VE a un impact sur la complexité et le nombre de lignes.
-
-**Objectif Step 4** : Récupérer les résultats des analyses et construire des statistiques (moyenne, delta avant/après) puis créer des visualisations. 
-
-Le schéma ci-dessous décrit plus en détails les différentes étapes (automatisée) de notre démarche : 
-
- 
-
-![pipeline](https://image.noelshack.com/fichiers/2020/11/2/1583871891-floz-page-1-1.png)
 
 ## VII. Menaces à la validité
 
