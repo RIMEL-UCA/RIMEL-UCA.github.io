@@ -56,6 +56,7 @@ En combinant ces trois questions, nous pensons obtenir des informations de dimen
 ## III. Collecte d'informations
 
 La zone de recherche se situe dans un ensemble de projets *Open Source*. Nous avons décidé de choisir GitHub qui répertorie un grand nombre de projets, facile à utiliser et à chercher des dépôts et des fichiers spécifiques. GitHub propose également une API permettant de récolter facilement des informations sur des dépôts de manière plus poussée (chercher du code précis).
+La totalité des données récoltées est fournie avec des instructions dans notre Readme.md.
 
 ### Recherche de POM sur GitHub
 
@@ -88,7 +89,7 @@ Une première hypothèse que nous établissons est : Les noms des *Maven Profile
 
 #### Expérimentation
 
-Afin de répondre à cette première sous-question, nous avons constitué une base contenant 5323 POMs possédant en tout 18 431 *Maven profiles* pour les caractériser à l'aide de différents critères. Le premier critère que nous utilisons afin de discriminer les *profiles* est leur nom, ou plus précisément leur *id*. 
+Afin de répondre à cette première sous-question, nous avons constitué une base contenant 5323 POMs possédant en tout 1942 *Maven profiles* et 7800 éléments de configuration, pour les caractériser à l'aide de différents critères. Le premier critère que nous utilisons afin de discriminer les *profiles* est leur nom, ou plus précisément leur *id*. 
 Ensuite, nous avons examiné le contenu des *profiles* de ces catégories pour comprendre lesquelles étaient le plus configurées, et comment. Nous appelons ici configuration, le fait de spécifier des ```properties```, ou d'utiliser des ```dependencies``` ou des ```plugins```. 
 Ces données sont enregistrées dans une base Neo4J.
 
@@ -165,14 +166,14 @@ Les technologies recherchées sont :
 
 ### Question 1 : Quels sont les différents types de Maven profiles dans les projets Open Source ?
 
-*Rappel : Les analyses de cette question ont été réalisées sur la base de données contenant 5323 POMs et possédant en tout 18 431 Maven profiles (base numéro 1).* <br/>
+*Rappel : Les analyses de cette question ont été réalisées sur la base de données contenant 5323 POMs et possédant en tout 1942 Maven profiles avec 7800 éléments de configuration (base numéro 1).* <br/>
 Nous avons choisi d'établir des catégories en fonction des noms majoritaires des *profiles*. En effet, ces derniers peuvent avoir des noms très différents, mais certains ne sont en fait que très peu utilisés comparés au nombre total de *profiles*. Les noms qui ressortaient le plus nous ont servi de catégories afin de regrouper par exemple "dev" et "development" ou encore "include-java-sources" et "include-binaries". On peut le constater sur le diagramme de répartition des noms : 
 
 ![profiles-names.png](../assets/MavenProfileInProjectTimeline/Profile-names.png)
 
 À partir de ce diagramme, nous les avons regroupés par catégorie. Nous avons fait le choix d'établir des ensembles disjoints pour ne pas avoir d'ambiguïté, c'est-à-dire que si un *profile* est dans une catégorie, il ne peut pas figurer dans une autre.
 
-Le diagramme ci-dessous montre le résultat de nos expérimentations, en pourcentage par rapport au 18 431 profiles stockés, leur répartition selon s'ils contiennent les différents termes dans leur nom.
+Le diagramme ci-dessous montre le résultat de nos expérimentations, en pourcentage par rapport au 1942 profiles stockés, leur répartition selon s'ils contiennent les différents termes dans leur nom.
 
 ![profiles-categories.png](../assets/MavenProfileInProjectTimeline/profiles-categories.png)
 
@@ -268,6 +269,8 @@ Enfin dans la question trois, notre démarche a été plus fructueuse, car nous 
 
 Nous pouvons donc apporter une réponse à notre question générale **Quels sont les principaux problèmes résolus par l’utilisation des Maven Profiles ?** sur les projets étudiés. Les problématiques auxquelles répondent les *profiles* sont principalement : inclure des éléments dans le build d'un projet, configurer les différents moments du cycle de développement d'un projet (dev, release, test) ou encore lancer des outils des outils particuliers sur le code (metrics). Nous n'avons pas trouvé de technologie impactant leur utilisation de manière négative dans le jeu de données étudiées, ce qui nous laisse penser que les problématiques que les *profiles* résolvent sont orthogonales aux technologies. Cependant, certaines technologies peuvent amener à utiliser plus de *profiles*, c'est notamment le cas de l'intégration continue, ou à utiliser des *profiles* particulier, comme avec les ORM et les *profiles* correspondant aux drivers SQL.
 
+En ce qui concerne les perspectives de l'étude, il serait intéressant de retravailler la question 2. Pour améliorer la fiabilité de nos résultats, nous pourrions contacter des développeurs de projets que nous avons étudiés pour leur demander pourquoi ils ont choisi les *profiles* qu'ils ont implémentés et dans quel but. Ce serait aussi un bon moyen de comprendre pourquoi autant de projets utilisent des *profiles* d'`include`. Nous pensons aussi que d'autres informations intéressantes pourraient être extraites de nos bases de données. 
+
 Pour terminer, nous avons beaucoup appris sur la manière dont une étude doit être conduite lors de ce projet. Nous nous sommes rendu compte de la nécessité de critiquer nos résultats et de prendre du recul vis-à-vis de ces derniers pour mieux les analyser. Les conclusions doivent toujours être mises en perspectives avec le jeu de données étudié et les biais connus.
 
 ## VI. Outillage
@@ -278,7 +281,7 @@ Au cours de cette étude, nous avons développé plusieurs outils pour récolter
 - Script Analyse (Python) : Ce script utilise les bases de données récupérées par l'outil définition-tool afin de récupérer des métriques sur les repositories des projets dont nous avons récupéré les poms.
 - Event-search-tool (Java/Spring) : Cet outil clone les projets sélectionnés précédemment avec le script d'analyse Python pour analyser les commits qui ont impacté les profils dans le pom. L'outil permet aussi de définir la stack technologique utilisée par le projet. Les résultats produits par cet outil sont stockés dans une base de données Neo4j.
 
-Nous avons travaillé sur la reproductibilité de notre étude. Ainsi, nous fournissons une documentation complète permettant de reproduire nos expériences. À noter que les données récupérées sur l'API Github par l'outil "definition-tool" varient. En effet, nous utilisons une fonction de l'API qui renvoie du code indexé en permanence (lorsque les développeurs commit). Il est donc impossible de reconstruire le même *dataset* que nous. C'est pourquoi nous mettons à disposition nos deux bases de données Neo4J sous forme de volumes docker. Ces dernières peuvent être utilisées via le docker-compose fourni dans le projet.
+Nous avons travaillé sur la reproductibilité de notre étude. Ainsi, nous fournissons une documentation complète permettant de reproduire nos expériences (cf. README.md dans notre code). À noter que les données récupérées sur l'API Github par l'outil "definition-tool" varient. En effet, nous utilisons une fonction de l'API qui renvoie du code indexé en permanence (lorsque les développeurs commit). Il est donc impossible de reconstruire le même *dataset* que nous. C'est pourquoi nous mettons à disposition nos deux bases de données Neo4J sous forme de volumes docker. Ces dernières peuvent être utilisées via le docker-compose fourni dans le projet.
 
 ### Diagramme de Venn
 
