@@ -99,7 +99,7 @@ Chaque membre de l'équipe a créé des scripts et des graphiques.
 Projets Android :
 Concernant l'architecture des projets elle n'est pas impactée par la gestion de la localisation puisque tous les projets androids suivent la même norme qui consiste a ranger les fichiers de traductions dans le répertoire "res" à la racine. La gestion des différentes langues se fait avec différents répertoires "values". Un répertoire va correspondre à une langue par exemple /res/values-de contenant un fichier "strings.xml".
 
-![](./assets/localisation/android_project.png)
+![](../assets/localisation/android_project.png)
 
 Nous pouvons voir grace au graphique ci-dessus que la taille des projets (ici le nombre de java file sert de références) n'a pas d'incidence sur la quantité de langue traduite. On peut aussi remarquer que les projets qui sont plus petits ont une grosse quantité de langues traduites (par exemple: mini.pocket, PixelKnot, card-locker) par rapport à leur quantité de fichiers java.
 
@@ -107,11 +107,11 @@ Nous pouvons voir grace au graphique ci-dessus que la taille des projets (ici le
 Projets Java :
 Concernant les projets Java nous pouvons constater que la localisation des fichiers liés à la l10n est dispatchée dans différents répertoires. Pour certains projets tel que "Jenkins" et "che", les properties sont séparées dans plus de 250 répertoires. Pour la majorité des projets analysés ces fichiers sont distribués dans moins de 50 répertoires.
 
-![](./assets/localisation/repertoires_contenant_des_properties_par_top_projet.png)
+![](../assets/localisation/repertoires_contenant_des_properties_par_top_projet.png)
 
 Si nous comparons ces résultats avec la proportion de fichiers properties et fichiers java, nous pouvons constater une corrélation entre les deux. Effectivement, les projets ayant peu de fichiers properties correspondant à la traduction sont ceux qui ont le moins de répertoire les contenant. Si nous reprenons l'exemple de "Jenkins", on voit qu'il y a plus de fichiers properties de traduction que de fichier java et que cela a un impact sur l'architecture du projet, puisque ces fichiers properties sont contenus dans plus de 250 répertoires. De même pour le projet "che", même si la quantité de traduction est moins élevé que "Jenkins", cela semble toujours avoir un impact sur l'architecture, puisque les fichiers liés à localisation sont contenus dans plus de 400 répertoires. Cette corrélation est aussi visible pour les projets "spring-petclinic", "ddsample-core" et "pentaho-kettle".
 
-![](./assets/localisation/nombre_de_fichier_properties_par_top_projet.png)
+![](../assets/localisation/nombre_de_fichier_properties_par_top_projet.png)
 
 La structure des projets android ne semble pas impactée par la localisation. Cela peut s'expliquer par la norme de placement des fichiers de traduction dans le répertoire "res". En revanche, les projets Java purs semblent impactés, cela peut s'expliquer par le manque de norme. Chaque projet semble gérer ses emplacements différemment, et aucun projet place tous ses fichiers de traduction au même endroit, ce qui impacte la structure global.
 
@@ -120,7 +120,7 @@ La structure des projets android ne semble pas impactée par la localisation. Ce
  
 Commits de localisation : 
 Lorsqu'on étudie le graphique représentant le pourcentage de commits liés à la localisation sur la branche master, on se rend rapidemment compte que le pourcentage est extrêment variable.
-![Figure : Pourcentage de commit lie a la localisation par projet](./assets/localisation/pourcentage_commit_graph.png)
+![Figure : Pourcentage de commit lie a la localisation par projet](../assets/localisation/pourcentage_commit_graph.png)
 Si on excepte les projets n'ayant aucun commits de localisation, le plus bas est à 1%, et le plus haut est à 76%. 
 Cette disparité dans le pourcentage nous a étonné, car nous nous attendions à ce que l'automatisation avec weblate permette de garder le nombre de commits assez bas, et régulier entre différents projets.
 
@@ -130,7 +130,7 @@ Pour cela nous avons réalisé un graphique en batons avec 3 valeurs pour chaque
 - Le pourcentage maximal de commits pour ce projet (violet)
 - Le pourcentage de commits sur master (vert)
 
-![](./assets/localisation/graph_branches.png)
+![](../assets/localisation/graph_branches.png)
 
 Globalement, on observe qu'il n'y a pas de branches dédiée à la localisation, car seuls 2 projets montrent une différence notable entre le pourcentage maximal et le pourcentage moyen.
 On remarque aussi qu'un bon nombre de projets (33 / 64) ont leur pourcentage de commits sur master égal au pourcentage maximal de commits, on peut donc supposer que master est la branche dédiée à la localisation pour ces projets là.
@@ -143,7 +143,7 @@ Avec ces valeurs, si on observe que la branche maximale a la même valeur que ma
 Nous avons également souhaité étudier la répartition des commits en fonction des auteurs : si le commit a été fait par un humain ou par Weblate. 
 Nous avons donc réalisé un digramme en boite à moustaches du pourcentage de répartion de commits de localisation réalisé par Weblate sur tous les projets. 
 
-![](./assets/localisation/graph_moyenne.png)
+![](../assets/localisation/graph_moyenne.png)
 
 La moyenne est à 50%, le minimum est à 0% et le maximum à 95%. Cela représente donc un grand écart type. 
 
@@ -155,18 +155,18 @@ Pour cela nous avons compté le nombre de commits lié a la localisation a chaqu
 de normaliser les comptes sur une echelle de 0 à 100, à 0 étant le premier commits detecté, à 100 le dernier detecté.
 Cela nous donnants le graphique suivant.
 
-![](./assets/localisation/commit_lie_a_la_localisation_dans_le_temps.png)
+![](../assets/localisation/commit_lie_a_la_localisation_dans_le_temps.png)
 
 On voit donc une répartition relativement disparate après une période de plateau où les projets ne versionnent pas de travail liés a la localisation. 
 Et on observe la même chose sur les projets selectionnés à travers weblate où les projets appliquant la l10n parmi les 1000 plus populaires sur github 
 représentés ci dessous:
 
-![](./assets/localisation/commit_lie_a_la_localisation_dans_le_temps_star.png)
+![](../assets/localisation/commit_lie_a_la_localisation_dans_le_temps_star.png)
 
 Afin de chercher a exclure les phénomènes ponctuels de commits massifs qui pourraient être effectués sur certains projets
 nous avons réalisé un graph la moyenne du nombre de fichiers versionnés par pourcentage de temps écoulé, à nouveau pour les deux ensembles de projets.
- ![](./assets/localisation/moyenne_commit_lie_a_la_localisation_dans_le_temps.png)
- ![](./assets/localisation/moyenne_commit_lie_a_la_localisation_dans_le_temps_star.png)
+ ![](../assets/localisation/moyenne_commit_lie_a_la_localisation_dans_le_temps.png)
+ ![](../assets/localisation/moyenne_commit_lie_a_la_localisation_dans_le_temps_star.png)
  
 Nous voyons alors un nombre de commits beaucoup plus homogène au cours du temps, à nouveau quelque soit l'échantillon de projets.
 
@@ -208,7 +208,7 @@ Donc dans le cas d'un changement de clé dans les fichiers properties, il va y a
 
 Par contre, on remarque une grosse différence pour le nombre moyen d'occurences de marqueurs par projets, et les projets Java ont en moyenne 900 occurences contrairement au projets Android qui en ont 100.
 
-![](./assets/localisation/marqueur_par_projet.png)
+![](../assets/localisation/marqueur_par_projet.png)
 
 Sur ce graphique, on peut distinguer que chaque projet est différent, certains projets ont jusqu'à 50% de fichiers avec des marqueurs et certains projets en ont environ 0%. 
 
