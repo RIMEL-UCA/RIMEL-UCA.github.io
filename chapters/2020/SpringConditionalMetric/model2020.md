@@ -15,19 +15,19 @@ Nous sommes quatre étudiants en dernière année à Polytech Nice Sophia en arc
 
 ## I. Contexte de la recherche
 
-Spring est un framework open-source qui facilite la mise en place et le développement d'applications Java. Son fonctionnement se base sur un système d'annotations. 
+Spring est un framework open source qui facilite la mise en place et le développement d'applications Java. Son fonctionnement se base sur un système d'annotations. 
 
-A l'heure actuelle, diverses annotations permettent d'effectuer de la variabilité dans Spring.
+À l'heure actuelle, diverses annotations permettent d'effectuer de la variabilité dans Spring.
 Quelques releases plus tôt, l'annotation @Profile, introduite dans la version 3.1 de Spring, était la première à apporter un mécanisme de paramétrage. En effet, avec cette annotation, nous pouvons activer des profils différents (un profil dev, un profil prod par exemple). C'est un moyen d’introduire de la variabilité basée uniquement sur des vérifications booléennes,
 en lien avec les fichiers *properties* de Spring.
 
 Cette annotation a par la suite été raffinée, notamment dans la version 4 de Spring. Elle se base désormais sur @Conditional apportant la possibilité supplémentaire de pouvoir être utilisée à l'échelle d'une méthode ce qui était impossible auparavant.
 En effet, dans cette même version, l'annotation *@Conditional* de Spring fait son apparition afin de répondre à des problématiques de condition de chargement de classe en fonction d'un contexte.
 
-Cette annotation est beaucoup plus puissante que le *@Profile*, nous pouvons effectuer de la variabilité en fonction des *Beans*. (Exemple : Si un *bean* est présent, Si un *bean* n'est pas présent, une classe, etc)
+Cette annotation est beaucoup plus puissante que le *@Profile*, nous pouvons effectuer de la variabilité en fonction des *Beans*. (Exemple : Si un *bean* est présent, Si un *bean* n'est pas présent, une classe, etc.)
 Nous pouvons donc voir que cette annotation offre de nouvelles possibilités.
 
-C'est donc pour cette raison que lors de cette étude, nous aimerions nous concentrer sur les annotations permettant d'offrir de la variabilité incluant *@Conditional*, mais aussi *Profile*, *@Value* et *@Resource*
+C'est donc pour cette raison que lors de cette étude, nous aimerions nous concentrer sur les annotations permettant d'offrir de la variabilité incluant *@Conditional*, mais aussi *Profile*, *@Value* et *@Resource*.
 
 ![Figure 1: Logo UCA](../assets/model/UCAlogoQlarge.png)
 
@@ -35,7 +35,7 @@ C'est donc pour cette raison que lors de cette étude, nous aimerions nous conce
 
 Nous avions tous au sein de l'équipe déjà utilisé Spring lors de projets Polytech, mais aucun de nous n'avait utilisé l'annotation *Conditional* et nous étions peu qualifiés sur les outils de paramétrage de Spring. La première question émergeant de nos réflexions était donc :
 
-**Comment les outils de paramétrage de Spring sont t-il utilisés et à quelle fréquence ?**
+**Comment les outils de paramétrage de Spring sont-ils utilisés et à quelle fréquence ?**
 
 Cette question d'ordre général a été notre première étape afin d'orienter nos recherches vers d'autres questions plus précises. Au fil de nos découvertes, nous avons pu cibler un ensemble de nouvelles questions qu'il nous semblait pertinent et intéressant d'étudier.
 
@@ -53,7 +53,7 @@ Il nous paraissait d'autre part intéressant d'étudier la fréquence de test de
 
 Nous avons pu remarquer lors de nos recherches, l'existence de plusieurs annotations de configuration autres que *@Conditional*. Nous avons tout de suite pensé qu'il serait intéressant, lorsque nous l'aurions étudiée, de la mettre en corrélation avec ses équivalents. Les autres annotations notées sont : 
 - *@Profile* qui est le prédécesseur de *@Conditional*, cette annotation est apparue dans *Spring 3.1* et est principalement utilisée afin de gérer des profils définis selon des fichiers de configuration (par exemple un fichier *".properties*). Un exemple d'utilisation serait la mise en place de profils de développement (dev), production (prod) et test. Le type de *Bean* chargé pourrait ensuite dépendre du profil sélectionné. 
-- *@Ressource* cette annotation n'est pas propre à Spring mais à JSR (Java Specification Requests), elle sert néanmoins également à faire de la variabilité de la même manière que les autres annotations fournies par Spring. Nous avons choisi de la prendre également en compte, car nous nous sommes rendus compte lors de nos recherches de son importance et de sa similitude avec les annotations de paramétrage Spring. Elle est d'ailleurs presque tout le temps associées à celles-ci au sein d'exemples, tutoriels et documentations. De plus, cela nous permettait également de nous apercevoir de l'utilisation générale des annotations de paramétrage, même en dehors des annotations Spring afin de pouvoir réguler notre étude.
+- *@Ressource* cette annotation n'est pas propre à Spring, mais à JSR (Java Specification Requests), elle sert néanmoins également à faire de la variabilité de la même manière que les autres annotations fournies par Spring. Nous avons choisi de la prendre également en compte, car nous nous sommes rendu compte lors de nos recherches de son importance et de sa similitude avec les annotations de paramétrage Spring. Elle est d'ailleurs presque tout le temps associée à celles-ci au sein d'exemples, tutoriels et documentations. De plus, cela nous permettait également de nous apercevoir de l'utilisation générale des annotations de paramétrage, même en dehors des annotations Spring afin de pouvoir réguler notre étude.
 - *@Value* cette annotation peut être utilisée pour injecter des valeurs dans des champs de *Beans* gérés par Spring et peut être appliquée au niveau d'un attribut ou constructeur/méthode d'une classe Java. Elle est apparue pour la première fois dans Spring 3.0, il s’agit donc d’une annotation ancrée dans le *framework*, nous trouvons intéressant de l’étudiant notamment en comparaison à  *@Conditional* qui est plus récente.
 Il nous paraissait également pertinent dans le cadre de cette étude d'étudier la fréquence d'utilisation de chacune de ces annotations, de constater dans quel type de projet elles apparaissent le plus souvent et de constater comment elles sont utilisées au sein de ces projets. Cela nous permettrait d'établir une potentielle correspondance entre toutes ses annotations dédiées à des pratiques de paramétrage, ou d'en comprendre les différences. 
 
@@ -64,9 +64,9 @@ De plus, nous avions envie de la mettre en opposition à *@Conditional*, la plus
 
 ## III. Collecte d'informations
 
-N'étant pas familiers avec les annotations de paramétrage de Spring, nous avons durant cette phase essayés de nous documenter autant que possible.
-Pour cela, nous avons lu plusieurs articles qui nous ont permis d'être plus en phase avec les concepts de rétro-ingénierie et de réutilisabilité du code. Ces concepts nous ont apporté une approche différente de la tâche d'analyse, notamment en mettant en avant des processus d'automatisation. Les articles que nous avons trouvés particulièrement pertinents sont les suivants : 'Mining Implicit Design Templates for Actionable Code Reuse', 'Are Developers Aware of the Architectural Impact of Their Change', 'Titan: A Toolset That Connects Software Architecture with Quality Analysis' et son listés dans les références. 
-Nous avons également longuement lu la documentation fournie par Spring, principalement au niveau de l'utilisation des annotations. Nous avons également étudié de nombreux projets hébergés par Spring sur Github. Nous avons pu trouver un grand nombre d'informations notamment au niveau des fichiers de *.changelog*, *release notes* ou au niveau des messages de *commits* des développeurs. Ces informations étaient d'ordre plus techniques, elles nous ont permis de comprendre à plus fin grain les problématiques relatives à l'utilisation de l'annotation et son utilité au sein de projets. 
+N'étant pas familiers avec les annotations de paramétrage de Spring, nous avons durant cette phase essayé de nous documenter autant que possible.
+Pour cela, nous avons lu plusieurs articles qui nous ont permis d'être plus en phase avec les concepts de rétro-ingénierie et de réutilisabilité du code. Ces concepts nous ont apporté une approche différente de la tâche d'analyse, notamment en mettant en avant des processus d'automatisation. Les articles que nous avons trouvés particulièrement pertinents sont les suivants : 'Mining Implicit Design Templates for Actionable Code Reuse', 'Are Developers Aware of the Architectural Impact of Their Change', 'Titan: A Toolset That Connects Software Architecture with Quality Analysis' et sont listés dans les références. 
+Nous avons également longuement lu la documentation fournie par Spring, principalement au niveau de l'utilisation des annotations. Nous avons également étudié de nombreux projets hébergés par Spring sur Github. Nous avons pu trouver un grand nombre d'informations notamment au niveau des fichiers de *.changelog*, *release notes* ou au niveau des messages de *commits* des développeurs. Ces informations étaient d'ordre plus technique, elles nous ont permis de comprendre à plus fin grain les problématiques relatives à l'utilisation de l'annotation et son utilité au sein de projets. 
 
 ## IV. Hypothèses émises et expériences réalisées
 
@@ -83,7 +83,7 @@ Une fois les fichiers identifiés, nous allons parser leur nom afin d'isoler les
 
 #### Hypothèse n°2 : L'annotation @Conditional est particulièrement utilisée dans les frameworks et bibliothèques. 
 
-Nous avions l'intuition que grâce à son apport fonctionnel, l'annotation serait particulièrement utilisée au sein de *frameworks* et bibliothèques car elle facilite l’ajout de variabilité. 
+Nous avions l'intuition que grâce à son apport fonctionnel, l'annotation serait particulièrement utilisée au sein de *frameworks* et bibliothèques, car elle facilite l’ajout de variabilité. 
 
 #### Expérimentation
 
@@ -94,18 +94,18 @@ Pour cela, nous allons reprendre le fonctionnement précédent à l’aide d’u
 
 #### Hypothèse : L'annotation Conditional est souvent testée lorsqu'elle est utilisée. 
 
-Ce questionnement nous permettrait d'obtenir des informations concernant la facilité de test de l'annotation, mais également si il est fréquent de tester une annotation de paramétrage et éventuellement comment celle-ci est testée. Au vue de sa fonction déterminante pour le chargement d'un *Bean*, nous avons émis l'hypothèse que *@Conditional* est généralement testée lorsqu'elle est utilisée.
+Ce questionnement nous permettrait d'obtenir des informations concernant la facilité de test de l'annotation, mais également s’il est fréquent de tester une annotation de paramétrage et éventuellement comment celle-ci est testée. Au vu de sa fonction déterminante pour le chargement d'un *Bean*, nous avons émis l'hypothèse que *@Conditional* est généralement testée lorsqu'elle est utilisée.
 
 #### Expérimentation
 
 Afin de pouvoir valider notre hypothèse, nous allons séparer les fichiers des projets testés en fonction de leur package. Nous savons que pour les fichiers Java, le code source est compris dans un package *'src'* et les tests dans un package *'test'*. Nous savons également que les mots clés "Test" et "Tests" sont par convention utilisés afin de nommer les fichiers contenant des tests. Grâce à ces deux conventions, nous allons pouvoir isoler les fichiers sources des fichiers tests et procéder à deux analyses de la présence de l'annotation *@Conditional*. Nous comparerons ensuite sa présence dans les deux types de fichiers différents afin de déduire la fréquence de test. 
-Nous pourrons selon les résultats obtenus effectuer d'autre recherches, comme par exemple quelle déclinaison de l'annotation est la plus testée. Nous envisageons également d'étudier manuellement au sein d'une sélection de fichiers, comment est utilisée l'annotation au sein des fichiers.
+Nous pourrons selon les résultats obtenus effectuer d'autres recherches, par exemple quelle déclinaison de l'annotation est la plus testée. Nous envisageons également d'étudier manuellement au sein d'une sélection de fichiers, comment est utilisée l'annotation au sein des fichiers.
 
 ### Quelle annotation de configuration est la plus utilisée parmi les existantes (Conditional, Profile, Value, Ressources) ? 
 
 #### Hypothèse : La répartition des annotations de paramétrage n'est pas homogène.
 
-En constatant l’ancienneté de certaines annotations et les différences d’usage, nous avions l’impression que celles-ci n’étaient pas utilisées pour les même problématiques, au sein des mêmes projets et à fréquence également. Nous avons trouvé intéressant de ne pas nous restreindre uniquement à l’annotation *Conditional* mais étendre nos recherches aux autres annotations de paramétrages connues.
+En constatant l’ancienneté de certaines annotations et les différences d’usage, nous avions l’impression que celles-ci n’étaient pas utilisées pour les mêmes problématiques, au sein des mêmes projets et à fréquence également. Nous avons trouvé intéressant de ne pas nous restreindre uniquement à l’annotation *Conditional*, mais étendre nos recherches aux autres annotations de paramétrages connues.
 
 #### Expérimentation
 
@@ -115,15 +115,15 @@ Afin de relever la répartition des annotations au sein de projets, nous allons 
 
 #### Hypothèse n°1 : L'annotation @Value utilisée dans les *if* fonctionne en *spreading* au sein d'un projet.
 
-Le premier questionnement que nous avions concernait le spectre d’utilisation de l’annotation *@Value*. Nous avions l’impression qu’elle pourrait être utilisée de manière répétée au sein d’un même projet, afin d’appliquer dans plusieurs fichiers une même conditions, permettant d’apporter de la variabilité à l’échelle d’un projet depuis des *Beans* particuliers. 
+Le premier questionnement que nous avions concernait le spectre d’utilisation de l’annotation *@Value*. Nous avions l’impression qu’elle pourrait être utilisée de manière répétée au sein d’un même projet, afin d’appliquer dans plusieurs fichiers une même condition, permettant d’apporter de la variabilité à l’échelle d’un projet depuis des *Beans* particuliers. 
 
 #### Expérimentation
 
-Afin de vérifier cette hypothèse, nous allons parser les fichiers Java contenant l’annotation. Le script d’identification d’une annotation au sein d’un fichier précédemment établie sera réutilisé. Puis nous irons chercher au sein des conditions “if”, la clause de la condition et nous la mettrons en corrélation avec les autres conditions établies au sein d’un même projet. Cela nous permettra de savoir si une condition est généralement utilisée plusieurs fois au sein d’un même projet. 
+Afin de vérifier cette hypothèse, nous allons parser les fichiers Java contenant l’annotation. Le script d’identification d’une annotation au sein d’un fichier précédemment établi sera réutilisé. Puis nous irons chercher au sein des conditions “if”, la clause de la condition et nous la mettrons en corrélation avec les autres conditions établies au sein d’un même projet. Cela nous permettra de savoir si une condition est généralement utilisée plusieurs fois au sein d’un même projet. 
 
 #### Hypothèse n°3 : L'annotation est fréquemment utilisée au sein de projets lambdas, mais moins utilisée que *@Conditional* au sein de bibliothèques.
 
-Nous pensons qu’il serait intéressant d’opposer l’utilisation de *@Conditional* et *@Value*, ces deux annotations nous semblent être les plus populaires en terme de paramétrage au sein de Spring. De part la variabilité de *Bean* apportée grâce à *@Conditional*, nous pensons que celle-ci sera plus présente au sein de bibliothèques car elle correspond mieux au besoin. Néanmoins, nous pensons que l’annotation *@Value* grâce à son ancienneté et sa modularité, est globalement plus utilisée. 
+Nous pensons qu’il serait intéressant d’opposer l’utilisation de *@Conditional* et *@Value*, ces deux annotations nous semblent être les plus populaires en termes de paramétrage au sein de Spring. De par la variabilité de *Bean* apportée grâce à *@Conditional*, nous pensons que celle-ci sera plus présente au sein de bibliothèques, car elle correspond mieux au besoin. Néanmoins, nous pensons que l’annotation *@Value* grâce à son ancienneté et sa modularité, est globalement plus utilisée. 
 
 #### Expérimentation
 
@@ -131,7 +131,7 @@ Afin de vérifier cette hypothèse, nous allons utiliser un script Python permet
 
 ## V. Ressources utilisées
 
-Afin de pouvoir fournir des réponses à nos questions, nous avons constitué un *dataset* de projets Java utilisant Spring. La récupération des *dataset* a été réalisée depuis la plateforme Github, hébergeur de projets open-source fonctionnant avec le gestionnaire de version Git. La plateforme contient des millions de projets qui nous ont permis d'établir un dataset complet et exhaustif. Il nous semblait important d’extraire les projets exemples, les tutoriels, les modules annexes de notre étude car ceux-ci ne correspondent pas à une réelle utilisation mise en contexte au sein d’un projet. Les annotations utilisées au sein de ces projets ne répondent pas à un besoin de développement mais sont incluses afin d’enseigner un usage, elles ne permettent pas de répondre à nos questions.
+Afin de pouvoir fournir des réponses à nos questions, nous avons constitué un *dataset* de projets Java utilisant Spring. La récupération des *dataset* a été réalisée depuis la plateforme Github, hébergeur de projets open source fonctionnant avec le gestionnaire de version Git. La plateforme contient des millions de projets qui nous ont permis d'établir un dataset complet et exhaustif. Il nous semblait important d’extraire les projets exemples, les tutoriels, les modules annexes de notre étude, car ceux-ci ne correspondent pas à une réelle utilisation mise en contexte au sein d’un projet. Les annotations utilisées au sein de ces projets ne répondent pas à un besoin de développement, mais sont incluses afin d’enseigner un usage, elles ne permettent pas de répondre à nos questions.
  Nous avons constitué notre *dataset* en deux étapes distinctes. 
 Tout d'abord, le premier *dataset* était constitué uniquement de projets Spring. Ne sachant pas comment l'annotation était utilisée et son utilité précise au sein de projets, nous pensions qu'acquérir des données de renseignement au niveau du créateur de l'annotation pourrait être très enrichissant pour cette étude. Pour cela, nous avons utilisé un ensemble de projets hébergés par Spring, décrit dans le tableau suivant.
 
@@ -141,7 +141,7 @@ Tout d'abord, le premier *dataset* était constitué uniquement de projets Sprin
 | Spring Cloud             | 63 |
 
 
-Nous avons par la suite constitué un second *set*, uniquement constitué de projets utilisant Spring mais n'appartenant pas à Spring. En effet, se limiter aux projets Spring n'aurait pas reflété l'utilisation réelle de l'annotation au sein de projets lambdas. Nous les avons classés dans le tableau suivant en fonction de leur type.
+Nous avons par la suite constitué un second *set*, uniquement constitué de projets utilisant Spring, mais n'appartenant pas à Spring. En effet, se limiter aux projets Spring n'aurait pas reflété l'utilisation réelle de l'annotation au sein de projets lambdas. Nous les avons classés dans le tableau suivant en fonction de leur type.
 
 | Frameworks                  | Bibliothèques        | Autres                            |
 |-----------------------------|----------------------|-----------------------------------|
@@ -160,7 +160,7 @@ Nous avons par la suite constitué un second *set*, uniquement constitué de pro
 
 Afin d'optimiser nos recherches, nous les avons automatisées à l'aide de scripts en Python. Le développement python était effectué sur l'outil Jupyter Notebook. Nous avons choisi cette application, car elle apportait plusieurs avantages :
 * la visualisation des scripts et des résultats d'exécution directement dans un navigateur web
-* la mémoire en cache des exécutions des scripts, ce qui a permit d'accélérer le développement, car les scripts n'ont pas besoin d'être relancés à chaque nouvelle exécution
+* la mémoire en cache des exécutions des scripts, ce qui a permis d'accélérer le développement, car les scripts n'ont pas besoin d'être relancés à chaque nouvelle exécution
 * les scripts partagés avec Jupyter Notebook Collaboration au sein desquels le stockage des projets clonés se fait directement dans le cloud (Google Drive)
 
 ### Javalang
@@ -192,7 +192,7 @@ D’autre part, le projet Spring Cloud contient 1654 annotations du type *@Condi
 
 On remarque que les annotations présentes en majorité sont identiques au sein des deux environnements différents bien que l’ordre soit légèrement différent. Cela nous permet de déduire que les annotations principalement utilisées sont *@ConditionalOnMissingBean*, *@ConditionalOnProperty*, *@ConditionalOnClass*, *@ConditionalOnBean* et *@Conditional*. 
 
-Nous avons également pu observer en étudiant Spring boot plus en détails que le projet contient 337 fichiers différents pour 4,15 @Conditional en moyenne par fichier. Nous avons également pu remarquer que l’annotation est présente au sein de 316 fichiers de configuration grâce à un script isolant les fichiers de configuration des autres fichiers.
+Nous avons également pu observer en étudiant Spring boot plus en détail que le projet contient 337 fichiers différents pour 4,15 @Conditional en moyenne par fichier. Nous avons également pu remarquer que l’annotation est présente au sein de 316 fichiers de configuration grâce à un script isolant les fichiers de configuration des autres fichiers.
 
 Nos analyses nous ont donc permis de répondre à la question précédemment posée : 
 Comment l'annotation @Conditional est-elle utilisée ?
@@ -214,10 +214,10 @@ Nous avons utilisé un script Python permettant de mettre en corrélation la fr�
 Nos résultats montrent une faible fréquence d'apparition de l'annotation *@Conditional* au sein de fichiers de tests. Mais ces chiffres ne permettaient pas de savoir si elle n'était pas testée par choix ou parce qu'il était difficile de la tester. Nous avons donc par la suite réalisé une recherche manuelle au niveau des projets. 
 
 Cette deuxième phase de recherche nous a permis de comprendre que nos mesures étaient faussées pour deux raisons : 
-* afin de tester les annotations *@Conditional*, il n’est pas nécessaire que celles-ci soient contenues dans un fichier de test. A l’inverse, des vérifications vont être directement réalisées sur les *Beans* chargés pour un environnement donné. Le résultat de l’utilisation de l’annotation est testé, l’annotation en elle-même n’est pas présente. 
-* nous nous sommes rendus compte que malheureusement de nombreux fichiers contenant des tests au sein de notre *dataset* ne suivaient pas les conventions d’usage Java sur lesquelles nous nous étions basés pour notre script (en utilisant les mots clef “Test, “Tests”). Nous ne pouvions pas à l’échelle de si grands projets réalisée une étude satisfaisant manuellement et il était également impossible de considérer ses projets dont les noms ne suivaient aucune convention.
+* afin de tester les annotations *@Conditional*, il n’est pas nécessaire que celles-ci soient contenues dans un fichier de test. À l’inverse, des vérifications vont être directement réalisées sur les *Beans* chargés pour un environnement donné. Le résultat de l’utilisation de l’annotation est testé, l’annotation en elle-même n’est pas présente. 
+* nous nous sommes rendu compte que malheureusement de nombreux fichiers contenant des tests au sein de notre *dataset* ne suivaient pas les conventions d’usage Java sur lesquelles nous nous étions basés pour notre script (en utilisant les mots-clefs “Test, “Tests”). Nous ne pouvions pas à l’échelle de si grands projets réaliser une étude satisfaisant manuellement et il était également impossible de considérer ses projets dont les noms ne suivaient aucune convention.
 
-Nous n’avons donc pas réussi à fonder nos propos en terme de test de l’annotation. Nous n’avons donc pas pu en déduire la facilité de test de celle-ci, ni si elle risquait d’apporter une régression de la couverture de test. 
+Nous n’avons donc pas réussi à fonder nos propos en termes de test de l’annotation. Nous n’avons donc pas pu en déduire la facilité de test de celle-ci, ni si elle risquait d’apporter une régression de la couverture de test. 
 
 ### Quelle annotation de configuration est la plus utilisée parmi les existantes (Conditional, Profile, Value, Ressources) ? 
 
@@ -226,11 +226,11 @@ Nous avons réalisé des scripts Python permettant de comptabiliser la présence
 ![alt text](../assets/SpringConditionalMetric/annotationConditionalIncludingValue.png)
 ![alt text](../assets/SpringConditionalMetric/eachAnnotationInEachProjects.png)
 
-Nous avons pu vérifier nos intuitions, notamment l'hypothèse émise "la répartition des annotations de paramétrage n'est pas homogène". Nous avons constaté que les annotation *@Profile* et *@Resource* sont très peu présente à l'échelle du *dataset*. En revanche les annotations *@Conditional* et *@Value* sont très présente, principalement cette dernière. Nous avions supposé que de par son ancienneté, *@Value* serait probablement la plus fréquente et nos résultats prouvent ce postulat. 
+Nous avons pu vérifier nos intuitions, notamment l'hypothèse émise "la répartition des annotations de paramétrage n'est pas homogène". Nous avons constaté que les annotations *@Profile* et *@Resource* sont très peu présentes à l'échelle du *dataset*. En revanche les annotations *@Conditional* et *@Value* sont très présentes, principalement cette dernière. Nous avions supposé que de par son ancienneté, *@Value* serait probablement la plus fréquente et nos résultats prouvent ce postulat. 
 
-D'autre part, nous avons également pu valider nos deux hypothèses suivantes : "l'annotation est fréquemment utilisée au sein de projets lambdas, mais moins utilisée que *@Conditional* au sein de librairies" et "l'annotation @Conditional est particulièrement utilisée dans les frameworks et bibliothèques" car nous observons une répartition des *@Value* forte au sein de projet lambdas. Celle-ci s'efface néanmoins au profit des *@Conditional* dans les bibliothèques (notamment 
+D'autre part, nous avons également pu valider nos deux hypothèses suivantes : "l'annotation est fréquemment utilisée au sein de projets lambdas, mais moins utilisée que *@Conditional* au sein de librairies" et "l'annotation @Conditional est particulièrement utilisée dans les frameworks et bibliothèques", car nous observons une répartition des *@Value* forte au sein de projets lambdas. Celle-ci s'efface néanmoins au profit des *@Conditional* dans les bibliothèques.
 
-Nous avons également pu nous apercevoir que les déclinaisons de *@Conditional* les plus utilisées au sein de ce *dataset* sont identiques à celles précédemment relevés au sein des projets Spring, ce qui confirme notre analyse en terme d'utilisation de l'annotation. 
+Nous avons également pu nous apercevoir que les déclinaisons de *@Conditional* les plus utilisées au sein de ce *dataset* sont identiques à celles précédemment relevées au sein des projets Spring, ce qui confirme notre analyse en termes d'utilisation de l'annotation. 
 
 ### Comment est utilisée l'annotation @Value ? 
 
@@ -238,14 +238,14 @@ Grâce à un script complet d'analyse de l'annotation *@Value* au sein des fichi
 
 | Informations concernant cette annotation              | Valeurs trouvées | 
 |-----------------------------|----------------------|
-| Nombre de fichier contenant l'annotation @Value                   | 207  |
+| Nombre de fichiers contenant l'annotation @Value                   | 207  |
 | Nombre de fichiers de configuration contenant l'annotation @Value | 54   |
 | Nombre d'attributs ayant l'annotation @Value                      | 2533 |
 | Nombre d'attributs uniques ayant l'annotation @Value              | 274  |
 | Nombre de if ayant un @Value en paramètre                         | 195  |
 | Nombre d'attributs avec @Value unique utilisé dans un if          | 19   |
 
-On remarque que celui-ci démontre une présence forte de l'annotation *@Value* pour les attributs. On remarque également qu'elle est contenu dans de nombreux fichiers et utilisée assez souvent dans des conditions *if*. 
+On remarque que celui-ci démontre une présence forte de l'annotation *@Value* pour les attributs. On remarque également qu'elle est contenue dans de nombreux fichiers et utilisée assez souvent dans des conditions *if*. 
 
 Nous nous sommes intéressés à l'étalement des conditions *if* d'un *@Value* sur plusieurs fichiers et avons restitué nos résultats sous le graphique suivant : 
 
@@ -255,16 +255,16 @@ On remarque notamment que le @Value le plus présent est dans 15 fichiers diffé
 
 ## VIII. Synthèse
 
-Nous pouvons désormais répondre la question posée au début de la démarche : **Comment les outils de paramétrage de Spring sont t-il utilisés et à quelle fréquence ?** 
+Nous pouvons désormais répondre la question posée au début de la démarche : **Comment les outils de paramétrage de Spring sont-ils utilisés et à quelle fréquence ?** 
 
-Nous pouvons constater que certains projets utilisent uniquement @Value afin d’ajouter de la variabilité. Les projets provenant majoritairement des dépôts de Spring utilisent le @Conditional, ce qui nous paraît logique, étant donné qu’ils ont crée l’annotation, ils maîtrisent son utilisation, cependant l’annotation @Value est aussi utilisée. Concernant d’autres projets, @Conditional est la seule annotation utilisée. 
+Nous pouvons constater que certains projets utilisent uniquement @Value afin d’ajouter de la variabilité. Les projets provenant majoritairement des dépôts de Spring utilisent le @Conditional, ce qui nous paraît logique, étant donné qu’ils ont créé l’annotation, ils maîtrisent son utilisation, cependant l’annotation @Value est aussi utilisée. Concernant d’autres projets, @Conditional est la seule annotation utilisée. 
 De plus, nous voyons que 6 dépôts ne contiennent pas d’annotations @Value ou @Conditional.
 
 Les résultats obtenus cependant sont à prendre avec des pincettes, en effet le parseur que nous avons utilisé *JavaLang* n’arrivait pas à parser certaines classes (qu’il détectait comme étant mal formées), donc il est possible que nous passions à côté de certains résultats, étant donné que certaines classes n’ont pas été prises en compte lors de l’étude. 
 
-Nous remarquons donc que la fréquence d'utilisation des annotations varie selon l'annotation mais également selon les projets évalués.
+Nous remarquons donc que la fréquence d'utilisation des annotations varie selon l'annotation, mais également selon les projets évalués.
 
-Nous concluons cette étude en ayant appris beaucoup sur l'utilisation des annotations de paramétrages de Spring en général mais aussi plus particulièrement concernant *@Conditional* et *@Value* sur lesquelles nous nous sommes concentrés. Nos hypothèses ont pu être vérifiées ou réfutées grâce à des expériences mises en place sur un *dataset*. Ces expériences ont été aussi bien manuelle, qu'automatiques grâce à l'utilisation de scripts Python.
+Nous concluons cette étude en ayant appris beaucoup sur l'utilisation des annotations de paramétrages de Spring en général, mais aussi plus particulièrement concernant *@Conditional* et *@Value* sur lesquelles nous nous sommes concentrés. Nos hypothèses ont pu être vérifiées ou réfutées grâce à des expériences mises en place sur un *dataset*. Ces expériences ont été aussi bien manuelles, qu'automatiques grâce à l'utilisation de scripts Python.
 Il est important de noter que nos résultats sont à pondérer, tout d'abord compte tenu du nombre de projets évalués. Nous avons sélectionné 111 projets relatifs à Spring puis 14 projets d'organisations diverses. Ce *dataset* est assez restreint et pourrait ne pas être assez représentatif des projets Java utilisant les annotations de paramétrage fournies par Spring. De plus, les projets récoltés sont uniquement issus de la plateforme Github, cela constitue également un biais non négligeable bien qu'il s'agisse d'une plateforme extrêmement populaire, utilisée dans l'hébergement de projets.
 
 
@@ -288,5 +288,6 @@ https://spring.io/docs
 [https://github.com/spring-projects/spring-framework](https://github.com/spring-projects/spring-framework)  
 [https://github.com/eugenp/tutorials](https://github.com/eugenp/tutorials)
 [https://github.com/INRIA/spoon](https://github.com/INRIA/spoon)
+
 
 
