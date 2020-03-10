@@ -188,7 +188,7 @@ On remarque que dans toutes les catégories, sauf ```release```, les ```properti
 
 Nous avons aussi calculé le taux d'utilisation de chaque élément de configuration dans les POM. On remarque que dans les *profiles* de ```dev```, le taux d'utilisation de ```properties``` est relativement faible : environ une propriété. Alors que dans le graphique précédent, nous avions remarqué que les *profiles* de ```dev``` étaient ceux possédant la plus grande variété de ```properties```. Nous pouvons donc en conclure que sur notre jeu de données, les *profiles* de ```dev``` configurent des ```properties``` qui sont spécifiques au projet. On remarque aussi que le taux d'utilisation de dépendances dans les *profiles* est relativement faible, seuls les *profiles* de la catégorie ```maven``` se démarque avec environ une dépendance par POM.
 
-![category-config.png](../assets/MavenProfileInProjectTimeline/average-usage.png){:height="400px" }
+![average-usage.png](../assets/MavenProfileInProjectTimeline/average-usage.png){:height="400px" }
 
 Enfin, nous avons décidé d'étudier certaines de ces catégories en détail. Nous avons donc récupéré les trois éléments de configuration (```properties```,```dependencies``` et ```plugins```) les plus utilisés dans chaque catégorie.
 
