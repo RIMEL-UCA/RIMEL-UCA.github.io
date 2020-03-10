@@ -19,23 +19,17 @@ services de gestion des conteneurs.
 
 L'impact sur la simplicité du déploiement automatique et la gestion d'une infrastructure logicielle est indéniable. 
 
-Par exemple, ING (qui figure dans le top 10 des compagnies fournissant des services financiers), disposait dans son équipe IT aux Pays-Bas
-de 1800 ingénieurs, et coordonner tous les changements (plusieurs équipes, plusieurs technologies...) était un gros challenge
-et a mené à une mauvaise qualité de code. 
- 
-Mais avec l'adoption de Docker, ING a été capable d'automatiser plusieurs tâches pour mettre à jour l'infrastructure et le produit, 
-a été capable de livrer plus rapidement à ses clients, ce qui suppose que l'effort de développement a été considérablement réduit, donc
-que la qualité du code s'est considérablement améliorée.
+![Figure 1: Logo UCA](../assets/model/UCAlogoQlarge.png)
 
 ## II. Question générale
 
-Dans ce contexte, nous pouvons nous demander si conteneuriser son logiciel simplifie le développement d'un projet, la qualité du code, et
-la manière qu'ont les développeurs de l'apréhender.
+Dans ce contexte, nous pouvons nous demander si conteneuriser son logiciel simplifie également le développement du code d'un projet, sa qualité, et
+la manière qu'ont les développeurs de l'appréhender.
 
 En effet, l'histoire d'ING laisse supposer que l'adoption de Docker leur a permis de grandement fluidifier leur cycle de développement. 
 
-La question sur l’utilisation des paramètres de haut niveau pour agir sur les logiciels conteneurisés est intéressante parce qu’elle tourne autour de thématiques importantes sur les 
-bonnes pratiques du développement logiciel.
+La question sur l’utilisation des paramètres de haut niveau pour agir sur les logiciels conteneurisés est intéressante parce qu’elle tourne 
+autour de thématiques importantes sur les bonnes pratiques du développement logiciel.
  
 Dans le contexte de CI/CD par exemple, la configuration varie considérablement d'un déploiement à un autre, alors que le code non. 
 
@@ -47,7 +41,7 @@ d’une violation de la méthodologie “Twelve Factor App” (Reference 2), qui
 Cette mauvaise pratique nous a coûté beaucoup de temps et d’efforts et nous a poussé à choisir ce sujet, pour nous informer et voir comment ces pratiques sont utilisées 
 dans le monde industriel / projets open-source, la complexité ajoutée et l’intérêt réel que cela apporte.  
 
-**Question générale : Comment les configurations haut niveau de Docker influent-elles sur la simplicité du code ?**
+**Question générale : Comment les configurations haut niveau de Docker influent la simplicité du code ?**
 
 Commençons par définir ce qu'est pour nous la simplicité : 
 
@@ -61,12 +55,12 @@ et donc d'influencer directement nos critères de simplicité.
  
 ### 1 - Les projets à analyser
 
-Afin de mener notre étude à bien, nous nous sommes mis à la recherche de jeu de données, c'est-à-dire de projets qui appliquer notre démarche.
+Afin de mener notre étude à bien, nous nous sommes mis à la recherche de jeu de données, c'est-à-dire de projets pour appliquer notre démarche.
 
-Notre démarche prévue consiste à explorer les projets open-source hébergés sur GitLab/Github (parmis les dépôts de code source les plus utilisés aujourd’hui).
+Notre démarche consiste à explorer les projets open-source hébergés sur GitLab/Github (parmis les dépôts de code source les plus utilisés aujourd’hui).
 
-Tout d'abord, il fallait qu'on ait des projets qui utilisent **Docker**, et que dans les fichiers de configurations Docker (Docker-compose ou Dockerfile), et qu'il y ait un nombre suffisant de variable
-d'environnements utilisés.
+Tout d'abord, il fallait qu'on ait des projets qui utilisent **Docker**, et que dans les fichiers de configurations Docker (Docker-compose ou Dockerfile) soient présents, 
+et qu'il y ait un nombre suffisant de variable d'environnements initialisées dans ces fichiers.
 
 Ensuite, d'autres critères de sélections sont entrés en jeu comme :
 * l'historique qui doit être important
@@ -74,12 +68,14 @@ Ensuite, d'autres critères de sélections sont entrés en jeu comme :
 * les messages de commit qui doivent être clairs
 * langage dont on connaît les conventions (JS, Python et Java) 
 
+Ces critères nous permettront de comparer des projets de différentes complexités, ayant un certain besoin de développer sur plusieurs phases ou pas, ou d’avoir un système qui change de comportement. 
+
 Les projets que l'on a retenu sont :
-* ElasticSearch
-* Thingsboard
-* Magma
-* Apache Skywalking
-* Hawkbit
+* ElasticSearch : <https://github.com/elastic/elasticsearch>
+* Thingsboard : <https://github.com/thingsboard/thingsboard.git>
+* Magma : <https://github.com/facebookincubator/magma>
+* Apache Skywalking : <https://github.com/apache/skywalking>
+* Openmrs-sdk : <https://github.com/openmrs/openmrs-sdk>
 
 ### III.2 - Les outils utilisés
 
@@ -156,6 +152,7 @@ A partir de ce script, on peut extraire la liste de variables d'environnements d
 ## VII. Menaces à la validité
 
 1. Peu de projets analysés
+Durant notre étude, nous avons étudié un nombre faible de projets pour pouvoir appuyer 
 2. Peu de données
 Peu d'utilisation concrètes de variables d'environnement dans le code trouvées dans les projets
 3. Plus de visualisation
@@ -170,7 +167,7 @@ En prenant un peu de recul sur la manière dont nous avons apréhender le projet
 non pas sur la qualité du code business, mais sur la qualité du code d'infrastructure.
 
 En effet, nous mettons en avant la différence entre ces deux types de code car nous nous sommes aperçus que les configurations Docker ne peuvent avoir qu'un impact limité (et indirect)
-sur la qualité du code business. 
+sur la qualité du code developpé. 
 
 En revanche, il aurait été intéressant d'évaluer la qualité du code qui décrit l'infrastructure conteneurisée, c'est-à-dire, essayer de mesurer la simplicité, la qualité des Dockerfiles, docker-compose, 
 en établissant et utilisant des métriques spécifiques pour mesurer la qualité d'un code d'infrastructure. 
