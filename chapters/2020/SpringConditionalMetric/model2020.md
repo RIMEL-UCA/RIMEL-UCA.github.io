@@ -94,9 +94,11 @@ le paramétrage
 
 #### Hypothèse n°1 : L'annotation @Conditional est utilisée dans des fichiers de configuration. 
 
-Afin de vérifier cette hypothèse, nous 
+Nous avions l'intuition que l'annotation devait être utilisée principalement pour de la configuration de projets. Puisque celle-ci offre notamment la possibilité de charger des Bean en fonction de conditions établies, cela pourrait parfaitement correspondre à 
 
 #### Expérimentation
+
+Afin de prouver notre intuition, nous allons relever la fréquence d'apparition de l'annotation dans différents fichiers au sein des différents projets du *dataset*. Une fois les fichiers relevés, nous allons parser leur nom afin d'isoler les mots clefs "Configuration", "Config", "Conf". Cela nous permettrai d'en déduire le pourcentage de répartition de l'annotation au sein des fichiers de configuration au sein du dataset.
 
 #### Hypothèse n°2 : L'annotation @Conditional est particulièrement utilisée dans les frameworks. 
 
@@ -145,29 +147,32 @@ Sur les 14 projet analyser le taux de @Conditional était Superieur pour les lib
 
 Afin de pouvoir fournir des réponses à nous questions, nous avons constitué un *dataset* de projets Java utilisant Spring. Pour cela, nous avons procédé en deux étapes. 
 Tout d'abord, le premier *dataset* était constitué uniquement de projets Spring. Ne sachant pas comment l'annotation était utilisée et son utilité précise au sein de projets, nous pensions qu'acquérir des données de reneignement au niveau du créateur de l'annotation pourrait être très enrichissant pour cette étude. Pour cela, nous avons utilisé les projets de Spring : Spring Projects (comptant 48 projets analysés) et Spring Cloud (comptant 63 projets analysés).
-[lister en fonction du type de projet]
-projets spring
 
-Nous avons par la suite constitué un second *set*, uniquement constitué de projets utilisant Spring mais n'appartenant pas à Spring. En effet, se limiter aux projets Spring n'aurait pas reflété l'utilisation réelle de l'annotation au sein de projets lambdas. 
+| Frameworks                  | Bibliothèques        | Autres                            |
+|-----------------------------|----------------------|-----------------------------------|
+| spring-projects             | permazen/permazen    | naver/pinpoint                    |
+| typetools/checker-framework | zalando/riptide      | jeremylong/DependencyCheck        |
+|                             | jmrozanec/cron-utils | micronaut-projects/micronaut-core |
+|                             | line/armeria         | debezium/debezium                 |
+|                             | INRIA/spoon          | spring-io/sagan                   |
+|                             |                      | eclipse/hawkbit                   |
+|                             | 
 
-[lister en fonction du type de projet]
-Les projets utilisés pour cette étude sont les suivants:  
-'naver/pinpoint',
- 'permazen/permazen',
- 'jeremylong/DependencyCheck',
- 'micronaut-projects/micronaut-core',
- 'zkoss/zk',
- 'spring-projects/spring-boot',
- 'typetools/checker-framework',
- 'debezium/debezium',
- 'spring-io/sagan',
- 'eclipse/hawkbit',
- 'zalando/riptide',
- 'spring-projects/spring-framework',
- 'eugenp/tutorials',
- 'INRIA/spoon',
- 'spring-cloud-projects',
- 'spring-boot projects'
+
+'spring-projects/spring-boot',
+'spring-projects/spring-framework'
+
+Nous avons par la suite constitué un second *set*, uniquement constitué de projets utilisant Spring mais n'appartenant pas à Spring. En effet, se limiter aux projets Spring n'aurait pas reflété l'utilisation réelle de l'annotation au sein de projets lambdas. Nous les avons classés dans le tableau suivant en fonction de leur type : 
+
+| Frameworks                  | Bibliothèques        | Autres                            |
+|-----------------------------|----------------------|-----------------------------------|
+| zkoss/zk                    | permazen/permazen    | naver/pinpoint                    |
+| typetools/checker-framework | zalando/riptide      | jeremylong/DependencyCheck        |
+|                             | jmrozanec/cron-utils | micronaut-projects/micronaut-core |
+|                             | line/armeria         | debezium/debezium                 |
+|                             | INRIA/spoon          | spring-io/sagan                   |
+|                             |                      | eclipse/hawkbit                   |
+|                             |                      | eugenp/tutorials                  |
 
 La récupération des *dataset* a été réalisée depuis la plateforme Github, hébergeur de projets open-source fonctionnant avec le gestionnaire de version Git. La plateforme contient des milions de projets qui nous ont permis d'établir un dataset complet et exhaustif. 
 
@@ -197,19 +202,22 @@ Nombre d'attribut avec @Resource unique utiliser dans un if 0
 
 ### Comment l'annotation @Conditional est-elle utilisée ?
 
-![alt text](https://zupimages.net/up/20/11/e0um.png)
-![alt text](https://zupimages.net/up/20/11/68gx.png)
-![alt text](https://zupimages.net/up/20/11/iif3.png)
-
+![alt text](https://zupimages.net/up/20/11/ke7s.png)
+![alt text](https://zupimages.net/up/20/11/psji.png)
 
 ### Comment et à quelle fréquence est-elle testée ? 
 
 #### Hypothèse : L'annotation Conditional est souvent testée lorsqu'elle est utilisée. 
 
-Nous considérons que cette hypothèse n'est pas vérifiée. Nos résultats montrent une faible fréquence d'apparition de l'annotation *@Conditional* au sein de fichiers de tests. Ne comprenant pas
+![alt text](https://zupimages.net/up/20/11/tudg.png)
+![alt text](https://zupimages.net/up/20/11/rqnt.png)
+![alt text](https://zupimages.net/up/20/11/bwq3.png)
+
+Nous considérons que cette hypothèse n'est pas vérifiée. Nos résultats montrent une faible fréquence d'apparition de l'annotation *@Conditional* au sein de fichiers de tests. Mais ces chiffres ne permettaient pas de savoir si elle n'était pas testée par choix ou parce qu'il était difficile de la tester. Nous avons donc par la suite réalisé une recherche manuelle au niveau des projets.
+Cette deuxième phase de recherche nous a permis de comprendre que nos mesures étaient faussées pour deux raisons : 
+- 
 
 ### Quelle annotation de configuration est la plus utilisée parmi les existantes (Conditional, Profile, Value, Ressources) ? 
-
 
 Nombre de fichier contenant l'annotation @Resource :  35
 Nombre de fichier contenant l'annotation @Resource et le mot Config:  2
@@ -218,6 +226,8 @@ Nombre d'attribut unique ayant l'annotation @Resource :  2
 Nombre de if ayant un @Resource en paramètre 0
 Nombre d'attribut avec @Resource unique utiliser dans un if 0
 
+![alt text](https://zupimages.net/up/20/11/68gx.png)
+![alt text](https://zupimages.net/up/20/11/iif3.png)
 
 ### Comment est utilisée l'annotation @Value ? 
 
@@ -230,6 +240,8 @@ Nombre d'attribut avec @Value unique utiliser dans un if 19
 
 Les annotations @Value basées sur leurs nom d'attribut sont en moyenne présentes sur  1.5072992700729928
 Le @Value le plus présent est dans 15 fichiers différents
+
+![alt text](https://zupimages.net/up/20/11/e0um.png)
 
 #### Hypothèse n°2 : L'annotation @Value s'utilise en *tangling* ou *spreading*
 
