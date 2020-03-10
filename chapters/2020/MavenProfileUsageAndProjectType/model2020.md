@@ -109,7 +109,7 @@ Après avoir obtenu plus de maîtrise sur notre sujet et découvert ce qu’il �
 
 La préoccupation de notre revue concerne premièrement la constitution d’un nouveau dataset. Pour réaliser cela, deux recherches différentes ont été mise en place. D’un côté, nous avons “amélioré” la première expérience qui consistait en une recherche manuelle des utilisateurs correspondant à des profils d’entreprise. Cette fois-ci, nous avons tout simplement concentré nos recherches sur les sociétés qui sont les plus actives sur les dépôts git comme GitHub.
 
-![ranking-companies](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/blob/maven-profile-usage-project-type/chapters/2020/assets/MavenProfileUsageAndProjectType/images/companies.png)
+![ranking-companies](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/blob/master/chapters/2020/assets/MavenProfileUsageAndProjectType/images/companies.png)
 
 Classement des entreprises les plus actives dans l’open-source (https://solutionshub.epam.com/osci)
 
@@ -118,7 +118,7 @@ L’autre recherche constituait en l’analyse d’archive de GitHub qui dataien
 
 Nous avons alors pu récupérer la requête SQL que l’utilisateur a réalisé pour récupérer cela. Nous avons tenté de modifier cette requête pour obtenir les informations qui nous intéressaient, basé sur les archives de GitHub en 2019. Nous avons ainsi pu ajouter un filtre sur les projets qui étaient développés en Java. 
 
-![big-query](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/blob/maven-profile-usage-project-type/chapters/2020/assets/MavenProfileUsageAndProjectType/images/BIG-QUERY.png)
+![big-query](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/blob/master/chapters/2020/assets/MavenProfileUsageAndProjectType/images/BIG-QUERY.png)
 
 L’interface BigQuery se présente sous la forme suivante. A noter que plus d’1,5 To de données ont été traités pour obtenir les projets, qui en cas de résultats concluants pouvaient constituer notre dataset. Le principe de la requête est de rechercher les projets en filtrant par les contributeurs qui ont des adresses mail professionnelles, et qui ont tendance à souvent contribuer. L’approche de la recherche semble étonnant mais les résultats sont particulièrement pertinents.
 
