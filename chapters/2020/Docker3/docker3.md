@@ -105,8 +105,7 @@ Au niveau de la performance, Lizard peut analyser un ensemble d'environ 1000 fic
 
 * **Recherche dans le code**
 
-Lib Git Python
-Walid s'exprimera ...
+Pour trouver les variables d'environnement dans le code, on filtre l'ensemble des commits pour trouver ceux dans lesquels on manipule les variables d'environnement. Ce filtre, on le fait en faisant une recherche avec la commande ```git log -S VARIABLE_ENV```. Une fois que nous avons les commits filtrés, on se positionne dessus et on filtre les fichiers en fonction de s'ils contiennent la variable d'environnement ou pas.
 
 * **GitJSON**
 
@@ -139,8 +138,6 @@ Avec la réduction de scope décrite précédemment, l'hypothèse que nous allon
 
 **_Hypothèse_ : L'ajout de variables d'environnements rend le code moins complexe** 
 
-Expliquer pourquoi on choisit cette hypothèse ...
-
 Pour prouver cette hypothèse, nous avons établi le protocole suivant :
 - Enumérer toutes les variables d'environnements d'un projet
 - Pour chaque variable d'environnement :
@@ -168,70 +165,64 @@ Le schéma ci-dessous décrit plus en détails les différentes étapes (automat
 
 
 
+Lien si l'image charge mal : [Protocol](https://image.noelshack.com/fichiers/2020/11/2/1583871891-floz-page-1-1.png)
+
+Nous avons utilisé cette procédure qui consiste à étudier deux commits qui se suivent, afin de mieux cibler les changements de variables d'environnement lors de la comparaison. La granularité utilisée est au niveau des fichiers concernant les variables d'environnement et non pas l'ensemble des fichiers du commits. Cependant, notre script est incomplet, en effet des améliorations peuvent être réalisées, notamment sur la récupération de l'ensemble des variables d'environnements du projet. 
+
+## VI. Présentations des résultats et de l'analyse
+
+### Analyse des résultats
+
+**A. OpenMrs**
+
+Voici les résultats obtenus sur le projet OpenMrs. 
+
+**NLOC**
+
+L'image ci-dessous montre : 
+
+- Colonne 1 : Les variables d'environnements trouvées
+
+- Colonne 2 : Le nombre de ligne dans le commit précédent l'ajout de la variable
+
+- Colonne 3 : Le nombre de ligne dans le commit d'ajout de la variable
+
+- Colonne 4 : La différence de complexité entre les deux commits 
+
+  
+
+![Image](https://scontent-cdg2-1.xx.fbcdn.net/v/t1.15752-9/89108041_493365074900659_1770274503096532992_n.png?_nc_cat=102&_nc_sid=b96e70&_nc_ohc=OtCCxQiZOi0AX-HTZt-&_nc_ht=scontent-cdg2-1.xx&oh=1443e4254a574a4808997a56c6961ce5&oe=5E96F743)
+
+![Image2](https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/89023721_295291068112872_7188106946472312832_n.png?_nc_cat=103&_nc_sid=b96e70&_nc_ohc=pwCITRSZ4pEAX9ofCqJ&_nc_ht=scontent-cdt1-1.xx&oh=59c2690fcb4b84a793460fc16bb5200a&oe=5E8DB8BB)
+
+**Interprétation** : 
+
+​	Nous observons que plus on ajoute de variables d'environnement plus le nombre de ligne augmente. 
 
 
-Justifier en quoi ce protocole permettra de vérifier ou pas l'hypothèse.
 
-## V. Mauvaises pistes explorées
+**Complexité cyclomatique** 
 
-Avant de fixer définitivement le protocole utilisé durant cette étude, nous avons exploré d'autres possibilités qui ont échouées 
-
-## V. Présentations des résultats et de l'analyse
-
-1. Analyse des résultats
-
-   **A. OpenMrs**
-
-   Voici les résultats obtenus sur le projet OpenMrs. 
-
-   
-
-   **NLOC**
-
-   L'image ci-dessous montre : 
+L'image ci-dessus montre : 
 
    - Colonne 1 : Les variables d'environnements trouvées
-
-   - Colonne 2 : Le nombre de ligne dans le commit précédent l'ajout de la variable
-
-   - Colonne 3 : Le nombre de ligne dans le commit d'ajout de la variable
-
+   - Colonne 2 : La complexité cyclomatique (CCN) dans le commit précédent l'ajout de la variable
+   - Colonne 3 : La complexité cyclomatique (CCN) dans le commit d'ajout de la variable
    - Colonne 4 : La différence de complexité entre les deux commits 
 
-     
+   ![Image](https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/88979522_2621295381441641_3173252310801317888_n.png?_nc_cat=106&_nc_sid=b96e70&_nc_ohc=l4MliccmlQwAX_83DjZ&_nc_ht=scontent-cdt1-1.xx&oh=d2effbfa389e358632d07f4d912f64ca&oe=5E95441D)
 
-   ![Image](https://scontent-cdg2-1.xx.fbcdn.net/v/t1.15752-9/89108041_493365074900659_1770274503096532992_n.png?_nc_cat=102&_nc_sid=b96e70&_nc_ohc=OtCCxQiZOi0AX-HTZt-&_nc_ht=scontent-cdg2-1.xx&oh=1443e4254a574a4808997a56c6961ce5&oe=5E96F743)
+   ![Image2](https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/89359283_1014915985575090_7539768633761726464_n.png?_nc_cat=103&_nc_sid=b96e70&_nc_ohc=RrFXG0Aj2q8AX-nyxUw&_nc_ht=scontent-cdt1-1.xx&oh=a3039b2dd37547c640cf6f9f0cdab429&oe=5E8E1735)
 
-   ![Image2](https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/89023721_295291068112872_7188106946472312832_n.png?_nc_cat=103&_nc_sid=b96e70&_nc_ohc=pwCITRSZ4pEAX9ofCqJ&_nc_ht=scontent-cdt1-1.xx&oh=59c2690fcb4b84a793460fc16bb5200a&oe=5E8DB8BB)
 
-   Interprétation : 
 
-   ​	Nous observons que plus on ajoute de variables d'environnement plus le nombre de ligne augmente. 
+**Interprétation** : 
 
-   
+Nous observons que la complexité cyclomatique diminue sur plusieurs variables (MYSQL_USER, MYSQL_PASSWORD). 
 
-   **Complexité cyclomatique** 
 
-   L'image ci-dessus montre : 
 
-      - Colonne 1 : Les variables d'environnements trouvées
-      - Colonne 2 : La complexité cyclomatique (CCN) dans le commit précédent l'ajout de la variable
-      - Colonne 3 : La complexité cyclomatique (CCN) dans le commit d'ajout de la variable
-      - Colonne 4 : La différence de complexité entre les deux commits 
-
-      ![Image](https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/88979522_2621295381441641_3173252310801317888_n.png?_nc_cat=106&_nc_sid=b96e70&_nc_ohc=l4MliccmlQwAX_83DjZ&_nc_ht=scontent-cdt1-1.xx&oh=d2effbfa389e358632d07f4d912f64ca&oe=5E95441D)
-
-      ![Image2](https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/89359283_1014915985575090_7539768633761726464_n.png?_nc_cat=103&_nc_sid=b96e70&_nc_ohc=RrFXG0Aj2q8AX-nyxUw&_nc_ht=scontent-cdt1-1.xx&oh=a3039b2dd37547c640cf6f9f0cdab429&oe=5E8E1735)
-
-   
-
-   Interprétation : 
-
-   Nous observons que la complexité cyclomatique diminue sur plusieurs variables (MYSQL_USER, MYSQL_PASSWORD). 
-
-   
-
-   **B. Apache Skywalking**
+**B. Apache Skywalking**
 
 
    **NLOC**
@@ -240,7 +231,7 @@ Avant de fixer définitivement le protocole utilisé durant cette étude, nous a
 
    ![Image2](https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/89024668_2476373432676814_8035139346954715136_n.png?_nc_cat=101&_nc_sid=b96e70&_nc_ohc=3v8DN2J4GoMAX9uHGai&_nc_ht=scontent-cdt1-1.xx&oh=966f8278ae501ed1e391078d59bd0472&oe=5E928B8A)
 
-   Interprétation : 
+   **Interprétation** : 
 
    Nous observons, comme sur le projet précédent que plus on ajoute de variables d'environnement plus le nombre de ligne augmente.
 
@@ -252,12 +243,15 @@ Avant de fixer définitivement le protocole utilisé durant cette étude, nous a
     
 ![Image2](https://scontent-cdg2-1.xx.fbcdn.net/v/t1.15752-9/88357402_540906743205371_2543530115736797184_n.png?_nc_cat=102&_nc_sid=b96e70&_nc_ohc=KqH2ZFGUW78AX-cPi6f&_nc_ht=scontent-cdg2-1.xx&oh=ac873ee116ba692ed39644e54c336f86&oe=5EA50623)
 
-   Interprétation : 
+   **Interprétation** : 
 
    Nous observons que la complexité cyclomatique a diminué lors de l'ajout de la variable TAG. La variable SW_STORAGE, n'a pas eu d'impact sur la complexité. Enfin, la variable COLLECTORS_SERVER a légèrement augmenté la complexité. 
 
-2. Conclusion de l'analyse
+### Conclusion de l'analyse
 
+L'impact des variables d'environnement sur les fichiers est minime, en effet, à travers ces graphes, nous observons que la différence de complexité nloc et ccn est à hauteur de -1 à 1. Il aurait fallu mesurer l'impact au niveau de la fonction. 
+
+Contrairement à ce que nous pensions, l'ajout de variable d'environnement augmente nloc au lieu de le diminuer. Cette augmentation pourrait être expliquée par l'ajout du code qui prend le dessus sur la diminution de la complexité induit par l'ajout de la variable d'environnement.
 
 ## VII. Menaces à la validité
 
@@ -273,9 +267,17 @@ Avant de fixer définitivement le protocole utilisé durant cette étude, nous a
 
   [ 'DEBUG', 'MYSQL_DATABASE', 'MYSQL_ROOT_PASSWORD', 'MYSQL_USER',  'MYSQL_PASSWORD', 'DB_DATABASE', 'DB_HOST', 'DB_USERNAME',  'DB_PASSWORD', 'DB_CREATE_TABLES', 'DB_AUTO_UPDATE', 'MODULE_WEB_ADMIN', 'MYSQL_DEV_PORT', 'TOMCAT_DEV_PORT', 'TOMCAT_DEV_DEBUG_PORT',  'TOMCAT_PORT' ]
 
+3. L'ajout de code biaise le résultat
+
+Dans le cadre de l'ajout d'une variable d'environnement, si du code (non lié à la variable) est ajouté parallèlement à l'ajout de la variable cela biaise le résultat. Malheureusement il s'agit de quelque chose que nous ne pouvons pas bien vérifier/cibler automatiquement. 
+
 ## VIII. Recul sur le projet
 
-Tout d'abord, ce projet (par extension, cette matière) a été très enrichissant pour nous car il nous a permis de nous initier aux problématiques de recherche. 
+Tout d'abord, ce projet (par extension, cette matière) a été très enrichissant pour nous car il nous a permis de nous initier aux problématiques de recherche. Nous avons néanmoins pris beaucoup de temps pour trouver une démarche, en effet, en début de projet nous nous sommes lancés sur de nombreuses mauvaises pistes : 
+
+* Comparaison de complexité par release
+* Mauvais choix d'outils (Sonar)
+* Réalisation de script existant déjà sur git (recherche par mots clés)
 
 En prenant un peu de recul sur la manière dont nous avons appréhendé le projet et la problématique, nous aurions pu diriger notre analyse non pas sur la qualité du code business, mais sur la qualité du code d'infrastructure.
 
@@ -285,6 +287,8 @@ En revanche, il aurait été intéressant d'évaluer **la qualité du code qui d
 en établissant et utilisant des métriques spécifiques pour mesurer la qualité d'un code d'infrastructure. 
 
 Globalement, l'idée serait de traduire chaque docker-compose par exemple en un graphe décrivant toutes les configurations Docker présentes et comment est-ce que ces derniers lient les conteneurs; à partir de ce graphe, nous pourrions réaliser des études sur sa forme et sa complexité, en utilisant pourquoi pas du Machine Learning pour entraîner un modèle qui déterminera la qualité d'un code d'infrastructure. 
+
+
 
 ## IX. References
 
