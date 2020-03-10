@@ -173,8 +173,8 @@ Javalang est une bibliothèque en Python permettant de parser des fichiers Java 
 
 Nous avons effectué notre tests sur un *dataset* composé des projets Spring afin de pouvoir observer une utilisation optimale de l’annotation au sein de projets mis en place par son créateur. Nous avons obtenu la répartition suivante au niveau des déclinaisons de l’annotation : 
 
-![alt text](./assets/annotationSpringProjects.png)
-![alt text](./assets/annotationSpringCloud.png)
+![alt text](../assets/SpringConditionalMetric/annotationSpringProjects.png)
+![alt text](../assets/SpringConditionalMetric/annotationSpringCloud.png)
 
 On compte un total de 1401 annotations du type *@Conditional* dans Spring boot avec le top 5 de fréquence de déclinaisons suivant : 
 @ConditionalOnMissingBean (34,8%)
@@ -206,9 +206,9 @@ En relatant la fréquence d’usage des différentes déclinaisons de l’annota
 
 Nous avons utilisé un script Python permettant de mettre en corrélation la fréquence d’apparition des annotations*@Conditional* au sein de code source et de tests pour les projets Spring et Spring Cloud. Nous avons ensuite généré les graphiques suivants : 
 
-![alt text](./assets/annotationConditionalTest.png)
-![alt text](./assets/conditionalMainvsTestSpringProjects.png)
-![alt text](./assets/conditionalMainvsTestSpringCloud.png)
+![alt text](../assets/SpringConditionalMetric/annotationConditionalTest.png)
+![alt text](../assets/SpringConditionalMetric/conditionalMainvsTestSpringProjects.png)
+![alt text](../assets/SpringConditionalMetric/conditionalMainvsTestSpringCloud.png)
 
 **Nous considérons que notre hypothèse “l'annotation Conditional est souvent testée lorsqu'elle est utilisée” n'est pas vérifiée.** 
 Nos résultats montrent une faible fréquence d'apparition de l'annotation *@Conditional* au sein de fichiers de tests. Mais ces chiffres ne permettaient pas de savoir si elle n'était pas testée par choix ou parce qu'il était difficile de la tester. Nous avons donc par la suite réalisé une recherche manuelle au niveau des projets. 
@@ -223,8 +223,8 @@ Nous n’avons donc pas réussi à fonder nos propos en terme de test de l’ann
 
 Nous avons réalisé des scripts Python permettant de comptabiliser la présence d’annotations au sein de projets, puis restituer les informations sous les graphiques suivants : 
 
-![alt text](./assets/annotationConditionalIncludingValue.png)
-![alt text](./assets/eachAnnotationInEachProjects.png)
+![alt text](../assets/SpringConditionalMetric/annotationConditionalIncludingValue.png)
+![alt text](../assets/SpringConditionalMetric/eachAnnotationInEachProjects.png)
 
 
 
@@ -240,7 +240,7 @@ Nous avons réalisé des scripts Python permettant de comptabiliser la présence
 Les annotations @Value basées sur leurs nom d'attribut sont en moyenne présentes sur  1.5072992700729928
 Le @Value le plus présent est dans 15 fichiers différents
 
-![alt text](assets/valueDistribution.png)
+![alt text](../assets/SpringConditionalMetric/valueDistribution.png)
 
 #### Hypothèse n°2 : L'annotation @Value s'utilise en *tangling* ou *spreading*
 
