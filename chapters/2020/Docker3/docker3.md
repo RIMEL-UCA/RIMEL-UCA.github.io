@@ -2,7 +2,7 @@
 
 ## Auteurs
 
-Nous sommes 4 étudiants en dernière année de Polytech Nice-Sophia (SI5), en Architecture Logicielle :
+Nous sommes 4 étudiants en dernière année à Polytech Nice-Sophia (SI5), en Architecture Logicielle :
 
 * Lazrak Sami &lt;sami.lazrak@etu.unice.fr&gt;
 * Larabi Walid &lt;walid.larabi@etu.unice.fr&gt;
@@ -11,11 +11,11 @@ Nous sommes 4 étudiants en dernière année de Polytech Nice-Sophia (SI5), en A
 
 ## I. Contexte de la recherche
 
-Durant cette dernière décennie, la conteneurisation est devenue une pratique courante au sein du développement logiciel car elle permet de simplifier plusieurs choses dans un environnement logiciel dont : le déploiement et l'isolation des composants. Elle permet également de disposer d'environnements homogènes et de gérer le dimensionnement de l'infrastructure. 
+Durant cette dernière décennie, la conteneurisation est devenue une pratique courante au sein du développement logiciel car elle permet de simplifier plusieurs choses dans un environnement logiciel dont le **déploiement** et l'**isolation des composants**. Elle permet également de disposer d'**environnements homogènes** et de gérer le **dimensionnement de l'infrastructure**. 
 
-**Docker** est devenu la référence principale au niveau des technologies de conteneurs, et est adopté massivement par d'autres outils open-sources. On pourrait citer par exemple **Kubernetes** qui propose de l'orchestration de conteneurs, ou encore des solutions Cloud telle que **Google Cloud Run** qui propose du scaling automatique de conteneur stateless. 
+**Docker** est devenu la référence principale au niveau des technologies de conteneurs, et est adopté massivement par d'autres outils. On pourrait citer par exemple **Kubernetes** qui propose de l'orchestration de conteneurs, ou encore des solutions Cloud telle que **Google Cloud Run** qui propose du scaling automatique de conteneur stateless. 
 
-Il en ressort que l'impact des conteneurs sur la simplicité du déploiement et la gestion d'une infrastructure logicielle est indéniable. 
+De nos jours, l'utilisation de la conteneurisation est très répandue et son impact sur la simplicité du déploiement et la gestion d'une infrastructure logicielle n'est plus à prouver. 
 
 ![Figure 1: Logo UCA](../assets/model/UCAlogoQlarge.png)
 
@@ -23,17 +23,21 @@ Il en ressort que l'impact des conteneurs sur la simplicité du déploiement et 
 
 Dans ce contexte, nous pouvons nous demander si conteneuriser son logiciel simplifie également le développement du code d'un projet, sa qualité et la manière qu'ont les développeurs de l'appréhender.
 
-La question sur l’utilisation des paramètres de haut niveau pour agir sur les logiciels conteneurisés est intéressante parce qu’elle tourne autour de thématiques importantes sur les bonnes pratiques du développement logiciel.
+La question sur l’utilisation des paramètres de haut niveau pour agir sur les logiciels conteneurisés est intéressante parce qu'elle peut avoir des impacts à différents niveaux : 
 
-Dans le contexte de CI/CD par exemple, la configuration varie considérablement d'un déploiement à un autre, alors que le code non. 
+* Dans le contexte de CI/CD par exemple, la configuration varie considérablement d'un déploiement à un autre, alors que le code non. 
 
-Un autre exemple serait d’avoir une même base de code et des comportements différents (avec des features toggle, gestion de licences etc.)
+* Il peut également y avoir une même base de code et des comportements différents, entrainés par des features toggle, par exemple, des features accessibles en fonction de la licence de produit, etc...
+
+On peut alors relier les configurations Docker de haut niveau à des thématiques importantes sur les bonnes pratiques du développement logiciel.
 
 Durant notre parcours, nous avons développé des applications qui stockent la configuration sous forme de constantes dans le code or il s’agit d’une violation de la méthodologie “Twelve Factor App” (Reference 2), qui nécessite une séparation stricte de la configuration du code; pour une meilleure maintenabilité, portabilité et résilience. 
 
 Cette mauvaise pratique nous a coûté beaucoup de temps et d’efforts et nous a poussé à choisir ce sujet, pour nous informer et voir comment ces pratiques sont utilisées dans le monde industriel / projets open-source, la complexité ajoutée et l’intérêt réel que cela apporte.  
 
-**Question générale : Comment les configurations haut niveau de Docker influent la simplicité du code ?**
+
+
+**Question générale : Comment les configurations haut niveau de Docker influent-elles sur la simplicité du code ?**
 
 Commençons par définir ce qu'est pour nous un code simple : 
 
@@ -51,24 +55,37 @@ Afin de mener notre étude à bien, nous nous sommes mis à la recherche de **je
 
 Notre démarche consistait à explorer les projets open-source hébergés sur GitLab/GitHub (parmi les dépôts de code source les plus utilisés aujourd’hui).
 
-Tout d'abord, il fallait qu'on ait des projets qui utilisent **Docker**, et que dans les fichiers de configurations Docker (Docker-compose ou Dockerfile) il y ait un nombre suffisant de variable d'environnements initialisées.
+Tout d'abord, il fallait que l'on ait des projets qui utilisent **Docker**, et que dans les fichiers de configurations Docker (_docker-compose.yml_ ou _Dockerfile_) il y ait **un nombre suffisant de variable d'environnements** initialisées.
 
 Ensuite, d'autres critères de sélections sont entrés en jeu comme :
-* l'historique qui doit être important
-* la popularité (stars)
-* les messages de commit qui doivent être clairs (pour faciliter la recherche par mots clés)
+* L'historique qui doit être important 
+
+  > Pour pouvoir observer un projet à différent moments de son développement
+
+* la popularité (stars) 
+
+  > Pour observer des projets aboutis, avec un grand nombre de contributeurs
+
+* les messages de commit qui doivent être clairs 
+
+  > Pour faciliter la recherche par mots clés
+
 * langage dont on connaît les conventions (JS, Python et Java) 
 
-Ces critères nous permettront de comparer des projets de différentes complexités, ayant un certain besoin de développer sur plusieurs phases ou pas, ou d’avoir un système qui change de comportement. 
+  > Pour travailler sur une base de code dont on peut voir les défauts/qualités
 
-Les projets que l'on a retenu sont :
-* ElasticSearch : <https://github.com/elastic/elasticsearch> : 42 variables d'environnement
-* Thingsboard : <https://github.com/thingsboard/thingsboard.git> : 64 variables d'environnement
-* Magma : <https://github.com/facebookincubator/magma> : 104 variables d'environnement
-* Apache Skywalking : <https://github.com/apache/skywalking> : 8 variables d'environnement
-* Openmrs-sdk : <https://github.com/openmrs/openmrs-sdk> : 16 variables d'environnement
 
-### III.2 - Les outils utilisés
+
+Ces critères nous ont permis de comparer des projets de différentes complexités, ayant un certain besoin de développer sur plusieurs phases ou pas, ou d’avoir un système qui change de comportement. 
+
+Les projets que nous avons retenus sont :
+* [ElasticSearch](https://github.com/elastic/elasticsearch) : **42** variables d'environnement
+* [Thingsboard](https://github.com/thingsboard/thingsboard.git) : **64** variables d'environnement
+* [Magma](https://github.com/facebookincubator/magma) : **104** variables d'environnement
+* [Apache Skywalking](https://github.com/apache/skywalking) : **8 **variables d'environnement
+* [Openmrs-sdk](https://github.com/openmrs/openmrs-sdk) : **16** variables d'environnement
+
+### 2 - Les outils utilisés
 
 * **Analyse de code**
 
@@ -78,9 +95,9 @@ Il nous fallait donc un outil pour évaluer la complexité cyclomatique performa
 
 Nous sommes partis sur un outil que toutes les personnes de notre groupe connaissaient, et avaient déjà utilisé : **SonarQube**, qui permet plus généralement de mesurer la qualité du code en continu.
 
-Le problème que l'on a eu avec Sonar est que pour effectuer ses mesures, on a besoin de builder au préalable les projets sur lesquels nous souhaitons faire notre analyse. Mais les projets que nous avons selectionnés étaient lourds et long à builder, nous n'avons donc pas réussi à réaliser cette étape préliminaire pour simplement évaluer la complexité de notre étude.
+Néanmoins nous avons rencontré des problèmes avec Sonar, en effet, pour effectuer une analyse nous avons besoin de builder au préalable le projet concerné. Cependant, les projets que nous avons selectionnés étaient lourds et long à builder, nous n'avons donc pas réussi à réaliser cette étape préliminaire pour simplement évaluer la complexité de notre étude.
 
-Nous avons décidé de nous lancer à la recherche d'un outil qui nous permettait d'avoir ces métriques, sans nous obliger à avoir buildé le projet en amont (un analyseur de code statique). 
+Nous avons décidé de nous lancer à la recherche d'un outil qui nous permettrait d'avoir ces métriques, sans nous obliger à builder le projet en amont (un analyseur de code statique). 
 
 A l'issue de cette recherche, nous avons décidé d'utiliser **Lizard**, qui nous permet de récupérer des métriques intéressantes pour notre étude : à l'échelle du code, du fichier et de la méthode. 
 
@@ -91,13 +108,10 @@ Au niveau de la performance, Lizard peut analyser un ensemble d'environ 1000 fic
 Lib Git Python
 Walid s'exprimera ...
 
-* **Recherche de commits**
-
-API Github
-
 * **GitJSON**
 
-GitJSON est un script permettant de récupérer tous les commits d'un repository sous le format JSON ou chaque commit à le format suivant : 
+**GitJSON** est un script permettant de récupérer tous les commits d'un repository sous le format JSON ou chaque commit à le format suivant : 
+
 ```json 
 {   
     "commit": "0dd313dd61e1d1dbeb89e3f326cb81b944ecabe4",  
