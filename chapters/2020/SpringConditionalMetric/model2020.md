@@ -179,17 +179,17 @@ Nous avons effectué notre tests sur un *dataset* composé des projets Spring af
 ![alt text](../assets/SpringConditionalMetric/annotationSpringCloud.png)
 
 On compte un total de 1401 annotations du type *@Conditional* dans Spring boot avec le top 5 de fréquence de déclinaisons suivant : 
-@ConditionalOnMissingBean (34,8%)
-@ConditionalOnClass (23,8%)
-@ConditionalOnBean (12,6%)
-@ConditionalOnProperty (9,17%)
+@ConditionalOnMissingBean (34,8%),
+@ConditionalOnClass (23,8%),
+@ConditionalOnBean (12,6%),
+@ConditionalOnProperty (9,17%),
 @Conditional (6,09%)
 
 D’autre part, le projet Spring Cloud contient 1654 annotations du type *@Conditional* avec le top 5 de fréquence suivant :
-@ConditionalOnMissingBean (35,7%)
-@ConditionalOnProperty (20,8%)
-@ConditionalOnClass (17,5%)
-@ConditionalOnBean (9,31%)
+@ConditionalOnMissingBean (35,7%),
+@ConditionalOnProperty (20,8%),
+@ConditionalOnClass (17,5%),
+@ConditionalOnBean (9,31%),
 @Conditional (3,51%)
 
 On remarque que les annotations présentes en majorité sont identiques au sein des deux environnements différents bien que l’ordre soit légèrement différent. Cela nous permet de déduire que les annotations principalement utilisées sont *@ConditionalOnMissingBean*, *@ConditionalOnProperty*, *@ConditionalOnClass*, *@ConditionalOnBean* et *@Conditional*. 
