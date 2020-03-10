@@ -33,9 +33,6 @@ Nous avons déjà réalisé des projets d'architecture logicielle où la questio
 D'autre part, c'est un sujet d'actualité. De plus en plus d'applications sont conteneurisées afin d'être déployées dans des solutions *cloud* ou des *clusters* d'orchestrateurs de conteneurs. Ces applications ont besoin d'être configurées à différents niveaux en fonction du type de paramètre. 
 
 
-![Figure 1: Logo UCA](../assets/model/UCAlogoQlarge.png){:height="50px" }
-
-
 ## II. Observations / questions générales
 
 Dans ce projet nous nous focaliserons sur la question suivante :  
