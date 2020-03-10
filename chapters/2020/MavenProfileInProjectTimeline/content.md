@@ -175,7 +175,7 @@ Nous avons choisi d'établir des catégories en fonction des noms majoritaires d
 
 Le diagramme ci-dessous montre le résultat de nos expérimentations, en pourcentage par rapport au 1942 profiles stockés, leur répartition selon s'ils contiennent les différents termes dans leur nom.
 
-![profiles-categories.png](../assets/MavenProfileInProjectTimeline/profiles-categories.png)
+![profiles-categories.png](../assets/MavenProfileInProjectTimeline/profiles-categories.png){:height="400px" }
 
 
 Parmi ces catégories, nous remarquons que les différentes phases de développement sont très présentes avec les catégories ```dev``` et ```prod```. Ces *profiles* servent donc à configurer les *build* en fonction du type de phase de développement dans lequel il est utilisé. Des profiles servent aussi beaucoup à lancer des actions particulières comme ```release``` et ```test```. Ensuite, on remarque que les *profiles* sont beaucoup utilisés afin d'ajuster le build en fonction de la version de Maven voulait être utilisée. En effet, avec la catégorie ```maven```, nous avons pu regrouper des profiles nommés la plupart du temps "maven3" ou "maven2". Enfin la catégorie la plus importante, ```include``` sert elle à ajouter certaines parties très spécifiques du projet, notamment des bibliothèques, des mappings xml ou encore des fichiers de configuration. Nous ne nous attendions pas a une telle proportion de *profiles* *include* dans notre *dataset*
@@ -188,7 +188,7 @@ On remarque que dans toutes les catégories, sauf ```release```, les ```properti
 
 Nous avons aussi calculé le taux d'utilisation de chaque élément de configuration dans les POM. On remarque que dans les *profiles* de ```dev```, le taux d'utilisation de ```properties``` est relativement faible : environ une propriété. Alors que dans le graphique précédent, nous avions remarqué que les *profiles* de ```dev``` étaient ceux possédant la plus grande variété de ```properties```. Nous pouvons donc en conclure que sur notre jeu de données, les *profiles* de ```dev``` configurent des ```properties``` qui sont spécifiques au projet. On remarque aussi que le taux d'utilisation de dépendances dans les *profiles* est relativement faible, seuls les *profiles* de la catégorie ```maven``` se démarque avec environ une dépendance par POM.
 
-![category-config.png](../assets/MavenProfileInProjectTimeline/average-usage.png){:height="400px" }
+![average-usage.png](../assets/MavenProfileInProjectTimeline/average-usage.png){:height="400px" }
 
 Enfin, nous avons décidé d'étudier certaines de ces catégories en détail. Nous avons donc récupéré les trois éléments de configuration (```properties```,```dependencies``` et ```plugins```) les plus utilisés dans chaque catégorie.
 
@@ -298,10 +298,10 @@ Lors de l'analyse des résultats, nous avons voulu faire un diagramme de Venn po
 
 ### Vues de nos bases de données
 
-Visualisation de notre base de données numéro 1 : 
+Visualisation de notre base de données numéro 1 : <br/>
 ![visu-bd1.png](../assets/MavenProfileInProjectTimeline/visu-bd1.png){:height="600px"}
 
-Visualisation de notre base de données numéro 2 : 
+Visualisation de notre base de données numéro 2 : <br/>
 ![visu-bd2.png](../assets/MavenProfileInProjectTimeline/visu-bd2.png){:height="600px"}
 
 ### Téléchargement des POM
@@ -362,7 +362,7 @@ Software evolution in open source projects - a large-scale investigation - Koch 
 
 A Unified Framework for the Comprehension of Software’s Time Dimension
 
-Cours de RIMEL et intervention de Sébastien MOSSER et Xavier BLANC.
+Cours de RIMEL et interventions de Sébastien MOSSER et Xavier BLANC.
 
 ![Polytech Nice-Sophia (UCA - Université C&#xF4;te d&apos;Azur)](../assets/MavenProfileInProjectTimeline/logoPolytechUCA.png){:height="200px" }
 
