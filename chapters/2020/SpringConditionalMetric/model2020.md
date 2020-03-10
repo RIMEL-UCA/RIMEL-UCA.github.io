@@ -41,7 +41,7 @@ Cette question d'ordre général a été notre première étape afin d'orienter 
 
 ### Comment l'annotation @Conditional est-elle utilisée ? 
 
-N'étant pas familiers avec l'annotation, il était important pour nous dans un premier temps de rassembler le plus d'informations possible sur *@Conditional*. Nous avons remarqué durant nos recherches que l'annotation de paramétrage que l'on appelle *@Conditional* possède en réalité plusieurs déclinaisons : *@ConditionalOnMissingBean*, *@ConditionalOnClass, *@ConditionalOnBean*, *@ConditionalOnProperty*, etc. 
+N'étant pas familiers avec l'annotation, il était important pour nous dans un premier temps de rassembler le plus d'informations possible sur *@Conditional*. Nous avons remarqué durant nos recherches que l'annotation de paramétrage que l'on appelle *@Conditional* possède en réalité plusieurs déclinaisons : *@ConditionalOnMissingBean*, *@ConditionalOnClass*, *@ConditionalOnBean*, *@ConditionalOnProperty*, etc. 
 Nous aimerions savoir comment l’annotation est utilisée en général ? Notamment nous souhaitons nous intéresser à la fréquence d'usage de chacune de ses déclinaisons au sein de projets afin d'en déduire qu'elles sont les annotations les plus utilisées et dans quel contexte d'usage. 
 Nous aimerions aussi nous intéresser au type de fichier (configuration, propriétés, tests, etc.) au sein desquels elle est potentiellement la plus utilisée, puis étendre cette logique aux types de projets où elle est présente. Nous pensons qu’étudier son application de manière générale au sein des projets nous permettrait de pouvoir ensuite plus facilement cerner l'usage des annotations de paramétrage.
 
@@ -113,7 +113,7 @@ Afin de relever la répartition des annotations au sein de projets, nous allons 
 
 ### Comment est utilisée l'annotation @Value ? 
 
-#### Hypothèse n°1 : L'annotation @Value tangling ou spreading
+#### Hypothèse n°1 : L'annotation @Value utilisée dans les *if* fonctionne en *spreading* au sein d'un projet.
 
 Le premier questionnement que nous avions concernait le spectre d’utilisation de l’annotation *@Value*. Nous avions l’impression qu’elle pourrait être utilisée de manière répétée au sein d’un même projet, afin d’appliquer dans plusieurs fichiers une même conditions, permettant d’apporter de la variabilité à l’échelle d’un projet depuis des *Beans* particuliers. 
 
@@ -173,8 +173,8 @@ Javalang est une bibliothèque en Python permettant de parser des fichiers Java 
 
 Nous avons effectué notre tests sur un *dataset* composé des projets Spring afin de pouvoir observer une utilisation optimale de l’annotation au sein de projets mis en place par son créateur. Nous avons obtenu la répartition suivante au niveau des déclinaisons de l’annotation : 
 
-![alt text](../assets/SpringConditionalMetric/annotationSpringProjects.png)
-![alt text](../assets/SpringConditionalMetric/annotationSpringCloud.png)
+![alt text](../assets/annotationSpringProjects.png)
+![alt text](../assets/annotationSpringCloud.png)
 
 On compte un total de 1401 annotations du type *@Conditional* dans Spring boot avec le top 5 de fréquence de déclinaisons suivant : 
 @ConditionalOnMissingBean (34,8%)
@@ -189,7 +189,6 @@ D’autre part, le projet Spring Cloud contient 1654 annotations du type *@Condi
 @ConditionalOnClass (17,5%)
 @ConditionalOnBean (9,31%)
 @Conditional (3,51%)
-
 
 On remarque que les annotations présentes en majorité sont identiques au sein des deux environnements différents bien que l’ordre soit légèrement différent. Cela nous permet de déduire que les annotations principalement utilisées sont *@ConditionalOnMissingBean*, *@ConditionalOnProperty*, *@ConditionalOnClass*, *@ConditionalOnBean* et *@Conditional*. 
 
@@ -206,9 +205,9 @@ En relatant la fréquence d’usage des différentes déclinaisons de l’annota
 
 Nous avons utilisé un script Python permettant de mettre en corrélation la fréquence d’apparition des annotations*@Conditional* au sein de code source et de tests pour les projets Spring et Spring Cloud. Nous avons ensuite généré les graphiques suivants : 
 
-![alt text](../assets/SpringConditionalMetric/annotationConditionalTest.png)
-![alt text](../assets/SpringConditionalMetric/conditionalMainvsTestSpringProjects.png)
-![alt text](../assets/SpringConditionalMetric/conditionalMainvsTestSpringCloud.png)
+![alt text](../assets/annotationConditionalTest.png)
+![alt text](../assets/conditionalMainvsTestSpringProjects.png)
+![alt text](../assets/conditionalMainvsTestSpringCloud.png)
 
 **Nous considérons que notre hypothèse “l'annotation Conditional est souvent testée lorsqu'elle est utilisée” n'est pas vérifiée.** 
 Nos résultats montrent une faible fréquence d'apparition de l'annotation *@Conditional* au sein de fichiers de tests. Mais ces chiffres ne permettaient pas de savoir si elle n'était pas testée par choix ou parce qu'il était difficile de la tester. Nous avons donc par la suite réalisé une recherche manuelle au niveau des projets. 
@@ -223,13 +222,21 @@ Nous n’avons donc pas réussi à fonder nos propos en terme de test de l’ann
 
 Nous avons réalisé des scripts Python permettant de comptabiliser la présence d’annotations au sein de projets, puis restituer les informations sous les graphiques suivants : 
 
-![alt text](../assets/SpringConditionalMetric/annotationConditionalIncludingValue.png)
-![alt text](../assets/SpringConditionalMetric/eachAnnotationInEachProjects.png)
+![alt text](../assets/annotationConditionalIncludingValue.png)
+![alt text](../assets/eachAnnotationInEachProjects.png)
 
+Nous avons pu vérifier nos intuitions, notamment l'hypothèse émise "la répartition des annotations de paramétrage n'est pas homogène". Nous avons constaté que les annotation *@Profile* et *@Resource* sont très peu présente à l'échelle du *dataset*. En revanche les annotations *@Conditional* et *@Value* sont très présente, principalement cette dernière. Nous avions supposé que de par son ancienneté, *@Value* serait probablement la plus fréquente et nos résultats prouvent ce postulat. 
 
+D'autre part, nous avons également pu valider nos deux hypothèses suivantes : "l'annotation est fréquemment utilisée au sein de projets lambdas, mais moins utilisée que *@Conditional* au sein de librairies" et "l'annotation @Conditional est particulièrement utilisée dans les frameworks et bibliothèques" car nous observons une répartition des *@Value* forte au sein de projet lambdas. Celle-ci s'efface néanmoins au profit des *@Conditional* dans les bibliothèques (notamment 
+
+Nous avons également pu nous apercevoir que les déclinaisons de *@Conditional* les plus utilisées au sein de ce *dataset* sont identiques à celles précédemment relevés au sein des projets Spring, ce qui confirme notre analyse en terme d'utilisation de l'annotation. 
 
 ### Comment est utilisée l'annotation @Value ? 
 
+Grâce à un script complet d'analyse de l'annotation *@Value* au sein des fichiers Java des projets du *dtaset*, nous avons pu établir le tableau suivant : 
+
+| Informations concernant cette annotation              | Valeurs trouvées | 
+|-----------------------------|----------------------|
 | Nombre de fichier contenant l'annotation @Value                   | 207  |
 | Nombre de fichiers de configuration contenant l'annotation @Value | 54   |
 | Nombre d'attributs ayant l'annotation @Value                      | 2533 |
@@ -237,18 +244,13 @@ Nous avons réalisé des scripts Python permettant de comptabiliser la présence
 | Nombre de if ayant un @Value en paramètre                         | 195  |
 | Nombre d'attributs avec @Value unique utilisé dans un if          | 19   |
 
-Les annotations @Value basées sur leurs nom d'attribut sont en moyenne présentes sur  1.5072992700729928
-Le @Value le plus présent est dans 15 fichiers différents
+On remarque que celui-ci démontre une présence forte de l'annotation *@Value* pour les attributs. On remarque également qu'elle est contenu dans de nombreux fichiers et utilisée assez souvent dans des conditions *if*. 
 
-![alt text](../assets/SpringConditionalMetric/valueDistribution.png)
+Nous nous sommes intéressés à l'étalement des conditions *if* d'un *@Value* sur plusieurs fichiers et avons restitué nos résultats sous le graphique suivant : 
 
-#### Hypothèse n°2 : L'annotation @Value s'utilise en *tangling* ou *spreading*
+![alt text](../assets/valueDistribution.png)
 
-Cette hypothèse semble donc être vérifiée par nos expérimentations. L'annotation *@Value* est plutôt utilisé en *spreading*, répétant une même affectation de valeur conditionnelle au sein de fichiers différents. 
-
-#### Hypothèse n°2 : L'annotation est fréquemment utilisée au sein de projets lambdas, mais moins utilisée que *@Conditional* au sein de librairies.
-
-Vérifiée par nos expérimentations
+On remarque notamment que le @Value le plus présent est dans 15 fichiers différents. Cette étude confirme une utilisation de l'annotation *@Value* en mode *spreading* au sein des projets.  Notre hypothèse "l'annotation @Value utilisée dans les *if* fonctionne en *spreading* au sein d'un projet" est vérifiée. 
 
 ## VIII. Synthèse
 
