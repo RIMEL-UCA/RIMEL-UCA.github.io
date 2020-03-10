@@ -296,6 +296,14 @@ Lors de l'analyse des résultats, nous avons voulu faire un diagramme de Venn po
 
 ## VIII. Annexes
 
+### Vues de nos bases de données
+
+Visualisation de notre base de données numéro 1 : 
+![visu-bd1.png](../assets/MavenProfileInProjectTimeline/visu-bd1.png){:height="600px"}
+
+Visualisation de notre base de données numéro 2 : 
+![visu-bd2.png](../assets/MavenProfileInProjectTimeline/visu-bd2.png){:height="600px"}
+
 ### Téléchargement des POM
 
 `https://raw.githubusercontent.com/<owner>/<repo>/<branch>/<filepath>`
@@ -348,6 +356,13 @@ La requête suivante permet de trouver les POM qui sont associés à une technol
 
 `MATCH (t:Technology)--(p:Pom)-[r]-(:MavenProfile) WHERE t.stack = '$STACK' WITH count(DISTINCT r) as nbMavenProfile, p RETURN p as Pom, nbMavenProfile`
 
+### Références
+
+Software evolution in open source projects - a large-scale investigation - Koch - 2007 - Journal of Software Maintenance and Evolution: Research and Practice
+
+A Unified Framework for the Comprehension of Software’s Time Dimension
+
+Cours de RIMEL et intervention de Sébastien MOSSER et Xavier BLANC.
 
 ![Polytech Nice-Sophia (UCA - Université C&#xF4;te d&apos;Azur)](../assets/MavenProfileInProjectTimeline/logoPolytechUCA.png){:height="200px" }
 
