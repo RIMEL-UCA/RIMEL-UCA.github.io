@@ -158,36 +158,79 @@ Avant de fixer définitivement le protocole utilisé durant cette étude, nous a
 
 ## V. Présentations des résultats et de l'analyse
 
-1. Analyse des résultats & construction d’une conclusion : Une fois votre expérience terminée, vous récupérez vos mesures et vous les analysez pour voir si votre hypothèse tient la route. 
+1. Analyse des résultats
+
+   **A. OpenMrs**
+
+   Voici les résultats obtenus sur le projet OpenMrs. 
+
+   
+
+   **NLOC**
+
+   L'image ci-dessous montre : 
+
+   - Colonne 1 : Les variables d'environnements trouvées
+
+   - Colonne 2 : La complexité (number line of code) dans le commit précédent l'ajout de la variable
+
+   - Colonne 3 : La complexité (number line of code) dans le commit d'ajout de la variable
+
+   - Colonne 4 : La différence de complexité entre les deux commits 
+
+     
+
+   ![Image](https://scontent-cdg2-1.xx.fbcdn.net/v/t1.15752-9/89108041_493365074900659_1770274503096532992_n.png?_nc_cat=102&_nc_sid=b96e70&_nc_ohc=OtCCxQiZOi0AX-HTZt-&_nc_ht=scontent-cdg2-1.xx&oh=1443e4254a574a4808997a56c6961ce5&oe=5E96F743)
+
+   ![Image2](https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/89023721_295291068112872_7188106946472312832_n.png?_nc_cat=103&_nc_sid=b96e70&_nc_ohc=pwCITRSZ4pEAX9ofCqJ&_nc_ht=scontent-cdt1-1.xx&oh=59c2690fcb4b84a793460fc16bb5200a&oe=5E8DB8BB)
+
+   Interprétation : 
+
+   ​	Nous observons que plus on ajoute de variables d'environnement plus le nombre de ligne augmente. 
+
+   
+
+   **Complexité cyclomatique** 
+
+   L'image ci-dessus montre : 
+
+      - Colonne 1 : Les variables d'environnements trouvées
+      - Colonne 2 : La complexité (number line of code) dans le commit précédent l'ajout de la variable
+      - Colonne 3 : La complexité (number line of code) dans le commit d'ajout de la variable
+      - Colonne 4 : La différence de complexité entre les deux commits 
+
+      ![Image](https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/88979522_2621295381441641_3173252310801317888_n.png?_nc_cat=106&_nc_sid=b96e70&_nc_ohc=l4MliccmlQwAX_83DjZ&_nc_ht=scontent-cdt1-1.xx&oh=d2effbfa389e358632d07f4d912f64ca&oe=5E95441D)
+
+      ![Image2](https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/89359283_1014915985575090_7539768633761726464_n.png?_nc_cat=103&_nc_sid=b96e70&_nc_ohc=RrFXG0Aj2q8AX-nyxUw&_nc_ht=scontent-cdt1-1.xx&oh=a3039b2dd37547c640cf6f9f0cdab429&oe=5E8E1735)
+
+   
+
+   
+
+   **B. Apache Skywalking** 
+
+   
+
 2. Conclusion de l'analyse
 
 
 ## VI. Description de la partie automatisée
 
-1. **Automatisation de la détection des variables d'environnement**
+Nous avons choisi dans un premier temps de tester d'appliquer notre démarche sur un seul projet (ThingsBoard). Par la suite, nous avons améliorer nos scripts de manières incrémentales afin qu'ils puissent s'appliquer aux différents projets. 
 
-Nous avons choisi dans un premier temps de tester d'appliquer notre démarche sur un seul projet (ThingsBoard). 
+**Objectif Step 1** :  Obtenir pour chaque VE le commit ou elle a été utilisée ou ajoutée et le commit précédent le commit en question
 
-La première chose à faire a été de récupérer les variables d'environnement que le projet contient. 
+**Objectif Step 2** : Obtenir les fichiers ou les variables d'environnement ont été modifiées entre le commit et son précédent.
 
-Vu que cette opération devra être effectuée sur plusieurs projets (voir pourra nous aider à voir le nombre de variables d'environnements dans un projet), nous avons décidé de l'automatiser.
+**Objectif Step 3** : Analyser (calculs de complexité) les fichiers au niveau de chaque commit pour pouvoir comparer si l'ajout des VE a un impact sur la complexité et le nombre de lignes.
 
-Nous avons automatisée cette partie, qui nous permet de détecter les variables d'environnements d'un projet, en supposant qu'elles soient localisées dans un des fichiers suivants :
-* docker-compose (ou tout variante, ex : docker-compose-stack.yml)
-* un fichier .env (qui sont utilisés pour être injectés dans des docker-compose ou dans des dockerFiles)
-* un Dockerfile
+**Objectif Step 4** : Récupérer les résultats des analyses et construire des statistiques (moyenne, delta avant/après) puis créer des visualisations. 
 
-A partir de ce script, on peut extraire la liste de variables d'environnements d'un projet (donc leur nombre).
+Le schéma ci-dessous décrit plus en détails les différentes étapes (automatisée) de notre démarche : 
 
-L'élaboration de ce script a été incrémentale, au fur et à mesure que l'on appliquait notre démarche à un nouveau projet, ce script a été étendu et amélioré.
+ 
 
-2. **Automatisation de la récupération de tout l'historique (commits) d'un projet**
-
-3. **Script permettant de detecter le/les commits qui ont manipulé une variable d'environnement donnée**
-
-4. **Script permettant de récupérer le commit ayant manipulé une variable d'environnement, et le précédent**
-
-5. **Script permettant de calculer la complexité de certains fichiers données entre deux commits**
+![pipeline](https://image.noelshack.com/fichiers/2020/11/2/1583871891-floz-page-1-1.png)
 
 ## VII. Menaces à la validité
 
@@ -214,7 +257,7 @@ En effet, nous mettons en avant la différence entre ces deux types de code car 
 En revanche, il aurait été intéressant d'évaluer **la qualité du code qui décrit l'infrastructure conteneurisée**, c'est-à-dire, essayer de mesurer la simplicité, la qualité des Dockerfiles, docker-compose, 
 en établissant et utilisant des métriques spécifiques pour mesurer la qualité d'un code d'infrastructure. 
 
-Globalement, l'idée serait de traduire chaque docker-compose par exemple en un graphe décrivant toutes les configurations Docker présentes et comment est-ce que ces derniers lient les conteneurs; à partir de ce graphe, nous pourrions réaliser des études sur sa forme et sa compléxité, en utilisant pourquoi pas du machine learning pour entraîner un modèle qui determinera la qualité d'un code d'infrastructure. 
+Globalement, l'idée serait de traduire chaque docker-compose par exemple en un graphe décrivant toutes les configurations Docker présentes et comment est-ce que ces derniers lient les conteneurs; à partir de ce graphe, nous pourrions réaliser des études sur sa forme et sa complexité, en utilisant pourquoi pas du Machine Learning pour entraîner un modèle qui déterminera la qualité d'un code d'infrastructure. 
 
 ## IX. References
 
