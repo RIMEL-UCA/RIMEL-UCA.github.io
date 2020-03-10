@@ -175,7 +175,7 @@ Nous avons choisi d'établir des catégories en fonction des noms majoritaires d
 
 Le diagramme ci-dessous montre le résultat de nos expérimentations, en pourcentage par rapport au 1942 profiles stockés, leur répartition selon s'ils contiennent les différents termes dans leur nom.
 
-![profiles-categories.png](../assets/MavenProfileInProjectTimeline/profiles-categories.png)
+![profiles-categories.png](../assets/MavenProfileInProjectTimeline/profiles-categories.png){:height="400px" }
 
 
 Parmi ces catégories, nous remarquons que les différentes phases de développement sont très présentes avec les catégories ```dev``` et ```prod```. Ces *profiles* servent donc à configurer les *build* en fonction du type de phase de développement dans lequel il est utilisé. Des profiles servent aussi beaucoup à lancer des actions particulières comme ```release``` et ```test```. Ensuite, on remarque que les *profiles* sont beaucoup utilisés afin d'ajuster le build en fonction de la version de Maven voulait être utilisée. En effet, avec la catégorie ```maven```, nous avons pu regrouper des profiles nommés la plupart du temps "maven3" ou "maven2". Enfin la catégorie la plus importante, ```include``` sert elle à ajouter certaines parties très spécifiques du projet, notamment des bibliothèques, des mappings xml ou encore des fichiers de configuration. Nous ne nous attendions pas a une telle proportion de *profiles* *include* dans notre *dataset*
