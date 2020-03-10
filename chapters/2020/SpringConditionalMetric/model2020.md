@@ -212,6 +212,7 @@ Nous avons utilisé un script Python permettant de mettre en corrélation la fr�
 ![alt text](../assets/SpringConditionalMetric/conditionalMainvsTestSpringCloud.png)
 
 **Nous considérons que notre hypothèse “l'annotation Conditional est souvent testée lorsqu'elle est utilisée” n'est pas vérifiée.** 
+
 Nos résultats montrent une faible fréquence d'apparition de l'annotation *@Conditional* au sein de fichiers de tests. Mais ces chiffres ne permettaient pas de savoir si elle n'était pas testée par choix ou parce qu'il était difficile de la tester. Nous avons donc par la suite réalisé une recherche manuelle au niveau des projets. 
 
 Cette deuxième phase de recherche nous a permis de comprendre que nos mesures étaient faussées pour deux raisons : 
