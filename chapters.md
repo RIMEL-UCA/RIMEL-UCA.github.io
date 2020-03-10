@@ -9,7 +9,7 @@ date:   2020-01-02 22:00:00 +0100
 ### [Comment est effectué le paramétrage dans les projets en Spring ?]({{ site.url }}/chapters/2020/SpringConditionalMetric/model2020)
 ### [Quels problèmes résout l'utilisation de profils Maven dans les logiciels Open Source ?]({{ site.url }}/chapters/2020/MavenProfileInProjectTimeline/content)
 ### [Dans quelle couche les paramètres de haut niveau des logiciels conteneurisés peuvent-ils être définis ?]({{ site.url }}/chapters/2020/DockerAndHighLevelDefinitionLayers/model2020)
-### [Comment est configuré un projet Spring via les @Conditional ?]({{ site.url }}/chapters/2020/spring-Conditional-usage/model2020)
+### [Comment est configuré un projet Spring via les @Conditional ?]({{ site.url }}/chapters/2020/SpringConditionalUsage/content)
 
 ## 2019
 ### [How to improve contributors onboarding]({{ site.url }}/chapters/2019/code-quality-in-open-source-projects-xwiki-2019/contents)
