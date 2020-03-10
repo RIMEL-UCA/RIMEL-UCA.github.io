@@ -1,157 +1,179 @@
 ---
 layout: default
-title : Dans quelles couches les paramètres de haut niveau des logiciels conteneurisés peuvent-ils être définis ?
-date:   2020-01-03 22:00:00 +0100
+title : Modèle de chapitre pour 2020
+date:   2020-02-28 22:00:00 +0100
 ---
 
 ## Auteurs
+Nous sommes quatre étudiants en 5ème année de diplôme d'ingénieur à Polytech Nice-Sophia, spécialisés en architecture logiciel :  
 
-Nous somme quatre étudiants en dernière année d'architecture logicielle à Polytech Nice-Sophia : 
+* Corentin Artaud &lt;corentin.artaud@etu.unice.fr&gt;
+* Théos Mariani &lt;theos.mariani@etu.unice.fr&gt;
+* Elena Moron Vidal &lt;elena.moron-vidal@etu.unice.fr&gt;
+* Alexandre Bolot &lt;alexandre.bolot@etu.unice.fr&gt;
 
-* BENAZET-LACARRE Laurent-Jérôme &lt;laurent-jerome.benazet-lacarre@etu.univ-cotedazur.fr&gt;
-* FRERE Baptiste &lt;baptiste.frere@etu.univ-cotedazur.fr&gt;
-* MENARD Noé &lt;noe.menard@etu.univ-cotedazur.fr&gt;
-* SALORD Florian &lt;florian.salord@etu.univ-cotedazur.fr&gt;
+## I. Contexte de notre recherche
 
-## I. Projet / contexte de recherche
+### Comment les paramètres de haut niveau agissent sur des logiciels conteneurisés ?
 
-Docker est un logiciel libre permettant de lancer des applications dans des conteneurs logiciels [[1]](https://fr.wikipedia.org/wiki/Docker_(logiciel)).  
-C'est un logiciel récent, sa première version open source datant de mars 2013.  
-En l'espace de quelques années, il s'est imposé comme un standard de l'industrie. Son succès provient de plusieurs aspects tels que : 
+De plus en plus de systèmes actuels utilisent des logiciels conteneurisés. Or, il existe de nombreux moyens de paramétriser des conteneurs Docker, et cela crée une forte hétérogénéité entre les différents projets.
 
-* Une véritable alternative aux machines virtuelles traditionnelles dans le cadre d'un déploiement d'application
-* Une grande portabilité pour les applications, qui les rend agnostiques du système d'exploitation de la machine hôte.
-* Des capacités de configuration pour l'utilisateur.
-* Une isolation des processus.
+Ces nombreux moyens possibles de paramètrisation permettent de faire varier le comportement au cours des différents cycles de vie d'une application.
+Dans le cadre de notre recherche, nous avons décidé de nous concentrer sur les phases suivantes : 
+- La construction de l'application (à la génération de l'éxécutable).
+- La création de l'image Docker
+- L'exécution de cette image
 
+Si nous avons choisi ces trois phases c'est parce qu'elles représentent les principaux moments où l'application est impactée par les paramètres de haut niveau. 
 
-Nous avons choisi de nous pencher sur l'étude de Docker pour plusieurs raisons : 
+#### Exclude :
 
-D'une part, c'est une question qui nous parle. 
-Nous avons déjà réalisé des projets d'architecture logicielle où la question d'avoir une solution configurable est apparue, que cela soit pour séparer un environnement de développement et de production, ou pour livrer un produit qui soit adapté aux attentes d'un client.  
+Nous avons décidé d'exclure les projets utilisant un docker-compose et donc plus généralement les solutions utilisant une architecture micro-service.
+Ceux-ci sont trop spécifiques à analyser car ils contiennent énormément de duplication d'information entre les mico-services, contrairement aux projets monolythes qui n'utilisent qu'un seul Dockerfile pour s'exécuter dans un environement donné.
+Si nous avions pris en compte les projets micro-services, cela aurai rendu nos résultats incohérents. Cependant, il serait intéressant pour une future étude de les intégrer, mais en considérant que chaque service est un projet à part entière. 
 
-D'autre part, c'est un sujet d'actualité. De plus en plus d'applications sont conteneurisées afin d'être déployées dans des solutions *cloud* ou des *clusters* d'orchestrateurs de conteneurs. Ces applications ont besoin d'être configurées à différents niveaux en fonction du type de paramètre. 
+![Figure 1: Logo UCA](../assets/model/UCAlogoQlarge.png)
 
-
-## II. Observations / questions générales
-
-Dans ce projet nous nous focaliserons sur la question suivante :  
-**Comment les paramètres de haut niveau agissent sur des logiciels conteneurisés ?**
-
-C'est une question très vaste. 
-En analysant différents projets utilisant Docker, on se rend compte que les mêmes paramètres peuvent être définis à différents niveaux.  
-La même variable peut être définie au niveau d'un fichier `Dockerfile` [[2]](https://docs.docker.com/engine/reference/builder/), d'un fichier `docker-compose.yml` [[3]](https://docs.docker.com/compose/) ou dans des fichiers de configuration spécifiques au langage ou *framework* utilisé par l'application.  
-On est alors amené à se demander : À quels niveaux peut-on définir théoriquement chaque paramètre et plus concrètement, à quels niveaux sont-ils réellement définis ?  
-
-Cette question reste encore très vaste, on ne peut pas analyser tous les paramètres qui existent.  
-Pour réaliser notre étude, nous avons ainsi décidé de nous focaliser sur des paramètres fréquemment utilisés dans des applications.  
-
-* Les URLs de base de données.
-* La gestion des versions.
-* Le port exposé par un serveur.
-* Les environnements (production, développement, test).
-
-Nous avons aussi décidé de restreindre notre analyse aux projets utilisant Docker et le *framework* Spring [[4]](https://spring.io).  
-Nous avons choisi ce *framework* au vu de nos connaissance préalables et du fait que l'ensemble de la configuration se fait dans un fichier `application.properties`.  
-Ce fichier unique permet une automatisation de nos analyses.
-
-## III. Regroupement d'informations
-
-Nous avons dans un premier temps effectué des recherches afin de savoir où et comment les différents paramètres qui nous intéressent peuvent être définis. 
-
-L'objectif de l'étude étant de comparer ces postulats avec les informations recueillies suite à l'analyse d'un ensemble de dépôts Git, nous avons tout d'abord sélectionné un échantillon de projets sur GitHub afin de réaliser nos premières analyses.  
-Ces projets devaient contenir à la fois le tag 'Docker' et le tag 'Spring' afin d'être sélectionnés et ont été retenus de par leur nombre important d'étoiles GitHub (signe de popularité).  
-Une étape de pre-processing était ensuite effectuée afin de s'assurer que les projets retenus comportaient bien au moins un `Dockerfile` ou un `docker-compose.yml` et un fichier de configuration Spring.  
-Tout ce processus de selection du dataset a été automatisé grâce à un script Python utilisant les *packages* PyGitHub pour la sélection des dépôts et PyGit2 pour leur clonage.
-
-Une fois le dataset constitué, une phase d'analyse pour chacun des projets a lieu.  
-Dans un premier temps, il faut déterminer si un paramètre a été utilisé, et si c'est le cas à quel niveau ce dernier a été défini.  
-Le même paramètre pouvant être défini différemment dans les différents niveaux de définition, chaque type de paramètre correspond à un ensemble de mot-clés permettant d'affirmer ou infirmer sa présence dans une couche.  
-Par exemple, pour la connexion à une base de données, les mot-clés `mongodb`, `mysql` peuvent être cherchés dans un `Dockerfile`, mais peuvent correspondre à une image dans un `docker-compose.yml`, aussi les mot-clés `url` ou `database` ont été préférés pour ce niveau.
+## II. Observations/General question
 
 
-Lors de nos recherches, nous nous sommes inspirés de certains articles, que ce soit au niveau des résultats obtenus ou de la démarche mise en place :  
-[To Docker or Not to Docker: A Security Perspective](https://www.researchgate.net/publication/309965523_To_Docker_or_Not_to_Docker_A_Security_Perspective?fbclid=IwAR0F04G9mmHWX3eeWzSZFDO4wOl54dcY7sBE3GlGz0yHIjSvXh-FC94vTBA)  
-[The Impact of Continuous Integration on Other Software Development Practices: A Large-Scale Empirical Study](https://web.cs.ucdavis.edu/~filkov/papers/CI_adoption.pdf)
+Quels sont les paramètres utilisés dans les différents cycles de vie d'une application conténeurisées ? Y a t-il des similarités entre differents langages de programmation ?
+
+L'intérêt principal de ces questions est de pouvoir déterminer s'il existe des normes pour un langage donné. De plus, nous voulons savoir si celles-ci sont généralisables à un ensemble de projets informatiques ou si les différentes technologies ont un impact sur la manière de paramétriser une application.
+
+L'objectif, s'il existe des normes ou généralités de paramétrisation, serait de faciliter la construction d'une solution conteneurisé en établissant des templates d'utilisation de docker ou encore en automatisant un maximun d'actions récurrentes.
+
+
+## III. Notre approche du sujet
+
+
+Le premier travail de notre recherche a été de définir des catégories de types de paramètre de haut niveau à partir d'une analyse statique et manuelle d'un petit ensemble de projets.
+
+Cela nous a permis par la suite de développer des algorithmes capables d'analyser en grand nombre de projets en labélisant les paramètres trouvés dans les catégories suivante : 
+
+- Réseau
+- Sécurité/Authentification
+- Variable d'environnement 
+- Et enfin les inconnus, dans le but d'améliorer au fûr et a messure notre analyse. 
+
+Dans le cadre de nos recherches nous avons décidé de nous concentrer dans un premier temps sur les projets développés en GoLang car ceux-ci ont des particularités très intéressantes :
+
+1. La phase de compilation de l'application et de la création de l'image docker sont décrites dans le dockerfile.
+2. L'utilisation de variables d'environnement récurentes.
+
+Ensuite nous avons décidé d'effectuer une comparaison avec des projets en Java car c'est un langage qui est beaucoup utilisé dans l'industrie.  
 
  
-## IV. Hypothèses et expériences
+## IV. Hypothesis & Experiences
 
-Nous sommes partis de l'hypothèse que certains paramètres de haut niveau sont définis dans différentes couches d'une application déployé sur Docker. Ces couches étant le code ou *framework* utilisé et les fichiers `Dockerfile` et `docker-compose.yml`, qui correspondent respectivement à la construction de l'image Docker, et à son exécution.  
-L'objectif de l'étude est de comparer nos hypothèses sur les niveaux de définitions des différents paramètres et ce qui est réellement utilisé dans un ensemble de projets tirés depuis GitHub.
+Pour nous guider dans nos recherches nous avons émis les hypothèses suivantes :
 
-Nous avons ainsi fait les hypothèses suivantes : 
+- Existe-t-il des liens entre les différents types de paramètres de haut niveau ?
+- Existe-t-il des points communs de paramètrage entre plusieurs technologies/langages ?
+- Existe-t-il des corélations entre différents types de paramètre ?
+ 
+Pour essayer de confirmer ou invalider nos hypothèses nous avons généré toute sortes graphe afin d'avoir une visualisation des données récupérées sur notre ensemble de projets. 
 
-- Code / *framework* : versions (du projet, des dépendances), port par défaut pour un serveur.
-- Dockerfile : type d’environnement (production, développement, test), version des dépendances.
-- Docker Compose : URL de ressources, port pour un serveur.
-
-Ces choix ont été faits suite à une étude sur quelques dépôts populaires sur les thèmes de Spring et Docker qui ont montré une utilisation conséquente de ces paramètres. Ils ont été appuyé par notre propre expérience dans l'utilisation de Docker et Spring.
-
-Il n'est pas possible d'analyser l'ensemble des paramètres existants aussi nous avons décidé de nous focaliser sur ceux-ci pour l'analyse des résultats.
-
-## V. Analyse des résultats et conclusion
-
-Après analyse de 72 dépôts GitHub ayant pour `topic` Docker et Spring, nous avons obtenu les résultats suivants :
+## V. Results
 
 
-![Percentage results](../assets/DockerAndHighLevelDefinitionLayers/docker_and_high_level_definition_layers_1.png){:height="500px" }
+Nous avons généré des graphes pour chaque cycle de vie d'une application: build (construction application/compilation du code source), exec (construction de l'image docker) et run (instanciation de l'image docker en un conteneur).
+Ceux-ci mettent en avant le taux d'apparition des exposes, args, volumes, nombre de variables d'environnement et nombre de variables de sécurité dans les différents projet que nous avons étudié.
+De plus, nous avons fait la distinction entre Java et Go pour comparer leur utilisation des paramètres de haut niveau.
 
-*Figure 1 : Parameter presence according to file repartition in percentage*
+![Figure 2: Graph bar build](../assets/DockerAndLifeCycle/build_bar_chart.jpg)
 
-![Absolute results](../assets/DockerAndHighLevelDefinitionLayers/docker_and_high_level_definition_layers_2.png){:height="500px" }
+Dans cette phase nous nous attendions à ne pas trouver d'expose car cela n'a pas de sens d'ouvrir un port lors de la construction.
+Cependant nous remarquons dans ce schéma qu'une application Java en utilise un. Après avoir verifié manuellement dans le projet concerné, nous avons remarqué qu'il s'agissait d'une anomalie de notre analyseur de dockerfile qui rencontrait 2 primitive `FROM` l'une après l'autre et les interprète mal. 
 
-*Figure 2 : Parameter presence according to file repartition in values*
+![Figure 3: Graph bar exec](../assets/DockerAndLifeCycle/exec_bar_chart.jpg)
+![Figure 4: Graph bar run](../assets/DockerAndLifeCycle/run_bar_chart.jpg)
+**Relation entre le nombre d'exposes et le nombre de variables de sécurité déclarées**
 
+Nous avons fait le calcul par phase ainsi que pour le global, de nouveau nous avons montré la distinction entre les langages pour les comparer.
+> Nous voyons que même si nous n'avons des données que pour la phase *run*, la moyenne est différente parce que si dans une phase il n'y a pas des variables de sécurité déclarées, le calcul ne se fait pas.
+> Alors nous pouvons trouver des exposes comme on remarque dans les graphs dessus et ils sont pris en compte pour le calcul global (*all stages*). 
 
-On observe pour chacun des paramètres une répartition bien différente au niveau de leur localisation.  
+![Figure 5: Graph bar Expose per SecVar](../assets/DockerAndLifeCycle/exposePerSec.jpg)
 
-### Connexion à une base de données
-
-Pour la connexion à une base de données, la présence de l'url majoritairement dans le `docker-compose` correspond aux hypothèses que nous avions posé vis-à-vis du fait que les URLs de ressources soient principalement dans les niveaux les plus élevés, à savoir à l'exécution des conteneurs Docker. 
-On constate néanmoins un résultat qui n'était pas attendu : une forte prévalence de ces paramètres est présente dans les fichiers de configuration Spring. Ce fait peut être dû à la simplicité d'utiliser différents fichiers de configuration en fonction de l'environnement utilisé.
-
-### Version
-Les versions sont en grande majorité déclarées dans les fichiers `docker-compose.yml`. Ce résultat peut être dû à une erreur dans les mots clés choisis pour représenter les versions, mais ne va à l'encontre de nos hypothèses qui étaient l'utilisation des versions dans le code / *framework*, et le fichier `docker-compose.yml`.
-
-
-### Port
-
-Les résultats sur les ports nous paraissent étonnant. En effet il est fréquent dans notre usage de Compose d'exposer les ports des serveurs via le mot-clé `ports`, qui n'a ici été retrouvé dans aucun des projets analysés.   
-On constate une prévalence de déclaration de port au niveau du `Dockerfile` plutôt que dans les configurations Spring.  
-Une explication possible de ce déséquilibre peut venir de l'utilisation du port par défaut des projets Spring, qui peut suffire dans le cas de serveur conteneurisé.
-
-### Environnement
-
-Avec les connexions aux bases de données, la gestion d'environnements est la seule à être présente sur tous les niveaux de déclaration possibles.  
-En majorité présent dans le Dockerfile, qui permet de définir du comportement de manière statique, il permet notamment d'avoir de multiples images avec des configurations différentes prêtes à l'emploi.  
-Leur utilisation dans les `docker-compose` est assez proche, ce qui permet de n'avoir qu'une seule image du projet et de pouvoir changer d'environnement *on the fly*. Cette utilisation nécessite cependant d'embarquer l'intégralité des dépendances des différentes configurations dans l'image Docker. Ce dernier point est la raison pour laquelle nous n'attendions pas de déclaration d'environnement dans les fichiers `docker-compose.yml`.   
-Enfin l'utilisation des variables d'environnement au niveau de Spring peut être due à une prévalence de l'utilisation des profils Maven, souvent associés aux projets Spring, d'où sa faible représentation ici.
+![Figure 6: Graph cloud expose per security](../assets/DockerAndLifeCycle/expose_per_sec_cloud.jpg)
 
 
-## VI. Outils
+Nous avons également analysé les variables d'environnement et de sécurité les plus utilisées dans les deux langages. Si le même nom de variable apparaît dans deux projets différents, nous ajoutons une apparition à cette variable. 
 
-[Lien vers le dépôt GitHub du projet](https://github.com/salord-f/rimel)
-
-Ce projet utilise plusieurs scripts Python afin de mener à bien ses analyses :
-
-- crawler : permet de sélectionner et cloner les dépôts GitHub d'intérêt, c'est-à-dire ayant les tags 'Docker' et 'Spring'. Ils sont clonés par ordre décroissant d'étoiles.
-
-	```
-	export TOKEN=${GitHub Token} && python3 crawler.py
-	```
-- analyzer : permet de parcourir l'ensemble des dépôts clonés et d'en extraire les données souhaitées, à savoir la quantité et le type de paramètres trouvés en fonction du niveau de définition. Génère un fichier au format xlsx (Excel) avec ces données.
-
-	```
-	python3 analyzer.py
-	```
-- graphs et filereader : permettent de générer des graphes à partir des données du fichier xlsx généré par analyzer.
-	```
-	python3 fileReader.py data.xlsx
-	```
+Les résultats pour les variables d'environnement de **GO** ont été:
 
 
-## VI. Références
-[Best practices for writing Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/?fbclid=IwAR0OWIdF30kuCeuWTzn2-hm7_EVjeD37ftcbZ1uqwT-Uno83apMN37OeXhI)  
-[Compose file version 3 reference](https://docs.docker.com/compose/compose-file/?fbclid=IwAR3r4LMfRqDAXEekEBNNb8aE93gzDhGVclxAJaduKYIHI9--zSEbrwUiQBI)  
-[Spring official documentation](https://spring.io/docs)
+| Rang | Variable      | Apparitions |
+|:----:| ------------- |:-----------:|
+|  1   | 'GOPATH'      |     48      |
+|  2   | 'PATH'        |     34      |
+|  3   | 'CGO_ENABLED' |      9      |
+|  4   | 'DOCKER_HOST' |      5      | 
+
+
+À partir de ce point, nous trouvons quelques variables avec 2, 3 voir 4 apparitions, mais la majeure partie n'apparaît qu'une seule fois. 
+
+Du côté des variables de sécurité, le résultat n'offre rien à remarquer parce chaque variable n'a qu'une seule apparition.
+
+Pour les variables d'environnement de **JAVA**, leur nombre d'apparitions maximal pour une même variable est de deux. Cela ne nous permet pas de déterminer une norme mais de déduire que l'utilisation des variables en java est fortement dépendante du contexte dans lequels il évolue.  
+En étant les suivantes:
+* 'JAVA_MINIMAL'
+* 'MAVEN_HOME'
+* 'APP_HOME'
+* 'LANG'
+* 'LANGUAGE'
+* 'LC_ALL'
+* 'SPRING_RABBITMQ_ADDRESSES'
+
+
+>TODO : :sweat_smile: ?
+Tant que pour la sécurité nous trouvons moins de déclarations de variables que dans les projets GO et sont différentes entre les projets alors il n'y a rien de particulier à distinguer. Il faut remarquer aussi que le nombre de projets JAVA est moitié moins, que le nombre de projets GO.
+
+> PROPOSITION : :bulb: 
+Pour ce qui concerne les vraible de sécurité en **Java**, comme pour **GO** nous ne pouvons rien remarquer de particulier car nous en trouvons encore moins et toujours en une seul instance. Cela viens surement du fait que nous avons moitié moins de projet **Java** que de projet **Go** ( moins de dockerFile et moins de dockerFile valides, c'est à dire avec au plus deux stages).
+
+## VI. Analyse
+
+Les résultats que nous avons présentés dans la partie précédente sont relativement hétérogènes.
+En effet, sur certains critères, les langages Java et Go ont de fortes similarités alors que sur d'autres mesures, il y a de fortes disparités.
+
+Par exemple il y a une forte similarité pour l'étape de `RUN` du Dockerfile, où l'utilisation des paramètres entre Go et Java suit la même tendance. 
+>(laquelle?)
+
+En revanche pour la phase de build et d'execution, les valeurs sont très différentes.
+
+* Selon nos observations et connaissances de ces deux langages, il n'est pas surprenant d'avoir une différence pour l'étape de build étant donné que Java est compilé en amont, alors que Go est compilé pendant la création de l'image Docker.
+* Concernant l'utilisation des variables d'environnement du langage Go, nous avons appris de cette étude qu'en dehors de la variable PATH (ou GOPATH), il n'y a pas de généralité ni de norme dans ce qui est utilisé.
+Il en va de même pour les variables d'environnement de Java : leur utilisation est très hétérogène et il n'y a pas (ou très peu) de variables similaires d'un projet à l'autre.
+
+Nous pouvons faire deux suppositions pour expliquer l'hétérogénéité des variables d'environnement :
+1. Leur utilisation est très fortement couplé à chaque projet et à son contexte : impossible de trouver des points communs métiers/d'infrastructure dans une grande quantité de projets.
+2. Des variables ayant un rôle et une fonction similaire existent, mais son nommées différemment entre les projets, par manque ou non respect des conventions de la communauté. Cela aurait pour conscéquence que notre algorithme de détection les traites séparément étant donné qu'il utilise le nommage pour les catégoriser.
+
+Lors de cette étude nous n'avons pas pu vérifier laquelle de ces deux supposition est la plus pertinente étant donné qu'il faudrait analyser "à la main" de très nombreux projets, comprendre l'utilité de chaque paramètre, et estimer (avec quelle précision ?) si des variables au nom différent remplissent ou non la même fonction.
+
+## VII. Méthode
+
+
+Pour obtenir tous ces résultats nous avons développé trois scripts en javascript et typescript.  
+Le premier en javascript pur, utilise l'API de github, il nous sert à récupérer une liste de repository contenant au moins un dockerFile et écrit dans le langage que l'on souhaite analysé (Golang et Java).Pour être sûr de récupérer des projets ayant de la valeur pour notre étude nous avons décidé de les trier en fonction de leur nombre d'étoile. Chaque étoile signifie qu'un utilisateur a souhaité ajouter le projet à ses favoris et y porte de l'intérêt.
+
+Le second script écrit en typescript prend en entrée un fichier contenant la liste des repository interessant pour un language. Pour chaque répository il va vérifier si le DockerFile contient bien au moins la phase de build de l'image et pas plus de 2 phases (comilation du code source et construction de l'image).  
+Il va ensuite extraire de ce repository des données provenant de différents fichiers: 
+- Dockerfile pour récupérer principalement les paramètres des phases de construction de l'application et de l'image. 
+- Les scripts bash `.sh` pour le phase d'instation de l'image.
+- Et enfin les fichiers markdown pour trouver la commande de lancement du projet.
+
+Puis il va stocker ces différentes données dans un fichier JSON (1 par repository) afin de pouvoir les utiliser pour d'autres utilisations.  
+Ce script gère les repositories par batch de 10 en parallelisant gràce aux fonctionnalitées de nodeJs les appels systèmes et réseau (clone des répos, appels files systèmes dont lectures des fichier, etc ..). Afin d'optimiser le temps de traitement, cela nous permet de gérer les 475 repos Golang en une vingtaine de minutes avec une bonne connexion à internet fibre et un ssd mvme.  
+
+Le troisième scripts écrits en typescript il génère les graphes en utilisant la bibliothèque plotly et les données obtenues avec le script précédement décrit.  
+
+
+## VII. References
+
+
+>lister les projets utilisé :
+1. [DockerFile reference](https://docs.docker.com/engine/reference/builder/)
+2. [github api v3](https://developer.github.com/v3/)

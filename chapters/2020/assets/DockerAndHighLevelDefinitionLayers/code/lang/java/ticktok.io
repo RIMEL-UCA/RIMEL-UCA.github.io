@@ -1,0 +1,1 @@
+{"buildMetrics":null,"runMetrics":{"expose":1,"args":0,"volumes":1,"EnvVariable":[],"unknown":["ADD","WORKDIR","CMD"],"SecurityVariable":[]},"execMetrics":{"expose":0,"args":0,"volumes":0,"EnvVariable":["RABBIT_URI","MONGO_URI","ACCESS_TOKEN"],"unknown":[],"SecurityVariable":[]},"isValid":true,"buildPresent":false,"execPresent":true,"execSource":"readme"}
