@@ -1,17 +1,19 @@
-# FinderJS
 
+# Commandes
 
  ```
- npm test 
+ npm start 
  ```   
-
-(../minio Dockerfile)
+permet de lancer l'analyse 
 
 
 ```
-npm start {Path} {fileNameWanted} 
+npm start crawl 
 
 ```
+permet de récupérer la liste des projets intéressants depuis Github
 
-
-fileNameWanted - uniquement les fichiers de ce nom seront analysé 
+```
+npm start graph
+```
+permet de générer les graphes depuis les données extraites de l'analyse.
