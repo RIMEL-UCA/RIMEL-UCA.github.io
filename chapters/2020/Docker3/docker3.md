@@ -35,29 +35,28 @@ Cette mauvaise pratique nous a coûté beaucoup de temps et d’efforts et nous 
 
 **Question générale : Comment les configurations haut niveau de Docker influent la simplicité du code ?**
 
-Commençons par définir ce qu'est pour nous la simplicité : 
+Commençons par définir ce qu'est pour nous un code simple : 
 
-Un code simple est un code lisible, c'est-à-dire structuré; mais c'est aussi un code maintenable, donc flexible et extensible.
+Un code simple est un code **lisible**, c'est-à-dire **structuré**; mais c'est aussi un code **maintenable**, donc **flexible** et **extensible**.
 
-Afin de faciliter notre étude, nous avons restreint notre analyse en étudiant l'influence d'un seul type de configuration haut-niveau de Docker : _les variables d'environnements_; 
-qui parmi toutes les autres façons de configurer des containers Docker (Volumes, Ports, Restart Policies, File Systems...), ce sont ceux qui ont le plus de chances d'être utilisée
- dans le code, et donc d'influencer directement ce qu'on appelle la simplicité.  
+Afin de faciliter notre étude, nous avons restreint notre analyse en étudiant l'influence d'un seul type de configuration haut-niveau de Docker : _les variables d'environnements_ 
+
+En effet, parmi toutes les autres façons de configurer des containers Docker (Volumes, Ports, Restart Policies, File Systems...), les variables d'environnements ont plus de chances d'être utilisées dans le code, et donc d'influencer directement ce que l'on appelle la simplicité.  
 
 ## III. Rassemblement d'informations
 
 ### 1 - Les projets à analyser
 
-Afin de mener notre étude à bien, nous nous sommes mis à la recherche de jeu de données, c'est-à-dire de projets pour appliquer notre démarche.
+Afin de mener notre étude à bien, nous nous sommes mis à la recherche de **jeu de données**, c'est-à-dire de projets pour appliquer notre démarche.
 
-Notre démarche consiste à explorer les projets open-source hébergés sur GitLab/Github (parmis les dépôts de code source les plus utilisés aujourd’hui).
+Notre démarche consistait à explorer les projets open-source hébergés sur GitLab/GitHub (parmi les dépôts de code source les plus utilisés aujourd’hui).
 
-Tout d'abord, il fallait qu'on ait des projets qui utilisent **Docker**, et que dans les fichiers de configurations Docker (Docker-compose ou Dockerfile) soient présents, 
-et qu'il y ait un nombre suffisant de variable d'environnements initialisées dans ces fichiers.
+Tout d'abord, il fallait qu'on ait des projets qui utilisent **Docker**, et que dans les fichiers de configurations Docker (Docker-compose ou Dockerfile) il y ait un nombre suffisant de variable d'environnements initialisées.
 
 Ensuite, d'autres critères de sélections sont entrés en jeu comme :
 * l'historique qui doit être important
 * la popularité (stars)
-* les messages de commit qui doivent être clairs
+* les messages de commit qui doivent être clairs (pour faciliter la recherche par mots clés)
 * langage dont on connaît les conventions (JS, Python et Java) 
 
 Ces critères nous permettront de comparer des projets de différentes complexités, ayant un certain besoin de développer sur plusieurs phases ou pas, ou d’avoir un système qui change de comportement. 
@@ -73,20 +72,17 @@ Les projets que l'on a retenu sont :
 
 * **Analyse de code**
 
-Dans notre démarche, l'évaluation de la compléxité du code est une partie importante, pour nous permettre d'évaluer la simplicité d'un dépôt de code.
+Dans notre démarche, l'évaluation de la complexité du code est une partie importante, pour nous permettre d'évaluer la simplicité d'un dépôt de code.
 
-Il nous fallait donc un outil pour évaluer la compléxité cyclomatique performant, car les projets selectionnées contiennent des milliers de commits et de fichiers.
+Il nous fallait donc un outil pour évaluer la complexité cyclomatique performant, car les projets sélectionnés contiennent des milliers de commits et de fichiers.
 
-Nous sommes partis sur un outil que toutes les personnes de notre groupe connaissaient, et avaient déjà utilisé : SonarQube, qui permet plus généralement de mesurer la qualité du code en continu.
+Nous sommes partis sur un outil que toutes les personnes de notre groupe connaissaient, et avaient déjà utilisé : **SonarQube**, qui permet plus généralement de mesurer la qualité du code en continu.
 
-Le problème que l'on a eu avec Sonar est que pour effectuer ses mesures, on a besoin de builder au préalable les projets sur lesquels nous souhaitons faire notre analyse.
+Le problème que l'on a eu avec Sonar est que pour effectuer ses mesures, on a besoin de builder au préalable les projets sur lesquels nous souhaitons faire notre analyse. Mais les projets que nous avons selectionnés étaient lourds et long à builder, nous n'avons donc pas réussi à réaliser cette étape préliminaire pour simplement évaluer la complexité de notre étude.
 
-Et vu que les projets que l'on a selectionnés sont plutôt lourds et long à builder, nous n'avons pas réussi à réaliser cette étape préliminaire pour simplement évaluer la compléxité de notre projet.
+Nous avons décidé de nous lancer à la recherche d'un outil qui nous permettait d'avoir ces métriques, sans nous obliger à avoir buildé le projet en amont (un analyseur de code statique). 
 
-Nous avons décidé de nous lancer à la recherche d'un outil qui nous permettait d'avoir ces métriques, sans nous obliger à avoir buildé le projet avant (un analyseur de code statique). 
-
-A l'issue de cette recherche, nous avons décidé d'utiliser Lizard, qui nous permet de récupérer des métriques intéressantes pour notre étude (surtout la compléxité cyclomatique), à l'échelle du code, 
-du fichier et de la méthode. 
+A l'issue de cette recherche, nous avons décidé d'utiliser **Lizard**, qui nous permet de récupérer des métriques intéressantes pour notre étude : à l'échelle du code, du fichier et de la méthode. 
 
 Au niveau de la performance, Lizard peut analyser un ensemble d'environ 1000 fichiers en environ 2 minutes, et ressortir un rapport riche sur les métriques de cet ensemble.
 
@@ -101,7 +97,27 @@ API Github
 
 * **GitJSON**
 
-Damien, Soufiane s'exprimera ...
+GitJSON est un script permettant de récupérer tous les commits d'un repository sous le format JSON ou chaque commit à le format suivant : 
+```json 
+{   
+    "commit": "0dd313dd61e1d1dbeb89e3f326cb81b944ecabe4",  
+    "subject": "new feature",   
+    "body": "add feature",
+    "verification_flag": "N",   
+    "author": {     
+        "name": "John Doe",     
+        "email": "johndoe@unice.io",     
+        "date": "Mon, 20 Jan 2020 15:24:15 +0200"   
+    },   
+    "commiter": {     
+        "name": "Toto",     
+        "email": "toto@unice.io",     
+        "date": "Mon, 20 Jan 2020 15:24:15 +0200"   
+    } 
+}
+```
+
+Nous avons choisi d'utiliser le format JSON pour simplifier le traitement des commits par nos scripts, le format JSON à l'avantage d'être structuré et simple, permettant ainsi de récupérer directement nos commits sous forme d'objet et d'accéder à leurs données facilement.
 
 ## IV. Hypothèse et Démarche
 
@@ -112,11 +128,11 @@ Avec la réduction de scope décrite précédemment, l'hypothèse que nous allon
 Expliquer pourquoi on choisit cette hypothèse ...
 
 Pour prouver cette hypothèse, nous avons établi le protocole suivant :
-- Enumerer toutes les variables d'environnements d'un projet
+- Enumérer toutes les variables d'environnements d'un projet
 - Pour chaque variable d'environnement :
--> Detecter les commits ayant utilisé la variable d'environnement, et leur commit précédent.
--> Detecter les fichiers (dans le code) dans lesquels les variables d'environnements ont été ajoutées
--> Calculer l'évolution de la compléxité cyclomatique de ces fichiers entre le commit précédent 
+-> Détecter les commits ayant utilisé la variable d'environnement, et leur commit précédent.
+-> Détecter les fichiers (dans le code) dans lesquels les variables d'environnements ont été ajoutées
+-> Calculer l'évolution de la complexité cyclomatique de ces fichiers entre le commit précédent 
       et le commit où la variable d'environnement a été utilisée.
 
 Description du protocole ... Etablir le lien avec les outils utilisés (et comment). Justifier en quoi ce protocole permettra de vérifier 
@@ -169,21 +185,16 @@ Peu d'utilisation concrètes de variables d'environnement dans le code trouvées
 
 ## VIII. Recul sur le projet
 
-Tout d'abord, ce projet (par extension, cette matière) a été très enrichissant pour nous car il nous a permis de nous initier
-aux problématiques de recherche, et on a pu avoir un avant-goût de ce qui peut être réalisé durant
-un doctorat par exemple.
+Tout d'abord, ce projet (par extension, cette matière) a été très enrichissant pour nous car il nous a permis de nous initier aux problématiques de recherche. 
 
-En prenant un peu de recul sur la manière dont nous avons apréhender le projet et la problématique, nous aurions pu diriger notre analyse 
-non pas sur la qualité du code business, mais sur la qualité du code d'infrastructure.
+En prenant un peu de recul sur la manière dont nous avons appréhendé le projet et la problématique, nous aurions pu diriger notre analyse non pas sur la qualité du code business, mais sur la qualité du code d'infrastructure.
 
-En effet, nous mettons en avant la différence entre ces deux types de code car nous nous sommes aperçus que les configurations Docker ne peuvent avoir qu'un impact limité (et indirect)
-sur la qualité du code developpé. 
+En effet, nous mettons en avant la différence entre ces deux types de code car nous nous sommes aperçus que les configurations Docker ne peuvent avoir qu'un impact limité (et indirect) sur la qualité du code développé. 
 
-En revanche, il aurait été intéressant d'évaluer la qualité du code qui décrit l'infrastructure conteneurisée, c'est-à-dire, essayer de mesurer la simplicité, la qualité des Dockerfiles, docker-compose, 
+En revanche, il aurait été intéressant d'évaluer **la qualité du code qui décrit l'infrastructure conteneurisée**, c'est-à-dire, essayer de mesurer la simplicité, la qualité des Dockerfiles, docker-compose, 
 en établissant et utilisant des métriques spécifiques pour mesurer la qualité d'un code d'infrastructure. 
 
-Globalement, l'idée serait de traduire chaque docker-compose par exemple en un graphe décrivant toutes les configurations Docker présentes et comment est-ce que ces derniers lient les conteneurs;
-et à partir de ce graphe, réaliser des études sur sa forme et sa compléxité, en utilisant pourquoi pas du machine learning pour entraîner un modèle qui determinera la qualité d'un code d'infrastructure. 
+Globalement, l'idée serait de traduire chaque docker-compose par exemple en un graphe décrivant toutes les configurations Docker présentes et comment est-ce que ces derniers lient les conteneurs; à partir de ce graphe, nous pourrions réaliser des études sur sa forme et sa compléxité, en utilisant pourquoi pas du machine learning pour entraîner un modèle qui determinera la qualité d'un code d'infrastructure. 
 
 ## IX. References
 
