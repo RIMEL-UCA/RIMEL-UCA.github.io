@@ -27,9 +27,7 @@ En effet, dans cette même version, l'annotation *@Conditional* de Spring fait s
 Cette annotation est beaucoup plus puissante que le *@Profile*, nous pouvons effectuer de la variabilité en fonction des *Beans*. (Exemple : Si un *bean* est présent, Si un *bean* n'est pas présent, une classe, etc)
 Nous pouvons donc voir que cette annotation offre de nouvelles possibilités.
 
-C'est donc pour cette raison que lors de cette étude, nous aimerions nous concentrer sur les annotations permettant d'offrir de la variabilité 
-incluant *@Conditional*, mais aussi *Profile*, *@Value* et *@Resource*
-
+C'est donc pour cette raison que lors de cette étude, nous aimerions nous concentrer sur les annotations permettant d'offrir de la variabilité incluant *@Conditional*, mais aussi *Profile*, *@Value* et *@Resource*
 
 ![Figure 1: Logo UCA](../assets/model/UCAlogoQlarge.png)
 
@@ -201,11 +199,11 @@ Comment l'annotation @Conditional est-elle utilisée ?
 
 En relatant la fréquence d’usage des différentes déclinaisons de l’annotation ou encore la présence de l’annotation au sein d’un fichier. Nous avons pu observer que l’annotation est généralement contenue plusieurs fois au sein d’un même fichier, elle est très rarement utilisée seule. Une autre information précieuse que nous avons pu obtenir est la fréquence d’utilisation de l’annotation au sein des projets Spring. Nous avons remarqué que celle-ci était très présente, ce qui démontre une grande diversité de cas d’utilisation. 
 
-**Notre hypothèse : “L'annotation @Conditional est utilisée dans des fichiers de configuration” est validée pour notre dataset. ** 
+**Notre hypothèse : “L'annotation @Conditional est utilisée dans des fichiers de configuration” est validée pour notre dataset.** 
 
 ### Comment et à quelle fréquence est-elle testée ? 
 
-Nous avons utilisé un script Python permettant de mettre en corrélation la fréquence d’apparition des annotations*@Conditional* au sein de code source et de tests pour les projets Spring et Spring Cloud. Nous avons ensuite généré les graphiques suivants : 
+Nous avons utilisé un script Python permettant de mettre en corrélation la fréquence d’apparition des annotations *@Conditional* au sein de code source et de tests pour les projets Spring et Spring Cloud. Nous avons ensuite généré les graphiques suivants : 
 
 ![alt text](../assets/SpringConditionalMetric/annotationConditionalTest.png)
 ![alt text](../assets/SpringConditionalMetric/conditionalMainvsTestSpringProjects.png)
