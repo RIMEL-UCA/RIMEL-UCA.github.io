@@ -193,11 +193,15 @@ L'élaboration de ce script a été incrémentale, au fur et à mesure que l'on 
 
 1. Peu de projets analysés
 
-  Durant notre étude, nous avons étudié un nombre faible de projets, qui est insuffisant pour pouvoir valider notre hypothèse. 
+  Durant notre étude, nous avons étudié un nombre faible de projets, qui est insuffisant pour pouvoir valider notre hypothèse. Ces projets étaient également différents, certains s'interfaçaient avec de nombreux composants externes (MYSQL, Kafka, etc...) tandis que d'autres non. 
 
 2. Peu de données
 
-  Au cours de nos recherches, nous avons pu chercher ou étaient utilisés les variables d'environnement, il en ressort que peu d'entre-elles sont utilisées dans le code. Nous n'avons par exemple pas trouvé d'utilisation concrète ou la variable modifie à proprement parler le comportement du code, en effet, la plupart des variables trouvées étaient des variables utilisées pour la configuration du projet (PORT, HOST, ...)
+  Au cours de nos recherches, nous avons pu chercher ou étaient utilisés les variables d'environnement, il en ressort que peu d'entre-elles sont utilisées dans le code. Nous n'avons par exemple pas trouvé beaucoup d'utilisations concrètes ou la variable modifiait à proprement parler le comportement du code, en effet, la plupart des variables trouvées étaient des variables utilisées pour la configuration du projet (PORT, HOST, PASSWORD, USER ...)
+
+  Voici par exemple la liste des variables présentes sur le projet Open-Mrs :
+
+  [ 'DEBUG', 'MYSQL_DATABASE', 'MYSQL_ROOT_PASSWORD', 'MYSQL_USER',  'MYSQL_PASSWORD', 'DB_DATABASE', 'DB_HOST', 'DB_USERNAME',  'DB_PASSWORD', 'DB_CREATE_TABLES', 'DB_AUTO_UPDATE', 'MODULE_WEB_ADMIN', 'MYSQL_DEV_PORT', 'TOMCAT_DEV_PORT', 'TOMCAT_DEV_DEBUG_PORT',  'TOMCAT_PORT' ]
 
 ## VIII. Recul sur le projet
 
