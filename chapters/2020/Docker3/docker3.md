@@ -82,7 +82,7 @@ Les projets que nous avons retenus sont :
 * [ElasticSearch](https://github.com/elastic/elasticsearch) : **42** variables d'environnement
 * [Thingsboard](https://github.com/thingsboard/thingsboard.git) : **64** variables d'environnement
 * [Magma](https://github.com/facebookincubator/magma) : **104** variables d'environnement
-* [Apache Skywalking](https://github.com/apache/skywalking) : **8 **variables d'environnement
+* [Apache Skywalking](https://github.com/apache/skywalking) : **8** variables d'environnement
 * [Openmrs-sdk](https://github.com/openmrs/openmrs-sdk) : **16** variables d'environnement
 
 ### 2 - Les outils utilisés
@@ -144,9 +144,9 @@ Expliquer pourquoi on choisit cette hypothèse ...
 Pour prouver cette hypothèse, nous avons établi le protocole suivant :
 - Enumérer toutes les variables d'environnements d'un projet
 - Pour chaque variable d'environnement :
--> Détecter les commits ayant utilisé la variable d'environnement, et leur commit précédent.
--> Détecter les fichiers (dans le code) dans lesquels les variables d'environnements ont été ajoutées
--> Calculer l'évolution de la complexité cyclomatique de ces fichiers entre le commit précédent 
+-> **Détecter les commits** ayant utilisé la variable d'environnement, et leur **commit précédent**.
+-> **Détecter les fichiers** (dans le code) dans lesquels les variables d'environnements ont été ajoutées
+-> **Calculer l'évolution de la complexité cyclomatique** de ces fichiers entre le commit précédent 
       et le commit où la variable d'environnement a été utilisée.
 
 Description du protocole ... Etablir le lien avec les outils utilisés (et comment). Justifier en quoi ce protocole permettra de vérifier 
@@ -166,16 +166,16 @@ Avant de fixer définitivement le protocole utilisé durant cette étude, nous a
 
 1. **Automatisation de la détection des variables d'environnement**
 
-Nous avons choisi dans un premier temps de tester d'appliquer notre démarche sur un seul projet (ThingsBoard). La première chose à faire
-a été de récupérer les variables d'environnement que le projet contient. 
+Nous avons choisi dans un premier temps de tester d'appliquer notre démarche sur un seul projet (ThingsBoard). 
 
-Vu que cette opération devra être effectuée sur plusieurs projets (voir pourra nous aider à voir le nombre de variables d'environnements
-dans un projet), nous avons décidé de l'automatiser.
+La première chose à faire a été de récupérer les variables d'environnement que le projet contient. 
+
+Vu que cette opération devra être effectuée sur plusieurs projets (voir pourra nous aider à voir le nombre de variables d'environnements dans un projet), nous avons décidé de l'automatiser.
 
 Nous avons automatisée cette partie, qui nous permet de détecter les variables d'environnements d'un projet, en supposant qu'elles soient localisées dans un des fichiers suivants :
 * docker-compose (ou tout variante, ex : docker-compose-stack.yml)
 * un fichier .env (qui sont utilisés pour être injectés dans des docker-compose ou dans des dockerFiles)
-* un DockerFile
+* un Dockerfile
 
 A partir de ce script, on peut extraire la liste de variables d'environnements d'un projet (donc leur nombre).
 
@@ -192,10 +192,12 @@ L'élaboration de ce script a été incrémentale, au fur et à mesure que l'on 
 ## VII. Menaces à la validité
 
 1. Peu de projets analysés
-Durant notre étude, nous avons étudié un nombre faible de projets pour pouvoir appuyer 
+
+  Durant notre étude, nous avons étudié un nombre faible de projets, qui est insuffisant pour pouvoir valider notre hypothèse. 
+
 2. Peu de données
-Peu d'utilisation concrètes de variables d'environnement dans le code trouvées dans les projets
-3. Plus de visualisation
+
+  Au cours de nos recherches, nous avons pu chercher ou étaient utilisés les variables d'environnement, il en ressort que peu d'entre-elles sont utilisées dans le code. Nous n'avons par exemple pas trouvé d'utilisation concrète ou la variable modifie à proprement parler le comportement du code, en effet, la plupart des variables trouvées étaient des variables utilisées pour la configuration du projet (PORT, HOST, ...)
 
 ## VIII. Recul sur le projet
 
