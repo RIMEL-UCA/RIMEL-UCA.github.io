@@ -1,6 +1,6 @@
 # Les configurations Docker permettent-ils de rendre le code plus simple ?
 
-## Authors
+## Auteurs
 
 Nous sommes 4 étudiants en dernière année de Polytech Nice-Sophia (SI5), en Architecture Logicielle :
 
@@ -26,8 +26,6 @@ L'impact sur la simplicité du déploiement automatique et la gestion d'une infr
 Dans ce contexte, nous pouvons nous demander si conteneuriser son logiciel simplifie également le développement du code d'un projet, sa qualité, et
 la manière qu'ont les développeurs de l'appréhender.
 
-En effet, l'histoire d'ING laisse supposer que l'adoption de Docker leur a permis de grandement fluidifier leur cycle de développement. 
-
 La question sur l’utilisation des paramètres de haut niveau pour agir sur les logiciels conteneurisés est intéressante parce qu’elle tourne 
 autour de thématiques importantes sur les bonnes pratiques du développement logiciel.
  
@@ -47,9 +45,9 @@ Commençons par définir ce qu'est pour nous la simplicité :
 
 Un code simple est un code lisible, c'est-à-dire structuré; mais c'est aussi un code maintenable, donc flexible et extensible.
 
-Afin de faciliter notre étude, nous avons restreint notre analyse en étudiant l'influence d'un seul type de configuration haut-niveau de Docker : les variables d'environnements; 
-qui parmi toutes les autres façons de configurer des containers Docker (Volumes, Ports, Restart Policies, File Systems...), ont le plus de chance d'être utilisée dans le code, 
-et donc d'influencer directement nos critères de simplicité.  
+Afin de faciliter notre étude, nous avons restreint notre analyse en étudiant l'influence d'un seul type de configuration haut-niveau de Docker : _les variables d'environnements_; 
+qui parmi toutes les autres façons de configurer des containers Docker (Volumes, Ports, Restart Policies, File Systems...), ce sont ceux qui ont le plus de chances d'être utilisée
+ dans le code, et donc d'influencer directement ce qu'on appelle la simplicité.  
 
 ## III. Rassemblement d'informations
  
@@ -71,11 +69,11 @@ Ensuite, d'autres critères de sélections sont entrés en jeu comme :
 Ces critères nous permettront de comparer des projets de différentes complexités, ayant un certain besoin de développer sur plusieurs phases ou pas, ou d’avoir un système qui change de comportement. 
 
 Les projets que l'on a retenu sont :
-* ElasticSearch : <https://github.com/elastic/elasticsearch>
-* Thingsboard : <https://github.com/thingsboard/thingsboard.git>
-* Magma : <https://github.com/facebookincubator/magma>
-* Apache Skywalking : <https://github.com/apache/skywalking>
-* Openmrs-sdk : <https://github.com/openmrs/openmrs-sdk>
+* ElasticSearch : <https://github.com/elastic/elasticsearch> : 42 variables d'environnement
+* Thingsboard : <https://github.com/thingsboard/thingsboard.git> : 64 variables d'environnement
+* Magma : <https://github.com/facebookincubator/magma> : 104 variables d'environnement
+* Apache Skywalking : <https://github.com/apache/skywalking> : 8 variables d'environnement
+* Openmrs-sdk : <https://github.com/openmrs/openmrs-sdk> : 16 variables d'environnement
 
 ### III.2 - Les outils utilisés
 
@@ -120,15 +118,25 @@ Avec la réduction de scope décrite précédemment, l'hypothèse que nous allon
 Expliquer pourquoi on choisit cette hypothèse ...
 
 Pour prouver cette hypothèse, nous avons établi le protocole suivant :
+- Enumerer toutes les variables d'environnements d'un projet
+- Pour chaque variable d'environnement :
+-> Detecter les commits ayant utilisé la variable d'environnement, et leur commit précédent.
+-> Detecter les fichiers (dans le code) dans lesquels les variables d'environnements ont été ajoutées
+-> Calculer l'évolution de la compléxité cyclomatique de ces fichiers entre le commit précédent 
+      et le commit où la variable d'environnement a été utilisée.
 
 Description du protocole ... Etablir le lien avec les outils utilisés (et comment). Justifier en quoi ce protocole permettra de vérifier 
 ou pas l'hypothèse.
 
+## V. Mauvaises pistes explorées
+
+Avant de fixer définitivement le protocole utilisé durant cette étude, nous avons exploré d'autres possibilités qui ont échouées 
 
 ## V. Présentations des résultats et de l'analyse
 
 1. Analyse des résultats & construction d’une conclusion : Une fois votre expérience terminée, vous récupérez vos mesures et vous les analysez pour voir si votre hypothèse tient la route. 
 2. Conclusion de l'analyse
+
 
 ## VI. Description de la partie automatisée
 
@@ -147,7 +155,15 @@ Nous avons automatisée cette partie, qui nous permet de détecter les variables
 
 A partir de ce script, on peut extraire la liste de variables d'environnements d'un projet (donc leur nombre).
 
-2. 
+L'élaboration de ce script a été incrémentale, au fur et à mesure que l'on appliquait notre démarche à un nouveau projet, ce script a été étendu et amélioré.
+
+2. **Automatisation de la récupération de tout l'historique (commits) d'un projet**
+
+3. **Script permettant de detecter le/les commits qui ont manipulé une variable d'environnement donnée**
+
+4. **Script permettant de récupérer le commit ayant manipulé une variable d'environnement, et le précédent**
+
+5. **Script permettant de calculer la complexité de certains fichiers données entre deux commits**
 
 ## VII. Menaces à la validité
 
