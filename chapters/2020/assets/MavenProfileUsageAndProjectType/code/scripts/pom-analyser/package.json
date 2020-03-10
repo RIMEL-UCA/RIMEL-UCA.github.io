@@ -1,0 +1,20 @@
+{
+  "name": "pom-analyser",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:extract": "node extractPoms.js",
+    "start:analyse": "node analysePoms.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parser": "^2.3.2",
+    "dotenv": "^8.2.0",
+    "pom-parser": "^1.2.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.5"
+  }
+}
