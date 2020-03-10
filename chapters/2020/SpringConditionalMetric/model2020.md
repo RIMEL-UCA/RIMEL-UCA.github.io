@@ -17,7 +17,17 @@ Nous sommes quatre étudiants en dernière année à Polytech Nice Sophia en arc
 
 Spring est un framework open-source qui facilite la mise en place et le développement d'applications Java. Son fonctionnement se base sur un système d'annotations. 
 
+A l'heure actuelle, divers annotations permettent d'effectuer de la variabilité dans Spring.
+
+Cependant, au tout début, l'annotation @Profile introduit dans la version 3.1 de Spring est la première à introduire un mécanisme de configuration.
+En effet, avec cette annotation, nous pouvons activer des profils différents (un profil dev, un profil prod par exemple). C'est une façon d'effectuer de la variabilité basée uniquement sur des vérifications booléennes,
+en lien avec les fichiers *properties* de Spring.
+
+Cette annotation a part la suite été raffinée, notamment dans la version 4 de Spring.
+
+
 L'annotation de paramétrage *@Conditional* a été introduite dans la version *Spring 5.2.3* afin de répoondre à des problématiques de condition de chargement de classe en fonction d'un contexte. 
+
 
 bullshit sur la variabilité.
 les nouvelles/anciennes annotations 
@@ -190,17 +200,16 @@ Nombre de if ayant un @Resource en paramètre 0
 Nombre d'attribut avec @Resource unique utiliser dans un if 0
 
 ### Comment l'annotation @Conditional est-elle utilisée ?
-
-![alt text](https://zupimages.net/up/20/11/ke7s.png)
-![alt text](https://zupimages.net/up/20/11/psji.png)
+![alt text](./assets/annotationSpringProjects.png)
+![alt text](./assets/annotationSpringCloud.png)
 
 ### Comment et à quelle fréquence est-elle testée ? 
 
 #### Hypothèse : L'annotation Conditional est souvent testée lorsqu'elle est utilisée. 
 
-![alt text](https://zupimages.net/up/20/11/tudg.png)
-![alt text](https://zupimages.net/up/20/11/rqnt.png)
-![alt text](https://zupimages.net/up/20/11/bwq3.png)
+![alt text](./assets/annotationConditionalTest.png)
+![alt text](./assets/conditionalMainvsTestSpringProjects.png)
+![alt text](./assets/conditionalMainvsTestSpringCloud.png)
 
 Nous considérons que cette hypothèse n'est pas vérifiée. Nos résultats montrent une faible fréquence d'apparition de l'annotation *@Conditional* au sein de fichiers de tests. Mais ces chiffres ne permettaient pas de savoir si elle n'était pas testée par choix ou parce qu'il était difficile de la tester. Nous avons donc par la suite réalisé une recherche manuelle au niveau des projets. 
 
@@ -217,8 +226,8 @@ Nombre d'attribut unique ayant l'annotation @Resource :  2
 Nombre de if ayant un @Resource en paramètre 0
 Nombre d'attribut avec @Resource unique utiliser dans un if 0
 
-![alt text](https://zupimages.net/up/20/11/68gx.png)
-![alt text](https://zupimages.net/up/20/11/iif3.png)
+![alt text](./assets/annotationConditionalIncludingValue.png)
+![alt text](./assets/eachAnnotationInEachProjects.png)
 
 ### Comment est utilisée l'annotation @Value ? 
 
@@ -232,7 +241,7 @@ Nombre d'attribut avec @Value unique utiliser dans un if 19
 Les annotations @Value basées sur leurs nom d'attribut sont en moyenne présentes sur  1.5072992700729928
 Le @Value le plus présent est dans 15 fichiers différents
 
-![alt text](https://zupimages.net/up/20/11/e0um.png)
+![alt text](assets/valueDistribution.png)
 
 #### Hypothèse n°2 : L'annotation @Value s'utilise en *tangling* ou *spreading*
 
