@@ -298,10 +298,10 @@ Lors de l'analyse des résultats, nous avons voulu faire un diagramme de Venn po
 
 ### Vues de nos bases de données
 
-Visualisation de notre base de données numéro 1 : 
+Visualisation de notre base de données numéro 1 : <br/>
 ![visu-bd1.png](../assets/MavenProfileInProjectTimeline/visu-bd1.png){:height="600px"}
 
-Visualisation de notre base de données numéro 2 : 
+Visualisation de notre base de données numéro 2 : <br/>
 ![visu-bd2.png](../assets/MavenProfileInProjectTimeline/visu-bd2.png){:height="600px"}
 
 ### Téléchargement des POM
@@ -362,7 +362,7 @@ Software evolution in open source projects - a large-scale investigation - Koch 
 
 A Unified Framework for the Comprehension of Software’s Time Dimension
 
-Cours de RIMEL et intervention de Sébastien MOSSER et Xavier BLANC.
+Cours de RIMEL et interventions de Sébastien MOSSER et Xavier BLANC.
 
 ![Polytech Nice-Sophia (UCA - Université C&#xF4;te d&apos;Azur)](../assets/MavenProfileInProjectTimeline/logoPolytechUCA.png){:height="200px" }
 
