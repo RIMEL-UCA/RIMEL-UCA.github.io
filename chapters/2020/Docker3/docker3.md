@@ -164,6 +164,8 @@ Nous avons utilisé cette procédure qui consiste à étudier deux commits qui s
 
 ## VI. Présentations des résultats et de l'analyse
 
+Nous avons sélectionné deux projets et trois variables d'environnement par projet pour illustrer nos propos.
+
 ### Analyse des résultats
 
 **A. OpenMrs**
