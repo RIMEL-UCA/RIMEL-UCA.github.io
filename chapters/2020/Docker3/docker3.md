@@ -11,33 +11,27 @@ Nous sommes 4 étudiants en dernière année de Polytech Nice-Sophia (SI5), en A
 
 ## I. Contexte de la recherche
 
-Durant cette dernière décennie, la conteneurisation est devenue une pratique courante au sein du développement des logiciels, car il permet de simplifier une partie importante
-du logiciel : le déploiement, l'isolement des composants, environnements homogènes, gestion du dimensionnement de l'infrastructure. 
+Durant cette dernière décennie, la conteneurisation est devenue une pratique courante au sein du développement logiciel car elle permet de simplifier plusieurs choses dans un environnement logiciel dont : le déploiement et l'isolation des composants. Elle permet également de disposer d'environnements homogènes et de gérer le dimensionnement de l'infrastructure. 
 
-Docker est devenue la référence principale au niveau des technologies de conteneurs, et elle est adoptée par d'autre outils open-sources comme Kubernetes qui fournissent des 
-services de gestion des conteneurs. 
+**Docker** est devenu la référence principale au niveau des technologies de conteneurs, et est adopté massivement par d'autres outils open-sources. On pourrait citer par exemple **Kubernetes** qui propose de l'orchestration de conteneurs, ou encore des solutions Cloud telle que **Google Cloud Run** qui propose du scaling automatique de conteneur stateless. 
 
-L'impact sur la simplicité du déploiement automatique et la gestion d'une infrastructure logicielle est indéniable. 
+Il en ressort que l'impact des conteneurs sur la simplicité du déploiement et la gestion d'une infrastructure logicielle est indéniable. 
 
 ![Figure 1: Logo UCA](../assets/model/UCAlogoQlarge.png)
 
 ## II. Question générale
 
-Dans ce contexte, nous pouvons nous demander si conteneuriser son logiciel simplifie également le développement du code d'un projet, sa qualité, et
-la manière qu'ont les développeurs de l'appréhender.
+Dans ce contexte, nous pouvons nous demander si conteneuriser son logiciel simplifie également le développement du code d'un projet, sa qualité et la manière qu'ont les développeurs de l'appréhender.
 
-La question sur l’utilisation des paramètres de haut niveau pour agir sur les logiciels conteneurisés est intéressante parce qu’elle tourne 
-autour de thématiques importantes sur les bonnes pratiques du développement logiciel.
- 
+La question sur l’utilisation des paramètres de haut niveau pour agir sur les logiciels conteneurisés est intéressante parce qu’elle tourne autour de thématiques importantes sur les bonnes pratiques du développement logiciel.
+
 Dans le contexte de CI/CD par exemple, la configuration varie considérablement d'un déploiement à un autre, alors que le code non. 
 
-Un autre exemple serait d’avoir une même base de code et des comportements différents (avec les features toggle, gestion de licences etc.)
+Un autre exemple serait d’avoir une même base de code et des comportements différents (avec des features toggle, gestion de licences etc.)
 
-Durant notre parcours, nous avons développé des applications qui stockent la configuration sous forme de constantes dans le code or il s’agit 
-d’une violation de la méthodologie “Twelve Factor App” (Reference 2), qui nécessite une séparation stricte de la configuration du code; pour une meilleure maintenabilité, portabilité et résilience. 
+Durant notre parcours, nous avons développé des applications qui stockent la configuration sous forme de constantes dans le code or il s’agit d’une violation de la méthodologie “Twelve Factor App” (Reference 2), qui nécessite une séparation stricte de la configuration du code; pour une meilleure maintenabilité, portabilité et résilience. 
 
-Cette mauvaise pratique nous a coûté beaucoup de temps et d’efforts et nous a poussé à choisir ce sujet, pour nous informer et voir comment ces pratiques sont utilisées 
-dans le monde industriel / projets open-source, la complexité ajoutée et l’intérêt réel que cela apporte.  
+Cette mauvaise pratique nous a coûté beaucoup de temps et d’efforts et nous a poussé à choisir ce sujet, pour nous informer et voir comment ces pratiques sont utilisées dans le monde industriel / projets open-source, la complexité ajoutée et l’intérêt réel que cela apporte.  
 
 **Question générale : Comment les configurations haut niveau de Docker influent la simplicité du code ?**
 
@@ -50,7 +44,7 @@ qui parmi toutes les autres façons de configurer des containers Docker (Volumes
  dans le code, et donc d'influencer directement ce qu'on appelle la simplicité.  
 
 ## III. Rassemblement d'informations
- 
+
 ### 1 - Les projets à analyser
 
 Afin de mener notre étude à bien, nous nous sommes mis à la recherche de jeu de données, c'est-à-dire de projets pour appliquer notre démarche.
@@ -147,7 +141,7 @@ a été de récupérer les variables d'environnement que le projet contient.
 
 Vu que cette opération devra être effectuée sur plusieurs projets (voir pourra nous aider à voir le nombre de variables d'environnements
 dans un projet), nous avons décidé de l'automatiser.
- 
+
 Nous avons automatisée cette partie, qui nous permet de détecter les variables d'environnements d'un projet, en supposant qu'elles soient localisées dans un des fichiers suivants :
 * docker-compose (ou tout variante, ex : docker-compose-stack.yml)
 * un fichier .env (qui sont utilisés pour être injectés dans des docker-compose ou dans des dockerFiles)
