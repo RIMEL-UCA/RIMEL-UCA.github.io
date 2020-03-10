@@ -1,7 +1,7 @@
 export { analyzeFolder };
 
 import { languageStats } from "./languageStats";
-import { stats } from "./stats";
+import { stats, Metrics } from "./stats";
 import { dictionary } from "./dictionary";
 
 const fs = require('fs');
@@ -50,27 +50,24 @@ function analyzeFolder(path: string) : languageStats[] {
       total++;    //New file studied
       if (contentJSON.isValid == true) {
         valid++;    //New valid file studied
-        var build = contentJSON.buildMetrics;         
-        var run = contentJSON.runMetrics;
-        var exec = contentJSON.execMetrics;
-    
+        var build = contentJSON.buildMetrics as Metrics;
+        var run = contentJSON.runMetrics as Metrics;
+        var exec = contentJSON.execMetrics as Metrics;
+        
         //Put new objects into stats
         if (build != null) {
-          buildStats.add(Number(build.expose), Number(build.args), Number(build.volumes),
-                  build.EnvVariable, build.unknown, build.SecurityVariable);
+          buildStats.add(build);
         } else {
           buildStats.addNull();
         }
         if (run != null) {
-          runStats.add(Number(run.expose), Number(run.args), Number(run.volumes), 
-                  run.EnvVariable, run.unknown, run.SecurityVariable);
+          runStats.add(run);
         }
         else {
           runStats.addNull();
         }
         if (exec != null) {
-          execStats.add(Number(exec.expose), Number(exec.args), Number(exec.volumes),
-                  exec.EnvVariable, exec.unknown, exec.SecurityVariable);  
+          execStats.add(exec);
         }
         else {
           execStats.addNull();

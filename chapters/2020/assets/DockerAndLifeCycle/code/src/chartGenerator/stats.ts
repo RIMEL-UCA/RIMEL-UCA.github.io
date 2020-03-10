@@ -15,6 +15,7 @@ class stats {
     private unknownTuple: dictionary[];
     private SecurityVariable: string[];
     private securityTuple: dictionary[];
+    public metricsList:Array<Metrics> ;
   
     //Constructor
     public constructor() {
@@ -29,6 +30,7 @@ class stats {
       this.EnvTuple = [];
       this.unknownTuple = [];
       this.securityTuple = [];
+      this.metricsList = new Array<Metrics>();
       return this;
     };
     
@@ -78,6 +80,7 @@ class stats {
     }
     private envToTuple(env: string[]){
       var found = false;
+      
       env.forEach(name => {
         this.EnvTuple.forEach(candidate => {
           if(candidate.getName() == name) {
@@ -130,21 +133,22 @@ class stats {
       });
     };
     
-    //Add new stat
-    public add(nExp: number, nArgs: number, nVolumes: number, 
-          nEnvVariable: string[], nUnknown: string[], nSecurityVariable: string[]) {
+    public add(metrics: Metrics) {
       this.total++;
       this.totalNotNull++;
-      this.expose+=nExp;
-      this.args+=nArgs;
-      this.volumes+=nVolumes;
-      this.EnvVariable = this.EnvVariable.concat(nEnvVariable);
-      this.envToTuple(nEnvVariable);
-      this.unknown = this.unknown.concat(nUnknown);
-      this.unkToTuple(nUnknown);
-      this.SecurityVariable = this.SecurityVariable.concat(nSecurityVariable);
-      this.secToTuple(nSecurityVariable);
+      this.expose+=metrics.expose;
+      this.args+=metrics.args;
+      this.volumes+=metrics.volumes;
+      this.EnvVariable = this.EnvVariable.concat(metrics.EnvVariable);
+      this.envToTuple(metrics.EnvVariable);
+      this.unknown = this.unknown.concat(metrics.unknown);
+      this.unkToTuple(metrics.unknown);
+      this.SecurityVariable = this.SecurityVariable.concat(metrics.SecurityVariable);
+      this.secToTuple(metrics.SecurityVariable);
+      this.metricsList.push(metrics);
     };
+
+    
     
     //Add new null
     public addNull() {
@@ -195,5 +199,14 @@ class stats {
         console.error("No stats found");
       }
     };
+  }
+
+  export class Metrics {
+    expose: number
+    args: number
+    volumes: number
+    EnvVariable: string[] 
+    unknown: string[]
+    SecurityVariable: string[]
   }
   
