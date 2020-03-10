@@ -19,20 +19,18 @@ Spring est un framework open-source qui facilite la mise en place et le dévelop
 
 A l'heure actuelle, divers annotations permettent d'effectuer de la variabilité dans Spring.
 
-Cependant, au tout début, l'annotation @Profile introduit dans la version 3.1 de Spring est la première à introduire un mécanisme de configuration.
+Cependant, au tout début, l'annotation *@Profile* introduit dans la version 3.1 de Spring est la première à introduire un mécanisme de configuration.
 En effet, avec cette annotation, nous pouvons activer des profils différents (un profil dev, un profil prod par exemple). C'est une façon d'effectuer de la variabilité basée uniquement sur des vérifications booléennes,
 en lien avec les fichiers *properties* de Spring.
 
-Cette annotation a part la suite été raffinée, notamment dans la version 4 de Spring.
+Cette annotation a part la suite été raffinée, notamment dans la version 4 de Spring, elle peut maintenant être utilisée sur les méthodes, et utilise l'annotation *@Conditional* venant tout juste de sortir.
 
+En effet, dans cette même version, l'annotation *@Conditional* de Spring fait son apparition afin de répondre à des problématiques de condition de chargement de classe en fonction d'un contexte.
+Cette annotation est beaucoup plus puissante que le *@Profile*, nous pouvons effectuer de la variabilité en fonction des beans. (Exemple : Si un bean est présent, Si un bean n'est pas présent, une classe, etc)
+Nous pouvons donc voir que cette annotation offre de nouvelles possibilités.
 
-L'annotation de paramétrage *@Conditional* a été introduite dans la version *Spring 5.2.3* afin de répoondre à des problématiques de condition de chargement de classe en fonction d'un contexte. 
-
-
-bullshit sur la variabilité.
-les nouvelles/anciennes annotations 
-spring
-contexte : 
+C'est donc pour cette raison que lors de cette étude, nous aimerions nous concentrer sur les annotations permettant d'offrir de la variabilité 
+incluant *@Conditional*, mais aussi *@Value* et *@Resource*
 
 ![Figure 1: Logo UCA](../assets/model/UCAlogoQlarge.png)
 
