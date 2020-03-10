@@ -97,15 +97,19 @@ Afin de prouver notre intuition, nous allons relever la fréquence d'apparition 
 
 #### Hypothèse n°2 : L'annotation @Conditional est particulièrement utilisée dans les frameworks. 
 
-Nous avions l'intuition que grâce à son apport fonctionnel, l'annotation serait particulièrement utilisée au sein de *frameworks* car elle facilite l'adaptabilité. 
+Nous avions l'intuition que grâce à son apport fonctionnel, l'annotation serait particulièrement utilisée au sein de *frameworks* car elle facilite l'adaptabilité. Pour cela, nous allons sélectionner un ensemble de projets différents : *Frameworks*, *API*, bibliothèques, plateformes, etc. Nous allons ensuite relever la fréquence d'apparition de l'annotation au sein de ces projets et corréler les résultats avec le type de chaque projet. Cela nous permettra d'établir s'il y a bien une distinction significative de fréquence d'apparition de l'annotation de paramétrage.
+
+[dire que quand l'annotation apparaît une fois on prend le fichier, mais potentiellement y en a plein à l'intérieur]
 
 ### Comment et à quelle fréquence est-elle testée ?
 
 #### Hypothèse : L'annotation Conditional est souvent testée lorsqu'elle est utilisée. 
 
-L'intérêt de cet hypothèse pour un projet, repose sur le fait qu'elle permettrait d'obtenir des informations concernant 
+Ce questionnement nous permettrait d'obtenir des informations concernant la facilité de test de l'annotation, mais également si il est fréquent de tester une annotation de paramétrage et éventuellement comment celle-ci est testée. Au vue de sa fonction déterminante pour le chargement d'un *Bean*, nous avons émis l'hypothèse que *@Conditional* est généralement testée lorsqu'elle est utilisée.
 
 #### Expérimentation
+
+Afin de pouvoir valider notre hypothèse, nous allons séparer les fichiers des projets testés en fonction de leur package. Nous savons que pour les fichiers Java, le code source est compris dans un package *'src'* et les tests dans un package *'test'*. Nous savons également que 
 
 reprendre du premier rapport -> on utilise pas @Conditional pour tester @Conditional -> pas démontrable 
 résultats pas assez simple à réaliser
@@ -145,8 +149,8 @@ Tout d'abord, le premier *dataset* était constitué uniquement de projets Sprin
 
 | Organisation                  | Nombre de projets        | 
 |-----------------------------|----------------------|
-| Spring Projects             | 48
-| Spring Cloud             | 63
+| Spring Projects             | 48 |
+| Spring Cloud             | 63 |
 
 
 Nous avons par la suite constitué un second *set*, uniquement constitué de projets utilisant Spring mais n'appartenant pas à Spring. En effet, se limiter aux projets Spring n'aurait pas reflété l'utilisation réelle de l'annotation au sein de projets lambdas. Nous les avons classés dans le tableau suivant en fonction de leur type.
@@ -163,18 +167,18 @@ Nous avons par la suite constitué un second *set*, uniquement constitué de pro
 
 La récupération des *dataset* a été réalisée depuis la plateforme Github, hébergeur de projets open-source fonctionnant avec le gestionnaire de version Git. La plateforme contient des milions de projets qui nous ont permis d'établir un dataset complet et exhaustif. 
 
-## VI. Outils utilisés 
+## VI. Technologies utilisées 
 
 ### Jupyter Notebook 
 
-Afin d'optimiser nos recherches, nous les avons automatisées à l'aide de scripts en Python. Le développement python était effectué sur l'outil Jupyter Notebook. Nous avons choisi cette application car elle apportait plusieurs avantages :
-
-* visualisation des résultats
-* mémoire en cache des exécutions des scripts, ce qui a permi d'accélérer le développement car les scripts n'ont pas besoin d'être relancés à chaque fois
-* scripts partagés avec Jupyter Notebook Collaboration au sein desquels le stockage des projets clonés se fait directement dans le cloud (Google Drive). 
+Afin d'optimiser nos recherches, nous les avons automatisées à l'aide de scripts en Python. Le développement python était effectué sur l'outil Jupyter Notebook. Nous avons choisi cette application, car elle apportait plusieurs avantages :
+* la visualisation des scripts et des résultats d'exécution directement dans un navigateur web
+* la mémoire en cache des exécutions des scripts, ce qui a permi d'accélérer le développement, car les scripts n'ont pas besoin d'être relancés à chaque nouvelle exécution
+* les scripts partagés avec Jupyter Notebook Collaboration au sein desquels le stockage des projets clonés se fait directement dans le cloud (Google Drive)
 
 ### Javalang
 
+Javalang est une bibliothèque en Python permettant de parser des fichiers Java afin d'obtenir une représentation sous forme d'objets en Python. Pour cela, elle définit un modèle de données représentant un fichier Java comprenant des attributs, annotations, méthodes, références, etc. Son implémentation est basée sur la spécification de Java réalisée par Oracle, disponible sur la page suivante :  https://docs.oracle.com/javase/specs/jls/se8/html/. Cet outil nous a permis de manipuler des objets contenant toutes les informations relatives aux fichiers Java étudiés. Nous avons ainsi pu directement utiliser les champs renseignés de ces objets au sein de nos scripts Python, plutôt que parser à chaque fois un fichier reçu sous forme de chaîne de caractères pour aller récolter des informations. 
 
 ## VII. Analyse des résultats
 
@@ -200,9 +204,11 @@ Nombre d'attribut avec @Resource unique utiliser dans un if 0
 ![alt text](https://zupimages.net/up/20/11/rqnt.png)
 ![alt text](https://zupimages.net/up/20/11/bwq3.png)
 
-Nous considérons que cette hypothèse n'est pas vérifiée. Nos résultats montrent une faible fréquence d'apparition de l'annotation *@Conditional* au sein de fichiers de tests. Mais ces chiffres ne permettaient pas de savoir si elle n'était pas testée par choix ou parce qu'il était difficile de la tester. Nous avons donc par la suite réalisé une recherche manuelle au niveau des projets.
+Nous considérons que cette hypothèse n'est pas vérifiée. Nos résultats montrent une faible fréquence d'apparition de l'annotation *@Conditional* au sein de fichiers de tests. Mais ces chiffres ne permettaient pas de savoir si elle n'était pas testée par choix ou parce qu'il était difficile de la tester. Nous avons donc par la suite réalisé une recherche manuelle au niveau des projets. 
+
 Cette deuxième phase de recherche nous a permis de comprendre que nos mesures étaient faussées pour deux raisons : 
-- 
+* 
+* 
 
 ### Quelle annotation de configuration est la plus utilisée parmi les existantes (Conditional, Profile, Value, Ressources) ? 
 
