@@ -150,13 +150,13 @@ Nos expériences introduisent les notions de qualité de code. Cette notion peut
 
 Dans un premier temps, nous avons observé l'évolution du nombre de commits au sein du projet depuis 2010 à 2019. Bien que le projet ait été créé en 2007, Les premiers commits sur le répertoire actuel commencent en 2010. Pour cette analyse, nous n'avons pas récupéré les commits de 2020 car, étant en début d'années, ils ne sont actuellement pas significatifs.
 
-![](../assets/MLAndEvolution/images/Evolution_du nombre_de commits_dans_le_temps.PNG)
+![](../assets/MLAndEvolution/images/Evolution_du_nombre_de_commits_dans_le_temps.PNG)
 
 Comme nous pouvons le voir sur le graphique précédent, l'évolution du nombre de commits ne correspond pas à ce à quoi nous nous attendions. En effet, le nombres de commits a pratiquement doublé entre 2010 (2601 commits) et 2011 (4845 commits). Mais, le plus surprenant est que le nombre de commits a diminué progressivement depuis 2011 jusqu'à arriver à environ 896 commits en 2017.
 Nous avons ensuite remarqué que le nombre de commits est légèrement en hausse depuis 2018. Nous nous sommes alors demandé si cette augmentation était visible en 2020.
 Nous avons donc analysé le nombre de commits par mois sur 2019 et 2020 pour évaluer la tendance d'évolution.
 
-![](../assets/MLAndEvolution/images/Evolution_du nombre_de commits_par_mois de_2019_a_2020.PNG)
+![](../assets/MLAndEvolution/images/Evolution_du_nombre_de_commits_par_mois_de_2019_a_2020.PNG)
 
 Etant donné que nous n'avons que les deux premiers mois de l'année, les résultats ne permettent pas de conclure si l'évolution du nombre de commits en 2020 va continuer à augmenter ou baisser. Cependant nous pouvons observer que le nombre de commits sur les deux premiers mois de 2020 suivent la moyenne des commits de 2019.
 
