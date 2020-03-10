@@ -26,7 +26,6 @@ contexte :
 
 ![Figure 1: Logo UCA](../assets/model/UCAlogoQlarge.png)
 
-
 ## II. Observation générale
 
 1. Commencez par formuler une question sur quelque chose que vous observez ou constatez ou encore une idée émergente. Attention pour répondre à cette question vous devrez être capable de quantifier vos réponses.
@@ -73,9 +72,10 @@ Lors de nos recherches, une seconde annotation a particulièrement attiré notre
 
 Sa modularité et la diversité de sa portée nous a amenés à nous demander si son mode d'utilisation se confirmait à du *tangling* (signifiant ) ou du *spreading* (signifiant ). 
 
-## III. Récolte d'informations
+## III. Collecte d'informations
 
-Afin de 
+Nous avons également durant cette phase, lu plusieurs articles qui nous ont permis d'être plus familiers avec les concepts de rétro-ingénieurie et de réutilisabilité du code. Ces concepts nous ont apporté une approche différente de la tâche d'analyse, notamment en mettant en avant des processus d'automatisation. 
+
 la doc de spring très important
 doc des annotations
 le paramétrage
@@ -83,44 +83,72 @@ le paramétrage
 [Are Developers Aware of the Architectural Impact of Their Change](http://www0.cs.ucl.ac.uk/staff/j.krinke/publications/ase17.pdf)  
 [Titan: A Toolset That Connects Software Architecture with Quality Analysis](https://www.cs.drexel.edu/~lx52/LuXiao/papers/FSE-TD-14.pdf)  
 
-## IV. Hypothèses émises
+## IV. Hypothèses émises et expériences réalisées
 
-### Hypothèse n°1 : L'annotation @Conditional est utilisée dans des fichiers de configuration. 
+1. Il s'agit ici d'énoncer sous forme d' hypothèses ce que vous allez chercher à démontrer. Vous devez définir vos hypothèses de façon à pouvoir les mesurer facilement. Bien sûr, votre hypothèse devrait être construite de manière à vous aider à répondre à votre question initiale. Explicitez ces différents points.
+2. Test de l’hypothèse par l’expérimentation. 1. Vos tests d’expérimentations permettent de vérifier si vos hypothèses sont vraies ou fausses. 2. Il est possible que vous deviez répéter vos expérimentations pour vous assurer que les premiers résultats ne sont pas seulement un accident.
+3. Explicitez bien les outils utilisés et comment.
+4. Justifiez vos choix.
 
-### Hypothèse n°2 : L'annotation @Conditional est particulièrement utilisée dans les frameworks. 
+### Comment l'annotation @Conditional est-elle utilisée ?
 
-### Hypothèse n°3 : L'annotation Conditional est souvent testée lorsqu'elle est utilisée. 
+#### Hypothèse n°1 : L'annotation @Conditional est utilisée dans des fichiers de configuration. 
+
+Afin de vérifier cette hypothèse, nous 
+
+#### Expérimentation
+
+#### Hypothèse n°2 : L'annotation @Conditional est particulièrement utilisée dans les frameworks. 
+
+Nous avions l'intuition que grâce à son apport fonctionnel, l'annotation serait particulièrement utilisée au sein de *frameworks* car elle facilite l'adaptabilité. 
+
+### Comment et à quelle fréquence est-elle testée ?
+
+#### Hypothèse : L'annotation Conditional est souvent testée lorsqu'elle est utilisée. 
+
+L'intérêt de cet hypothèse pour un projet, repose sur le fait qu'elle permettrait d'obtenir des informations concernant 
+
+#### Expérimentation
 
 reprendre du premier rapport -> on utilise pas @Conditional pour tester @Conditional -> pas démontrable 
 résultats pas assez simple à réaliser
 
-### Hypothèse n°4 : La répartition des annotations de paramétrage n'est pas homogène.
+### Quelle annotation de configuration est la plus utilisée parmi les existantes (Conditional, Profile, Value, Ressources) ? 
 
-### Hypothèse n°5 : L'annotation @Value tangling ou spreading
+#### Hypothèse : La répartition des annotations de paramétrage n'est pas homogène.
 
-1. Il s'agit ici d'énoncer sous forme d' hypothèses ce que vous allez chercher à démontrer. Vous devez définir vos hypothèses de façon à pouvoir les _mesurer facilement._ Bien sûr, votre hypothèse devrait être construite de manière à v_ous aider à répondre à votre question initiale_.Explicitez ces différents points.
+#### Expérimentation
+
+### Comment est utilisée l'annotation @Value ? 
+
+#### Hypothèse n°1 : L'annotation @Value tangling ou spreading
 
 Le taux de @Value utiliser dans des if
-La je vais, par projet, regarder la répartition des Annotation @Conditional et Autre pour essayer de classifier les libs, des projets concrêt
+
+#### Expérimentation
+
+#### Hypothèse n°2 : L'annotation @Value tangling ou spreading
+
+#### Expérimentation
+
+#### Hypothèse n°3 : L'annotation est fréquemment utilisée au sein de projets lambdas, mais moins utilisée que *@Conditional* au sein de librairies.
+
+La je vais, par projet, regarder la répartition des Annotation @Conditional et Autre pour essayer de classifier les libs, des projets concrêts
 pour voir si on peut dire
 Sur les 14 projet analyser le taux de @Conditional était Superieur pour les libs et @Value pour les projet concret
 
-Tout d'abord, nous avons cherché à savoir quelle annotation @Conditional était la plus utilisée et où. 
+#### Expérimentation
 
-Ensuite, nous avons souhaité comparer sa fréquence avec d'autres annotations de configuration.
-
-Nous nous sommes également intéressés aux tests potentiellement effectué sur l'annotation @Conditional afin de voir si celle-ci était souvent testée.
-
-Nous avons ensuite cherché les fichiers au sein desquels l'annotation est utilisée = nom de fichier.
-
-Ensuite création d'un gros dataset fiable.
-
-Pour finir, comparaison de @Value/@Profile/@Conditional/@Ressource
 
 
 ## V. Ressources utilisées
 
-Afin de mener à bien notre étude nous avons eu besoin de constituer un dataset de projets utilisant Spring. Pour cela, nous nous sommes servis de la plateforme d'hébergement et de développement, basée sur le gestionnaire de version Git : Github. La plateforme contient des milions de projets qui nous ont permis d'établir un dataset complet et exhaustif. 
+Afin de pouvoir fournir des réponses à nous questions, nous avons constitué un *dataset* de projets Java utilisant Spring. Pour cela, nous avons procédé en deux étapes. 
+Tout d'abord, le premier *dataset* était constitué uniquement de projets Spring. Ne sachant pas comment l'annotation était utilisée et son utilité précise au sein de projets, nous pensions qu'acquérir des données de reneignement au niveau du créateur de l'annotation pourrait être très enrichissant pour cette étude. Pour cela, nous avons utilisé les projets de Spring : Spring Projects (comptant 48 projets analysés) et Spring Cloud (comptant 63 projets analysés).
+[lister en fonction du type de projet]
+projets spring
+
+Nous avons par la suite constitué un second *set*, uniquement constitué de projets utilisant Spring mais n'appartenant pas à Spring. En effet, se limiter aux projets Spring n'aurait pas reflété l'utilisation réelle de l'annotation au sein de projets lambdas. 
 
 [lister en fonction du type de projet]
 Les projets utilisés pour cette étude sont les suivants:  
@@ -141,40 +169,79 @@ Les projets utilisés pour cette étude sont les suivants:
  'spring-cloud-projects',
  'spring-boot projects'
 
-Afin d'optimiser nos recherches, nous les avons automatisées à l'aide de scripts en Python. Le développement python était effectué sur l'outil Jupyter Notebook. 
+La récupération des *dataset* a été réalisée depuis la plateforme Github, hébergeur de projets open-source fonctionnant avec le gestionnaire de version Git. La plateforme contient des milions de projets qui nous ont permis d'établir un dataset complet et exhaustif. 
 
-[ parler de javalang également ]
+## VI. Outils utilisés 
 
 ### Jupyter Notebook 
 
-Nous avons choisi cette application car elle apportait plusieurs avantages :
+Afin d'optimiser nos recherches, nous les avons automatisées à l'aide de scripts en Python. Le développement python était effectué sur l'outil Jupyter Notebook. Nous avons choisi cette application car elle apportait plusieurs avantages :
 
 * visualisation des résultats
 * mémoire en cache des exécutions des scripts, ce qui a permi d'accélérer le développement car les scripts n'ont pas besoin d'être relancés à chaque fois
 * scripts partagés avec Jupyter Notebook Collaboration au sein desquels le stockage des projets clonés se fait directement dans le cloud (Google Drive). 
 
-## VI. Expériences réalisées
-
-2. Test de l’hypothèse par l’expérimentation. 1. Vos tests d’expérimentations permettent de vérifier si vos hypothèses sont vraies ou fausses. 2. Il est possible que vous deviez répéter vos expérimentations pour vous assurer que les premiers résultats ne sont pas seulement un accident.
-3. Explicitez bien les outils utilisés et comment.
-4. Justifiez vos choix.
-
-- 
--
+### Javalang
 
 
-## VII. Analyse des résultats et validation des hypothèses
-
-
-
-## VIII. Conclusion
+## VII. Analyse des résultats
 
 1. Analyse des résultats & construction d’une conclusion : Une fois votre expérience terminée, vous récupérez vos mesures et vous les analysez pour voir si votre hypothèse tient la route. 
 
+Nombre de fichier contenant l'annotation @Resource :  35
+Nombre de fichier contenant l'annotation @Resource et le mot Config:  2
+Nombre d'attribut ayant l'annotation @Resource :  4
+Nombre d'attribut unique ayant l'annotation @Resource :  2
+Nombre de if ayant un @Resource en paramètre 0
+Nombre d'attribut avec @Resource unique utiliser dans un if 0
+
+### Comment l'annotation @Conditional est-elle utilisée ?
+
+![alt text](https://zupimages.net/up/20/11/e0um.png)
+![alt text](https://zupimages.net/up/20/11/68gx.png)
+![alt text](https://zupimages.net/up/20/11/iif3.png)
+
+
+### Comment et à quelle fréquence est-elle testée ? 
+
+#### Hypothèse : L'annotation Conditional est souvent testée lorsqu'elle est utilisée. 
+
+Nous considérons que cette hypothèse n'est pas vérifiée. Nos résultats montrent une faible fréquence d'apparition de l'annotation *@Conditional* au sein de fichiers de tests. Ne comprenant pas
+
+### Quelle annotation de configuration est la plus utilisée parmi les existantes (Conditional, Profile, Value, Ressources) ? 
+
+
+Nombre de fichier contenant l'annotation @Resource :  35
+Nombre de fichier contenant l'annotation @Resource et le mot Config:  2
+Nombre d'attribut ayant l'annotation @Resource :  4
+Nombre d'attribut unique ayant l'annotation @Resource :  2
+Nombre de if ayant un @Resource en paramètre 0
+Nombre d'attribut avec @Resource unique utiliser dans un if 0
+
+
+### Comment est utilisée l'annotation @Value ? 
+
+Nombre de fichier contenant l'annotation @Value :  207
+Nombre de fichier contenant l'annotation @Value et le mot Config:  54
+Nombre d'attribut ayant l'annotation @Value :  2533
+Nombre d'attribut unique ayant l'annotation @Value :  274
+Nombre de if ayant un @Value en paramètre 195
+Nombre d'attribut avec @Value unique utiliser dans un if 19
+
+Les annotations @Value basées sur leurs nom d'attribut sont en moyenne présentes sur  1.5072992700729928
+Le @Value le plus présent est dans 15 fichiers différents
+
+#### Hypothèse n°2 : L'annotation @Value s'utilise en *tangling* ou *spreading*
+
+Cette hypothèse semble donc être vérifiée par nos expérimentations. L'annotation *@Value* est plutôt utilisé en *spreading*, répétant une même affectation de valeur conditionnelle au sein de fichiers différents. 
+
+#### Hypothèse n°2 : L'annotation est fréquemment utilisée au sein de projets lambdas, mais moins utilisée que *@Conditional* au sein de librairies.
+
+Vérifiée par nos expérimentations
+
+## VIII. Synthèse
 
 à ne pas oublier : le biais d'utiliser uniquement github 
-
-
 
 
 ## IX. Références
