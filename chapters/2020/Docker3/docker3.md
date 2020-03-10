@@ -139,13 +139,6 @@ Avec la réduction de scope décrite précédemment, l'hypothèse que nous allon
 **_Hypothèse_ : L'ajout de variables d'environnements rend le code moins complexe** 
 
 Pour prouver cette hypothèse, nous avons établi le protocole suivant :
-- Enumérer toutes les variables d'environnements d'un projet
-- Pour chaque variable d'environnement :
--> **Détecter les commits** ayant utilisé la variable d'environnement, et leur **commit précédent**.
--> **Détecter les fichiers** (dans le code) dans lesquels les variables d'environnements ont été ajoutées
--> **Calculer l'évolution de la complexité cyclomatique** de ces fichiers entre le commit précédent  et le commit où la variable d'environnement a été utilisée.
-
-### Protocole
 
 Nous avons choisi dans un premier temps de tester d'appliquer notre démarche sur un seul projet (ThingsBoard). Par la suite, nous avons améliorer nos scripts de manières incrémentales afin qu'ils puissent s'appliquer aux différents projets. Enfin, nous avons automatisé notre protocole, afin de l'appliquer rapidement sur différents projets. 
 
