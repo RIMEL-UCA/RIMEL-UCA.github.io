@@ -1,4 +1,4 @@
-<!-- # Comment les bibliothèques de codes de Machine Learning évoluent-elles ? -->
+# Comment les bibliothèques de codes de Machine Learning évoluent-elles ? 
 
 ## Auteurs :
 
