@@ -96,20 +96,20 @@ Chaque membre de l'équipe a créé des scripts et des graphiques.
 
 #### 1. Analyse des résultats concernant la structure des projets
 
-Projets Android :
-Concernant l'architecture des projets elle n'est pas impactée par la gestion de la localisation puisque tous les projets androids suivent la même norme qui consiste a ranger les fichiers de traductions dans le répertoire "res" à la racine. La gestion des différentes langues se fait avec différents répertoires "values". Un répertoire va correspondre à une langue par exemple /res/values-de contenant un fichier "strings.xml".
+*Projets Android :*
+Concernant l'architecture des projets elle n'est pas impactée par la gestion de la localisation puisque tous les projets androids suivent la même norme qui consiste à ranger les fichiers de traduction dans le répertoire "res" à la racine. La gestion des différentes langues se fait avec différents répertoires "values". Un répertoire va correspondre à une langue par exemple /res/values-de contenant un fichier "strings.xml".
 
 ![Projets Android](./assets/android_project.png)
 
 Nous pouvons voir grace au graphique ci-dessus que la taille des projets (ici le nombre de java file sert de références) n'a pas d'incidence sur la quantité de langue traduite. On peut aussi remarquer que les projets qui sont plus petits ont une grosse quantité de langues traduites (par exemple: mini.pocket, PixelKnot, card-locker) par rapport à leur quantité de fichiers java.
 
 
-Projets Java :
-Concernant les projets Java nous pouvons constater que la localisation des fichiers liés à la l10n est dispatchée dans différents répertoires. Pour certains projets tel que "Jenkins" et "che", les properties sont séparées dans plus de 250 répertoires. Pour la majorité des projets analysés ces fichiers sont distribués dans moins de 50 répertoires.
+*Projets Java :*
+Concernant les projets Java nous pouvons constater que la localisation des fichiers liés à la l10n est dispatchée dans différents répertoires. Pour certains projets tel que "Jenkins" et "che", les properties sont séparées dans plus de 250 répertoires. Pour la majorité des projets analysés, ces fichiers sont distribués dans moins de 50 répertoires.
 
 ![Properties](./assets/repertoires_contenant_des_properties_par_top_projet.png)
 
-Si nous comparons ces résultats avec la proportion de fichiers properties et fichiers java, nous pouvons constater une corrélation entre les deux. Effectivement, les projets ayant peu de fichiers properties correspondant à la traduction sont ceux qui ont le moins de répertoire les contenant. Si nous reprenons l'exemple de "Jenkins", on voit qu'il y a plus de fichiers properties de traduction que de fichier java et que cela a un impact sur l'architecture du projet, puisque ces fichiers properties sont contenus dans plus de 250 répertoires. De même pour le projet "che", même si la quantité de traduction est moins élevé que "Jenkins", cela semble toujours avoir un impact sur l'architecture, puisque les fichiers liés à localisation sont contenus dans plus de 400 répertoires. Cette corrélation est aussi visible pour les projets "spring-petclinic", "ddsample-core" et "pentaho-kettle".
+Si nous comparons ces résultats avec la proportion de fichiers properties et fichiers java, nous constatons une corrélation entre les deux. Effectivement, les projets ayant peu de fichiers properties correspondant à la traduction sont ceux qui ont le moins de répertoire les contenant. Si nous reprenons l'exemple de "Jenkins", on voit qu'il y a plus de fichiers properties de traduction que de fichier java et que cela a un impact sur l'architecture du projet, puisque ces fichiers properties sont contenus dans plus de 250 répertoires. De même pour le projet "che", même si la quantité de traduction est moins élevée que pour "Jenkins", cela semble toujours avoir un impact sur l'architecture, puisque les fichiers liés à localisation sont contenus dans plus de 400 répertoires. Cette corrélation est aussi visible pour les projets "spring-petclinic", "ddsample-core" et "pentaho-kettle".
 
 ![Fichiers properties](./assets/nombre_de_fichier_properties_par_top_projet.png)
 
