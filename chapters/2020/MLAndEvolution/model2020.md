@@ -10,7 +10,7 @@ Ce groupe est composé de 4 étudiants de Master :
 * Nadeur MOSBAH &lt;nadeur.mosbah@etu.univ-cotedazur.fr&gt; (AL)
 
 
-## Introduction :
+## Introduction 
 
 De nos jours, le *Machine Learning* est un champ d'étude en vogue.
 Il suscite l'attention de nombreuses personnes et les recherches ne font qu'évoluer.
@@ -20,7 +20,7 @@ Cet intérêt affecte de façon non négligeable les projets *Open-source*. De n
 Ce chapitre va présenter les résultats de nos recherches et de nos observations au travers des différentes problématiques que nous nous sommes posées. Nous présenterons tout d'abord le contexte de notre recherche, puis nous parlerons de notre démarche et enfin des résultats que nous avons obtenus.
 
 
-## I. Contexte : 
+## I. Contexte 
 
 ### 1.1 - Pourquoi l'évolution des projets Open-Source ?
 
@@ -45,7 +45,7 @@ Depuis, de nombreux volontaires ont contribué au projet et il est actuellement 
 
 
 
-## II. Problématiques : 
+## II. Problématiques
 
 Comme précisé dans la partie précédente, notre étude se concentrera uniquement sur le projet open-source Scikit-learn.
 La problématique de départ de notre étude est donc la suivante : Comment évoluent les bibliothèques Open Source de Machine Learning ?
@@ -79,7 +79,7 @@ Nos premières intuitions sur ces questions sont que, étant dans une bibliothè
 Bien que nous jugions très intéressante cette problématique, celle-ci ne sera pas étudiée en profondeur car nous avons préféré nous focaliser en majeure partie sur les deux premières problématiques. 
 
 
-## III. Recherches et expérimentations : 
+## III. Recherches et expérimentations 
 ### 3.1 - Outils utilisés
 
 Pour effectuer nos expérimentations et répondre aux problématiques précédentes, nous avons décidé d'utiliser ***Pydriller***. Ce framework, utilisable via Python, permet d'analyser les répertoires Github pour en obtenir de nombreuses informations telles que les commits effectués, les modifications, les contributeurs, etc...
@@ -130,7 +130,7 @@ Pour chercher  leurs apparitions dans les différentes contributions, nous avons
 Nous avons donc, à l'aide d'un script Python et Pydriller, parcouru l'ensemble des commits du répertoire. Pour chaque commit, nous avons vérifié si le message associé contenait le nom d'une des techniques listées, ou bien l'abréviation de celle-ci (si c'était le cas, nous comptions ça comme une occurrence).
 Une fois les résultats obtenus, nous les avons mis en forme à l'aide de Pyplot.
 
-## IV. Analyse des résultats : 
+## IV. Analyse des résultats 
 
 À la suite des différentes démarches présentées, nous avons obtenu des résultats nous permettant d'appuyer nos hypothèses ou encore de changer complètement notre vision des choses.
 
@@ -248,7 +248,7 @@ Si cette problématique n'a pas été plus poussée, c'est dû aux problèmes qu
 La première raison peut provenir de notre manière de les rechercher. En effet, nous n'avons utilisé que les noms et abréviations des méthodes de Machine Learning. Il est donc possible que ces techniques soient nommées d'une manière différente au sein de la communauté Scikit, voir même par chaque individu en général. Cela nous amène à l'autre point qui peut poser un problème, le manque de rigueur de la part des contributeurs. En effet, bien que Scikit encourage ses contributeurs à expliciter au maximum l'objet de leurs contributions, ces derniers ne suivent pas tous les règles de bonne conduite ce qui peut rendre la tâche de recherche compliquée.
 
 
-## V. Conclusion : 
+## V. Conclusion 
 
 Au terme de cette étude, nous ne pouvons malheureusement pas expliquer comment Scikit a évolué au cours de ces dernières années et nous ne pouvons pas non plus généraliser nos conclusions aux autres bibliothèques de Machine Learning.
 
@@ -273,7 +273,7 @@ Pour cette étude, certains des choix que nous avons fait peuvent être discutab
 Pour conclure, cette étude n'est pas réellement une conclusion mais plus une étude générale dégageant de nouvelles problématiques qui peuvent être creuser.
 
 
-## VI. Références : 
+## VI. Références 
 
 * Les [sources](https://github.com/scikit-learn/scikit-learn) du projet Scikit-learn
 * L'[article](https://www.researchgate.net/profile/Tom_Mens/publication/271551387_ECOS_Ecological_studies_of_open_source_software_ecosystems/links/54ef23710cf2e55866f42b16/ECOS-Ecological-studies-of-open-source-software-ecosystems.pdf?origin=publication_detail) de Tom Mens, Maelick Claes et Philippe Grosjean traitant de l'écosystème
