@@ -17,7 +17,6 @@ Durant cette dernière décennie, la conteneurisation est devenue une pratique c
 
 De nos jours, l'utilisation de la conteneurisation est très répandue et son impact sur la simplicité du déploiement et la gestion d'une infrastructure logicielle n'est plus à prouver. 
 
-![Figure 1: Logo UCA](../assets/model/UCAlogoQlarge.png)
 
 ## II. Question générale
 
