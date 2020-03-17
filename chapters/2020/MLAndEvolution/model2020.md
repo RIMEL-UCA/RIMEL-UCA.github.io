@@ -150,7 +150,7 @@ Dans un premier temps, nous avons observé l'évolution du nombre de commits au 
 
 ![](../assets/MLAndEvolution/images/Evolution_du_nombre_de_commits_dans_le_temps.PNG)
 
-Comme nous pouvons le voir sur le graphique précédent, l'évolution du nombre de commits ne correspond pas à ce à quoi nous nous attendions. En effet, le nombres de commits a pratiquement doublé entre 2010 (2601 commits) et 2011 (4845 commits). Mais, le plus surprenant est que le nombre de commits a diminué progressivement depuis 2011 jusqu'à arriver à environ 896 commits en 2017.
+Comme nous pouvons le voir sur le graphique précédent, l'évolution du nombre de commits ne correspond pas à ce à quoi nous nous attendions. En effet, le nombre de commits a pratiquement doublé entre 2010 (2601 commits) et 2011 (4845 commits). Mais, le plus surprenant est que le nombre de commits a diminué progressivement depuis 2011 jusqu'à arriver à environ 896 commits en 2017.
 Nous avons ensuite remarqué que le nombre de commits est légèrement en hausse depuis 2018. Nous nous sommes alors demandé si cette augmentation était visible en 2020.
 Nous avons donc analysé le nombre de commits par mois sur 2019 et 2020 pour évaluer la tendance d'évolution.
 
@@ -162,12 +162,12 @@ En ce qui concerne l'évolution en détails des types de contributions, nous avo
 
 ![](../assets/MLAndEvolution/images/Evolution_des_types_de_commits.PNG)
 
-* **Documentation** : Ce type de contribution est l'un des plus présent et celui qui suit le plus l'évolution des commits en générale. Cela témoigne de l'importance apporté à la documentation par les contributeurs et rassure quant à la qualité de la documentation du projet.
+* **Documentation** : Ce type de contribution est l'un des plus présents et celui qui suit le plus l'évolution des commits en générale. Cela témoigne de l'importance apporté à la documentation par les contributeurs et rassure quant à la qualité de la documentation du projet.
 * **Fix** : Les commits liés à la correction des bugs sont les plus récurrents sur l'ensemble du projet. L'évolution des commits est moins constant que celui des autres, les commits ont augmenté en 2013 pour atteindre un maximum de 900 commits.
 * **Enhancement** : Les commits liés à l'amélioration du code suivent la tendance générale bien que leur quantité soit moindre. Nous n'observons cependant pas de pic important après 2012.
 * **Bug** : Les commits en lien avec les bugs sont ceux qui sont le moins représentés. Nous pourrons remarquer qu'ils sont continuellement en baisse et qu'après 2013, ils passent à moins de cent occurrences par an. Nous pouvons penser que cela est lié à l'évolution de bonnes pratiques, tels que les tests avant de push.
-* **Merge** : Les commits référençant les merges sont ceux qui ont la représentation la moins stable. En effet, nous pouvons remarquer plusieurs pics, l'un en 2011 (comme les autres types de commit) et un autre en 2015. Après 2015, nous noterons une baisse continue des commits.
-* **Maintenance** : Les contributions liées à la maintenance ne sont apparues qu'à partir 2013. Parmi les types de contributions n'étant pas présent depuis 2010, le type "maintenance" est le seul comptant suffisamment de commits pour que nous ayons pu le sélectionner. Nous pouvons noter une forte augmentation de la maintenance à partir de 2017.
+* **Merge** : Les commits référençant les merges sont ceux qui ont la représentation la moins stable. En effet, nous pouvons remarquer plusieurs pics, l'un en 2011 (comme les autres types de commit) et un autre en 2015. Après 2015, nous noterons une baisse continue des merge.
+* **Maintenance** : Les contributions liées à la maintenance ne sont apparues qu'à partir 2013. Parmi les types de contributions n'étant pas présents depuis 2010, le type "maintenance" est le seul comptant suffisamment de commits pour que nous ayons pu le sélectionner. Nous pouvons noter une forte augmentation de la maintenance à partir de 2017.
 * **Test** : Les commits liés aux tests suivant la tendance générale avec un pic en 2012, une baisse dans les commits puis une légère hausse à partir de 2017.
 
 ### 4.3 - Problématique 2 : Evolution de la qualité du code
@@ -241,7 +241,7 @@ D'une manière similaire à la précédente, nous avons essayé de savoir quels 
 
 ![](../assets/MLAndEvolution/images/algos_types_occurences_commits.png)
 
-Nous pouvons clairement voir que les techniques de régression sont celles qui ont plus de contribution.
+Nous pouvons clairement voir que les techniques de régression sont celles qui ont le plus de contributions.
 Dans les deux cas étudiés (occurrences des algorithmes/techniques et occurrences des types de techniques), nous ne nous attendions pas à voir une telle disparité apparaître.
 
 Si cette problématique n'a pas été plus poussée, c'est dû aux problèmes que nous avons rencontrés lors de nos diverses expérimentations. Comme nous avons pu voir sur les graphiques, le nombre maximum d'occurrences trouvé avoisine les 600, ce qui, sur un répertoire de plus de 25000 commits nous semble quelque peu faible. Cela nous a donc amené à remettre en question la démarche utilisée. Rechercher les occurrences d'utilisation des différentes techniques, via les messages des commits peut ne pas mener à des résultats fiables. 
