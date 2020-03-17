@@ -1,0 +1,36 @@
+{
+  "name": "finderjs",
+  "version": "1.0.0",
+  "description": "node findJS.js {Path} {fileNameWanted}",
+  "main": "index.js",
+  "dependencies": {
+    "@types/lodash": "^4.14.149",
+    "@types/node": "^13.7.0",
+    "chalk": "^3.0.0",
+    "dockerfile-ast": "^0.0.18",
+    "fs-extra": "^8.1.0",
+    "lodash": "^4.17.15",
+    "neek": "^1.1.2",
+    "plotly": "^1.0.6",
+    "request": "^2.88.0",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "ts-node ./src/index.ts",
+    "crawl": "node src/crawler/crawler.js && node src/crawler/recrawler.js && node src/crawler/cleaner.js",
+    "graph": "ts-node ./src/chartGenerator/graphGenerator.ts",
+    "select": "ts-node src/Query.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexBolot/ProjetRIMEL.git"
+  },
+  "author": "Theos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexBolot/ProjetRIMEL/issues"
+  },
+  "homepage": "https://github.com/AlexBolot/ProjetRIMEL#readme"
+}
