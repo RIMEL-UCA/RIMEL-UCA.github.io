@@ -57,18 +57,19 @@ implémentés en python.
  
 ## IV. Méthodologie
 
-Pour cette expérience, nous avons d'abord récupéré des projets java depuis la source Weblate avec un script python [script.1]. Puis nous avons effectué des analyses sur ces projets. Tous les outils utilisés pour effectuer les analyses sont des scripts python que nous avons développé.
+Pour cette expérience, nous avons d'abord récupéré des projets java depuis la source Weblate avec un script python [script.1]. Puis nous avons effectué des analyses sur ces projets. Tous les outils utilisés pour effectuer les analyses sont des scripts python que nous avons développés.
 
 Nous avons choisi d'effectuer deux types d'analyses. 
 
-La première concernant la structure d'un projet :
-- Rechercher les .properties liés à la localisation dans les projets java [script.2]. Trouver la localisation des .properties nous permettra de déterminer si la l10n a un impact sur l'architecture des projets. 
-    - Voir leur localisation s'ils sont dans des packages séparés ou non
-    - Voir la quantité de fichiers .properties par rapport au reste des fichiers java
+La première concernant la **structure d'un projet** :
+- Rechercher les .properties liés à la localisation dans les projets java [script.2] ;
+trouver la localisation des .properties nous permettra de déterminer si la l10n a un impact sur l'architecture des projets. 
+    - Identifier leur localisation s'ils sont dans des packages séparés ou non
+    - Identifier la quantité de fichiers .properties par rapport au reste des fichiers java
 
-- Rechercher les marqueurs de traduction dans les fichiers Java/Jsp. [script.3]. Cette information permettra de voir la quantité de fichiers Java/JSP impactés par la l10n.
+- Rechercher les marqueurs de traduction dans les fichiers Java/Jsp. [script.3]. Cette information permettra de caractériser la quantité de fichiers Java/JSP impactés par la l10n.
   
- Lors de la première itération, nous avons remarqué qu'une majorité des projets weblate java étaient en fait des projets Android. Les projets Android ont une gestion de la traduction particulière qui demande d'adapter notre première étape. Même si les fichiers sont différents, le but reste le même pour chaque étape voir l'influence sur l'architecture et le nombre de fichiers Java impactés.
+ Lors de la première itération, nous avons remarqué qu'une majorité des projets weblate java étaient en fait des projets Android. Les projets Android ont une gestion de la traduction particulière qui demande d'adapter notre première étape. Même si les fichiers sont différents, le but reste le même pour chaque étape déterminer l'influence sur l'architecture et le nombre de fichiers Java impactés.
 
 - Rechercher répertoires "values" liés à la localisation dans les projets Android [script.4]
     - Voir la quantité de fichiers xml dans les répertoires "values" par rapport au reste des fichiers java
@@ -76,9 +77,9 @@ La première concernant la structure d'un projet :
 - Rechercher les marqueurs de traduction dans les fichiers java, pour voir le nombre de fichiers Java touchés par la traduction [script.3]
 
 
-La deuxième analyse concerne la gestion de version avec : 
-- Parcourir les commits pour trouver ceux qui sont liés à la l10n grâce à des mots clefs (localisation, translation etc) [script.5]
-- Voir le nombre de fichiers impactés lors des commits liés à la localisation. Cette analyse permettra de savoir combien de commits sont liés à la localisation, et de voir quelle proportion prend la localisation sur le développement d'une application [script.6]
+La deuxième analyse concerne la **gestion de version** avec : 
+- Parcourir les commits pour trouver ceux qui sont liés à la l10n grâce à des mots clefs (localisation, translation, etc) [script.5]
+- Déterminer le nombre de fichiers impactés lors des commits liés à la localisation. Cette analyse permettra de savoir combien de commits sont liés à la localisation, et de voir quelle proportion prend la localisation sur le développement d'une application [script.6]
 
 - Parcourir les branches pour déterminer si une branche est spécifique à la traduction [script.7]. Ces résultats montreront si une branche est spécifique à la gestion d'l10n ou non.
 
