@@ -13,11 +13,11 @@ Ce groupe est composé de 4 étudiants de Master :
 ## Introduction 
 
 De nos jours, le *Machine Learning* est un champ d'étude en vogue.
-Il suscite l'attention de nombreuses personnes et les recherches ne font qu'évoluer.
+Il suscite l'attention de nombreuses personnes.
 
-Cet intérêt affecte de façon non négligeable les projets *Open-source*. De nombreux projets voient le jours, la population contribuant à de tels projets grandit et évolue. Nous pouvons alors nous demander comment a évolué cette population ou encore si la qualité des projets a été affectée.
+Cet intérêt affecte de façon non négligeable les projets *Open-source*. De nombreux projets voient le jour; la population contribuant à de tels projets grandit et évolue. Nous pouvons alors nous demander comment a évolué cette population et si la qualité des projets a été affectée.
 
-Ce chapitre va présenter les résultats de nos recherches et de nos observations au travers des différentes problématiques que nous nous sommes posées. Nous présenterons tout d'abord le contexte de notre recherche, puis nous parlerons de notre démarche et enfin des résultats que nous avons obtenus.
+Ce chapitre va présenter les résultats de nos recherches et de nos observations au travers des différentes questions que nous nous sommes posées. Nous présentons tout d'abord le contexte de notre recherche, puis nous décrivons notre démarche et enfin des résultats que nous avons obtenus.
 
 
 ## I. Contexte 
@@ -27,7 +27,7 @@ Ce chapitre va présenter les résultats de nos recherches et de nos observation
  Lors de ces deux dernières décennies, le développement collaboratif de projets open-source a connu une croissance exponentielle.
 De tels projets peuvent impliquer de nombreuses personnes et de ce fait, certaines études se sont concentrées sur l'évolution et l'organisation des projets. Elles parlent alors de l'*écosystème* des logiciels. Ces écosystèmes sont alors comparés aux écosystèmes que nous pouvons retrouver dans la nature.
  
-Ainsi, selon l'article *Ecological studies of Open Source Software Ecosystem*, pour pouvoir étudier cette évolution, il est nécessaire que le système sélectionné soit résistant aux changements environnementaux et ce, sans perturber de trop les communautés.
+Ainsi, selon l'article *Ecological studies of Open Source Software Ecosystem*, pour pouvoir étudier cette évolution, il est nécessaire que le système sélectionné soit résistant aux changements environnementaux et ce, sans "trop" perturber les communautés.
 Cela implique que lors d'une période de déséquilibre, le système doit être capable de revenir à un état proche de celui de départ.
 Les écosystèmes anciens et avec une grande *biodiversité* ont plus de chance d'être résistants.
 
@@ -48,8 +48,8 @@ Depuis, de nombreux volontaires ont contribué au projet et il est actuellement 
 ## II. Problématiques
 
 Comme précisé dans la partie précédente, notre étude se concentrera uniquement sur le projet open-source Scikit-learn.
-La problématique de départ de notre étude est donc la suivante : Comment évoluent les bibliothèques Open Source de Machine Learning ?
-Cette problématique étant trop générale, il nous a fallu délimiter notre sujet d'étude et nous concentrer sur certains points révélateurs. Ainsi, nous avons pu tirer trois "sous-problématiques" sur lesquelles nous avons décidé de nous pencher : 
+La problématique de départ de notre étude est donc la suivante : *Comment évoluent les bibliothèques Open Source de Machine Learning ?*
+Cette problématique étant trop générale, pour pouvoir lui apporter une réponse, il nous a fallu délimiter notre sujet d'étude et nous concentrer sur certains points révélateurs. Ainsi, nous avons pu tirer trois "sous-problématiques" sur lesquelles nous avons décidé de nous pencher : 
 
 * Problématique 1 : Quelle est l'évolution des différents types de contribution ?
 * Problématique 2 : Comment la qualité du code au sein de Scikit-learn a-t-elle évoluée ?
@@ -72,9 +72,9 @@ Selon nous, la qualité du code et les pratiques des utilisateurs vont évoluer 
 Ainsi, les fichiers seront plus souvent entretenus, les complexités diminueront s'il est possible de le faire et la documentation manquante sera apportée au fil du temps.
 
 
-### 2.3 - Quels méthodes/techniques de Machine Learning ont reçu le plus de contribution au sein de la bibliothèque ?
+### 2.3 - Quels méthodes/techniques de Machine Learning ont reçu le plus de contributions au sein de la bibliothèque ?
 
-Il existe bon nombre de techniques qui sont utilisées dans le domaine du Machine Learning, leur utilisation dépendant de la tâche à résoudre.  Étant le cœur du domaine, nous avons jugé intéressant de nous pencher sur la diversité de celles-ci au sein de Scikit-learn afin d'avoir une idée de la variété de méthode qu'une bibliothèque open source peut proposer et utiliser, mais également de savoir quelles sont celles qui apparaissent le plus dans les contributions. 
+Il existe bon nombre de techniques qui sont utilisées dans le domaine du Machine Learning, leur utilisation dépendant de la tâche à résoudre.  Étant le cœur du domaine, nous avons jugé intéressant de nous pencher sur la diversité de celles-ci au sein de Scikit-learn afin d'avoir une idée de la variété des méthodes qu'une bibliothèque open source peut proposer et utiliser, mais également de savoir quelles sont celles qui apparaissent le plus dans les contributions. 
 Nos premières intuitions sur ces questions sont que, étant dans une bibliothèque open source, nous pouvons y trouver une large variété de techniques de Machine Learning et qu'il y aura bien certaines méthodes qui seront plus référencées que d'autres dans les contributions de la communauté (car étant plus populaires, plus accessibles à tous les niveaux des contributeurs, plus utilisées dans le domaine du Machine Learning en général, etc...).
 Bien que nous jugions très intéressante cette problématique, celle-ci ne sera pas étudiée en profondeur car nous avons préféré nous focaliser en majeure partie sur les deux premières problématiques. 
 
@@ -106,7 +106,7 @@ Pour pallier ce problème et éviter de trop nous égarer, nous nous sommes limi
 
 Nous avons ensuite recherché le nombre de commits par an, pour chacun de ces groupes.
 
-Pour cela, nous avons récupéré l'ensembles des commits sur la branche master et les avons insérés dans une table SQL. Nous avons utilisé une base de données *Postgres* pour supporter cette table. Ce choix a été fait pour comparer les méthodes d'analyse possibles. Cela nous a permis de remarquer que pour une analyse plus précise des commits, les requêtes SQL étaient plus limitées que des scripts python.
+Pour cela, nous avons récupéré l'ensemble des commits sur la branche master et les avons insérés dans une table SQL. Nous avons utilisé une base de données *Postgres* pour supporter cette table. Ce choix a été fait pour comparer les méthodes d'analyse possibles. Cela nous a permis de remarquer que pour une analyse plus précise des commits, les requêtes SQL étaient plus limitées que des scripts python.
 
 
 
@@ -125,7 +125,7 @@ Nous avons tout d'abord récupéré, pour chaque année, la quantité de documen
 #### 3.2.3 - Problématique 3 : méthodes de Machine Learning au sein de Scikit-Learn
 
 
-Afin de déterminer quels techniques/méthodes apparaissent dans les contributions de la bibliothèque Scikit-learn, nous avons d'abord dû nous documenter sur le sujet. En nous basant sur plusieurs sites internets, nous avons dressé une première liste non-exhaustive, dans un tableur Excel, des techniques les plus communes et connues dans le monde du Machine Learning (leurs noms ainsi que les abréviations par lesquelles elles sont couramment nommées). A l'issue de ces premières recherches nous avons ainsi pu dresser une liste de près de 60 méthodes.
+Afin de déterminer quelles techniques/méthodes apparaissent dans les contributions de la bibliothèque Scikit-learn, nous avons d'abord dû nous documenter sur le sujet. En nous basant sur plusieurs sites internets, nous avons dressé une première liste non-exhaustive, dans un tableur Excel, des techniques les plus communes et connues dans le monde du Machine Learning (leurs noms ainsi que les abréviations par lesquelles elles sont couramment nommées). A l'issue de ces premières recherches nous avons ainsi pu dresser une liste de près de 60 méthodes.
 Pour chercher  leurs apparitions dans les différentes contributions, nous avons décidé d'analyser les messages des commits. Ce choix a été fait car la communauté Scikit-learn encourage ses contributeurs à faire apparaître dans les messages de leurs commits les différentes méthodes utilisées/concernées dans/par la contribution. Il devient ainsi plus simple de détecter l'apparition de celles-ci dans les contributions.
 Nous avons donc, à l'aide d'un script Python et Pydriller, parcouru l'ensemble des commits du répertoire. Pour chaque commit, nous avons vérifié si le message associé contenait le nom d'une des techniques listées, ou bien l'abréviation de celle-ci (si c'était le cas, nous comptions ça comme une occurrence).
 Une fois les résultats obtenus, nous les avons mis en forme à l'aide de Pyplot.
