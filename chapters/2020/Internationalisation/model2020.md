@@ -113,15 +113,15 @@ Si nous comparons ces résultats avec la proportion de fichiers properties et fi
 
 ![Fichiers properties](./assets/nombre_de_fichier_properties_par_top_projet.png)
 
-La structure des projets android ne semble pas impactée par la localisation. Cela peut s'expliquer par la norme de placement des fichiers de traduction dans le répertoire "res". En revanche, les projets Java purs semblent impactés, cela peut s'expliquer par le manque de norme. Chaque projet semble gérer ses emplacements différemment, et aucun projet place tous ses fichiers de traduction au même endroit, ce qui impacte la structure global.
+La structure des projets android ne semble pas impactée par la localisation. Cela peut s'expliquer par la norme de placement des fichiers de traduction dans le répertoire "res". En revanche, les projets Java purs semblent impactés, cela peut s'expliquer par le manque de norme. Chaque projet semble gérer ses emplacements différemment, et aucun projet ne place tous ses fichiers de traduction au même endroit, ce qui impacte la structure globale.
 
 
 #### 2. Analyse des résultats d'analyse des commits
  
-Commits de localisation : 
+*Commits de localisation :*
 Lorsqu'on étudie le graphique représentant le pourcentage de commits liés à la localisation sur la branche master, on se rend rapidemment compte que le pourcentage est extrêment variable.
 ![Figure : Pourcentage de commit lie a la localisation par projet](./assets/pourcentage_commit_graph.png)
-Si on excepte les projets n'ayant aucun commits de localisation, le plus bas est à 1%, et le plus haut est à 76%. 
+Si on omet les projets n'ayant aucun commit de localisation, le plus bas est à 1%, et le plus haut est à 76%. 
 Cette disparité dans le pourcentage nous a étonné, car nous nous attendions à ce que l'automatisation avec weblate permette de garder le nombre de commits assez bas, et régulier entre différents projets.
 
 La question s'est ensuite posée de savoir si une branche en particulier était dédiée à la localisation. 
@@ -141,7 +141,7 @@ On peut toutefois remarquer que le pourcentage de commits de localisation en moy
 Avec ces valeurs, si on observe que la branche maximale a la même valeur que master, c'est que la localisation se concentre majoritairement sur master.
 
 Nous avons également souhaité étudier la répartition des commits en fonction des auteurs : si le commit a été fait par un humain ou par Weblate. 
-Nous avons donc réalisé un digramme en boite à moustaches du pourcentage de répartion de commits de localisation réalisé par Weblate sur tous les projets. 
+Nous avons donc réalisé un diagramme en boite à moustaches du pourcentage de répartion de commits de localisation réalisé par Weblate sur tous les projets. 
 
 ![](./assets/graph_moyenne.png)
 
@@ -151,9 +151,9 @@ Nous sommes encore une fois surpris d'avoir la moitié des commits de localisati
 assez faible, compte tenu de l'automatisation des commits par Weblate.
 
 Enfin nous avons souhaité analyser la répartition des commits dans le temps.
-Pour cela nous avons compté le nombre de commits lié a la localisation a chaque date de chaque projet, et fait en sorte
-de normaliser les comptes sur une echelle de 0 à 100, à 0 étant le premier commits detecté, à 100 le dernier detecté.
-Cela nous donnants le graphique suivant.
+Pour cela nous avons compté le nombre de commits lié a la localisation à chaque date de chaque projet, et fait en sorte
+de normaliser les comptes sur une échelle de 0 à 100, à 0 étant le premier commits detecté, à 100 le dernier detecté.
+Cela nous donne le graphique suivant.
 
 ![](./assets/commit_lie_a_la_localisation_dans_le_temps.png)
 
@@ -175,7 +175,7 @@ Nous pouvons donc voir que les projets tendent en moyenne à avoir une activité
 
 #### 3. Analyse des résultats concernant les marqueurs de traduction
 
-Après avoir vu l'analyse des commits liés à la localisation, nous allons regarder les résultats de l'analyse dans le code pour voir les marqueurs qui font référence aux clés présentes dans des fichiers properties pour récuperer la valeur associée a cete clé.
+Après avoir vu l'analyse des commits liés à la localisation, nous allons regarder les résultats de l'analyse dans le code pour voir les marqueurs qui font référence aux clés présentes dans des fichiers properties pour récuperer la valeur associée à cette clé.
 
 Voici ci-dessous les résultats obtenus séparés en deux parties, les projets Android et les projets Java/JSP car les façons de rechercher les marqueurs étaient radicalement différentes.
 
@@ -198,8 +198,8 @@ Voici ci-dessous les résultats obtenus séparés en deux parties, les projets A
 }
 ```
 
-On peut observer tout d'abord que la présence des marqueurs de traduction est plus forte en moyenne dans les fichiers des projets Android que dans les fichiers Java. Meme si globalement, les projets Java ont plus de fichiers Java/JSP que les projets Android.
-Les projets Androids ont aussi plus de marqueurs que les projets Java, cela peut s'expliquer par la facilité d'implementation de la localisation qui est supportée par le framework Android.
+On peut observer tout d'abord que la présence des marqueurs de traduction est plus forte en moyenne dans les fichiers des projets Android que dans les fichiers Java, même si globalement, les projets Java ont plus de fichiers Java/JSP que les projets Android.
+Les projets Androids ont aussi plus de marqueurs que les projets Java; cela peut s'expliquer par la facilité d'implementation de la localisation qui est supportée par le framework Android.
 Mais on voit par contre, dans les projets Java, qu'il y a, en moyenne, dans les fichiers, plus de marqueurs. 
 
 
@@ -210,17 +210,17 @@ Par contre, on remarque une grosse différence pour le nombre moyen d'occurences
 
 ![](./assets/marqueur_par_projet.png)
 
-Sur ce graphique, on peut distinguer que chaque projet est différent, certains projets ont jusqu'à 50% de fichiers avec des marqueurs et certains projets en ont environ 0%. 
+Sur ce graphique, on peut distinguer que  certains projets ont jusqu'à 50% de fichiers avec des marqueurs et certains projets en ont environ 0%. 
 
 Pour résumer les résultats sur l'analyse des marqueurs, on observe que dans les projets Android et Java, l'impact qu'apporte un changement sur les clés de traductions a modifié en moyenne 14.5% des fichiers dans les projets Android contre 9.5% dans les projets Java. Mais quand on regarde cas par cas, le total de fichiers avec des marqueurs est extrêment variable, et ces observations sont donc à nuancer.
 
 ## VII. Conclusion 
 Rappelons les questions posées au début : 
-Sommes nous capables d’identifier l’impact de la localisation dans des projets informatiques ?
- Sommes nous capables d’évaluer le type d’impact de la localisation ?
-    - Si oui, quels impacts peut-on distinguer ?  
+- Sommes nous capables d’identifier l’impact de la localisation dans des projets informatiques ?
+Sommes nous capables d’évaluer le type d’impact de la localisation ?
+   Si oui, quels impacts peut-on distinguer ?  
 - Quelles sont les corrélations entre la gestion de version et la mise en oeuvre de la localisation dans un projet informatique ?
-    - Est-ce qu’il y a des branches dédiées ? 
+     Est-ce qu’il y a des branches dédiées ? 
     
 On est capable d'identifier l'impact de la localisation, et plusieurs types d'impacts :
 - Impact dans la structure des projets avec les fichiers .properties
@@ -232,11 +232,11 @@ Au niveau de l'impact sur la structure, l'architecture des projets android ne se
 Cela peut s'expliquer par la norme de placement des fichiers de traduction dans le répertoire values. 
 En revanche les projets Java purs semblent impactés. Cela peut s'expliquer par le manque de norme, qui entraîne donc pour chaque projet une gestion différente, donc un impact différent sur chaque structure de projet.
 
-Si on se penche sur le niveau du fichier, on a pu remarquer que les marqueurs de traducation se trouvaient dans beaucoup de fichiers différents (encore plus fort dans les projets android). 
+Si on étudie la localisation au niveau du fichier, on peut remarquer que les marqueurs de traduction se trouvaient dans beaucoup de fichiers différents (encore plus fort dans les projets android). 
 De même que pour la structure des projets, comme il n'existe pas de norme en Java, chaque projet gère à sa façon les marqueurs de traduction.
 
 
-Pour résumer cette réponse, en ce qui concerne la structure de projet l'impact est très fort sur les projets Java et plus faibles sur les projets Android.
+Pour résumer cette réponse, en ce qui concerne la structure de projet l'impact est très fort sur les projets Java et plus faible sur les projets Android.
 Pour les fichiers de code, l'impact est nuancé, 9% des fichiers concernés en moyenne, avec toutefois un très fort écart type : de 0% à 50%
 Enfin, pour l'impact dans le temps, les conséquences de la l10n sont globalement faibles (en moyenne 2 fichiers par unité de temps relative à la durée de vie du projet) mais elles sont constantes tout au long du projet.
 
