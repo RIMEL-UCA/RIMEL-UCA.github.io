@@ -9,8 +9,6 @@ Ce groupe est composé de 4 étudiants de Master :
 * Sherine SOUMARE DIT SABATHIER &lt;sherine.soumare-dit-sabathier@etu.univ-cotedazur.fr&gt; (IHM)
 * Nadeur MOSBAH &lt;nadeur.mosbah@etu.univ-cotedazur.fr&gt; (AL)
 
-![Figure 1: Logo UCA](../assets/model/UCAlogoQlarge.png)
-
 
 ## Introduction :
 
