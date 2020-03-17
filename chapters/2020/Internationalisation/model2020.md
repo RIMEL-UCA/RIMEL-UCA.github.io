@@ -25,13 +25,13 @@ En choisissant l10n cela nous permet de réduire l’amplitude du sujet et donc 
 
 ## II. Question et sous-questions
 
-###Question générale
+### Question générale
 Nous avons choisi de restreindre le sujet en parlant de localisation (l10n) et non pas d’internationalisation (i18n). En effet i18n permet de concevoir et développer une application qui permet de facilement mettre en place l10n. En choisissant l10n cela nous permet de réduire l’amplitude du sujet et donc d’avoir une question plus spécifique.
 Nous avons choisi de poser la question : “Quel est l’impact des techniques de mise en oeuvre de la localisation sur les projets informatique ?”.
 Nous avons défini les techniques comme un ensemble des framework, librairies ou développement dédiés à gérer de multiples langues dans un projet.
 Cette question est intéressante puisqu’elle touche à deux aspects, quelles techniques sont utilisées, mais aussi est-ce que ces techniques apportent des contraintes sur le projet , et lesquelles sont-elles ? 
 
-###Sous-questions 
+### Sous-questions 
 - Sommes nous capables d’identifier l’impact de la localisation dans des projets informatiques ?
     -En fonction des résultats, on pourrait réorienter le projet vers une autre approche
 - Sommes nous capables d’évaluer le type d’impact de la localisation ?
@@ -41,17 +41,17 @@ Cette question est intéressante puisqu’elle touche à deux aspects, quelles t
 
 ## III. Zone de Recherche
 
-Dans le cadre de nos question nous cherchons principalement à conduire des recherches empiriques sur des projets existants.
+Dans le cadre de nos questions nous cherchons principalement à conduire des recherches empiriques sur des projets existants.
 Nous allons donc chercher à explorer des projets existants qui mettent en place de la l10n et extraire de ces derniers des données pertinentes pour nos questionnements.
 
 Pour ce faire, nous nous appuierons sur des sites regroupant des projets qui ont intégrés de la l10n, et l'accès à leur code source, comme _Weblate_ 
 qui permet sur sa plateforme principale la traduction participative ouverte au public. 
 
-Egalement afin d'élargir le champ de recherche nous conduirons une recherche sur Github parmi les projets java les plus populaires, afin d'estimer comment appliquer la l10n et obtenir un autre échantillon de statistiques indépendantes de l'outil _Weblate_.
+Egalement afin d'élargir le champ de recherche nous conduirons une recherche sur Github parmi les projets java les plus populaires, afin d'estimer comment est appliquée la l10n et obtenir un autre échantillon de statistiques indépendantes de l'outil _Weblate_.
 
 La sélection se fera à travers du webscrapping et des requêtes aux API des différents sites, 
 afin d'extraire des projets en java et les liens de leur repository sources.
-Une fois les différents projets sélectionnés, nous appliquerons des scripts d'analyse détaillés en IV 
+Une fois les différents projets sélectionnés, nous appliquerons des scripts d'analyse détaillés en IV, 
 implémentés en python. 
 
  
