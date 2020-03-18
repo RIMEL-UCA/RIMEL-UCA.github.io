@@ -1,4 +1,4 @@
-# Les configurations Docker permettent-ils de rendre le code plus simple ?
+# Les configurations Docker permettent-elles de rendre le code plus simple ?
 
 ## Auteurs
 
