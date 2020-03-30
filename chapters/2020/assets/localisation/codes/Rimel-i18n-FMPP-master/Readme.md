@@ -1,4 +1,5 @@
 # I18N - Rimel - 2020
+version originale : https://github.com/GregoirePeltier/Rimel-i18n-FMPP
 _Outils et documents de Francois Marguerettaz Peltier Pillone pour le projet I18N RIMEL 2020 a polytech_
 
 ## Outils
