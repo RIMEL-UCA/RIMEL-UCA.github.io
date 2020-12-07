@@ -4,7 +4,7 @@ title:  "Chapters"
 date:   2020-01-02 22:00:00 +0100
 ---
 <div class="span7">
-{% for post in site.posts limit:4 %}
+{% for post in site.chapters.posts limit:4 %}
 {% include postsummary.html %}
 {% endfor %}
 </div>
