@@ -3,11 +3,7 @@ layout: default
 title:  "Chapters"
 date:   2020-01-02 22:00:00 +0100
 ---
-<div class="span7">
-{% for post in site.chapters.posts limit:4 %}
-{% include postsummary.html %}
-{% endfor %}
-</div>
+
 ## 2020
 ### [Comment les bibliothèques de codes de Machine Learning évoluent-elles ?]({{ site.url }}/chapters/2020/MLAndEvolution/model2020)
 ### [Quel est l’impact des techniques de mise en oeuvre de la localisation sur les projets informatique ?]({{ site.url }}/chapters/2020/Internationalisation/model2020)
