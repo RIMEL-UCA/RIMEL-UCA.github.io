@@ -30,7 +30,7 @@ Préciser ici votre contexte.
 Pourquoi c'est intéressant.
 
 
-![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](../assets/model/UCAlogoQlarge.png){:height="50px" }
+![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](../assets/model/UCAlogoQlarge.png){:height="25px" }
 
 
 ## II. Observations/General question
