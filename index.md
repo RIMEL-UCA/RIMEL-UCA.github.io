@@ -13,8 +13,8 @@ In this course, teams of 3-4 students works on a Software maintenance problem.
 During a 7 week period, the students spent 4 hours by weeks on this course. <br/>
 Students write this book, in English or French, explaining their own experiments.<br/>
 
-This work draws heavily on : <a href="https://www.gitbook.com/book/delftswa/desosa2016/details">2016</a>  and 
-<a href="https://legacy.gitbook.com/book/delftswa/desosa2018/details">2018</a> 
+This work draws heavily on  Delft University of Technology in  <a href="https://delftswa.gitbooks.io/desosa2016/content/">2016</a>  and
+<a href="https://github.com/delftswa2018/desosa2018">2018</a>.
 <br/>
 <br/>
 <br/>
