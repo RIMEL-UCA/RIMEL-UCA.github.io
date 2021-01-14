@@ -1,7 +1,7 @@
 ---
 layout: default
-title : Internationalisation et Gestion de Version
-date:   2020-03-10 22:00:00 +0100
+title : Etude de la relation entre tests fonctionnels et tests unitaires dans un projet BDD
+date:   2021-01-14 21:08:00 +0100
 ---
 
 ## Authors
