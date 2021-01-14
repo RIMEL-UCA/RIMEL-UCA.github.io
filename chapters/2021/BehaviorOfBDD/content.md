@@ -1,3 +1,9 @@
+---
+layout: default
+title : Internationalisation et Gestion de Version
+date:   2020-03-10 22:00:00 +0100
+---
+
 ## Authors
 
 We are four students in last year of Polytech' Nice-Sophia specialized in Software Architecture :
