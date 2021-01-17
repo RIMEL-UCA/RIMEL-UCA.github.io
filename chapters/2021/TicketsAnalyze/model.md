@@ -1,6 +1,6 @@
 ---
 layout: default
-title : Modèle de chapitre pour 2021
+title : Dans quelle mesure les tickets nous renseignent sur l’architecture et l’organisation du développement d’un système ?
 date:   2021-01-03 22:00:00 +0100
 ---
 
