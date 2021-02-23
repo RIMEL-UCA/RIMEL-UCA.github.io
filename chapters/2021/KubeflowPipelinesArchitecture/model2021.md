@@ -80,11 +80,11 @@ Ce DSL ajoute certaines fonctionnalités et annotations pour permettre la gestio
 La définition du pipeline se fait avec l’annotation `@dsl.pipeline`. Ainsi, on peut établir l’exemple suivant :
 
 ```
-@dsl.pipeline(
-    name="Mnist ml",
-    description="A Mnist pipeline"
-)
-def pipeline_steps(): ...
+@dsl.pipeline(  
+    name="Mnist ml",  
+    description="A Mnist pipeline"  
+)  
+def pipeline_steps(): ...  
 ```
 
 Ensuite, les différents composants du pipeline seront définis dans la méthode pipeline steps, méthode pouvant être renommée sans problème. 
