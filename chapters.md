@@ -4,7 +4,7 @@ title:  "Chapters"
 date:   2020-01-02 22:00:00 +0100
 ---
 ## 2021
-### [Modèle]({{ site.url }}/chapters/2021/Model/model2021) 
+### [Comment Kubeflow Pipelines permet-il de gérer les erreurs ?]({{ site.url }}/chapters/2021/KubeflowPipelinesArchitecture/model2021)
 
 ## 2020
 ### [Comment les bibliothèques de codes de Machine Learning évoluent-elles ?]({{ site.url }}/chapters/2020/MLAndEvolution/model2020)
