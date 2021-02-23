@@ -26,7 +26,7 @@ Premièrement, qu’est-ce que Kubeflow ? Kubeflow est un framework open source 
 Nous nous intéressons dans cet article à un composant essentiel de Kubeflow, Kubeflow Pipelines. Pour comprendre l'intérêt de Kubeflow Pipelines, il est important de connaître le principe d’un workflow de machine learning. 
 Un workflow traditionnel peut être schématisé comme suit :
 
-![Figure 1: Workflow de machine learning](./assets/picture_1.png)
+![Figure 1: Workflow de machine learning](./assets/picture1.png)
 
 Certains workflows cependant présentent plus de dépendances entre chaque composant et gérer le flux de données devient assez compliqué. 
 C’est un des problèmes auquel Kubleflow Pipelines permet de répondre. 
@@ -133,11 +133,11 @@ Pour les cas où le fichier est stocké, chaque composant devra être écrit dan
 Parmi les exemples que nous avons étudiés, les codes lancés étaient soit des scripts python, soit des scripts bash. Une fois que l’utilisateur dispose de son code, il devra alors définir le pipeline ainsi que son flow d’exécution comme montré dans la partie précédente. 
 Enfin, le pipeline sera converti en un fichier .yaml qui sera alors utilisé par Kubeflow Pipelines pour exécuter le workflow.
 
-![Figure 2: représentation d’un workflow de programme de machine learning sous Kubeflow](./assets/picture_2.png)
+![Figure 2: représentation d’un workflow de programme de machine learning sous Kubeflow](./assets/picture2.png)
 
 Nous pouvons donc schématiser le flow de compilation par le graphique suivant :
 
-![Figure 3 : flow de compilation du pipeline](./assets/picture_3.png)
+![Figure 3 : flow de compilation du pipeline](./assets/picture3.png)
 
 ## IV. Hypothèses & Expérimentations
 
@@ -148,7 +148,7 @@ C’est pourquoi nos premières expérimentations nous ont aidés à nous positi
 Dans un premier temps, nous avons exploré et tenté de comprendre la structure du DSL de KubeFlow Pipelines, afin de repérer de potentiels endroits où des erreurs provoquées dans le dsl pourraient être remontées. 
 En utilisant pydeps et GraphViz, nous avons pu produire un graphe de dépendances entre les différents modules de la partie sdk du projet :
 
-![Figure 4 : dépendances du DSL](./assets/picture_4.PNG)
+![Figure 4 : dépendances du DSL](./assets/picture4.png)
 
 En plus de cela, nous avons pu explorer le projet avec des scripts bash pour repérer les mots clés ‘raise’, ‘error’ ou encore ‘exception’ dans le code de KFP afin d’entamer une analyse manuelle plus fine sur les types d’erreurs présents dans le système. 
 C’est en remarquant que la quasi-intégralité de ces erreurs et exceptions étaient de l’ordre d’une mauvaise utilisation du système (données de configuration fournies à KFP invalides ou absentes) ou de contraintes définies par l’utilisateur lui-même non validées (structure de données transmises entre deux éléments du pipeline non-conforme aux attentes de l’utilisateur) que nous avons pu émettre notre hypothèse principale :
