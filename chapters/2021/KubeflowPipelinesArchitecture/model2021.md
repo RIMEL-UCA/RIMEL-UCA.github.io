@@ -185,6 +185,7 @@ Voici la liste des outils utilisés:
 - GitHub API : pour récupérer les répertoires GitHub
 - [Script .sh](./scripts/script.sh)
 - [Script .py](./scripts/githubgetrepositories.py)
+  - To use the script you need to replace the API Key line 12 with your github API Key
 
 ## VII. Références
 
