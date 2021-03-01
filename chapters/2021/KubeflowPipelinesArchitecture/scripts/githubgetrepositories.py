@@ -9,7 +9,7 @@ import zipfile
 import re
 
 USER = 'montoyadamien'
-API_TOKEN = '2667a6745af7e860f1533c5508d53b47127d254f'
+API_TOKEN = 'API_KEY' # put your github api key here
 GIT_API_URL = 'https://api.github.com/'
 NUMBER_REPO_TO_FETCH = 40
 repositories_using_dsl = 0
