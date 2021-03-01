@@ -183,8 +183,8 @@ Voici la liste des outils utilisés:
 - pydeps : pour générer le graphe des dépendances
 - Graphviz : Pour dessisner et visualiser le graphe de dépendances
 - GitHub API : pour récupérer les répertoires GitHub
-- [Script .sh](./scripts/script.sh)
-- [Script .py](./scripts/githubgetrepositories.py)
+- [Script .sh](./assets/script.sh)
+- [Script .py](./assets/githubgetrepositories.py)
   - To use the script you need to replace the API Key line 12 with your github API Key
 
 ## VII. Références
