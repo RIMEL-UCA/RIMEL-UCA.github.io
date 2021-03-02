@@ -1,0 +1,392 @@
+TITLE,ISSUE_ID,LOGS,COMMITS,ASSIGNES,COMMENTS
+This component requires inline template type-checking  which is not supported by the current environment.(-998900),40857,0,0,0,5
+`Error: Failed to find exported name of node` reported from pkg bundled by `ng-packagr`,40959,1,0,0,4
+SSR/Universal: styles flicker on lazy-load module rendering,32855,0,0,1,8
+Router Segments parsing error with =,21381,0,0,0,5
+"Tour of Heros tutorial causes error in ch 3 when TS transpiler is set to ""strict""",40941,1,4,0,2
+AOT Dev builds in Angular v9+ are much slower than JIT,37293,0,0,0,80
+Animating opacity on :enter doesn't work with a video element that is playing,40949,0,0,0,0
+Support OnInit in services,23235,0,0,0,23
+strictDomEventTypes uses incorrect types for keyup.Enter style outputs,40778,1,0,0,7
+misleading documentation on :host and :host-context directives,39466,0,0,1,5
+Style Guide still recommends Codelyzer which is being deprecated,40903,0,0,1,2
+Ivy Memory Leak: Select & Option Elements,37671,0,0,0,6
+[@angular/animations] ViewEncapsulation.ShadowDom breaks Angular Animations,25672,0,6,0,17
+Single build with multiple configurationw vs multiple builds with single configuration each,40923,1,0,1,2
+Better documentation for multiple projects within one workspace,39368,0,0,1,6
+CanDeactivate not triggered when navigating from lazy loaded module component to root module,28730,0,0,0,7
+keyvalue pipe doesn't preserve a Map's sorted order,31420,0,0,0,30
+Child routes disappear immediately instead of playing :leave animation,15477,0,0,0,31
+Binding on input [type] is broken,13243,0,0,0,21
+Styles are not removed by router after navigation when using ViewEncapsulation.None,16670,0,3,0,36
+Language service tags autocomplete for textarea and select as errors.,39490,0,1,1,1
+bug happened when animations work with ng-content,24041,0,0,0,15
+Components host-element should (optional) be a html-comment instead of html-element,18877,0,0,0,88
+Routing: Preserve trailing slash,16051,0,0,0,25
+Angular - TransferState - page is loading twice (flickering),23427,0,0,0,50
+Overriding templates/templateUrls of components,11144,0,0,0,12
+Destroy of components trigger events,40906,1,0,0,3
+Clarify documentation around svg fragments in templates,40916,0,0,0,0
+Incremental AOT compilation is 5 times slower in Angular 11.1 comparing to 10.1,40635,0,0,3,41
+Feature: more robust module loader for router,12289,0,0,0,29
+Angular 11 - Documentation - Tutorial: Tour of Heroes  property not initialized error from typescript,39966,1,0,1,3
+[String Interpolation] Object key treating as html tag,40902,1,0,0,2
+Query params always purport to be empty on page load even though provided,12157,0,0,0,62
+Dependency injection with @Self() is broken in tests,31632,1,0,0,10
+Insufficient docs for interaction when mixing view encapsulation modes,40715,0,0,0,5
+Missing equiv-text and wrong line number from library in extracted i18n messages.xlf,40689,0,0,0,9
+PipeTransform docs unclear when dealing with multiple parameters,37321,0,7,1,8
+docs: a snapshot and description for the lifecycle hooks Peek-A-Boo example doesn't match to an actual behavior.,40138,0,4,1,5
+Hammer tap event doesn't fire after binding sanitized HTML on iOS,40781,0,0,0,2
+"Angular Language Service throws ""no config file for"" html template while activating experimental-ivy under VSCode",40875,1,0,0,0
+Enter and leave animations don't behave as expected with parent-child relationships,35825,0,0,0,6
+[Ivy] ASSERTION ERROR: Should be run in update mode,32756,1,0,0,29
+With ivy  injecting a parent directive with the @host annotation fails in nested structures,36241,0,0,1,7
+Angular 11.1.1 breaks source map for components with variable as an inline template,40854,0,0,0,2
+API docs: there's no Optional  Self and SkipSelf decorators,40851,0,0,1,3
+"Getting ""control.registerOnChange is not a function"" after changing form",13788,0,0,0,37
+request| feat(template): provide alias for `constructor` in template to access statics,9962,0,0,0,2
+The behavior of ActivatedRoute's Observables are not documented (only emit when shallow equality check fails),40769,0,0,0,19
+"""Usage notes"" in API reference are hard to discover",40753,0,4,1,2
+Unclear alert about reactive forms and validation attributes,37165,1,0,0,2
+ng-if on root elements of projected content fails to render on initialisation,16685,0,0,0,2
+@angular/core/testing imports @angular/compiler without it being a listed dependency,38096,1,0,0,2
+Update i18n doc with loadTranslations and $localize,37563,1,0,1,7
+Forms: State that setErrors() will make status === INVALID regardless of value passed for key,21564,0,0,0,29
+Misleading errormessage when using HostBinding with @animation trigger but no defined animations ,15581,0,0,0,9
+Boolean properties as HTML binary attributes,14761,0,0,0,37
+Feature: @Directive should support styles and styleUrls properties,17766,0,0,0,35
+Optional Parameters for  angular2 routes,12347,0,1,0,11
+HttpParameterCodec improperly encodes special characters like '+' or '=',11058,0,2,0,69
+VS Code auto-import doesn't identify secondary entry points,40407,0,0,0,11
+[Angular Elements] Supporting Shadow Dom and Theming IE11+,26693,0,0,0,34
+Error: ExpressionChangedAfterItHasBeenCheckedError: Expression has changed after it was checked. Previous value for '@routeAnimations': 'undefined'. Current value: 'NewAnimationName'.,36173,1,0,0,9
+"feat(ngSwitchCase): add ""ngSwitchBreak"" optional directive",19824,0,0,0,7
+"In Safari  using a SafeResourceUrl in <object> with type=""application/pdf""  crashes the entire tab",40309,0,0,0,2
+"Create a ""Directives Overview""or similar topic",40755,0,0,1,0
+Using directive in ICU in Ivy is not allowed  and the error message is really vague,37298,1,0,1,2
+docs: update Ivy compatibility guide to mention DebugElement behavior difference related to styling,38451,0,0,0,6
+Type declaration for ActivatedRoute.fragment doesn't declare possible null values,23894,0,9,0,8
+strictTemplates and strictNullChecks doesn't work well with optional chaining in templates,37619,1,0,0,10
+i18n ignore leading and trailing spaces,13114,0,6,1,29
+Service worker doesn't support seeking in videos,25865,0,2,0,19
+Angular http client not working with translation on in IOS chrome browser,40103,1,0,0,4
+"docs: improve the ""Try it now"" card in the landing page",40179,1,0,1,5
+Ergonomic component-level code splitting and lazy loading,18093,0,0,0,70
+Http ResponseType cannot be set,18586,0,2,0,63
+TestBed: Error: Directive SomePipe has no selector  please add it!,36427,1,0,0,4
+describe format of DecimalPipe's digitsInfo parameter,40671,0,8,1,1
+i18n: $localize extraction should handle ES5 concatenated strings,36937,0,0,0,19
+Upgraded AngularJS component broken transclusion under ng-if,29026,1,0,0,8
+memory leak with angular animation,30728,0,0,0,6
+Memory leak with animations in combination with @HostBinding,24197,0,0,0,7
+[Ivy AOT] AOT recompilation is working slow on big projects,35906,0,0,0,10
+Would like FormControl to also have an event for pristine/touched/untouched/valid (as it does for valueChanges and statusChanges),10887,0,0,0,52
+Reactive Forms rules for name and formControlName matching causes conflicts with radio sets in different FormGroup/FormArray sections,40074,0,0,0,6
+Allow passing misc data to http client options,18155,0,4,0,68
+Support generic SimpleChange<T> for use in ngOnChanges,17560,0,9,0,13
+ng-content default content,12530,0,0,1,38
+Ivy compiler breaks ComponentPortal ComponentFactory combination,39892,1,0,0,12
+AnimationPlayer sometimes throws,26095,0,0,0,3
+Runtime Errors (Template parse errors) are not logged any more as Errors but regular info,40628,0,0,0,1
+Proposal: Provide Component Lifecycle Hooks as Observables,10185,0,4,0,17
+Add a reference about disabling/enabling a form control on setValue section,25030,0,0,1,3
+onSameUrlNavigation doesn't re-load routed components,21115,0,0,0,81
+MODULE_INITIALIZER like APP_INITIALIZER ,17606,0,0,0,63
+forRoot() is called twice when imported in app-module (with Ivy only),38376,0,0,0,3
+SharedStylesHost isn't cleaning up styles between Karma test specs,31834,0,7,2,8
+Proposal: computed properties,20472,0,0,0,42
+Async guards should have the option to wait for previous guards to finish,40577,0,0,0,2
+Docs: Add 'Adding reactivity' section to 'Try It' in the 'Getting Started' guide,40275,0,0,0,2
+Static ViewChild is intermittently undefined on first ngOnChanges,40547,0,0,0,3
+Structural Directive's provides are no longer available in template as of Angular 4.0,15998,0,0,0,18
+writeValue called before ngOnInit in nested ControlValueAccessors with initial form data,40209,0,0,0,0
+Improve documentation of behavior for ngFor's trackBy,40461,0,0,1,11
+Cannot determine if animation player has started,40472,0,0,0,0
+Add a customizable nonce attribute to injected style elements - CSP,26152,0,0,0,8
+asynchronous providers,23279,0,0,0,47
+scrollPositionRestoration has several problems,24547,0,0,0,94
+ViewEncapusulation doesn't work as expected when assigning css styles.... VE.Native and VE.None produce intended results but not VE.Emulated (default),15312,0,0,1,11
+feat: `::part` support in Angular's Emulated CSS parser ,22515,0,0,0,4
+Allow passing validator classes to the FormControl constructor,24981,0,0,1,0
+No ability to set validation status of AngularJS form from Angular component (ngModel  Upgrade Provider),23085,0,0,0,4
+Form validators re-run on view (re)creation,19465,0,0,0,2
+rxjs Observable or Subject instead EventEmitter,34394,0,0,0,13
+Recursion of components (and circular imports) doesn't work in Ivy built libraries,35602,0,0,0,21
+Router Animation query empty list error,16917,0,0,1,22
+Allow view creation during change detection,15634,0,7,0,41
+@angular/bazel peer-depends on deprecated rollup packages,35149,0,0,0,2
+Angular Elements should preserve/forward component methods,22114,0,0,0,20
+Function calls are not supported in decorators when fullTemplateTypeCheck is not specified and @dynamic has no effect,23609,0,9,0,109
+Discriminated union types not resolved properly with ngSwitch,34522,0,0,0,22
+Running tests in angular repo fail for firefox tests,40375,0,0,0,5
+Component/declarative error handling (ala React 16's <ErrorBoundary/>),18509,0,0,0,6
+Doesn't navigate to child route with empty path if defined after another route with common ancestor path,12904,0,0,0,3
+Implement Google Analytics tracking via gtag.js instead of analytics.js,22260,0,2,0,4
+Sourcemap path in current bundle isn't being formed properly,14021,0,7,0,9
+Add template input variable to glossary,39783,1,2,0,3
+Problem when adding dynamically a component with g[test] selector in SVG,10404,0,0,0,22
+Document what is <ng-content> tag and how content projection works,17983,0,0,1,22
+[BUG]: Component implementing ControlValueAccessor used inside ngFor loses data,37920,0,3,1,1
+Changing form control name attribute issue.,38465,0,3,1,0
+Zoneless async router guards break change detection,37223,0,3,1,3
+Add a section about testing structural directive ,40382,0,0,1,2
+TestBed overridden providers always registered in NgModule injector,39080,0,2,1,1
+routerLinkActive applies active class to null routerLink,18347,0,1,0,13
+Docs CheckAlways missing link,29751,0,1,1,2
+Allow Route['resolve'] to be a single value/observable/promise,25430,0,4,0,6
+"Repeated navigation attempts not possible when canDeactivate guard turns down initial navigation and urlUpdateStrategy set to ""eager""",28561,0,0,0,4
+"""Cannot find control with unspecified name attribute"" plz add the name of the control",19153,0,0,0,8
+feat(forms) support creating arrays with the template-driven-forms approach (NgModelArray?),9615,0,0,1,17
+ng test always fails by sorting zone-testing import order,40305,1,0,1,10
+UpgradeModule needs to support Hybrid Apps w/ Lazily loaded Hybrid Bundles  using the AngularJS Router,17490,0,1,0,26
+Router upgrade helpers for ngUpgradeLite,19707,0,0,1,7
+Cannot read property 'bindingStartIndex' of null when using Library,35586,1,0,0,19
+collection issue: improve search ,25753,0,0,0,4
+bug(compiler-cli): metadata resolution error when generating flat module with reference in re-export,20931,0,13,0,20
+component host element removal is delayed when animation module is added to project,19742,0,0,0,5
+BUG:  elements from previous route are still in the DOM when ngOnInit and ngAfterViewInit are executed,35879,0,0,1,4
+Support for async rendering,19030,0,0,0,26
+Angular animations leak,40191,0,0,0,3
+ngTemplateOutlet modifies its initial context when getting a new context whose shape is the same,24515,0,9,1,2
+incorrect component passed to canDeactivate guard ,34614,0,3,0,5
+elements: too many change detection runs during initialization,33059,0,0,0,6
+registerOnValidatorChange is not called for ngModelGroup,20268,0,0,1,0
+Animation doesn't work properly in nested component inside ng-content when both parent and child components use animations,32815,0,0,0,5
+$localize tagged template fails in library production build (ViewEngine),40128,1,0,0,2
+Router exponentially slows down by increasing outlet count,40310,0,0,0,2
+routerLink directive always makes element focusable,28345,0,0,0,11
+routerLink and `null` value should remove `href` attribute from link,13980,0,8,0,15
+Re-navigating to a the same url during an active navigation causes cancellation without a new navigation starting,34795,0,0,0,7
+Router tutorial: tour of heroes refers to non-existent code.,40299,1,0,0,6
+style.grid-template-columns inline binding doesn't work,28897,0,0,0,12
+formGroup disable()/enable() does not work right after init,22556,0,0,0,38
+Injected ngControl doesn't contain control property in Angular 9,35330,1,0,0,8
+Click event not firing only once after HammerManager destroyed on IOS,36338,0,0,0,4
+HttpTestingController does not resolve async/await,25965,0,0,0,11
+Error building Angular 9.0.0-rc.0 on windows 10,33615,0,0,0,7
+Unnecessary calls to retrieve and shouldAttach in RouteReuseStrategy,23162,0,0,0,3
+Service Worker Push requestSubscription error on SAFARI 12,27889,1,0,0,12
+docs: an animation for the lifecycle hooks SpyDirective example doesn't match to an actual behavior,40193,0,5,0,3
+trackBy incorrectly changes item type,40125,1,0,0,5
+Support Input/Output spread,14545,0,0,0,10
+When IVY enable I get the following error:  Failed to execute 'insertBefore' on 'Node': The node before which the new node is to be inserted is not a child of this node.,40188,1,0,1,4
+enable whitespace preservation marker in XLIFF files by default,40177,0,0,0,0
+Location.go doesn't work for external URLs,20167,0,0,0,6
+Missing official documentation on supported Node versions.,39436,0,0,0,9
+low hanging fruit: the error messaging for ngFor unable to iterate objects,28240,1,0,0,4
+V4.2.0 router events timing ,17473,0,1,1,26
+Router - Clarify params subscription behavior when deactivating a route,16261,0,0,0,21
+TypeError: Cannot read property 'ngModule' of undefined,39573,1,0,0,6
+Angular 9: projectable nodes change position,35357,0,0,1,2
+compiler-cli typecheck fails if filepath is wrong without useful log,39040,1,1,0,18
+ Anchor scrolling only works first time it is clicked and not on subsequent clicks.,29099,0,0,0,8
+Matrix array param is not retrievable by ParamMap#getAll function.,19179,0,0,0,10
+feat(Forms) Expose FormControl errors to parent FormGroup,10530,0,0,0,18
+bug(animations): Element rendered twice when animated,26133,0,0,0,12
+Forcing change detection when unit testing onPush components,12313,0,0,1,74
+Router shallowEqual util throws error in IE,40090,1,0,0,2
+@angular/language-service ability to quiet errors...,13726,0,0,0,8
+docs(security): add useful guidance to the CSP section of the guide,37631,0,6,0,9
+service-worker(safari): POST requests getting blocked with 504 by Service Worker,37133,1,0,0,3
+entryComponents marked deprecrated  but still needed for npm libraries,39958,0,0,1,7
+Input parameter order does matter,40007,1,0,0,7
+"Ivy: Clarification of why ""class"" input is handled differently in template and host",39618,0,0,0,1
+DOM elements are not removed when the root view is removed,39955,0,0,0,0
+JIT Complier needed with AOT Build for Dynamic Component.,20875,0,0,0,64
+Adding routing breaks document.referrer functionality in IE 11,38234,0,0,0,9
+Ambiguent error when creating component in onDestroy phase,35582,1,0,0,11
+elements: no coalescing of change detection invocations across instances,33060,0,0,0,2
+ngZoneEventCoalescing  a CanActivate guard and pace-js together break Angular's change detection,39854,0,0,1,2
+ValueAccessor.writeValue is being called twice  first time with a phantom null value,14988,0,0,0,50
+Router should push to history if the state differs from the previous when the url is the same,36128,0,4,0,7
+Getting base url from route give different results,38972,0,0,0,3
+Installation tutorial on older documents is installing the latest version of @angular/cli,39821,0,0,1,2
+Create dynamic component loading documentation,39624,0,0,1,3
+Test fails when calling HttpTestingController.expectOne and rxjs from() with a Promise,25733,0,0,0,9
+Async call inside before each breaks next async calls in specs,16647,0,0,0,3
+Angular 9: Spy not tracking/detecting life cycle methods(ngOnInit/ngAfterViewInit),37465,1,0,0,7
+[@angular/router] Nested redirection not working.,39770,0,0,0,4
+More documentation needed for ngTemplateOutlet,39349,0,0,1,19
+Polyfills / browser support confusion,39793,0,0,1,1
+Document compileNonExportedClasses  compiler option,39838,0,0,0,4
+[angular/core] make DebugServices treeshakable (~10KB savings),39902,0,0,0,8
+Empty expressions are not allowed,39851,1,0,0,2
+Vague error when a comment is inside interpolated expression,34084,1,0,0,3
+(Docs) renaming a project manually leaves it unusable,39909,0,0,0,4
+Compiler does not report unpaired angle brackets in a component's template,39899,0,0,0,0
+For structural directives with empty attribute the corresponding @Input-method is not called,35726,0,6,1,11
+Reactive form async validation fires on change when updateOn: 'submit',36998,0,2,1,3
+Injectable decorator not recognized when used with custom decorator,38966,1,0,0,6
+"After upgrading to Angular 8  production builds can't load: Failed to load module script: The server responded with a non-JavaScript MIME type of ""text/plain"". Strict MIME type checking is enforced for module scripts per HTML spec.",30835,1,1,1,125
+Compiling @Injectable abstract class fails when constructor params cannot be resolved,37914,1,0,0,6
+[testing] valueChanges-Event of Control is not executed when dispatching Event for Input-Field,7549,0,0,1,19
+Allow Route Params to be Passed into Component @Inputs,18967,0,0,0,45
+Windows build error: Generating Skylark documentation dir for docs (2 files) failed (Exit 9009),33965,1,1,0,12
+Better docs for ViewChild and ContentChild selectors,21734,0,0,0,8
+Add value change options to ControlValueAccessor writeValue and onChange,20230,0,0,0,21
+ExpressionChangedAfterItHasBeenCheckedError with dynamic validators in a template driven composite form control,23657,0,0,0,51
+Styles from external components are included outside the scope of a shadow DOM component,35039,0,0,0,4
+Syntax errors in template tags are not caught by the compiler,39114,1,0,0,2
+Angular valid template with all the strict flags on results in DOMException.,39781,1,0,0,1
+Unit testing component with debounceTime rxjs operator is way too hard,25457,0,0,0,19
+docs: Misleading route matching strategy documentation,39737,0,0,0,0
+docs: make docs more discoverable and reduce clicks,39736,0,0,1,0
+docs: remove non deployment related sub-sections from deployment guide,39735,0,0,1,3
+[Docs] missing documentation for UrlMatcher,39697,0,0,0,2
+Reactive Form - Formgroup with a nested formgroup throw exception on reset call with null values,20509,0,0,0,2
+[animations] Missing Support for SVG-related Animations,16427,0,0,0,12
+Feature: Introduce *call* pipe,20419,0,0,0,22
+Angular CLI: ng update to 11 duplicates multi-line comments in app.module.ts,39752,0,0,0,1
+TestBed beforeEach docs aren't coherent with CLI Generate,39740,0,0,0,0
+ViewContainerRefs createEmbeddedView method should allow to specify injector,14935,0,0,0,17
+ng 11: patchValue  valueChanges & async pipe,39702,0,0,0,13
+Deactivation Guard breaks the routing history,13586,0,7,1,100
+Router: inconsistent commands for main and named outlets,13872,0,0,0,2
+HttpClient should allow different responseTypes for success response and error response,19148,0,0,0,11
+FormControlDirective and FormControlName do not call setDisabledState on ControlValueAcessor instances when the CVA is added and is enabled,35309,0,2,1,1
+FormControl.setValidators...why is there no getValidators?,13461,0,0,1,72
+bug: relative navigation doesn't work inside route guards,22763,0,0,0,12
+Test fails with flush() but works with tick(),34742,0,0,1,3
+Multiple dead links in contributors list and documentation,39719,0,0,1,0
+Navigating with outlets is confusing: outlets map does not apply to consumed segments,13523,0,0,0,19
+"""Introduction to Angular animations"" problems",39708,1,0,0,0
+[ivy rc4] new unbound (static) input handling breaks existing code and makes component lifecycle inconsistent,34227,0,0,0,8
+ngc does not support relative rootDir via cli,36290,1,0,0,3
+BrowserAnimationsModule is not tree-shakable,36306,0,0,0,5
+No documentation on running ngc (@angular/compiler-cli),29623,0,0,1,16
+"Ivy doesn't allow @Input() called ""style"" to be set from template using a static value",39580,0,0,0,2
+AbstractControl.valueChanges event fires without respect on current disabled/enabled state,15667,0,0,0,4
+Change Route guard and resolver ordering to follow route parent/child hierarchy,24187,0,0,0,19
+Hidden elements inside animated elements break animations in safari,23915,0,0,0,3
+docs: please describe how to compile and load components in the browser,30423,0,0,1,9
+Angular Element is not removed and readded to the DOM properly,38778,0,0,0,11
+Polluted HTTP_INTERCEPTOR in child modules,39125,0,0,0,2
+"Invalid return type of ""DebugElement.query""",22449,0,0,0,2
+Introduce ngOnAttach/ngOnDetach lifecycle hooks,25521,0,0,0,23
+Protractor with benchpress runner gives TypeError: capsObject.forEach is not a function,25139,0,0,0,4
+"Cannot use ""map"" on a type of Array<T> | QueryList<T> because of signature mismatches",39602,0,0,0,1
+"ngIf type narrowing feature does not work within ""else"" template",21504,0,0,0,3
+Document that ngc in  5.0.0-rc.2 places generated files for node_modules into `outDir`,19760,0,0,0,10
+Unsupported import syntax,13768,0,0,0,11
+ngNonBindable can't handle unescaped { characters,11859,0,0,0,13
+TemplateRef generic error in template with Ivy,35710,1,0,0,3
+Better offline compiler error when accessing private properties,11422,0,1,0,27
+Type 'SafeHtml' is not assignable to type 'string',33028,1,0,0,12
+optional chaining in template uses 'null'  but strictTemplates treats it as 'undefined',37622,1,1,0,3
+strictTemplates mode emits confusing type checking error for two-way data-binding with missing @Output declaration (Type 'Event' is not assignable to type X),39300,0,0,0,1
+Compiler XHTML support,37779,0,0,0,2
+Cannot parse slashes in unquoted attribute values,36932,0,0,0,1
+Two-way binding not work with non-null assertion operator,36551,0,4,0,1
+Pipes vs ternaries: unexpected grammar difference between Angular and AngularJS,27415,0,0,0,10
+Compiler error messages have incorrect column and line numbers,20948,0,0,0,1
+False-Positive: Parser Error: Missing expected } at the end of the expression,9571,0,0,0,8
+When using the Unified Angular Location Service  AngularJS useHash paths have their leading slashes removed,34596,0,0,0,4
+Textarea element in form when binding model has initial state as dirty in IE,14440,0,4,0,43
+FormControl statusChanges are not emitted when binding to input,39588,1,0,0,2
+Imported forChild()-routes overrides forRoot()-routes (depends on the order of imports),12648,0,0,0,10
+ngOnDestroy not called for injectables created via factory providers provided at component level,28738,0,0,0,11
+Clarification for documentation (Interceptors),39578,1,0,0,0
+Better ngClass typings,39280,0,0,0,1
+Cannot bind SafeUrl to SVGImageElement,38854,1,0,0,3
+HTTP Module using wrong Content-Type for multipart/form-data,37597,0,0,0,8
+Broken Link on i18n page,39563,1,0,1,0
+Angular i18n generates one trans-unit where two are needed.,39551,0,0,0,3
+i18n select-ICU generates two units in xlf,25858,0,0,0,3
+UseCapture:true event handlers,11200,0,1,0,16
+Service Worker is blocking CSP violation reports,31477,1,0,0,3
+Force Pipe To Be Called,15041,0,0,0,78
+Lazy Loading documentation should be in Best Practices,39161,1,0,1,1
+FormGroup.disable() and FormGroup.enable() do not allow resetting disabled state.,19251,0,0,0,13
+docs(di): improve documentation for the providedIn: 'any' provider scope,39112,1,0,0,0
+Angular testing with bazel inside docker is not working.,30605,0,0,0,1
+Angular stability is not reflected correctly in test environment when a setInterval is running,38650,0,0,1,6
+i18n: Additional calendar support (non-Gregorian) for `DatePipe` etc,20551,0,0,1,26
+Using slot API with Angular Elements throws an error,35974,0,0,0,3
+bazel: esm5 output aspect not respecting custom typescript compiler,32389,0,0,0,0
+bazel: ng_package rule generates invalid secondary entry-point definitions,32651,0,0,0,0
+Shifting scroll items only when @ViewChild Element is referenced in a child component.,37011,0,0,0,3
+[Proposal] Initial / Original value API for AbstractControl,19747,0,8,0,14
+Form is invalid when all fields are disabled,39287,0,0,0,7
+Add CSS webpack-dev-server HMR when using component styles,39367,0,0,0,13
+Some legacy-unit-tests-saucelabs tests are broken in Safari and iOS,36975,0,4,0,2
+EVENT_MANAGER_PLUGINS injection order,37850,0,0,0,4
+Update documentation for improving template type check,39421,0,0,0,4
+Improve documentation of NO_ERRORS_SCHEMA,39454,0,0,0,3
+Add *ngTemplateOutlet context example in docs,36895,1,0,0,9
+Angular Element DOM node is removed from DOM when an Angular Element is readded/reconnected,38962,0,0,0,2
+Animations guide: user goals and tasks to add or refine,26214,0,0,1,6
+pwa can't cache resource with space in url,25443,0,1,0,2
+ComponentRef Change detector doesn't trigger detecting for view,36667,1,10,1,6
+ExpressionChangedAfterItHasBeenCheckedError is thrown by ngModel.invalid above the ngModel control declaration,18748,0,0,0,26
+Ivy: Animation events removed when node's position is changed,37895,0,0,0,1
+Animating margin of a leaving element breaks in Firefox,38641,0,0,0,0
+BrowserAnimationsModule not working properly with scrollPositionRestoration,38341,0,0,0,2
+[Ivy] Animation events @trigger.start and @trigger.done are emitted after ngOnDestroy,37971,0,0,0,1
+Ivy: :leave animations trigger when navigating away from component,36530,0,0,0,2
+EventEmitter.emit() should only accept T  not T | undefined.,35119,0,10,0,0
+Inaccurate error when `BrowserAnimationsModule` is loaded but the `@Component.animations` property is missing,27702,1,0,0,6
+unexpected transition happened with router change after calling applicationRef.attachView ,34718,0,0,0,11
+NgModule should be able to declare providers/service they need.,11281,0,0,0,10
+Missing space between currency code and value in currency pipe #2,33803,0,0,0,2
+Re-evaluate or expand template vars example,39385,1,0,0,0
+docs: Improve Angular compiler options guide,39354,0,0,1,0
+docs: clarify default value of type-checking compiler options,39355,0,0,1,0
+docs: improve documentations around injection token ROUTES,39350,0,0,0,1
+Property getter/setter behavor difference when using @angular/elements,34594,0,0,0,1
+Elements lazy load make unable to use providers in modules,37441,1,0,0,13
+ChangeDetector and NgForm false valid on template using OnPush and NgModel,36640,0,0,0,3
+Validators.pattern anchoring doesn't work as expected,37501,0,0,0,0
+Radio-buttons out of sync with model (reactive-forms),38196,0,0,0,4
+Docs: FormArrays are not marked as dirty when being validated either on pushing/removing items,36788,0,0,0,7
+Dynamic FormControl binding is broken,35988,0,0,0,3
+DefaultValueAccessor doesn't update the model correctly when entering CJK characters with an IME that has autocorrect,35031,0,0,0,0
+ExpressionChangedAfterItHasBeenCheckedError is thrown by ngModel.control.disabled() been called,33557,1,0,0,2
+Angular 9.1.1 fixture.query() can't see DOM built directly with Renderer,36623,0,0,0,1
+@angular/animations delay passed in options parameter for transition() call has no effect,29762,0,0,0,8
+Animation modules break correctly disposing of the application,38968,0,0,0,2
+Unit test doesn't fail even if Error is thrown during cleanup,38971,1,0,0,1
+HttpClient - incorrect ContentType for boolean,38924,0,0,0,1
+New topic: Improving application performance,34735,0,0,2,6
+UrlMatcher as a service,17145,0,0,0,16
+In Ivy  pipes in projected content uses viewProviders from a host component where ViewEngine did not,39276,0,0,1,0
+Inline CSS from Angular Animations lost when reattaching Route Snapshot,36401,0,0,0,2
+Add documentation for zone.js in Angular,28493,0,0,1,7
+FormControl not updated on textarea when FormControlName change,28979,0,0,0,4
+HttpClient#post does not serialize native UrlSearchParams,36317,0,1,0,3
+FormGroup not dirty when a nested FormControl changes from disabled to enabled  or vice versa.,34252,0,0,0,9
+ReactiveForms: FormGroup.removeControl doesn't call control.setParent(null),29517,0,2,0,4
+Adding emojis to formcontrol breaks pattern validation in IE11,33359,0,0,0,4
+TimelineAnimationEngine leaks memory (entries in _animations),20585,0,0,0,6
+Unified Angular Location Service incorrectly parses the initial URL when in useHash mode,34600,0,0,0,2
+Test all angular.io examples to ensure they work with `strict` mode enabled,39344,1,0,1,2
+ContentChildren query lags in change detection when wrapped by template,38976,0,0,1,7
+QueryList's filter method doesn't support type guards,38446,0,0,0,0
+Directive matching with `attr.` is not working with Ivy,38512,0,0,0,1
+Move all tools in Angular tools and remove non tools from this section,39176,0,0,1,0
+Make Developer Workflow content more prominent in the AIO navigation,39163,1,0,1,0
+Move all tutorial content in AIO to Tutorials section,39162,1,0,1,0
+Review moving style binding content in attribute-binding.md to separate topic,39160,1,0,0,0
+Be more accurate in minimal supported browser versions,39152,0,0,0,1
+Improve Observables Testing documentation,39144,0,0,0,0
+Merge the attribute and property binding pages,39141,1,0,0,0
+Update content about view encapsulation to ensure it is concise  clear and correct.,38987,1,0,0,0
+Update landing page to provide better information about Angular.io content,35450,0,0,0,1
+patchValue of Select with value not in options keeps the form valid,14342,0,0,0,8
+Angular - Form Validation (duplicate trigger function custom validate),21500,0,0,0,7
+valueChanges observable on AbstractControl emits events before its parent's value has changed.,13129,0,0,0,13
+InjectionToken generic type is not considered when assigning instances,36736,0,1,0,2
+Change detection on ES6 Generators causes unwanted side-effects and return wrong results,35742,0,0,0,5
+[Elements] Slots working for an angular Element  but not Component,31242,0,0,0,1
+Child custom element's OnInit hook is called before parent's one,28265,0,0,0,1
+[Ivy] Subclass/component now inheriting `@Component({ host: {} })` properties from superclass.,36563,0,0,0,3
+Services provided implicitly vs explicitly behave differently,29038,1,0,0,1
+"Structural directive using selector with format ""element[attribute]""",36762,1,0,0,2
+@Attribute does not work as expected,36863,0,0,0,6
+enableIvy: true Hostlistener is not working,36782,1,0,0,2
+Allow lifecycle hooks to be defined on a directive instance and not only on a prototype,38241,0,0,0,2
+`providedIn: null` has the same effect as `providedIn: 'root'`,29330,1,0,0,1
+Improperly Formed Component Markup Fails Silently,24613,0,0,0,4
+html element property and input naming conflict,24376,0,0,0,9
+Calling platformBrowserDynamic a second time silently ignores extraProviders,25358,0,0,0,7
+"""No provider"" error message should describe the dependency hierarchy",25959,0,0,0,2
