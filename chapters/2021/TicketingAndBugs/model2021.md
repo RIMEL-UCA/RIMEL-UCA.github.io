@@ -1,3 +1,12 @@
+## Authors
+
+Nous sommes quatre étudiants en 5ème année de diplôme d'ingénieur à Polytech Nice-Sophia, spécialisés en architecture logicielle :  
+
+* Ilyas EL BANI &lt;ilyas.el-bani@etu.univ-cotedazur.fr&gt;
+* Alexia GIRARD &lt;alexia.girard@etu.univ-cotedazur.fr&gt;
+* Côme DEMOLLIERE &lt;come.demolliere@etu.univ-cotedazur.fr&gt;
+* Meriam Zekri &lt;meriam.zekri@etu.univ-cotedazur.fr&gt;
+
 ## **I. Mise en contexte**
 La question du sujet proposé au départ est : [ “Les tickets permettent-ils une meilleure compréhension de l’architecture d’un système ?](https://docs.google.com/document/d/1lY0OArbvPvbuHBK1dCuNzkyhSVU45M_paZ1jC5hP0HM/edit#heading=h.nciph9dbajbi)”. 
 
@@ -334,8 +343,7 @@ Les informations les plus importantes sont les versions que le développeur util
 Il est important également de décrire et de comparer le comportement attendu par rapport au comportement obtenu.
 
 Cette expérimentation nous a permis d’identifier les points importants d’un ticket de bug et ainsi de cibler au mieux nos recherches pour les expérimentations.
-##
-##
+
 ## **VI. Conclusion**
 La question initiale était : **“En quoi le ticketing peut être utile lors d’une investigation d’un bug?”.** Nous pouvons désormais y répondre grâce aux résultats de nos différentes sous-questions.
 
@@ -348,9 +356,7 @@ L’avis général que nous pouvons extraire des différentes questions posées 
 
 Toutefois, il est important de garder une certaine distance avec les réponses obtenues par les développeurs, chacun a son propre avis sur les outils de ticketing et chacun a également son propre usage de ce dernier. Certains développeurs trouvent un côté trop verbeux aux outils de ticketing et n’aiment pas forcément l’utiliser et peuvent répondre que l’outil de ticketing n’est pas utile lors de l’investigation d’un bug. Il est important également de préciser que le ticketing peut être très utile pour résoudre un bug si une politique a été mise en place pour déclarer un nouveau bug et si les contributeurs ajoutent le plus d’informations possibles comme notamment des logs. 
 De plus, lors de nos différentes automatisations, nous avons dû limiter le nombre de tickets recherchés car il était assez difficile de le faire à une très grande échelle. Nous nous sommes limités à 1000 tickets par recherche, il faut donc rester prudent sur les résultats obtenus pour ces expérimentations.
-##
-##
-##
+
 ## **VI. Références**
 1. API de GitHub : <https://docs.github.com/en/rest> 
 1. Module npm utilisé pour GitHub API : <https://www.npmjs.com/package/github-api> 
