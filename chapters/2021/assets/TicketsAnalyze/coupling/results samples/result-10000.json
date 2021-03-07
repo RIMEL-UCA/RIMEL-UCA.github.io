@@ -1,0 +1,63 @@
+[
+    {
+     "ticketId": "1599856",
+     "links": [
+      {
+       "url": "https://www.github.com/mongodb/mongo/blob/9c8fde52207b4bbf464cb840390d5384fa0ec2cc/src/mongo/db/auth/authz_manager_external_state_d.cpp",
+       "fileComponent": "Security",
+       "includeComponent": "Storage",
+       "numberOfIncludesFound": 1
+      }
+     ]
+    },
+    {
+     "ticketId": "1435687",
+     "links": [
+      {
+       "url": "https://www.github.com/mongodb/mongo/blob/c02549a7a7c103ba352d90cb33d195ba7cb27455/src/mongo/client/replica_set_monitor.cpp",
+       "fileComponent": "Sharding",
+       "includeComponent": "Replication",
+       "numberOfIncludesFound": 1
+      }
+     ]
+    },
+    {
+     "ticketId": "1425507",
+     "links": [
+      {
+       "url": "https://www.github.com/mongodb/mongo/blob/eae31861e0f813f0099e1d490c4a622d75cd5a08/src/mongo/db/write_concern.cpp",
+       "fileComponent": "Replication",
+       "includeComponent": "Storage",
+       "numberOfIncludesFound": 2
+      }
+     ]
+    },
+    {
+     "ticketId": "1619951",
+     "links": [
+      {
+       "url": "https://www.github.com/mongodb/mongo/blob/674d57fc70d80dedbfd634ce00ca4b967ea89646/src/mongo/db/mongod_main.cpp",
+       "fileComponent": "Replication",
+       "includeComponent": "Networking",
+       "numberOfIncludesFound": 2
+      }
+     ]
+    },
+    {
+     "ticketId": "1441597",
+     "links": [
+      {
+       "url": "https://www.github.com/mongodb/mongo/blob/86d5aa1f6e698d7b89a614cce25479e20cc6ae6c/src/mongo/client/replica_set_monitor.cpp",
+       "fileComponent": "Networking",
+       "includeComponent": "Sharding",
+       "numberOfIncludesFound": 5
+      }
+     ]
+    },
+    {
+     "numberOfTicketsWith2Components": 115
+    },
+    {
+     "numberOfTicketsAnalyzed": 28
+    }
+   ]

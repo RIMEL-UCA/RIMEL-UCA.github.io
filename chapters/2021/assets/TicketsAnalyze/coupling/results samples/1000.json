@@ -1,0 +1,692 @@
+[
+ {
+  "name": "Storage",
+  "paths": [
+   {
+    "path": "src/workloads/contrib/historystore/eMRCf_runner.sh"
+   },
+   {
+    "path": "src/mongo/db/query/plan_yield_policy_impl.cpp"
+   },
+   {
+    "path": "jstests/core/timeseries/timeseries_bucket_limit_count.js"
+   },
+   {
+    "path": "src/mongo/db/catalog/index_catalog_entry_impl.cpp"
+   },
+   {
+    "path": "src/mongo/db/db_raii.cpp"
+   },
+   {
+    "path": "src/mongo/db/exec/working_set.cpp"
+   },
+   {
+    "path": "jstests/core/timeseries/timeseries_bucket_limit_count.js"
+   },
+   {
+    "path": "src/mongo/db/storage/wiredtiger/wiredtiger_oplog_manager.cpp"
+   },
+   {
+    "path": "jstests/noPassthrough/lock_free_ops_concurrent_with_exclusive_lock.js"
+   },
+   {
+    "path": "src/mongo/db/commands/dbhash.cpp"
+   },
+   {
+    "path": "src/mongo/db/catalog/validate_results.cpp"
+   },
+   {
+    "path": "jstests/libs/parallelTester.js"
+   },
+   {
+    "path": "src/mongo/db/db_raii.cpp"
+   },
+   {
+    "path": "src/mongo/db/query/find.cpp"
+   },
+   {
+    "path": "src/mongo/db/catalog/create_collection.cpp"
+   },
+   {
+    "path": "src/mongo/db/timeseries/bucket_catalog.cpp"
+   },
+   {
+    "path": "src/mongo/db/catalog/database_impl.cpp"
+   },
+   {
+    "path": "jstests/libs/parallelTester.js"
+   },
+   {
+    "path": "src/mongo/db/db_raii.cpp"
+   },
+   {
+    "path": "src/mongo/db/db_raii.cpp"
+   },
+   {
+    "path": "src/mongo/db/operation_context.h"
+   },
+   {
+    "path": "src/mongo/db/storage/wiredtiger/wiredtiger_index.cpp"
+   },
+   {
+    "path": "src/mongo/db/storage/wiredtiger/wiredtiger_kv_engine.cpp"
+   },
+   {
+    "path": "src/mongo/shell/utils.js"
+   },
+   {
+    "path": "src/mongo/db/transaction_participant.cpp"
+   },
+   {
+    "path": "src/mongo/db/storage/wiredtiger/wiredtiger_kv_engine.cpp"
+   },
+   {
+    "path": "src/mongo/db/repl/replication_coordinator_impl.cpp"
+   }
+  ]
+ },
+ {
+  "name": "Querying",
+  "paths": [
+   {
+    "path": "src/mongo/db/query/tree_walker.h"
+   },
+   {
+    "path": "src/mongo/idl/basic_types.idl"
+   },
+   {
+    "path": "src/mongo/db/pipeline/aggregate_command.idl"
+   },
+   {
+    "path": "src/mongo/db/ops/write_ops.idl"
+   },
+   {
+    "path": "src/mongo/db/query/hint.idl"
+   },
+   {
+    "path": "src/mongo/db/commands/getmore_cmd.cpp"
+   },
+   {
+    "path": "src/mongo/db/ops/write_ops.idl"
+   },
+   {
+    "path": "src/mongo/db/pipeline/aggregate_command.idl"
+   },
+   {
+    "path": "src/mongo/db/explain.idl"
+   },
+   {
+    "path": "src/mongo/db/explain.idl"
+   },
+   {
+    "path": "src/mongo/db/explain.idl"
+   },
+   {
+    "path": "src/mongo/db/query/plan_explainer_sbe.h"
+   },
+   {
+    "path": "src/mongo/db/commands/getmore_cmd.cpp"
+   },
+   {
+    "path": "src/mongo/db/query/planner_analysis.cpp"
+   },
+   {
+    "path": "src/mongo/db/ops/write_ops.idl"
+   },
+   {
+    "path": "src/mongo/db/exec/collection_scan.cpp"
+   },
+   {
+    "path": "src/mongo/db/ops/write_ops.idl"
+   },
+   {
+    "path": "src/mongo/db/ops/write_ops.idl"
+   },
+   {
+    "path": "src/mongo/idl/basic_types.idl"
+   },
+   {
+    "path": "src/mongo/idl/basic_types.idl"
+   }
+  ]
+ },
+ {
+  "name": "Sharding",
+  "paths": [
+   {
+    "path": "src/mongo/s/client/shard.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/resharding/resharding_op_observer.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/resharding/resharding_op_observer.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/resharding/resharding_donor_recipient_common.cpp"
+   },
+   {
+    "path": "src/mongo/db/storage/ephemeral_for_test/ephemeral_for_test_kv_engine.cpp"
+   },
+   {
+    "path": "src/mongo/s/catalog/type_database.h"
+   },
+   {
+    "path": "src/mongo/db/concurrency/write_conflict_exception.h"
+   },
+   {
+    "path": "src/mongo/db/s/config/sharding_catalog_manager_database_operations.cpp"
+   },
+   {
+    "path": "jstests/sharding/coll_timestamp_test.js"
+   },
+   {
+    "path": "src/mongo/db/s/dist_lock_manager.cpp"
+   },
+   {
+    "path": "src/mongo/db/write_concern.h"
+   },
+   {
+    "path": "src/mongo/db/s/shardsvr_drop_collection_command.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/shardsvr_create_collection_command.cpp"
+   },
+   {
+    "path": "src/mongo/db/vector_clock_metadata_hook.cpp"
+   },
+   {
+    "path": "jstests/replsets/tenant_migration_donor_state_machine.js"
+   },
+   {
+    "path": "src/mongo/db/s/collection_metadata.cpp"
+   },
+   {
+    "path": "jstests/sharding/coll_timestamp_test.js"
+   },
+   {
+    "path": "src/mongo/s/config_server_catalog_cache_loader.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/resharding/resharding_donor_service.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/dist_lock_manager.cpp"
+   },
+   {
+    "path": "src/mongo/db/commands/tenant_migration_donor_cmds.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/shard_key_util.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/dist_lock_manager.cpp"
+   },
+   {
+    "path": "jstests/sharding/coll_timestamp_test.js"
+   },
+   {
+    "path": "src/mongo/db/s/SConscript"
+   },
+   {
+    "path": "jstests/sharding/coll_timestamp_test.js"
+   },
+   {
+    "path": "jstests/sharding/enable_sharding.js"
+   },
+   {
+    "path": "src/mongo/db/operation_context.h"
+   },
+   {
+    "path": "jstests/libs/override_methods/mongos_manual_intervention_actions.js"
+   },
+   {
+    "path": "src/mongo/db/vector_clock_metadata_hook.h"
+   },
+   {
+    "path": "jstests/libs/read_write_concern_defaults_propagation_common.js"
+   },
+   {
+    "path": "src/mongo/db/s/resharding/resharding_donor_service.cpp"
+   },
+   {
+    "path": "src/mongo/stdx/condition_variable.h"
+   },
+   {
+    "path": "src/mongo/s/write_ops/batched_command_request.h"
+   },
+   {
+    "path": "src/mongo/s/sharding_egress_metadata_hook.cpp"
+   },
+   {
+    "path": "src/mongo/s/config_server_catalog_cache_loader.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/rename_collection_coordinator.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/sharding_logging.cpp"
+   },
+   {
+    "path": "src/mongo/db/repl/tenant_migration_access_blocker.h"
+   },
+   {
+    "path": "jstests/sharding/updates_to_rangedeletions_collection_trigger_range_deletions.js"
+   },
+   {
+    "path": "jstests/sharding/refine_collection_shard_key_abort_on_stepup.js"
+   },
+   {
+    "path": "src/mongo/db/s/shard_server_test_fixture.cpp"
+   },
+   {
+    "path": "src/mongo/db/vector_clock_metadata_hook.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/shardsvr_drop_collection_command.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/sharding_ddl_coordinator.h"
+   },
+   {
+    "path": "src/mongo/s/grid.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/dist_lock_manager.h"
+   },
+   {
+    "path": "src/mongo/db/s/sharding_ddl_coordinator.h"
+   },
+   {
+    "path": "src/mongo/s/sharding_egress_metadata_hook.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/shardsvr_drop_collection_command.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/migration_destination_manager.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/create_collection_coordinator.cpp"
+   },
+   {
+    "path": "src/mongo/db/repl/tenant_migration_donor_service.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/resharding/resharding_recipient_service.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/shard_collection_legacy.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/resharding/resharding_coordinator_service.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/resharding/resharding_coordinator_service.cpp"
+   },
+   {
+    "path": "jstests/ssl/x509/certs.yml"
+   },
+   {
+    "path": "src/mongo/db/s/config/sharding_catalog_manager_collection_operations.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/resharding/resharding_donor_recipient_common.cpp"
+   },
+   {
+    "path": "src/mongo/s/client/shard_registry.cpp"
+   },
+   {
+    "path": "src/mongo/s/mongos_main.cpp"
+   },
+   {
+    "path": "src/mongo/db/repl/primary_only_service_test.cpp"
+   },
+   {
+    "path": "src/mongo/db/repl/tenant_migration_donor_service.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/resharding/resharding_coordinator_service.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/resharding/resharding_coordinator_service.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/resharding/resharding_coordinator_service.cpp"
+   },
+   {
+    "path": "src/mongo/db/repl/tenant_migration_donor_access_blocker.cpp"
+   },
+   {
+    "path": "src/mongo/s/catalog_cache.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/shardsvr_rename_collection_command.cpp"
+   },
+   {
+    "path": "src/mongo/db/vector_clock.cpp"
+   },
+   {
+    "path": "src/mongo/db/vector_clock.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/resharding/resharding_recipient_service.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/resharding/resharding_collection_cloner.cpp"
+   },
+   {
+    "path": "src/mongo/db/repl/tenant_migration_donor_service.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/resharding/resharding_recipient_service.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/sharding_ddl_coordinator.h"
+   },
+   {
+    "path": "src/mongo/db/s/shardsvr_drop_collection_command.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/migration_destination_manager.cpp"
+   },
+   {
+    "path": "src/mongo/db/repl/tenant_migration_donor_service.cpp"
+   },
+   {
+    "path": "src/mongo/db/repl/tenant_migration_recipient_service.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/sharding_initialization_mongod.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/resharding/resharding_recipient_service.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/migration_destination_manager.cpp"
+   },
+   {
+    "path": "jstests/sharding/read_write_concern_defaults_application.js"
+   },
+   {
+    "path": "src/mongo/db/s/resharding/resharding_coordinator_service.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/migration_destination_manager.cpp"
+   },
+   {
+    "path": "src/mongo/db/repl/tenant_migration_recipient_service_test.cpp"
+   },
+   {
+    "path": "src/mongo/shell/replsettest.js"
+   }
+  ]
+ },
+ {
+  "name": "Internal Code",
+  "paths": [
+   {
+    "path": "src/mongo/executor/async_request_executor.cpp"
+   },
+   {
+    "path": "src/mongo/executor/async_request_executor.cpp"
+   },
+   {
+    "path": "src/mongo/db/repl/primary_only_service.h"
+   },
+   {
+    "path": "src/mongo/db/repl/primary_only_service.cpp"
+   },
+   {
+    "path": "src/mongo/db/s/resharding/resharding_metrics.cpp"
+   },
+   {
+    "path": "src/mongo/db/query/sbe_stage_builder_coll_scan.cpp"
+   },
+   {
+    "path": "src/mongo/util/future_util.h"
+   },
+   {
+    "path": "src/mongo/db/s/resharding/resharding_metrics.h"
+   },
+   {
+    "path": "src/mongo/executor/async_request_executor.cpp"
+   },
+   {
+    "path": "src/mongo/db/client_out_of_line_executor.cpp"
+   },
+   {
+    "path": "src/mongo/base/initializer.cpp"
+   },
+   {
+    "path": "src/mongo/util/assert_util.h"
+   },
+   {
+    "path": "src/mongo/db/query/sbe_stage_builder_coll_scan.cpp"
+   },
+   {
+    "path": "src/mongo/transport/service_state_machine.cpp"
+   },
+   {
+    "path": "src/mongo/db/repl/primary_only_service.cpp"
+   },
+   {
+    "path": "src/mongo/s/commands/strategy.cpp"
+   },
+   {
+    "path": "src/mongo/util/future_util.h"
+   },
+   {
+    "path": "src/mongo/util/future_util.h"
+   },
+   {
+    "path": "src/mongo/db/s/resharding/resharding_metrics.cpp"
+   },
+   {
+    "path": "src/mongo/db/repl/primary_only_service.cpp"
+   },
+   {
+    "path": "src/mongo/db/service_context.cpp"
+   },
+   {
+    "path": "src/mongo/db/repl/primary_only_service.h"
+   },
+   {
+    "path": "src/mongo/db/repl/primary_only_service.cpp"
+   },
+   {
+    "path": "src/mongo/executor/network_interface_tl.cpp"
+   },
+   {
+    "path": "src/mongo/db/commands/dbcommands.cpp"
+   },
+   {
+    "path": "src/mongo/util/future_util.h"
+   },
+   {
+    "path": "src/mongo/db/query/sbe_stage_builder_coll_scan.cpp"
+   },
+   {
+    "path": "src/mongo/db/exec/sbe/stages/ix_scan.cpp"
+   }
+  ]
+ },
+ {
+  "name": "Networking",
+  "paths": [
+   {
+    "path": "src/mongo/client/server_discovery_monitor.cpp"
+   },
+   {
+    "path": "src/mongo/client/server_discovery_monitor.cpp"
+   },
+   {
+    "path": "src/mongo/client/server_discovery_monitor.cpp"
+   },
+   {
+    "path": "src/mongo/client/server_discovery_monitor.cpp"
+   },
+   {
+    "path": "src/mongo/client/streamable_replica_set_monitor.cpp"
+   },
+   {
+    "path": "src/mongo/client/server_discovery_monitor.cpp"
+   },
+   {
+    "path": "src/mongo/client/streamable_replica_set_monitor.cpp"
+   },
+   {
+    "path": "src/mongo/client/streamable_replica_set_monitor.cpp"
+   },
+   {
+    "path": "src/mongo/client/server_discovery_monitor.cpp"
+   },
+   {
+    "path": "src/mongo/client/server_discovery_monitor.cpp"
+   },
+   {
+    "path": "src/mongo/client/streamable_replica_set_monitor.cpp"
+   },
+   {
+    "path": "src/mongo/client/streamable_replica_set_monitor.cpp"
+   }
+  ]
+ },
+ {
+  "name": "Write Ops",
+  "paths": [
+   {
+    "path": "src/mongo/db/ops/write_ops.idl"
+   }
+  ]
+ },
+ {
+  "name": "Security",
+  "paths": [
+   {
+    "path": "src/mongo/db/auth/sasl_commands.idl"
+   }
+  ]
+ },
+ {
+  "name": "Replication",
+  "paths": [
+   {
+    "path": "src/mongo/db/repl/hello.idl"
+   },
+   {
+    "path": "src/mongo/db/commands/set_feature_compatibility_version_command.cpp"
+   },
+   {
+    "path": "src/mongo/db/auth/auth_types.idl"
+   },
+   {
+    "path": "jstests/replsets/step_down_during_draining.js"
+   },
+   {
+    "path": "jstests/replsets/step_down_during_draining.js"
+   },
+   {
+    "path": "src/mongo/db/commands.h"
+   },
+   {
+    "path": "src/mongo/db/catalog/rename_collection.cpp"
+   },
+   {
+    "path": "src/mongo/db/repl/primary_only_service.cpp"
+   },
+   {
+    "path": "src/mongo/db/index_builds_coordinator_mongod.cpp"
+   },
+   {
+    "path": "src/mongo/db/catalog/rename_collection.cpp"
+   },
+   {
+    "path": "src/mongo/db/repl/repl_set_config_checks.cpp"
+   },
+   {
+    "path": "src/mongo/db/repl/oplog_buffer_collection.cpp"
+   },
+   {
+    "path": "src/mongo/db/repl/README.md"
+   },
+   {
+    "path": "src/mongo/db/repl/repl_set_config_checks.cpp"
+   },
+   {
+    "path": "src/mongo/db/commands/feature_compatibility_version.cpp"
+   },
+   {
+    "path": "src/mongo/db/repl/primary_only_service.cpp"
+   },
+   {
+    "path": "src/mongo/db/repl/tenant_migration_recipient_service.cpp"
+   },
+   {
+    "path": "src/mongo/db/repl/tenant_migration_recipient_service.cpp"
+   },
+   {
+    "path": "src/mongo/db/transaction_participant.cpp"
+   },
+   {
+    "path": "src/mongo/db/repl/oplog.cpp"
+   },
+   {
+    "path": "src/mongo/db/repl/replication_coordinator_impl.cpp"
+   },
+   {
+    "path": "src/mongo/shell/replsettest.js"
+   },
+   {
+    "path": "src/mongo/db/repl/replication_coordinator_impl.cpp"
+   },
+   {
+    "path": "src/mongo/db/repl/replication_coordinator_impl.cpp"
+   }
+  ]
+ },
+ {
+  "name": "Testing Infrastructure",
+  "paths": [
+   {
+    "path": "jstests/hooks/run_check_repl_dbhash.js"
+   },
+   {
+    "path": "jstests/hooks/run_check_repl_dbhash_background.js"
+   },
+   {
+    "path": "jstests/core/geo_s2disjoint_holes.js"
+   }
+  ]
+ },
+ {
+  "name": "Indexing",
+  "paths": [
+   {
+    "path": "src/mongo/db/create_indexes.idl"
+   },
+   {
+    "path": "src/mongo/db/index/index_descriptor.cpp"
+   },
+   {
+    "path": "src/mongo/db/index_builds_coordinator.cpp"
+   }
+  ]
+ },
+ {
+  "name": "Upgrade/Downgrade",
+  "paths": [
+   {
+    "path": "src/mongo/db/commands/set_feature_compatibility_version_command.cpp"
+   }
+  ]
+ },
+ {
+  "name": "Logging",
+  "paths": [
+   {
+    "path": "src/mongo/logv2/log_attr.h"
+   }
+  ]
+ }
+]
