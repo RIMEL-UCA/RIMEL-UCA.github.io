@@ -17,9 +17,7 @@ date:   2021-01-03 22:00:00 +0100
 
 **_janvier 2021_**
 
-## Authors
-
-We are four students in last year of Polytech' Nice-Sophia specialized in Software Architecture :
+## Auteurs
 
 * Rania Fekih &lt;rania.fekih@etu.unice.fr&gt;
 * Anis Khalili &lt;anis.khalili@etu.unice.fr&gt;
@@ -177,7 +175,7 @@ Bugs 2020
 
 Improvement 2020
 
-![](./assets/image5.png)
+![](./assets/image5.PNG)
 
 Nous pouvons remarquer ici qu’il y a pas mal de composants qui s’affiche dans les deux graphes. Nous avons : 
 - Le composant sharding qui a +360 tickets bugs et qui a de même +280 
@@ -188,7 +186,7 @@ Nous pouvons remarquer ici qu’il y a pas mal de composants qui s’affiche dan
 
 Bugs 2019
 
-![](./assets/image6.png)
+![](./assets/image6.PNG)
 
 Improvement 2019 
 
