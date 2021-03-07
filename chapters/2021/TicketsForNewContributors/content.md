@@ -96,7 +96,7 @@ Pour tenter de répondre à notre question, il nous fallait répondre aux deux s
 
 <div style="text-align: justify">
 
-> * Sous-question 1 : Les premiers commits d'un contributeur sont-ils toujours associés à des tickets existants ?
+* ### Sous-question 1 : Les premiers commits d'un contributeur sont-ils toujours associés à des tickets existants ?
 
 Notre hypothèse consiste en celle-ci : **Le premier commit d'un contributeur est associé à un ticket existant.**
 
@@ -117,7 +117,7 @@ Une fois trouvée nous avons pu avancer de nouveau sur notre expérience. Cette 
 
 <div style="text-align: justify">
 
-> * Sous-question 2 : Quelles sont les caractéristiques communes à ces tickets (types de labels, format du titre, description) ?
+* ### Sous-question 2 : Quelles sont les caractéristiques communes à ces tickets (types de labels, format du titre, description) ?
 
 Ici nous avons le choix entre les labels, le format du titre du ticket ou encore sa description.
 La description n'est pas un indicateur de performance mesurable car elle donne juste des détails sur les fonctionnalités couvertes par le ticket concerné.
@@ -210,7 +210,7 @@ Nous allons vérifier si ces projets tendent à valider notre hypothèse de dép
 
 Par souci de lisibilité, nous avons mis les graphes des labels les plus utilisés en bar chart horizontal.
 
-### **`Vscode`**
+**1- vscode**
 
 Pour faire un état des lieux de vscode, nous avons analysés 744 commits dont 327 sont étiquetés.
 Les raisons de la présence de commits non étiquetés ont déjà été explicitées plus haut.
@@ -230,7 +230,7 @@ Ceci se déduit également au vu du nombre de mises à jour et aux ajouts d'exte
 Quant au label `verified`, son utilisation fréquente peut s'expliquer par le fait qu'un membre vérifie une nouvelle partie de code intégrée sur la branche principale du projet et s'assure que les nouvelles fonctionnalités s'intègrent bien aux fonctionnalités existantes.
 Si tout est correct, il finit par donner son approbation via une pull request.
 
-### **`Flutter`**
+**2- flutter**
 
 Pour faire un état des lieux de flutter, nous avons analysés 802 commits dont 721 sont étiquetés.
 Sur les 721 tickets détectés, 592 d'entre eux étaient labellisées.
@@ -250,7 +250,8 @@ L'analyse de ces 2 projets nous mène à croire que notre hypothèse de base est
 
 Nous allons à présent passer à l'analyse générale qui prend en compte tous les projets analysés.
 
-### **`Analyse générale`**
+**3- Analyse générale**
+
 Nous passerons directement à l'analyse des labels puisque l'analyse sur les commits a été faite précédemment.
 
 <p align="center">
