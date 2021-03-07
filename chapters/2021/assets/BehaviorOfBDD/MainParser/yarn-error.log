@@ -1,0 +1,47 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.22.10/libexec/bin/yarn.js
+
+PATH: 
+  /Users/alexandre/.deno/bin:/Library/Frameworks/Python.framework/Versions/3.8/bin/:/usr/local/Cellar/python@3.8/3.8.5/Frameworks/Python.framework/Versions/3.8/bin:/Library/Frameworks/Python.framework/Versions/3.8/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Users/alexandre/.deno/bin:/Library/Frameworks/Python.framework/Versions/3.8/bin/:/usr/local/Cellar/python@3.8/3.8.5/Frameworks/Python.framework/Versions/3.8/bin:/Library/Frameworks/Python.framework/Versions/3.8/bin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  15.2.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/alexandre/SI5/Engeenering/parseur/MainParser/package.json: Unexpected token } in JSON at position 552
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:310:30)
+      at /usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "main-parser",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+      "start": "node app.js",
+      "example": "node app.js --path=/Users/alexandre/SI5/Engeenering/cookiefactory-1920-big-brain-cucumber --test=fr.unice.polytech.cookie_factory.order.ItemTest.removeQuantity"
+    },
+    "dependencies": {
+      "coverage-parser": "file:./../CoverageParser",
+      "directory-parser": "file:./../DirectoryParser",
+      "extension-modifier": "file:./../ExtensionModifier",
+      "process": "^0.11.10",
+      "progress": "^2.0.3",
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
