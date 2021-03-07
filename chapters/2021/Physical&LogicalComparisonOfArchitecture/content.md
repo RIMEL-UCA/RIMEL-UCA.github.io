@@ -37,10 +37,11 @@ De plus, en tant qu'élève architecte logicielle, la rétro ingénierie de proj
 
 ## II. Observations/General question
 
-1. Commencez par formuler une question sur quelque chose que vous observez ou constatez ou encore une idée émergente. Attention pour répondre à cette question vous devrez être capable de quantifier vos réponses.
-2. Préciser bien pourquoi cette question est intéressante de votre point de vue et éventuellement en quoi la question est plus générale que le contexte de votre projet \(ex: Choisir une libraire de code est un problème récurrent qui se pose très différemment cependant en fonction des objectifs\)
+Notre problématique est issue d'une idée qui nous est venu en tant que citoyen français qui commençons à découvrir petit à petit la complexité de notre système. En effet, lors du développement de l'application, les développeurs ont du prendre en compte toutes les nuances du système de santé français afin d'informer les bonnes institutions et de s'interfacer correctement avec les organismes déjà en place. C'est cette complexité qui nous a intrigué et qui nous a donné envie de répondre à cette problématique générale : 
+**En quoi l'architecture des projets reflète l'organisation administrative des pays et leur gestion de la crise du covid-19**
 
-Cette première étape nécessite beaucoup de réflexion pour se définir la bonne question afin de poser les bonnes bases pour la suit.
+Cette problématique va nous permettre de nous intérésser à la fois à l'architecture globale des projets mais aussi de venir investiguer dans le code l'implémentation concrète des mesures gouvernementales. Il y aura donc 2 axes de reflexion à suivre, portés sur différentes échelles de vision de l'architecture, une vision gros grain et un zoom dans le code.
+La question étant beaucoup trop générale et impossible à traiter par une équipe de 4 personnes avec le temps accordé, nous nous sommes intéréssés à deux sous questions qui seront détaillées plus bas dans ce rapport. Ces deux sous questions nous paraissent très intéréssante car elles reprennent l'idée générale de la problématique globale mais axée sur de la compréhension des projets et leur comparaison.
 
 ## III. information gathering
 
@@ -64,9 +65,16 @@ Préciser vos zones de recherches en fonction de votre projet,
 
 #### France
 
-#### Canade
+#### Canada
 
 ![Figure 1: method claim kay canada](../assets/Physical&LogicalComparisonOfArchitecture/canadaCodeClaimKey.png)
+
+### Comment est implémenté la gestion de la distanciation sociale et des cas contacts dans les applications ?
+### Ces implémentations ont-elles évoluées au fil des décisions gouvernementales ?
+
+#### France
+
+#### Canada
 
 ## VI. Tools \(facultatif\)
 
