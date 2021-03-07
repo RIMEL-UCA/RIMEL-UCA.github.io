@@ -405,7 +405,7 @@ Ce dernier permet en effet d’avoir, pour chaque fichier source du projet, des 
 
 ![Figure 24 : Echantillon du fichier XML généré par JaCoCo](../assets/BehaviorOfBDD/doc/images/jacoco_xml.png)
 
-*Figure 24 : Echantillon du fichier XML généré par JaCoCo](../assets/BehaviorOfBDD/doc/images/jacoco_xml.png*
+*Figure 24 : Echantillon du fichier XML généré par JaCoCo*
 
 Sur la capture d’écran (fig. 24), on peut voir une représentation de l’information XML générée par JaCoCo pour le fichier Customer.java.  
 
@@ -415,11 +415,11 @@ Les figures y et z correspondent à la représentation visuelle correspondant à
 
 ![Figure 25 : Échantillon 1 du fichier html généré par JaCoCo](../assets/BehaviorOfBDD/doc/images/jacoco_code1.png)
 
-*Figure 25 : Échantillon 1 du fichier html généré par JaCoCo](../assets/BehaviorOfBDD/doc/images/jacoco_code1.png*
+*Figure 25 : Échantillon 1 du fichier html généré par JaCoCo*
 
 ![Figure 26 : Échantillon 2 du fichier html généré par JaCoCo](../assets/BehaviorOfBDD/doc/images/jacoco_code2.png)
 
-*Figure 26 : Échantillon 2 du fichier html généré par JaCoCo](../assets/BehaviorOfBDD/doc/images/jacoco_code2.png*
+*Figure 26 : Échantillon 2 du fichier html généré par JaCoCo*
 
 Les lignes surlignées en vert sont les lignes dont tous les cas possibles ont été couverts par les tests lancés. Les lignes en orange sont couvertes par les tests lancés, mais tous les cas ne sont pas couverts. Enfin, les lignes rouges sont les lignes non couvertes. 
 
