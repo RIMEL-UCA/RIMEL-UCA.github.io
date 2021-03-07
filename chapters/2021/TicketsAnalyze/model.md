@@ -188,7 +188,7 @@ Nous pouvons remarquer ici qu’il y a pas mal de composants qui s’affiche dan
 
 Bugs 2019
 
-![](../assets/image6.png)
+![](./assets/image6.png)
 
 Improvement 2019 
 
@@ -215,10 +215,12 @@ Ce serveur permet de générer 3 ensemble de graph différents :
 
 #### /generalData :
 Elle prend au coeur de la requête 2 attributs:
+```json
 {   
     "APIJira" : "https://jira.mongodb.org/rest/api/2/search",
     "ProjectName":"SERVER"  
 }
+```
 
 cette requête permet d'exécuter plusieurs filter ( on a intégré 18 filter) appelé GeneralFilter , 
 ce type de filtre est appliqué à tous les composant du projet exemple :
@@ -230,12 +232,14 @@ nombre de ticket new feature
 
 #### /specificDataComponents:
 Elle prend au coeur de la requête 4 attributs:
+```json
 {   
     "APIJira" : "https://jira.mongodb.org/rest/api/2/search",
     "ProjectName":"SERVER",
     "principalComponent" : "Sharding",
     "otherComponents" : ["Replication", "Security", "Querying", "Storage", "Testing Infrastructure", "Aggregation Framework", "build", "Shell"] 
 }
+```
 Cette requête permet d'exécuter plusieurs filter ( on a intégré 2 filter) appelé SpecificFilter .Ces filtres nous permettent de faire une observation de la relation entre un composant principal choisi et un ensemble de composant secondaire exemples:
 nombre de bug partagé entre un composant et les autre composant 
 nombre de bug critique et bloquante partagé entre un composant et les autres
@@ -244,12 +248,14 @@ nombre de bug critique et bloquante partagé entre un composant et les autres
 
 #### /specificDataTwoComponents:
 Elle prend au coeur de la requête 4 attributs:
+```json
 {  
     "APIJira" : "https://jira.mongodb.org/rest/api/2/search",
     "ProjectName":"SERVER",
     "firstComponent" : "Sharding",
     "secondComponent" : "Replication"    
 }
+```
 Cette requête permet d'exécuter plusieurs filter ( on a intégré 2 filter) appelé 
 #### SpecificFilterOneToOne .Ces filtres nous permettent de faire une observation de la relation entre deux composant choisi ,exemples:
 nombre de lien entre 2 composants
@@ -261,9 +267,11 @@ ensuite il stocke ces données dans des fichiers.csv qui prend le nom des filtre
 Ce mécanisme est automatique et il peut être appliqué à n'importe quel projet jira il suffit juste de préciser l’api jira et le nom du projet à analyser.
 
 ### Pour lancer le projet : 
+```shell
 cd jira_api_automation 
 npm install
-npm start 
+npm start
+```
 Lien vers la collection postman : https://www.getpostman.com/collections/9cca438d452ea0dc099c
 
 ___
