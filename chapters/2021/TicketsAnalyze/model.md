@@ -143,4 +143,136 @@ ___
 
 Pour répondre à l’hypothèse “le composant qui a le plus de tickets est le composant le plus important” nous avons commencé par appliquer le filtre qu’on a précisé auparavant au projet SERVER de mongodb et nous avons dégagé ce graph : 
 
+![](../assets/image1.png)
 
+graphe des 4 premières lignes : 
+
+![](../assets/image2.png)
+
+Le s représente le sharding et repl représente la réplication. Donc ceci vérifie bien notre hypothèse. Dans la sous question suivante nous allons expliquer comment nous avons associé les dossiers à leur composant. 
+
+### Une fois qu’on trouve les composants qui ont des tickets en commun, peut-on identifier un couplage ?
+
+Pour répondre à cette question, nous avons développé un programme en NodeJS qui fonctionne en deux étapes. 
+
+La première est permet d’identifier un lien entre les composants décrits dans le gestionnaire de tickets et les dossiers du projet MongoDB sur GitHub. Parfois ce lien est évident, mais il ne l’est pas nécessairement, ce qui justifie l’utilisation d’un tel outil. En sortie de cette première étape nous avons un fichier JSON dans lequel se trouve les composants et les chemins des fichiers auxquels ils sont liés. Nous considérons que tous les fichiers d’un chemin sont liés à un composant si le chemin apparaît en majorité pour ce composant dans notre fichier. Nous avons choisi d’utiliser 1000 tickets pour identifier les liens entre composants et chemins. Le résultat est un fichier visible sur notre github (lien à mettre).
+
+La seconde partie permet de vérifier l’hypothèse d’un couplage entre composants. Dans le cadre de notre étude, nous avons choisi de nous restreindre aux tickets qui concernent 2 composants. Pour chacun de ces tickets, nous récupérons les liens github associés si il y en a, et nous utilisons notre fichier JSON pour lier le fichier du code source du projet de MongoDB modifié sur Github à l’un des deux composants du ticket. Ensuite, nous vérifions le couplage réel entre ces composants en regardant les fichiers “include” dans le code source et en les liant à un composant, de la même façon. L’API de Jira ne permet pas de recevoir tous les tickets du projet SERVER en une seule requête. Au total, XXX tickets sont liés au projet, et nous pouvons en récupérer 10 000 simultanément avec un peu de chance (parfois la requête ne passe pas…). 
+
+Nos résultats pour 10 000 tickets ne sont pas particulièrement concluants. Le fichier JSON en sortie du deuxième algorithme est disponible sur github. Seulement 115 tickets sont liés à deux composants, et 28 d’entre eux ont un lien github… Parmi ces 28 tickets, notre hypothèse a pu être validée pour seulement 5 d’entre eux (environ ⅙). Nous pensons ne pas avoir suffisamment de données pour pouvoir conclure quoi que ce soit à propos de notre hypothèse.
+
+### Après avoir une idée sur les différents composants, comment peut-on identifier les composants qui sont en évolution ?
+Pour distinguer les composants qui sont en évolution nous avons filtré les tickets de type “new feature”et par année 2020. Nous avons rassemblé ces données par composant. 
+
+![](../assets/image3.png)
+
+En utilisant cet article : https://tel.archives-ouvertes.fr/tel-00488005/document Nous avons dégagé cette définition pour l’évolution de l’architecture qui nous confirme nos résultats : l’évolution logicielle est la possibilité de pouvoir élargir les systèmes et d’appliquer le passage à l’échelle, pour prendre
+ en compte de nouveaux besoins ou des fonctionnalités plus complexes. Ceci nous confirme que les tickets qui ont le plus de tickets new feature ( nouvelle fonctionnalité ) sont des composants en évolution. 
+
+### Comment peut-on évaluer l’implémentation d’un composant ?
+Comme nous l'avons précisé auparavant afin de prouver notre hypothèse nous avons opté pour une comparaison entre les composants qui ont plus de tickets de type bug vs les composants qui ont le plus des tickets de type improvement. Nous avons commencé par l’année de 2020 après nous avons exercé la même procédure sur l’année 2019. 
+Bugs 2020
+
+![](../assets/image4.png)
+
+Improvement 2020
+
+![](../assets/image5.png)
+
+Nous pouvons remarquer ici qu’il y a pas mal de composants qui s’affiche dans les deux graphes. Nous avons : 
+- Le composant sharding qui a +360 tickets bugs et qui a de même +280 
+- Le composant replication qui a +180 tickets de bugs et +140 tickets de improvement. 
+- Le composant testing infrastructure qui a +360 tickets de bugs et +260 tickets de “improvement” 
+- Le composant storage qui a +135 de tickets bug et qui +40 ticket d’improvement 
+- Ce qui nous prouve à ce stade que notre hypothèse est bien valide. Nous allons terminé l’analyse avec l’année 2019
+
+Bugs 2019
+
+![](../assets/image6.png)
+
+Improvement 2019 
+
+![](../assets/image7.png)
+
+Pareil ici nous avons un nombre important de composants qui s’affichent dans les deux graphes : 
+Le composants querying a +360 tickets de types et il a +60 tickets d’improvement 
+Le composant replication +360 tickets de bugs et il a +40 tickets d’improvement 
+Le composant storage qui a +120 tickets de bugs et qui 40 tickets d’improvement 
+Il y aussi testing infrastructure et sharding 
+Donc jusque là nous avons des chiffres qui vérifient bien notre hypothèse mais nous avons décidé de voir des articles publiés sur internet qui peuvent nous confirmer cela. Nous avons l’article ref4 ( indiqué dans les références)   ou les nombre de bugs est marqué comme un métrique d’évaluation de la qualité de code et ce dernier nécessite éventuellement des tâches d’amélioration ( partie 3.7 ). 
+
+___
+
+## VI. Tools \(facultatif\)
+
+Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à \(1\) pouvoir reproduire vos expérimentations, \(2\) partager/expliquer à d'autres l'usage des outils.
+
+### Notre serveur d’analyse:
+
+Au lieu de visualiser les tickets et les informations reliées à un projet Jira à la main et directement en modifiant à chaque fois les filtres . Nous avons développé nos propres serveurs d’analyse qui permet à partir d’une Api jira et un nom de projet choisi de retourner  plusieurs graph permettant d'avoir une observation et des renseignements  sur l’architecture et la structure du système.
+
+Ce serveur permet de générer 3 ensemble de graph différents :
+
+#### /generalData :
+Elle prend au coeur de la requête 2 attributs:
+{   
+    "APIJira" : "https://jira.mongodb.org/rest/api/2/search",
+    "ProjectName":"SERVER"  
+}
+
+cette requête permet d'exécuter plusieurs filter ( on a intégré 18 filter) appelé GeneralFilter , 
+ce type de filtre est appliqué à tous les composant du projet exemple :
+nombre de ticket bug par composant par années ( 2019 2020 ).
+nombre de ticket bug avec priorité P1 et P2
+nombre de ticket improvement par années ( 2019 2020 )
+nombre de ticket new feature
+=> se sont les filtres utilisés dans notre analyse.
+
+#### /specificDataComponents:
+Elle prend au coeur de la requête 4 attributs:
+{   
+    "APIJira" : "https://jira.mongodb.org/rest/api/2/search",
+    "ProjectName":"SERVER",
+    "principalComponent" : "Sharding",
+    "otherComponents" : ["Replication", "Security", "Querying", "Storage", "Testing Infrastructure", "Aggregation Framework", "build", "Shell"] 
+}
+Cette requête permet d'exécuter plusieurs filter ( on a intégré 2 filter) appelé SpecificFilter .Ces filtres nous permettent de faire une observation de la relation entre un composant principal choisi et un ensemble de composant secondaire exemples:
+nombre de bug partagé entre un composant et les autre composant 
+nombre de bug critique et bloquante partagé entre un composant et les autres
+
+
+
+#### /specificDataTwoComponents:
+Elle prend au coeur de la requête 4 attributs:
+{  
+    "APIJira" : "https://jira.mongodb.org/rest/api/2/search",
+    "ProjectName":"SERVER",
+    "firstComponent" : "Sharding",
+    "secondComponent" : "Replication"    
+}
+Cette requête permet d'exécuter plusieurs filter ( on a intégré 2 filter) appelé 
+#### SpecificFilterOneToOne .Ces filtres nous permettent de faire une observation de la relation entre deux composant choisi ,exemples:
+nombre de lien entre 2 composants
+
+### Fonctionnement interne 
+ ce serveur d’analyse reçoit en entrée le types de filtres exécuter après il fait le parsing des du fichier json retourné par l’API Jira 
+ensuite il stocke ces données dans des fichiers.csv qui prend le nom des filtres et génère à la fin les graph détaillés pour faire l’observation facilement.
+
+Ce mécanisme est automatique et il peut être appliqué à n'importe quel projet jira il suffit juste de préciser l’api jira et le nom du projet à analyser.
+
+### Pour lancer le projet : 
+cd jira_api_automation 
+npm install
+npm start 
+Lien vers la collection postman : https://www.getpostman.com/collections/9cca438d452ea0dc099c
+
+___
+## VII. Références
+
+1.https://tel.archives-ouvertes.fr/tel-00488005/document
+
+2.https://developer.atlassian.com/server/jira/platform/rest-apis/
+
+3.https://jira.mongodb.org/projects/SERVER/issues
+
+4.http://www.ra-innovation.uliege.be/2018/wp-content/uploads/sites/4/2019/09/Me%CC%81triques-et-crite%CC%80res-de%CC%81valuation-de-la-qualite%CC%81-du-code-source-dun-logiciel.pdf
