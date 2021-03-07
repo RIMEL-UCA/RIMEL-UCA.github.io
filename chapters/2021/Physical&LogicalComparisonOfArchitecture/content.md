@@ -28,10 +28,12 @@ We are four students in last year of Polytech' Nice-Sophia specialized in Softwa
 
 ## I. Research context /Project
 
-Préciser ici votre contexte.
+Notre contexte d'étude se base sur la comparaison des applications de détection et de tracage du COVID-19 et en particulier sur les applications françaises et canadiennes. Nous allons donc nous baser sur l'application TousAntiCovid (ex StopCovid) et l'application CovidShield. 
+- Projet canadien : https://github.com/CovidShield/
+- Projet français : https://gitlab.inria.fr/stopcovid19
 
-Pourquoi c'est intéressant.
-
+Avec toutes les plaintes autour de la sécurisation de nos données et de la conservation de la vie privée, l'étude de ces deux projets est très intéréssante afin de comprendre si l'inquiétude générale est justifiée ou non. 
+De plus, en tant qu'élève architecte logicielle, la rétro ingénierie de projet tels que ceux ci nous permet de comprendre et d'analyser les choix qui ont été fait, à nuancer évidemment avec la rapidité des décisions et les contraintes temporelles dûes à la crise.
 
 ## II. Observations/General question
 
