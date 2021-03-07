@@ -7,6 +7,7 @@ date:   2020-01-02 22:00:00 +0100
 ### [Comment Kubeflow Pipelines permet-il de gérer les erreurs ?]({{ site.url }}/chapters/2021/KubeflowPipelinesArchitecture/model2021)
 ### [FLots de données et application Anti-Covid ?]({{ site.url }}/chapters/2021/DataFlowAnalysisCovid/content)
 ### [Traçabilité des règles : étude de cas, les applications anti-covid France et Canada]({{ site.url }}/chapters/2021/ImpactOfRulesInCodeAndArchitecture/content)
+### [Etude des éléments associés à un ticket qui influent les premiers commits d’un nouveau contributeur.]({{ site.url }}/chapters/2021/TicketsForNewContributors/content)
 
 ## 2020
 ### [Comment les bibliothèques de codes de Machine Learning évoluent-elles ?]({{ site.url }}/chapters/2020/MLAndEvolution/model2020)
