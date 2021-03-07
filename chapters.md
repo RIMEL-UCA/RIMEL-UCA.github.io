@@ -5,6 +5,7 @@ date:   2020-01-02 22:00:00 +0100
 ---
 ## 2021
 ### [Comment Kubeflow Pipelines permet-il de gérer les erreurs ?]({{ site.url }}/chapters/2021/KubeflowPipelinesArchitecture/model2021)
+### [FLots de données et application Anti-Covid ?]({{ site.url }}/chapters/2021/DataFlowAnalysisCovid/)
 
 ## 2020
 ### [Comment les bibliothèques de codes de Machine Learning évoluent-elles ?]({{ site.url }}/chapters/2020/MLAndEvolution/model2020)
