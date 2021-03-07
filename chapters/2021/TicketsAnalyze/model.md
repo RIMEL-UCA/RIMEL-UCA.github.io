@@ -254,8 +254,9 @@ Elle prend au coeur de la requête 4 attributs:
     "secondComponent" : "Replication"    
 }
 ```
-Cette requête permet d'exécuter plusieurs filter ( on a intégré 2 filter) appelé 
-#### SpecificFilterOneToOne .Ces filtres nous permettent de faire une observation de la relation entre deux composant choisi ,exemples:
+Cette requête permet d'exécuter plusieurs filter ( on a intégré 2 filter) appelé SpecificFilterOneToOne.
+
+Ces filtres nous permettent de faire une observation de la relation entre deux composant choisi, exemples:
 nombre de lien entre 2 composants
 
 ### Fonctionnement interne 
@@ -271,10 +272,6 @@ npm install
 npm start
 ```
 Lien vers la collection postman : https://www.getpostman.com/collections/9cca438d452ea0dc099c
-
-Premier projet : https://github.com/RobinLambert1/retro-ingenerie-ice-breaker/tree/main/jira_api_automation
-
-Le projet qui permet de vérifier l'hypothèse du couplage est disponible ici: https://github.com/RobinLambert1/retro-ingenerie-ice-breaker/tree/main/coupling
 
 ___
 ## VII. Références
