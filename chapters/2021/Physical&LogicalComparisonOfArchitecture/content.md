@@ -122,6 +122,17 @@ L’architecture du produit est donc très simple, et monolithique. Comme préci
 
 #### France
 
+L’application française se base sur le signal bluetooth afin de déterminer si un utilisateur est à proximité d’un autre et ainsi établir le lien des cas contacts. Il se base sur le RSSI, c’est à dire l’ atténuation du signal bluetooth des smartphones environnants, cette donnée est très imparfaite pour mesurer la distance entre deux smartphone et pas tout à fait précise, ils en prennent donc plusieurs afin de les agréger et de pouvoir en sortir une donnée plus précise et exploitable.
+Détail du calcul :
+![Figure 5: calcul RSSI](../assets/Physical&LogicalComparisonOfArchitecture/calculRSSI.png)
+
+Afin que les deux utilisateurs connaissent l’identité de l’autre, avec le signal RSSI, un identifiant propre pour chaque utilisateur est transmis à l'autre.
+Le cas contact est donc établi si les conditions suivantes sont respectées :
+- Le transmetteur est positif au covid
+- Le récepteur est resté à moins de 2m pendant plus de 1 minute
+- Le transmetteur et le récepteur se sont rencontrés 14 jours ou moins depuis le test positif.
+
+
 #### Canada
 
 L’application canadienne Android et iOS font appel au service Exposure Notification, un service réalisé conjointement par Apple et Google pour combattre le COVID-19 qui permet à tous les appareils (iOS et Android) de pouvoir communiquer à travers ce service.
@@ -140,6 +151,16 @@ Pour ce qui est des cas contacts, l’implémentation est toujours basée sur le
 ### Ces implémentations ont-elles évoluées au fil des décisions gouvernementales ?
 
 #### France
+
+![Figure 6: Commits par jour sur le répertoire des applications iOS et Android](../assets/Physical&LogicalComparisonOfArchitecture/commitByDaysFrance.png)
+Comme on peut le voir il y a des commits assez régulièrement (1 tous les 10 jours environs), mais les implémentations n’ont pas changés suites aux annonces du gouvernement ce sont principalement des mise à jours (Mise à jours du Bluetooth Low Energy) ou des fix de bug.
+En revanche, nous avons pu voir sur un de leur document, qu'ils travaillent sur une nouvelle approche.
+
+Le problème avec la méthode précédente est qu'elle se concentre sur les interactions doubles et ignore le fait qu'une personne peut avoir été contaminée par plusieurs sources possibles. Une autre méthode repose sur le suivi d'une population de n individus (par exemple quelques centaines), qui peut être testée chaque jour. Si nous pouvons suivre la population de référence (en identifiant le contact), nous pouvons faire une prédiction postérieure du cas positif en fonction des informations de contact et des informations positives du contact. Ce programme fournit des informations sur la capacité de prédire l’état d’un individu et permet de répondre à deux types de questions:
+Comparez différents modèles de quantification des contacts: par exemple, un seuil plus élevé peut améliorer les performances de prédiction en supprimant les contacts qui ne fournissent pas d'informations.
+Recherchez la profondeur de temps la plus appropriée pour le modèle: raccourcir le temps d'analyse de 14 jours à 10 jours peut conduire à des prédictions plus précises. Nous pouvons également envisager d'utiliser un mécanisme d'oubli pour réduire l'impact des contacts passés sur les prévisions actuelles.
+
+L’implémentation évolue donc afin d’avoir de meilleurs résultats, en revanche ce n’est pas directement lié aux décisions gouvernementales.
 
 #### Canada
 
