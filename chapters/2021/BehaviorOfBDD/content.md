@@ -256,7 +256,7 @@ Nous avons passé beaucoup de temps à réaliser les scripts de parsing de proje
 (cf. partie VI.2) qui nous permettent d’obtenir les fichiers d’output nécessaires à la réalisation d’une visualisation de données.  
 
 D’autre part, au vu du temps que nous prenaient la phase de développement des outils d’analyse de projets, nous avons décidé de ne pas réaliser les scripts liant les tests unitaires aux tests fonctionnels. 
-Nous n’avons donc pas produit de résultat analysable concernant la question 3. Dans cette partie, les  
+Nous n’avons donc pas produit de résultat analysable concernant la question 3.  
 
 ### Résultats et analyse
 
