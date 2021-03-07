@@ -43,12 +43,16 @@ Notre problématique est issue d'une idée qui nous est venu en tant que citoyen
 Cette problématique va nous permettre de nous intérésser à la fois à l'architecture globale des projets mais aussi de venir investiguer dans le code l'implémentation concrète des mesures gouvernementales. Il y aura donc 2 axes de reflexion à suivre, portés sur différentes échelles de vision de l'architecture, une vision gros grain et un zoom dans le code.
 La question étant beaucoup trop générale et impossible à traiter par une équipe de 4 personnes avec le temps accordé, nous nous sommes intéréssés à deux sous questions qui seront détaillées plus bas dans ce rapport. Ces deux sous questions nous paraissent très intéréssante car elles reprennent l'idée générale de la problématique globale mais axée sur de la compréhension des projets et leur comparaison.
 
-## III. information gathering
+## III. Information gathering
 
-Préciser vos zones de recherches en fonction de votre projet,
+Afin d'avoir une bonne maitrise des 2 projets, nous avons dans un premier temps pris connaissance des différentes documentations présentes dans les github.
+Le projet français ne possède pas de readme à la racine du projetmais un schéma d'architecture permettant de comprendre les différents liens entre les composants. Ce schéma est disponible dans le dossier documentation : https://gitlab.inria.fr/stopcovid19/accueil/-/tree/master/documentation
+L'application canadienne, quant-à-elle, possède un readme très complet ainsi qu'un repository de documentation qui regroupe plusieurs informations utiles sur le projet (https://github.com/CovidShield/rationale)
+Nous avons également utilisé les informations fournies par google sur leur système de notification d'exposition pour Android (https://support.google.com/android/answer/9888358) et pour iOS (https://covid19-static.cdn-apple.com/applications/covid19/current/static/contact-tracing/pdf/ExposureNotification-BluetoothSpecificationv1.2.pdf)
+Pour la compréhension de la détection d'un cas contact nous nous sommes appuyés sur cet article : https://www.acteurspublics.fr/upload/media/default/0001/28/4f9351ca4dc6503a5165b76bceaff6ca6646f9b0.pdf
 
-1. les articles ou documents utiles à votre projet
-2. les outils
+Cette phase de prise d'information c'est également accompagné d'une investigation manuelle du code afin de comprendre la place de chaque composant ainsi que l'articulation entre les composants.
+Pour l'étude des commits nous avons utilisé un script python fait à la main utilisant l'api de github.
  
 ## IV. Hypothesis & Experiences
 
@@ -56,6 +60,18 @@ Préciser vos zones de recherches en fonction de votre projet,
 2. Test de l’hypothèse par l’expérimentation. 1. Vos tests d’expérimentations permettent de vérifier si vos hypothèses sont vraies ou fausses. 2. Il est possible que vous deviez répéter vos expérimentations pour vous assurer que les premiers résultats ne sont pas seulement un accident.
 3. Explicitez bien les outils utilisés et comment.
 4. Justifiez vos choix
+
+Afin de réduire la charge de travail et de nous donner un scope plus réalisable nous avons découpé la question générale en 2 sous-questions.
+
+Notre première sous-question est liée à l'architecture gros grain des deux projets. Notre hypothèse est que l'organisation administrative des pays se reflètent dans les dépendances externes des projets ainsi que dans leur architecture. Ainsi notre première sous question est la suivante : 
+En quoi les dépendances externes reflètent l’organisation administrative du pays autour de la crise du COVID-19 ?
+
+Notre seconde sous-question est liée à l'étude du code et les composants internes. Nos hypothèses pour cette sous-question sont les suivantes : 
+- la gestion de la distanciation sociale a évolué en fonction des mesures gouvernementales
+- la gestion des cas contacts est différente dans les 2 projets
+Nos deux sous-questions liées à ces hypothèses sont les suivantes : 
+- Comment est implémenté la gestion de la distanciation sociale et des cas contacts dans les applications ?
+- Ces implémentations ont-elles évoluées au fil des décisions gouvernementales ?
 
 ## V. Result Analysis and Conclusion
 
@@ -87,7 +103,20 @@ En conclusion, la France utilise différents services externes. Tout d’abord, 
 
 #### Canada
 
+L’application Canadienne a une philosophie totalement différente de celle française avec comme objectif d’être éventuellement mondialisée et ne doit donc pas être dépendante d’une institution gouvernementale. Comme prévu dans les risques étudiés le système est donc en mode “pull” et le gouvernement devra donc venir chercher les informations directement dans les bases de données du produit. Cependant il y certains points intéressants à relever dans cette architecture.
+ 
+Dans un premier temps, un citoyen doit forcément récupérer un code auprès d’un professionnel de la santé avant de pouvoir uploader sa positivité au covid. L’application ayant comme vocation d’être mondialisée, cela paraît pertinent puisque les professionnels de la santé sont les seuls points communs entre tous les pays au niveau gestion des soins. Ce sont donc eux qui valident la positivité au COVID puis demandent la génération d’une clé via le front de covidShield puis fournissent cette clé à leur patient pour qu’il puisse envoyer ses informations au serveur.
+La méthode du serveur permettant de générer la clé s’appelle “*claimKey*” et elle se situe dans le package “*pkg/server*” du serveur. Voici un aperçu de la méthode à laquelle nous avons réduit les codes d’erreurs pour mieux comprendre l'enchaînement : 
+
 ![Figure 3: method claim kay canada](../assets/Physical&LogicalComparisonOfArchitecture/canadaCodeClaimKey.png)
+
+Comme précisé dans le readme de l’application, les seules données personnelles stockées sont l’adresse ip de la personne utilisant le serveur. Dans le cas de cette méthode, l’adresse IP permet de s’assurer que c’est bien un professionnel de la santé qui fait appel à ce service et qu’il n’a pas été banni par le serveur. Une fois que la clé unique temporaire a été générée, le professionnel de la santé la fournit à son patient. La méthode upload, visible dans les résultats bruts car trop longue, permet d’envoyer ses résultats en précisant la clé fournie par son médecin. Une paire cléMedecin/cléPatient est ensuite stockée en base de données pour identifier la personne contaminée.
+
+Les dépendances externes sont donc inexistantes dans ce projet. Cette application CovidShield est complètement autonome et ne nécessite que ses 2 composants principaux pour fonctionner à savoir l’application mobile (IOS et Android) et le serveur. Le frontEnd est un composant optionnel, facilitant l’utilisation du produit (faire faire des appels REST via postman par un médecin pour envoyer une information au serveur n’est pas très intuitif). Il faut évidemment en plus de cela déployer la base de données, qui est dans le docker-compose du back et qui est une technologie mySQL.
+
+![Figure 4: canadian application architecture](../assets/Physical&LogicalComparisonOfArchitecture/canadaArchi.png)
+
+L’architecture du produit est donc très simple, et monolithique. Comme précisé par les développeurs dans le readme, la scalabilité est très facile. En effet, tous les appels sont stateless, il suffit donc de dupliquer le serveur et de rajouter un load balancer en entrée pour tenir la montée en charge.
 
 ### Comment est implémenté la gestion de la distanciation sociale et des cas contacts dans les applications ?
 
@@ -99,9 +128,10 @@ L’application canadienne Android et iOS font appel au service Exposure Notific
 Nous retrouvons des explications détaillées du service Exposure Notification sur chacun des systèmes d’exploitation:
 - Android : [https://support.google.com/android/answer/9888358](https://support.google.com/android/answer/9888358)
 - Apple : [ExposureNotification-BluetoothSpecificationv1.2.pdf](https://covid19-static.cdn-apple.com/applications/covid19/current/static/contact-tracing/pdf/ExposureNotification-BluetoothSpecificationv1.2.pdf)
+
 Malheureusement, ce service ne calcule pas la distance entre deux appareils. Cependant, si on suit la spécification de Google :
 
-![Figure 4: Détails sur la gestion de la distanciation](../assets/Physical&LogicalComparisonOfArchitecture/exposureNotificationDetails.png)
+![Figure 5: Détails sur la gestion de la distanciation](../assets/Physical&LogicalComparisonOfArchitecture/exposureNotificationDetails.png)
 
 On remarque que la distance entre deux appareils est basée sur l’intensité du signal bluetooth. Sachant que ce service fait appel au Bluetooth Low Energy. Si on se réfère au spécification de cette technologie, cela correspond à une distance théorique inférieure à 100 mètres.
 
@@ -115,7 +145,7 @@ Pour ce qui est des cas contacts, l’implémentation est toujours basée sur le
 
 Ces implémentations sur les applications canadiennes se basent essentiellement sur le service Exposure Notification. La majorité des commits sur le répertoire des applications ([https://github.com/CovidShield/mobile/commits/master](https://github.com/CovidShield/mobile/commits/master)) sont des commits de maintenance pour fixer des soucis techniques. C’est encore plus flagrant avec ce graphe qui affiche le nombre de commits par jours sur le répertoire des applications :
 
-![Figure 5: Commits par jour sur le répertoire des applications iOS et Android](../assets/Physical&LogicalComparisonOfArchitecture/commitsByDaysMobile.png)
+![Figure 6: Commits par jour sur le répertoire des applications iOS et Android](../assets/Physical&LogicalComparisonOfArchitecture/commitsByDaysMobile.png)
 
 Les derniers commits datent du 28 octobre 2020. Ce qui nous a surpris, en cherchant un peu, il semblerait que le Canada n’utilise plus CovidShield mais COVID Alert ([https://github.com/cds-snc](https://github.com/cds-snc)).
 
