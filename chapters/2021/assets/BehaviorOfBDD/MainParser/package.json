@@ -1,0 +1,19 @@
+{
+  "name": "main-parser",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node app.js",
+    "example": "node app.js --path=/Users/alexandre/SI5/Engeenering/cookiefactory-1920-big-brain-cucumber --test=fr.unice.polytech.cookie_factory.order.ItemTest.removeQuantity"
+  },
+  "dependencies": {
+    "arg": "^5.0.0",
+    "coverage-parser": "file:../CoverageParser",
+    "directory-parser": "file:../DirectoryParser",
+    "extension-modifier": "file:../ExtensionModifier",
+    "methods-parser": "file:../MethodsParser",
+    "process": "^0.11.10",
+    "progress": "^2.0.3"
+  }
+}
