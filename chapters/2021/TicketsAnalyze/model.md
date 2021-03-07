@@ -143,11 +143,11 @@ ___
 
 Pour répondre à l’hypothèse “le composant qui a le plus de tickets est le composant le plus important” nous avons commencé par appliquer le filtre qu’on a précisé auparavant au projet SERVER de mongodb et nous avons dégagé ce graph : 
 
-![](../assets/image1.png)
+![](./assets/image1.png)
 
 graphe des 4 premières lignes : 
 
-![](../assets/image2.png)
+![](./assets/image2.png)
 
 Le s représente le sharding et repl représente la réplication. Donc ceci vérifie bien notre hypothèse. Dans la sous question suivante nous allons expliquer comment nous avons associé les dossiers à leur composant. 
 
@@ -164,7 +164,7 @@ Nos résultats pour 10 000 tickets ne sont pas particulièrement concluants. Le 
 ### Après avoir une idée sur les différents composants, comment peut-on identifier les composants qui sont en évolution ?
 Pour distinguer les composants qui sont en évolution nous avons filtré les tickets de type “new feature”et par année 2020. Nous avons rassemblé ces données par composant. 
 
-![](../assets/image3.png)
+![](./assets/image3.png)
 
 En utilisant cet article : https://tel.archives-ouvertes.fr/tel-00488005/document Nous avons dégagé cette définition pour l’évolution de l’architecture qui nous confirme nos résultats : l’évolution logicielle est la possibilité de pouvoir élargir les systèmes et d’appliquer le passage à l’échelle, pour prendre
  en compte de nouveaux besoins ou des fonctionnalités plus complexes. Ceci nous confirme que les tickets qui ont le plus de tickets new feature ( nouvelle fonctionnalité ) sont des composants en évolution. 
@@ -173,11 +173,11 @@ En utilisant cet article : https://tel.archives-ouvertes.fr/tel-00488005/documen
 Comme nous l'avons précisé auparavant afin de prouver notre hypothèse nous avons opté pour une comparaison entre les composants qui ont plus de tickets de type bug vs les composants qui ont le plus des tickets de type improvement. Nous avons commencé par l’année de 2020 après nous avons exercé la même procédure sur l’année 2019. 
 Bugs 2020
 
-![](../assets/image4.png)
+![](./assets/image4.png)
 
 Improvement 2020
 
-![](../assets/image5.png)
+![](./assets/image5.png)
 
 Nous pouvons remarquer ici qu’il y a pas mal de composants qui s’affiche dans les deux graphes. Nous avons : 
 - Le composant sharding qui a +360 tickets bugs et qui a de même +280 
@@ -192,7 +192,7 @@ Bugs 2019
 
 Improvement 2019 
 
-![](../assets/image7.png)
+![](./assets/image7.png)
 
 Pareil ici nous avons un nombre important de composants qui s’affichent dans les deux graphes : 
 Le composants querying a +360 tickets de types et il a +60 tickets d’improvement 
