@@ -90,15 +90,38 @@ En conclusion, la France utilise différents services externes. Tout d’abord, 
 ![Figure 3: method claim kay canada](../assets/Physical&LogicalComparisonOfArchitecture/canadaCodeClaimKey.png)
 
 ### Comment est implémenté la gestion de la distanciation sociale et des cas contacts dans les applications ?
+
+#### France
+
+#### Canada
+
+L’application canadienne Android et iOS font appel au service Exposure Notification, un service réalisé conjointement par Apple et Google pour combattre le COVID-19 qui permet à tous les appareils (iOS et Android) de pouvoir communiquer à travers ce service.
+Nous retrouvons des explications détaillées du service Exposure Notification sur chacun des systèmes d’exploitation:
+- Android : [https://support.google.com/android/answer/9888358](https://support.google.com/android/answer/9888358)
+- Apple : [ExposureNotification-BluetoothSpecificationv1.2.pdf](https://covid19-static.cdn-apple.com/applications/covid19/current/static/contact-tracing/pdf/ExposureNotification-BluetoothSpecificationv1.2.pdf)
+Malheureusement, ce service ne calcule pas la distance entre deux appareils. Cependant, si on suit la spécification de Google :
+
+![Figure 4: Détails sur la gestion de la distanciation](../assets/Physical&LogicalComparisonOfArchitecture/exposureNotificationDetails.png)
+
+On remarque que la distance entre deux appareils est basée sur l’intensité du signal bluetooth. Sachant que ce service fait appel au Bluetooth Low Energy. Si on se réfère au spécification de cette technologie, cela correspond à une distance théorique inférieure à 100 mètres.
+
+Pour ce qui est des cas contacts, l’implémentation est toujours basée sur le service Exposure Notification. Le service génère un identifiant qui correspond à une séquence de nombre aléatoire toutes les 10-20 minutes. Le service partage cet identifiant en arrière-plan avec les autres appareils aux alentours. Lorsque le service détecte un identifiant d’un autre appareil, il l’enregistre et si cet identifiant est signalé comme positif au COVID, le service notifie l’application.
+
 ### Ces implémentations ont-elles évoluées au fil des décisions gouvernementales ?
 
 #### France
 
 #### Canada
 
-## VI. Tools \(facultatif\)
+Ces implémentations sur les applications canadiennes se basent essentiellement sur le service Exposure Notification. La majorité des commits sur le répertoire des applications ([https://github.com/CovidShield/mobile/commits/master](https://github.com/CovidShield/mobile/commits/master)) sont des commits de maintenance pour fixer des soucis techniques. C’est encore plus flagrant avec ce graphe qui affiche le nombre de commits par jours sur le répertoire des applications :
 
-Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à \(1\) pouvoir reproduire vos expérimentations, \(2\) partager/expliquer à d'autres l'usage des outils.
+![Figure 5: Commits par jour sur le répertoire des applications iOS et Android](../assets/Physical&LogicalComparisonOfArchitecture/commitsByDaysMobile.png)
+
+Les derniers commits datent du 28 octobre 2020. Ce qui nous a surpris, en cherchant un peu, il semblerait que le Canada n’utilise plus CovidShield mais COVID Alert ([https://github.com/cds-snc](https://github.com/cds-snc)).
+
+## VI. Tools
+
+Pour avoir le graphique des commits par jour pour voir l'évolution des applications avec les décisions gouvernementales, nous avons développé un script qui communique avec l'API de Github. Qui peut se trouver [ici](../assets/Physical&LogicalComparisonOfArchitecture/code/commitsAnalyzer.py). Pour l'executer, il faut utiliser : `python commitsAnalyzer.py`. Par défaut, le script analyse le répertoire mobile de l'organisation CovidShield. Pour modifier de répertoire, il suffit de modifier les variables qui se situe à la ligne 36 et 37.
 
 ## VI. References
 
