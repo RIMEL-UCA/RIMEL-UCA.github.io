@@ -172,10 +172,20 @@ Les derniers commits datent du 28 octobre 2020. Ce qui nous a surpris, en cherch
 
 ## VI. Tools
 
-Pour avoir le graphique des commits par jour pour voir l'évolution des applications avec les décisions gouvernementales, nous avons développé un script qui communique avec l'API de Github. Qui peut se trouver [ici](../assets/Physical&LogicalComparisonOfArchitecture/code/commitsAnalyzer.py). Pour l'executer, il faut utiliser : `python commitsAnalyzer.py`. Par défaut, le script analyse le répertoire mobile de l'organisation CovidShield. Pour modifier de répertoire, il suffit de modifier les variables qui se situe à la ligne 36 et 37.
+Pour avoir le graphique des commits par jour pour voir l'évolution des applications avec les décisions gouvernementales du Canada, nous avons développé un script qui communique avec l'API de Github. Qui peut se trouver [ici](../assets/Physical&LogicalComparisonOfArchitecture/code/commitsAnalyzer.py). Pour l'executer, il faut utiliser : `python commitsAnalyzer.py`. Par défaut, le script analyse le répertoire mobile de l'organisation CovidShield. Pour modifier de répertoire, il suffit de modifier les variables qui se situe à la ligne 36 et 37.
+
+Pour avoir le graphique des commits par jour pour voir l'évolution des applications avec les décisions gouvernementales de France, nous avons développé un script qui communique avec l'API de Gitlab. Qui peut se trouver [ici](../assets/Physical&LogicalComparisonOfArchitecture/code/commitsAnalyzerFrance.py). Pour l'executer, il faut utiliser : `python3 commitsAnalyzerFrance.py`. Par défaut, le script analyse le répertoire mobile de AntiCovid. 
 
 ## VI. References
 
-1. ref1
-1. ref2
+- FR:
+
+App: https://gitlab.inria.fr/stopcovid19/stopcovid-android & https://gitlab.inria.fr/stopcovid19/stopcovid-ios
+
+Server: https://gitlab.inria.fr/stopcovid19/submission-code-server & https://gitlab.inria.fr/stopcovid19/robert-server
+- CA:
+
+App: https://github.com/CovidShield/mobile
+
+Server: https://github.com/CovidShield/server
 
