@@ -25,7 +25,7 @@ date:   2021-01-03 22:00:00 +0100
 * Robin Lambert &lt;robin.lambert@etu.unice.fr&gt;
 
 ## I. Contexte de recherche 
-Comme chaque développeur, lorsqu’on est intégré à un projet qui est en cours de développement ou bien avancé, nous trouvons des difficultés à comprendre la structure de milliers de fichiers ainsi que le mode de fonctionnement au sein de l’équipe. Les tickets sont au centre de l’organisation de tout projet, c’est pourquoi nous allons étudier les tickets pour essayer de tirer des conclusions sur l’architecture d’un projet.
+Comme chaque développeur, lorsque l’on est intégré à un projet qui est en cours de développement ou bien avancé, nous rencontrons des difficultés à comprendre la structure de milliers de fichiers du code source, ainsi que le mode de fonctionnement au sein de l’équipe. Les tickets sont au centre de l’organisation de tout projet, c’est pourquoi nous allons étudier les tickets pour essayer de tirer des conclusions sur l’architecture d’un projet.
 Cette étude pourrait nous permettre d’avoir une meilleure vision de structure des gros projets, nous avons pris comme exemple des projets open source où nous avons accès aux tickets pour trouver des informations sur la manière dont les projets sont découpés (modules, composants, microservices...).
 
 ___
@@ -153,9 +153,9 @@ Le s représente le sharding et repl représente la réplication. Donc ceci vér
 
 Pour répondre à cette question, nous avons développé un programme en NodeJS qui fonctionne en deux étapes. 
 
-La première est permet d’identifier un lien entre les composants décrits dans le gestionnaire de tickets et les dossiers du projet MongoDB sur GitHub. Parfois ce lien est évident, mais il ne l’est pas nécessairement, ce qui justifie l’utilisation d’un tel outil. En sortie de cette première étape nous avons un fichier JSON dans lequel se trouve les composants et les chemins des fichiers auxquels ils sont liés. Nous considérons que tous les fichiers d’un chemin sont liés à un composant si le chemin apparaît en majorité pour ce composant dans notre fichier. Nous avons choisi d’utiliser 1000 tickets pour identifier les liens entre composants et chemins. Le résultat est un fichier visible sur notre github (lien à mettre).
+La première est permet d’identifier un lien entre les composants décrits dans le gestionnaire de tickets et les dossiers du projet MongoDB sur GitHub. Parfois ce lien est évident, mais il ne l’est pas nécessairement, ce qui justifie l’utilisation d’un tel outil. En sortie de cette première étape nous avons un fichier JSON dans lequel se trouve les composants et les chemins des fichiers auxquels ils sont liés. Nous considérons que tous les fichiers d’un chemin sont liés à un composant si le chemin apparaît en majorité pour ce composant dans notre fichier. Nous avons choisi d’utiliser 1000 tickets pour identifier les liens entre composants et chemins. Le résultat est un fichier visible sur notre github (https://github.com/RobinLambert1/retro-ingenerie-ice-breaker/blob/main/coupling/results%20samples/result-10000.json).
 
-La seconde partie permet de vérifier l’hypothèse d’un couplage entre composants. Dans le cadre de notre étude, nous avons choisi de nous restreindre aux tickets qui concernent 2 composants. Pour chacun de ces tickets, nous récupérons les liens github associés si il y en a, et nous utilisons notre fichier JSON pour lier le fichier du code source du projet de MongoDB modifié sur Github à l’un des deux composants du ticket. Ensuite, nous vérifions le couplage réel entre ces composants en regardant les fichiers “include” dans le code source et en les liant à un composant, de la même façon. L’API de Jira ne permet pas de recevoir tous les tickets du projet SERVER en une seule requête. Au total, XXX tickets sont liés au projet, et nous pouvons en récupérer 10 000 simultanément avec un peu de chance (parfois la requête ne passe pas…). 
+La seconde partie permet de vérifier l’hypothèse d’un couplage entre composants. Dans le cadre de notre étude, nous avons choisi de nous restreindre aux tickets qui concernent 2 composants. Pour chacun de ces tickets, nous récupérons les liens github associés si il y en a, et nous utilisons notre fichier JSON pour lier le fichier du code source du projet de MongoDB modifié sur Github à l’un des deux composants du ticket. Ensuite, nous vérifions le couplage réel entre ces composants en regardant les fichiers “include” dans le code source et en les liant à un composant, de la même façon. L’API de Jira ne permet pas de recevoir tous les tickets du projet SERVER en une seule requête. Au total, 51849 tickets sont liés au projet, et nous pouvons en récupérer 10 000 simultanément avec un peu de chance (parfois la requête ne passe pas…). 
 
 Nos résultats pour 10 000 tickets ne sont pas particulièrement concluants. Le fichier JSON en sortie du deuxième algorithme est disponible sur github. Seulement 115 tickets sont liés à deux composants, et 28 d’entre eux ont un lien github… Parmi ces 28 tickets, notre hypothèse a pu être validée pour seulement 5 d’entre eux (environ ⅙). Nous pensons ne pas avoir suffisamment de données pour pouvoir conclure quoi que ce soit à propos de notre hypothèse.
 
@@ -264,13 +264,17 @@ ensuite il stocke ces données dans des fichiers.csv qui prend le nom des filtre
 
 Ce mécanisme est automatique et il peut être appliqué à n'importe quel projet jira il suffit juste de préciser l’api jira et le nom du projet à analyser.
 
-### Pour lancer le projet : 
+### Pour lancer le projet :
 ```shell
 cd jira_api_automation 
 npm install
 npm start
 ```
 Lien vers la collection postman : https://www.getpostman.com/collections/9cca438d452ea0dc099c
+
+Premier projet : https://github.com/RobinLambert1/retro-ingenerie-ice-breaker/tree/main/jira_api_automation
+
+Le projet qui permet de vérifier l'hypothèse du couplage est disponible ici: https://github.com/RobinLambert1/retro-ingenerie-ice-breaker/tree/main/coupling
 
 ___
 ## VII. Références
