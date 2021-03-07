@@ -180,7 +180,7 @@ Nous avons également vérifié manuellement sur le dépôt Github du projet pou
 Sur les projets de ce type, on peut remarquer que les contributeurs ne committent pas toujours en référençant des tickets.
 
 <p align="center">
-    <img src="../assets/TicketsForNewContributors/charts/ohmyzsh-commits.png"/>
+    <img src="assets/TicketsForNewContributors/charts/ohmyzsh-commits.png"/>
 </p>
 
 Ce n'est pas le seul sur lequel nous avons remarqué des commits non étiquetés. **Tensorflow**, **Kubernetes** et **Facebook-React-Native** aussi sont dans le même cas.
