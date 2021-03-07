@@ -44,6 +44,8 @@ Nous voulons démontrer que les méthodes que l'on va utilisés vont permettre d
 
 Les méthodes sont les suivantes :
 
+- Analyse statique : Analyser le comportement de l'application
+
 - Analyse Dynamique : Analyser le comportement d'une application lors de l'éxecution du programme
 - Analyse du ticketing sur git : Etudier les issues des développeurs fournis sur leur repository Gitlab
 - Analyse du code-source et de la documentation : Comprendre l'architecture de l'application ainsi que les différents choix réalisés dans l'application
@@ -223,6 +225,18 @@ Le problème comme on peut le voir étant que les requêtes sont en HTTPS et que
 
 Suite à cela on a pu ainsi capturer le trafic en clair ! On a ainsi pu mieux comprendre quels étaient les appels réseaux effectués avec le serveur lorsque l’on s’enregistre et s’authentifie, et obtenir plus d’informations sur le serveur de l’application. Mais l’analyse dynamique a ses limites comme on peut le voir, il y a des scénarios qu'on n’a pas pu explorer comme savoir ce qui se passe lorsqu’on une personne est déclarée positive au covid (aucun de nous n’est tombé malade…), ou encore de savoir ce qui se passe lorsqu’on passe proche d’un cas positive (mettre sa vie en danger pour voir les appels réseaux n’était pas une solution non plus).
 
+### Analyse statique
+
+FlowDroid est un outil intéressant qui, à partir de l'apk d'une application android, permet de construire un "call graph" pour montrer le flot de données dans une application.
+
+Malheureusement cet outil n'a jamais fonctionné pour nous ; nous sommes quatre à l'avoir testé, et pour chacun le programme se terminait brusquement à cause de différentes erreurs liées à la mémoire. Chaque essai du programme prenant environ 10 heures, il fut très difficile d'essayer de le configurer correctement pour pouvoir le lancer sans erreurs.
+
+Nous pensons que, pour une application aussi conséquente que TousAntiCovid, nos machines ne sont tout simplement pas assez puissantes, ou n'ont pas assez de mémoire vive pour pouvoir terminer l'exécution de FlowDroid. Nous n'avons donc pu malheureusement rien tirer de cette méthode d'analyse.
+
+![ img](../assets/DataFlowAnalysisCovid/memoryerror.JPG)
+
+
+
 ## V. Result Analysis and Conclusion
 
 Finalement avec toutes ces méthodes nous sommes loin d'avoir répondu à toutes les questions que l'on s'était posées. Chaque méthode a sa propre limite, dans l'analyse manuelle, on a pu voir qu'on a réussi à savoir comment les informations étaient stockées mais comme indiqué, dans un code assez large, il est difficile de tout explorer. Avec le ticketing on a vu que la règlementation provenant de différents acteurs (ANSSI,INRIA,...) impacter également le gestion des données. Le ticketing est un outil intéressant permettant de récolter un grand nombre d'informations, pas seulement sur l'application final mais aussi sur la chronologie qui a permit d'arriver à cette application final, et ainsi voir les décisions qui ont été faits sur l'application. Il est un outil qui peut être utilisé dans la plupart des projets ce qui en fait un atout indispensable dans l'étude d'une application. Enfin en effectuant une analyse dynamique, on n'a pas pu en tirer quelque chose d'intéressant car les scénarios qui nous intéressaient ne pouvaient être exécutés (car trop dangereux). Pour conclure sur le projet, nous pensons que ces méthodes peuvent être intéressantes pour l'analyse de flot de données, on a répondu partiellement à la question principale, mais on pense que cela peut servir de base pour approfondir le sujet.
@@ -233,3 +247,4 @@ Finalement avec toutes ces méthodes nous sommes loin d'avoir répondu à toutes
 2. [Charles SSL proxying](https://www.charlesproxy.com/documentation/proxying/ssl-proxying/)
 3. [Android profiler](https://developer.android.com/studio/profile/generate-trace-logs)
 4. [Article covid19](https://arxiv.org/pdf/2006.10933.pdf)
+5. [FlowDroid](https://github.com/secure-software-engineering/FlowDroid)
