@@ -94,8 +94,6 @@ Pour effectuer nos expérimentations et répondre à nos questions, nous avons d
 ### 2. Démarche
 Pour tenter de répondre à notre question, il nous fallait répondre aux deux sous-questions. Nous avons donc émis une hypothèse tout d'abord pour la première sous-question :
 
-<div style="text-align: justify">
-
 * ### Sous-question 1 : Les premiers commits d'un contributeur sont-ils toujours associés à des tickets existants ?
 
 Notre hypothèse consiste en celle-ci : **Le premier commit d'un contributeur est associé à un ticket existant.**
@@ -113,9 +111,6 @@ Nous avons manuellement cherché la dernière page puis à partir de ce point de
 Mais cette méthode ne convenait pas non plus car nous manœuvrions par tâtonnement pour trouver la dernière page. Nous nous sommes donc mis à chercher une information nous permettant de récupérer la dernière page de n'importe quelle requête.
 Notre script analysait alors les informations récupérées dans les en-têtes des réponses retournées par le serveur pour tenter de retrouver les informations sur la pagination et indirectement sur la dernière page.
 Une fois trouvée nous avons pu avancer de nouveau sur notre expérience. Cette fois-ci, nous parcourions tous les commits des 3 dernières pages (quand c'était possible car certains n'en avaient qu'une) et pour chacun d'entre eux, nous effectuions une analyse sur le message du commit. Le message du commit est un attribut du corps (body) du commit. L'analyse du message consistait à savoir si ce dernier contenait un hashtag (#) car c'était la condition pour reconnaître un commit étiqueté.
-</div>
-
-<div style="text-align: justify">
 
 * ### Sous-question 2 : Quelles sont les caractéristiques communes à ces tickets (types de labels, format du titre, description) ?
 
@@ -156,8 +151,6 @@ Pour représenter nos résultats graphiquement, nous avons parcouru chaque fichi
 Ensuite nous avons calculé le nombre total de chaque attribut ou clé.
 Par exemple pour la clé `labels` nous avons sommé les labels puis trié dans l'ordre décroissant.
 On obtenait finalement les labels les plus utilisés aux moins utilisés. Nous avons retenu les premiers labels (environ entre 5 et 10).
-
-</div>
 
 ## V. Analyse des résultats obtenus
 
