@@ -153,7 +153,7 @@ Le s représente le sharding et repl représente la réplication. Donc ceci vér
 
 Pour répondre à cette question, nous avons développé un programme en NodeJS qui fonctionne en deux étapes. 
 
-La première est permet d’identifier un lien entre les composants décrits dans le gestionnaire de tickets et les dossiers du projet MongoDB sur GitHub. Parfois ce lien est évident, mais il ne l’est pas nécessairement, ce qui justifie l’utilisation d’un tel outil. En sortie de cette première étape nous avons un fichier JSON dans lequel se trouve les composants et les chemins des fichiers auxquels ils sont liés. Nous considérons que tous les fichiers d’un chemin sont liés à un composant si le chemin apparaît en majorité pour ce composant dans notre fichier. Nous avons choisi d’utiliser 1000 tickets pour identifier les liens entre composants et chemins. Le résultat est un fichier visible sur notre github (https://github.com/RobinLambert1/retro-ingenerie-ice-breaker/blob/main/coupling/results%20samples/result-10000.json).
+La premiere est permet d’identifier un lien entre les composants décrits dans le gestionnaire de tickets et les dossiers du projet MongoDB sur GitHub. Parfois ce lien est évident, mais il ne l’est pas nécessairement, ce qui justifie l’utilisation d’un tel outil. En sortie de cette première étape nous avons un fichier JSON dans lequel se trouve les composants et les chemins des fichiers auxquels ils sont liés. Nous considérons que tous les fichiers d’un chemin sont liés à un composant si le chemin apparaît en majorité pour ce composant dans notre fichier. Nous avons choisi d’utiliser 1000 tickets pour identifier les liens entre composants et chemins. Le résultat est un fichier visible dans notre projet.
 
 La seconde partie permet de vérifier l’hypothèse d’un couplage entre composants. Dans le cadre de notre étude, nous avons choisi de nous restreindre aux tickets qui concernent 2 composants. Pour chacun de ces tickets, nous récupérons les liens github associés si il y en a, et nous utilisons notre fichier JSON pour lier le fichier du code source du projet de MongoDB modifié sur Github à l’un des deux composants du ticket. Ensuite, nous vérifions le couplage réel entre ces composants en regardant les fichiers “include” dans le code source et en les liant à un composant, de la même façon. L’API de Jira ne permet pas de recevoir tous les tickets du projet SERVER en une seule requête. Au total, 51849 tickets sont liés au projet, et nous pouvons en récupérer 10 000 simultanément avec un peu de chance (parfois la requête ne passe pas…). 
 
@@ -164,11 +164,11 @@ Pour distinguer les composants qui sont en évolution nous avons filtré les tic
 
 ![](./assets/image3.png)
 
-En utilisant cet article : https://tel.archives-ouvertes.fr/tel-00488005/document Nous avons dégagé cette définition pour l’évolution de l’architecture qui nous confirme nos résultats : l’évolution logicielle est la possibilité de pouvoir élargir les systèmes et d’appliquer le passage à l’échelle, pour prendre
- en compte de nouveaux besoins ou des fonctionnalités plus complexes. Ceci nous confirme que les tickets qui ont le plus de tickets new feature ( nouvelle fonctionnalité ) sont des composants en évolution. 
+En utilisant cet article : https://tel.archives-ouvertes.fr/tel-00488005/document Nous avons dégagé cette définition pour l’évolution de l’architecture qui nous confirme nos résultats : l’évolution logicielle est la possibilité de pouvoir élargir les systèmes et d’appliquer le passage à l’échelle, pour prendre en compte de nouveaux besoins ou des fonctionnalités plus complexes. Ceci nous confirme que les tickets qui ont le plus de tickets new feature ( nouvelle fonctionnalité ) sont des composants en évolution. 
 
 ### Comment peut-on évaluer l’implémentation d’un composant ?
-Comme nous l'avons précisé auparavant afin de prouver notre hypothèse nous avons opté pour une comparaison entre les composants qui ont plus de tickets de type bug vs les composants qui ont le plus des tickets de type improvement. Nous avons commencé par l’année de 2020 après nous avons exercé la même procédure sur l’année 2019. 
+Comme nous l'avons précisé auparavant afin de prouver notre hypothèse nous avons opté pour une comparaison entre les composants qui ont plus de tickets de type bug vs les composants qui ont le plus des tickets de type improvement. Nous avons commencé par l’année de 2020 après nous avons exercé la même procédure sur l’année 2019.
+
 Bugs 2020
 
 ![](./assets/image4.png)
@@ -193,9 +193,10 @@ Improvement 2019
 ![](./assets/image7.png)
 
 Pareil ici nous avons un nombre important de composants qui s’affichent dans les deux graphes : 
-Le composants querying a +360 tickets de types et il a +60 tickets d’improvement 
-Le composant replication +360 tickets de bugs et il a +40 tickets d’improvement 
-Le composant storage qui a +120 tickets de bugs et qui 40 tickets d’improvement 
+- Le composants querying a +360 tickets de types et il a +60 tickets d’improvement 
+- Le composant replication +360 tickets de bugs et il a +40 tickets d’improvement 
+- Le composant storage qui a +120 tickets de bugs et qui 40 tickets d’improvement 
+
 Il y aussi testing infrastructure et sharding 
 Donc jusque là nous avons des chiffres qui vérifient bien notre hypothèse mais nous avons décidé de voir des articles publiés sur internet qui peuvent nous confirmer cela. Nous avons l’article ref4 ( indiqué dans les références)   ou les nombre de bugs est marqué comme un métrique d’évaluation de la qualité de code et ce dernier nécessite éventuellement des tâches d’amélioration ( partie 3.7 ). 
 
@@ -222,11 +223,11 @@ Elle prend au coeur de la requête 2 attributs:
 
 cette requête permet d'exécuter plusieurs filter ( on a intégré 18 filter) appelé GeneralFilter , 
 ce type de filtre est appliqué à tous les composant du projet exemple :
-nombre de ticket bug par composant par années ( 2019 2020 ).
-nombre de ticket bug avec priorité P1 et P2
-nombre de ticket improvement par années ( 2019 2020 )
-nombre de ticket new feature
-=> se sont les filtres utilisés dans notre analyse.
+- nombre de ticket bug par composant par années ( 2019 2020 ).
+- nombre de ticket bug avec priorité P1 et P2
+- nombre de ticket improvement par années ( 2019 2020 )
+- nombre de ticket new feature
+se sont les filtres utilisés dans notre analyse.
 
 #### /specificDataComponents:
 Elle prend au coeur de la requête 4 attributs:
@@ -256,7 +257,7 @@ Elle prend au coeur de la requête 4 attributs:
 ```
 Cette requête permet d'exécuter plusieurs filter ( on a intégré 2 filter) appelé SpecificFilterOneToOne.
 
-Ces filtres nous permettent de faire une observation de la relation entre deux composant choisi, exemples:
+Ces filtres nous permettent de faire une observation de la relation entre deux composant choisi, exemple :
 nombre de lien entre 2 composants
 
 ### Fonctionnement interne 
