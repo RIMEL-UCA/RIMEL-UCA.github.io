@@ -58,6 +58,14 @@ Préciser vos zones de recherches en fonction de votre projet,
 
 1. Analyse des résultats & construction d’une conclusion : Une fois votre expérience terminée, vous récupérez vos mesures et vous les analysez pour voir si votre hypothèse tient la route. 
 
+### En quoi les dépendances externes reflètent l’organisation administrative du pays autour de la crise du COVID-19 ?
+
+#### France
+
+#### Canade
+
+![Figure 1: method claim kay canada](../assets/Physical&LogicalComparisonOfArchitecture/canadaCodeClaimKey.png)
+
 ## VI. Tools \(facultatif\)
 
 Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à \(1\) pouvoir reproduire vos expérimentations, \(2\) partager/expliquer à d'autres l'usage des outils.
