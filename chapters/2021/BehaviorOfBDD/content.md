@@ -393,7 +393,7 @@ Tandis que pour les projets 2020-2021 ce n’est pas le cas, on observe la dispe
 *Figure 23 : Graphique global obtenu pour les projets de Conception Logicielle 2020-2021*
 
 L’analyse de chacun de ces graphiques nous mène toujours à la même conclusion que l’analyse du graphique global. On voit cependant qu’il y avait un risque non négligeable de biais dû 
-à nos scripts qui ne semblent pas marcher correctement sur un set de projets. La figure 21 est donc plus représentative de la tendance globale. 
+à nos scripts qui ne semblent pas marcher correctement sur un set de projets. La figure 22 est donc plus représentative de la tendance globale. 
 
 ## VI. Outils
 
