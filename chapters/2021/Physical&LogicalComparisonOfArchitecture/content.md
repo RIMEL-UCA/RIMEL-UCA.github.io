@@ -56,11 +56,6 @@ Pour l'étude des commits nous avons utilisé un script python fait à la main u
  
 ## IV. Hypothesis & Experiences
 
-1. Il s'agit ici d'énoncer sous forme d' hypothèses ce que vous allez chercher à démontrer. Vous devez définir vos hypothèses de façon à pouvoir les _mesurer facilement._ Bien sûr, votre hypothèse devrait être construite de manière à v_ous aider à répondre à votre question initiale_.Explicitez ces différents points.
-2. Test de l’hypothèse par l’expérimentation. 1. Vos tests d’expérimentations permettent de vérifier si vos hypothèses sont vraies ou fausses. 2. Il est possible que vous deviez répéter vos expérimentations pour vous assurer que les premiers résultats ne sont pas seulement un accident.
-3. Explicitez bien les outils utilisés et comment.
-4. Justifiez vos choix
-
 Afin de réduire la charge de travail et de nous donner un scope plus réalisable nous avons découpé la question générale en 2 sous-questions.
 
 Notre première sous-question est liée à l'architecture gros grain des deux projets. Notre hypothèse est que l'organisation administrative des pays se reflètent dans les dépendances externes des projets ainsi que dans leur architecture. Ainsi notre première sous question est la suivante : 
@@ -73,9 +68,12 @@ Nos deux sous-questions liées à ces hypothèses sont les suivantes :
 - Comment est implémenté la gestion de la distanciation sociale et des cas contacts dans les applications ?
 - Ces implémentations ont-elles évoluées au fil des décisions gouvernementales ?
 
-## V. Result Analysis and Conclusion
+Pour vérifier nos hypothèses nous sommes partis sur un travail très manuel puisque nous avons analysé les codes sources à la recherches d'informations (sur les protocoles de communications dans le cas de la sous question sur les dépendances et des mots clef de distance pour la seconde sous question comme "nearby" pour l'application canadienne et "proximity" pour l'application française). De plus pour essayer de voir si les décisions gouvernementale ont impactés les applications nous avons cherché à analyser les dates de commits des différents repositories pour trouver une corrélation entre ces dates. Pour ce faire nous avons créé deux scripts (un pour  github et un pour gitlab) pour récupérer les temporalités des commits.
+En ce qui concerne la première sous question, nous avons réussi à trouver des liens entre les services français (et européen) de santé et l'application TousAntiCovid. Ces liens sont utilisés pour se connecter en tant que professionnel ou alors transmettre des informations pour faire des statistiques sur l'épidémie (via la SIDEP).
+Du côté du Canada, les données sont récupérés par l'état (via un système de pull) et on ne peut donc pas voir quelles organisations utilisent les données. L'hypothèse n'est donc pas validée pour le Canada.
+Dans le cas de la seconde sous question, nous n'avons trouvé aucune évolution de la distanciation sociale dans le code source des applications canadienne et française. Toutefois les deux applications ont implémenté cette mesure de façon différente. La France utilise un système basé sur les EBID et le Canada avec l'Exposure Notification (système produit par Google et Apple).
 
-1. Analyse des résultats & construction d’une conclusion : Une fois votre expérience terminée, vous récupérez vos mesures et vous les analysez pour voir si votre hypothèse tient la route. 
+## V. Result Analysis and Conclusion
 
 ### En quoi les dépendances externes reflètent l’organisation administrative du pays autour de la crise du COVID-19 ?
 
@@ -99,7 +97,6 @@ En effet, on observe ci-dessus que cette gestion du countryCode devait permettre
 En effet, le code que je vous ai présenté ci-dessus est en réalité du code mort, on voit dans la documentation de la fonction que les spécifications ont évoluées et que la validation des messages se fait maintenant dans le “crypto back-end”. En parcourant le repository on voit que dans robert-crypto-grpc-server.src.main.java.fr.gouv.stopc.robert.crypto.grpc.server.impl.CryptoGrpcServiceBaseImpl.java nous trouvons la méthode “getInfoFromHelloMessage” Qui réalise le travail décrit précédemment. Toutefois cette implémentation en grpc est cryptée et dans un premier temps il faut décrypter l’ECC (Encrypted Country Code) où cette fois, si celui-ci ne correspond pas à la celui de la France il est bien renvoyé au serveur européen correspondant dans le but de lui envoyer l’information qu’un de ses citoyens est un cas contact.
 
 En conclusion, la France utilise différents services externes. Tout d’abord, elle communique son nombre de cas contact à la SIDEP pour qu’elle puisse évaluer la situation journalière de plus lorsqu’un cas contact européen est détecté le pays concerné est prévenu ce qui montre que la gestion française de la crise est en fait une gestion européenne. Bien que certains services propres à la France soient utilisés dans cette crise (comme Ameli qui permet aux professionnels de santé de se connecter au web pro).
-
 
 #### Canada
 
