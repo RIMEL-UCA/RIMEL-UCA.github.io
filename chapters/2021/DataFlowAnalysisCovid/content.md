@@ -91,7 +91,7 @@ Proposition d’ajout d’un fonctionnalité de QR Code déjà présente mais pa
 
 ###### #15 [New feature] Exposure Notification API (more and more required)
 
-Ce ticket un peu politique, expose le point de vue que la France, en utilisant le protocole ROBERT, se déli de l’Europe et du monde, et donc qu’il faudrait utiliser la “Exposure Notification API” basé sur un [protocole européen](https://github.com/DP-3T/documents), cela permettrait d’unifier les efforts mondiaux au lieu de se battre chacun dans son coin. Cela fait écho avec notre sujet de base qui était sur la comparaison entre tous-anti-covid et CovidShield (application canadienne), la France ayant fait le choix d’utiliser son propre protocole et donc d’utiliser une application isolée du reste du monde, alors que le Canada à fait le choix d’utiliser une application permettant de lier ses données facilement aux données d’autres pays.
+Ce ticket un peu politique, expose le point de vue que la France, en utilisant le protocole ROBERT, se délie de l’Europe et du monde, et donc qu’il faudrait utiliser la “Exposure Notification API” basé sur un [protocole européen](https://github.com/DP-3T/documents), cela permettrait d’unifier les efforts mondiaux au lieu de se battre chacun dans son coin. Cela fait écho avec notre sujet de base qui était sur la comparaison entre tous-anti-covid et CovidShield (application canadienne), la France ayant fait le choix d’utiliser son propre protocole et donc d’utiliser une application isolée du reste du monde, alors que le Canada à fait le choix d’utiliser une application permettant de lier ses données facilement aux données d’autres pays.
 
 Dans cette issue on peut aussi prendre connaissance d’une résolution du parlement européen datant du 17 avril 2020, déclarant que les état souhaitant mettre en place une application de traçage afin de combattre le Covid “soient totalement transparents sur le fonctionnement des applications de recherche des contacts, afin que les gens puissent vérifier à la fois le protocole sous-jacent pour la sécurité et la confidentialité, et vérifier le code lui-même pour voir si l'application fonctionne comme les autorités le prétendent”. C’est en partie grâce à cette demande que nous pouvons actuellement étudier le code de cette application, nous pouvons donc aussi en conclure que la réglementation n’a pas un impact que sur le flot de données mais aussi sur notre capacité à étudier ce dernier.
 
@@ -120,8 +120,8 @@ Le repository étant composé d’un grand nombre de tickets ayant pour beaucoup
 
 Le code source de Tous Anti Covid étant disponible publiquement, il est bien évidemment intéressant de faire une analyse manuelle du code directement pour pouvoir répondre à une partie de nos questions. Toutefois, si cette méthodologie peut fournir certaines réponses que nous ne pouvons obtenir avec une analyse dynamique, elle présente rapidement ses limites :
 
-- Le code est énorme et réparti sur deux repo Gitlab (application Android et serveur central).
-- Tout analyser prendrait beaucoup trop de temps.Il est difficile de trouver les informations que l’on cherche dans un si gros code, entre tous les appels de fonctions et les changements de variables.
+- Le code est énorme et réparti sur deux repo Gitlab (application Android et serveur central). Tout analyser prendrait beaucoup trop de temps.
+- Il est difficile de trouver les informations que l’on cherche dans un si gros code, entre tous les appels de fonctions et les changements de variables.
 
 #### Méthodologie
 
@@ -136,7 +136,7 @@ Dans l’application Android nous avons cherché dans l’entièreté du code ce
 
 Les mots-clés comme “phone”, “number”, “name”, “postcode” n’existent tout simplement pas, ou ne mènent pas aux informations que nous recherchons.
 
-“id” est un mot-clé beaucoup trop large qui mène à énormément de résultats, mais à des données personnelles comme nous le recherchions.
+“id” est un mot-clé beaucoup trop large qui mène à énormément de résultats, mais pas à des données personnelles comme nous le recherchions.
 
 “Latitude” et “longitude” existent ; mais ils ne correspondent pas à la position géographique de l’utilisateur comme nous en avions fait l’hypothèse, ils correspondent aux positions géographiques des centres de vaccinations en France. Il semble donc que l’application ne traite jamais la position GPS des utilisateurs.
 
@@ -225,7 +225,7 @@ Suite à cela on a pu ainsi capturer le trafic en clair ! On a ainsi pu mieux co
 
 ## V. Result Analysis and Conclusion
 
-Finalement avec toutes ces méthodes nous sommes loin d'avoir répondu à toutes les questions que l'on s'était posé. Chaque méthode a sa propre limite, dans l'analyse manuelle, on a pu voir qu'on a réussi à savoir comment les informations étaient stockées mais comme indiqué, dans un code assez large, il est difficile de tout explorer. Avec le ticketing on a vu que la règlementation provenant de différents acteurs (ANSSI,INRIA,...) impacter également le gestion des données. Le ticketing est un outil intéressant permettant de récolter un grand nombre d'informations, pas seulement sur l'application final mais aussi sur la chronologie qui a permit d'arriver à cette application final, et ainsi voir les décisions qui ont été faits sur l'application. Il est un outil qui peut être utilisé dans la plupart des projets ce qui en fait un atout indespensable dans l'étude d'une application. Enfin en effectuant une analyse dynamique, on n'a pas pu en tirer quelque chose d'intéressant car les scénarios qui nous intéressaient ne pouvaient être executés (car trop dangereux). Pour conclure sur le projet, nous pensons que ces méthodes peuvent être intéressantes pour l'analyse de flot de données, on a répondu partiellement à la question principale, mais on pense que cela peut servir de base pour approfondir le sujet.
+Finalement avec toutes ces méthodes nous sommes loin d'avoir répondu à toutes les questions que l'on s'était posées. Chaque méthode a sa propre limite, dans l'analyse manuelle, on a pu voir qu'on a réussi à savoir comment les informations étaient stockées mais comme indiqué, dans un code assez large, il est difficile de tout explorer. Avec le ticketing on a vu que la règlementation provenant de différents acteurs (ANSSI,INRIA,...) impacter également le gestion des données. Le ticketing est un outil intéressant permettant de récolter un grand nombre d'informations, pas seulement sur l'application final mais aussi sur la chronologie qui a permit d'arriver à cette application final, et ainsi voir les décisions qui ont été faits sur l'application. Il est un outil qui peut être utilisé dans la plupart des projets ce qui en fait un atout indispensable dans l'étude d'une application. Enfin en effectuant une analyse dynamique, on n'a pas pu en tirer quelque chose d'intéressant car les scénarios qui nous intéressaient ne pouvaient être exécutés (car trop dangereux). Pour conclure sur le projet, nous pensons que ces méthodes peuvent être intéressantes pour l'analyse de flot de données, on a répondu partiellement à la question principale, mais on pense que cela peut servir de base pour approfondir le sujet.
 
 ## VI. References
 
