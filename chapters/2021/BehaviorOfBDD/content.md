@@ -1,7 +1,7 @@
 ---
 layout: default
 title : Etude de la relation entre tests fonctionnels et tests unitaires dans un projet BDD
-date:   2021-01-14 21:08:00 +0100
+date:   2021-03-07 21:08:00 +0100
 ---
 
 ## Auteurs
@@ -29,8 +29,6 @@ Le but général de notre recherche est donc d’explorer les comportements conj
 
 En analysant les exécutions des Tests Fonctionnels (TF) BDD et Tests Unitaires (TU) sur le code de plusieurs projets Open-Source utilisant la technique de BDD, 
 on pourrait étudier la relation qu’il y a entre les deux types de tests et ainsi avancer dans la compréhension du comportement d’un projet BDD. 
-
-![Figure 0 : Logo UCA, exemple, vous pouvez l'enlever](../assets/model/UCAlogoQlarge.png)
 
 ## II. Question générale
 
@@ -101,6 +99,7 @@ On lance les tests 1 par 1 en produisant un rapport JaCoCo à chaque fois. Aprè
 JaCoCo permet d’extraire la couverture de lignes par des tests. C’est l’information qui nous intéresse. Et en lançant les tests un par un, on est sûrs que les lignes indiquées par JaCoCo sont couvertes par le test en cours. 
 
 ![Figure 1 : Lien entre les tests et les lignes de code couvertes](../assets/BehaviorOfBDD/doc/images/h1_demarche_1.png)
+*Figure 1 : Lien entre les tests et les lignes de code couvertes*
 
 Dans la figure 1, on voit que l’on a un ensemble de tests unitaires et de tests fonctionnels. Les tests unitaires T1 et T2 couvrent respectivement les lignes 1 à 3 et 4 à 7. 
 
@@ -109,6 +108,7 @@ Dans la figure 1, on voit que l’on a un ensemble de tests unitaires et de test
 A la fin de tous les tests, on transforme les informations récupérées en 2 matrices, l’une pour les TU et l’autre pour les TF. Ces matrices regroupent la correspondance des tests aux lignes couvertes (fig. 2). 
 
 ![Figure 2 : Exemple de matrices de couverture de lignes obtenues à la fin du lancement de tous les tests unitaires et fonctionnels](../assets/BehaviorOfBDD/doc/images/h1_demarche_2.png)
+*Figure 2 : Exemple de matrices de couverture de lignes obtenues à la fin du lancement de tous les tests unitaires et fonctionnels*
 
 ##### Étape 3
 
@@ -123,15 +123,18 @@ La taille des ensembles dépend du nombre de lignes couvertes. Dans ces ensemble
 La figure 3 représente la transformation d’une matrice en un ensemble visualisable de lignes couvertes. La figure 4 est la représentation d’ensembles que l’on attend.
 
 ![Figure 3 : Transformation d'une matrice en un ensemble de lignes couvertes](../assets/BehaviorOfBDD/doc/images/h1_demarche_3.png)
+*Figure 3 : Transformation d'une matrice en un ensemble de lignes couvertes*
 
 ![Figure 4 : Exemple de deux ensembles de lignes couvertes par TU et TF](../assets/BehaviorOfBDD/doc/images/h1_demarche_4.png)
+*Figure 4 : Exemple de deux ensembles de lignes couvertes par TU et TF*
 
 ##### Étape 4
 
 Après avoir construit les 2 ensembles, on cherche à trouver leur intersection. Ainsi on pourra conclure si les TU et TF testent les mêmes lignes. 
 On s’attend à l’un des résultats de la figure 5 (avec la taille des ensembles et des intersections pouvant varier). 
 
-![Figure 5 : Résultats possibles pour la question 1 ](../assets/BehaviorOfBDD/doc/images/h1_resultat_attendu.png)
+![Figure 5 : Résultats possibles pour la question 1](../assets/BehaviorOfBDD/doc/images/h1_resultat_attendu.png)
+*Figure 5 : Résultats possibles pour la question 1*
 
 Pour valider l’hypothèse, on s’attend à deux ensembles globaux (fig.5) dont une majorité est commune aux deux.  
 
@@ -148,6 +151,7 @@ L’information qui nous intéresse dans le rapport JaCoCo est toujours l’appe
 On extrait et calcule ensuite cette information pour chaque test lancé. 
 
 ![Figure 6 : Représentation de la couverture de lignes d'un test pour deux méthodes](../assets/BehaviorOfBDD/doc/images/h2_demarche_1.png)
+*Figure 6 : Représentation de la couverture de lignes d'un test pour deux méthodes*
 
 Sur la figure 6, on voit que le test passe par la méthode 1 car il couvre des lignes de la méthode 1.
 
@@ -156,23 +160,27 @@ Sur la figure 6, on voit que le test passe par la méthode 1 car il couvre des l
 A la fin de tous les tests, on transforme les informations récupérées en 2 matrices, une pour les TU et l’autre pour les TF, qui regroupent la correspondance des tests aux méthodes couvertes (fig. 7). 
 
 ![Figure 7 : Exemple de matrices de couverture de méthodes obtenues à la fin du lancement de tous les tests unitaires et fonctionnels](../assets/BehaviorOfBDD/doc/images/h2_demarche_2.png)
+*Figure 7 : Exemple de matrices de couverture de méthodes obtenues à la fin du lancement de tous les tests unitaires et fonctionnels*
 
 ##### Étape 3
 
 On mutualise ces 2 matrices en 1 seule (fig. 8).
 
 ![Figure 8 : Fusion des deux matrices](../assets/BehaviorOfBDD/doc/images/h2_demarche_3.png)
+*Figure 8 : Fusion des deux matrices*
 
 ##### Étape 4
 
 En utilisant les données de la matrice en figure 7, on trace des graphique (fig. 9, 10).
 
 ![Figure 9 : Exemple de graphique possible](../assets/BehaviorOfBDD/doc/images/h2_resultat_attendu_pour_1_projet.png)
+*Figure 9 : Exemple de graphique possible*
 
 La figure 9 contient 2 courbes indiquant le nombre de tests, une pour les TU et l’autre pour les TF, en fonction de la méthode qu’ils testent en abscisse. 
 Si les 2 courbes suivent la même évolution, alors on peut en conclure que le nombre de TU et le nombre de TF sont corrélés. 
 
 ![Figure 10 : Graphique possible du nombre de TF en fonction du nombre de TF par méthode](../assets/BehaviorOfBDD/doc/images/h2_resultat_attendu_commun.png)
+*Figure 10 : Graphique possible du nombre de TF en fonction du nombre de TF par méthode*
 
 Un autre graphique possible est un nuage de points. La figure 10 est un nuage de points où chaque point correspond à une méthode testée. 
 La coordonnée x de chaque point est le nombre de TU qui testent la méthode représentée par ce point, et la coordonnée y est le nombre de TF qui testent cette méthode. 
@@ -191,6 +199,7 @@ Pour chaque projet :
 On identifie la complexité de chaque fonctionnalité (fonctionnalité = scénario Cucumber). 
 
 ![Figure 11 : Exemple de complexités de fonctionnalités](../assets/BehaviorOfBDD/doc/images/h3_demarche_1.png)
+*Figure 11 : Exemple de complexités de fonctionnalités*
 
 Sur la figure 11, la complexité est liée au nombre de lignes du test Cucumber. Cette définition est très limitée, mais a l’avantage de permettre un calcul de complexité très simple. 
 La définition pourra, une fois des résultats obtenus et un script terminé, être changée et précisée. On pourrait par exemple considérer que plus un scénario appelle de lignes de codes, plus il est complexe. 
@@ -208,6 +217,7 @@ Pour chaque TU, on identifie les méthodes testées (suivant la démarche de la 
 On déduit ensuite les tests unitaires liés à une fonctionnalité en regardant pour chaque test quelles méthodes sont communes à chaque test fonctionnel. 
 
 ![Figure 12 : Exemple de matrices de couverture de méthodes par un test fonctionnel et par tous les tests unitaires](../assets/BehaviorOfBDD/doc/images/h3_demarche_2.png)
+*Figure 12 : Exemple de matrices de couverture de méthodes par un test fonctionnel et par tous les tests unitaires*
 
 Sur la figure 12, on voit que la fonctionnalité de TF1 est liée aux tests unitaires T1 et Tn puisque T1 et Tn passent par les méthodes M1 et Mn (les mêmes que pour TF1). 
 
@@ -216,12 +226,13 @@ Sur la figure 12, on voit que la fonctionnalité de TF1 est liée aux tests unit
 En utilisant les données obtenues, on trace un graphique (fig. 13) : 
 
 ![Figure 13 : Graphique possible du nombre de méthodes couvertes par les TU en fonction de la complexité de la fonctionnalité à laquelle ils sont liés](../assets/BehaviorOfBDD/doc/images/h3_resultat_attendu.png)
+*Figure 13 : Graphique possible du nombre de méthodes couvertes par les TU en fonction de la complexité de la fonctionnalité à laquelle ils sont liés*
 
 Ce graphique peut être obtenu sur pour seul projet mais aussi pour tous les projets testés : 
 
 * en mettant tous les tests fonctionnels sur l’axe des x afin d’obtenir un graphique très étiré sur l’horizontale, 
 
-*ou en créant un graphique pour chaque projet puis en faisant la moyenne du nombre de méthodes couvertes par les TU pour chaque test fonctionnel ayant la même complexité, et produire un graphique moyen, plus petit. 
+* ou en créant un graphique pour chaque projet puis en faisant la moyenne du nombre de méthodes couvertes par les TU pour chaque test fonctionnel ayant la même complexité, et produire un graphique moyen, plus petit. 
 
 Encore une fois, le graphique en figure 13 est une simplification grossière. C’est un nuage de points que l’on obtiendra. Nous tracerons la tendance qui se dégage de ce nuage de points. 
 Si la courbe est croissante, nous pourrons dans une certaine mesure2 valider notre hypothèse. 
@@ -238,7 +249,8 @@ Nous n’avons donc pas produit de résultat analysable concernant la question 3
 
 ##### Résultats de la démarche pour l’hypothèse 1
 
-![Figure 14: Diagramme de Venn représentant les lignes couvertes par les tests fonctionnels et les tests unitaires pour l’ensemble des projets.](../assets/BehaviorOfBDD/output/vennplot_global.png)
+![Figure 14: Diagramme de Venn représentant les lignes couvertes par les tests fonctionnels et les tests unitaires pour l’ensemble des projets](../assets/BehaviorOfBDD/output/vennplot_global.png)
+*Figure 14: Diagramme de Venn représentant les lignes couvertes par les tests fonctionnels et les tests unitaires pour l’ensemble des projets*
 
 Sur la figure 14 on retrouve le diagramme de Venn cumulatif de tous les projets. Lors de la construction de ce diagramme, les numéros de lignes ont été préfixés par le nom de fichier et 
 le nom de projet auquel elles appartiennent pour ne pas les confondre. 
@@ -260,16 +272,19 @@ vers les tests fonctionnels mais également qu’ils sont orientés BDD, ce qui 
 bleue est dans la majorité des cas au-dessus de la courbe rouge. 
 
 ![Figure 15 : Exemple de diagramme du nombre de tests unitaires et fonctionnels pour chaque méthode](../assets/BehaviorOfBDD/output/conception19-20_conceptiontoutcourt/graph.png)
+*Figure 15 : Exemple de diagramme du nombre de tests unitaires et fonctionnels pour chaque méthode*
 
 On retrouve des plateaux comme par exemple le graphique suivant (fig.16) où l’on remarque que beaucoup de points sont alignés. Ces points sont surement des sous méthodes appelées 
 dans une méthode parente. Ainsi si la méthode parente est appelée x fois alors toutes ces méthodes seront appelées x fois, ce qui génère des plateaux à en ordonné dans le graphique. 
 
 ![Figure 16 : Exemple de diagramme du nombre de tests unitaires et fonctionnels pour chaque méthode](../assets/BehaviorOfBDD/output/conception19-20_saladbar/graph.png)
+*Figure 16 : Exemple de diagramme du nombre de tests unitaires et fonctionnels pour chaque méthode*
 
 Enfin on remarque également que dans la majorité des cas les courbes évoluent ensemble, c’est à dire que lorsque les valeurs de la courbe bleu augmentent, les valeurs de celle 
 de la rouge aussi. Pour la diminution il s’agit de la même chose. On voit donc une corrélation dans la plupart des cas entre le nombre d’appels. 
 
 ![Figure 17 : Exemple de diagramme du nombre de tests unitaires et fonctionnels pour chaque méthode](../assets/BehaviorOfBDD/output/conception19-20_cordonsbleus/graph.png)
+*Figure 17 : Exemple de diagramme du nombre de tests unitaires et fonctionnels pour chaque méthode*
 
 On retrouve donc dans l’analyse des graphiques une prédominance des tests fonctionnels. On retrouve également une corrélation entre les appels des méthodes par les tests unitaires et par les tests fonctionnels. 
 Cette analyse a une limite, il faut suivre les deux courbes pour voir cette évolution commune. Et il est assez fastidieux de comparer pour chaque méthode les deux points de TF et TU. Pour pallier cette limite 
@@ -278,8 +293,10 @@ nous pouvons tenter de créer d’autres graphiques.
 Après avoir créé les données en brut, on peut retraiter ces mêmes données pour faire d’autres graphiques comme en figures 18 et 19 :
 
 ![Figure 18: Dérivée du nombre de tests unitaires et fonctionnels](../assets/BehaviorOfBDD/output/conception19-20_cordonsbleus/graph_derivate.png)
+*Figure 18: Dérivée du nombre de tests unitaires et fonctionnels*
 
 ![Figure 19 : Ratio du nombre de tests fonctionnels sur le nombre de tests unitaires](../assets/BehaviorOfBDD/output/conception19-20_cordonsbleus/graph_ratio.png)
+*Figure 19 : Ratio du nombre de tests fonctionnels sur le nombre de tests unitaires*
 
 Tout d’abord, le graphique des ratios permet de mettre en évidence la corrélation entre les tests. Un ratio toujours supérieur à 1 ou toujours inférieur à 1, démontre que plus 
 il y a de tests unitaires plus il y a de tests fonctionnels. Si le ratio alterne entre des valeurs inférieures à 1 et supérieures à 1 alors il n’y a aucune corrélation à en tirer. 
@@ -297,6 +314,7 @@ tous les projets. Nous avons donc déterminé le graphique ci-après qui récapi
 Voici le diagramme global qu’on obtient (fig. 20) : 
 
 ![Figure 20: nuage de points cumulés de tous les projets représentant le nombre de TF en fonction du nombre de TU par méthode testée](../assets/BehaviorOfBDD/output/scatterplot_global.png)
+*Figure 20: nuage de points cumulés de tous les projets représentant le nombre de TF en fonction du nombre de TU par méthode testée*
 
 Le graphique global obtenu (qui cumule les résultats de tous les projets) est un nuage de points où chaque point correspond à une méthode testée. La coordonnée x de chaque point est le nombre de TU qui testent la méthode représentée par ce point, et la coordonnée y est le nombre de TF qui testent cette méthode. 
 
@@ -308,7 +326,8 @@ Si les points étaient concentrés le long de la courbe de tendance, on aurait p
 
 Dans certains projets c’est presque le cas, par exemple, dans conception19-20_big_brain (fig. 21) : 
 
-![Figure 21 : nuage de points représentant le nombre de TF en fonction du nombre de TU par méthode pour un projet ](../assets/BehaviorOfBDD/output/conception19-20_big_brain/scatterplot.png)
+![Figure 21 : nuage de points représentant le nombre de TF en fonction du nombre de TU par méthode pour un projet](../assets/BehaviorOfBDD/output/conception19-20_big_brain/scatterplot.png)
+*Figure 21 : nuage de points représentant le nombre de TF en fonction du nombre de TU par méthode pour un projet*
 
 Mais si on revient au graphique global, on voit que ce n’est pas vrai pour tous les projets.
 
@@ -343,10 +362,12 @@ Enfin, on remarque une différence dans les résultats de la partie 2 pour les p
 Dans le cas des projets de conception logicielle 2019-2020 les points sur le graphique sont dispersés aléatoirement (fig. 22) : 
 
 ![Figure 22 : Graphique global obtenu pour les projets de Conception Logicielle 2019-2020](../assets/BehaviorOfBDD/output/scatterplot_global_onlyconception19-20.png)
+*Figure 22 : Graphique global obtenu pour les projets de Conception Logicielle 2019-2020*
 
 Tandis que pour les projets 2020-2021 ce n’est pas le cas, on observe la dispersion en lignes horizontales (fig. 23) : 
 
 ![Figure 23 : Graphique global obtenu pour les projets de Conception Logicielle 2020-2021](../assets/BehaviorOfBDD/output/scatterplot_global_onlyconception20-21.png)
+*Figure 23 : Graphique global obtenu pour les projets de Conception Logicielle 2020-2021*
 
 L’analyse de chacun de ces graphiques nous mène toujours à la même conclusion que l’analyse du graphique global. On voit cependant qu’il y avait un risque non négligeable de biais dû 
 à nos scripts qui ne semblent pas marcher correctement sur un set de projets. La figure 21 est donc plus représentative de la tendance globale. 
@@ -360,16 +381,19 @@ reporting (html pour la visualisation, CSV ou encore xml). Le fichier qui nous i
 Ce dernier permet en effet d’avoir, pour chaque fichier source du projet, des informations sur les méthodes ainsi que sur les lignes couvertes. 
 
 ![Figure 24 : Echantillon du fichier XML généré par JaCoCo](../assets/BehaviorOfBDD/doc/images/jacoco_xml.png)
+*Figure 24 : Echantillon du fichier XML généré par JaCoCo](../assets/BehaviorOfBDD/doc/images/jacoco_xml.png*
 
-Sur la capture d’écran (fig. 23), on peut voir une représentation de l’information XML générée par JaCoCo pour le fichier Customer.java.  
+Sur la capture d’écran (fig. 24), on peut voir une représentation de l’information XML générée par JaCoCo pour le fichier Customer.java.  
 
 En lançant les tests unitaires un par un puis les tests fonctionnels un par un, il nous est possible d’obtenir un tel fichier pour chacun des tests, et donc d’obtenir les lignes couvertes par chacun des tests. 
 
 Les figures y et z correspondent à la représentation visuelle correspondant à la figure x et donnée par le fichier html généré par JaCoCo.  
 
 ![Figure 25 : Échantillon 1 du fichier html généré par JaCoCo](../assets/BehaviorOfBDD/doc/images/jacoco_code1.png)
+*Figure 25 : Échantillon 1 du fichier html généré par JaCoCo](../assets/BehaviorOfBDD/doc/images/jacoco_code1.png*
 
 ![Figure 26 : Échantillon 2 du fichier html généré par JaCoCo](../assets/BehaviorOfBDD/doc/images/jacoco_code2.png)
+*Figure 26 : Échantillon 2 du fichier html généré par JaCoCo](../assets/BehaviorOfBDD/doc/images/jacoco_code2.png*
 
 Les lignes surlignées en vert sont les lignes dont tous les cas possibles ont été couverts par les tests lancés. Les lignes en orange sont couvertes par les tests lancés, mais tous les cas ne sont pas couverts. Enfin, les lignes rouges sont les lignes non couvertes. 
 
@@ -439,7 +463,7 @@ Pour lancer les scénarios fonctionnels un par un :
 Pour reproduire notre démarche avec les scripts que l’on a réalisé, nous vous invitons à lire le [readme de notre projet](../assets/BehaviorOfBDD/README.md). 
 
 Pour générer les diagrammes à partir les résultats des scripts précédents, il suffit d’exécuter le fichier “scripts.py” du répertoire “DataVizScripts” 
-(avec la commande “python scripts.py” ou depuis IDLE). Les graphiques seront générés dans le même répertoire “output” que tous les autres outputs. 
+(avec la commande `python scripts.py` ou depuis IDLE). Les graphiques seront générés dans le même répertoire “output” que tous les autres outputs. 
 
 ## VII. Conclusion
 
