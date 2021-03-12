@@ -19,7 +19,7 @@ Nous sommes quatre étudiants en dernière année à Polytech Nice Sophia, dans 
 
 Le virus du Covid-19 a touché le monde entier au début de l’année 2020. Pour répondre à cette crise sanitaire planétaire, les gouvernements ont alors créé des applications permettant de tracer les chaînes de contamination.
 
-La technologie la plus largement utilisée dans ces applications est le Bluetooth LE (pour Low Energy). Le Bluetooth LE est une technologie à faible portée permettant une communication sans fil entre deux appareils. Grâce aux capteurs Bluetooth des utilisateurs, ces applications sont capables de détecter les individus à proximité et si une personne est déclarée par la suite malade, alors les personnes qui ont été en contact en sont informés.
+La technologie la plus largement utilisée dans ces applications est le Bluetooth LE (pour Low Energy). Le Bluetooth LE est une technologie à faible portée permettant une communication sans fil entre deux appareils. Grâce aux capteurs Bluetooth des utilisateurs, ces applications sont capables de détecter les individus à proximité et si une personne est déclarée par la suite malade, alors les personnes qui ont été en contact en sont informées.
 
 Dans nos recherches, nous devions étudier l’application Canadienne CovidAlert (ou CovidShield) et Française StopCovid (ou TousAntiCovid). Cette approche est très intéressante puisqu’en fonction des pays les réglementations sont différentes autour de la protection des données et de la vie privée. La France, étant membre de l’Union Européenne doit suivre le fameux **Règlement Général sur la Protection des Données (RGPD)**. Le Canada a également son équivalent : la **Loi sur la protection des renseignements personnels et les documents électroniques (LPRPDE)**. 
 
