@@ -13,8 +13,7 @@ date:   2020-01-02 22:00:00 +0100
 
 ### [Etude des éléments associés à un ticket qui influent les premiers commits d’un nouveau contributeur.]({{ site.url }}/chapters/2021/TicketsForNewContributors/content)
 ### [Les tickets permettent-ils une meilleure compréhension de l’architecture d’un système ?]({{ site.url }}/chapters/2021/TicketingAndBugs/content)
-
-
+### [Dans quelle mesure les tickets nous renseignent sur l’architecture et l’organisation du développement d’un système ?]({{ site.url }}/chapters/2021/TicketsAnalyze/model.md)
 
 
 ### [Etude de la relation entre tests fonctionnels et tests unitaires dans un projet BDD]({{ site.url }}/chapters/2021/BehaviorOfBDD/content)
