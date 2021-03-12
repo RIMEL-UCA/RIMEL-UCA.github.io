@@ -8,6 +8,8 @@ date:   2020-01-02 22:00:00 +0100
 
 ### [Etude sur les methodes permettant d'étudier le flot de données d'une application de traçage]({{ site.url }}/chapters/2021/DataFlowAnalysisCovid/content)
 ### [Étude de l'impact des règles sur l'architecture et le code des applications Anti-Covid Française et Canadienne]({{ site.url }}/chapters/2021/ImpactOfRulesInCodeAndArchitecture/content)
+### [Comparaison architecturale physique et logicielle]({{ site.url }}/chapters/2021/Physical&LogicalComparisonOfArchitecture/content)
+
 
 ### [Etude des éléments associés à un ticket qui influent les premiers commits d’un nouveau contributeur.]({{ site.url }}/chapters/2021/TicketsForNewContributors/content)
 
