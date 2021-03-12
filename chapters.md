@@ -12,6 +12,10 @@ date:   2020-01-02 22:00:00 +0100
 
 
 ### [Etude des éléments associés à un ticket qui influent les premiers commits d’un nouveau contributeur.]({{ site.url }}/chapters/2021/TicketsForNewContributors/content)
+### [Les tickets permettent-ils une meilleure compréhension de l’architecture d’un système ?]({{ site.url }}/chapters/2021/TicketingAndBugs/content)
+
+
+
 
 ### [Etude de la relation entre tests fonctionnels et tests unitaires dans un projet BDD]({{ site.url }}/chapters/2021/BehaviorOfBDD/content)
 
@@ -25,6 +29,7 @@ date:   2020-01-02 22:00:00 +0100
 ### [Dans quelles couches les paramètres de haut niveau des logiciels conteneurisés peuvent-ils être définis ?]({{ site.url }}/chapters/2020/DockerAndHighLevelDefinitionLayers/model2020)
 ### [Les configurations Docker permettent-elles de rendre le code plus simple ?]({{ site.url }}/chapters/2020/Docker3/model2020)
 ### [Docker et cycle de vie]({{ site.url }}/chapters/2020/DockerAndLifeCycle/model2020)
+
 
 
 ## 2019
