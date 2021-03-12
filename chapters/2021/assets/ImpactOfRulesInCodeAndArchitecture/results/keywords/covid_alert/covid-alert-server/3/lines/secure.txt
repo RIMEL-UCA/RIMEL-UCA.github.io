@@ -1,0 +1,8 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/config/infrastructure/aws/README.md:107:According to GitHub (because they [own it](https://dependabot.com/blog/hello-github/)), Dependabot creates pull requests to keep your dependencies secure and up-to-date.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/go.sum:145:github.com/gorilla/securecookie v1.1.1/go.mod h1:ra0sb63/xPlUeL+yeDciTfxMRAA+MP+HVt/4epWDjd4=
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:89:Curve25519, XSalsa20, and Poly1305). This is widely regarded as an exceedingly secure implementation
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:13:require('securerandom')
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:88:      SecureRandom.hex(64)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:7:require('securerandom')
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:207:      add_key(active_at: new, submitted_at: time_in_date("00:00", yesterday_utc), data: SecureRandom.bytes(16))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:209:    add_key(region: 'BC', active_at: new, submitted_at: time_in_date("00:00", yesterday_utc), data: SecureRandom.bytes(16))

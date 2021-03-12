@@ -1,0 +1,954 @@
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/3,Fixed my config and reformatted for a cleaner PR
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/10,will resubmit with more updates
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/14,To note here is that the HMAC will need to match the one in the shared file if you want to retrieve exposure keys from the server. But we can adjust those locally
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/26,RE: Stephen Y @Stephen-PM 
+> Show that some of Ontario's learnings have been leveraged (no pulsing blue dot, etc.).
+
+@amazingphilippe are we going to use the Ontario "icons" to replace the pulsing blue dot?
+
+<img width="300" src="https://user-images.githubusercontent.com/62242/84881414-d331f300-b05b-11ea-8030-5c63e41b6433.jpg">
+
+<hr>
+
+<img width="300" src="https://user-images.githubusercontent.com/62242/84881962-931f4000-b05c-11ea-8723-35661b8f3b1a.jpg">
+
+
+
+
+
+
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/26,I did some more work on this to add the Province/Territory picker button to the home screen (if not set), and to the settings nav:
+<img width="363" alt="Screen Shot 2020-06-17 at 9 58 21 PM" src="https://user-images.githubusercontent.com/5498428/84987225-024c7100-b0fd-11ea-9929-fa749de45774.png">
+
+But there is still a bug to work out, and I'm not sure this will be crucial for demo'ing, so I will pause on this for now.
+
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/26,Closing since most of these changes are getting added to the box-icon branch
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/72,We can merge - the build and push doesn't happen as part of this repo.  It's a manual process at this point via xCode.
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/78,I was doing some research into the linking to the bluetooth page and came across some projects that opened up the right links for bluetooth:
+
+This is the line that needs to be changed: https://github.com/cds-snc/covid-shield-mobile/blob/cb3f1a75492e368eb390d2c4b61574c9757d19a5/src/screens/home/views/BluetoothDisabledView.tsx#L11
+
+
+Heres an example for IOS: https://github.com/rjblopes/react-native-device-settings/pull/8/files
+
+Heres an example for Android: https://github.com/LuoZihYuan/Synesthesia-Experiment/blob/6149fff0f2e2d7c54bd6dad89bbc725f0e9bf6fa/Runtime/SERoboArm.js#L36
+
+I am testing this out now
+
+
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/78,Nice, thanks so much for looking into this for us.
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/87,Android build
+<img width="300" alt="Screen Shot 2020-06-20 at 6 30 00 PM" src="https://user-images.githubusercontent.com/62242/85212776-440b3080-b324-11ea-9d34-2393e59575a1.png">
+
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/87,iOS Build
+<img width="300" alt="Screen Shot 2020-06-20 at 6 34 03 PM" src="https://user-images.githubusercontent.com/62242/85212826-b67c1080-b324-11ea-8036-d27374e03e3c.png">
+
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/78,Was looking at the use of `App-prefs:root=Bluetooth`
+
+And not sure if it's still the case but it might get rejected.
+
+https://developer.apple.com/forums/thread/100471
+
+```
+Guideline 2.5.1 - Performance - Software Requirements
+
+Your app uses the "prefs:root=" non-public URL scheme, which is a private entity. The use of non-public APIs is not permitted on the App Store because it can lead to a poor user experience should these APIs change.
+ 
+```
+
+<img width="920" alt="Screen Shot 2020-06-20 at 8 04 41 PM" src="https://user-images.githubusercontent.com/62242/85213804-6fe0e300-b331-11ea-9b12-ba53d0ffcf48.png">
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/78,https://github.com/CovidShield/mobile/issues/125#issuecomment-647055105
+
+Found this note 
+
+```
+These functions are disabled by default. You must not call them If your app need submit to App Store. As an alternative, you can show a tip to tell the user how to change the system setting.
+```
+
+https://github.com/c19354837/react-native-system-setting/blob/master/iOS.md#ios
+
+<img width="984" alt="Screen Shot 2020-06-20 at 8 19 39 PM" src="https://user-images.githubusercontent.com/62242/85213978-7e2ffe80-b333-11ea-882b-c99ea877190f.png">
+
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/78,It appears on iOS it will not be possible to open up the bluetooth settings, we will just have to have a link saying enable bluetooth. 
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/78,@smcmurtry 
+
+Via @Stephen-PM 
+> We'll remove the button at least temporarily  
+
+
+
+
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/78,The main issue apart from this which was referenced in the link earlier is that there is actually no check for if bluetooth is enabled anywhere in the codebase. The closest thing I could find was this module which appears to be compatible with iOS and allows you to perform the switch for android too. 
+https://github.com/solinor/react-native-bluetooth-status
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/71,cc:
+
+@sboots 
+@Stephen-PM 
+
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/78,https://github.com/cds-snc/covid-shield-mobile/blob/5c36b2582eb4e60963e991fce97d772c03880e20/ios/CovidShield/ExposureNotification.m#L98
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/78,My apologies, I am fairly new to objective c, I thought that this was a case switch for an not yet completed function but I now see this is being returned by the native exposure notification system. 
+
+I couldn't find an equivalent of that case in the android portion. It appears to me that this case switch can't distinguish the case where it's inactive and that the bluetooth is off. 
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/78,No worries - we're all getting up to speed on the codebase :)
+
+And yes sounds like that's the case.
+
+Thanks again for your help.
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/71,Thanks for reaching out @RByers I've noted this to some CDS folks and we'll see what they come back with :)
+
+@katewilhelm
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/78,Added a PR with a potential solution to the bluetooth status check and the ability to change the bluetooth settings in app for android ^
+
+Also attaching this issue from CovidShield here for reference: https://github.com/CovidShield/mobile/issues/121
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/79,@maxneuvians @dsamojlenko 
+
+I would like to get away from using the debug menu.  My concern is we end up getting the app into states that the real app can't end up in.
+
+It would be nice if we can hit the api via a terminal command via curl request to 
+
+- Trigger push Notifications 
+- Exposure state (re-confirm state)
+
+
+
+
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/34,https://github.com/cds-snc/covid-shield-mobile/issues/79#issuecomment-647097217
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/91,Upstream issue here:
+https://github.com/CovidShield/mobile/issues/111
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/96,- We're using the initial province select from upstream 
+- Added to the drawer menu (https://github.com/cds-snc/covid-shield-mobile/issues/96#issue-642535054)
+
+- In some cases you can also reach it from within the content
+<img width="250" alt="Screen Shot 2020-06-21 at 6 21 45 AM" src="https://user-images.githubusercontent.com/62242/85222255-b5c89600-b387-11ea-98e3-4ca34d16f164.png">
+
+
+Noting the upstream.
+
+
+
+**Upstream** 
+https://github.com/CovidShield/mobile/issues/81
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/95,Per https://github.com/CovidShield/mobile/issues/114
+
+We need to coordinate with @dsamojlenko on Monday to get a build with entitlements pushed up. 
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/78,Ref https://github.com/cds-snc/covid-shield-mobile/issues/78 
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/95,https://github.com/CovidShield/mobile/issues/137
+
+
+Via https://github.com/CovidShield/mobile/issues/125#issuecomment-647113522
+
+> Hi @ChrisDryden ,
+
+I was discussing with my team few days ago and we think it makes more sense for user to not care about bluetooth if using exposure notification (EN). That means:
+
+The turn on bluetooth UI should be removed.
+Android bridge for EN should also check bluetooth status and returns same payload as iOS.
+When turn on EN, Android should turn on bluetooth at the same time.
+
+
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/90,@ChrisDryden going to hold off on reviewing this until we get better coordinated with upstream + on our end.  Ideally the fixes will happen in one spot and get cherry picked up or downstream.
+
+https://github.com/CovidShield/mobile/issues/125#issuecomment-647116531
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/3,Awesome feedback, I've incorporated it all. Right now the UX for an error is pretty bad (you just get ERROR). It also sends it to stderr so we can catch it somewhere.
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/3,I added a link to /code/ in base.html
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/5,I think we can get rid of requirements.txt as well actually.
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/5,I think let's wait, actually.
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/13,@sboisvert, I'm going to merge this so that I can fix our deploys.
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/15,I'm interested in seeing if the review environments will send out emails
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/15,Also, this should fail tests
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/30,Oh, I missed adding in
+> Go to `127.0.0.1:8000/` to see the landing page.
+
+FR:
+
+> Rendez-vous à `127.0.0.1:8000/` pour voir la page d’accueil.
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/36,This pull request **fixes 3 alerts** when merging cc27f4a87f84a09caab59e16ffcad86502ac0641 into 60dfc5dd3ead38b4f5e0e42faba2081fbd211446 - [view on LGTM.com](https://lgtm.com/projects/g/cds-snc/covid-healthcare-portal/rev/pr-4dd466940ae635f09d93c0d43b24c02c6c4f4974)
+
+**fixed alerts:**
+
+* 2 for Unused import
+* 1 for Variable defined multiple times
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/38,The docker container doesn't have the `gettext` utilities required to `makemessages` or `compilemessages`.
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/38,> We accept an 8-digit code but then add an empty space in the middle so that it's more readable. Looking at the string length give you `9` because of the space in the middle, so it's probably better to keep the number hardcoded for now.
+
+You're right! I missed that. I can fix this easily if you want. If you're more comfortable with hard coded, I totally understand too.
+
+
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/38,Sorry about the approval and then the retraction. I didn't figure out about the miscount problem until I had sent the approval along. If you want to change this so it's not dynamic (or ignores the space), I'll re-approve the PR.
+
+> The docker container doesn't have the `gettext` utilities required to `makemessages` or `compilemessages`.
+
+Ah, interesting. If you want to submit a PR for that, that would be super.
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/28,This pull request **introduces 5 alerts** when merging 97e812b013b22e6d0a5e6926022631a1395713b1 into 60dfc5dd3ead38b4f5e0e42faba2081fbd211446 - [view on LGTM.com](https://lgtm.com/projects/g/cds-snc/covid-healthcare-portal/rev/pr-f4eddfc1380ba87c5dee6ef650166b92ba75e92d)
+
+**new alerts:**
+
+* 5 for Unused import
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/28,@pcraig3 I'm still manually testing this but I think it's ready for review. I'm going to add some unit tests to it but not sure if we want to merge it now without the tests to make it easier for future merges
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/28,I'm going to work on tests for this in a separate PR
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/28,This pull request **introduces 1 alert** when merging 288f1ac47915111e31e8ed4f848e8680692f074a into 25df434f8153558bb0292fb65981f59ca41e3193 - [view on LGTM.com](https://lgtm.com/projects/g/cds-snc/covid-healthcare-portal/rev/pr-894b38c03206598570f8cbf17cfad26f9350804f)
+
+**new alerts:**
+
+* 1 for Unused import
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/38,@PierrePaul Merci pour le PR! My initial reaction is to suspect that since the 8 digit code won't change in size that we can keep it hardcoded. Just really to keep things as simple as possible, what do you think?
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/38,> @PierrePaul Merci pour le PR! My initial reaction is to suspect that since the 8 digit code won't change in size that we can keep it hardcoded. Just really to keep things as simple as possible, what do you think?
+
+It's your call really, right now the code looks like `code|cut:" "|length` so I wouldn't call this really complicated. That exact wording might not even be necessary in the future.
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/28,This pull request **introduces 1 alert** when merging fa89fabe9619da440d1e569e8cee0f3782cc01c4 into 2f455b1930cd5d378e581de8f644016d1ac759b6 - [view on LGTM.com](https://lgtm.com/projects/g/cds-snc/covid-healthcare-portal/rev/pr-6606b0570a666f986ea9054da7226cc87f8767fd)
+
+**new alerts:**
+
+* 1 for Unused import
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/42,Thanks @sboisvert! 🙌 
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/28,One last thing I'll add is that you can update the [`signup.html`](https://github.com/cds-snc/covid-healthcare-portal/blob/main/profiles/templates/profiles/signup.html) template to bring in the new form styling and error messaging. 
+
+I already did this for the PasswordReset form so it will be pretty straightforward: https://github.com/cds-snc/covid-healthcare-portal/commit/7ac342d1a3e10e8a06d7ffbba9d6bf92ba2d9322#diff-d070b5025129bb20e939468414da2952
+
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/38,Gonna merge, as I am working on this file now.
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/44,Good question.
+
+For all of our current repos we just use the English version of the MIT license. 
+
+This stackexchange question implies that translating the license isn't really useful: https://opensource.stackexchange.com/questions/6077/license-details-in-languages-other-than-english-american/6079#6079
+
+> Translations of the licenses may be helpful for understanding, but are not a legally relevant document. If an official translation exists you could additionally link to that. You should not write or commission a translation of your own. That exposes you to unnecessarily liability if you mistranslate something, and it may actually violate the license of the license. 
+
+So we're not going to provide a French translation of the MIT license. 
+
+Other than that, we translate our READMEs and other project documentation as a standard practice.
+
+
+
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/47,Thought ... We could do (in JS):
+
+```js
+`Expires: ${(new Date(Date.now()+10*60*1000)).toLocaleString('fr-CA', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' })}`
+```
+
+Output (on Mac, Safari): 
+`Expires: samedi 27 juin 2020 9:51:35 HAE` (fr-CA) 
+or `Expires: Saturday, June 27, 2020, 9:51:58 AM EDT` (en-CA)
+
+And even pass through the server's UTC timestamp by having `Date.now()+10*60*1000` (or however close we can get) computed server-side, because UTC time should be an accurate representation of what time it will be when this expires (with odd-but-accurate effects during leap hours):
+
+```js
+`Expires: ${(new Date(1593236567072)).toLocaleString('fr-CA', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' })}`
+```
+
+In the above, fr-CA can be swapped for en-CA, though "Expires: " would have to be translated like other strings.
+
+It's worth keeping in mind that when something is predicted to happen in x minutes, or is a log of what happened x minutes ago, you can use UTC timestamps (or UNIX timestamps) to represent these instants in time. Where you can't use UNIX timestamps is when humans are trying to arrange a time to meet in a certain location's time zone (because time zones vary over time and place), but when minutes get leap seconds added to them, the duration of a minute changes in every time zone -- such that generally speaking, 10 minutes from now in UTC is equivalent to 10 minutes from now in a local time zone. :)
+
+Through this, you could create a JS-based countdown clock, change the page on its expiry, etc.
+
+CanIUse: https://caniuse.com/#feat=mdn-javascript_builtins_date_tolocalestring_options
+
+The upstream Rails portal uses setTimeout to show a message when the code "expires", you could probably modify this to be a hair more accurate by subtracting the client UNIX timestamp from the server-generated one, though good luck if the local time is set incorrectly. (You might get a negative number of milliseconds if the local browser is more than 10 minutes faster than the server's clock.) https://github.com/CovidShield/portal/blob/a63d154d14952dceec4b7eabf85ed77f83d1dee6/app/javascript/components/code-generator.js#L87-L90
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/47,Just throwing my 2 cents, storing the date in UTC and using JS to show the date in the correct timezone (either user preference or browser default) is usually the most reliable way to go.
+
+Moment.js is easy to work with, but big. There are other alternatives like date-fns with good timezone and i18n support ( https://github.com/you-dont-need/You-Dont-Need-Momentjs ).
+
+There is also the possibility of storing UTC, then using `<time>` tag, but if I recall correctly, it's not supported in internet explorer 11. Also, using `<time>`, a user could not change manually the timezone in his profile, the user is stuck with the timezone exposed by his browser.
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/47,I think we want to go quick and simple on this, I don't think we need to worry about exact precision with leap seconds and etc.
+I think we can assume that the computer they are using has the correct timezone, or at least one they will know and recognize, so if we say EDT and their computer is in EDT but they are currently in CDT, they are probably aware of this.
+@PierrePaul do you want to take a go at using date-fns for this?
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/47,> @PierrePaul do you want to take a go at using date-fns for this?
+
+Yes, on it.
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/28,@pcraig3 I think you need to re-approve as a code-owner
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/47,Gonna merge as-is for now and then later we can revisit.
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/47,oops, can't merge until I get another approval
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/20,Ensured that the new ECR is deployed
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/13,Looks like the integration into the 'server' component isn't picking up the Go pkg info..
+
+https://support.snyk.io/hc/en-us/articles/360003817417-Snyk-for-Golang
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/13,Snyk is enabled across all 4 repo's, but it doesn't appear to picking up the Golang code in the server so I've got a support ticket in.
+
+Closing, will re-open if this drags out.
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/39,Fields are deprecated
+
+https://developers.google.com/android/exposure-notifications/exposure-key-file-format
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/15,Closed in https://github.com/cds-snc/continuous-guardrail-scanning
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/48,#47 can be closed once merged.
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/50,After a discussion with @lchski, we’ll implement this feature. Lucas will follow-up with our policy read on the acceptability of this change.
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/52,cc: @caitlintuba for viz.
+
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/76,This issue was fixed in #23 and #16 by adding a ECR repository and removing the reference to the DockerHub images. 
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/75,Container images are pushed into a separate production ECR as defined in this pull request #58. Before they are deployed they are scanned both my the Microsoft GitHub action as well as the AWS native solution.
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/60,Open Telemetry was added to the server through this pull request from upstream: #35. Additionally application level metrics were added in #51 and continue to be added as need arises.
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/72,This was fixed by adding `-${random_string.random.result}` to the Terraform in #12, which allows new secrets to be created on each re-run Terraform, while allowing for the previous 30 day recovery window.
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/52,Sorry for the necromancy comment, but thanks to your link to https://github.com/hashicorp/setup-terraform/issues/23, I've managed to solve the same [issue](https://github.com/hoprnet/hopr-devops/commit/cc6fadb889fd3013fb9d0844716b50128e987f8e). In a very random note, at [HOPR](https://hoprnet.org/) we are building an open-source privacy-oriented mixnet to communicate data and we might overlap with some of the work done in here. HMU here or at Twitter w/@jjperezaguinaga (or our founder @SCBuergel) in Twitter to chat ☺️ 
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/74,Partially addressed in #42 and #45 but needs more work.
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/83,@whytoe has some suggestions on a better implementation.
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/61,Issue finding category updated to HTTPS
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/86,Data provider isnt available because the KMS needs to be created first, going to investigate the best way to ensure core services are available before application deployment
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/90,AWS documentation states it should default to Latest
+
+`platform_version - (Optional) The platform version on which to run your service. Only applicable for launch_type set to FARGATE. Defaults to LATEST. More information about Fargate platform versions can be found in the AWS ECS User Guide. `
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/85,Need to add in encryption once #86 is merged
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/71,Would love to understand the cost implications of this, given this will be a relatively heavy query path. Will flag this one to AWS for a 2nd set of eyes.
+
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/90,"Fargate tasks now support the CAP_SYS_PTRACE Linux capability"++ 
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/74,@maxneuvians I can complete this
+Do you have a list of alarms you want implemented?
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/69,I'm not sure this is necessary: the only files sent are zip files, which are already compressed, and tiny JSON blobs which are unlikely to be more than 1–2 packets anyway.
+
+Doesn't seem harmful though 🤷 
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/79,Unfortunately did not work - scaled the workloads to 0 and took them offline. It looks like we need to define alarms that trigger autoscaling actions: https://medium.com/@bradford_hamilton/deploying-containers-on-amazons-ecs-using-fargate-and-terraform-part-2-2e6f6a3a957f
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/83,We will merge this and enhance in https://github.com/cds-snc/covid-shield-server/issues/91
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/71,@obrien-j I'll make sure you have full sight on this.  Note that "AWS WAF is included with AWS Shield Advanced at no extra cost."
+
+https://docs.aws.amazon.com/waf/latest/developerguide/ddos-overview.html#ddos-advanced
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/79,As @maxneuvians mentioned, in the merged code there isn't a cloudwatch metric alarm that trigger the escalation process. ECS service support several scaling strategies https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-auto-scaling.html. The example in medium blog use step_scaling, but maybe you should review target tracking policy (target_tracking_scaling_policy_configuration in Terraform)
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/61,Potentially use https://aws.amazon.com/blogs/compute/using-aws-app-mesh-with-fargate/
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/89,Linked to #71 
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/71,It might be nice to block URLs that don't fit the retrieval URL schema:
+
+https://github.com/cds-snc/covid-shield-server/blob/master/pkg/server/retrieve.go#L36
+
+and
+
+https://github.com/cds-snc/covid-shield-server/blob/master/pkg/server/config.go#L22
+
+and
+
+https://github.com/cds-snc/covid-shield-server/blob/master/pkg/server/services.go#L26-L27
+
+
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/9,The store listings explain this succinctly already. The readme on this repo is exactly what you would expect to find on any other open source project. I agree that it could also include the info you're requesting, but it's quite amusing you think insulting the developers as the most appropriate way to get your point across. 
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/9,Wasn't an insult. I came to this project from a news article and wanted to know more about it in general. Being a developer myself, I realize that sometimes I just assume others know what I'm talking about. I think that's the case here.
+Most projects readme's have a line that says what it is. This project's overview says how it's built. Two totally different things.
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/9,I'm up for moving most of the current `README.md` into, say, `DEVELOP.md` and having the bulk of `README.md` be a copy of the app store descriptions. Not that I'm a contributor yet. 
+
+@iplayfast, the bit about "self absorbed" is slightly impolite, depending on the audience, I think. 
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/9,Ah. I suppose "self absorbed" could be interpreted as an insult. Didn't mean it that way. I just know when I'm eyeballs deep in a project I am self absorbed, and have a hard time viewing from others viewpoints about the project.
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/9,For what it's worth we're listening and definitely attempting to look at things from as many viewpoints as possible.
+
+We'll triage this and go from there :)
+
+https://digital.canada.ca
+
+
+
+
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/9,I'm just going to drop in this repo here, which wasn't in most of the media announcement, but is more in line with your original questions.
+
+https://github.com/cds-snc/covid-alert-documentation/
+
+I'm also going to move this over there, where we'll be triaging non-app/server specific issues and questions.
+
+No harm, no foul. We're admittedly all pretty absorbed in this project, and we do appreciate any feedback to make it easier for folks to understand, and especially as it relates to privacy, and peoples trust and confidence in the service.
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/9,@iplayfast Did you want to take a crack at a more descriptive title, or would you mind if I did? 
+
+It'll help make it more identifiable while triaging through the issues list.
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/10,Thanks the questions @gh-andre, we've had a comment on this previously on the app's repo as well.
+
+I'm going to move this issue up into the 'covid-alert-documentation' repository as well, as that'll help us centralize efforts on improving the clarity and consistency of our documentation. 
+
+Do you have a specific set of questions that you'd like clarity on to help us focus our efforts? 
+
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/10,It seems like you're curious about how Rolling Proximity Identifiers (aka 'random codes', or RPI's) and Diagnosis keys (aka: different 'random codes') are stored?
+
+> If so, the diagnosis keys, which are just re-named Temporary Exposure keys (randomly generated 16-byte values), are stored in the national servers database without any linkage to other pieces of information.
+> RPI's that your phone broadcast are stored by other phones in their exposure notification subsystem. This information is never presented to the application itself, and is only ever used by the subsystem to match against diagnosis keys that the app downloads from the national server itself.
+> This matching process leverage several factors to determine if there's an exposure, one of which as you mentioned 'proximity', is actually represented by a signal attentuation, measured by a ratio of transmit power and received signal strength, which are stored with the RPI's locally.
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/10,The point is, the key for deploying this app is to gain some community trust and vague descriptions are not helping. If somebody doesn't understand how it works, they will not read Google's contact tracing scanning flow sequence diagrams, but simply will shrug off this app.
+
+You need to present a diagram of interactions in human-readable terms, describe what databases are used, where data is stored in general (i.e. mentioned databases, owner's device, other people's devices), as well as to assure people that there is no retention of data in any form, such as backups (I saw an issue here talking about one-day backups and a system like this shouldn't have any, but should only rely on redundant storage; there must be no backups).
+
+Specifically, you need to describe what happens in any of the following scenarios:
+
+* if any of the databases is compromised, what will attacker gain from that information?
+* if somebody gets their copy on random keys for other people on their own device, what can they gain?
+* if somebody steals my device, what they will gain?
+* can somebody fake positive COVID-19 diagnosis?
+
+As an example, you would describe that Rolling Proximity Identifier is generated every 15 minutes, so if somebody followed a person with the same device in Bluetooth signal proximity, they wouldn't track the person because RPI's are generated every 15 minutes. Same for all bits - daily tracing keys, diagnosis keys, etc.
+
+If you don't describe those, no amount of doctors saying they love this app will help installing it on as many devices as is needed for contact tracing.
+
+> This information is never presented to the application itself
+
+That's security by obscurity and is irrelevant. You should assume that any user can hack their own device to gain full access to this data, so your narrative should be that this data, if obtained by the device holder, cannot be used to retrieve diagnosis data for these RPI's.
+
+Lastly, if it is all anonymous, how would a health professional contact a person if they are sick? None of the descriptions are clear on that, which suggests that there's something in the database that tracks a person for this contact. You need to describe that a health professional contacts a person whether they have an app or not, gives them the diagnosis and *if* the person has the app, then they also get the one time code to notify others. Clarity is important.
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/10,These are very legitimate concerns. I echo these  questions:
+- how does public health generate the secret key to provide to person infected with COVID, is it a pool of numbers
+- if I ran a script on a phone emulator could I get a list of “working codes” using brute force.
+- if a device is deemed rogue how can we disable it.
+
+
+
+Sent from my iPhone
+
+On Aug 2, 2020, at 5:24 PM, Andre <notifications@github.com> wrote:
+
+﻿
+
+The point is, the key for deploying this app is to gain some community trust and vague descriptions are not helping. If somebody doesn't understand how it works, they will not read Google's contact tracing scanning flow sequence diagrams, but simply will shrug off this app.
+
+You need to present a diagram of interactions in human-readable terms, describe what databases are used, where data is stored in general (i.e. mentioned databases, owner's device, other people's devices), as well as to assure people that there is no retention of data in any form, such as backups (I saw an issue here talking about one-day backups and a system like this shouldn't have any, but should only rely on redundant storage; there must be no backups).
+
+Specifically, you need to describe what happens in any of the following scenarios:
+
+  *   if any of the databases is compromised, what will attacker gain from that information?
+  *   if somebody gets their copy on random keys for other people on their own device, what can they gain?
+  *   if somebody steals my device, what they will gain?
+  *   can somebody fake positive COVID-19 diagnosis?
+
+As an example, you would describe that Rolling Proximity Identifier is generated every 15 minutes, so if somebody followed a person with the same device in Bluetooth signal proximity, they wouldn't track the person because RPI's are generated every 15 minutes. Same for all bits - daily tracing keys, diagnosis keys, etc.
+
+If you don't describe those, no amount of doctors saying they love this app will help installing it on as many devices as is needed for contact tracing.
+
+This information is never presented to the application itself
+
+That's security by obscurity and is irrelevant. You should assume that any user can hack their own device to gain full access to this data, so your narrative should be that this data, if obtained by the device holder, cannot be used to retrieve diagnosis data for these RPI's.
+
+Lastly, if it is all anonymous, how would a health professional contact a person if they are sick? None of the descriptions are clear on that, which suggests that there's something in the database that tracks a person for this contact. You need to describe that a health professional contacts a person whether they have an app or not, gives them the diagnosis and if the person has the app, then they also get the one time code to notify others. Clarity is important.
+
+—
+You are receiving this because you are subscribed to this thread.
+Reply to this email directly, view it on GitHub<https://github.com/cds-snc/covid-alert-documentation/issues/10#issuecomment-667726486>, or unsubscribe<https://github.com/notifications/unsubscribe-auth/AGAFWJOUM4LCBSWPBL3OBYDR6XKPDANCNFSM4PSWRVUA>.
+
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/10,The more I browse through changes from the original design, the less confident I get from this forked development. There is a reason Google and Apple developed specific guidelines and changing them to "adapt" to local health care needs is only making it more vulnerable to various privacy issues.
+
+For example, 
+
+* I see now that the lifetime of one time codes has been extended from 10 minutes to 24 hours, so now somebody getting their phone call in a restaurant and writing it down on a napkin leaves this code available to others for 24 hours.
+* There is apparently some logging in the app and no description of log retention policy or what's in the log.
+* There's a new `hashID` introduced to allow people issue their own claim codes, without any documentation of possible security implications and measures to mitigate them. 
+* There are some AWS SNS alerts added without clear description of what is being sent and how this data is retained.
+
+These are just things that popped up on the surface, without looking at the code much. You should be running Google's original server and app with transparent practices on log retention, backups, etc. This way we at least would know the code went through some security experts at Google and Apple. 
+
+If you want to change how it behaves, you should submit your changes to Google, so they adapt their code under their security practices and guidelines. Taking a secure server and changing it up to make it more "convenient" for various local parties is how security and privacy breaches are created. 
+
+At the very least you should commission Google folks to review your changes and provide their guidance in terms of security and privacy. 
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/10,For what it's worth, it wasn't Google that developed the upstream pre-fork codebase. That was built, as a reference implementation of Apple/Google's Exposure Notification frameworks, prospectively for an ultimate handoff to CDS or some other Canadian government entity, and in as simple and privacy-preserving a manner as possible. Changes and improvements are being made here, post-handoff, rather than in the upstream repo, because the project also took on a life of its own outside of Canada and it's much simpler for CDS to not worry about conflicting with those other users while prioritizing getting COVID Alert working for Canada. We do actually intend to take most or all of these changes upstream, but just haven't got around to it yet. Speaking as a maintainer of one part of that upstream project, I can safely say that I haven't come across a change in this fork that I haven't found completely compatible with our original privacy stance and vision.
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/10,@burke 
+
+There is a point being missed here. Developers are terrible at security, in general, and things like bumping up expiry for one-time codes from 10 minutes to 24 hours are very questionable and should be confirmed by those with security skills, whether it's the original designers or an outside security consulting company.
+
+The app will be used only if people have confidence in privacy features of the app and so far statements like "random identifiers" are misleading because if they were random, you wouldn't be able to receive a diagnosis key, which is a daily key and match it up against rolling proximity identifiers.
+
+You need to come up with a good diagram that shows how the app interacts with other phones, how it receives diagnostic keys and matches them up against RPE's, whether a tracing key, which uniquely identifies the device, ever gets into the cloud database, what the device public key in the database is used for, and so on. This is just to show people what the app does.
+
+On top of that, you need to describe how data can be exploited (or not) if a database gets compromised, if person's device gets compromised or if a remote device gets compromised with my keys on it. This description should be done by a security-aware person and not a developer. 
+
+Lastly, you need to describe retention policies for logs, database backups, encryption at rest policy for AWS database, and any communication with AWS, like SNS messages. 
+
+One important point in all of this, I'm not asking this for myself to entertain my curiosity about the app. If you want the app to be used, this is what needs to be done to convince the layer of the population who are not completely against it, but not quite sure what the app does. You can ignore this, but it will not help you to install the app in numbers we all need to make contact tracing useful.
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/10,Of course security audits are important (and, if you peruse the closed issues on these repositories, you'll see quite a bit of activity of that nature).
+
+To respond to a couple of specific points here though:
+
+"Random identifiers" is—unfortunately—the user-facing language used by Apple and Google in consent prompts, which paints application implementors into the corner of having to mirror this same language.
+
+Most of what you're asking for is actually the domain of the Exposure Notification frameworks in Android and iOS. While it's true that COVID Shield and COVID Alert would do well to explain this integrated system of app and framework holistically, the reason the early documentation doesn't have the information you're looking to find is that the framework parts are extensively documented in a more global way ([example](https://www.apple.com/covid19/contacttracing), [example](https://ncase.me/contact-tracing/)). The truly novel parts of the app and server are few and far between; the mobile application is, to a larger extent than one would initially guess, just a pretty wrapper around a small handful of framework calls. The One-Time-Code system for authenticating diagnoses is really the only major concept not defined by Apple and Google.
+
+But, if confirmation from the original designers of this protocol matters, consider this it: Ten minute expiry was my choice and I'm confident that bumping it to 24 hours alongside the substantial increase in keyspace size is an improvement.
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/48,Your suggestion cannot be implemented within the Google/Apple framework since the framework requires explicit consent from the user (via a dialog box) before exposures are uploaded. There is nothing the app can do here to automate this process. 
+
+An alternative suggestion is to add functionality to retrieve the test result to the app. This way, the user has more incentive to use the app and may be more likely to upload the exposures. German's app takes this approach. However, they found that only 50% of the users who would be able to upload exposures actually do so.
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/48,> Your suggestion cannot be implemented within the Google/Apple framework since the framework requires explicit consent from the user (via a dialog box) before exposures are uploaded. There is nothing the app can do here to automate this process.
+> 
+> An alternative suggestion is to add functionality to retrieve the test result to the app. This way, the user has more incentive to use the app and may be more likely to upload the exposures. German's app takes this approach. However, they found that only 50% of the users who would be able to upload exposures actually do so.
+
+The preauthorized dialog is proposed as the mean to comply with the framework. Uploading exposure data remains only done if user is subsequently diagnosed positive. Yes the server or portal would now be notifying the app user of his own test result, which used to be done outside the app framework with the problems that we fully appreciate now. The proposed test result optimization would streamline the currently elusive final notifications to users having been in the proximity.
+
+
+
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/42,Further thread discussions have not timely occured. Improved support for BC will most likely also require improvement in the process of managing new requirements such as better tracking/sign off of requirements of both BC Heath and Canada Health authorities discussed strictly privately so far (no public records readily available). https://github.com/cds-snc/covid-alert-server/issues/417 has been entered to track progress on managing new requirements and getting them allocated for development, testing and release -vs- other resources currently available or already allocated. More resources and budget may be necessary in order to timely deliver during the 2nd wave.
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/42,This is a public repo. I feel that if the BC gov were more public with their requirements, BC tech firms would be happy to contribute coding resources to solve these problems. It's the lack of transparency when journalists asks questions about their progress that is most upsetting. I would invite Dr Bonnie Hendry and Health Minister Adrian Dix to consider posting the requirements to this issue to improve the transparency of the process.
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/44,Ref: cds-snc/covid-alert-app#1384 
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/27,@EliseKa to add FR translations. 
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/44,Hi @LeCanardQuoi - thank you for your comments. Please refer to [this doc](https://github.com/cds-snc/covid-alert-documentation/blob/main/product/qr-codes.md) for an overview of our work on QR codes and notifications for venue outbreaks. We'll be updating documentation and details in that repo as we go forward. 
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/44,> Hi @LeCanardQuoi - thank you for your comments. Please refer to [this doc](https://github.com/cds-snc/covid-alert-documentation/blob/main/product/qr-codes.md) for an overview of our work on QR codes and notifications for venue outbreaks. We'll be updating documentation and details in that repo as we go forward.
+
+Am delighted. Will however require careful thought about a phased deployment (release plan), including field trial, public policy support and ... messaging. First step would be to simply record these QR scan (whether "partner" in program or not) as an other form of proximity events (rf. cds-snc/covid-alert-app#1304) and make core users aware of such logging. Much similar to logging proximity events imho.  Most useful info for stix&stones contact tracing people (rf. cds-snc/covid-alert-app#1395). Final notification remains similarly elusive imho but doable with sufficient pragmatism, proper kpi metrics (rf cds-snc/covid-alert-app#1305), community engagement and less wokeism ;-) Must learn to walk before running. Microsoft wisdom of "eating own dogfood" most applicable here. Deploy first in federal "facilities": custom&immig, airline flight, post office and Service Canada points of service. Great pressure for BC and Alta btw to get off their derrière. Hence public policy absolutely vital to deploy successfully, and "turbocharge" these adoption/retention rates. Cheers to the Marmot!
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/27,FR translations added on the same branch
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/24,I can reproduce, I see two options: either linking to the [Security policy tab](https://github.com/cds-snc/covid-alert-documentation/security/policy) of this repository or referencing [the source itself](https://github.com/cds-snc/.github/blob/master/SECURITY.md).
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/28,Waiting on translation to merge.
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/28,PR was switched to https://github.com/cds-snc/covid-alert-app/pull/1382
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/44,Still not sure on process to exchange on related requirements. Two additional sub-reqs: 1) Tracking as proximity events non signatory QR scan code sites would have merits for an app user wishing to track their whereabouts (without depending on Google map trace). Would be useful before more comprehensive support gets off the ground, likely involving bureaucratic delays. 2) Make sure the feature can be individually activated and deactivated, similarly to activating/deactivating Bluetooth proximity events, and log these commands to the Google setting log.
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/48,An elegant user interface scheme to implement pre-authorization would be through an activation and deactivation command of the actual alert notification. So once the user signs up to be notified upon diagnosed exposure events (whether bluetooth proximity or QR code scan), he/she also signs up to notify (preauthorize) if ever diagnosed. Fair is fair? Activation of notification inbound is currently defaulted on while outbound notification is on-demand voluntary, and too often avoided which defeats entire purpose of the app. @sidewalkballet 
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/42,Mandatory BC business  COVID-19 safety plans promoted via QR code signage could be leveraged by linking to upcoming  QR code scan support cds-snc/covid-alert-app#1328 Thanks to Jeff D. for suggesting.
+https://t.co/9UH9fqHgJD
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/3,Fixed my config and reformatted for a cleaner PR
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/10,will resubmit with more updates
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/14,To note here is that the HMAC will need to match the one in the shared file if you want to retrieve exposure keys from the server. But we can adjust those locally
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/26,RE: Stephen Y @Stephen-PM 
+> Show that some of Ontario's learnings have been leveraged (no pulsing blue dot, etc.).
+
+@amazingphilippe are we going to use the Ontario "icons" to replace the pulsing blue dot?
+
+<img width="300" src="https://user-images.githubusercontent.com/62242/84881414-d331f300-b05b-11ea-8030-5c63e41b6433.jpg">
+
+<hr>
+
+<img width="300" src="https://user-images.githubusercontent.com/62242/84881962-931f4000-b05c-11ea-8723-35661b8f3b1a.jpg">
+
+
+
+
+
+
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/26,I did some more work on this to add the Province/Territory picker button to the home screen (if not set), and to the settings nav:
+<img width="363" alt="Screen Shot 2020-06-17 at 9 58 21 PM" src="https://user-images.githubusercontent.com/5498428/84987225-024c7100-b0fd-11ea-9929-fa749de45774.png">
+
+But there is still a bug to work out, and I'm not sure this will be crucial for demo'ing, so I will pause on this for now.
+
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/26,Closing since most of these changes are getting added to the box-icon branch
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/72,We can merge - the build and push doesn't happen as part of this repo.  It's a manual process at this point via xCode.
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/78,I was doing some research into the linking to the bluetooth page and came across some projects that opened up the right links for bluetooth:
+
+This is the line that needs to be changed: https://github.com/cds-snc/covid-shield-mobile/blob/cb3f1a75492e368eb390d2c4b61574c9757d19a5/src/screens/home/views/BluetoothDisabledView.tsx#L11
+
+
+Heres an example for IOS: https://github.com/rjblopes/react-native-device-settings/pull/8/files
+
+Heres an example for Android: https://github.com/LuoZihYuan/Synesthesia-Experiment/blob/6149fff0f2e2d7c54bd6dad89bbc725f0e9bf6fa/Runtime/SERoboArm.js#L36
+
+I am testing this out now
+
+
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/78,Nice, thanks so much for looking into this for us.
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/87,Android build
+<img width="300" alt="Screen Shot 2020-06-20 at 6 30 00 PM" src="https://user-images.githubusercontent.com/62242/85212776-440b3080-b324-11ea-9d34-2393e59575a1.png">
+
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/87,iOS Build
+<img width="300" alt="Screen Shot 2020-06-20 at 6 34 03 PM" src="https://user-images.githubusercontent.com/62242/85212826-b67c1080-b324-11ea-8036-d27374e03e3c.png">
+
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/78,Was looking at the use of `App-prefs:root=Bluetooth`
+
+And not sure if it's still the case but it might get rejected.
+
+https://developer.apple.com/forums/thread/100471
+
+```
+Guideline 2.5.1 - Performance - Software Requirements
+
+Your app uses the "prefs:root=" non-public URL scheme, which is a private entity. The use of non-public APIs is not permitted on the App Store because it can lead to a poor user experience should these APIs change.
+ 
+```
+
+<img width="920" alt="Screen Shot 2020-06-20 at 8 04 41 PM" src="https://user-images.githubusercontent.com/62242/85213804-6fe0e300-b331-11ea-9b12-ba53d0ffcf48.png">
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/78,https://github.com/CovidShield/mobile/issues/125#issuecomment-647055105
+
+Found this note 
+
+```
+These functions are disabled by default. You must not call them If your app need submit to App Store. As an alternative, you can show a tip to tell the user how to change the system setting.
+```
+
+https://github.com/c19354837/react-native-system-setting/blob/master/iOS.md#ios
+
+<img width="984" alt="Screen Shot 2020-06-20 at 8 19 39 PM" src="https://user-images.githubusercontent.com/62242/85213978-7e2ffe80-b333-11ea-882b-c99ea877190f.png">
+
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/78,It appears on iOS it will not be possible to open up the bluetooth settings, we will just have to have a link saying enable bluetooth. 
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/78,@smcmurtry 
+
+Via @Stephen-PM 
+> We'll remove the button at least temporarily  
+
+
+
+
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/78,The main issue apart from this which was referenced in the link earlier is that there is actually no check for if bluetooth is enabled anywhere in the codebase. The closest thing I could find was this module which appears to be compatible with iOS and allows you to perform the switch for android too. 
+https://github.com/solinor/react-native-bluetooth-status
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/71,cc:
+
+@sboots 
+@Stephen-PM 
+
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/78,https://github.com/cds-snc/covid-shield-mobile/blob/5c36b2582eb4e60963e991fce97d772c03880e20/ios/CovidShield/ExposureNotification.m#L98
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/78,My apologies, I am fairly new to objective c, I thought that this was a case switch for an not yet completed function but I now see this is being returned by the native exposure notification system. 
+
+I couldn't find an equivalent of that case in the android portion. It appears to me that this case switch can't distinguish the case where it's inactive and that the bluetooth is off. 
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/78,No worries - we're all getting up to speed on the codebase :)
+
+And yes sounds like that's the case.
+
+Thanks again for your help.
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/71,Thanks for reaching out @RByers I've noted this to some CDS folks and we'll see what they come back with :)
+
+@katewilhelm
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/78,Added a PR with a potential solution to the bluetooth status check and the ability to change the bluetooth settings in app for android ^
+
+Also attaching this issue from CovidShield here for reference: https://github.com/CovidShield/mobile/issues/121
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/79,@maxneuvians @dsamojlenko 
+
+I would like to get away from using the debug menu.  My concern is we end up getting the app into states that the real app can't end up in.
+
+It would be nice if we can hit the api via a terminal command via curl request to 
+
+- Trigger push Notifications 
+- Exposure state (re-confirm state)
+
+
+
+
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/34,https://github.com/cds-snc/covid-shield-mobile/issues/79#issuecomment-647097217
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/91,Upstream issue here:
+https://github.com/CovidShield/mobile/issues/111
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/96,- We're using the initial province select from upstream 
+- Added to the drawer menu (https://github.com/cds-snc/covid-shield-mobile/issues/96#issue-642535054)
+
+- In some cases you can also reach it from within the content
+<img width="250" alt="Screen Shot 2020-06-21 at 6 21 45 AM" src="https://user-images.githubusercontent.com/62242/85222255-b5c89600-b387-11ea-98e3-4ca34d16f164.png">
+
+
+Noting the upstream.
+
+
+
+**Upstream** 
+https://github.com/CovidShield/mobile/issues/81
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/95,Per https://github.com/CovidShield/mobile/issues/114
+
+We need to coordinate with @dsamojlenko on Monday to get a build with entitlements pushed up. 
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/78,Ref https://github.com/cds-snc/covid-shield-mobile/issues/78 
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/95,https://github.com/CovidShield/mobile/issues/137
+
+
+Via https://github.com/CovidShield/mobile/issues/125#issuecomment-647113522
+
+> Hi @ChrisDryden ,
+
+I was discussing with my team few days ago and we think it makes more sense for user to not care about bluetooth if using exposure notification (EN). That means:
+
+The turn on bluetooth UI should be removed.
+Android bridge for EN should also check bluetooth status and returns same payload as iOS.
+When turn on EN, Android should turn on bluetooth at the same time.
+
+
+https://api.github.com/repos/cds-snc/covid-alert-app/issues/90,@ChrisDryden going to hold off on reviewing this until we get better coordinated with upstream + on our end.  Ideally the fixes will happen in one spot and get cherry picked up or downstream.
+
+https://github.com/CovidShield/mobile/issues/125#issuecomment-647116531
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/3,Awesome feedback, I've incorporated it all. Right now the UX for an error is pretty bad (you just get ERROR). It also sends it to stderr so we can catch it somewhere.
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/3,I added a link to /code/ in base.html
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/5,I think we can get rid of requirements.txt as well actually.
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/5,I think let's wait, actually.
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/13,@sboisvert, I'm going to merge this so that I can fix our deploys.
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/15,I'm interested in seeing if the review environments will send out emails
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/15,Also, this should fail tests
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/30,Oh, I missed adding in
+> Go to `127.0.0.1:8000/` to see the landing page.
+
+FR:
+
+> Rendez-vous à `127.0.0.1:8000/` pour voir la page d’accueil.
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/36,This pull request **fixes 3 alerts** when merging cc27f4a87f84a09caab59e16ffcad86502ac0641 into 60dfc5dd3ead38b4f5e0e42faba2081fbd211446 - [view on LGTM.com](https://lgtm.com/projects/g/cds-snc/covid-healthcare-portal/rev/pr-4dd466940ae635f09d93c0d43b24c02c6c4f4974)
+
+**fixed alerts:**
+
+* 2 for Unused import
+* 1 for Variable defined multiple times
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/38,The docker container doesn't have the `gettext` utilities required to `makemessages` or `compilemessages`.
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/38,> We accept an 8-digit code but then add an empty space in the middle so that it's more readable. Looking at the string length give you `9` because of the space in the middle, so it's probably better to keep the number hardcoded for now.
+
+You're right! I missed that. I can fix this easily if you want. If you're more comfortable with hard coded, I totally understand too.
+
+
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/38,Sorry about the approval and then the retraction. I didn't figure out about the miscount problem until I had sent the approval along. If you want to change this so it's not dynamic (or ignores the space), I'll re-approve the PR.
+
+> The docker container doesn't have the `gettext` utilities required to `makemessages` or `compilemessages`.
+
+Ah, interesting. If you want to submit a PR for that, that would be super.
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/28,This pull request **introduces 5 alerts** when merging 97e812b013b22e6d0a5e6926022631a1395713b1 into 60dfc5dd3ead38b4f5e0e42faba2081fbd211446 - [view on LGTM.com](https://lgtm.com/projects/g/cds-snc/covid-healthcare-portal/rev/pr-f4eddfc1380ba87c5dee6ef650166b92ba75e92d)
+
+**new alerts:**
+
+* 5 for Unused import
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/28,@pcraig3 I'm still manually testing this but I think it's ready for review. I'm going to add some unit tests to it but not sure if we want to merge it now without the tests to make it easier for future merges
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/28,I'm going to work on tests for this in a separate PR
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/28,This pull request **introduces 1 alert** when merging 288f1ac47915111e31e8ed4f848e8680692f074a into 25df434f8153558bb0292fb65981f59ca41e3193 - [view on LGTM.com](https://lgtm.com/projects/g/cds-snc/covid-healthcare-portal/rev/pr-894b38c03206598570f8cbf17cfad26f9350804f)
+
+**new alerts:**
+
+* 1 for Unused import
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/38,@PierrePaul Merci pour le PR! My initial reaction is to suspect that since the 8 digit code won't change in size that we can keep it hardcoded. Just really to keep things as simple as possible, what do you think?
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/38,> @PierrePaul Merci pour le PR! My initial reaction is to suspect that since the 8 digit code won't change in size that we can keep it hardcoded. Just really to keep things as simple as possible, what do you think?
+
+It's your call really, right now the code looks like `code|cut:" "|length` so I wouldn't call this really complicated. That exact wording might not even be necessary in the future.
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/28,This pull request **introduces 1 alert** when merging fa89fabe9619da440d1e569e8cee0f3782cc01c4 into 2f455b1930cd5d378e581de8f644016d1ac759b6 - [view on LGTM.com](https://lgtm.com/projects/g/cds-snc/covid-healthcare-portal/rev/pr-6606b0570a666f986ea9054da7226cc87f8767fd)
+
+**new alerts:**
+
+* 1 for Unused import
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/42,Thanks @sboisvert! 🙌 
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/28,One last thing I'll add is that you can update the [`signup.html`](https://github.com/cds-snc/covid-healthcare-portal/blob/main/profiles/templates/profiles/signup.html) template to bring in the new form styling and error messaging. 
+
+I already did this for the PasswordReset form so it will be pretty straightforward: https://github.com/cds-snc/covid-healthcare-portal/commit/7ac342d1a3e10e8a06d7ffbba9d6bf92ba2d9322#diff-d070b5025129bb20e939468414da2952
+
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/38,Gonna merge, as I am working on this file now.
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/44,Good question.
+
+For all of our current repos we just use the English version of the MIT license. 
+
+This stackexchange question implies that translating the license isn't really useful: https://opensource.stackexchange.com/questions/6077/license-details-in-languages-other-than-english-american/6079#6079
+
+> Translations of the licenses may be helpful for understanding, but are not a legally relevant document. If an official translation exists you could additionally link to that. You should not write or commission a translation of your own. That exposes you to unnecessarily liability if you mistranslate something, and it may actually violate the license of the license. 
+
+So we're not going to provide a French translation of the MIT license. 
+
+Other than that, we translate our READMEs and other project documentation as a standard practice.
+
+
+
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/47,Thought ... We could do (in JS):
+
+```js
+`Expires: ${(new Date(Date.now()+10*60*1000)).toLocaleString('fr-CA', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' })}`
+```
+
+Output (on Mac, Safari): 
+`Expires: samedi 27 juin 2020 9:51:35 HAE` (fr-CA) 
+or `Expires: Saturday, June 27, 2020, 9:51:58 AM EDT` (en-CA)
+
+And even pass through the server's UTC timestamp by having `Date.now()+10*60*1000` (or however close we can get) computed server-side, because UTC time should be an accurate representation of what time it will be when this expires (with odd-but-accurate effects during leap hours):
+
+```js
+`Expires: ${(new Date(1593236567072)).toLocaleString('fr-CA', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' })}`
+```
+
+In the above, fr-CA can be swapped for en-CA, though "Expires: " would have to be translated like other strings.
+
+It's worth keeping in mind that when something is predicted to happen in x minutes, or is a log of what happened x minutes ago, you can use UTC timestamps (or UNIX timestamps) to represent these instants in time. Where you can't use UNIX timestamps is when humans are trying to arrange a time to meet in a certain location's time zone (because time zones vary over time and place), but when minutes get leap seconds added to them, the duration of a minute changes in every time zone -- such that generally speaking, 10 minutes from now in UTC is equivalent to 10 minutes from now in a local time zone. :)
+
+Through this, you could create a JS-based countdown clock, change the page on its expiry, etc.
+
+CanIUse: https://caniuse.com/#feat=mdn-javascript_builtins_date_tolocalestring_options
+
+The upstream Rails portal uses setTimeout to show a message when the code "expires", you could probably modify this to be a hair more accurate by subtracting the client UNIX timestamp from the server-generated one, though good luck if the local time is set incorrectly. (You might get a negative number of milliseconds if the local browser is more than 10 minutes faster than the server's clock.) https://github.com/CovidShield/portal/blob/a63d154d14952dceec4b7eabf85ed77f83d1dee6/app/javascript/components/code-generator.js#L87-L90
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/47,Just throwing my 2 cents, storing the date in UTC and using JS to show the date in the correct timezone (either user preference or browser default) is usually the most reliable way to go.
+
+Moment.js is easy to work with, but big. There are other alternatives like date-fns with good timezone and i18n support ( https://github.com/you-dont-need/You-Dont-Need-Momentjs ).
+
+There is also the possibility of storing UTC, then using `<time>` tag, but if I recall correctly, it's not supported in internet explorer 11. Also, using `<time>`, a user could not change manually the timezone in his profile, the user is stuck with the timezone exposed by his browser.
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/47,I think we want to go quick and simple on this, I don't think we need to worry about exact precision with leap seconds and etc.
+I think we can assume that the computer they are using has the correct timezone, or at least one they will know and recognize, so if we say EDT and their computer is in EDT but they are currently in CDT, they are probably aware of this.
+@PierrePaul do you want to take a go at using date-fns for this?
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/47,> @PierrePaul do you want to take a go at using date-fns for this?
+
+Yes, on it.
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/28,@pcraig3 I think you need to re-approve as a code-owner
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/47,Gonna merge as-is for now and then later we can revisit.
+https://api.github.com/repos/cds-snc/covid-alert-portal/issues/47,oops, can't merge until I get another approval
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/20,Ensured that the new ECR is deployed
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/13,Looks like the integration into the 'server' component isn't picking up the Go pkg info..
+
+https://support.snyk.io/hc/en-us/articles/360003817417-Snyk-for-Golang
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/13,Snyk is enabled across all 4 repo's, but it doesn't appear to picking up the Golang code in the server so I've got a support ticket in.
+
+Closing, will re-open if this drags out.
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/39,Fields are deprecated
+
+https://developers.google.com/android/exposure-notifications/exposure-key-file-format
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/15,Closed in https://github.com/cds-snc/continuous-guardrail-scanning
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/48,#47 can be closed once merged.
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/50,After a discussion with @lchski, we’ll implement this feature. Lucas will follow-up with our policy read on the acceptability of this change.
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/52,cc: @caitlintuba for viz.
+
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/76,This issue was fixed in #23 and #16 by adding a ECR repository and removing the reference to the DockerHub images. 
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/75,Container images are pushed into a separate production ECR as defined in this pull request #58. Before they are deployed they are scanned both my the Microsoft GitHub action as well as the AWS native solution.
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/60,Open Telemetry was added to the server through this pull request from upstream: #35. Additionally application level metrics were added in #51 and continue to be added as need arises.
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/72,This was fixed by adding `-${random_string.random.result}` to the Terraform in #12, which allows new secrets to be created on each re-run Terraform, while allowing for the previous 30 day recovery window.
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/52,Sorry for the necromancy comment, but thanks to your link to https://github.com/hashicorp/setup-terraform/issues/23, I've managed to solve the same [issue](https://github.com/hoprnet/hopr-devops/commit/cc6fadb889fd3013fb9d0844716b50128e987f8e). In a very random note, at [HOPR](https://hoprnet.org/) we are building an open-source privacy-oriented mixnet to communicate data and we might overlap with some of the work done in here. HMU here or at Twitter w/@jjperezaguinaga (or our founder @SCBuergel) in Twitter to chat ☺️ 
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/74,Partially addressed in #42 and #45 but needs more work.
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/83,@whytoe has some suggestions on a better implementation.
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/61,Issue finding category updated to HTTPS
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/86,Data provider isnt available because the KMS needs to be created first, going to investigate the best way to ensure core services are available before application deployment
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/90,AWS documentation states it should default to Latest
+
+`platform_version - (Optional) The platform version on which to run your service. Only applicable for launch_type set to FARGATE. Defaults to LATEST. More information about Fargate platform versions can be found in the AWS ECS User Guide. `
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/85,Need to add in encryption once #86 is merged
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/71,Would love to understand the cost implications of this, given this will be a relatively heavy query path. Will flag this one to AWS for a 2nd set of eyes.
+
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/90,"Fargate tasks now support the CAP_SYS_PTRACE Linux capability"++ 
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/74,@maxneuvians I can complete this
+Do you have a list of alarms you want implemented?
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/69,I'm not sure this is necessary: the only files sent are zip files, which are already compressed, and tiny JSON blobs which are unlikely to be more than 1–2 packets anyway.
+
+Doesn't seem harmful though 🤷 
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/79,Unfortunately did not work - scaled the workloads to 0 and took them offline. It looks like we need to define alarms that trigger autoscaling actions: https://medium.com/@bradford_hamilton/deploying-containers-on-amazons-ecs-using-fargate-and-terraform-part-2-2e6f6a3a957f
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/83,We will merge this and enhance in https://github.com/cds-snc/covid-shield-server/issues/91
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/71,@obrien-j I'll make sure you have full sight on this.  Note that "AWS WAF is included with AWS Shield Advanced at no extra cost."
+
+https://docs.aws.amazon.com/waf/latest/developerguide/ddos-overview.html#ddos-advanced
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/79,As @maxneuvians mentioned, in the merged code there isn't a cloudwatch metric alarm that trigger the escalation process. ECS service support several scaling strategies https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-auto-scaling.html. The example in medium blog use step_scaling, but maybe you should review target tracking policy (target_tracking_scaling_policy_configuration in Terraform)
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/61,Potentially use https://aws.amazon.com/blogs/compute/using-aws-app-mesh-with-fargate/
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/89,Linked to #71 
+https://api.github.com/repos/cds-snc/covid-alert-server/issues/71,It might be nice to block URLs that don't fit the retrieval URL schema:
+
+https://github.com/cds-snc/covid-shield-server/blob/master/pkg/server/retrieve.go#L36
+
+and
+
+https://github.com/cds-snc/covid-shield-server/blob/master/pkg/server/config.go#L22
+
+and
+
+https://github.com/cds-snc/covid-shield-server/blob/master/pkg/server/services.go#L26-L27
+
+
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/9,The store listings explain this succinctly already. The readme on this repo is exactly what you would expect to find on any other open source project. I agree that it could also include the info you're requesting, but it's quite amusing you think insulting the developers as the most appropriate way to get your point across. 
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/9,Wasn't an insult. I came to this project from a news article and wanted to know more about it in general. Being a developer myself, I realize that sometimes I just assume others know what I'm talking about. I think that's the case here.
+Most projects readme's have a line that says what it is. This project's overview says how it's built. Two totally different things.
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/9,I'm up for moving most of the current `README.md` into, say, `DEVELOP.md` and having the bulk of `README.md` be a copy of the app store descriptions. Not that I'm a contributor yet. 
+
+@iplayfast, the bit about "self absorbed" is slightly impolite, depending on the audience, I think. 
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/9,Ah. I suppose "self absorbed" could be interpreted as an insult. Didn't mean it that way. I just know when I'm eyeballs deep in a project I am self absorbed, and have a hard time viewing from others viewpoints about the project.
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/9,For what it's worth we're listening and definitely attempting to look at things from as many viewpoints as possible.
+
+We'll triage this and go from there :)
+
+https://digital.canada.ca
+
+
+
+
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/9,I'm just going to drop in this repo here, which wasn't in most of the media announcement, but is more in line with your original questions.
+
+https://github.com/cds-snc/covid-alert-documentation/
+
+I'm also going to move this over there, where we'll be triaging non-app/server specific issues and questions.
+
+No harm, no foul. We're admittedly all pretty absorbed in this project, and we do appreciate any feedback to make it easier for folks to understand, and especially as it relates to privacy, and peoples trust and confidence in the service.
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/9,@iplayfast Did you want to take a crack at a more descriptive title, or would you mind if I did? 
+
+It'll help make it more identifiable while triaging through the issues list.
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/10,Thanks the questions @gh-andre, we've had a comment on this previously on the app's repo as well.
+
+I'm going to move this issue up into the 'covid-alert-documentation' repository as well, as that'll help us centralize efforts on improving the clarity and consistency of our documentation. 
+
+Do you have a specific set of questions that you'd like clarity on to help us focus our efforts? 
+
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/10,It seems like you're curious about how Rolling Proximity Identifiers (aka 'random codes', or RPI's) and Diagnosis keys (aka: different 'random codes') are stored?
+
+> If so, the diagnosis keys, which are just re-named Temporary Exposure keys (randomly generated 16-byte values), are stored in the national servers database without any linkage to other pieces of information.
+> RPI's that your phone broadcast are stored by other phones in their exposure notification subsystem. This information is never presented to the application itself, and is only ever used by the subsystem to match against diagnosis keys that the app downloads from the national server itself.
+> This matching process leverage several factors to determine if there's an exposure, one of which as you mentioned 'proximity', is actually represented by a signal attentuation, measured by a ratio of transmit power and received signal strength, which are stored with the RPI's locally.
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/10,The point is, the key for deploying this app is to gain some community trust and vague descriptions are not helping. If somebody doesn't understand how it works, they will not read Google's contact tracing scanning flow sequence diagrams, but simply will shrug off this app.
+
+You need to present a diagram of interactions in human-readable terms, describe what databases are used, where data is stored in general (i.e. mentioned databases, owner's device, other people's devices), as well as to assure people that there is no retention of data in any form, such as backups (I saw an issue here talking about one-day backups and a system like this shouldn't have any, but should only rely on redundant storage; there must be no backups).
+
+Specifically, you need to describe what happens in any of the following scenarios:
+
+* if any of the databases is compromised, what will attacker gain from that information?
+* if somebody gets their copy on random keys for other people on their own device, what can they gain?
+* if somebody steals my device, what they will gain?
+* can somebody fake positive COVID-19 diagnosis?
+
+As an example, you would describe that Rolling Proximity Identifier is generated every 15 minutes, so if somebody followed a person with the same device in Bluetooth signal proximity, they wouldn't track the person because RPI's are generated every 15 minutes. Same for all bits - daily tracing keys, diagnosis keys, etc.
+
+If you don't describe those, no amount of doctors saying they love this app will help installing it on as many devices as is needed for contact tracing.
+
+> This information is never presented to the application itself
+
+That's security by obscurity and is irrelevant. You should assume that any user can hack their own device to gain full access to this data, so your narrative should be that this data, if obtained by the device holder, cannot be used to retrieve diagnosis data for these RPI's.
+
+Lastly, if it is all anonymous, how would a health professional contact a person if they are sick? None of the descriptions are clear on that, which suggests that there's something in the database that tracks a person for this contact. You need to describe that a health professional contacts a person whether they have an app or not, gives them the diagnosis and *if* the person has the app, then they also get the one time code to notify others. Clarity is important.
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/10,These are very legitimate concerns. I echo these  questions:
+- how does public health generate the secret key to provide to person infected with COVID, is it a pool of numbers
+- if I ran a script on a phone emulator could I get a list of “working codes” using brute force.
+- if a device is deemed rogue how can we disable it.
+
+
+
+Sent from my iPhone
+
+On Aug 2, 2020, at 5:24 PM, Andre <notifications@github.com> wrote:
+
+﻿
+
+The point is, the key for deploying this app is to gain some community trust and vague descriptions are not helping. If somebody doesn't understand how it works, they will not read Google's contact tracing scanning flow sequence diagrams, but simply will shrug off this app.
+
+You need to present a diagram of interactions in human-readable terms, describe what databases are used, where data is stored in general (i.e. mentioned databases, owner's device, other people's devices), as well as to assure people that there is no retention of data in any form, such as backups (I saw an issue here talking about one-day backups and a system like this shouldn't have any, but should only rely on redundant storage; there must be no backups).
+
+Specifically, you need to describe what happens in any of the following scenarios:
+
+  *   if any of the databases is compromised, what will attacker gain from that information?
+  *   if somebody gets their copy on random keys for other people on their own device, what can they gain?
+  *   if somebody steals my device, what they will gain?
+  *   can somebody fake positive COVID-19 diagnosis?
+
+As an example, you would describe that Rolling Proximity Identifier is generated every 15 minutes, so if somebody followed a person with the same device in Bluetooth signal proximity, they wouldn't track the person because RPI's are generated every 15 minutes. Same for all bits - daily tracing keys, diagnosis keys, etc.
+
+If you don't describe those, no amount of doctors saying they love this app will help installing it on as many devices as is needed for contact tracing.
+
+This information is never presented to the application itself
+
+That's security by obscurity and is irrelevant. You should assume that any user can hack their own device to gain full access to this data, so your narrative should be that this data, if obtained by the device holder, cannot be used to retrieve diagnosis data for these RPI's.
+
+Lastly, if it is all anonymous, how would a health professional contact a person if they are sick? None of the descriptions are clear on that, which suggests that there's something in the database that tracks a person for this contact. You need to describe that a health professional contacts a person whether they have an app or not, gives them the diagnosis and if the person has the app, then they also get the one time code to notify others. Clarity is important.
+
+—
+You are receiving this because you are subscribed to this thread.
+Reply to this email directly, view it on GitHub<https://github.com/cds-snc/covid-alert-documentation/issues/10#issuecomment-667726486>, or unsubscribe<https://github.com/notifications/unsubscribe-auth/AGAFWJOUM4LCBSWPBL3OBYDR6XKPDANCNFSM4PSWRVUA>.
+
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/10,The more I browse through changes from the original design, the less confident I get from this forked development. There is a reason Google and Apple developed specific guidelines and changing them to "adapt" to local health care needs is only making it more vulnerable to various privacy issues.
+
+For example, 
+
+* I see now that the lifetime of one time codes has been extended from 10 minutes to 24 hours, so now somebody getting their phone call in a restaurant and writing it down on a napkin leaves this code available to others for 24 hours.
+* There is apparently some logging in the app and no description of log retention policy or what's in the log.
+* There's a new `hashID` introduced to allow people issue their own claim codes, without any documentation of possible security implications and measures to mitigate them. 
+* There are some AWS SNS alerts added without clear description of what is being sent and how this data is retained.
+
+These are just things that popped up on the surface, without looking at the code much. You should be running Google's original server and app with transparent practices on log retention, backups, etc. This way we at least would know the code went through some security experts at Google and Apple. 
+
+If you want to change how it behaves, you should submit your changes to Google, so they adapt their code under their security practices and guidelines. Taking a secure server and changing it up to make it more "convenient" for various local parties is how security and privacy breaches are created. 
+
+At the very least you should commission Google folks to review your changes and provide their guidance in terms of security and privacy. 
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/10,For what it's worth, it wasn't Google that developed the upstream pre-fork codebase. That was built, as a reference implementation of Apple/Google's Exposure Notification frameworks, prospectively for an ultimate handoff to CDS or some other Canadian government entity, and in as simple and privacy-preserving a manner as possible. Changes and improvements are being made here, post-handoff, rather than in the upstream repo, because the project also took on a life of its own outside of Canada and it's much simpler for CDS to not worry about conflicting with those other users while prioritizing getting COVID Alert working for Canada. We do actually intend to take most or all of these changes upstream, but just haven't got around to it yet. Speaking as a maintainer of one part of that upstream project, I can safely say that I haven't come across a change in this fork that I haven't found completely compatible with our original privacy stance and vision.
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/10,@burke 
+
+There is a point being missed here. Developers are terrible at security, in general, and things like bumping up expiry for one-time codes from 10 minutes to 24 hours are very questionable and should be confirmed by those with security skills, whether it's the original designers or an outside security consulting company.
+
+The app will be used only if people have confidence in privacy features of the app and so far statements like "random identifiers" are misleading because if they were random, you wouldn't be able to receive a diagnosis key, which is a daily key and match it up against rolling proximity identifiers.
+
+You need to come up with a good diagram that shows how the app interacts with other phones, how it receives diagnostic keys and matches them up against RPE's, whether a tracing key, which uniquely identifies the device, ever gets into the cloud database, what the device public key in the database is used for, and so on. This is just to show people what the app does.
+
+On top of that, you need to describe how data can be exploited (or not) if a database gets compromised, if person's device gets compromised or if a remote device gets compromised with my keys on it. This description should be done by a security-aware person and not a developer. 
+
+Lastly, you need to describe retention policies for logs, database backups, encryption at rest policy for AWS database, and any communication with AWS, like SNS messages. 
+
+One important point in all of this, I'm not asking this for myself to entertain my curiosity about the app. If you want the app to be used, this is what needs to be done to convince the layer of the population who are not completely against it, but not quite sure what the app does. You can ignore this, but it will not help you to install the app in numbers we all need to make contact tracing useful.
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/10,Of course security audits are important (and, if you peruse the closed issues on these repositories, you'll see quite a bit of activity of that nature).
+
+To respond to a couple of specific points here though:
+
+"Random identifiers" is—unfortunately—the user-facing language used by Apple and Google in consent prompts, which paints application implementors into the corner of having to mirror this same language.
+
+Most of what you're asking for is actually the domain of the Exposure Notification frameworks in Android and iOS. While it's true that COVID Shield and COVID Alert would do well to explain this integrated system of app and framework holistically, the reason the early documentation doesn't have the information you're looking to find is that the framework parts are extensively documented in a more global way ([example](https://www.apple.com/covid19/contacttracing), [example](https://ncase.me/contact-tracing/)). The truly novel parts of the app and server are few and far between; the mobile application is, to a larger extent than one would initially guess, just a pretty wrapper around a small handful of framework calls. The One-Time-Code system for authenticating diagnoses is really the only major concept not defined by Apple and Google.
+
+But, if confirmation from the original designers of this protocol matters, consider this it: Ten minute expiry was my choice and I'm confident that bumping it to 24 hours alongside the substantial increase in keyspace size is an improvement.
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/48,Your suggestion cannot be implemented within the Google/Apple framework since the framework requires explicit consent from the user (via a dialog box) before exposures are uploaded. There is nothing the app can do here to automate this process. 
+
+An alternative suggestion is to add functionality to retrieve the test result to the app. This way, the user has more incentive to use the app and may be more likely to upload the exposures. German's app takes this approach. However, they found that only 50% of the users who would be able to upload exposures actually do so.
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/48,> Your suggestion cannot be implemented within the Google/Apple framework since the framework requires explicit consent from the user (via a dialog box) before exposures are uploaded. There is nothing the app can do here to automate this process.
+> 
+> An alternative suggestion is to add functionality to retrieve the test result to the app. This way, the user has more incentive to use the app and may be more likely to upload the exposures. German's app takes this approach. However, they found that only 50% of the users who would be able to upload exposures actually do so.
+
+The preauthorized dialog is proposed as the mean to comply with the framework. Uploading exposure data remains only done if user is subsequently diagnosed positive. Yes the server or portal would now be notifying the app user of his own test result, which used to be done outside the app framework with the problems that we fully appreciate now. The proposed test result optimization would streamline the currently elusive final notifications to users having been in the proximity.
+
+
+
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/42,Further thread discussions have not timely occured. Improved support for BC will most likely also require improvement in the process of managing new requirements such as better tracking/sign off of requirements of both BC Heath and Canada Health authorities discussed strictly privately so far (no public records readily available). https://github.com/cds-snc/covid-alert-server/issues/417 has been entered to track progress on managing new requirements and getting them allocated for development, testing and release -vs- other resources currently available or already allocated. More resources and budget may be necessary in order to timely deliver during the 2nd wave.
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/42,This is a public repo. I feel that if the BC gov were more public with their requirements, BC tech firms would be happy to contribute coding resources to solve these problems. It's the lack of transparency when journalists asks questions about their progress that is most upsetting. I would invite Dr Bonnie Hendry and Health Minister Adrian Dix to consider posting the requirements to this issue to improve the transparency of the process.
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/44,Ref: cds-snc/covid-alert-app#1384 
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/27,@EliseKa to add FR translations. 
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/44,Hi @LeCanardQuoi - thank you for your comments. Please refer to [this doc](https://github.com/cds-snc/covid-alert-documentation/blob/main/product/qr-codes.md) for an overview of our work on QR codes and notifications for venue outbreaks. We'll be updating documentation and details in that repo as we go forward. 
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/44,> Hi @LeCanardQuoi - thank you for your comments. Please refer to [this doc](https://github.com/cds-snc/covid-alert-documentation/blob/main/product/qr-codes.md) for an overview of our work on QR codes and notifications for venue outbreaks. We'll be updating documentation and details in that repo as we go forward.
+
+Am delighted. Will however require careful thought about a phased deployment (release plan), including field trial, public policy support and ... messaging. First step would be to simply record these QR scan (whether "partner" in program or not) as an other form of proximity events (rf. cds-snc/covid-alert-app#1304) and make core users aware of such logging. Much similar to logging proximity events imho.  Most useful info for stix&stones contact tracing people (rf. cds-snc/covid-alert-app#1395). Final notification remains similarly elusive imho but doable with sufficient pragmatism, proper kpi metrics (rf cds-snc/covid-alert-app#1305), community engagement and less wokeism ;-) Must learn to walk before running. Microsoft wisdom of "eating own dogfood" most applicable here. Deploy first in federal "facilities": custom&immig, airline flight, post office and Service Canada points of service. Great pressure for BC and Alta btw to get off their derrière. Hence public policy absolutely vital to deploy successfully, and "turbocharge" these adoption/retention rates. Cheers to the Marmot!
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/27,FR translations added on the same branch
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/24,I can reproduce, I see two options: either linking to the [Security policy tab](https://github.com/cds-snc/covid-alert-documentation/security/policy) of this repository or referencing [the source itself](https://github.com/cds-snc/.github/blob/master/SECURITY.md).
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/28,Waiting on translation to merge.
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/28,PR was switched to https://github.com/cds-snc/covid-alert-app/pull/1382
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/44,Still not sure on process to exchange on related requirements. Two additional sub-reqs: 1) Tracking as proximity events non signatory QR scan code sites would have merits for an app user wishing to track their whereabouts (without depending on Google map trace). Would be useful before more comprehensive support gets off the ground, likely involving bureaucratic delays. 2) Make sure the feature can be individually activated and deactivated, similarly to activating/deactivating Bluetooth proximity events, and log these commands to the Google setting log.
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/48,An elegant user interface scheme to implement pre-authorization would be through an activation and deactivation command of the actual alert notification. So once the user signs up to be notified upon diagnosed exposure events (whether bluetooth proximity or QR code scan), he/she also signs up to notify (preauthorize) if ever diagnosed. Fair is fair? Activation of notification inbound is currently defaulted on while outbound notification is on-demand voluntary, and too often avoided which defeats entire purpose of the app. @sidewalkballet 
+https://api.github.com/repos/cds-snc/covid-alert-documentation/issues/42,Mandatory BC business  COVID-19 safety plans promoted via QR code signage could be leveraged by linking to upcoming  QR code scan support cds-snc/covid-alert-app#1328 Thanks to Jeff D. for suggesting.
+https://t.co/9UH9fqHgJD

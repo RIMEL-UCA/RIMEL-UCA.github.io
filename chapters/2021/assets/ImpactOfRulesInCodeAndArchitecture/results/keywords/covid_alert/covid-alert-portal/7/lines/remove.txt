@@ -1,0 +1,57 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/pre-rebase.sample:49:	echo >&2 "$topic is fully merged to master; better remove it."
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/prepare-commit-msg.sample:12:# This hook includes three examples. The first one removes the
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/index matches
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/signals.py:7:from .views import _remove_low_on_codes_notification
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/signals.py:15:def remove_any_outstanding_announcements_to_be_created(sender, instance, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/signals.py:16:    # Remove any announcements for the user that were just created because of low code signal
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/signals.py:26:        # Remove existing notification for only 1 code remaining if it exists
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/signals.py:27:        _remove_low_on_codes_notification(for_user)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:554:        # Remove any Static codes if they exist
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:580:        # Remove any Static codes if they exist
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:142:    _remove_low_on_codes_notification(user)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:145:def _remove_low_on_codes_notification(user):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:146:    """Remove the existing low on code notification if it exists """
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:64:- Remove bottom padding from main nav links on mobile
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:78:- Remove h3s in About section: use h2s instead
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:82:## Removed
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:84:- Remove "Next" link to Support page from the "Admin accounts" page
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:85:- Remove "Welcome" page
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:109:## Removed
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:111:- Remove "Quick guide" page
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:116:### Removed
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:118:- Remove BACKUP_CODE feature flag now that backup codes rollout has gone swimmingly
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:165:- Remove STMP email configuration and ADMINS variable
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:198:- Remove the "required" attribute from form inputs
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:239:- Remove prior login attempts for newly created accounts
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:246:- Remove traceback instructions for the instructions for patients. We want to wait for the app to be updated before those go out.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:260:- Remove duplicate "preconnect" link in HTML header
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:321:- Let managers remove other team members who have created a CovidKey in the past
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:332:- Yubikey verification form now using base form (no colons, removed autocomplete, etc.)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CODE_OF_CONDUCT.md:48:Community leaders have the right and responsibility to remove, edit, or reject
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/sns.tf:102:      "SNS:RemovePermission",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/migrations/0003_remove_covidkey_key.py:13:        migrations.RemoveField(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/migrations/0004_auto_20200914_2055.py:12:        ('covid_key', '0003_remove_covidkey_key'),
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.mo matches
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1682:msgid "Remove Yubikey"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/forms.py:8:        # Remove the colon after field labels
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/forms.py:15:            # remove autocomplete attributes
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:128:    # lowercase and remove whitespace from codes entered into the 2fa form
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:132:        # remove whitespace
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/migrations/0003_remove_healthcareuser_language.py:13:        migrations.RemoveField(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/migrations/0004_add_healthcareprovince_model.py:10:        ("profiles", "0003_remove_healthcareuser_language"),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/css/normalize.css:20: * Remove the margin in all browsers.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/css/normalize.css:73: * Remove the gray background on active links in IE 10.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/css/normalize.css:81: * 1. Remove the bottom border in Chrome 57-
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/css/normalize.css:145: * Remove the border on images inside links in IE 10.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/css/normalize.css:157: * 2. Remove the margin in Firefox and Safari.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/css/normalize.css:182: * Remove the inheritance of text transform in Edge, Firefox, and IE.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/css/normalize.css:183: * 1. Remove the inheritance of text transform in Firefox.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/css/normalize.css:203: * Remove the inner border and padding in Firefox.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/css/normalize.css:236: * 3. Remove the padding so developers are not caught out when they zero out
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/css/normalize.css:258: * Remove the default vertical scrollbar in IE 10+.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/css/normalize.css:267: * 2. Remove the padding in IE 10.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/css/normalize.css:296: * Remove the inner padding in Chrome and Safari on macOS.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/scss/pages/_login.scss:61:      /* remove all spacing and padding so we can have full-bleed columns */
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/healthcareuser_detail.html:89:                                <span>{% trans "Remove Yubikey" %}</span>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:585:        Once we complete the signup, those access attempts should be removed.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:411:            "base_url": base_url[:-1],  # remove the trailing slash

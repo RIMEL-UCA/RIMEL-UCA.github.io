@@ -1,0 +1,154 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.clconfig.js:4:module.exports = config({
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.devcontainer/Dockerfile:17:RUN export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.devcontainer/Dockerfile:39:RUN echo "export PATH=${GOROOT}/bin:${PATH}" >> /root/.bashrc
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/get-sg-ids.sh:14:export VPN
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/get-sg-ids.sh:17:export DB
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:24:  serialized_pb=b'\n\x11\x63ovidshield.proto\x12\x0b\x63ovidshield\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1egoogle/protobuf/duration.proto\"@\n\x0fKeyClaimRequest\x12\x15\n\rone_time_code\x18\x01 \x02(\t\x12\x16\n\x0e\x61pp_public_key\x18\x02 \x02(\x0c\"\xae\x02\n\x10KeyClaimResponse\x12\x36\n\x05\x65rror\x18\x01 \x01(\x0e\x32\'.covidshield.KeyClaimResponse.ErrorCode\x12\x19\n\x11server_public_key\x18\x02 \x01(\x0c\x12\x17\n\x0ftries_remaining\x18\x03 \x01(\r\x12\x39\n\x16remaining_ban_duration\x18\x04 \x01(\x0b\x32\x19.google.protobuf.Duration\"s\n\tErrorCode\x12\x08\n\x04NONE\x10\x00\x12\x0b\n\x07UNKNOWN\x10\x01\x12\x19\n\x15INVALID_ONE_TIME_CODE\x10\x02\x12\x10\n\x0cSERVER_ERROR\x10\x03\x12\x0f\n\x0bINVALID_KEY\x10\x04\x12\x11\n\rTEMPORARY_BAN\x10\x05\"k\n\x16\x45ncryptedUploadRequest\x12\x19\n\x11server_public_key\x18\x01 \x02(\x0c\x12\x16\n\x0e\x61pp_public_key\x18\x02 \x02(\x0c\x12\r\n\x05nonce\x18\x03 \x02(\x0c\x12\x0f\n\x07payload\x18\x04 \x02(\x0c\"\xb3\x03\n\x17\x45ncryptedUploadResponse\x12=\n\x05\x65rror\x18\x01 \x02(\x0e\x32..covidshield.EncryptedUploadResponse.ErrorCode\"\xd8\x02\n\tErrorCode\x12\x08\n\x04NONE\x10\x00\x12\x0b\n\x07UNKNOWN\x10\x01\x12\x13\n\x0fINVALID_KEYPAIR\x10\x02\x12\x15\n\x11\x44\x45\x43RYPTION_FAILED\x10\x03\x12\x13\n\x0fINVALID_PAYLOAD\x10\x04\x12\x10\n\x0cSERVER_ERROR\x10\x05\x12\x1d\n\x19INVALID_CRYPTO_PARAMETERS\x10\x06\x12\x11\n\rTOO_MANY_KEYS\x10\x07\x12\x15\n\x11INVALID_TIMESTAMP\x10\x08\x12\x1a\n\x16INVALID_ROLLING_PERIOD\x10\n\x12\x14\n\x10INVALID_KEY_DATA\x10\x0b\x12)\n%INVALID_ROLLING_START_INTERVAL_NUMBER\x10\x0c\x12#\n\x1fINVALID_TRANSMISSION_RISK_LEVEL\x10\r\x12\x16\n\x12NO_KEYS_IN_PAYLOAD\x10\x0e\"h\n\x06Upload\x12-\n\ttimestamp\x18\x01 \x02(\x0b\x32\x1a.google.protobuf.Timestamp\x12/\n\x04keys\x18\x02 \x03(\x0b\x32!.covidshield.TemporaryExposureKey\"\xe9\x01\n\x1aTemporaryExposureKeyExport\x12\x17\n\x0fstart_timestamp\x18\x01 \x01(\x06\x12\x15\n\rend_timestamp\x18\x02 \x01(\x06\x12\x0e\n\x06region\x18\x03 \x01(\t\x12\x11\n\tbatch_num\x18\x04 \x01(\x05\x12\x12\n\nbatch_size\x18\x05 \x01(\x05\x12\x33\n\x0fsignature_infos\x18\x06 \x03(\x0b\x32\x1a.covidshield.SignatureInfo\x12/\n\x04keys\x18\x07 \x03(\x0b\x32!.covidshield.TemporaryExposureKey\"\x97\x01\n\rSignatureInfo\x12 \n\x18verification_key_version\x18\x03 \x01(\t\x12\x1b\n\x13verification_key_id\x18\x04 \x01(\t\x12\x1b\n\x13signature_algorithm\x18\x05 \x01(\tJ\x04\x08\x01\x10\x02J\x04\x08\x02\x10\x03R\rapp_bundle_idR\x0f\x61ndroid_package\"\x8d\x01\n\x14TemporaryExposureKey\x12\x10\n\x08key_data\x18\x01 \x01(\x0c\x12\x1f\n\x17transmission_risk_level\x18\x02 \x01(\x05\x12%\n\x1drolling_start_interval_number\x18\x03 \x01(\x05\x12\x1b\n\x0erolling_period\x18\x04 \x01(\x05:\x03\x31\x34\x34\"A\n\x10TEKSignatureList\x12-\n\nsignatures\x18\x01 \x03(\x0b\x32\x19.covidshield.TEKSignature\"|\n\x0cTEKSignature\x12\x32\n\x0esignature_info\x18\x01 \x01(\x0b\x32\x1a.covidshield.SignatureInfo\x12\x11\n\tbatch_num\x18\x02 \x01(\x05\x12\x12\n\nbatch_size\x18\x03 \x01(\x05\x12\x11\n\tsignature\x18\x04 \x01(\x0c\x42\x17Z\x15pkg/proto/covidshield'
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:379:_TEMPORARYEXPOSUREKEYEXPORT = _descriptor.Descriptor(
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:380:  name='TemporaryExposureKeyExport',
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:381:  full_name='covidshield.TemporaryExposureKeyExport',
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:388:      name='start_timestamp', full_name='covidshield.TemporaryExposureKeyExport.start_timestamp', index=0,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:395:      name='end_timestamp', full_name='covidshield.TemporaryExposureKeyExport.end_timestamp', index=1,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:402:      name='region', full_name='covidshield.TemporaryExposureKeyExport.region', index=2,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:409:      name='batch_num', full_name='covidshield.TemporaryExposureKeyExport.batch_num', index=3,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:416:      name='batch_size', full_name='covidshield.TemporaryExposureKeyExport.batch_size', index=4,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:423:      name='signature_infos', full_name='covidshield.TemporaryExposureKeyExport.signature_infos', index=5,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:430:      name='keys', full_name='covidshield.TemporaryExposureKeyExport.keys', index=6,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:643:_TEMPORARYEXPOSUREKEYEXPORT.fields_by_name['signature_infos'].message_type = _SIGNATUREINFO
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:644:_TEMPORARYEXPOSUREKEYEXPORT.fields_by_name['keys'].message_type = _TEMPORARYEXPOSUREKEY
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:652:DESCRIPTOR.message_types_by_name['TemporaryExposureKeyExport'] = _TEMPORARYEXPOSUREKEYEXPORT
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:694:TemporaryExposureKeyExport = _reflection.GeneratedProtocolMessageType('TemporaryExposureKeyExport', (_message.Message,), {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:695:  'DESCRIPTOR' : _TEMPORARYEXPOSUREKEYEXPORT,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:697:  # @@protoc_insertion_point(class_scope:covidshield.TemporaryExposureKeyExport)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:699:_sym_db.RegisterMessage(TemporaryExposureKeyExport)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/commitlint.config.js:1:module.exports = {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:63:export DATABASE_URL="root@tcp(localhost)/covidshield"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:64:export KEY_CLAIM_TOKEN=thisisatoken=302
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:81:$ export DB_USER=<username>
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:82:$ export DB_PASS=<password>
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:83:$ export DB_HOST=<hostname>
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:84:$ export DB_NAME=<test database name>
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:162:export DATABASE_URL="root@tcp(localhost)/covidshield"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:163:export KEY_CLAIM_TOKEN=thisisatoken=302
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:178:$ export DB_USER=<username>
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:179:$ export DB_PASS=<password>
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:180:$ export DB_HOST=<hostname>
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:181:$ export DB_NAME=<test database name>
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/go.mod:18:	go.opentelemetry.io/otel/exporters/metric/prometheus v0.6.0
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/go.sum:305:go.opentelemetry.io/otel/exporters/metric/prometheus v0.6.0 h1:ClUqY13ALEUo02GxltNpMT9pIim5C+k0V0VkUXesSeU=
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/go.sum:306:go.opentelemetry.io/otel/exporters/metric/prometheus v0.6.0/go.mod h1:xnqgYLNgg5vhor2rcURO8RdnWJUE/Wwk6jF+SUeKgNM=
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:604:type TemporaryExposureKeyExport struct {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:630:func (x *TemporaryExposureKeyExport) Reset() {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:631:	*x = TemporaryExposureKeyExport{}
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:639:func (x *TemporaryExposureKeyExport) String() string {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:643:func (*TemporaryExposureKeyExport) ProtoMessage() {}
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:645:func (x *TemporaryExposureKeyExport) ProtoReflect() protoreflect.Message {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:657:// Deprecated: Use TemporaryExposureKeyExport.ProtoReflect.Descriptor instead.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:658:func (*TemporaryExposureKeyExport) Descriptor() ([]byte, []int) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:662:func (x *TemporaryExposureKeyExport) GetStartTimestamp() uint64 {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:669:func (x *TemporaryExposureKeyExport) GetEndTimestamp() uint64 {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:676:func (x *TemporaryExposureKeyExport) GetRegion() string {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:683:func (x *TemporaryExposureKeyExport) GetBatchNum() int32 {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:690:func (x *TemporaryExposureKeyExport) GetBatchSize() int32 {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:697:func (x *TemporaryExposureKeyExport) GetSignatureInfos() []*SignatureInfo {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:704:func (x *TemporaryExposureKeyExport) GetKeys() []*TemporaryExposureKey {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:711:func (x *TemporaryExposureKeyExport) GetRevisedKeys() []*TemporaryExposureKey {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:1212:	(*TemporaryExposureKeyExport)(nil),     // 8: covidshield.TemporaryExposureKeyExport
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:1226:	9,  // 5: covidshield.TemporaryExposureKeyExport.signature_infos:type_name -> covidshield.SignatureInfo
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:1227:	10, // 6: covidshield.TemporaryExposureKeyExport.keys:type_name -> covidshield.TemporaryExposureKey
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:1228:	10, // 7: covidshield.TemporaryExposureKeyExport.revised_keys:type_name -> covidshield.TemporaryExposureKey
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:1245:		file_proto_covidshield_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:1257:		file_proto_covidshield_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:1269:		file_proto_covidshield_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:1281:		file_proto_covidshield_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:1293:		file_proto_covidshield_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:1305:		file_proto_covidshield_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:1306:			switch v := v.(*TemporaryExposureKeyExport); i {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:1317:		file_proto_covidshield_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:1329:		file_proto_covidshield_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:1341:		file_proto_covidshield_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:1353:		file_proto_covidshield_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:535:type TemporaryExposureKeyExport struct {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:558:func (x *TemporaryExposureKeyExport) Reset() {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:559:	*x = TemporaryExposureKeyExport{}
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:567:func (x *TemporaryExposureKeyExport) String() string {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:571:func (*TemporaryExposureKeyExport) ProtoMessage() {}
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:573:func (x *TemporaryExposureKeyExport) ProtoReflect() protoreflect.Message {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:585:// Deprecated: Use TemporaryExposureKeyExport.ProtoReflect.Descriptor instead.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:586:func (*TemporaryExposureKeyExport) Descriptor() ([]byte, []int) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:590:func (x *TemporaryExposureKeyExport) GetStartTimestamp() uint64 {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:597:func (x *TemporaryExposureKeyExport) GetEndTimestamp() uint64 {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:604:func (x *TemporaryExposureKeyExport) GetRegion() string {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:611:func (x *TemporaryExposureKeyExport) GetBatchNum() int32 {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:618:func (x *TemporaryExposureKeyExport) GetBatchSize() int32 {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:625:func (x *TemporaryExposureKeyExport) GetSignatureInfos() []*SignatureInfo {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:632:func (x *TemporaryExposureKeyExport) GetKeys() []*TemporaryExposureKey {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:1092:	(*TemporaryExposureKeyExport)(nil),     // 7: covidshieldv1.TemporaryExposureKeyExport
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:1106:	8,  // 5: covidshieldv1.TemporaryExposureKeyExport.signature_infos:type_name -> covidshieldv1.SignatureInfo
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:1107:	9,  // 6: covidshieldv1.TemporaryExposureKeyExport.keys:type_name -> covidshieldv1.TemporaryExposureKey
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:1123:		file_proto_covidshieldv1_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:1135:		file_proto_covidshieldv1_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:1147:		file_proto_covidshieldv1_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:1159:		file_proto_covidshieldv1_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:1171:		file_proto_covidshieldv1_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:1183:		file_proto_covidshieldv1_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:1184:			switch v := v.(*TemporaryExposureKeyExport); i {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:1195:		file_proto_covidshieldv1_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:1207:		file_proto_covidshieldv1_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:1219:		file_proto_covidshieldv1_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:1231:		file_proto_covidshieldv1_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/retrieval.go:25:	binHeader              = []byte("EK Export v1    ")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/retrieval.go:68:	tekExport := &pb.TemporaryExposureKeyExport{
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/retrieval.go:78:	exportBinData, err := proto.Marshal(tekExport)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/retrieval.go:83:	sig, err := signer.Sign(append(binHeader, exportBinData...))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/retrieval.go:96:	exportSigData, err := proto.Marshal(sigList)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/retrieval.go:103:	f, err := zipw.Create("export.bin")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/retrieval.go:115:	n, err = f.Write(exportBinData)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/retrieval.go:120:	if n != len(exportBinData) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/retrieval.go:123:	f, err = zipw.Create("export.sig")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/retrieval.go:127:	n, err = f.Write(exportSigData)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/retrieval.go:132:	if n != len(exportSigData) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:13:	"go.opentelemetry.io/otel/exporters/metric/prometheus"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:14:	metricstdout "go.opentelemetry.io/otel/exporters/metric/stdout"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:15:	tracerstdout "go.opentelemetry.io/otel/exporters/trace/stdout"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:60:	var exporter *tracerstdout.Exporter
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:64:		exporter, err = tracerstdout.NewExporter(tracerstdout.Options{PrettyPrint: tracerProvider == PRETTY})
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:70:		log(nil, err).WithField("provider", tracerProvider).Fatal("failed to initialize exporter")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:76:		sdktrace.WithSyncer(exporter))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:108:		var exporter *prometheus.Exporter
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:109:		exporter, err = prometheus.InstallNewPipeline(prometheus.Config{}, pull.WithStateful(false))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:113:		http.HandleFunc("/metrics", exporter.ServeHTTP)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:122:		log(nil, err).WithField("provider", metricProvider).Fatal("failed to initialize metric stdout exporter")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/covidshield.proto:124:message TemporaryExposureKeyExport {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/README.md:116:`TemporaryKeyExport`, and `encoded.sig` contains a serialized `TEKSignatureList`. These are passed
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/scripts/install_dev_tools.sh:2:export PATH=/usr/local/go/bin:$PATH
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/scripts/install_dev_tools.sh:3:export GOPATH=/root/go
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/scripts/install_dev_tools.sh:4:export GOBIN=/usr/local/bin 
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/scripts/install_dev_tools.sh:5:export GO111MODULE=on
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:189:      assert_equal(%w(export.bin export.sig), files.keys)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:190:      [files['export.bin'], files['export.sig']]
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/protocol/covidshield_pb.rb:57:    add_message "covidshield.TemporaryExposureKeyExport" do
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/protocol/covidshield_pb.rb:108:  TemporaryExposureKeyExport = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("covidshield.TemporaryExposureKeyExport").msgclass
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:18:    export_proto, siglist_proto = extract_zip(resp.body)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:19:    assert_equal("EK Export v1    ", export_proto[0...16])
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:20:    assert_valid_signature_list(siglist_proto, export_proto)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:21:    export_proto = export_proto[16..-1]
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:22:    export = Covidshield::TemporaryExposureKeyExport.decode(export_proto)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:23:    export
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:29:    export = assert_happy_zip_response(resp)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:30:    assert_keys(export, [], region: 'CA', date_number: dn)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:82:    export = assert_happy_zip_response(resp)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:87:    assert_keys(export, keys, region: 'CA', date_number: dn)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:111:      export = assert_happy_zip_response(resp)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:129:      assert_equal(keys, export.keys)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:150:    export = assert_happy_zip_response(resp)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:164:    assert_equal(keys, export.keys)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:251:        Covidshield::TemporaryExposureKeyExport.new(
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:319:  def assert_keys(export, keys, region:, date_number:)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:324:      Covidshield::TemporaryExposureKeyExport.new(
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:338:      ).to_json, export.to_json
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:342:  def assert_valid_signature_list(siglist_proto, export_proto)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:344:    assert_valid_signature(siglist.signatures[0].signature, export_proto)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/roundtrip_test.rb:113:    export_proto, siglist_proto = extract_zip(resp.body)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/roundtrip_test.rb:114:    export = Covidshield::TemporaryExposureKeyExport.decode(export_proto[16..-1])
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/roundtrip_test.rb:115:    export.keys

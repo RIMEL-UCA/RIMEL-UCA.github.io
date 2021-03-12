@@ -1,0 +1,5 @@
+./results/git/stop_covid/issue_file_gitlab.txt:150:52937,[Server] Normalize id model property names (minor correction),In [model files](https://gitlab.inria.fr/stopcovid19/robert-server/-/blob/develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/model/Registration.java), one property is permanentIdentifier but all others ids are simply called id or somethingId (`epochId`). 
+./results/git/stop_covid/issue_file_gitlab.txt:177:52830,ClientIdentifier keys are not being deleted in the database,When a user unregisters, he sends a "deleteId" command to the GRPC server. This server then deletes this data from the PostgreSQL database.
+./results/git/stop_covid/issue_file_gitlab.txt:179:https://gitlab.inria.fr/stopcovid19/robert-server/-/blob/develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/database/model/ClientIdentifier.java#L23
+./results/git/stop_covid/issue_file_gitlab.txt:209:[INFO] robert-server-database ............................. SUCCESS [  0.787 s]
+./results/git/stop_covid/issue_file_gitlab.txt:250:[INFO] robert-server-database ............................. SUCCESS [  0.692 s]

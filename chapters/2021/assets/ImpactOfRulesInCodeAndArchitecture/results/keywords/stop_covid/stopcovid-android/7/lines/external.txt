@@ -1,0 +1,32 @@
+stopcovid-android/.gitignore:48:# External native build folder generated in Android Studio 2.2 and later
+stopcovid-android/.gitignore:49:.externalNativeBuild
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/MaterialAlertDialogBuilderExt.kt:180:        strings["myHealthController.covidAdvices.url"]?.openInExternalBrowser(context)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/ProximityFragmentIsolationExt.kt:152:        strings["myHealthController.testingSites.url"]?.openInExternalBrowser(requireContext())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/SectionsExt.kt:34:                    link.url.openInExternalBrowser(it.context)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/StringExt.kt:25:fun String.openInExternalBrowser(context: Context) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/InfoCenterDetailCardItem.kt:20:import com.lunabeestudio.stopcovid.extension.openInExternalBrowser
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/InfoCenterDetailCardItem.kt:71:            url?.openInExternalBrowser(it.context)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/LinkItem.kt:24:import com.lunabeestudio.stopcovid.extension.openInExternalBrowser
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/LinkItem.kt:43:            url?.openInExternalBrowser(it.context)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingProximityFragment.kt:28:import com.lunabeestudio.stopcovid.extension.openInExternalBrowser
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingProximityFragment.kt:115:                        strings["common.privacyPolicy"]?.openInExternalBrowser(requireContext())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/AboutFragment.kt:21:import com.lunabeestudio.stopcovid.extension.openInExternalBrowser
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/AttestationsFragment.kt:28:import com.lunabeestudio.stopcovid.extension.openInExternalBrowser
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/AttestationsFragment.kt:96:                        strings["attestationsController.termsOfUse.url"]?.openInExternalBrowser(requireContext())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/InformationFragment.kt:23:import com.lunabeestudio.stopcovid.extension.openInExternalBrowser
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/InformationFragment.kt:199:                strings["sickController.button.myConditionInformation.url"]?.openInExternalBrowser(requireContext())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/IsSickFragment.kt:23:import com.lunabeestudio.stopcovid.extension.openInExternalBrowser
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/IsSickFragment.kt:61:                strings["sickController.button.recommendations.url"]?.openInExternalBrowser(requireContext())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingNoBleFragment.kt:21:import com.lunabeestudio.stopcovid.extension.openInExternalBrowser
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingNoBleFragment.kt:71:                strings["onboarding.runWithoutBleController.infosUrl"]?.openInExternalBrowser(requireContext())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/QRCodeFragment.kt:28:import com.lunabeestudio.stopcovid.extension.openInExternalBrowser
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/QRCodeFragment.kt:70:                            strings["common.privacyPolicy"]?.openInExternalBrowser(requireContext())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/QRCodeFragment.kt:123:                        strings["common.privacyPolicy"]?.openInExternalBrowser(requireContext())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ReportFragment.kt:27:import com.lunabeestudio.stopcovid.extension.openInExternalBrowser
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ReportFragment.kt:90:                            strings["declareController.codeNotReceived.alert.video.url"]?.openInExternalBrowser(requireContext())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ReportFragment.kt:93:                            strings["contactUs.url"]?.openInExternalBrowser(requireContext())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VaccinationActionsBottomSheetFragment.kt:28:import com.lunabeestudio.stopcovid.extension.openInExternalBrowser
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VaccinationActionsBottomSheetFragment.kt:60:                    args.vaccinationCenter.url?.openInExternalBrowser(it)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VaccinationFragment.kt:33:import com.lunabeestudio.stopcovid.extension.openInExternalBrowser
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VaccinationFragment.kt:80:                    strings["vaccinationController.eligibility.url"]?.openInExternalBrowser(it.context)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/network/LBMaintenanceHttpClient.kt:23: * Light http client allowing us to do some network works without external libs

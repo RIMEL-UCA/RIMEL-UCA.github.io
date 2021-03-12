@@ -1,0 +1,40 @@
+Fichier binaire stopcovid-blesdk-ios/.git/index correspondant
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:14:class BluetoothCentralManager: NSObject, BluetoothCentralManagerProtocol {
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManagerDelegate.swift:13:protocol BluetoothCentralManagerDelegate: class {
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManagerDelegate.swift:15:    func bluetoothCentralManager(_ centralManager: BluetoothCentralManagerProtocol, stateDidChange state: ProximityNotificationState)
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManagerDelegate.swift:17:    func bluetoothCentralManager(_ centralManager: BluetoothCentralManagerProtocol, didScan peripheral: BluetoothPeripheral, bluetoothProximityPayload: BluetoothProximityPayload?) -> Bool
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManagerDelegate.swift:19:    func bluetoothCentralManager(_ centralManager: BluetoothCentralManagerProtocol, didReadCharacteristicForPeripheralIdentifier peripheralIdentifier: UUID, bluetoothProximityPayload: BluetoothProximityPayload)
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManagerDelegate.swift:21:    func bluetoothCentralManager(_ centralManager: BluetoothCentralManagerProtocol, didNotFindServiceForPeripheralIdentifier peripheralIdentifier: UUID)
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManagerProtocol.swift:13:protocol BluetoothCentralManagerProtocol: class {
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothPeripheralManager.swift:14:class BluetoothPeripheralManager: NSObject, BluetoothPeripheralManagerProtocol {
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothPeripheralManagerDelegate.swift:13:protocol BluetoothPeripheralManagerDelegate: class {
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothPeripheralManagerDelegate.swift:15:    func bluetoothPeripheralManager(_ peripheralManager: BluetoothPeripheralManagerProtocol, didReceiveWriteFrom peripheral: BluetoothPeripheral, bluetoothProximityPayload: BluetoothProximityPayload)
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothPeripheralManagerProtocol.swift:13:protocol BluetoothPeripheralManagerProtocol: class {
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:17:    private let centralManager: BluetoothCentralManagerProtocol
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:19:    private let peripheralManager: BluetoothPeripheralManagerProtocol
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:46:         centralManager: BluetoothCentralManagerProtocol,
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:47:         peripheralManager: BluetoothPeripheralManagerProtocol) {
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:120:    func bluetoothCentralManager(_ centralManager: BluetoothCentralManagerProtocol, stateDidChange state: ProximityNotificationState) {
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:126:    func bluetoothCentralManager(_ centralManager: BluetoothCentralManagerProtocol,
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:151:    func bluetoothCentralManager(_ centralManager: BluetoothCentralManagerProtocol,
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:167:    func bluetoothCentralManager(_ centralManager: BluetoothCentralManagerProtocol,
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:176:    func bluetoothPeripheralManager(_ peripheralManager: BluetoothPeripheralManagerProtocol,
+stopcovid-blesdk-ios/ProximityNotification/ProximityInfo.swift:13:/// A protocol for metadata associated with proximity information.
+stopcovid-blesdk-ios/ProximityNotification/ProximityInfo.swift:14:public protocol ProximityMetadata {}
+stopcovid-blesdk-ios/ProximityNotification/ProximityNotification.swift:13:protocol ProximityNotification {
+stopcovid-blesdk-ios/ProximityNotification/ProximityNotificationLogger.swift:40:/// The logger protocol to build a custom logger.
+stopcovid-blesdk-ios/ProximityNotification/ProximityNotificationLogger.swift:41:public protocol ProximityNotificationLoggerProtocol {
+stopcovid-blesdk-ios/ProximityNotification/ProximityNotificationLogger.swift:54:class ProximityNotificationConsoleLogger: ProximityNotificationLoggerProtocol {
+stopcovid-blesdk-ios/ProximityNotification/ProximityNotificationLogger.swift:88:    private let logger: ProximityNotificationLoggerProtocol
+stopcovid-blesdk-ios/ProximityNotification/ProximityNotificationLogger.swift:90:    init(logger: ProximityNotificationLoggerProtocol) {
+stopcovid-blesdk-ios/ProximityNotification/ProximityNotificationService.swift:69:                logger: ProximityNotificationLoggerProtocol) {
+stopcovid-blesdk-ios/ProximityNotification.xcodeproj/project.pbxproj:30:		AF51E49D24744D5200645356 /* BluetoothPeripheralManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF51E49C24744D5200645356 /* BluetoothPeripheralManagerProtocol.swift */; };
+stopcovid-blesdk-ios/ProximityNotification.xcodeproj/project.pbxproj:32:		AF51E4A124744D8900645356 /* BluetoothCentralManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF51E4A024744D8900645356 /* BluetoothCentralManagerProtocol.swift */; };
+stopcovid-blesdk-ios/ProximityNotification.xcodeproj/project.pbxproj:99:		AF51E49C24744D5200645356 /* BluetoothPeripheralManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothPeripheralManagerProtocol.swift; sourceTree = "<group>"; };
+stopcovid-blesdk-ios/ProximityNotification.xcodeproj/project.pbxproj:101:		AF51E4A024744D8900645356 /* BluetoothCentralManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothCentralManagerProtocol.swift; sourceTree = "<group>"; };
+stopcovid-blesdk-ios/ProximityNotification.xcodeproj/project.pbxproj:187:				AF51E4A024744D8900645356 /* BluetoothCentralManagerProtocol.swift */,
+stopcovid-blesdk-ios/ProximityNotification.xcodeproj/project.pbxproj:191:				AF51E49C24744D5200645356 /* BluetoothPeripheralManagerProtocol.swift */,
+stopcovid-blesdk-ios/ProximityNotification.xcodeproj/project.pbxproj:351:				AF51E4A124744D8900645356 /* BluetoothCentralManagerProtocol.swift in Sources */,
+stopcovid-blesdk-ios/ProximityNotification.xcodeproj/project.pbxproj:354:				AF51E49D24744D5200645356 /* BluetoothPeripheralManagerProtocol.swift in Sources */,
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothCentralManagerMock.swift:14:class BluetoothCentralManagerMock: BluetoothCentralManagerProtocol {
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothPeripheralManagerMock.swift:14:class BluetoothPeripheralManagerMock: BluetoothPeripheralManagerProtocol {

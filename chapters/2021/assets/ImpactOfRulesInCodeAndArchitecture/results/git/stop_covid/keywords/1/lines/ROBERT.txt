@@ -1,0 +1,77 @@
+./results/git/stop_covid/commit_file_gitlab.txt:108:See merge request stopcovid19/robert-client-api-spec!11
+./results/git/stop_covid/commit_file_gitlab.txt:115:See merge request stopcovid19/robert-client-api-spec!10
+./results/git/stop_covid/commit_file_gitlab.txt:122:See merge request stopcovid19/robert-client-api-spec!9
+./results/git/stop_covid/commit_file_gitlab.txt:129:See merge request stopcovid19/robert-client-api-spec!7
+./results/git/stop_covid/commit_file_gitlab.txt:136:See merge request stopcovid19/robert-client-api-spec!6
+./results/git/stop_covid/commit_file_gitlab.txt:143:See merge request stopcovid19/robert-client-api-spec!5
+./results/git/stop_covid/commit_file_gitlab.txt:150:See merge request stopcovid19/robert-client-api-spec!4
+./results/git/stop_covid/commit_file_gitlab.txt:157:See merge request stopcovid19/robert-client-api-spec!3
+./results/git/stop_covid/commit_file_gitlab.txt:164:See merge request stopcovid19/robert-client-api-spec!2
+./results/git/stop_covid/commit_file_gitlab.txt:171:See merge request stopcovid19/robert-client-api-spec!1
+./results/git/stop_covid/commit_file_gitlab.txt:181:Initial Robert files
+./results/git/stop_covid/commit_file_gitlab.txt:189:See merge request stopcovid19/robert-server!109
+./results/git/stop_covid/commit_file_gitlab.txt:196:See merge request stopcovid19/robert-server!108
+./results/git/stop_covid/commit_file_gitlab.txt:203:See merge request stopcovid19/robert-server!107
+./results/git/stop_covid/commit_file_gitlab.txt:204:feat: Use the property var robert.server.request-time-delta-tolerance mapped on the env var ROBERT_SERVER_REQUEST_TIME_DELTA_TOLERANCE
+./results/git/stop_covid/commit_file_gitlab.txt:210:See merge request stopcovid19/robert-server!97
+./results/git/stop_covid/commit_file_gitlab.txt:217:See merge request stopcovid19/robert-server!100
+./results/git/stop_covid/commit_file_gitlab.txt:224:See merge request stopcovid19/robert-server!99
+./results/git/stop_covid/commit_file_gitlab.txt:225:feat: Use the property var robert.server.request-time-delta-tolerance mapped on the env var ROBERT_SERVER_REQUEST_TIME_DELTA_TOLERANCE
+./results/git/stop_covid/commit_file_gitlab.txt:231:See merge request stopcovid19/robert-server!96
+./results/git/stop_covid/commit_file_gitlab.txt:234:feat: Setting Robert Server Batch
+./results/git/stop_covid/commit_file_gitlab.txt:236:See merge request stopcovid19/robert-server!90
+./results/git/stop_covid/commit_file_gitlab.txt:244:Merge branch 'feat-setting-robert-server-ws' into 'develop'
+./results/git/stop_covid/commit_file_gitlab.txt:246:feat: Setting Robert Server WS
+./results/git/stop_covid/commit_file_gitlab.txt:248:See merge request stopcovid19/robert-server!88
+./results/git/stop_covid/commit_file_gitlab.txt:249:feat: Setting Robert Server WS
+./results/git/stop_covid/commit_file_gitlab.txt:255:See merge request stopcovid19/robert-server!95
+./results/git/stop_covid/commit_file_gitlab.txt:256:feat: Use the property var robert.server.request-time-delta-tolerance mapped on the env var ROBERT_SERVER_REQUEST_TIME_DELTA_TOLERANCE
+./results/git/stop_covid/issue_file_gitlab.txt:9:52048,Cryptographic key erasure,[SSUBuilder](https://gitlab.inria.fr/stopcovid19/stopcovid-robertsdk-android/-/blob/master/domain/src/main/java/com/lunabeestudio/domain/model/SSUBuilder.kt) and [HelloBuilder](https://gitlab.inria.fr/stopcovid19/stopcovid-robertsdk-android/-/blob/master/domain/src/main/java/com/lunabeestudio/domain/model/HelloBuilder.kt) hold a key created with SecretKeySpec. As stated in this documentation : [SecreyKeySpec constructor](https://docs.oracle.com/javase/8/docs/api/javax/crypto/spec/SecretKeySpec.html#SecretKeySpec-byte:A-java.lang.String-) the key given in parameter to the SecretKeySpec constructor is copied into the new object, so this object should be cleaned by a call to [destroy](https://docs.oracle.com/javase/8/docs/api/javax/security/auth/Destroyable.html#destroy--) when not used anymore. **NB IMPORTANT : a test (during the test stage) should be done to make sure that the original key, given in the constructor parameter, is not erased consistently with the java api documentation**. 
+./results/git/stop_covid/issue_file_gitlab.txt:115:issue_id,issue_title,issue_description,issue_labels54879,Any documtation for installing ROBERT Server locally ?,,[]
+./results/git/stop_covid/issue_file_gitlab.txt:125:> https://gitlab.inria.fr/stopcovid19/robert-server/-/blob/08db030b079c481b4e68c785466a953403dcd4e4/robert-server-common/src/main/java/fr/gouv/stopc/robert/server/common/utils/ByteUtils.java#L44
+./results/git/stop_covid/issue_file_gitlab.txt:150:52937,[Server] Normalize id model property names (minor correction),In [model files](https://gitlab.inria.fr/stopcovid19/robert-server/-/blob/develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/model/Registration.java), one property is permanentIdentifier but all others ids are simply called id or somethingId (`epochId`). 
+./results/git/stop_covid/issue_file_gitlab.txt:174:In your configuration file https://gitlab.inria.fr/stopcovid19/robert-server/-/blob/develop/robert-server-ws-rest/src/main/resources/application.properties#L42 we see that by default you expose the "health" and "metrics" endpoints. The first one isn't probably very dangerous, but I wouldn't expose the second one, you can have lots of things being exposed through it.
+./results/git/stop_covid/issue_file_gitlab.txt:179:https://gitlab.inria.fr/stopcovid19/robert-server/-/blob/develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/database/model/ClientIdentifier.java#L23
+./results/git/stop_covid/issue_file_gitlab.txt:184:52823,Please tag version before starting prod (shoud be duplicated for ios and android apps),Please tag the robert-server and ios / android mobile applications in order to allow checks between playstore released versions and source code.,[]
+./results/git/stop_covid/issue_file_gitlab.txt:185:52821,ROBERT_PROTOCOL_CONTAGIOUS_PERIOD value,According to Article 2 point 6 in legal publication about stopcovid :
+./results/git/stop_covid/issue_file_gitlab.txt:190:https://gitlab.inria.fr/stopcovid19/robert-server/-/blob/4f349d6922ae8bf26cf1ac395683faf3c8afd457/robert-server-ws-rest/src/main/resources/application.properties#L44
+./results/git/stop_covid/issue_file_gitlab.txt:194:I checked-out the latest version of the branch 'develop' (https://gitlab.inria.fr/stopcovid19/robert-server/-/commit/97c49841b75b326c2fc35ef56d6215d908ca6ee0), ran 'mvn clean compile' and got the following error:
+./results/git/stop_covid/issue_file_gitlab.txt:200:[ERROR] /home/stephane/Documents/assembloo/engineering/repositories/stopcovid/robert-server/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/cryptographic/service/impl/CryptographicStorageServiceImpl.java:[78,43] incompatible types: java.lang.String cannot be converted to sun.security.pkcs11.Config
+./results/git/stop_covid/issue_file_gitlab.txt:204:[INFO] Reactor Summary for robert-server 1.0.0-SNAPSHOT:
+./results/git/stop_covid/issue_file_gitlab.txt:206:[INFO] robert-server ...................................... SUCCESS [  0.803 s]
+./results/git/stop_covid/issue_file_gitlab.txt:207:[INFO] robert-crypto-grpc-server-messaging ................ SUCCESS [  3.913 s]
+./results/git/stop_covid/issue_file_gitlab.txt:208:[INFO] robert-server-common ............................... SUCCESS [  0.567 s]
+./results/git/stop_covid/issue_file_gitlab.txt:209:[INFO] robert-server-database ............................. SUCCESS [  0.787 s]
+./results/git/stop_covid/issue_file_gitlab.txt:210:[INFO] robert-server-crypto ............................... SUCCESS [  0.559 s]
+./results/git/stop_covid/issue_file_gitlab.txt:211:[INFO] robert-server-ws-rest .............................. SUCCESS [  1.295 s]
+./results/git/stop_covid/issue_file_gitlab.txt:212:[INFO] robert-server-batch ................................ SUCCESS [  0.423 s]
+./results/git/stop_covid/issue_file_gitlab.txt:213:[INFO] robert-crypto-grpc-server-storage .................. FAILURE [  0.638 s]
+./results/git/stop_covid/issue_file_gitlab.txt:214:[INFO] robert-crypto-grpc-server .......................... SKIPPED
+./results/git/stop_covid/issue_file_gitlab.txt:221:[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:compile (default-compile) on project robert-crypto-grpc-server-storage: Compilation failure
+./results/git/stop_covid/issue_file_gitlab.txt:222:[ERROR] /home/stephane/Documents/assembloo/engineering/repositories/stopcovid/robert-server/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/cryptographic/service/impl/CryptographicStorageServiceImpl.java:[78,43] incompatible types: java.lang.String cannot be converted to sun.security.pkcs11.Config
+./results/git/stop_covid/issue_file_gitlab.txt:241:[ERROR] /home/stephane/Documents/assembloo/engineering/repositories/stopcovid/robert-server/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/service/impl/AuthRequestValidationServiceImpl.java:[10,20] package javax.xml.ws does not exist
+./results/git/stop_covid/issue_file_gitlab.txt:245:[INFO] Reactor Summary for robert-server 1.0.0-SNAPSHOT:
+./results/git/stop_covid/issue_file_gitlab.txt:247:[INFO] robert-server ...................................... SUCCESS [  0.890 s]
+./results/git/stop_covid/issue_file_gitlab.txt:248:[INFO] robert-crypto-grpc-server-messaging ................ SUCCESS [  3.590 s]
+./results/git/stop_covid/issue_file_gitlab.txt:249:[INFO] robert-server-common ............................... SUCCESS [  0.492 s]
+./results/git/stop_covid/issue_file_gitlab.txt:250:[INFO] robert-server-database ............................. SUCCESS [  0.692 s]
+./results/git/stop_covid/issue_file_gitlab.txt:251:[INFO] robert-server-crypto ............................... SUCCESS [  0.509 s]
+./results/git/stop_covid/issue_file_gitlab.txt:252:[INFO] robert-server-ws-rest .............................. FAILURE [  1.079 s]
+./results/git/stop_covid/issue_file_gitlab.txt:253:[INFO] robert-server-batch ................................ SKIPPED
+./results/git/stop_covid/issue_file_gitlab.txt:254:[INFO] robert-crypto-grpc-server-storage .................. SKIPPED
+./results/git/stop_covid/issue_file_gitlab.txt:255:[INFO] robert-crypto-grpc-server .......................... SKIPPED
+./results/git/stop_covid/issue_file_gitlab.txt:262:[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.8.1:compile (default-compile) on project robert-server-ws-rest: Compilation failure
+./results/git/stop_covid/issue_file_gitlab.txt:263:[ERROR] /home/stephane/Documents/assembloo/engineering/repositories/stopcovid/robert-server/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/service/impl/AuthRequestValidationServiceImpl.java:[10,20] package javax.xml.ws does not exist
+./results/git/stop_covid/issue_file_gitlab.txt:269:Adding the following dependency to robert-server-ws-rest/pom.xml fixes the issue:
+./results/git/stop_covid/issue_file_gitlab.txt:280:> Note that according to Robert protocol, Risk scores are kept on the phone, unless the user is tested positive.
+./results/git/stop_covid/issue_file_gitlab.txt:295:Mixnets are only vaguely mentionned in the ROBERT specification as one possible solution.
+./results/git/stop_covid/issue_file_gitlab.txt:298:https://gitlab.inria.fr/stopcovid19/accueil/-/blob/master/documentation/robertImplementationModalities.txt
+./results/git/stop_covid/issue_file_gitlab.txt:305:Mixnets actually form a real protocol, a specification is needed. When the specification of ROBERT will be updated with the specification of mixnet?
+./results/git/stop_covid/issue_file_gitlab.txt:314:52748,Sybil attack - Multiple accounts to identify infected people,In the risk analysis published by the Robert team ( https://github.com/ROBERT-proximity-tracing/documents/blob/master/Proximity-tracing-analysis-EN-v1_0.pdf ), risk IR1 is "Identify infected individuals". It is stated as one of the most important risks of proximity tracing and lowering this risk has been one of the most expected and revendicated benefits of Robert against decentralized approaches / DP3T.
+./results/git/stop_covid/issue_file_gitlab.txt:318:In other words, if an attacker can create many accounts, authors recognize that the centralized approach looses this expected benefit. In other words too, preventing attackers from creating several accounts is required by the team which designed Robert.
+./results/git/stop_covid/issue_file_gitlab.txt:321:* IP/Ports of users should probably not be logged, it would go against other requirements of the Robert team (to prevent re-identification)
+./results/git/stop_covid/issue_file_gitlab.txt:327:52742,Remove id from log,[This log.info](https://gitlab.inria.fr/stopcovid19/robert-server/-/blob/develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/ContactProcessor.java#L130) in ContactProcessor logs an `idA` when not found in the system. It would be better to not log the `idA` value for the case it was used previously as a valid id.,['ANSSI']
+./results/git/stop_covid/issue_file_gitlab.txt:340:52497,Out-of-date dependencies,[pom.xml](https://gitlab.inria.fr/stopcovid19/robert-server/-/blob/develop/pom.xml) declares out-of-date dependencies usage:
+./results/git/stop_covid/issue_file_gitlab.txt:341:*  [protobuf](https://gitlab.inria.fr/stopcovid19/robert-server/-/blob/develop/pom.xml#L46): `3.11.0 -> 3.12.1`,
+./results/git/stop_covid/issue_file_gitlab.txt:342:*  [spring-boot](https://gitlab.inria.fr/stopcovid19/robert-server/-/blob/develop/pom.xml#L18): `2.2.6.RELEASE -> 2.3.0.RELEASE`. Note that this newer version contains several bug fixes and security fixes.,['ANSSI']
+./results/git/stop_covid/issue_file_gitlab.txt:369:Comme avec le protocole ROBERT utilisé pour la partie Bluetooth de TousAntiCovid, il y a deux [risques principaux](https://risques-tracage.fr/): traçage des utilisateurs, et injection de fausses alertes.  Ces systèmes ne collectent pas l'identité des utilisateurs, mais certains utilisateurs peuvent être identifiés en utilisant des données en dehors du protocole.  En particulier, le serveur connait leurs adresses IP, et pourrait les réidentifier avec l'aide des fournisseurs d'accès Internet.  

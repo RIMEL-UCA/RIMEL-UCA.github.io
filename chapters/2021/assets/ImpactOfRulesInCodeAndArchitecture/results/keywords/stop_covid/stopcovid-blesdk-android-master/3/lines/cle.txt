@@ -1,0 +1,29 @@
+./stopcovid-blesdk-android-master/LICENSE.txt:211:behalf of any Contributor. You must make it absolutely clear that any
+./stopcovid-blesdk-android-master/build.gradle:37:task clean(type: Delete) {
+./stopcovid-blesdk-android-master/gradle.properties:14:# AndroidX package structure to make it clearer which packages are bundled with the
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithoutAdvertiser.kt:492:            lastStatusHistory.clear()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleRecordProviderForScanWithoutPayload.kt:35:        cleanCacheIfNeeded()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleRecordProviderForScanWithoutPayload.kt:45:        cleanCacheIfNeeded()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleRecordProviderForScanWithoutPayload.kt:53:    private fun cleanCacheIfNeeded() {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleRecordProviderForScanWithoutPayload.kt:54:        val cleanUpPredicate: (ExpiringCache<*, *>) -> Boolean =
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleRecordProviderForScanWithoutPayload.kt:56:        lastPayloadByDeviceId.takeIf(cleanUpPredicate)?.cleanUp()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleRecordProviderForScanWithoutPayload.kt:57:        lastScanByDeviceId.takeIf(cleanUpPredicate)?.cleanUp()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleScannedDeviceSelector.kt:114:        deviceScans.clear()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattClientImpl.kt:269: * Clearing device cache could help recovering from error 133.
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:86:                        clearServices()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:114:            clearServices()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/tools/ExpiringCache.kt:43:    fun cleanUp() {
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/CoroutineTestRule.kt:39:        testDispatcher.cleanupTestCoroutines()
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleRecordProviderForScanWithoutPayloadTest.kt:139:    fun fromPayload_should_cleanup_cache_if_size_it_above_75_percent() {
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleRecordProviderForScanWithoutPayloadTest.kt:162:    fun fromPayload_should_not_cleanup_cache_if_size_it_below75_percent() {
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleRecordProviderForScanWithoutPayloadTest.kt:183:    fun fromScan_should_cleanup_cache_if_size_it_above_75_percent() {
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleRecordProviderForScanWithoutPayloadTest.kt:207:    fun fromScan_should_not_cleanup_cache_if_size_it_below_75_percent() {
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImplTest.kt:120:            onLifecycle(mock()) {
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImplTest.kt:139:            onLifecycle(mock()) {
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImplTest.kt:163:            val result = onLifecycle(mock()) { it.requestRemoteRssi(device) }
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImplTest.kt:186:            val result = onLifecycle(mock()) { it.requestRemoteRssi(device) }
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImplTest.kt:209:            val result = onLifecycle(mock()) { it.requestRemoteRssi(device) }
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImplTest.kt:232:            val result = onLifecycle(mock()) { it.requestRemoteRssi(device) }
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImplTest.kt:245:    private suspend fun <T> onLifecycle(
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/tools/ExpiringCacheTest.kt:54:    fun cleanUp_given_expired_values_should_remove_them() {
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/tools/ExpiringCacheTest.kt:71:        cache.cleanUp()

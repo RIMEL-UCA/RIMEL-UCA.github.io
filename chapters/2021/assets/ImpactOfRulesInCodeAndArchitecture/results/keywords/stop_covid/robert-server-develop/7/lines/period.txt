@@ -1,0 +1,32 @@
+./robert-server-develop/robert-crypto-grpc-server/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/CryptoServiceGrpcServerTest.java:796:            log.warn("Outside of K_S patch period ({}); current epoch: {}",
+./robert-server-develop/robert-crypto-grpc-server/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/CryptoServiceGrpcServerTest.java:857:    void testGetIdFromAuthWithEbidEncodedWithPreviousKSAfterGracePeriodSucceeds() {
+./robert-server-develop/robert-crypto-grpc-server/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/CryptoServiceGrpcServerTest.java:1094:            log.warn("Outside of K_S patch period ({}); current epoch: {}",
+./robert-server-develop/robert-crypto-grpc-server/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/CryptoServiceGrpcServerTest.java:1378:            log.warn("Outside of K_S patch period ({}); current epoch: {}",
+./robert-server-develop/robert-crypto-grpc-server/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/CryptoServiceGrpcServerTest.java:1699:            log.warn("Outside of K_S patch period ({}); current epoch: {}",
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/configuration/ContactsProcessingConfiguration.java:413:        int contagiousPeriod = this.propertyLoader.getContagiousPeriod();
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/configuration/ContactsProcessingConfiguration.java:414:        int minEpochId = currentEpochId - contagiousPeriod * 96;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/listener/ProcessingJobExecutionListener.java:56:        int contagiousPeriod = this.propertyLoader.getContagiousPeriod();
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/listener/ProcessingJobExecutionListener.java:57:        int minEpochId = currentEpochId - contagiousPeriod * 96;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/ContactProcessor.java:243:        List<EpochExposition> epochsToKeep = ScoringUtils.getExposedEpochsWithoutEpochsOlderThanContagiousPeriod(
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/ContactProcessor.java:246:                this.propertyLoader.getContagiousPeriod(),
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/PurgeOldEpochExpositionsProcessor.java:37:        List<EpochExposition> epochsToKeep = ScoringUtils.getExposedEpochsWithoutEpochsOlderThanContagiousPeriod(
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/PurgeOldEpochExpositionsProcessor.java:40:                this.propertyLoader.getContagiousPeriod(),
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/RegistrationProcessor.java:30:        List<EpochExposition> epochsToKeep = ScoringUtils.getExposedEpochsWithoutEpochsOlderThanContagiousPeriod(
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/RegistrationProcessor.java:33:                this.propertyLoader.getContagiousPeriod(),
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/utils/PropertyLoader.java:29:    @Value("${robert.protocol.contagious-period}")
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/utils/PropertyLoader.java:30:    private Integer contagiousPeriod;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/utils/ScoringUtils.java:23:     * Keep epochs within the contagious period
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/utils/ScoringUtils.java:27:    public static List<EpochExposition> getExposedEpochsWithoutEpochsOlderThanContagiousPeriod(
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/utils/ScoringUtils.java:30:            int contagiousPeriod,
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/utils/ScoringUtils.java:33:        // Purge exposed epochs list from epochs older than contagious period (C_T)
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/utils/ScoringUtils.java:37:            int nbOfEpochsToKeep = (contagiousPeriod * 24 * 3600) / epochDuration;
+./robert-server-develop/robert-server-batch/src/main/resources/application-dev.properties:43:robert.protocol.contagious-period=${ROBERT_PROTOCOL_CONTAGIOUS_PERIOD:14}
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:1026:			int val = (this.propertyLoader.getContagiousPeriod() * 24 * 3600)
+./robert-server-develop/robert-server-batch/src/test/resources/application.properties:34:robert.protocol.contagious-period=14
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/KpiController.java:43:	 * Generates the Kpis for Robert Server on a period
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/KpiController.java:45:	 * @param fromDate start date of the period
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/KpiController.java:46:	 * @param toDate   end date of the period
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/service/IKpiService.java:15:	 * Compute the Kpis for each day on a period
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/service/IKpiService.java:17:	 * @param fromDate the beginning date of the period
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/service/IKpiService.java:18:	 * @param toDate   the ending date of the period
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/service/IKpiService.java:19:	 * @return the list of <code>RobertServerKpi</code> for each day on the period

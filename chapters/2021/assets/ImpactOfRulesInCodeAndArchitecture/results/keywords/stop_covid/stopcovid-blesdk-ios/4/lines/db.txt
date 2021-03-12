@@ -1,0 +1,16 @@
+Fichier binaire stopcovid-blesdk-ios/.git/objects/pack/pack-0d5c9133326ba74fc5b410771d5e43a91935e0e9.pack correspondant
+stopcovid-blesdk-ios/.git/packed-refs:8:^9db5425d164e29ceffd9377fb493fba0fa3b5d1e
+stopcovid-blesdk-ios/ProximityNotification/Filter/ProximityFilterConfiguration.swift:19:    /// The threshold above which an RSSI value is clipped. Default value is 0 dBm. Has no effect if filtering mode is `ProximityFilterMode.Full`.
+stopcovid-blesdk-ios/ProximityNotification/Filter/ProximityFilterConfiguration.swift:28:    /// The power below which a received RSSI value is considered to be zero risk, in dBm. Default value is -66 dBm. Has no effect if filtering mode is `ProximityFilterMode.Full`.
+stopcovid-blesdk-ios/ProximityNotification/Filter/ProximityFilterConfiguration.swift:46:    ///   - rssiThreshold: The threshold above which an RSSI value is clipped. Default value is 0 dBm. Has no effect if filtering mode is `ProximityFilterMode.Full`.
+stopcovid-blesdk-ios/ProximityNotification/Filter/ProximityFilterConfiguration.swift:49:    ///   - p0: The power below which a received RSSI value is considered to be zero risk, in dBm. Default value is -66 dBm. Has no effect if filtering mode is `ProximityFilterMode.Full`.
+stopcovid-blesdk-ios/ProximityNotification/Filter/TimestampedRSSI.swift:16:    /// The received signal strength indicator, in dBm.
+stopcovid-blesdk-ios/ProximityNotification/Filter/TimestampedRSSI.swift:27:    ///   - rssi: The received signal strength indicator, in dBm.
+stopcovid-blesdk-ios/ProximityNotification.xcodeproj/project.pbxproj:20:		AF401CBA247E65DB00CFDD4B /* RSSIClipper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF401CB9247E65DB00CFDD4B /* RSSIClipper.swift */; };
+stopcovid-blesdk-ios/ProximityNotification.xcodeproj/project.pbxproj:89:		AF401CB9247E65DB00CFDD4B /* RSSIClipper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSIClipper.swift; sourceTree = "<group>"; };
+stopcovid-blesdk-ios/ProximityNotification.xcodeproj/project.pbxproj:231:				AF401CB9247E65DB00CFDD4B /* RSSIClipper.swift */,
+stopcovid-blesdk-ios/ProximityNotification.xcodeproj/project.pbxproj:332:				AF401CBA247E65DB00CFDD4B /* RSSIClipper.swift in Sources */,
+stopcovid-blesdk-ios/ProximityNotification.xcodeproj/xcshareddata/xcschemes/ProximityNotificationTests.xcscheme:11:      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+stopcovid-blesdk-ios/ProximityNotification.xcodeproj/xcshareddata/xcschemes/ProximityNotificationTests.xcscheme:12:      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+stopcovid-blesdk-ios/ProximityNotification.xcodeproj/xcshareddata/xcschemes/ProximityNotificationTests.xcscheme:30:      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+stopcovid-blesdk-ios/ProximityNotification.xcodeproj/xcshareddata/xcschemes/ProximityNotificationTests.xcscheme:31:      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"

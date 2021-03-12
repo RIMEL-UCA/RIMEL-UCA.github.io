@@ -1,0 +1,501 @@
+./robert-server-develop/pom.xml:30:		<module>robert-server-database</module>
+./robert-server-develop/robert-crypto-grpc-server-messaging/mvnw:204:# This allows using the maven wrapper in projects that prohibit checking in binary data.
+./robert-server-develop/robert-crypto-grpc-server-messaging/mvnw.cmd:130:@REM This allows using the maven wrapper in projects that prohibit checking in binary data.
+./robert-server-develop/robert-crypto-grpc-server-messaging/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/service/CryptoGrpcService.java:120:        java.lang.String[] descriptorData = {
+./robert-server-develop/robert-crypto-grpc-server-messaging/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/service/CryptoGrpcService.java:140:                        "\016dataToValidate\030\002 \001(\014\"(\n\025MacValidationRe" +
+./robert-server-develop/robert-crypto-grpc-server-messaging/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/service/CryptoGrpcService.java:142:                        "ionRequest\022\n\n\002ka\030\001 \001(\014\022\026\n\016dataToValidate" +
+./robert-server-develop/robert-crypto-grpc-server-messaging/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/service/CryptoGrpcService.java:194:                .internalBuildGeneratedFileFrom(descriptorData,
+./robert-server-develop/robert-crypto-grpc-server-messaging/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/service/CryptoGrpcService.java:268:                        new java.lang.String[] { "Ka", "DataToValidate", });
+./robert-server-develop/robert-crypto-grpc-server-messaging/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/service/CryptoGrpcService.java:280:                        new java.lang.String[] { "Ka", "DataToValidate", "MacToMatchWith", });
+./robert-server-develop/robert-crypto-grpc-server-messaging/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/service/CryptoGrpcService.java:286:                        new java.lang.String[] { "Ka", "DataToValidate", "MacToMatchWith", "Prefixe", });
+./robert-server-develop/robert-crypto-grpc-server-messaging/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/client/CryptoServerGrpcClientTest.java:99://                .setDataToValidate(ByteString.copyFrom(generate(12)))
+./robert-server-develop/robert-crypto-grpc-server-messaging/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/client/CryptoServerGrpcClientTest.java:134://                .setDataToValidate(ByteString.copyFrom(generate(12)))
+./robert-server-develop/robert-crypto-grpc-server-messaging/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/client/CryptoServerGrpcClientTest.java:170://                .setDataToValidate(ByteString.copyFrom(generate(16)))
+./robert-server-develop/robert-crypto-grpc-server-storage/pom.xml:47:			<artifactId>spring-boot-starter-data-jpa</artifactId>
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/database/config/AuditorAwareImpl.java:1:package fr.gouv.stopc.robert.crypto.grpc.server.storage.database.config;
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/database/config/AuditorAwareImpl.java:6:import org.springframework.data.domain.AuditorAware;
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/database/config/JpaConfig.java:1:package fr.gouv.stopc.robert.crypto.grpc.server.storage.database.config;
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/database/config/JpaConfig.java:7:import org.springframework.data.domain.AuditorAware;
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/database/config/JpaConfig.java:8:import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/database/model/ClientIdentifier.java:1:package fr.gouv.stopc.robert.crypto.grpc.server.storage.database.model;
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/database/model/ClientIdentifier.java:7:import org.springframework.data.annotation.CreatedDate;
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/database/model/ClientIdentifier.java:8:import org.springframework.data.annotation.LastModifiedDate;
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/database/model/ClientIdentifier.java:9:import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/database/model/ClientIdentifier.java:13:import lombok.Data;
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/database/model/ClientIdentifier.java:19:@Data
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/database/model/ClientIdentifier.java:36:    @Column(name = "key_for_mac", updatable = false, nullable = false)
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/database/model/ClientIdentifier.java:40:    @Column(name = "key_for_tuples", updatable = false, nullable = false)
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/database/model/ClientIdentifier.java:44:    @Column(name = "creation_time", updatable = false)
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/database/repository/ClientIdentifierRepository.java:1:package fr.gouv.stopc.robert.crypto.grpc.server.storage.database.repository;
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/database/repository/ClientIdentifierRepository.java:5:import org.springframework.data.jpa.repository.JpaRepository;
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/database/repository/ClientIdentifierRepository.java:8:import fr.gouv.stopc.robert.crypto.grpc.server.storage.database.model.ClientIdentifier;
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/model/ClientIdentifierBundle.java:5:import lombok.Data;
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/model/ClientIdentifierBundle.java:12:@Data
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/service/impl/ClientKeyStorageServiceImpl.java:25:import fr.gouv.stopc.robert.crypto.grpc.server.storage.database.model.ClientIdentifier;
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/service/impl/ClientKeyStorageServiceImpl.java:26:import fr.gouv.stopc.robert.crypto.grpc.server.storage.database.repository.ClientIdentifierRepository;
+./robert-server-develop/robert-crypto-grpc-server-storage/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/storage/service/impl/ClientKeyStorageImplTest.java:4:import fr.gouv.stopc.robert.crypto.grpc.server.storage.database.model.ClientIdentifier;
+./robert-server-develop/robert-crypto-grpc-server-storage/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/storage/service/impl/ClientKeyStorageImplTest.java:5:import fr.gouv.stopc.robert.crypto.grpc.server.storage.database.repository.ClientIdentifierRepository;
+./robert-server-develop/robert-crypto-grpc-server-storage/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/storage/service/impl/ClientKeyStorageImplTest.java:13:import org.springframework.data.domain.Example;
+./robert-server-develop/robert-crypto-grpc-server-storage/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/storage/service/impl/ClientKeyStorageImplTest.java:14:import org.springframework.data.domain.Page;
+./robert-server-develop/robert-crypto-grpc-server-storage/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/storage/service/impl/ClientKeyStorageImplTest.java:15:import org.springframework.data.domain.Pageable;
+./robert-server-develop/robert-crypto-grpc-server-storage/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/storage/service/impl/ClientKeyStorageImplTest.java:16:import org.springframework.data.domain.Sort;
+./robert-server-develop/robert-crypto-grpc-server/mvnw:204:# This allows using the maven wrapper in projects that prohibit checking in binary data.
+./robert-server-develop/robert-crypto-grpc-server/mvnw.cmd:130:@REM This allows using the maven wrapper in projects that prohibit checking in binary data.
+./robert-server-develop/robert-crypto-grpc-server/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/exception/RobertServerCryptoExceptionHandler.java:4:import io.grpc.Metadata;
+./robert-server-develop/robert-crypto-grpc-server/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/exception/RobertServerCryptoExceptionHandler.java:13:    public <ReqT, RespT> ServerCall.Listener<ReqT> interceptCall(ServerCall<ReqT, RespT> serverCall, Metadata metadata,
+./robert-server-develop/robert-crypto-grpc-server/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/exception/RobertServerCryptoExceptionHandler.java:15:        ServerCall.Listener<ReqT> listener = serverCallHandler.startCall(serverCall, metadata);
+./robert-server-develop/robert-crypto-grpc-server/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/exception/RobertServerCryptoExceptionHandler.java:16:        return new ExceptionHandlingServerCallListener<>(listener, serverCall, metadata);
+./robert-server-develop/robert-crypto-grpc-server/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/exception/RobertServerCryptoExceptionHandler.java:22:        private Metadata metadata;
+./robert-server-develop/robert-crypto-grpc-server/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/exception/RobertServerCryptoExceptionHandler.java:25:                                            Metadata metadata) {
+./robert-server-develop/robert-crypto-grpc-server/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/exception/RobertServerCryptoExceptionHandler.java:28:            this.metadata = metadata;
+./robert-server-develop/robert-crypto-grpc-server/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/exception/RobertServerCryptoExceptionHandler.java:36:                handleException(ex, serverCall, metadata);
+./robert-server-develop/robert-crypto-grpc-server/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/exception/RobertServerCryptoExceptionHandler.java:46:                handleException(ex, serverCall, metadata);
+./robert-server-develop/robert-crypto-grpc-server/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/exception/RobertServerCryptoExceptionHandler.java:51:        private void handleException(RuntimeException exception, ServerCall<ReqT, RespT> serverCall, Metadata metadata) {
+./robert-server-develop/robert-crypto-grpc-server/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/exception/RobertServerCryptoExceptionHandler.java:52:                serverCall.close(Status.UNKNOWN, metadata);
+./robert-server-develop/robert-crypto-grpc-server/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/service/impl/CryptoGrpcServiceBaseImpl.java:22:import com.fasterxml.jackson.databind.ObjectMapper;
+./robert-server-develop/robert-crypto-grpc-server/src/main/resources/application.properties:18:spring.datasource.url= ${ROBERT_CRYPTO_SERVER_DB_URL:jdbc:postgresql://localhost:5432/robert}
+./robert-server-develop/robert-crypto-grpc-server/src/main/resources/application.properties:19:spring.datasource.username=${ROBERT_CRYPTO_SERVER_DB_USR:robert}
+./robert-server-develop/robert-crypto-grpc-server/src/main/resources/application.properties:20:spring.datasource.password=${ROBERT_CRYPTO_SERVER_DB_PWD:robert}
+./robert-server-develop/robert-crypto-grpc-server/src/main/resources/application.properties:22:# spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+./robert-server-develop/robert-crypto-grpc-server/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/CryptoServiceGrpcServerTest.java:41:import com.fasterxml.jackson.databind.ObjectMapper;
+./robert-server-develop/robert-crypto-grpc-server/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/service/impl/ECDHKeyServiceImplTest.java:81:            log.info("Server private key data as hex: {}", ByteUtils.toHexString(serverPrivateKey.getEncoded()));
+./robert-server-develop/robert-crypto-grpc-server/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/service/impl/ECDHKeyServiceImplTest.java:82:            log.info("Server private key data as binary: {}", ByteUtils.toBinaryString(serverPrivateKey.getEncoded()));
+./robert-server-develop/robert-crypto-grpc-server/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/service/impl/ECDHKeyServiceImplTest.java:89:            log.info("Client public key data as hex: {}", ByteUtils.toHexString(clientPublicKey.getEncoded()));
+./robert-server-develop/robert-crypto-grpc-server/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/service/impl/ECDHKeyServiceImplTest.java:90:            log.info("Client public key data as binary: {}", ByteUtils.toBinaryString(clientPublicKey.getEncoded()));
+./robert-server-develop/robert-crypto-grpc-server/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/utils/CryptoTestUtils.java:67:        byte[] data = new byte[sizeInBytes];
+./robert-server-develop/robert-crypto-grpc-server/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/utils/CryptoTestUtils.java:68:        new SecureRandom().nextBytes(data);
+./robert-server-develop/robert-crypto-grpc-server/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/utils/CryptoTestUtils.java:69:        return data;
+./robert-server-develop/robert-server-batch/mvnw:204:# This allows using the maven wrapper in projects that prohibit checking in binary data.
+./robert-server-develop/robert-server-batch/mvnw.cmd:130:@REM This allows using the maven wrapper in projects that prohibit checking in binary data.
+./robert-server-develop/robert-server-batch/pom.xml:56:			<artifactId>robert-server-database</artifactId>
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/RobertServerBatchApplication.java:6:import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/RobertServerBatchApplication.java:8:import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/RobertServerBatchApplication.java:12:@EnableAutoConfiguration(exclude={DataSourceAutoConfiguration.class})
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/configuration/ContactsProcessingConfiguration.java:20:import org.springframework.batch.item.data.MongoItemReader;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/configuration/ContactsProcessingConfiguration.java:21:import org.springframework.batch.item.data.MongoItemWriter;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/configuration/ContactsProcessingConfiguration.java:22:import org.springframework.batch.item.data.builder.MongoItemWriterBuilder;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/configuration/ContactsProcessingConfiguration.java:28:import org.springframework.data.domain.Sort;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/configuration/ContactsProcessingConfiguration.java:29:import org.springframework.data.domain.Sort.Direction;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/configuration/ContactsProcessingConfiguration.java:30:import org.springframework.data.mongodb.core.MongoTemplate;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/configuration/ContactsProcessingConfiguration.java:31:import org.springframework.data.mongodb.core.query.Criteria;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/configuration/ContactsProcessingConfiguration.java:32:import org.springframework.data.mongodb.core.query.Query;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/configuration/ContactsProcessingConfiguration.java:52:import fr.gouv.stopc.robertserver.database.model.Contact;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/configuration/ContactsProcessingConfiguration.java:53:import fr.gouv.stopc.robertserver.database.model.Registration;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/configuration/ContactsProcessingConfiguration.java:54:import fr.gouv.stopc.robertserver.database.service.ContactService;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/configuration/ContactsProcessingConfiguration.java:55:import fr.gouv.stopc.robertserver.database.service.IRegistrationService;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/listener/ProcessingJobExecutionListener.java:8:import fr.gouv.stopc.robertserver.database.service.ContactService;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/listener/ProcessingJobExecutionListener.java:9:import fr.gouv.stopc.robertserver.database.service.IRegistrationService;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/model/ItemIdMapping.java:5:import lombok.Data;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/model/ItemIdMapping.java:7:import org.springframework.data.annotation.Id;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/model/ItemIdMapping.java:8:import org.springframework.data.mongodb.core.mapping.Document;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/model/ItemIdMapping.java:12:@Data
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/model/ScoringResult.java:4:import lombok.Data;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/model/ScoringResult.java:6:@Data
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/ContactIdMappingProcessor.java:5:import fr.gouv.stopc.robertserver.database.model.Contact;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/ContactProcessor.java:24:import fr.gouv.stopc.robertserver.database.model.Contact;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/ContactProcessor.java:25:import fr.gouv.stopc.robertserver.database.model.EpochExposition;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/ContactProcessor.java:26:import fr.gouv.stopc.robertserver.database.model.HelloMessageDetail;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/ContactProcessor.java:27:import fr.gouv.stopc.robertserver.database.model.Registration;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/ContactProcessor.java:28:import fr.gouv.stopc.robertserver.database.service.IRegistrationService;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/ContactProcessor.java:120:                    // remove the message from the database
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/PurgeOldEpochExpositionsProcessor.java:13:import fr.gouv.stopc.robertserver.database.model.EpochExposition;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/PurgeOldEpochExpositionsProcessor.java:14:import fr.gouv.stopc.robertserver.database.model.Registration;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/RegistrationIdMappingProcessor.java:5:import fr.gouv.stopc.robertserver.database.model.Registration;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/RegistrationProcessor.java:12:import fr.gouv.stopc.robertserver.database.model.EpochExposition;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/RegistrationProcessor.java:13:import fr.gouv.stopc.robertserver.database.model.Registration;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/UpdateRegistrationFlagsProcessor.java:6:import fr.gouv.stopc.robertserver.database.model.Registration;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/repository/ItemIdMappingRepository.java:4:import org.springframework.data.mongodb.repository.MongoRepository;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/repository/ItemIdMappingRepository.java:5:import org.springframework.data.mongodb.repository.Query;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/service/ScoringStrategyService.java:5:import fr.gouv.stopc.robertserver.database.model.Contact;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/service/impl/ScoringStrategyServiceImpl.java:15:import fr.gouv.stopc.robertserver.database.model.Contact;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/service/impl/ScoringStrategyServiceImpl.java:16:import fr.gouv.stopc.robertserver.database.model.HelloMessageDetail;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/service/impl/ScoringStrategyV2ServiceImpl.java:15:import fr.gouv.stopc.robertserver.database.model.Contact;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/service/impl/ScoringStrategyV2ServiceImpl.java:16:import fr.gouv.stopc.robertserver.database.model.HelloMessageDetail;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/utils/ScoringUtils.java:11:import fr.gouv.stopc.robertserver.database.model.EpochExposition;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/utils/ScoringUtils.java:12:import fr.gouv.stopc.robertserver.database.model.Registration;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/writer/ContactItemWriter.java:5:import fr.gouv.stopc.robertserver.database.model.Contact;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/writer/ContactItemWriter.java:6:import fr.gouv.stopc.robertserver.database.service.ContactService;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/writer/ContactItemWriter.java:59:        log.info("Execution duration of the update/delete of data : {} second(s).", timeElapsed);
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/writer/RegistrationItemWriter.java:13:import fr.gouv.stopc.robertserver.database.model.Registration;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/writer/RegistrationItemWriter.java:14:import fr.gouv.stopc.robertserver.database.service.IRegistrationService;
+./robert-server-develop/robert-server-batch/src/main/resources/application-dev.properties:1:#spring.data.mongodb.authentication-database= # Authentication database name.
+./robert-server-develop/robert-server-batch/src/main/resources/application-dev.properties:2:# Database name.
+./robert-server-develop/robert-server-batch/src/main/resources/application-dev.properties:3:# spring.data.mongodb.database=${ROBERT_SERVER_DB_NAME:protectedRobertDB}
+./robert-server-develop/robert-server-batch/src/main/resources/application-dev.properties:4:#spring.data.mongodb.field-naming-strategy= # Fully qualified name of the FieldNamingStrategy to use.
+./robert-server-develop/robert-server-batch/src/main/resources/application-dev.properties:5:#spring.data.mongodb.grid-fs-database= # GridFS database name.
+./robert-server-develop/robert-server-batch/src/main/resources/application-dev.properties:6:# spring.data.mongodb.host=${ROBERT_SERVER_DB_HOST:localhost}
+./robert-server-develop/robert-server-batch/src/main/resources/application-dev.properties:8:#spring.data.mongodb.password= # Login password of the mongo server.
+./robert-server-develop/robert-server-batch/src/main/resources/application-dev.properties:10:# spring.data.mongodb.port=${ROBERT_SERVER_DB_PORT:27017}
+./robert-server-develop/robert-server-batch/src/main/resources/application-dev.properties:11:spring.data.mongodb.uri=${ROBERT_SERVER_DB_URI:mongodb\://${ROBERT_SERVER_DB_HOST:localhost}\:${ROBERT_SERVER_DB_PORT:27017}/${ROBERT_SERVER_DB_NAME:protectedRobertDB}}
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:57:import fr.gouv.stopc.robertserver.database.model.Contact;
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:58:import fr.gouv.stopc.robertserver.database.model.EpochExposition;
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:59:import fr.gouv.stopc.robertserver.database.model.HelloMessageDetail;
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:60:import fr.gouv.stopc.robertserver.database.model.Registration;
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:61:import fr.gouv.stopc.robertserver.database.service.ContactService;
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:62:import fr.gouv.stopc.robertserver.database.service.IRegistrationService;
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:111:		byte[] data = new byte[sizeInBytes];
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:112:		new SecureRandom().nextBytes(data);
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:113:		return data;
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ItemIdProcessorTest.java:7:import fr.gouv.stopc.robertserver.database.model.Contact;
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ItemIdProcessorTest.java:8:import fr.gouv.stopc.robertserver.database.model.Registration;
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/PurgeOldEpochExpositionsProcessorTest.java:30:import fr.gouv.stopc.robertserver.database.model.EpochExposition;
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/PurgeOldEpochExpositionsProcessorTest.java:31:import fr.gouv.stopc.robertserver.database.model.Registration;
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/PurgeOldEpochExpositionsProcessorTest.java:32:import fr.gouv.stopc.robertserver.database.service.IRegistrationService;
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/RegistrationProcessorTest.java:32:import fr.gouv.stopc.robertserver.database.model.EpochExposition;
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/RegistrationProcessorTest.java:33:import fr.gouv.stopc.robertserver.database.model.Registration;
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/RegistrationProcessorTest.java:34:import fr.gouv.stopc.robertserver.database.service.IRegistrationService;
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/UpdateRegistrationFlagsProcessorTest.java:20:import fr.gouv.stopc.robertserver.database.model.Registration;
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/repository/ItemIdMappingRepositoryTest.java:80:                .anyMatch(itemIdMapping -> Arrays.equals(((Binary)itemIdMapping.getItemId()).getData(), byteArrayToFind))) {
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/RSSICalibratedScoringStrategyTest.java:31:import fr.gouv.stopc.robertserver.database.model.Contact;
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/RSSICalibratedScoringStrategyTest.java:32:import fr.gouv.stopc.robertserver.database.model.HelloMessageDetail;
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/ScoringAlgorithmV2Test.java:27:import fr.gouv.stopc.robertserver.database.model.Contact;
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/ScoringAlgorithmV2Test.java:28:import fr.gouv.stopc.robertserver.database.model.HelloMessageDetail;
+./robert-server-develop/robert-server-batch/src/test/resources/application.properties:1:#spring.data.mongodb.authentication-database= # Authentication database name.
+./robert-server-develop/robert-server-batch/src/test/resources/application.properties:2:# Database name.
+./robert-server-develop/robert-server-batch/src/test/resources/application.properties:3:spring.data.mongodb.database=test
+./robert-server-develop/robert-server-batch/src/test/resources/application.properties:4:#spring.data.mongodb.field-naming-strategy= # Fully qualified name of the FieldNamingStrategy to use.
+./robert-server-develop/robert-server-batch/src/test/resources/application.properties:5:#spring.data.mongodb.grid-fs-database= # GridFS database name.
+./robert-server-develop/robert-server-batch/src/test/resources/application.properties:6:spring.data.mongodb.host=localhost
+./robert-server-develop/robert-server-batch/src/test/resources/application.properties:8:#spring.data.mongodb.password= # Login password of the mongo server.
+./robert-server-develop/robert-server-batch/src/test/resources/application.properties:10:spring.data.mongodb.port=27717
+./robert-server-develop/robert-server-common/mvnw:204:# This allows using the maven wrapper in projects that prohibit checking in binary data.
+./robert-server-develop/robert-server-common/mvnw.cmd:130:@REM This allows using the maven wrapper in projects that prohibit checking in binary data.
+./robert-server-develop/robert-server-crypto/mvnw:204:# This allows using the maven wrapper in projects that prohibit checking in binary data.
+./robert-server-develop/robert-server-crypto/mvnw.cmd:130:@REM This allows using the maven wrapper in projects that prohibit checking in binary data.
+./robert-server-develop/robert-server-crypto/src/main/java/fr/gouv/stopc/robert/server/crypto/service/CryptoService.java:113:    byte[] performAESOperation(int mode, byte[] data, byte[] key);
+./robert-server-develop/robert-server-crypto/src/main/java/fr/gouv/stopc/robert/server/crypto/service/impl/CryptoServiceImpl.java:113:     * @param argument data to be processed
+./robert-server-develop/robert-server-crypto/src/main/java/fr/gouv/stopc/robert/server/crypto/service/impl/CryptoServiceImpl.java:114:     * @param salt prefixes the data to be processed
+./robert-server-develop/robert-server-crypto/src/main/java/fr/gouv/stopc/robert/server/crypto/service/impl/CryptoServiceImpl.java:159:     * @param bytes data to check
+./robert-server-develop/robert-server-crypto/src/main/java/fr/gouv/stopc/robert/server/crypto/service/impl/CryptoServiceImpl.java:173:    public byte[] performAESOperation(int mode, byte[] data, byte[] key) {
+./robert-server-develop/robert-server-crypto/src/main/java/fr/gouv/stopc/robert/server/crypto/service/impl/CryptoServiceImpl.java:182:            return cipher.doFinal(data);
+./robert-server-develop/robert-server-crypto/src/main/java/fr/gouv/stopc/robert/server/crypto/structure/CryptoAES.java:17:import lombok.Data;
+./robert-server-develop/robert-server-crypto/src/main/java/fr/gouv/stopc/robert/server/crypto/structure/impl/Crypto3DES.java:19: * Triple Data Encryption Algorithm -- TripleDES or 3DES
+./robert-server-develop/robert-server-database/mvnw:204:# This allows using the maven wrapper in projects that prohibit checking in binary data.
+./robert-server-develop/robert-server-database/mvnw.cmd:130:@REM This allows using the maven wrapper in projects that prohibit checking in binary data.
+./robert-server-develop/robert-server-database/pom.xml:20:	<artifactId>robert-server-database</artifactId>
+./robert-server-develop/robert-server-database/pom.xml:22:	<name>robert-server-database</name>
+./robert-server-develop/robert-server-database/pom.xml:23:	<description>Database management module</description>
+./robert-server-develop/robert-server-database/pom.xml:47:			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/RobertServerDatabaseApplication.java:1:package fr.gouv.stopc.robertserver.database;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/RobertServerDatabaseApplication.java:7:public class RobertServerDatabaseApplication {
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/RobertServerDatabaseApplication.java:11:		SpringApplication.run(RobertServerDatabaseApplication.class, args);
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/model/ApplicationConfigurationModel.java:1:package fr.gouv.stopc.robertserver.database.model;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/model/ApplicationConfigurationModel.java:3:import org.springframework.data.annotation.Id;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/model/ApplicationConfigurationModel.java:4:import org.springframework.data.mongodb.core.mapping.Document;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/model/ApplicationConfigurationModel.java:8:import lombok.Data;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/model/ApplicationConfigurationModel.java:13:@Data
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/model/Contact.java:1:package fr.gouv.stopc.robertserver.database.model;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/model/Contact.java:7:import org.springframework.data.mongodb.core.mapping.Document;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/model/Contact.java:13:@Data
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/model/EpochExposition.java:1:package fr.gouv.stopc.robertserver.database.model;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/model/EpochExposition.java:5:import lombok.Data;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/model/EpochExposition.java:12:@Data
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/model/HelloMessageDetail.java:1:package fr.gouv.stopc.robertserver.database.model;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/model/HelloMessageDetail.java:7:import lombok.Data;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/model/HelloMessageDetail.java:13:@Data
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/model/Registration.java:1:package fr.gouv.stopc.robertserver.database.model;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/model/Registration.java:7:import org.springframework.data.annotation.Id;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/model/Registration.java:8:import org.springframework.data.mongodb.core.mapping.Document;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/model/Registration.java:12:@Data
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/repository/ApplicationConfigurationRepository.java:1:package fr.gouv.stopc.robertserver.database.repository;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/repository/ApplicationConfigurationRepository.java:3:import org.springframework.data.mongodb.repository.MongoRepository;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/repository/ApplicationConfigurationRepository.java:5:import fr.gouv.stopc.robertserver.database.model.ApplicationConfigurationModel;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/repository/ContactRepository.java:1:package fr.gouv.stopc.robertserver.database.repository;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/repository/ContactRepository.java:3:import fr.gouv.stopc.robertserver.database.model.Contact;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/repository/ContactUUIDRepository.java:1:package fr.gouv.stopc.robertserver.database.repository;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/repository/ContactUUIDRepository.java:8:import org.springframework.data.mongodb.repository.MongoRepository;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/repository/ContactUUIDRepository.java:9:import org.springframework.data.repository.NoRepositoryBean;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/repository/ContactUUIDRepository.java:10:import org.springframework.data.util.StreamUtils;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/repository/ContactUUIDRepository.java:11:import org.springframework.data.util.Streamable;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/repository/ContactUUIDRepository.java:13:import fr.gouv.stopc.robertserver.database.model.Contact;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/repository/RegistrationRepository.java:1:package fr.gouv.stopc.robertserver.database.repository;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/repository/RegistrationRepository.java:3:import org.springframework.data.mongodb.repository.MongoRepository;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/repository/RegistrationRepository.java:4:import org.springframework.data.mongodb.repository.Query;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/repository/RegistrationRepository.java:7:import fr.gouv.stopc.robertserver.database.model.Registration;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/service/ContactService.java:1:package fr.gouv.stopc.robertserver.database.service;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/service/ContactService.java:5:import fr.gouv.stopc.robertserver.database.model.Contact;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/service/IApplicationConfigService.java:1:package fr.gouv.stopc.robertserver.database.service;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/service/IApplicationConfigService.java:5:import fr.gouv.stopc.robertserver.database.model.ApplicationConfigurationModel;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/service/IRegistrationService.java:1:package fr.gouv.stopc.robertserver.database.service;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/service/IRegistrationService.java:6:import fr.gouv.stopc.robertserver.database.model.Registration;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/service/impl/ApplicationConfigServiceImpl.java:1:package fr.gouv.stopc.robertserver.database.service.impl;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/service/impl/ApplicationConfigServiceImpl.java:9:import fr.gouv.stopc.robertserver.database.model.ApplicationConfigurationModel;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/service/impl/ApplicationConfigServiceImpl.java:10:import fr.gouv.stopc.robertserver.database.repository.ApplicationConfigurationRepository;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/service/impl/ApplicationConfigServiceImpl.java:11:import fr.gouv.stopc.robertserver.database.service.IApplicationConfigService;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/service/impl/ContactServiceImpl.java:1:package fr.gouv.stopc.robertserver.database.service.impl;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/service/impl/ContactServiceImpl.java:12:import fr.gouv.stopc.robertserver.database.model.Contact;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/service/impl/ContactServiceImpl.java:13:import fr.gouv.stopc.robertserver.database.repository.ContactRepository;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/service/impl/ContactServiceImpl.java:14:import fr.gouv.stopc.robertserver.database.service.ContactService;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/service/impl/RegistrationService.java:1:package fr.gouv.stopc.robertserver.database.service.impl;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/service/impl/RegistrationService.java:10:import fr.gouv.stopc.robertserver.database.model.Registration;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/service/impl/RegistrationService.java:11:import fr.gouv.stopc.robertserver.database.repository.RegistrationRepository;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/service/impl/RegistrationService.java:12:import fr.gouv.stopc.robertserver.database.service.IRegistrationService;
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/ApplicationConfigurationRepositoryTest.java:1:package test.fr.gouv.stopc.robertserver.database.repository;
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/ApplicationConfigurationRepositoryTest.java:11:import org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest;
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/ApplicationConfigurationRepositoryTest.java:14:import fr.gouv.stopc.robertserver.database.RobertServerDatabaseApplication;
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/ApplicationConfigurationRepositoryTest.java:15:import fr.gouv.stopc.robertserver.database.model.ApplicationConfigurationModel;
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/ApplicationConfigurationRepositoryTest.java:16:import fr.gouv.stopc.robertserver.database.repository.ApplicationConfigurationRepository;
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/ApplicationConfigurationRepositoryTest.java:18:@ContextConfiguration(classes = { RobertServerDatabaseApplication.class })
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/ApplicationConfigurationRepositoryTest.java:19:@DataMongoTest
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/ContactRepositoryTest.java:1:package test.fr.gouv.stopc.robertserver.database.repository;
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/ContactRepositoryTest.java:5:import org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest;
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/ContactRepositoryTest.java:8:import fr.gouv.stopc.robertserver.database.RobertServerDatabaseApplication;
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/ContactRepositoryTest.java:9:import fr.gouv.stopc.robertserver.database.model.Contact;
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/ContactRepositoryTest.java:10:import fr.gouv.stopc.robertserver.database.repository.ContactRepository;
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/ContactRepositoryTest.java:16:@ContextConfiguration(classes = {RobertServerDatabaseApplication.class})
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/ContactRepositoryTest.java:17:@DataMongoTest
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/RegistrationRepositoryTest.java:1:package test.fr.gouv.stopc.robertserver.database.repository;
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/RegistrationRepositoryTest.java:13:import org.springframework.boot.test.autoconfigure.data.mongo.DataMongoTest;
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/RegistrationRepositoryTest.java:16:import fr.gouv.stopc.robertserver.database.RobertServerDatabaseApplication;
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/RegistrationRepositoryTest.java:17:import fr.gouv.stopc.robertserver.database.model.EpochExposition;
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/RegistrationRepositoryTest.java:18:import fr.gouv.stopc.robertserver.database.model.Registration;
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/RegistrationRepositoryTest.java:19:import fr.gouv.stopc.robertserver.database.repository.RegistrationRepository;
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/RegistrationRepositoryTest.java:21:@ContextConfiguration(classes = {RobertServerDatabaseApplication.class})
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/RegistrationRepositoryTest.java:22:@DataMongoTest
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/service/ApplicationConfigServiceImplTest.java:1:package test.fr.gouv.stopc.robertserver.database.service;
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/service/ApplicationConfigServiceImplTest.java:12:import fr.gouv.stopc.robertserver.database.repository.ApplicationConfigurationRepository;
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/service/ApplicationConfigServiceImplTest.java:13:import fr.gouv.stopc.robertserver.database.service.impl.ApplicationConfigServiceImpl;
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/service/ContactServiceImplTest.java:1:package test.fr.gouv.stopc.robertserver.database.service;
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/service/ContactServiceImplTest.java:18:import fr.gouv.stopc.robertserver.database.model.Contact;
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/service/ContactServiceImplTest.java:19:import fr.gouv.stopc.robertserver.database.repository.ContactRepository;
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/service/ContactServiceImplTest.java:20:import fr.gouv.stopc.robertserver.database.service.impl.ContactServiceImpl;
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/service/RegistrationServiceImplTest.java:1:package test.fr.gouv.stopc.robertserver.database.service;
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/service/RegistrationServiceImplTest.java:4:import fr.gouv.stopc.robertserver.database.model.Registration;
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/service/RegistrationServiceImplTest.java:5:import fr.gouv.stopc.robertserver.database.repository.RegistrationRepository;
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/service/RegistrationServiceImplTest.java:6:import fr.gouv.stopc.robertserver.database.service.impl.RegistrationService;
+./robert-server-develop/robert-server-database/src/test/resources/application.properties:1:#spring.data.mongodb.authentication-database= # Authentication database name.
+./robert-server-develop/robert-server-database/src/test/resources/application.properties:2:# Database name.
+./robert-server-develop/robert-server-database/src/test/resources/application.properties:3:spring.data.mongodb.database=test
+./robert-server-develop/robert-server-database/src/test/resources/application.properties:4:#spring.data.mongodb.field-naming-strategy= # Fully qualified name of the FieldNamingStrategy to use.
+./robert-server-develop/robert-server-database/src/test/resources/application.properties:5:#spring.data.mongodb.grid-fs-database= # GridFS database name.
+./robert-server-develop/robert-server-database/src/test/resources/application.properties:6:spring.data.mongodb.host=localhost
+./robert-server-develop/robert-server-database/src/test/resources/application.properties:8:#spring.data.mongodb.password= # Login password of the mongo server.
+./robert-server-develop/robert-server-database/src/test/resources/application.properties:10:spring.data.mongodb.port=27717
+./robert-server-develop/robert-server-database/src/test/resources/application.properties:12:spring.data.mongodb.repositories.enabled=true 
+./robert-server-develop/robert-server-database/src/test/resources/application.properties:13:# Mongo database URI. When set, host and port are ignored.
+./robert-server-develop/robert-server-database/src/test/resources/application.properties:14:#spring.data.mongodb.uri=mongodb://localhost/local
+./robert-server-develop/robert-server-dataset-injector/README.md:5:- MongoDB database instance
+./robert-server-develop/robert-server-dataset-injector/README.md:9:java -jar robert-server-dataset-injector <contact | registration> <number of record to generate>
+./robert-server-develop/robert-server-dataset-injector/README.md:14:java -jar robert-server-dataset-injector.jar contact 100000
+./robert-server-develop/robert-server-dataset-injector/README.md:15:java -jar robert-server-dataset-injector registration 20000
+./robert-server-develop/robert-server-dataset-injector/README.md:18:# Reset MongoDB database
+./robert-server-develop/robert-server-dataset-injector/README.md:19:The script script/reset-mongo-db allows to reset the MongoDB database.
+./robert-server-develop/robert-server-dataset-injector/README.md:21:This script takes the database name in parameter. Example : ./reset-mongo-db.sh protectedRobertDB
+./robert-server-develop/robert-server-dataset-injector/mvnw:204:# This allows using the maven wrapper in projects that prohibit checking in binary data.
+./robert-server-develop/robert-server-dataset-injector/mvnw.cmd:130:@REM This allows using the maven wrapper in projects that prohibit checking in binary data.
+./robert-server-develop/robert-server-dataset-injector/pom.xml:20:	<artifactId>robert-server-dataset-injector</artifactId>
+./robert-server-develop/robert-server-dataset-injector/pom.xml:22:	<name>robert-server-dataset-injector</name>
+./robert-server-develop/robert-server-dataset-injector/pom.xml:23:	<description>Dataset injector module</description>
+./robert-server-develop/robert-server-dataset-injector/pom.xml:47:			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+./robert-server-develop/robert-server-dataset-injector/pom.xml:79:			<artifactId>robert-server-database</artifactId>
+./robert-server-develop/robert-server-dataset-injector/pom.xml:100:			<artifactId>spring-boot-starter-data-jpa</artifactId>
+./robert-server-develop/robert-server-dataset-injector/pom.xml:121:					<mainClass>fr.gouv.stopc.robertserver.dataset.injector.RobertServerInjectorDatasetApplication</mainClass>
+./robert-server-develop/robert-server-dataset-injector/script/reset-mongo-db.bat:2:REM Reset the collections idTable and CONTACTS_TO_PROCESS of the database given in parameter.
+./robert-server-develop/robert-server-dataset-injector/script/reset-mongo-db.bat:5:echo Please give the database name in parameter. Example : protectedRobertDB.
+./robert-server-develop/robert-server-dataset-injector/script/reset-mongo-db.bat:8:echo Reset the collections idTable and CONTACTS_TO_PROCESS of the database %dbname%.
+./robert-server-develop/robert-server-dataset-injector/script/reset-mongo-db.sh:2:#Reset the collections idTable and CONTACTS_TO_PROCESS of the database given in parameter.
+./robert-server-develop/robert-server-dataset-injector/script/reset-mongo-db.sh:6:    echo Please give the database name in parameter. Example : protectedRobertDB.
+./robert-server-develop/robert-server-dataset-injector/script/reset-mongo-db.sh:9:echo Reset the collections idTable and CONTACTS_TO_PROCESS of the database ${dbname}.
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/RobertServerInjectorDatasetApplication.java:1:package fr.gouv.stopc.robertserver.dataset.injector;
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/RobertServerInjectorDatasetApplication.java:3:import fr.gouv.stopc.robertserver.dataset.injector.service.InjectorDataSetService;
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/RobertServerInjectorDatasetApplication.java:10:import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/RobertServerInjectorDatasetApplication.java:13:import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/RobertServerInjectorDatasetApplication.java:14:import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/RobertServerInjectorDatasetApplication.java:19:@EnableMongoRepositories(basePackages = "fr.gouv.stopc.robertserver.database.repository")
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/RobertServerInjectorDatasetApplication.java:21:@EnableJpaRepositories(basePackages ="fr.gouv.stopc.robert.crypto.grpc.server.storage.database.repository")
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/RobertServerInjectorDatasetApplication.java:23:public class RobertServerInjectorDatasetApplication {
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/RobertServerInjectorDatasetApplication.java:26:	private InjectorDataSetService injectorDataSetService;
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/RobertServerInjectorDatasetApplication.java:29:		ConfigurableApplicationContext cac = SpringApplication.run(RobertServerInjectorDatasetApplication.class, args);
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/RobertServerInjectorDatasetApplication.java:30:		InjectorDataSetService bean = cac.getBean(InjectorDataSetService.class);
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/exception/RobertInjectorDataSetException.java:1:package fr.gouv.stopc.robertserver.dataset.injector.exception;
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/exception/RobertInjectorDataSetException.java:3:public class RobertInjectorDataSetException extends Exception {
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/exception/RobertInjectorDataSetException.java:9:    public RobertInjectorDataSetException(String message){
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/service/GeneratorIdService.java:1:package fr.gouv.stopc.robertserver.dataset.injector.service;
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/service/InjectorDataSetService.java:1:package fr.gouv.stopc.robertserver.dataset.injector.service;
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/service/InjectorDataSetService.java:3:public interface InjectorDataSetService {
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/service/impl/GeneratorIdServiceImpl.java:1:package fr.gouv.stopc.robertserver.dataset.injector.service.impl;
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/service/impl/GeneratorIdServiceImpl.java:9:import fr.gouv.stopc.robertserver.dataset.injector.service.GeneratorIdService;
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/service/impl/GeneratorIdServiceImpl.java:10:import fr.gouv.stopc.robertserver.dataset.injector.utils.PropertyLoader;
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImpl.java:1:package fr.gouv.stopc.robertserver.dataset.injector.service.impl;
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImpl.java:5:import fr.gouv.stopc.robert.crypto.grpc.server.storage.database.model.ClientIdentifier;
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImpl.java:6:import fr.gouv.stopc.robert.crypto.grpc.server.storage.database.repository.ClientIdentifierRepository;
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImpl.java:14:import fr.gouv.stopc.robertserver.database.model.Contact;
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImpl.java:15:import fr.gouv.stopc.robertserver.database.model.EpochExposition;
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImpl.java:16:import fr.gouv.stopc.robertserver.database.model.HelloMessageDetail;
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImpl.java:17:import fr.gouv.stopc.robertserver.database.model.Registration;
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImpl.java:18:import fr.gouv.stopc.robertserver.database.service.ContactService;
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImpl.java:19:import fr.gouv.stopc.robertserver.database.service.IRegistrationService;
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImpl.java:20:import fr.gouv.stopc.robertserver.dataset.injector.service.GeneratorIdService;
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImpl.java:21:import fr.gouv.stopc.robertserver.dataset.injector.service.InjectorDataSetService;
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImpl.java:22:import fr.gouv.stopc.robertserver.dataset.injector.utils.PropertyLoader;
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImpl.java:44:public class InjectorDataSetServiceImpl implements InjectorDataSetService {
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImpl.java:80:    public InjectorDataSetServiceImpl(PropertyLoader propertyLoader) {
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/utils/PropertyLoader.java:1:package fr.gouv.stopc.robertserver.dataset.injector.utils;
+./robert-server-develop/robert-server-dataset-injector/src/main/resources/application.properties:2:#spring.data.mongodb.authentication-database= # Authentication database name.
+./robert-server-develop/robert-server-dataset-injector/src/main/resources/application.properties:3:# Database name.
+./robert-server-develop/robert-server-dataset-injector/src/main/resources/application.properties:4:# spring.data.mongodb.database=${ROBERT_SERVER_DB_NAME:protectedRobertDB}
+./robert-server-develop/robert-server-dataset-injector/src/main/resources/application.properties:5:#spring.data.mongodb.field-naming-strategy= # Fully qualified name of the FieldNamingStrategy to use.
+./robert-server-develop/robert-server-dataset-injector/src/main/resources/application.properties:6:#spring.data.mongodb.grid-fs-database= # GridFS database name.
+./robert-server-develop/robert-server-dataset-injector/src/main/resources/application.properties:7:# spring.data.mongodb.host=${ROBERT_SERVER_DB_HOST:localhost}
+./robert-server-develop/robert-server-dataset-injector/src/main/resources/application.properties:9:#spring.data.mongodb.password= # Login password of the mongo server.
+./robert-server-develop/robert-server-dataset-injector/src/main/resources/application.properties:11:# spring.data.mongodb.port=${ROBERT_SERVER_DB_PORT:27017}
+./robert-server-develop/robert-server-dataset-injector/src/main/resources/application.properties:12:spring.data.mongodb.uri=${ROBERT_SERVER_DB_URI:mongodb\://${ROBERT_SERVER_DB_HOST:localhost}\:${ROBERT_SERVER_DB_PORT:27017}/${ROBERT_SERVER_DB_NAME:protectedRobertDB}}
+./robert-server-develop/robert-server-dataset-injector/src/main/resources/application.properties:46:spring.datasource.url= ${ROBERT_CRYPTO_SERVER_DB_URL:jdbc:postgresql://localhost:5432/robert}
+./robert-server-develop/robert-server-dataset-injector/src/main/resources/application.properties:47:spring.datasource.username=${ROBERT_CRYPTO_SERVER_DB_USR:robert}
+./robert-server-develop/robert-server-dataset-injector/src/main/resources/application.properties:48:spring.datasource.password=${ROBERT_CRYPTO_SERVER_DB_PWD:robert}
+./robert-server-develop/robert-server-dataset-injector/src/main/resources/application.properties:50:spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+./robert-server-develop/robert-server-dataset-injector/src/main/resources/logback.xml:5: <property  name="LOG_FILENAME" value="${ROBERT_SERVER_BATCH_LOG_FILE_NAME:-robert-server-dataset-injector}" />
+./robert-server-develop/robert-server-dataset-injector/src/main/resources/logback.xml:6: <property  name="ERROR_LOG_FILENAME" value="${ROBERT_SERVER_BATCH_ERROR_LOG_FILE_NAME:-robert-server-dataset-injector}.error" />
+./robert-server-develop/robert-server-dataset-injector/src/test/java/test/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImplTest.java:1:package test.fr.gouv.stopc.robertserver.dataset.injector.service.impl;
+./robert-server-develop/robert-server-dataset-injector/src/test/java/test/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImplTest.java:3:import fr.gouv.stopc.robert.crypto.grpc.server.storage.database.model.ClientIdentifier;
+./robert-server-develop/robert-server-dataset-injector/src/test/java/test/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImplTest.java:4:import fr.gouv.stopc.robert.crypto.grpc.server.storage.database.repository.ClientIdentifierRepository;
+./robert-server-develop/robert-server-dataset-injector/src/test/java/test/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImplTest.java:5:import fr.gouv.stopc.robertserver.database.service.ContactService;
+./robert-server-develop/robert-server-dataset-injector/src/test/java/test/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImplTest.java:6:import fr.gouv.stopc.robertserver.database.service.impl.RegistrationService;
+./robert-server-develop/robert-server-dataset-injector/src/test/java/test/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImplTest.java:7:import fr.gouv.stopc.robertserver.dataset.injector.RobertServerInjectorDatasetApplication;
+./robert-server-develop/robert-server-dataset-injector/src/test/java/test/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImplTest.java:8:import fr.gouv.stopc.robertserver.dataset.injector.service.GeneratorIdService;
+./robert-server-develop/robert-server-dataset-injector/src/test/java/test/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImplTest.java:9:import fr.gouv.stopc.robertserver.dataset.injector.service.InjectorDataSetService;
+./robert-server-develop/robert-server-dataset-injector/src/test/java/test/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImplTest.java:20:import test.fr.gouv.stopc.robertserver.dataset.injector.utils.GenerateIdUtils;
+./robert-server-develop/robert-server-dataset-injector/src/test/java/test/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImplTest.java:31:@ContextConfiguration(classes = {RobertServerInjectorDatasetApplication.class })
+./robert-server-develop/robert-server-dataset-injector/src/test/java/test/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImplTest.java:33:public class InjectorDataSetServiceImplTest {
+./robert-server-develop/robert-server-dataset-injector/src/test/java/test/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImplTest.java:42:    private InjectorDataSetService injectorDataSetService;
+./robert-server-develop/robert-server-dataset-injector/src/test/java/test/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImplTest.java:110:        injectorDataSetService.injectContacts(5);
+./robert-server-develop/robert-server-dataset-injector/src/test/java/test/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImplTest.java:143:        injectorDataSetService.injectRegistrations(10);
+./robert-server-develop/robert-server-dataset-injector/src/test/java/test/fr/gouv/stopc/robertserver/dataset/injector/utils/GenerateIdUtils.java:1:package test.fr.gouv.stopc.robertserver.dataset.injector.utils;
+./robert-server-develop/robert-server-dataset-injector/src/test/resources/application.properties:1:#spring.data.mongodb.authentication-database= # Authentication database name.
+./robert-server-develop/robert-server-dataset-injector/src/test/resources/application.properties:2:# Database name.
+./robert-server-develop/robert-server-dataset-injector/src/test/resources/application.properties:3:spring.data.mongodb.database=test
+./robert-server-develop/robert-server-dataset-injector/src/test/resources/application.properties:4:#spring.data.mongodb.field-naming-strategy= # Fully qualified name of the FieldNamingStrategy to use.
+./robert-server-develop/robert-server-dataset-injector/src/test/resources/application.properties:5:#spring.data.mongodb.grid-fs-database= # GridFS database name.
+./robert-server-develop/robert-server-dataset-injector/src/test/resources/application.properties:6:spring.data.mongodb.host=localhost
+./robert-server-develop/robert-server-dataset-injector/src/test/resources/application.properties:8:#spring.data.mongodb.password= # Login password of the mongo server.
+./robert-server-develop/robert-server-dataset-injector/src/test/resources/application.properties:10:spring.data.mongodb.port=27717
+./robert-server-develop/robert-server-dataset-injector/src/test/resources/application.properties:12:spring.data.mongodb.repositories.enabled=true 
+./robert-server-develop/robert-server-dataset-injector/src/test/resources/application.properties:13:# Mongo database URI. When set, host and port are ignored.
+./robert-server-develop/robert-server-dataset-injector/src/test/resources/application.properties:14:#spring.data.mongodb.uri=mongodb://localhost/local
+./robert-server-develop/robert-server-dataset-injector/src/test/resources/application.properties:31:spring.datasource.url= ${ROBERT_CRYPTO_SERVER_DB_URL:jdbc:postgresql://localhost:5432/robert}
+./robert-server-develop/robert-server-dataset-injector/src/test/resources/application.properties:32:spring.datasource.username=${ROBERT_CRYPTO_SERVER_DB_USR:robert}
+./robert-server-develop/robert-server-dataset-injector/src/test/resources/application.properties:33:spring.datasource.password=${ROBERT_CRYPTO_SERVER_DB_PWD:robert}
+./robert-server-develop/robert-server-dataset-injector/src/test/resources/application.properties:35:spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+./robert-server-develop/robert-server-ws-rest/mvnw:204:# This allows using the maven wrapper in projects that prohibit checking in binary data.
+./robert-server-develop/robert-server-ws-rest/mvnw.cmd:130:@REM This allows using the maven wrapper in projects that prohibit checking in binary data.
+./robert-server-develop/robert-server-ws-rest/pom.xml:61:			<artifactId>robert-server-database</artifactId>
+./robert-server-develop/robert-server-ws-rest/pom.xml:89:			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/RobertServerWsRestApplication.java:6:import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/RobertServerWsRestApplication.java:8:import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/RobertServerWsRestApplication.java:12:@EnableAutoConfiguration(exclude = { DataSourceAutoConfiguration.class })
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/DeleteHistoryControllerImpl.java:17:import fr.gouv.stopc.robertserver.database.model.Registration;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/DeleteHistoryControllerImpl.java:18:import fr.gouv.stopc.robertserver.database.service.IRegistrationService;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/RegisterControllerImpl.java:10:import fr.gouv.stopc.robertserver.database.model.ApplicationConfigurationModel;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/RegisterControllerImpl.java:11:import fr.gouv.stopc.robertserver.database.model.Registration;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/RegisterControllerImpl.java:23:import fr.gouv.stopc.robertserver.database.service.IApplicationConfigService;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/RegisterControllerImpl.java:24:import fr.gouv.stopc.robertserver.database.service.IRegistrationService;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/ReportControllerDelegate.java:57:            throw new RobertServerBadRequestException(MessageConstants.INVALID_DATA.getValue());
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/ReportControllerDelegate.java:62:            throw new RobertServerBadRequestException(MessageConstants.INVALID_DATA.getValue());
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/StatusControllerImpl.java:20:import fr.gouv.stopc.robertserver.database.model.ApplicationConfigurationModel;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/StatusControllerImpl.java:21:import fr.gouv.stopc.robertserver.database.model.Registration;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/StatusControllerImpl.java:22:import fr.gouv.stopc.robertserver.database.service.IApplicationConfigService;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/StatusControllerImpl.java:23:import fr.gouv.stopc.robertserver.database.service.IRegistrationService;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/UnregisterControllerImpl.java:12:import fr.gouv.stopc.robertserver.database.model.Registration;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/UnregisterControllerImpl.java:13:import fr.gouv.stopc.robertserver.database.service.IRegistrationService;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/dto/CaptchaCreationDto.java:7:import lombok.Data;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/dto/CaptchaCreationDto.java:14:@Data
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/dto/CaptchaDto.java:7:import lombok.Data;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/dto/CaptchaDto.java:12:@Data
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/dto/ClientConfigDto.java:7:import lombok.Data;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/dto/ClientConfigDto.java:12:@Data
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/dto/DeleteHistoryResponseDto.java:7:import lombok.Data;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/dto/DeleteHistoryResponseDto.java:12:@Data
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/dto/EpochKeyBundleDto.java:7:import lombok.Data;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/dto/EpochKeyBundleDto.java:14:@Data
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/dto/EpochKeyDto.java:10:import lombok.Data;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/dto/EpochKeyDto.java:16:@Data
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/dto/RegisterResponseDto.java:10:import lombok.Data;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/dto/RegisterResponseDto.java:17:@Data
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/dto/ReportBatchResponseDto.java:7:import lombok.Data;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/dto/ReportBatchResponseDto.java:12:@Data
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/dto/ReportBatchResponseV4Dto.java:7:import lombok.Data;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/dto/ReportBatchResponseV4Dto.java:12:@Data
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/dto/RobertServerKpi.java:7:import lombok.Data;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/dto/RobertServerKpi.java:14:@Data
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/dto/StatusResponseDto.java:9:import lombok.Data;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/dto/StatusResponseDto.java:15:@Data
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/dto/UnregisterResponseDto.java:5:import lombok.Data;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/dto/UnregisterResponseDto.java:12:@Data
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/dto/VerifyResponseDto.java:5:import lombok.Data;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/dto/VerifyResponseDto.java:10:@Data
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/exception/ApiError.java:5:import lombok.Data;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/exception/ApiError.java:11:@Data
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/exception/CustomRestExceptionHandler.java:32:		String message = MessageConstants.INVALID_DATA.getValue();
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/service/AuthRequestValidationService.java:11:import fr.gouv.stopc.robertserver.database.model.Registration;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/service/impl/AuthRequestValidationServiceImpl.java:9:import fr.gouv.stopc.robertserver.database.model.Registration;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/service/impl/AuthRequestValidationServiceImpl.java:10:import fr.gouv.stopc.robertserver.database.service.IRegistrationService;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/service/impl/CaptchaErrorMessage.java:8:import lombok.Data;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/service/impl/CaptchaErrorMessage.java:14:@Data
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/service/impl/CaptchaServiceImpl.java:29:import lombok.Data;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/service/impl/CaptchaServiceImpl.java:50:	@Data
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/service/impl/CaptchaServiceImpl.java:74:						log.error("Captcha not validated => {} : {} ", MessageConstants.INVALID_DATA.getValue(), e.getErrorMessage().getMessage());
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/service/impl/ContactDtoServiceImpl.java:9:import fr.gouv.stopc.robertserver.database.model.Contact;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/service/impl/ContactDtoServiceImpl.java:10:import fr.gouv.stopc.robertserver.database.service.ContactService;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/service/impl/KpiServiceImpl.java:9:import fr.gouv.stopc.robertserver.database.service.IRegistrationService;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/service/impl/utils/CaptchaAccessException.java:7:import lombok.Data;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/service/impl/utils/CaptchaAccessException.java:13:@Data
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/service/impl/utils/CaptchaErrorHandler.java:11:import com.fasterxml.jackson.databind.ObjectMapper;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/utils/MessageConstants.java:20:	INVALID_DATA("Invalid data");
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/vo/CaptchaCreationVo.java:7:import lombok.Data;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/vo/CaptchaCreationVo.java:12:@Data
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/vo/ContactVo.java:11:import lombok.Data;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/vo/ContactVo.java:17:@Data
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/vo/HelloMessageDetailVo.java:10:import lombok.Data;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/vo/HelloMessageDetailVo.java:15:@Data
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/vo/PushInfoVo.java:7:import lombok.Data;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/vo/PushInfoVo.java:13:@Data
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/vo/RegisterVo.java:9:import lombok.Data;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/vo/RegisterVo.java:16:@Data
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/vo/ReportBatchRequestVo.java:10:import lombok.Data;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/vo/ReportBatchRequestVo.java:16:@Data
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/vo/RobertServerKpi.java:7:import lombok.Data;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/vo/RobertServerKpi.java:14:@Data
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/vo/mapper/ContactMapper.java:13:import fr.gouv.stopc.robertserver.database.model.Contact;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/vo/mapper/ContactMapper.java:14:import fr.gouv.stopc.robertserver.database.model.HelloMessageDetail;
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application-dev.properties:13:#spring.data.mongodb.authentication-database= # Authentication database name.
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application-dev.properties:14:# Database name.
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application-dev.properties:15:#spring.data.mongodb.database=${ROBERT_SERVER_DB_NAME:protectedRobertDB}
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application-dev.properties:16:#spring.data.mongodb.field-naming-strategy= # Fully qualified name of the FieldNamingStrategy to use.
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application-dev.properties:17:#spring.data.mongodb.grid-fs-database= # GridFS database name.
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application-dev.properties:18:#spring.data.mongodb.host=${ROBERT_SERVER_DB_HOST:localhost}
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application-dev.properties:20:#spring.data.mongodb.password= # Login password of the mongo server.
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application-dev.properties:22:#spring.data.mongodb.port=${ROBERT_SERVER_DB_PORT:27017}
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application-dev.properties:28:spring.data.mongodb.uri=${ROBERT_SERVER_DB_URI:mongodb\://${ROBERT_SERVER_DB_HOST:localhost}\:${ROBERT_SERVER_DB_PORT:27017}/${ROBERT_SERVER_DB_NAME:protectedRobertDB}}
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application.properties:13:#spring.data.mongodb.authentication-database= # Authentication database name.
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application.properties:14:# Database name.
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application.properties:15:#spring.data.mongodb.database=${ROBERT_SERVER_DB_NAME:protectedRobertDB}
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application.properties:16:#spring.data.mongodb.field-naming-strategy= # Fully qualified name of the FieldNamingStrategy to use.
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application.properties:17:#spring.data.mongodb.grid-fs-database= # GridFS database name.
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application.properties:18:#spring.data.mongodb.host=${ROBERT_SERVER_DB_HOST:localhost}
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application.properties:20:#spring.data.mongodb.password= # Login password of the mongo server.
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application.properties:22:#spring.data.mongodb.port=${ROBERT_SERVER_DB_PORT:27017}
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/DeleteHistoryControllerWsRestTest.java:57:import fr.gouv.stopc.robertserver.database.model.EpochExposition;
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/DeleteHistoryControllerWsRestTest.java:58:import fr.gouv.stopc.robertserver.database.model.Registration;
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/DeleteHistoryControllerWsRestTest.java:59:import fr.gouv.stopc.robertserver.database.service.impl.RegistrationService;
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/RegisterControllerWsRestTest.java:47:import fr.gouv.stopc.robertserver.database.model.Registration;
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/RegisterControllerWsRestTest.java:48:import fr.gouv.stopc.robertserver.database.service.impl.RegistrationService;
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/ReportControllerWsRestTest.java:139:            assertEquals(response.getBody(), buildApiError(MessageConstants.INVALID_DATA.getValue()));
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/ReportControllerWsRestTest.java:161:            assertEquals(response.getBody(), buildApiError(MessageConstants.INVALID_DATA.getValue()));
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/ReportControllerWsRestTest.java:183:            assertEquals(response.getBody(), buildApiError(MessageConstants.INVALID_DATA.getValue()));
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:58:import fr.gouv.stopc.robertserver.database.model.EpochExposition;
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:59:import fr.gouv.stopc.robertserver.database.model.Registration;
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:60:import fr.gouv.stopc.robertserver.database.service.impl.RegistrationService;
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/UnregisterControllerWsRestTest.java:55:import fr.gouv.stopc.robertserver.database.model.Registration;
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/UnregisterControllerWsRestTest.java:56:import fr.gouv.stopc.robertserver.database.service.impl.RegistrationService;
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/service/impl/CaptchaServiceImplTest.java:140:    public void testVerifyCaptchaWhenDataInvalid() {
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/vo/mapper/ContactMapperTest.java:21:import fr.gouv.stopc.robertserver.database.model.Contact;
+./robert-server-develop/robert-server-ws-rest/src/test/resources/application.properties:12:#spring.data.mongodb.authentication-database= # Authentication database name.
+./robert-server-develop/robert-server-ws-rest/src/test/resources/application.properties:13:# Database name.
+./robert-server-develop/robert-server-ws-rest/src/test/resources/application.properties:14:#spring.data.mongodb.database=test
+./robert-server-develop/robert-server-ws-rest/src/test/resources/application.properties:15:#spring.data.mongodb.field-naming-strategy= # Fully qualified name of the FieldNamingStrategy to use.
+./robert-server-develop/robert-server-ws-rest/src/test/resources/application.properties:16:#spring.data.mongodb.grid-fs-database= # GridFS database name.
+./robert-server-develop/robert-server-ws-rest/src/test/resources/application.properties:17:#spring.data.mongodb.host=localhost
+./robert-server-develop/robert-server-ws-rest/src/test/resources/application.properties:19:#spring.data.mongodb.password= # Login password of the mongo server.
+./robert-server-develop/robert-server-ws-rest/src/test/resources/application.properties:21:#spring.data.mongodb.port=27717
+./robert-server-develop/robert-server-ws-rest/src/test/resources/application.properties:23:# Mongo database URI. When set, host and port are ignored.
+./robert-server-develop/robert-server-ws-rest/src/test/resources/application.properties:24:#spring.data.mongodb.uri=mongodb://localhost/local

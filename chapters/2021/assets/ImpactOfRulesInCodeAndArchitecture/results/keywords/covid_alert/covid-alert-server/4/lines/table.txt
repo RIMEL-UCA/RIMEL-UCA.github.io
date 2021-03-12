@@ -1,0 +1,43 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/pre-commit.sample:26:# printable range starts at the space character and ends with tilde.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/pre-commit.sample:39:To be portable it is advisable to rename the file.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.github/PULL_REQUEST_TEMPLATE.md:5:## Why this approach? Any notable design decisions?
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/clear-diagnosis-keys.sh:18:TRUNCATE TABLE server.diagnosis_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CODE_OF_CONDUCT.md:30:Examples of unacceptable behavior include:
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CODE_OF_CONDUCT.md:44:acceptable behavior and will take appropriate and fair corrective action in
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CODE_OF_CONDUCT.md:63:Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at cds-snc@tbs-sct.gc.ca. All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. The project team is obligated to maintain confidentiality with regard to the reporter of an incident. Further details of specific enforcement policies may be posted separately.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CODE_OF_CONDUCT.md:147:Voici des exemples de comportements inacceptables :
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CODE_OF_CONDUCT.md:159:comportement acceptable et ils prendront des mesures correctives appropriées et justes en
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CODE_OF_CONDUCT.md:171:Les cas de comportement abusif, de harcèlement ou d’autres comportements inacceptables peuvent être signalés en communiquant avec l’équipe du projet à cds-snc@tbs-sct.gc.ca. Toutes les plaintes feront l’objet d’un examen et d’une enquête, ce qui donnera lieu à une réponse jugée nécessaire et appropriée selon les circonstances. L’équipe de projet
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/go.sum:155:github.com/hashicorp/go-immutable-radix v1.0.0/go.mod h1:0y9vanUI8NX6FsYoO3zeMjhV/C5i9g4Q3DwcSNZ4P60=
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:13:	CREATE TABLE IF NOT EXISTS schema_migrations (
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:27:CREATE TABLE IF NOT EXISTS diagnosis_keys (
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:41:CREATE TABLE IF NOT EXISTS encryption_keys (
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:59:CREATE TABLE IF NOT EXISTS failed_key_claim_attempts (
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:71:			`ALTER TABLE diagnosis_keys  ADD COLUMN originator VARCHAR(64)`,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:72:			`ALTER TABLE encryption_keys ADD COLUMN originator VARCHAR(64)`,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:73:			`ALTER TABLE diagnosis_keys  ADD INDEX (originator)`,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:74:			`ALTER TABLE encryption_keys ADD INDEX (originator)`,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:79:			`ALTER TABLE encryption_keys ADD COLUMN hash_id VARCHAR(128)`,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:80:			`ALTER TABLE encryption_keys ADD INDEX (hash_id)`,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:85:			`ALTER TABLE encryption_keys MODIFY one_time_code VARCHAR(10)`,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:91:			`ALTER TABLE encryption_keys ADD UNIQUE (hash_id)`,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:97:CREATE TABLE IF NOT EXISTS events (
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:114:CREATE TABLE IF NOT EXISTS tek_upload_count (
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:127:CREATE TABLE IF NOT EXISTS otk_life_duration (
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:140:DROP TABLE otk_life_duration
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:142:CREATE TABLE IF NOT EXISTS otk_life_duration (
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:188:	log(nil, nil).Info("locking table schema_migrations")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:189:	if _, err := db.Exec("LOCK TABLES schema_migrations WRITE"); err != nil {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:192:	log(nil, nil).Info("acquired table lock on schema_migrations")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:200:	if _, err := db.Exec("UNLOCK TABLES"); err != nil {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:203:	log(nil, nil).Info("released table lock on schema_migrations")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:542:	// Roll back if table is locked
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:553:	assert.Equal(t, expectedErr, receivedErr, "Expected error if table is locked")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/test_tools.go:9:// ClearDiagnosisKeys Truncates the diagnosis_keys table to support testing
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/test_tools.go:20:	if _, err := db.Exec(`TRUNCATE TABLE diagnosis_keys`); err != nil {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/test_tools_test.go:37:	mock.ExpectExec(`TRUNCATE TABLE diagnosis_keys`).WillReturnResult(sqlmock.NewResult(0,0))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/test_tools_test.go:54:	mock.ExpectExec(`TRUNCATE TABLE diagnosis_keys`).WillReturnError(fmt.Errorf("oh no"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/test_tools_test.go:62:	assert.EqualError(t, err, "oh no", "should return an error if unable to truncate the table")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim.go:107:	// other than transiently in the failed attempts table.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:33:  def test_reject_unacceptable_periods
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:89:    # max acceptable number of keys (28)

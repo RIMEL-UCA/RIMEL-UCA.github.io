@@ -1,0 +1,57 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/post-update.sample:8:exec git update-server-info
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.github/workflows/terraform.yml:39:  TF_VAR_rds_server_db_password: ${{ secrets.DB_PASSWORD }}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/infrastructure/aws/README.md:17:| Serverless compute       | [Fargate](https://aws.amazon.com/fargate/)                             |
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/bootstrap/provider.tf:9:  server_side_encryption_configuration {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/bootstrap/provider.tf:11:      apply_server_side_encryption_by_default {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/bootstrap/provider.tf:28:  server_side_encryption_configuration {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/bootstrap/provider.tf:30:      apply_server_side_encryption_by_default {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/cloudwatch_portal.tf:385:  alarm_description   = "COVID Alert Portal Warning - AWS has detected a DDOS attack on the COVID Alert Portal's DNS Server"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/ecs.tf:38:    database_url                           = aws_secretsmanager_secret_version.server_database_url.arn
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/ecs.tf:77:    database_url                           = aws_secretsmanager_secret_version.server_database_url.arn
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/iam.tf:25:      aws_secretsmanager_secret.server_database_url.arn,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/kinesis.tf:66:  server_side_encryption {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/rds.tf:17:resource "aws_rds_cluster_instance" "covidportal_server_instances" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/rds.tf:20:  identifier                   = "${var.rds_server_name}-instance-${count.index}"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/rds.tf:21:  cluster_identifier           = aws_rds_cluster.covidportal_server.id
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/rds.tf:22:  instance_class               = var.rds_server_instance_class
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/rds.tf:29:    Name                  = "${var.rds_server_name}-instance"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/rds.tf:34:resource "aws_rds_cluster" "covidportal_server" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/rds.tf:35:  cluster_identifier        = "${var.rds_server_name}-cluster"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/rds.tf:37:  database_name             = var.rds_server_db_name
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/rds.tf:38:  final_snapshot_identifier = "server-${random_string.random.result}"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/rds.tf:39:  master_username           = var.rds_server_db_user
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/rds.tf:40:  master_password           = var.rds_server_db_password
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/rds.tf:54:    Name                  = "${var.rds_server_name}-cluster"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/s3.tf:7:  server_side_encryption_configuration {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/s3.tf:9:      apply_server_side_encryption_by_default {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/s3.tf:23:  server_side_encryption_configuration {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/s3.tf:25:      apply_server_side_encryption_by_default {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/secrets.tf:1:resource "aws_secretsmanager_secret" "server_database_url" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/secrets.tf:2:  name                    = "server-database-url"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/secrets.tf:6:resource "aws_secretsmanager_secret_version" "server_database_url" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/secrets.tf:7:  secret_id     = aws_secretsmanager_secret.server_database_url.id
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/secrets.tf:8:  secret_string = "postgres://${var.rds_server_db_user}:${var.rds_server_db_password}@${aws_rds_cluster.covidportal_server.endpoint}:5432/${var.rds_server_db_name}"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/variables.auto.tfvars:50:rds_server_db_name = "covid_portal"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/variables.auto.tfvars:51:rds_server_name    = "staging-covidportal-db"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/variables.auto.tfvars:52:rds_server_db_user = "postgres"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/variables.auto.tfvars:54:# rds_server_db_password       = ""
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/variables.auto.tfvars:55:rds_server_allocated_storage = "5"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/variables.auto.tfvars:56:rds_server_instance_class    = "db.t3.medium"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/variables.tf:229:variable "rds_server_db_name" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/variables.tf:233:variable "rds_server_name" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/variables.tf:237:variable "rds_server_db_user" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/variables.tf:241:variable "rds_server_db_password" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/variables.tf:245:variable "rds_server_allocated_storage" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/variables.tf:249:variable "rds_server_instance_class" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/entrypoint.sh:11:# Start server
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/entrypoint.sh:12:echo "Starting server"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/entrypoint.sh:14:	python manage.py runserver 0.0.0.0:8000
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.mo matches
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1635:msgstr "Non, conserver"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile:12:serve = "python manage.py runserver"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:103:We use New Relic to monitor for server side errors and application performance in production and staging. We do not leverage New Relic client (browser side) metric reporting.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:122:The local server can be accessed at `http://127.0.0.1:8000/` or `http://localhost:8000`.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:158:Note that watching the SCSS will require a new terminal window to run the development server. If you are using iTerm, you can open another tab with `Command + t` or a new pane with `Command + d`. Remember to activate your virtual environment in your new pane using `pipenv shell` and `pipenv install`.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:168:#### 4. Run development server
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:170:Then, run `python manage.py runserver` to run the app. Go to `http://127.0.0.1:8000/` to see the login page.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:317:Exécutez ensuite `python manage.py runserver` pour faire fonctionner l’application. Rendez-vous à `http://127.0.0.1:8000/` pour voir la page d’accueil.

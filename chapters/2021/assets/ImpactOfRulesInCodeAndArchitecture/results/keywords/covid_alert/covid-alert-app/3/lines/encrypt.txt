@@ -1,0 +1,215 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield/Info.plist:48:	<key>ITSAppUsesNonExemptEncryption</key>
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/datasharing/components/BaseTekUploadView.tsx:44:    if (Object.values(covidshield.EncryptedUploadResponse.ErrorCode).includes(error)) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.spec.ts:38:    EncryptedUploadRequest: {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.spec.ts:43:    EncryptedUploadResponse: {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.spec.ts:175:      covidshield.EncryptedUploadResponse.decode.mockImplementationOnce(() => ({
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.spec.ts:201:      covidshield.EncryptedUploadResponse.decode.mockImplementationOnce(() => false);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:242:    const encryptedPayload = nacl.box(serializedUpload, nonce, serverPublicKey, clientPrivate);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:244:    await this.upload(encryptedPayload, nonce, serverPublicKey, clientPublicKey);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:271:  ): Promise<covidshield.EncryptedUploadResponse> {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:272:    const request = covidshield.EncryptedUploadRequest.encode({
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:279:    const encryptedUploadResponse = covidshield.EncryptedUploadResponse.decode(Buffer.from(response.buffer));
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:281:      if (encryptedUploadResponse && encryptedUploadResponse.error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:282:        throw encryptedUploadResponse.error;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:286:    return encryptedUploadResponse;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:222:    /** Properties of an EncryptedUploadRequest. */
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:223:    interface IEncryptedUploadRequest {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:225:        /** EncryptedUploadRequest serverPublicKey */
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:228:        /** EncryptedUploadRequest appPublicKey */
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:231:        /** EncryptedUploadRequest nonce */
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:234:        /** EncryptedUploadRequest payload */
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:238:    /** Represents an EncryptedUploadRequest. */
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:239:    class EncryptedUploadRequest implements IEncryptedUploadRequest {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:242:         * Constructs a new EncryptedUploadRequest.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:245:        constructor(properties?: covidshield.IEncryptedUploadRequest);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:247:        /** EncryptedUploadRequest serverPublicKey. */
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:250:        /** EncryptedUploadRequest appPublicKey. */
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:253:        /** EncryptedUploadRequest nonce. */
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:256:        /** EncryptedUploadRequest payload. */
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:260:         * Creates a new EncryptedUploadRequest instance using the specified properties.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:262:         * @returns EncryptedUploadRequest instance
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:264:        public static create(properties?: covidshield.IEncryptedUploadRequest): covidshield.EncryptedUploadRequest;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:267:         * Encodes the specified EncryptedUploadRequest message. Does not implicitly {@link covidshield.EncryptedUploadRequest.verify|verify} messages.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:268:         * @param message EncryptedUploadRequest message or plain object to encode
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:272:        public static encode(message: covidshield.IEncryptedUploadRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:275:         * Encodes the specified EncryptedUploadRequest message, length delimited. Does not implicitly {@link covidshield.EncryptedUploadRequest.verify|verify} messages.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:276:         * @param message EncryptedUploadRequest message or plain object to encode
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:280:        public static encodeDelimited(message: covidshield.IEncryptedUploadRequest, writer?: $protobuf.Writer): $protobuf.Writer;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:283:         * Decodes an EncryptedUploadRequest message from the specified reader or buffer.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:286:         * @returns EncryptedUploadRequest
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:290:        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): covidshield.EncryptedUploadRequest;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:293:         * Decodes an EncryptedUploadRequest message from the specified reader or buffer, length delimited.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:295:         * @returns EncryptedUploadRequest
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:299:        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): covidshield.EncryptedUploadRequest;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:302:         * Verifies an EncryptedUploadRequest message.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:309:         * Creates an EncryptedUploadRequest message from a plain object. Also converts values to their respective internal types.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:311:         * @returns EncryptedUploadRequest
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:313:        public static fromObject(object: { [k: string]: any }): covidshield.EncryptedUploadRequest;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:316:         * Creates a plain object from an EncryptedUploadRequest message. Also converts values to other types if specified.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:317:         * @param message EncryptedUploadRequest
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:321:        public static toObject(message: covidshield.EncryptedUploadRequest, options?: $protobuf.IConversionOptions): { [k: string]: any };
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:324:         * Converts this EncryptedUploadRequest to JSON.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:330:    /** Properties of an EncryptedUploadResponse. */
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:331:    interface IEncryptedUploadResponse {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:333:        /** EncryptedUploadResponse error */
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:334:        error?: (covidshield.EncryptedUploadResponse.ErrorCode|null);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:337:    /** Represents an EncryptedUploadResponse. */
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:338:    class EncryptedUploadResponse implements IEncryptedUploadResponse {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:341:         * Constructs a new EncryptedUploadResponse.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:344:        constructor(properties?: covidshield.IEncryptedUploadResponse);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:346:        /** EncryptedUploadResponse error. */
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:347:        public error: covidshield.EncryptedUploadResponse.ErrorCode;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:350:         * Creates a new EncryptedUploadResponse instance using the specified properties.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:352:         * @returns EncryptedUploadResponse instance
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:354:        public static create(properties?: covidshield.IEncryptedUploadResponse): covidshield.EncryptedUploadResponse;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:357:         * Encodes the specified EncryptedUploadResponse message. Does not implicitly {@link covidshield.EncryptedUploadResponse.verify|verify} messages.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:358:         * @param message EncryptedUploadResponse message or plain object to encode
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:362:        public static encode(message: covidshield.IEncryptedUploadResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:365:         * Encodes the specified EncryptedUploadResponse message, length delimited. Does not implicitly {@link covidshield.EncryptedUploadResponse.verify|verify} messages.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:366:         * @param message EncryptedUploadResponse message or plain object to encode
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:370:        public static encodeDelimited(message: covidshield.IEncryptedUploadResponse, writer?: $protobuf.Writer): $protobuf.Writer;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:373:         * Decodes an EncryptedUploadResponse message from the specified reader or buffer.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:376:         * @returns EncryptedUploadResponse
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:380:        public static decode(reader: ($protobuf.Reader|Uint8Array), length?: number): covidshield.EncryptedUploadResponse;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:383:         * Decodes an EncryptedUploadResponse message from the specified reader or buffer, length delimited.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:385:         * @returns EncryptedUploadResponse
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:389:        public static decodeDelimited(reader: ($protobuf.Reader|Uint8Array)): covidshield.EncryptedUploadResponse;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:392:         * Verifies an EncryptedUploadResponse message.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:399:         * Creates an EncryptedUploadResponse message from a plain object. Also converts values to their respective internal types.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:401:         * @returns EncryptedUploadResponse
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:403:        public static fromObject(object: { [k: string]: any }): covidshield.EncryptedUploadResponse;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:406:         * Creates a plain object from an EncryptedUploadResponse message. Also converts values to other types if specified.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:407:         * @param message EncryptedUploadResponse
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:411:        public static toObject(message: covidshield.EncryptedUploadResponse, options?: $protobuf.IConversionOptions): { [k: string]: any };
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:414:         * Converts this EncryptedUploadResponse to JSON.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:420:    namespace EncryptedUploadResponse {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:570:        covidshield.EncryptedUploadRequest = (function() {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:573:             * Properties of an EncryptedUploadRequest.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:575:             * @interface IEncryptedUploadRequest
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:576:             * @property {Uint8Array|null} [serverPublicKey] EncryptedUploadRequest serverPublicKey
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:577:             * @property {Uint8Array|null} [appPublicKey] EncryptedUploadRequest appPublicKey
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:578:             * @property {Uint8Array|null} [nonce] EncryptedUploadRequest nonce
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:579:             * @property {Uint8Array|null} [payload] EncryptedUploadRequest payload
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:583:             * Constructs a new EncryptedUploadRequest.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:585:             * @classdesc Represents an EncryptedUploadRequest.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:586:             * @implements IEncryptedUploadRequest
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:588:             * @param {covidshield.IEncryptedUploadRequest=} [properties] Properties to set
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:590:            function EncryptedUploadRequest(properties) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:598:             * EncryptedUploadRequest serverPublicKey.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:600:             * @memberof covidshield.EncryptedUploadRequest
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:603:            EncryptedUploadRequest.prototype.serverPublicKey = $util.newBuffer([]);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:606:             * EncryptedUploadRequest appPublicKey.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:608:             * @memberof covidshield.EncryptedUploadRequest
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:611:            EncryptedUploadRequest.prototype.appPublicKey = $util.newBuffer([]);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:614:             * EncryptedUploadRequest nonce.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:616:             * @memberof covidshield.EncryptedUploadRequest
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:619:            EncryptedUploadRequest.prototype.nonce = $util.newBuffer([]);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:622:             * EncryptedUploadRequest payload.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:624:             * @memberof covidshield.EncryptedUploadRequest
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:627:            EncryptedUploadRequest.prototype.payload = $util.newBuffer([]);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:630:             * Creates a new EncryptedUploadRequest instance using the specified properties.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:632:             * @memberof covidshield.EncryptedUploadRequest
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:634:             * @param {covidshield.IEncryptedUploadRequest=} [properties] Properties to set
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:635:             * @returns {covidshield.EncryptedUploadRequest} EncryptedUploadRequest instance
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:637:            EncryptedUploadRequest.create = function create(properties) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:638:                return new EncryptedUploadRequest(properties);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:642:             * Encodes the specified EncryptedUploadRequest message. Does not implicitly {@link covidshield.EncryptedUploadRequest.verify|verify} messages.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:644:             * @memberof covidshield.EncryptedUploadRequest
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:646:             * @param {covidshield.IEncryptedUploadRequest} message EncryptedUploadRequest message or plain object to encode
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:650:            EncryptedUploadRequest.encode = function encode(message, writer) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:665:             * Encodes the specified EncryptedUploadRequest message, length delimited. Does not implicitly {@link covidshield.EncryptedUploadRequest.verify|verify} messages.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:667:             * @memberof covidshield.EncryptedUploadRequest
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:669:             * @param {covidshield.IEncryptedUploadRequest} message EncryptedUploadRequest message or plain object to encode
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:673:            EncryptedUploadRequest.encodeDelimited = function encodeDelimited(message, writer) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:678:             * Decodes an EncryptedUploadRequest message from the specified reader or buffer.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:680:             * @memberof covidshield.EncryptedUploadRequest
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:684:             * @returns {covidshield.EncryptedUploadRequest} EncryptedUploadRequest
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:688:            EncryptedUploadRequest.decode = function decode(reader, length) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:691:                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.covidshield.EncryptedUploadRequest();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:716:             * Decodes an EncryptedUploadRequest message from the specified reader or buffer, length delimited.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:718:             * @memberof covidshield.EncryptedUploadRequest
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:721:             * @returns {covidshield.EncryptedUploadRequest} EncryptedUploadRequest
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:725:            EncryptedUploadRequest.decodeDelimited = function decodeDelimited(reader) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:732:             * Verifies an EncryptedUploadRequest message.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:734:             * @memberof covidshield.EncryptedUploadRequest
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:739:            EncryptedUploadRequest.verify = function verify(message) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:758:             * Creates an EncryptedUploadRequest message from a plain object. Also converts values to their respective internal types.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:760:             * @memberof covidshield.EncryptedUploadRequest
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:763:             * @returns {covidshield.EncryptedUploadRequest} EncryptedUploadRequest
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:765:            EncryptedUploadRequest.fromObject = function fromObject(object) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:766:                if (object instanceof $root.covidshield.EncryptedUploadRequest)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:768:                var message = new $root.covidshield.EncryptedUploadRequest();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:793:             * Creates a plain object from an EncryptedUploadRequest message. Also converts values to other types if specified.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:795:             * @memberof covidshield.EncryptedUploadRequest
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:797:             * @param {covidshield.EncryptedUploadRequest} message EncryptedUploadRequest
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:801:            EncryptedUploadRequest.toObject = function toObject(message, options) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:847:             * Converts this EncryptedUploadRequest to JSON.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:849:             * @memberof covidshield.EncryptedUploadRequest
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:853:            EncryptedUploadRequest.prototype.toJSON = function toJSON() {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:857:            return EncryptedUploadRequest;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:860:        covidshield.EncryptedUploadResponse = (function() {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:863:             * Properties of an EncryptedUploadResponse.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:865:             * @interface IEncryptedUploadResponse
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:866:             * @property {covidshield.EncryptedUploadResponse.ErrorCode|null} [error] EncryptedUploadResponse error
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:870:             * Constructs a new EncryptedUploadResponse.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:872:             * @classdesc Represents an EncryptedUploadResponse.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:873:             * @implements IEncryptedUploadResponse
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:875:             * @param {covidshield.IEncryptedUploadResponse=} [properties] Properties to set
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:877:            function EncryptedUploadResponse(properties) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:885:             * EncryptedUploadResponse error.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:886:             * @member {covidshield.EncryptedUploadResponse.ErrorCode} error
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:887:             * @memberof covidshield.EncryptedUploadResponse
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:890:            EncryptedUploadResponse.prototype.error = 0;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:893:             * Creates a new EncryptedUploadResponse instance using the specified properties.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:895:             * @memberof covidshield.EncryptedUploadResponse
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:897:             * @param {covidshield.IEncryptedUploadResponse=} [properties] Properties to set
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:898:             * @returns {covidshield.EncryptedUploadResponse} EncryptedUploadResponse instance
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:900:            EncryptedUploadResponse.create = function create(properties) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:901:                return new EncryptedUploadResponse(properties);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:905:             * Encodes the specified EncryptedUploadResponse message. Does not implicitly {@link covidshield.EncryptedUploadResponse.verify|verify} messages.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:907:             * @memberof covidshield.EncryptedUploadResponse
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:909:             * @param {covidshield.IEncryptedUploadResponse} message EncryptedUploadResponse message or plain object to encode
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:913:            EncryptedUploadResponse.encode = function encode(message, writer) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:922:             * Encodes the specified EncryptedUploadResponse message, length delimited. Does not implicitly {@link covidshield.EncryptedUploadResponse.verify|verify} messages.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:924:             * @memberof covidshield.EncryptedUploadResponse
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:926:             * @param {covidshield.IEncryptedUploadResponse} message EncryptedUploadResponse message or plain object to encode
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:930:            EncryptedUploadResponse.encodeDelimited = function encodeDelimited(message, writer) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:935:             * Decodes an EncryptedUploadResponse message from the specified reader or buffer.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:937:             * @memberof covidshield.EncryptedUploadResponse
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:941:             * @returns {covidshield.EncryptedUploadResponse} EncryptedUploadResponse
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:945:            EncryptedUploadResponse.decode = function decode(reader, length) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:948:                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.covidshield.EncryptedUploadResponse();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:964:             * Decodes an EncryptedUploadResponse message from the specified reader or buffer, length delimited.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:966:             * @memberof covidshield.EncryptedUploadResponse
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:969:             * @returns {covidshield.EncryptedUploadResponse} EncryptedUploadResponse
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:973:            EncryptedUploadResponse.decodeDelimited = function decodeDelimited(reader) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:980:             * Verifies an EncryptedUploadResponse message.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:982:             * @memberof covidshield.EncryptedUploadResponse
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:987:            EncryptedUploadResponse.verify = function verify(message) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:1014:             * Creates an EncryptedUploadResponse message from a plain object. Also converts values to their respective internal types.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:1016:             * @memberof covidshield.EncryptedUploadResponse
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:1019:             * @returns {covidshield.EncryptedUploadResponse} EncryptedUploadResponse
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:1021:            EncryptedUploadResponse.fromObject = function fromObject(object) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:1022:                if (object instanceof $root.covidshield.EncryptedUploadResponse)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:1024:                var message = new $root.covidshield.EncryptedUploadResponse();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:1087:             * Creates a plain object from an EncryptedUploadResponse message. Also converts values to other types if specified.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:1089:             * @memberof covidshield.EncryptedUploadResponse
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:1091:             * @param {covidshield.EncryptedUploadResponse} message EncryptedUploadResponse
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:1095:            EncryptedUploadResponse.toObject = function toObject(message, options) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:1102:                    object.error = options.enums === String ? $root.covidshield.EncryptedUploadResponse.ErrorCode[message.error] : message.error;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:1107:             * Converts this EncryptedUploadResponse to JSON.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:1109:             * @memberof covidshield.EncryptedUploadResponse
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:1113:            EncryptedUploadResponse.prototype.toJSON = function toJSON() {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:1119:             * @name covidshield.EncryptedUploadResponse.ErrorCode
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:1136:            EncryptedUploadResponse.ErrorCode = (function() {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:1155:            return EncryptedUploadResponse;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.proto:43:// We are using a NaCl Box (Curve25519+XSalsa20+Poly1305) to encrypt and
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.proto:53:message EncryptedUploadRequest {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.proto:55:  // used to encrypt the payload. This key should be stored locally for 14
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.proto:66:  // encryption library to generate the ciphertext.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.proto:68:  // payload is the result of encoding/marshalling, and then encrypting, an
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.proto:70:  // field, because we need to encrypt a byte stream, not an object.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.proto:74:// EncryptedUploadResponse is received from the server in response to a
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.proto:75:// EncryptedUploadRequest. If the request was successful, error will be NONE.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.proto:76:message EncryptedUploadResponse {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.proto:98:// Upload is the decrypted type of the `payload` field in EncryptedUploadRequest.

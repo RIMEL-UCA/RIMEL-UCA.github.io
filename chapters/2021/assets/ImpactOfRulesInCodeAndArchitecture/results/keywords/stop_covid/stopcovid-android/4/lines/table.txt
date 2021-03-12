@@ -1,0 +1,189 @@
+stopcovid-android/.git/hooks/pre-commit.sample:26:# printable range starts at the space character and ends with tilde.
+stopcovid-android/.git/hooks/pre-commit.sample:39:To be portable it is advisable to rename the file.
+Fichier binaire stopcovid-android/.git/index correspondant
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/advertiser/BleAdvertiserImpl.kt:98:            .setConnectable(true)
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithoutAdvertiser.kt:59:private fun hasUnstableBluetoothStack() = isAndroidLessThan7()
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithoutAdvertiser.kt:116:    override val shouldRestartBluetooth = hasUnstableBluetoothStack()
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithoutAdvertiser.kt:221:                if (hasUnstableBluetoothStack()) {
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithoutAdvertiser.kt:458:        private val lastStatusHistory = mutableListOf<Boolean>()
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleScannedDeviceSelector.kt:34:    private val deviceScans = mutableListOf<BleScannedDevice>()
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleScannedDeviceSelector.kt:139:        val result = mutableListOf<BleScannedDevice>()
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/filter/RiskComputer.kt:48:            val rssis = mutableListOf<Int>()
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/filter/RiskComputer.kt:75:    val groupedRssis = List(timeSlotCount) { mutableListOf<Int>() }
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/filter/RssiClipper.kt:21:        val peaks = mutableListOf<Int>()
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/filter/RssiClipper.kt:23:        val clippedTimestampRssis = mutableListOf<TimestampedRssi>()
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/filter/ProximityFilterIntTest.kt:29:    private var timestampedRssis = mutableListOf<TimestampedRssi>()
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/filter/ProximityFilterIntTest.kt:30:    private var clippedRssisByRssiThreshold = mutableMapOf<Int, MutableList<Int>>()
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/filter/ProximityFilterIntTest.kt:41:            clippedRssisByRssiThreshold.getOrPut(-35) { mutableListOf() }.add(values[2].toInt())
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/filter/ProximityFilterIntTest.kt:42:            clippedRssisByRssiThreshold.getOrPut(-60) { mutableListOf() }.add(values[3].toInt())
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/extension/ViewExt.kt:32:            insets.stableInsetRight,
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/extension/ViewExt.kt:46:        appBarLayout.setLiftable(true)
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/extension/ViewExt.kt:87:    context.theme.resolveAttribute(R.attr.selectableItemBackground, this, true)
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/manager/StringsManager.kt:15:import androidx.lifecycle.MutableLiveData
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/manager/StringsManager.kt:34:    private val _liveStrings: MutableLiveData<Event<HashMap<String, String>>> = MutableLiveData()
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/utils/SingleLiveEvent.kt:15:import androidx.lifecycle.MutableLiveData
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/utils/SingleLiveEvent.kt:32:class SingleLiveEvent<T> : MutableLiveData<T>() {
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/utils/SingleLiveEvent.kt:43:        // Observe the internal MutableLiveData
+stopcovid-android/coreui/src/main/res/layout/item_action.xml:17:    android:background="?selectableItemBackground"
+stopcovid-android/coreui/src/main/res/layout/item_action.xml:53:        android:textIsSelectable="false"
+stopcovid-android/coreui/src/main/res/layout/item_caption.xml:20:    android:textIsSelectable="false"
+stopcovid-android/coreui/src/main/res/layout/item_card_with_actions.xml:28:            android:background="?selectableItemBackground"
+stopcovid-android/coreui/src/main/res/layout/item_clickable_row.xml:16:    android:background="?selectableItemBackground"
+stopcovid-android/coreui/src/main/res/layout/item_clickable_row.xml:28:        android:textIsSelectable="false"
+stopcovid-android/coreui/src/main/res/layout/item_clickable_row.xml:40:        android:textIsSelectable="false"
+stopcovid-android/coreui/src/main/res/layout/item_switch.xml:25:        android:textIsSelectable="false"
+stopcovid-android/coreui/src/main/res/layout/item_title.xml:25:        android:textIsSelectable="false"
+stopcovid-android/coreui/src/main/res/layout/item_title.xml:33:        android:textIsSelectable="false"
+stopcovid-android/coreui/src/main/res/layout/layout_confirmation_bottom_sheet.xml:26:        android:textIsSelectable="false"
+stopcovid-android/coreui/src/main/res/values/untranslatable_strings.xml:12:    <string name="string_prefix" translatable="false">strings-</string>
+stopcovid-android/domain/src/main/java/com/lunabeestudio/domain/model/EphemeralBluetoothIdentifier.kt:54:            val ebids = mutableListOf<EphemeralBluetoothIdentifier>()
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:51:    protected val localProximityList: MutableList<LocalProximity> = mutableListOf()
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:17:import androidx.lifecycle.MutableLiveData
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:101:    private var _attestationsLiveData: MutableLiveData<List<Map<String, FormEntry>>?> = MutableLiveData(attestations)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/manager/LocalProximityFilterImpl.kt:30:        val mutableLocalProximityList = localProximityList.toMutableList()
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/manager/LocalProximityFilterImpl.kt:53:                mutableLocalProximityList.removeAll(list)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/manager/LocalProximityFilterImpl.kt:61:        return mutableLocalProximityList
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/sharedcrypto/BouncyCastleCryptoDataSource.kt:16:import org.bouncycastle.jce.ECNamedCurveTable
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/sharedcrypto/BouncyCastleCryptoDataSource.kt:33:        val ecSpec: ECParameterSpec = ECNamedCurveTable.getParameterSpec(NAMED_CURVE_SPEC)
+stopcovid-android/gradlew:89:        # IBM's JDK on AIX uses strange locations for the executables
+stopcovid-android/LICENSE.md:16:means Source Code Form to which the initial Contributor has attached the notice in Exhibit A, the Executable Form of such Source Code Form, and Modifications of such Source Code Form, in each case including portions thereof.
+stopcovid-android/LICENSE.md:25:### 1.6. “Executable Form”
+stopcovid-android/LICENSE.md:104:## 3.2. Distribution of Executable Form
+stopcovid-android/LICENSE.md:106:If You distribute Covered Software in Executable Form then:
+stopcovid-android/LICENSE.md:108:	a. such Covered Software must also be made available in Source Code Form, as described in Section 3.1, and You must inform recipients of the Executable Form how they can obtain a copy of such Source Code Form by reasonable means in a timely manner, at a charge no more than the cost of distribution to the recipient; and
+stopcovid-android/LICENSE.md:110:	b. You may distribute such Executable Form under the terms of this License, or sublicense it under different terms, provided that the license for the Executable Form does not attempt to limit or alter the recipients’ rights in the Source Code Form under this License.
+stopcovid-android/LICENSE.md:138:_Covered Software is provided under this License on an “as is” basis, without warranty of any kind, either expressed, implied, or statutory, including, without limitation, warranties that the Covered Software is free of defects, merchantable, fit for a particular purpose or non-infringing. The entire risk as to the quality and performance of the Covered Software is with You. Should any Covered Software prove defective in any respect, You (not any Contributor) assume the cost of any necessary servicing, repair, or correction. This disclaimer of warranty constitutes an essential part of this License. No use of any Covered Software is authorized under this License except under this disclaimer._
+stopcovid-android/LICENSE.txt:20:    the notice in Exhibit A, the Executable Form of such Source Code
+stopcovid-android/LICENSE.txt:34:1.6. "Executable Form"
+stopcovid-android/LICENSE.txt:170:3.2. Distribution of Executable Form
+stopcovid-android/LICENSE.txt:172:If You distribute Covered Software in Executable Form then:
+stopcovid-android/LICENSE.txt:176:    the Executable Form how they can obtain a copy of such Source Code
+stopcovid-android/LICENSE.txt:180:(b) You may distribute such Executable Form under the terms of this
+stopcovid-android/LICENSE.txt:182:    license for the Executable Form does not attempt to limit or alter
+stopcovid-android/LICENSE.txt:269:*  Covered Software is free of defects, merchantable, fit for a        *
+stopcovid-android/licenses/tests/license-junit4.txt:198:serve as the Agreement Steward to a suitable separate entity. Each new version
+stopcovid-android/licenses/tests/license-zohhak.txt:103:       suitable for, and under terms that permit, the user to
+stopcovid-android/licenses/tests/license-zohhak.txt:109:       1) Use a suitable shared library mechanism for linking with the
+stopcovid-android/licenses/tests/license-zohhak.txt:110:       Library.  A suitable mechanism is one that (a) uses at run time
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:16:import androidx.lifecycle.MutableLiveData
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:119:    private val atRiskMutableLiveData: MutableLiveData<Event<AtRiskStatus>> = MutableLiveData()
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:120:    override val atRiskStatus: LiveData<Event<AtRiskStatus>> = atRiskMutableLiveData
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:584:            if (atRiskMutableLiveData.value == null || atRiskMutableLiveData.value?.peekContent() != atRisk) {
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:585:                atRiskMutableLiveData.postValue(Event(atRisk))
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/utils/Event.kt:18:    private val handledIdSet: MutableSet<Int> = mutableSetOf()
+stopcovid-android/stopcovid/proguard-rules.pro:17:#-keepattributes SourceFile,LineNumberTable
+stopcovid-android/stopcovid/src/main/assets/MoreKeyFigures/morekeyfigures-en.json:24:        "description": "Tous les indicateurs (excepté le R Effectif) sont mis à jour quotidiennement, après consolidation par Santé publique France et le Ministère des Solidarités et de la Santé. Le nombre de reproduction R (nombre moyen de personnes infectées par un cas) est estimé selon la méthode de Cori (Cori et al, Am. J. Epidemiol. 2013), avec une fenêtre temporelle mobile de 7 jours. Il permet de suivre les tendances récentes de la dynamique de transmission. Les estimations du R effectif sont produites à partir du nombre de patients positifs (RT-PCR ou Tag, données SI-DEP), des passages aux urgences pour suspicion de COVID-19 (réseau OSCOUR®) ou des nouvelles hospitalisations pour COVID-19 (données SI-VIC). Les données du R effectif sont arrêtées le mardi et publiées une fois par semaine (le jeudi). Le R effectif estimé à partir des données SI-DEP (tests) est un indicateur de la situation épidémiologique environ 7 jours auparavant (délai moyen entre infection et test). Il peut être instable notamment lorsque l’incidence est faible et peut être influencé par les actions locales de dépistage.\n\n- Le nombre de nouveaux cas confirmés rapportés depuis la veille :\nCet indicateur est seulement disponible au niveau national ; il est très sensible aux variations quotidiennes des activités de dépistage qui sont remontées à Santé publique France et ne constitue pas un bon reflet de la situation sanitaire.\n\n- Le nombre de nouveaux cas positifs enregistrés par date de prélèvement, le taux d’incidence et le taux de positivité :\nCes indicateurs sont disponibles au niveau national et départemental. Ils se basent sur les données à J-3 et sont calculés sur la moyenne des 7 derniers jours (allant de J-9 à J-3) afin de mieux prendre en compte la fluctuation des données.\n\n- Le R Effectif :\nLe R Effectif est calculé sur une fenêtre de 7 jours allant de J-9 à J-3. Il est disponible au niveau national (France métropolitaine) et au niveau régional (régions métropolitaines et ultra-marines).\n\n- Les indicateurs sur la réanimation :\nLe nombre de nouveaux patients en réanimation, de patients actuellement en réanimation et l’indicateur de tension des réanimations couvrent précisément les services de réanimation, de soins intensifs ou d’unité de surveillance continue et sont à interpréter au niveau régional. En effet, certains départements n’ayant pas ces services à disposition, ces indicateurs ne peuvent pas être interprétés au niveau départemental. Ces indicateurs sont mis à jour quotidiennement et rapportés par date d’enregistrement des patients."
+stopcovid-android/stopcovid/src/main/assets/MoreKeyFigures/morekeyfigures-fr.json:24:        "description": "Tous les indicateurs (excepté le R Effectif) sont mis à jour quotidiennement, après consolidation par Santé publique France et le Ministère des Solidarités et de la Santé. Le nombre de reproduction R (nombre moyen de personnes infectées par un cas) est estimé selon la méthode de Cori (Cori et al, Am. J. Epidemiol. 2013), avec une fenêtre temporelle mobile de 7 jours. Il permet de suivre les tendances récentes de la dynamique de transmission. Les estimations du R effectif sont produites à partir du nombre de patients positifs (RT-PCR ou Tag, données SI-DEP), des passages aux urgences pour suspicion de COVID-19 (réseau OSCOUR®) ou des nouvelles hospitalisations pour COVID-19 (données SI-VIC). Les données du R effectif sont arrêtées le mardi et publiées une fois par semaine (le jeudi). Le R effectif estimé à partir des données SI-DEP (tests) est un indicateur de la situation épidémiologique environ 7 jours auparavant (délai moyen entre infection et test). Il peut être instable notamment lorsque l’incidence est faible et peut être influencé par les actions locales de dépistage.\n\n- Le nombre de nouveaux cas confirmés rapportés depuis la veille :\nCet indicateur est seulement disponible au niveau national ; il est très sensible aux variations quotidiennes des activités de dépistage qui sont remontées à Santé publique France et ne constitue pas un bon reflet de la situation sanitaire.\n\n- Le nombre de nouveaux cas positifs enregistrés par date de prélèvement, le taux d’incidence et le taux de positivité :\nCes indicateurs sont disponibles au niveau national et départemental. Ils se basent sur les données à J-3 et sont calculés sur la moyenne des 7 derniers jours (allant de J-9 à J-3) afin de mieux prendre en compte la fluctuation des données.\n\n- Le R Effectif :\nLe R Effectif est calculé sur une fenêtre de 7 jours allant de J-9 à J-3. Il est disponible au niveau national (France métropolitaine) et au niveau régional (régions métropolitaines et ultra-marines).\n\n- Les indicateurs sur la réanimation :\nLe nombre de nouveaux patients en réanimation, de patients actuellement en réanimation et l’indicateur de tension des réanimations couvrent précisément les services de réanimation, de soins intensifs ou d’unité de surveillance continue et sont à interpréter au niveau régional. En effet, certains départements n’ayant pas ces services à disposition, ces indicateurs ne peuvent pas être interprétés au niveau départemental. Ces indicateurs sont mis à jour quotidiennement et rapportés par date d’enregistrement des patients."
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-fr.json:18:        "description": "Les données échangées entre deux téléphones via Bluetooth sont des pseudo-identifiants.\nUn pseudo-identifiant est renouvelé automatiquement toutes les 15 minutes. C’est par exemple une suite de numéros, de lettres ou de signes, qui ne permet pas par elle-même d’identifier une personne.\n\nLes données sont partagées par votre application avec le serveur, géré par le Ministère des Solidarités et de la Santé, seulement si vous avez été diagnostiqué comme un cas de COVID-19 et avec votre accord. Cela permet alors aux applications des autres utilisateurs d’interroger le serveur pour savoir si elles ont été à proximité de votre application. Si c’est le cas, les utilisateurs seront alertés qu’ils ont été exposés à un risque de contamination. Il leur sera alors recommandé de prendre contact avec leur médecin.\n\nLes personnes alertées n’auront aucune information sur le téléphone portable à l’origine de l’alerte ni sur son propriétaire.\n\nL’application ne tient pas compte des contextes spécifiques et notamment des situations où une protection spécifique est mise en place (équipement des personnels de santé, séparation par une vitre par exemple). Il est toujours possible pour l’utilisateur de désactiver temporairement l’application."
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-fr.json:22:        "description": "Les données sont stockées sur votre téléphone portable. En cas de test positif, et avec votre consentement, vous pourrez protéger vos proches et les personnes que vous avez croisées en partageant sur le serveur géré par le Ministère des Solidarités et de la Santé cet historique de proximité."
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:509:    "attestationFieldItemChoiceController.footer": "- Anyone seeking to benefit from one of these exemptions to leave their homes must be in possession of a document stating that they have a suitable reason for doing so.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:138:    "common.error.server": "Hay demasiada gente intentando conectarse a TousAntiCovid. ¡Muchas gracias! Estamos haciendo todo lo posible por restablecer el servicio cuanto antes.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:415:    "onboarding.runWithoutBleController.mainMessage.subtitle": "Lamentablemente, tu teléfono no admite íntegramente el Bluetooth Low Energy, utilizado para detectar tus “Contactos Bluetooth”. Aun así, puedes acceder al resto de la aplicación.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:494:    "newAttestationController.generate.alert.message": "Certifico que mi desplazamiento está relacionado con el siguiente motivo, autorizado por el decreto n°2020-1310 de 29 de octubre de 2020 por el que se establecen las medidas generales necesarias para hacer frente a la epidemia de Covid-19 en el marco del estado de emergencia sanitaria.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:505:    "newAttestationController.header": "En aplicación del decreto n°2020-1310 de 29 octubre de 2020 por el que se establecen las medidas generales necesarias para hacer frente a la epidemia de Covid-19 en el marco del estado de emergencia sanitaria",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:559:    "venuesRecording.onboardingController.mainMessage.title": "Necesitamos tu colaboración para poder informarte e informar a los demás en caso de exposición al COVID-19 en los establecimientos.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:560:    "venuesRecording.onboardingController.mainMessage.message": "Solo tienes que escanear los códigos QR que encontrarás en los establecimientos para recibir un aviso en caso de que alguien notifique un positivo COVID-19 en la aplicación.\nY si eres tú el que comunicas un positivo en la aplicación, estarás informando de forma anónima a todas las personas que estaban ese mismo lugar al mismo tiempo que tú.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:571:    "venueFlashCodeController.explanation": "Acerca el teléfono al código QR del establecimiento",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:582:    "onboarding.venuesController.mainMessage.title": "Romper la cadena de transmisión en los establecimientos públicos",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:583:    "onboarding.venuesController.mainMessage.subtitle": "Escanea el código QR de estos establecimientos y recibe un aviso en caso de que alguien que haya coincidido contigo en este lugar comunique un positivo por COVID-19.",
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/SectionsExt.kt:20:fun List<Section>.fillItems(items: MutableList<GenericItem>) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/EditTextItem.kt:13:import android.text.Editable
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/EditTextItem.kt:33:    var onTextChange: ((text: Editable?) -> Unit)? = null
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/InfoCenterDetailCardItem.kt:104:        tagAdapter.setHasStableIds(true)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:153:    private fun spaceDividerItems(items: MutableList<GenericItem>) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:160:    private fun manageNotificationsItems(items: MutableList<GenericItem>) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:182:    private fun eraseVenuesItems(items: MutableList<GenericItem>) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:210:    private fun eraseAttestationItems(items: MutableList<GenericItem>) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:238:    private fun eraseIsolationItems(items: MutableList<GenericItem>) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:266:    private fun eraseLocalHistoryItems(items: MutableList<GenericItem>) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:294:    private fun eraseRemoteContactItems(items: MutableList<GenericItem>) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:322:    private fun eraseRemoteAlertItems(items: MutableList<GenericItem>) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:350:    private fun quitStopCovidItems(items: MutableList<GenericItem>) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ProximityFragment.kt:489:                ProximityManager.hasUnstableBluetooth() -> {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ReminderBottomSheetDialogFragment.kt:67:        val items = mutableListOf<GenericItem>()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/FormManager.kt:15:import androidx.lifecycle.MutableLiveData
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/FormManager.kt:39:    private val _form: MutableLiveData<Event<AttestationForm>> = MutableLiveData()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/GestureManager.kt:22:    fun fillItems(items: MutableList<GenericItem>, strings: Map<String, String>) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/InfoCenterManager.kt:22:import androidx.lifecycle.MutableLiveData
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/InfoCenterManager.kt:73:    private val _infos: MutableLiveData<Event<List<InfoCenterEntry>>> = MutableLiveData()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/InfoCenterManager.kt:77:    private val _tags: MutableLiveData<Event<List<InfoCenterTag>>> = MutableLiveData()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/InfoCenterManager.kt:81:    private val _strings: MutableLiveData<Event<Map<String, String>>> = MutableLiveData()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:14:import androidx.lifecycle.MutableLiveData
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:40:    private val _currentFormState: MutableLiveData<Event<IsolationFormStateEnum?>> = MutableLiveData(Event(currentFormStateValue))
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/KeyFiguresManager.kt:16:import androidx.lifecycle.MutableLiveData
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/KeyFiguresManager.kt:37:    private val _figures: MutableLiveData<Event<List<KeyFigure>>> = MutableLiveData()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/LinksManager.kt:15:import androidx.lifecycle.MutableLiveData
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/LinksManager.kt:21:    private val _linksSections: MutableLiveData<List<Section>> = MutableLiveData()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/MoreKeyFiguresManager.kt:15:import androidx.lifecycle.MutableLiveData
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/MoreKeyFiguresManager.kt:22:    private val _moreKeyFiguresSections: MutableLiveData<List<Section>> = MutableLiveData()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/PrivacyManager.kt:15:import androidx.lifecycle.MutableLiveData
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/PrivacyManager.kt:21:    private val _privacySections: MutableLiveData<List<Section>> = MutableLiveData()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/ProximityManager.kt:64:    fun hasUnstableBluetooth(): Boolean {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/VaccinationCenterManager.kt:18:import androidx.lifecycle.MutableLiveData
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/VaccinationCenterManager.kt:52:    private val _vaccinationCenters: MutableLiveData<Event<List<VaccinationCenter>>> = MutableLiveData()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/VenuesManager.kt:135:        val venuesQrCode = keystoreDataSource.venuesQrCode?.toMutableList() ?: mutableListOf()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/VenuesManager.kt:171:        val venuesQrCode = keystoreDataSource.venuesQrCode?.toMutableList() ?: mutableListOf()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/AttestationsViewModel.kt:27:        val attestations = keystoreDataSource.attestations?.toMutableList()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/CaptchaViewModel.kt:13:import androidx.lifecycle.MutableLiveData
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/CaptchaViewModel.kt:35:    val loadingInProgress: MutableLiveData<Boolean> = MutableLiveData(false)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/CodeViewModel.kt:13:import androidx.lifecycle.MutableLiveData
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/CodeViewModel.kt:30:    val loadingInProgress: MutableLiveData<Boolean> = MutableLiveData(false)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/CodeViewModel.kt:31:    val code: MutableLiveData<String> = MutableLiveData("")
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/HealthViewModel.kt:13:import androidx.lifecycle.MutableLiveData
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/HealthViewModel.kt:28:    val loadingInProgress: MutableLiveData<Boolean> = MutableLiveData(false)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:15:import androidx.lifecycle.MutableLiveData
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:51:    val loadingInProgress: MutableLiveData<Boolean> = MutableLiveData(false)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/NewAttestationViewModel.kt:25:    val infos: MutableMap<String, FormEntry> = (secureKeystoreDataSource.savedAttestationData ?: mapOf()).toMutableMap()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/NewAttestationViewModel.kt:34:        val infosCopy = infos.toMutableMap()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/NewAttestationViewModel.kt:38:        secureKeystoreDataSource.attestations = (secureKeystoreDataSource.attestations?.toMutableList() ?: mutableListOf()).apply {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/OnBoardingViewModel.kt:13:import androidx.lifecycle.MutableLiveData
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/OnBoardingViewModel.kt:19:    val showLogo: MutableLiveData<Boolean> = MutableLiveData(false)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ProximityViewModel.kt:14:import androidx.lifecycle.MutableLiveData
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ProximityViewModel.kt:42:    val loadingInProgress: MutableLiveData<Boolean> = MutableLiveData(false)
+stopcovid-android/stopcovid/src/main/res/layout/activity_app_maintenance.xml:40:            android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/activity_main.xml:55:            android:background="?selectableItemBackground"
+stopcovid-android/stopcovid/src/main/res/layout/activity_main.xml:62:            android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/fragment_qr_code.xml:30:        android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/include_numbers.xml:26:        android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/include_numbers.xml:37:        android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/include_numbers.xml:52:        android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/include_numbers.xml:65:        android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/include_numbers.xml:80:        android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/include_numbers.xml:92:        android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/include_numbers.xml:106:        android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/item_attestation_qr_code.xml:24:        android:background="?selectableItemBackground">
+stopcovid-android/stopcovid/src/main/res/layout/item_attestation_qr_code.xml:47:            android:textIsSelectable="true"
+stopcovid-android/stopcovid/src/main/res/layout/item_big_title.xml:19:    android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/item_contact_content.xml:24:        android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/item_contact_content.xml:50:        android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/item_contact_content.xml:64:        android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/item_date.xml:19:    android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/item_delete_card.xml:34:            android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/item_delete_card.xml:47:            android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/item_delete_card.xml:58:            android:background="?selectableItemBackgroundBorderless"
+stopcovid-android/stopcovid/src/main/res/layout/item_double_text.xml:16:    android:background="?selectableItemBackground"
+stopcovid-android/stopcovid/src/main/res/layout/item_double_text.xml:27:        android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/item_double_text.xml:43:        android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/item_highlighted_number_card.xml:19:    android:foreground="?selectableItemBackground">
+stopcovid-android/stopcovid/src/main/res/layout/item_highlighted_number_card.xml:35:            android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/item_highlighted_number_card.xml:44:            android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/item_highlighted_number_card.xml:52:            android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/item_icon_title.xml:41:        android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/item_key_figure_card.xml:77:                android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/item_link.xml:17:    android:background="?selectableItemBackground"
+stopcovid-android/stopcovid/src/main/res/layout/item_link.xml:40:        android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/item_logo_body.xml:37:        android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/item_numbers_card.xml:18:    android:foreground="?selectableItemBackground">
+stopcovid-android/stopcovid/src/main/res/layout/item_numbers_card.xml:35:            android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/item_numbers_card.xml:47:            android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/item_selection.xml:17:    android:background="?selectableItemBackground"
+stopcovid-android/stopcovid/src/main/res/layout/item_selection.xml:28:        android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/item_selection.xml:40:        android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/item_vaccination_center_card.xml:17:    android:foreground="?selectableItemBackground"
+stopcovid-android/stopcovid/src/main/res/layout/item_vaccination_center_card.xml:31:            android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/item_vaccination_center_card.xml:40:            android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/item_vaccination_center_card.xml:49:            android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/item_vaccination_center_card.xml:57:            android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/item_vaccination_center_card.xml:65:            android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/layout/item_vaccination_center_card.xml:73:            android:textIsSelectable="false"
+stopcovid-android/stopcovid/src/main/res/values/untranslatable_strings.xml:11:    <string name="app_name" translatable="false">AntiCovid</string>

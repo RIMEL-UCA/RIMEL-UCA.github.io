@@ -1,0 +1,9 @@
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.mo matches
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:741:"captures les données pour ce site."
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1623:"toutes les données."
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1886:"Contactez votre administrateur. Vous trouverez ses coordonnées dans le "
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:269:**Démarrage rapide:** Après avoir activé un environnement virtuel, exécutez le script `entrypoint.sh` pour effectuer les migrations de base de données, la collecte de fichiers statiques et la compilation des fichiers CSS. Une instance de l'application sera alors démarré et sera accessible à `http://127.0.0.1:8000 /` ou `http://localhost:8000`.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:275:#### 1. Migrations de bases de données
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:277:Par défaut, Django crée une base de données SQLite, mais nous utilisons Postgres en production.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:287:Pour créer le schéma de base de données, exécutez `python manage.py makemigrations`
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:323:Vous pouvez utiliser Docker Compose pour construire un conteneur d’application parallèlement à une base de données Postgres. Il va mapper vos fichiers locaux dans un conteneur Docker, créer une base de données PostgreSQL et faire une compilation CSS et une migration de base de données. L’application s’exécute sur le port `8000`, la base de donnée sur le port `5432` (u: `user`, p: `password`) et sera desservie à l’adresse `http://0.0.0.0:8000`.

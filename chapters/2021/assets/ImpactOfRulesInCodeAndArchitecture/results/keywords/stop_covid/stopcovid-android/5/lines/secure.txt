@@ -1,0 +1,189 @@
+Fichier binaire stopcovid-android/.git/index correspondant
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/KeystoreDataSourceTest.kt:24:    private lateinit var keystoreDataSource: SecureKeystoreDataSource
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/KeystoreDataSourceTest.kt:40:        keystoreDataSource = SecureKeystoreDataSource(context, LocalCryptoManager(context))
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileEphemeralBluetoothIdentifierDataSourceTest.kt:24:class SecureFileEphemeralBluetoothIdentifierDataSourceTest {
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileEphemeralBluetoothIdentifierDataSourceTest.kt:26:    lateinit var secureFileEphemeralBluetoothIdentifierDataSource: SecureFileEphemeralBluetoothIdentifierDataSource
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileEphemeralBluetoothIdentifierDataSourceTest.kt:31:        secureFileEphemeralBluetoothIdentifierDataSource = SecureFileEphemeralBluetoothIdentifierDataSource(
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileEphemeralBluetoothIdentifierDataSourceTest.kt:45:        secureFileEphemeralBluetoothIdentifierDataSource.saveAll(
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileEphemeralBluetoothIdentifierDataSourceTest.kt:50:        val getAll = secureFileEphemeralBluetoothIdentifierDataSource.getAll()
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileEphemeralBluetoothIdentifierDataSourceTest.kt:51:        val get250 = secureFileEphemeralBluetoothIdentifierDataSource.getForTime(250L)
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileEphemeralBluetoothIdentifierDataSourceTest.kt:52:        val get1000 = secureFileEphemeralBluetoothIdentifierDataSource.getForTime(1000L)
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileEphemeralBluetoothIdentifierDataSourceTest.kt:54:        secureFileEphemeralBluetoothIdentifierDataSource.saveAll()
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileEphemeralBluetoothIdentifierDataSourceTest.kt:63:        secureFileEphemeralBluetoothIdentifierDataSource.saveAll(
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileEphemeralBluetoothIdentifierDataSourceTest.kt:69:        secureFileEphemeralBluetoothIdentifierDataSource.removeUntilTimeKeepLast(750L)
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileEphemeralBluetoothIdentifierDataSourceTest.kt:70:        var getAll = secureFileEphemeralBluetoothIdentifierDataSource.getAll()
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileEphemeralBluetoothIdentifierDataSourceTest.kt:74:        secureFileEphemeralBluetoothIdentifierDataSource.removeUntilTimeKeepLast(2000L)
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileEphemeralBluetoothIdentifierDataSourceTest.kt:75:        getAll = secureFileEphemeralBluetoothIdentifierDataSource.getAll()
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileEphemeralBluetoothIdentifierDataSourceTest.kt:83:        secureFileEphemeralBluetoothIdentifierDataSource.saveAll(
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileEphemeralBluetoothIdentifierDataSourceTest.kt:88:        secureFileEphemeralBluetoothIdentifierDataSource.removeAll()
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileEphemeralBluetoothIdentifierDataSourceTest.kt:89:        val getAll = secureFileEphemeralBluetoothIdentifierDataSource.getAll()
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:28:class SecureFileLocalProximityDataSourceTest {
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:30:    private lateinit var secureFileLocalProximityDataSource: SecureFileLocalProximityDataSource
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:40:        secureFileLocalProximityDataSource = SecureFileLocalProximityDataSource(
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:55:            secureFileLocalProximityDataSource.saveAll(*list.toTypedArray())
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:59:        val getList = secureFileLocalProximityDataSource.getUntilTime(0)
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:68:            secureFileLocalProximityDataSource.saveAll(*list.toTypedArray())
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:72:        secureFileLocalProximityDataSource.removeAll()
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:74:        val removedList = secureFileLocalProximityDataSource.getUntilTime(0)
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:82:            secureFileLocalProximityDataSource.saveAll(*list.toTypedArray())
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:83:            secureFileLocalProximityDataSource.removeAll() // remove all before dump finished
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:87:        val getList = secureFileLocalProximityDataSource.getUntilTime(0)
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:108:        assertThat(secureFileLocalProximityDataSource.getUntilTime(5 * 60 * 60 * 24)).hasSize(5 * dayNumber * sessionNumber)
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:109:        assertThat(secureFileLocalProximityDataSource.getUntilTime(9 * 60 * 60 * 24)).hasSize(dayNumber * sessionNumber)
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:110:        assertThat(secureFileLocalProximityDataSource.getUntilTime(10 * 60 * 60 * 24)).hasSize(0)
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:111:        assertThat(secureFileLocalProximityDataSource.getUntilTime(0L)).hasSize((proximityNumber * dayNumber * sessionNumber).toInt())
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:126:        secureFileLocalProximityDataSource.removeUntilTime(5 * 60 * 60 * 24)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileEphemeralBluetoothIdentifierDataSource.kt:26:class SecureFileEphemeralBluetoothIdentifierDataSource(
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:33:open class SecureFileLocalProximityDataSource(
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:27:class SecureKeystoreDataSource(context: Context, private val cryptoManager: LocalCryptoManager) : LocalKeystoreDataSource {
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/LocalCryptoManager.kt:43:import java.security.SecureRandom
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/LocalCryptoManager.kt:326:        private val prng: SecureRandom = SecureRandom()
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/sharedcrypto/BouncyCastleCryptoDataSource.kt:22:import java.security.SecureRandom
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/sharedcrypto/BouncyCastleCryptoDataSource.kt:36:        keyPairGenerator.initialize(ecSpec, SecureRandom())
+stopcovid-android/licenses/tests/license-junit4.txt:66:assumes sole responsibility to secure any other intellectual property rights
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/extension/ByteArrayExt.kt:13:import java.security.SecureRandom
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/extension/ByteArrayExt.kt:17:        set(i, SecureRandom().nextInt().toByte())
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/IsolationManagerTest.kt:5:import com.lunabeestudio.framework.local.datasource.SecureKeystoreDataSource
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/IsolationManagerTest.kt:18:    private val secureKeystoreDataSource: SecureKeystoreDataSource by lazy {
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/IsolationManagerTest.kt:19:        context.secureKeystoreDataSource
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/IsolationManagerTest.kt:221:        secureKeystoreDataSource.isWarningAtRisk = true
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/IsolationManagerTest.kt:222:        secureKeystoreDataSource.lastWarningReceivedDate = daysAgo(nDaysAgo)
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/IsolationManagerTest.kt:226:        secureKeystoreDataSource.lastWarningReceivedDate = null
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/IsolationManagerTest.kt:230:        secureKeystoreDataSource.lastRiskReceivedDate = daysAgo(nDaysAgo)
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/IsolationManagerTest.kt:234:        secureKeystoreDataSource.lastRiskReceivedDate = null
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/IsolationManagerTest.kt:238:        secureKeystoreDataSource.isSick = true
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/IsolationManagerTest.kt:239:        secureKeystoreDataSource.reportPositiveTestDate = daysAgo(nDaysAgo)
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/IsolationManagerTest.kt:242:            secureKeystoreDataSource.reportSymptomsStartDate = symptomsStartedDaysAgo?.let {
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/IsolationManagerTest.kt:243:                secureKeystoreDataSource.reportPositiveTestDate?.minus(TimeUnit.DAYS.toMillis(it.toLong()))
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/IsolationManagerTest.kt:244:            } ?: secureKeystoreDataSource.reportPositiveTestDate
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/IsolationManagerTest.kt:249:        secureKeystoreDataSource.isSick = false
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/IsolationManagerTest.kt:250:        secureKeystoreDataSource.reportPositiveTestDate = null
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/IsolationManagerTest.kt:251:        secureKeystoreDataSource.reportSymptomsStartDate = null
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:10:import com.lunabeestudio.framework.local.datasource.SecureKeystoreDataSource
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:15:import com.lunabeestudio.stopcovid.extension.secureKeystoreDataSource
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:30:    private lateinit var keystoreDataSource: SecureKeystoreDataSource
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:47:        keystoreDataSource = context.secureKeystoreDataSource()
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:111:            SecureKeystoreDataSource::class.java,
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:167:            SecureKeystoreDataSource::class.java,
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:190:            secureKeystoreDataSource = keystoreDataSource,
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:196:            secureKeystoreDataSource = keystoreDataSource,
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:202:            secureKeystoreDataSource = keystoreDataSource,
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:208:            secureKeystoreDataSource = keystoreDataSource,
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:214:            secureKeystoreDataSource = keystoreDataSource,
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:220:            secureKeystoreDataSource = keystoreDataSource,
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:226:            secureKeystoreDataSource = keystoreDataSource,
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:232:            secureKeystoreDataSource = keystoreDataSource,
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:238:            secureKeystoreDataSource = keystoreDataSource,
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:244:            secureKeystoreDataSource = keystoreDataSource,
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:250:            secureKeystoreDataSource = keystoreDataSource,
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:256:            secureKeystoreDataSource = keystoreDataSource,
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:262:            secureKeystoreDataSource = keystoreDataSource,
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:268:            secureKeystoreDataSource = keystoreDataSource,
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:274:            secureKeystoreDataSource = keystoreDataSource,
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:291:            secureKeystoreDataSource = keystoreDataSource,
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:305:            secureKeystoreDataSource = keystoreDataSource,
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:319:            secureKeystoreDataSource = keystoreDataSource,
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:333:            secureKeystoreDataSource = keystoreDataSource,
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:347:            secureKeystoreDataSource = keystoreDataSource,
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:431:            secureKeystoreDataSource = keystoreDataSource,
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:436:            secureKeystoreDataSource = keystoreDataSource,
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:441:            secureKeystoreDataSource = keystoreDataSource,
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:244:    "captchaController.mainMessage.image.subtitle": "This action ensures secure access to TousAntiCovid.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:246:    "captchaController.mainMessage.audio.subtitle": "This action ensures secure access to TousAntiCovid.",
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/ContextExt.kt:16:import com.lunabeestudio.framework.local.datasource.SecureKeystoreDataSource
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/ContextExt.kt:27:fun Context.secureKeystoreDataSource(): SecureKeystoreDataSource = (applicationContext as StopCovid).secureKeystoreDataSource
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/AttestationsFragment.kt:31:import com.lunabeestudio.stopcovid.extension.secureKeystoreDataSource
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/AttestationsFragment.kt:53:    private val viewModel: AttestationsViewModel by viewModels { AttestationsViewModelFactory(requireContext().secureKeystoreDataSource()) }
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ConfirmVenueQrCodeFragment.kt:24:import com.lunabeestudio.stopcovid.extension.secureKeystoreDataSource
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ConfirmVenueQrCodeFragment.kt:74:                    secureKeystoreDataSource = requireContext().secureKeystoreDataSource(),
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:36:import com.lunabeestudio.stopcovid.extension.secureKeystoreDataSource
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:63:            requireContext().secureKeystoreDataSource(),
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:128:                requireContext().secureKeystoreDataSource(),
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/NewAttestationFragment.kt:37:import com.lunabeestudio.stopcovid.extension.secureKeystoreDataSource
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/NewAttestationFragment.kt:56:    private val viewModel: NewAttestationViewModel by activityViewModels { NewAttestationViewModelFactory(requireContext().secureKeystoreDataSource()) }
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/NewAttestationPickerFragment.kt:22:import com.lunabeestudio.stopcovid.extension.secureKeystoreDataSource
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/NewAttestationPickerFragment.kt:31:    private val viewModel: NewAttestationViewModel by activityViewModels { NewAttestationViewModelFactory(requireContext().secureKeystoreDataSource()) }
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ProximityFragment.kt:85:import com.lunabeestudio.stopcovid.extension.secureKeystoreDataSource
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ProximityFragment.kt:137:        ProximityViewModelFactory(robertManager, isolationManager, requireContext().secureKeystoreDataSource())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ProximityFragment.kt:894:                        requireContext().secureKeystoreDataSource(),
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VenueQRCodeFragment.kt:23:import com.lunabeestudio.stopcovid.extension.secureKeystoreDataSource
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VenueQRCodeFragment.kt:74:            secureKeystoreDataSource = requireContext().secureKeystoreDataSource(),
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VenuesHistoryFragment.kt:20:import com.lunabeestudio.stopcovid.extension.secureKeystoreDataSource
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VenuesHistoryFragment.kt:52:        items.addAll(VenuesManager.getVenuesQrCode(requireContext().secureKeystoreDataSource(), includingFuture = true)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VenuesHistoryFragment.kt:66:                                VenuesManager.removeVenue(requireContext().secureKeystoreDataSource(), venueQrCode.id)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VenuesPrivateEventFragment.kt:30:import com.lunabeestudio.stopcovid.extension.secureKeystoreDataSource
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VenuesPrivateEventFragment.kt:52:        VenuesManager.generateNewQRCodeIfNeeded(sharedPrefs, requireContext().robertManager(), requireContext().secureKeystoreDataSource())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:15:import com.lunabeestudio.framework.local.datasource.SecureKeystoreDataSource
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:28:    val secureKeystoreDataSource: SecureKeystoreDataSource,
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:45:        get() = secureKeystoreDataSource.isolationFormState?.let { enumValues<IsolationFormStateEnum>()[it] }
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:47:            secureKeystoreDataSource.isolationFormState = value?.ordinal
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:55:        get() = secureKeystoreDataSource.isolationLastContactDate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:57:            secureKeystoreDataSource.isolationLastContactDate = value
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:62:        get() = secureKeystoreDataSource.isolationIsKnownIndexAtHome
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:64:            secureKeystoreDataSource.isolationIsKnownIndexAtHome = value
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:69:        get() = secureKeystoreDataSource.isolationKnowsIndexSymptomsEndDate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:71:            secureKeystoreDataSource.isolationKnowsIndexSymptomsEndDate = value
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:76:        get() = secureKeystoreDataSource.isolationIndexSymptomsEndDate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:78:            secureKeystoreDataSource.isolationIndexSymptomsEndDate = value
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:83:        get() = secureKeystoreDataSource.isolationLastFormValidationDate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:85:            secureKeystoreDataSource.isolationLastFormValidationDate = value
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:90:        get() = secureKeystoreDataSource.isolationIsTestNegative
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:92:            secureKeystoreDataSource.isolationIsTestNegative = value
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:97:        get() = secureKeystoreDataSource.isolationPositiveTestingDate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:99:            secureKeystoreDataSource.isolationPositiveTestingDate = value
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:104:        get() = secureKeystoreDataSource.isolationIsHavingSymptoms
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:106:            secureKeystoreDataSource.isolationIsHavingSymptoms = value
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:111:        get() = secureKeystoreDataSource.isolationSymptomsStartDate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:113:            secureKeystoreDataSource.isolationSymptomsStartDate = value
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:118:        get() = secureKeystoreDataSource.isolationIsStillHavingFever
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:120:            secureKeystoreDataSource.isolationIsStillHavingFever = value
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:125:        get() = secureKeystoreDataSource.isolationIsFeverReminderScheduled
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:127:            secureKeystoreDataSource.isolationIsFeverReminderScheduled = value
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/ProximityManager.kt:152:        Intent().setComponent(ComponentName("com.iqoo.secure", "com.iqoo.secure.ui.phoneoptimize.AddWhiteListActivity")),
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/ProximityManager.kt:153:        Intent().setComponent(ComponentName("com.iqoo.secure", "com.iqoo.secure.ui.phoneoptimize.BgStartUpManager")),
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/VenuesManager.kt:8:import com.lunabeestudio.framework.local.datasource.SecureKeystoreDataSource
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/VenuesManager.kt:34:        secureKeystoreDataSource: SecureKeystoreDataSource,
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/VenuesManager.kt:41:                processVenuePath(robertManager, secureKeystoreDataSource, path)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/VenuesManager.kt:54:        secureKeystoreDataSource: SecureKeystoreDataSource,
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/VenuesManager.kt:97:            saveVenue(secureKeystoreDataSource, venueQrCode)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/VenuesManager.kt:134:    private fun saveVenue(keystoreDataSource: SecureKeystoreDataSource, venueQrCode: VenueQrCode) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/VenuesManager.kt:145:        keystoreDataSource: SecureKeystoreDataSource,
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/VenuesManager.kt:158:        keystoreDataSource: SecureKeystoreDataSource,
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/VenuesManager.kt:170:    fun removeVenue(keystoreDataSource: SecureKeystoreDataSource, venueId: String) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/VenuesManager.kt:176:    fun clearAllData(preferences: SharedPreferences, keystoreDataSource: SecureKeystoreDataSource) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/VenuesManager.kt:185:        keystoreDataSource: SecureKeystoreDataSource,
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/StopCovid.kt:40:import com.lunabeestudio.framework.local.datasource.SecureFileEphemeralBluetoothIdentifierDataSource
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/StopCovid.kt:41:import com.lunabeestudio.framework.local.datasource.SecureFileLocalProximityDataSource
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/StopCovid.kt:42:import com.lunabeestudio.framework.local.datasource.SecureKeystoreDataSource
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/StopCovid.kt:92:    override val isolationManager: IsolationManager by lazy { IsolationManager(this, robertManager, secureKeystoreDataSource) }
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/StopCovid.kt:110:    val secureKeystoreDataSource: SecureKeystoreDataSource by lazy {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/StopCovid.kt:111:        SecureKeystoreDataSource(this, cryptoManager)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/StopCovid.kt:117:            SecureFileEphemeralBluetoothIdentifierDataSource(this, cryptoManager),
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/StopCovid.kt:118:            secureKeystoreDataSource,
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/StopCovid.kt:119:            SecureFileLocalProximityDataSource(File(filesDir, LOCAL_PROXIMITY_DIR), cryptoManager),
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/StopCovid.kt:146:            secureKeystoreDataSource.configuration = secureKeystoreDataSource.configuration?.apply {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/StopCovid.kt:230:        VenuesManager.clearExpired(robertManager, secureKeystoreDataSource)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/StopCovid.kt:354:        secureKeystoreDataSource,
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/StopCovid.kt:359:        VenuesManager.clearAllData(sharedPrefs, secureKeystoreDataSource)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/StopCovid.kt:482:        secureKeystoreDataSource.attestations = secureKeystoreDataSource.attestations?.filter { attestation ->
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/AttestationsViewModel.kt:17:import com.lunabeestudio.framework.local.datasource.SecureKeystoreDataSource
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/AttestationsViewModel.kt:33:class AttestationsViewModelFactory(private val secureKeystoreDataSource: SecureKeystoreDataSource) :
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/AttestationsViewModel.kt:37:        return AttestationsViewModel(secureKeystoreDataSource) as T
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:21:import com.lunabeestudio.framework.local.datasource.SecureKeystoreDataSource
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:38:    private val secureKeystoreDataSource: SecureKeystoreDataSource,
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:54:        VenuesManager.clearAllData(PreferenceManager.getDefaultSharedPreferences(application.getAppContext()), secureKeystoreDataSource)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:61:        secureKeystoreDataSource.savedAttestationData = null
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:62:        secureKeystoreDataSource.saveAttestationData = null
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:63:        secureKeystoreDataSource.attestations = null
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:167:    private val secureKeystoreDataSource: SecureKeystoreDataSource,
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:174:        return ManageDataViewModel(secureKeystoreDataSource, robertManager, isolationManager) as T
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/NewAttestationViewModel.kt:16:import com.lunabeestudio.framework.local.datasource.SecureKeystoreDataSource
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/NewAttestationViewModel.kt:22:class NewAttestationViewModel(private val secureKeystoreDataSource: SecureKeystoreDataSource) : ViewModel() {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/NewAttestationViewModel.kt:24:    var shouldSaveInfos: Boolean = secureKeystoreDataSource.saveAttestationData ?: false
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/NewAttestationViewModel.kt:25:    val infos: MutableMap<String, FormEntry> = (secureKeystoreDataSource.savedAttestationData ?: mapOf()).toMutableMap()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/NewAttestationViewModel.kt:30:        secureKeystoreDataSource.saveAttestationData = shouldSaveInfos
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/NewAttestationViewModel.kt:38:        secureKeystoreDataSource.attestations = (secureKeystoreDataSource.attestations?.toMutableList() ?: mutableListOf()).apply {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/NewAttestationViewModel.kt:44:            secureKeystoreDataSource.savedAttestationData = infos
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/NewAttestationViewModel.kt:50:        infos.putAll(secureKeystoreDataSource.savedAttestationData ?: mapOf())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/NewAttestationViewModel.kt:62:class NewAttestationViewModelFactory(private val secureKeystoreDataSource: SecureKeystoreDataSource) :
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/NewAttestationViewModel.kt:66:        return NewAttestationViewModel(secureKeystoreDataSource) as T

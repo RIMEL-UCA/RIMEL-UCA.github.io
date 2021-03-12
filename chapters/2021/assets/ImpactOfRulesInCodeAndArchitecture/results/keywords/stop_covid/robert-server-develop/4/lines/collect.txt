@@ -1,0 +1,341 @@
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/cryptographic/service/impl/CryptographicStorageServiceImpl.java:26:import java.util.stream.Collectors;
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/cryptographic/service/impl/CryptographicStorageServiceImpl.java:31:import org.springframework.util.CollectionUtils;
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/cryptographic/service/impl/CryptographicStorageServiceImpl.java:364:        if (!CollectionUtils.isEmpty(this.kekCache)) {
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/cryptographic/service/impl/CryptographicStorageServiceImpl.java:365:            aliases.addAll(this.kekCache.keySet().stream().map(elt -> String.format("Key Encryption Key '%s'", elt)).collect(Collectors.toList()));
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/cryptographic/service/impl/CryptographicStorageServiceImpl.java:372:        if (!CollectionUtils.isEmpty(this.serverKeyCache)) {
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/cryptographic/service/impl/CryptographicStorageServiceImpl.java:373:            aliases.addAll(this.serverKeyCache.keySet().stream().map(elt -> String.format("Server Key '%s'", elt)).collect(Collectors.toList()));
+./robert-server-develop/robert-crypto-grpc-server/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/service/impl/CryptoGrpcServiceBaseImpl.java:9:import java.util.Collection;
+./robert-server-develop/robert-crypto-grpc-server/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/service/impl/CryptoGrpcServiceBaseImpl.java:14:import java.util.stream.Collectors;
+./robert-server-develop/robert-crypto-grpc-server/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/service/impl/CryptoGrpcServiceBaseImpl.java:19:import org.springframework.util.CollectionUtils;
+./robert-server-develop/robert-crypto-grpc-server/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/service/impl/CryptoGrpcServiceBaseImpl.java:759:    private java.util.List<EphemeralTupleJson> mapEphemeralTuples(Collection<EphemeralTuple> tuples) {
+./robert-server-develop/robert-crypto-grpc-server/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/service/impl/CryptoGrpcServiceBaseImpl.java:803:        Collection<EphemeralTuple> ephemeralTuples = new ArrayList<>();
+./robert-server-develop/robert-crypto-grpc-server/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/service/impl/CryptoGrpcServiceBaseImpl.java:810:                    Collection<EphemeralTuple> tuplesForDay = tupleGenerator.exec(
+./robert-server-develop/robert-crypto-grpc-server/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/service/impl/CryptoGrpcServiceBaseImpl.java:829:                .collect(Collectors.toList());
+./robert-server-develop/robert-crypto-grpc-server/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/service/impl/CryptoGrpcServiceBaseImpl.java:836:            if (!CollectionUtils.isEmpty(ephemeralTuples)) {
+./robert-server-develop/robert-crypto-grpc-server/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/CryptoServiceGrpcServerTest.java:20:import java.util.Collection;
+./robert-server-develop/robert-crypto-grpc-server/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/CryptoServiceGrpcServerTest.java:261:    private boolean checkTuplesContentMatchesKeysForDays(Collection<CryptoGrpcServiceBaseImpl.EphemeralTupleJson> decodedTuples,
+./robert-server-develop/robert-crypto-grpc-server/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/CryptoServiceGrpcServerTest.java:285:            Collection<CryptoGrpcServiceBaseImpl.EphemeralTupleJson> decodedTuples = objectMapper.readValue(
+./robert-server-develop/robert-crypto-grpc-server/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/CryptoServiceGrpcServerTest.java:287:                    new TypeReference<Collection<CryptoGrpcServiceBaseImpl.EphemeralTupleJson>>(){});
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/configuration/ContactsProcessingConfiguration.java:283:        log.info("{} currently reading Contact(s) from itemId collections from id={} - to id= {} ", name, start, end);
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/configuration/ContactsProcessingConfiguration.java:303:        log.info("{} currently reading Registration(s) from itemId collections from id={} - to id= {} ", name, start, end);
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/configuration/ContactsProcessingConfiguration.java:377:                .collection("itemIdMapping").build();
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/configuration/ContactsProcessingConfiguration.java:402:                .collection("itemIdMapping").build();
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/configuration/ContactsProcessingConfiguration.java:474:                .collection("idTable").build();
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/configuration/ScoringAlgorithmConfiguration.java:25:	// limit power in Db below which the collected value is assumed to be zero
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/listener/PopulateIdMappingListener.java:19:        log.info("START : Reset the itemIdMapping collection.");
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/listener/PopulateIdMappingListener.java:21:        log.info("END : Reset the itemIdMapping collection.");
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/listener/ProcessingJobExecutionListener.java:34:        //reset the itemIdMapping collections
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/listener/ProcessingJobExecutionListener.java:35:        log.info("START : Reset the itemIdMapping collection.");
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/listener/ProcessingJobExecutionListener.java:37:        log.info("END : Reset the itemIdMapping collection.");
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/listener/ProcessingJobExecutionListener.java:66:        //reset the itemIdMapping collections
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/listener/ProcessingJobExecutionListener.java:67:        log.info("START : Reset the itemIdMapping collection.");
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/listener/ProcessingJobExecutionListener.java:69:        log.info("END : Reset the itemIdMapping collection.");
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/ContactProcessor.java:10:import org.springframework.util.CollectionUtils;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/ContactProcessor.java:77:        if (CollectionUtils.isEmpty(contact.getMessageDetails())) {
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/ContactProcessor.java:97:                    .setTimeReceived(helloMessageDetail.getTimeCollectedOnDevice())
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/ContactProcessor.java:142:                                helloMessageDetail.getTimeCollectedOnDevice())) {
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/ContactProcessor.java:153:        if (CollectionUtils.isEmpty(contact.getMessageDetails())) {
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/ContactProcessor.java:182:        final long timeFromDeviceAs16bits = castLong(helloMessageDetail.getTimeCollectedOnDevice(), 2);
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/ContactProcessor.java:254:        .filter(processedContact -> !CollectionUtils.isEmpty(processedContact.getMessageDetails()))
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/ContactProcessor.java:255:        .filter(processedContact -> !CollectionUtils.isEmpty(toBeDiscarded))
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/service/impl/ItemIdMappingServiceImpl.java:10:import java.util.stream.Collectors;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/service/impl/ItemIdMappingServiceImpl.java:34:                .collect(Collectors.toList());
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/service/impl/ScoringStrategyServiceImpl.java:69:                long delta = nextMessage.getTimeCollectedOnDevice() - messageDetail.getTimeCollectedOnDevice();
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/service/impl/ScoringStrategyServiceImpl.java:76:            long remainder = (message.getTimeCollectedOnDevice() - this.serverConfigurationService.getServiceTimeStart()) % epochDuration;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/service/impl/ScoringStrategyV2ServiceImpl.java:109:		double t0 = messageDetails.get(0).getTimeCollectedOnDevice();
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/service/impl/ScoringStrategyV2ServiceImpl.java:113:		double tf = messageDetails.get(vectorSize - 1).getTimeCollectedOnDevice();
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/service/impl/ScoringStrategyV2ServiceImpl.java:133:			double timestampDelta = messageDetail.getTimeCollectedOnDevice() - t0;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/utils/ScoringUtils.java:5:import java.util.stream.Collectors;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/utils/ScoringUtils.java:7:import org.springframework.util.CollectionUtils;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/utils/ScoringUtils.java:34:        return CollectionUtils.isEmpty(exposedEpochs) ?
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/utils/ScoringUtils.java:39:        }).collect(Collectors.toList());
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/utils/ScoringUtils.java:51:        List<EpochExposition> scoresSinceLastNotif = CollectionUtils.isEmpty(epochExpositions) ?
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/utils/ScoringUtils.java:55:                .collect(Collectors.toList());
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/utils/ScoringUtils.java:61:                .collect(Collectors.toList());
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/writer/ContactItemWriter.java:12:import org.springframework.util.CollectionUtils;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/writer/ContactItemWriter.java:33:        if (!CollectionUtils.isEmpty(items)) {
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/writer/RegistrationItemWriter.java:10:import org.springframework.util.CollectionUtils;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/writer/RegistrationItemWriter.java:36:        if (!CollectionUtils.isEmpty(items)) {
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:38:import org.springframework.util.CollectionUtils;
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:157:			assertFalse(CollectionUtils.isEmpty(this.contactService.findAll()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:165:			assertTrue(CollectionUtils.isEmpty(this.contactService.findAll()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:192:			assertFalse(CollectionUtils.isEmpty(this.contactService.findAll()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:200:			assertTrue(CollectionUtils.isEmpty(this.contactService.findAll()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:246:			assertFalse(CollectionUtils.isEmpty(this.contactService.findAll()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:257:			assertTrue(CollectionUtils.isEmpty(this.contactService.findAll()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:320:			assertFalse(CollectionUtils.isEmpty(this.contactService.findAll()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:329:			assertTrue(CollectionUtils.isEmpty(this.contactService.findAll()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:333:			assertFalse(CollectionUtils.isEmpty(expectedRegistration.get().getExposedEpochs()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:395:			assertFalse(CollectionUtils.isEmpty(this.contactService.findAll()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:404:			assertTrue(CollectionUtils.isEmpty(this.contactService.findAll()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:408:			assertFalse(CollectionUtils.isEmpty(expectedRegistration.get().getExposedEpochs()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:472:					.timeCollectedOnDevice(Integer.toUnsignedLong(timeReceived))
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:484:			assertFalse(CollectionUtils.isEmpty(this.contactService.findAll()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:493:			assertTrue(CollectionUtils.isEmpty(this.contactService.findAll()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:494:			assertTrue(CollectionUtils.isEmpty(contact.getMessageDetails()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:567:					.timeCollectedOnDevice(Integer.toUnsignedLong(timeReceived))
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:579:			assertFalse(CollectionUtils.isEmpty(this.contactService.findAll()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:588:			assertTrue(CollectionUtils.isEmpty(this.contactService.findAll()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:663:                    .timeCollectedOnDevice(Integer.toUnsignedLong(timeReceived))
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:670:                    .timeCollectedOnDevice(Integer.toUnsignedLong(accurateTimeReceived))
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:682:            assertFalse(CollectionUtils.isEmpty(this.contactService.findAll()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:694:			assertTrue(CollectionUtils.isEmpty(this.contactService.findAll()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:696:            assertFalse(CollectionUtils.isEmpty(expectedRegistration.get().getExposedEpochs()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:759:					.timeCollectedOnDevice(Integer.toUnsignedLong(timeReceived))
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:771:			assertFalse(CollectionUtils.isEmpty(this.contactService.findAll()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:780:			assertTrue(CollectionUtils.isEmpty(this.contactService.findAll()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:855:					.timeCollectedOnDevice(Integer.toUnsignedLong(timeReceived))
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:876:			assertFalse(CollectionUtils.isEmpty(this.contactService.findAll()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:885:			assertTrue(CollectionUtils.isEmpty(this.contactService.findAll()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:890:			assertFalse(CollectionUtils.isEmpty(expectedRegistration.get().getExposedEpochs()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:963:                    .timeCollectedOnDevice(Integer.toUnsignedLong(timeReceived))
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:970:                    .timeCollectedOnDevice(Integer.toUnsignedLong(ByteUtils.bytesToInt(validTimeOfDevice)))
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:977:                    .timeCollectedOnDevice(Integer.toUnsignedLong(ByteUtils.bytesToInt(validTimeOfDevice)))
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:989:            assertFalse(CollectionUtils.isEmpty(this.contactService.findAll()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:1000:			assertTrue(CollectionUtils.isEmpty(this.contactService.findAll()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:1002:            assertFalse(CollectionUtils.isEmpty(expectedRegistration.get().getExposedEpochs()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:1081:					.timeCollectedOnDevice(Integer.toUnsignedLong(timeReceived))
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:1093:			assertFalse(CollectionUtils.isEmpty(this.contactService.findAll()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:1104:			assertTrue(CollectionUtils.isEmpty(this.contactService.findAll()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:1106:			assertFalse(CollectionUtils.isEmpty(expectedRegistration.get().getExposedEpochs()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:1153:				.timeCollectedOnDevice(Integer.toUnsignedLong(timeReceived))
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/PurgeOldEpochExpositionsProcessorTest.java:10:import java.util.Collections;
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/PurgeOldEpochExpositionsProcessorTest.java:80:        this.registrationItemWriter.write(Collections.singletonList(this.registration.get()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/PurgeOldEpochExpositionsProcessorTest.java:111:        this.registrationItemWriter.write(Collections.singletonList(this.registration.get()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/PurgeOldEpochExpositionsProcessorTest.java:142:        this.registrationItemWriter.write(Collections.singletonList(this.registration.get()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/RegistrationProcessorTest.java:9:import java.util.Collections;
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/RegistrationProcessorTest.java:121:        this.registrationItemWriter.write(Collections.singletonList(this.registration.get()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/RegistrationProcessorTest.java:153:        this.registrationItemWriter.write(Collections.singletonList(this.registration.get()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/RegistrationProcessorTest.java:185:        this.registrationItemWriter.write(Collections.singletonList(this.registration.get()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/RegistrationProcessorTest.java:273:        this.registrationItemWriter.write(Collections.singletonList(this.registration.get()));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/RSSICalibratedScoringStrategyTest.java:86:		messages.add(HelloMessageDetail.builder().timeCollectedOnDevice(this.randomReferenceEpochStartTime + 178L)
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/RSSICalibratedScoringStrategyTest.java:89:		messages.add(HelloMessageDetail.builder().timeCollectedOnDevice(this.randomReferenceEpochStartTime + 180L)
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/RSSICalibratedScoringStrategyTest.java:92:		messages.add(HelloMessageDetail.builder().timeCollectedOnDevice(this.randomReferenceEpochStartTime + 214L)
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/RSSICalibratedScoringStrategyTest.java:95:		messages.add(HelloMessageDetail.builder().timeCollectedOnDevice(this.randomReferenceEpochStartTime + 225L)
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/RSSICalibratedScoringStrategyTest.java:114:		messages.add(HelloMessageDetail.builder().timeCollectedOnDevice(this.randomReferenceEpochStartTime + 178L)
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/RSSICalibratedScoringStrategyTest.java:117:		messages.add(HelloMessageDetail.builder().timeCollectedOnDevice(this.randomReferenceEpochStartTime + 180L)
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/RSSICalibratedScoringStrategyTest.java:120:		messages.add(HelloMessageDetail.builder().timeCollectedOnDevice(this.randomReferenceEpochStartTime + 214L)
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/RSSICalibratedScoringStrategyTest.java:123:		messages.add(HelloMessageDetail.builder().timeCollectedOnDevice(this.randomReferenceEpochStartTime + 225L)
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/RSSICalibratedScoringStrategyTest.java:126:		messages.add(HelloMessageDetail.builder().timeCollectedOnDevice(this.randomReferenceEpochStartTime + 278L)
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/RSSICalibratedScoringStrategyTest.java:129:		messages.add(HelloMessageDetail.builder().timeCollectedOnDevice(this.randomReferenceEpochStartTime + 301L)
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/RSSICalibratedScoringStrategyTest.java:132:		messages.add(HelloMessageDetail.builder().timeCollectedOnDevice(this.randomReferenceEpochStartTime + 450L)
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/RSSICalibratedScoringStrategyTest.java:135:		messages.add(HelloMessageDetail.builder().timeCollectedOnDevice(this.randomReferenceEpochStartTime + 489L)
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/RSSICalibratedScoringStrategyTest.java:138:		messages.add(HelloMessageDetail.builder().timeCollectedOnDevice(this.randomReferenceEpochStartTime + 543L)
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/RSSICalibratedScoringStrategyTest.java:141:		messages.add(HelloMessageDetail.builder().timeCollectedOnDevice(this.randomReferenceEpochStartTime + 576L)
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/RSSICalibratedScoringStrategyTest.java:144:		messages.add(HelloMessageDetail.builder().timeCollectedOnDevice(this.randomReferenceEpochStartTime + 602L)
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/RSSICalibratedScoringStrategyTest.java:147:		messages.add(HelloMessageDetail.builder().timeCollectedOnDevice(this.randomReferenceEpochStartTime + 741L)
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/RSSICalibratedScoringStrategyTest.java:166:		messages.add(HelloMessageDetail.builder().timeCollectedOnDevice(this.randomReferenceEpochStartTime + 178L)
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/RSSICalibratedScoringStrategyTest.java:169:		messages.add(HelloMessageDetail.builder().timeCollectedOnDevice(this.randomReferenceEpochStartTime + 180L)
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/RSSICalibratedScoringStrategyTest.java:188:		messages.add(HelloMessageDetail.builder().timeCollectedOnDevice(this.randomReferenceEpochStartTime + 15L)
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/RSSICalibratedScoringStrategyTest.java:191:		messages.add(HelloMessageDetail.builder().timeCollectedOnDevice(this.randomReferenceEpochStartTime + 180L)
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/RSSICalibratedScoringStrategyTest.java:194:		messages.add(HelloMessageDetail.builder().timeCollectedOnDevice(this.randomReferenceEpochStartTime + 500L)
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/RSSICalibratedScoringStrategyTest.java:197:		messages.add(HelloMessageDetail.builder().timeCollectedOnDevice(this.randomReferenceEpochStartTime + 719L)
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/RSSICalibratedScoringStrategyTest.java:216:		messages.add(HelloMessageDetail.builder().timeCollectedOnDevice(this.randomReferenceEpochStartTime + 5L)
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/RSSICalibratedScoringStrategyTest.java:220:				.timeCollectedOnDevice(this.randomReferenceEpochStartTime + (900L - 5L)).rssiCalibrated(-78).build());
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/RSSICalibratedScoringStrategyTest.java:238:		messages.add(HelloMessageDetail.builder().timeCollectedOnDevice(this.randomReferenceEpochStartTime + 5L)
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/RSSICalibratedScoringStrategyTest.java:258:				.timeCollectedOnDevice(this.randomReferenceEpochStartTime + (900L - 5L)).rssiCalibrated(-78).build());
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/RSSICalibratedScoringStrategyTest.java:277:				.timeCollectedOnDevice(this.randomReferenceEpochStartTime + (900 / 2 + 5)).rssiCalibrated(-78).build());
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/RSSICalibratedScoringStrategyTest.java:296:				.timeCollectedOnDevice(this.randomReferenceEpochStartTime + (900 / 2 + 5)).rssiCalibrated(-78).build());
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/ScoringAlgorithmV2Test.java:11:import java.util.stream.Collectors;
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/ScoringAlgorithmV2Test.java:118:        List<File> sortedFiles2 = Arrays.asList(files).stream().sorted(Comparator.comparing(File::getName)).collect(Collectors.toList());
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/ScoringAlgorithmV2Test.java:127:                    .map(line -> HelloMessageDetail.builder().timeCollectedOnDevice(Long.parseLong(line[1].trim()))
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/ScoringAlgorithmV2Test.java:130:                    .collect(Collectors.toList());
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/ScoringAlgorithmV2Test.java:235:            }).collect(Collectors.toList());
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/scoring/ScoringAlgorithmV2Test.java:248:                            .collect(Collectors.toList())));
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A00.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A01.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A02.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A03.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A04.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A05.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A06.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A07.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A08.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A09.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A10.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A11.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A12.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A13.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A14.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A15.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A16.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A17.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A18.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A19.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A20.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A21.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A22.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A23.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A24.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A25.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A26.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A27.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A28.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A29.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A30.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A31.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A32.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A33.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A34.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A35.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A36.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A37.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A38.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A39.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A40.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A41.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A42.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A43.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A44.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A45.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A46.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A47.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A48.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A49.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A50.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A51.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A52.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A53.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A54.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A55.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A56.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/C4_20_A/C4_20_A57.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA00.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA01.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA02.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA03.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA04.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA05.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA06.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA07.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA08.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA09.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA10.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA11.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA12.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA13.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA14.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA15.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA16.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA17.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA18.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA19.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA20.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA21.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA22.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA23.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA24.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA25.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA26.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA27.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA28.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA29.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA30.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA31.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA32.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA33.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA34.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA35.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA36.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA37.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA38.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA39.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA40.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA41.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA42.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA43.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA44.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA45.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA46.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA47.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA48.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA49.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA50.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA51.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA52.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA53.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA54.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA55.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA56.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA57.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA58.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA59.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA60.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA61.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA62.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA63.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA64.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA65.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA66.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA67.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-batch/src/test/resources/input_v2/R1_AA/R1_AA68.csv:1:mac,timeCollectedOnDevice,timeFromHelloMessage,rssiCalibrated
+./robert-server-develop/robert-server-crypto/src/main/java/fr/gouv/stopc/robert/server/crypto/callable/CryptoStructureConcurrentArray.java:4:import java.util.Collections;
+./robert-server-develop/robert-server-crypto/src/main/java/fr/gouv/stopc/robert/server/crypto/callable/CryptoStructureConcurrentArray.java:36:            this.cryptoStructureList = Collections.synchronizedList(this.cryptoStructureList);
+./robert-server-develop/robert-server-crypto/src/main/java/fr/gouv/stopc/robert/server/crypto/callable/CryptoStructureConcurrentArray.java:54:        return Collections.synchronizedList(truncatedList);
+./robert-server-develop/robert-server-crypto/src/main/java/fr/gouv/stopc/robert/server/crypto/callable/TupleGenerator.java:5:import java.util.Collection;
+./robert-server-develop/robert-server-crypto/src/main/java/fr/gouv/stopc/robert/server/crypto/callable/TupleGenerator.java:7:import java.util.stream.Collectors;
+./robert-server-develop/robert-server-crypto/src/main/java/fr/gouv/stopc/robert/server/crypto/callable/TupleGenerator.java:19:import org.springframework.util.CollectionUtils;
+./robert-server-develop/robert-server-crypto/src/main/java/fr/gouv/stopc/robert/server/crypto/callable/TupleGenerator.java:44:    public Collection<EphemeralTuple> exec(final byte[] idA,
+./robert-server-develop/robert-server-crypto/src/main/java/fr/gouv/stopc/robert/server/crypto/callable/TupleGenerator.java:66:        Collection<EphemeralTuple> ephemeralTuples = ephemeralTupleStream.filter(Objects::nonNull).collect(Collectors.toList());
+./robert-server-develop/robert-server-crypto/src/main/java/fr/gouv/stopc/robert/server/crypto/callable/TupleGenerator.java:67:        if (CollectionUtils.isEmpty(ephemeralTuples)) {
+./robert-server-develop/robert-server-crypto/src/test/java/test/fr/gouv/stopc/robert/server/crypto/service/impl/CryptoServiceImplTest.java:9:import java.util.Collection;
+./robert-server-develop/robert-server-crypto/src/test/java/test/fr/gouv/stopc/robert/server/crypto/service/impl/CryptoServiceImplTest.java:67:        final Collection<EphemeralTuple> ephemeralTuples = tupleGenerator.exec(idA, currentEpoch, numberOfEpochs, (byte) 0x21);
+./robert-server-develop/robert-server-crypto/src/test/java/test/fr/gouv/stopc/robert/server/crypto/service/impl/CryptoServiceImplTest.java:126:        final Collection<EphemeralTuple> ephemeralTuples = tupleGenerator.exec(idA, currentEpoch, numberOfEpochs, (byte) 0x33);
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/model/ApplicationConfigurationModel.java:15:@Document(collection = "application_configuration")
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/model/Contact.java:15:@Document(collection = "CONTACTS_TO_PROCESS")
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/model/HelloMessageDetail.java:23:    private Long timeCollectedOnDevice;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/repository/ContactUUIDRepository.java:3:import java.util.Collections;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/repository/ContactUUIDRepository.java:30:			return Collections.emptyList();
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/repository/ContactUUIDRepository.java:36:				.collect(StreamUtils.toUnmodifiableList());
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/service/impl/ContactServiceImpl.java:10:import org.springframework.util.CollectionUtils;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/service/impl/ContactServiceImpl.java:15:import org.springframework.util.CollectionUtils;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/service/impl/ContactServiceImpl.java:44:		if (!CollectionUtils.isEmpty(contacts)) {
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/service/impl/RegistrationService.java:13:import org.springframework.util.CollectionUtils;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/service/impl/RegistrationService.java:47:        if (!CollectionUtils.isEmpty(registrations)) {
+./robert-server-develop/robert-server-dataset-injector/README.md:20:Concretely, this script actually deletes all entries of the associated collections of contacts and registrations.
+./robert-server-develop/robert-server-dataset-injector/script/reset-mongo-db.bat:2:REM Reset the collections idTable and CONTACTS_TO_PROCESS of the database given in parameter.
+./robert-server-develop/robert-server-dataset-injector/script/reset-mongo-db.bat:8:echo Reset the collections idTable and CONTACTS_TO_PROCESS of the database %dbname%.
+./robert-server-develop/robert-server-dataset-injector/script/reset-mongo-db.sh:2:#Reset the collections idTable and CONTACTS_TO_PROCESS of the database given in parameter.
+./robert-server-develop/robert-server-dataset-injector/script/reset-mongo-db.sh:9:echo Reset the collections idTable and CONTACTS_TO_PROCESS of the database ${dbname}.
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImpl.java:100:                        contactService.saveContacts(Collections.singletonList(buildContact()));
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImpl.java:138:                        .expositionScores(Collections.singletonList(800.0))
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImpl.java:142:                        .expositionScores(Collections.singletonList(800.0))
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImpl.java:164:                        .expositionScores(Collections.singletonList(800.0))
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImpl.java:168:                        .expositionScores(Collections.singletonList(800.0))
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImpl.java:238:                .timeCollectedOnDevice(Integer.toUnsignedLong(timeReceived))
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/DeleteHistoryControllerImpl.java:14:import org.springframework.util.CollectionUtils;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/DeleteHistoryControllerImpl.java:24:import org.springframework.util.CollectionUtils;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/DeleteHistoryControllerImpl.java:61:			if (!CollectionUtils.isEmpty(record.getExposedEpochs())) {
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/RegisterControllerImpl.java:31:import org.springframework.util.CollectionUtils;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/RegisterControllerImpl.java:33:import java.util.Collections;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/RegisterControllerImpl.java:36:import java.util.stream.Collectors;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/RegisterControllerImpl.java:115:            if (CollectionUtils.isEmpty(serverConf)) {
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/RegisterControllerImpl.java:116:                registerResponseDto.setConfig(Collections.emptyList());
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/RegisterControllerImpl.java:121:                        .collect(Collectors.toList()));
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/ReportControllerDelegate.java:7:import org.springframework.util.CollectionUtils;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/ReportControllerDelegate.java:45:        return !CollectionUtils.isEmpty(reportBatchRequestVo.getContacts())
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/StatusControllerImpl.java:3:import java.util.Collections;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/StatusControllerImpl.java:7:import java.util.stream.Collectors;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/StatusControllerImpl.java:15:import org.springframework.util.CollectionUtils;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/StatusControllerImpl.java:204:		if (CollectionUtils.isEmpty(serverConf)) {
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/StatusControllerImpl.java:205:			return Collections.emptyList();
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/StatusControllerImpl.java:210:					.collect(Collectors.toList());
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/service/impl/utils/CaptchaErrorHandler.java:6:import java.util.stream.Collectors;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/service/impl/utils/CaptchaErrorHandler.java:23:				String httpBodyResponse = reader.lines().collect(Collectors.joining(""));
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/vo/HelloMessageDetailVo.java:22:	private Long timeCollectedOnDevice;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/vo/mapper/ContactMapper.java:4:import java.util.Collections;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/vo/mapper/ContactMapper.java:7:import java.util.stream.Collectors;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/vo/mapper/ContactMapper.java:11:import org.springframework.util.CollectionUtils;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/vo/mapper/ContactMapper.java:31:		if (CollectionUtils.isEmpty(contactVoList)) {
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/vo/mapper/ContactMapper.java:32:			return Collections.emptyList();
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/vo/mapper/ContactMapper.java:49:				.timeCollectedOnDevice(dtoMessage.getTimeCollectedOnDevice())
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/vo/mapper/ContactMapper.java:58:				.collect(Collectors.toList());
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/ReportControllerWsRestTest.java:19:import java.util.Collections;
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/ReportControllerWsRestTest.java:111:                .timeCollectedOnDevice(1L) //
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/ReportControllerWsRestTest.java:218:                    .timeCollectedOnDevice(3797833665L) //
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/ReportControllerWsRestTest.java:323:            this.reportBatchRequestVo.setContacts(Collections.emptyList());
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/vo/mapper/ContactMapperTest.java:9:import java.util.Collections;
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/vo/mapper/ContactMapperTest.java:18:import org.springframework.util.CollectionUtils;
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/vo/mapper/ContactMapperTest.java:38:        assertTrue(CollectionUtils.isEmpty(this.contactMapper.convertToEntity(Collections.emptyList())));
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/vo/mapper/ContactMapperTest.java:60:        assertFalse(CollectionUtils.isEmpty(contact.get().getMessageDetails()));
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/vo/mapper/ContactMapperTest.java:67:                .timeCollectedOnDevice(TimeUtils.convertUnixMillistoNtpSeconds(System.currentTimeMillis()))

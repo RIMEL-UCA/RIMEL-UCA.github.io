@@ -1,0 +1,216 @@
+stopcovid-android/.git/hooks/post-update.sample:8:exec git update-server-info
+Fichier binaire stopcovid-android/.git/index correspondant
+Fichier binaire stopcovid-android/.git/objects/pack/pack-40aa1290409f6ab13c74904ed3c021399b43f621.pack correspondant
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiser.kt:40:        startGattServer()
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiser.kt:52:        stopGattServer()
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiser.kt:95:    private suspend fun startGattServer() {
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiser.kt:96:        if (!doStartGattServer()) {
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiser.kt:106:    private suspend fun doStartGattServer() = withContext(coroutineContextProvider.main) {
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiser.kt:170:    private suspend fun stopGattServer() = withContext(coroutineContextProvider.main) {
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:16:import android.bluetooth.BluetoothGattServer
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:17:import android.bluetooth.BluetoothGattServerCallback
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:46:    private var bluetoothGattServer: BluetoothGattServer? = null
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:50:            .plus(bluetoothManager.getConnectedDevices(BluetoothProfile.GATT_SERVER))
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:64:            "Starting GATT server"
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:74:            "Stopping GATT server"
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:82:            bluetoothGattServer =
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:83:                bluetoothManager.openGattServer(context, GattServerCallback(callback))?.apply {
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:94:            requireNotNull(bluetoothGattServer) { "openGattServer returned null" }
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:97:                message = "Succeed to start GATT server"
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:103:                message = "Failed to start GATT server",
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:113:        bluetoothGattServer?.runCatching {
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:119:                message = "Failed to stop GATT server",
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:125:                message = "Succeed to stop GATT server"
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:128:        bluetoothGattServer = null
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:293:    private inner class GattServerCallback(private val callback: BleGattManager.Callback) :
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:294:        BluetoothGattServerCallback() {
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:359:                        bluetoothGattServer?.sendResponse(device, requestId, result, offset, value)
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImplTest.kt:13:import android.bluetooth.BluetoothGattServer
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImplTest.kt:46:    private val bluetoothGattServer: BluetoothGattServer = mock()
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImplTest.kt:49:        on { openGattServer(any(), any()) } doReturn bluetoothGattServer
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImplTest.kt:72:    fun start_given_openGattServer_return_null_should_return_false() {
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImplTest.kt:75:        doReturn(null).whenever(bluetoothManager).openGattServer(any(), any())
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImplTest.kt:85:    fun start_given_bluetoothGattServer_throws_exception_should_close_opened_gatt_server_and_return_false() {
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImplTest.kt:88:        doThrow(RuntimeException::class).whenever(bluetoothGattServer).addService(any())
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImplTest.kt:95:        verify(bluetoothGattServer, times(1)).close()
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImplTest.kt:102:        doThrow(RuntimeException::class).whenever(bluetoothGattServer).close()
+stopcovid-android/coreui/build.gradle:34:        buildConfigField 'String', 'SERVER_URL', 'BASE_URL+"/json/version-26/"'
+stopcovid-android/coreui/build.gradle:35:        buildConfigField 'String', 'SERVER_CERTIFICATE_SHA256', '"sha256/sXQojvwsiyblrpMQIVRXGC5u7AgknzTJm+VIK1kQmD8="'
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/extension/StringExt.kt:31:        val okHttpClient = OkHttpClient.getDefaultOKHttpClient(context, this@saveTo, BuildConfig.SERVER_CERTIFICATE_SHA256)
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/extension/StringExt.kt:51:        val okHttpClient = OkHttpClient.getDefaultOKHttpClient(context, this@saveTo, BuildConfig.SERVER_CERTIFICATE_SHA256)
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/manager/ConfigManager.kt:30:    private const val URL: String = BuildConfig.SERVER_URL + BuildConfig.CONFIG_JSON
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/manager/ServerManager.kt:29:abstract class ServerManager {
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/manager/ServerManager.kt:39:    protected open fun url(): String = BuildConfig.SERVER_URL
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/manager/StringsManager.kt:24:object StringsManager : ServerManager() {
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/utils/SingleLiveEvent.kt:16:import androidx.lifecycle.Observer
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/utils/SingleLiveEvent.kt:26: * can be emitted if the observer is active. This LiveData only calls the observable if there's an
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/utils/SingleLiveEvent.kt:30: * Note that only one observer is going to be notified of changes.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/utils/SingleLiveEvent.kt:37:    override fun observe(owner: LifecycleOwner, observer: Observer<in T>) {
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/utils/SingleLiveEvent.kt:39:        if (hasActiveObservers()) {
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/utils/SingleLiveEvent.kt:40:            Timber.w("Multiple observers registered but only one will be notified of changes.")
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/utils/SingleLiveEvent.kt:44:        super.observe(owner, Observer { t ->
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/utils/SingleLiveEvent.kt:46:                observer.onChanged(t)
+stopcovid-android/domain/src/main/java/com/lunabeestudio/domain/model/ServerStatusUpdate.kt:13:class ServerStatusUpdate(
+stopcovid-android/domain/src/main/java/com/lunabeestudio/domain/model/SSUBuilder.kt:32:     * Build an [ServerStatusUpdate] with the given timestamp
+stopcovid-android/domain/src/main/java/com/lunabeestudio/domain/model/SSUBuilder.kt:35:     * @return A complete [ServerStatusUpdate] ready to send
+stopcovid-android/domain/src/main/java/com/lunabeestudio/domain/model/SSUBuilder.kt:37:    fun build(currentTimeMillis: Long = System.currentTimeMillis()): ServerStatusUpdate {
+stopcovid-android/domain/src/main/java/com/lunabeestudio/domain/model/SSUBuilder.kt:63:        return ServerStatusUpdate(ebid, ephemeralBluetoothIdentifier.epochId, time, mac)
+stopcovid-android/framework/build.gradle:93:    androidTestImplementation "com.squareup.okhttp3:mockwebserver:_"
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/remote/ServiceTest.kt:15:import com.lunabeestudio.domain.model.ServerStatusUpdate
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/remote/ServiceTest.kt:24:import okhttp3.mockwebserver.MockResponse
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/remote/ServiceTest.kt:25:import okhttp3.mockwebserver.MockWebServer
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/remote/ServiceTest.kt:32:    private lateinit var server: MockWebServer
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/remote/ServiceTest.kt:37:        server = MockWebServer()
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/remote/ServiceTest.kt:38:        server.start()
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/remote/ServiceTest.kt:41:            server.url("/api/v1.0/").toString(),
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/remote/ServiceTest.kt:42:            server.url("/api/v1.0/").toString(),
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/remote/ServiceTest.kt:48:        server.enqueue(
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/remote/ServiceTest.kt:66:        server.enqueue(
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/remote/ServiceTest.kt:86:        server.enqueue(
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/remote/ServiceTest.kt:91:            dataSource.status("", ServerStatusUpdate("", 0L, "", ""))
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/remote/ServiceTest.kt:101:            dataSource.status("", ServerStatusUpdate("", 0L, "", ""))
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/remote/ServiceTest.kt:107:        server.enqueue(
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/remote/ServiceTest.kt:124:        server.enqueue(
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/remote/ServiceTest.kt:132:        server.enqueue(
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/remote/ServiceTest.kt:150:        server.enqueue(
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/remote/ServiceTest.kt:166:        server.enqueue(
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/remote/ServiceTest.kt:171:            dataSource.unregister("", ServerStatusUpdate("", 0L, "", ""))
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/remote/ServiceTest.kt:176:            dataSource.unregister("", ServerStatusUpdate("", 0L, "", ""))
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/remote/ServiceTest.kt:182:        server.enqueue(
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/remote/ServiceTest.kt:187:            dataSource.deleteExposureHistory("", ServerStatusUpdate("", 0L, "", ""))
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/remote/ServiceTest.kt:192:            dataSource.deleteExposureHistory("", ServerStatusUpdate("", 0L, "", ""))
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/remote/ServiceTest.kt:197:        server.enqueue(MockResponse().setResponseCode(401))
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/remote/ServiceTest.kt:205:        server.enqueue(MockResponse().setResponseCode(500))
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/remote/ServiceTest.kt:216:        server.enqueue(MockResponse().setResponseCode(401))
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/remote/ServiceTest.kt:224:        server.enqueue(MockResponse().setResponseCode(500))
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/remote/ServiceTest.kt:236:        server.shutdown()
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/sharedcrypto/BouncyCastleCryptoDataSourceTest.kt:26:    private lateinit var serverPublicKey: PublicKey
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/sharedcrypto/BouncyCastleCryptoDataSourceTest.kt:35:        val serverKeySpec = X509EncodedKeySpec(Base64.decode(MOCK_SERVER_PUB_KEY, Base64.NO_WRAP))
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/sharedcrypto/BouncyCastleCryptoDataSourceTest.kt:36:        serverPublicKey = keyFactory.generatePublic(serverKeySpec)
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/sharedcrypto/BouncyCastleCryptoDataSourceTest.kt:51:            serverPublicKey.encoded,
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/sharedcrypto/BouncyCastleCryptoDataSourceTest.kt:65:        private const val MOCK_SERVER_PUB_KEY: String = "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIk7OAGcqyGpnmeTQiEDU0Uih9h3wMhwGmv6lqYuupR6I9aqLTBGSQvi6YIA+r7ZvxilaRBxzdxIuMXlTUTDxhw=="
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/datasource/ServiceDataSource.kt:17:import com.lunabeestudio.domain.model.ServerStatusUpdate
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/datasource/ServiceDataSource.kt:34:import com.lunabeestudio.framework.remote.server.StopCovidApi
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/datasource/ServiceDataSource.kt:35:import com.lunabeestudio.framework.remote.server.StopCovidWarningApi
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/datasource/ServiceDataSource.kt:101:    override suspend fun unregister(apiVersion: String, ssu: ServerStatusUpdate): RobertResult {
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/datasource/ServiceDataSource.kt:107:    override suspend fun status(apiVersion: String, ssu: ServerStatusUpdate): RobertResultData<StatusReport> {
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/datasource/ServiceDataSource.kt:164:    override suspend fun deleteExposureHistory(apiVersion: String, ssu: ServerStatusUpdate): RobertResult {
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/extension/ExceptionExt.kt:15:import com.lunabeestudio.framework.remote.model.ServerException
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/extension/ExceptionExt.kt:39:                    val robertServerError =
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/extension/ExceptionExt.kt:40:                        Gson().fromJson(this.response()?.errorBody()?.string() ?: "", ServerException::class.java)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/extension/ExceptionExt.kt:41:                    robertServerError?.message?.let { message ->
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/model/ServerException.kt:13:internal class ServerException(
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/server/StopCovidApi.kt:11:package com.lunabeestudio.framework.remote.server
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/server/StopCovidWarningApi.kt:11:package com.lunabeestudio.framework.remote.server
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/sharedcrypto/BouncyCastleCryptoDataSource.kt:40:    override fun getEncryptionKeys(rawServerPublicKey: ByteArray,
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/sharedcrypto/BouncyCastleCryptoDataSource.kt:46:        val serverPublicKey = keyFactory.generatePublic(X509EncodedKeySpec(rawServerPublicKey))
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/sharedcrypto/BouncyCastleCryptoDataSource.kt:52:        keyAgreement.doPhase(serverPublicKey, true)
+stopcovid-android/robert/build.gradle:22:        buildConfigField 'String', 'SERVER_PUBLIC_KEY', '"MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEAc9IDt6qJq453SwyWPB94JaLB2VfTAcL43YVtMr3HhDCd22gKaQXIbX1d+tNhfvaKM51sxeaXziPjntUzbTNiw=="'
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/datasource/RemoteServiceDataSource.kt:16:import com.lunabeestudio.domain.model.ServerStatusUpdate
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/datasource/RemoteServiceDataSource.kt:33:    suspend fun unregister(apiVersion: String, ssu: ServerStatusUpdate): RobertResult
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/datasource/RemoteServiceDataSource.kt:34:    suspend fun status(apiVersion: String, ssu: ServerStatusUpdate): RobertResultData<StatusReport>
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/datasource/RemoteServiceDataSource.kt:38:    suspend fun deleteExposureHistory(apiVersion: String, ssu: ServerStatusUpdate): RobertResult
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/datasource/SharedCryptoDataSource.kt:17:    fun getEncryptionKeys(rawServerPublicKey: ByteArray,
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/extension/LiveDataExt.kt:16:import androidx.lifecycle.Observer
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/extension/LiveDataExt.kt:18:import com.lunabeestudio.robert.utils.EventObserver
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/extension/LiveDataExt.kt:20:fun <U, T : Event<U?>> LiveData<T>.observeEventAndConsume(@NonNull owner: LifecycleOwner, @NonNull observer: Observer<U>) {
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/extension/LiveDataExt.kt:21:    val eventObserverId = owner.hashCode()
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/extension/LiveDataExt.kt:22:    this.value?.getContentIfNotHandled(eventObserverId)
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/extension/LiveDataExt.kt:23:    observe(owner, EventObserver(eventObserverId) {
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/extension/LiveDataExt.kt:24:        observer.onChanged(it)
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertException.kt:60:class ServerDecryptException(message: String = "Server data decrypt fail") :
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertException.kt:87:class TimeNotAlignedException(message: String = "Phone time not aligned with server time") :
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/repository/EphemeralBluetoothIdentifierRepository.kt:21:import com.lunabeestudio.robert.model.ServerDecryptException
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/repository/EphemeralBluetoothIdentifierRepository.kt:37:                throw ServerDecryptException()
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:20:import com.lunabeestudio.domain.model.ServerStatusUpdate
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:58:                rawServerPublicKey = Base64.decode(BuildConfig.SERVER_PUBLIC_KEY, Base64.NO_WRAP),
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:72:    suspend fun unregister(apiVersion: String, serverStatusUpdate: ServerStatusUpdate): RobertResult =
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:73:        remoteServiceDataSource.unregister(apiVersion, serverStatusUpdate)
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:75:    suspend fun status(apiVersion: String, serverStatusUpdate: ServerStatusUpdate): RobertResultData<StatusReport> =
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:76:        remoteServiceDataSource.status(apiVersion, serverStatusUpdate)
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:87:    suspend fun deleteExposureHistory(apiVersion: String, serverStatusUpdate: ServerStatusUpdate): RobertResult =
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:88:        remoteServiceDataSource.deleteExposureHistory(apiVersion, serverStatusUpdate)
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:27:import com.lunabeestudio.domain.model.ServerStatusUpdate
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:474:    private suspend fun getSSU(prefix: Byte): RobertResultData<ServerStatusUpdate> {
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/utils/EventObserver.kt:13:import androidx.lifecycle.Observer
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/utils/EventObserver.kt:16: * An [Observer] for [Event]s, simplifying the pattern of checking if the [Event]'s content has
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/utils/EventObserver.kt:21:class EventObserver<T>(private val id: Int = -1, private val onEventUnhandledContent: (T) -> Unit) : Observer<Event<T>> {
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-de.json:18:        "description": "Die Daten, die über die Bluetooth-Funktion zwischen zwei Smartphones ausgetauscht werden, entsprechen nach dem Zufallsprinzip vorübergehend generierten Pseudo-Kennungen.\nEine Pseudo-Kennung wird automatisch alle 15 Minuten erneuert. Sie besteht aus einer Reihe von Zahlen, Buchstaben und Zeichen, die allein nicht ausreichen, um eine Person zu identifizieren.\n\nDer Datenaustausch zwischen Ihrer App und dem Server, der vom französischen Ministerium für Gesundheit und Solidarität verwaltet wird, erfolgt nur mit Ihrer Einwilligung und sofern Sie als COVID-19-Fall diagnostiziert worden sind. In diesem Fall können die Apps der anderen Benutzer beim Server anfragen, ob sie sich in der Nähe Ihrer App aufgehalten haben. Ist das der Fall, erhalten die Benutzer eine Warnung mit dem Hinweis, dass sie der Gefahr einer Ansteckung ausgesetzt waren und die Empfehlung, einen Arzt zu konsultieren.\n\nDie betroffenen Personen erhalten weder Informationen über das Mobiltelefon, das die Warnmeldung ausgelöst hat, noch über den Besitzer des Smartphones.\n\nDer jeweilige Kontext der Verwendung wird von der App nicht berücksichtigt und der Benutzer hat jederzeit die Möglichkeit, die App zu deaktivieren.\n\nDie App berücksichtigt weder den jeweiligen Kontext noch Situationen, in denen eine spezifische Schutzausrüstung (u. a. die Ausrüstung von medizinischem Fachpersonal, Trennung durch eine Glasscheibe) zum Einsatz kommt. Der Benutzer kann die App jederzeit vorübergehend deaktivieren."
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-de.json:22:        "description": "Die Daten werden auf Ihrem Mobiltelefon gespeichert. Wenn Sie positiv auf das Coronavirus getestet werden und Ihre Einwilligung geben, können Sie Ihre Angehörigen ebenso wie alle weiteren Kontaktpersonen schützen, indem Sie Ihren Näherungsverlauf auf dem Server teilen, der vom französischen Ministerium für Gesundheit und Solidarität verwaltet wird."
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-de.json:26:        "description": "Die auf dem Smartphone und auf dem Server gespeicherten Daten werden nach 14 Tagen automatisch gelöscht."
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-de.json:30:        "description": "Gemäß der Datenschutzgrundverordnung (DSGVO)können Sie die auf Ihrem Telefon und auf dem Server gespeicherten Daten sowie alle Daten in Verbindung mit Ihrer Anmeldung löschen (und sich abmelden)."
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-en.json:18:        "description": "The data shared between two phones over their Bluetooth connections are temporary pseudo-identifiers.\nPseudo-identifiers are renewed automatically every 15 minutes. They can be a string of numbers, letters and symbols that cannot be used on their own to identify a person.\n\nThe application shares these data with the server managed by the Ministry for Solidarity and Health, only if you have been diagnosed as a COVID-19 case and only if you give your consent. If you do, then other users’ apps can connect to the server to find out if they have been close to your phone. If they have, the users will receive an alert that they have been exposed to a contamination risk and they will be encouraged to contact their doctors.\n\nThe users receiving the alert will have no information about the phone that triggered the alert or about the owner of the phone.\n\n The app does not take account of special circumstances, such as situations where specific protection measures are in place, including the use of personal protection equipment by healthcare personnel, or separation by a pane of glass. Users can deactivate the app temporarily at any time."
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-en.json:22:        "description": "The data are stored on your mobile phone. If you test positive and if you give your consent, you can protect the people closest to you and people you have met by sharing the history of your close contacts through the server managed by the Ministry for Solidarity and Health."
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-en.json:26:        "description": "The data stored on your phone and on the server are automatically deleted after 14 days."
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-en.json:30:        "description": "In compliance with the General Data Protection Regulation (GDPR), you can delete the data stored on your phone, the data stored on the server and the data relating to your registration, and you can cancel your registration."
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-it.json:18:      "description":"I dati trasferiti tra due smartphone tramite il Bluetooth sono degli pseudo-identificatori temporanei.\nUno pseudo-identificatore viene modificato automaticamente ogni 15 minuti. Si tratta per esempio di una stringa di numeri, di lettere o di segni, che non basta in sé per identificare una persona\n\nI dati sono condivisi dalla tua applicazione con il server, gestito dal Ministero della solidarietà e della salute, unicamente se sei testato/a positivo/a sei un caso diagnosticato di COVID-19, e con il tuo accordo. Ciò consente quindi alle applicazioni degli altri utenti di inviare una richiesta al server per sapere se sono stati vicini alla tua applicazione. Se la risposta è positiva, gli utenti saranno allora avvertiti che sono stati esposti a un rischio di contagio. Sarà raccomandato loro di contattare il medico curante.\n\nLe persone che avranno ricevuto tale avviso non hanno nessuna informazione a proposito del telefono cellulare da cui proviene l’avviso né del suo proprietario.\n\n\n\nL’applicazione non tiene conto dei contesti specifici e in particolare delle situazioni in cui è adottata una protezione specifica (attrezzature del personale sanitario, separazione tramite un vetro, per esempio). L’utente può sempre disattivare temporaneamente l’applicazione."
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-it.json:22:      "description":"I dati sono registrati sul tuo telefono cellulare. Se il test è positivo, e con il tuo accordo, puoi proteggere i tuoi cari e le persone che hai incontrato condividendo sul server gestito dal Ministero della solidarietà e della salute questa cronologia di prossimità."
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-it.json:26:      "description":"I dati registrati sullo smartphone e sul server sono cancellati automaticamente dopo 14 giorni."
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-it.json:30:      "description":"In conformità con il regolamento generale sulla protezione dei dati (GDPR), puoi cancellare: i dati registrati sul tuo smartphone, i dati presenti sul server nonché i dati riguardanti la tua iscrizione (e puoi annullare l’iscrizione)."
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:138:    "common.error.server": "أعداد الذين يلتحقون بتطبيق TousAntiCovid كبيرة جدًا. شكرًا جزيلًا لكم! نفعل ما بوسعنا لتوفر التطبيق في أسرع وقت.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:138:    "common.error.server": "Sie sind sehr zahlreich, die sich TousAntiCovid anschließen. Vielen Dank! Wir tun unser Bestes, um sehr schnell verfügbar zu sein.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:167:    "manageDataController.eraseRemoteContact.title": "Meine Daten auf dem Server",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:168:    "manageDataController.eraseRemoteContact.subtitle": "Bei diesem Vorgang werden Ihre eigenen Pseudo-Kennungen gelöscht, die mit anderen Mobiltelefonen ausgetauscht und auf den Server hochgeladen wurden.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:169:    "manageDataController.eraseRemoteContact.button": "Auf dem Server löschen",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:172:    "manageDataController.eraseRemoteContact.confirmationDialog.message": "Diese Aktion kann nicht rückgängig gemacht werden. Möchten Sie die zeitlich befristeten Pseudo-Kennungen auf dem Server tatsächlich löschen?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:191:    "sendHistoryController.mainMessage.subtitle": "Durch das anonyme Teilen Ihrer \"Bluetooth-Kontakte\" können Sie einen Beitrag zur Unterbrechung der Ansteckungsketten leisten und Leben retten.\n\nMit dem Senden dieser Informationen erlaube ich TousAntiCovid, die entsprechenden Daten 14 Tage lang auf dem Server zu speichern.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:138:    "common.error.server": "A lot of you have joined TousAntiCovid. Thank you! We're doing everything we can to get back online very soon.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:167:    "manageDataController.eraseRemoteContact.title": "My data on the server",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:168:    "manageDataController.eraseRemoteContact.subtitle": "This will delete all of your own user IDs that have been shared with other phones and uploaded to the server.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:169:    "manageDataController.eraseRemoteContact.button": "Delete from server",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:172:    "manageDataController.eraseRemoteContact.confirmationDialog.message": "This cannot be undone. Are you sure you want to delete your temporary user IDs from the server?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:191:    "sendHistoryController.mainMessage.subtitle": "Anonymously sharing your \"Bluetooth contacts\" will help to break the chain of transmission and to save lives.\n\nBy sending this information, I authorise TousAntiCovid to store it on the server for 14 days.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:138:    "common.error.server": "Hay demasiada gente intentando conectarse a TousAntiCovid. ¡Muchas gracias! Estamos haciendo todo lo posible por restablecer el servicio cuanto antes.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:114:   "common.keep":"Conserver",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:138:   "common.error.server":"Vous êtes très nombreux à rejoindre TousAntiCovid. Un grand merci ! On fait le maximum pour être disponible très vite.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:138:    "common.error.server": "Siete molto numerosi su TousAntiCovid. Grazie mille! Facciamo del nostro meglio per essere disponibili molto rapidamente.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:167:    "manageDataController.eraseRemoteContact.title": "I miei dati sul server",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:168:    "manageDataController.eraseRemoteContact.subtitle": "Quest’operazione cancellerà i tuoi pseudo-identificatori scambiati con altri dispositivi e inviati al server.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:169:    "manageDataController.eraseRemoteContact.button": "Cancella sul server",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:172:    "manageDataController.eraseRemoteContact.confirmationDialog.message": "Quest’operazione è irreversibile, confermi la cancellazione dei tuoi pseudo-identificatori temporanei dal server ?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:191:    "sendHistoryController.mainMessage.subtitle": "Condividendo in maniera anonima i tuoi \"contatti Bluetooth\", puoi contribuire a interrompere le catene di trasmissione, salvando vite umane.\n\nCon l’invio di queste informazioni, autorizzo TousAntiCovid a registrarle sul server per 14 giorni.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:138:    "common.error.server": "Há muitos utilizadores a ligarem-se à TousAntiCovid. Muito obrigado! Daremos o nosso melhor para voltarmos a estar disponíveis logo que possível.",
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/activity/MainActivity.kt:59:        initStringsObserver()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/activity/MainActivity.kt:96:    private fun initStringsObserver() {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/activity/SplashScreenActivity.kt:8:import androidx.lifecycle.Observer
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/activity/SplashScreenActivity.kt:41:        // Wait 2 + 5 seconds to load strings from file or server. Show blocking error if we still don't have strings.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/activity/SplashScreenActivity.kt:53:            val stringsObserver = object : Observer<Event<HashMap<String, String>>> {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/activity/SplashScreenActivity.kt:56:                        StringsManager.liveStrings.removeObserver(this)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/activity/SplashScreenActivity.kt:61:            StringsManager.liveStrings.observe(this@SplashScreenActivity, stringsObserver)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/Constants.kt:51:    object ServerConstant {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/Constants.kt:52:        val MAX_GAP_DEVICE_SERVER: Long = TimeUnit.MINUTES.toMillis(2L)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/CovidExceptionExt.kt:22:    ErrorCode.BACKEND -> strings["common.error.server"] ?: message
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/RobertExceptionExt.kt:30:import com.lunabeestudio.stopcovid.model.ServerDecryptException
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/RobertExceptionExt.kt:48:        ErrorCode.DECRYPT_FAIL -> ServerDecryptException(message)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/CaptchaFragment.kt:73:        initViewModelObserver()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/CaptchaFragment.kt:77:    private fun initViewModelObserver() {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/HealthFragment.kt:61:        initViewModelObserver()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/HealthFragment.kt:64:    private fun initViewModelObserver() {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/IsolationFormFragment.kt:63:        initViewModelObserver()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/IsolationFormFragment.kt:66:    private fun initViewModelObserver() {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:73:        initViewModelObserver()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:76:    private fun initViewModelObserver() {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ProximityFragment.kt:293:        initViewModelObserver()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ProximityFragment.kt:294:        initHasNewsObserver()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ProximityFragment.kt:321:    private fun initViewModelObserver() {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ProximityFragment.kt:362:    private fun initHasNewsObserver() {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/SendHistoryFragment.kt:58:        initViewModelObserver()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/SendHistoryFragment.kt:61:    private fun initViewModelObserver() {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/AppMaintenanceManager.kt:52:     * @param infoFreeCompletion : Called when the server doesn't block the app
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/AppMaintenanceManager.kt:53:     * @param infoBlockedCompletion : Called when the server does block the app
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/AppMaintenanceManager.kt:203:     * Save the json gotten on the server
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/AppMaintenanceManager.kt:212:     * Get the last json saved if server is inaccessible
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/FormManager.kt:36:    private const val url: String = com.lunabeestudio.stopcovid.coreui.BuildConfig.SERVER_URL + BuildConfig.FORM_PATH
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/InfoCenterManager.kt:62:    private val url: String = com.lunabeestudio.stopcovid.coreui.BuildConfig.SERVER_URL + BuildConfig.INFO_CENTER_FOLDER
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/SectionManager.kt:16:import com.lunabeestudio.stopcovid.coreui.manager.ServerManager
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/SectionManager.kt:20:abstract class SectionManager : ServerManager() {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/TimeCheckManager.kt:21:    fun isTimeAlignedWithServer(response: Response): Boolean? {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/TimeCheckManager.kt:22:        return response.header("Date")?.let { serverDateString ->
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/TimeCheckManager.kt:23:            val serverDate = SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss z", Locale.ENGLISH).parse(serverDateString)!!
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/TimeCheckManager.kt:24:            abs(serverDate.time - System.currentTimeMillis()) < Constants.ServerConstant.MAX_GAP_DEVICE_SERVER
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/model/CovidException.kt:62:class ServerDecryptException(message: String = "Server data decrypt fail") :
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/model/CovidException.kt:89:class TimeNotAlignedException(message: String = "Phone time not aligned with server time") :
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/network/LBMaintenanceHttpClient.kt:46:                val isClockAligned = TimeCheckManager.isTimeAlignedWithServer(response)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/StopCovid.kt:25:import androidx.lifecycle.LifecycleObserver
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/StopCovid.kt:90:class StopCovid : Application(), LifecycleObserver, RobertApplication, IsolationApplication {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/StopCovid.kt:133:        ProcessLifecycleOwner.get().lifecycle.addObserver(this)

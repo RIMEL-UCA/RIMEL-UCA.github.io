@@ -1,0 +1,74 @@
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:63:        let options = [CBCentralManagerOptionRestoreIdentifierKey: "proximitynotification-bluetoothcentralmanager"]
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:95:        let options: [String: Any] = [CBCentralManagerScanOptionAllowDuplicatesKey: NSNumber(value: true)]
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:260:        restoredPeripherals = dict[CBCentralManagerRestoredStatePeripheralsKey] as? [CBPeripheral]
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:271:        if let advertisementDataServiceData = advertisementData[CBAdvertisementDataServiceDataKey] as? [CBUUID: Data],
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothPeripheralManager.swift:46:        let options = [CBPeripheralManagerOptionRestoreIdentifierKey: "proximitynotification-bluetoothperipheralmanager"]
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothPeripheralManager.swift:77:        let advertisementData = [CBAdvertisementDataServiceUUIDsKey: [serviceUUID]]
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:169:        scannedPeripheralForPeripheralIdentifier.removeValue(forKey: peripheralIdentifier)
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:170:        bluetoothProximityPayloadForPeripheralIdentifier.removeValue(forKey: peripheralIdentifier)
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:13:final class Cache<Key: Hashable, Value>: NSObject, NSCacheDelegate {
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:15:    private let cache = NSCache<KeyWrapper, Entry>()
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:19:    private var keys = Set<Key>()
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:35:    subscript(key: Key) -> Value? {
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:37:            return value(forKey: key)
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:41:                setValue(value, forKey: key)
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:43:                removeValue(forKey: key)
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:48:    func setValue(_ value: Value, forKey key: Key) {
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:50:        let entry = Entry(key: key, value: value, expirationDate: expirationDate)
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:51:        cache.setObject(entry, forKey: KeyWrapper(key))
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:53:            self.keys.insert(key)
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:57:    func value(forKey key: Key) -> Value? {
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:58:        guard let entry = cache.object(forKey: KeyWrapper(key)) else {
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:63:            removeValue(forKey: key)
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:71:    func removeValue(forKey key: Key) {
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:72:        cache.removeObject(forKey: KeyWrapper(key))
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:81:            keys.forEach { key in
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:82:                _ = self.value(forKey: key)
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:93:            self.keys.remove(entry.key)
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:100:    final class KeyWrapper: NSObject {
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:102:        let key: Key
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:104:        init(_ key: Key) {
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:105:            self.key = key
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:109:            return key.hashValue
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:113:            guard let wrapper = object as? KeyWrapper else {
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:117:            return wrapper.key == key
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:126:        let key: Key
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:132:        init(key: Key, value: Value, expirationDate: Date) {
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:133:            self.key = key
+stopcovid-blesdk-ios/ProximityNotification.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist:5:	<key>IDEDidComputeMac32BitWarning</key>
+stopcovid-blesdk-ios/ProximityNotificationTests/CacheTests.swift:19:        let firstKey = UUID()
+stopcovid-blesdk-ios/ProximityNotificationTests/CacheTests.swift:20:        let secondKey = UUID()
+stopcovid-blesdk-ios/ProximityNotificationTests/CacheTests.swift:25:        cache[firstKey] = firstValue
+stopcovid-blesdk-ios/ProximityNotificationTests/CacheTests.swift:26:        cache.setValue(secondValue, forKey: secondKey)
+stopcovid-blesdk-ios/ProximityNotificationTests/CacheTests.swift:29:        XCTAssertEqual(firstValue, cache[firstKey])
+stopcovid-blesdk-ios/ProximityNotificationTests/CacheTests.swift:30:        XCTAssertEqual(firstValue, cache.value(forKey: firstKey))
+stopcovid-blesdk-ios/ProximityNotificationTests/CacheTests.swift:31:        XCTAssertEqual(secondValue, cache[secondKey])
+stopcovid-blesdk-ios/ProximityNotificationTests/CacheTests.swift:32:        XCTAssertEqual(secondValue, cache.value(forKey: secondKey))
+stopcovid-blesdk-ios/ProximityNotificationTests/CacheTests.swift:38:        let firstKey = UUID()
+stopcovid-blesdk-ios/ProximityNotificationTests/CacheTests.swift:39:        let secondKey = UUID()
+stopcovid-blesdk-ios/ProximityNotificationTests/CacheTests.swift:42:        cache[firstKey] = firstValue
+stopcovid-blesdk-ios/ProximityNotificationTests/CacheTests.swift:43:        cache[secondKey] = secondValue
+stopcovid-blesdk-ios/ProximityNotificationTests/CacheTests.swift:46:        cache[firstKey] = nil
+stopcovid-blesdk-ios/ProximityNotificationTests/CacheTests.swift:47:        cache.removeValue(forKey: secondKey)
+stopcovid-blesdk-ios/ProximityNotificationTests/CacheTests.swift:50:        XCTAssertNil(cache[firstKey])
+stopcovid-blesdk-ios/ProximityNotificationTests/CacheTests.swift:51:        XCTAssertNil(cache[secondKey])
+stopcovid-blesdk-ios/ProximityNotificationTests/CacheTests.swift:57:        let firstKey = UUID()
+stopcovid-blesdk-ios/ProximityNotificationTests/CacheTests.swift:58:        let secondKey = UUID()
+stopcovid-blesdk-ios/ProximityNotificationTests/CacheTests.swift:61:        cache[firstKey] = firstValue
+stopcovid-blesdk-ios/ProximityNotificationTests/CacheTests.swift:62:        cache[secondKey] = secondValue
+stopcovid-blesdk-ios/ProximityNotificationTests/CacheTests.swift:68:        XCTAssertNil(cache[firstKey])
+stopcovid-blesdk-ios/ProximityNotificationTests/CacheTests.swift:69:        XCTAssertNil(cache[secondKey])
+stopcovid-blesdk-ios/ProximityNotificationTests/CacheTests.swift:75:        let expiredKey = UUID()
+stopcovid-blesdk-ios/ProximityNotificationTests/CacheTests.swift:76:        let validKey = UUID()
+stopcovid-blesdk-ios/ProximityNotificationTests/CacheTests.swift:79:        cache[expiredKey] = expiredValue
+stopcovid-blesdk-ios/ProximityNotificationTests/CacheTests.swift:83:        cache[validKey] = validValue
+stopcovid-blesdk-ios/ProximityNotificationTests/CacheTests.swift:87:        XCTAssertNil(cache[expiredKey])
+stopcovid-blesdk-ios/ProximityNotificationTests/CacheTests.swift:88:        XCTAssertEqual(validValue, cache[validKey])
+stopcovid-blesdk-ios/ProximityNotificationTests/Info.plist:5:	<key>CFBundleDevelopmentRegion</key>
+stopcovid-blesdk-ios/ProximityNotificationTests/Info.plist:7:	<key>CFBundleExecutable</key>
+stopcovid-blesdk-ios/ProximityNotificationTests/Info.plist:9:	<key>CFBundleIdentifier</key>
+stopcovid-blesdk-ios/ProximityNotificationTests/Info.plist:11:	<key>CFBundleInfoDictionaryVersion</key>
+stopcovid-blesdk-ios/ProximityNotificationTests/Info.plist:13:	<key>CFBundleName</key>
+stopcovid-blesdk-ios/ProximityNotificationTests/Info.plist:15:	<key>CFBundlePackageType</key>
+stopcovid-blesdk-ios/ProximityNotificationTests/Info.plist:17:	<key>CFBundleShortVersionString</key>
+stopcovid-blesdk-ios/ProximityNotificationTests/Info.plist:19:	<key>CFBundleVersion</key>

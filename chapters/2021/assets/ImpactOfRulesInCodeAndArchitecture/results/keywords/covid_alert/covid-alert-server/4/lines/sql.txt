@@ -1,0 +1,268 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.devcontainer/devcontainer.json:2:	"name": "Ruby, Go, and MySQL",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.devcontainer/docker-compose.yml:30:    image: mysql:5.7
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.devcontainer/docker-compose.yml:35:      MYSQL_DATABASE: test
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.devcontainer/docker-compose.yml:36:      MYSQL_PASSWORD: password
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.devcontainer/docker-compose.yml:37:      MYSQL_ROOT_PASSWORD: password
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.devcontainer/docker-compose.yml:38:      MYSQL_USER: test
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.github/workflows/pr-test-ruby-ci.yml:7:      mysql:
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.github/workflows/pr-test-ruby-ci.yml:8:        image: mysql:5.7
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.github/workflows/pr-test-ruby-ci.yml:10:          MYSQL_DATABASE: test
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.github/workflows/pr-test-ruby-ci.yml:11:          MYSQL_PASSWORD: password
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.github/workflows/pr-test-ruby-ci.yml:12:          MYSQL_ROOT_PASSWORD: password
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.github/workflows/pr-test-ruby-ci.yml:13:          MYSQL_USER: test
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.github/workflows/pr-test-ruby-ci.yml:17:        options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.github/workflows/pr-test-ruby-ci.yml:36:        PORT: ${{ job.services.mysql.ports[3306] }}
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.github/workflows/pr-test-ruby-ci.yml:38:        while ! mysqladmin ping -h"127.0.0.1" -P"$PORT" --silent; do
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.snyk:5:  'snyk:lic:golang:github.com:go-sql-driver:mysql:MPL-2.0':
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/clear-diagnosis-keys.sh:17:mysql --login-path="$AWS_PROFILE"  << EOF
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/daily-reports.sh:13:mysql --login-path="$AWS_PROFILE" << EOF
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/README.md:18:Run the sql that we currently use to generate daily reports
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:40:**Note**: It is normal to see a few errors from the retrieval service exiting initially while the MySQL database is instantiated
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:53:* MySQL
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:139:**Remarque** : Il est normal de voir quelques erreurs du service d’extraction à la sortie initiale pendant que la base de données MySQL est instanciée.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:152:* MySQL
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/docker-compose.yml:3:  mysql:
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/docker-compose.yml:4:    image: mysql:5.7
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/docker-compose.yml:7:      - ./tmp/db:/var/lib/mysql
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/docker-compose.yml:10:      MYSQL_USER: covidshield
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/docker-compose.yml:11:      MYSQL_DATABASE: covidshield
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/docker-compose.yml:12:      MYSQL_PASSWORD: covidshield
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/docker-compose.yml:13:      MYSQL_RANDOM_ROOT_PASSWORD: "yes"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/docker-compose.yml:26:      - mysql
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/docker-compose.yml:30:      DATABASE_URL: covidshield:covidshield@tcp(mysql)/covidshield
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/docker-compose.yml:51:      - mysql
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/docker-compose.yml:54:      DATABASE_URL: covidshield:covidshield@tcp(mysql)/covidshield
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/Gemfile:7:gem('mysql2')
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/Gemfile.lock:14:    mysql2 (0.5.3)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/Gemfile.lock:28:  mysql2
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/go.mod:6:	github.com/DATA-DOG/go-sqlmock v1.4.1
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/go.mod:10:	github.com/go-sql-driver/mysql v1.5.0
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/go.sum:18:github.com/DATA-DOG/go-sqlmock v1.4.1 h1:ThlnYciV1iM/V0OSF/dtkqWb6xo5qITT1TJBG1MRDJM=
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/go.sum:19:github.com/DATA-DOG/go-sqlmock v1.4.1/go.mod h1:f/Ixk793poVmq4qj/V1dPUg2JEAKC73Q5eFN3EC/SaM=
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/go.sum:86:github.com/go-sql-driver/mysql v1.5.0 h1:ozyZYNQW3x3HtqT1jira07DN2PArx2v7/mN66gGcHOs=
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/go.sum:87:github.com/go-sql-driver/mysql v1.5.0/go.mod h1:DCzpHaOWr8IXmIStZouvnhqoel9Qv2LBy8hT2VhHyBg=
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/go.sum:169:github.com/hashicorp/mdns v1.0.0/go.mod h1:tL+uN++7HEJ6SQLQ2/p+z2pH24WQKWjBPkE0mNTz8vQ=
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/mocks/pkg/persistence/queryRower.go:8:	sql "database/sql"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/mocks/pkg/persistence/queryRower.go:17:func (_m *queryRower) QueryRow(query string, args ...interface{}) *sql.Row {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/mocks/pkg/persistence/queryRower.go:23:	var r0 *sql.Row
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/mocks/pkg/persistence/queryRower.go:24:	if rf, ok := ret.Get(0).(func(string, ...interface{}) *sql.Row); ok {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/mocks/pkg/persistence/queryRower.go:28:			r0 = ret.Get(0).(*sql.Row)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:883:      "integrity": "sha512-//88mFWSJx8lxCzwdAABTJL2MyWB12+eIY7MDL2SqLmAkeKU9qxRvWuSyTjm3FUmpBEMuFfckAIqEaVGUDxb6w==",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:8:	"database/sql"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:19:	"github.com/go-sql-driver/mysql"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:27:// Conn mediates all access to a MySQL/CloudSQL connection. It exposes a
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:67:	db *sql.DB
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:78:// Dial establishes a MySQL/CloudSQL connection and returns a Conn object,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:105:			mysql.RegisterTLSConfig("custom", &tls.Config{
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:113:	db, err := sql.Open("mysql", url)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:284:	case sql.ErrNoRows:
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:305:func handleKeysRows(rows *sql.Rows) ([]*pb.TemporaryExposureKey, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:7:	"database/sql/driver"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:14:	"github.com/DATA-DOG/go-sqlmock"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:25:var allQueryMatcher sqlmock.QueryMatcher = sqlmock.QueryMatcherFunc(func(expectedSQL, actualSQL string) error { return nil })
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:29:// Match satisfies sqlmock.Argument interface
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:36:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(allQueryMatcher))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:43:	mock.ExpectExec("").WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:54:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(allQueryMatcher))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:62:	rows := sqlmock.NewRows([]string{"originator", "count"}).AddRow("foo", 1).AddRow("bar", 2)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:74:	mock.ExpectExec("").WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:86:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(allQueryMatcher))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:94:	rows := sqlmock.NewRows([]string{"originator", "count"}).AddRow("foo", 1).AddRow("bar", 2)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:102:	mock.ExpectExec("").WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:114:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(allQueryMatcher))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:122:	rows := sqlmock.NewRows([]string{"originator", "count"}).AddRow("foo", 1).AddRow("bar", 2)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:128:	mock.ExpectExec("").WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:138:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(sqlmock.QueryMatcherEqual))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:155:	rows := sqlmock.NewRows([]string{"count"}).AddRow(0)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:160:	rows = sqlmock.NewRows([]string{"created", "originator"}).AddRow(created, originator)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:180:		WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:182:	rows = sqlmock.NewRows([]string{"server_public_key"}).AddRow(pub[:])
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:211:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(allQueryMatcher))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:228:	).WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:263:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(allQueryMatcher))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:305:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(allQueryMatcher))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:334:	).WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:372:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(allQueryMatcher))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:418:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(allQueryMatcher))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:440:	rows := sqlmock.NewRows([]string{"one_time_code"}).AddRow("ABCD")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:443:	mock.ExpectExec(`DELETE FROM encryption_keys WHERE hash_id = ? AND one_time_code IS NOT NULL`).WithArgs(hashID).WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:456:	).WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:492:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(allQueryMatcher))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:514:	rows := sqlmock.NewRows([]string{"one_time_code"}).AddRow(nil)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:525:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(allQueryMatcher))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:535:	rows := sqlmock.NewRows([]string{"server_private_key"}).AddRow(pub[:])
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:552:	rows = sqlmock.NewRows([]string{"server_private_key"})
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:561:	rows = sqlmock.NewRows([]string{"server_private_key"})
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:571:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(allQueryMatcher))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:589:	row := sqlmock.NewRows([]string{"region", "originator", "remaining_keys"}).AddRow("302", "randomOrigin", 3)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:609:		).WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:621:	).WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:632:	).WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:645:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(allQueryMatcher))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:660:	row := sqlmock.NewRows([]string{"region", "key_data", "rolling_start_interval_number", "rolling_period", "transmission_risk_level"}).AddRow("302", []byte{}, 2651450, 144, 4)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:692:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(allQueryMatcher))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:702:	row := sqlmock.NewRows([]string{"failures", "last_failure"})
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:719:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(allQueryMatcher))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:726:	mock.ExpectExec("").WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:734:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(sqlmock.QueryMatcherEqual))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:750:	).WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:753:	row := sqlmock.NewRows([]string{"failures", "last_failure"}).AddRow(1, time.Now())
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:773:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(allQueryMatcher))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:780:	mock.ExpectExec("").WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:790:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(allQueryMatcher))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:797:	rows := sqlmock.NewRows([]string{"count"}).AddRow(100)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:808:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(allQueryMatcher))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:815:	rows := sqlmock.NewRows([]string{"count"}).AddRow(100)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:826:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(allQueryMatcher))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:833:	rows := sqlmock.NewRows([]string{"count"}).AddRow(100)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/events.go:5:	"database/sql"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/events.go:74:func saveEvent(tx *sql.Tx, e Event) error {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/events.go:114:func getServerEventsByType(db *sql.DB, date string) ([]Events, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/events.go:169:func getTEKUploadsByDay(db *sql.DB, date string) ([]Uploads, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/events_test.go:9:	"github.com/DATA-DOG/go-sqlmock"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/events_test.go:45:func setupSaveEventMock(mock sqlmock.Sqlmock, event Event) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/events_test.go:56:	).WillReturnResult(sqlmock.NewResult(0, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/events_test.go:61:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(sqlmock.QueryMatcherEqual))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/events_test.go:119:	db, _, _ := sqlmock.New(sqlmock.QueryMatcherOption(sqlmock.QueryMatcherEqual))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/events_test.go:129:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(sqlmock.QueryMatcherEqual))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/events_test.go:133:	rows := sqlmock.NewRows([]string{"identifier", "source", "date", "count"}).AddRow("event", "foo", d, 1)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/events_test.go:157:	db, _, _ := sqlmock.New(sqlmock.QueryMatcherOption(sqlmock.QueryMatcherEqual))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/events_test.go:167:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(sqlmock.QueryMatcherEqual))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/events_test.go:171:	rows := sqlmock.NewRows([]string{"originator", "date", "count", "first_upload"}).AddRow("foo", d, 5, true)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/main_test.go:4:	"database/sql"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/main_test.go:5:	"github.com/DATA-DOG/go-sqlmock"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/main_test.go:32:func createNewSqlMock() (*sql.DB, sqlmock.Sqlmock) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/main_test.go:33:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(sqlmock.QueryMatcherEqual))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/metric_queries.go:4:	"database/sql"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/metric_queries.go:10:func countUnclaimedEncryptionKeysByOriginator(tx *sql.Tx) ([]CountByOriginator, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/metric_queries.go:17:func countExpiredClaimedEncryptionKeysByOriginator(tx *sql.Tx) ([]CountByOriginator, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/metric_queries.go:25:func countExpiredClaimedEncryptionKeysWithNoUploadsByOriginator(tx *sql.Tx) ([]CountByOriginator, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/metric_queries.go:33:func countExhaustedEncryptionKeysByOriginator(tx *sql.Tx) ([]CountByOriginator, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/metric_queries.go:41:func countByOriginator(tx *sql.Tx, query string) ([]CountByOriginator, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/metric_queries_test.go:5:	"github.com/DATA-DOG/go-sqlmock"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/metric_queries_test.go:11:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(sqlmock.QueryMatcherEqual))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/metric_queries_test.go:13:	rows := sqlmock.NewRows([]string{"originator", "count"}).AddRow("foo", 1).AddRow("bar",2)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/metric_queries_test.go:31:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(sqlmock.QueryMatcherEqual))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:4:	"database/sql"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:8:	// inject mysql support for database/sql
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:9:	_ "github.com/go-sql-driver/mysql"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:160:	dbForCreate, err := sql.Open("mysql", strings.TrimSuffix(url, dbName))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:172:	db, err := sql.Open("mysql", url)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:210:func runMigration(db *sql.DB, migration migration) error {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator_test.go:6:	"github.com/DATA-DOG/go-sqlmock"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator_test.go:11:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(sqlmock.QueryMatcherEqual))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator_test.go:17:		rows := sqlmock.NewRows([]string{"count"}).AddRow(0)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator_test.go:20:			mock.ExpectExec(statement).WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator_test.go:22:		mock.ExpectExec("INSERT INTO schema_migrations (version) VALUES (?)").WithArgs(migration.id).WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/otk_duration.go:4:	"database/sql"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/otk_duration.go:21:func saveOtkDuration(tx *sql.Tx, otkDuration OtkDuration) error {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/otk_duration.go:57:func  getAggregateOtkDurationsByDate(db *sql.DB, date string) ([]AggregateOtkDuration, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/otk_duration_test.go:5:	"github.com/DATA-DOG/go-sqlmock"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/otk_duration_test.go:10:func setupOtkDurationMock(mock sqlmock.Sqlmock, originator string, duration int) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/otk_duration_test.go:16:		WillReturnResult(sqlmock.NewResult(0, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/otk_duration_test.go:20:	db, mock := createNewSqlMock()
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/otk_duration_test.go:40:	db, mock := createNewSqlMock()
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/otk_duration_test.go:62:	db, mock := createNewSqlMock()
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:5:	"database/sql"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:16:func saveCountEvents(ctx context.Context, tx *sql.Tx, identifier EventType, counts []CountByOriginator) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:32:func deleteOldDiagnosisKeys(db *sql.DB) (int64, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:45:func deleteExpiredKeys(ctx context.Context, db *sql.DB) (int64, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:92:func deleteUnclaimedKeys(ctx context.Context, db *sql.DB) (int64, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:137:func deleteExhaustedKeys(ctx context.Context, db *sql.DB) (int64, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:179:func claimKey(db *sql.DB, oneTimeCode string, appPublicKey []byte, ctx context.Context) ([]byte, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:299:func persistEncryptionKey(db *sql.DB, region, originator string, pub *[32]byte, priv *[32]byte, oneTimeCode string) error {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:309:func persistEncryptionKeyWithHashID(db *sql.DB, region, originator, hashID string, pub *[32]byte, priv *[32]byte, oneTimeCode string) error {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:321:		var oneTimeCode sql.NullString
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:337:func privForPub(db *sql.DB, pub []byte) *sql.Row {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:353:func diagnosisKeysForHours(db *sql.DB, region string, startHour uint32, endHour uint32, currentRollingStartIntervalNumber int32) (*sql.Rows, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:368:func registerDiagnosisKeys(db *sql.DB, appPubKey *[32]byte, keys []*pb.TemporaryExposureKey, ctx context.Context) error {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:475:	QueryRow(query string, args ...interface{}) *sql.Row
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:484:		if err.Error() == "sql: no rows in result set" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:507:func registerClaimKeySuccess(db *sql.DB, identifier string) error {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:512:func registerClaimKeyFailure(db *sql.DB, identifier string) (triesRemaining int, banDuration time.Duration, err error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:544:func deleteOldFailedClaimKeyAttempts(db *sql.DB) (int64, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:554:func countClaimedOneTimeCodes(db *sql.DB) (int64, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:567:func countDiagnosisKeys(db *sql.DB) (int64, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:580:func countUnclaimedOneTimeCodes(db *sql.DB) (int64, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:5:	"database/sql/driver"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:10:	"github.com/DATA-DOG/go-sqlmock"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:19:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(sqlmock.QueryMatcherEqual))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:25:	mock.ExpectExec(`DELETE FROM diagnosis_keys WHERE hour_of_submission < ?`).WithArgs(oldestHour).WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:40:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(sqlmock.QueryMatcherEqual))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:58:	rows := sqlmock.NewRows([]string{"count"}).AddRow(1)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:72:	rows = sqlmock.NewRows([]string{"count"}).AddRow(0)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:89:	rows = sqlmock.NewRows([]string{"count"}).AddRow(0)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:115:	rows = sqlmock.NewRows([]string{"count"}).AddRow(0)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:146:	rows = sqlmock.NewRows([]string{"count"}).AddRow(0)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:163:		WillReturnResult(sqlmock.NewResult(1, 2))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:177:	rows = sqlmock.NewRows([]string{"count"}).AddRow(0)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:194:		WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:210:	rows = sqlmock.NewRows([]string{"count"}).AddRow(0)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:227:		WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:229:	rows = sqlmock.NewRows([]string{"server_public_key"}).AddRow(pub[:])
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:244:func setupSelectOneTimeCode(mock sqlmock.Sqlmock, oneTimeCode string, time driver.Value) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:245:	rows := sqlmock.NewRows([]string{"created", "originator"}).AddRow(time, "originator")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:250:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(sqlmock.QueryMatcherEqual))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:291:	).WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:304:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(sqlmock.QueryMatcherEqual))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:373:	rows := sqlmock.NewRows([]string{"one_time_code"}).AddRow(nil)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:400:	rows = sqlmock.NewRows([]string{"one_time_code"}).AddRow(oneTimeCode)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:428:	rows = sqlmock.NewRows([]string{"one_time_code"}).AddRow(oneTimeCode)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:431:	mock.ExpectExec(`DELETE FROM encryption_keys WHERE hash_id = ? AND one_time_code IS NOT NULL`).WithArgs(hashID).WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:454:	).WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:467:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(sqlmock.QueryMatcherEqual))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:480:	rows := sqlmock.NewRows([]string{"server_private_key"}).AddRow(priv[:])
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:495:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(sqlmock.QueryMatcherEqual))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:512:	row := sqlmock.NewRows([]string{"region", "key_data", "rolling_start_interval_number", "rolling_period", "transmission_risk_level"}).AddRow("302", []byte{}, 2651450, 144, 4)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:534:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(sqlmock.QueryMatcherEqual))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:557:	row := sqlmock.NewRows([]string{"region", "originator", "remaining_keys"}).AddRow(region, originator, 0)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:571:	row = sqlmock.NewRows([]string{"region", "originator", "remaining_keys"}).AddRow("302", "randomOrigin", 1)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:596:	row = sqlmock.NewRows([]string{"region", "originator", "remaining_keys"}).AddRow("302", "randomOrigin", 1)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:630:	row = sqlmock.NewRows([]string{"region", "originator", "remaining_keys"}).AddRow("302", "randomOrigin", 1)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:650:		).WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:671:	row = sqlmock.NewRows([]string{"region", "originator", "remaining_keys"}).AddRow("302", "randomOrigin", 3)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:691:		).WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:703:	).WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:734:	row = sqlmock.NewRows([]string{"region", "originator", "remaining_keys"}).AddRow("302", "randomOrigin", config.AppConstants.InitialRemainingKeys)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:754:		).WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:766:	).WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:777:	).WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:790:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(sqlmock.QueryMatcherEqual))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:798:	row := sqlmock.NewRows([]string{"failures", "last_failure"})
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:832:	row = sqlmock.NewRows([]string{"failures", "last_failure"}).AddRow(attempts, time.Now())
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:849:	row = sqlmock.NewRows([]string{"failures", "last_failure"}).AddRow(attempts, time.Now())
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:866:	row = sqlmock.NewRows([]string{"failures", "last_failure"}).AddRow(attempts, time.Now().Add(-time.Hour*1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:883:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(sqlmock.QueryMatcherEqual))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:888:	mock.ExpectExec(`DELETE FROM failed_key_claim_attempts WHERE identifier = ?`).WithArgs(identifier).WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:899:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(sqlmock.QueryMatcherEqual))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:938:	).WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:968:	).WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:971:	row := sqlmock.NewRows([]string{"failures", "last_failure"}).AddRow(1, time.Now())
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:991:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(sqlmock.QueryMatcherEqual))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:994:	mock.ExpectExec(`DELETE FROM failed_key_claim_attempts WHERE last_failure < ?`).WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:1008:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(sqlmock.QueryMatcherEqual))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:1011:	row := sqlmock.NewRows([]string{"count"}).AddRow(100)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:1027:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(sqlmock.QueryMatcherEqual))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:1030:	row := sqlmock.NewRows([]string{"count"}).AddRow(100)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:1046:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(sqlmock.QueryMatcherEqual))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:1049:	row := sqlmock.NewRows([]string{"count"}).AddRow(100)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/test_tools.go:5:	"database/sql"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/test_tools.go:14:func clearDiagnosisKeys(ctx context.Context, db *sql.DB) error {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/test_tools_test.go:8:	"github.com/DATA-DOG/go-sqlmock"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/test_tools_test.go:31:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(sqlmock.QueryMatcherEqual))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/test_tools_test.go:37:	mock.ExpectExec(`TRUNCATE TABLE diagnosis_keys`).WillReturnResult(sqlmock.NewResult(0,0))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/test_tools_test.go:51:	db, mock, _ := sqlmock.New(sqlmock.QueryMatcherOption(sqlmock.QueryMatcherEqual))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/scripts/heroku_run.sh:5:no_prot="${url/mysql:\/\//}"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/claim_key_test.rb:139:    @dbconn.prepare(<<~SQL).execute
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/claim_key_test.rb:141:    SQL
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:11:require('mysql2')
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:41:        @dbconn = Mysql2::Client.new(
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:134:      @dbconn.prepare(<<~SQL).execute(seconds)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:136:      SQL
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:140:      @dbconn.prepare(<<~SQL).execute(hours)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:142:      SQL
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:143:      @dbconn.prepare(<<~SQL).execute(hours, hours)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:147:      SQL
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:249:        'mysqladmin', "--host=#{DB_HOST}", "--user=#{DB_USER}",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:288:    @insert_key ||= @dbconn.prepare(<<~SQL)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:292:    SQL

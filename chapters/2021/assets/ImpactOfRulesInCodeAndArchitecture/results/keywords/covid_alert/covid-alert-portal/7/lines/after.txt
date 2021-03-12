@@ -1,0 +1,54 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/applypatch-msg.sample:6:# The hook should exit with non-zero status after issuing an
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/commit-msg.sample:6:# status after issuing an appropriate message if it wants to stop the
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/fsmonitor-watchman.sample:51:	# changed since $time but were not transient (ie created after
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/pre-applypatch.sample:6:# The hook should exit with non-zero status after issuing an
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/pre-commit.sample:5:# exit with non-zero status after issuing an appropriate message if
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/pre-merge-commit.sample:5:# exit with non-zero status after issuing an appropriate message to
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/pre-push.sample:4:# push" after it has checked the remote status, but before anything has been
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:17:#   This boolean sets whether a tag may be modified after creation. By default
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/templates/about/4_give_a_key.html:16:    <p>{% trans "After you generate a key, the next screen shows a combination of letters and numbers. The screen gives 1 word that you’ll read for each letter. This helps the patient check they heard the correct letter." %}</p>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/migrations/0001_initial.py:31:                ('publish_end', models.DateField(blank=True, null=True, verbose_name='Publish end date', help_text='The announcement will not be shown after this date')),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/models.py:58:        help_text=_("The announcement will not be shown after this date"),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/templates/backup_codes/admin_backup_codes_list.html:23:  <p>{% trans "After they log in, they can follow the instructions to get more security codes." %}</p>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:454:    def test_redirect_to_start_backup_codes_signup_view_after_login(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:459:    def test_backup_codes_signup_view_after_setting_referrer(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:82:    # this is called _after_ self.get()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:137:  - On attempted login: lock out users after a set number of failed 2FA attempts
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:294:- Adds a welcome page for new users (after completing signup + 2fa for the first time)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:363:- Adding a second layer of user throttling. After 100 failed logins in a 30 days window, the user will be blocked for 24 hours.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/forms.py:57:    A form for redirecting users after sending OTK via SMS
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.mo matches
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:193:"After you generate a key, the next screen shows a combination of letters and "
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:355:msgid "The announcement will not be shown after this date"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:384:"After they log in, they can follow the instructions to get more security "
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:846:msgid "No new keys after expiry."
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:900:"After patients have either answered questions or decided not to answer,  "
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/forms.py:8:        # Remove the colon after field labels
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:24:# Tests whether the second command line argument (after ./manage.py) was test
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:318:INVITATIONS_ACCEPT_INVITE_AFTER_SIGNUP = True
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:361:AXES_FAILURE_LIMIT = 10  # Lockout after 10 failed login attempts
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/includes/big-code.html:22:  <p>{% trans "No new keys after expiry." %}</p>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/includes/detailed_instructions.html:35:    <span>{% trans "After patients have either answered questions or decided not to answer,  they need to give COVID Alert permission to upload random codes. Tap “Share exposures” to give permission." %}</span>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:238:        # Validate the password after self.instance is updated with form data
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:423:        # Validate the password after self.instance is updated with form data
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/css/normalize.css:8: * 2. Prevent adjustments of font size after orientation changes in iOS.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/js/script.js:13:// Add disabled to buttons after click
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/scss/components/_button.scss:111:    &::after {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/scss/components/_links.scss:5:  a::after {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/scss/components/_multiple-choice.scss:22:      &:checked + label::after {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/scss/components/_multiple-choice.scss:54:      &::after {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/scss/components/_multiple-choice.scss:76:    &::after {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/scss/components/_multiple-choice.scss:105:    &::after {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/scss/components/_nav.scss:121:      &::after {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/scss/components/_nav.scss:133:      > div::after {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/scss/components/_otk.scss:10:    &:after {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:556:    def test_invitation_accepted_after_signup(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:582:    def test_login_attempts_deleted_after_signup(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:784:        # Invitations expire after 24 hours
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:878:        # Invitations expire after 24 hours
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/urls.py:86:        "session-timed-out/", views.redirect_after_timed_out, name="session_timed_out"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:441:def redirect_after_timed_out(request):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:69:- `CONFIRMATION_EMAIL_TEMPLATE_ID_EN` and `CONFIRMATION_EMAIL_TEMPLATE_ID_FR` : Template IDs for the English and French versions of the confirmation emails that is sent to new users after successfully signing-up.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:116:**Quick Start:** After activating a virtual environment, run
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:124:For a more thorough setup of the various environment options please follow the instructions below after having activated your virtual environment from inside the root project folder.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:217:Feature development on the Portal follows a [trunk-based development](https://trunkbaseddevelopment.com/) workflow. The `main` branch has the most up-to-date code and is always production-ready. When starting a new feature (or a bugfix, etc.), a new branch is created from the tip of the `main` branch. Once the work is complete, the feature is merged back into `main` via a Pull Request (PR). PRs must pass a series of [automated tests](https://github.com/cds-snc/covid-alert-portal#automated-tests) (unit tests, linting, etc), as well as a manual review by another developer. After the automated tests pass and the PR is approved, the code is merged into `main` and the feature branch is deleted. The `main` branch is protected from direct pushes or force pushes — pull requests are mandatory.

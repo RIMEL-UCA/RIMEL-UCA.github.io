@@ -1,0 +1,997 @@
+issue_id,issue_title,issue_body,issue_labels1447,Feature/filtered metrics tests,# Summary | Résumé
+
+- Refactored FilteredMetricsService to extract some of the logic that we can add unit tests on
+- Added unit tests on new MetricsFilter class,[]
+1446,Update async storage,Fixes #1444 
+
+*NOTE*
+This needs verification/testing on both platforms. 
+Care should be given to the change around settings.gradle since I'm not as familiar with the Android build environment. It built on my dev machine - but tests etc. need to be run/verified.
+
+I have verified on iOS Simulator that the files are excluded from the iCloud backup - but again this will need to be verified on device.
+
+<img width="2672" alt="Screen Shot 2021-02-26 at 8 08 40 AM" src="https://user-images.githubusercontent.com/8114/109304967-6cccb980-7813-11eb-9c1a-3e7a7ad3a9be.png">
+
+```
+➜  covid-alert-app git:(update_async_storage) ✗ xcrun simctl get_app_container booted ca.gc.hcsc.canada.stopcovid data                                                                                                                       
+/Users/bob/Library/Developer/CoreSimulator/Devices/6A257592-8E43-450D-8317-D1A8EBA35E6F/data/Containers/Data/Application/7B50DF4D-AE2B-4026-8A82-C432FBD7F845
+➜  covid-alert-app git:(update_async_storage) ✗ cd /Users/bob/Library/Developer/CoreSimulator/Devices/6A257592-8E43-450D-8317-D1A8EBA35E6F/data/Containers/Data/Application/7B50DF4D-AE2B-4026-8A82-C432FBD7F845/Library/Application\ Support/ca.gc.hcsc.canada.stopcovid 
+➜  ca.gc.hcsc.canada.stopcovid ls 
+RCTAsyncLocalStorage_V1
+➜  ca.gc.hcsc.canada.stopcovid xattr -l RCTAsyncLocalStorage_V1 
+com.apple.metadata:com_apple_backup_excludeItem: com.apple.MobileBackup
+➜  ca.gc.hcsc.canada.stopcovid cd RCTAsyncLocalStorage_V1 
+➜  RCTAsyncLocalStorage_V1 cat manifest.json 
+{"Locale":"en","Region":"PE","UUID_KEY":"59OS9U9Z","UserStopped":"0","OnboardedDatetime":"2021-02-26T12:45:43.921Z","exposureStatus":"{\"type\":\"monitoring\"}","IsOnboarded":"1","navigationState":"{\"stale\":false,\"type\":\"stack\",\"key\":\"stack-eJEGE_vqv4vkDvyYVfAS4\",\"index\":0,\"routeNames\":[\"Landing\",\"Home\",\"OnboardingNavigator\",\"Tutorial\",\"DataSharing\",\"LanguageSelect\",\"RegionSelect\",\"RegionSelectExposedNoPT\",\"DismissAlert\",\"NoCode\",\"TestScreen\",\"ErrorScreen\",\"FrameworkUnavailableScreen\",\"QRCodeFlow\",\"CheckInHistoryScreen\",\"ClearOutbreakExposure\"],\"routes\":[{\"name\":\"Home\",\"key\":\"Home-WrrTMLnuVlu8SnQnYDrBs\"}]}"}%                                                                                                                                                                                                                                                ➜  RCTAsyncLocalStorage_V1 xattr manifest.json 
+com.apple.TextEncoding
+➜  RCTAsyncLocalStorage_V1 
+```
+
+,[]
+1444,Chore - Update async storage and remove existing patch for iCloud backups,# Summary | Résumé
+
+The `packages.json` file specifies a dependency on `react-native-community/async-storage": "1.9.0"` the current version is `1.14.1`
+
+Within `patches/@react-native-community+async-storage+1.9.0.patch` modifications are made to ensure that data is not backed up in iCloud storage.
+
+It appears via https://github.com/react-native-async-storage/async-storage/pull/455 that files are excluded from the iCloud backup by default - See https://react-native-async-storage.github.io/async-storage/docs/advanced/backup/ 
+
+The changes  between 1.9.0 and 1.14.1 can be viewed at https://github.com/react-native-async-storage/async-storage/compare/v1.9.0...v1.14.1
+
+---
+
+# Steps to address
+
+- [ ] Review https://github.com/react-native-async-storage/async-storage/compare/v1.9.0...v1.14.1 for other areas of possible concern
+- [ ] Update dependency in `package.json` - Do we want to specify an open semver ? e.g. So long as we're on 1.x we're ok?
+- [ ] Build and verify existing behaviour on iOS and Android - ensuring files remain out of iCloud backup. Will require help of @cds-snc team to verify on device
+- [ ] Remove `patches/@react-native-community+async-storage+1.9.0.patch`
+- [ ] Celebrate successful merge with a 🍵 , ☕  , 🍺 , 🍹 
+,[{'id': 2102563387, 'node_id': 'MDU6TGFiZWwyMTAyNTYzMzg3', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-app/labels/bug', 'name': 'bug', 'color': 'd73a4a', 'default': True, 'description': "Something isn't working"}, {'id': 2240139725, 'node_id': 'MDU6TGFiZWwyMjQwMTM5NzI1', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-app/labels/inbox', 'name': 'inbox', 'color': '000000', 'default': False, 'description': 'for new issues coming in'}]
+1441,Run app on android 4.4,Hello, thanks for developing this app,
+
+I'm trying to run the app on android studio and am wondering how/if I can run it on android 4.4.
+
+Thanks so much!,[]
+1432,Update TEST_PLAN.md,# Summary | Résumé
+
+The [TEST_PLAN.md](../TEST_PLAN.md) doc has instructions severely out of date.
+
+Marking it as deprecated, and that the file needs to be re-written, as-is it can no longer be used as a guide for how to test the app.
+
+Done when: the file is updated
+
+,[{'id': 2102563397, 'node_id': 'MDU6TGFiZWwyMTAyNTYzMzk3', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-app/labels/enhancement', 'name': 'enhancement', 'color': 'a2eeef', 'default': True, 'description': 'New feature or request'}, {'id': 2240139725, 'node_id': 'MDU6TGFiZWwyMjQwMTM5NzI1', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-app/labels/inbox', 'name': 'inbox', 'color': '000000', 'default': False, 'description': 'for new issues coming in'}]
+1429,New bottom menu design,# Summary | Résumé
+
+In this PR I am killing off our custom `BottomSheet` component and making it a regular page that appears on top of the homescreen. This simplifies a lot of things. The design of the closed menu has changed to indicate that the menu is no longer "swipeable" and the contents of the menu have had a design refresh as well.
+
+This PR also makes it possible to set the "QR Enabled" feature flag in the test menu rather than the .env file. I can pull that part out into a separate PR if desired, although it is somewhat related since it makes it easy to see how the menu changes depending on this setting.,[]
+1428,created new menu buttons,# Summary | Résumé
+
+Redesign of current overlay menu
+,[]
+1427,Homescreen z-index test,# Summary | Résumé
+
+Just a test using z-index to pull the shape on top of the first card. The negative margin is set on the rounded box, only if its the first one. Nothing else is added to the symbol, only a z-index to pull it to the foreground.
+
+# Test instructions | Instructions pour tester la modification
+
+Force different screens to test all layouts. 
+
+# Help requested | Aide requise
+
+This needs to be tested on android.
+
+Other home screens without cards have been tested. This should not break them. 
+
+# Unresolved questions / Out of scope | Questions non résolues ou hors sujet
+
+Initially we were working on new designs to avoid having to overlap shapes. So we now have two options to decide from!
+
+,[]
+1426,Internal storage API revamp,,[]
+1418,QR Code To Do list, Part 2,# Summary | Résumé
+
+- [ ] add lookup table mapping "location type" to "default dwell time", ~10min (?) for convenience store, longer for other types, etc
+- [ ]  add "location type" to QR code
+- [x] explore signing of the QR code data in the url
+- [ ] background checks of outbreaks 
+- [ ] enforce a minimum time between checks for outbreak exposures (in background and foreground, similar bluetooth exposure checks)
+- [ ] compare app to figma and update content
+- [x] convo with server team to get realistic outbreak data sent to the app (mock data for now) (we are now waiting on this PR: https://github.com/cds-snc/covid-alert-server/pull/438)
+- [ ] copy the data model from [here](https://github.com/cds-snc/covid-alert-server/blob/qr_submission/proto/covidshield.proto) and use this on top of our current mocked data in db.json
+- [ ] use the `getPeriodsSinceLastFetch`/`lastChecked` logic to request the mock data
+- [ ] implement unzipping the outbreak files (may want to wait until https://github.com/cds-snc/covid-alert-server/pull/438 is merged)
+- [ ] implement verifying the signature, add the public key as an env variable. Q: can we use `import nacl from 'tweetnacl';` for this? (again may want to wait until https://github.com/cds-snc/covid-alert-server/pull/438 is merged)
+- [ ] decision on where the primary QR Scan button is (@amazingphilippe)
+- [ ] performance test feature with large amounts of data
+,[{'id': 2102563397, 'node_id': 'MDU6TGFiZWwyMTAyNTYzMzk3', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-app/labels/enhancement', 'name': 'enhancement', 'color': 'a2eeef', 'default': True, 'description': 'New feature or request'}]
+1407,Home screen experiment,I changed the home screen so it is made up of 2 panels - the exposure status on top, and the system status below. This is empty if the system status is fine.,[]
+1351,Added serial queue in order to prevent updating exposure status value…,… from two different threads running concurrently
+
+# Summary | Résumé
+
+Providing solution to #896 
+
+---
+
+> Description en 1 à 3 phrases de la modification proposée, avec un lien vers le problème (« issue ») GitHub ou la fiche Trello, le cas échéant.
+
+# Test instructions | Instructions pour tester la modification
+
+> Sequential steps (1., 2., 3., ...) that describe how to test this change. This will help a developer test things out without too much detective work. Also, include any environmental setup steps that aren't in the normal README steps and/or any time-based elements that this requires.
+
+---
+
+> Étapes consécutives (1., 2., 3., …) qui décrivent la façon de tester la modification. Elles aideront les développeurs à faire des tests sans avoir à jouer au détective. Veuillez aussi inclure toutes les étapes de configuration de l’environnement qui ne font pas partie des étapes normales dans le fichier README et tout élément temporel requis.
+
+# Help requested | Aide requise
+
+> Things that you (the submitter) want reviewers to pay very close attention to when they review this.
+
+---
+
+> Éléments auxquels vous (le demandeur) souhaitez que les réviseurs prêtent attention lorsqu’ils examineront votre demande.
+
+# Unresolved questions / Out of scope | Questions non résolues ou hors sujet
+
+> Are there any related issues or tangent features you consider out of scope for this issue that could be addressed in the future?
+
+---
+
+> Y a-t-il des questions connexes que vous considérez hors sujet et qui pourraient être abordées plus tard?
+
+# Reviewer checklist | Liste de vérification du réviseur
+
+This is a suggested checklist of questions reviewers might ask during their review | Voici une suggestion de liste de vérification comprenant des questions que les réviseurs pourraient poser pendant leur examen :
+
+
+- [ ] Does this meet a user need? | Est-ce que ça répond à un besoin utilisateur?
+- [ ] Is it accessible? | Est-ce que c’est accessible?
+- [ ] Is it translated between both offical languages? | Est-ce dans les deux langues officielles?
+- [ ] Is the code maintainable? | Est-ce que le code peut être maintenu?
+- [ ] Have you tested it? | L’avez-vous testé?
+- [ ] Are there automated tests? | Y a-t-il des tests automatisés?
+- [ ] Does this cause automated test coverage to drop? | Est-ce que ça entraîne une baisse de la quantité de code couvert par les tests automatisés?
+- [ ] Does this break existing functionality? | Est-ce que ça brise une fonctionnalité existante?
+- [ ] Should this be split into smaller PRs to decrease change risk? | Est-ce que ça devrait être divisé en de plus petites demandes de tirage (« pull requests ») afin de réduire le risque lié aux modifications?
+- [ ] Does this change the privacy policy? | Est-ce que ça entraîne une modification de la politique de confidentialité?
+- [ ] Does this introduce any security concerns? | Est-ce que ça introduit des préoccupations liées à la sécurité?
+- [ ] Does this significantly alter performance? | Est-ce que ça modifie de façon importante la performance?
+- [ ] What is the risk level of using added dependencies? | Quel est le degré de risque d’utiliser des dépendances ajoutées?
+- [ ] Should any documentation be updated as a result of this? (i.e. README setup, etc.) | Faudra-t-il mettre à jour la documentation à la suite de ce changement (fichier README, etc.)?
+
+,[]
+1344,Deleting server and client keys from storage when transitioning from …,…diagnosed to monitoring state
+
+# Summary | Résumé
+
+Providing solution to https://github.com/cds-snc/covid-alert-app/issues/1178
+
+---
+
+> Description en 1 à 3 phrases de la modification proposée, avec un lien vers le problème (« issue ») GitHub ou la fiche Trello, le cas échéant.
+
+# Test instructions | Instructions pour tester la modification
+
+> Sequential steps (1., 2., 3., ...) that describe how to test this change. This will help a developer test things out without too much detective work. Also, include any environmental setup steps that aren't in the normal README steps and/or any time-based elements that this requires.
+
+---
+
+> Étapes consécutives (1., 2., 3., …) qui décrivent la façon de tester la modification. Elles aideront les développeurs à faire des tests sans avoir à jouer au détective. Veuillez aussi inclure toutes les étapes de configuration de l’environnement qui ne font pas partie des étapes normales dans le fichier README et tout élément temporel requis.
+
+# Help requested | Aide requise
+
+> Things that you (the submitter) want reviewers to pay very close attention to when they review this.
+
+---
+
+> Éléments auxquels vous (le demandeur) souhaitez que les réviseurs prêtent attention lorsqu’ils examineront votre demande.
+
+# Unresolved questions / Out of scope | Questions non résolues ou hors sujet
+
+> Are there any related issues or tangent features you consider out of scope for this issue that could be addressed in the future?
+
+---
+
+> Y a-t-il des questions connexes que vous considérez hors sujet et qui pourraient être abordées plus tard?
+
+# Reviewer checklist | Liste de vérification du réviseur
+
+This is a suggested checklist of questions reviewers might ask during their review | Voici une suggestion de liste de vérification comprenant des questions que les réviseurs pourraient poser pendant leur examen :
+
+
+- [ ] Does this meet a user need? | Est-ce que ça répond à un besoin utilisateur?
+- [ ] Is it accessible? | Est-ce que c’est accessible?
+- [ ] Is it translated between both offical languages? | Est-ce dans les deux langues officielles?
+- [ ] Is the code maintainable? | Est-ce que le code peut être maintenu?
+- [ ] Have you tested it? | L’avez-vous testé?
+- [ ] Are there automated tests? | Y a-t-il des tests automatisés?
+- [ ] Does this cause automated test coverage to drop? | Est-ce que ça entraîne une baisse de la quantité de code couvert par les tests automatisés?
+- [ ] Does this break existing functionality? | Est-ce que ça brise une fonctionnalité existante?
+- [ ] Should this be split into smaller PRs to decrease change risk? | Est-ce que ça devrait être divisé en de plus petites demandes de tirage (« pull requests ») afin de réduire le risque lié aux modifications?
+- [ ] Does this change the privacy policy? | Est-ce que ça entraîne une modification de la politique de confidentialité?
+- [ ] Does this introduce any security concerns? | Est-ce que ça introduit des préoccupations liées à la sécurité?
+- [ ] Does this significantly alter performance? | Est-ce que ça modifie de façon importante la performance?
+- [ ] What is the risk level of using added dependencies? | Quel est le degré de risque d’utiliser des dépendances ajoutées?
+- [ ] Should any documentation be updated as a result of this? (i.e. README setup, etc.) | Faudra-t-il mettre à jour la documentation à la suite de ce changement (fichier README, etc.)?
+
+,[]
+1333,Explore supporting Android 5 ,Initial PR to start testing Android 5.0 device support
+
+## Google docs
+> For your app to work on all devices, set your minSdkVersion to version 6.0 (API level 23) or higher. The framework works on some devices as low as version 5.0 (API level 21), so using this version is an option to increase the number of devices eligible. If you decide to set the minSdkVersion to API level 21, you should test your app on the most popular Android 5.0 devices in your country to ensure that your app works as intended.,[]
+1327,Added Loggly logging to Objective-C (development environment only),# Summary | Résumé
+
+Added a way to log from the Objective-C code to our Loggly server.
+
+---
+
+> Description en 1 à 3 phrases de la modification proposée, avec un lien vers le problème (« issue ») GitHub ou la fiche Trello, le cas échéant.
+
+# Test instructions | Instructions pour tester la modification
+
+> Sequential steps (1., 2., 3., ...) that describe how to test this change. This will help a developer test things out without too much detective work. Also, include any environmental setup steps that aren't in the normal README steps and/or any time-based elements that this requires.
+
+---
+
+> Étapes consécutives (1., 2., 3., …) qui décrivent la façon de tester la modification. Elles aideront les développeurs à faire des tests sans avoir à jouer au détective. Veuillez aussi inclure toutes les étapes de configuration de l’environnement qui ne font pas partie des étapes normales dans le fichier README et tout élément temporel requis.
+
+# Help requested | Aide requise
+
+> Things that you (the submitter) want reviewers to pay very close attention to when they review this.
+
+---
+
+> Éléments auxquels vous (le demandeur) souhaitez que les réviseurs prêtent attention lorsqu’ils examineront votre demande.
+
+# Unresolved questions / Out of scope | Questions non résolues ou hors sujet
+
+> Are there any related issues or tangent features you consider out of scope for this issue that could be addressed in the future?
+
+---
+
+> Y a-t-il des questions connexes que vous considérez hors sujet et qui pourraient être abordées plus tard?
+
+# Reviewer checklist | Liste de vérification du réviseur
+
+This is a suggested checklist of questions reviewers might ask during their review | Voici une suggestion de liste de vérification comprenant des questions que les réviseurs pourraient poser pendant leur examen :
+
+
+- [ ] Does this meet a user need? | Est-ce que ça répond à un besoin utilisateur?
+- [ ] Is it accessible? | Est-ce que c’est accessible?
+- [ ] Is it translated between both offical languages? | Est-ce dans les deux langues officielles?
+- [ ] Is the code maintainable? | Est-ce que le code peut être maintenu?
+- [ ] Have you tested it? | L’avez-vous testé?
+- [ ] Are there automated tests? | Y a-t-il des tests automatisés?
+- [ ] Does this cause automated test coverage to drop? | Est-ce que ça entraîne une baisse de la quantité de code couvert par les tests automatisés?
+- [ ] Does this break existing functionality? | Est-ce que ça brise une fonctionnalité existante?
+- [ ] Should this be split into smaller PRs to decrease change risk? | Est-ce que ça devrait être divisé en de plus petites demandes de tirage (« pull requests ») afin de réduire le risque lié aux modifications?
+- [ ] Does this change the privacy policy? | Est-ce que ça entraîne une modification de la politique de confidentialité?
+- [ ] Does this introduce any security concerns? | Est-ce que ça introduit des préoccupations liées à la sécurité?
+- [ ] Does this significantly alter performance? | Est-ce que ça modifie de façon importante la performance?
+- [ ] What is the risk level of using added dependencies? | Quel est le degré de risque d’utiliser des dépendances ajoutées?
+- [ ] Should any documentation be updated as a result of this? (i.e. README setup, etc.) | Faudra-t-il mettre à jour la documentation à la suite de ce changement (fichier README, etc.)?
+
+,[]
+1317,Menu button layout issue with larger accessibility text sizes,# Summary | Résumé
+
+When the iPhone is set to text sizes in the "Accessibility" range, some UI layout is not optimal, particularly the height of the "menu button"
+
+# Steps to reproduce | Étapes à reproduire
+
+Set the system's text size to default, open up COVID Alert. You'll see something like this:
+![Standard Size](https://user-images.githubusercontent.com/544380/102821499-2c7d3500-43a5-11eb-90aa-ba4a6d7dfcd2.PNG)
+
+Then set the system text size to something in the "Accessibility" range, here I'm using the smallest of the accessibility sizes `UIContentSizeCategory. accessibilityMedium `
+
+![text Size AX1](https://user-images.githubusercontent.com/544380/102821579-55052f00-43a5-11eb-88df-56f1734b936b.PNG)
+
+Notice how with the larger text size, the menu button at the bottom is not sized sufficiently large for the "tap for menu" text to be visible.
+
+# Environment | Environnement logiciel
+
+iPhone 12 Pro, iOS 14.3
+iPhone 6S, iOS 14.2
+
+# Unresolved questions / Out of scope | Questions non résolues ou hors sujet
+
+> Are there any related issues you consider out of scope for this issue that could be addressed in the future?
+
+In general, the text sizes used in the app when the system is set to the larger text sizes could use a bit of optimization. Here, you can see the text of Apple's "Body" style in the settings app, for how I have my phone configured:
+
+![Body Text Size](https://user-images.githubusercontent.com/544380/102821760-a01f4200-43a5-11eb-85e0-ab01b98979e9.jpeg)
+
+I would expect the text for "Your phone is now running Bluetooth…" to be set in a comparable size to Apple's body style. The COVID alert text is larger, but at least for how I prefer my phone to be set up, the text is unnecessarily large and this can impact information density. 
+
+![text Size AX1](https://user-images.githubusercontent.com/544380/102821777-a9101380-43a5-11eb-8def-e7e2d71982ab.PNG)
+
+,[{'id': 2162874589, 'node_id': 'MDU6TGFiZWwyMTYyODc0NTg5', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-app/labels/a11y', 'name': 'a11y', 'color': 'f4c066', 'default': False, 'description': ''}, {'id': 2102563387, 'node_id': 'MDU6TGFiZWwyMTAyNTYzMzg3', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-app/labels/bug', 'name': 'bug', 'color': 'd73a4a', 'default': True, 'description': "Something isn't working"}]
+1314,Close button is sometimes at the top right,# Summary | Résumé
+
+> One paragraph explanation of the bug, including why it is a problem (i.e. what does it prevent a user from doing or accomplishing). Screenshots are greatly helpful here too.
+
+The [Material UX guidelines](https://material.io/components/app-bars-top#contextual-action-bar) suggest using an `x` at the top left. But, the enter exposure key flow has a close button at the top right:
+![close at top right](https://user-images.githubusercontent.com/2119212/102597993-5efb0980-40e9-11eb-8f64-6eb00397fb18.png)
+
+Most of the close buttons are at the top left, e.g.:
+![close at top left](https://user-images.githubusercontent.com/2119212/102598826-97e7ae00-40ea-11eb-9061-5a748e419e02.png)
+
+There's even a cancel button at the top left:
+![cancel at top left](https://user-images.githubusercontent.com/2119212/102598102-83ef7c80-40e9-11eb-960b-c69f35714723.png)
+
+
+# Steps to reproduce | Étapes à reproduire
+
+> Sequential steps (1., 2., 3., ...) that describe how to reproduce the bug. This will help a developer experience what the user experienced so that they can debug it.
+
+1. Open Covid Alert app
+2. Tap `Tap for menu`
+3. Tap `Enter your one-time key`
+
+# Environment | Environnement logiciel
+
+> What kind of device was the bug experienced with. This would include device, version of the operating system (i.e. iOS or Android), and any other environmental details that might be relevant.
+
+Pixel 3a / Android 11
+
+# Unresolved questions / Out of scope | Questions non résolues ou hors sujet
+
+> Are there any related issues you consider out of scope for this issue that could be addressed in the future?
+
+The `Cancel` / `Close` buttons have different vertical padding as well,[{'id': 2185278183, 'node_id': 'MDU6TGFiZWwyMTg1Mjc4MTgz', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-app/labels/android', 'name': 'android', 'color': '6bf9e9', 'default': False, 'description': ''}, {'id': 2102563387, 'node_id': 'MDU6TGFiZWwyMTAyNTYzMzg3', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-app/labels/bug', 'name': 'bug', 'color': 'd73a4a', 'default': True, 'description': "Something isn't working"}]
+1183,[BVC-120] Mobile app - Insufficient validation of KeyClaim response,# Summary | Résumé
+
+The application can be tricked into believing it has received a valid Key Claim Response by simply using invalid tags in the response message. Presumably, this will result in a failure later on, when the app tries to use the server’s Public Key. The relevant code is located in the KeyClaimResponse decode function in covidshield.js.
+
+This issue was easily demonstrated with an HTTP server that sends response data that contains 100 bytes of zeros data back to the client in response to the POST /claim-key request. The POST request is sent when the user enters the 8-digit number to initiate the uploading of TEKs, after being diagnosed.  Because the app thinks the response is valid, it displays the "Agree" screen to request user's permission to download the TEKs.  When the user selects Agree, an error message is returned, "Random codes could not be uploaded You did not give permission".  The application is not able to recover and is stuck in the "upload your random codes" state.
+
+The decode function should be updated as follows:
+
+reject the response if an invalid tag is provided with an appropriate message to the user
+
+validate the fields extracted from the message,[{'id': 2180853016, 'node_id': 'MDU6TGFiZWwyMTgwODUzMDE2', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-app/labels/CCCS', 'name': 'CCCS', 'color': '2ea011', 'default': False, 'description': ''}, {'id': 2102563387, 'node_id': 'MDU6TGFiZWwyMTAyNTYzMzg3', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-app/labels/bug', 'name': 'bug', 'color': 'd73a4a', 'default': True, 'description': "Something isn't working"}, {'id': 2240139725, 'node_id': 'MDU6TGFiZWwyMjQwMTM5NzI1', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-app/labels/inbox', 'name': 'inbox', 'color': '000000', 'default': False, 'description': 'for new issues coming in'}]
+1182,[BVC-117] Possible Denial of Service - Application accepts very large payload for diagnosis keys file,# Summary | Résumé
+
+The download diagnosis file operation is executed periodically to retrieve the diagnosis keys from the server. It is possible for a malicious server to perform a denial of service attack by returning a large keys file which could potentially consume all of the memory available to the app and would eventually crash the application. Based on code review of the downloadDiagnosisKeysFile in CovidShieldModule.kt, we can confirm that the application isn’t restricting the size of received payload and just blindly saves the diagnosis key files without any validation. We were able to send a diagnosis key file of size 100MB and confirm via the debugger that the data was getting saved to the keys.zip file.
+
+Possible solutions:
+
+Limit the size of the receive payload, it is not clear whether this capability is supported by OKHttpClient.
+
+ Not a great solution, but if (1) is not possible, the application should reject the response if the data > 16M or an appropriate maximum payload size as per https://developers.google.com/android/exposure-notifications/exposure-key-file-format#file-format and agreement with the server development team.,[{'id': 2180853016, 'node_id': 'MDU6TGFiZWwyMTgwODUzMDE2', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-app/labels/CCCS', 'name': 'CCCS', 'color': '2ea011', 'default': False, 'description': ''}, {'id': 2102563387, 'node_id': 'MDU6TGFiZWwyMTAyNTYzMzg3', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-app/labels/bug', 'name': 'bug', 'color': 'd73a4a', 'default': True, 'description': "Something isn't working"}, {'id': 2240139725, 'node_id': 'MDU6TGFiZWwyMjQwMTM5NzI1', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-app/labels/inbox', 'name': 'inbox', 'color': '000000', 'default': False, 'description': 'for new issues coming in'}]
+1181,[BVC-108] Large invalid response data causes the app to crash with Out of Memory exception.,# Summary | Résumé
+
+Application should be robust enough to handle large invalid data from a server, possibly a malicious server (john: or faulty server response on our part). Sending large response data of around 100MB in response to the  GET exposure-configuration request caused the android mobile application to crash with the following message being displayed to the user:
+
+Could Not invoke FileReaderModule.readAsText
+null
+
+Failed to allocate a 200000012 byte allocation with 25165824 free bytes and 155MB until OOM, max allowed footprint 130630480, growth limit 268435456
+
+snippet of related logs:
+2020-07-07 14:13:08.230 26688-26946/app.covidshield W/app.covidshiel: Throwing OutOfMemoryError "Failed to allocate a 200000012 byte allocation with 25165824 free bytes and 155MB until OOM, max allowed footprint 130630480, growth limit 268435456" (VmSize 4233836 kB)
+2020-07-07 14:13:08.310 26688-26946/app.covidshield W/app.covidshiel: Throwing OutOfMemoryError "Failed to allocate a 200000016 byte allocation with 25165824 free bytes and 155MB until OOM, max allowed footprint 130630480, growth limit 268435456" (VmSize 4233836 kB)
+2020-07-07 14:13:08.314 26688-26946/app.covidshield E/unknown:ReactNative: Exception in native call
+java.lang.RuntimeException: Could not invoke FileReaderModule.readAsText
+at com.facebook.react.bridge.JavaMethodWrapper.invoke(JavaMethodWrapper.java:383)
+at com.facebook.react.bridge.JavaModuleWrapper.invoke(JavaModuleWrapper.java:151)
+at com.facebook.react.bridge.queue.NativeRunnable.run(Native Method)
+at android.os.Handler.handleCallback(Handler.java:873)
+at android.os.Handler.dispatchMessage(Handler.java:99)
+at com.facebook.react.bridge.queue.MessageQueueThreadHandler.dispatchMessage(MessageQueueThreadHandler.java:27)
+at android.os.Looper.loop(Looper.java:214)
+at com.facebook.react.bridge.queue.MessageQueueThreadImpl$4.run(MessageQueueThreadImpl.java:226)
+at java.lang.Thread.run(Thread.java:764)
+Caused by: java.lang.reflect.InvocationTargetException
+at java.lang.reflect.Method.invoke(Native Method)
+at com.facebook.react.bridge.JavaMethodWrapper.invoke(JavaMethodWrapper.java:372)
+at com.facebook.react.bridge.JavaModuleWrapper.invoke(JavaModuleWrapper.java:151) 
+at com.facebook.react.bridge.queue.NativeRunnable.run(Native Method) 
+at android.os.Handler.handleCallback(Handler.java:873) 
+at android.os.Handler.dispatchMessage(Handler.java:99) 
+at com.facebook.react.bridge.queue.MessageQueueThreadHandler.dispatchMessage(MessageQueueThreadHandler.java:27) 
+at android.os.Looper.loop(Looper.java:214) 
+at com.facebook.react.bridge.queue.MessageQueueThreadImpl$4.run(MessageQueueThreadImpl.java:226) 
+at java.lang.Thread.run(Thread.java:764) 
+Caused by: java.lang.OutOfMemoryError: Failed to allocate a 200000016 byte allocation with 25165824 free bytes and 155MB until OOM, max allowed footprint 130630480, growth limit 268435456
+at java.lang.StringFactory.newStringFromBytes(StringFactory.java:125)
+at java.lang.StringFactory.newStringFromBytes(StringFactory.java:65)
+at com.facebook.react.modules.blob.FileReaderModule.readAsText(FileReaderModule.java:62)
+at java.lang.reflect.Method.invoke(Native Method) 
+at com.facebook.react.bridge.JavaMethodWrapper.invoke(JavaMethodWrapper.java:372) 
+at com.facebook.react.bridge.JavaModuleWrapper.invoke(JavaModuleWrapper.java:151) 
+at com.facebook.react.bridge.queue.NativeRunnable.run(Native Method) 
+at android.os.Handler.handleCallback(Handler.java:873) 
+at android.os.Handler.dispatchMessage(Handler.java:99) 
+at com.facebook.react.bridge.queue.MessageQueueThreadHandler.dispatchMessage(MessageQueueThreadHandler.java:27) 
+at android.os.Looper.loop(Looper.java:214) 
+at com.facebook.react.bridge.queue.MessageQueueThreadImpl$4.run(MessageQueueThreadImpl.java:226) 
+at java.lang.Thread.run(Thread.java:764) ,[{'id': 2180853016, 'node_id': 'MDU6TGFiZWwyMTgwODUzMDE2', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-app/labels/CCCS', 'name': 'CCCS', 'color': '2ea011', 'default': False, 'description': ''}, {'id': 2102563387, 'node_id': 'MDU6TGFiZWwyMTAyNTYzMzg3', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-app/labels/bug', 'name': 'bug', 'color': 'd73a4a', 'default': True, 'description': "Something isn't working"}, {'id': 2240139725, 'node_id': 'MDU6TGFiZWwyMjQwMTM5NzI1', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-app/labels/inbox', 'name': 'inbox', 'color': '000000', 'default': False, 'description': 'for new issues coming in'}]
+1180,[BVC-104] Review inclusion of libhermes-executor-debug.so in release APK,# Summary | Résumé
+
+Hermes is a JavaScript engine optimized for React Native
+
+debug versions of a library should be included in debug builds only. This is backed by MSTG-CODE-2 as per https://mobile-security.gitbook.io/masvs/security-requirements/0x12-v7-code_quality_and_build_setting_requirements
+
+However, we are ending up with libhermes-executor-debug.so and libhermes-executor-release.so in our release APK. It might be for the better (see below) but still is not great.
+
+D:\WFH\project\covidmobile20200607\node_modules\react-native\react.gradle
+
+A Facebook module tries the following:
+
+<covidshield>\node_modules\react-native\ReactAndroid\src\main\java\com\facebook\hermes\reactexecutor\HermesExecutor.java
+
+static {
+  // libhermes must be loaded explicitly to invoke its JNI_OnLoad.
+  SoLoader.loadLibrary("hermes");
+  try {
+    SoLoader.loadLibrary("hermes-executor-debug");
+    mode_ = "Debug";
+  } catch (UnsatisfiedLinkError e) {
+    SoLoader.loadLibrary("hermes-executor-release");
+    mode_ = "Release";
+  }
+}
+What happens at runtime is a failed attempt to load libhermes-executor-debug.so 
+
+07-07 08:23:46.311  9334  9355 D SoLoader: libhermes-executor-debug.so found on /data/data/com.google.android.apps.exposurenotification/lib-main
+
+07-07 08:23:46.334  9334  9355 E SoLoader: couldn't find DSO to load: libhermes-executor-debug.so caused by: couldn't find DSO to load: libhermes-inspector.so caused by: dlopen failed: cannot locate symbol "_ZTIN8facebook6hermes8debugger13EventObserverE" referenced by "/data/data/com.google.android.apps.exposurenotification/lib-main/libhermes-inspector.so"...
+07-07 08:23:46.334  9334  9355 E SoLoader: couldn't find DSO to load: libhermes-executor-debug.so caused by: couldn't find DSO to load: libhermes-inspector.so caused by: dlopen failed: cannot locate symbol "_ZTIN8facebook6hermes8debugger13EventObserverE" referenced by "/data/data/com.google.android.apps.exposurenotification/lib-main/libhermes-inspector.so"...
+07-07 08:23:46.334  9334  9355 E SoLoader: couldn't find DSO to load: libhermes-executor-debug.so caused by: couldn't find DSO to load: libhermes-inspector.so caused by: dlopen failed: cannot locate symbol "_ZTIN8facebook6hermes8debugger13EventObserverE" referenced by "/data/data/com.google.android.apps.exposurenotification/lib-main/libhermes-inspector.so"...
+07-07 08:23:46.334  9334  9355 E SoLoader: couldn't find DSO to load: libhermes-executor-debug.so caused by: couldn't find DSO to load: libhermes-inspector.so caused by: dlopen failed: cannot locate symbol "_ZTIN8facebook6hermes8debugger13EventObserverE" referenced by "/data/data/com.google.android.apps.exposurenotification/lib-main/libhermes-inspector.so"...
+Followed by a successful load of the release version
+
+07-07 08:23:46.334  9334  9355 D SoLoader: libhermes-executor-release.so found on /data/data/com.google.android.apps.exposurenotification/lib-main
+Conceivably, if someone replaced libhermes-executor-debug.so with one that loads properly, they could get code execution.
+
+I don't know if it's a good solution, but please consider checking if the following code <covid-shield-mobile>/blob/master/android/app/build.gradle can be changed.
+
+if (enableHermes) {
+        def hermesPath = "../../node_modules/hermes-engine/android/";
+        debugImplementation files(hermesPath + "hermes-debug.aar")
+        releaseImplementation files(hermesPath + "hermes-release.aar")
+    } else {
+        implementation jscFlavor
+    }
+can be changed to 
+
+if (enableHermes) {
+        def hermesPath = "../../node_modules/hermes-engine/android/";
+        debugImplementation files(hermesPath + "hermes-release.aar")
+        releaseImplementation files(hermesPath + "hermes-release.aar")
+    } else {
+        implementation jscFlavor
+    }
+
+<more detail>
+
+More changes might be needed, at least in the following React-provided files, which are not within our control (unless we want to routinely import the React code base and make modifications to it):
+
+node_modules/react-native/ReactAndroid/build.gradle
+
+node_modules/react-native/ReactAndroid/src/main/java/com/facebook/hermes/reactexecutor/Android.mk
+
+ 
+
+    - def hermesAAR = file("$hermesPackagePath/android/hermes-debug.aar")
+    + def hermesAAR = file("$hermesPackagePath/android/hermes-release.aar")
+    if (!hermesAAR.exists()) {
+        throw new GradleScriptException("The hermes-engine npm package is missing \"android/hermes-debug.aar\"")
+    }
+
+
+
+# Environment | Environnement logiciel
+
+ios
+
+,[{'id': 2180853016, 'node_id': 'MDU6TGFiZWwyMTgwODUzMDE2', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-app/labels/CCCS', 'name': 'CCCS', 'color': '2ea011', 'default': False, 'description': ''}, {'id': 2240139725, 'node_id': 'MDU6TGFiZWwyMjQwMTM5NzI1', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-app/labels/inbox', 'name': 'inbox', 'color': '000000', 'default': False, 'description': 'for new issues coming in'}, {'id': 2180915251, 'node_id': 'MDU6TGFiZWwyMTgwOTE1MjUx', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-app/labels/privsec', 'name': 'privsec', 'color': 'd13a29', 'default': False, 'description': ''}]
+1179,[BVC-155] Review  LC_LOAD_WEAK_DYLIB load command for the library BackgroundTasks,# Summary | Résumé
+
+LC_LOAD_WEAK_DYLIB load command is present for the library BackgroundTasks - this is best avoided since there's also a LC_RPATH that adds @executable_path/Frameworks to the search path and that directory doesn't exist. 
+
+These two load commands could be used to inject a third party library into the app.
+
+<more detail>
+
+The binary has a weak dependence on a library called BackgroundTasks. It also has a built-in library search path @executable_path/Frameworks. As far as I can see, that library doesn’t exist on my device and the path either. This can be used to inject a third party library into the app. For the actual mechanics on how to perform the DLL injection, please consult this awesome presentation:
+
+https://speakerdeck.com/patrickwardle/dll-hijacking-on-os-x-number-at-percent-and-yeah
+
+# Steps to reproduce | Étapes à reproduire
+
+# Environment | Environnement logiciel
+
+IOS
+
+# Unresolved questions / Out of scope | Questions non résolues ou hors sujet
+
+,[{'id': 2180853016, 'node_id': 'MDU6TGFiZWwyMTgwODUzMDE2', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-app/labels/CCCS', 'name': 'CCCS', 'color': '2ea011', 'default': False, 'description': ''}, {'id': 2240139725, 'node_id': 'MDU6TGFiZWwyMjQwMTM5NzI1', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-app/labels/inbox', 'name': 'inbox', 'color': '000000', 'default': False, 'description': 'for new issues coming in'}, {'id': 2180915251, 'node_id': 'MDU6TGFiZWwyMTgwOTE1MjUx', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-app/labels/privsec', 'name': 'privsec', 'color': 'd13a29', 'default': False, 'description': ''}]
+1178,[BVC-158] Keys should be wiped after leaving diagnosed state.,# Summary | Résumé
+
+Keys created during the initial OTK exchange step are not removed from local storage after leaving the diagnosed state. As a matter of keeping things clean, would recommend wiping any artifacts related to previous diagnosis state.
+
+
+# Environment | Environnement logiciel
+
+Both Android / IOS.
+
+,[{'id': 2180853016, 'node_id': 'MDU6TGFiZWwyMTgwODUzMDE2', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-app/labels/CCCS', 'name': 'CCCS', 'color': '2ea011', 'default': False, 'description': ''}, {'id': 2240139725, 'node_id': 'MDU6TGFiZWwyMjQwMTM5NzI1', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-app/labels/inbox', 'name': 'inbox', 'color': '000000', 'default': False, 'description': 'for new issues coming in'}]
+896,BVC-143 Concurrency Control issue - Access to exposure status is not properly synchronized,Access to the exposure status in ExposureNotificationService class is not properly synchronized and could lead to data corruption issues where one thread may update this value while another thread is in the middle of executing a particular function that relies on the previous value of the variable.
+
+The ExposureStatus type is used to keep track of the state of the user's exposure with other related information.
+There are currently three possible states (refer to as types in the data structure): 'monitoring', 'exposed' and 'diagnosed'
+
+An instance of the ExposureStatus type is stored within the ExposureNotificationService class which is responsible for:
+
+ periodic processing of diagnosis file downloads and exposure matching via the performExposureStatusUpdate method and,
+
+ processing user initiated operation to submit the one time code and upload the user's TEKs via the startKeysSubmission and fetchAndSubmitKeys functions.
+
+The startKeysSubmission and fetchAndSubmitKeys run on a different thread from performExposureStatusUpdate and both threads can be executed in parallel.
+
+The startKeysSubmission and performExposureStatusUpdate functions are able to modify the shared ExposureStatus variable without any concurrency control in place. This could result in one function overwriting the value set by another function before either function completes. It can result in the state of 'exposed' getting overwritten to 'diagnosed' and vice versa and prematurely stopping further processing of a diagnosis file upload or exposure matching.
+
+The major side effect here is the uploading of an infected user's TEKs could be cancelled by a concurrent detection of a new exposure resulting in the user's TEK never getting uploaded to the server.,[{'id': 2180853016, 'node_id': 'MDU6TGFiZWwyMTgwODUzMDE2', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-app/labels/CCCS', 'name': 'CCCS', 'color': '2ea011', 'default': False, 'description': ''}, {'id': 2164766070, 'node_id': 'MDU6TGFiZWwyMTY0NzY2MDcw', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-app/labels/low%20priority', 'name': 'low priority', 'color': 'baf3ff', 'default': False, 'description': ''}]
+issue_id,issue_title,issue_body,issue_labels402,added content changes from the issues raised,#396 
+#394
+#392 
+#391 
+#389 
+
+The above issues were fixed in this PR. Mostly, they are content changes,[]
+396,Change to https://covid-alert-temp-just-n-fqbd7o.herokuapp.com/en/confirmation,@dsamojlenko 
+
+Please replace "X" with "2" 
+
+Thanks!,[]
+395,Change to https://www.figma.com/file/0CvVmmVb0EhnCmChzel70P/QR-Code-Registration-Website?node-id=185%3A4,@dsamojlenko 
+Please the first letter of the type of event In the input box for "Type" (for example, it shows as "arts" instead of "Arts".
+
+Thanks!
+
+,[]
+394,Change to https://covid-alert-temp-just-n-fqbd7o.herokuapp.com/en/location/contact/,@dsamojlenko 
+Please bold the input lines as in figma
+https://www.figma.com/file/0CvVmmVb0EhnCmChzel70P/QR-Code-Registration-Website?node-id=182%3A6992
+
+Thanks!,[]
+393,Change to https://covid-alert-temp-just-n-fqbd7o.herokuapp.com/en/location/address/,@dsamojlenko 
+
+Please bold the input lines as in figma
+https://www.figma.com/file/0CvVmmVb0EhnCmChzel70P/QR-Code-Registration-Website?node-id=233%3A4408
+
+Thanks!,[]
+392,Update content for https://covid-alert-temp-just-n-fqbd7o.herokuapp.com/en/location/category/,@dsamojlenko 
+
+Please use figma content from https://www.figma.com/file/0CvVmmVb0EhnCmChzel70P/QR-Code-Registration-Website?node-id=179%3A834
+
+French translation coming later.
+
+Merci!,[]
+391,Changes to https://covid-alert-temp-just-n-fqbd7o.herokuapp.com/en/name,@dsamojlenko 
+Please
+(1) add a period at the end of "You've confirmed your email address."
+
+(2) Bold "Full name"
+
+(3) Replace "Continue" with "Next"
+
+Thanks!,[]
+390,Update content for email with link to confirm email address,@dsamojlenko 
+Please use this figma content https://www.figma.com/file/0CvVmmVb0EhnCmChzel70P/QR-Code-Registration-Website?node-id=391%3A5290
+
+Thanks!,[]
+389,Changes to https://covid-alert-temp-just-n-fqbd7o.herokuapp.com/en/,@dsamojlenko 
+Please:
+(1) change heading to "Display a QR code to help slow the spread of COVID-19"
+(addition of the word "help")
+
+(2) Add hyperlink to "Contact" page.
+
+(3) Please add "Before you start" content as shown here in Figma - French version coming later: https://www.figma.com/file/0CvVmmVb0EhnCmChzel70P/QR-Code-Registration-Website?node-id=1138%3A2
+
+Thanks!,[]
+388,[WIP] This is just a placeholder PR,# Summary | Résumé
+
+> 1-3 sentence description of the changed you're proposing, including a link to a GitHub Issue # or Trello card if applicable.
+
+---
+
+> Description en 1 à 3 phrases de la modification proposée, avec un lien vers le problème (« issue ») GitHub ou la fiche Trello, le cas échéant.
+
+# Test instructions | Instructions pour tester la modification
+
+> Sequential steps (1., 2., 3., ...) that describe how to test this change. This will help a developer test things out without too much detective work. Also, include any environmental setup steps that aren't in the normal README steps and/or any time-based elements that this requires.
+
+---
+
+> Étapes consécutives (1., 2., 3., …) qui décrivent la façon de tester la modification. Elles aideront les développeurs à faire des tests sans avoir à jouer au détective. Veuillez aussi inclure toutes les étapes de configuration de l’environnement qui ne font pas partie des étapes normales dans le fichier README et tout élément temporel requis.
+
+# Help requested | Aide requise
+
+> Things that you (the submitter) want reviewers to pay very close attention to when they review this.
+
+---
+
+> Éléments auxquels vous (le demandeur) souhaitez que les réviseurs prêtent attention lorsqu’ils examineront votre demande.
+
+# Unresolved questions / Out of scope | Questions non résolues ou hors sujet
+
+> Are there any related issues or tangent features you consider out of scope for this issue that could be addressed in the future?
+
+---
+
+> Y a-t-il des questions connexes que vous considérez hors sujet et qui pourraient être abordées plus tard?
+
+# Reviewer checklist | Liste de vérification du réviseur
+
+This is a suggested checklist of questions reviewers might ask during their review | Voici une suggestion de liste de vérification comprenant des questions que les réviseurs pourraient poser pendant leur examen :
+
+
+- [ ] Does this meet a user need? | Est-ce que ça répond à un besoin utilisateur?
+- [ ] Is it accessible? | Est-ce que c’est accessible?
+- [ ] Is it translated between both offical languages? | Est-ce dans les deux langues officielles?
+- [ ] Is the code maintainable? | Est-ce que le code peut être maintenu?
+- [ ] Have you tested it? | L’avez-vous testé?
+- [ ] Are there automated tests? | Y a-t-il des tests automatisés?
+- [ ] Does this cause automated test coverage to drop? | Est-ce que ça entraîne une baisse de la quantité de code couvert par les tests automatisés?
+- [ ] Does this break existing functionality? | Est-ce que ça brise une fonctionnalité existante?
+- [ ] Should this be split into smaller PRs to decrease change risk? | Est-ce que ça devrait être divisé en de plus petites demandes de tirage (« pull requests ») afin de réduire le risque lié aux modifications?
+- [ ] Does this change the privacy policy? | Est-ce que ça entraîne une modification de la politique de confidentialité?
+- [ ] Does this introduce any security concerns? | Est-ce que ça introduit des préoccupations liées à la sécurité?
+- [ ] Does this significantly alter performance? | Est-ce que ça modifie de façon importante la performance?
+- [ ] What is the risk level of using added dependencies? | Quel est le degré de risque d’utiliser des dépendances ajoutées?
+- [ ] Should any documentation be updated as a result of this? (i.e. README setup, etc.) | Faudra-t-il mettre à jour la documentation à la suite de ce changement (fichier README, etc.)?
+,[]
+387,Datepicker,The date picker should now be working in the public exposures tab.,[]
+386,[WIP] Integrate Canada Post Address Complete,# Summary | Résumé
+
+This is a placeholder PR because we need a deployed environment for api authorization.
+,[]
+385,last_modified_password_datetime_display,Added "Last changed: <datetime>" to "Manage your account" with french translation,[]
+366,Remove second Notify SMS template if we don't end up using it ,For most of our email messages, we have a French template and an English one (the text is all the same, but we flip the order they come in).
+
+However, for the OTK SMS, we just send the OTK without any text around or after it. This means that both of our Notify SMS templates are identical, so it would be better to have just 1 template rather than 2. Code that you're not using for anything just makes the app bigger and harder to maintain.
+
+I would say end of Feb, early March 2021 it would be a good time to revisit it. 
+
+,[]
+365,Formatting phone numbers ,It would be good to show nice phone numbers instead of putting in the country code and all the numbers squished together.
+
+| In the mocks | In our app  |
+|--------|-------|
+|  <img width="346" alt="Screen Shot 2021-01-29 at 1 11 24 PM" src="https://user-images.githubusercontent.com/2454380/106311834-c1404180-6233-11eb-9ca6-e56a40a2f7f9.png">   |  <img width="346" alt="Screen Shot 2021-01-29 at 1 11 05 PM" src="https://user-images.githubusercontent.com/2454380/106311832-c0a7ab00-6233-11eb-91b8-da2d857b9b4c.png">   |
+
+Pretty clear it would be nicer to do it the mocks way, although it's kind of a low priority. 
+
+Offhand, we show the phone number on the OTK SMS confirmation (#357), and on the "Manage your account" page.,[]
+282,Alignment of "delete" in manage team page,@pcraig3 on the manage team page, please make "delete" a separate column, as in figma
+
+https://staging.covid-hcportal.cdssandbox.xyz/en/profiles/
+
+Thanks!,[]
+43,How can I help?,### Are you interested in contributing?
+
+Here's a few suggestions:
+
+**Additional tests:**
+Security Unit tests
+A11y tests (manual and automated)
+End to end testing with Cypress
+
+**Code Review and feedback:**
+We're not Django pros, if there's an easier or better way we could of done something, let us know!
+
+### Vous souhaitez contribuer ?
+
+Voici quelques suggestions :
+
+**Tests supplémentaires:**
+Tests de sécurité
+Tests accessibilitée (manuels et automatisés)
+Des tests avec Cypress
+
+**Révision du code:**
+Nous ne sommes pas des pros de Django, s'il y a un moyen plus facile ou plus éfficace de faire quelque chose, faites-le nous savoir !
+,[]
+issue_id,issue_title,issue_body,issue_labels436,Expose Server Metrics through a CSV file,HC requires the OTK Metrics to be hosted as a CSV file. 
+
+This file will be probably hosted in an S3 bucket that can be accessed by HC's.,[{'id': 2335884145, 'node_id': 'MDU6TGFiZWwyMzM1ODg0MTQ1', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/medium%20priority', 'name': 'medium priority', 'color': 'e99695', 'default': False, 'description': ''}]
+424,QR Code - Exposure Event Distribution,,[]
+423,QR Code - Exposure Event Portal Endpoint,## Description
+
+We need an endpoint that can be called by the Covid Alert Portal that can be used to POST Exposure Events. 
+
+This Endpoint will sit on the Submission server and will be protected using the same WAF rules as the OTK generation end point and will be authenticated using the same bearer token that is currently used to limit OTK Generation to PTs
+
+## AC
+
+ - Unit Tests of new functionality
+ - Updated E2E Ruby Tests
+ - Endpoint that takes an exposure event and stores it in the database,[]
+422,Convert expiration worker to a lambda,## Description
+
+Currently the expiration worker is run as part of the retrieval service. 
+
+While this is not having an impact on service performance it does introduce the possibility of a race condition. 
+
+This caused an issue where deleted OTKs were being counted multiple times. The issue has been resolved by using transactions but this caused a small increase in the number of DB connections needed. 
+
+Ideally this task should be handled by a microservice and run periodically during the day, it does not need to occur in the go microservices.
+
+Expiration Server Code sits here: https://github.com/cds-snc/covid-alert-server/blob/master/pkg/workers/expiration.go
+
+## AC 
+ - Write a lambda in chalice that will clean up the expired keys on a regular schedule
+ - lambda is monitered using x-ray
+ - lambda is deployed using TF
+ ,[{'id': 2335884145, 'node_id': 'MDU6TGFiZWwyMzM1ODg0MTQ1', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/medium%20priority', 'name': 'medium priority', 'color': 'e99695', 'default': False, 'description': ''}]
+418,Add eslint for serverless code,Add prettier rules
+Add eslint security rules 
+
+
+Take a look at this eslint configuration:
+
+https://github.com/cds-snc/c19-benefits-node/blob/master/.eslintrc.js
+
+Run from this cmd: 
+https://github.com/cds-snc/c19-benefits-node/blob/d13e2767e5b3e7ff73fd69b42f450af5c1ec6844/package.json#L18,[{'id': 2335974802, 'node_id': 'MDU6TGFiZWwyMzM1OTc0ODAy', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/high%20priority', 'name': 'high priority', 'color': '4a32c1', 'default': False, 'description': ''}]
+416,Discussions about Issues, "meta", and general Q&A,Bonjour, Hi! _(Le français suit.)_
+
+We're going to experiment with using GitHub's new "Discussions" feature to help make space for folks to discuss ongoing ideas, changes, and what not, while reserving the Issues board for the delivery team to focus on in-progress work. 
+
+This is a first for us, so be patient and let us know where you think it's not working.
+
+https://github.com/cds-snc/covid-alert-documentation/discussions
+
+We will move any issues from this board into the 'Discussions' feature as necessary. Obvious implementation bugs are fair game here, but everything else will get moved.
+
+Thanks for your patience and understanding,
+
+CDS folks who love talking to non CDS folks but who also are trying to focus on delivering the thing.
+
+***
+
+Nous allons commencer à utiliser la nouvelle rubrique « Discussions » de GitHub pour permettre aux gens de discuter d'idées, de modifications et autres, et nous allons réserver la rubrique « Issues » à l'équipe de prestation, pour qu'elle puisse se concentrer sur le travail en cours.
+
+C'est une première pour nous, alors faites preuve de patience et indiquez-nous ce qui fonctionne mal selon vous.
+
+https://github.com/cds-snc/covid-alert-documentation/discussions
+
+Nous déplacerons au besoin les questions ou problèmes (issues) vers la rubrique « Discussions ». Les bogues d'implémentation évidents sont bienvenus ici, mais tout le reste sera déplacé.
+
+Merci de votre patience et de votre compréhension,
+
+De la part des gens du SNC qui adorent parler aux gens d'en dehors du SNC, mais qui essaient aussi de livrer la chose en question.,[]
+413,Implement Device Attestation,# Description 
+- [ ] Implement SafetNet Backend to support https://github.com/cds-snc/covid-alert-app/issues/1116
+- [ ] Implement DeviceCheck Backend to support https://github.com/cds-snc/covid-alert-app/issues/1115
+
+## Potential Reference Material
+- https://www.netguru.com/codestories/stay-safe-with-safetynet-attestation-api-in-android
+- https://fluffy.es/devicecheck-tutorial/#serverside (edited) 
+
+## Acceptance Criteria
+- We can attest an iOS device
+- We can attest an android device,[]
+412,Create a small frontend to QA Microservices,## Description 
+This needs to be used by someone with little to no technical experience.
+
+## AC 
+ - [ ] Call methods exposed in cds-snc/covid-alert-server#392 
+ - [ ] Use Google OAuth to authenticate with CDS emails.
+ - [ ] WCAG 2.1 Compliant
+ - [ ] Bilingual (Fre/Eng),[]
+411,Implement Metric Collections from Devices,Outcome: Securely and anonymously measure the app usage metrics.
+
+How: The app will call a server endpoint when an event occurs. The server will anonymously add the event to an aggregate tally.
+
+AC:
+
+- [x] Implement Microservice for collecting Metrics cds-snc/covid-alert-server#407
+- [ ] Implement Microservice for reading Metrics cds-snc/covid-alert-server#408
+,[{'id': 2335974802, 'node_id': 'MDU6TGFiZWwyMzM1OTc0ODAy', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/high%20priority', 'name': 'high priority', 'color': '4a32c1', 'default': False, 'description': ''}]
+409,Security Issue: Disable Mutable Tags in ECR,Issue found in Snyk scan of TF Files
+
+##  Path: 
+
+resource > aws_ecr_repository[repository] > image_tag_mutability
+
+## The issue is...
+
+The AWS ECR registry does not enforce immutable tags
+
+## The impact of this is...
+
+Image tags can be modified post deployment
+
+## You can resolve this by...
+
+Set image_tag_mutability attribute to IMMUTABLE
+
+
+## AC
+
+ - [ ] Fix in Demo https://github.com/cds-snc/covid-alert-server-demo-terraform/issues/29
+ - [ ] Fix in Staging https://github.com/cds-snc/covid-alert-server-staging-terraform/issues/72
+ - [ ] Fix in Prod https://github.com/cds-snc/covid-alert-server-production-terraform/issues/46
+,[{'id': 2335974802, 'node_id': 'MDU6TGFiZWwyMzM1OTc0ODAy', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/high%20priority', 'name': 'high priority', 'color': '4a32c1', 'default': False, 'description': ''}, {'id': 2122849561, 'node_id': 'MDU6TGFiZWwyMTIyODQ5NTYx', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/security', 'name': 'security', 'color': 'aa2049', 'default': False, 'description': ''}]
+408,Expose App Metrics,Create an API Endpoint in Covid Alert Server that allows for someone to call it and recieve the metrics for a specific date. 
+
+## AC 
+ - An endpoint that exposes the aggregate metrics collected in #407 
+ - The endpoint is able to be passed the date through the URL and this data will be returned as a JSON object containing all the aggregated events logged on that specific date. 
+ - The endpoint will be secured so only authenticated individuals can call it.
+ - Automated Tests have been written for this endpoint
+ - Infrastructure as Code is written for this endpoint 
+ - API Documentation has been updated for this new endpoint
+ - CI is updated for new service
+   - Linting of new source code (see #418)
+   - Snyk scanning of new dependencies
+   - New Tests are running on PR,[{'id': 2335974802, 'node_id': 'MDU6TGFiZWwyMzM1OTc0ODAy', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/high%20priority', 'name': 'high priority', 'color': '4a32c1', 'default': False, 'description': ''}]
+406,Fix DevContainers on Windows Machines,The current Visual Studio Remote Containers extension doesn't work out of the box on Windows. 
+
+When running `make` an error about not being able to find a protoc --protoc-gen-go plugin is displayed. 
+
+A workaround is available by running the following commands in the Shell in the dev environment will fix the issue but a more permanent fix is required. 
+
+```bash
+export GOPATH=$(go env GOPATH)
+export PATH=$PATH:$GOPATH/bin
+```
+
+I'm leaving this as wontfix for now as CDS dev machines are Macbooks and it does run in a Linux VM. ,[{'id': 2096927445, 'node_id': 'MDU6TGFiZWwyMDk2OTI3NDQ1', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/bug', 'name': 'bug', 'color': 'd73a4a', 'default': True, 'description': "Something isn't working"}, {'id': 2189820562, 'node_id': 'MDU6TGFiZWwyMTg5ODIwNTYy', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/low%20priority', 'name': 'low priority', 'color': 'e5b712', 'default': False, 'description': ''}, {'id': 2096927453, 'node_id': 'MDU6TGFiZWwyMDk2OTI3NDUz', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/wontfix', 'name': 'wontfix', 'color': 'ffffff', 'default': True, 'description': 'This will not be worked on'}]
+402,QA Tools Microservices/Lambda,,[{'id': 2335974802, 'node_id': 'MDU6TGFiZWwyMzM1OTc0ODAy', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/high%20priority', 'name': 'high priority', 'color': '4a32c1', 'default': False, 'description': ''}]
+396,build(deps): bump ini from 1.3.5 to 1.3.8,Bumps [ini](https://github.com/isaacs/ini) from 1.3.5 to 1.3.8.
+<details>
+<summary>Commits</summary>
+<ul>
+<li><a href="https://github.com/npm/ini/commit/a2c5da86604bc2238fe393c5ff083bf23a9910eb"><code>a2c5da8</code></a> 1.3.8</li>
+<li><a href="https://github.com/npm/ini/commit/af5c6bb5dca6f0248c153aa87e25bddfc515ff6e"><code>af5c6bb</code></a> Do not use Object.create(null)</li>
+<li><a href="https://github.com/npm/ini/commit/8b648a1ac49e1b3b7686ea957e0b95e544bc6ec1"><code>8b648a1</code></a> don't test where our devdeps don't even work</li>
+<li><a href="https://github.com/npm/ini/commit/c74c8af35f32b801a7e82a8309eab792a95932f6"><code>c74c8af</code></a> 1.3.7</li>
+<li><a href="https://github.com/npm/ini/commit/024b8b55ac1c980c6225607b007714c54eb501ba"><code>024b8b5</code></a> update deps, add linting</li>
+<li><a href="https://github.com/npm/ini/commit/032fbaf5f0b98fce70c8cc380e0d05177a9c9073"><code>032fbaf</code></a> Use Object.create(null) to avoid default object property hazards</li>
+<li><a href="https://github.com/npm/ini/commit/2da90391ef70db41d10f013e3a87f9a8c5d01a72"><code>2da9039</code></a> 1.3.6</li>
+<li><a href="https://github.com/npm/ini/commit/cfea636f534b5ca7550d2c28b7d1a95d936d56c6"><code>cfea636</code></a> better git push script, before publish instead of after</li>
+<li><a href="https://github.com/npm/ini/commit/56d2805e07ccd94e2ba0984ac9240ff02d44b6f1"><code>56d2805</code></a> do not allow invalid hazardous string as section name</li>
+<li>See full diff in <a href="https://github.com/isaacs/ini/compare/v1.3.5...v1.3.8">compare view</a></li>
+</ul>
+</details>
+<details>
+<summary>Maintainer changes</summary>
+<p>This version was pushed to npm by <a href="https://www.npmjs.com/~isaacs">isaacs</a>, a new releaser for ini since your current version.</p>
+</details>
+<br />
+
+
+[![Dependabot compatibility score](https://dependabot-badges.githubapp.com/badges/compatibility_score?dependency-name=ini&package-manager=npm_and_yarn&previous-version=1.3.5&new-version=1.3.8)](https://docs.github.com/en/github/managing-security-vulnerabilities/about-dependabot-security-updates#about-compatibility-scores)
+
+Dependabot will resolve any conflicts with this PR as long as you don't alter it yourself. You can also trigger a rebase manually by commenting `@dependabot rebase`.
+
+[//]: # (dependabot-automerge-start)
+[//]: # (dependabot-automerge-end)
+
+---
+
+<details>
+<summary>Dependabot commands and options</summary>
+<br />
+
+You can trigger Dependabot actions by commenting on this PR:
+- `@dependabot rebase` will rebase this PR
+- `@dependabot recreate` will recreate this PR, overwriting any edits that have been made to it
+- `@dependabot merge` will merge this PR after your CI passes on it
+- `@dependabot squash and merge` will squash and merge this PR after your CI passes on it
+- `@dependabot cancel merge` will cancel a previously requested merge and block automerging
+- `@dependabot reopen` will reopen this PR if it is closed
+- `@dependabot close` will close this PR and stop Dependabot recreating it. You can achieve the same result by closing it manually
+- `@dependabot ignore this major version` will close this PR and stop Dependabot creating any more for this major version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this minor version` will close this PR and stop Dependabot creating any more for this minor version (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot ignore this dependency` will close this PR and stop Dependabot creating any more for this dependency (unless you reopen the PR or upgrade to it yourself)
+- `@dependabot use these labels` will set the current labels as the default for future PRs for this repo and language
+- `@dependabot use these reviewers` will set the current reviewers as the default for future PRs for this repo and language
+- `@dependabot use these assignees` will set the current assignees as the default for future PRs for this repo and language
+- `@dependabot use this milestone` will set the current milestone as the default for future PRs for this repo and language
+
+You can disable automated security fix PRs for this repo from the [Security Alerts page](https://github.com/cds-snc/covid-alert-server/network/alerts).
+
+</details>,[{'id': 2634673093, 'node_id': 'MDU6TGFiZWwyNjM0NjczMDkz', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/dependencies', 'name': 'dependencies', 'color': '0366d6', 'default': False, 'description': 'Pull requests that update a dependency file'}]
+394,Implement EN V2 Protobuf,- Implement new fields for v2,[{'id': 2335974802, 'node_id': 'MDU6TGFiZWwyMzM1OTc0ODAy', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/high%20priority', 'name': 'high priority', 'color': '4a32c1', 'default': False, 'description': ''}]
+392,Create a testing tools microservice that allows QA folks to perform the following tasks,## Description
+
+A Microservice or collection of lambda's that can be deployed to the staging environment, preferably controlled through TF Feature Flags. 
+
+
+## AC 
+- [ ] Create the following Endpoints
+  - [ ] Cause an Invalidation in the CloudFront Cache and allow us to report back on status. 
+   To replace the following script: https://github.com/cds-snc/covid-alert-server/blob/master/bin/invalidate-cache.sh
+  - [ ] Truncate the diagnosis_keys table. 
+  Work on this is currently here: https://github.com/cds-snc/covid-alert-server/blob/master/pkg/server/test_tools.go
+  It needs to be moved out of the Keyclaim microservice 
+  - [ ] The ability to stuff the database with data similar to production
+  To replace the following script: https://github.com/cds-snc/covid-alert-server/tree/master/bin/stuff-database
+- [ ] Only allow authenticated users to call it.
+- [ ] Be callable by #403 ,[{'id': 2096927448, 'node_id': 'MDU6TGFiZWwyMDk2OTI3NDQ4', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/enhancement', 'name': 'enhancement', 'color': 'a2eeef', 'default': True, 'description': 'New feature or request'}, {'id': 2335974802, 'node_id': 'MDU6TGFiZWwyMzM1OTc0ODAy', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/high%20priority', 'name': 'high priority', 'color': '4a32c1', 'default': False, 'description': ''}]
+385,Update QA Tool Setup Instructions,Add instructions for install AWS-Cli 
+and for installing JQ,[{'id': 2335974802, 'node_id': 'MDU6TGFiZWwyMzM1OTc0ODAy', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/high%20priority', 'name': 'high priority', 'color': '4a32c1', 'default': False, 'description': ''}]
+383,Migrate Staging environment to Lambda Containers,-  [x] Upgrade AWS Provider to 3.21 cds-snc/covid-alert-server-staging-terraform#60
+ - [ ] Retrieval Service
+ - [ ] Submission Service 
+
+,[{'id': 2096927448, 'node_id': 'MDU6TGFiZWwyMDk2OTI3NDQ4', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/enhancement', 'name': 'enhancement', 'color': 'a2eeef', 'default': True, 'description': 'New feature or request'}, {'id': 2159748411, 'node_id': 'MDU6TGFiZWwyMTU5NzQ4NDEx', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/infrastructure', 'name': 'infrastructure', 'color': '2cc92e', 'default': False, 'description': ''}, {'id': 2189820562, 'node_id': 'MDU6TGFiZWwyMTg5ODIwNTYy', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/low%20priority', 'name': 'low priority', 'color': 'e5b712', 'default': False, 'description': ''}]
+381,Add update mocks to makefile,Mocks are currently updated by running ./bin/update-mocks.sh
+
+This should be added to the makefile and should be run whenever any of the files we generate mocks from are modified.,[{'id': 2503924338, 'node_id': 'MDU6TGFiZWwyNTAzOTI0MzM4', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/S', 'name': 'S', 'color': '636e72', 'default': False, 'description': ''}, {'id': 2335884145, 'node_id': 'MDU6TGFiZWwyMzM1ODg0MTQ1', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/medium%20priority', 'name': 'medium priority', 'color': 'e99695', 'default': False, 'description': ''}]
+380,Metric API Service,Create a new microservice that exposes the /events endpoint to allow us to segregate event queries from the submission endpoint
+
+AC 
+
+- [ ] Remove /events end point from submission service
+- [ ] Add new events microservice
+,[{'id': 2335884145, 'node_id': 'MDU6TGFiZWwyMzM1ODg0MTQ1', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/medium%20priority', 'name': 'medium priority', 'color': 'e99695', 'default': False, 'description': ''}]
+378,Remove transactions from db.saveEvent,## Description
+
+The private method [persistence.saveEvent](https://github.com/cds-snc/covid-alert-server/blob/93db46640ecebcb23acfbcf6cef69c9d662aab48/pkg/persistence/events.go#L83) should not run in a transaction since it's usually run from within a transaction because transactions cannot be nested in MySQL, so either we are commiting too early or golang is just ignore the nest.
+
+The public method [persistence.SaveEvent](https://github.com/cds-snc/covid-alert-server/blob/93db46640ecebcb23acfbcf6cef69c9d662aab48/pkg/persistence/events.go#L75) should have the transaction instead.
+
+## AC
+
+ - [ ] Remove transaction from persistence.saveEvent
+ - [ ] Add transaction to persistence.saveEvent
+ - [ ] Update unit tests.,[{'id': 2503924338, 'node_id': 'MDU6TGFiZWwyNTAzOTI0MzM4', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/S', 'name': 'S', 'color': '636e72', 'default': False, 'description': ''}, {'id': 2189820562, 'node_id': 'MDU6TGFiZWwyMTg5ODIwNTYy', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/low%20priority', 'name': 'low priority', 'color': 'e5b712', 'default': False, 'description': ''}]
+373,Create Containers for Github Actions,in order to speed up build times we should build dev environment containers,[{'id': 2189820562, 'node_id': 'MDU6TGFiZWwyMTg5ODIwNTYy', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/low%20priority', 'name': 'low priority', 'color': 'e5b712', 'default': False, 'description': ''}, {'id': 2503989551, 'node_id': 'MDU6TGFiZWwyNTAzOTg5NTUx', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/needs%20story%20definition', 'name': 'needs story definition', 'color': '064760', 'default': False, 'description': ''}, {'id': 2549442607, 'node_id': 'MDU6TGFiZWwyNTQ5NDQyNjA3', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/pipeline', 'name': 'pipeline', 'color': '19b3c1', 'default': False, 'description': 'Improvements to pipelines'}]
+364,Document Team Principles,Defining principles for the team will guide all future decisions on changes to Covid Alert Server
+
+# Privacy
+# Security
+# Automation
+Automate tasks whenever possible
+- Reduce the chance of human error
+- Make it easy to do the right thing.
+- Reduce Friction to development.,[{'id': 2189820562, 'node_id': 'MDU6TGFiZWwyMTg5ODIwNTYy', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/low%20priority', 'name': 'low priority', 'color': 'e5b712', 'default': False, 'description': ''}]
+363,Add instructions for installing .githooks in contributors.md,`make init`
+
+
+- [ ] EN
+- [ ] FR,[{'id': 2096927446, 'node_id': 'MDU6TGFiZWwyMDk2OTI3NDQ2', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/documentation', 'name': 'documentation', 'color': '0075ca', 'default': True, 'description': 'Improvements or additions to documentation'}, {'id': 2335974802, 'node_id': 'MDU6TGFiZWwyMzM1OTc0ODAy', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/high%20priority', 'name': 'high priority', 'color': '4a32c1', 'default': False, 'description': ''}]
+362,Add commitlint checks in CI,Commitlint is being used as a git-hook to ensure commits follow the Angular Commit Convention. As a git-hook it can be bypassed quite easily. 
+
+We need to fail on the server as well. ,[{'id': 2503924338, 'node_id': 'MDU6TGFiZWwyNTAzOTI0MzM4', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/S', 'name': 'S', 'color': '636e72', 'default': False, 'description': ''}, {'id': 2189820562, 'node_id': 'MDU6TGFiZWwyMTg5ODIwNTYy', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/low%20priority', 'name': 'low priority', 'color': 'e5b712', 'default': False, 'description': ''}, {'id': 2549442607, 'node_id': 'MDU6TGFiZWwyNTQ5NDQyNjA3', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/pipeline', 'name': 'pipeline', 'color': '19b3c1', 'default': False, 'description': 'Improvements to pipelines'}]
+351,Add documentation to Go functions,AC
+- [ ] All public functions are properly documented,[{'id': 2503924911, 'node_id': 'MDU6TGFiZWwyNTAzOTI0OTEx', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/M', 'name': 'M', 'color': '636e72', 'default': False, 'description': ''}, {'id': 2189820562, 'node_id': 'MDU6TGFiZWwyMTg5ODIwNTYy', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/low%20priority', 'name': 'low priority', 'color': 'e5b712', 'default': False, 'description': ''}]
+347,Test contingency plan,We have our contingency plan - now let’s pick a scenario and test it out on paper to see if it really is feasible.
+Will look to tech leads to identify scenario that is scary and could realistically happen.
+https://docs.google.com/spreadsheets/d/1LHI49cKp3Pc9_jY1h0HUkG9XgVEYdwOk41Uw7zi6NaU/edit#gid=0 ,[{'id': 2503924338, 'node_id': 'MDU6TGFiZWwyNTAzOTI0MzM4', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/S', 'name': 'S', 'color': '636e72', 'default': False, 'description': ''}, {'id': 2096927446, 'node_id': 'MDU6TGFiZWwyMDk2OTI3NDQ2', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/documentation', 'name': 'documentation', 'color': '0075ca', 'default': True, 'description': 'Improvements or additions to documentation'}, {'id': 2335884145, 'node_id': 'MDU6TGFiZWwyMzM1ODg0MTQ1', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/medium%20priority', 'name': 'medium priority', 'color': 'e99695', 'default': False, 'description': ''}]
+341,Document the service continuity requirements,This is one of the deliverables from the COVID Exposure Notification Service Plan of Action and Milestones.
+
+AC:
+- [ ] Draft for Emily and Caitlin to review
+- [ ] Final version shared
+
+
+https://docs.google.com/document/d/12TKC3jJv2c1z2emciHirzcbluHSjC_S9rECtL2E9Ono/edit,[{'id': 2503924338, 'node_id': 'MDU6TGFiZWwyNTAzOTI0MzM4', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/S', 'name': 'S', 'color': '636e72', 'default': False, 'description': ''}, {'id': 2335974802, 'node_id': 'MDU6TGFiZWwyMzM1OTc0ODAy', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/high%20priority', 'name': 'high priority', 'color': '4a32c1', 'default': False, 'description': ''}]
+339,Include requestor's IP address in logs,Logging can be improved by adding the requestor’s IP address in the log for the server’s response. This will make it a lot easier to see where bad requests are coming from, without having to combine data from multiple logs. 
+
+Acceptance criteria:
+- [ ] whenever a key-claim request fails, the IP is logged with the error message.,[{'id': 2503924338, 'node_id': 'MDU6TGFiZWwyNTAzOTI0MzM4', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/S', 'name': 'S', 'color': '636e72', 'default': False, 'description': ''}, {'id': 2335884145, 'node_id': 'MDU6TGFiZWwyMzM1ODg0MTQ1', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/medium%20priority', 'name': 'medium priority', 'color': 'e99695', 'default': False, 'description': ''}]
+337,Investigate DNS query logging, and alarms associated with non-expected domain traffic.,This allows us to monitor the DNS queries coming out of our compute clusters. Should we find any egress to places we do not trust, we can assume that malicious activity is going on.
+
+Risk: Not able to identify malicious activity. 
+
+Acceptance criteria:
+
+- [ ] DNS logging enabled
+- [ ] Notification sent to appropriate channel once DNS query logged,[{'id': 2503924338, 'node_id': 'MDU6TGFiZWwyNTAzOTI0MzM4', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/S', 'name': 'S', 'color': '636e72', 'default': False, 'description': ''}, {'id': 2335884145, 'node_id': 'MDU6TGFiZWwyMzM1ODg0MTQ1', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-server/labels/medium%20priority', 'name': 'medium priority', 'color': 'e99695', 'default': False, 'description': ''}]
+issue_id,issue_title,issue_body,issue_labels36,Update security.md with content from VDP,I'm duplicating this rather than renaming the vdp file in the odd chance we have any upstream links pointing to it. This will make the GitHub integrations with security.MD file work better, rather than falling back onto our default .github/security.md files.
+
+If there's a better way to link them, happy to roll this back.
+
+,[{'id': 2193738982, 'node_id': 'MDU6TGFiZWwyMTkzNzM4OTgy', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-documentation/labels/enhancement', 'name': 'enhancement', 'color': 'a2eeef', 'default': True, 'description': 'New feature or request'}]
+24,Reference to missing security.md,The vulnerability disclosure policy mentions a security.md file. This file is not present in this repository.,[{'id': 2193738977, 'node_id': 'MDU6TGFiZWwyMTkzNzM4OTc3', 'url': 'https://api.github.com/repos/cds-snc/covid-alert-documentation/labels/bug', 'name': 'bug', 'color': 'd73a4a', 'default': True, 'description': "Something isn't working"}]

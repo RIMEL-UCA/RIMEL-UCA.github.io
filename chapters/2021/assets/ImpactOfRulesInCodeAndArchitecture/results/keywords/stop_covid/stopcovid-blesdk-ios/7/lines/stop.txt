@@ -1,0 +1,96 @@
+stopcovid-blesdk-ios/.git/config:7:	url = https://gitlab.inria.fr/stopcovid19/stopcovid-blesdk-ios.git
+stopcovid-blesdk-ios/.git/hooks/applypatch-msg.sample:7:# appropriate message if it wants to stop the commit.  The hook is
+stopcovid-blesdk-ios/.git/hooks/commit-msg.sample:6:# status after issuing an appropriate message if it wants to stop the
+stopcovid-blesdk-ios/.git/hooks/pre-applypatch.sample:7:# appropriate message if it wants to stop the commit.
+stopcovid-blesdk-ios/.git/hooks/pre-commit.sample:6:# it wants to stop the commit.
+stopcovid-blesdk-ios/.git/logs/HEAD:1:0000000000000000000000000000000000000000 0ac355f87da0e734d074309249b5c594fe699257 Florian Focas <florianfocas@gmail.com> 1613464204 +0100	clone: from https://gitlab.inria.fr/stopcovid19/stopcovid-blesdk-ios.git
+stopcovid-blesdk-ios/.git/logs/refs/heads/master:1:0000000000000000000000000000000000000000 0ac355f87da0e734d074309249b5c594fe699257 Florian Focas <florianfocas@gmail.com> 1613464204 +0100	clone: from https://gitlab.inria.fr/stopcovid19/stopcovid-blesdk-ios.git
+stopcovid-blesdk-ios/.git/logs/refs/remotes/origin/HEAD:1:0000000000000000000000000000000000000000 0ac355f87da0e734d074309249b5c594fe699257 Florian Focas <florianfocas@gmail.com> 1613464204 +0100	clone: from https://gitlab.inria.fr/stopcovid19/stopcovid-blesdk-ios.git
+stopcovid-blesdk-ios/AUTHORS.md:3:* Naos <dev1(dot)stopcovid(at)orange(dot)com>
+stopcovid-blesdk-ios/AUTHORS.md:4:* Merak <dev2(dot)stopcovid(at)orange(dot)com>
+stopcovid-blesdk-ios/AUTHORS.md:5:* Wezen <dev3(dot)stopcovid(at)orange(dot)com>
+stopcovid-blesdk-ios/AUTHORS.md:6:* Kochab <dev4(dot)stopcovid(at)orange(dot)com>
+stopcovid-blesdk-ios/AUTHORS.md:7:* Régulus <dev5(dot)stopcovid(at)orange(dot)com>
+stopcovid-blesdk-ios/AUTHORS.md:8:* Eltanin <dev6(dot)stopcovid(at)orange(dot)com>
+stopcovid-blesdk-ios/AUTHORS.md:9:* Arcturus <dev7(dot)stopcovid(at)orange(dot)com>
+stopcovid-blesdk-ios/AUTHORS.md:10:* Bételgeuse <dev8(dot)stopcovid(at)orange(dot)com>
+stopcovid-blesdk-ios/AUTHORS.md:11:* Nunki <dev9(dot)stopcovid(at)orange(dot)com>
+stopcovid-blesdk-ios/AUTHORS.md:12:* Wei <dev10(dot)stopcovid(at)orange(dot)com>
+stopcovid-blesdk-ios/AUTHORS.md:13:* Murzim <dev11(dot)stopcovid(at)orange(dot)com>
+stopcovid-blesdk-ios/AUTHORS.md:14:* Sirius <dev20(dot)stopcovid(at)orange(dot)com>
+stopcovid-blesdk-ios/LICENSE.txt:291:*  goodwill, work stoppage, computer failure or malfunction, or any    *
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:8: * Created by Orange / Date - 2020/05/06 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:69:    func stop() {
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:70:        logger.info(message: "stop central manager",
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:71:                    source: ProximityNotificationEvent.bluetoothCentralManagerStop.rawValue)
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:73:        stopCentralManager()
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:83:    private func stopCentralManager() {
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:87:            centralManager.stopScan()
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:242:        stopCentralManager()
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManagerDelegate.swift:8: * Created by Orange / Date - 2020/05/19 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManagerProtocol.swift:8: * Created by Orange / Date - 2020/05/19 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManagerProtocol.swift:21:    func stop()
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothPeripheral.swift:8: * Created by Orange / Date - 2020/05/06 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothPeripheralManager.swift:8: * Created by Orange / Date - 2020/05/06 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothPeripheralManager.swift:52:    func stop() {
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothPeripheralManager.swift:53:        logger.info(message: "stop peripheral manager",
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothPeripheralManager.swift:54:                    source: ProximityNotificationEvent.bluetoothPeripheralManagerStop.rawValue)
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothPeripheralManager.swift:56:        stopPeripheralManager()
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothPeripheralManager.swift:61:    private func stopPeripheralManager() {
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothPeripheralManager.swift:65:            peripheralManager.stopAdvertising()
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothPeripheralManager.swift:88:        stopPeripheralManager()
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothPeripheralManagerDelegate.swift:8: * Created by Orange / Date - 2020/11/10 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothPeripheralManagerProtocol.swift:8: * Created by Orange / Date - 2020/05/19 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothPeripheralManagerProtocol.swift:19:    func stop()
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityMetadata.swift:8: * Created by Orange / Date - 2020/05/06 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:8: * Created by Orange / Date - 2020/05/06 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:71:    func stop() {
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:72:        centralManager.stop()
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:73:        peripheralManager.stop()
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:74:        stopCacheExpirationTimer()
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:95:        stopCacheExpirationTimer()
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:108:    private func stopCacheExpirationTimer() {
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityPayload.swift:8: * Created by Orange / Date - 2020/05/06 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothRSSICalibrator.swift:8: * Created by Orange / Date - 2020/11/10 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothSettings.swift:8: * Created by Orange / Date - 2020/05/06 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/CBManagerState+BluetoothProximityNotification.swift:8: * Created by Orange / Date - 2020/05/06 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:8: * Created by Orange / Date - 2020/05/14 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotification/Filter/Collection+ProximityFilter.swift:8: * Created by Orange / Date - 2020/05/29 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotification/Filter/ProximityFilter.swift:8: * Created by Orange / Date - 2020/05/27 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotification/Filter/ProximityFilterConfiguration.swift:8: * Created by Orange / Date - 2020/05/27 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotification/Filter/ProximityFilterError.swift:8: * Created by Orange / Date - 2020/05/27 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotification/Filter/ProximityFilterMode.swift:8: * Created by Orange / Date - 2020/05/27 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotification/Filter/ProximityFilterOutput.swift:8: * Created by Orange / Date - 2020/05/27 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotification/Filter/RiskComputer.swift:8: * Created by Orange / Date - 2020/05/06 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotification/Filter/RSSIClipper.swift:8: * Created by Orange / Date - 2020/05/27 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotification/Filter/RSSIClipperOutput.swift:8: * Created by Orange / Date - 2020/05/27 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotification/Filter/TimestampedRSSI.swift:8: * Created by Orange / Date - 2020/05/29 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotification/ProximityInfo.swift:8: * Created by Orange / Date - 2020/05/06 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotification/ProximityNotification.swift:8: * Created by Orange / Date - 2020/05/06 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotification/ProximityNotification.swift:23:    func stop()
+stopcovid-blesdk-ios/ProximityNotification/ProximityNotificationEvent.swift:8: * Created by Orange / Date - 2020/09/22 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotification/ProximityNotificationEvent.swift:17:    case bluetoothPeripheralManagerStop
+stopcovid-blesdk-ios/ProximityNotification/ProximityNotificationEvent.swift:31:    case bluetoothCentralManagerStop
+stopcovid-blesdk-ios/ProximityNotification/ProximityNotificationLogger.swift:8: * Created by Orange / Date - 2020/05/06 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotification/ProximityNotificationService.swift:8: * Created by Orange / Date - 2020/05/06 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotification/ProximityNotificationService.swift:95:        stop()
+stopcovid-blesdk-ios/ProximityNotification/ProximityNotificationService.swift:111:    /// Stops the proximity notification service.
+stopcovid-blesdk-ios/ProximityNotification/ProximityNotificationService.swift:112:    public func stop() {
+stopcovid-blesdk-ios/ProximityNotification/ProximityNotificationService.swift:113:        bluetoothProximityNotification.stop()
+stopcovid-blesdk-ios/ProximityNotification/ProximityNotificationSettings.swift:8: * Created by Orange / Date - 2020/05/06 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotification/ProximityNotificationVersion.swift:8: * Created by Orange / Date - 2020/05/12 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotification/ProximityPayload.swift:8: * Created by Orange / Date - 2020/05/19 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothCentralManagerMock.swift:8: * Created by Orange / Date - 2020/05/17 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothCentralManagerMock.swift:37:    func stop() {}
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothPeripheralManagerMock.swift:8: * Created by Orange / Date - 2020/05/17 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothPeripheralManagerMock.swift:26:    func stop() {}
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:8: * Created by Orange / Date - 2020/05/17 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityPayloadTests.swift:8: * Created by Orange / Date - 2020/05/06 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothRSSICalibratorTests.swift:8: * Created by Orange / Date - 2020/11/10 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotificationTests/CacheTests.swift:8: * Created by Orange / Date - 2020/05/06 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:8: * Created by Orange / Date - 2020/06/03 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityPayloadTests.swift:8: * Created by Orange / Date - 2020/05/06 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotificationTests/RiskComputerTests.swift:8: * Created by Orange / Date - 2020/05/06 - for the STOP-COVID project
+stopcovid-blesdk-ios/ProximityNotificationTests/RSSIClipperTests.swift:8: * Created by Orange / Date - 2020/06/03 - for the STOP-COVID project
+stopcovid-blesdk-ios/README.md:50:To stop the service, you can call `stop`.
+stopcovid-blesdk-ios/README.md:53:service.stop()

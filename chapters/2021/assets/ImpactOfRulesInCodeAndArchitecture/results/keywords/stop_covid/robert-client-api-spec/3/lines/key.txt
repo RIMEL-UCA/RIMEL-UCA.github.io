@@ -1,0 +1,10 @@
+../robert-client-api-spec/openapi.yaml:348:            dedicated client-side key to decrypt.
+../robert-client-api-spec/openapi.yaml:369:        clientPublicECDHKey:
+../robert-client-api-spec/openapi.yaml:372:            Client public key to be used by server to derive shared secret and keys.
+../robert-client-api-spec/openapi.yaml:382:        - clientPublicECDHKey
+../robert-client-api-spec/openapi.yaml:392:            dedicated client-side key to decrypt.
+../robert-client-api-spec/openapi.yaml:469:    KeyPair:
+../robert-client-api-spec/openapi.yaml:518:      description: All keys encountered for an epoch for an identical EBID (a "contact").
+../robert-client-api-spec/openapi.yaml:519:        Reported keys must be removed LocalProximityHistory DB upon success of
+../robert-client-api-spec/openapi.yaml:558:          key:
+../robert-client-api-spec/openapi.yaml:559:            $ref: "#/components/schemas/KeyPair"

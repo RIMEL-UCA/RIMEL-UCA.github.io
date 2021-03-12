@@ -1,0 +1,6 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.gitignore:5:db.sqlite3
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:173:default_db_path = os.path.join(BASE_DIR, "db.sqlite3")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:185:        default=f"sqlite:///{default_db_path}", conn_max_age=600, ssl_require=is_prod
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:13:- Running the COVID Alert Portal locally as a python process requires [python3](https://www.python.org/downloads/) and a database, although an SQLite database will be created if no connection string exists.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:130:By default the Django creates an SQLite database, but we use Postgres in production.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:277:Par défaut, Django crée une base de données SQLite, mais nous utilisons Postgres en production.

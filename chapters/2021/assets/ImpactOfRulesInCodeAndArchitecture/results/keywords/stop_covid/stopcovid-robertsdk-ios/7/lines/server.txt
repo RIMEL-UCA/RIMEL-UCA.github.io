@@ -1,0 +1,14 @@
+../stopcovid-robertsdk-ios/.git/hooks/post-update.sample:8:exec git update-server-info
+Binary file ../stopcovid-robertsdk-ios/.git/index matches
+../stopcovid-robertsdk-ios/Robert/Protocols/RBServer.swift:5://  RBServer.swift
+../stopcovid-robertsdk-ios/Robert/Protocols/RBServer.swift:13:protocol RBServer {
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:17:    private var server: RBServer!
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:42:    func start(server: RBServer, storage: RBStorage, bluetooth: RBBluetooth) {
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:43:        self.server = server
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:51:        NotificationCenter.default.addObserver(self, selector: #selector(applicationWillTerminate), name: UIApplication.willTerminateNotification, object: nil)
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:109:// MARK: - Server methods -
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:124:            server.status(ebid: statusMessage.ebid, time: statusMessage.time, mac: statusMessage.mac) { result in
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:148:            server.report(token: token, helloMessages: localHelloMessages) { error in
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:169:        server.register(captcha: "") { result in
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:201:            server.unregister(ebid: statusMessage.ebid, time: statusMessage.time, mac: statusMessage.mac, completion: { error in
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:226:            server.deleteExposureHistory(ebid: statusMessage.ebid, time: statusMessage.time, mac: statusMessage.mac, completion: { error in

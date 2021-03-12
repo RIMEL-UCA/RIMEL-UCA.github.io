@@ -1,0 +1,101 @@
+Binary file ../stopcovid-robertsdk-ios/.git/index matches
+../stopcovid-robertsdk-ios/Robert/Extensions/Data+RBExtension.swift:5://  Data+Extension.swift
+../stopcovid-robertsdk-ios/Robert/Extensions/Data+RBExtension.swift:14:extension Data {
+../stopcovid-robertsdk-ios/Robert/Extensions/Data+RBExtension.swift:18:    func hmac(key: Data) -> Data {
+../stopcovid-robertsdk-ios/Robert/Extensions/Data+RBExtension.swift:19:        let string: UnsafePointer<UInt8> = (self as NSData).bytes.bindMemory(to: UInt8.self, capacity: self.count)
+../stopcovid-robertsdk-ios/Robert/Extensions/Data+RBExtension.swift:25:        return Data(result)
+../stopcovid-robertsdk-ios/Robert/Extensions/Data+RBExtension.swift:28:    mutating func wipeData() {
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:27:    func generateCurrentHelloMessage() throws -> Data {
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:34:    func generateHelloMessage(for epoch: RBEpoch, ntpTimestamp: Int, key: String) -> Data {
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:35:        let message: Data = generateMessage(for: epoch, ntpTimestamp: ntpTimestamp, key: key)
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:36:        let mac: Data = generateHelloMessageMac(key: key, message: message)
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:40:    private func generateMessage(for epoch: RBEpoch, ntpTimestamp: Int, key: String) -> Data {
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:41:        let ecc: Data = Data(base64Encoded: epoch.ecc)!
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:42:        let ebid: Data = Data(base64Encoded: epoch.ebid)!
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:44:        let data: Data = withUnsafeBytes(of: time) { Data($0) }
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:45:        return ecc + ebid + data
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:48:    private func generateHelloMessageMac(key: String, message: Data) -> Data {
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:49:        let totalMessage: Data = Data([RobertConstants.Prefix.c1]) + message
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:50:        let parsedKey: String = String(data: Data(base64Encoded: key)!, encoding: .ascii)!
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:68:        let timeData: Data = withUnsafeBytes(of: time) { Data($0) }
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:69:        let mac: Data = try generateStatusMessageMAC(key: key, epoch: epoch, timeData: timeData)
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:70:        return RBStatusMessage(ebid: epoch.ebid, time: timeData.base64EncodedString(), mac: mac.base64EncodedString())
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:73:    private func generateStatusMessageMAC(key: String, epoch: RBEpoch, timeData: Data) throws -> Data {
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:74:        guard let ebid = Data(base64Encoded: epoch.ebid) else {
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:77:        let totalMessage: Data = Data([RobertConstants.Prefix.c2]) + ebid + timeData
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:78:        guard let data = Data(base64Encoded: key), let parsedKey = String(data: data, encoding: .ascii) else {
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:89:    func parseHelloMessage(_ messageData: Data) {
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:90:        let eccData: Data = messageData[0..<1]
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:91:        let ebidData: Data = messageData[1..<9]
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:92:        let timeData: Data = messageData[9..<11]
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:93:        let pointer = UnsafePointer(timeData.bytes)
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:95:        print("Parsed ecc: \(eccData.base64EncodedString())")
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:96:        print("Parsed ebid: \(ebidData.base64EncodedString())")
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:16:    static func generateHelloMessage(for epoch: RBEpoch, ntpTimestamp: Int, key: Data) throws -> Data {
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:17:        let message: Data = try generateMessage(for: epoch, ntpTimestamp: ntpTimestamp)
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:18:        let mac: Data = try generateHelloMessageMac(key: key, message: message)
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:22:    private static func generateMessage(for epoch: RBEpoch, ntpTimestamp: Int) throws -> Data {
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:23:        guard let ecc = Data(base64Encoded: epoch.ecc) else {
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:26:        guard let ebid = Data(base64Encoded: epoch.ebid) else {
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:30:        let data: Data = withUnsafeBytes(of: time) { Data($0) }
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:31:        return ecc + ebid + data
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:34:    private static func generateHelloMessageMac(key: Data, message: Data) throws -> Data {
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:35:        let totalMessage: Data = Data([RBConstants.Prefix.c1]) + message
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:40:    static func generateStatusMessage(for epoch: RBEpoch, ntpTimestamp: Int, key: Data) throws -> RBStatusMessage {
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:42:        let timeData: Data = withUnsafeBytes(of: time) { Data($0) }
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:43:        let mac: Data = try generateStatusMessageMAC(key: key, epoch: epoch, timeData: timeData)
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:44:        return RBStatusMessage(ebid: epoch.ebid, time: timeData.base64EncodedString(), mac: mac.base64EncodedString())
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:47:    private static func generateStatusMessageMAC(key: Data, epoch: RBEpoch, timeData: Data) throws -> Data {
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:48:        guard let ebid = Data(base64Encoded: epoch.ebid) else {
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:51:        let totalMessage: Data = Data([RBConstants.Prefix.c2]) + ebid + timeData
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:56:    static func generateUnregisterMessage(for epoch: RBEpoch, ntpTimestamp: Int, key: Data) throws -> RBUnregisterMessage {
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:58:        let timeData: Data = withUnsafeBytes(of: time) { Data($0) }
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:59:        let mac: Data = try generateUnregisterMessageMAC(key: key, epoch: epoch, timeData: timeData)
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:60:        return RBUnregisterMessage(ebid: epoch.ebid, time: timeData.base64EncodedString(), mac: mac.base64EncodedString())
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:63:    private static func generateUnregisterMessageMAC(key: Data, epoch: RBEpoch, timeData: Data) throws -> Data {
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:64:        guard let ebid = Data(base64Encoded: epoch.ebid) else {
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:67:        let totalMessage: Data = Data([RBConstants.Prefix.c3]) + ebid + timeData
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:72:    static func generateDeleteExposureHistoryMessage(for epoch: RBEpoch, ntpTimestamp: Int, key: Data) throws -> RBDeleteExposureHistoryMessage {
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:74:        let timeData: Data = withUnsafeBytes(of: time) { Data($0) }
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:75:        let mac: Data = try generateDeleteExposureHistoryMessageMAC(key: key, epoch: epoch, timeData: timeData)
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:76:        return RBDeleteExposureHistoryMessage(ebid: epoch.ebid, time: timeData.base64EncodedString(), mac: mac.base64EncodedString())
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:79:    private static func generateDeleteExposureHistoryMessageMAC(key: Data, epoch: RBEpoch, timeData: Data) throws -> Data {
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:80:        guard let ebid = Data(base64Encoded: epoch.ebid) else {
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:83:        let totalMessage: Data = Data([RBConstants.Prefix.c4]) + ebid + timeData
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageParser.swift:15:    static func getEcc(from helloMessage: Data) -> Data? {
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageParser.swift:20:    static func getEbid(from helloMessage: Data) -> Data? {
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageParser.swift:25:    static func getTime(from helloMessage: Data) -> UInt16? {
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageParser.swift:27:        let timeData: Data = helloMessage[9..<11]
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageParser.swift:28:        let time: UInt16 = timeData.bytes.withUnsafeBufferPointer { $0.baseAddress?.withMemoryRebound(to: UInt16.self, capacity: 1) { $0.pointee }.bigEndian } ?? 0
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageParser.swift:32:    static func getMac(from helloMessage: Data) -> Data? {
+../stopcovid-robertsdk-ios/Robert/Model/RBReceivedHelloMessage.swift:15:    var helloMessage: Data
+../stopcovid-robertsdk-ios/Robert/Model/RBReceivedProximity.swift:15:    let data: Data
+../stopcovid-robertsdk-ios/Robert/Model/RBStorable.swift:15:    static func from(data: Data) throws -> Self
+../stopcovid-robertsdk-ios/Robert/Model/RBStorable.swift:16:    func toData() throws -> Data
+../stopcovid-robertsdk-ios/Robert/Model/RBStorable.swift:22:    static func from(data: Data) throws -> Self {
+../stopcovid-robertsdk-ios/Robert/Model/RBStorable.swift:23:        return try JSONDecoder().decode(Self.self, from: data)
+../stopcovid-robertsdk-ios/Robert/Model/RBStorable.swift:26:    func toData() throws -> Data {
+../stopcovid-robertsdk-ios/Robert/Protocols/RBBluetooth.swift:15:    func start(helloMessageCreationHandler: @escaping () -> Data,
+../stopcovid-robertsdk-ios/Robert/Protocols/RBBluetooth.swift:16:               ebidExtractionHandler: @escaping (_ data: Data) -> Data,
+../stopcovid-robertsdk-ios/Robert/Protocols/RBStorage.swift:29:    func save(key: Data)
+../stopcovid-robertsdk-ios/Robert/Protocols/RBStorage.swift:30:    func getKey() -> Data?
+../stopcovid-robertsdk-ios/Robert/Protocols/RBStorage.swift:57:    // MARK: - Data cleraing -
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:20:    private var ka: Data?
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:56:        bluetooth.start(helloMessageCreationHandler: { () -> Data in
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:62:                    return Data()
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:65:                return Data()
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:67:        }, ebidExtractionHandler: { helloMessage -> Data in
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:68:            RBMessageParser.getEbid(from: helloMessage) ?? Data()
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:70:            let eccString: String? = RBMessageParser.getEcc(from: receivedProximity.data)?.base64EncodedString()
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:71:            let ebidString: String? = RBMessageParser.getEbid(from: receivedProximity.data)?.base64EncodedString()
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:72:            let timeInt: UInt16? = RBMessageParser.getTime(from: receivedProximity.data)
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:73:            let macString: String? = RBMessageParser.getMac(from: receivedProximity.data)?.base64EncodedString()
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:99:        ka?.wipeData()
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:186:            clearAllLocalData()
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:205:                    self.clearAllLocalData()
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:230:                    self.clearAllLocalData()
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:251:    func clearAllLocalData() {
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:257:        ka?.wipeData()
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:266:        guard let data = Data(base64Encoded: response.key) else {
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:269:        storage.save(key: data)
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:270:        ka = data

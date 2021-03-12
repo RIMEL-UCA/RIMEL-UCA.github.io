@@ -1,0 +1,7 @@
+./results/git/covid_alert/commit_file_github.txt:312:* update permissions
+./results/git/covid_alert/commit_file_github.txt:352:* made the text on the NoPermission view obviously different from the NoCamera view
+./results/git/covid_alert/commit_file_github.txt:368:* UI Changes to RequestCameraPermissionScreen
+./results/git/covid_alert/commit_file_github.txt:448:* remove android permissions related to qr featuer
+./results/git/covid_alert/commit_file_github.txt:450:* remove android permissions
+./results/git/covid_alert/commit_file_github.txt:456:* commented out unneeded ios permissions
+./results/git/covid_alert/issue_file_github.txt:348:This issue was easily demonstrated with an HTTP server that sends response data that contains 100 bytes of zeros data back to the client in response to the POST /claim-key request. The POST request is sent when the user enters the 8-digit number to initiate the uploading of TEKs, after being diagnosed.  Because the app thinks the response is valid, it displays the "Agree" screen to request user's permission to download the TEKs.  When the user selects Agree, an error message is returned, "Random codes could not be uploaded You did not give permission".  The application is not able to recover and is stuck in the "upload your random codes" state.

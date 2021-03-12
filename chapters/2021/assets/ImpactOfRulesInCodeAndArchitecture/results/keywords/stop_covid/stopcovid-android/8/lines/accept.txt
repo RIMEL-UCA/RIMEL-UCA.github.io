@@ -1,0 +1,66 @@
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/filter/ProximityFilter.kt:32:     * @param riskThreshold Risk threshold. The threshold above which RSSIs are accepted if filtering mode is [Mode.RISKS]. Default value is 0.2.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/filter/ProximityFilter.kt:69:         * RSSIs were accepted
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/filter/ProximityFilter.kt:81:        data class Accepted(
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/filter/ProximityFilter.kt:130:            return Output.Accepted(sortedTimestampedRssis, false)
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/filter/ProximityFilter.kt:144:            return Output.Accepted(
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/filter/ProximityFilter.kt:163:        return Output.Accepted(
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/filter/ProximityFilterIntTest.kt:54:    fun filter_given_full_mode(durationThresholdInMinutes: Int, accepted: Boolean) {
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/filter/ProximityFilterIntTest.kt:69:        assertThat(output is ProximityFilter.Output.Accepted).isEqualTo(accepted)
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/filter/ProximityFilterIntTest.kt:71:        if (accepted) {
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/filter/ProximityFilterIntTest.kt:72:            val okOutput = output as ProximityFilter.Output.Accepted
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/filter/ProximityFilterIntTest.kt:123:        assertThat(output is ProximityFilter.Output.Accepted).isTrue()
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/filter/ProximityFilterIntTest.kt:124:        val okOutput = output as ProximityFilter.Output.Accepted
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/filter/ProximityFilterIntTest.kt:166:        accepted: Boolean
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/filter/ProximityFilterIntTest.kt:191:        assertThat(output is ProximityFilter.Output.Accepted).isEqualTo(accepted)
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/filter/ProximityFilterIntTest.kt:193:        if (accepted) {
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/filter/ProximityFilterIntTest.kt:194:            val okOutput = output as ProximityFilter.Output.Accepted
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/network/OkHttpClient.kt:73:                addHeader("Accept", "application/json")
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/manager/LocalProximityFilterImpl.kt:54:            } else if (filterOutput is ProximityFilter.Output.Accepted && filterOutput.areTimestampedRssisUpdated) {
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/RetrofitClient.kt:128:                addHeader("Accept", "application/json")
+stopcovid-android/licenses/library/license-kotlinx-couroutines.txt:166:   9. Accepting Warranty or Additional Liability. While redistributing
+stopcovid-android/licenses/library/license-kotlinx-couroutines.txt:168:      and charge a fee for, acceptance of support, warranty, indemnity,
+stopcovid-android/licenses/library/license-kotlinx-couroutines.txt:170:      License. However, in accepting such obligations, You may act only
+stopcovid-android/licenses/library/license-kotlinx-couroutines.txt:175:      of your accepting any such warranty or additional liability.
+stopcovid-android/licenses/library/license-timber.txt:166:   9. Accepting Warranty or Additional Liability. While redistributing
+stopcovid-android/licenses/library/license-timber.txt:168:      and charge a fee for, acceptance of support, warranty, indemnity,
+stopcovid-android/licenses/library/license-timber.txt:170:      License. However, in accepting such obligations, You may act only
+stopcovid-android/licenses/library/license-timber.txt:175:      of your accepting any such warranty or additional liability.
+stopcovid-android/licenses/tests/license-junit4.txt:7:CONSTITUTES RECIPIENT'S ACCEPTANCE OF THIS AGREEMENT.
+stopcovid-android/licenses/tests/license-junit4.txt:116:Commercial distributors of software may accept certain responsibilities with
+stopcovid-android/licenses/tests/license-truth.txt:166:   9. Accepting Warranty or Additional Liability. While redistributing
+stopcovid-android/licenses/tests/license-truth.txt:168:      and charge a fee for, acceptance of support, warranty, indemnity,
+stopcovid-android/licenses/tests/license-truth.txt:170:      License. However, in accepting such obligations, You may act only
+stopcovid-android/licenses/tests/license-truth.txt:175:      of your accepting any such warranty or additional liability.
+stopcovid-android/licenses/tests/license-zohhak.txt:163:apply, that proxy's public statement of acceptance of any version is
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:16:    "onboarding.privacyController.accept": "القبول",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:35:    "onboarding.batteryController.accept": "القبول",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:221:    "onboarding.noBleController.accept": "مشاركة التطبيق",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:413:    "onboarding.runWithoutBleController.accept": "حسنًا، فهمت.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:16:    "onboarding.privacyController.accept": "Zustimmen",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:35:    "onboarding.batteryController.accept": "Zustimmen",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:221:    "onboarding.noBleController.accept": "App teilen",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:413:    "onboarding.runWithoutBleController.accept": "Ok, ich habe verstanden",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:16:    "onboarding.privacyController.accept": "Accept",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:35:    "onboarding.batteryController.accept": "Accept",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:221:    "onboarding.noBleController.accept": "Share the app",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:413:    "onboarding.runWithoutBleController.accept": "OK, got it",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:16:    "onboarding.privacyController.accept": "Aceptar",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:35:    "onboarding.batteryController.accept": "Aceptar",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:221:    "onboarding.noBleController.accept": "Compartir la aplicación",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:413:    "onboarding.runWithoutBleController.accept": "Ok, entendido",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:16:   "onboarding.privacyController.accept":"Accepter",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:34:   "onboarding.batteryController.mainMessage.subtitle":"Pour que TousAntiCovid fonctionne de manière continue en arrière-plan, acceptez de désactiver l’optimisation de la batterie pour TousAntiCovid seulement.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:35:   "onboarding.batteryController.accept":"Accepter",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:221:   "onboarding.noBleController.accept":"Partager l'application",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:414:   "onboarding.runWithoutBleController.accept":"Ok, j'ai compris",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:16:    "onboarding.privacyController.accept": "Accetta",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:35:    "onboarding.batteryController.accept": "Accetta",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:221:    "onboarding.noBleController.accept": "Condividi l’applicazione",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:413:    "onboarding.runWithoutBleController.accept": "OK, ho capito",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:16:    "onboarding.privacyController.accept": "Aceitar",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:35:    "onboarding.batteryController.accept": "Aceitar",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:221:    "onboarding.noBleController.accept": "Partilhar a aplicação",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:413:    "onboarding.runWithoutBleController.accept": "OK, compreendi.",
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingBatteryFragment.kt:34:    override fun getButtonTitleKey(): String? = "onboarding.batteryController.accept"
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingNoBleFragment.kt:30:    override fun getButtonTitleKey(): String = "onboarding.runWithoutBleController.accept"
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingPrivacyFragment.kt:27:    override fun getButtonTitleKey(): String = "onboarding.privacyController.accept"

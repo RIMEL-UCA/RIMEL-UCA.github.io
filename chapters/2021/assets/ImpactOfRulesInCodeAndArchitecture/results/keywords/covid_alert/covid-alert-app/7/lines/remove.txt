@@ -1,0 +1,74 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/.git/hooks/pre-rebase.sample:49:	echo >&2 "$topic is fully merged to master; better remove it."
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/.git/hooks/prepare-commit-msg.sample:12:# This hook includes three examples. The first one removes the
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/build.gradle:78: *   // for example, you might want to remove it from here.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/debug/AndroidManifest.xml:9:        tools:node="remove" />
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/debug/AndroidManifest.xml:12:        tools:node="remove" />
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/AndroidManifest.xml:15:    <uses-permission tools:node="remove" android:name="android.permission.CAMERA" />
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/AndroidManifest.xml:16:    <uses-permission tools:node="remove" android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/AndroidManifest.xml:17:    <uses-permission tools:node="remove" android:name="android.permission.READ_EXTERNAL_STORAGE" />
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/ExposureNotificationModule.kt:150:            detectExposureResolutionCompleters.remove(token)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/receiver/worker/ExposureCheckHeadlessTask.java:47:            mActiveTaskContext.removeTaskEventListener(this);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/receiver/worker/ExposureCheckHeadlessTask.java:59:        mActiveTaskContext.removeTaskEventListener(this);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/receiver/worker/ExposureCheckHeadlessTask.java:84:                    reactInstanceManager.removeReactInstanceEventListener(this);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/utils/PendingTokenManager.kt:32:        val editor = sharedPreferences.edit().apply { remove(TOKEN) }
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/release/AndroidManifest.xml:7:        tools:node="remove" />
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/release/AndroidManifest.xml:10:        tools:node="remove" />
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/CODE_OF_CONDUCT.md:48:Community leaders have the right and responsibility to remove, edit, or reject
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/e2e/environment.js:7:    // Can be safely removed, if you are content with the default value (=300000ms)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/fastlane/Matchfile:13:# Remove the # in the beginning of the line to enable the other options
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/patches/@react-native-community+async-storage+1.9.0.patch:33:+      NSError *removeFileError;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/patches/@react-native-community+async-storage+1.9.0.patch:34:+      BOOL removeFileSuccess = [[NSFileManager defaultManager] removeItemAtPath:filePath error:&removeFileError];
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/patches/@react-native-community+async-storage+1.9.0.patch:35:+      if (!removeFileSuccess) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/patches/@react-native-community+async-storage+1.9.0.patch:36:+        return RCTMakeError(@"Error removing file at path.", removeFileError, nil);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/patches/@react-native-community+async-storage+1.9.0.patch:65:+      NSError *removeFileError;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/patches/@react-native-community+async-storage+1.9.0.patch:66:+      BOOL removeFileSuccess = [[NSFileManager defaultManager] removeItemAtPath:filePath error:&removeFileError];
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/patches/@react-native-community+async-storage+1.9.0.patch:67:+      if (!removeFileSuccess) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/patches/@react-native-community+async-storage+1.9.0.patch:68:+        return RCTMakeError(@"Error removing file at path.", removeFileError, nil);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/patches/react-native-system-setting+1.7.4.patch:336:             mContext.removeActivityEventListener(this);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/App.tsx:76:      AppState.removeEventListener('change', onAppStateChange);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/bridge/ExposureNotification/utils.ts:6: * TODO: remove in follow up PR https://github.com/cds-snc/covid-shield-mobile/issues/803
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/bridge/PushNotification.ts:20:  removeAllPendingNotificationRequests(): void;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/bridge/PushNotification.ts:26:    RNPushNotification.removeAllDeliveredNotifications();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/bridge/PushNotification.ts:33:  removeAllPendingNotificationRequests: () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/bridge/PushNotification.ts:34:    RNPushNotification.removeAllPendingNotificationRequests();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/components/Toolbar.tsx:27:    return () => subscription.remove();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/locale/utils.spec.ts:12:  removeEventListener: jest.fn(),
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/home/components/NotificationPermissionStatus.tsx:58:      AppState.removeEventListener('change', onChange);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/qr/CheckInSuccessfulScreen.tsx:18:  const {removeCheckIn} = useOutbreakService();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/qr/CheckInSuccessfulScreen.tsx:24:    removeCheckIn();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/qr/CheckInSuccessfulScreen.tsx:27:  }, [removeCheckIn, popAlert, navigateHome]);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/qr/utils.ts:90:      Linking.removeEventListener('url', handleOpenURL);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/qr/views/CameraPermissionDenied.tsx:25:      AppState.removeEventListener('change', onAppStateChange);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/tutorial/Tutorial.tsx:73:            removeClippedSubviews={false}
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/AccessibilityService/AccessibilityServiceProvider.tsx:33:      AccessibilityInfo.removeEventListener('screenReaderChanged', handleScreenReaderToggled);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:120:      // Stop and remove legacy periodic tasks that were scheduled using react-native-background-fetch
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:156:      DeviceEventEmitter.removeAllListeners('initiateExposureCheckEvent');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:158:      DeviceEventEmitter.removeAllListeners('executeExposureCheckEvent');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:258:    // @todo: maybe remove this gets called in updateExposureStatus
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationServiceProvider.tsx:86:      AppState.removeEventListener('change', onAppStateChange);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationServiceProvider.tsx:242:      AppState.removeEventListener('change', updateStatus);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationServiceProvider.tsx:243:      bluetoothListenerPromise.then(listener => listener.remove()).catch(() => {});
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationServiceProvider.tsx:244:      locationListenerPromise?.then(listener => listener.remove()).catch(() => {});
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/PollNotificationService/PollNotificationService.ts:68:  await AsyncStorage.removeItem(READ_RECEIPTS_KEY);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/date-fns.ts:95:  // remove non-alpha chars from month
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/Observable.ts:58:      this.removeSubscription(sub);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/Observable.ts:61:      this.state.cycleEndActions.push(() => this.removeSubscription(sub));
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/Observable.ts:75:  private removeSubscription(sub: Subscription<T>) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/OutbreakProvider.tsx:35:  removeCheckIn = async () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/OutbreakProvider.tsx:36:    // removes most recent Check In
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/OutbreakProvider.tsx:111:  const removeCheckIn = useMemo(
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/OutbreakProvider.tsx:113:      outbreakService.removeCheckIn();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/OutbreakProvider.tsx:126:      removeCheckIn,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/OutbreakProvider.tsx:129:    [outbreakStatus, setOutbreakStatus, checkForExposures, addCheckIn, removeCheckIn, checkInHistory],
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/types/react-native-system-setting.d.ts:3:    remove();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/TEST_PLAN.md:32:Note: Because the server doesn't return Temporary Exposure Keys (TEKs) for current date (https://github.com/CovidShield/server/blob/master/pkg/server/retrieve.go#L83), for this test to work, the server needs to remove that restriction. This is possible if you run server locally or modify production server.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:2614:"@svgr/babel-plugin-remove-jsx-attribute@^4.2.0":
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:2616:  resolved "https://registry.yarnpkg.com/@svgr/babel-plugin-remove-jsx-attribute/-/babel-plugin-remove-jsx-attribute-4.2.0.tgz#297550b9a8c0c7337bea12bdfc8a80bb66f85abc"
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:2618:"@svgr/babel-plugin-remove-jsx-empty-expression@^4.2.0":
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:2620:  resolved "https://registry.yarnpkg.com/@svgr/babel-plugin-remove-jsx-empty-expression/-/babel-plugin-remove-jsx-empty-expression-4.2.0.tgz#c196302f3e68eab6a05e98af9ca8570bc13131c7"
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:2647:    "@svgr/babel-plugin-remove-jsx-attribute" "^4.2.0"
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:2648:    "@svgr/babel-plugin-remove-jsx-empty-expression" "^4.2.0"
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:7891:    remove-trailing-separator "^1.0.1"
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:9024:remove-trailing-separator@^1.0.1:
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:9026:  resolved "https://registry.yarnpkg.com/remove-trailing-separator/-/remove-trailing-separator-1.1.0.tgz#c24bce2a283adad5bc3f58e0d48249b92379d8ef"
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/__mocks__/react-native-localize.ts:22:  removeEventListener: jest.fn(),

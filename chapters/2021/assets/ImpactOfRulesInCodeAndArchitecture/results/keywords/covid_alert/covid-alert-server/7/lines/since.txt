@@ -1,0 +1,27 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/fsmonitor-watchman.sample:13:# modified since the given time. Paths must be relative to the root of
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/fsmonitor-watchman.sample:51:	# changed since $time but were not transient (ie created after
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/fsmonitor-watchman.sample:54:	# To accomplish this, we're using the "since" generator to use the
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/fsmonitor-watchman.sample:65:			"since": $time,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/fsmonitor-watchman.sample:67:			"expression": ["not", ["allof", ["since", $time, "cclock"], ["not", "exists"]]]
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/pre-commit.sample:29:	# even required, for portability to Solaris 10's /usr/bin/tr), since
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/pre-rebase.sample:146: * A has one fix since it was merged up to "next".
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:327:			DaysSinceOnsetOfSymptoms:   &onsetDays,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:671:			DaysSinceOnsetOfSymptoms:   &onsetDays,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/events.go:51:// translateTokenForLogs Since we don't want to log bearer tokens to the log file we only use the first and last character
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:496:		elapsed := time.Since(lastFailure)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:811:	DaysSinceOnsetOfSymptoms *int32 `protobuf:"zigzag32,6,opt,name=days_since_onset_of_symptoms,json=daysSinceOnsetOfSymptoms" json:"days_since_onset_of_symptoms,omitempty"`
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:886:func (x *TemporaryExposureKey) GetDaysSinceOnsetOfSymptoms() int32 {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:887:	if x != nil && x.DaysSinceOnsetOfSymptoms != nil {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:888:		return *x.DaysSinceOnsetOfSymptoms
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim.go:65:		Since the region that is being retrieved above is no longer the MCC code for canada
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:142:	if ts == nil || math.Abs(time.Since(time.Unix(ts.Seconds, 0)).Seconds()) > 3600 {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/covidshield.proto:205:  optional sint32 days_since_onset_of_symptoms = 6;
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/README.md:41:Since you, the reader, are more likely to be in a position of having to implement a client for this
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/README.md:136:Since the Exposure Notification Framework doesn't track keys before it is enabled, and since the
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/README.md:146:Since there is little value in retrieving historical data upon Application installation, it is
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:72:{"minimumRiskScore":0,"attenuationLevelValues":[1,2,3,4,5,6,7,8],"attenuationWeight":50,"daysSinceLastExposureLevelValues":[1,2,3,4,5,6,7,8],"daysSinceLastExposureWeight":50,"durationLevelValues":[1,2,3,4,5,6,7,8],"durationWeight":50,"transmissionRiskLevelValues":[1,2,3,4,5,6,7,8],"transmissionRiskWeight":50}
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:280:{"minimumRiskScore":0,"attenuationLevelValues":[1,2,3,4,5,6,7,8],"attenuationWeight":50,"daysSinceLastExposureLevelValues":[1,2,3,4,5,6,7,8],"daysSinceLastExposureWeight":50,"durationLevelValues":[1,2,3,4,5,6,7,8],"durationWeight":50,"transmissionRiskLevelValues":[1,2,3,4,5,6,7,8],"transmissionRiskWeight":50}
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/expiration_worker_test.rb:56:    seconds_since_utc_midnight = Time.now.to_i % 86400
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/expiration_worker_test.rb:57:    hours_until_utc_midnight = 24 - (seconds_since_utc_midnight / 3600)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:75:        days_since_onset_of_symptoms: 0,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/protocol/covidshield_pb.rb:78:      optional :days_since_onset_of_symptoms, :sint32, 6

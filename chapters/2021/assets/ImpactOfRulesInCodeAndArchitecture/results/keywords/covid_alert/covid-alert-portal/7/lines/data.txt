@@ -1,0 +1,249 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:381:        post_data = {"code": token}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:384:            post_data,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:493:        post_data = {"code": token}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:496:            post_data,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:505:            post_data,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:529:        post_data = {"code": token}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:532:            post_data,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:541:            post_data,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:563:        post_data = {"code": token}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:566:            post_data,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:574:            post_data,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:589:        post_data = {"code": token}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:592:            post_data,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:600:            post_data,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:122:#### ⚠️ This release includes a data migration
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:131:#### ⚠️ This release includes a data migration
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:155:#### ⚠️ This release includes a data migration
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:258:- Data migration to add "sent" dates to any invitations missing that fields
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:315:#### ⚠️ This release includes a data migration
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:336:#### ⚠️ This release includes a data migration
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/cloudwatch_portal.tf:80:  treat_missing_data  = "notBreaching"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/cloudwatch_portal.tf:108:  treat_missing_data  = "notBreaching"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/cloudwatch_portal.tf:141:  treat_missing_data  = "notBreaching"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/cloudwatch_portal.tf:155:  treat_missing_data  = "notBreaching"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/cloudwatch_portal.tf:182:  treat_missing_data  = "notBreaching"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/cloudwatch_portal.tf:209:  treat_missing_data  = "notBreaching"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/cloudwatch_portal.tf:236:  treat_missing_data  = "notBreaching"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/cloudwatch_portal.tf:249:  datapoints_to_alarm = "2"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/cloudwatch_portal.tf:252:  treat_missing_data  = "notBreaching"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/cloudwatch_portal.tf:259:    return_data = "true"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/cloudwatch_portal.tf:289:  datapoints_to_alarm = "2"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/cloudwatch_portal.tf:292:  treat_missing_data  = "breaching"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/cloudwatch_portal.tf:298:    return_data = "true"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/cloudwatch_portal.tf:312:  datapoints_to_alarm = "2"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/cloudwatch_portal.tf:315:  treat_missing_data  = "breaching"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/cloudwatch_portal.tf:321:    return_data = "true"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/cloudwatch_portal.tf:345:  treat_missing_data  = "missing"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/cloudwatch_qrcode.tf:80:  treat_missing_data  = "notBreaching"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/cloudwatch_qrcode.tf:108:  treat_missing_data  = "notBreaching"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/ecs.tf:28:data "template_file" "covidportal_task" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/ecs.tf:38:    database_url                           = aws_secretsmanager_secret_version.server_database_url.arn
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/ecs.tf:67:data "template_file" "qrcode_registration_task" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/ecs.tf:77:    database_url                           = aws_secretsmanager_secret_version.server_database_url.arn
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/ecs.tf:115:  container_definitions    = data.template_file.covidportal_task.rendered
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/ecs.tf:130:  container_definitions    = data.template_file.qrcode_registration_task.rendered
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/iam.tf:1:data "aws_iam_policy_document" "covidportal" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/iam.tf:16:data "aws_iam_policy_document" "covidportal_secrets_manager" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/iam.tf:25:      aws_secretsmanager_secret.server_database_url.arn,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/iam.tf:52:  policy = data.aws_iam_policy_document.covidportal_secrets_manager.json
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/iam.tf:58:  assume_role_policy = data.aws_iam_policy_document.covidportal.json
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/iam.tf:81:  assume_role_policy = data.aws_iam_policy_document.assume_role_policy_codedeploy.json
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/iam.tf:85:data "aws_iam_policy_document" "assume_role_policy_codedeploy" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/kms.tf:1:data "aws_caller_identity" "current" {}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/kms.tf:15:        "AWS" : "arn:aws:iam::${data.aws_caller_identity.current.account_id}:root"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/kms.tf:27:        "kms:GenerateDataKey*",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/kms.tf:41:          "kms:Decrypt","kms:GenerateDataKey"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/kms.tf:55:        "kms:GenerateDataKey*",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/lambda/lambda_notify_slack.js:15:    var postData = {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/lambda/lambda_notify_slack.js:53:                postData.icon_emoji = ":rotating_light:";
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/lambda/lambda_notify_slack.js:67:                postData.icon_emoji = ":warning:";
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/lambda/lambda_notify_slack.js:75:    postData.attachments = [
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/lambda/lambda_notify_slack.js:91:      res.on('data', function (chunk) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/lambda/lambda_notify_slack.js:100:    req.write(util.format("%j", postData));
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/lambda.tf:25:data "archive_file" "notify_slack_sns" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/lambda.tf:37:  source_code_hash = data.archive_file.notify_slack_sns.output_base64sha256
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:5:data "aws_availability_zones" "available" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:31:  subnet_ids = data.aws_subnet_ids.ecr_endpoint_available.ids
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:42:  subnet_ids = data.aws_subnet_ids.ecr_endpoint_available.ids
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:118:  availability_zone = element(data.aws_availability_zones.available.names, count.index)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:132:  availability_zone = element(data.aws_availability_zones.available.names, count.index)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:141:data "aws_subnet_ids" "ecr_endpoint_available" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:279:resource "aws_security_group_rule" "covidportal_egress_database" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:286:  source_security_group_id = aws_security_group.covidportal_database.id
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:362:resource "aws_security_group_rule" "qrcode_egress_database" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:369:  source_security_group_id = aws_security_group.covidportal_database.id
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:402:resource "aws_security_group" "covidportal_database" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:403:  name        = "covidportal-database"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:404:  description = "Ingress - covidportal Database"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/rds.tf:37:  database_name             = var.rds_server_db_name
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/rds.tf:50:    aws_security_group.covidportal_database.id
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/s3.tf:70:data "aws_iam_policy_document" "web_distribution" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/s3.tf:83:  policy = data.aws_iam_policy_document.web_distribution.json
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/secrets.tf:1:resource "aws_secretsmanager_secret" "server_database_url" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/secrets.tf:2:  name                    = "server-database-url"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/secrets.tf:6:resource "aws_secretsmanager_secret_version" "server_database_url" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/secrets.tf:7:  secret_id     = aws_secretsmanager_secret.server_database_url.id
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/sns.tf:85:  policy = data.aws_iam_policy_document.cloudwatch_events_sns_topic_policy.json
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/sns.tf:90:  policy = data.aws_iam_policy_document.cloudwatch_events_sns_topic_policy.json
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/sns.tf:93:data "aws_iam_policy_document" "cloudwatch_events_sns_topic_policy" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/sns.tf:116:        data.aws_caller_identity.current.account_id,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/task-definitions/covid-portal.json:55:        "name": "DATABASE_URL",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/task-definitions/covid-portal.json:56:        "valueFrom": "${database_url}"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/forms.py:33:                    "email": self.cleaned_data.get("email", None),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/forms.py:34:                    "subject": self.cleaned_data.get("feedback", "")[0:20] + "...",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/forms.py:35:                    "description": self.cleaned_data.get("feedback", ""),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/forms.py:36:                    "name": self.cleaned_data.get("name", ""),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/tests.py:21:        post_data = {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/tests.py:28:            post_data,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/tests.py:37:        post_data = {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/tests.py:45:            post_data,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/forms.py:33:            "phone_number" in self.cleaned_data
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/forms.py:34:            and self.cleaned_data["phone_number"] != self.cleaned_data["phone_number2"]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/forms.py:39:        return self.cleaned_data
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/forms.py:49:            phone_number=str(self.cleaned_data.get("phone_number")),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:50:    def get_context_data(self, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:52:        context = super().get_context_data(**kwargs)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:162:    def get_context_data(self, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:163:        context = super().get_context_data(**kwargs)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:168:        self.phone_number = str(form.cleaned_data.get("phone_number"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:192:    def get_context_data(self, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:193:        context = super().get_context_data(**kwargs)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:199:        self.redirect_choice = form.cleaned_data.get("redirect_choice")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/docker-compose.yml:14:      - DATABASE_URL=postgres://user:password@db:5432/covid_portal
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/entrypoint.sh:3:# Apply database migrations
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/entrypoint.sh:4:echo "Apply database migrations"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/google_analytics/migrations/0001_initial.py:18:                ('ga_code', models.CharField(blank=True, default=None, help_text='If no tracking code provided Google Analytics will not record any data for site.', max_length=100, null=True, verbose_name='Google Analytics Code')),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/google_analytics/models.py:18:            "If no tracking code provided Google Analytics will not record any data for site."
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/google_analytics/templates/includes/google_analytics.html:8:      window.dataLayer = window.dataLayer || [];
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/google_analytics/templates/includes/google_analytics.html:9:      function gtag(){dataLayer.push(arguments);}
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.mo matches
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:737:"If no tracking code provided Google Analytics will not record any data for "
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile:27:dj-database-url = "*"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:141:        "dj-database-url": {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/.env.example:10:# DATABASE_URL =
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/audit_backends.py:49:        changed_fields_data = json.loads(crud_info.get("changed_fields", "{}"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/audit_backends.py:50:        if changed_fields_data is not None:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/audit_backends.py:51:            changed_fields = list(changed_fields_data.keys())
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:16:import dj_database_url
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:170:# Database
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:171:# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:175:# database migrations will fail if env var is set to an empty string
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:176:if os.getenv("DATABASE_URL") == "":
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:177:    del os.environ["DATABASE_URL"]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:179:if os.getenv("DATABASE_URL"):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:180:    db_config = dj_database_url.config(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:181:        default=os.getenv("DATABASE_URL"), conn_max_age=600, ssl_require=is_prod
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:184:    db_config = dj_database_url.config(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:188:DATABASES = {"default": db_config}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/admin.py:79:        email = self.cleaned_data.get("email", "").lower()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:91:        return self.cleaned_data["username"].lower()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:131:        code = self.cleaned_data["code"].lower()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:184:        phone_number = self.cleaned_data.get("phone_number")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:185:        phone_number2 = self.data.get("phone_number2")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:226:        password1 = self.cleaned_data.get("password1")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:227:        # We can't use clean_data for password2, it hasn't been cleaned yet
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:228:        password2 = self.data.get("password2")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:238:        # Validate the password after self.instance is updated with form data
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:240:        password = self.cleaned_data.get("password1")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:248:        self.user.set_password(self.cleaned_data["password1"])
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:321:        password1 = self.cleaned_data.get("new_password1")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:322:        # We can't use clean_data for password2, it hasn't been cleaned yet
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:323:        password2 = self.data.get("new_password2")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:389:        province_abbr = self.cleaned_data.get("province", "")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:393:        password1 = self.cleaned_data.get("password1")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:394:        # We can't use clean_data for password2, it hasn't been cleaned yet
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:395:        password2 = self.data.get("password2")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:409:        email = self.cleaned_data.get("email", "").lower()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:423:        # Validate the password after self.instance is updated with form data
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:425:        password = self.cleaned_data.get("password1")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:443:            address=self.cleaned_data.get("email"),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:479:        phone_number = self.cleaned_data.get("phone_number")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:480:        # We can't use clean_data for phone_number_confirmation, it hasn't been cleaned yet
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:481:        phone_number_confirmation = self.data.get("phone_number_confirmation")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:539:        cleaned_data = super().clean()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:540:        params = {"email": cleaned_data.get("email"), "inviter": user}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:546:        cleaned_data = super().clean()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:547:        email = cleaned_data.get("email")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:579:        cleaned_data = super().clean()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:580:        token = self.cleaned_data.get("otp_token")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:584:        cleaned_data["name"] = self.instance.user.email[:32]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:594:        return cleaned_data
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:616:        cleaned_data = super().clean()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:617:        token = cleaned_data.get("otp_token")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:619:            return cleaned_data
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:624:        return cleaned_data
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/login_handler.py:3:from axes.handlers.database import AxesDatabaseHandler
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/login_handler.py:10:class HealthcareLoginHandler(AxesDatabaseHandler):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/login_handler.py:13:        # If AxesDatabaseHandler already returns locked, let's return it right now
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:223:        post_data = {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:229:            response = self.client.post(reverse("login"), post_data)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:234:        return self.client.post(reverse("admin:login"), post_data)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:303:        post_data = {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:308:        response = self.client.post(reverse("login"), post_data)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:320:        post_data = {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:325:        response = self.client.post(reverse("login"), post_data)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:495:        self.new_user_data = {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:561:        response = self.client.post(reverse("signup"), data=self.new_user_data)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:571:            reverse("signup_2fa"), data=self.new_user_data
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:589:            User.objects.filter(email=self.new_user_data["email"]).first()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:595:            {"username": self.new_user_data["email"], "password": "fake_password"},
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:600:            AccessAttempt.objects.filter(username=self.new_user_data["email"]).first(),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:604:                username=self.new_user_data["email"]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:610:        response = self.client.post(reverse("signup"), data=self.new_user_data)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:615:            User.objects.filter(email=self.new_user_data["email"]).first(),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:620:            AccessAttempt.objects.filter(username=self.new_user_data["email"]).first(),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:624:                username=self.new_user_data["email"]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1189:        post_data = {"name": "Don Draper"}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1192:            post_data,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1201:        post_data = {"email": "don@example.com"}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1202:        response = self.client.post(edit_url, post_data)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1262:        post_data = {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1268:            post_data,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1275:        post_data = {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1281:            post_data,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:165:            username=form.cleaned_data.get("email"),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:166:            password=form.cleaned_data.get("password1"),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:246:        code = form.cleaned_data.get("code")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:366:    def get_context_data(self, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:367:        context = super().get_context_data(*args, **kwargs)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:13:- Running the COVID Alert Portal locally as a python process requires [python3](https://www.python.org/downloads/) and a database, although an SQLite database will be created if no connection string exists.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:47:##### database configuration
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:49:- `DATABASE_URL`: A string containing the database scheme, host, username, password, and port. The `DATABASE_URL` is parsed by [`dj-django-url`](https://pypi.org/project/dj-database-url/).
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:120:- the `entrypoint.sh` script to perform the database migrations
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:128:#### 1. Database migrations
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:130:By default the Django creates an SQLite database, but we use Postgres in production.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:132:If a `DATABASE_URL` environment variable exists, it will set all the connection parameters at the same time.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:134:##### Postgres [URL schema](https://github.com/jacobian/dj-database-url#url-schema)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:136:| Django Backend                  | DATABASE_URL                              |
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:140:To create the database schema, run `python manage.py makemigrations`.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:176:You can use Docker Compose to build an application container along with a Postgres database. It will map your local files into a Docker container, spin up a PostgreSQL database, and do CSS compilation and a DB migration. The app runs on port `8000`, the database at port `5432` (u: `user`, p: `password`) and will be served at `http://0.0.0.0:8000`.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:279:Si une variable d’environnement `DATABASE_URL` existe, elle configurera tous les paramètres de connexion au même moment.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:281:##### Postgres [URL schema](https://github.com/jacobian/dj-database-url#url-schema)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:283:| Django Backend                  | DATABASE_URL                              |
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/templates/register/summary.html:53:                    {{ form_data.category }}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/templates/register/summary.html:64:                    {{ form_data.name }}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/templates/register/summary.html:76:                    {{ form_data.address }}<br>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/templates/register/summary.html:77:                    {{ form_data.address_2 }}<br>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/templates/register/summary.html:78:                    {{ form_data.city }}<br>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/templates/register/summary.html:79:                    {{ form_data.province }}<br>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/templates/register/summary.html:80:                    {{ form_data.postal_code }}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/templates/register/summary.html:92:                    {{ form_data.contact_email }}<br>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/templates/register/summary.html:93:                    {{ form_data.contact_phone }}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:78:        form = forms.LocationCategoryForm(data={})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:83:        form = forms.LocationNameForm(data={})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:88:        form = forms.LocationAddressForm(data={"address": ""})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:93:        form = forms.LocationAddressForm(data={"city": ""})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:98:        form = forms.LocationAddressForm(data={"province": ""})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:103:        form = forms.LocationAddressForm(data={"postal_code": ""})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:108:        form = forms.LocationContactForm(data={"contact_email": ""})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:113:        form = forms.LocationContactForm(data={"contact_email": "notanemail"})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:118:        form = forms.LocationContactForm(data={"contact_phone": ""})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:123:        form = forms.LocationContactForm(data={"contact_phone": "notaphonenumber"})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/views.py:19:        email = form.cleaned_data.get("email")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/views.py:67:    def get_context_data(self, form, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/views.py:68:        context = super(LocationWizard, self).get_context_data(form=form, **kwargs)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/views.py:70:        context["form_data"] = self.get_all_cleaned_data()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/views.py:75:        forms = [form.cleaned_data for form in form_list]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/views.py:98:    def get_context_data(self, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/views.py:99:        context = super().get_context_data(**kwargs)

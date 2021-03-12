@@ -1,0 +1,20 @@
+../stopcovid-robertsdk-android/.git/hooks/post-update.sample:8:exec git update-server-info
+Binary file ../stopcovid-robertsdk-android/.git/index matches
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/ServerStatusUpdate.kt:13:class ServerStatusUpdate(
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/SSUBuilder.kt:32:     * Build an [ServerStatusUpdate] with the given timestamp
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/SSUBuilder.kt:35:     * @return A complete [ServerStatusUpdate] ready to send
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/SSUBuilder.kt:37:    fun build(currentTimeMillis: Long = System.currentTimeMillis()): ServerStatusUpdate {
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/SSUBuilder.kt:56:        return ServerStatusUpdate(ebid, time, mac)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/RemoteServiceDataSource.kt:13:import com.lunabeestudio.domain.model.ServerStatusUpdate
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/RemoteServiceDataSource.kt:22:    suspend fun unregister(serverStatusUpdate: ServerStatusUpdate): RobertResult
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/RemoteServiceDataSource.kt:23:    suspend fun status(serverStatusUpdate: ServerStatusUpdate, ntpInitialTimeS: Long): RobertResultData<StatusReport>
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/RemoteServiceDataSource.kt:25:    suspend fun deleteExposureHistory(serverStatusUpdate: ServerStatusUpdate): RobertResult
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:16:import com.lunabeestudio.domain.model.ServerStatusUpdate
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:30:    suspend fun unregister(serverStatusUpdate: ServerStatusUpdate): RobertResult =
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:31:        remoteServiceDataSource.unregister(serverStatusUpdate)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:33:    suspend fun status(serverStatusUpdate: ServerStatusUpdate, ntpInitialTimeS: Long): RobertResultData<StatusReport> =
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:34:        remoteServiceDataSource.status(serverStatusUpdate, ntpInitialTimeS)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:39:    suspend fun deleteExposureHistory(serverStatusUpdate: ServerStatusUpdate): RobertResult =
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:40:        remoteServiceDataSource.deleteExposureHistory(serverStatusUpdate)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:27:import com.lunabeestudio.domain.model.ServerStatusUpdate
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:159:    private fun getSSU(prefix: Byte): RobertResultData<ServerStatusUpdate> {

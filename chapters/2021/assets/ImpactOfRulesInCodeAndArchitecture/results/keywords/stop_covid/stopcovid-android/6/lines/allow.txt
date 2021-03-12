@@ -1,0 +1,96 @@
+stopcovid-android/.git/hooks/applypatch-msg.sample:8:# allowed to edit the commit message file.
+stopcovid-android/.git/hooks/commit-msg.sample:7:# commit.  The hook is allowed to edit the commit message file.
+stopcovid-android/.git/hooks/pre-commit.sample:18:# If you want to allow non-ASCII filenames set this variable to true.
+stopcovid-android/.git/hooks/pre-commit.sample:19:allownonascii=$(git config --bool hooks.allownonascii)
+stopcovid-android/.git/hooks/pre-commit.sample:27:if [ "$allownonascii" != "true" ] &&
+stopcovid-android/.git/hooks/pre-commit.sample:43:  git config hooks.allownonascii true
+stopcovid-android/.git/hooks/pre-rebase.sample:15:# merged to 'next' branch from getting rebased, because allowing it
+stopcovid-android/.git/hooks/pre-rebase.sample:50:	exit 1 ;# we could allow it, but there is no point.
+stopcovid-android/.git/hooks/pre-rebase.sample:62:		exit 1 ;# we could allow it, but there is no point.
+stopcovid-android/.git/hooks/pre-rebase.sample:153:We would want to allow C to be rebased, refuse A, and encourage
+stopcovid-android/.git/hooks/update.sample:10:# hooks.allowunannotated
+stopcovid-android/.git/hooks/update.sample:11:#   This boolean sets whether unannotated tags will be allowed into the
+stopcovid-android/.git/hooks/update.sample:13:# hooks.allowdeletetag
+stopcovid-android/.git/hooks/update.sample:14:#   This boolean sets whether deleting tags will be allowed in the
+stopcovid-android/.git/hooks/update.sample:16:# hooks.allowmodifytag
+stopcovid-android/.git/hooks/update.sample:19:# hooks.allowdeletebranch
+stopcovid-android/.git/hooks/update.sample:20:#   This boolean sets whether deleting branches will be allowed in the
+stopcovid-android/.git/hooks/update.sample:24:#   in the repository.  By default this is allowed.
+stopcovid-android/.git/hooks/update.sample:46:allowunannotated=$(git config --bool hooks.allowunannotated)
+stopcovid-android/.git/hooks/update.sample:47:allowdeletebranch=$(git config --bool hooks.allowdeletebranch)
+stopcovid-android/.git/hooks/update.sample:49:allowdeletetag=$(git config --bool hooks.allowdeletetag)
+stopcovid-android/.git/hooks/update.sample:50:allowmodifytag=$(git config --bool hooks.allowmodifytag)
+stopcovid-android/.git/hooks/update.sample:74:		if [ "$allowunannotated" != "true" ]; then
+stopcovid-android/.git/hooks/update.sample:75:			echo "*** The un-annotated tag, $short_refname, is not allowed in this repository" >&2
+stopcovid-android/.git/hooks/update.sample:82:		if [ "$allowdeletetag" != "true" ]; then
+stopcovid-android/.git/hooks/update.sample:83:			echo "*** Deleting a tag is not allowed in this repository" >&2
+stopcovid-android/.git/hooks/update.sample:89:		if [ "$allowmodifytag" != "true" ] && git rev-parse $refname > /dev/null 2>&1
+stopcovid-android/.git/hooks/update.sample:92:			echo "*** Modifying a tag is not allowed in this repository." >&2
+stopcovid-android/.git/hooks/update.sample:99:			echo "*** Creating a branch is not allowed in this repository" >&2
+stopcovid-android/.git/hooks/update.sample:105:		if [ "$allowdeletebranch" != "true" ]; then
+stopcovid-android/.git/hooks/update.sample:106:			echo "*** Deleting a branch is not allowed in this repository" >&2
+stopcovid-android/.git/hooks/update.sample:115:		if [ "$allowdeletebranch" != "true" ]; then
+stopcovid-android/.git/hooks/update.sample:116:			echo "*** Deleting a tracking branch is not allowed in this repository" >&2
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/model/ApiConfiguration.kt:93:    @SerializedName("app.allowNoAdvertisingDevice")
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/model/ApiConfiguration.kt:94:    val allowNoAdvertisingDevice: Boolean,
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/model/ApiConfiguration.kt:147:    allowNoAdvertisingDevice = allowNoAdvertisingDevice,
+stopcovid-android/domain/src/main/java/com/lunabeestudio/domain/model/Configuration.kt:51:    val allowNoAdvertisingDevice: Boolean,
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/LocalCryptoManager.kt:138:     * From Marshmallow, this key is generated and operated directly from the android keystore.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/LocalCryptoManager.kt:139:     * From KitKat and before Marshmallow, this key is stored in the application shared preferences
+stopcovid-android/LICENSE.md:142:_Under no circumstances and under no legal theory, whether tort (including negligence), contract, or otherwise, shall any Contributor, or anyone who distributes Covered Software as permitted above, be liable to You for any direct, indirect, special, incidental, or consequential damages of any character including, without limitation, damages for lost profits, loss of goodwill, work stoppage, computer failure or malfunction, or any and all other commercial damages or losses, even if such party shall have been informed of the possibility of such damages. This limitation of liability shall not apply to liability for death or personal injury resulting from such party’s negligence to the extent applicable law prohibits such limitation. Some jurisdictions do not allow the exclusion or limitation of incidental or consequential damages, so this exclusion and limitation may not apply to You._
+stopcovid-android/LICENSE.txt:297:*  jurisdictions do not allow the exclusion or limitation of           *
+stopcovid-android/licenses/tests/license-junit4.txt:68:allow Recipient to distribute the Program, it is Recipient's responsibility to
+stopcovid-android/licenses/tests/license-junit4.txt:111:any, in a manner that reasonably allows subsequent Recipients to identify the
+stopcovid-android/licenses/tests/license-junit4.txt:131:Contributor in writing of such claim, and b) allow the Commercial Contributor
+stopcovid-android/licenses/tests/license-zohhak.txt:6: of this license document, but changing it is not allowed.
+stopcovid-android/stopcovid/src/main/AndroidManifest.xml:35:        android:allowBackup="false"
+stopcovid-android/stopcovid/src/main/AndroidManifest.xml:46:        tools:ignore="AllowBackup,HardcodedDebugMode,LockedOrientationActivity"
+stopcovid-android/stopcovid/src/main/assets/Config/config.json:148:      "name": "app.allowNoAdvertisingDevice",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:20:    "onboarding.proximityController.allowProximity": "القبول",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:24:    "onboarding.beAwareController.allowNotifications": "قبول الإشعارات",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:198:    "onboarding.proximityController.allowProximity.warning": "انتبه: سيطلب نظام Android منك الوصول إلى مكان تواجد هذا الجهاز. لن يستعمل TousAntiCovid غير كشف الهواتف الموجودة في محيطه بواسطة Bluetooth، دون تحديد الموقع الجغرافي بتاتًا",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:20:    "onboarding.proximityController.allowProximity": "Erlauben",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:24:    "onboarding.beAwareController.allowNotifications": "Benachrichtigungen erlauben",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:198:    "onboarding.proximityController.allowProximity.warning": "Warnung! Android wird Sie um die Erlaubnis für den Zugriff auf die Position dieses Geräts bitten. TousAntiCovid nutzt ausschließlich die Bluetooth-Erkennung von Telefonen in unmittelbarer Nähe und keinesfalls die Standortbestimmung",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:18:    "onboarding.proximityController.mainMessage.title": "Allow \"Bluetooth contacts\"",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:20:    "onboarding.proximityController.allowProximity": "Allow",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:24:    "onboarding.beAwareController.allowNotifications": "Allow push notifications",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:72:    "proximityController.error.noBattery": "In order for the Bluetooth contact to work, you need to allow it to run as a background app by tapping here 👉",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:73:    "proximityController.error.noBluetooth": "In order for the Bluetooth contact to work, you need to allow Bluetooth in settings by tapping here 👉",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:198:    "onboarding.proximityController.allowProximity.warning": "Please note, Android will ask you for access to this phone’s location. TousAntiCovid will only use the Bluetooth detection of nearby phones, and will never use location data",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:306:    "home.activationExplanation": "Activating TousAntiCovid will keep you informed and inform others about the risk of infection, allowing you to play your part in the fight against COVID-19.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:20:    "onboarding.proximityController.allowProximity": "Autorizar",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:24:    "onboarding.beAwareController.allowNotifications": "Autorizar las notificaciones",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:198:    "onboarding.proximityController.allowProximity.warning": "Atención: Android va a solicitar acceso a la ubicación de este dispositivo. TousAntiCovid utilizará únicamente la detección Bluetooth de los teléfonos que estén cerca, nunca la geolocalización.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:20:   "onboarding.proximityController.allowProximity":"Autoriser",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:24:   "onboarding.beAwareController.allowNotifications":"Autoriser les notifications",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:198:   "onboarding.proximityController.allowProximity.warning":"Attention, Android va vous demander l’accès à la position de cet appareil. TousAntiCovid utilisera uniquement la détection Bluetooth des téléphones à proximité, et en aucun cas la géolocalisation",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:20:    "onboarding.proximityController.allowProximity": "Autorizza",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:24:    "onboarding.beAwareController.allowNotifications": "Autorizza le notifiche",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:198:    "onboarding.proximityController.allowProximity.warning": "Attenzione, Android ti chiederà l’accesso alla posizione di questo dispositivo. TousAntiCovid utilizzerà unicamente il rilevamento Bluetooth degli smartphone situati in prossimità, e non utilizzerà in nessun caso la geolocalizzazione.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:20:    "onboarding.proximityController.allowProximity": "Autorizar",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:24:    "onboarding.beAwareController.allowNotifications": "Autorizar as notificações",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:198:    "onboarding.proximityController.allowProximity.warning": "Atenção: o Android vai solicitar-lhe o acesso à localização deste dispositivo. A TousAntiCovid utilizará apenas a deteção Bluetooth dos telemóveis nas imediações e, em nenhuma hipótese, a geolocalização",
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/AttestationQrCodeItem.kt:28:    var allowShare: Boolean = false
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/AttestationQrCodeItem.kt:61:            menu.findItem(R.id.qr_code_menu_share).isVisible = allowShare
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingProximityFragment.kt:42:    override fun getButtonTitleKey(): String = "onboarding.proximityController.allowProximity"
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingProximityFragment.kt:48:                .setMessage(strings["onboarding.proximityController.allowProximity.warning"])
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/AttestationsFragment.kt:163:    private fun qrCodeItemFromAttestation(attestation: AttestationMap, allowShare: Boolean): AttestationQrCodeItem {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/AttestationsFragment.kt:175:            this.allowShare = allowShare
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingNotificationFragment.kt:27:    override fun getButtonTitleKey(): String? = "onboarding.beAwareController.allowNotifications"
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:34:    private fun notifyChangeIfAllowed() {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:58:            notifyChangeIfAllowed()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:65:            notifyChangeIfAllowed()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:72:            notifyChangeIfAllowed()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:79:            notifyChangeIfAllowed()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:86:            notifyChangeIfAllowed()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:93:            notifyChangeIfAllowed()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:100:            notifyChangeIfAllowed()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:107:            notifyChangeIfAllowed()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:114:            notifyChangeIfAllowed()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:121:            notifyChangeIfAllowed()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:128:            notifyChangeIfAllowed()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:211:        notifyChangeIfAllowed()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:289:        notifyChangeIfAllowed()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/ProximityManager.kt:61:            || robertManager.configuration.allowNoAdvertisingDevice
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/network/LBMaintenanceHttpClient.kt:23: * Light http client allowing us to do some network works without external libs

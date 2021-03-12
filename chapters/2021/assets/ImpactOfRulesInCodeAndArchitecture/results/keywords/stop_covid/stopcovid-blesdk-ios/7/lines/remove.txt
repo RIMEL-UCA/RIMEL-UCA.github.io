@@ -1,0 +1,33 @@
+stopcovid-blesdk-ios/.git/hooks/pre-rebase.sample:49:	echo >&2 "$topic is fully merged to master; better remove it."
+stopcovid-blesdk-ios/.git/hooks/prepare-commit-msg.sample:12:# This hook includes three examples. The first one removes the
+stopcovid-blesdk-ios/LICENSE.txt:118:(a) for any code that a Contributor has removed from Covered Software;
+stopcovid-blesdk-ios/LICENSE.txt:200:You may not remove or alter the substance of any license notices
+stopcovid-blesdk-ios/LICENSE.txt:344:modified version of this License if you rename the license and remove
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:201:        connectingPeripherals.remove(peripheral)
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:202:        peripheralsToWriteValue.remove(peripheral)
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:211:        connectionTimeoutTimersForPeripheralIdentifiers.removeAll()
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:212:        connectingPeripherals.removeAll()
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:213:        peripheralsToWriteValue.removeAll()
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:247:            restoredPeripherals?.removeAll()
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothPeripheralManager.swift:67:        // Remove services when BT is off is an API misuse
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothPeripheralManager.swift:69:            peripheralManager.removeAllServices()
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:75:        scannedPeripheralForPeripheralIdentifier.removeAllValues()
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:76:        bluetoothProximityPayloadForPeripheralIdentifier.removeAllValues()
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:77:        connectionDateForPayloadIdentifier.removeAllValues()
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:99:            self.scannedPeripheralForPeripheralIdentifier.removeExpiredValues()
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:100:            self.bluetoothProximityPayloadForPeripheralIdentifier.removeExpiredValues()
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:101:            self.connectionDateForPayloadIdentifier.removeExpiredValues()
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:169:        scannedPeripheralForPeripheralIdentifier.removeValue(forKey: peripheralIdentifier)
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:170:        bluetoothProximityPayloadForPeripheralIdentifier.removeValue(forKey: peripheralIdentifier)
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:43:                removeValue(forKey: key)
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:63:            removeValue(forKey: key)
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:71:    func removeValue(forKey key: Key) {
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:72:        cache.removeObject(forKey: KeyWrapper(key))
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:75:    func removeAllValues() {
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:76:        cache.removeAllObjects()
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:79:    func removeExpiredValues() {
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:93:            self.keys.remove(entry.key)
+stopcovid-blesdk-ios/ProximityNotificationTests/CacheTests.swift:35:    func testRemoveValueSucceeds() {
+stopcovid-blesdk-ios/ProximityNotificationTests/CacheTests.swift:47:        cache.removeValue(forKey: secondKey)
+stopcovid-blesdk-ios/ProximityNotificationTests/CacheTests.swift:54:    func testRemoveAllValuesSucceeds() {
+stopcovid-blesdk-ios/ProximityNotificationTests/CacheTests.swift:65:        cache.removeAllValues()

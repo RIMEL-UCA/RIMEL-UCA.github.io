@@ -1,0 +1,122 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:24:  serialized_pb=b'\n\x11\x63ovidshield.proto\x12\x0b\x63ovidshield\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1egoogle/protobuf/duration.proto\"@\n\x0fKeyClaimRequest\x12\x15\n\rone_time_code\x18\x01 \x02(\t\x12\x16\n\x0e\x61pp_public_key\x18\x02 \x02(\x0c\"\xae\x02\n\x10KeyClaimResponse\x12\x36\n\x05\x65rror\x18\x01 \x01(\x0e\x32\'.covidshield.KeyClaimResponse.ErrorCode\x12\x19\n\x11server_public_key\x18\x02 \x01(\x0c\x12\x17\n\x0ftries_remaining\x18\x03 \x01(\r\x12\x39\n\x16remaining_ban_duration\x18\x04 \x01(\x0b\x32\x19.google.protobuf.Duration\"s\n\tErrorCode\x12\x08\n\x04NONE\x10\x00\x12\x0b\n\x07UNKNOWN\x10\x01\x12\x19\n\x15INVALID_ONE_TIME_CODE\x10\x02\x12\x10\n\x0cSERVER_ERROR\x10\x03\x12\x0f\n\x0bINVALID_KEY\x10\x04\x12\x11\n\rTEMPORARY_BAN\x10\x05\"k\n\x16\x45ncryptedUploadRequest\x12\x19\n\x11server_public_key\x18\x01 \x02(\x0c\x12\x16\n\x0e\x61pp_public_key\x18\x02 \x02(\x0c\x12\r\n\x05nonce\x18\x03 \x02(\x0c\x12\x0f\n\x07payload\x18\x04 \x02(\x0c\"\xb3\x03\n\x17\x45ncryptedUploadResponse\x12=\n\x05\x65rror\x18\x01 \x02(\x0e\x32..covidshield.EncryptedUploadResponse.ErrorCode\"\xd8\x02\n\tErrorCode\x12\x08\n\x04NONE\x10\x00\x12\x0b\n\x07UNKNOWN\x10\x01\x12\x13\n\x0fINVALID_KEYPAIR\x10\x02\x12\x15\n\x11\x44\x45\x43RYPTION_FAILED\x10\x03\x12\x13\n\x0fINVALID_PAYLOAD\x10\x04\x12\x10\n\x0cSERVER_ERROR\x10\x05\x12\x1d\n\x19INVALID_CRYPTO_PARAMETERS\x10\x06\x12\x11\n\rTOO_MANY_KEYS\x10\x07\x12\x15\n\x11INVALID_TIMESTAMP\x10\x08\x12\x1a\n\x16INVALID_ROLLING_PERIOD\x10\n\x12\x14\n\x10INVALID_KEY_DATA\x10\x0b\x12)\n%INVALID_ROLLING_START_INTERVAL_NUMBER\x10\x0c\x12#\n\x1fINVALID_TRANSMISSION_RISK_LEVEL\x10\r\x12\x16\n\x12NO_KEYS_IN_PAYLOAD\x10\x0e\"h\n\x06Upload\x12-\n\ttimestamp\x18\x01 \x02(\x0b\x32\x1a.google.protobuf.Timestamp\x12/\n\x04keys\x18\x02 \x03(\x0b\x32!.covidshield.TemporaryExposureKey\"\xe9\x01\n\x1aTemporaryExposureKeyExport\x12\x17\n\x0fstart_timestamp\x18\x01 \x01(\x06\x12\x15\n\rend_timestamp\x18\x02 \x01(\x06\x12\x0e\n\x06region\x18\x03 \x01(\t\x12\x11\n\tbatch_num\x18\x04 \x01(\x05\x12\x12\n\nbatch_size\x18\x05 \x01(\x05\x12\x33\n\x0fsignature_infos\x18\x06 \x03(\x0b\x32\x1a.covidshield.SignatureInfo\x12/\n\x04keys\x18\x07 \x03(\x0b\x32!.covidshield.TemporaryExposureKey\"\x97\x01\n\rSignatureInfo\x12 \n\x18verification_key_version\x18\x03 \x01(\t\x12\x1b\n\x13verification_key_id\x18\x04 \x01(\t\x12\x1b\n\x13signature_algorithm\x18\x05 \x01(\tJ\x04\x08\x01\x10\x02J\x04\x08\x02\x10\x03R\rapp_bundle_idR\x0f\x61ndroid_package\"\x8d\x01\n\x14TemporaryExposureKey\x12\x10\n\x08key_data\x18\x01 \x01(\x0c\x12\x1f\n\x17transmission_risk_level\x18\x02 \x01(\x05\x12%\n\x1drolling_start_interval_number\x18\x03 \x01(\x05\x12\x1b\n\x0erolling_period\x18\x04 \x01(\x05:\x03\x31\x34\x34\"A\n\x10TEKSignatureList\x12-\n\nsignatures\x18\x01 \x03(\x0b\x32\x19.covidshield.TEKSignature\"|\n\x0cTEKSignature\x12\x32\n\x0esignature_info\x18\x01 \x01(\x0b\x32\x1a.covidshield.SignatureInfo\x12\x11\n\tbatch_num\x18\x02 \x01(\x05\x12\x12\n\nbatch_size\x18\x03 \x01(\x05\x12\x11\n\tsignature\x18\x04 \x01(\x0c\x42\x17Z\x15pkg/proto/covidshield'
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:128:      name='INVALID_ROLLING_PERIOD', index=9, number=10,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:529:      name='rolling_period', full_name='covidshield.TemporaryExposureKey.rolling_period', index=3,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/main.py:41:        tek.rolling_period = 144
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/main.py:68:        k.rolling_period = key.rolling_period
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CODE_OF_CONDUCT.md:86:those enforcing the Code of Conduct, for a specified period of time. This
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CODE_OF_CONDUCT.md:97:communication with the community for a specified period of time. No public or
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CODE_OF_CONDUCT.md:99:with those enforcing the Code of Conduct, is allowed during this period.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/config.yaml:32:enableEntirePeriodBundle: true
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/config/config.go:27:	EnableEntirePeriodBundle           bool
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/config/config.go:66:	viper.SetDefault("enableEntirePeriodBundle", false)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:311:		var rollingPeriod int32
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:314:		err := rows.Scan(&region, &key, &rollingStartIntervalNumber, &rollingPeriod, &transmissionRiskLevel)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:325:			RollingPeriod:              &rollingPeriod,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:594:		(region, originator, key_data, rolling_start_interval_number, rolling_period, transmission_risk_level, hour_of_submission)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:600:		(region, originator, key_data, rolling_start_interval_number, rolling_period, transmission_risk_level, hour_of_submission)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:606:			key.GetRollingPeriod(),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:657:	rollingPeriod := int32(144)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:660:	row := sqlmock.NewRows([]string{"region", "key_data", "rolling_start_interval_number", "rolling_period", "transmission_risk_level"}).AddRow("302", []byte{}, 2651450, 144, 4)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:669:			RollingPeriod:              &rollingPeriod,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:30:	rolling_period                INT NOT NULL,               -- int32
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:357:		`SELECT region, key_data, rolling_start_interval_number, rolling_period, transmission_risk_level FROM diagnosis_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:393:		(region, originator, key_data, rolling_start_interval_number, rolling_period, transmission_risk_level, hour_of_submission)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:408:		result, err := s.Exec(region, originator, key.GetKeyData(), key.GetRollingStartIntervalNumber(), key.GetRollingPeriod(), key.GetTransmissionRiskLevel(), hourOfSubmission)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:505:	SELECT region, key_data, rolling_start_interval_number, rolling_period, transmission_risk_level FROM diagnosis_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:512:	row := sqlmock.NewRows([]string{"region", "key_data", "rolling_start_interval_number", "rolling_period", "transmission_risk_level"}).AddRow("302", []byte{}, 2651450, 144, 4)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:575:		(region, originator, key_data, rolling_start_interval_number, rolling_period, transmission_risk_level, hour_of_submission)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:600:		(region, originator, key_data, rolling_start_interval_number, rolling_period, transmission_risk_level, hour_of_submission)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:607:		key.GetRollingPeriod(),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:635:		(region, originator, key_data, rolling_start_interval_number, rolling_period, transmission_risk_level, hour_of_submission)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:641:		(region, originator, key_data, rolling_start_interval_number, rolling_period, transmission_risk_level, hour_of_submission)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:647:			key.GetRollingPeriod(),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:676:		(region, originator, key_data, rolling_start_interval_number, rolling_period, transmission_risk_level, hour_of_submission)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:682:		(region, originator, key_data, rolling_start_interval_number, rolling_period, transmission_risk_level, hour_of_submission)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:688:			key.GetRollingPeriod(),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:739:		(region, originator, key_data, rolling_start_interval_number, rolling_period, transmission_risk_level, hour_of_submission)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:745:		(region, originator, key_data, rolling_start_interval_number, rolling_period, transmission_risk_level, hour_of_submission)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:751:			key.GetRollingPeriod(),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:1069:	rollingPeriod := int32(144)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:1074:		RollingPeriod:              &rollingPeriod,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/defs.go:18:	MaxTEKRollingPeriod = 144
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/defs.go:47:	return (intervalNumber / MaxTEKRollingPeriod) * MaxTEKRollingPeriod
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/defs_test.go:40:	expected := (intervalNumber / MaxTEKRollingPeriod) * MaxTEKRollingPeriod
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:113:	EncryptedUploadResponse_INVALID_ROLLING_PERIOD                EncryptedUploadResponse_ErrorCode = 10
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:132:		10: "INVALID_ROLLING_PERIOD",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:148:		"INVALID_ROLLING_PERIOD":                10,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:804:	// Number of intervals in a period.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:805:	RollingPeriod *int32 `protobuf:"varint,4,opt,name=rolling_period,json=rollingPeriod,def=144" json:"rolling_period,omitempty"`
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:816:	Default_TemporaryExposureKey_RollingPeriod = int32(144)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:872:func (x *TemporaryExposureKey) GetRollingPeriod() int32 {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:873:	if x != nil && x.RollingPeriod != nil {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:874:		return *x.RollingPeriod
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:876:	return Default_TemporaryExposureKey_RollingPeriod
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:113:	EncryptedUploadResponse_INVALID_ROLLING_PERIOD                EncryptedUploadResponse_ErrorCode = 10
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:132:		10: "INVALID_ROLLING_PERIOD",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:148:		"INVALID_ROLLING_PERIOD":                10,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:725:	// Number of intervals in a period.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:726:	RollingPeriod *int32 `protobuf:"varint,4,opt,name=rolling_period,json=rollingPeriod,def=144" json:"rolling_period,omitempty"`
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:731:	Default_TemporaryExposureKey_RollingPeriod = int32(144)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:787:func (x *TemporaryExposureKey) GetRollingPeriod() int32 {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:788:	if x != nil && x.RollingPeriod != nil {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:789:		return *x.RollingPeriod
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:791:	return Default_TemporaryExposureKey_RollingPeriod
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/retrieval_test.go:79:	rollingPeriod := int32(144)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/retrieval_test.go:84:		RollingPeriod:              &rollingPeriod,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/retrieve.go:82:	if config.AppConstants.EnableEntirePeriodBundle == true && vars["day"] == "00000" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/retrieve.go:115:		return s.fail(log(ctx, nil), w, "request for current date", "cannot serve data for current period for privacy reasons", http.StatusNotFound)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/retrieve_test.go:234:	rollingPeriod := int32(144)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/retrieve_test.go:239:		RollingPeriod:              &rollingPeriod,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/services.go:28:	EnableEntirePeriodBundle           bool `json:"enableEntirePeriodBundle"`
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/services.go:61:		EnableEntirePeriodBundle:           config.AppConstants.EnableEntirePeriodBundle,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:191:	if key.GetRollingPeriod() < 1 || key.GetRollingPeriod() > 144 {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:193:			ctx, w, nil, "missing or invalid rollingPeriod",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:194:			http.StatusBadRequest, uploadError(pb.EncryptedUploadResponse_INVALID_ROLLING_PERIOD),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:494:func TestValidateKey_RollingPeriodLT1(t *testing.T) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:504:	// Test RollingPeriod < 1
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:514:	assert.True(t, checkUploadResponse(resp.Body.Bytes(), pb.EncryptedUploadResponse_INVALID_ROLLING_PERIOD))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:516:	testhelpers.AssertLog(t, hook, 1, logrus.WarnLevel, "missing or invalid rollingPeriod")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:519:func TestValidateKey_RollingPeriodGT144(t *testing.T) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:530:	// Test RollingPeriod > 144
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:540:	assert.True(t, checkUploadResponse(resp.Body.Bytes(), pb.EncryptedUploadResponse_INVALID_ROLLING_PERIOD))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:542:	testhelpers.AssertLog(t, hook, 1, logrus.WarnLevel, "missing or invalid rollingPeriod")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:718:func buildKey(token []byte, transmissionRiskLevel, rollingStartIntervalNumber, rollingPeriod int32) pb.TemporaryExposureKey {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:723:		RollingPeriod:              &rollingPeriod,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/timemath/timemath.go:36:	return int32(int(rsin) + days*pb.MaxTEKRollingPeriod)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/timemath/timemath_test.go:48:	expected := int32(int(20000) + 10*pb.MaxTEKRollingPeriod)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/covidshield.proto:89:    INVALID_ROLLING_PERIOD = 10;
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/covidshield.proto:186:  // Number of intervals in a period.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/covidshield.proto:187:  optional int32 rolling_period = 4 [default = 144];
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/README.md:119:Note that the `period` provided to the retrieve endpoint corresponds to the time at which a
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/README.md:141:full history of 14 days of keys (168 periods) will be relevant if the App has been installed for
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/README.md:147:recommended to mark the previous 168 periods as having already been fetched, immediately on first
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:33:PERIOD_HOURS = 6
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:68:    def tek(data: '1' * 16, transmission_risk_level: 3, rolling_period: 144, rolling_start_interval_number: next_rsin)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:72:        rolling_period: rolling_period,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/protocol/covidshield_pb.rb:47:      value :INVALID_ROLLING_PERIOD, 10
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/protocol/covidshield_pb.rb:76:      optional :rolling_period, :int32, 4, default: 144
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:26:  def test_retrieve_period_happy_path_no_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:33:  def test_reject_unacceptable_periods
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:44:        body: "cannot serve data for current period for privacy reasons\n"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:96:    # Our retrieve endpoint returns keys SUBMITTED within the given period.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:110:    if config["enableEntirePeriodBundle"]
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:135:  def test_period_bounds
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:139:    # Our retrieve endpoint returns keys SUBMITTED within the given period.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:261:              rolling_period: 144,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:290:      (key_data, rolling_start_interval_number, rolling_period, transmission_risk_level, hour_of_submission, region)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:295:  def add_key_explicit(data: '1' * 16, rsin:, transmission_risk_level: 8, hour:, region: '302', rolling_period: TEK_ROLLING_PERIOD)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:296:    insert_key.execute(data, rsin, rolling_period, transmission_risk_level, hour, region)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:303:  TEK_ROLLING_PERIOD = 144
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:307:    (en_interval_number / TEK_ROLLING_PERIOD) * TEK_ROLLING_PERIOD
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/roundtrip_test.rb:99:    number_of_periods = 14
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/roundtrip_test.rb:100:    number_of_periods.times do |n|
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:104:    # rolling_period missing, too high, too low
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:105:    assert_tek_fails(:INVALID_ROLLING_PERIOD, rolling_period: 0)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:106:    assert_tek_fails(:INVALID_ROLLING_PERIOD, rolling_period: 145)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:136:    resp = post_teks(teks.map { |tek| tek.rolling_period = random_tek_interval; tek })
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:175:      keys[n]["rolling_period"] = rand(1...144)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:176:      keys[n + 18]["rolling_period"] = rand(1...144)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:243:    if make_half_day # This makes the keys have the same RSIN with different rolling periods
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:245:      keys = (keys + keys).map{ |k| k.rolling_period = rand(1...144); k}
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:270:  def tek(key_data: '1' * 16, transmission_risk_level: 3, rolling_period: 144, rolling_start_interval_number: next_rsin)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:274:      rolling_period: rolling_period,

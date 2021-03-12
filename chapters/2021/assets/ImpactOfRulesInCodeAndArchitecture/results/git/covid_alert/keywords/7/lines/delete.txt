@@ -1,0 +1,5 @@
+./results/git/covid_alert/commit_file_github.txt:31:* Deleted unused event type metric definitions
+./results/git/covid_alert/commit_file_github.txt:252:* able to delete values
+./results/git/covid_alert/commit_file_github.txt:547:Breaks up the expiration worker deletion so it now counts and deletes Expired, Exhausted, and Unclaimed OTKs separately. 
+./results/git/covid_alert/issue_file_github.txt:672:282,Alignment of "delete" in manage team page,@pcraig3 on the manage team page, please make "delete" a separate column, as in figma
+./results/git/covid_alert/issue_file_github.txt:722:This caused an issue where deleted OTKs were being counted multiple times. The issue has been resolved by using transactions but this caused a small increase in the number of DB connections needed. 

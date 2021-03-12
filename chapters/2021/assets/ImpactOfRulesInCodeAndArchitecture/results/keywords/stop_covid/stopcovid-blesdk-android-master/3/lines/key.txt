@@ -1,0 +1,31 @@
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/tools/ExpiringCache.kt:27:    operator fun get(key: K): V? {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/tools/ExpiringCache.kt:28:        val current = lruCache.get(key) ?: return null
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/tools/ExpiringCache.kt:30:            remove(key)
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/tools/ExpiringCache.kt:37:    fun put(key: K, value: V): V? {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/tools/ExpiringCache.kt:38:        val previous = lruCache.put(key, ExpiringValue(value, elapsedRealtime() + expireTime))
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/tools/ExpiringCache.kt:47:            .forEach { remove(it.key) }
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/tools/ExpiringCache.kt:50:    private fun remove(key: K) {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/tools/ExpiringCache.kt:51:        lruCache.remove(key)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/tools/ExpiringCacheTest.kt:30:        val key1 = "key1"
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/tools/ExpiringCacheTest.kt:31:        val key2 = "key2"
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/tools/ExpiringCacheTest.kt:36:        cache.put(key1, value1) // will expire at 1100
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/tools/ExpiringCacheTest.kt:38:        cache.put(key2, value2) // will expire at 1200
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/tools/ExpiringCacheTest.kt:40:        assertThat(cache[key1]).isEqualTo(value1)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/tools/ExpiringCacheTest.kt:41:        assertThat(cache[key2]).isEqualTo(value2)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/tools/ExpiringCacheTest.kt:48:        assertThat(cache[key1]).isNull()
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/tools/ExpiringCacheTest.kt:49:        assertThat(cache[key2]).isEqualTo(value2)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/tools/ExpiringCacheTest.kt:59:        cache.put("key1", "value1")
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/tools/ExpiringCacheTest.kt:60:        cache.put("key2", "value2")
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/tools/ExpiringCacheTest.kt:61:        cache.put("key3", "value3")
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/tools/ExpiringCacheTest.kt:63:        cache.put("key4", "value4")
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/tools/ExpiringCacheTest.kt:67:        assertThat(cache["key4"]).isEqualTo("value4")
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/tools/ExpiringCacheTest.kt:75:        assertThat(cache["key1"]).isNull()
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/tools/ExpiringCacheTest.kt:76:        assertThat(cache["key2"]).isNull()
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/tools/ExpiringCacheTest.kt:77:        assertThat(cache["key3"]).isNull()
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/tools/ExpiringCacheTest.kt:78:        assertThat(cache["key4"]).isEqualTo("value4")
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/tools/ExpiringCacheTest.kt:86:        val key1 = "key1"
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/tools/ExpiringCacheTest.kt:87:        val key2 = "key2"
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/tools/ExpiringCacheTest.kt:92:        cache.put(key1, value1)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/tools/ExpiringCacheTest.kt:93:        cache.put(key2, value2)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/tools/ExpiringCacheTest.kt:96:        assertThat(cache[key1]).isNull()
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/tools/ExpiringCacheTest.kt:97:        assertThat(cache[key2]).isEqualTo(value2)

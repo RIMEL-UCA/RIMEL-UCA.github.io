@@ -1,0 +1,11 @@
+./results/git/covid_alert/commit_file_github.txt:534:fix: drop old duration table replace with new one (#429)
+./results/git/covid_alert/commit_file_github.txt:610:Add a new table in the database to store aggregate OTK lifetimes by day,
+./results/git/covid_alert/issue_comment_file_github.txt:174:You're right! I missed that. I can fix this easily if you want. If you're more comfortable with hard coded, I totally understand too.
+./results/git/covid_alert/issue_comment_file_github.txt:651:You're right! I missed that. I can fix this easily if you want. If you're more comfortable with hard coded, I totally understand too.
+./results/git/covid_alert/issue_file_github.txt:96:- [ ] add lookup table mapping "location type" to "default dwell time", ~10min (?) for convenience store, longer for other types, etc
+./results/git/covid_alert/issue_file_github.txt:494:LC_LOAD_WEAK_DYLIB load command is present for the library BackgroundTasks - this is best avoided since there's also a LC_RPATH that adds @executable_path/Frameworks to the search path and that directory doesn't exist. 
+./results/git/covid_alert/issue_file_github.txt:500:The binary has a weak dependence on a library called BackgroundTasks. It also has a built-in library search path @executable_path/Frameworks. As far as I can see, that library doesn’t exist on my device and the path either. This can be used to inject a third party library into the app. For the actual mechanics on how to perform the DLL injection, please consult this awesome presentation:
+./results/git/covid_alert/issue_file_github.txt:798:409,Security Issue: Disable Mutable Tags in ECR,Issue found in Snyk scan of TF Files
+./results/git/covid_alert/issue_file_github.txt:806:The AWS ECR registry does not enforce immutable tags
+./results/git/covid_alert/issue_file_github.txt:814:Set image_tag_mutability attribute to IMMUTABLE
+./results/git/covid_alert/issue_file_github.txt:914:  - [ ] Truncate the diagnosis_keys table. 

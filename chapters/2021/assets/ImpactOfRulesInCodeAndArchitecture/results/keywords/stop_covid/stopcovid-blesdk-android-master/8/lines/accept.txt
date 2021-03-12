@@ -1,0 +1,31 @@
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/filter/ProximityFilter.kt:32:     * @param riskThreshold Risk threshold. The threshold above which RSSIs are accepted if filtering mode is [Mode.RISKS]. Default value is 0.2.
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/filter/ProximityFilter.kt:69:         * RSSIs were accepted
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/filter/ProximityFilter.kt:81:        data class Accepted(
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/filter/ProximityFilter.kt:130:            return Output.Accepted(sortedTimestampedRssis, false)
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/filter/ProximityFilter.kt:144:            return Output.Accepted(
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/filter/ProximityFilter.kt:163:        return Output.Accepted(
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/filter/ProximityFilterIntTest.kt:54:    fun filter_given_full_mode(durationThresholdInMinutes: Int, accepted: Boolean) {
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/filter/ProximityFilterIntTest.kt:69:        assertThat(output is ProximityFilter.Output.Accepted).isEqualTo(accepted)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/filter/ProximityFilterIntTest.kt:71:        if (accepted) {
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/filter/ProximityFilterIntTest.kt:72:            val okOutput = output as ProximityFilter.Output.Accepted
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/filter/ProximityFilterIntTest.kt:123:        assertThat(output is ProximityFilter.Output.Accepted).isTrue()
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/filter/ProximityFilterIntTest.kt:124:        val okOutput = output as ProximityFilter.Output.Accepted
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/filter/ProximityFilterIntTest.kt:166:        accepted: Boolean
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/filter/ProximityFilterIntTest.kt:191:        assertThat(output is ProximityFilter.Output.Accepted).isEqualTo(accepted)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/filter/ProximityFilterIntTest.kt:193:        if (accepted) {
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/filter/ProximityFilterIntTest.kt:194:            val okOutput = output as ProximityFilter.Output.Accepted
+./stopcovid-blesdk-android-master/licenses/library/license-kotlinx-couroutines.txt:166:   9. Accepting Warranty or Additional Liability. While redistributing
+./stopcovid-blesdk-android-master/licenses/library/license-kotlinx-couroutines.txt:168:      and charge a fee for, acceptance of support, warranty, indemnity,
+./stopcovid-blesdk-android-master/licenses/library/license-kotlinx-couroutines.txt:170:      License. However, in accepting such obligations, You may act only
+./stopcovid-blesdk-android-master/licenses/library/license-kotlinx-couroutines.txt:175:      of your accepting any such warranty or additional liability.
+./stopcovid-blesdk-android-master/licenses/library/license-timber.txt:166:   9. Accepting Warranty or Additional Liability. While redistributing
+./stopcovid-blesdk-android-master/licenses/library/license-timber.txt:168:      and charge a fee for, acceptance of support, warranty, indemnity,
+./stopcovid-blesdk-android-master/licenses/library/license-timber.txt:170:      License. However, in accepting such obligations, You may act only
+./stopcovid-blesdk-android-master/licenses/library/license-timber.txt:175:      of your accepting any such warranty or additional liability.
+./stopcovid-blesdk-android-master/licenses/tests/license-junit4.txt:7:CONSTITUTES RECIPIENT'S ACCEPTANCE OF THIS AGREEMENT.
+./stopcovid-blesdk-android-master/licenses/tests/license-junit4.txt:116:Commercial distributors of software may accept certain responsibilities with
+./stopcovid-blesdk-android-master/licenses/tests/license-truth.txt:166:   9. Accepting Warranty or Additional Liability. While redistributing
+./stopcovid-blesdk-android-master/licenses/tests/license-truth.txt:168:      and charge a fee for, acceptance of support, warranty, indemnity,
+./stopcovid-blesdk-android-master/licenses/tests/license-truth.txt:170:      License. However, in accepting such obligations, You may act only
+./stopcovid-blesdk-android-master/licenses/tests/license-truth.txt:175:      of your accepting any such warranty or additional liability.
+./stopcovid-blesdk-android-master/licenses/tests/license-zohhak.txt:163:apply, that proxy's public statement of acceptance of any version is

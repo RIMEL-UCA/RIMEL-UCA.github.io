@@ -1,0 +1,23 @@
+../stopcovid-robertsdk-android/.git/hooks/pre-rebase.sample:49:	echo >&2 "$topic is fully merged to master; better remove it."
+../stopcovid-robertsdk-android/.git/hooks/prepare-commit-msg.sample:12:# This hook includes three examples. The first one removes the
+../stopcovid-robertsdk-android/LICENSE.md:135:1.  for any code that a Contributor has removed from Covered Software;
+../stopcovid-robertsdk-android/LICENSE.md:217:You may not remove or alter the substance of any license notices
+../stopcovid-robertsdk-android/LICENSE.md:351:modified version of this License if you rename the license and remove
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/LocalEphemeralBluetoothIdentifierDataSource.kt:19:    fun removeUntilTimeKeepLast(ntpTimeS: Long)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/LocalEphemeralBluetoothIdentifierDataSource.kt:20:    fun removeAll()
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/LocalLocalProximityDataSource.kt:20:    fun removeUntilTime(ntpTimeS: Long)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/LocalLocalProximityDataSource.kt:21:    fun removeAll()
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/EphemeralBluetoothIdentifierRepository.kt:34:    fun removeUntilTimeKeepLast(ntpTimeS: Long) {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/EphemeralBluetoothIdentifierRepository.kt:35:        localEphemeralBluetoothIdentifierDataSource.removeUntilTimeKeepLast(ntpTimeS)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/EphemeralBluetoothIdentifierRepository.kt:38:    fun removeAll() {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/EphemeralBluetoothIdentifierRepository.kt:39:        localEphemeralBluetoothIdentifierDataSource.removeAll()
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/LocalProximityRepository.kt:26:    fun removeUntilTime(ntpTimeS: Long) {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/LocalProximityRepository.kt:27:        localLocalProximityDataSource.removeUntilTime(ntpTimeS)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/LocalProximityRepository.kt:30:    fun removeAll() {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/LocalProximityRepository.kt:31:        localLocalProximityDataSource.removeAll()
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:85:        ephemeralBluetoothIdentifierRepository.removeAll()
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:138:        ephemeralBluetoothIdentifierRepository.removeUntilTimeKeepLast(ephemeralBluetoothIdentifierExpiredTime)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:141:        localProximityRepository.removeUntilTime(localProximityExpiredTime)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:186:        localProximityRepository.removeAll()
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:219:                        ephemeralBluetoothIdentifierRepository.removeAll()
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:220:                        localProximityRepository.removeAll()

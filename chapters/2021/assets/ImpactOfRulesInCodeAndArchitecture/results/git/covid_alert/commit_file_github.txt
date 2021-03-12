@@ -1,0 +1,684 @@
+App transport security fix (#1449)
+
+* Update fastlane to 2.176.0 (was 2.174.0) - also updates
+aws-partitions 1.429.0 (was 1.427.0)
+aws-sdk-s3 1.89.0 (was 1.88.1)
+emoji_regex 3.2.2 (was 3.2.1)
+
+* Add a new fastlane lane that checks to see that there is no NSAppTransportSecurity key in the final IPA
+This check is only performed when a :build_and_deploy with production. This action can be triggered by the yarn deploy-ios:production action. @cds-snc team need to confirm if this is sufficient for checking the build that will end up in the appstore
+
+* Remove the NSAppTransportSecurity key & dict from the Info.plist
+Fix link to the E2E docs which was renamed from DETOX_DOC to README.md in change #1338 via e88e0c6f (#1450)
+Chore/screen size fix (#1438)
+
+* UI changes to screens
+
+* added padding and lint fix
+
+* styling changes to barcode reader
+
+* updated the qr flow to use the same toolbar as the datasharing flow
+
+* added black background to the toolbar
+
+* removed icons on scan screen
+
+Co-authored-by: Stephen McMurtry <smcmurtry@gmail.com>
+package bumps (#1443)
+Feature/background process event (#1442)
+
+* Deleted unused event type metric definitions
+
+* Added new background-process event
+
+* Plugged new background-process event in updateExposureStatusInBackground function
+Metrics adjustments (#1433)
+
+* Added osversion to global metrics payload
+
+* [TEMPORARY debug commit] Added deviceuuid to Metrics global payload
+
+* add temp uuid
+
+* fix temp uuid
+
+* [TEMPORARY debug commit] Added backgroundTaskDuration log
+
+* Plugged push metrics to server in the foreground and added an event to know if the foreground or background path triggered the push action
+
+* Fixed unit tests not behaving properly because of try/catch block. Issue revealed by the fact that we now publish events outside of the try/catch
+
+* Added debug API on FilteredMetricsService in order to fetch all existing metrics from the internal storage
+
+* Fixed DefaultMetricsStorage not implementing MetricsStorageCleaner interface
+
+* Added some unit tests for MetricsService
+
+* add debug metrics logic
+
+* update debug message
+
+* Removed sharedInstance debug log in FilteredMetricsService
+
+* Removed foreground-push and background-push events
+
+* Fixed lint issue
+
+* Updated publishing of active-user and background-check events
+
+* remove uuid
+
+* Revert "[TEMPORARY debug commit] Added deviceuuid to Metrics global payload"
+
+This reverts commit 9acc0b41c8f070b74827c425479ab365a2f40791.
+
+* Updated backgroundDuration logs
+
+Co-authored-by: Tim Arney <tim@line37.com>
+Added active-user event (#1440)
+fixed bug in daysBetweenUTC, updated date mocking in ENService tests (#1439)
+Background tasks are aggregated per UTC day (#1437)
+
+* background tasks are aggregated per UTC day
+
+* added utc mday to background task metric
+
+* added tests, fixed bug in getUTCMidnight
+Patch/adjust metric upload interval (#1435)
+
+* Remove random number of minutes for Metrics upload.
+* Compare the Metrics upload based on day, rather than minutes since last upload.
+* Compare against UTC.
+Outbreak tests (#1431)
+
+* add tests for Outbreaks
+Feature/clear outbreak exposed (#1430)
+
+Created the flow for clear outbreak exposure
+
+Co-authored-by: Stephen McMurtry <smcmurtry@gmail.com>
+Replacing `outbreakStatus` with `outbreakHistory` (#1425)
+
+* defined outbreak history items and wrote some functions to update this
+
+* stubbed in tests
+
+* adding new outbreak exposures to outbreak history, using this instead of the outbreak status
+
+* added a clear outbreak history function for use in the test menu
+
+* fixed bug where outbreak history was not updating ui correctly
+
+* update last checked even if no exposures are detected
+Tie Outbreak checks into background tasks. (#1424)
+
+* Tie Outbreak checks into background tasks.
+
+* Rename the storage key.
+
+* Remove randomMinutes.
+
+* Refactor to eliminate duplication.
+
+* Lint
+
+Co-authored-by: Stephen McMurtry <smcmurtry@gmail.com>
+Skip sign qr (#1423)
+
+* only check signed if env exists
+Rename the `checkForExposures` function to `checkForOutbreaks`. (#1422)
+remove PtBR (#1415)
+Change to the correct protobuf type def (#1421)
+Fix type-o. (#1410)
+Cancel check in now pops an Alert (#1413)
+Verify QR code (#1419)
+
+* verify qr code
+able to check in foreground (#1417)
+
+Able to check for exposures in foreground.
+Remove flipper (#1416)
+
+* initial cleanup
+
+* remove FB_SONARKIT_ENABLED
+Fix ios builds (and update fastlane) (#1414)
+
+* update fastlane dependencies
+
+* update to reference new release build config
+Feature/expand e2e tests (#1383)
+
+* fix oneTimeCode test
+
+* checkpoint commit
+
+* add config for aosp emulator
+
+* add a couple ids for testing
+
+* skip a bunch of outdated tests, fix one
+
+* get test to pass on ios
+
+* fix linting error
+
+* Add handles for element selection in e2e tests
+
+* better handles in views for scrolling
+
+* e2e tests for the Demo menu complete!
+
+* Formatting fixes for the linter
+
+* Refactor the aimless swiping with an elegant wait
+
+* Upgrade to latest v17 Detox
+
+Issues were found with detox v18 so this is a new as things can get for now
+
+* Test run better with AOSP emnulator
+
+* comment for the code source
+
+* Required changes to play nice with master
+
+* Save a second
+
+* Fixes the spacing
+
+* Update lockfile
+
+Co-authored-by: Dave Samojlenko <dave.samojlenko@cds-snc.ca>
+Added a new env variable QR_ENABLED (#1412)
+Remove unused social sharing (#1405)
+
+* Remove the unused social sharing translations.
+
+* Remove instagram & instagram-storied from the list of URLs that can be queried from canOpenURL.
+See https://developer.apple.com/documentation/uikit/uiapplication/1622952-canopenurl & https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/20001431-102207
+
+* Add the Info-Debug.plist to the xcodeproj and remove LSApplicationQueriesSchemes as per previous commit
+
+* Results of yarn generate-translations
+Fixed XCode compilation issue due to latest XCode version 12.4 (#1392)
+QR code prototype (#1384)
+
+* able to open app via deep link
+
+* able to navigate to certain screens
+
+* updated android manifest file
+
+* added QR Code screen
+
+* able to navigate to screen from terminated app
+
+* able to store ID to local storage
+
+* initial setup
+
+* initial view
+
+* add temp screen
+
+* update views
+
+* add unimodules
+
+* Setup iOS side
+
+* UI changes
+
+* remove baseview
+
+* view cleanup
+
+* init styling
+
+* style
+
+* remove width
+
+* fix lint
+
+* able to store IDs as array
+
+* Android configuration for installing 'unimodules' for the QRCode scanner.
+
+* able to log out saved IDs
+
+* able to delete values
+
+* cleaned up code
+
+* renamed symbols
+
+* UI Changes
+
+* Update ignore file for generated files.
+
+* cleaned up code
+
+* removed commented code
+
+* eslint fix
+
+* fixed remaining lint issues
+
+* removed unnecessary code
+
+* add go to route
+
+* lint
+
+* update screen names
+
+* fix merge
+
+* destructure array
+
+* update set json
+
+* test bounds
+
+* able to trigger QR check and nav to exposed screen
+
+* update QR Code reader style
+
+* updated QR code reader styles
+
+* add jwt
+
+* add ts ignore
+
+* update the check in screen/ refactoring
+
+* creating QR not detected screen
+
+* ignore vendor
+
+* update views
+
+* add views
+
+* add error screen
+
+* useDeepLink
+
+* lint
+
+* update permissions
+
+* update perms
+
+* add callback
+
+* update perm status
+
+* update error screen
+
+* update error screen
+
+* made a separate navigator for QR pages, made some of the views their own pages
+
+* removed jwt.decode from the qr code reading
+
+* renamed a page, hooked up the "continue to home" button
+
+* added a stub page: LearnAboutQRScreen
+
+* created new toolbar and base qr screen
+
+* implemented base screen for the other views
+
+* add scan a place button
+
+* lint
+
+* added check-in history page for debugging
+
+* fixed bug causing CheckInHistoryScreen to crash
+
+* add primary action button
+
+* comment changes
+
+* Comment changes
+
+* add back button text
+
+* made the text on the NoPermission view obviously different from the NoCamera view
+
+* lint
+
+* reverted unneeded change to readme
+
+* moved button to footer, moved some translations
+
+* change how the check in data is stored, update components that use it
+
+* pass check in data directly to CheckInSuccessfulScreen, make cancel check in button navigate home
+
+* renamed some files
+
+* name change in index file
+
+* UI Changes to RequestCameraPermissionScreen
+
+* fixed layout on CheckInSuccessfulScreen
+
+* yarn generate-translations
+
+* added env variable to read outbreak locations from a url (github for now). refactored and moved logic to shared/qr.ts. Simplified the Outbreak page
+
+* nav to home from perms screen
+
+* update app on state change
+
+* update link to QR code not recgognized
+
+* add scheme
+
+* updated invalid qr screen
+
+* add clear
+
+* created cancel check in screen
+
+* now saving OutbreakStatus in storage
+
+* hooked up clear outbreak status button in test menu
+
+* creaded an OutbreakProvider so the homescreen can auto update when the outbreakStatus changes
+
+* added start and end times to the exposedLocations
+
+* time checking wip
+
+* screen updates
+
+* update icon
+
+* added time logic to outbreak exposure check
+
+* making the functions smaller
+
+* deep link fix and scheme change
+
+* fixed bug, wrote test
+
+* add react-native-base64 remove react-native-pure-jwt
+
+* changed the android scheme
+
+* UI changes
+
+* added new icons and translation
+
+* Added outbreak notification
+
+* added new url scheme for qr
+
+* added address to check in success screen
+
+* typescript fixes and moved the check in history screen up
+
+* updated exposed location
+
+* updated translations
+
+* removed name from exposed locations, since we are not using it
+
+* update pod file
+
+* storage service for instruction screen
+
+* updated UI
+
+* added intro screen
+
+* Added associated domains capability in order to enable universal links
+
+* env variable for master
+
+* removing unneeded libs ios
+
+* remove android permissions related to qr featuer
+
+* remove android permissions
+
+* removed unneeded exclusions
+
+* lint and typescript
+
+* commented out unneeded ios permissions
+
+* Updated Associated Domains capability settings to dynamically set the domain using the env file
+
+* Updated dynamic associated domain in order to use existing QR_HOST env variable
+
+Co-authored-by: Omar Tehsin <omartehsin@Omars-MacBook-Pro.local>
+Co-authored-by: Omar Tehsin <omartehsin@gmail.com>
+Co-authored-by: Clément Janin <ninjaclem8@hotmail.fr>
+Co-authored-by: James Eberhardt <james.eberhardt@cds-snc.ca>
+Co-authored-by: Stephen McMurtry <smcmurtry@gmail.com>
+make sure Date.now() works in the tests (#1408)
+Merge pull request #401 from cds-snc/bugfix/handle_errors_on_register_site
+
+Render custom error templates from register app
+render custom error templates from register app
+Merge pull request #400 from cds-snc/migration_fix
+
+Another migration fix
+Another migration fix
+Merge pull request #399 from cds-snc/migration_fix
+
+yet another migration fix attempt
+yet another migration fix attempt
+Merge pull request #398 from cds-snc/migration_fix
+
+Another migration fix
+Another migration fix
+Merge pull request #397 from cds-snc/migration_fix
+
+Removed broken migration dependency
+Removed broken migration dependency
+Merge pull request #382 from cds-snc/update_registration_flow_content
+
+Update registration flow content
+updated changelog
+don't need the waffle switch anymore
+Merge branch 'main' into update_registration_flow_content
+Merge pull request #381 from cds-snc/alerting
+
+Alerting flow initial pass
+squashed problematic migrations
+Merge branch 'main' of github.com:cds-snc/covid-alert-portal into alerting
+fix formatting
+update translations
+add tests for confirm_email
+test redirects for non confirmed email
+handle users without valid session
+check that email confirmed
+check correct view is returned
+handle situations where session expires or someone accesses these pages without confirming email
+Added new version and changelog
+move svgs out of html to linked files
+put register styles in register directory
+use apostrophe
+remove remaining template conditionals except 403/404
+feat: add QR outbreak event submission and retrievel endpoint (#438)
+
+* feat: add QR submission endpoint
+
+* fix: auth logging
+
+* fix: put header logging back in
+
+* fix: change model name from qr_submission to outbreak_event
+
+* feat: retrieval endpoint for QR codes
+fix: add ecr login (#434)
+fix(ci): update amazon-ecs-deploy-task-defintion to v1.4.2 (#433)
+fix: add required ) (#432)
+fix: add matrix to APPSPEC_FILE (#431)
+fix(ci): pin long sha on deploy actions (#430)
+
+* fix: merge copy pasted action, add long sha
+
+* fix: add long sha for all actions
+
+* fix: fix typos, further generalize
+fix: drop old duration table replace with new one (#429)
+feat: re-enable v2 (#426)
+fix: only count OTKs if deletions actually occured
+
+Fixes:
+This is a further fix to correct the way OTK's are counted
+
+Only persist counts for OTKExpired, OTKExhausted, OTKExpiredNoUploads and OTKUnclaimed if a deletion actually occurs. 
+
+This PR also fixes a small potential bug where SQL Queries are using fmt.sprintf that can potentially allow a sql injection attack if someone was able to modify our Server Secrets. Although if that were to occur we would have significantly greater problems then a sql injection. This is just closing up a small issue.
+feat: re-enable v2 (#421)
+Fix/transaction count (#420)
+
+Breaks up the expiration worker deletion so it now counts and deletes Expired, Exhausted, and Unclaimed OTKs separately. 
+
+The count and deletion now occur in a transaction this should prevent the race condition that was previously found in this worker.
+feat: added success percent report (#410)
+
+* feat: added success percent report
+
+* feat: rename to csv
+feat: add initial support for EN V2 (#400)
+
+* feat: add v2 protobuf definition
+
+Adds a `revised_keys` field to the `TemporaryExposureKeyExport` message
+Adds a `report_type` field to the `TemporaryExposureKey` message and the
+associated Enum for the `ReportType`
+Adds a `days_since_onset_of_symptoms`
+Adds a service for viewing feature flags
+
+* feat: get rid of feature flag and update to v2
+
+EN Protobuf is supposed to be fully backwards compatible according to
+Apple we will revert code manually if staging stops working
+
+* feat: upgrading proto to v2
+
+* feat: update ruby test test_retrieve_stuff
+
+* feat: use string for enum
+
+* feat: remove v2 feature flag as we don't use it
+feat: update dockerfile (#405)
+
+Update golang to 1.15.6-alpine3.12
+convert .dockerignore to safelist
+docs(release): strategy for commit messages (#404)
+refactor: break out massive test methods into individual tests
+
+- break out tests in retrieve_test.go
+- break out TestUpload
+- break out TestValidateKey
+- add setupUploadTest method
+- run go fmt in `pkg/server` dir
+fix: move init to end of file (#397)
+release: lint commit messages to ensure they adhere to Conventional Commit  (#393)
+
+* ci(release): add a commit-msg hook
+
+Validate commit messages using commitlint
+
+* ci(release): add commitlint locally
+
+* ci: lint commit msgs in PR
+fix: loging to the correct repo (#389)
+fix: use proper env variables (#388)
+feat: modify github action to push monolith to ecr (#387)
+feat: add an api to query Aggregate OTK Durations (#382)
+
+Adds an API that uses basic auth with the same credentials as the other
+/events endpoints.
+Added DB queries to read Aggregate OTK Durations
+Update Mocks
+feat: track OTK lifetimes to the hour (#379)
+
+Add a new table in the database to store aggregate OTK lifetimes by day,
+province and hours live.
+ci: replace sync labels with action (#376)
+chore: remove test label (#375)
+ci: install github-label-sync (#372)
+chore: testing label change (#371)
+fix: use env instead of with (#370)
+Chore/test labels (#369)
+
+* ci: fix sync-labels.yml shellcheck.yml
+
+* chore: test label workflow
+ci: fix sync-labels.yml shellcheck.yml (#368)
+Publish CCCS Security Assessment report (#62)
+
+* Publish CCCS Security Assessment report along with associated main page updates.
+* Uploaded both final versions en/fr of CCS assessment report.
+Grab Code of Conduct from covid-alert-server repo (#33)
+Merge pull request #61 from cds-snc/qr-code-research-findings-doc
+
+QR code research findings doc
+QR code discovery research findings doc added
+Recherche et constatations relatives au code QR / Findings from QR Code discovery research
+Publish RFC :: 0001-working-in-the-open.md (#31)
+
+* Create 0001-working-in-the-open.md
+* Updated with french translation for this specific rfc. Note, not all rfc's will have full translation, but will aim to have major project related ones maintain this OL parity where possible.
+Merge pull request #30 from cds-snc/privacy-assessment-february
+
+February 2021 Privacy Assessment update
+Mise à jour, février 2021 – February 2021 update
+Merge pull request #29 from cds-snc/metrics-doc
+
+Updated Readme
+Updated Readme
+Merge pull request #28 from cds-snc/metrics-doc
+
+Add Metrics doc
+Language switch links
+Update metrics.md
+Adding FR metrics doc
+Merge pull request #27 from cds-snc/product-doc
+
+Update QR Code doc
+Add English metrics doc
+Update French QR code documentation
+
+Update to language following Privacy recommendations (French version of PR #27)
+Update language per privacy recommendations
+Merge pull request #26 from cds-snc/product-doc
+
+French/English links
+French/English links
+Merge pull request #25 from cds-snc/product-doc
+
+Adding QR Codes overview
+Update README.md
+
+Updated Readme links
+update urls
+Adding QR Codes doc
+Merge pull request #23 from cds-snc/privacy-assessment-october
+
+October 2020 update to the Privacy Assessment
+Minor edits / Révisions minimes
+Mise à jour, octobre 2020 – October 2020 update
+Merge pull request #22 from cds-snc/add-changelog
+
+Add portal changelog link
+Add portal changelog link
+Updated links and formatting tweaks (#21)
+
+* Updated English/French links
+
+* Minor formatting tweaks

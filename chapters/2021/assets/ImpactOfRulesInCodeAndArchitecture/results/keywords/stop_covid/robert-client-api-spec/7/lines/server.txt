@@ -1,0 +1,10 @@
+../robert-client-api-spec/.git/hooks/post-update.sample:8:exec git update-server-info
+../robert-client-api-spec/openapi.yaml:109:        Requires a CAPTCHA resolution token (and its ID) that will be verified by the server.
+../robert-client-api-spec/openapi.yaml:139:        The request is a POST even if no information is contributed to the server because parameters should not be passed as queryparams.
+../robert-client-api-spec/openapi.yaml:174:        Once the app has successfully reported its data, it should call the /unregister endpoint to remove its id from the server.
+../robert-client-api-spec/openapi.yaml:198:        User wants to stop using the ROBERT service. Delete all data related to this user from the server
+../robert-client-api-spec/openapi.yaml:242:servers:
+../robert-client-api-spec/openapi.yaml:243:  - url: https://yourrobertserver.org/v3
+../robert-client-api-spec/openapi.yaml:372:            Client public key to be used by server to derive shared secret and keys.
+../robert-client-api-spec/README.md:4:Cette spécifiation décrit l'API REST exposée par le composant [ROBERT-server](https://gitlab.inria.fr/stopcovid19/robert-server) et consommée par les applications mobiles StopCovid.
+../robert-client-api-spec/USING.md:3:The Client API specification of the Stop-Covid project for communications between the Stop-Covid mobile apps and the ROBERT server.

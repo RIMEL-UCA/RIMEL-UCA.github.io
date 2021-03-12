@@ -1,0 +1,8 @@
+./results/git/stop_covid/issue_file_gitlab.txt:113:Only `public` or `open` code will be visible inside the sandboxed environment at runtime.
+./results/git/stop_covid/issue_file_gitlab.txt:125:> https://gitlab.inria.fr/stopcovid19/robert-server/-/blob/08db030b079c481b4e68c785466a953403dcd4e4/robert-server-common/src/main/java/fr/gouv/stopc/robert/server/common/utils/ByteUtils.java#L44
+./results/git/stop_covid/issue_file_gitlab.txt:228:https://docs.oracle.com/javase/9/security/pkcs11-reference-guide1.htm#JSSEC-GUID-97F1E537-CB59-4C7F-AB6B-05D4DBD69AC0
+./results/git/stop_covid/issue_file_gitlab.txt:430:Here is a filtered adb logcat which only includes lines with 'stopcovid'.
+./results/git/stop_covid/issue_file_gitlab.txt:597:Now I wanted to update to 2.0.1, but when downloading the APK, Android just says "App not installed" at the end of the installation process. "adb" gives a better message:
+./results/git/stop_covid/issue_file_gitlab.txt:600:$ adb install ~/tousanticovid-release.apk 
+./results/git/stop_covid/issue_file_gitlab.txt:601:adb: failed to install /home/vh/tousanticovid-release.apk: Failure [INSTALL_FAILED_UPDATE_INCOMPATIBLE: Package fr.gouv.android.stopcovid signatures do not match previously installed version; ignoring!]
+./results/git/stop_covid/issue_file_gitlab.txt:666:[fix]: https://github.com/ofa-/stopcovid-android/commit/ac5c454613d1f99df128194db53a7b8bf742cf4d,['BLE']

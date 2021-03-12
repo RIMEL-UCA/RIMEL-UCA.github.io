@@ -1,0 +1,207 @@
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/RobertManager.kt:97:    suspend fun eraseLocalHistory(): RobertResult
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/RobertManager.kt:99:    suspend fun eraseRemoteExposureHistory(application: RobertApplication): RobertResult
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/RobertManager.kt:101:    suspend fun eraseRemoteAlert(): RobertResult
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:452:                        // 403 means token invalid, erase token
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:501:    override suspend fun eraseLocalHistory(): RobertResult {
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:506:    override suspend fun eraseRemoteExposureHistory(application: RobertApplication): RobertResult {
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:522:    override suspend fun eraseRemoteAlert(): RobertResult {
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:161:    "manageDataController.eraseLocalHistory.title": "بياناتي على هذا الهاتف",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:162:    "manageDataController.eraseLocalHistory.subtitle": "ستمحو هذه العملية جميع معلومات \"قائمة الاتصال Bluetooth\" المعثور عليها على هاتفك.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:163:    "manageDataController.eraseLocalHistory.button": "المحو عن هاتفي",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:164:    "manageDataController.eraseLocalHistory.success": "نجح محو البيانات",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:165:    "manageDataController.eraseLocalHistory.confirmationDialog.title": "التأكيد",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:166:    "manageDataController.eraseLocalHistory.confirmationDialog.message": "هل تؤكد أنك تريد حذف كامل الجدول الزمني بخصوص \"قائمة الاتصال Bluetooth\" المعثور عليها حتى الآن؟ هذه الخطوة لا رجعة فيها.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:167:    "manageDataController.eraseRemoteContact.title": "بياناتي على الخادم",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:168:    "manageDataController.eraseRemoteContact.subtitle": "ستمحو هذه العملية تعريفات اتصالك الشخصية التي تبادلتها مع هواتف أخرى وتم تحميلها على الخادم.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:169:    "manageDataController.eraseRemoteContact.button": "الحذف من الخادم",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:170:    "manageDataController.eraseRemoteContact.success": "نجح حذف البيانات",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:171:    "manageDataController.eraseRemoteContact.confirmationDialog.title": "التأكيد",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:172:    "manageDataController.eraseRemoteContact.confirmationDialog.message": "هذه الخطوة لا رجعة فيها. هل تؤكد أنك تريد محو تعريفات اتصالك المؤقتة من الخادم؟",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:173:    "manageDataController.eraseRemoteAlert.title": "إنذاراتي",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:174:    "manageDataController.eraseRemoteAlert.subtitle": "حين تصادف أشخاصًا تم اختبارهم إيجابيًا بمرض كوفيد-19، تتلقى إنذارًا. انتبه: تؤدي هذه العملية إلى حذف جميع إنذاراتك.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:175:    "manageDataController.eraseRemoteAlert.button": "محو إنذاراتي",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:176:    "manageDataController.eraseRemoteAlert.success": "نجح محو الإنذارات",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:177:    "manageDataController.eraseRemoteAlert.confirmationDialog.title": "انتبه",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:178:    "manageDataController.eraseRemoteAlert.confirmationDialog.message": "هذه الخطوة لا رجعة فيها. هل تؤكد أنك تريد محو إنذاراتك؟",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:161:    "manageDataController.eraseLocalHistory.title": "Meine Daten \"Bluetooth-Kontakte\"",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:162:    "manageDataController.eraseLocalHistory.subtitle": "Bei diesem Vorgang werden alle im Zusammenhang mit \"Bluetooth-Kontakten\" erfassten Informationen auf Ihrem Telefon gelöscht.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:163:    "manageDataController.eraseLocalHistory.button": "Auf meinem Telefon löschen",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:164:    "manageDataController.eraseLocalHistory.success": "Daten wurden erfolgreich gelöscht",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:165:    "manageDataController.eraseLocalHistory.confirmationDialog.title": "Bestätigung",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:166:    "manageDataController.eraseLocalHistory.confirmationDialog.message": "Bestätigen Sie, dass Sie den gesamten Verlauf der \"Bluetooth-Kontakte\" löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:167:    "manageDataController.eraseRemoteContact.title": "Meine Daten auf dem Server",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:168:    "manageDataController.eraseRemoteContact.subtitle": "Bei diesem Vorgang werden Ihre eigenen Pseudo-Kennungen gelöscht, die mit anderen Mobiltelefonen ausgetauscht und auf den Server hochgeladen wurden.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:169:    "manageDataController.eraseRemoteContact.button": "Auf dem Server löschen",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:170:    "manageDataController.eraseRemoteContact.success": "Daten wurden erfolgreich gelöscht",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:171:    "manageDataController.eraseRemoteContact.confirmationDialog.title": "Bestätigung",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:172:    "manageDataController.eraseRemoteContact.confirmationDialog.message": "Diese Aktion kann nicht rückgängig gemacht werden. Möchten Sie die zeitlich befristeten Pseudo-Kennungen auf dem Server tatsächlich löschen?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:173:    "manageDataController.eraseRemoteAlert.title": "Meine Alarme",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:174:    "manageDataController.eraseRemoteAlert.subtitle": "Sobald Sie einer Person begegnet sind, die als COVID-19-Fall diagnostiziert worden ist, erhalten Sie einen Alarm. Bitte beachten Sie, dass dieser Vorgang alle Alarme löscht.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:175:    "manageDataController.eraseRemoteAlert.button": "Meine Alarme löschen",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:176:    "manageDataController.eraseRemoteAlert.success": "Alarme wurden erfolgreich gelöscht",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:177:    "manageDataController.eraseRemoteAlert.confirmationDialog.title": "Warnung",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:178:    "manageDataController.eraseRemoteAlert.confirmationDialog.message": "Diese Aktion kann nicht rückgängig gemacht werden. Möchten Sie Ihre Alarme tatsächlich löschen?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:161:    "manageDataController.eraseLocalHistory.title": "My \"Bluetooth contacts\" data",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:162:    "manageDataController.eraseLocalHistory.subtitle": "This will delete all of the information on \"Bluetooth contacts \" stored on your phone.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:163:    "manageDataController.eraseLocalHistory.button": "Delete from my phone",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:164:    "manageDataController.eraseLocalHistory.success": "Data successfully deleted",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:165:    "manageDataController.eraseLocalHistory.confirmationDialog.title": "Confirmation",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:166:    "manageDataController.eraseLocalHistory.confirmationDialog.message": "Are you sure that you want to delete your entire history of \"Bluetooth contacts\"? This cannot be undone.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:167:    "manageDataController.eraseRemoteContact.title": "My data on the server",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:168:    "manageDataController.eraseRemoteContact.subtitle": "This will delete all of your own user IDs that have been shared with other phones and uploaded to the server.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:169:    "manageDataController.eraseRemoteContact.button": "Delete from server",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:170:    "manageDataController.eraseRemoteContact.success": "Data successfully deleted",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:171:    "manageDataController.eraseRemoteContact.confirmationDialog.title": "Confirmation",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:172:    "manageDataController.eraseRemoteContact.confirmationDialog.message": "This cannot be undone. Are you sure you want to delete your temporary user IDs from the server?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:173:    "manageDataController.eraseRemoteAlert.title": "My alerts",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:174:    "manageDataController.eraseRemoteAlert.subtitle": "Whenever you come into close contact with users who have tested positive for COVID-19, you will be sent an alert. Please note, this will delete all of your alerts.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:175:    "manageDataController.eraseRemoteAlert.button": "Delete my alerts",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:176:    "manageDataController.eraseRemoteAlert.success": "Alerts successfully deleted",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:177:    "manageDataController.eraseRemoteAlert.confirmationDialog.title": "Please note",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:178:    "manageDataController.eraseRemoteAlert.confirmationDialog.message": "This cannot be undone. Are you sure you want to delete your alerts?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:686:    "venuesHistoryController.footer": "Your location history will be used to notify you if someone who has tested positive was in this location.\nLocations will be erased automatically after 14 days each time the app is opened.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:161:    "manageDataController.eraseLocalHistory.title": "Mis datos de contactos Bluetooth",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:162:    "manageDataController.eraseLocalHistory.subtitle": "Esta operación borrará todos los datos de \"contactos Bluetooth\" almacenadas en tu teléfono.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:163:    "manageDataController.eraseLocalHistory.button": "Borrar de mi teléfono",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:164:    "manageDataController.eraseLocalHistory.success": "Datos eliminados con éxito",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:165:    "manageDataController.eraseLocalHistory.confirmationDialog.title": "Confirmación",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:166:    "manageDataController.eraseLocalHistory.confirmationDialog.message": "¿Confirmas que quieres suprimir el historial de \"contactos Bluetooth\" almacenados hasta ahora? Esta acción es irreversible.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:167:    "manageDataController.eraseRemoteContact.title": "Mis datos en el servidor",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:168:    "manageDataController.eraseRemoteContact.subtitle": "Esta operación borrará los pseudo-identificadores que te han sido asignados y que han sido intercambiados con otros teléfonos y enviados al servidor.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:169:    "manageDataController.eraseRemoteContact.button": "Borrar los datos del servidor",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:170:    "manageDataController.eraseRemoteContact.success": "Datos borrados con éxito",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:171:    "manageDataController.eraseRemoteContact.confirmationDialog.title": "Confirmación",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:172:    "manageDataController.eraseRemoteContact.confirmationDialog.message": "Esta acción es irreversible: ¿Confirmas que quieres borrar tus pseudo-identificadores efímeros del servidor?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:173:    "manageDataController.eraseRemoteAlert.title": "Mis notificaciones",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:174:    "manageDataController.eraseRemoteAlert.subtitle": "Si en algún momento has estado cerca de una o más personas que hayan dado positivo por COVID-19, recibirás una notificación. Atención: esta acción suprimirá todas tus notificaciones.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:175:    "manageDataController.eraseRemoteAlert.button": "Borrar mis notificaciones",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:176:    "manageDataController.eraseRemoteAlert.success": "Notificaciones correctamente eliminadas",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:177:    "manageDataController.eraseRemoteAlert.confirmationDialog.title": "Atención",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:178:    "manageDataController.eraseRemoteAlert.confirmationDialog.message": "Esta acción es irreversible: ¿Confirmas que quieres borrar tus notificaciones?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:161:   "manageDataController.eraseLocalHistory.title":"Mes données \"contacts Bluetooth\"",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:162:   "manageDataController.eraseLocalHistory.subtitle":"Cette opération effacera toutes les informations de \"contacts Bluetooth\" collectés sur votre téléphone.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:163:   "manageDataController.eraseLocalHistory.button":"Effacer sur mon téléphone",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:164:   "manageDataController.eraseLocalHistory.success":"Données effacées avec succès",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:165:   "manageDataController.eraseLocalHistory.confirmationDialog.title":"Confirmation",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:166:   "manageDataController.eraseLocalHistory.confirmationDialog.message":"Confirmez-vous vouloir supprimer tout l'historique des \"contacts Bluetooth\" collectés jusque-là ? Cette action est irréversible.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:167:   "manageDataController.eraseRemoteContact.title":"Mes données sur le serveur",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:168:   "manageDataController.eraseRemoteContact.subtitle":"Cette opération effacera vos propres pseudo-identifiants qui ont été échangés avec d’autres téléphones et remontés sur le serveur.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:169:   "manageDataController.eraseRemoteContact.button":"Effacer sur le serveur",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:170:   "manageDataController.eraseRemoteContact.success":"Données effacées avec succès",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:171:   "manageDataController.eraseRemoteContact.confirmationDialog.title":"Confirmation",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:172:   "manageDataController.eraseRemoteContact.confirmationDialog.message":"Cette action est irréversible, confirmez-vous vouloir effacer vos pseudo-identifiants éphémères du serveur ?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:173:   "manageDataController.eraseRemoteAlert.title":"Mes alertes",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:174:   "manageDataController.eraseRemoteAlert.subtitle":"Dès lors que vous avez été à proximité d’utilisateurs diagnostiqués comme des cas de COVID-19, vous recevez une alerte. Attention, cette opération supprimera toutes vos alertes.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:175:   "manageDataController.eraseRemoteAlert.button":"Effacer mes alertes",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:176:   "manageDataController.eraseRemoteAlert.success":"Alertes effacées avec succès",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:177:   "manageDataController.eraseRemoteAlert.confirmationDialog.title":"Attention",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:178:   "manageDataController.eraseRemoteAlert.confirmationDialog.message":"Cette action est irréversible, confirmez-vous vouloir effacer vos alertes ?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:161:    "manageDataController.eraseLocalHistory.title": "I miei dati \"contatti Bluetooth\"",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:162:    "manageDataController.eraseLocalHistory.subtitle": "Questa operazione cancellerà tutte le informazioni riguardanti i \"contatti Bluetooth\" registrati sul tuo smartphone.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:163:    "manageDataController.eraseLocalHistory.button": "Cancella sul mio smartphone",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:164:    "manageDataController.eraseLocalHistory.success": "Dati cancellati",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:165:    "manageDataController.eraseLocalHistory.confirmationDialog.title": "Conferma",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:166:    "manageDataController.eraseLocalHistory.confirmationDialog.message": "Confermi la cancellazione di tutta la cronologia dei \"contatti Bluetooth\" raccolti fino a ora? Quest’operazione è irreversibile.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:167:    "manageDataController.eraseRemoteContact.title": "I miei dati sul server",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:168:    "manageDataController.eraseRemoteContact.subtitle": "Quest’operazione cancellerà i tuoi pseudo-identificatori scambiati con altri dispositivi e inviati al server.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:169:    "manageDataController.eraseRemoteContact.button": "Cancella sul server",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:170:    "manageDataController.eraseRemoteContact.success": "Dati cancellati",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:171:    "manageDataController.eraseRemoteContact.confirmationDialog.title": "Conferma",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:172:    "manageDataController.eraseRemoteContact.confirmationDialog.message": "Quest’operazione è irreversibile, confermi la cancellazione dei tuoi pseudo-identificatori temporanei dal server ?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:173:    "manageDataController.eraseRemoteAlert.title": "I miei avvisi",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:174:    "manageDataController.eraseRemoteAlert.subtitle": "Nel caso in cui tu abbia incontrato degli utenti diagnosticati come casi di COVID-19, riceverai un avviso. Attenzione, quest’operazione cancellerà tutti i tuoi avvisi.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:175:    "manageDataController.eraseRemoteAlert.button": "Cancella i miei avvisi",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:176:    "manageDataController.eraseRemoteAlert.success": "Avvisi cancellati",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:177:    "manageDataController.eraseRemoteAlert.confirmationDialog.title": "Attenzione",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:178:    "manageDataController.eraseRemoteAlert.confirmationDialog.message": "Quest’operazione è irreversibile, confermi la cancellazione degli avvisi?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:161:    "manageDataController.eraseLocalHistory.title": "Os meus dados de \"contactos Bluetooth\"",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:162:    "manageDataController.eraseLocalHistory.subtitle": "Esta operação eliminará todas as informações de \"contactos Bluetooth\" recolhidas no telemóvel.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:163:    "manageDataController.eraseLocalHistory.button": "Eliminar no telemóvel",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:164:    "manageDataController.eraseLocalHistory.success": "Dados eliminados com sucesso",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:165:    "manageDataController.eraseLocalHistory.confirmationDialog.title": "Confirmação",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:166:    "manageDataController.eraseLocalHistory.confirmationDialog.message": "Tem a certeza de que pretende eliminar todo o histórico dos \"contactos Bluetooth\" recolhido até agora? Esta ação é irreversível.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:167:    "manageDataController.eraseRemoteContact.title": "Os meus dados no servidor",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:168:    "manageDataController.eraseRemoteContact.subtitle": "Esta operação eliminará todos os seus pseudoidentificadores trocados com outros telemóveis e enviados para o servidor.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:169:    "manageDataController.eraseRemoteContact.button": "Eliminar no servidor",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:170:    "manageDataController.eraseRemoteContact.success": "Dados eliminados com sucessso",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:171:    "manageDataController.eraseRemoteContact.confirmationDialog.title": "Confirmação",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:172:    "manageDataController.eraseRemoteContact.confirmationDialog.message": "Esta ação é irreversível. Tem a certeza de que pretende eliminar os seus pseudoidentificadores efémeros do servidor?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:173:    "manageDataController.eraseRemoteAlert.title": "Os meus alertas",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:174:    "manageDataController.eraseRemoteAlert.subtitle": "Se tiver estado nas imediações de utilizadores diagnosticados como casos de COVID-19, receberá um alerta. Atenção: esta operação eliminará todos os seus alertas.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:175:    "manageDataController.eraseRemoteAlert.button": "Eliminar os meus alertas",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:176:    "manageDataController.eraseRemoteAlert.success": "Alertas eliminados com sucesso",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:177:    "manageDataController.eraseRemoteAlert.confirmationDialog.title": "Atenção",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:178:    "manageDataController.eraseRemoteAlert.confirmationDialog.message": "Esta ação é irreversível. Tem a certeza de que pretende eliminar os seus alertas?",
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/HealthFragment.kt:68:        viewModel.eraseNotificationSuccess.observe(viewLifecycleOwner) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:83:        viewModel.eraseAttestationsSuccess.observe(viewLifecycleOwner) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:84:            showSnackBar(strings["manageDataController.eraseLocalHistory.success"] ?: "")
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:86:        viewModel.eraseIsolationSuccess.observe(viewLifecycleOwner) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:87:            showSnackBar(strings["manageDataController.eraseLocalHistory.success"] ?: "")
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:89:        viewModel.eraseVenuesSuccess.observe(viewLifecycleOwner) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:90:            showSnackBar(strings["manageDataController.eraseLocalHistory.success"] ?: "")
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:92:        viewModel.eraseLocalSuccess.observe(viewLifecycleOwner) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:93:            showSnackBar(strings["manageDataController.eraseLocalHistory.success"] ?: "")
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:95:        viewModel.eraseRemoteSuccess.observe(viewLifecycleOwner) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:96:            showSnackBar(strings["manageDataController.eraseRemoteContact.success"] ?: "")
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:98:        viewModel.eraseAlertSuccess.observe(viewLifecycleOwner) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:99:            showSnackBar(strings["manageDataController.eraseRemoteAlert.success"] ?: "")
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:119:        eraseAttestationItems(items)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:122:            eraseIsolationItems(items)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:131:            eraseVenuesItems(items)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:138:            eraseLocalHistoryItems(items)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:140:            eraseRemoteContactItems(items)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:142:            eraseRemoteAlertItems(items)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:182:    private fun eraseVenuesItems(items: MutableList<GenericItem>) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:202:                        viewModel.eraseVenues(requireContext().applicationContext as RobertApplication)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:210:    private fun eraseAttestationItems(items: MutableList<GenericItem>) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:230:                        viewModel.eraseAttestations()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:238:    private fun eraseIsolationItems(items: MutableList<GenericItem>) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:258:                        viewModel.eraseIsolation()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:266:    private fun eraseLocalHistoryItems(items: MutableList<GenericItem>) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:268:            text = strings["manageDataController.eraseLocalHistory.title"]
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:275:            text = strings["manageDataController.eraseLocalHistory.subtitle"]
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:279:            text = strings["manageDataController.eraseLocalHistory.button"]
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:282:                    .setTitle(strings["manageDataController.eraseLocalHistory.confirmationDialog.title"])
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:283:                    .setMessage(strings["manageDataController.eraseLocalHistory.confirmationDialog.message"])
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:286:                        viewModel.eraseLocalHistory()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:294:    private fun eraseRemoteContactItems(items: MutableList<GenericItem>) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:296:            text = strings["manageDataController.eraseRemoteContact.title"]
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:303:            text = strings["manageDataController.eraseRemoteContact.subtitle"]
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:307:            text = strings["manageDataController.eraseRemoteContact.button"]
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:310:                    .setTitle(strings["manageDataController.eraseRemoteContact.confirmationDialog.title"])
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:311:                    .setMessage(strings["manageDataController.eraseRemoteContact.confirmationDialog.message"])
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:314:                        viewModel.eraseRemoteExposureHistory(requireContext().applicationContext as RobertApplication)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:322:    private fun eraseRemoteAlertItems(items: MutableList<GenericItem>) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:324:            text = strings["manageDataController.eraseRemoteAlert.title"]
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:331:            text = strings["manageDataController.eraseRemoteAlert.subtitle"]
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:335:            text = strings["manageDataController.eraseRemoteAlert.button"]
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:338:                    .setTitle(strings["manageDataController.eraseRemoteAlert.confirmationDialog.title"])
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:339:                    .setMessage(strings["manageDataController.eraseRemoteAlert.confirmationDialog.message"])
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:342:                        viewModel.eraseRemoteAlert(requireContext().applicationContext as RobertApplication)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/HealthViewModel.kt:29:    val eraseNotificationSuccess: SingleLiveEvent<Unit> = SingleLiveEvent()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/HealthViewModel.kt:38:                    when (val result = robertManager.eraseRemoteAlert()) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/HealthViewModel.kt:39:                        is RobertResult.Success -> eraseNotificationSuccess.postValue(null)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:43:    val eraseAttestationsSuccess: SingleLiveEvent<Unit> = SingleLiveEvent()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:44:    val eraseIsolationSuccess: SingleLiveEvent<Unit> = SingleLiveEvent()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:45:    val eraseVenuesSuccess: SingleLiveEvent<Unit> = SingleLiveEvent()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:46:    val eraseLocalSuccess: SingleLiveEvent<Unit> = SingleLiveEvent()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:47:    val eraseRemoteSuccess: SingleLiveEvent<Unit> = SingleLiveEvent()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:48:    val eraseAlertSuccess: SingleLiveEvent<Unit> = SingleLiveEvent()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:53:    fun eraseVenues(application: RobertApplication, postValue: Boolean = true) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:56:            eraseVenuesSuccess.postValue(null)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:60:    fun eraseAttestations(postValue: Boolean = true) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:65:            eraseAttestationsSuccess.postValue(null)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:69:    fun eraseIsolation(postValue: Boolean = true) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:72:            eraseIsolationSuccess.postValue(null)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:76:    fun eraseLocalHistory() {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:81:                    when (val result = robertManager.eraseLocalHistory()) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:82:                        is RobertResult.Success -> eraseLocalSuccess.postValue(null)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:93:    fun eraseRemoteExposureHistory(application: RobertApplication) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:98:                    when (val result = robertManager.eraseRemoteExposureHistory(application)) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:99:                        is RobertResult.Success -> eraseRemoteSuccess.postValue(null)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:110:    fun eraseRemoteAlert(application: RobertApplication) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:115:                    when (val result = robertManager.eraseRemoteAlert()) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:118:                            eraseAlertSuccess.postValue(null)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:142:                            eraseAttestations(false)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:143:                            eraseVenues(application, false)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:145:                            eraseIsolation(false)

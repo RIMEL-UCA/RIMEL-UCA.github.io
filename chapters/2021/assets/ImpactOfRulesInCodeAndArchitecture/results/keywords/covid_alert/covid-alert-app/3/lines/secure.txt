@@ -1,0 +1,76 @@
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-app/.git/index matches
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-app/.git/objects/pack/pack-2eee96e38f6668f4725249e4ef9c31892516bc60.pack matches
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/CovidShieldModule.kt:17:import java.security.SecureRandom
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/CovidShieldModule.kt:32:            val bytes = SecureRandom().generateSeed(size)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/docs/notifications/readme.md:25:The mobile app will store read receipts in RNSecureKeyStore keyed by message.id
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield/Info.plist:13:				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/Podfile.lock:302:  - RNSecureKeyStore (1.0.0):
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/Podfile.lock:387:  - RNSecureKeyStore (from `../node_modules/react-native-secure-key-store/ios`)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/Podfile.lock:505:  RNSecureKeyStore:
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/Podfile.lock:506:    :path: "../node_modules/react-native-secure-key-store/ios"
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/Podfile.lock:587:  RNSecureKeyStore: f1ad870e53806453039f650720d2845c678d89c8
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/package.json:68:    "react-native-secure-key-store": "^2.0.7",
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/index.ts:7:import RNSecureKeyStore from 'react-native-secure-key-store';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/index.ts:32:      RNSecureKeyStore,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/index.ts:46:      RNSecureKeyStore,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:5:import RNSecureKeyStore from 'react-native-secure-key-store';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:131:        RNSecureKeyStore,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:72:const secureStorage: any = {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:168:    service = new ExposureNotificationService(server, i18n, storage, secureStorage, bridge);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:523:    when(secureStorage.get)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:102:export interface SecurePersistencyProvider {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:103:  set(key: string, value: string, options: SecureStorageOptions): Promise<null>;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:107:export interface SecureStorageOptions {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:131:  private secureStorage: SecurePersistencyProvider;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:137:    secureStorage: SecurePersistencyProvider,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:147:    this.secureStorage = secureStorage;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:152:      this.secureStorage.set(EXPOSURE_HISTORY, history.join(','), {});
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:392:      await this.secureStorage.set(SUBMISSION_AUTH_KEYS, serialized, {});
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:407:    const submissionKeysStr = await this.secureStorage.get(SUBMISSION_AUTH_KEYS);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:905:      const _exposureHistory = await this.secureStorage.get(EXPOSURE_HISTORY);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:1046:        message: 'Saving exposure configuration to secure storage.',
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationServiceProvider.tsx:6:import RNSecureKeyStore from 'react-native-secure-key-store';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationServiceProvider.tsx:20:  SecurePersistencyProvider,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationServiceProvider.tsx:30:  secureStorage?: SecurePersistencyProvider;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationServiceProvider.tsx:39:  secureStorage,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationServiceProvider.tsx:50:        secureStorage || RNSecureKeyStore,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationServiceProvider.tsx:53:    [backendInterface, exposureNotification, i18n, secureStorage, storage],
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationServiceV2.spec.ts:58:const secureStorage: any = {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationServiceV2.spec.ts:94:    service = new ExposureNotificationService(server, i18n, storage, secureStorage, bridge);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/FilteredMetricsService.ts:15:import {DefaultSecureKeyValueStore} from './SecureKeyValueStorage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/FilteredMetricsService.ts:81:    this.stateStorage = new DefaultFilteredMetricsStateStorage(new DefaultSecureKeyValueStore());
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/FilteredMetricsStateStorage.ts:1:import {SecureKeyValueStore} from './SecureKeyValueStorage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/FilteredMetricsStateStorage.ts:20:  private keyValueStore: SecureKeyValueStore;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/FilteredMetricsStateStorage.ts:22:  constructor(secureKeyValueStore: SecureKeyValueStore) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/FilteredMetricsStateStorage.ts:23:    this.keyValueStore = secureKeyValueStore;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsService.ts:12:import {DefaultSecureKeyValueStore, SecureKeyValueStore} from './SecureKeyValueStorage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsService.ts:36:      const secureKeyValueStore = new DefaultSecureKeyValueStore();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsService.ts:37:      const metricsStorage = new DefaultMetricsStorage(secureKeyValueStore);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsService.ts:42:        secureKeyValueStore,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsService.ts:54:  private secureKeyValueStore: SecureKeyValueStore;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsService.ts:64:    secureKeyValueStore: SecureKeyValueStore,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsService.ts:71:    this.secureKeyValueStore = secureKeyValueStore;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsService.ts:169:    return this.secureKeyValueStore
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsService.ts:175:    return this.secureKeyValueStore.save(LastMetricTimestampSentToTheServerUniqueIdentifier, `${timestamp}`);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsService.ts:179:    return this.secureKeyValueStore
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsService.ts:185:    return this.secureKeyValueStore.save(MetricsLastUploadedDateTime, `${date.getTime()}`);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsStorage.ts:5:import {SecureKeyValueStore} from './SecureKeyValueStorage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsStorage.ts:22:  private keyValueStore: SecureKeyValueStore;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsStorage.ts:25:  constructor(secureKeyValueStore: SecureKeyValueStore) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsStorage.ts:26:    this.keyValueStore = secureKeyValueStore;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/SecureKeyValueStorage.ts:1:import RNSecureKeyStore, {ACCESSIBLE} from 'react-native-secure-key-store';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/SecureKeyValueStorage.ts:3:export interface SecureKeyValueStore {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/SecureKeyValueStorage.ts:8:export class DefaultSecureKeyValueStore implements SecureKeyValueStore {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/SecureKeyValueStorage.ts:10:    return RNSecureKeyStore.set(key, value, {accessible: ACCESSIBLE.ALWAYS_THIS_DEVICE_ONLY});
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/SecureKeyValueStorage.ts:14:    return RNSecureKeyStore.get(key).catch(() => null);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/tests/MetricsProvider.spec.ts:5:import {RNSecureKeyStoreMock} from './RNSecureKeyStoreMock';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/tests/MetricsProvider.spec.ts:13:    const metricsStorage = new DefaultMetricsStorage(new RNSecureKeyStoreMock());
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/tests/MetricsStorage.spec.ts:3:import {RNSecureKeyStoreMock} from './RNSecureKeyStoreMock';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/tests/MetricsStorage.spec.ts:10:    sut = new DefaultMetricsStorage(new RNSecureKeyStoreMock());
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/tests/RNSecureKeyStoreMock.ts:1:import {SecureKeyValueStore} from '../SecureKeyValueStorage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/tests/RNSecureKeyStoreMock.ts:3:export class RNSecureKeyStoreMock implements SecureKeyValueStore {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/PollNotificationService/PollNotificationService.ts:6:import RNSecureKeyStore, {ACCESSIBLE} from 'react-native-secure-key-store';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/PollNotificationService/PollNotificationService.ts:201:  return RNSecureKeyStore.get(LastPollNotificationDateTime).catch(() => null);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/PollNotificationService/PollNotificationService.ts:205:  return RNSecureKeyStore.set(LastPollNotificationDateTime, `${date.getTime()}`, {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:8775:react-native-secure-key-store@^2.0.7:
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:8777:  resolved "https://registry.yarnpkg.com/react-native-secure-key-store/-/react-native-secure-key-store-2.0.7.tgz#70b24afae0f75fd90e46aabd8fc9ce6484727850"

@@ -1,0 +1,8 @@
+../stopcovid-robertsdk-android/.git/hooks/pre-rebase.sample:93:This sample hook safeguards topic branches that have been
+../stopcovid-robertsdk-android/.git/hooks/update.sample:32:# --- Safety check
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/extension/SecretKeySpecExt.kt:16:fun SecretKey.safeDestroy() {
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/extension/SecretKeySpecExt.kt:24:fun <T> SecretKey.safeUse(block: (SecretKey) -> T): T {
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/HelloBuilder.kt:13:import com.lunabeestudio.domain.extension.safeDestroy
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/HelloBuilder.kt:55:            secretKeySpec.safeDestroy()
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/SSUBuilder.kt:14:import com.lunabeestudio.domain.extension.safeDestroy
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/SSUBuilder.kt:50:        secretKeySpec.safeDestroy()

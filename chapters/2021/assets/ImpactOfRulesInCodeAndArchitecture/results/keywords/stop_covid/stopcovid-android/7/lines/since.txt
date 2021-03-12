@@ -1,0 +1,56 @@
+stopcovid-android/.git/hooks/fsmonitor-watchman.sample:13:# modified since the given time. Paths must be relative to the root of
+stopcovid-android/.git/hooks/fsmonitor-watchman.sample:51:	# changed since $time but were not transient (ie created after
+stopcovid-android/.git/hooks/fsmonitor-watchman.sample:54:	# To accomplish this, we're using the "since" generator to use the
+stopcovid-android/.git/hooks/fsmonitor-watchman.sample:65:			"since": $time,
+stopcovid-android/.git/hooks/fsmonitor-watchman.sample:67:			"expression": ["not", ["allof", ["since", $time, "cclock"], ["not", "exists"]]]
+stopcovid-android/.git/hooks/pre-commit.sample:29:	# even required, for portability to Solaris 10's /usr/bin/tr), since
+stopcovid-android/.git/hooks/pre-rebase.sample:146: * A has one fix since it was merged up to "next".
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithoutAdvertiser.kt:82:        private val timeSinceLastScannerStart: Long
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithoutAdvertiser.kt:107:            // Since Android 7 we should not start and stop scans more than 5 times
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithoutAdvertiser.kt:110:                get() = maxOf(500, 8_000L - timeSinceLastScannerStart)
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattClientImpl.kt:220:            throw BleGattClientException("operation ($operationName) failed since it is no more connected")
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:38:    protected val daySinceNtp: Long
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:114:        val dailySessionDir = File(storageDir, "$daySinceNtp")
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:119:            name.contains(Regex("^$daySinceNtp-\\d+$"))
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:124:        return File(dailySessionDir, "$daySinceNtp-$sessionNum")
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:166:            val fileDaySinceNtp = encryptedFile.parentFile!!.name.toLong()
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:167:            if (daySinceNtp != fileDaySinceNtp || localProximityList.size > DUMP_FILE_MAX_ENTRIES) {
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/extension/DateExtensionTest.kt:9:    fun roundTimeIntervalSince1900_interval_1() {
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/extension/DateExtensionTest.kt:13:        assert(Date(4102444799999L).roundedTimeIntervalSince1900(interval) == 6311433599L)
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/extension/DateExtensionTest.kt:15:        assert(Date(946684800000L).roundedTimeIntervalSince1900(interval) == 3155673600L)
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/extension/DateExtensionTest.kt:17:        assert(Date(946684800999L).roundedTimeIntervalSince1900(interval) == 3155673600L)
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/extension/DateExtensionTest.kt:19:        assert(Date(946684801000L).roundedTimeIntervalSince1900(interval) == 3155673601L)
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/extension/DateExtensionTest.kt:23:    fun roundTimeIntervalSince1900_interval_60() {
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/extension/DateExtensionTest.kt:27:        assert(Date(4102444799999L).roundedTimeIntervalSince1900(interval) == 6311433600L)
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/extension/DateExtensionTest.kt:29:        assert(Date(946684800000L).roundedTimeIntervalSince1900(interval) == 3155673600L)
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/extension/DateExtensionTest.kt:31:        assert(Date(946684769999L).roundedTimeIntervalSince1900(interval) == 3155673540L)
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/extension/DateExtensionTest.kt:33:        assert(Date(946684770000L).roundedTimeIntervalSince1900(interval) == 3155673600L)
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/extension/DateExtensionTest.kt:35:        assert(Date(946684770001L).roundedTimeIntervalSince1900(interval) == 3155673600L)
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/extension/DateExtensionTest.kt:39:    fun roundTimeIntervalSince1900_interval_900() {
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/extension/DateExtensionTest.kt:43:        assert(Date(4102444799999L).roundedTimeIntervalSince1900(interval) == 6311433600L)
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/extension/DateExtensionTest.kt:45:        assert(Date(946684800000L).roundedTimeIntervalSince1900(interval) == 3155673600L)
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/extension/DateExtensionTest.kt:47:        assert(Date(946684349999L).roundedTimeIntervalSince1900(interval) == 3155672700L)
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/extension/DateExtensionTest.kt:49:        assert(Date(946684350000L).roundedTimeIntervalSince1900(interval) == 3155673600L)
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/extension/DateExtensionTest.kt:51:        assert(Date(946684350001L).roundedTimeIntervalSince1900(interval) == 3155673600L)
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/extension/DateExtensionTest.kt:55:    fun roundTimeIntervalSince1900_interval_901() {
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/extension/DateExtensionTest.kt:59:        assert(Date(4102444799999L).roundedTimeIntervalSince1900(interval) == 6311433821L)
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/extension/DateExtensionTest.kt:61:        assert(Date(946684800000L).roundedTimeIntervalSince1900(interval) == 3155673212L)
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/extension/DateExtensionTest.kt:63:        assert(Date(946683961999L).roundedTimeIntervalSince1900(interval) == 3155672311L)
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/extension/DateExtensionTest.kt:65:        assert(Date(946683962000L).roundedTimeIntervalSince1900(interval) == 3155673212L)
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/extension/DateExtensionTest.kt:67:        assert(Date(946683962001L).roundedTimeIntervalSince1900(interval) == 3155673212L)
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/extension/DateExtensionTest.kt:71:    fun roundTimeIntervalSince1900_interval_3600() {
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/extension/DateExtensionTest.kt:75:        assert(Date(4102444799999L).roundedTimeIntervalSince1900(interval) == 6311433600L)
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/extension/DateExtensionTest.kt:77:        assert(Date(946684800000L).roundedTimeIntervalSince1900(interval) == 3155673600L)
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/extension/DateExtensionTest.kt:79:        assert(Date(946682999999L).roundedTimeIntervalSince1900(interval) == 3155670000L)
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/extension/DateExtensionTest.kt:81:        assert(Date(946683000000L).roundedTimeIntervalSince1900(interval) == 3155673600L)
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/extension/DateExtensionTest.kt:83:        assert(Date(946683000001L).roundedTimeIntervalSince1900(interval) == 3155673600L)
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:14:import com.lunabeestudio.stopcovid.extension.roundedTimeIntervalSince1900
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:359:            .roundedTimeIntervalSince1900(context.robertManager().configuration.venuesTimestampRoundingInterval.toLong())) {
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:334:    "keyfigure.registered.description": "The number of people who have downloaded and activated the app since 2nd June 2020.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:336:    "keyfigure.notification.description": "The number of people notified by the app following exposure to COVID-19 since 2nd June 2020.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:338:    "keyfigure.qrcodes.description": "The number of users to have been reported as having tested positive for COVID-19 in the app (since 2nd June 2020).",
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/DateExt.kt:6:fun Date.roundedTimeIntervalSince1900(interval: Long): Long {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/VenuesManager.kt:15:import com.lunabeestudio.stopcovid.extension.roundedTimeIntervalSince1900
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/VenuesManager.kt:81:                    .roundedTimeIntervalSince1900(robertManager.configuration.venuesTimestampRoundingInterval.toLong())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/StopCovid.kt:489:        val elapsedTimeSinceRefresh = (System.currentTimeMillis() - (robertManager.atRiskLastRefresh ?: 0L)).milliseconds
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/StopCovid.kt:491:        if (robertManager.isRegistered && elapsedTimeSinceRefresh > checkStatusFrequency) {

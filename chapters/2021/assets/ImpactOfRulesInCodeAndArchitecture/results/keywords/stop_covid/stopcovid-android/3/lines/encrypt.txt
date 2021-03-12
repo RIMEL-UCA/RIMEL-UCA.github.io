@@ -1,0 +1,132 @@
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/LocalCryptoManagerTest.kt:40:    fun encrypt_decrypt_shortByteArray() {
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/LocalCryptoManagerTest.kt:43:        val encrypted = localCryptoManager.encrypt(passphrase.copyOf())
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/LocalCryptoManagerTest.kt:44:        val decrypted = localCryptoManager.decrypt(encrypted)
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/LocalCryptoManagerTest.kt:46:        assertThat(encrypted).isNotEqualTo(passphrase)
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/LocalCryptoManagerTest.kt:51:    fun encrypt_decrypt_longByteArray() {
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/LocalCryptoManagerTest.kt:54:        val encrypted = localCryptoManager.encrypt(passphrase.copyOf())
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/LocalCryptoManagerTest.kt:55:        val decrypted = localCryptoManager.decrypt(encrypted)
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/LocalCryptoManagerTest.kt:57:        assertThat(encrypted).isNotEqualTo(passphrase)
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/sharedcrypto/BouncyCastleCryptoDataSourceTest.kt:49:    fun get_encryption_keys() {
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/sharedcrypto/BouncyCastleCryptoDataSourceTest.kt:50:        val keys = bcCryptoDataSource.getEncryptionKeys(
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileEphemeralBluetoothIdentifierDataSource.kt:82:            cryptoManager.encryptToFile(json, epochFile)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:41:    protected var _encryptedFile: File? = null
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:42:    protected val encryptedFile: File
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:44:            if (_encryptedFile == null) {
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:45:                _encryptedFile = getDailySessionFile()
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:47:            return _encryptedFile!!
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:109:        _encryptedFile = null
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:134:            val tmpFile = createTempFile(directory = encryptedFile.parentFile)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:137:                    Timber.v("Start dumping ${localProximityList.size} items to ${encryptedFile.absolutePath}")
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:143:            tmpFile.renameTo(encryptedFile)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:146:            Timber.v("Dumping cache to ${encryptedFile.absolutePath} done in ${dumpTime}ms")
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:154:            updateEncryptedFolderIfNeeded(dumpResult.first)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:164:    protected open suspend fun updateEncryptedFolderIfNeeded(lastDumpedIndex: Int) {
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:166:            val fileDaySinceNtp = encryptedFile.parentFile!!.name.toLong()
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:169:                _encryptedFile = getDailySessionFile()
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:38:        get() = getEncryptedValue(SHARED_PREF_KEY_SHOULD_RELOAD_BLE_SETTINGS, Boolean::class.java)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:39:        set(value) = setEncryptedValue(SHARED_PREF_KEY_SHOULD_RELOAD_BLE_SETTINGS, value)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:43:            val value: Boolean? = getEncryptedValue(SHARED_PREF_KEY_IS_REGISTERED, Boolean::class.java)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:51:        set(value) = setEncryptedValue(SHARED_PREF_KEY_IS_REGISTERED, value)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:54:        get() = getEncryptedValue(SHARED_PREF_KEY_KA, ByteArray::class.java, useCache = false)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:55:        set(value) = setEncryptedValue(SHARED_PREF_KEY_KA, value, useCache = false)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:58:        get() = getEncryptedValue(SHARED_PREF_KEY_KEA, ByteArray::class.java, useCache = false)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:59:        set(value) = setEncryptedValue(SHARED_PREF_KEY_KEA, value, useCache = false)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:62:        get() = getAndMigrateOldUnencryptedLong(SHARED_PREF_KEY_TIME_START, SHARED_PREF_KEY_TIME_START_ENCRYPTED)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:63:        set(value) = setEncryptedValue(SHARED_PREF_KEY_TIME_START_ENCRYPTED, value)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:66:        get() = getEncryptedValue(SHARED_PREF_KEY_IS_WARNING_AT_RISK, Boolean::class.java, useCache = false)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:67:        set(value) = setEncryptedValue(SHARED_PREF_KEY_IS_WARNING_AT_RISK, value, useCache = false)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:70:        get() = getEncryptedValue(SHARED_PREF_KEY_AT_RISK_LAST_REFRESH, Long::class.java)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:71:        set(value) = setEncryptedValue(SHARED_PREF_KEY_AT_RISK_LAST_REFRESH, value)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:74:        get() = getEncryptedValue(SHARED_PREF_KEY_AT_RISK_LAST_ERROR, Long::class.java)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:75:        set(value) = setEncryptedValue(SHARED_PREF_KEY_AT_RISK_LAST_ERROR, value)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:78:        get() = getEncryptedValue(SHARED_PREF_KEY_LAST_RISK_RECEIVED_DATE, Long::class.java)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:79:        set(value) = setEncryptedValue(SHARED_PREF_KEY_LAST_RISK_RECEIVED_DATE, value)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:82:        get() = getEncryptedValue(SHARED_PREF_KEY_LAST_EXPOSURE_TIMEFRAME, Int::class.java, useCache = false)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:83:        set(value) = setEncryptedValue(SHARED_PREF_KEY_LAST_EXPOSURE_TIMEFRAME, value, useCache = false)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:86:        get() = getEncryptedValue(SHARED_PREF_KEY_PROXIMITY_ACTIVE, Boolean::class.java)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:87:        set(value) = setEncryptedValue(SHARED_PREF_KEY_PROXIMITY_ACTIVE, value)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:90:        get() = getEncryptedValue(SHARED_PREF_KEY_IS_SICK, Boolean::class.java, useCache = false)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:91:        set(value) = setEncryptedValue(SHARED_PREF_KEY_IS_SICK, value, useCache = false)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:94:        get() = getEncryptedValue(SHARED_PREF_KEY_SAVE_ATTESTATION_DATA, Boolean::class.java)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:95:        set(value) = setEncryptedValue(SHARED_PREF_KEY_SAVE_ATTESTATION_DATA, value)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:98:        get() = getEncryptedValue(SHARED_PREF_KEY_SAVED_ATTESTATION_DATA, object : TypeToken<Map<String, FormEntry>>() {}.type)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:99:        set(value) = setEncryptedValue(SHARED_PREF_KEY_SAVED_ATTESTATION_DATA, value)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:105:        get() = getEncryptedValue(SHARED_PREF_KEY_ATTESTATIONS, object : TypeToken<List<Map<String, FormEntry>>>() {}.type)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:107:            setEncryptedValue(SHARED_PREF_KEY_ATTESTATIONS, value)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:112:        get() = getAndMigrateOldUnencryptedLong(SHARED_PREF_KEY_REPORT_DATE, SHARED_PREF_KEY_REPORT_DATE_ENCRYPTED)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:113:        set(value) = setEncryptedValue(SHARED_PREF_KEY_REPORT_DATE_ENCRYPTED, value)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:116:        get() = getEncryptedValue(SHARED_PREF_KEY_REPORT_VALIDATION_TOKEN, String::class.java)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:117:        set(value) = setEncryptedValue(SHARED_PREF_KEY_REPORT_VALIDATION_TOKEN, value)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:120:        get() = getEncryptedValue(SHARED_PREF_KEY_SAVE_DATA_VENUES_QR_CODE, object : TypeToken<List<VenueQrCode>>() {}.type)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:121:        set(value) = setEncryptedValue(SHARED_PREF_KEY_SAVE_DATA_VENUES_QR_CODE, value)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:124:        get() = getEncryptedValue(SHARED_PREF_KEY_REPORT_TO_SEND_TIME, Long::class.java)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:125:        set(value) = setEncryptedValue(SHARED_PREF_KEY_REPORT_TO_SEND_TIME, value)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:128:        get() = getEncryptedValue(SHARED_PREF_KEY_REPORT_POSITIVE_TEST_DATE, Long::class.java)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:129:        set(value) = setEncryptedValue(SHARED_PREF_KEY_REPORT_POSITIVE_TEST_DATE, value)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:132:        get() = getEncryptedValue(SHARED_PREF_KEY_REPORT_SYMPTOMS_DATE, Long::class.java)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:133:        set(value) = setEncryptedValue(SHARED_PREF_KEY_REPORT_SYMPTOMS_DATE, value)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:136:        get() = getEncryptedValue(SHARED_PREF_KEY_WARNING_RECEIVED_DATE, Long::class.java)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:137:        set(value) = setEncryptedValue(SHARED_PREF_KEY_WARNING_RECEIVED_DATE, value)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:141:        get() = getEncryptedValue(SHARED_PREF_KEY_ISOLATION_FORM_STATE, Int::class.java)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:142:        set(value) = setEncryptedValue(SHARED_PREF_KEY_ISOLATION_FORM_STATE, value)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:145:        get() = getEncryptedValue(SHARED_PREF_KEY_ISOLATION_LAST_CONTACT_DATE, Long::class.java)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:146:        set(value) = setEncryptedValue(SHARED_PREF_KEY_ISOLATION_LAST_CONTACT_DATE, value)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:149:        get() = getEncryptedValue(SHARED_PREF_KEY_ISOLATION_IS_KNOWN_INDEX_AT_HOME, Boolean::class.java)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:150:        set(value) = setEncryptedValue(SHARED_PREF_KEY_ISOLATION_IS_KNOWN_INDEX_AT_HOME, value)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:153:        get() = getEncryptedValue(SHARED_PREF_KEY_ISOLATION_KNOWS_SYMPTOMS_END_DATE, Boolean::class.java)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:154:        set(value) = setEncryptedValue(SHARED_PREF_KEY_ISOLATION_KNOWS_SYMPTOMS_END_DATE, value)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:157:        get() = getEncryptedValue(SHARED_PREF_KEY_ISOLATION_INDEX_SYMPTOMS_END_DATE, Long::class.java)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:158:        set(value) = setEncryptedValue(SHARED_PREF_KEY_ISOLATION_INDEX_SYMPTOMS_END_DATE, value)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:161:        get() = getEncryptedValue(SHARED_PREF_KEY_ISOLATION_LAST_FORM_VALIDATION_DATE, Long::class.java)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:162:        set(value) = setEncryptedValue(SHARED_PREF_KEY_ISOLATION_LAST_FORM_VALIDATION_DATE, value)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:165:        get() = getEncryptedValue(SHARED_PREF_KEY_ISOLATION_IS_TEST_NEGATIVE, Boolean::class.java)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:166:        set(value) = setEncryptedValue(SHARED_PREF_KEY_ISOLATION_IS_TEST_NEGATIVE, value)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:169:        get() = getEncryptedValue(SHARED_PREF_KEY_ISOLATION_POSITIVE_TESTING_DATE, Long::class.java)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:170:        set(value) = setEncryptedValue(SHARED_PREF_KEY_ISOLATION_POSITIVE_TESTING_DATE, value)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:173:        get() = getEncryptedValue(SHARED_PREF_KEY_ISOLATION_IS_HAVING_SYMPTOMS, Boolean::class.java)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:174:        set(value) = setEncryptedValue(SHARED_PREF_KEY_ISOLATION_IS_HAVING_SYMPTOMS, value)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:177:        get() = getEncryptedValue(SHARED_PREF_KEY_ISOLATION_SYMPTOMS_START_DATE, Long::class.java)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:178:        set(value) = setEncryptedValue(SHARED_PREF_KEY_ISOLATION_SYMPTOMS_START_DATE, value)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:181:        get() = getEncryptedValue(SHARED_PREF_KEY_ISOLATION_IS_STILL_HAVING_FEVER, Boolean::class.java)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:182:        set(value) = setEncryptedValue(SHARED_PREF_KEY_ISOLATION_IS_STILL_HAVING_FEVER, value)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:185:        get() = getEncryptedValue(SHARED_PREF_KEY_ISOLATION_IS_FEVER_REMINDER_SCHEDULES, Boolean::class.java)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:186:        set(value) = setEncryptedValue(SHARED_PREF_KEY_ISOLATION_IS_FEVER_REMINDER_SCHEDULES, value)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:189:    private fun <T> getEncryptedValue(key: String, type: Type, useCache: Boolean = true): T? {
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:197:            val encryptedText = sharedPreferences.getString(key, null)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:198:            return if (encryptedText != null) {
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:201:                        cryptoManager.decrypt(encryptedText) as? T
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:203:                        val decryptedString = cryptoManager.decryptToString(encryptedText)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:217:    private fun setEncryptedValue(key: String, value: Any?, useCache: Boolean = true) {
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:230:                        cryptoManager.encryptToString(value)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:232:                        cryptoManager.encryptToString(gson.toJson(value))
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:267:                    cryptoManager.encryptToString(gson.toJson(value))
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:275:    private fun getAndMigrateOldUnencryptedLong(oldKey: String, newKey: String): Long? {
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:278:            setEncryptedValue(newKey, prevLong)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:282:            getEncryptedValue(newKey, Long::class.java)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:294:        private const val SHARED_PREF_KEY_TIME_START_ENCRYPTED = "shared.pref.time_start_encrypted"
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:306:        private const val SHARED_PREF_KEY_REPORT_DATE_ENCRYPTED = "shared.pref.report_date_encrypted"
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/LocalCryptoManager.kt:71:    fun encryptToString(clearText: String): String {
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/LocalCryptoManager.kt:72:        return encryptToString(clearText.toByteArray())
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/LocalCryptoManager.kt:75:    fun encryptToString(passphrase: ByteArray, clearPassphrase: Boolean = true): String {
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/LocalCryptoManager.kt:76:        return Base64.encodeToString(encrypt(passphrase, clearPassphrase), Base64.NO_WRAP)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/LocalCryptoManager.kt:79:    fun encryptToFile(clearText: String, targetFile: AtomicFile) {
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/LocalCryptoManager.kt:90:    fun encrypt(passphrase: ByteArray, clearPassphrase: Boolean = true): ByteArray {
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/LocalCryptoManager.kt:107:    fun decrypt(encryptedText: String): ByteArray {
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/LocalCryptoManager.kt:108:        return decrypt(Base64.decode(encryptedText, Base64.NO_WRAP))
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/LocalCryptoManager.kt:111:    fun decryptToString(encryptedText: String): String = String(decrypt(encryptedText))
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/LocalCryptoManager.kt:125:    fun decrypt(encryptedData: ByteArray): ByteArray {
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/LocalCryptoManager.kt:128:            createCipherInputStream(encryptedData.inputStream(), AES_GCM_IV_LENGTH).use { cis ->
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/LocalCryptoManager.kt:136:     * Returns the AES key used for local storage encryption/decryption with AES/GCM.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/LocalCryptoManager.kt:172:                        KeyProperties.PURPOSE_ENCRYPT or KeyProperties.PURPOSE_DECRYPT
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/LocalCryptoManager.kt:176:                        .setEncryptionPaddings(KeyProperties.ENCRYPTION_PADDING_NONE)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/LocalCryptoManager.kt:185:                    "Secret key couldn't be found in the KeyStore but data are already encrypted with it\nkeystore aliases = ${
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/LocalCryptoManager.kt:256:            cipher.init(Cipher.ENCRYPT_MODE, localProtectionKey)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/LocalCryptoManager.kt:261:            cipher.init(Cipher.ENCRYPT_MODE, localProtectionKey, IvParameterSpec(iv))
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/sharedcrypto/BouncyCastleCryptoDataSource.kt:40:    override fun getEncryptionKeys(rawServerPublicKey: ByteArray,
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/sharedcrypto/BouncyCastleCryptoDataSource.kt:67:    override fun decrypt(key: ByteArray, encryptedData: ByteArray): ByteArray {
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/sharedcrypto/BouncyCastleCryptoDataSource.kt:69:        val iv: ByteArray = encryptedData.copyOfRange(0, AES_GCM_IV_LENGTH)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/sharedcrypto/BouncyCastleCryptoDataSource.kt:74:            cipher.doFinal(encryptedData, AES_GCM_IV_LENGTH, encryptedData.size - AES_GCM_IV_LENGTH)
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/datasource/SharedCryptoDataSource.kt:17:    fun getEncryptionKeys(rawServerPublicKey: ByteArray,
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/datasource/SharedCryptoDataSource.kt:22:    fun decrypt(key: ByteArray, encryptedData: ByteArray): ByteArray
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:57:            sharedCryptoDataSource.getEncryptionKeys(
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:551:    "common.error.secretKey": "Database encryption failure. Please try again or restart your phone.",

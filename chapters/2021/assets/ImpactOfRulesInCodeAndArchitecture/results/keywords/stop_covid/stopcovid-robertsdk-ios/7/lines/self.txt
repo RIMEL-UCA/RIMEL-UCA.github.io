@@ -1,0 +1,24 @@
+../stopcovid-robertsdk-ios/Robert/Extensions/Data+RBExtension.swift:16:    var bytes: [UInt8] { [UInt8](self) }
+../stopcovid-robertsdk-ios/Robert/Extensions/Data+RBExtension.swift:19:        let string: UnsafePointer<UInt8> = (self as NSData).bytes.bindMemory(to: UInt8.self, capacity: self.count)
+../stopcovid-robertsdk-ios/Robert/Extensions/Data+RBExtension.swift:20:        let stringLength = self.count
+../stopcovid-robertsdk-ios/Robert/Extensions/Date+RBExtension.swift:20:        self.init(timeIntervalSince1970: Double(timeIntervalSince1900 - 2208988800))
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:19:        self.storage = storage
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:94:        let time: UInt16 = pointer.withMemoryRebound(to: UInt16.self, capacity: 1) { $0.pointee }.bigEndian
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageParser.swift:28:        let time: UInt16 = timeData.bytes.withUnsafeBufferPointer { $0.baseAddress?.withMemoryRebound(to: UInt16.self, capacity: 1) { $0.pointee }.bigEndian } ?? 0
+../stopcovid-robertsdk-ios/Robert/Model/RBStorable.swift:15:    static func from(data: Data) throws -> Self
+../stopcovid-robertsdk-ios/Robert/Model/RBStorable.swift:22:    static func from(data: Data) throws -> Self {
+../stopcovid-robertsdk-ios/Robert/Model/RBStorable.swift:23:        return try JSONDecoder().decode(Self.self, from: data)
+../stopcovid-robertsdk-ios/Robert/Model/RBStorable.swift:27:        return try JSONEncoder().encode(self)
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:43:        self.server = server
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:44:        self.storage = storage
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:45:        self.bluetooth = bluetooth
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:46:        self.storage.start()
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:51:        NotificationCenter.default.addObserver(self, selector: #selector(applicationWillTerminate), name: UIApplication.willTerminateNotification, object: nil)
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:57:            if let epoch = self.storage.getCurrentEpoch() {
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:69:        }, didReceiveProximity: { [weak self] receivedProximity in
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:84:            self?.storage.save(localProximity: localProximity)
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:128:                        try self.processStatusResponse(response)
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:152:                    self.storage.save(isSick: true)
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:173:                    try self.processRegisterResponse(response)
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:205:                    self.clearAllLocalData()
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:230:                    self.clearAllLocalData()

@@ -1,0 +1,166 @@
+Fichier binaire stopcovid-blesdk-ios/.git/index correspondant
+stopcovid-blesdk-ios/.gitignore:2:xcuserdata/
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:185:                peripheral.writeValue(bluetoothProximityPayload.data, for: characteristic, type: .withResponse)
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:265:                        advertisementData: [String: Any],
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:271:        if let advertisementDataServiceData = advertisementData[CBAdvertisementDataServiceDataKey] as? [CBUUID: Data],
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:272:            let serviceData = advertisementDataServiceData[serviceUUID] {
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:273:            bluetoothProximityPayload = BluetoothProximityPayload(data: serviceData)
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:288:            // Android found with the data, connect to the peripheral and write own payload
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:344:           let bluetoothProximityPayload = BluetoothProximityPayload(data: readValue) {
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothPeripheralManager.swift:77:        let advertisementData = [CBAdvertisementDataServiceUUIDsKey: [serviceUUID]]
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothPeripheralManager.swift:78:        peripheralManager?.startAdvertising(advertisementData)
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothPeripheralManager.swift:131:            request.value = bluetoothProximityPayload.data
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothPeripheralManager.swift:148:               let bluetoothProximityPayload = BluetoothProximityPayload(data: receivedValue),
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityMetadata.swift:13:/// The Bluetooth metadata associated with proximity information.
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityMetadata.swift:14:public struct BluetoothProximityMetadata: ProximityMetadata {
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:86:        let metadata = BluetoothProximityMetadata(rawRSSI: rawRSSI,
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:91:                             metadata: metadata)
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityPayload.swift:15:    let data: Data
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityPayload.swift:20:        return Int8(bitPattern: data[16])
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityPayload.swift:24:        return Int8(bitPattern: data[17])
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityPayload.swift:28:        return data.count >= BluetoothProximityPayload.minimumByteCount + 1 ? Int8(bitPattern: data[18]) : nil
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityPayload.swift:36:        let metadataBytes = [BluetoothProximityPayload.currentVersion, txPowerLevel]
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityPayload.swift:37:        let metadata = Data(metadataBytes.map { UInt8(bitPattern: $0) })
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityPayload.swift:38:        self.data = payload.data + metadata
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityPayload.swift:42:    init?(data: Data) {
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityPayload.swift:43:        guard data.count >= BluetoothProximityPayload.minimumByteCount,
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityPayload.swift:44:            let payload = ProximityPayload(data: data.prefix(ProximityPayload.byteCount)) else {
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityPayload.swift:48:        self.data = data
+stopcovid-blesdk-ios/ProximityNotification/ProximityInfo.swift:13:/// A protocol for metadata associated with proximity information.
+stopcovid-blesdk-ios/ProximityNotification/ProximityInfo.swift:14:public protocol ProximityMetadata {}
+stopcovid-blesdk-ios/ProximityNotification/ProximityInfo.swift:25:    /// The associated metadata.
+stopcovid-blesdk-ios/ProximityNotification/ProximityInfo.swift:26:    public let metadata: ProximityMetadata
+stopcovid-blesdk-ios/ProximityNotification/ProximityNotificationService.swift:33:public typealias ProximityPayloadIdentifier = Data
+stopcovid-blesdk-ios/ProximityNotification/ProximityPayload.swift:19:    /// The payload data.
+stopcovid-blesdk-ios/ProximityNotification/ProximityPayload.swift:20:    public let data: Data
+stopcovid-blesdk-ios/ProximityNotification/ProximityPayload.swift:22:    /// Creates a proximity payload from the specified data.
+stopcovid-blesdk-ios/ProximityNotification/ProximityPayload.swift:23:    /// - Parameter data: The payload data. Must contain exactly 16 bytes.
+stopcovid-blesdk-ios/ProximityNotification/ProximityPayload.swift:24:    public init?(data: Data) {
+stopcovid-blesdk-ios/ProximityNotification/ProximityPayload.swift:25:        guard data.count == ProximityPayload.byteCount else {
+stopcovid-blesdk-ios/ProximityNotification/ProximityPayload.swift:29:        self.data = data
+stopcovid-blesdk-ios/ProximityNotification.xcodeproj/project.pbxproj:14:		AF114A6D248A695D00736059 /* TimestampedRSSIDataSet.csv in Resources */ = {isa = PBXBuildFile; fileRef = AF114A6C248A695D00736059 /* TimestampedRSSIDataSet.csv */; };
+stopcovid-blesdk-ios/ProximityNotification.xcodeproj/project.pbxproj:38:		AFB393A124631533003A7D58 /* BluetoothProximityMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB3939624630F8F003A7D58 /* BluetoothProximityMetadata.swift */; };
+stopcovid-blesdk-ios/ProximityNotification.xcodeproj/project.pbxproj:83:		AF114A6C248A695D00736059 /* TimestampedRSSIDataSet.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TimestampedRSSIDataSet.csv; sourceTree = "<group>"; };
+stopcovid-blesdk-ios/ProximityNotification.xcodeproj/project.pbxproj:115:		AFB3939624630F8F003A7D58 /* BluetoothProximityMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothProximityMetadata.swift; sourceTree = "<group>"; };
+stopcovid-blesdk-ios/ProximityNotification.xcodeproj/project.pbxproj:192:				AFB3939624630F8F003A7D58 /* BluetoothProximityMetadata.swift */,
+stopcovid-blesdk-ios/ProximityNotification.xcodeproj/project.pbxproj:216:				AF114A6C248A695D00736059 /* TimestampedRSSIDataSet.csv */,
+stopcovid-blesdk-ios/ProximityNotification.xcodeproj/project.pbxproj:318:				AF114A6D248A695D00736059 /* TimestampedRSSIDataSet.csv in Resources */,
+stopcovid-blesdk-ios/ProximityNotification.xcodeproj/project.pbxproj:333:				AFB393A124631533003A7D58 /* BluetoothProximityMetadata.swift in Sources */,
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:50:        bluetoothProximityNotification.start(proximityPayloadProvider: { return ProximityPayload(data: Data(Array(0..<16))) },
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:52:                                             identifierFromProximityPayload: { _ in return Data() })
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:61:        guard let proximityPayload = ProximityPayload(data: Data(Array(0..<16))) else {
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:82:            let metadata = proximity.metadata as? BluetoothProximityMetadata
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:83:            XCTAssertNotNil(metadata)
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:84:            if let metadata = metadata {
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:85:                XCTAssertEqual(Int(txPowerLevel), metadata.txPowerLevel)
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:86:                XCTAssertEqual(rssi, metadata.rawRSSI)
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:87:                XCTAssertEqual(rssi - Int(txPowerLevel) - Int(self.settings.rxCompensationGain), metadata.calibratedRSSI)
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:95:                                             identifierFromProximityPayload: { _ in return Data() })
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:111:        guard let proximityPayload = ProximityPayload(data: Data(Array(0..<16))) else {
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:136:                                             identifierFromProximityPayload: { _ in return Data() })
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:149:        guard let proximityPayload = ProximityPayload(data: Data(Array(0..<16))) else {
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:170:            let metadata = proximity.metadata as? BluetoothProximityMetadata
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:171:            XCTAssertNotNil(metadata)
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:172:            if let metadata = metadata {
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:173:                XCTAssertEqual(Int(txPowerLevel), metadata.txPowerLevel)
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:174:                XCTAssertEqual(rssi, metadata.rawRSSI)
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:175:                XCTAssertEqual(rssi - Int(txPowerLevel) - Int(self.settings.rxCompensationGain), metadata.calibratedRSSI)
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:183:                                             identifierFromProximityPayload: { _ in return Data() })
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:199:        guard let proximityPayload = ProximityPayload(data: Data(Array(0..<16))) else {
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:224:                                             identifierFromProximityPayload: { _ in return Data() })
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:238:        guard let proximityPayload = ProximityPayload(data: Data(Array(0..<16))) else {
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:260:            let metadata = proximity.metadata as? BluetoothProximityMetadata
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:261:            XCTAssertNotNil(metadata)
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:262:            if let metadata = metadata {
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:263:                XCTAssertEqual(Int(txPowerLevel), metadata.txPowerLevel)
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:264:                XCTAssertEqual(rssi, metadata.rawRSSI)
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:265:                XCTAssertEqual(rssi - Int(self.settings.txCompensationGain), metadata.calibratedRSSI)
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:273:                                             identifierFromProximityPayload: { _ in return Data() })
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityPayloadTests.swift:16:    func testInitWithPayloadAndMetadataSucceeds() {
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityPayloadTests.swift:18:        guard let payload = ProximityPayload(data: Data(Array(0..<16))) else {
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityPayloadTests.swift:30:        XCTAssertEqual(18, bluetoothProximityPayload.data.count)
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityPayloadTests.swift:36:    func testInitWithDataSucceeds() {
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityPayloadTests.swift:38:        let data = Data(Array(0..<18))
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityPayloadTests.swift:41:        let bluetoothProximityPayload = BluetoothProximityPayload(data: data)
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityPayloadTests.swift:46:            XCTAssertEqual(data, bluetoothProximityPayload.data)
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityPayloadTests.swift:47:            XCTAssertEqual(data.prefix(16), bluetoothProximityPayload.payload.data)
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityPayloadTests.swift:54:    func testInitWithDataContainingRSSISucceeds() {
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityPayloadTests.swift:56:        let data = Data(Array(0..<19))
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityPayloadTests.swift:59:        let bluetoothProximityPayload = BluetoothProximityPayload(data: data)
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityPayloadTests.swift:64:            XCTAssertEqual(data, bluetoothProximityPayload.data)
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityPayloadTests.swift:65:            XCTAssertEqual(data.prefix(16), bluetoothProximityPayload.payload.data)
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityPayloadTests.swift:72:    func testInitWithTruncatedDataFails() {
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityPayloadTests.swift:74:        let data = Data(Array(0..<17))
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityPayloadTests.swift:77:        let bluetoothProximityPayload = BluetoothProximityPayload(data: data)
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothRSSICalibratorTests.swift:24:        guard let proximityPayload = ProximityPayload(data: Data(Array(0..<16))) else {
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothRSSICalibratorTests.swift:46:        guard let proximityPayload = ProximityPayload(data: Data(Array(0..<16))) else {
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothRSSICalibratorTests.swift:68:        guard let proximityPayload = ProximityPayload(data: Data(Array(0..<16))) else {
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:36:        let dataSet = parseTimestampedRSSIDataSet()
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:37:        let parameterizedData = [ParameterizedData(input: Input(dataSet: dataSet, durationThreshold: 2.0 * 60.0),
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:39:                                 ParameterizedData(input: Input(dataSet: dataSet, durationThreshold: 5.0 * 60.0),
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:41:                                 ParameterizedData(input: Input(dataSet: dataSet, durationThreshold: 14.0 * 60.0),
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:43:                                 ParameterizedData(input: Input(dataSet: dataSet, durationThreshold: 15.0 * 60.0),
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:46:        parameterizedData.forEach { parameterizedData in
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:48:            let proximityFilter = ProximityFilter(configuration: parameterizedData.configuration)
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:51:            let result = proximityFilter.filterRSSIs(parameterizedData.timestampedRSSIs,
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:57:            XCTAssertEqual(parameterizedData.expectedResult, result)
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:62:        let dataSet = parseTimestampedRSSIDataSet()
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:67:        let parameterizedData = [ParameterizedData(input: Input(dataSet: dataSet, rssiThreshold: -35),
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:69:                                 ParameterizedData(input: Input(dataSet: dataSet, rssiThreshold: -35, a: 10.0),
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:71:                                 ParameterizedData(input: Input(dataSet: dataSet, rssiThreshold: -35, p0: -55.0),
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:73:                                 ParameterizedData(input: Input(dataSet: dataSet, rssiThreshold: -60),
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:76:        parameterizedData.forEach { parameterizedData in
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:78:            let proximityFilter = ProximityFilter(configuration: parameterizedData.configuration)
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:81:            let result = proximityFilter.filterRSSIs(parameterizedData.timestampedRSSIs,
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:87:            assertEqual(parameterizedData.expectedResult, result, riskAccuracy: 0.0001)
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:92:        let dataSet = parseTimestampedRSSIDataSet()
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:99:        let parameterizedData = [ParameterizedData(input: Input(dataSet: dataSet, rssiThreshold: -35),
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:101:                                 ParameterizedData(input: Input(dataSet: dataSet, rssiThreshold: -35, a: 10.0),
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:103:                                 ParameterizedData(input: Input(dataSet: dataSet, rssiThreshold: -35, b: 0.1),
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:105:                                 ParameterizedData(input: Input(dataSet: dataSet, rssiThreshold: -35, p0: -55.0),
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:107:                                 ParameterizedData(input: Input(dataSet: dataSet, rssiThreshold: -60),
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:109:                                 ParameterizedData(input: Input(dataSet: dataSet, rssiThreshold: -35, riskThreshold: 0.2),
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:111:                                 ParameterizedData(input: Input(dataSet: dataSet, rssiThreshold: -35, riskThreshold: 0.2, p0: -75.0),
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:114:        parameterizedData.forEach { parameterizedData in
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:116:            let proximityFilter = ProximityFilter(configuration: parameterizedData.configuration)
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:119:            let result = proximityFilter.filterRSSIs(parameterizedData.timestampedRSSIs,
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:125:            assertEqual(parameterizedData.expectedResult, result, riskAccuracy: 0.0001)
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:204:    private func parseTimestampedRSSIDataSet() -> TimestampedRSSIDataSet {
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:205:        guard let url = Bundle(for: type(of: self)).url(forResource: "TimestampedRSSIDataSet", withExtension: "csv"),
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:206:            let data = try? Data(contentsOf: url),
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:207:            let dataSet = String(bytes: data, encoding: .utf8) else {
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:208:                return TimestampedRSSIDataSet(timestampedRSSIs: [], clippedTimestampedRSSIs: [:])
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:214:        let lines = dataSet.split { $0.isNewline }
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:232:        return TimestampedRSSIDataSet(timestampedRSSIs: timestampedRSSIs, clippedTimestampedRSSIs: clippedTimestampedRSSIs)
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:238:    private struct TimestampedRSSIDataSet {
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:248:    private struct ParameterizedData {
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:257:            let inputTimestampedRSSIs = input.dataSet.timestampedRSSIs
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:271:                let outputTimestampedRSSIs = input.dataSet.clippedTimestampedRSSIs[input.rssiThreshold] ?? inputTimestampedRSSIs
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:293:        let dataSet: TimestampedRSSIDataSet
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:307:        init(dataSet: TimestampedRSSIDataSet,
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:314:            self.dataSet = dataSet
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityPayloadTests.swift:16:    func testInitWithDataSucceeds() {
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityPayloadTests.swift:18:        let data = Data(Array(0..<16))
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityPayloadTests.swift:21:        let proximityPayload = ProximityPayload(data: data)
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityPayloadTests.swift:26:            XCTAssertEqual(data, proximityPayload.data)
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityPayloadTests.swift:30:    func testInitWithTruncatedDataFails() {
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityPayloadTests.swift:32:        let data = Data(Array(0..<15))
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityPayloadTests.swift:35:        let proximityPayload = ProximityPayload(data: data)
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityPayloadTests.swift:41:    func testInitWithDataOverflowFails() {
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityPayloadTests.swift:43:        let data = Data(Array(0..<17))
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityPayloadTests.swift:46:        let proximityPayload = ProximityPayload(data: data)
+stopcovid-blesdk-ios/ProximityNotificationTests/RSSIClipperTests.swift:29:    func testClipRSSIsWithDatasetShouldReturnExpectedOutput() {
+stopcovid-blesdk-ios/ProximityNotificationTests/RSSIClipperTests.swift:30:        let parameterizedData = [ParameterizedData(rssis: [0], threshold: 0, expectedRSSIs: [0], expectedPeaks: []),
+stopcovid-blesdk-ios/ProximityNotificationTests/RSSIClipperTests.swift:31:                                 ParameterizedData(rssis: [1], threshold: 0, expectedRSSIs: [0], expectedPeaks: [1]),
+stopcovid-blesdk-ios/ProximityNotificationTests/RSSIClipperTests.swift:32:                                 ParameterizedData(rssis: [1, 2, 3], threshold: 0, expectedRSSIs: [0, 0, 0], expectedPeaks: [1, 2, 3]),
+stopcovid-blesdk-ios/ProximityNotificationTests/RSSIClipperTests.swift:33:                                 ParameterizedData(rssis: [1, -20], threshold: 0, expectedRSSIs: [-20, -20], expectedPeaks: [1]),
+stopcovid-blesdk-ios/ProximityNotificationTests/RSSIClipperTests.swift:34:                                 ParameterizedData(rssis: [-20, 1], threshold: 0, expectedRSSIs: [-20, -20], expectedPeaks: [1])]
+stopcovid-blesdk-ios/ProximityNotificationTests/RSSIClipperTests.swift:36:        parameterizedData.forEach { parameterizedData in
+stopcovid-blesdk-ios/ProximityNotificationTests/RSSIClipperTests.swift:38:            let rssiClipper = RSSIClipper(threshold: parameterizedData.threshold)
+stopcovid-blesdk-ios/ProximityNotificationTests/RSSIClipperTests.swift:41:            let output = rssiClipper.clipRSSIs(parameterizedData.timestampedRSSIs)
+stopcovid-blesdk-ios/ProximityNotificationTests/RSSIClipperTests.swift:44:            XCTAssertEqual(parameterizedData.expectedOutput.clippedTimestampedRSSIs, output.clippedTimestampedRSSIs)
+stopcovid-blesdk-ios/ProximityNotificationTests/RSSIClipperTests.swift:45:            XCTAssertEqual(parameterizedData.expectedOutput.peaks, output.peaks)
+stopcovid-blesdk-ios/ProximityNotificationTests/RSSIClipperTests.swift:52:    private struct ParameterizedData {
+stopcovid-blesdk-ios/README.md:3:`ProximityNotification` SDK uses Bluetooth Low Energy (BLE) in order to exchange data with proximity nearby.
+stopcovid-blesdk-ios/README.md:6:- Proximity payload containing exchanged data.
+stopcovid-blesdk-ios/README.md:8:- Some metadata such as BLE calibrated received signal strength indicator (RSSI) and transmitting (TX) power level.

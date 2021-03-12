@@ -1,0 +1,4 @@
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithoutAdvertiser.kt:82:        private val timeSinceLastScannerStart: Long
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithoutAdvertiser.kt:107:            // Since Android 7 we should not start and stop scans more than 5 times
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithoutAdvertiser.kt:110:                get() = maxOf(500, 8_000L - timeSinceLastScannerStart)
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattClientImpl.kt:220:            throw BleGattClientException("operation ($operationName) failed since it is no more connected")

@@ -1,0 +1,335 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.devcontainer/docker-compose.yml:22:      DATABASE_URL: "test:password@tcp(db)/test"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.devcontainer/docker-compose.yml:35:      MYSQL_DATABASE: test
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/index matches
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.github/workflows/pr-test-ruby-ci.yml:10:          MYSQL_DATABASE: test
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/get-sg-ids.sh:16:DB="$(getSG "covidshield-database")"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/README.md:14:Add the VPN_SG security group to the covidshield-database security group
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/README.md:24:Removes the VPN_SG security group from the covidshield-database security group
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:8:from google.protobuf import symbol_database as _symbol_database
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:11:_sym_db = _symbol_database.Default()
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:24:  serialized_pb=b'\n\x11\x63ovidshield.proto\x12\x0b\x63ovidshield\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1egoogle/protobuf/duration.proto\"@\n\x0fKeyClaimRequest\x12\x15\n\rone_time_code\x18\x01 \x02(\t\x12\x16\n\x0e\x61pp_public_key\x18\x02 \x02(\x0c\"\xae\x02\n\x10KeyClaimResponse\x12\x36\n\x05\x65rror\x18\x01 \x01(\x0e\x32\'.covidshield.KeyClaimResponse.ErrorCode\x12\x19\n\x11server_public_key\x18\x02 \x01(\x0c\x12\x17\n\x0ftries_remaining\x18\x03 \x01(\r\x12\x39\n\x16remaining_ban_duration\x18\x04 \x01(\x0b\x32\x19.google.protobuf.Duration\"s\n\tErrorCode\x12\x08\n\x04NONE\x10\x00\x12\x0b\n\x07UNKNOWN\x10\x01\x12\x19\n\x15INVALID_ONE_TIME_CODE\x10\x02\x12\x10\n\x0cSERVER_ERROR\x10\x03\x12\x0f\n\x0bINVALID_KEY\x10\x04\x12\x11\n\rTEMPORARY_BAN\x10\x05\"k\n\x16\x45ncryptedUploadRequest\x12\x19\n\x11server_public_key\x18\x01 \x02(\x0c\x12\x16\n\x0e\x61pp_public_key\x18\x02 \x02(\x0c\x12\r\n\x05nonce\x18\x03 \x02(\x0c\x12\x0f\n\x07payload\x18\x04 \x02(\x0c\"\xb3\x03\n\x17\x45ncryptedUploadResponse\x12=\n\x05\x65rror\x18\x01 \x02(\x0e\x32..covidshield.EncryptedUploadResponse.ErrorCode\"\xd8\x02\n\tErrorCode\x12\x08\n\x04NONE\x10\x00\x12\x0b\n\x07UNKNOWN\x10\x01\x12\x13\n\x0fINVALID_KEYPAIR\x10\x02\x12\x15\n\x11\x44\x45\x43RYPTION_FAILED\x10\x03\x12\x13\n\x0fINVALID_PAYLOAD\x10\x04\x12\x10\n\x0cSERVER_ERROR\x10\x05\x12\x1d\n\x19INVALID_CRYPTO_PARAMETERS\x10\x06\x12\x11\n\rTOO_MANY_KEYS\x10\x07\x12\x15\n\x11INVALID_TIMESTAMP\x10\x08\x12\x1a\n\x16INVALID_ROLLING_PERIOD\x10\n\x12\x14\n\x10INVALID_KEY_DATA\x10\x0b\x12)\n%INVALID_ROLLING_START_INTERVAL_NUMBER\x10\x0c\x12#\n\x1fINVALID_TRANSMISSION_RISK_LEVEL\x10\r\x12\x16\n\x12NO_KEYS_IN_PAYLOAD\x10\x0e\"h\n\x06Upload\x12-\n\ttimestamp\x18\x01 \x02(\x0b\x32\x1a.google.protobuf.Timestamp\x12/\n\x04keys\x18\x02 \x03(\x0b\x32!.covidshield.TemporaryExposureKey\"\xe9\x01\n\x1aTemporaryExposureKeyExport\x12\x17\n\x0fstart_timestamp\x18\x01 \x01(\x06\x12\x15\n\rend_timestamp\x18\x02 \x01(\x06\x12\x0e\n\x06region\x18\x03 \x01(\t\x12\x11\n\tbatch_num\x18\x04 \x01(\x05\x12\x12\n\nbatch_size\x18\x05 \x01(\x05\x12\x33\n\x0fsignature_infos\x18\x06 \x03(\x0b\x32\x1a.covidshield.SignatureInfo\x12/\n\x04keys\x18\x07 \x03(\x0b\x32!.covidshield.TemporaryExposureKey\"\x97\x01\n\rSignatureInfo\x12 \n\x18verification_key_version\x18\x03 \x01(\t\x12\x1b\n\x13verification_key_id\x18\x04 \x01(\t\x12\x1b\n\x13signature_algorithm\x18\x05 \x01(\tJ\x04\x08\x01\x10\x02J\x04\x08\x02\x10\x03R\rapp_bundle_idR\x0f\x61ndroid_package\"\x8d\x01\n\x14TemporaryExposureKey\x12\x10\n\x08key_data\x18\x01 \x01(\x0c\x12\x1f\n\x17transmission_risk_level\x18\x02 \x01(\x05\x12%\n\x1drolling_start_interval_number\x18\x03 \x01(\x05\x12\x1b\n\x0erolling_period\x18\x04 \x01(\x05:\x03\x31\x34\x34\"A\n\x10TEKSignatureList\x12-\n\nsignatures\x18\x01 \x03(\x0b\x32\x19.covidshield.TEKSignature\"|\n\x0cTEKSignature\x12\x32\n\x0esignature_info\x18\x01 \x01(\x0b\x32\x1a.covidshield.SignatureInfo\x12\x11\n\tbatch_num\x18\x02 \x01(\x05\x12\x12\n\nbatch_size\x18\x03 \x01(\x05\x12\x11\n\tsignature\x18\x04 \x01(\x0c\x42\x17Z\x15pkg/proto/covidshield'
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:133:      name='INVALID_KEY_DATA', index=10, number=11,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:508:      name='key_data', full_name='covidshield.TemporaryExposureKey.key_data', index=0,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/main.py:38:        tek.key_data = nacl.utils.random(16)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/main.py:65:        k.key_data = key.key_data
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/main.py:76:    resp = requests.post(url, headers=headers, data=ep_req.SerializeToString())
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/main.py:112:    resp = requests.post(url, headers=headers, data=kc_req.SerializeToString())
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/cmd/generate-ecdsa-private-key/main.go:17:	data, err := x509.MarshalECPrivateKey(privateKey)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/cmd/generate-ecdsa-private-key/main.go:21:	fmt.Println(hex.EncodeToString(data))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/config.yaml:9:# so 14 days ago is the oldest data.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:40:**Note**: It is normal to see a few errors from the retrieval service exiting initially while the MySQL database is instantiated
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:63:export DATABASE_URL="root@tcp(localhost)/covidshield"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:76:Set your database connection details using environment variables
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:77:(note that the database will be clobbered so ensure that you don't use a
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:78:production database):
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:84:$ export DB_NAME=<test database name>
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:162:export DATABASE_URL="root@tcp(localhost)/covidshield"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:181:$ export DB_NAME=<test database name>
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/docker-compose.yml:11:      MYSQL_DATABASE: covidshield
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/docker-compose.yml:30:      DATABASE_URL: covidshield:covidshield@tcp(mysql)/covidshield
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/docker-compose.yml:54:      DATABASE_URL: covidshield:covidshield@tcp(mysql)/covidshield
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/examples/new-key-claim/node.js:18:    res.on("data", (d) => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/examples/retrieval/app.rb:8:class Database
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/examples/retrieval/app.rb:15:  def drop_old_data
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/examples/retrieval/app.rb:41:    @database = Database.new
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/examples/retrieval/app.rb:53:      # data becomes available, is probably correct.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/examples/retrieval/app.rb:83:    @database.drop_old_data
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/examples/retrieval/app.rb:88:      fetch_date_number(date_number) unless @database.fetched?(date_number)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/examples/retrieval/app.rb:102:    puts "received data: \x1b[37;3m#{resp.body[0..40].inspect}... (#{resp.body.size} bytes total)\x1b[0m"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/examples/retrieval/app.rb:108:      @database.mark_fetched(date_number)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/go.mod:6:	github.com/DATA-DOG/go-sqlmock v1.4.1
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/go.sum:11:cloud.google.com/go/datastore v1.0.0/go.mod h1:LXYbyblFSglQ5pkeyhO+Qmw7ukd3C+pD7TKLgZqpHYE=
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/go.sum:18:github.com/DATA-DOG/go-sqlmock v1.4.1 h1:ThlnYciV1iM/V0OSF/dtkqWb6xo5qITT1TJBG1MRDJM=
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/go.sum:19:github.com/DATA-DOG/go-sqlmock v1.4.1/go.mod h1:f/Ixk793poVmq4qj/V1dPUg2JEAKC73Q5eFN3EC/SaM=
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/go.sum:20:github.com/DataDog/datadog-go v3.4.0+incompatible h1:LZ0OTmlvhCBT0VYUvhGu8Lrc7WqNCj6Zw9HnMi0V6mA=
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/go.sum:21:github.com/DataDog/datadog-go v3.4.0+incompatible/go.mod h1:LButxg5PwREeZtORoXG3tL4fMGNddJ+vMq1mwgfaqoQ=
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/go.sum:22:github.com/DataDog/sketches-go v0.0.0-20190923095040-43f19ad77ff7 h1:qELHH0AWCvf98Yf+CNIJx9vOZOfHFDDzgDRYsnNk/vs=
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/go.sum:23:github.com/DataDog/sketches-go v0.0.0-20190923095040-43f19ad77ff7/go.mod h1:Q5DbzQ+3AkgGwymQO7aZFNP7ns2lZKGtvRBzRXfdi60=
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/mocks/pkg/persistence/queryRower.go:8:	sql "database/sql"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:302:    "@types/normalize-package-data": {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:304:      "resolved": "https://registry.npmjs.org/@types/normalize-package-data/-/normalize-package-data-2.4.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:843:        "normalize-package-data": "^3.0.0",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:868:    "normalize-package-data": {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:870:      "resolved": "https://registry.npmjs.org/normalize-package-data/-/normalize-package-data-3.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:967:        "@types/normalize-package-data": "^2.4.0",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:968:        "normalize-package-data": "^2.5.0",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:979:        "normalize-package-data": {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:981:          "resolved": "https://registry.npmjs.org/normalize-package-data/-/normalize-package-data-2.5.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:33:	database          persistence.Conn
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:44:		database:          newDatabase(DatabaseURL()),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:67:	a.servlets = append(a.servlets, server.NewUploadServlet(a.database))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:68:	a.servlets = append(a.servlets, server.NewKeyClaimServlet(a.database, lookup))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:74:	migrateDB(DatabaseURL()) // This is a bit of a weird place for this but it works for now.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:78:	a.components = append(a.components, newExpirationWorker(a.database))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:80:	a.servlets = append(a.servlets, server.NewRetrieveServlet(a.database, retrieval.NewAuthenticator(), retrieval.NewSigner()))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:85:	a.servlets = append(a.servlets, server.NewMetricsServlet(a.database, lookup))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:100:	return &App{&main}, a.database
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:103:func DatabaseURL() string {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:104:	url := os.Getenv("DATABASE_URL")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:106:		panic("DATABASE_URL must be set")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:111:func newDatabase(dbURL string) persistence.Conn {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:140:func migrateDB(databaseURL string) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:141:	log(nil, nil).Info("running database bootstrap / migrations")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:142:	err := persistence.MigrateDatabase(databaseURL)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:144:		log(nil, err).Fatal("error running database bootstrap / migrations")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/test-tools.go:17:	a.servlets = append(a.servlets, server.NewTestToolsServlet(a.database, lookup))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/test-tools_test.go:21:		database:          nil,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/test-tools_test.go:39:		database:          nil,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:8:	"database/sql"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:28:// method for each query we support. The one exception is database
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:115:		log(nil, err).Fatal("Could not connect to database")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:322:			KeyData:                    key,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:7:	"database/sql/driver"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:14:	"github.com/DATA-DOG/go-sqlmock"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:594:		(region, originator, key_data, rolling_start_interval_number, rolling_period, transmission_risk_level, hour_of_submission)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:600:		(region, originator, key_data, rolling_start_interval_number, rolling_period, transmission_risk_level, hour_of_submission)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:604:			key.GetKeyData(),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:660:	row := sqlmock.NewRows([]string{"region", "key_data", "rolling_start_interval_number", "rolling_period", "transmission_risk_level"}).AddRow("302", []byte{}, 2651450, 144, 4)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:666:			KeyData:                    []byte{},
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/events.go:5:	"database/sql"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/events_test.go:9:	"github.com/DATA-DOG/go-sqlmock"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/events_test.go:101:	assert.Equal(t, 1, hook.LastEntry().Data["Count"])
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/events_test.go:102:	assert.Equal(t, onApi, hook.LastEntry().Data["Originator"])
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/events_test.go:103:	assert.Equal(t, OTKGenerated, hook.LastEntry().Data["Identifier"])
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/events_test.go:104:	assert.Equal(t, Server, hook.LastEntry().Data["DeviceType"])
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/events_test.go:105:	assert.Equal(t, now, hook.LastEntry().Data["Date"])
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/events_test.go:114:	assert.Equal(t, "b...b", hook.LastEntry().Data["Originator"])
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/main_test.go:4:	"database/sql"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/main_test.go:5:	"github.com/DATA-DOG/go-sqlmock"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/metric_queries.go:4:	"database/sql"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/metric_queries_test.go:5:	"github.com/DATA-DOG/go-sqlmock"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:4:	"database/sql"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:8:	// inject mysql support for database/sql
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:28:	key_data                      BINARY(16) NOT NULL UNIQUE,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:35:	UNIQUE INDEX (key_data, region),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:36:	INDEX (key_data),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:155:// MigrateDatabase creates the database and migrates it into the correct state.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:156:func MigrateDatabase(url string) error {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:165:	if _, err := dbForCreate.Exec(`CREATE DATABASE IF NOT EXISTS ` + dbName); err != nil {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator_test.go:6:	"github.com/DATA-DOG/go-sqlmock"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/otk_duration.go:4:	"database/sql"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/otk_duration_test.go:5:	"github.com/DATA-DOG/go-sqlmock"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:5:	"database/sql"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:357:		`SELECT region, key_data, rolling_start_interval_number, rolling_period, transmission_risk_level FROM diagnosis_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:362:		ORDER BY key_data
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:393:		(region, originator, key_data, rolling_start_interval_number, rolling_period, transmission_risk_level, hour_of_submission)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:408:		result, err := s.Exec(region, originator, key.GetKeyData(), key.GetRollingStartIntervalNumber(), key.GetRollingPeriod(), key.GetTransmissionRiskLevel(), hourOfSubmission)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:5:	"database/sql/driver"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:10:	"github.com/DATA-DOG/go-sqlmock"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:505:	SELECT region, key_data, rolling_start_interval_number, rolling_period, transmission_risk_level FROM diagnosis_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:510:		ORDER BY key_data`
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:512:	row := sqlmock.NewRows([]string{"region", "key_data", "rolling_start_interval_number", "rolling_period", "transmission_risk_level"}).AddRow("302", []byte{}, 2651450, 144, 4)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:575:		(region, originator, key_data, rolling_start_interval_number, rolling_period, transmission_risk_level, hour_of_submission)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:600:		(region, originator, key_data, rolling_start_interval_number, rolling_period, transmission_risk_level, hour_of_submission)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:605:		key.GetKeyData(),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:635:		(region, originator, key_data, rolling_start_interval_number, rolling_period, transmission_risk_level, hour_of_submission)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:641:		(region, originator, key_data, rolling_start_interval_number, rolling_period, transmission_risk_level, hour_of_submission)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:645:			key.GetKeyData(),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:676:		(region, originator, key_data, rolling_start_interval_number, rolling_period, transmission_risk_level, hour_of_submission)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:682:		(region, originator, key_data, rolling_start_interval_number, rolling_period, transmission_risk_level, hour_of_submission)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:686:			key.GetKeyData(),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:739:		(region, originator, key_data, rolling_start_interval_number, rolling_period, transmission_risk_level, hour_of_submission)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:745:		(region, originator, key_data, rolling_start_interval_number, rolling_period, transmission_risk_level, hour_of_submission)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:749:			key.GetKeyData(),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:959:	// Commits and returns the correct data from checkClaimKeyBan
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:1071:		KeyData:                    token,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/test_tools.go:5:	"database/sql"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/test_tools_test.go:8:	"github.com/DATA-DOG/go-sqlmock"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/defs.go:13:	// KeyDataLength is the length of an Exposure Notification Temporary Exposure Key (Data)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/defs.go:14:	KeyDataLength = 16
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:114:	EncryptedUploadResponse_INVALID_KEY_DATA                      EncryptedUploadResponse_ErrorCode = 11
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:133:		11: "INVALID_KEY_DATA",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:149:		"INVALID_KEY_DATA":                      11,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:193:// Data type that represents why this key was published.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:798:	KeyData []byte `protobuf:"bytes,1,opt,name=key_data,json=keyData" json:"key_data,omitempty"`
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:851:func (x *TemporaryExposureKey) GetKeyData() []byte {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:853:		return x.KeyData
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:1191:	file_proto_covidshield_proto_rawDescData = file_proto_covidshield_proto_rawDesc
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:1196:		file_proto_covidshield_proto_rawDescData = protoimpl.X.CompressGZIP(file_proto_covidshield_proto_rawDescData)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:1198:	return file_proto_covidshield_proto_rawDescData
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:114:	EncryptedUploadResponse_INVALID_KEY_DATA                      EncryptedUploadResponse_ErrorCode = 11
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:133:		11: "INVALID_KEY_DATA",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:149:		"INVALID_KEY_DATA":                      11,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:719:	KeyData []byte `protobuf:"bytes,1,opt,name=key_data,json=keyData" json:"key_data,omitempty"`
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:766:func (x *TemporaryExposureKey) GetKeyData() []byte {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:768:		return x.KeyData
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:1072:	file_proto_covidshieldv1_proto_rawDescData = file_proto_covidshieldv1_proto_rawDesc
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:1077:		file_proto_covidshieldv1_proto_rawDescData = protoimpl.X.CompressGZIP(file_proto_covidshieldv1_proto_rawDescData)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:1079:	return file_proto_covidshieldv1_proto_rawDescData
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/retrieval.go:78:	exportBinData, err := proto.Marshal(tekExport)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/retrieval.go:83:	sig, err := signer.Sign(append(binHeader, exportBinData...))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/retrieval.go:96:	exportSigData, err := proto.Marshal(sigList)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/retrieval.go:115:	n, err = f.Write(exportBinData)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/retrieval.go:120:	if n != len(exportBinData) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/retrieval.go:127:	n, err = f.Write(exportSigData)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/retrieval.go:132:	if n != len(exportSigData) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/retrieval_test.go:62:	data := make([]byte, 32)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/retrieval_test.go:63:	rand.Read(data)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/retrieval_test.go:65:	signer.On("Sign", mock.AnythingOfType("[]uint8")).Return(data, nil)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/retrieval_test.go:81:		KeyData:                    token,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/signer.go:39:func (s *signer) Sign(data []byte) ([]byte, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/signer.go:40:	digest := sha256.Sum256(data)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/signer_test.go:31:	data, _ := x509.MarshalECPrivateKey(privateKey)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/signer_test.go:32:	os.Setenv("ECDSA_KEY", hex.EncodeToString(data))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/signer_test.go:43:	data, _ := x509.MarshalECPrivateKey(privateKey)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/signer_test.go:44:	os.Setenv("ECDSA_KEY", hex.EncodeToString(data))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/signer_test.go:48:	data = []byte(strings.Repeat("a", 10))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/signer_test.go:49:	digest := sha256.Sum256(data)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/signer_test.go:51:	receivedSignature, receivedError := signer.Sign(data)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim.go:113:		return requestError(ctx, w, err, "database error checking claim-key ban", http.StatusInternalServerError, kcre)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim.go:123:	data, err := ioutil.ReadAll(reader)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim.go:132:	if err := proto.Unmarshal(data, &req); err != nil {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim.go:162:			msg := "database error recording claim-key failure"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim.go:178:	data, err = proto.Marshal(resp)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim.go:186:	if _, err := w.Write(data); err != nil {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim_test.go:352:	testhelpers.AssertLog(t, hook, 1, logrus.ErrorLevel, "database error checking claim-key ban")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim_test.go:462:	testhelpers.AssertLog(t, hook, 1, logrus.ErrorLevel, "database error recording claim-key failure")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim_test.go:553:func checkClaimKeyResponseDuration(data []byte, duration *durationpb.Duration) bool {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim_test.go:555:	proto.Unmarshal(data, &response)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim_test.go:559:func checkClaimKeyResponseError(data []byte, expectedCode pb.KeyClaimResponse_ErrorCode) bool {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim_test.go:561:	proto.Unmarshal(data, &response)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim_test.go:565:func checkClaimKeyResponseTriesRemaining(data []byte, triesRemaining uint32) bool {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim_test.go:567:	proto.Unmarshal(data, &response)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/metrics.go:128:	m.getTEKUploadsData(ctx, w, r)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/metrics.go:132:func (m *metricsServlet) getTEKUploadsData(ctx context.Context, w http.ResponseWriter, r *http.Request) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/metrics.go:183:	m.getDurationData(ctx, w, r)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/metrics.go:187:func (m *metricsServlet) getDurationData(ctx context.Context, w http.ResponseWriter, r *http.Request) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/metrics_test.go:199:func TestMetricsServlet_GetTEKUploadsData(t *testing.T) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/metrics_test.go:230:func TestMetricsServlet_GetOtkDurationsData(t *testing.T) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/retrieve.go:115:		return s.fail(log(ctx, nil), w, "request for current date", "cannot serve data for current period for privacy reasons", http.StatusNotFound)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/retrieve.go:117:		return s.fail(log(ctx, nil), w, "request for future data", "cannot request future data", http.StatusNotFound)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/retrieve.go:119:		return s.fail(log(ctx, nil), w, "request for too-old data", "requested data no longer valid", http.StatusGone)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/retrieve.go:124:		return s.fail(log(ctx, err), w, "database error", "", http.StatusInternalServerError)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/retrieve_test.go:152:	testhelpers.AssertLog(t, hook, 1, logrus.WarnLevel, "request for future data")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/retrieve_test.go:177:	testhelpers.AssertLog(t, hook, 1, logrus.WarnLevel, "request for too-old data")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/retrieve_test.go:207:	testhelpers.AssertLog(t, hook, 1, logrus.ErrorLevel, "database error")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/retrieve_test.go:236:		KeyData:                    token,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/server.go:49:	data, err := proto.Marshal(resp)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/server.go:58:	if _, err := w.Write(data); err != nil {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:42:	data, err := ioutil.ReadAll(reader)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:52:	if err := proto.Unmarshal(data, &seu); err != nil {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:176:	data, err = proto.Marshal(resp)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:185:	if _, err := w.Write(data); err != nil {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:199:	if len(key.GetKeyData()) != 16 {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:201:			ctx, w, nil, "invalid key data",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:202:			http.StatusBadRequest, uploadError(pb.EncryptedUploadResponse_INVALID_KEY_DATA),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:546:func TestValidateKey_KeyDataNot16Bytes(t *testing.T) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:556:	// Key data not 16 bytes
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:566:	assert.True(t, checkUploadResponse(resp.Body.Bytes(), pb.EncryptedUploadResponse_INVALID_KEY_DATA))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:568:	testhelpers.AssertLog(t, hook, 1, logrus.WarnLevel, "invalid key data")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:720:		KeyData:                    token,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:749:func checkUploadResponse(data []byte, expectedCode pb.EncryptedUploadResponse_ErrorCode) bool {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:751:	proto.Unmarshal(data, &response)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/workers/expiration.go:70:	// Run the worker once, before returning, to clean out old data on boot.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/covidshield.proto:90:    INVALID_KEY_DATA = 11;
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/covidshield.proto:177:  optional bytes key_data = 1;
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/covidshield.proto:189:  // Data type that represents why this key was published.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/README.md:122:endpoint will only include key data from Keys active between 0 and 14 days ago (relative to the
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/README.md:125:The rationale for this is: a client should fetch the key data for the past 14 days initially.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/README.md:129:device can check every day for newly-available unprocessed data packs and expect to find one
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/README.md:138:data from before the App was installed.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/README.md:146:Since there is little value in retrieving historical data upon Application installation, it is
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:13:personally-identifiable information is ever stored, and nothing other than IP address is available to the server. No data at all is retained past 21 days. This server is designed to handle
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:22:- [Data usage](#data-usage)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:41:generated from this codebase, and can be deployed independently as long as they share a database. It
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:43:the same database, though there would be little value in deploying multiple configurations of
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:46:For a more technical overview of the codebase, especially of the protocol and database schema, see
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:51:When diagnosis keys are uploaded, the `key-submission` server stores the data defined and required
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:52:by the Exposure Notification API in addition to the time at which the data was received by the
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:56:The hour of submission is used to group keys into buckets, in order to prevent clients ([COVID Alert mobile app](https://github.com/cds-snc/covid-alert-app)) from having to download a given set of key data
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:83:purged from the database.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:86:days, after which they are purged from the database.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:92:## Data usage
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:94:The _Diagnosis Key_ retrieval protocol used in _COVID Alert_ was designed to restrict the data
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:96:there is minimal protocol overhead on top of the key data size of 16 bytes.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:102:* Each key entails just under 18 bytes of data transfer when using compression.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:103:* Key metadata and protocol overhead should in reality be minimal, but:
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:105:  soon with more accurate real-world data sizes.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:107:**Data below is current at May 12, 2020**. For each case, we assume the example daily new cases is a
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:268:Au moment du téléversement des clés de diagnostic, le serveur `key-submission` stocke les données définies et requises par l’interface de programmation d’applications (API) de notification d’exposition en plus de la date à laquelle les données ont été reçues par le serveur. L’horodatage de cet envoi est arrondi à l’heure la plus proche pour la protection de la vie privée (pour empêcher la corrélation de plusieurs clés avec le même utilisateur).
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/scripts/heroku_run.sh:15:database="${strarr[1]}"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/scripts/heroku_run.sh:21:db="${u_and_p}@tcp(${host})/${database}"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/scripts/heroku_run.sh:23:DATABASE_URL=$db PORT=$PORT /usr/local/bin/server --config_file_path ./
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/claim_key_test.rb:12:    # too much post data
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/claim_key_test.rb:17:    # incomprehensible post data
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:28:DATABASE_URL = "#{DB_USER}:#{DB_PASS}@tcp(#{DB_HOST})/#{DB_NAME}"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:38:      Helper.with_server_with_pristine_database do |sub_conn, ret_conn|
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:42:          host: DB_HOST, username: DB_USER, password: DB_PASS, database: DB_NAME,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:68:    def tek(data: '1' * 16, transmission_risk_level: 3, rolling_period: 144, rolling_start_interval_number: next_rsin)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:70:        key_data: data,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:173:    def expect(*data)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:174:      data = Array(data).flatten
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:175:      assert_equal(data, @buf.shift(data.size), "  (from #{caller_locations[0]})")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:178:    def extract_zip(data)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:181:      tf.write(data)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:197:    def with_server_with_pristine_database(&block)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:198:      with_pristine_database { with_servers(&block) }
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:214:          'DATABASE_URL' => DATABASE_URL,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:240:    def with_pristine_database(&block)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/protocol/covidshield_pb.rb:48:      value :INVALID_KEY_DATA, 11
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/protocol/covidshield_pb.rb:73:      optional :key_data, :bytes, 1
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:44:        body: "cannot serve data for current period for privacy reasons\n"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:54:      body: "cannot request future data\n"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:63:    assert_response(resp, 410, 'text/plain; charset=utf-8', body: "requested data no longer valid\n")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:97:    add_key(active_at: active_at, submitted_at: time_in_date("23:59:59", fiveteen_days_ago), data: '1' * 16)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:98:    add_key(active_at: active_at, submitted_at: time_in_date("00:00", fourteen_days_ago), data: '2' * 16)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:99:    add_key(active_at: active_at, submitted_at: time_in_date("01:59:59", yesterday_utc), data: '3' * 16)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:100:    add_key(active_at: active_at, submitted_at: time_in_date("02:00", yesterday_utc), data: '4' * 16)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:101:    add_key(active_at: active_at, submitted_at: time_in_date("02:00", yesterday_utc), data: '5' * 16)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:102:    add_key(active_at: active_at, submitted_at: time_in_date("02:00", today_utc), data: '6' * 16)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:115:        data: "2222222222222222",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:119:        data: "3333333333333333",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:123:        data: "4444444444444444",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:127:        data: "5555555555555555",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:131:      assert_response(resp, 410, 'text/plain; charset=utf-8', body: "requested data no longer valid\n")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:140:    add_key(active_at: active_at, submitted_at: time_in_date("23:59:59", two_days_ago), data: '1' * 16)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:141:    add_key(active_at: active_at, submitted_at: time_in_date("00:00", yesterday_utc), data: '2' * 16)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:142:    add_key(active_at: active_at, submitted_at: time_in_date("01:59:59", yesterday_utc), data: '3' * 16)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:143:    add_key(active_at: active_at, submitted_at: time_in_date("02:00", yesterday_utc), data: '4' * 16)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:154:      data: "2222222222222222",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:158:      data: "3333333333333333",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:162:      data: "4444444444444444",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:204:    STDERR.puts("adding many records to the database (takes about 5-12 seconds)...")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:207:      add_key(active_at: new, submitted_at: time_in_date("00:00", yesterday_utc), data: SecureRandom.bytes(16))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:209:    add_key(region: 'BC', active_at: new, submitted_at: time_in_date("00:00", yesterday_utc), data: SecureRandom.bytes(16))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:219:    # write sample data
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:228:    key_data = []
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:238:      key_data.concat(file.keys.map(&:key_data))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:241:    assert_equal(18001, key_data.size)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:242:    assert_equal(18001, key_data.uniq.size)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:247:  def expect_one_key(resp, rsin, risk, data, start_time, end_time)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:248:    expect_retrieve_data(
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:259:              key_data: data,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:277:  def add_key(data: '1' * 16, active_at:, submitted_at:, transmission_risk_level: 8, region: '302')
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:283:      data: data
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:290:      (key_data, rolling_start_interval_number, rolling_period, transmission_risk_level, hour_of_submission, region)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:295:  def add_key_explicit(data: '1' * 16, rsin:, transmission_risk_level: 8, hour:, region: '302', rolling_period: TEK_ROLLING_PERIOD)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:296:    insert_key.execute(data, rsin, rolling_period, transmission_risk_level, hour, region)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:310:  def assert_valid_signature(signature, data)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:315:    digest = Digest::SHA256.digest(data)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/roundtrip_test.rb:22:      tek(data: '111111111111111a', rolling_start_interval_number: days_ago_at_noon(1)),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/roundtrip_test.rb:23:      tek(data: '111111111111111b', rolling_start_interval_number: days_ago_at_noon(2)),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/roundtrip_test.rb:24:      tek(data: '111111111111111c', rolling_start_interval_number: days_ago_at_noon(3)),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/roundtrip_test.rb:25:      tek(data: '111111111111111d', rolling_start_interval_number: days_ago_at_noon(4)),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/roundtrip_test.rb:26:      tek(data: '111111111111111e', rolling_start_interval_number: days_ago_at_noon(5)),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/roundtrip_test.rb:27:      tek(data: '111111111111111f', rolling_start_interval_number: days_ago_at_noon(6)),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/roundtrip_test.rb:28:      tek(data: '111111111111111g', rolling_start_interval_number: days_ago_at_noon(7)),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/roundtrip_test.rb:29:      tek(data: '111111111111111h', rolling_start_interval_number: days_ago_at_noon(8)),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/roundtrip_test.rb:30:      tek(data: '111111111111111i', rolling_start_interval_number: days_ago_at_noon(9)),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/roundtrip_test.rb:31:      tek(data: '111111111111111j', rolling_start_interval_number: days_ago_at_noon(10)),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/roundtrip_test.rb:32:      tek(data: '111111111111111k', rolling_start_interval_number: days_ago_at_noon(11)),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/roundtrip_test.rb:33:      tek(data: '111111111111111l', rolling_start_interval_number: days_ago_at_noon(12)),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/roundtrip_test.rb:34:      tek(data: '111111111111111m', rolling_start_interval_number: days_ago_at_noon(13)),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/roundtrip_test.rb:51:    keys.unshift(tek(data: '111111111111111z', rolling_start_interval_number: days_ago_at_noon(1)))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/roundtrip_test.rb:107:    have_key_ids =      keys.map { |k| k.key_data[-1] }.sort
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/roundtrip_test.rb:108:    want_key_ids = want_keys.map { |k| k.key_data[-1] }.sort
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:10:    # too much post data
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:14:    # incomprehensible post data
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:112:    # key data absent, too long, too short
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:113:    assert_tek_fails(:INVALID_KEY_DATA, key_data: nil)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:114:    assert_tek_fails(:INVALID_KEY_DATA, key_data: '1'*15)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:115:    assert_tek_fails(:INVALID_KEY_DATA, key_data: '1'*17)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:117:    # key data absent, too long, too short
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:228:    tek(key_data: n.chr * 16)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:270:  def tek(key_data: '1' * 16, transmission_risk_level: 3, rolling_period: 144, rolling_start_interval_number: next_rsin)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:272:      key_data: key_data,

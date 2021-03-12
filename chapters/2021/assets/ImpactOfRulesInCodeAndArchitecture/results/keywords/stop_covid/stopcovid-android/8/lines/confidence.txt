@@ -1,0 +1,13 @@
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithoutAdvertiser.kt:121:            minConfidenceScore = settings.deviceSelectorMinConfidenceScore,
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleScannedDeviceSelector.kt:23:    private val minConfidenceScore: Int = -2,
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleScannedDeviceSelector.kt:42:    // Select by confidence score / THEN most recent scans / THEN by rssi average / THEN by scan count
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleScannedDeviceSelector.kt:46:            val confidenceScore = deviceStats.confidenceScore
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleScannedDeviceSelector.kt:57:            confidenceScore + priority
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleScannedDeviceSelector.kt:165:                    deviceStats.confidenceScore <= minConfidenceScore -> false
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleScannedDeviceSelector.kt:205:    val confidenceScore: Int
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleSettings.kt:30: * @param deviceSelectorMinConfidenceScore Minimum confidence score in order to keep device
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleSettings.kt:49:    val deviceSelectorMinConfidenceScore : Int = -3,
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceSelectorTest.kt:29:    private val minConfidenceScore = -1
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceSelectorTest.kt:223:    fun select_given_multiple_devices_should_select_ones_with_best_confidence_score() =
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceSelectorTest.kt:264:    fun select_given_multiple_devices_should_evict_scans_with_bad_confidence_score() =
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceSelectorTest.kt:388:            minConfidenceScore = minConfidenceScore,

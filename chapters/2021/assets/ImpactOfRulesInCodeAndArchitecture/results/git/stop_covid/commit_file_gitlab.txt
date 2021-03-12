@@ -1,0 +1,360 @@
+Add SecretKey erasure
+
+Add FilteringInfo storage
+Close #1
+
+Simplifie le nom du fichier licence
+
+Corrige le lien dans README.md
+
+Fichier de licence
+
+Initial SDK
+
+Initial files
+
+Update documentation
+
+Upgrade version to 2.1.1 (16)
+
+Add CoroutineExceptionHandler on ProximityNotificationService start / stop
+
+Force using 1s report delay and no hardware batching for devices without advertiser
+
+ProximityNotificationCallback methods are now suspendable
+
+Update Android Gradle plugin to 4.1.2
+
+Upgrade version to 2.1.0 (15)
+
+Upgrade dependencies
+
+Add wakelock and remove waitFor
+
+disable scanner hardware filtering for single device scan
+
+Increase timeout to 8s between scan restart on Android >= N
+
+Increase minimum stats count to compute BT healthy status
+
+10 -> 20
+
+Use Dispatchers.Main.immediate
+
+service doStart / doStop uses Dispatchers.Main.Immediate
+
+Extract Result.kt into tools
+
+Improve scanner management
+
+Stop BLE components on error
+
+isHealthy -> isUnhealthy
+
+Improve scanner error detection for devices without advertising
+
+Improve restart bluetooth
+
+Handle device without advertising
+
+Update version to 1.2.0
+
+Manage no advertising devices
+
+Manage write with response to fit Android code
+
+Disconnect Android later if an app error occurs
+
+Add source events to the logger
+
+Update version to 1.1.1
+
+Fix a crash when devices are disconnected on stop
+
+Destroy central manager to disconnect devices and clean structures after to avoid concurrent access
+
+Update version to 1.1.0
+
+Update proximity filtering algorithms
+
+Fix a crash due to concurrency in Cache
+
+Implement proximity filtering algorithms
+
+Update version to 1.0.0
+
+Update to version 0.4.3
+
+Add version number to Bluetooth proximity payload
+
+Remove connection date expired values on timer
+
+Remove cache entry when the service is not found
+
+Clean gitignore
+
+Rename TestProximityPayload to ProximityPayloadTests to match naming conventions
+
+Add GitLab CI configuration file
+
+Add AUTHORS
+
+Initial commit
+
+Merge branch 'fix-push-api-version' into 'develop'
+
+increment api version number to 3
+
+See merge request stopcovid19/robert-client-api-spec!11
+increment api version number to 3
+
+Merge branch 'feat-push' into 'develop'
+
+feat push
+
+See merge request stopcovid19/robert-client-api-spec!10
+feat push
+
+Merge branch 'fix-rename-captchaid' into 'develop'
+
+rename captchaId to id in POST /captcha response and add more supported locales
+
+See merge request stopcovid19/robert-client-api-spec!9
+rename captchaId to id in POST /captcha response and add more supported locales
+
+Merge branch 'fix-captcha-versioning' into 'develop'
+
+Update version to v2
+
+See merge request stopcovid19/robert-client-api-spec!7
+update version to v2
+
+Merge branch 'feat-custom-captcha' into 'develop'
+
+Feat custom captcha
+
+See merge request stopcovid19/robert-client-api-spec!6
+Feat custom captcha
+
+Merge branch 'rollback-server-public-ecdh-key' into 'develop'
+
+rollback serverPublicECDHKey
+
+See merge request stopcovid19/robert-client-api-spec!5
+rollback serverPublicECDHKey
+
+Merge branch 'add-ecdh-server-public-key' into 'develop'
+
+add serverPublicKey in response
+
+See merge request stopcovid19/robert-client-api-spec!4
+add serverPublicKey in response
+
+Merge branch 'add-ecdh-encryption-register' into 'develop'
+
+refactor /register request and response to secure key and tuples with ecdh
+
+See merge request stopcovid19/robert-client-api-spec!3
+refactor /register request and response to secure key and tuples with ecdh
+
+Merge branch 'add-req-salt-info' into 'develop'
+
+Add request salt info details in description of each relevant service
+
+See merge request stopcovid19/robert-client-api-spec!2
+Add request salt info details in description of each relevant service
+
+Merge branch 'patch-1' into 'develop'
+
+Remove spurious space preventing automatic linking in README.md
+
+See merge request stopcovid19/robert-client-api-spec!1
+Remove spurious space preventing automatic linking
+Code cleaning + Interface updates + NSError and Data extensions added.
+
+Simplifie le nom du fichier licence
+
+Corrige le lien dans README.md
+
+Fichier de licence
+
+Initial Robert files
+
+Configuration check
+
+Merge branch 'fix-merge-in-develop-unregister' into 'develop'
+
+chore: Removing /v1 in IUnregister
+
+See merge request stopcovid19/robert-server!109
+chore: Removing /v1 in IUnregister
+
+Merge branch 'fix-merge-in-develop-deleteExposure' into 'develop'
+
+chore: Removing /v1 in deleteExposureHistory
+
+See merge request stopcovid19/robert-server!108
+chore: Removing /v1 in deleteExposureHistory
+
+Merge branch 'release/v1.7.0' into 'develop'
+
+Merge Back Release/v1.7.0
+
+See merge request stopcovid19/robert-server!107
+feat: Use the property var robert.server.request-time-delta-tolerance mapped on the env var ROBERT_SERVER_REQUEST_TIME_DELTA_TOLERANCE
+
+Merge branch 'feat-update-management-status-atRisk' into 'develop'
+
+Feat update management status at risk
+
+See merge request stopcovid19/robert-server!97
+Feat update management status at risk
+
+Merge branch 'feature/cleanRegisterAndCaptchaV1' into 'develop'
+
+delete register (v1) , captcha (v1) , report (v1) , unregister (v1) , deleteHistory (v1) and all tests
+
+See merge request stopcovid19/robert-server!100
+delete register (v1) , captcha (v1) , report (v1) , unregister (v1) , deleteHistory (v1) and all tests
+
+Merge branch 'release/v1.6.0' into 'develop'
+
+Merge Back Release/v1.6.0
+
+See merge request stopcovid19/robert-server!99
+feat: Use the property var robert.server.request-time-delta-tolerance mapped on the env var ROBERT_SERVER_REQUEST_TIME_DELTA_TOLERANCE
+
+Merge branch 'feat-async-call-push-server' into 'develop'
+
+feat: Verify pushInfo data && Do async call to the push server
+
+See merge request stopcovid19/robert-server!96
+Merge branch 'feature/cockpit-to-batch' into 'develop'
+
+feat: Setting Robert Server Batch
+
+See merge request stopcovid19/robert-server!90
+feat: Adding Spring Cloud Consul properties
+
+- spring.cloud.consul.scheme
+- spring.cloud.consul.token
+
+feat: Verify pushInfo data && Do async call to the push server
+
+Merge branch 'feat-setting-robert-server-ws' into 'develop'
+
+feat: Setting Robert Server WS
+
+See merge request stopcovid19/robert-server!88
+feat: Setting Robert Server WS
+
+Merge branch 'release/v1.5.0' into 'develop'
+
+Merge Back Release/v1.5.0
+
+See merge request stopcovid19/robert-server!95
+feat: Use the property var robert.server.request-time-delta-tolerance mapped on the env var ROBERT_SERVER_REQUEST_TIME_DELTA_TOLERANCE
+
+Update to 2.2.7
+
+- Maintenance add support for App Gallery
+- Revamp change postale code
+- Get positive isolation days from config
+- Fix audio captcha not working in command mode
+- Add warning and error logs in prod
+- Fix too much notification
+- Bar graph and average series
+
+Update to 2.2.6
+
+- Allow remote configuration of scan report. delay
+- Add average charts
+- Always show rationale before camera permission
+- Add link to privacy policy when requesting permision
+- Fix downloading vaccination centers when no postal code is defined
+
+Update to 2.2.5
+
+- Catch crash when launching BLE module
+- Add vaccination centers
+
+Update to 2.2.4
+
+- Update BLE to 2.1.0
+- Enhance concurrency security around file writing
+- Add share to graph
+
+Update to 2.2.3
+
+- Performance improvement
+- Add graphics to key figure
+
+Update to 2.2.0
+
+- Cosmetic improvement
+- Add possibility to have timestamp in QR Code deeplinks
+- Fix crash with malformed key figures json
+- Fix error in onBoarding if locale is not supported
+
+Update to 2.2.1
+
+- Code refactorization
+- Allow empty venueCategory or venueCapacity in deeplink
+- Add vaccination module
+- Improve splashscreen
+
+Update third party licenses
+
+credit :
+- ProgressButton
+- zxing
+- zxing-android-embedded
+
+Update to 2.2.0
+
+- Isolation module
+- Exemption certificates
+- Contact tracing reminders
+- Useful links
+- key figures
+- News sharing
+- Venues
+- Private events
+- Performance improvements
+- UI enhancing
+- Bug fixes
+
+Update to 2.1.8
+
+- Sport attestations are now valid for 3 hours
+
+Update to 2.1.7
+
+- Feature flag on attestations
+- Key figures explanation screen
+- Prevent using Proximity after reporting sick
+- Cosmetic improvement
+- Inverse attestation sorting
+- Attestation "sport_animaux" is only valid for one hour
+
+Update to 2.1.6
+
+- Cosmetic improvement on numbers layout
+- Use extractDate instead of lastUpdate for Key Figure
+
+Fix urls not opening on Android 11
+
+Update to 2.1.4
+
+Update to 2.1.2
+
+Update to 2.1.1
+
+Update to 2.1.0
+
+Update to 2.0.1
+
+Update to 2.0.0
+
+Update to 1.1.4
+

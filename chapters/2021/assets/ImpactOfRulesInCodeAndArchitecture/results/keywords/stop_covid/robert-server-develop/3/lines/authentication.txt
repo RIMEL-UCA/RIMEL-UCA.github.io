@@ -1,0 +1,14 @@
+./robert-server-develop/robert-server-batch/src/main/resources/application-dev.properties:1:#spring.data.mongodb.authentication-database= # Authentication database name.
+./robert-server-develop/robert-server-batch/src/test/resources/application.properties:1:#spring.data.mongodb.authentication-database= # Authentication database name.
+./robert-server-develop/robert-server-database/src/test/resources/application.properties:1:#spring.data.mongodb.authentication-database= # Authentication database name.
+./robert-server-develop/robert-server-dataset-injector/src/main/resources/application.properties:2:#spring.data.mongodb.authentication-database= # Authentication database name.
+./robert-server-develop/robert-server-dataset-injector/src/test/resources/application.properties:1:#spring.data.mongodb.authentication-database= # Authentication database name.
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/DeleteHistoryControllerImpl.java:49:			log.info("Delete exposure history request authentication failed");
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/DeleteHistoryControllerImpl.java:52:		log.info("Delete exposure history request authentication passed");
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/ReportControllerDelegate.java:69:            throw new RobertServerUnauthorizedException(MessageConstants.INVALID_AUTHENTICATION.getValue());
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/StatusControllerImpl.java:78:			log.info("Status request authentication failed");
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/utils/MessageConstants.java:16:	INVALID_AUTHENTICATION("Invalid authentication"),
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application-dev.properties:13:#spring.data.mongodb.authentication-database= # Authentication database name.
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application.properties:13:#spring.data.mongodb.authentication-database= # Authentication database name.
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/ReportControllerWsRestTest.java:471:        assertThat(response.getBody(), equalTo(buildApiError(MessageConstants.INVALID_AUTHENTICATION.getValue())));
+./robert-server-develop/robert-server-ws-rest/src/test/resources/application.properties:12:#spring.data.mongodb.authentication-database= # Authentication database name.

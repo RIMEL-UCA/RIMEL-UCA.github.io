@@ -1,0 +1,19 @@
+stopcovid-blesdk-ios/.git/hooks/pre-push.sample:14:# Information about the commits which are being pushed is supplied as lines to
+stopcovid-blesdk-ios/LICENSE.txt:164:the terms of this License. You must inform recipients that the Source
+stopcovid-blesdk-ios/LICENSE.txt:175:    Form, as described in Section 3.1, and You must inform recipients of
+stopcovid-blesdk-ios/LICENSE.txt:293:*  shall have been informed of the possibility of such damages. This   *
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityMetadata.swift:13:/// The Bluetooth metadata associated with proximity information.
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothSettings.swift:31:    /// The expiration delay for the received Bluetooth proximity information in cache. Default value is 30 minutes.
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothSettings.swift:41:    ///   - cacheExpirationDelay: The expiration delay for the received Bluetooth proximity information in cache. Default value is 30 minutes.
+stopcovid-blesdk-ios/ProximityNotification/Filter/ProximityFilter.swift:13:/// An object that filters proximity information.
+stopcovid-blesdk-ios/ProximityNotification/Filter/TimestampedRSSI.swift:13:/// A structure that contains contextual information about a received signal strength indicator (RSSI).
+stopcovid-blesdk-ios/ProximityNotification/ProximityInfo.swift:13:/// A protocol for metadata associated with proximity information.
+stopcovid-blesdk-ios/ProximityNotification/ProximityInfo.swift:16:/// A structure that contains proximity information.
+stopcovid-blesdk-ios/ProximityNotification/ProximityInfo.swift:22:    /// The date when these proximity information were retrieved.
+stopcovid-blesdk-ios/ProximityNotification/ProximityNotificationService.swift:44:/// A handler called when proximity information has been updated.
+stopcovid-blesdk-ios/ProximityNotification/ProximityNotificationService.swift:45:/// - Parameter proximityInfo: The new proximity information.
+stopcovid-blesdk-ios/ProximityNotification/ProximityNotificationService.swift:101:    ///   - proximityInfoUpdateHandler: A handler called when proximity information has been updated.
+stopcovid-blesdk-ios/ProximityNotification.xcodeproj/project.pbxproj:425:				DEBUG_INFORMATION_FORMAT = dwarf;
+stopcovid-blesdk-ios/ProximityNotification.xcodeproj/project.pbxproj:485:				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+stopcovid-blesdk-ios/ProximityNotification.xcodeproj/project.pbxproj:563:				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+stopcovid-blesdk-ios/README.md:5:Each time a device is nearby a `ProximityInfo` is notified. `ProximityInfo` contains following information:

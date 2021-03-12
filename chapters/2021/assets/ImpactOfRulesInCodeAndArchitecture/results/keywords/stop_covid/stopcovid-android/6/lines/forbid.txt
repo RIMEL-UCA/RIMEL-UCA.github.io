@@ -1,0 +1,16 @@
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileEphemeralBluetoothIdentifierDataSource.kt:85:            val message = "Trying to save empty ebid array is forbidden"
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/extension/ExceptionExt.kt:17:import com.lunabeestudio.robert.model.ForbiddenException
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/extension/ExceptionExt.kt:37:                403 -> ForbiddenException()
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertException.kt:21:    FORBIDDEN,
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertException.kt:45:class ForbiddenException(message: String = "Forbidden to call this endpoint") :
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertException.kt:46:    RobertException(ErrorCode.FORBIDDEN, message)
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:40:import com.lunabeestudio.robert.model.ForbiddenException
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:453:                        if (result.error is ForbiddenException) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/CovidExceptionExt.kt:19:    ErrorCode.FORBIDDEN,
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/ExceptionExt.kt:15:import com.lunabeestudio.robert.model.ForbiddenException
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/ExceptionExt.kt:34:            403 -> ForbiddenException()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/RobertExceptionExt.kt:20:import com.lunabeestudio.stopcovid.model.ForbiddenException
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/RobertExceptionExt.kt:39:        ErrorCode.FORBIDDEN -> ForbiddenException(message)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/model/CovidException.kt:18:    FORBIDDEN,
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/model/CovidException.kt:44:class ForbiddenException(message: String = "Forbidden to call this endpoint") :
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/model/CovidException.kt:45:    CovidException(ErrorCode.FORBIDDEN, message)

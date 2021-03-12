@@ -1,0 +1,29 @@
+./stopcovid-blesdk-android-master/LICENSE.txt:20:    the notice in Exhibit A, the Executable Form of such Source Code
+./stopcovid-blesdk-android-master/LICENSE.txt:34:1.6. "Executable Form"
+./stopcovid-blesdk-android-master/LICENSE.txt:170:3.2. Distribution of Executable Form
+./stopcovid-blesdk-android-master/LICENSE.txt:172:If You distribute Covered Software in Executable Form then:
+./stopcovid-blesdk-android-master/LICENSE.txt:176:    the Executable Form how they can obtain a copy of such Source Code
+./stopcovid-blesdk-android-master/LICENSE.txt:180:(b) You may distribute such Executable Form under the terms of this
+./stopcovid-blesdk-android-master/LICENSE.txt:182:    license for the Executable Form does not attempt to limit or alter
+./stopcovid-blesdk-android-master/LICENSE.txt:269:*  Covered Software is free of defects, merchantable, fit for a        *
+./stopcovid-blesdk-android-master/gradlew:88:        # IBM's JDK on AIX uses strange locations for the executables
+./stopcovid-blesdk-android-master/library/proguard-rules.pro:17:#-keepattributes SourceFile,LineNumberTable
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithoutAdvertiser.kt:59:private fun hasUnstableBluetoothStack() = isAndroidLessThan7()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithoutAdvertiser.kt:116:    override val shouldRestartBluetooth = hasUnstableBluetoothStack()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithoutAdvertiser.kt:221:                if (hasUnstableBluetoothStack()) {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithoutAdvertiser.kt:458:        private val lastStatusHistory = mutableListOf<Boolean>()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleScannedDeviceSelector.kt:34:    private val deviceScans = mutableListOf<BleScannedDevice>()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleScannedDeviceSelector.kt:139:        val result = mutableListOf<BleScannedDevice>()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/advertiser/BleAdvertiserImpl.kt:98:            .setConnectable(true)
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/filter/RiskComputer.kt:48:            val rssis = mutableListOf<Int>()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/filter/RiskComputer.kt:75:    val groupedRssis = List(timeSlotCount) { mutableListOf<Int>() }
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/filter/RssiClipper.kt:21:        val peaks = mutableListOf<Int>()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/filter/RssiClipper.kt:23:        val clippedTimestampRssis = mutableListOf<TimestampedRssi>()
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/filter/ProximityFilterIntTest.kt:29:    private var timestampedRssis = mutableListOf<TimestampedRssi>()
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/filter/ProximityFilterIntTest.kt:30:    private var clippedRssisByRssiThreshold = mutableMapOf<Int, MutableList<Int>>()
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/filter/ProximityFilterIntTest.kt:41:            clippedRssisByRssiThreshold.getOrPut(-35) { mutableListOf() }.add(values[2].toInt())
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/filter/ProximityFilterIntTest.kt:42:            clippedRssisByRssiThreshold.getOrPut(-60) { mutableListOf() }.add(values[3].toInt())
+./stopcovid-blesdk-android-master/licenses/tests/license-junit4.txt:198:serve as the Agreement Steward to a suitable separate entity. Each new version
+./stopcovid-blesdk-android-master/licenses/tests/license-zohhak.txt:103:       suitable for, and under terms that permit, the user to
+./stopcovid-blesdk-android-master/licenses/tests/license-zohhak.txt:109:       1) Use a suitable shared library mechanism for linking with the
+./stopcovid-blesdk-android-master/licenses/tests/license-zohhak.txt:110:       Library.  A suitable mechanism is one that (a) uses at run time

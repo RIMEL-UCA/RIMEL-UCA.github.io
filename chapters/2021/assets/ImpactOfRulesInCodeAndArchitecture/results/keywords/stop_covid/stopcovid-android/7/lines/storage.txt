@@ -1,0 +1,28 @@
+Fichier binaire stopcovid-android/.git/index correspondant
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:32:    private lateinit var localStorage: File
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:37:        localStorage = File(context.filesDir, "local_proximity_test")
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:38:        localStorage.deleteRecursively()
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:41:            localStorage,
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:47:    fun clearStorage() {
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:99:            val dir = File(localStorage, dirName.toString())
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:117:            val dir = File(localStorage, dirName.toString())
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:124:        assertThat(localStorage.walkBottomUp().filter { it.isFile }.toList().size).isEqualTo(10 * 10)
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:128:        assertThat(localStorage.listFiles()).hasLength(5)
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:129:        assertThat(localStorage.walkBottomUp().filter { it.isFile }.toList().size).isEqualTo(5 * 10)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/extension/LocalProximityExt.kt:14:import com.lunabeestudio.framework.proto.ProtoStorage
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/extension/LocalProximityExt.kt:16:fun LocalProximity.toProto(): ProtoStorage.LocalProximityProto {
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/extension/LocalProximityExt.kt:17:    val builder = ProtoStorage.LocalProximityProto.newBuilder().apply {
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/extension/LocalProximityExt.kt:29:fun List<LocalProximity>.toProto(): ProtoStorage.LocalProximityProtoList {
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/extension/LocalProximityExt.kt:30:    val builder = ProtoStorage.LocalProximityProtoList.newBuilder().apply {
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/extension/LocalProximityExt.kt:38:fun ProtoStorage.LocalProximityProto.toDomain(): LocalProximity =
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/extension/LocalProximityExt.kt:41:fun ProtoStorage.LocalProximityProtoList.toDomain(): List<LocalProximity> =
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:18:import com.lunabeestudio.framework.proto.ProtoStorage
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:34:    private val storageDir: File,
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:59:        return storageDir.listFiles { file ->
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:72:                ProtoStorage.LocalProximityProtoList.parseFrom(cis).toDomain()
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:93:        storageDir.listFiles { file ->
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:106:        storageDir.listFiles()?.forEach { file ->
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:114:        val dailySessionDir = File(storageDir, "$daySinceNtp")
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/LocalCryptoManager.kt:136:     * Returns the AES key used for local storage encryption/decryption with AES/GCM.
+stopcovid-android/framework/src/main/proto/com/lunabeestudio/framework/proto/ProtoStorage.proto:6:option java_outer_classname = "ProtoStorage";
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-en.json:25:        "section": "Data storage times",

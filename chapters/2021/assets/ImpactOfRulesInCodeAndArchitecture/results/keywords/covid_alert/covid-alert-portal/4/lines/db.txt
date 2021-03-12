@@ -1,0 +1,436 @@
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/objects/pack/pack-b2d5516249985a8a97b26ce8dac1bd2663fa44fa.idx matches
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/objects/pack/pack-b2d5516249985a8a97b26ce8dac1bd2663fa44fa.pack matches
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/packed-refs:2:f963e786697eaa292a7cb034d0483db0e1652789 refs/remotes/origin/add-constance
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/packed-refs:8:f794bfa15563310fc808b7850089c40cdb7343c8 refs/remotes/origin/confirmation_email
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/packed-refs:14:3d28731fc472e9e6343f40a8e72e24b6a1572db8 refs/remotes/origin/gitactions_fix2
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/packed-refs:20:e6d35fdbf4c99655b375644ae10142c58b004841 refs/remotes/origin/qrcode_generator
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.github/workflows/staging-deploy-portal.yml:13:        uses: fountainhead/action-wait-for-check@4699210ccc66e2a13260803fadbb77085421b891
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.github/workflows/staging-deploy-portal.yml:60:          jq  --argjson port "$CONTAINER_PORT" --arg cname "$CONTAINER_NAME" --arg taskdefarn "$TASKDEF_ARN" '.Resources[0].TargetService.Properties.TaskDefinition = $taskdefarn | .Resources[0].TargetService.Properties.LoadBalancerInfo.ContainerName = $cname | .Resources[0].TargetService.Properties.LoadBalancerInfo.ContainerPort = $port' config/infrastructure/aws/appspec-template.json > covid-alert-portal-appspec.json
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.github/workflows/staging-deploy-qrcode.yml:13:        uses: fountainhead/action-wait-for-check@4699210ccc66e2a13260803fadbb77085421b891
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.github/workflows/staging-deploy-qrcode.yml:60:          jq  --argjson port "$CONTAINER_PORT" --arg cname "$CONTAINER_NAME" --arg taskdefarn "$TASKDEF_ARN" '.Resources[0].TargetService.Properties.TaskDefinition = $taskdefarn | .Resources[0].TargetService.Properties.LoadBalancerInfo.ContainerName = $cname | .Resources[0].TargetService.Properties.LoadBalancerInfo.ContainerPort = $port' config/infrastructure/aws/appspec-template.json > qrcode-appspec.json
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.github/workflows/terraform.yml:39:  TF_VAR_rds_server_db_password: ${{ secrets.DB_PASSWORD }}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.gitignore:5:db.sqlite3
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/templates/about/1_index.html:6:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/templates/about/1_index.html:8:{% block content_class %}row{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/templates/about/1_index.html:20:    {% endblocktrans %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/templates/about/1_index.html:30:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/templates/about/2_create_account.html:6:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/templates/about/2_create_account.html:8:{% block content_class %}row{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/templates/about/2_create_account.html:38:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/templates/about/3_one_time_keys.html:6:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/templates/about/3_one_time_keys.html:8:{% block content_class %}row{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/templates/about/3_one_time_keys.html:28:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/templates/about/4_give_a_key.html:6:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/templates/about/4_give_a_key.html:8:{% block content_class %}row{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/templates/about/4_give_a_key.html:29:    {% endblocktrans %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/templates/about/4_give_a_key.html:35:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/templates/about/5_help_patient_enter_key.html:6:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/templates/about/5_help_patient_enter_key.html:8:{% block content_class %}row{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/templates/about/5_help_patient_enter_key.html:23:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/templates/about/6_admin_accounts.html:6:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/templates/about/6_admin_accounts.html:8:{% block content_class %}row{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/templates/about/6_admin_accounts.html:25:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/context_processors.py:2:from django.db.models import Q
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/migrations/0001_initial.py:4:from django.db import migrations, models
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/migrations/0001_initial.py:5:import django.db.models.deletion
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/migrations/0001_initial.py:32:                ('for_user', models.ForeignKey(blank=True, default=None, null=True, on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL, verbose_name='For User', help_text='If no user is selected the announcement will be shown to all users.')),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/migrations/0002_field_description_change.py:3:from django.db import migrations, models
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/models.py:1:from django.db import models
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/signals.py:1:from django.db.models.signals import post_delete
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/templates/backup_codes/admin_backup_codes_list.html:4:{% block title %}{% trans "Security code" %}{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/templates/backup_codes/admin_backup_codes_list.html:10:  <p>{% blocktrans with view.staff_user.email as staff_email %}Give {{ staff_email }} this code to log in.{% endblocktrans %}</p>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/templates/backup_codes/admin_backup_codes_list.html:29:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/templates/backup_codes/backup_codes_contacted.html:6:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/templates/backup_codes/backup_codes_contacted.html:13:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/templates/backup_codes/backup_codes_help.html:7:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/templates/backup_codes/backup_codes_help.html:13:  <p>{% blocktrans with view.user_admin.email as admin_email %}Ask your administrator for a code. You can email them at {{ admin_email }}.{% endblocktrans %}</p>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/templates/backup_codes/backup_codes_help.html:16:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/templates/backup_codes/backup_codes_list.html:4:{% block title %}{% trans "Security codes" %}{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/templates/backup_codes/backup_codes_list.html:6:{% block body_class %}backup_codes{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/templates/backup_codes/backup_codes_list.html:32:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/templates/backup_codes/signup_backup_codes_list.html:4:{% block title %}{% trans "No mobile phone?" %}{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/templates/backup_codes/signup_backup_codes_list.html:6:{% block body_class %}backup_codes{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/templates/backup_codes/signup_backup_codes_list.html:25:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:7:from django.db.models import Q
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:331:- Added aria-describedby attributes to inputs when there are validation error messages.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CODE_OF_CONDUCT.md:24:* Giving and gracefully accepting constructive feedback
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/infrastructure/aws/appspec-template.json:10:                    "LoadBalancerInfo": {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/infrastructure/aws/README.md:21:| Load balancing           | [Elastic Load Balancing](https://aws.amazon.com/elasticloadbalancing/) |
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/bootstrap/provider.tf:37:resource "aws_dynamodb_table" "terraform_state_lock" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/certificates.tf:7:  domain_name = "portal.covid-hcportal.cdssandbox.xyz"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/certificates.tf:9:    "register.covid-hcportal.cdssandbox.xyz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/certificates.tf:10:    "staging.covid-hcportal.cdssandbox.xyz"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/certificates.tf:50:  domain_name               = "covid-hcportal.cdssandbox.xyz"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/certificates.tf:51:  subject_alternative_names = ["*.covid-hcportal.cdssandbox.xyz"]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/cloudfront.tf:25:  aliases             = ["portal.covid-hcportal.cdssandbox.xyz", "register.covid-hcportal.cdssandbox.xyz"]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/cloudwatch_portal.tf:266:        LoadBalancer = aws_lb.covidportal.arn_suffix
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/dashboard.tf:243:                    [ "AWS/ApplicationELB", "TargetResponseTime", "LoadBalancer", "${aws_lb.covidportal.arn_suffix}", { "id": "m1", "visible": false } ]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/dashboard.tf:277:                    [ "AWS/ApplicationELB", "HTTPCode_Target_5XX_Count", "LoadBalancer", "${aws_lb.covidportal.arn_suffix}", { "id": "m1", "visible": false } ],
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/dashboard.tf:279:                    [ "AWS/ApplicationELB", "HTTPCode_ELB_503_Count", "LoadBalancer", "${aws_lb.covidportal.arn_suffix}", { "id": "m2", "visible": false } ],
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/maintenance_mode/en.htm:2:<!-- saved from url=(0071)https://staging.covid-hcportal.cdssandbox.xyz/en/login/?next=/en/start/ -->
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/maintenance_mode/en.htm:12:    <link type="text/css" href="https://staging.covid-hcportal.cdssandbox.xyz/normalize.css" rel="stylesheet" />
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/maintenance_mode/en.htm:13:    <link type="text/css" href="https://staging.covid-hcportal.cdssandbox.xyz/styles.css" rel="stylesheet" />
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/maintenance_mode/en.htm:14:    <link rel="shortcut icon" type="image/png" href="https://staging.covid-hcportal.cdssandbox.xyz/favicon.ico" />
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/maintenance_mode/en.htm:26:              <img type="image/svg+xml" src="https://staging.covid-hcportal.cdssandbox.xyz/sig-blk-en.svg" alt="Government of Canada" />
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/maintenance_mode/en.htm:52:            <p>For help or to give feedback, contact us at <a href="mailto:assistance+healthcare@cds-snc.ca">assistance+healthcare@cds-snc.ca</a></p>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/maintenance_mode/en.htm:60:          <div class="canada-wordmark"><img type="image/svg+xml" src="https://staging.covid-hcportal.cdssandbox.xyz/wmms-blk.svg" alt="Symbol of the Government of Canada" /></div>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/maintenance_mode/fr.htm:2:<!-- saved from url=(0055)https://staging.covid-hcportal.cdssandbox.xyz/fr/login/ -->
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/maintenance_mode/fr.htm:12:    <link type="text/css" href="https://staging.covid-hcportal.cdssandbox.xyz/normalize.css" rel="stylesheet" />
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/maintenance_mode/fr.htm:13:    <link type="text/css" href="https://staging.covid-hcportal.cdssandbox.xyz/styles.css" rel="stylesheet" />
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/maintenance_mode/fr.htm:14:    <link rel="shortcut icon" type="image/png" href="https://staging.covid-hcportal.cdssandbox.xyz/favicon.ico" />
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/maintenance_mode/fr.htm:26:              <img type="image/svg+xml" src="https://staging.covid-hcportal.cdssandbox.xyz/sig-blk-fr.svg" alt="Gouvernement du Canada" />
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/maintenance_mode/fr.htm:60:          <div class="canada-wordmark"><img type="image/svg+xml" src="https://staging.covid-hcportal.cdssandbox.xyz/wmms-blk.svg" alt="Symbole du gouvernement du Canada" /></div>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:280:  description              = "Security group rule for Portal DB egress through privatelink"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:363:  description              = "Security group rule for Portal DB egress through privatelink"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/outputs.tf:33:output "aws_db_subnet_group" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/outputs.tf:34:  value = aws_db_subnet_group.covidportal
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/provider.tf:22:    dynamodb_table = "terraform-lock"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/rds.tf:7:resource "aws_db_subnet_group" "covidportal" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/rds.tf:8:  name       = var.rds_db_subnet_group_name
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/rds.tf:12:    Name                  = var.rds_db_subnet_group_name
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/rds.tf:23:  db_subnet_group_name         = aws_db_subnet_group.covidportal.name
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/rds.tf:37:  database_name             = var.rds_server_db_name
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/rds.tf:39:  master_username           = var.rds_server_db_user
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/rds.tf:40:  master_password           = var.rds_server_db_password
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/rds.tf:43:  db_subnet_group_name      = aws_db_subnet_group.covidportal.name
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/secrets.tf:8:  secret_string = "postgres://${var.rds_server_db_user}:${var.rds_server_db_password}@${aws_rds_cluster.covidportal_server.endpoint}:5432/${var.rds_server_db_name}"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/variables.auto.tfvars:25:django_allowed_hosts  = ".cdssandbox.xyz"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/variables.auto.tfvars:47:rds_db_subnet_group_name = "staging-portal-db"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/variables.auto.tfvars:50:rds_server_db_name = "covid_portal"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/variables.auto.tfvars:51:rds_server_name    = "staging-covidportal-db"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/variables.auto.tfvars:52:rds_server_db_user = "postgres"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/variables.auto.tfvars:54:# rds_server_db_password       = ""
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/variables.auto.tfvars:56:rds_server_instance_class    = "db.t3.medium"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/variables.auto.tfvars:62:route53_zone_name = "tf.covid-hcportal.cdssandbox.xyz"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/variables.tf:224:variable "rds_db_subnet_group_name" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/variables.tf:228:# RDS DB - Key Retrieval/Submission
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/variables.tf:229:variable "rds_server_db_name" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/variables.tf:237:variable "rds_server_db_user" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/variables.tf:241:variable "rds_server_db_password" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/forms.py:21:    FEEDBACK_MESSAGE = _("You need to enter something if you want to contact us")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/forms.py:22:    feedback = forms.CharField(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/forms.py:23:        label=_("Ask questions or give feedback"),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/forms.py:24:        error_messages={"required": FEEDBACK_MESSAGE},
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/forms.py:34:                    "subject": self.cleaned_data.get("feedback", "")[0:20] + "...",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/forms.py:35:                    "description": self.cleaned_data.get("feedback", ""),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/forms.py:48:                    "There was a problem and your feedback wasn’t submitted. Please email your feedback to assistance+healthcare@cds-snc.ca."
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/templates/contact/form.html:7:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/templates/contact/form.html:15:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/templates/contact/success.html:6:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/templates/contact/success.html:19:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/tests.py:16:    def test_contact_empty_feedback(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/tests.py:30:        self.assertContains(response, ContactForm.FEEDBACK_MESSAGE)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/tests.py:40:            "feedback": "[test please delete] feedback",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/migrations/0001_initial.py:4:from django.db import migrations, models
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/migrations/0001_initial.py:5:import django.db.models.deletion
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/migrations/0001_initial.py:25:                ('created_by', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, related_name='+', to=settings.AUTH_USER_MODEL)),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/migrations/0002_auto_20200727_0031.py:4:from django.db import migrations, models
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/migrations/0002_auto_20200727_0031.py:5:import django.db.models.deletion
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/migrations/0002_auto_20200727_0031.py:19:            field=models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to=settings.AUTH_USER_MODEL),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/migrations/0003_remove_covidkey_key.py:3:from django.db import migrations
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/migrations/0004_auto_20200914_2055.py:4:from django.db import migrations, models
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/migrations/0004_auto_20200914_2055.py:5:import django.db.models.deletion
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/migrations/0004_auto_20200914_2055.py:24:            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to=settings.AUTH_USER_MODEL),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/models.py:2:from django.db import models
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/templates/covid_key/generate_key.html:4:{% block title %}{% trans "When patient is ready, generate a key" %}{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/templates/covid_key/generate_key.html:17:    <li>{% blocktrans %}<span>To open the app and check they’re connected to the internet.</span><strong class="break-line">OR</strong><span>To find a safe place to record the key right now.</span>{% endblocktrans %}</li>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/templates/covid_key/generate_key.html:27:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/templates/covid_key/key.html:5:{% block title %}{% trans "Give patient this key" %}{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/templates/covid_key/key.html:28:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/templates/covid_key/locked.html:4:{% block title %}{% trans "Key generation limit reached" %}{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/templates/covid_key/locked.html:9:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/templates/covid_key/otk_sms.html:8:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/templates/covid_key/otk_sms.html:19:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/templates/covid_key/otk_sms_sent.html:8:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/templates/covid_key/otk_sms_sent.html:31:  <strong>{% blocktrans %}Did {{ phone_number }} get the key?{% endblocktrans %}</strong>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/templates/covid_key/otk_sms_sent.html:34:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/templates/covid_key/start.html:4:{% block title %}{% trans "You’re logged in to give one-time keys" %}{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/templates/covid_key/start.html:12:    <li>{% blocktrans %}Tested positive for COVID-19, <strong>and</strong>,{% endblocktrans %}</li>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/templates/covid_key/start.html:25:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/docker-compose.yml:4:  db:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/docker-compose.yml:7:      - POSTGRES_DB=covid_portal
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/docker-compose.yml:14:      - DATABASE_URL=postgres://user:password@db:5432/covid_portal
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/docker-compose.yml:21:      - db
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/google_analytics/migrations/0001_initial.py:3:from django.db import migrations, models
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/google_analytics/models.py:1:from django.db import models
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/google_analytics/templates/includes/google_analytics.html:16:{% endblock %}
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.mo matches
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:536:msgid "Ask questions or give feedback"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:541:"There was a problem and your feedback wasn’t submitted. Please email your "
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:542:"feedback to assistance+healthcare@cds-snc.ca."
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:20:                "sha256:a841dacd6b99318a741b166adb07e19ee71a274450e68237b4650ca1055ab128"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:27:                "sha256:7162a3cb30ab0609f1a4c95938fd73e8604f63bdba516a7f7d64b83ff09478f0"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:42:                "sha256:1c02557aa099101b9d21496f8a914e9ed2222ef70336404eeeac8edba836fbea",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:43:                "sha256:70b62ef1527c950db59062cda342ea224d772abdf6adc58b86a45421bab20a6b"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:57:                "sha256:0d6f53a15db4120f2b08c94f11e7d93d2c911ee118b6b30a04ec3ee8310179fa",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:58:                "sha256:f864054d66fd9118f2e67044ac8981a54775ec5b67aed0441892edb553d21da5"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:83:                "sha256:27c43923c467ad8f3c2609eb28152dbbc8546d51dbda1362a086f92660d8f045",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:86:                "sha256:35f5dae5edb2f44bde9b179ed34427066bfd1bdcea20d241486a56f0d71624fc",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:87:                "sha256:3c376c94b8363ac61b0f3a2b8c888abc01e3075e8c435541fd52dba0c0e4b5a0",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:89:                "sha256:432346db309942f7b4336505878dfa92c0bfaddb6fe76f045cfbbd557fa0576a",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:104:                "sha256:7dbbbc898d23ae44336ad8d37c406ad8e9925f590290f5b0ed6de2fdaf886da9",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:108:                "sha256:82288cbc35d972fe0d9af4a99de765da48cf95fdbb1a58e53b05bfdc7ac72d47",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:109:                "sha256:8e510a3516da1b4bc41683740fc9aa29e27ffa312413e01a179f27db5a07dc7e",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:111:                "sha256:9f08dd7825e5d95db1795d13c29cd85707f5f46151de167f15e0a2ebcfafcb99",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:114:                "sha256:ab6f821b019b41ac404ff8dd23ab87c5eedcdb9d17287af545d662550871dc0a",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:116:                "sha256:bdb712094e51894fb8d462b7128db28d83a6082590e6eece243bdab26642999f",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:117:                "sha256:bdfb948bce69c83585c4838abbff09c3ec06d3db3e20d4d123cb1afdac48a782",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:118:                "sha256:c1a00074f5688d4263744b145c6e0042643544006effb549f0a69db2d5dbfd72",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:119:                "sha256:c27ed191fba57a6232e0f24a75837e9db7cd8f1294c7dff955dc20ed6c5d92ea",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:167:                "sha256:db4e17fad2e07baa02bb210c5f819fb5137c548e3a5a4330ccc8662bb88d42c7"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:182:                "sha256:01443a07723f9a479d498bd7bb63571aaa771e690f64bde515db6cdb76e8041a",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:191:                "sha256:80e9ed3f11d8927ecd5fa7e03e3aeebd87729d6feba60f9b26b554237dbe3508"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:206:                "sha256:6077807aa641c7abae9ca418e757c8e3940fb0ce60499dba24c100ad57c61442"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:227:                "sha256:46506277e2be7986053bead305b175f495e434a3de19cdb10c045f2ec83fd5ab",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:244:                "sha256:adb46905cc4ecb19d8494424e1c4352f24946bb472340a2a17257d44bf8228e6"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:267:                "sha256:e412f0f844aa101fa77ba5d07768a8a77ea0e0a6e098b87a6eef3bedb2e5ecd4"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:274:                "sha256:a39f294f8c4e026b9e441d0e4d35ff3b26d1eb2da1d52196ba4bc04ba78b1db1",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:290:                "sha256:49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:305:                "sha256:1b2d415bbf6fa7da33ef46e549db1418498267b459978eff8357e5e823962d35",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:323:                "sha256:2d82818f5bb3e369420cb3c4060a7970edba416647068eb4c5343488a6c604a8"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:330:                "sha256:28522e32cf382bc483585dd439a788618e3db207aed9534b14ba32e219ceffda",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:368:                "sha256:0deac2af1a587ae12836aa07970f5cb91964f05a7c6cdb69d8425ff4c15d4e2c",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:369:                "sha256:0e4dc3d5996760104746e6cfcdb519d9d2cd27c738296525d5867ea695774e67",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:372:                "sha256:1fabed9ea2acc4efe4671b92c669a213db744d2af8a9fc5d69a8e9bc14b7a9db",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:383:                "sha256:a0c50db33c32594305b0ef9abc0cb7db13de7621d2cadf8392a1d9b3c437ef77",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:388:                "sha256:b4afc542c0ac0db720cf516dd20c0846f71c248d2b3d21013aa0d4ef9c71ca25",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:394:                "sha256:cec7e622ebc545dbb4564e483dd20e4e404da17ae07e06f3e780b2dacd5cee66",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:399:                "sha256:e74a55f6bad0e7d3968399deb50f61f4db1926acf4a6d83beaaa7df986f48b1c",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:401:                "sha256:ee69dad2c7155756ad114c02db06002f4cded41132cc51378e57aad79cc8e4f4",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:410:                "sha256:1cfdb92dca388e27e732caa72a1cc624520fe93752a665c3b6cd8f1a91b34916",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:417:                "sha256:50826b49fbca348a61529693b0031cdb782c39060fb9dca5ac5dff858159dc5a",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:418:                "sha256:5598dc6c9dbfe882904e54584322893eff185b98960bbe2cdaaa20e8a437b6e5",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:426:                "sha256:70d807d11d508433daf96244ec1c64e55039e8a35931fc5ea9eee94dbe3cb6b5",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:428:                "sha256:7798e73225a699651888489fbb1dbc565e03a509942a8ce6194bbe6fb582a41f",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:438:                "sha256:b4e6b269a8ddaede774e5c3adbef6bf452ee144e6db8a716d23694953348cd86",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:439:                "sha256:b68794fba45bdb367eeb71249c26d23e61167510a1d0c3d6cf0f2f14636e62ee",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:458:                "sha256:0c8d1b80d1a1e91717ea7d526178e3882732420b03f08afea0406db6402e220e",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:459:                "sha256:587825ed60b1711daea4832cf37524dfd404325b7db5e25ebe88c495c9f807a0"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:482:                "sha256:38c8fd190db64f513fe4e1baa59fed086ae71fa45083b6936b52d34df8f86a88",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:484:                "sha256:4902e6aa086cbb224241adbc2f06235927d5cdacffb2425c73e6570e8d862364",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:487:                "sha256:5862975b45d451b6db51c2e654990c1820523a5b07100fc6903e9c86575202a0",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:490:                "sha256:6e4b08c6f8daca7d8f07c8d24e4331ae7953333dbd09c648ed6ebd24db5a10ee",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:492:                "sha256:749078d1eb89484db5f34b4012092ad14b327944ee7f1c4f74d6279a6e4d1884",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:495:                "sha256:83d6b356e116ca119db8e7c6fc2983289d87b27b3fac238cfe5dca529d884562",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:505:                "sha256:bafb01b4688833e099d79e7efd23f99172f501a15c44f21ea2118681473fdba0",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:508:                "sha256:d1ebb090a426db66dd80df8ca85adc4abfcbad8a7c2e9a5ec7513ede522e0a8f",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:513:                "sha256:f8f295db00ef5f8bae530fc39af0b40486ca6068733fb860b42115052206466f"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:527:                "sha256:30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:528:                "sha256:8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:543:                "sha256:017cde379adbd6a1f15a61873f43e8274179378e95ef3fede90b5aa64d304ed0",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:551:                "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:552:                "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:565:                "sha256:5dcfc2e264bd8a1db8b11a892bd1647154ce03eeba94b461effe68790d8b8e07",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:569:                "sha256:84aa6223d71012c68d577c83f4e7db50d11d6b1399a9c779046d75e24bed74ea",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:570:                "sha256:85f95aa97a35bdb2f2f7d10ec5bbdac0aeb9dafdaf88e17492da0504de2e6400",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:571:                "sha256:8db0e856712f79c45956da0c9a40ca4246abc3485ae0d7ecc86a20f5e4c09abc",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:575:                "sha256:9ec45db0c766f196ae629e509f059ff05fc3148f9ffd28f3cfe75d4afb485412",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:581:                "sha256:c1c876fd795b36126f773db9cbb393f19808edd2637e00fd6caba0e25f2c7b64",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:583:                "sha256:cc7b98bf58167b7f2db91a4327da24fb93368838eb84a44c472283778fc2446b",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:587:                "sha256:d746a437cdbca200622385305aedd9aef68e8a645e385cc483bdc5e488f07166",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:595:                "sha256:99d4073b617d30288f569d3f13d2bd7548c3a7e4c8de87db09a9d29bb3a4a60c",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:622:                "sha256:0f48fc7dc82ee14aeaedb986e175a429d24129b7eada1b7e94a864e4f0644dde",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:624:                "sha256:1375bb8b88cb050a2d4e0da901001347a44302aeadb8ceb4b6e5aa373b8ea68f",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:625:                "sha256:14a9f1887591684fb59fdba8feef7123a0da2424b0652e1b58dd5b9a7bb1188c",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:631:                "sha256:32ab83016c24c5cf3db2943286b85b0a172dae08c58d0f53875235219b676409",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:645:                "sha256:7e40d3f8eb472c1509b12ac2a7e24158ec352fc8567b77ab02c0db053927e339",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:649:                "sha256:87c4b38288f71acd2106f5d94f575bc2136ea2887fdb5dfe18003c881fa6b370",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:657:                "sha256:b7f7421841f8db443855d2854e25914a79a1ff48ae92f70d0a5c2f8907ab98c9",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:663:                "sha256:c6809ebcbf6c1049002b9ac09c127ae43929042ec1f1dbd8bb1615f7cd9f70a0",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:674:                "sha256:749dbbd6bfd0cf1318af27bf97a14e28e5ff548ef8e5b1566ccfb25a11e7c839",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:683:                "sha256:2ae695f7eb96c62529f03a038461afe3c692db3465e215355e1bb4b0ab408712"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:697:                "sha256:2295e7b2f6b5bd100585ebcb1f616591b652db8a741695b3d8f5d28bdc934367",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:706:                "sha256:35b2d75ee967ea93b55750aa9edbbf72813e06a66ba54438df2cfac9e3c27fc8"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:713:                "sha256:73ebfe9dbf22e832286dafa60473e4cd239f8592f699aa5adaf10050e6e1823c",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:721:                "sha256:30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:722:                "sha256:8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/audit_backends.py:5:from django.db.models import Count, Q
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:173:default_db_path = os.path.join(BASE_DIR, "db.sqlite3")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:180:    db_config = dj_database_url.config(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:184:    db_config = dj_database_url.config(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:185:        default=f"sqlite:///{default_db_path}", conn_max_age=600, ssl_require=is_prod
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:188:DATABASES = {"default": db_config}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:392:    "staging.covid-hcportal.cdssandbox.xyz",
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/static/portal/img/instructions/screen-0-en.png matches
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/static/portal/img/instructions/screen-0-fr.png matches
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/static/portal/img/instructions/screen-1-en.png matches
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/static/portal/img/instructions/screen-1-fr.png matches
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/static/portal/img/instructions/screen-2-en.png matches
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/static/portal/img/instructions/screen-2-fr.png matches
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/static/portal/img/instructions/screen-3-en.png matches
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/static/portal/img/instructions/screen-3-fr.png matches
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/static/portal/img/instructions/screen-4-en.png matches
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/static/portal/img/instructions/screen-4-fr.png matches
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/static/portal/img/instructions/screen-6-fr.png matches
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/403.html:6:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/403.html:21:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/403_csrf.html:4:{% block title %}{% trans "Forbidden" %}{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/403_csrf.html:12:{% endblock content %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/404.html:6:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/404.html:22:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/500.html:6:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/500.html:19:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/admin/login-disabled.html:8:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/admin/login-disabled.html:10:{% block bodyclass %}{{ block.super }} login{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/admin/login-disabled.html:12:{% block usertools %}{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/admin/login-disabled.html:14:{% block nav-global %}{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/admin/login-disabled.html:16:{% block content_title %}{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/admin/login-disabled.html:18:{% block breadcrumbs %}{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/admin/login-disabled.html:23:        <p>{% blocktrans %}Please use the <a href="{{ login_url }}">main website to log in</a>.{% endblocktrans %}</p>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/admin/login-disabled.html:25:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/base.html:37:    <title>{% block title %}{% endblock %}{% block title_suffix %} {{ title_suffix }}{% endblock %}</title>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/base.html:39:  <body class="{% block body_class %}{% endblock %}">
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/base.html:64:            <div><span>BETA</span><span>This is a new service — your feedback will help us improve it.</span></div>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/base.html:74:          <div class="content--container {% block content_class %}{% endblock %}">
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/base.html:75:            {% block content %}{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/includes/big-code.html:6:    <div class="example-text">{% blocktrans %}EXAMPLE ONLY. NOT A VALID ONE-TIME KEY.{% endblocktrans %}</div>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/includes/big-code.html:18:    {% endblocktrans %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/includes/cds_form.html:25:          {% with "aria-describedby:error--"|add:field.html_name as describedBy %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/includes/cds_form.html:26:            {{ field|add_error_attr:describedBy  }}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/includes/expires_string.html:7:  <p>{% blocktrans %}Key <strong>expires on</strong>{% endblocktrans %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/locked_out.html:6:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/locked_out.html:11:    <p>{% blocktrans %}Contact <a href="mailto:assistance+healthcare@cds-snc.ca">assistance+healthcare@cds-snc.ca</a> for help.{% endblocktrans %}</p>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/locked_out.html:12:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/registration/login.html:8:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/registration/login.html:10:{% block body_class %}login{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/registration/login.html:36:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/registration/password_reset_confirm.html:11:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/registration/password_reset_confirm.html:26:    <p>{% blocktrans with url=reset_url %}If you still need a new password, <a href="{{ url }}">send a new password reset email</a>.{% endblocktrans %}</p>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/registration/password_reset_confirm.html:28:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/registration/password_reset_done.html:4:{% block title %}{% trans "Check your email" %}{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/registration/password_reset_done.html:10:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/registration/password_reset_form.html:7:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/registration/password_reset_form.html:16:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/throttled/locked.html:4:{% block title %}{% trans "Daily limit reached" %}{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/throttled/locked.html:9:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:33:        self.assertNotContains(response, 'aria-describedby="error--username"')
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:53:        # look for the input including the id, the input value, and the "aria-describedby" attribute
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:56:            '<input type="text" name="username" value="roger sterling" autocapitalize="none" autocomplete="off" maxlength="255" aria-describedby="error--username" id="id_username">',
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:61:    https://github.com/django/django/blob/9a54a9172a724d38caf6a150f41f23d79b9bdbb7/django/contrib/auth/forms.py#L173
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:258:    https://github.com/django/django/blob/9a54a9172a724d38caf6a150f41f23d79b9bdbb7/django/contrib/auth/forms.py#L251
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:285:                "uidb64": urlsafe_base64_encode(force_bytes(user.pk)),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/migrations/0001_initial.py:4:from django.db import migrations, models
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/migrations/0002_healthcareuser_province.py:3:from django.db import migrations, models
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/migrations/0003_remove_healthcareuser_language.py:3:from django.db import migrations
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/migrations/0004_add_healthcareprovince_model.py:3:from django.db import migrations, models
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/migrations/0004_add_healthcareprovince_model.py:4:import django.db.models.deletion
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/migrations/0004_add_healthcareprovince_model.py:38:                on_delete=django.db.models.deletion.PROTECT,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/migrations/0005_add_provinces.py:3:from django.db import migrations
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/migrations/0006_healthcareuser_is_superuser.py:3:from django.db import migrations, models
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/migrations/0007_healthcareuser_phone_number.py:3:from django.db import migrations
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/migrations/0008_create_intial_notifysms_devices.py:3:from django.db import migrations
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/migrations/0009_add_more_provinces.py:3:from django.db import migrations, models
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/migrations/0010_healthcareprovince_api_key.py:3:from django.db import migrations, models
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/migrations/0011_auto_20200827_1428.py:3:from django.db import migrations, models
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/migrations/0011_auto_20200831_1848.py:3:from django.db import migrations, models
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/migrations/0012_healthcareuser_blocked_until.py:3:from django.db import migrations, models
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/migrations/0013_merge_20200902_1402.py:3:from django.db import migrations
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/migrations/0014_auto_20200907_0159.py:3:from django.db import migrations, models
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/migrations/0015_fix_invitation_sent.py:3:from django.db import migrations
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/migrations/0016_update_description_name_phone_number.py:3:from django.db import migrations, models
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/migrations/0017_update_description_phone_number.py:3:from django.db import migrations
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/migrations/0018_add_new_province_alter_province_abbr.py:3:from django.db import migrations, models
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/migrations/0019_healthcareprovince_sms_enabled.py:3:from django.db import migrations, models
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/models.py:2:from django.db import models
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/models.py:47:        user.save(using=self._db)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/models.py:63:        user.save(using=self._db)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/signals.py:1:from django.db.models.signals import post_save, pre_save
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/img/sig-blk-en.jpg matches
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/img/sig-blk-fr.jpg matches
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/img/wmms-blk.jpg matches
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/invitations/messages/invite_already_accepted.txt:3:{% blocktrans %}Account already exists for ‘{{ email }}’{% endblocktrans %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/invitations/messages/invite_expired.txt:3:{% blocktrans %}This link has expired.{% endblocktrans %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/invitations/messages/invite_invalid.txt:3:{% blocktrans %}This link is invalid. Ask your administrator for a new link.{% endblocktrans %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/invitations/templates/invitation_confirm_delete.html:6:  {% blocktrans with email=invitation.email%}Are you sure you want to delete the invitation sent to {{ email }}?{% endblocktrans %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/invitations/templates/invitation_confirm_delete.html:7:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/invitations/templates/invitation_confirm_delete.html:12:  <h1>{% blocktrans with email=invitation.email%}Are you sure you want to delete the invitation sent to {{ email }}?{% endblocktrans %}</h1>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/invitations/templates/invitation_confirm_delete.html:16:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/invitations/templates/invite.html:7:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/invitations/templates/invite.html:14:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/invitations/templates/invite_complete.html:7:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/invitations/templates/invite_complete.html:10:  <h1>{% blocktrans with email=request.session.invite_email %}Invitation sent to {{ email }}{% endblocktrans %}</h1>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/invitations/templates/invite_complete.html:11:  <p>{% blocktrans %}They’ll get an email with a link to create their account. The link expires in 1 day.{% endblocktrans %}</p>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/invitations/templates/invite_complete.html:16:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/invitations/templates/invite_expired.html:4:{% block title %}{% trans "Ask your administrator for a new link" %}{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/invitations/templates/invite_expired.html:10:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/invitations/templates/invite_list.html:7:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/invitations/templates/invite_list.html:38:                            <span class="visually-hidden">{% blocktrans with email=invitation.email %}Resend invitation to {{ email }}{% endblocktrans %}</span>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/invitations/templates/invite_list.html:43:                        <span class="visually-hidden">{% blocktrans with email=invitation.email %}Delete invitation for {{email}}{% endblocktrans %}</span>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/invitations/templates/invite_list.html:53:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/invitations/templates/locked.html:4:{% block title %}{% trans "Invitation limit reached" %}{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/invitations/templates/locked.html:9:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/2fa-resend.html:7:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/2fa-resend.html:18:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/2fa.html:7:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/2fa.html:35:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/edit.html:7:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/edit.html:15:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/healthcareuser_confirm_delete.html:7:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/healthcareuser_confirm_delete.html:12:  <h1>{% blocktrans with email=profile_user.email %}Are you sure you want to delete the account at {{ email }}?{% endblocktrans %}</h1>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/healthcareuser_confirm_delete.html:13:  <p>{% blocktrans with name=profile_user.name %}{{ name }} will not be able to log in and their details will be deleted.{% endblocktrans %}</p>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/healthcareuser_confirm_delete.html:18:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/healthcareuser_detail.html:10:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/healthcareuser_detail.html:157:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/healthcareuser_list.html:4:{% block title %}{% trans "Manage team" %}{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/healthcareuser_list.html:37:              <span class="visually-hidden">{% blocktrans with email=healthcareuser.email %}View account for {{ email }}{% endblocktrans %}</span>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/healthcareuser_list.html:40:              <span class="visually-hidden">{% blocktrans with email=healthcareuser.email %}Manage account for {{ email }}{% endblocktrans %}</span>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/healthcareuser_list.html:47:                <span class="visually-hidden">{% blocktrans with email=healthcareuser.email %}Delete account for {{email}}{% endblocktrans %}</span>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/healthcareuser_list.html:58:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/privacy.html:6:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/privacy.html:40:    {% endblocktrans %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/privacy.html:42:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/signup.html:7:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/signup.html:15:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/signup_2fa.html:7:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/signup_2fa.html:16:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/support.html:6:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/support.html:16:    <p>{% blocktrans with view.user_admin.email as admin_email %}Contact your administrator at <a href="mailto:{{ admin_email }}">{{ admin_email }}</a>.{% endblocktrans %}</p>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/support.html:29:  {% endblocktrans %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/support.html:36:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/terms.html:6:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/terms.html:29:    {% endblocktrans %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/terms.html:31:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/yubikey_create.html:7:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/yubikey_create.html:15:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/yubikey_delete.html:7:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/yubikey_delete.html:16:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/yubikey_verify.html:7:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/yubikey_verify.html:15:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:33:    # Provinces are inserted into the DB during migrations, we can call them once the test DB is initialized
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:577:        # So let's force a reload from the DB
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:578:        self.invite.refresh_from_db()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/urls.py:149:        "reset/<uidb64>/<token>/",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/utils/_banned_passwords.py:25:    "YfDbUfNjH10305070",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/utils/_banned_passwords.py:898:    "dkflbvbhjdbx",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/utils/_banned_passwords.py:967:    "fktrcfylhjdbx",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/utils/_banned_passwords.py:1163:    "hellogoodbye",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/utils/_banned_passwords.py:1418:    "davidbeckham",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:22:from django.db.models.expressions import RawSQL
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:309:        # Pass user to invite, save the invite to the DB, and return it
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:95:- `FRESHDESK_PRODUCT_ID`: If you use more than one product, use this variable to specify where the feedback should go to.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:138:| `django.db.backends.postgresql` | `postgres://USER:PASSWORD@HOST:PORT/NAME` |
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:176:You can use Docker Compose to build an application container along with a Postgres database. It will map your local files into a Docker container, spin up a PostgreSQL database, and do CSS compilation and a DB migration. The app runs on port `8000`, the database at port `5432` (u: `user`, p: `password`) and will be served at `http://0.0.0.0:8000`.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:285:| `django.db.backends.postgresql` | `postgres://USER:PASSWORD@HOST:PORT/NAME` |
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/migrations/0001_initial.py:3:from django.db import migrations, models
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/migrations/0002_location.py:3:from django.db import migrations, models
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/migrations/0003_auto_20210204_1508.py:3:from django.db import migrations
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/migrations/0004_location_short_code.py:3:from django.db import migrations, models
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/models.py:2:from django.db import models
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/templates/register/confirmation.html:6:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/templates/register/confirmation.html:34:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/templates/register/location_address.html:7:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/templates/register/location_address.html:20:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/templates/register/location_category.html:7:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/templates/register/location_category.html:15:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/templates/register/location_contact.html:7:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/templates/register/location_contact.html:16:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/templates/register/location_name.html:7:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/templates/register/location_name.html:16:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/templates/register/registrant_email.html:7:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/templates/register/registrant_email.html:15:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/templates/register/registrant_name.html:7:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/templates/register/registrant_name.html:15:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/templates/register/start.html:7:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/templates/register/start.html:17:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/templates/register/summary.html:6:{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/templates/register/summary.html:109:{% endblock %}

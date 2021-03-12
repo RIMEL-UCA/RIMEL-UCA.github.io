@@ -1,0 +1,107 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/pre-push.sample:31:		# Handle delete
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/pre-rebase.sample:102:   it is deleted.  If you need to build on top of it to correct
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/pre-rebase.sample:124:    Then you can delete it.  More importantly, you should not
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/pre-rebase.sample:149:   and is ready to be deleted.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/pre-rebase.sample:154:B to be deleted.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:13:# hooks.allowdeletetag
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:19:# hooks.allowdeletebranch
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:47:allowdeletebranch=$(git config --bool hooks.allowdeletebranch)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:49:allowdeletetag=$(git config --bool hooks.allowdeletetag)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:62:# if $newrev is 0000...0000, it's a commit to delete a ref.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:65:	newrev_type=delete
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:80:	refs/tags/*,delete)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:81:		# delete tag
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:82:		if [ "$allowdeletetag" != "true" ]; then
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:103:	refs/heads/*,delete)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:104:		# delete branch
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:105:		if [ "$allowdeletebranch" != "true" ]; then
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:113:	refs/remotes/*,delete)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:114:		# delete tracking branch
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:115:		if [ "$allowdeletebranch" != "true" ]; then
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/mocks/pkg/persistence/Conn.go:205:// DeleteExhaustedKeys provides a mock function with given fields: _a0
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/mocks/pkg/persistence/Conn.go:206:func (_m *Conn) DeleteExhaustedKeys(_a0 context.Context) (int64, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/mocks/pkg/persistence/Conn.go:226:// DeleteExpiredKeys provides a mock function with given fields: _a0
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/mocks/pkg/persistence/Conn.go:227:func (_m *Conn) DeleteExpiredKeys(_a0 context.Context) (int64, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/mocks/pkg/persistence/Conn.go:247:// DeleteOldDiagnosisKeys provides a mock function with given fields:
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/mocks/pkg/persistence/Conn.go:248:func (_m *Conn) DeleteOldDiagnosisKeys() (int64, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/mocks/pkg/persistence/Conn.go:268:// DeleteOldFailedClaimKeyAttempts provides a mock function with given fields:
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/mocks/pkg/persistence/Conn.go:269:func (_m *Conn) DeleteOldFailedClaimKeyAttempts() (int64, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/mocks/pkg/persistence/Conn.go:289:// DeleteUnclaimedKeys provides a mock function with given fields: _a0
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/mocks/pkg/persistence/Conn.go:290:func (_m *Conn) DeleteUnclaimedKeys(_a0 context.Context) (int64, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:47:	DeleteOldDiagnosisKeys() (int64, error)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:48:	DeleteUnclaimedKeys(context.Context) (int64, error)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:49:	DeleteExhaustedKeys(context.Context) (int64, error)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:50:	DeleteExpiredKeys(context.Context) (int64, error)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:51:	DeleteOldFailedClaimKeyAttempts() (int64, error)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:123:func (c *conn) DeleteOldDiagnosisKeys() (int64, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:124:	return deleteOldDiagnosisKeys(c.db)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:127:func (c *conn) DeleteExpiredKeys(ctx context.Context) (int64, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:128:	return deleteExpiredKeys(ctx, c.db)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:131:func (c *conn) DeleteExhaustedKeys(ctx context.Context) (int64, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:132:	return deleteExhaustedKeys(ctx, c.db)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:135:func (c *conn) DeleteUnclaimedKeys(ctx context.Context) (int64, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:136:	return deleteUnclaimedKeys(ctx, c.db)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:347:func (c *conn) DeleteOldFailedClaimKeyAttempts() (int64, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:348:	return deleteOldFailedClaimKeyAttempts(c.db)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:34:func TestDBDeleteOldDiagnosisKeys(t *testing.T) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:46:	receivedResult, receivedError := conn.DeleteOldDiagnosisKeys()
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:52:func TestDBDeleteOldExpiredKeys(t *testing.T) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:77:	receivedResult, receivedError := conn.DeleteExpiredKeys(context.Background())
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:84:func TestDBDeleteOldUnclaimedKeys(t *testing.T) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:105:	receivedResult, receivedError := conn.DeleteUnclaimedKeys(context.Background())
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:112:func TestDBDeleteOldExhaustedKeys(t *testing.T) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:131:	receivedResult, receivedError := conn.DeleteExhaustedKeys(context.Background())
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:443:	mock.ExpectExec(`DELETE FROM encryption_keys WHERE hash_id = ? AND one_time_code IS NOT NULL`).WithArgs(hashID).WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:772:func TestDBDeleteOldFailedClaimKeyAttempts(t *testing.T) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:783:	receivedResult, receivedError := conn.DeleteOldFailedClaimKeyAttempts()
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/metric_queries.go:51:			numberToDelete int
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/metric_queries.go:55:		if err := rows.Scan(&originator, &numberToDelete); err != nil {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/metric_queries.go:61:			Count:      numberToDelete,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:32:func deleteOldDiagnosisKeys(db *sql.DB) (int64, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:37:	res, err := db.Exec(`DELETE FROM diagnosis_keys WHERE hour_of_submission < ?`, oldestHour)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:45:func deleteExpiredKeys(ctx context.Context, db *sql.DB) (int64, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:67:		DELETE FROM encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:92:func deleteUnclaimedKeys(ctx context.Context, db *sql.DB) (int64, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:100:	// Count the keys we are going to delete
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:111:		DELETE FROM encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:137:func deleteExhaustedKeys(ctx context.Context, db *sql.DB) (int64, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:144:	// Count the keys we are going to delete
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:155:		DELETE FROM encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:326:			_, err = db.Exec(`DELETE FROM encryption_keys WHERE hash_id = ? AND one_time_code IS NOT NULL`, hashID)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:508:	_, err := db.Exec(`DELETE FROM failed_key_claim_attempts WHERE identifier = ?`, identifier)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:544:func deleteOldFailedClaimKeyAttempts(db *sql.DB) (int64, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:547:	res, err := db.Exec(`DELETE FROM failed_key_claim_attempts WHERE last_failure < ?`, threshold)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:18:func TestDeleteOldDiagnosisKeys(t *testing.T) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:25:	mock.ExpectExec(`DELETE FROM diagnosis_keys WHERE hour_of_submission < ?`).WithArgs(oldestHour).WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:26:	deleteOldDiagnosisKeys(db)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:386:	// Return error if duplicate un-used hashID found but delete fails
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:403:	mock.ExpectExec(`DELETE FROM encryption_keys WHERE hash_id = ? AND one_time_code IS NOT NULL`).WithArgs(hashID).WillReturnError(fmt.Errorf("error"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:412:	assert.Equal(t, expectedErr, receivedErr, "Expected error if could not execute delete")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:414:	// Return error if duplicate un-used hashID found and delete passes (regenerates OTC)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:431:	mock.ExpectExec(`DELETE FROM encryption_keys WHERE hash_id = ? AND one_time_code IS NOT NULL`).WithArgs(hashID).WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:440:	assert.Equal(t, expectedErr, receivedErr, "Expected error if could execute delete")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:888:	mock.ExpectExec(`DELETE FROM failed_key_claim_attempts WHERE identifier = ?`).WithArgs(identifier).WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:895:	assert.Nil(t, receivedResult, "Expected nil if executed delete")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:990:func TestDeleteOldFailedClaimKeyAttempts(t *testing.T) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:994:	mock.ExpectExec(`DELETE FROM failed_key_claim_attempts WHERE last_failure < ?`).WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:997:	receivedResult, receivedError := deleteOldFailedClaimKeyAttempts(db)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:1004:	assert.Nil(t, receivedError, "Expected nil if executed delete")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/metrics_test.go:99:	httpVerbs := []string{"POST", "PUT", "DELETE", "PATCH", "OPTIONS"}
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/workers/expiration.go:19:	if nDeleted, err := w.db.DeleteOldDiagnosisKeys(); err != nil {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/workers/expiration.go:20:		log(ctx, err).Info("failed to delete old diagnosis keys")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/workers/expiration.go:23:		log(ctx, nil).WithField("count", nDeleted).Info("deleted old diagnosis keys")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/workers/expiration.go:26:	if nDeleted, err := w.db.DeleteUnclaimedKeys(ctx); err != nil {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/workers/expiration.go:27:		log(ctx, err).Info("failed to delete unclaimed keys")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/workers/expiration.go:30:		log(ctx, nil).WithField("count", nDeleted).Info("deleted unclaimed keys")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/workers/expiration.go:33:	if nDeleted, err := w.db.DeleteExpiredKeys(ctx); err != nil {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/workers/expiration.go:34:		log(ctx, err).Info("failed to delete expired keys")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/workers/expiration.go:37:		log(ctx, nil).WithField("count", nDeleted).Info("deleted expired keys")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/workers/expiration.go:40:	if nDeleted, err := w.db.DeleteExhaustedKeys(ctx); err != nil {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/workers/expiration.go:41:		log(ctx, err).Info("failed to delete exhausted keys")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/workers/expiration.go:44:		log(ctx, nil).WithField("count", nDeleted).Info("deleted exhausted keys")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/workers/expiration.go:47:	if nDeleted, err := w.db.DeleteOldFailedClaimKeyAttempts(); err != nil {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/workers/expiration.go:48:		log(ctx, err).Info("failed to delete old failed claim-key attempts")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/workers/expiration.go:51:		log(ctx, nil).WithField("count", nDeleted).Info("deleted old claim-key attempts")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/new_key_claim_hash_id_test.rb:20:    %w[get patch delete put].each do |meth|
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/new_key_claim_test.rb:32:    %w[get patch delete put].each do |meth|
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:68:    %w[post patch delete put].each do |meth|

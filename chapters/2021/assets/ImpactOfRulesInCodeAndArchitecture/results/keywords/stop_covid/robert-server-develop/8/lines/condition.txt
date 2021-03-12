@@ -1,0 +1,41 @@
+./robert-server-develop/LICENSE.md:56:# 2. License Grants and Conditions
+./robert-server-develop/LICENSE.md:94:## 2.7. Conditions
+./robert-server-develop/LICENSE.md:96:Sections 3.1, 3.2, 3.3, and 3.4 are conditions of the licenses granted in Section 2.1.
+./robert-server-develop/robert-crypto-grpc-server-messaging/LICENSE:56:# 2. License Grants and Conditions
+./robert-server-develop/robert-crypto-grpc-server-messaging/LICENSE:94:## 2.7. Conditions
+./robert-server-develop/robert-crypto-grpc-server-messaging/LICENSE:96:Sections 3.1, 3.2, 3.3, and 3.4 are conditions of the licenses granted in Section 2.1.
+./robert-server-develop/robert-crypto-grpc-server-messaging/mvnw:15:# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+./robert-server-develop/robert-crypto-grpc-server-messaging/mvnw.cmd:14:@REM "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+./robert-server-develop/robert-crypto-grpc-server-messaging/src/main/proto/crypto_service.proto:11:// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+./robert-server-develop/robert-crypto-grpc-server/LICENSE:56:# 2. License Grants and Conditions
+./robert-server-develop/robert-crypto-grpc-server/LICENSE:94:## 2.7. Conditions
+./robert-server-develop/robert-crypto-grpc-server/LICENSE:96:Sections 3.1, 3.2, 3.3, and 3.4 are conditions of the licenses granted in Section 2.1.
+./robert-server-develop/robert-crypto-grpc-server/mvnw:15:# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+./robert-server-develop/robert-crypto-grpc-server/mvnw.cmd:14:@REM "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+./robert-server-develop/robert-server-batch/LICENSE:56:# 2. License Grants and Conditions
+./robert-server-develop/robert-server-batch/LICENSE:94:## 2.7. Conditions
+./robert-server-develop/robert-server-batch/LICENSE:96:Sections 3.1, 3.2, 3.3, and 3.4 are conditions of the licenses granted in Section 2.1.
+./robert-server-develop/robert-server-batch/mvnw:15:# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+./robert-server-develop/robert-server-batch/mvnw.cmd:14:@REM "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/service/impl/ScoringStrategyServiceImpl.java:7:import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/service/impl/ScoringStrategyServiceImpl.java:27:@ConditionalOnProperty(name = "robert.scoring.algo-version", havingValue = "0")
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/service/impl/ScoringStrategyV2ServiceImpl.java:7:import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/service/impl/ScoringStrategyV2ServiceImpl.java:25:@ConditionalOnProperty(name = "robert.scoring.algo-version", havingValue = "2")
+./robert-server-develop/robert-server-common/LICENSE:56:# 2. License Grants and Conditions
+./robert-server-develop/robert-server-common/LICENSE:94:## 2.7. Conditions
+./robert-server-develop/robert-server-common/LICENSE:96:Sections 3.1, 3.2, 3.3, and 3.4 are conditions of the licenses granted in Section 2.1.
+./robert-server-develop/robert-server-common/mvnw:15:# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+./robert-server-develop/robert-server-common/mvnw.cmd:14:@REM "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+./robert-server-develop/robert-server-crypto/LICENSE:56:# 2. License Grants and Conditions
+./robert-server-develop/robert-server-crypto/LICENSE:94:## 2.7. Conditions
+./robert-server-develop/robert-server-crypto/LICENSE:96:Sections 3.1, 3.2, 3.3, and 3.4 are conditions of the licenses granted in Section 2.1.
+./robert-server-develop/robert-server-crypto/mvnw:15:# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+./robert-server-develop/robert-server-crypto/mvnw.cmd:14:@REM "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+./robert-server-develop/robert-server-database/mvnw:15:# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+./robert-server-develop/robert-server-database/mvnw.cmd:14:@REM "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+./robert-server-develop/robert-server-dataset-injector/mvnw:15:# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+./robert-server-develop/robert-server-dataset-injector/mvnw.cmd:14:@REM "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+./robert-server-develop/robert-server-ws-rest/mvnw:15:# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+./robert-server-develop/robert-server-ws-rest/mvnw.cmd:14:@REM "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/CaptchaControllerImpl.java:9:import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/CaptchaControllerImpl.java:27:@ConditionalOnProperty("captcha.gateway.enabled")

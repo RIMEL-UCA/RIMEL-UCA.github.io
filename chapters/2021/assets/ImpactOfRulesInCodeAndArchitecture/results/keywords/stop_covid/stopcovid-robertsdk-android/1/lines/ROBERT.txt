@@ -1,0 +1,157 @@
+../stopcovid-robertsdk-android/.git/config:9:	url = https://gitlab.inria.fr/stopcovid19/stopcovid-robertsdk-android.git
+Binary file ../stopcovid-robertsdk-android/.git/index matches
+../stopcovid-robertsdk-android/.git/logs/HEAD:1:0000000000000000000000000000000000000000 7f28ef01b9daa89d0867bdf21328d0916de104c3 davidbisegna <david.bisegna@etu.unice.fr> 1613461122 +0100	clone: from https://gitlab.inria.fr/stopcovid19/stopcovid-robertsdk-android.git
+../stopcovid-robertsdk-android/.git/logs/refs/heads/master:1:0000000000000000000000000000000000000000 7f28ef01b9daa89d0867bdf21328d0916de104c3 davidbisegna <david.bisegna@etu.unice.fr> 1613461122 +0100	clone: from https://gitlab.inria.fr/stopcovid19/stopcovid-robertsdk-android.git
+../stopcovid-robertsdk-android/.git/logs/refs/remotes/origin/HEAD:1:0000000000000000000000000000000000000000 7f28ef01b9daa89d0867bdf21328d0916de104c3 davidbisegna <david.bisegna@etu.unice.fr> 1613461122 +0100	clone: from https://gitlab.inria.fr/stopcovid19/stopcovid-robertsdk-android.git
+../stopcovid-robertsdk-android/domain/src/androidTest/java/com/lunabeestudio/domain/SSUBuilderTest.kt:32:            settings = SSUSettings(prefix = RobertConstant.PREFIX.C2),
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/HelloSettings.kt:13:import com.lunabeestudio.domain.RobertConstant
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/HelloSettings.kt:21:    val prefix: Byte = RobertConstant.PREFIX.C1
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/RobertConstant.kt:13:object RobertConstant {
+../stopcovid-robertsdk-android/README.md:4:Ce composant a pour rôle d'implémenter le protocole ROBERT dans l'application mobile pour Android
+../stopcovid-robertsdk-android/robert/src/main/AndroidManifest.xml:14:    package="com.lunabeestudio.robert">
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/Constant.kt:11:package com.lunabeestudio.robert
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/Constant.kt:15:    const val STATUS_WORKER_NAME: String = "RobertManager.Status.Worker"
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/LocalEphemeralBluetoothIdentifierDataSource.kt:11:package com.lunabeestudio.robert.datasource
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/LocalKeystoreDataSource.kt:11:package com.lunabeestudio.robert.datasource
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/LocalLocalProximityDataSource.kt:11:package com.lunabeestudio.robert.datasource
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/RemoteServiceDataSource.kt:11:package com.lunabeestudio.robert.datasource
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/RemoteServiceDataSource.kt:17:import com.lunabeestudio.robert.model.RobertResult
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/RemoteServiceDataSource.kt:18:import com.lunabeestudio.robert.model.RobertResultData
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/RemoteServiceDataSource.kt:21:    suspend fun register(captcha: String): RobertResultData<RegisterReport>
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/RemoteServiceDataSource.kt:22:    suspend fun unregister(serverStatusUpdate: ServerStatusUpdate): RobertResult
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/RemoteServiceDataSource.kt:23:    suspend fun status(serverStatusUpdate: ServerStatusUpdate, ntpInitialTimeS: Long): RobertResultData<StatusReport>
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/RemoteServiceDataSource.kt:24:    suspend fun report(token: String, localProximityList: List<LocalProximity>): RobertResult
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/RemoteServiceDataSource.kt:25:    suspend fun deleteExposureHistory(serverStatusUpdate: ServerStatusUpdate): RobertResult
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/RemoteServiceDataSource.kt:26:    suspend fun eraseRemoteAlert(): RobertResult
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/extension/ByteArrayExt.kt:11:package com.lunabeestudio.robert.extension
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertException.kt:11:package com.lunabeestudio.robert.model
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertException.kt:13:abstract class RobertException(
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertException.kt:24:    ROBERT_UNKNOWN,
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertException.kt:25:    ROBERT_NO_EBID_FOR_EPOCH,
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertException.kt:26:    ROBERT_NO_EBID,
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertException.kt:32:    RobertException(ErrorCode.UNKNOWN, message)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertException.kt:35:    RobertException(ErrorCode.UNAUTHORIZED, message)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertException.kt:38:    RobertException(ErrorCode.BACKEND, message)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertException.kt:41:    RobertException(ErrorCode.NO_INTERNET, message)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertException.kt:45:    RobertException(ErrorCode.PROXIMITY_UNKNOWN, message)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertException.kt:48:    RobertException(ErrorCode.KEYSTORE_NO_KEY, message)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertException.kt:51:    RobertException(ErrorCode.ROBERT_NO_EBID_FOR_EPOCH, message)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertException.kt:54:    RobertException(ErrorCode.ROBERT_NO_EBID, message ?: "No EphemeralBluetoothIdentifier found")
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertException.kt:56:class RobertUnknownException(message: String = "Unknown error occurred") :
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertException.kt:57:    RobertException(ErrorCode.ROBERT_UNKNOWN, message)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertException.kt:61:    RobertException(ErrorCode.KEYSTORE_DECRYPT, message)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertResult.kt:11:package com.lunabeestudio.robert.model
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertResult.kt:13:sealed class RobertResult {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertResult.kt:14:    open class Success : RobertResult()
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertResult.kt:15:    open class Failure(var error: RobertException? = null) : RobertResult()
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertResult.kt:18:sealed class RobertResultData<T> {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertResult.kt:19:    open class Success<T>(val data: T) : RobertResultData<T>()
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertResult.kt:20:    open class Failure<T>(var error: RobertException? = null) : RobertResultData<T>()
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/EphemeralBluetoothIdentifierRepository.kt:11:package com.lunabeestudio.robert.repository
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/EphemeralBluetoothIdentifierRepository.kt:16:import com.lunabeestudio.robert.datasource.LocalEphemeralBluetoothIdentifierDataSource
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:11:package com.lunabeestudio.robert.repository
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:14:import com.lunabeestudio.robert.datasource.LocalKeystoreDataSource
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/LocalProximityRepository.kt:11:package com.lunabeestudio.robert.repository
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/LocalProximityRepository.kt:14:import com.lunabeestudio.robert.datasource.LocalLocalProximityDataSource
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:11:package com.lunabeestudio.robert.repository
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:18:import com.lunabeestudio.robert.datasource.RemoteServiceDataSource
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:19:import com.lunabeestudio.robert.model.RobertResult
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:20:import com.lunabeestudio.robert.model.RobertResultData
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:27:    suspend fun register(captcha: String): RobertResultData<RegisterReport> =
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:30:    suspend fun unregister(serverStatusUpdate: ServerStatusUpdate): RobertResult =
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:33:    suspend fun status(serverStatusUpdate: ServerStatusUpdate, ntpInitialTimeS: Long): RobertResultData<StatusReport> =
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:36:    suspend fun report(token: String, localProximityList: List<LocalProximity>): RobertResult =
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:39:    suspend fun deleteExposureHistory(serverStatusUpdate: ServerStatusUpdate): RobertResult =
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:42:    suspend fun eraseRemoteAlert(): RobertResult =
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertApplication.kt:11:package com.lunabeestudio.robert
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertApplication.kt:15:interface RobertApplication {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertApplication.kt:16:    val robertManager: RobertManager
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManager.kt:11:package com.lunabeestudio.robert
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManager.kt:16:import com.lunabeestudio.robert.model.RobertResult
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManager.kt:17:import com.lunabeestudio.robert.model.RobertResultData
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManager.kt:19:interface RobertManager {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManager.kt:31:    suspend fun register(application: RobertApplication, captcha: String): RobertResult
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManager.kt:33:    fun activateProximity(application: RobertApplication)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManager.kt:35:    fun deactivateProximity(application: RobertApplication)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManager.kt:37:    suspend fun updateStatus(): RobertResult
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManager.kt:41:    suspend fun report(token: String): RobertResult
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManager.kt:45:    fun getCurrentHelloBuilder(): RobertResultData<HelloBuilder>
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManager.kt:47:    suspend fun eraseLocalHistory(): RobertResult
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManager.kt:49:    suspend fun eraseRemoteExposureHistory(): RobertResult
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManager.kt:51:    suspend fun eraseRemoteAlert(): RobertResult
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManager.kt:53:    suspend fun quitStopCovid(application: RobertApplication): RobertResult
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:11:package com.lunabeestudio.robert
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:20:import com.lunabeestudio.domain.RobertConstant
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:28:import com.lunabeestudio.robert.datasource.LocalEphemeralBluetoothIdentifierDataSource
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:29:import com.lunabeestudio.robert.datasource.LocalKeystoreDataSource
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:30:import com.lunabeestudio.robert.datasource.LocalLocalProximityDataSource
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:31:import com.lunabeestudio.robert.datasource.RemoteServiceDataSource
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:32:import com.lunabeestudio.robert.extension.use
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:33:import com.lunabeestudio.robert.model.NoEphemeralBluetoothIdentifierFound
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:34:import com.lunabeestudio.robert.model.NoEphemeralBluetoothIdentifierFoundForEpoch
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:35:import com.lunabeestudio.robert.model.RobertResult
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:36:import com.lunabeestudio.robert.model.RobertResultData
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:37:import com.lunabeestudio.robert.model.RobertUnknownException
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:38:import com.lunabeestudio.robert.model.UnknownException
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:39:import com.lunabeestudio.robert.repository.EphemeralBluetoothIdentifierRepository
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:40:import com.lunabeestudio.robert.repository.KeystoreRepository
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:41:import com.lunabeestudio.robert.repository.LocalProximityRepository
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:42:import com.lunabeestudio.robert.repository.RemoteServiceRepository
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:43:import com.lunabeestudio.robert.worker.StatusWorker
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:47:class RobertManagerImpl(
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:48:    application: RobertApplication,
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:53:) : RobertManager {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:84:    override suspend fun register(application: RobertApplication, captcha: String): RobertResult {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:91:            is RobertResultData.Success -> {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:98:                RobertResult.Success()
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:100:            is RobertResultData.Failure -> RobertResult.Failure(result.error)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:104:    override fun activateProximity(application: RobertApplication) {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:109:    override fun deactivateProximity(application: RobertApplication) {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:114:    override suspend fun updateStatus(): RobertResult {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:115:        val ssu = getSSU(RobertConstant.PREFIX.C2)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:117:        return if (ssu is RobertResultData.Success && timeStart != null) {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:121:                is RobertResultData.Success -> {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:125:                    RobertResult.Success()
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:127:                is RobertResultData.Failure -> RobertResult.Failure(result.error)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:131:            RobertResult.Failure(UnknownException())
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:144:    override suspend fun report(token: String): RobertResult {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:147:            is RobertResult.Success -> {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:159:    private fun getSSU(prefix: Byte): RobertResultData<ServerStatusUpdate> {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:165:                RobertResultData.Success(ssuBuilder.build())
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:166:            } ?: RobertResultData.Failure(RobertUnknownException())
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:168:            RobertResultData.Failure(NoEphemeralBluetoothIdentifierFound())
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:172:    override fun getCurrentHelloBuilder(): RobertResultData<HelloBuilder> {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:178:                RobertResultData.Success(helloBuilder)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:179:            } ?: RobertResultData.Failure(RobertUnknownException())
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:181:            RobertResultData.Failure(NoEphemeralBluetoothIdentifierFoundForEpoch())
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:185:    override suspend fun eraseLocalHistory(): RobertResult {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:187:        return RobertResult.Success()
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:190:    override suspend fun eraseRemoteExposureHistory(): RobertResult {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:191:        val ssu = getSSU(RobertConstant.PREFIX.C4)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:193:            is RobertResultData.Success -> {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:196:                    is RobertResult.Success -> result
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:197:                    is RobertResult.Failure -> RobertResult.Failure(result.error)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:200:            is RobertResultData.Failure -> {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:201:                RobertResult.Failure(ssu.error)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:206:    override suspend fun eraseRemoteAlert(): RobertResult {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:210:    override suspend fun quitStopCovid(application: RobertApplication): RobertResult {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:211:        val ssu = getSSU(RobertConstant.PREFIX.C3)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:213:            is RobertResultData.Success -> {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:216:                    is RobertResult.Success -> {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:227:                        RobertResult.Success()
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:229:                    is RobertResult.Failure -> RobertResult.Failure(result.error)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:232:            is RobertResultData.Failure -> {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:233:                RobertResult.Failure(ssu.error)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/worker/StatusWorker.kt:11:package com.lunabeestudio.robert.worker
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/worker/StatusWorker.kt:16:import com.lunabeestudio.robert.RobertApplication
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/worker/StatusWorker.kt:17:import com.lunabeestudio.robert.RobertManager
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/worker/StatusWorker.kt:18:import com.lunabeestudio.robert.model.RobertResult
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/worker/StatusWorker.kt:25:        val robertManager: RobertManager = (applicationContext as RobertApplication).robertManager
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/worker/StatusWorker.kt:28:        val wasAtRisk = robertManager.isAtRisk
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/worker/StatusWorker.kt:29:        val result = robertManager.updateStatus()
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/worker/StatusWorker.kt:31:        if (!wasAtRisk && robertManager.isAtRisk) {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/worker/StatusWorker.kt:32:            (applicationContext as RobertApplication).atRiskDetected()
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/worker/StatusWorker.kt:36:            is RobertResult.Success -> {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/worker/StatusWorker.kt:38:                robertManager.clearOldData()
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/worker/StatusWorker.kt:41:            is RobertResult.Failure -> Result.retry()
+../stopcovid-robertsdk-android/settings.gradle:8:include ':robert'

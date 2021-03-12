@@ -1,0 +1,113 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/.git/hooks/pre-commit.sample:26:# printable range starts at the space character and ends with tilde.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/.git/hooks/pre-commit.sample:39:To be portable it is advisable to rename the file.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/build.gradle:82: *   nodeExecutableAndArgs: ["node"],
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/CustomPackage.kt:16:    private var nativeModules: MutableList<NativeModule>? = null
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/CustomPackage.kt:18:    override fun createNativeModules(reactContext: ReactApplicationContext): MutableList<NativeModule> {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/CustomPackage.kt:19:        val nativeModules = mutableListOf<NativeModule>(
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/CustomPackage.kt:29:    override fun createViewManagers(reactContext: ReactApplicationContext): MutableList<ViewManager<View, ReactShadowNode<*>>> = mutableListOf()
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/extensions/ReactNativeExtensions.kt:6:import com.facebook.react.bridge.WritableArray
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/extensions/ReactNativeExtensions.kt:7:import com.facebook.react.bridge.WritableMap
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/extensions/ReactNativeExtensions.kt:8:import com.facebook.react.bridge.WritableNativeArray
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/extensions/ReactNativeExtensions.kt:9:import com.facebook.react.bridge.WritableNativeMap
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/extensions/ReactNativeExtensions.kt:14:fun List<Any>.toWritableArray(): WritableArray {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/extensions/ReactNativeExtensions.kt:15:    val writableArray = WritableNativeArray()
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/extensions/ReactNativeExtensions.kt:16:    forEach { writableArray.pushMap(it.toWritableMap()) }
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/extensions/ReactNativeExtensions.kt:17:    return writableArray
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/extensions/ReactNativeExtensions.kt:20:fun Any.toWritableMap(): WritableMap {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/extensions/ReactNativeExtensions.kt:33:private fun convertJsonToMap(jsonObject: JSONObject): WritableMap {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/extensions/ReactNativeExtensions.kt:34:    val map: WritableMap = WritableNativeMap()
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/extensions/ReactNativeExtensions.kt:66:private fun convertJsonToArray(jsonArray: JSONArray): WritableArray {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/extensions/ReactNativeExtensions.kt:67:    val array: WritableArray = WritableNativeArray()
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/ExposureNotificationModule.kt:20:import app.covidshield.extensions.toWritableArray
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/ExposureNotificationModule.kt:21:import app.covidshield.extensions.toWritableMap
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/ExposureNotificationModule.kt:45:import kotlinx.coroutines.CompletableDeferred
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/ExposureNotificationModule.kt:67:    private var startResolutionCompleter: CompletableDeferred<Unit>? = null
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/ExposureNotificationModule.kt:68:    private var getTekResolutionCompleter: CompletableDeferred<Unit>? = null
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/ExposureNotificationModule.kt:69:    private var detectExposureResolutionCompleters = hashMapOf<Token, CompletableDeferred<Token>?>()
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/ExposureNotificationModule.kt:147:            val completer = CompletableDeferred<Token>()
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/ExposureNotificationModule.kt:156:            promise.resolve(summary.toWritableMap().apply {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/ExposureNotificationModule.kt:187:            promise.resolve(summaryAndToken?.first?.toWritableMap()?.apply {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/ExposureNotificationModule.kt:201:            promise.resolve(exposureKeys.toWritableArray())
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/ExposureNotificationModule.kt:224:                    val daysToInfectiousness = mutableMapOf<Int, Int>()
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/ExposureNotificationModule.kt:252:                promise.resolve(windows.toWritableArray())
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/ExposureNotificationModule.kt:270:                    startResolutionCompleter = CompletableDeferred()
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/ExposureNotificationModule.kt:310:                getTekResolutionCompleter = CompletableDeferred()
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/receiver/worker/ExposureCheckHeadlessTask.java:12:import com.facebook.react.bridge.WritableMap;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/receiver/worker/ExposureCheckHeadlessTask.java:13:import com.facebook.react.bridge.WritableNativeMap;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/receiver/worker/ExposureCheckHeadlessTask.java:39:        WritableMap clientEvent = new WritableNativeMap();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/receiver/worker/ExposureCheckSchedulerWorker.kt:42:                            val completer = CompletableDeferred<Unit>()
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/receiver/worker/HeadlessJsTaskWorker.kt:9:import kotlinx.coroutines.CompletableDeferred
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/receiver/worker/HeadlessJsTaskWorker.kt:33:                    val completer = CompletableDeferred<Unit>()
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/utils/PendingTokenManager.kt:21:            putStringSet(TOKEN, tokens.toMutableSet().apply { add(token) })
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/gradlew:88:        # IBM's JDK on AIX uses strange locations for the executables
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/CODE_OF_CONDUCT.md:30:Examples of unacceptable behavior include:
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/CODE_OF_CONDUCT.md:44:acceptable behavior and will take appropriate and fair corrective action in
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/CODE_OF_CONDUCT.md:63:Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at cds-snc@tbs-sct.gc.ca. All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. The project team is obligated to maintain confidentiality with regard to the reporter of an incident. Further details of specific enforcement policies may be posted separately.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/CODE_OF_CONDUCT.md:147:Voici des exemples de comportements inacceptables :
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/CODE_OF_CONDUCT.md:159:comportement acceptable et ils prendront des mesures correctives appropriées et justes en
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/CODE_OF_CONDUCT.md:171:Les cas de comportement abusif, de harcèlement ou d’autres comportements inacceptables peuvent être signalés en communiquant avec l’équipe du projet à cds-snc@tbs-sct.gc.ca. Toutes les plaintes feront l’objet d’un examen et d’une enquête, ce qui donnera lieu à une réponse jugée nécessaire et appropriée selon les circonstances. L’équipe de projet
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-app/design/illustrator/illustrations.ai matches
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/Gemfile.lock:123:      terminal-table (>= 1.4.5, < 2.0.0)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/Gemfile.lock:141:      representable (~> 3.0)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/Gemfile.lock:149:      representable (~> 3.0)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/Gemfile.lock:207:    representable (3.0.4)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/Gemfile.lock:233:    terminal-table (1.8.0)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield/ExposureNotification.m:16:@property (nonatomic) NSMutableArray *reportedSummaries;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield/ExposureNotification.m:24:    self.reportedSummaries = NSMutableArray.new;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield/ExposureNotification.m:147:      NSMutableArray *serialziedKeys = [NSMutableArray new];
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield/ExposureNotification.m:162:  NSMutableArray *acc = [NSMutableArray new];
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield/ExposureNotification.m:264:  NSMutableArray *arr = [NSMutableArray new];
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield/ExposureNotification.m:347:  NSMutableArray *arr = [NSMutableArray new];
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield/ExposureNotification.m:365:        NSMutableArray<NSDictionary *> *exWindows = [NSMutableArray new];
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield/ExposureNotification.m:367:          NSMutableArray<NSDictionary *> *scanInstances = [NSMutableArray new];
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield/Info-debug.plist:13:	<key>CFBundleExecutable</key>
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield/Info-debug.plist:14:	<string>$(EXECUTABLE_NAME)</string>
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield/Info.plist:28:	<key>CFBundleExecutable</key>
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield/Info.plist:29:	<string>$(EXECUTABLE_NAME)</string>
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield.xcodeproj/project.pbxproj:523:				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield.xcodeproj/project.pbxproj:543:				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield.xcodeproj/project.pbxproj:573:				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield.xcodeproj/project.pbxproj:600:				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield.xcodeproj/project.pbxproj:793:				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield.xcodeproj/project.pbxproj:815:				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield.xcodeproj/project.pbxproj:892:				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield.xcodeproj/project.pbxproj:914:				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield.xcodeproj/xcshareddata/xcschemes/Diawi.xcscheme:30:      <Testables>
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield.xcodeproj/xcshareddata/xcschemes/Diawi.xcscheme:31:      </Testables>
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield.xcodeproj/xcshareddata/xcschemes/Production.xcscheme:30:      <Testables>
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield.xcodeproj/xcshareddata/xcschemes/Production.xcscheme:31:         <TestableReference
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield.xcodeproj/xcshareddata/xcschemes/Production.xcscheme:40:         </TestableReference>
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield.xcodeproj/xcshareddata/xcschemes/Production.xcscheme:41:      </Testables>
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield.xcodeproj/xcshareddata/xcschemes/Staging.xcscheme:30:      <Testables>
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield.xcodeproj/xcshareddata/xcschemes/Staging.xcscheme:31:      </Testables>
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShieldTests/Info.plist:7:	<key>CFBundleExecutable</key>
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShieldTests/Info.plist:8:	<string>$(EXECUTABLE_NAME)</string>
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/patches/@react-native-community+async-storage+1.9.0.patch:7: - (NSDictionary *)_writeManifest:(NSMutableArray<NSDictionary *> **)errors
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/patches/@react-native-community+async-storage+1.9.0.patch:32:+    if ([[NSFileManager defaultManager] isDeletableFileAtPath:filePath]) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/patches/@react-native-community+async-storage+1.9.0.patch:64:+    if ([[NSFileManager defaultManager] isDeletableFileAtPath:filePath]) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/patches/react-native-system-setting+1.7.4.patch:379:-                WritableMap para = Arguments.createMap();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:1897:    fast-json-stable-stringify "^2.0.0"
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:1918:    fast-json-stable-stringify "^2.0.0"
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:3044:    fast-json-stable-stringify "^2.0.0"
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:3570:    fast-json-stable-stringify "2.x"
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:4946:    json-stable-stringify-without-jsonify "^1.0.1"
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:4959:    table "^5.2.3"
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:4960:    text-table "^0.2.0"
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:4988:    json-stable-stringify-without-jsonify "^1.0.1"
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:5000:    table "^5.2.3"
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:5001:    text-table "^0.2.0"
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:5273:fast-json-stable-stringify@2.x, fast-json-stable-stringify@^2.0.0:
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:5275:  resolved "https://registry.yarnpkg.com/fast-json-stable-stringify/-/fast-json-stable-stringify-2.1.0.tgz#874bf69c6f404c2b5d99c481341399fd55892633"
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:6954:json-stable-stringify-without-jsonify@^1.0.1:
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:6956:  resolved "https://registry.yarnpkg.com/json-stable-stringify-without-jsonify/-/json-stable-stringify-without-jsonify-1.0.1.tgz#9db7b59496ad3f3cfef30a75142d2d930ad72651"
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:6958:json-stable-stringify@^1.0.1:
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:6960:  resolved "https://registry.yarnpkg.com/json-stable-stringify/-/json-stable-stringify-1.0.1.tgz#9a759d39c5f2ff503fd5300646ed445f88c4f9af"
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:7612:    json-stable-stringify "^1.0.1"
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:9606:stable@^0.1.8:
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:9608:  resolved "https://registry.yarnpkg.com/stable/-/stable-0.1.8.tgz#836eb3c8382fe2936feaf544631017ce7d47a3cf"
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:9845:    stable "^0.1.8"
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:9864:table@^5.2.3:
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:9866:  resolved "https://registry.yarnpkg.com/table/-/table-5.4.6.tgz#1292d19500ce3f86053b05f0e8e7e4a3bb21079e"
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:9925:text-table@^0.2.0:
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:9927:  resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:10048:    fast-json-stable-stringify "2.x"

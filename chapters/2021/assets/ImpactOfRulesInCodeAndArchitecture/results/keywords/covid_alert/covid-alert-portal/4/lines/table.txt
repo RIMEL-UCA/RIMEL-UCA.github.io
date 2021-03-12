@@ -1,0 +1,69 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/pre-commit.sample:26:# printable range starts at the space character and ends with tilde.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/pre-commit.sample:39:To be portable it is advisable to rename the file.
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/index matches
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/templates/includes/_nav_about.html:3:<nav class="nav--about" aria-label="{% trans 'Table of contents: About the Portal' %}">
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:3:All notable changes to this project will be documented in this file.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:63:- Prevent visually-hidden text from being selectable
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CODE_OF_CONDUCT.md:30:Examples of unacceptable behavior include:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CODE_OF_CONDUCT.md:44:acceptable behavior and will take appropriate and fair corrective action in
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CODE_OF_CONDUCT.md:63:Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at cds-snc@tbs-sct.gc.ca. All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. The project team is obligated to maintain confidentiality with regard to the reporter of an incident. Further details of specific enforcement policies may be posted separately.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CODE_OF_CONDUCT.md:147:Voici des exemples de comportements inacceptables :
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CODE_OF_CONDUCT.md:159:comportement acceptable et ils prendront des mesures correctives appropriées et justes en
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CODE_OF_CONDUCT.md:171:Les cas de comportement abusif, de harcèlement ou d’autres comportements inacceptables peuvent être signalés en communiquant avec l’équipe du projet à cds-snc@tbs-sct.gc.ca. Toutes les plaintes feront l’objet d’un examen et d’une enquête, ce qui donnera lieu à une réponse jugée nécessaire et appropriée selon les circonstances. L’équipe de projet
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/bootstrap/provider.tf:37:resource "aws_dynamodb_table" "terraform_state_lock" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/cloudwatch_portal.tf:161:  name           = "SiteTableChange"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/cloudwatch_portal.tf:166:    name          = "SiteTableChange"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/cloudwatch_portal.tf:174:  alarm_name          = "SiteTableChangeWarn"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/cloudwatch_portal.tf:183:  alarm_description   = "COVID Alert Portal Warning - Someone changed something on the Django sites table."
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/dashboard.tf:20:                "view": "table"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/dashboard.tf:34:                "view": "table"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/dashboard.tf:48:                "view": "table"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/dashboard.tf:62:                "view": "table"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/ecr.tf:7:  image_tag_mutability = "MUTABLE"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:71:  route_table_ids   = [aws_vpc.covidportal.main_route_table_id]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:189:resource "aws_route_table" "covidportal_public_subnet" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:198:    Name                  = "Public Subnet Route Table"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:203:resource "aws_route_table_association" "covidportal" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:207:  route_table_id = aws_route_table.covidportal_public_subnet.id
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:210:resource "aws_route_table" "covidportal_private_subnet" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:221:    Name                  = "Private Subnet Route Table ${count.index}"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:226:resource "aws_route_table_association" "covidportal_private_route" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:230:  route_table_id = aws_route_table.covidportal_private_subnet.*.id[count.index]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/provider.tf:22:    dynamodb_table = "terraform-lock"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/migrations/0001_initial.py:21:                ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/models.py:7:    id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.mo matches
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:282:msgid "Table of contents: About the Portal"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:283:msgstr "Table des matières: Le portail"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:33:# Quick-start development settings - unsuitable for production
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/migrations/0001_initial.py:18:                ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/migrations/0011_auto_20200827_1428.py:69:                ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/models.py:68:    id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/models.py:135:    time = models.DateTimeField(_("Attempt Time"), auto_now_add=True, editable=False)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/models.py:140:    id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/css/normalize.css:243:  display: table; /* 1 */
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/scss/components/_summary-list.scss:5:    display: table;
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/scss/components/_summary-list.scss:7:    table-layout: fixed;
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/scss/components/_summary-list.scss:12:        display: table-row;
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/scss/components/_summary-list.scss:17:        display: table-cell;
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/scss/components/_summary-list.scss:31:        display: table-cell;
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/scss/components/_summary-list.scss:43:        display: table-cell;
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/scss/components/_table.scss:1:main table {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/scss/components/_table.scss:15:    display: table-caption;
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/scss/styles.scss:28:@import "./components/_table";
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/scss/_base.scss:12:[contentEditable="true"] {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/invitations/templates/invite_list.html:14:    <table class="with-actions invitations">
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/invitations/templates/invite_list.html:49:    </table>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/healthcareuser_detail.html:20:    <table {% if not view_only %}class="with-actions" {% endif %}>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/healthcareuser_detail.html:149:    </table>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/healthcareuser_list.html:14:  <table class="with-actions">
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/healthcareuser_list.html:56:  </table>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:479:        self.assertIn(self.email, f.as_table())
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:483:        self.assertIn('value="Manitoba"', f.as_table())
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:41:- `DJANGO_SECRET_KEY`: The `SECRET_KEY` in Django is used to provide cryptographic signing, and should be set to a unique, unpredictable value. Django won't start unless this is set. [Read the docs here](https://docs.djangoproject.com/en/3.0/ref/settings/#secret-key).
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:142:Then, create the tables by running `python manage.py migrate`.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:289:Ensuite, créez les tableaux en exécutant `python manage.py migrate`
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/migrations/0001_initial.py:18:                ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/migrations/0002_location.py:17:                ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/models.py:9:    id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/models.py:22:    id = models.UUIDField(primary_key=True, default=uuid4, editable=False)

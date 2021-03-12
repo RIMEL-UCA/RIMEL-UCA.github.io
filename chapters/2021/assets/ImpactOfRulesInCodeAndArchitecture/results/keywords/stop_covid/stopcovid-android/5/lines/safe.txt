@@ -1,0 +1,210 @@
+stopcovid-android/.git/hooks/pre-rebase.sample:93:This sample hook safeguards topic branches that have been
+stopcovid-android/.git/hooks/update.sample:32:# --- Safety check
+stopcovid-android/build.gradle:18:        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:_"
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/extension/StringExt.kt:74:fun String?.safeEmojiSpanify(): CharSequence? {
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/fastitem/ButtonItem.kt:23:import com.lunabeestudio.stopcovid.coreui.extension.safeEmojiSpanify
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/fastitem/ButtonItem.kt:38:        holder.button.text = text.safeEmojiSpanify()
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/fastitem/CaptionItem.kt:19:import com.lunabeestudio.stopcovid.coreui.extension.safeEmojiSpanify
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/fastitem/CaptionItem.kt:32:        holder.textView.text = text.safeEmojiSpanify()
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/fastitem/CardWithActionsItem.kt:17:import com.lunabeestudio.stopcovid.coreui.extension.safeEmojiSpanify
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/fastitem/CardWithActionsItem.kt:115:                actionBinding.textView.text = label.safeEmojiSpanify()
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/fastitem/TitleItem.kt:19:import com.lunabeestudio.stopcovid.coreui.extension.safeEmojiSpanify
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/fastitem/TitleItem.kt:29:        holder.textSwitcher.setText(text.safeEmojiSpanify())
+stopcovid-android/domain/src/main/java/com/lunabeestudio/domain/extension/SecretKeySpecExt.kt:16:fun SecretKey.safeDestroy() {
+stopcovid-android/domain/src/main/java/com/lunabeestudio/domain/extension/SecretKeySpecExt.kt:26:fun <T> SecretKey.safeUse(block: (SecretKey) -> T): T {
+stopcovid-android/domain/src/main/java/com/lunabeestudio/domain/extension/SecretKeySpecExt.kt:30:        safeDestroy()
+stopcovid-android/domain/src/main/java/com/lunabeestudio/domain/model/HelloBuilder.kt:13:import com.lunabeestudio.domain.extension.safeUse
+stopcovid-android/domain/src/main/java/com/lunabeestudio/domain/model/HelloBuilder.kt:44:        val hello = secretKeySpec.safeUse {
+stopcovid-android/domain/src/main/java/com/lunabeestudio/domain/model/SSUBuilder.kt:14:import com.lunabeestudio.domain.extension.safeDestroy
+stopcovid-android/domain/src/main/java/com/lunabeestudio/domain/model/SSUBuilder.kt:57:        secretKeySpec.safeDestroy()
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/sharedcrypto/BouncyCastleCryptoDataSource.kt:13:import com.lunabeestudio.domain.extension.safeUse
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/sharedcrypto/BouncyCastleCryptoDataSource.kt:55:            SecretKeySpec(sharedSecret, HASH_HMACSHA256).safeUse<Pair<ByteArray, ByteArray>> { secretKeySpec ->
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/sharedcrypto/BouncyCastleCryptoDataSource.kt:72:        return SecretKeySpec(key, ALGORITHM_AES).safeUse { secretKey ->
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/utils/CryptoHelper.kt:13:import com.lunabeestudio.domain.extension.safeDestroy
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/utils/CryptoHelper.kt:25:        key.safeDestroy()
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/utils/CryptoHelper.kt:33:        key.safeDestroy()
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/extension/EnumUtil.kt:15:inline fun <reified T : Enum<T>> safeEnumValueOf(name: String?): T? {
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:35:import com.lunabeestudio.robert.extension.safeEnumValueOf
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:147:        get() = safeEnumValueOf<LocalProximityFilter.Mode>(configuration.filterMode) ?: RobertConstant.BLE_FILTER_MODE
+stopcovid-android/stopcovid/build.gradle:15:apply plugin: 'androidx.navigation.safeargs.kotlin'
+stopcovid-android/stopcovid/build.gradle:70:                "UnsafeExperimentalUsageError",
+stopcovid-android/stopcovid/build.gradle:71:                "UnsafeExperimentalUsageWarning",
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/IsolationManagerTest.kt:49:        assert(isolationManager.currentRecommendationState == IsolationRecommendationStateEnum.INITIAL_CASE_SAFE) {
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/IsolationManagerTest.kt:50:            "current recommendation state should be initial safe"
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/IsolationManagerTest.kt:138:            IsolationRecommendationStateEnum.INITIAL_CASE_SAFE)
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/IsolationManagerTest.kt:157:            IsolationRecommendationStateEnum.INITIAL_CASE_SAFE)
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/IsolationManagerTest.kt:185:            IsolationRecommendationStateEnum.INITIAL_CASE_SAFE)
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:610:    "isolation.recommendation.initialCaseSafe.title": "هل ينبغي أن أعتزل؟",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:611:    "isolation.recommendation.initialCaseSafe.body": "وفقا لحالتك الصحية فانّ اعتزالك هامّ لكسر سلسلة تنقل الفيروس.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:610:    "isolation.recommendation.initialCaseSafe.title": "Sollte ich mich isolieren?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:611:    "isolation.recommendation.initialCaseSafe.body": "Je nach Gesundheitszustand ist Ihre Isolierung wichtig, um die Übertragungsketten zu unterbrechen.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:211:    "sickController.sick.mainMessage.title": "Stay safe!",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:272:    "widget.isSick.small.title": "Stay safe!",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:273:    "widget.isSick.full.title": "Stay safe!",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:591:    "venuesPrivateEventController.mainMessage.subtitle": "In order for everyone to stay safe anonymously, your guests can scan the QR code using the TousAntiCovid app.\nAlternatively, you can share this link with them by pressing \"Share\".",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:594:    "venuesPrivateEventController.sharing.text": "Everyone will be able to stay safe anonymously using this link:",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:596:    "informationController.mainMessage.warning.subtitle": "How you can stay safe:",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:609:    "isolation.recommendation.initialCaseSafe.title": "Do I have to self-isolate?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:610:    "isolation.recommendation.initialCaseSafe.body": "Self-isolating is an important measure in breaking the chain of transmission.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:609:    "isolation.recommendation.initialCaseSafe.title": "¿Debo aislarme?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:610:    "isolation.recommendation.initialCaseSafe.body": "Dependiendo de tu estado de salud, es importante que te aísles para romper la cadena de transmisión del virus.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:639:   "isolation.recommendation.initialCaseSafe.title": "Dois-je m'isoler ?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:640:   "isolation.recommendation.initialCaseSafe.body": "Selon votre état de santé, votre isolement est important pour rompre les chaînes de transmission.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:609:    "isolation.recommendation.initialCaseSafe.title": "Devo isolarmi?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:610:    "isolation.recommendation.initialCaseSafe.body": "A seconda del tuo stato di salute, il tuo isolamento può essere importante per rompere le catene di trasmissione.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:609:    "isolation.recommendation.initialCaseSafe.title": "Devo isolar-me?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:610:    "isolation.recommendation.initialCaseSafe.body": "Em função do seu estado de saúde, o seu isolamento é importante para romper as cadeias de transmissão.",
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/NavControllerExt.kt:19:fun NavController.safeNavigate(@IdRes resId: Int, args: Bundle?, navOptions: NavOptions?) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/NavControllerExt.kt:27:fun NavController.safeNavigate(directions: NavDirections) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/ProximityFragmentIsolationExt.kt:42:    if (state == IsolationRecommendationStateEnum.INITIAL_CASE_SAFE) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/ProximityFragmentIsolationExt.kt:50:                findNavControllerOrNull()?.safeNavigate(ProximityFragmentDirections.actionProximityFragmentToIsolationFormFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/ProximityFragmentIsolationExt.kt:52:            identifier = "isolationSafe".hashCode().toLong()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/ProximityFragmentIsolationExt.kt:61:                findNavControllerOrNull()?.safeNavigate(ProximityFragmentDirections.actionProximityFragmentToIsolationFormFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/ProximityFragmentIsolationExt.kt:64:            identifier = "isolationNotSafe".hashCode().toLong()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/ProximityFragmentIsolationExt.kt:78:        IsolationRecommendationStateEnum.INITIAL_CASE_SAFE,
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/ProximityFragmentIsolationExt.kt:129:    findNavControllerOrNull()?.safeNavigate(ProximityFragmentDirections.actionProximityFragmentToIsolationFormFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/BigTitleItem.kt:19:import com.lunabeestudio.stopcovid.coreui.extension.safeEmojiSpanify
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/BigTitleItem.kt:32:        holder.textView.text = text.safeEmojiSpanify()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/ContactItem.kt:19:import com.lunabeestudio.stopcovid.coreui.extension.safeEmojiSpanify
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/ContactItem.kt:37:        holder.headerTextView.setTextOrHide(header.safeEmojiSpanify())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/ContactItem.kt:38:        holder.titleTextView.setTextOrHide(title.safeEmojiSpanify())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/ContactItem.kt:39:        holder.captionTextView.setTextOrHide(caption.safeEmojiSpanify())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/ContactItem.kt:40:        holder.moreButton.setTextOrHide(more.safeEmojiSpanify())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/DangerButtonItem.kt:21:import com.lunabeestudio.stopcovid.coreui.extension.safeEmojiSpanify
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/DangerButtonItem.kt:34:        holder.button.text = text.safeEmojiSpanify()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/DateItem.kt:18:import com.lunabeestudio.stopcovid.coreui.extension.safeEmojiSpanify
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/DateItem.kt:29:        holder.textView.text = text.safeEmojiSpanify()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/DeleteCardItem.kt:17:import com.lunabeestudio.stopcovid.coreui.extension.safeEmojiSpanify
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/DeleteCardItem.kt:37:        binding.titleTextView.text = title.safeEmojiSpanify()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/DeleteCardItem.kt:39:        binding.captionTextView.text = caption.safeEmojiSpanify()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/DoubleTextItem.kt:17:import com.lunabeestudio.stopcovid.coreui.extension.safeEmojiSpanify
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/DoubleTextItem.kt:29:        holder.titleTextView.text = title.safeEmojiSpanify()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/DoubleTextItem.kt:30:        holder.captionTextView.text = caption.safeEmojiSpanify()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/IconTitleItem.kt:19:import com.lunabeestudio.stopcovid.coreui.extension.safeEmojiSpanify
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/IconTitleItem.kt:32:        holder.textView.text = text.safeEmojiSpanify()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/IsolationStateRadioGroupItem.kt:20:import com.lunabeestudio.stopcovid.coreui.extension.safeEmojiSpanify
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/IsolationStateRadioGroupItem.kt:47:        binding.stateAllGoodRadioButton.text = allGoodLabel.safeEmojiSpanify()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/IsolationStateRadioGroupItem.kt:48:        binding.stateSymptomsRadioButton.text = symptomsLabel.safeEmojiSpanify()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/IsolationStateRadioGroupItem.kt:49:        binding.stateContactRadioButton.text = contactLabel.safeEmojiSpanify()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/IsolationStateRadioGroupItem.kt:50:        binding.statePositiveRadioButton.text = positiveLabel.safeEmojiSpanify()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/LinkCardItem.kt:19:import com.lunabeestudio.stopcovid.coreui.extension.safeEmojiSpanify
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/LinkCardItem.kt:39:        binding.link.textView.text = label.safeEmojiSpanify()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/LinkItem.kt:22:import com.lunabeestudio.stopcovid.coreui.extension.safeEmojiSpanify
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/LinkItem.kt:40:        holder.textView.text = text.safeEmojiSpanify()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/ProximityButtonItem.kt:19:import com.lunabeestudio.stopcovid.coreui.extension.safeEmojiSpanify
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/ProximityButtonItem.kt:36:        holder.mainButton.text = mainText.safeEmojiSpanify()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/ProximityButtonItem.kt:37:        holder.lightButton.text = lightText.safeEmojiSpanify()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/SelectionItem.kt:17:import com.lunabeestudio.stopcovid.coreui.extension.safeEmojiSpanify
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/SelectionItem.kt:35:        binding.titleTextView.text = title.safeEmojiSpanify()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/SelectionItem.kt:36:        binding.captionTextView.text = caption.safeEmojiSpanify()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingProximityFragment.kt:30:import com.lunabeestudio.stopcovid.extension.safeNavigate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingProximityFragment.kt:140:                        ?.safeNavigate(OnBoardingProximityFragmentDirections.actionOnBoardingProximityFragmentToOnBoardingBatteryFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingProximityFragment.kt:143:                        ?.safeNavigate(OnBoardingProximityFragmentDirections.actionOnBoardingProximityFragmentToOnBoardingNotificationFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingProximityFragment.kt:147:                    ?.safeNavigate(OnBoardingProximityFragmentDirections.actionOnBoardingProximityFragmentToOnBoardingNoBleFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/AboutMainFragment.kt:22:import com.lunabeestudio.stopcovid.extension.safeNavigate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/AboutMainFragment.kt:39:            findNavControllerOrNull()?.safeNavigate(R.id.nav_about, null, navOptions {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/AttestationsFragment.kt:30:import com.lunabeestudio.stopcovid.extension.safeNavigate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/AttestationsFragment.kt:84:                findNavControllerOrNull()?.safeNavigate(AttestationsFragmentDirections.actionAttestationsFragmentToNewAttestationFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/AttestationsFragment.kt:198:                findNavControllerOrNull()?.safeNavigate(
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/CodeFragment.kt:27:import com.lunabeestudio.stopcovid.extension.safeNavigate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/CodeFragment.kt:113:            findNavControllerOrNull()?.safeNavigate(CodeFragmentDirections.actionCodeFragmentToSymptomsOriginFragment(trimmedCode))
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ConfirmVenueQrCodeFragment.kt:23:import com.lunabeestudio.stopcovid.extension.safeNavigate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ConfirmVenueQrCodeFragment.kt:108:                ?.safeNavigate(ConfirmVenueQrCodeFragmentDirections.actionConfirmVenueQrCodeFragmentToVenueConfirmationFragment(venueType))
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/HealthFragment.kt:31:import com.lunabeestudio.stopcovid.extension.safeNavigate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/HealthFragment.kt:114:                findNavControllerOrNull()?.safeNavigate(HealthFragmentDirections.actionHealthFragmentToInformationFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/HealthFragment.kt:143:                findNavControllerOrNull()?.safeNavigate(HealthFragmentDirections.actionHealthFragmentToInformationFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/HealthFragment.kt:252:                        findNavControllerOrNull()?.safeNavigate(HealthFragmentDirections.actionHealthFragmentToInformationFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/HealthFragment.kt:274:                        findNavControllerOrNull()?.safeNavigate(HealthFragmentDirections.actionHealthFragmentToInformationFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/HealthFragment.kt:296:                        findNavControllerOrNull()?.safeNavigate(HealthFragmentDirections.actionHealthFragmentToInformationFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/InformationFragment.kt:25:import com.lunabeestudio.stopcovid.extension.safeNavigate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/InformationFragment.kt:150:                findNavControllerOrNull()?.safeNavigate(InformationFragmentDirections.actionInformationFragmentToGestureFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/IsSickFragment.kt:24:import com.lunabeestudio.stopcovid.extension.safeNavigate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/IsSickFragment.kt:77:                findNavControllerOrNull()?.safeNavigate(IsSickFragmentDirections.actionIsSickFragmentToGestureFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/KeyFigureDetailsFragment.kt:39:import com.lunabeestudio.stopcovid.extension.safeNavigate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/KeyFigureDetailsFragment.kt:288:        findNavControllerOrNull()?.safeNavigate(KeyFigureDetailsFragmentDirections.actionKeyFigureDetailsFragmentToPostalCodeBottomSheetFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/KeyFiguresFragment.kt:21:import com.lunabeestudio.stopcovid.extension.safeNavigate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/KeyFiguresFragment.kt:38:        findNavControllerOrNull()?.safeNavigate(KeyFiguresFragmentDirections.actionKeyFiguresFragmentToPostalCodeBottomSheetFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/KeyFiguresFragment.kt:61:                        findNavControllerOrNull()?.safeNavigate(KeyFiguresFragmentDirections.actionKeyFiguresFragmentToMoreKeyFigureFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/KeyFiguresFragment.kt:113:                findNavControllerOrNull()?.safeNavigate(
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:35:import com.lunabeestudio.stopcovid.extension.safeNavigate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:109:            findNavControllerOrNull()?.safeNavigate(ManageDataFragmentDirections.actionGlobalOnBoardingActivity())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/NewAttestationFragment.kt:36:import com.lunabeestudio.stopcovid.extension.safeNavigate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/NewAttestationFragment.kt:219:                    findNavControllerOrNull()?.safeNavigate(
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingBatteryFragment.kt:26:import com.lunabeestudio.stopcovid.extension.safeNavigate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingBatteryFragment.kt:43:                ?.safeNavigate(OnBoardingBatteryFragmentDirections.actionOnBoardingBatteryFragmentToOnBoardingNotificationFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingBatteryFragment.kt:76:                    ?.safeNavigate(OnBoardingBatteryFragmentDirections.actionOnBoardingBatteryFragmentToOnBoardingNotificationFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingExplanationFragment.kt:20:import com.lunabeestudio.stopcovid.extension.safeNavigate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingExplanationFragment.kt:30:            ?.safeNavigate(OnBoardingExplanationFragmentDirections.actionOnBoardingExplanationFragmentToOnBoardingPrivacyFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingFragment.kt:20:import com.lunabeestudio.stopcovid.coreui.extension.safeEmojiSpanify
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingFragment.kt:45:        getActivityMergeBinding().bottomSheetButton.text = strings[getButtonTitleKey()].safeEmojiSpanify()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingGestureFragment.kt:19:import com.lunabeestudio.stopcovid.extension.safeNavigate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingGestureFragment.kt:36:            ?.safeNavigate(OnBoardingGestureFragmentDirections.actionOnBoardingGestureFragmentToMainActivity())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingNoBleFragment.kt:23:import com.lunabeestudio.stopcovid.extension.safeNavigate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingNoBleFragment.kt:35:                ?.safeNavigate(
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingNoBleFragment.kt:40:                ?.safeNavigate(
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingNotificationFragment.kt:20:import com.lunabeestudio.stopcovid.extension.safeNavigate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingNotificationFragment.kt:31:                ?.safeNavigate(OnBoardingNotificationFragmentDirections.actionOnBoardingNotificationFragmentToOnBoardingVenuesFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingNotificationFragment.kt:34:                ?.safeNavigate(OnBoardingNotificationFragmentDirections.actionOnBoardingNotificationFragmentToOnBoardingGestureFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingPrivacyFragment.kt:20:import com.lunabeestudio.stopcovid.extension.safeNavigate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingPrivacyFragment.kt:30:            ?.safeNavigate(OnBoardingPrivacyFragmentDirections.actionOnBoardingPrivacyFragmentToOnBoardingProximityFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingVenuesFragment.kt:19:import com.lunabeestudio.stopcovid.extension.safeNavigate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingVenuesFragment.kt:29:            ?.safeNavigate(OnBoardingVenuesFragmentDirections.actionOnBoardingVenuesFragmentToOnBoardingGestureFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingWelcomeFragment.kt:19:import com.lunabeestudio.stopcovid.extension.safeNavigate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingWelcomeFragment.kt:29:            ?.safeNavigate(OnBoardingWelcomeFragmentDirections.actionOnBoardingWelcomeFragmentToOnBoardingExplanationFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/PositiveTestFragment.kt:23:import com.lunabeestudio.stopcovid.extension.safeNavigate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/PositiveTestFragment.kt:60:                    ?.safeNavigate(
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/PositiveTestFragment.kt:80:                        ?.safeNavigate(
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ProximityFragment.kt:84:import com.lunabeestudio.stopcovid.extension.safeNavigate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ProximityFragment.kt:521:                        findNavControllerOrNull()?.safeNavigate(ProximityFragmentDirections.actionProximityFragmentToHealthFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ProximityFragment.kt:532:                        findNavControllerOrNull()?.safeNavigate(ProximityFragmentDirections.actionProximityFragmentToIsSickFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ProximityFragment.kt:547:                            findNavControllerOrNull()?.safeNavigate(ProximityFragmentDirections.actionProximityFragmentToHealthFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ProximityFragment.kt:616:        findNavControllerOrNull()?.safeNavigate(ProximityFragmentDirections.actionProximityFragmentToVenueQrCodeFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ProximityFragment.kt:623:                    ?.safeNavigate(
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ProximityFragment.kt:628:                findNavControllerOrNull()?.safeNavigate(ProximityFragmentDirections.actionProximityFragmentToVenuesPrivateEventFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ProximityFragment.kt:651:                findNavControllerOrNull()?.safeNavigate(ProximityFragmentDirections.actionProximityFragmentToInfoCenterFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ProximityFragment.kt:659:                    findNavControllerOrNull()?.safeNavigate(ProximityFragmentDirections.actionProximityFragmentToInfoCenterFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ProximityFragment.kt:677:            findNavControllerOrNull()?.safeNavigate(ProximityFragmentDirections.actionProximityFragmentToKeyFiguresFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ProximityFragment.kt:686:                    findNavControllerOrNull()?.safeNavigate(
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ProximityFragment.kt:762:                        findNavControllerOrNull()?.safeNavigate(ProximityFragmentDirections.actionProximityFragmentToPostalCodeBottomSheetFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ProximityFragment.kt:800:                findNavControllerOrNull()?.safeNavigate(ProximityFragmentDirections.actionProximityFragmentToAttestationsFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ProximityFragment.kt:841:                    findNavControllerOrNull()?.safeNavigate(ProximityFragmentDirections.actionProximityFragmentToReportFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ProximityFragment.kt:861:                findNavControllerOrNull()?.safeNavigate(ProximityFragmentDirections.actionProximityFragmentToVaccinationFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ProximityFragment.kt:882:                    findNavControllerOrNull()?.safeNavigate(ProximityFragmentDirections.actionProximityFragmentToLinksFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ProximityFragment.kt:891:                    findNavControllerOrNull()?.safeNavigate(ProximityFragmentDirections.actionProximityFragmentToVenuesHistoryFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ProximityFragment.kt:899:                    findNavControllerOrNull()?.safeNavigate(ProximityFragmentDirections.actionProximityFragmentToManageDataFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ProximityFragment.kt:902:                    findNavControllerOrNull()?.safeNavigate(ProximityFragmentDirections.actionProximityFragmentToPrivacyFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ProximityFragment.kt:905:                    findNavControllerOrNull()?.safeNavigate(R.id.nav_about, null, navOptions {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ProximityFragment.kt:939:                                ?.safeNavigate(ProximityFragmentDirections.actionProximityFragmentToCaptchaFragment(CaptchaNextFragment.Back))
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ProximityFragment.kt:956:            findNavControllerOrNull()?.safeNavigate(ProximityFragmentDirections.actionProximityFragmentToReminderDialogFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ReportFragment.kt:29:import com.lunabeestudio.stopcovid.extension.safeNavigate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ReportFragment.kt:47:                findNavControllerOrNull()?.safeNavigate(ReportFragmentDirections.actionReportFragmentToCodeFragment(args.code))
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ReportFragment.kt:103:                    findNavControllerOrNull()?.safeNavigate(ReportFragmentDirections.actionReportFragmentToReportQrCodeFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ReportFragment.kt:111:                    findNavControllerOrNull()?.safeNavigate(ReportFragmentDirections.actionReportFragmentToCodeFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ReportQRCodeFragment.kt:15:import com.lunabeestudio.stopcovid.extension.safeNavigate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ReportQRCodeFragment.kt:28:            findNavControllerOrNull()?.safeNavigate(ReportQRCodeFragmentDirections.actionReportQrCodeFragmentToSymptomsOriginFragment(code))
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/SendHistoryFragment.kt:34:import com.lunabeestudio.stopcovid.extension.safeNavigate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/SendHistoryFragment.kt:78:                    findNavControllerOrNull()?.safeNavigate(SendHistoryFragmentDirections.actionSendHistoryFragmentToIsSickFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/SymptomsOriginFragment.kt:23:import com.lunabeestudio.stopcovid.extension.safeNavigate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/SymptomsOriginFragment.kt:60:                    ?.safeNavigate(
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/SymptomsOriginFragment.kt:80:                        ?.safeNavigate(
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/SymptomsOriginFragment.kt:93:                    ?.safeNavigate(
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VaccinationFragment.kt:35:import com.lunabeestudio.stopcovid.extension.safeNavigate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VaccinationFragment.kt:147:                        ?.safeNavigate(VaccinationFragmentDirections.actionVaccinationFragmentToPostalCodeBottomSheetFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VenueOnBoardingFragment.kt:23:import com.lunabeestudio.stopcovid.extension.safeNavigate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VenueOnBoardingFragment.kt:39:        findNavControllerOrNull()?.safeNavigate(
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VenueQRCodeFragment.kt:22:import com.lunabeestudio.stopcovid.extension.safeNavigate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VenueQRCodeFragment.kt:52:            !robertManager.isRegistered -> findNavControllerOrNull()?.safeNavigate(
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VenueQRCodeFragment.kt:58:            venueFullPath != null -> findNavControllerOrNull()?.safeNavigate(
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VenueQRCodeFragment.kt:61:            !sharedPrefs.isVenueOnBoardingDone -> findNavControllerOrNull()?.safeNavigate(
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VenueQRCodeFragment.kt:90:                ?.safeNavigate(VenueQRCodeFragmentDirections.actionVenueQrCodeFragmentToVenueConfirmationFragment(venueType))
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/AppMaintenanceManager.kt:121:                // In case of a malformed JSON we don't safe it and use the last one instead
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:317:            else -> IsolationRecommendationStateEnum.INITIAL_CASE_SAFE
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/ProximityManager.kt:135:        Intent().setComponent(ComponentName("com.letv.android.letvsafe", "com.letv.android.letvsafe.AutobootManageActivity")),
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/ProximityManager.kt:149:        Intent().setComponent(ComponentName("com.coloros.safecenter", "com.coloros.safecenter.permission.startup.StartupAppListActivity")),
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/ProximityManager.kt:150:        Intent().setComponent(ComponentName("com.coloros.safecenter", "com.coloros.safecenter.startupapp.StartupAppListActivity")),
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/ProximityManager.kt:151:        Intent().setComponent(ComponentName("com.oppo.safe", "com.oppo.safe.permission.startup.StartupAppListActivity")),
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/model/CaptchaNextFragment.kt:16:import com.lunabeestudio.stopcovid.extension.safeNavigate
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/model/CaptchaNextFragment.kt:31:                navController?.safeNavigate(CaptchaFragmentDirections.actionCaptchaFragmentToVenueQrCodeFragment(venueFullPath = venueFullPath))
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/model/CaptchaNextFragment.kt:33:                navController?.safeNavigate(CaptchaFragmentDirections.actionCaptchaFragmentToVenueOnBoardingFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/model/CaptchaNextFragment.kt:40:            navController?.safeNavigate(CaptchaFragmentDirections.actionCaptchaFragmentToVenuesPrivateEventFragment())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/model/IsolationRecommendationStateEnum.kt:15:    INITIAL_CASE_SAFE("initialCaseSafe"),

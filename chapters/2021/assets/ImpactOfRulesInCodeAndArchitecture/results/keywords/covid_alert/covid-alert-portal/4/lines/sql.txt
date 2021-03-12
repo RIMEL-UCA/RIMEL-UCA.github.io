@@ -1,0 +1,23 @@
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/objects/pack/pack-b2d5516249985a8a97b26ce8dac1bd2663fa44fa.pack matches
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.gitignore:5:db.sqlite3
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/app.json:4:  "addons": ["heroku-postgresql:hobby-dev"]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/rds.tf:19:  engine                       = "aurora-postgresql"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/rds.tf:36:  engine                    = "aurora-postgresql"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:541:        "sqlparse": {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:173:default_db_path = os.path.join(BASE_DIR, "db.sqlite3")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:185:        default=f"sqlite:///{default_db_path}", conn_max_age=600, ssl_require=is_prod
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/utils/_banned_passwords.py:663:    "123456prof_root3.sql.txt:,",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/utils/_banned_passwords.py:670:    "123456prof_root2.sql.txt:,",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/utils/_banned_passwords.py:1109:    "111111prof_root3.sql.txt:,",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/utils/_banned_passwords.py:1125:    "111111prof_root2.sql.txt:,",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:22:from django.db.models.expressions import RawSQL
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:355:            current_user_email=RawSQL("email = %s", (self.request.user.email,))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:13:- Running the COVID Alert Portal locally as a python process requires [python3](https://www.python.org/downloads/) and a database, although an SQLite database will be created if no connection string exists.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:130:By default the Django creates an SQLite database, but we use Postgres in production.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:138:| `django.db.backends.postgresql` | `postgres://USER:PASSWORD@HOST:PORT/NAME` |
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:176:You can use Docker Compose to build an application container along with a Postgres database. It will map your local files into a Docker container, spin up a PostgreSQL database, and do CSS compilation and a DB migration. The app runs on port `8000`, the database at port `5432` (u: `user`, p: `password`) and will be served at `http://0.0.0.0:8000`.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:178:Read the step-by-step process at [Django, Docker, and PostgreSQL Tutorial](https://learndjango.com/tutorials/django-docker-and-postgresql-tutorial).
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:277:Par défaut, Django crée une base de données SQLite, mais nous utilisons Postgres en production.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:285:| `django.db.backends.postgresql` | `postgres://USER:PASSWORD@HOST:PORT/NAME` |
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:323:Vous pouvez utiliser Docker Compose pour construire un conteneur d’application parallèlement à une base de données Postgres. Il va mapper vos fichiers locaux dans un conteneur Docker, créer une base de données PostgreSQL et faire une compilation CSS et une migration de base de données. L’application s’exécute sur le port `8000`, la base de donnée sur le port `5432` (u: `user`, p: `password`) et sera desservie à l’adresse `http://0.0.0.0:8000`.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:325:Vous pouvez les le processus étape par étape sur [Django, Docker, et PostgreSQL Tutorial](https://learndjango.com/tutorials/django-docker-and-postgresql-tutorial) (en anglais).

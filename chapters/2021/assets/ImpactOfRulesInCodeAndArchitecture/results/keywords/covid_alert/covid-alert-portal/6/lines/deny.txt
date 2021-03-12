@@ -1,0 +1,6 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:22:# hooks.denycreatebranch
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:48:denycreatebranch=$(git config --bool hooks.denycreatebranch)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:98:		if [ "$oldrev" = "$zero" -a "$denycreatebranch" = "true" ]; then
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:522:    action     = "deny"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:531:    action     = "deny"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/utils/_banned_passwords.py:806:    "denya2531914",

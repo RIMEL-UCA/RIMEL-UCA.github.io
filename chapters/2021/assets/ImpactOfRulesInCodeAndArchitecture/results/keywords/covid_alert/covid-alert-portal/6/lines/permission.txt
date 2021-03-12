@@ -1,0 +1,51 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CODE_OF_CONDUCT.md:37:  address, without their explicit permission
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CODE_OF_CONDUCT.md:153:* la publication de renseignements personnels d’autres personnes, telles qu’une adresse physique ou électronique, sans permission explicite;
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/kms.tf:12:      "Sid" : "Enable IAM User Permissions",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/lambda.tf:51:resource "aws_lambda_permission" "notify_slack_warning" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/lambda.tf:59:resource "aws_lambda_permission" "notify_slack_critical" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/lambda.tf:67:resource "aws_lambda_permission" "notify_slack_ok" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/lambda.tf:75:resource "aws_lambda_permission" "notify_slack_dns_critical" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/lambda.tf:82:resource "aws_lambda_permission" "notify_slack_dns_ok" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/sns.tf:102:      "SNS:RemovePermission",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/sns.tf:108:      "SNS:AddPermission",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/templates/covid_key/otk_sms.html:13:  <h1>{% trans "If patient gives permission, text this key to their phone" %}</h1>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:175:            "<h1>If patient gives permission, text this key to their phone</h1>",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:7:from django.contrib.auth.mixins import PermissionRequiredMixin
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:143:class OtkSmsView(PermissionRequiredMixin, FormView, SessionTemplateView):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:146:    permission_required = ["sms_enabled"]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:152:    def handle_no_permission(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:173:class OtkSmsSentView(PermissionRequiredMixin, FormView, SessionTemplateView):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:176:    permission_required = ["sms_enabled"]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:182:    def handle_no_permission(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/LICENSE:5:Permission is hereby granted, free of charge, to any person obtaining a copy
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/LICENSE:12:The above copyright notice and this permission notice shall be included in all
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.mo matches
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:672:msgid "If patient gives permission, text this key to their phone"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:758:msgid "You do not have permission to visit this page."
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:901:"they need to give COVID Alert permission to upload random codes. Tap “Share "
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:902:"exposures” to give permission."
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:910:"The next screen asks permission to share information to notify others. "
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:921:"COVID Alert will ask permission to upload random codes daily for the next 13 "
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1730:msgid "Permissions"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/admin.py:12:    def has_permission(self, request):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/admin.py:14:        return super().has_permission(request) and request.user.is_verified()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/403.html:11:    <p>{% trans "You do not have permission to visit this page." %}</p>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/includes/detailed_instructions.html:35:    <span>{% trans "After patients have either answered questions or decided not to answer,  they need to give COVID Alert permission to upload random codes. Tap “Share exposures” to give permission." %}</span>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/includes/detailed_instructions.html:41:    <span>{% trans "The next screen asks permission to share information to notify others. Depending on the phone’s operating system, the screen may describe this in different ways, such as sharing random IDs with COVID Alert. Tap “Share”." %}</span>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/includes/detailed_instructions.html:47:    <span>{% trans "COVID Alert will ask permission to upload random codes daily for the next 13 days." %}</span>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:64:            response, "You do not have permission to visit this page.", status_code=403
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/urls.py:19:def disable_delete_permissions(cls, request, obj=None):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/urls.py:23:AccessLogAdmin.has_delete_permission = disable_delete_permissions
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/urls.py:25:handler403 = views.permission_denied_view
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/urls.py:46:    path("403/", views.permission_denied_view),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/views.py:10:def permission_denied_view(request, exception=None):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/admin.py:27:    def has_add_permission(self, request, obj=None):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/admin.py:30:    def has_delete_permission(self, request, obj=None):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/admin.py:132:        ("Permissions", {"fields": ("is_admin", "is_superuser")}),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/admin.py:142:        permissions_tuple = (
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/admin.py:143:            "Permissions",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/admin.py:151:            fieldsets += (permissions_tuple,)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/models.py:100:        """Does the user have a specific permission?"""
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/models.py:105:        """Validate list of view permissions"""
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/models.py:111:        """Does the user have permissions to view the app `app_label`?"""
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/healthcareuser_list.html:19:          <th scope="col">{% trans "Permissions" %}</th>

@@ -1,0 +1,4 @@
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:16:import androidx.work.ExistingPeriodicWorkPolicy
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:18:import androidx.work.PeriodicWorkRequestBuilder
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:243:        val statusWorkRequest = PeriodicWorkRequestBuilder<StatusWorker>(1L, TimeUnit.DAYS)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:247:            .enqueueUniquePeriodicWork(Constant.STATUS_WORKER_NAME, ExistingPeriodicWorkPolicy.KEEP, statusWorkRequest)

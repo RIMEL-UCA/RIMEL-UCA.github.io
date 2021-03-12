@@ -1,0 +1,33 @@
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiser.kt:40:        startGattServer()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiser.kt:52:        stopGattServer()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiser.kt:95:    private suspend fun startGattServer() {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiser.kt:96:        if (!doStartGattServer()) {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiser.kt:106:    private suspend fun doStartGattServer() = withContext(coroutineContextProvider.main) {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiser.kt:170:    private suspend fun stopGattServer() = withContext(coroutineContextProvider.main) {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:16:import android.bluetooth.BluetoothGattServer
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:17:import android.bluetooth.BluetoothGattServerCallback
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:46:    private var bluetoothGattServer: BluetoothGattServer? = null
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:50:            .plus(bluetoothManager.getConnectedDevices(BluetoothProfile.GATT_SERVER))
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:64:            "Starting GATT server"
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:74:            "Stopping GATT server"
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:82:            bluetoothGattServer =
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:83:                bluetoothManager.openGattServer(context, GattServerCallback(callback))?.apply {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:94:            requireNotNull(bluetoothGattServer) { "openGattServer returned null" }
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:97:                message = "Succeed to start GATT server"
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:103:                message = "Failed to start GATT server",
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:113:        bluetoothGattServer?.runCatching {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:119:                message = "Failed to stop GATT server",
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:125:                message = "Succeed to stop GATT server"
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:128:        bluetoothGattServer = null
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:293:    private inner class GattServerCallback(private val callback: BleGattManager.Callback) :
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:294:        BluetoothGattServerCallback() {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:359:                        bluetoothGattServer?.sendResponse(device, requestId, result, offset, value)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImplTest.kt:13:import android.bluetooth.BluetoothGattServer
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImplTest.kt:46:    private val bluetoothGattServer: BluetoothGattServer = mock()
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImplTest.kt:49:        on { openGattServer(any(), any()) } doReturn bluetoothGattServer
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImplTest.kt:72:    fun start_given_openGattServer_return_null_should_return_false() {
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImplTest.kt:75:        doReturn(null).whenever(bluetoothManager).openGattServer(any(), any())
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImplTest.kt:85:    fun start_given_bluetoothGattServer_throws_exception_should_close_opened_gatt_server_and_return_false() {
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImplTest.kt:88:        doThrow(RuntimeException::class).whenever(bluetoothGattServer).addService(any())
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImplTest.kt:95:        verify(bluetoothGattServer, times(1)).close()
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImplTest.kt:102:        doThrow(RuntimeException::class).whenever(bluetoothGattServer).close()

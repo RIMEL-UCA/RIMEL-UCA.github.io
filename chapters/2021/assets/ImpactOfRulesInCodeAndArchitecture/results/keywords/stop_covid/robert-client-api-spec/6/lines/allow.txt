@@ -1,0 +1,34 @@
+../robert-client-api-spec/.git/hooks/applypatch-msg.sample:8:# allowed to edit the commit message file.
+../robert-client-api-spec/.git/hooks/commit-msg.sample:7:# commit.  The hook is allowed to edit the commit message file.
+../robert-client-api-spec/.git/hooks/pre-commit.sample:18:# If you want to allow non-ASCII filenames set this variable to true.
+../robert-client-api-spec/.git/hooks/pre-commit.sample:19:allownonascii=$(git config --type=bool hooks.allownonascii)
+../robert-client-api-spec/.git/hooks/pre-commit.sample:27:if [ "$allownonascii" != "true" ] &&
+../robert-client-api-spec/.git/hooks/pre-commit.sample:43:  git config hooks.allownonascii true
+../robert-client-api-spec/.git/hooks/pre-rebase.sample:15:# merged to 'next' branch from getting rebased, because allowing it
+../robert-client-api-spec/.git/hooks/pre-rebase.sample:50:	exit 1 ;# we could allow it, but there is no point.
+../robert-client-api-spec/.git/hooks/pre-rebase.sample:62:		exit 1 ;# we could allow it, but there is no point.
+../robert-client-api-spec/.git/hooks/pre-rebase.sample:153:We would want to allow C to be rebased, refuse A, and encourage
+../robert-client-api-spec/.git/hooks/update.sample:10:# hooks.allowunannotated
+../robert-client-api-spec/.git/hooks/update.sample:11:#   This boolean sets whether unannotated tags will be allowed into the
+../robert-client-api-spec/.git/hooks/update.sample:13:# hooks.allowdeletetag
+../robert-client-api-spec/.git/hooks/update.sample:14:#   This boolean sets whether deleting tags will be allowed in the
+../robert-client-api-spec/.git/hooks/update.sample:16:# hooks.allowmodifytag
+../robert-client-api-spec/.git/hooks/update.sample:19:# hooks.allowdeletebranch
+../robert-client-api-spec/.git/hooks/update.sample:20:#   This boolean sets whether deleting branches will be allowed in the
+../robert-client-api-spec/.git/hooks/update.sample:24:#   in the repository.  By default this is allowed.
+../robert-client-api-spec/.git/hooks/update.sample:46:allowunannotated=$(git config --type=bool hooks.allowunannotated)
+../robert-client-api-spec/.git/hooks/update.sample:47:allowdeletebranch=$(git config --type=bool hooks.allowdeletebranch)
+../robert-client-api-spec/.git/hooks/update.sample:49:allowdeletetag=$(git config --type=bool hooks.allowdeletetag)
+../robert-client-api-spec/.git/hooks/update.sample:50:allowmodifytag=$(git config --type=bool hooks.allowmodifytag)
+../robert-client-api-spec/.git/hooks/update.sample:74:		if [ "$allowunannotated" != "true" ]; then
+../robert-client-api-spec/.git/hooks/update.sample:75:			echo "*** The un-annotated tag, $short_refname, is not allowed in this repository" >&2
+../robert-client-api-spec/.git/hooks/update.sample:82:		if [ "$allowdeletetag" != "true" ]; then
+../robert-client-api-spec/.git/hooks/update.sample:83:			echo "*** Deleting a tag is not allowed in this repository" >&2
+../robert-client-api-spec/.git/hooks/update.sample:89:		if [ "$allowmodifytag" != "true" ] && git rev-parse $refname > /dev/null 2>&1
+../robert-client-api-spec/.git/hooks/update.sample:92:			echo "*** Modifying a tag is not allowed in this repository." >&2
+../robert-client-api-spec/.git/hooks/update.sample:99:			echo "*** Creating a branch is not allowed in this repository" >&2
+../robert-client-api-spec/.git/hooks/update.sample:105:		if [ "$allowdeletebranch" != "true" ]; then
+../robert-client-api-spec/.git/hooks/update.sample:106:			echo "*** Deleting a branch is not allowed in this repository" >&2
+../robert-client-api-spec/.git/hooks/update.sample:115:		if [ "$allowdeletebranch" != "true" ]; then
+../robert-client-api-spec/.git/hooks/update.sample:116:			echo "*** Deleting a tracking branch is not allowed in this repository" >&2
+../robert-client-api-spec/LICENSE.md:142:_Under no circumstances and under no legal theory, whether tort (including negligence), contract, or otherwise, shall any Contributor, or anyone who distributes Covered Software as permitted above, be liable to You for any direct, indirect, special, incidental, or consequential damages of any character including, without limitation, damages for lost profits, loss of goodwill, work stoppage, computer failure or malfunction, or any and all other commercial damages or losses, even if such party shall have been informed of the possibility of such damages. This limitation of liability shall not apply to liability for death or personal injury resulting from such party’s negligence to the extent applicable law prohibits such limitation. Some jurisdictions do not allow the exclusion or limitation of incidental or consequential damages, so this exclusion and limitation may not apply to You._

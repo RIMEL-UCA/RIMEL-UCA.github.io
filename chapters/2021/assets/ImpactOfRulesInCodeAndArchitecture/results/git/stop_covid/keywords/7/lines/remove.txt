@@ -1,0 +1,6 @@
+./results/git/stop_covid/commit_file_gitlab.txt:32:Add wakelock and remove waitFor
+./results/git/stop_covid/commit_file_gitlab.txt:90:Remove connection date expired values on timer
+./results/git/stop_covid/commit_file_gitlab.txt:92:Remove cache entry when the service is not found
+./results/git/stop_covid/commit_file_gitlab.txt:169:Remove spurious space preventing automatic linking in README.md
+./results/git/stop_covid/commit_file_gitlab.txt:172:Remove spurious space preventing automatic linking
+./results/git/stop_covid/issue_file_gitlab.txt:327:52742,Remove id from log,[This log.info](https://gitlab.inria.fr/stopcovid19/robert-server/-/blob/develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/ContactProcessor.java#L130) in ContactProcessor logs an `idA` when not found in the system. It would be better to not log the `idA` value for the case it was used previously as a valid id.,['ANSSI']

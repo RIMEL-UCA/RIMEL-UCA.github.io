@@ -1,0 +1,139 @@
+./stopcovid-blesdk-android-master/AUTHORS.md:3:* Naos <dev1(dot)stopcovid(at)orange(dot)com>
+./stopcovid-blesdk-android-master/AUTHORS.md:4:* Merak <dev2(dot)stopcovid(at)orange(dot)com>
+./stopcovid-blesdk-android-master/AUTHORS.md:5:* Wezen <dev3(dot)stopcovid(at)orange(dot)com>
+./stopcovid-blesdk-android-master/AUTHORS.md:6:* Kochab <dev4(dot)stopcovid(at)orange(dot)com>
+./stopcovid-blesdk-android-master/AUTHORS.md:7:* Régulus <dev5(dot)stopcovid(at)orange(dot)com>
+./stopcovid-blesdk-android-master/AUTHORS.md:8:* Eltanin <dev6(dot)stopcovid(at)orange(dot)com>
+./stopcovid-blesdk-android-master/AUTHORS.md:9:* Arcturus <dev7(dot)stopcovid(at)orange(dot)com>
+./stopcovid-blesdk-android-master/AUTHORS.md:10:* Bételgeuse <dev8(dot)stopcovid(at)orange(dot)com>
+./stopcovid-blesdk-android-master/AUTHORS.md:11:* Nunki <dev9(dot)stopcovid(at)orange(dot)com>
+./stopcovid-blesdk-android-master/AUTHORS.md:12:* Wei <dev10(dot)stopcovid(at)orange(dot)com>
+./stopcovid-blesdk-android-master/AUTHORS.md:13:* Murzim <dev11(dot)stopcovid(at)orange(dot)com>
+./stopcovid-blesdk-android-master/AUTHORS.md:14:* Sirius <dev20(dot)stopcovid(at)orange(dot)com>
+./stopcovid-blesdk-android-master/LICENSE.txt:291:*  goodwill, work stoppage, computer failure or malfunction, or any    *
+./stopcovid-blesdk-android-master/README.md:65:To stop the service just call stop()
+./stopcovid-blesdk-android-master/README.md:67:service.stop()
+./stopcovid-blesdk-android-master/gradlew:67:nonstop=false
+./stopcovid-blesdk-android-master/gradlew:78:  NONSTOP* )
+./stopcovid-blesdk-android-master/gradlew:79:    nonstop=true
+./stopcovid-blesdk-android-master/gradlew:108:if [ "$cygwin" = "false" -a "$darwin" = "false" -a "$nonstop" = "false" ] ; then
+./stopcovid-blesdk-android-master/library/build.gradle:46:    testOptions {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotification.kt:23:    suspend fun stop()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationEventId.kt:23:    BLE_ADVERTISER_STOP(BLE_ADVERTISER),
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationEventId.kt:24:    BLE_ADVERTISER_STOP_ERROR(BLE_ADVERTISER),
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationEventId.kt:25:    BLE_ADVERTISER_STOP_SUCCESS(BLE_ADVERTISER),
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationEventId.kt:30:    BLE_GATT_STOP(BLE_GATT),
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationEventId.kt:31:    BLE_GATT_STOP_ERROR(BLE_GATT),
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationEventId.kt:32:    BLE_GATT_STOP_SUCCESS(BLE_GATT),
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationEventId.kt:50:    BLE_SCANNER_STOP(BLE_SCANNER),
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationEventId.kt:51:    BLE_SCANNER_STOP_ERROR(BLE_SCANNER),
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationEventId.kt:52:    BLE_SCANNER_STOP_SUCCESS(BLE_SCANNER),
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationEventId.kt:58:    PROXIMITY_NOTIFICATION_STOP(PROXIMITY_NOTIFICATION),
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationEventId.kt:59:    PROXIMITY_NOTIFICATION_STOP_BLE(PROXIMITY_NOTIFICATION),
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationService.kt:66:        stop()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationService.kt:94:     * Stops ProximityNotification and foreground service.
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationService.kt:99:    fun stop() {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationService.kt:101:            ProximityNotificationEventId.PROXIMITY_NOTIFICATION_STOP,
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationService.kt:102:            "Stop Proximity Notification"
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationService.kt:105:        doStop()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationService.kt:136:            stopBleProximityNotification()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationService.kt:175:    protected open fun doStop() {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationService.kt:177:            stopBleProximityNotification()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationService.kt:180:                stopForeground(true)
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationService.kt:208:            stopBleProximityNotification()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationService.kt:227:    private suspend fun stopBleProximityNotification() {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationService.kt:229:            ProximityNotificationEventId.PROXIMITY_NOTIFICATION_STOP_BLE,
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationService.kt:230:            "Stop BLE Proximity Notification"
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationService.kt:233:        bleProximityNotification?.stop()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationService.kt:278:     * By default it stops the ProximityNotification and the foreground service
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationService.kt:280:     * @see ProximityNotification#stop
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationService.kt:288:        doStop()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotification.kt:64:    override suspend fun stop() {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiser.kt:47:    override suspend fun stop() {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiser.kt:48:        super.stop()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiser.kt:50:        stopScanner()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiser.kt:51:        stopAdvertiser()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiser.kt:52:        stopGattServer()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiser.kt:58:        stopAdvertiser()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiser.kt:83:                        bleAdvertiser.stop()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiser.kt:154:                bleScanner.stop()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiser.kt:166:    private suspend fun stopAdvertiser() = withContext(coroutineContextProvider.main) {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiser.kt:167:        bleAdvertiser.stop()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiser.kt:170:    private suspend fun stopGattServer() = withContext(coroutineContextProvider.main) {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiser.kt:171:        bleGattManager.stop()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiser.kt:174:    private suspend fun stopScanner() = withContext(coroutineContextProvider.main) {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiser.kt:175:        bleScanner.stop()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithoutAdvertiser.kt:90:        val afterStoppingScanner: Long,
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithoutAdvertiser.kt:97:            afterStoppingScanner = 100L,
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithoutAdvertiser.kt:104:            afterStoppingScanner = 100L,
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithoutAdvertiser.kt:107:            // Since Android 7 we should not start and stop scans more than 5 times
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithoutAdvertiser.kt:146:    override suspend fun stop() {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithoutAdvertiser.kt:147:        super.stop()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithoutAdvertiser.kt:149:        stopAdvertiser()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithoutAdvertiser.kt:162:    private suspend fun stopAdvertiser() {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithoutAdvertiser.kt:234:                delay(timeouts.afterStoppingScanner)
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithoutAdvertiser.kt:329:        delay(timeouts.afterStoppingScanner)
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithoutAdvertiser.kt:421:                    continuation.invokeOnCancellation { bleScanner.stop() }
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithoutAdvertiser.kt:447:                bleScanner.stop()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/advertiser/BleAdvertiser.kt:23:    fun stop()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/advertiser/BleAdvertiserImpl.kt:35:        doStop()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/advertiser/BleAdvertiserImpl.kt:39:    override fun stop() {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/advertiser/BleAdvertiserImpl.kt:41:            ProximityNotificationEventId.BLE_ADVERTISER_STOP,
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/advertiser/BleAdvertiserImpl.kt:42:            "Stopping advertising"
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/advertiser/BleAdvertiserImpl.kt:45:        doStop()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/advertiser/BleAdvertiserImpl.kt:64:            doStop()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/advertiser/BleAdvertiserImpl.kt:68:    private fun doStop() {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/advertiser/BleAdvertiserImpl.kt:70:            bluetoothAdvertiser.stopAdvertising(advertiseCallback)
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/advertiser/BleAdvertiserImpl.kt:73:                eventId = ProximityNotificationEventId.BLE_ADVERTISER_STOP_ERROR,
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/advertiser/BleAdvertiserImpl.kt:74:                message = "Failed to stop advertising",
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/advertiser/BleAdvertiserImpl.kt:79:                eventId = ProximityNotificationEventId.BLE_ADVERTISER_STOP_SUCCESS,
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/advertiser/BleAdvertiserImpl.kt:80:                message = "Succeed to stop advertising"
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManager.kt:40:    fun stop()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:67:        doStop()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:71:    override fun stop() {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:73:            ProximityNotificationEventId.BLE_GATT_STOP,
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:74:            "Stopping GATT server"
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:77:        doStop()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:107:            doStop()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:111:    private fun doStop() {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:118:                eventId = ProximityNotificationEventId.BLE_GATT_STOP_ERROR,
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:119:                message = "Failed to stop GATT server",
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:124:                eventId = ProximityNotificationEventId.BLE_GATT_STOP_SUCCESS,
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:125:                message = "Succeed to stop GATT server"
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/scanner/BleScanner.kt:60:    fun stop()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/scanner/BleScannerImpl.kt:42:        doStop()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/scanner/BleScannerImpl.kt:52:        doStop()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/scanner/BleScannerImpl.kt:60:    override fun stop() {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/scanner/BleScannerImpl.kt:62:            ProximityNotificationEventId.BLE_SCANNER_STOP,
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/scanner/BleScannerImpl.kt:63:            "Stopping scanner"
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/scanner/BleScannerImpl.kt:66:        doStop()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/scanner/BleScannerImpl.kt:91:                doStop()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/scanner/BleScannerImpl.kt:96:    private fun doStop() {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/scanner/BleScannerImpl.kt:98:            bluetoothScanner.stopScan(this)
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/scanner/BleScannerImpl.kt:101:                eventId = ProximityNotificationEventId.BLE_SCANNER_STOP_ERROR,
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/scanner/BleScannerImpl.kt:102:                message = "Failed to stop scanner",
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/scanner/BleScannerImpl.kt:107:                eventId = ProximityNotificationEventId.BLE_SCANNER_STOP_SUCCESS,
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/scanner/BleScannerImpl.kt:108:                message = "Succeed to stop scanner"
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiserTest.kt:453:    fun stop_should_call_stop_on_each_components() = testCoroutineRule.runBlockingTest {
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiserTest.kt:458:        onStop()
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiserTest.kt:461:        verify(bleAdvertiser, atLeastOnce()).stop()
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiserTest.kt:462:        verify(bleScanner, atLeastOnce()).stop()
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiserTest.kt:463:        verify(bleGattManager, atLeastOnce()).stop()
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiserTest.kt:483:        verify(bleAdvertiser, times(1)).stop()
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiserTest.kt:486:        verify(bleScanner, never()).stop()
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiserTest.kt:488:        verify(bleGattManager, never()).stop()
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiserTest.kt:508:    private fun onStop() {
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiserTest.kt:509:        runBlocking { bleProximityNotification.stop() }
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/advertiser/BleAdvertiserImplTest.kt:69:    fun stop_given_exception_should_not_throw_exception() {
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/advertiser/BleAdvertiserImplTest.kt:72:        doThrow(RuntimeException::class).whenever(bluetoothAdvertiser).stopAdvertising(any())
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/advertiser/BleAdvertiserImplTest.kt:75:        val result = runCatching { bleAdvertiser.stop() }
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImplTest.kt:99:    fun stop_given_exception_should_not_throw_exception() {
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImplTest.kt:105:        val result = runCatching { bleGattManager.stop() }
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImplTest.kt:251:        bleGattManager.stop()
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/scanner/BleScannerImplTest.kt:93:    fun stop_given_exception_should_not_throw_exception() {
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/scanner/BleScannerImplTest.kt:96:        doThrow(RuntimeException::class).whenever(bluetoothScanner).stopScan(any())
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/scanner/BleScannerImplTest.kt:99:        val result = runCatching { bleScanner.stop() }
+./stopcovid-blesdk-android-master/licenses/library/license-kotlinx-couroutines.txt:162:      work stoppage, computer failure or malfunction, or any and all
+./stopcovid-blesdk-android-master/licenses/library/license-timber.txt:162:      work stoppage, computer failure or malfunction, or any and all
+./stopcovid-blesdk-android-master/licenses/tests/license-junit4.txt:206:expressly, by implication, estoppel or otherwise. All rights in the Program not
+./stopcovid-blesdk-android-master/licenses/tests/license-truth.txt:162:      work stoppage, computer failure or malfunction, or any and all

@@ -1,0 +1,172 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/.git/hooks/fsmonitor-watchman.sample:13:# modified since the given time. Paths must be relative to the root of
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/.git/hooks/fsmonitor-watchman.sample:51:	# changed since $time but were not transient (ie created after
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/.git/hooks/fsmonitor-watchman.sample:54:	# To accomplish this, we're using the "since" generator to use the
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/.git/hooks/fsmonitor-watchman.sample:65:			"since": $time,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/.git/hooks/fsmonitor-watchman.sample:67:			"expression": ["not", ["allof", ["since", $time, "cclock"], ["not", "exists"]]]
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/.git/hooks/pre-commit.sample:29:	# even required, for portability to Solaris 10's /usr/bin/tr), since
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/.git/hooks/pre-rebase.sample:146: * A has one fix since it was merged up to "next".
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/extensions/ConfigurationExtensions.kt:11:        .setDaysSinceLastExposureScores(*daysSinceLastExposureLevelValues.toIntArray())
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/extensions/ConfigurationExtensions.kt:12:        .setDaysSinceLastExposureWeight(daysSinceLastExposureWeight)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/extensions/ExposureInformationExtensions.kt:9:        date = dateMillisSinceEpoch,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/extensions/ExposureSummaryExtensions.kt:9:        daysSinceLastExposure = daysSinceLastExposure,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/extensions/ExposureWindowExtensions.kt:12:            secondsSinceLastScan = secondsSinceLastScan
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/extensions/ExposureWindowExtensions.kt:18:             day = dateMillisSinceEpoch,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/models/Configuration.kt:10:    @SerializedName("daysSinceLastExposureLevelValues") val daysSinceLastExposureLevelValues: List<Int>,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/models/Configuration.kt:11:    @SerializedName("daysSinceLastExposureWeight") val daysSinceLastExposureWeight: Int,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/models/Summary.kt:7:    @SerializedName("daysSinceLastExposure") val daysSinceLastExposure: Int,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/models/Window.kt:16:        @SerializedName("secondsSinceLastScan") val secondsSinceLastScan: Int
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/ExposureNotificationModule.kt:229:                            .setDaysSinceOnsetToInfectiousness(daysToInfectiousness)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/ExposureNotificationModule.kt:230:                            .setInfectiousnessWhenDaysSinceOnsetMissing(Infectiousness.STANDARD)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/index.js:4:// Needed only on Android when using Hermes since it doesn't yet
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield/ExposureNotification.m:243:  if (configDict[@"daysSinceLastExposureLevelValues"]) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield/ExposureNotification.m:244:    configuration.daysSinceLastExposureLevelValues = mapIntValues(configDict[@"daysSinceLastExposureLevelValues"]);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield/ExposureNotification.m:246:  if (configDict[@"daysSinceLastExposureWeight"]) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield/ExposureNotification.m:247:    configuration.daysSinceLastExposureWeight = [configDict[@"daysSinceLastExposureWeight"] doubleValue];
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield/ExposureNotification.m:280:      @"daysSinceLastExposure": @(summary.daysSinceLastExposure),
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield/ExposureNotification.m:316:  if (configDict[@"daysSinceLastExposureLevelValues"]) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield/ExposureNotification.m:317:    configuration.daysSinceLastExposureLevelValues = mapIntValues(configDict[@"daysSinceLastExposureLevelValues"]);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield/ExposureNotification.m:319:  if (configDict[@"daysSinceLastExposureWeight"]) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield/ExposureNotification.m:320:    configuration.daysSinceLastExposureWeight = [configDict[@"daysSinceLastExposureWeight"] doubleValue];
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield/ExposureNotification.m:345:  configuration.infectiousnessForDaysSinceOnsetOfSymptoms = getInfectiousness();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield/ExposureNotification.m:372:              @"secondsSinceLastScan": @(obj2.secondsSinceLastScan),
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield/ExposureNotification.m:377:            @"day": @(1000 * obj.date.timeIntervalSince1970),
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShieldTests/CovidShieldTests.m:32:  NSDate *date = [NSDate dateWithTimeIntervalSinceNow:TIMEOUT_SECONDS];
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShieldTests/CovidShieldTests.m:44:  while ([date timeIntervalSinceNow] > 0 && !foundElement && !redboxError) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShieldTests/CovidShieldTests.m:45:    [[NSRunLoop mainRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate dateWithTimeIntervalSinceNow:0.1]];
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShieldTests/CovidShieldTests.m:46:    [[NSRunLoop mainRunLoop] runMode:NSRunLoopCommonModes beforeDate:[NSDate dateWithTimeIntervalSinceNow:0.1]];
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/bridge/ExposureNotification/types.ts:58:  daysSinceLastExposure: number;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/bridge/ExposureNotification/types.ts:70:  daysSinceLastExposureLevelValues: number[];
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/bridge/ExposureNotification/types.ts:71:  daysSinceLastExposureWeight: number;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/bridge/ExposureNotification/types.ts:79:  dateMillisSinceEpoch: number;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/bridge/ExposureNotification/types.ts:122:  secondsSinceLastScan: number;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/bridge/ExposureNotification/utils.spec.ts:13:// I set lastExposureTimestamp = undefined since that is not
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/bridge/ExposureNotification/utils.spec.ts:19:  daysSinceLastExposure: 0,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/bridge/ExposureNotification/utils.spec.ts:27:  daysSinceLastExposure: 2,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/bridge/ExposureNotification/utils.spec.ts:35:  daysSinceLastExposure: 2147483647,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/bridge/ExposureNotification/utils.spec.ts:42:      // this requirement if from apple: https://developer.apple.com/documentation/exposurenotification/enexposuredetectionsummary/3583708-dayssincelastexposure
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/bridge/ExposureNotification/utils.ts:11:    summary.matchedKeyCount > 0 ? addDays(today, -summary.daysSinceLastExposure).getTime() : 0;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/testScreen/MockBackend.ts:12:  daysSinceLastExposureLevelValues: [1, 2, 3, 4, 5, 6, 7, 8],
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/testScreen/MockBackend.ts:13:  daysSinceLastExposureWeight: 50,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/testScreen/MockExposureNotification.ts:6:    daysSinceLastExposure: 0,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.spec.ts:279:      spyDate = jest.spyOn(DateFns, 'getMillisSinceUTCEpoch').mockImplementation(() => 1594764739745);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:11:import {getMillisSinceUTCEpoch, hoursSinceEpoch} from 'shared/date-fns';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:56:    const message = `${MCC_CODE}:${periodStr}:${Math.floor(getMillisSinceUTCEpoch() / 1000 / 3600)}`;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:142:      // startTimeOfKeySinceEpochInSecs / (60 * 10).
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:149:      const providedDateHoursSinceEpoch = hoursSinceEpoch(contagiousDateInfo.date);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:150:      let contagiousStartHoursSinceEpoch;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:152:        contagiousStartHoursSinceEpoch = providedDateHoursSinceEpoch - CONTAGIOUS_DAYS_BEFORE_SYMPTOM_ONSET * 24;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:154:        contagiousStartHoursSinceEpoch = providedDateHoursSinceEpoch - CONTAGIOUS_DAYS_BEFORE_TEST_DATE * 24;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:158:      const rollingEndIntervalHoursSinceEpoch = rollingEndIntervalNumber / TEN_MINUTE_PERIODS_PER_HOUR;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:159:      if (rollingEndIntervalHoursSinceEpoch < contagiousStartHoursSinceEpoch) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:218:      timestamp: {seconds: Math.floor(getMillisSinceUTCEpoch() / 1000)},
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:789:        /** TemporaryExposureKey daysSinceOnsetOfSymptoms */
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:790:        daysSinceOnsetOfSymptoms?: (number|null);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:817:        /** TemporaryExposureKey daysSinceOnsetOfSymptoms. */
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:818:        public daysSinceOnsetOfSymptoms: number;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:2072:             * @property {number|null} [daysSinceOnsetOfSymptoms] TemporaryExposureKey daysSinceOnsetOfSymptoms
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:2131:             * TemporaryExposureKey daysSinceOnsetOfSymptoms.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:2132:             * @member {number} daysSinceOnsetOfSymptoms
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:2136:            TemporaryExposureKey.prototype.daysSinceOnsetOfSymptoms = 0;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:2172:                if (message.daysSinceOnsetOfSymptoms != null && Object.hasOwnProperty.call(message, "daysSinceOnsetOfSymptoms"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:2173:                    writer.uint32(/* id 6, wireType 0 =*/48).sint32(message.daysSinceOnsetOfSymptoms);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:2224:                        message.daysSinceOnsetOfSymptoms = reader.sint32();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:2285:                if (message.daysSinceOnsetOfSymptoms != null && message.hasOwnProperty("daysSinceOnsetOfSymptoms"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:2286:                    if (!$util.isInteger(message.daysSinceOnsetOfSymptoms))
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:2287:                        return "daysSinceOnsetOfSymptoms: integer expected";
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:2340:                if (object.daysSinceOnsetOfSymptoms != null)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:2341:                    message.daysSinceOnsetOfSymptoms = object.daysSinceOnsetOfSymptoms | 0;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:2370:                    object.daysSinceOnsetOfSymptoms = 0;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:2382:                if (message.daysSinceOnsetOfSymptoms != null && message.hasOwnProperty("daysSinceOnsetOfSymptoms"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:2383:                    object.daysSinceOnsetOfSymptoms = message.daysSinceOnsetOfSymptoms;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.proto:205:  optional sint32 days_since_onset_of_symptoms = 6;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:75:        const minutesSinceLastCheck = Math.ceil(minutesBetween(lastCheckedDate, today));
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:76:        if (minutesSinceLastCheck < delay) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:77:          delay -= minutesSinceLastCheck;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureConfigurationDefault.json:6:  "daysSinceLastExposureLevelValues": [0, 1, 1, 1, 1, 1, 1, 1],
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureConfigurationDefault.json:7:  "daysSinceLastExposureWeight": 1,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureConfigurationSchema.json:36:    "daysSinceLastExposureLevelValues": {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureConfigurationSchema.json:46:    "daysSinceLastExposureWeight": {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureConfigurationSchema.json:92:    "daysSinceLastExposureLevelValues",
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureConfigurationSchema.json:93:    "daysSinceLastExposureWeight",
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureConfigurationValidator.spec.ts:31:      daysSinceLastExposureLevelValues: [0, 1, 1, 1, 1, 1, 1, 1],
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureConfigurationValidator.spec.ts:32:      daysSinceLastExposureWeight: 50,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:5:import {periodSinceEpoch} from '../../shared/date-fns';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:88:  daysSinceLastExposure = 5,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:94:  daysSinceLastExposure: number;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:100:      daysSinceLastExposure: 1234567,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:107:  const lastExposureTimestamp = today.getTime() - daysSinceLastExposure * ONE_DAY;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:110:    daysSinceLastExposure,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:191:      daysSinceLastExposure: 2,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:198:      daysSinceLastExposure: 7,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:205:      daysSinceLastExposure: 5,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:240:        daysSinceLastExposure: 7,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:265:    'given daysSinceLastExposure = %p, immediateMinutes = %p, os = %p, returns status %p',
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:266:    async (argDaysSinceLastExposure, immediateMinutes, os, expectedStatus) => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:278:        daysSinceLastExposure: 7,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:291:        daysSinceLastExposure: argDaysSinceLastExposure,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:307:      daysSinceLastExposure: 7,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:346:      daysSinceLastExposure: 7,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:354:      daysSinceLastExposure: 7,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:362:      daysSinceLastExposure: 8,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:370:      daysSinceLastExposure: 6,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:393:        period: periodSinceEpoch(new OriginalDate('2020-05-19T06:10:00+0000'), HOURS_PER_PERIOD),
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:406:        period: periodSinceEpoch(new OriginalDate('2020-05-18T05:10:00+0000'), HOURS_PER_PERIOD),
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:417:        period: periodSinceEpoch(new OriginalDate('2020-05-17T23:10:00+0000'), HOURS_PER_PERIOD),
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:441:        period: periodSinceEpoch(new OriginalDate('2020-05-18T04:10:00+0000'), HOURS_PER_PERIOD),
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:445:    const currentPeriod = periodSinceEpoch(currentDatetime, HOURS_PER_PERIOD);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:605:      const period = periodSinceEpoch(today, HOURS_PER_PERIOD);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:636:      const period = periodSinceEpoch(today, HOURS_PER_PERIOD);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:647:          daysSinceLastExposure: daysAgo,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:667:      const period = periodSinceEpoch(today, HOURS_PER_PERIOD);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:675:          daysSinceLastExposure: 2,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:692:            daysSinceLastExposure: 2,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:702:      const period = periodSinceEpoch(today, HOURS_PER_PERIOD);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:704:        daysSinceLastExposure: 7,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:731:      const period = periodSinceEpoch(today, HOURS_PER_PERIOD);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:735:        daysSinceLastExposure: 8,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:741:        daysSinceLastExposure: 7,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:795:      const period = periodSinceEpoch(today, HOURS_PER_PERIOD);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:797:        daysSinceLastExposure: 7,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:829:          period: periodSinceEpoch(today, HOURS_PER_PERIOD),
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:860:        daysSinceLastExposure: 7,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:914:  describe('getPeriodsSinceLastFetch', () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:916:      expect(service.getPeriodsSinceLastFetch()).toStrictEqual([0, 18400]);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:920:      expect(service.getPeriodsSinceLastFetch(18395)).toStrictEqual([18400, 18399, 18398, 18397, 18396, 18395]);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:924:      expect(service.getPeriodsSinceLastFetch(18400)).toStrictEqual([18400]);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:928:      expect(service.getPeriodsSinceLastFetch(18399)).toStrictEqual([18400, 18399]);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:947:          period: periodSinceEpoch(today, HOURS_PER_PERIOD),
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:961:          period: periodSinceEpoch(today, HOURS_PER_PERIOD),
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:979:      daysSinceLastExposure: 10,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:985:      daysSinceLastExposure: 1,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:1053:      daysSinceLastExposure: 1,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:1059:      daysSinceLastExposure: 2,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:1100:      daysSinceLastExposure: 1,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:13:  periodSinceEpoch,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:326:  public getPeriodsSinceLastFetch = (_lastCheckedPeriod?: number): number[] => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:328:    let runningPeriod = periodSinceEpoch(runningDate, HOURS_PER_PERIOD);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:511:      .map(scan => scan.secondsSinceLastScan)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:567:          daysSinceLastExposure: -1 /* dummy value */,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:660:            minutesSinceLastCheck: minutes,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:674:            minutesSinceLastCheck: minutes,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:992:    const periodsSinceLastFetch = this.getPeriodsSinceLastFetch(lastCheckedPeriod);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:994:      for (const period of periodsSinceLastFetch) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:1025:    const lastCheckedPeriod = periodSinceEpoch(today, HOURS_PER_PERIOD);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationServiceV2.spec.ts:67:    secondsSinceLastScan: seconds,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/FilteredMetricsService.ts:107:                'hoursSinceExposureDetectedAt',
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsService.ts:115:          const minutesSinceLastUpload = minutesBetween(metricsLastUploadedDateTime, today);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsService.ts:120:            message: `MinutesSinceLastUpload: ${minutesSinceLastUpload}, MinimumUploadMinutes: ${MIN_UPLOAD_MINUTES}, RandomMinutes: ${randomMinutes}`,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsService.ts:122:          if (minutesSinceLastUpload > MIN_UPLOAD_MINUTES + randomMinutes) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/PollNotificationService/PollNotificationService.ts:190:  const minutesSinceLastPollNotification = minutesBetween(new Date(Number(lastPollNotificationDateTime)), today);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/PollNotificationService/PollNotificationService.ts:195:    message: `Minutes Since Last Poll Notification: ${minutesSinceLastPollNotification}, MinimumUploadMinutes: ${MIN_POLL_NOTIFICATION_MINUTES}, RandomMinutes: ${randomMinutes}`,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/PollNotificationService/PollNotificationService.ts:197:  return minutesSinceLastPollNotification > MIN_POLL_NOTIFICATION_MINUTES + randomMinutes;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/BottomSheet.tsx:250:  // since there might be moar than one clock
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/date-fns.spec.ts:4:  hoursSinceEpoch,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/date-fns.spec.ts:59:  describe('hoursSinceEpoch', () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/date-fns.spec.ts:60:    it('returns 1 for date which is 1 hour since the epoch', () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/date-fns.spec.ts:61:      expect(hoursSinceEpoch(new Date('1970-01-01 01:00:00 GMT+0000'))).toStrictEqual(1);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/date-fns.spec.ts:65:      expect(hoursSinceEpoch(new Date('1970-01-01 00:00:00 GMT+0000'))).toStrictEqual(0);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/date-fns.spec.ts:69:      expect(hoursSinceEpoch(new Date('1970-01-02 01:30:00 GMT+0000'))).toStrictEqual(25.5);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/date-fns.ts:8:export function hoursSinceEpoch(date: Date) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/date-fns.ts:12:export function periodSinceEpoch(date: Date, hoursPerPeriod: number) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/date-fns.ts:57:export function getMillisSinceUTCEpoch() {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/Observable.ts:70:      // since we always push back, insertion will always precede deletion.

@@ -1,0 +1,46 @@
+Binary file ../stopcovid-robertsdk-ios/.git/index matches
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:16:    let storage: RobertStorage
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:18:    init(storage: RobertStorage) {
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:19:        self.storage = storage
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:28:        let epoch: RBEpoch = try storage.getCurrentEpoch()
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:30:        let key: String = try storage.getKey()
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:60:        let epoch: RBEpoch = try storage.getCurrentEpoch()
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:62:        let key: String = try storage.getKey()
+../stopcovid-robertsdk-ios/Robert/Protocols/RBStorage.swift:5://  RBStorage.swift
+../stopcovid-robertsdk-ios/Robert/Protocols/RBStorage.swift:13:protocol RBStorage {
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:18:    private var storage: RBStorage!
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:22:    var isRegistered: Bool { storage.isKeyStored() && storage.getLastEpoch() != nil }
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:24:        get { storage.isProximityActivated() }
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:25:        set { storage.save(proximityActivated: newValue) }
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:28:        get { storage.isSick() }
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:29:        set { storage.save(isSick: newValue) }
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:32:        get { storage.isAtRisk() }
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:33:        set { storage.save(isAtRisk: newValue) }
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:36:        get { storage.lastStatusReceivedDate() }
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:37:        set { storage.saveLastStatusReceivedDate(newValue) }
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:39:    var currentEpoch: RBEpoch? { storage.getCurrentEpoch() }
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:40:    var localProximityList: [RBLocalProximity] { storage.getLocalProximityList() }
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:42:    func start(server: RBServer, storage: RBStorage, bluetooth: RBBluetooth) {
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:44:        self.storage = storage
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:46:        self.storage.start()
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:57:            if let epoch = self.storage.getCurrentEpoch() {
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:84:            self?.storage.save(localProximity: localProximity)
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:93:        if let key = storage.getKey() {
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:104:        storage.stop()
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:117:        guard let epoch = storage.getCurrentEpoch() else {
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:143:        let localHelloMessages: [RBLocalProximity] = storage.getLocalProximityList()
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:145:            storage.save(isSick: true)
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:152:                    self.storage.save(isSick: true)
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:160:        if storage.isKeyStored() {
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:194:        guard let epoch = storage.getCurrentEpoch() else {
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:219:        guard let epoch = storage.getCurrentEpoch() else {
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:240:        storage.clearLocalEpochs()
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:244:        storage.clearLocalProximityList()
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:248:        storage.save(isAtRisk: nil)
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:252:        storage.clearAll(includingDBKey: false)
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:269:        storage.save(key: data)
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:271:        try storage.save(timeStart: response.timeStart)
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:274:            storage.save(epochs: response.epochs)
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:279:        storage.save(isAtRisk: response.atRisk)
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:280:        storage.save(lastExposureTimeFrame: response.lastExposureTimeFrame)
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:283:            storage.save(epochs: response.epochs)

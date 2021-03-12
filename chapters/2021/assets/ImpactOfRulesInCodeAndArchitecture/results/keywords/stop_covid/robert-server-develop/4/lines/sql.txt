@@ -1,0 +1,16 @@
+./robert-server-develop/pom.xml:49:		<postgresql.version>42.2.12</postgresql.version>
+./robert-server-develop/pom.xml:151:				<groupId>org.postgresql</groupId>
+./robert-server-develop/pom.xml:152:				<artifactId>postgresql</artifactId>
+./robert-server-develop/pom.xml:153:				<version>${postgresql.version}</version>
+./robert-server-develop/robert-crypto-grpc-server/pom.xml:137:			<groupId>org.postgresql</groupId>
+./robert-server-develop/robert-crypto-grpc-server/pom.xml:138:			<artifactId>postgresql</artifactId>
+./robert-server-develop/robert-crypto-grpc-server/src/main/resources/application.properties:18:spring.datasource.url= ${ROBERT_CRYPTO_SERVER_DB_URL:jdbc:postgresql://localhost:5432/robert}
+./robert-server-develop/robert-crypto-grpc-server/src/main/resources/application.properties:22:# spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+./robert-server-develop/robert-crypto-grpc-server/src/main/resources/application.properties:23:# spring.jpa.show-sql=true
+./robert-server-develop/robert-server-dataset-injector/README.md:4:- running instance of crypto-server (which depends on PostgreSQL DB and softHSMv2)
+./robert-server-develop/robert-server-dataset-injector/pom.xml:103:			<groupId>org.postgresql</groupId>
+./robert-server-develop/robert-server-dataset-injector/pom.xml:104:			<artifactId>postgresql</artifactId>
+./robert-server-develop/robert-server-dataset-injector/src/main/resources/application.properties:46:spring.datasource.url= ${ROBERT_CRYPTO_SERVER_DB_URL:jdbc:postgresql://localhost:5432/robert}
+./robert-server-develop/robert-server-dataset-injector/src/main/resources/application.properties:50:spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
+./robert-server-develop/robert-server-dataset-injector/src/test/resources/application.properties:31:spring.datasource.url= ${ROBERT_CRYPTO_SERVER_DB_URL:jdbc:postgresql://localhost:5432/robert}
+./robert-server-develop/robert-server-dataset-injector/src/test/resources/application.properties:35:spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect

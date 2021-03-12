@@ -1,0 +1,15 @@
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/objects/pack/pack-b2d5516249985a8a97b26ce8dac1bd2663fa44fa.pack matches
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/cloudfront.tf:59:    ssl_support_method       = "sni-only"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/lb_portal.tf:78:  ssl_policy        = "ELBSecurityPolicy-FS-1-2-Res-2019-08"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/lb_qrcode.tf:78:  ssl_policy        = "ELBSecurityPolicy-FS-1-2-Res-2019-08"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile:4:verify_ssl = true
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:12:                "verify_ssl": true
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:181:        default=os.getenv("DATABASE_URL"), conn_max_age=600, ssl_require=is_prod
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:185:        default=f"sqlite:///{default_db_path}", conn_max_age=600, ssl_require=is_prod
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:229:SECURE_SSL_REDIRECT = is_prod
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:242:# Setting SECURE_SSL_REDIRECT on heroku was causing infinite redirects without this
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:244:    SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/static/portal/img/instructions/screen-3-en.png matches
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/static/portal/img/instructions/screen-5-en.png matches
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/urls.py:6:from axes.admin import AccessLogAdmin
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/urls.py:23:AccessLogAdmin.has_delete_permission = disable_delete_permissions

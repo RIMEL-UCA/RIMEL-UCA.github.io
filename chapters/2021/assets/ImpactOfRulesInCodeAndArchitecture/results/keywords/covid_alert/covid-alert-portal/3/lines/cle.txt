@@ -1,0 +1,91 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/pre-rebase.sample:118:    clean up before publishing, and things that have not been
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/objects/pack/pack-b2d5516249985a8a97b26ce8dac1bd2663fa44fa.pack matches
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/certificates.tf:18:  lifecycle {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/certificates.tf:58:  lifecycle {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/ecr.tf:14:resource "aws_ecr_lifecycle_policy" "policy" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/ecs.tf:180:  lifecycle {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/ecs.tf:231:  lifecycle {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/lb_portal.tf:86:  lifecycle {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/lb_portal.tf:108:  lifecycle {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/lb_qrcode.tf:86:  lifecycle {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/lb_qrcode.tf:108:  lifecycle {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:556:  lifecycle {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/rds.tf:58:  lifecycle {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/forms.py:33:                    "email": self.cleaned_data.get("email", None),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/forms.py:34:                    "subject": self.cleaned_data.get("feedback", "")[0:20] + "...",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/forms.py:35:                    "description": self.cleaned_data.get("feedback", ""),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/forms.py:36:                    "name": self.cleaned_data.get("name", ""),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/forms.py:30:    def clean(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/forms.py:31:        super().clean()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/forms.py:33:            "phone_number" in self.cleaned_data
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/forms.py:34:            and self.cleaned_data["phone_number"] != self.cleaned_data["phone_number2"]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/forms.py:39:        return self.cleaned_data
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/forms.py:49:            phone_number=str(self.cleaned_data.get("phone_number")),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:29:        # clear any existing one time keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:168:        self.phone_number = str(form.cleaned_data.get("phone_number"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:199:        self.redirect_choice = form.cleaned_data.get("redirect_choice")
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/static/portal/img/instructions/screen-2-en.png matches
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/views.py:34:    # but if a ?next_url has been provided, let's make sure it's clean
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/views.py:42:        # if it is not clean, let's default to /
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/admin.py:56:    def clean_password(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/admin.py:78:    def clean_email(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/admin.py:79:        email = self.cleaned_data.get("email", "").lower()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:90:    def clean_username(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:91:        return self.cleaned_data["username"].lower()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:129:    def clean_code(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:131:        code = self.cleaned_data["code"].lower()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:183:    def clean_phone_number(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:184:        phone_number = self.cleaned_data.get("phone_number")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:225:    def clean_password1(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:226:        password1 = self.cleaned_data.get("password1")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:227:        # We can't use clean_data for password2, it hasn't been cleaned yet
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:236:    def _post_clean(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:237:        super()._post_clean()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:240:        password = self.cleaned_data.get("password1")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:248:        self.user.set_password(self.cleaned_data["password1"])
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:320:    def clean_new_password1(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:321:        password1 = self.cleaned_data.get("new_password1")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:322:        # We can't use clean_data for password2, it hasn't been cleaned yet
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:333:    def clean_new_password2(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:386:    def clean_province(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:389:        province_abbr = self.cleaned_data.get("province", "")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:392:    def clean_password1(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:393:        password1 = self.cleaned_data.get("password1")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:394:        # We can't use clean_data for password2, it hasn't been cleaned yet
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:403:    def clean_password2(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:405:        # The logic has been moved to clean_password
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:408:    def clean_email(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:409:        email = self.cleaned_data.get("email", "").lower()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:418:    def _post_clean(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:419:        # This function is the same as UserCreationForm._post_clean, except we
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:422:        forms.ModelForm._post_clean(self)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:425:        password = self.cleaned_data.get("password1")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:443:            address=self.cleaned_data.get("email"),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:478:    def clean_phone_number(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:479:        phone_number = self.cleaned_data.get("phone_number")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:480:        # We can't use clean_data for phone_number_confirmation, it hasn't been cleaned yet
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:509:    def clean_email(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:511:            email = super().clean_email()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:521:            # the CleanEmailMixin
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:539:        cleaned_data = super().clean()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:540:        params = {"email": cleaned_data.get("email"), "inviter": user}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:546:        cleaned_data = super().clean()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:547:        email = cleaned_data.get("email")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:578:    def clean(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:579:        cleaned_data = super().clean()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:580:        token = self.cleaned_data.get("otp_token")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:584:        cleaned_data["name"] = self.instance.user.email[:32]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:594:        return cleaned_data
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:615:    def clean(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:616:        cleaned_data = super().clean()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:617:        token = cleaned_data.get("otp_token")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:619:            return cleaned_data
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:624:        return cleaned_data
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/login_handler.py:71:        # Let's clean up the blocked_until field if set
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/static/css/normalize.css:37: * `article` contexts in Chrome, Firefox, and Safari.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:165:            username=form.cleaned_data.get("email"),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:166:            password=form.cleaned_data.get("password1"),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:246:        code = form.cleaned_data.get("code")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/views.py:19:        email = form.cleaned_data.get("email")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/views.py:70:        context["form_data"] = self.get_all_cleaned_data()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/views.py:75:        forms = [form.cleaned_data for form in form_list]

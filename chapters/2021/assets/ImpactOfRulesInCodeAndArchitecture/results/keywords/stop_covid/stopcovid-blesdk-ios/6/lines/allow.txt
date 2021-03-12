@@ -1,0 +1,38 @@
+stopcovid-blesdk-ios/.git/hooks/applypatch-msg.sample:8:# allowed to edit the commit message file.
+stopcovid-blesdk-ios/.git/hooks/commit-msg.sample:7:# commit.  The hook is allowed to edit the commit message file.
+stopcovid-blesdk-ios/.git/hooks/pre-commit.sample:18:# If you want to allow non-ASCII filenames set this variable to true.
+stopcovid-blesdk-ios/.git/hooks/pre-commit.sample:19:allownonascii=$(git config --bool hooks.allownonascii)
+stopcovid-blesdk-ios/.git/hooks/pre-commit.sample:27:if [ "$allownonascii" != "true" ] &&
+stopcovid-blesdk-ios/.git/hooks/pre-commit.sample:43:  git config hooks.allownonascii true
+stopcovid-blesdk-ios/.git/hooks/pre-rebase.sample:15:# merged to 'next' branch from getting rebased, because allowing it
+stopcovid-blesdk-ios/.git/hooks/pre-rebase.sample:50:	exit 1 ;# we could allow it, but there is no point.
+stopcovid-blesdk-ios/.git/hooks/pre-rebase.sample:62:		exit 1 ;# we could allow it, but there is no point.
+stopcovid-blesdk-ios/.git/hooks/pre-rebase.sample:153:We would want to allow C to be rebased, refuse A, and encourage
+stopcovid-blesdk-ios/.git/hooks/update.sample:10:# hooks.allowunannotated
+stopcovid-blesdk-ios/.git/hooks/update.sample:11:#   This boolean sets whether unannotated tags will be allowed into the
+stopcovid-blesdk-ios/.git/hooks/update.sample:13:# hooks.allowdeletetag
+stopcovid-blesdk-ios/.git/hooks/update.sample:14:#   This boolean sets whether deleting tags will be allowed in the
+stopcovid-blesdk-ios/.git/hooks/update.sample:16:# hooks.allowmodifytag
+stopcovid-blesdk-ios/.git/hooks/update.sample:19:# hooks.allowdeletebranch
+stopcovid-blesdk-ios/.git/hooks/update.sample:20:#   This boolean sets whether deleting branches will be allowed in the
+stopcovid-blesdk-ios/.git/hooks/update.sample:24:#   in the repository.  By default this is allowed.
+stopcovid-blesdk-ios/.git/hooks/update.sample:46:allowunannotated=$(git config --bool hooks.allowunannotated)
+stopcovid-blesdk-ios/.git/hooks/update.sample:47:allowdeletebranch=$(git config --bool hooks.allowdeletebranch)
+stopcovid-blesdk-ios/.git/hooks/update.sample:49:allowdeletetag=$(git config --bool hooks.allowdeletetag)
+stopcovid-blesdk-ios/.git/hooks/update.sample:50:allowmodifytag=$(git config --bool hooks.allowmodifytag)
+stopcovid-blesdk-ios/.git/hooks/update.sample:74:		if [ "$allowunannotated" != "true" ]; then
+stopcovid-blesdk-ios/.git/hooks/update.sample:75:			echo "*** The un-annotated tag, $short_refname, is not allowed in this repository" >&2
+stopcovid-blesdk-ios/.git/hooks/update.sample:82:		if [ "$allowdeletetag" != "true" ]; then
+stopcovid-blesdk-ios/.git/hooks/update.sample:83:			echo "*** Deleting a tag is not allowed in this repository" >&2
+stopcovid-blesdk-ios/.git/hooks/update.sample:89:		if [ "$allowmodifytag" != "true" ] && git rev-parse $refname > /dev/null 2>&1
+stopcovid-blesdk-ios/.git/hooks/update.sample:92:			echo "*** Modifying a tag is not allowed in this repository." >&2
+stopcovid-blesdk-ios/.git/hooks/update.sample:99:			echo "*** Creating a branch is not allowed in this repository" >&2
+stopcovid-blesdk-ios/.git/hooks/update.sample:105:		if [ "$allowdeletebranch" != "true" ]; then
+stopcovid-blesdk-ios/.git/hooks/update.sample:106:			echo "*** Deleting a branch is not allowed in this repository" >&2
+stopcovid-blesdk-ios/.git/hooks/update.sample:115:		if [ "$allowdeletebranch" != "true" ]; then
+stopcovid-blesdk-ios/.git/hooks/update.sample:116:			echo "*** Deleting a tracking branch is not allowed in this repository" >&2
+stopcovid-blesdk-ios/LICENSE.txt:297:*  jurisdictions do not allow the exclusion or limitation of           *
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:95:        let options: [String: Any] = [CBCentralManagerScanOptionAllowDuplicatesKey: NSNumber(value: true)]
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothSettings.swift:25:    /// The compensation gain for the receiving power level, in decibels. Allows to compute the calibrated RSSI.
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothSettings.swift:39:    ///   - rxCompensationGain: The compensation gain for the receiving power level, in decibels. Allows to compute the calibrated RSSI.
+stopcovid-blesdk-ios/ProximityNotification.xcodeproj/xcshareddata/xcschemes/ProximityNotificationTests.xcscheme:37:      allowLocationSimulation = "YES">

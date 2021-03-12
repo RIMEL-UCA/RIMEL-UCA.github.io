@@ -1,0 +1,19 @@
+d5b58be1fe860f05d00ead79aa09d77845145c4b,Accidentally committed these changes while still logged in via my personal GitHub account
+d748bd44ee362ae380320c278699c7d922303df3,Can i have some help on my code please?
+
+d664a89752a0818da625477c8a281d93822efa4c,Let's change back to `captureMessage('getExposureConfiguration', {exposureConfigurationUrl});`
+d664a89752a0818da625477c8a281d93822efa4c,Let's add back `captureMessage('updateExposureStatusInBackground', {exposureStatus: this.exposureStatus.get()});`
+d664a89752a0818da625477c8a281d93822efa4c,Add back `captureMessage('updatedExposureStatusInBackground', {exposureStatus: this.exposureStatus.get()});`
+d664a89752a0818da625477c8a281d93822efa4c,Try catch is optional
+e9792e40b58f8fc0376f33a293af71b2096ed820,Missing `captureMessage('updateExposureStatusInBackground', {exposureStatus: this.exposureStatus.get()});` before init. We want to know when this method is called and when it is `updated`.
+1c2a0a9e4ee49f455fedb848de44200c0e27059d,Typo, `warning: ATS is disbaled` -> `warning: ATS is disabled`
+13061fe56b7ee198bcda21ce5a793c8e8d992a0d,:eyes: ?
+e6686df5dc04c46bccd47ddc0b4f134a337c54d9,![](https://github.trello.services/images/mini-trello-icon.png) [Translation for notifications for background Exposure Checks.](https://trello.com/c/BfCnWbvs/885-translation-for-notifications-for-background-exposure-checks)
+bb34e86c9bc0d9a94d6711a6c960995f77987139,Looks like a typo here.
+bb34e86c9bc0d9a94d6711a6c960995f77987139,Could use `await isENFrameworkSupported()` instead of `.then().catch()` to better match the style of the rest of the app. Not a big concern though.
+bb34e86c9bc0d9a94d6711a6c960995f77987139,I can definitely try to use `await isENFrameworkSupported()`. Using the `then` operator would be a good idea when we start to chain multiple promises though.
+e01c11eea79d0b97f0bd3f81c3ecea2b85689f74,I approve this commit. ;)
+2e3014f978ccf3b5d9aa7b27670c30eb0894b9b1,We should reuse this one, which we have for when people sign up: https://github.com/cds-snc/covid-alert-portal/blob/main/profiles/forms.py#L176
+2e3014f978ccf3b5d9aa7b27670c30eb0894b9b1,Looks good! 👍 
+2e3014f978ccf3b5d9aa7b27670c30eb0894b9b1,Nice, I didn't know about this Mixin 👍 
+85037aea696808c8e0de4b0afe9282e51424c2a3,Awesomeness! 🎉 

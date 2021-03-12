@@ -1,0 +1,8 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:363:		`, // don't implicitly order by insertion date: for privacy
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/retrieve.go:115:		return s.fail(log(ctx, nil), w, "request for current date", "cannot serve data for current period for privacy reasons", http.StatusNotFound)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/README.md:4:*See [this joint statement from Canada's Federal, Provincial, and Territorial Privacy
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/README.md:6:privacy concerns addressed by this protocol.*
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:9:provided by Canada's Privacy
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:12:The choices made in implementation are meant to maximize privacy, security, and performance. No
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:53:server. This submission timestamp is rounded to the nearest hour for privacy preservation (to
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:44:        body: "cannot serve data for current period for privacy reasons\n"

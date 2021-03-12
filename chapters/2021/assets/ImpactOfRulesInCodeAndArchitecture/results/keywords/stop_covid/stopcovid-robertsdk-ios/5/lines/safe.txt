@@ -1,0 +1,11 @@
+../stopcovid-robertsdk-ios/.git/hooks/pre-rebase.sample:93:This sample hook safeguards topic branches that have been
+../stopcovid-robertsdk-ios/.git/hooks/update.sample:32:# --- Safety check
+../stopcovid-robertsdk-ios/Robert/Extensions/Data+RBExtension.swift:19:        let string: UnsafePointer<UInt8> = (self as NSData).bytes.bindMemory(to: UInt8.self, capacity: self.count)
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:44:        let data: Data = withUnsafeBytes(of: time) { Data($0) }
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:68:        let timeData: Data = withUnsafeBytes(of: time) { Data($0) }
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:93:        let pointer = UnsafePointer(timeData.bytes)
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:30:        let data: Data = withUnsafeBytes(of: time) { Data($0) }
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:42:        let timeData: Data = withUnsafeBytes(of: time) { Data($0) }
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:58:        let timeData: Data = withUnsafeBytes(of: time) { Data($0) }
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:74:        let timeData: Data = withUnsafeBytes(of: time) { Data($0) }
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageParser.swift:28:        let time: UInt16 = timeData.bytes.withUnsafeBufferPointer { $0.baseAddress?.withMemoryRebound(to: UInt16.self, capacity: 1) { $0.pointee }.bigEndian } ?? 0

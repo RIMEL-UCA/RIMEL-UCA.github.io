@@ -1,0 +1,26 @@
+../stopcovid-robertsdk-android/.git/hooks/pre-push.sample:31:		# Handle delete
+../stopcovid-robertsdk-android/.git/hooks/pre-rebase.sample:102:   it is deleted.  If you need to build on top of it to correct
+../stopcovid-robertsdk-android/.git/hooks/pre-rebase.sample:124:    Then you can delete it.  More importantly, you should not
+../stopcovid-robertsdk-android/.git/hooks/pre-rebase.sample:149:   and is ready to be deleted.
+../stopcovid-robertsdk-android/.git/hooks/pre-rebase.sample:154:B to be deleted.
+../stopcovid-robertsdk-android/.git/hooks/update.sample:13:# hooks.allowdeletetag
+../stopcovid-robertsdk-android/.git/hooks/update.sample:19:# hooks.allowdeletebranch
+../stopcovid-robertsdk-android/.git/hooks/update.sample:47:allowdeletebranch=$(git config --type=bool hooks.allowdeletebranch)
+../stopcovid-robertsdk-android/.git/hooks/update.sample:49:allowdeletetag=$(git config --type=bool hooks.allowdeletetag)
+../stopcovid-robertsdk-android/.git/hooks/update.sample:62:# if $newrev is 0000...0000, it's a commit to delete a ref.
+../stopcovid-robertsdk-android/.git/hooks/update.sample:65:	newrev_type=delete
+../stopcovid-robertsdk-android/.git/hooks/update.sample:80:	refs/tags/*,delete)
+../stopcovid-robertsdk-android/.git/hooks/update.sample:81:		# delete tag
+../stopcovid-robertsdk-android/.git/hooks/update.sample:82:		if [ "$allowdeletetag" != "true" ]; then
+../stopcovid-robertsdk-android/.git/hooks/update.sample:103:	refs/heads/*,delete)
+../stopcovid-robertsdk-android/.git/hooks/update.sample:104:		# delete branch
+../stopcovid-robertsdk-android/.git/hooks/update.sample:105:		if [ "$allowdeletebranch" != "true" ]; then
+../stopcovid-robertsdk-android/.git/hooks/update.sample:113:	refs/remotes/*,delete)
+../stopcovid-robertsdk-android/.git/hooks/update.sample:114:		# delete tracking branch
+../stopcovid-robertsdk-android/.git/hooks/update.sample:115:		if [ "$allowdeletebranch" != "true" ]; then
+../stopcovid-robertsdk-android/build.gradle:26:task clean(type: Delete) {
+../stopcovid-robertsdk-android/build.gradle:27:    delete rootProject.buildDir
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/RemoteServiceDataSource.kt:25:    suspend fun deleteExposureHistory(serverStatusUpdate: ServerStatusUpdate): RobertResult
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:39:    suspend fun deleteExposureHistory(serverStatusUpdate: ServerStatusUpdate): RobertResult =
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:40:        remoteServiceDataSource.deleteExposureHistory(serverStatusUpdate)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:194:                val result = remoteServiceRepository.deleteExposureHistory(ssu.data)

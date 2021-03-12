@@ -1,0 +1,52 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/ecs.tf:38:    database_url                           = aws_secretsmanager_secret_version.server_database_url.arn
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/ecs.tf:77:    database_url                           = aws_secretsmanager_secret_version.server_database_url.arn
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/iam.tf:25:      aws_secretsmanager_secret.server_database_url.arn,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:279:resource "aws_security_group_rule" "covidportal_egress_database" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:286:  source_security_group_id = aws_security_group.covidportal_database.id
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:362:resource "aws_security_group_rule" "qrcode_egress_database" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:369:  source_security_group_id = aws_security_group.covidportal_database.id
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:402:resource "aws_security_group" "covidportal_database" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:403:  name        = "covidportal-database"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:404:  description = "Ingress - covidportal Database"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/rds.tf:37:  database_name             = var.rds_server_db_name
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/rds.tf:50:    aws_security_group.covidportal_database.id
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/secrets.tf:1:resource "aws_secretsmanager_secret" "server_database_url" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/secrets.tf:2:  name                    = "server-database-url"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/secrets.tf:6:resource "aws_secretsmanager_secret_version" "server_database_url" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/secrets.tf:7:  secret_id     = aws_secretsmanager_secret.server_database_url.id
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/task-definitions/covid-portal.json:55:        "name": "DATABASE_URL",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/task-definitions/covid-portal.json:56:        "valueFrom": "${database_url}"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/docker-compose.yml:14:      - DATABASE_URL=postgres://user:password@db:5432/covid_portal
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/entrypoint.sh:3:# Apply database migrations
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/entrypoint.sh:4:echo "Apply database migrations"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile:27:dj-database-url = "*"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile.lock:141:        "dj-database-url": {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/.env.example:10:# DATABASE_URL =
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:16:import dj_database_url
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:170:# Database
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:171:# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:175:# database migrations will fail if env var is set to an empty string
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:176:if os.getenv("DATABASE_URL") == "":
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:177:    del os.environ["DATABASE_URL"]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:179:if os.getenv("DATABASE_URL"):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:180:    db_config = dj_database_url.config(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:181:        default=os.getenv("DATABASE_URL"), conn_max_age=600, ssl_require=is_prod
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:184:    db_config = dj_database_url.config(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:188:DATABASES = {"default": db_config}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/login_handler.py:3:from axes.handlers.database import AxesDatabaseHandler
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/login_handler.py:10:class HealthcareLoginHandler(AxesDatabaseHandler):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/login_handler.py:13:        # If AxesDatabaseHandler already returns locked, let's return it right now
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:13:- Running the COVID Alert Portal locally as a python process requires [python3](https://www.python.org/downloads/) and a database, although an SQLite database will be created if no connection string exists.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:47:##### database configuration
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:49:- `DATABASE_URL`: A string containing the database scheme, host, username, password, and port. The `DATABASE_URL` is parsed by [`dj-django-url`](https://pypi.org/project/dj-database-url/).
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:120:- the `entrypoint.sh` script to perform the database migrations
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:128:#### 1. Database migrations
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:130:By default the Django creates an SQLite database, but we use Postgres in production.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:132:If a `DATABASE_URL` environment variable exists, it will set all the connection parameters at the same time.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:134:##### Postgres [URL schema](https://github.com/jacobian/dj-database-url#url-schema)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:136:| Django Backend                  | DATABASE_URL                              |
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:140:To create the database schema, run `python manage.py makemigrations`.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:176:You can use Docker Compose to build an application container along with a Postgres database. It will map your local files into a Docker container, spin up a PostgreSQL database, and do CSS compilation and a DB migration. The app runs on port `8000`, the database at port `5432` (u: `user`, p: `password`) and will be served at `http://0.0.0.0:8000`.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:279:Si une variable d’environnement `DATABASE_URL` existe, elle configurera tous les paramètres de connexion au même moment.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:281:##### Postgres [URL schema](https://github.com/jacobian/dj-database-url#url-schema)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:283:| Django Backend                  | DATABASE_URL                              |

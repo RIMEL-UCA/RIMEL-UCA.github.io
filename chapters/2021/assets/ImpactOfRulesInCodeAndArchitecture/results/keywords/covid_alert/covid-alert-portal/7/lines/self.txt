@@ -1,0 +1,1461 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/tests.py:9:    def test_apps(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/tests.py:10:        self.assertEqual(AboutConfig.name, "about")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/tests.py:11:        self.assertEqual(apps.get_app_config("about").name, "about")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/tests.py:15:    def test_about_covid_alert_page(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/tests.py:16:        response = self.client.get(reverse("about:index"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/tests.py:17:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/tests.py:18:        self.assertContains(response, "<h1>COVID Alert</h1>", html=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/tests.py:20:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/tests.py:24:    def test_about_create_account_page(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/tests.py:25:        response = self.client.get(reverse("about:create_account"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/tests.py:26:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/tests.py:27:        self.assertContains(response, "<h1>Create an account</h1>", html=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/tests.py:28:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/tests.py:34:    def test_about_one_time_keys_page(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/tests.py:35:        response = self.client.get(reverse("about:one_time_keys"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/tests.py:36:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/tests.py:37:        self.assertContains(response, "<h1>One-time keys</h1>", html=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/tests.py:38:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/tests.py:44:    def test_about_give_a_key_page(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/tests.py:45:        response = self.client.get(reverse("about:give_a_key"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/tests.py:46:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/tests.py:47:        self.assertContains(response, "<h1>Give a key</h1>", html=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/tests.py:48:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/tests.py:54:    def test_about_help_patient_enter_key_page(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/tests.py:55:        response = self.client.get(reverse("about:help_patient_enter_key"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/tests.py:56:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/tests.py:57:        self.assertContains(response, "<h1>Help patient enter key</h1>", html=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/tests.py:58:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/tests.py:64:    def test_about_admin_accounts_page(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/tests.py:65:        response = self.client.get(reverse("about:admin_accounts"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/tests.py:66:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/tests.py:67:        self.assertContains(response, "<h1>Admin accounts</h1>", html=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/tests.py:68:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/models.py:63:    def dismiss_url(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/models.py:64:        if self.dismissable:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/models.py:65:            return reverse("announcements:dismiss", args=[self.pk])
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:15:    def test_apps(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:16:        self.assertEqual(AnnouncementsConfig.name, "announcements")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:17:        self.assertEqual(apps.get_app_config("announcements").name, "announcements")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:21:    def setUp(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:23:        self.user2_credentials = get_other_credentials(is_admin=False)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:24:        self.user2 = User.objects.create_user(**self.user2_credentials)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:32:    def test_site_wide_is_visible_by_all(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:35:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:36:        response = self.client.get(reverse("start"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:37:        self.assertContains(response, '<div class="title">Test for Site Wide</div>')
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:38:        self.client.logout()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:41:        self.login(self.user2_credentials)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:42:        response = self.client.get(reverse("start"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:43:        self.assertContains(response, '<div class="title">Test for Site Wide</div>')
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:45:    def test_site_wide_is_visible_on_multiple_pages(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:46:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:48:        response = self.client.get(reverse("about:index"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:49:        self.assertContains(response, '<div class="title">Test for Site Wide</div>')
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:51:        response = self.client.get(reverse("start"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:52:        self.assertContains(response, '<div class="title">Test for Site Wide</div>')
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:54:        response = self.client.post(reverse("key"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:55:        self.assertContains(response, '<div class="title">Test for Site Wide</div>')
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:57:    def test_to_ensure_user_scoped_is_only_visible_to_that_user(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:63:            for_user=self.user,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:65:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:66:        response = self.client.get(reverse("start"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:67:        self.assertContains(response, '<div class="title">Test for User 1 Only</div>')
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:68:        self.client.logout()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:71:        self.login(self.user2_credentials)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:72:        response = self.client.get(reverse("start"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:73:        self.assertNotContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:77:    def test_that_only_active_announcements_are_displayed(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:85:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:86:        response = self.client.get(reverse("start"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:87:        self.assertContains(response, '<div class="title">Test for Site Wide</div>')
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:88:        self.assertNotContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:92:    def test_to_ensure_announcement_is_dismissable(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:100:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:101:        response = self.client.get(reverse("start"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:102:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:106:    def test_to_ensure_announcement_is_not_dismissable(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:108:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:109:        response = self.client.get(reverse("start"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/tests.py:110:        self.assertNotContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/views.py:11:    def post(self, request, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/views.py:12:        self.object = self.get_object()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/views.py:16:        if self.object.dismissable:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/views.py:19:            excluded.add(self.object.pk)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/apps.py:8:    def ready(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/forms.py:9:    def __init__(self, user, admin, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/forms.py:10:        self.user = user
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/forms.py:11:        self.admin = admin
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/forms.py:14:    def is_valid(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/forms.py:15:        if self.user is None or self.user.is_authenticated is False:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/forms.py:22:        self,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/forms.py:27:            address=self.admin.email,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/forms.py:32:                "name": self.admin.name,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/forms.py:33:                "user_email": self.user.email,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/forms.py:34:                "user_name": self.user.name,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/templates/backup_codes/backup_codes_list.html:18:    {% trans "Do not email them to yourself or anyone else, do not keep them on a shared computer or on any device that is not protected by a password." %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/templates/backup_codes/signup_backup_codes_list.html:16:    {% trans "Do not email them to yourself or anyone else, do not keep them on a shared computer or on any device that is not protected by a password." %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:22:    def test_apps(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:23:        self.assertEqual(BackupCodesConfig.name, "backup_codes")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:24:        self.assertEqual(apps.get_app_config("backup_codes").name, "backup_codes")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:28:    def setUp(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:31:    def test_user_can_get_security_codes_on_account_page(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:32:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:33:        response = self.client.get(reverse("user_profile", kwargs={"pk": self.user.id}))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:34:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:35:        self.assertContains(response, "Never generated", html=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:37:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:41:    def test_user_can_view_codes_row_on_account_page(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:42:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:44:        self.client.post(reverse("backup_codes"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:46:        response = self.client.get(reverse("user_profile", kwargs={"pk": self.user.id}))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:47:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:48:        self.assertContains(response, "10 codes left", html=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:50:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:54:    def test_user_redirected_from_backup_codes_page_without_codes(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:55:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:56:        response = self.client.get(reverse("backup_codes"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:57:        self.assertRedirects(response, "/en/profiles/{}".format(self.credentials["id"]))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:59:    def test_user_can_generate_10_security_codes(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:60:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:61:        response = self.client.post(reverse("backup_codes"), follow=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:62:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:63:        self.assertContains(response, "<h1>Security codes</h1>")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:65:        device = StaticDevice.objects.get(user__id=self.user.id)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:66:        self.assertEqual(len(device.token_set.all()), 10)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:68:    def test_old_security_codes_invalid_if_new_security_codes_generated(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:69:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:70:        response = self.client.post(reverse("backup_codes"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:71:        self.assertRedirects(response, "/en/backup-codes")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:75:            for t in StaticDevice.objects.get(user__id=self.user.id).token_set.all()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:78:        response = self.client.post(reverse("backup_codes"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:79:        self.assertRedirects(response, "/en/backup-codes")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:82:            for t in StaticDevice.objects.get(user__id=self.user.id).token_set.all()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:86:            self.assertNotIn(code, new_codes)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:88:    def test_user_codes_HTML(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:89:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:90:        response = self.client.post(reverse("backup_codes"), follow=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:91:        self.assertRedirects(response, "/en/backup-codes")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:92:        self.assertContains(response, "<h1>Security codes</h1>")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:93:        device = StaticDevice.objects.get(user__id=self.user.id)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:98:            self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:103:            self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:111:    def test_user_codes_empty_HTML(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:112:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:113:        self.client.post(reverse("backup_codes"), follow=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:114:        device = StaticDevice.objects.get(user__id=self.user.id)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:118:        self.assertEqual(len(device.token_set.all()), 1)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:121:        response = self.client.get(reverse("user_profile", kwargs={"pk": self.user.id}))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:122:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:123:        self.assertContains(response, "1 code left", html=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:126:        response = self.client.get(reverse("backup_codes"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:127:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:128:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:135:    def test_low_on_security_codes_banner(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:136:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:138:        self.client.post(reverse("backup_codes"), follow=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:140:        device = StaticDevice.objects.get(user__id=self.user.id)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:143:        self.assertEqual(len(device.token_set.all()), 1)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:145:        response = self.client.get(reverse("start"), follow=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:146:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:149:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:157:    def setUp(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:160:    def test_admin_can_see_security_code_button_for_staff_user(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:164:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:165:        response = self.client.get(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:168:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:170:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:176:    def test_admin_can_get_security_code_for_staff_user(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:180:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:181:        response = self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:186:        self.assertEqual(len(device.token_set.all()), 1)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:188:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:189:        self.assertContains(response, "<h1>Security code</h1>", html=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:191:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:199:    def test_admin_getting_security_code_for_staff_user_replaces_existing_codes(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:204:        self.login(staff_credentials)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:205:        self.client.post(reverse("backup_codes"), follow=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:207:        self.assertEqual(len(device.token_set.all()), 10)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:210:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:212:        self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:218:        self.assertEqual(len(device.token_set.all()), 1)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:220:    def test_admin_redirect_on_get_request_if_no_static_device(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:225:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:226:        response = self.client.get(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:229:        self.assertRedirects(response, "/en/profiles/{}".format(staff_user.id))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:231:    def test_admin_can_get_security_code_for_other_admin_user(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:235:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:236:        response = self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:239:        self.assertRedirects(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:245:        self.assertEqual(len(device.token_set.all()), 1)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:247:    def test_admin_can_NOT_get_security_code_for_other_province_user(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:251:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:252:        response = self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:256:        self.assertEqual(response.status_code, 403)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:259:        self.assertIsNone(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:263:    def test_admin_can_NOT_get_security_code_for_superuser(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:267:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:268:        response = self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:272:        self.assertEqual(response.status_code, 403)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:275:        self.assertIsNone(StaticDevice.objects.filter(user__id=superuser.id).first())
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:277:    def test_admin_can_delete_staff_user_with_security_codes(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:281:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:283:        self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:288:        self.assertEqual(len(device.token_set.all()), 1)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:290:        response = self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:293:        self.assertEqual(response.status_code, 302)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:294:        self.assertEqual(response.url, reverse("profiles"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:295:        self.assertEqual(len(User.objects.filter(pk=staff_user.id)), 0)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:299:    def setUp(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:301:        self.ensure_codes_created()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:302:        self.logout()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:304:    def ensure_codes_created(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:305:        self.login(login_2fa=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:306:        self.client.post(reverse("backup_codes"), follow=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:308:    def logout(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:309:        self.client.logout()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:311:    def test_user_can_login_with_backup_code(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:312:        self.login(login_2fa=False)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:315:        response = self.client.get(reverse("login_2fa"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:316:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:319:        static_device = self.user.staticdevice_set.first()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:323:        response = self.client.post(reverse("login_2fa"), {"code": token}, follow=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:326:        self.assertTrue(response.context["user"].is_verified())
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:328:    def test_user_can_login_with_backup_code_case_insensitive(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:329:        self.login(login_2fa=False)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:332:        response = self.client.get(reverse("login_2fa"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:333:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:336:        static_device = self.user.staticdevice_set.first()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:343:        response = self.client.post(reverse("login_2fa"), {"code": token}, follow=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:346:        self.assertTrue(response.context["user"].is_verified())
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:348:    def test_user_can_login_with_backup_code_whitespace(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:349:        self.login(login_2fa=False)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:352:        response = self.client.get(reverse("login_2fa"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:353:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:356:        static_device = self.user.staticdevice_set.first()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:363:        response = self.client.post(reverse("login_2fa"), {"code": token}, follow=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:366:        self.assertTrue(response.context["user"].is_verified())
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:368:    def test_user_can_login_with_sms_code(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:369:        self.login(login_2fa=False)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:370:        generate_2fa_code(self.user)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:373:        response = self.client.get(reverse("login_2fa"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:374:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:377:        sms_device = self.user.notifysmsdevice_set.last()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:382:        response = self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:389:        self.assertTrue(response.context["user"].is_verified)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:393:    def setUp(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:395:        self.inviter_credentials = {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:403:        self.inviter = User.objects.create_user(**self.inviter_credentials)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:404:        self.invite = Invitation.create(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:405:            self.user.email, inviter=self.inviter, sent=timezone.now()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:407:        self.invite.accepted = True
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:409:    def test_users_admin_displayed_on_backup_code_help_page(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:410:        self.login(login_2fa=False)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:411:        response = self.client.get(reverse("backup_codes_help"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:412:        self.assertContains(response, self.inviter.email)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:415:        self,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:418:        User.objects.filter(email__exact=self.inviter.email).delete()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:420:        self.login(login_2fa=False)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:421:        response = self.client.get(reverse("backup_codes_help"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:422:        self.assertContains(response, "assistance+healthcare@cds-snc.ca")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:426:    def setUp(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:428:        self.user_credentials = {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:435:        self.user = User.objects.create_user(**self.user_credentials)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:437:    def test_user_redirected_to_signup_if_no_mobile_or_static_codes(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:438:        self.client.login(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:439:            username=self.user_credentials.get("email"),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:440:            password=self.user_credentials.get("password"),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:442:        response = self.client.get(reverse("login_2fa"), follow=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:443:        self.assertRedirects(response, "/en/signup-2fa/")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:447:    def setUp(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:450:    def test_redirect_to_login_backup_codes_signup_view(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:451:        response = self.client.get(reverse("signup_backup_codes"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:452:        self.assertRedirects(response, "/en/login/?next=/en/signup/backup-codes")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:454:    def test_redirect_to_start_backup_codes_signup_view_after_login(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:455:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:456:        response = self.client.get(reverse("signup_backup_codes"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:457:        self.assertRedirects(response, "/en/start/")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:459:    def test_backup_codes_signup_view_after_setting_referrer(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:460:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:464:        response = self.client.get(reverse("signup_backup_codes"), **headers)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:465:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:466:        self.assertContains(response, "<h1>No mobile phone?</h1>")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:468:        device = StaticDevice.objects.get(user__id=self.user.id)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:469:        self.assertEqual(len(device.token_set.all()), 10)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:473:    def check_throttle_failure_count(self, devices):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:481:    def test_lockout_of_backup_codes_with_sms_device(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:483:        user = self.user
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:485:        self.login(login_2fa=False)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:486:        generate_2fa_code(self.user)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:488:        response = self.client.get(reverse("login_2fa"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:489:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:494:        response = self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:500:        self.assertFormError(response, "form", "code", "You entered the wrong code.")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:503:        response = self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:508:        self.assertRedirects(response, "/en/login/")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:510:        self.assertEqual(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:511:            self.check_throttle_failure_count(user.notifysmsdevice_set.all()), 0
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:513:        self.assertEqual(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:514:            self.check_throttle_failure_count(user.staticdevice_set.all()), 0
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:518:    def test_lockout_of_backup_codes_with_static_device(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:520:        user = self.user
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:522:        self.login(login_2fa=False)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:524:        response = self.client.get(reverse("login_2fa"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:525:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:530:        response = self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:536:        self.assertFormError(response, "form", "code", "You entered the wrong code.")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:539:        response = self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:544:        self.assertRedirects(response, "/en/login/")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:546:        self.assertEqual(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:547:            self.check_throttle_failure_count(user.notifysmsdevice_set.all()), 0
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:549:        self.assertEqual(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:550:            self.check_throttle_failure_count(user.staticdevice_set.all()), 0
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:553:    def test_backup_code_attempts_are_being_throttled_with_sms(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:555:        self.user.staticdevice_set.all().delete()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:556:        self.login(login_2fa=False)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:558:        response = self.client.get(reverse("login_2fa"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:559:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:564:        response = self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:570:        self.assertFormError(response, "form", "code", "You entered the wrong code.")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:572:        response = self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:577:        self.assertFormError(response, "form", "code", "Please try again later.")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:579:    def test_backup_code_attempts_are_being_throttled_with_static(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:581:        self.user.notifysmsdevice_set.all().delete()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:582:        self.login(login_2fa=False)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:584:        response = self.client.get(reverse("login_2fa"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:585:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:590:        response = self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:596:        self.assertFormError(response, "form", "code", "You entered the wrong code.")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:598:        response = self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:603:        self.assertFormError(response, "form", "code", "Please try again later.")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:25:    def get(self, request, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:26:        if not get_user_static_device(self.request.user):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:33:    def post(self, request, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:37:    def get_queryset(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:38:        return _get_backup_codes_list(self.request.user)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:45:    def dispatch(self, request, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:46:        # setting self.staff_user so that other methods will have access to it
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:47:        self.staff_user = get_object_or_404(HealthcareUser, pk=self.kwargs["pk"])
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:50:    def get(self, request, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:51:        if not get_user_static_device(self.staff_user):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:53:                reverse_lazy("user_profile", kwargs={"pk": self.staff_user.pk})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:58:    def post(self, request, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:59:        _recreate_backup_codes(self.staff_user, num_codes=1)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:61:            reverse_lazy("backup_codes_admin", kwargs={"pk": self.staff_user.pk})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:64:    def get_queryset(self, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:65:        return get_user_static_device(self.staff_user).token_set.all()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:72:    def get(self, request, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:82:    # this is called _after_ self.get()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:83:    def get_queryset(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:84:        return _get_backup_codes_list(self.request.user)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:92:    def get_form_kwargs(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:95:        kwargs["user"] = self.request.user
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:96:        kwargs["admin"] = self.user_admin
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:99:    def form_valid(self, form):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:107:                form.send_mail(self.request.LANGUAGE_CODE)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:109:            logout(self.request)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/forms.py:28:    def send_freshdesk(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/forms.py:33:                    "email": self.cleaned_data.get("email", None),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/forms.py:34:                    "subject": self.cleaned_data.get("feedback", "")[0:20] + "...",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/forms.py:35:                    "description": self.cleaned_data.get("feedback", ""),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/forms.py:36:                    "name": self.cleaned_data.get("name", ""),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/tests.py:10:    def test_apps(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/tests.py:11:        self.assertEqual(ContactConfig.name, "contact")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/tests.py:12:        self.assertEqual(apps.get_app_config("contact").name, "contact")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/tests.py:16:    def test_contact_empty_feedback(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/tests.py:17:        response = self.client.get(reverse("contact:index"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/tests.py:18:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/tests.py:19:        self.assertContains(response, "")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/tests.py:26:        response = self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/tests.py:30:        self.assertContains(response, ContactForm.FEEDBACK_MESSAGE)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/tests.py:32:    def test_contact_valid(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/tests.py:33:        response = self.client.get(reverse("contact:index"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/tests.py:34:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/tests.py:35:        self.assertContains(response, "")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/tests.py:43:        response = self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/tests.py:47:        self.assertEqual(response.status_code, 302)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/tests.py:48:        self.assertEqual(response.url, reverse("contact:success"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/views.py:14:    def form_valid(self, form):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/views.py:22:            return self.form_invalid(form)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/apps.py:8:    def ready(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/forms.py:30:    def clean(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/forms.py:33:            "phone_number" in self.cleaned_data
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/forms.py:34:            and self.cleaned_data["phone_number"] != self.cleaned_data["phone_number2"]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/forms.py:37:                {"phone_number2": [self.error_messages["phone_number2"]]}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/forms.py:39:        return self.cleaned_data
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/forms.py:43:        self,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/forms.py:49:            phone_number=str(self.cleaned_data.get("phone_number")),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:24:    def test_apps(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:25:        self.assertEqual(CovidKeyConfig.name, "covid_key")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:26:        self.assertEqual(apps.get_app_config("covid_key").name, "covid_key")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:30:    def setUp(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:33:    def test_start_view(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:34:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:35:        response = self.client.get(reverse("start"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:36:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:37:        self.assertContains(response, "<h1>You’re logged in to give one-time keys</h1>")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:39:    def test_generate_key_view(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:40:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:41:        response = self.client.get(reverse("generate_key"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:42:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:43:        self.assertContains(response, "<h1>When patient is ready, generate a key</h1>")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:47:    def test_key(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:51:        self.client.login(username="test@test.com", password="testpassword")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:52:        response = self.client.post(reverse("key"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:53:        self.assertEqual(response.status_code, 302)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:55:        self.login_2fa()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:57:        response = self.client.post(reverse("key"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:58:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:59:        self.assertContains(response, "<h1>Give patient this key</h1>")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:60:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:64:    def test_key_redirects_on_get(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:68:        self.client.login(username="test@test.com", password="testpassword")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:69:        self.login_2fa()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:71:        response = self.client.get(reverse("key"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:72:        self.assertEqual(response.status_code, 302)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:73:        self.assertRedirects(response, "/en/start/")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:76:    def test_key_throttled(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:79:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:81:        covid_key.created_by = self.user
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:85:        response = self.client.post(reverse("key"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:86:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:94:    def test_key_throttled_for_another_user(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:97:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:99:        covid_key.created_by = self.user
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:103:        response = self.client.post(reverse("key"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:104:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:112:        self.login(user2_credentials)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:113:        response = self.client.get(reverse("key"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:114:        self.assertEqual(response.status_code, 302)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:115:        self.assertRedirects(response, "/en/start/")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:120:    def setUp(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:122:        self.client = Client(enforce_csrf_checks=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:124:    def test_CSRF_page_for_bad_posts(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:128:        self.client.login(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:129:            username=self.credentials.get("email"),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:130:            password=self.credentials.get("password"),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:132:        user = HealthcareUser.objects.get(email=self.credentials.get("email"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:135:        session = self.client.session
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:139:        response = self.client.post(reverse("key"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:141:        self.assertEqual(response.status_code, 403)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:145:    def setUp(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:154:    def test_otk_sms_view_no_key(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:159:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:160:        response = self.client.get(reverse("otk_sms"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:161:        self.assertEqual(response.status_code, 302)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:163:    def test_otk_sms_view_with_key(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:167:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:168:        self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:171:        response = self.client.get(reverse("otk_sms"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:172:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:173:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:178:    def test_otk_sms_view_disabled_province(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:191:        self.login(credentials)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:192:        self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:195:        response = self.client.get(reverse("otk_sms"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:196:        self.assertEqual(response.status_code, 302)  # Redirect to start
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:198:    def test_otk_sms_view_submit_error(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:202:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:203:        self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:206:        response = self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:210:        self.assertContains(response, "Phone numbers must match")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:212:    def test_otk_sms_view_submit_redirect(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:216:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:217:        self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:220:        response = self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:224:        self.assertEqual(response.status_code, 302)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:226:    def test_otk_sms_sent_view(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:230:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:231:        self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:234:        response = self.client.get(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:237:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/tests.py:238:        self.assertContains(response, "<h1>Check patient received this key</h1>")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:28:    def get(self, request):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:30:        self.request.session.pop("otk", None)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:35:    def get(self, request, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:36:        if "otk" in self.request.session:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:50:    def get_context_data(self, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:53:        context["sms_enabled"] = self.request.user.province.sms_enabled
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:54:        context["code"] = self.request.session.get("otk")["code"]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:56:            self.request.session.get("otk")["expiry"]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:61:    def post(self, request):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:123:        self.request.session["otk"] = {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:128:        return self.render_to_response(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:136:    def limit_reached(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:138:            f"User {self.request.user.email} has hit the limit of {settings.COVID_KEY_MAX_PER_USER} keys per 24h."
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:140:        return render(self.request, "covid_key/locked.html", status=403)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:148:    def __init__(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:150:        self.phone_number = None
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:152:    def handle_no_permission(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:159:    def get_success_url(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:160:        return reverse_lazy("otk_sms_sent", kwargs={"phone_number": self.phone_number})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:162:    def get_context_data(self, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:164:        context["code"] = self.request.session.get("otk")["code"]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:167:    def form_valid(self, form):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:168:        self.phone_number = str(form.cleaned_data.get("phone_number"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:169:        form.send_sms(self.request.LANGUAGE_CODE, self.request.session.get("otk"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:178:    def __init__(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:180:        self.redirect_choice = "start"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:182:    def handle_no_permission(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:189:    def get_success_url(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:190:        return reverse_lazy(self.redirect_choice)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:192:    def get_context_data(self, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:194:        context["code"] = self.request.session.get("otk")["code"]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:195:        context["phone_number"] = self.kwargs["phone_number"]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:198:    def form_valid(self, form):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:199:        self.redirect_choice = form.cleaned_data.get("redirect_choice")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/google_analytics/models.py:22:    def __str__(self):
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.mo matches
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:473:"Do not email them to yourself or anyone else, do not keep them on a shared "
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1805:"yourself.\n"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/admin.py:12:    def has_permission(self, request):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/audit_backends.py:12:    def request(self, request_info):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/audit_backends.py:16:    def login(self, login_info):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/audit_backends.py:33:    def crud(self, crud_info):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/forms.py:7:    def __init__(self, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/forms.py:13:        for field in self.fields:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/forms.py:14:            self.fields[field].widget.attrs.pop("autofocus", None)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/forms.py:16:            self.fields[field].widget.attrs.update({"autocomplete": "off"})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:16:    def user_admin(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:17:        if self.user_was_invited:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:19:                email__iexact=self.request.user.email
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:30:    def user_was_invited(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:31:        return Invitation.objects.filter(email__iexact=self.request.user.email).exists()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:41:    def dispatch(self, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:42:        self._check()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:45:            f"{self.throttled_lookup_user_field}": self.request.user.id,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:46:            f"{self.throttled_lookup_date_field}__gte": now()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:47:            - timedelta(seconds=self.throttled_time_range),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:49:        count = self.throttled_model.objects.filter(**filter_kwargs).count()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:50:        if count >= self.throttled_limit:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:51:            return self.limit_reached()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:55:    def limit_reached(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:56:        return render(self.request, "throttled/locked.html", status=403)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:58:    def _check(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:59:        if self.throttled_model is None:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:63:        if self.throttled_limit is None:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:67:        if self.throttled_time_range is None:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:72:        if hasattr(self.throttled_model, self.throttled_lookup_user_field) is False:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:74:                f"The model passed to ThrottledMixin ({self.throttled_model}) has no field {self.throttled_lookup_user_field} for the look up."
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:77:        if hasattr(self.throttled_model, self.throttled_lookup_date_field) is False:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:79:                f"The model passed to ThrottledMixin ({self.throttled_model}) has no field {self.throttled_lookup_date_field} for the look up."
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:86:    def dispatch(self, request, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:94:                self.get_redirect_field_name(),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:101:    def test_func(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:103:        if self.request.user.is_superuser or self.request.user.is_admin:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:110:    def test_func(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:112:        if self.request.user.is_superuser:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:116:        profile_user = get_object_or_404(get_user_model(), pk=self.kwargs["pk"])
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:119:        if self.request.user.id == profile_user.id:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:128:            self.request.user.is_admin
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:129:            and self.request.user.province.id == profile_user.province.id
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/services.py:14:    def __init__(self, api_key=None, end_point=None):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/services.py:15:        self.client = None
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/services.py:19:            self.client = NotificationsAPIClient(api_key, base_url=end_point)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/services.py:21:    def send_email(self, address, template_id, details):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/services.py:30:        if self.client:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/services.py:32:                self.client.send_email_notification(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/services.py:42:    def send_sms(self, phone_number, template_id, details):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/services.py:51:        if self.client:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/services.py:53:                self.client.send_sms_notification(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:391:    "'self'",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:396:CSP_STYLE_SRC = ["'self'", "fonts.googleapis.com"]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:397:CSP_FONT_SRC = ["'self'", "fonts.gstatic.com"]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:399:    "'self'",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:404:    "'self'",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:408:    "'self'",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:7:    def test_robots(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:8:        response = self.client.get(reverse("robots_file"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:10:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:11:        self.assertEqual(response.get("Content-type"), "text/plain")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:12:        self.assertContains(response, "User-Agent: *\nDisallow: /")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:14:    def test_status(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:15:        response = self.client.get(reverse("status"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:17:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:18:        self.assertEqual(response.get("Content-type"), "text/plain")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:19:        self.assertContains(response, settings.DJVERSION_VERSION)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:23:    def test_login_no_errors(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:24:        response = self.client.get(reverse("login"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:25:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:26:        self.assertContains(response, "<h1>Log in</h1>")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:27:        self.assertNotContains(response, "Please correct the errors on the page")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:28:        self.assertNotContains(response, 'id="error--username"')
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:29:        self.assertNotContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:33:        self.assertNotContains(response, 'aria-describedby="error--username"')
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:35:    def test_login_with_errors(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:36:        response = self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:42:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:43:        self.assertContains(response, "<h1>Log in</h1>")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:45:        self.assertContains(response, "Please correct the errors on the page")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:47:        self.assertContains(response, '<a href="#id_username">')
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:49:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:54:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:61:    def test_custom_403_response(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:62:        response = self.client.get("/403/")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:63:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:67:    def test_custom_404_response(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:68:        response = self.client.get("/404/")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:69:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:75:    def test_custom_500_response(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:76:        response = self.client.get("/500/")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:78:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/admin.py:20:    def is_api_key_set(self, obj: "HealthcareProvince"):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/admin.py:27:    def has_add_permission(self, request, obj=None):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/admin.py:30:    def has_delete_permission(self, request, obj=None):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/admin.py:56:    def clean_password(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/admin.py:60:        return self.initial["password"]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/admin.py:78:    def clean_email(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/admin.py:79:        email = self.cleaned_data.get("email", "").lower()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/admin.py:106:    def number_keys_generated(self, user: HealthcareUser):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/admin.py:138:    def get_fieldsets(self, request, obj=None):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/admin.py:140:            return self.add_fieldsets
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/apps.py:8:    def ready(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:74:    def __init__(self, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:75:        super(HealthcareAuthenticationForm, self).__init__(*args, **kwargs)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:78:        self.fields["username"].validators = [
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:81:        self.fields["username"].label = _("Email address")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:82:        self.fields["username"].error_messages["required"] = validation_messages[
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:85:        self.fields["password"].error_messages["required"] = validation_messages[
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:90:    def clean_username(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:91:        return self.cleaned_data["username"].lower()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:93:    def is_valid(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:98:        user = self.get_user()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:108:    def __init__(self, user, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:109:        self.user = user
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:112:    def is_valid(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:113:        if self.user is None or self.user.is_authenticated is False:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:116:        generate_2fa_code(self.user)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:129:    def clean_code(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:131:        code = self.cleaned_data["code"].lower()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:183:    def clean_phone_number(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:184:        phone_number = self.cleaned_data.get("phone_number")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:185:        phone_number2 = self.data.get("phone_number2")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:188:                self.error_messages.get("phone_number_mismatch"),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:217:    def __init__(self, user, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:218:        self.user = user
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:225:    def clean_password1(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:226:        password1 = self.cleaned_data.get("password1")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:228:        password2 = self.data.get("password2")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:231:                self.error_messages["password_mismatch"],
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:236:    def _post_clean(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:238:        # Validate the password after self.instance is updated with form data
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:240:        password = self.cleaned_data.get("password1")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:243:                password_validation.validate_password(password, self.user)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:245:                self.add_error("password1", error)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:247:    def save(self, commit=True):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:248:        self.user.set_password(self.cleaned_data["password1"])
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:250:            self.user.save()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:252:        return self.user
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:261:    def __init__(self, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:265:        self.fields["email"].label = _("Email address")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:266:        self.fields["email"].error_messages["required"] = validation_messages["email"][
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:272:        self,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:320:    def clean_new_password1(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:321:        password1 = self.cleaned_data.get("new_password1")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:323:        password2 = self.data.get("new_password2")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:327:                    self.error_messages["password_mismatch"],
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:330:        password_validation.validate_password(password1, self.user)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:333:    def clean_new_password2(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:380:    def __init__(self, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:382:        self.fields["password1"].error_messages["required"] = validation_messages[
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:386:    def clean_province(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:389:        province_abbr = self.cleaned_data.get("province", "")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:392:    def clean_password1(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:393:        password1 = self.cleaned_data.get("password1")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:395:        password2 = self.data.get("password2")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:398:                self.error_messages["password_mismatch"],
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:403:    def clean_password2(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:408:    def clean_email(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:409:        email = self.cleaned_data.get("email", "").lower()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:418:    def _post_clean(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:422:        forms.ModelForm._post_clean(self)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:423:        # Validate the password after self.instance is updated with form data
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:425:        password = self.cleaned_data.get("password1")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:428:                password_validation.validate_password(password, self.instance)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:430:                self.add_error("password1", error)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:434:        self,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:443:            address=self.cleaned_data.get("email"),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:478:    def clean_phone_number(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:479:        phone_number = self.cleaned_data.get("phone_number")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:481:        phone_number_confirmation = self.data.get("phone_number_confirmation")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:495:    def __init__(self, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:499:        self.fields["email"].label = _("Email address")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:501:    def validate_invitation(self, email):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:509:    def clean_email(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:536:    def save(self, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:545:    def save(self, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:550:            "inviter": self.request.user,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:553:        instance.send_invitation(self.request, language=get_language())
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:555:        super(forms.ModelForm, self).save(*args, **kwargs)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:563:    def __init__(self, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:565:        self.fields["inviter"].disabled = True
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:572:    def __init__(self, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:575:        self.fields["otp_token"].widget.attrs.update({"autofocus": "autofocus"})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:576:        self.instance.user = user
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:578:    def clean(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:580:        token = self.cleaned_data.get("otp_token")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:584:        cleaned_data["name"] = self.instance.user.email[:32]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:587:            self.instance.service = service
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:588:            self.instance.public_id = token[:-32]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:589:            verified = self.instance.verify_token(token)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:605:    def __init__(self, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:606:        self.device = kwargs.pop("device", None)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:608:        self.fields["otp_token"].widget.attrs.update({"autofocus": "autofocus"})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:610:    def get_device(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:611:        if self.is_valid():
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:612:            return self.device
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:615:    def clean(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:622:        if not self.device.verify_token(token):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/login_handler.py:11:    def is_locked(self, request, credentials: dict = None) -> bool:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/login_handler.py:17:        user_locked = self._is_user_locked(username=credentials.get("username"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/login_handler.py:22:        attempts = self.get_healthcareuser_failures(request, credentials)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/login_handler.py:28:    def _is_user_locked(self, username):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/login_handler.py:39:    def user_login_failed(self, sender, credentials: dict, request=None, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/login_handler.py:43:        user_locked = self._is_user_locked(username=credentials.get("username"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/login_handler.py:58:            attempts = self.get_healthcareuser_failures(request, credentials)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/login_handler.py:69:    def user_logged_in(self, sender, request, user, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/login_handler.py:77:        self, request: dict, credentials: dict = None
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/management/commands/createdefaultsuperuser.py:10:    def handle(self, *args, **options):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/management/commands/createdefaultsuperuser.py:12:            self.stdout.write(self.style.SUCCESS("Default Super User already exists"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/management/commands/createdefaultsuperuser.py:15:            self.create_su()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/management/commands/createdefaultsuperuser.py:17:            self.stdout.write(self.style.SUCCESS("Not creating default Super User"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/management/commands/createdefaultsuperuser.py:19:    def create_su(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/management/commands/createdefaultsuperuser.py:31:            self.stdout.write(self.style.SUCCESS("Successfully created new super user"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/mixins.py:9:    def test_func(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/mixins.py:11:        profile_user = get_object_or_404(get_user_model(), pk=self.kwargs["pk"])
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/mixins.py:15:            not self.request.user.is_superuser
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/mixins.py:16:            and self.request.user.is_admin
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/mixins.py:25:    def test_func(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/mixins.py:26:        # you can't delete yourself
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/mixins.py:27:        if self.request.user.id == self.kwargs["pk"]:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/mixins.py:34:    def test_func(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/mixins.py:36:        if self.request.user.id != self.kwargs["pk"]:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/models.py:17:    def __str__(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/models.py:18:        return "{} ({})".format(self.name, self.abbr)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/models.py:27:        self, email, password=None, is_admin=False, is_superuser=False, **kwargs
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/models.py:39:        user = self.model(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/models.py:40:            email=self.normalize_email(email),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/models.py:47:        user.save(using=self._db)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/models.py:50:    def create_superuser(self, email, name, password, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/models.py:55:        user = self.create_user(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/models.py:63:        user.save(using=self._db)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/models.py:96:    def __str__(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/models.py:97:        return self.email
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/models.py:99:    def has_perm(self, perm, obj=None):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/models.py:104:    def has_perms(self, perms, obj=None):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/models.py:107:            return self.province.sms_enabled
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/models.py:110:    def has_module_perms(self, app_label):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/models.py:116:    def api_key(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/models.py:121:        api_key = self.province.api_key
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/models.py:127:    def is_staff(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/models.py:130:        return self.is_superuser
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/models.py:143:    def __str__(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/models.py:144:        return self.domain
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/privacy.html:32:            <b>You have the right to access, review and correct your personal information.</b> You can correct most information in the portal by yourself.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:81:    def test_apps(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:82:        self.assertEqual(ProfilesConfig.name, "profiles")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:83:        self.assertEqual(apps.get_app_config("profiles").name, "profiles")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:87:    def setUp(self, is_admin=False):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:88:        self.validator = BannedPasswordValidator()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:90:    def test_bad_12_character_passwords(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:92:            with self.assertRaises(ValidationError):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:93:                self.validator.validate(password)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:95:    def test_bad_covid_passwords(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:97:            with self.assertRaises(ValidationError):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:98:                self.validator.validate(password)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:102:    def test_default_superuser_from_cds(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:103:        self.credentials = get_other_credentials(is_superuser=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:104:        self.user = User.objects.create_superuser(**self.credentials)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:105:        self.assertEqual(self.user.province.name, "Canadian Digital Service")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:109:    def setUp(self, is_admin=False):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:110:        self.credentials = get_credentials(is_admin=is_admin)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:111:        self.user = User.objects.create_user(**self.credentials)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:112:        self.credentials["username"] = self.credentials["email"]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:113:        self.credentials["id"] = self.user.id
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:115:        self.invited_email = "invited@test.com"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:118:    def login(self, credentials: dict = None, login_2fa: bool = True):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:120:            credentials = self.credentials
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:122:        self.client.login(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:127:            self.login_2fa(user)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:129:    def login_2fa(self, user: User = None):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:131:            user = self.user
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:135:        session = self.client.session
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:141:    def setUp(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:144:    def test_not_authenticated_redirects_to_login(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:145:        response = self.client.get("/", follow=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:146:        self.assertRedirects(response, "/en/login/?next=/en/start/")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:148:    def test_authenticated_redirects_to_start(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:149:        self.client.login(username="test@test.com", password="testpassword")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:150:        self.login_2fa()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:151:        response = self.client.get("/", follow=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:152:        self.assertRedirects(response, "/en/start/")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:156:    def test_login_page(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:157:        response = self.client.get(reverse("login"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:158:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:159:        self.assertContains(response, "<h1>Log in</h1>")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:160:        self.assertNotContains(response, '<a href="/en/login/">Log in</a>')
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:162:    def test_privacy_page(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:163:        response = self.client.get(reverse("privacy"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:164:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:165:        self.assertContains(response, "<h1>Privacy notice for COVID Alert Portal</h1>")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:167:    def test_terms_page(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:168:        response = self.client.get(reverse("terms"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:169:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:170:        self.assertContains(response, "<h1>Terms of use</h1>")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:172:    def test_quick_guide_redirects_to_support(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:173:        response = self.client.get("/en/quick-guide/", follow=False)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:174:        self.assertRedirects(response, reverse("support"), status_code=301)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:178:    def test_support_page_NOT_logged_in(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:179:        response = self.client.get(reverse("support"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:180:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:181:        self.assertContains(response, "<h1>Support</h1>")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:182:        self.assertContains(response, "Contact your administrator. You")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:184:    def test_support_page_logged_in(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:185:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:186:        response = self.client.get(reverse("support"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:187:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:188:        self.assertContains(response, "<h1>Support</h1>")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:189:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:197:    def test_code(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:198:        response = self.client.get(reverse("key"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:199:        self.assertRedirects(response, "/en/login/?next=/en/key/")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:201:    def test_start(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:202:        response = self.client.get(reverse("start"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:203:        self.assertRedirects(response, "/en/login/?next=/en/start/")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:205:    def test_2fa(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:206:        response = self.client.get(reverse("login_2fa"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:207:        self.assertRedirects(response, "/en/login/?next=/en/login-2fa/")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:209:    def test_yubikey_verify(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:210:        response = self.client.get(reverse("yubikey_verify"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:211:        self.assertRedirects(response, "/en/login/")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:213:    def test_django_admin_panel(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:214:        response = self.client.get(reverse("admin:index"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:215:        self.assertRedirects(response, "/admin/login/?next=/admin/")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:219:    def setUp(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:222:    def attempt_logins_return_response(self, number_of_attempts):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:224:            "username": self.user.email,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:229:            response = self.client.post(reverse("login"), post_data)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:230:            self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:234:        return self.client.post(reverse("admin:login"), post_data)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:237:    def test_user_lockout(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:238:        response = self.attempt_logins_return_response(settings.AXES_FAILURE_LIMIT - 1)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:239:        self.assertEqual(response.status_code, 403)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:247:    def test_user_slow_lockout(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:248:        response = self.attempt_logins_return_response(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:251:        self.assertEqual(response.status_code, 403)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:257:            response = self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:260:                    "username": self.user.email,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:264:            self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:270:    def setUp(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:273:    def test_redirect_from_django_admin_dashboard_if_admin_user(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:275:        self.client.login(username="test@test.com", password="testpassword")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:276:        response = self.client.get(reverse("admin:index"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:277:        self.assertEqual(response.status_code, 302)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:279:        self.assertRedirects(response, "/admin/login/?next=/admin/")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:281:    def test_see_django_admin_dashboard_if_superuser(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:286:        self.client.login(username=superuser.email, password="testpassword2")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:288:        response = self.client.get(reverse("admin:index"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:289:        self.assertEqual(response.status_code, 302)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:290:        self.login_2fa(superuser)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:291:        response = self.client.get(reverse("admin:index"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:292:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:293:        self.assertContains(response, "administration")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:296:    def test_user_is_blocked(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:308:        response = self.client.post(reverse("login"), post_data)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:310:        self.assertEqual(response.status_code, 403)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:313:    def test_user_is_inactive(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:325:        response = self.client.post(reverse("login"), post_data)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:327:        self.assertEqual(response.status_code, 403)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:331:    def test_login_page(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:333:        response = self.client.get(reverse("login"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:334:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:335:        self.assertContains(response, "<h1>Log in</h1>")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:336:        self.assertContains(response, 'autocomplete="off"')
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:339:        response = self.client.post("/en/login/", self.credentials, follow=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:340:        self.assertTrue(response.context["user"].is_active)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:342:    def test_2fa_page(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:343:        self.login(login_2fa=False)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:346:        response = self.client.get(reverse("login_2fa"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:347:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:348:        self.assertContains(response, "<h1>Enter your security code</h1>")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:349:        self.assertNotContains(response, "Your account")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:350:        self.assertContains(response, "Log out")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:352:    def test_login_with_uppercased_email_and_whitespace(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:355:            "password": self.credentials["password"],
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:359:        response = self.client.post("/en/login/", _credentials, follow=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:360:        self.assertTrue(response.context["user"].is_active)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:362:    def test_1hour_inactivity(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:363:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:364:        response = self.client.get(reverse("start"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:365:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:369:            response = self.client.get(reverse("start"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:370:            self.assertRedirects(response, "/en/login/?next=/en/start/")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:372:    def test_1hour_with_activity(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:373:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:374:        response = self.client.get(reverse("start"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:375:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:380:            response = self.client.get(reverse("start"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:381:            self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:386:            response = self.client.get(reverse("start"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:387:            self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:392:            response = self.client.get(reverse("start"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:393:            self.assertEqual(response.status_code, 302)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:395:    def test_session_timed_out_message(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:396:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:397:        response = self.client.get(reverse("session_timed_out"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:398:        self.assertEqual(response.status_code, 302)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:399:        response = self.client.get(reverse("login"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:400:        self.assertContains(response, "Your session timed out.")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:404:    def test_switch_language(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:406:        response = self.client.get("/", follow=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:407:        self.assertContains(response, "Français")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:410:        response = self.client.get(reverse("switch_language"), follow=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:411:        self.assertContains(response, "English")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:414:        response = self.client.get(reverse("switch_language"), follow=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:415:        self.assertContains(response, "Français")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:417:        response = self.client.get(reverse("privacy"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:418:        self.assertContains(response, "<h1>Privacy notice for COVID Alert Portal</h1>")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:420:    def test_root_with_accept_language_header_fr(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:428:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:429:        self.assertEqual(response.request["PATH_INFO"], "/fr/login/")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:431:    def test_root_with_accept_language_header_en(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:439:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:440:        self.assertEqual(response.request["PATH_INFO"], "/en/login/")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:442:    def test_root_without_accept_language_header(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:448:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:449:        self.assertEqual(response.request["PATH_INFO"], "/en/login/")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:451:    def test_start_with_language_setting_fr(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:456:        response = self.client.get(reverse("login"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:457:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:458:        self.assertEqual(response.request["PATH_INFO"], "/fr/login/")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:460:    def test_start_with_language_setting_en(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:465:        response = self.client.get(reverse("login"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:466:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:467:        self.assertEqual(response.request["PATH_INFO"], "/en/login/")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:471:    def setUp(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:472:        self.email = "test@test.com"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:473:        self.invite = Invitation.create(self.email)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:475:        self.province = _get_province()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:477:    def test_email_in_form(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:478:        f = SignupForm(initial={"email": self.invite.email})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:479:        self.assertIn(self.email, f.as_table())
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:481:    def test_province_in_form(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:482:        f = SignupForm(initial={"province": self.province.name})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:483:        self.assertIn('value="Manitoba"', f.as_table())
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:487:    def setUp(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:490:        self.invite = Invitation.create(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:491:            self.invited_email, inviter=self.user, sent=timezone.now()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:495:        self.new_user_data = {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:496:            "email": self.invited_email,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:505:    def test_get_inviter_method(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:506:        session = self.client.session
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:507:        session["account_verified_email"] = self.invite.email
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:513:        response = self.client.get(reverse("signup"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:522:        self.assertEqual(inviter, self.user)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:524:    def test_email_and_province_on_signup_page(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:525:        session = self.client.session
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:526:        session["account_verified_email"] = self.invite.email
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:529:        response = self.client.get(reverse("signup"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:532:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:535:                self.invited_email
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:539:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:542:                self.credentials["province"].abbr
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:546:    def test_redirect_if_invitation_missing_for_email_in_session(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:547:        session = self.client.session
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:551:        response = self.client.get(reverse("signup"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:553:        self.assertEqual(response.status_code, 302)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:554:        self.assertRedirects(response, "/en/invite/expired")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:556:    def test_invitation_accepted_after_signup(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:557:        url = reverse("invitations:accept-invite", args=[self.invite.key])
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:558:        self.client.get(url)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:560:        self.assertEqual(self.invite.accepted, False)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:561:        response = self.client.post(reverse("signup"), data=self.new_user_data)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:562:        self.assertEqual(response.status_code, 302)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:563:        self.assertEqual(response.url, reverse("signup_2fa"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:565:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:566:            self.client.get(reverse("signup_2fa")),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:570:        second_step_response = self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:571:            reverse("signup_2fa"), data=self.new_user_data
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:573:        self.assertEqual(second_step_response.status_code, 302)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:574:        self.assertEqual(second_step_response.url, reverse("login_2fa"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:578:        self.invite.refresh_from_db()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:579:        self.assertEqual(self.invite.accepted, True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:582:    def test_login_attempts_deleted_after_signup(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:588:        self.assertIsNone(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:589:            User.objects.filter(email=self.new_user_data["email"]).first()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:593:        self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:595:            {"username": self.new_user_data["email"], "password": "fake_password"},
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:599:        self.assertTrue(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:600:            AccessAttempt.objects.filter(username=self.new_user_data["email"]).first(),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:602:        self.assertTrue(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:604:                username=self.new_user_data["email"]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:608:        url = reverse("invitations:accept-invite", args=[self.invite.key])
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:609:        self.client.get(url)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:610:        response = self.client.post(reverse("signup"), data=self.new_user_data)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:611:        self.assertEqual(response.status_code, 302)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:614:        self.assertTrue(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:615:            User.objects.filter(email=self.new_user_data["email"]).first(),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:619:        self.assertIsNone(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:620:            AccessAttempt.objects.filter(username=self.new_user_data["email"]).first(),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:622:        self.assertIsNone(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:624:                username=self.new_user_data["email"]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:630:    def setUp(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:633:    def test_redirect_on_invite_page_if_logged_out(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:634:        response = self.client.get(reverse("invite"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:635:        self.assertRedirects(response, "/en/login/?next=/en/invite/")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:637:    def test_redirect_on_invite_complete_page_if_logged_out(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:638:        response = self.client.get(reverse("invite_complete"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:639:        self.assertRedirects(response, "/en/login/?next=/en/invite-complete/")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:641:    def test_see_invite_page_and_inviter_id_in_form(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:645:        self.client.login(username="test@test.com", password="testpassword")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:646:        self.login_2fa()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:647:        response = self.client.get(reverse("invite"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:648:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:650:        self.assertContains(response, "Add new account")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:652:    def test_send_invitation_and_see_success_message(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:656:        self.client.login(username="test@test.com", password="testpassword")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:657:        self.login_2fa()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:659:        response = self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:660:            reverse("invite"), {"email": self.invited_email}, follow=True
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:663:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:664:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:665:            response, "<h1>Invitation sent to {}</h1>".format(self.invited_email)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:668:    def test_send_invitation_twice_and_see_success_message(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:673:        self.client.login(username="test@test.com", password="testpassword")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:674:        self.login_2fa()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:677:            response = self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:678:                reverse("invite"), {"email": self.invited_email}, follow=True
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:681:            self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:682:            self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:683:                response, "<h1>Invitation sent to {}</h1>".format(self.invited_email)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:687:        self,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:697:            inviter=self.user,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:702:        self.client.login(username="test@test.com", password="testpassword")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:703:        self.login_2fa()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:704:        response = self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:708:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:709:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:714:        self,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:723:            inviter=self.user,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:728:        self.client.login(username="test@test.com", password="testpassword")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:729:        self.login_2fa()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:730:        response = self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:734:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:735:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:740:    def test_send_invitation_invalid_domain(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:741:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:744:        response = self.client.post(reverse("invite"), {"email": email}, follow=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:746:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:747:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:752:    def test_send_invitation_invalid_domain_with_wildcard(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:753:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:758:        response = self.client.post(reverse("invite"), {"email": email}, follow=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:760:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:761:        self.assertContains(response, "<h1>Invitation sent to {}</h1>".format(email))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:763:    def test_see_invitations_list_with_pending_invite(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:765:            email=f"{uuid4()}@{uuid4()}.com", inviter=self.user
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:771:        self.client.login(username="test@test.com", password="testpassword")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:772:        self.login_2fa()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:774:        response = self.client.get(reverse("invitation_list"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:775:        self.assertContains(response, "<td>{}</td>".format(invitation.email))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:776:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:780:    def test_see_invitations_list_with_expired_invite(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:782:            email=f"{uuid4()}@{uuid4()}.com", inviter=self.user
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:788:        self.client.login(username="test@test.com", password="testpassword")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:789:        self.login_2fa()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:791:        response = self.client.get(reverse("invitation_list"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:792:        self.assertContains(response, "<td>{}</td>".format(invitation.email))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:793:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:797:    def test_delete_invitation(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:799:            email=f"{uuid4()}@{uuid4()}.com", inviter=self.user
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:803:        self.client.login(username="test@test.com", password="testpassword")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:804:        self.login_2fa()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:806:        response = self.client.get(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:809:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:811:    def test_delete_invitation_normal_user(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:813:            email=f"{uuid4()}@{uuid4()}.com", inviter=self.user
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:819:        self.client.login(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:822:        self.login_2fa(other_user)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:824:        response = self.client.get(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:827:        self.assertEqual(response.status_code, 403)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:829:    def test_confirm_invitation_deleted(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:831:            email=f"{uuid4()}@{uuid4()}.com", inviter=self.user
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:837:        self.client.login(username="test@test.com", password="testpassword")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:838:        self.login_2fa()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:840:        response = self.client.get(reverse("invitation_list"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:841:        self.assertContains(response, "<td>{}</td>".format(invitation.email))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:842:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:846:        response = self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:849:        self.assertContains(response, "<p>No invitations yet</p>")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:851:    def test_throttle_invitations(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:852:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:853:        response = self.client.get(reverse("invite"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:854:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:858:                email=f"{uuid4()}-{i}@{uuid4()}.com", inviter=self.user
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:862:        response = self.client.get(reverse("invite"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:863:        self.assertEqual(response.status_code, 403)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:868:            response = self.client.get(reverse("invite"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:869:            self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:873:    def setUp(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:876:    def test_redirect_to_login_with_expired_message_on_expired_invite(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:877:        invitation = Invitation.create(email="fake@example.com", inviter=self.user)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:884:        response = self.client.post(url, follow=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:885:        self.assertEqual(response.request["PATH_INFO"], "/en/invite/expired")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:886:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:892:    def test_redirect_to_login_with_account_exists_message_if_invite_doesnt_exist(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:893:        invitation = Invitation.create(email="fake@example.com", inviter=self.user)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:900:        response = self.client.post(url, follow=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:901:        self.assertEqual(response.request["PATH_INFO"], "/en/login/")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:902:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:908:    def test_redirect_to_login_with_account_exists_message_if_invite_accepted(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:910:            email="fake@example.com", inviter=self.user, accepted=True
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:917:        response = self.client.post(url, follow=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:918:        self.assertEqual(response.request["PATH_INFO"], "/en/login/")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:919:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:927:    def setUp(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:930:    def test_redirect_on_manage_accounts_page_if_logged_out(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:931:        response = self.client.get(reverse("profiles"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:932:        self.assertRedirects(response, "/en/login/?next=/en/profiles/")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:934:    def test_forbidden_if_not_admin(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:937:        self.login(staff_credentials)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:939:        response = self.client.get(reverse("profiles"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:940:        self.assertEqual(response.status_code, 403)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:942:    def test_manage_accounts_link_visible_if_logged_in(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:943:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:945:        response = self.client.get(reverse("start"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:946:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:947:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:951:    def test_manage_accounts_page(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:954:        self.login(admin_credentials)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:956:        response = self.client.get(reverse("profiles"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:957:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:958:        self.assertContains(response, "<h1>Manage team</h1>")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:960:        self.assertContains(response, self.credentials["email"])
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:962:    def test_manage_accounts_page_no_users_from_other_province(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:965:        self.login(admin_ab_credentials)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:967:        response = self.client.get(reverse("profiles"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:968:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:969:        self.assertContains(response, "<h1>Manage team</h1>")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:971:        self.assertNotContains(response, self.credentials["email"])
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:975:    def setUp(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:978:    def test_redirect_on_profile_page_if_logged_out(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:979:        response = self.client.get(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:980:            reverse("user_profile", kwargs={"pk": self.credentials["id"]})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:982:        self.assertRedirects(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:983:            response, "/en/login/?next=/en/profiles/{}".format(self.credentials["id"])
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:986:    def test_profile_page_visible_when_logged_in(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:987:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:989:        response = self.client.get(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:990:            reverse("user_profile", kwargs={"pk": self.credentials["id"]})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:992:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:993:        self.assertContains(response, "Manage your account")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:994:        self.assertContains(response, self.user.name)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:996:    def test_profile_page_not_found_if_user_id_does_not_exist(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:997:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:999:        response = self.client.get(reverse("user_profile", kwargs={"pk": uuid4()}))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1000:        self.assertEqual(response.status_code, 404)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1002:    def test_forbidden_profile_page_if_non_admin_user_viewing_other_profile(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1005:        self.login(staff_credentials)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1008:        response = self.client.get(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1009:            reverse("user_profile", kwargs={"pk": self.credentials["id"]})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1011:        self.assertEqual(response.status_code, 403)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1013:    def test_view_profile_page_if_superuser_viewing_other_profile(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1016:        self.login(superuser_credentials)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1018:        response = self.client.get(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1019:            reverse("user_profile", kwargs={"pk": self.credentials["id"]})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1021:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1022:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1023:            response, '<td colspan="2">{}</td>'.format(self.credentials["email"])
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1026:    def test_forbidden_see_profile_page_superuser(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1027:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1033:        response = self.client.get(reverse("user_profile", kwargs={"pk": superuser.id}))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1034:        self.assertEqual(response.status_code, 403)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1037:        self,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1039:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1042:        response = self.client.get(reverse("user_profile", kwargs={"pk": user2.id}))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1043:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1044:        self.assertContains(response, '<td colspan="2">{}</td>'.format(user2.email))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1046:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1051:        self,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1053:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1056:        response = self.client.get(reverse("user_profile", kwargs={"pk": user2.id}))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1057:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1058:        self.assertContains(response, '<td colspan="2">{}</td>'.format(user2.email))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1060:        self.assertContains(response, '<td colspan="2">{}</td>'.format(user2.name))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1062:        self.assertNotContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1066:    def test_forbidden_profile_page_if_admin_user_viewing_other_province_user(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1069:        self.login(admin_ab_credentials)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1071:        response = self.client.get(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1072:            reverse("user_profile", kwargs={"pk": self.credentials["id"]})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1074:        self.assertEqual(response.status_code, 403)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1076:    def test_only_user_can_view_own_security_codes(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1077:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1079:        response = self.client.get(reverse("user_profile", kwargs={"pk": user2.id}))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1080:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1082:        self.assertNotContains(response, '<a href="/en/backup-codes">')
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1086:    def setUp(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1089:    def test_forbidden_see_delete_page_for_self(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1091:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1094:        response = self.client.get(reverse("user_delete", kwargs={"pk": self.user.id}))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1095:        self.assertEqual(response.status_code, 403)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1097:    def test_admin_forbidden_see_delete_page_for_superuser(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1098:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1105:        response = self.client.get(reverse("user_delete", kwargs={"pk": superuser.id}))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1106:        self.assertEqual(response.status_code, 403)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1108:    def test_admin_forbidden_see_delete_page_for_other_admin(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1109:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1116:        response = self.client.get(reverse("user_delete", kwargs={"pk": admin.id}))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1117:        self.assertEqual(response.status_code, 403)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1119:    def test_admin_see_delete_page_for_staff_user(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1120:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1124:        response = self.client.get(reverse("user_delete", kwargs={"pk": user2.id}))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1125:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1126:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1133:    def test_admin_delete_staff_user_generated_keys(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1136:        self.login(user2_credentials)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1137:        response = self.client.post(reverse("key"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1138:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1140:        self.login(get_credentials())
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1141:        response = self.client.post(reverse("user_delete", kwargs={"pk": user2.id}))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1142:        self.assertEqual(response.status_code, 302)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1143:        self.assertEqual(response.url, reverse("profiles"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1145:    def test_superadmin_can_see_delete_page_for_admin(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1148:        self.login(superuser_credentials)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1151:        response = self.client.get(reverse("user_delete", kwargs={"pk": self.user.id}))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1152:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1153:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1156:                self.user.email
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1160:    def test_invitation_deleted(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1161:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1163:        Invitation.create(email=user_credentials.get("email"), inviter=self.user)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1167:        response = self.client.post(reverse("user_delete", kwargs={"pk": user.id}))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1168:        self.assertRedirects(response, reverse("profiles"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1171:        self.assertEqual(count, 0)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1175:        response = self.client.post(reverse("user_delete", kwargs={"pk": user.id}))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1176:        self.assertRedirects(response, reverse("profiles"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1180:    def test_edit_name(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1181:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1183:        response = self.client.get(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1184:            reverse("user_edit_name", kwargs={"pk": self.user.id})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1186:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1190:        response = self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1191:            reverse("user_edit_name", kwargs={"pk": self.user.id}),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1194:        self.assertEqual(response.status_code, 302)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1195:        user = User.objects.get(pk=self.user.id)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1196:        self.assertEqual(user.name, "Don Draper")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1198:    def test_edit_email_forbidden(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1199:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1200:        edit_url = "/profiles/{}/edit/email".format(self.user.id)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1202:        response = self.client.post(edit_url, post_data)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1203:        self.assertEqual(response.status_code, 404)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1205:    def test_edit_someone_else_account_forbidden(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1207:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1211:        response = self.client.get(reverse("user_edit_name", kwargs={"pk": user2.id}))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1212:        self.assertEqual(response.status_code, 403)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1214:    def test_admin_edit_staff_account(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1217:        self.login(admin_credentials)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1223:        response = self.client.get(reverse("user_edit_name", kwargs={"pk": user2.id}))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1224:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1226:    def test_admin_edit_staff_password_forbidden(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1229:        self.login(admin_credentials)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1235:        response = self.client.get(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1238:        self.assertEqual(response.status_code, 403)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1240:    def test_admin_edit_admin_account_forbidden(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1243:        self.login(admin_credentials)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1249:        response = self.client.get(reverse("user_edit_name", kwargs={"pk": user2.id}))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1250:        self.assertEqual(response.status_code, 403)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1252:    def test_edit_someone_else_account_with_admin(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1253:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1257:        response = self.client.get(reverse("user_edit_name", kwargs={"pk": user2.id}))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1258:        self.assertEqual(response.status_code, 403)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1260:    def test_change_phone_number(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1261:        self.login()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1266:        response = self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1267:            reverse("user_edit_phone", kwargs={"pk": self.user.id}),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1270:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1279:        response = self.client.post(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1280:            reverse("user_edit_phone", kwargs={"pk": self.user.id}),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1283:        self.assertEqual(response.status_code, 302)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1284:        user = User.objects.get(pk=self.user.id)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1285:        self.assertEqual(user.phone_number, number)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/utils/invitation_adapter.py:13:    def get_user_signed_up_signal(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/utils/invitation_adapter.py:18:        self,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/utils/_banned_passwords.py:273:    "memyselfandi",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/utils/_banned_passwords.py:533:    "vika-selfish",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/utils/_banned_passwords.py:1127:    "gofuckyourself",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/validators.py:13:    def validate(self, password, user=None):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/validators.py:27:    def get_help_text(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/validators.py:32:    def validate(self, password, user=None):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/validators.py:33:        if len(password) < self.min_length:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/validators.py:36:                % {"min_length": self.min_length},
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/validators.py:40:    def get_help_text(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/validators.py:42:            "min_length": self.min_length
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/validators.py:47:    def validate(self, password, user=None):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/validators.py:58:    def get_help_text(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/validators.py:63:    def validate(self, password, user=None):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/validators.py:72:    def get_help_text(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:62:    def get(self, request, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:71:    def get_form_kwargs(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:73:        device = self.request.user.remoteyubikeydevice_set.first()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:78:    def form_valid(self, form):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:81:        device = RemoteYubikeyDevice.objects.filter(user=self.request.user).first()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:82:        self.request.user.otp_device = device
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:83:        self.request.session[DEVICE_ID_SESSION_KEY] = device.persistent_id
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:92:    def _check_yubikey_exists_for_user(self, user):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:95:    def get(self, request, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:97:        if self._check_yubikey_exists_for_user(self.request.user):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:98:            return redirect(self.get_success_url())
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:102:    def get_success_url(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:103:        return reverse_lazy("user_profile", kwargs={"pk": self.request.user.id})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:105:    def get_form_kwargs(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:108:        kwargs["user"] = self.request.user
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:111:    def form_valid(self, form):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:120:    def delete(self, request, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:127:            generate_2fa_code(self.request.user)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:130:    def get_success_url(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:131:        return reverse_lazy("user_profile", kwargs={"pk": self.request.user.id})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:138:    def get_success_url(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:141:    def get(self, request, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:142:        invited_email = self.request.session.get("account_verified_email", None)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:152:    def get_initial(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:154:        invited_email = self.request.session.get("account_verified_email", None)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:155:        inviter = self.get_inviter()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:161:    def form_valid(self, form):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:164:            request=self.request,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:168:        user_signed_up.send(sender=user.__class__, request=self.request, user=user)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:171:        inviter = self.get_inviter()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:172:        form.send_mail(self.request.LANGUAGE_CODE, inviter.email)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:174:        login(self.request, user)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:180:        return super(SignUpView, self).form_valid(form)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:182:    def get_inviter(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:184:        invited_email = self.request.session.get("account_verified_email", None)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:195:    def get(self, request, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:198:    def form_valid(self, form):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:199:        existing_user = HealthcareUser.objects.get(pk=self.request.user.id)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:203:        generate_2fa_code(self.request.user)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:205:        return super(SignUp2FAView, self).form_valid(form)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:214:    def has_mobile(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:215:        return True if self.request.user.notifysmsdevice_set.exists() else False
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:218:    def has_static_code(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:219:        return True if self.request.user.staticdevice_set.exists() else False
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:221:    def get(self, request, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:228:        if not self.has_mobile and not self.has_static_code:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:233:    def get_initial(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:236:            if self.has_mobile:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:237:                sms_device = self.request.user.notifysmsdevice_set.last()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:239:            elif self.has_static_code:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:240:                static_device = self.request.user.staticdevice_set.first()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:245:    def form_valid(self, form):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:252:        if self.has_mobile:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:254:                self.request, code, self.request.user.notifysmsdevice_set.all()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:257:        if not locked_out and not code_verfied and self.has_static_code:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:259:                self.request, code, self.request.user.staticdevice_set.all()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:285:    def get_form_kwargs(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:287:        kwargs["user"] = self.request.user
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:290:    def form_valid(self, form):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:293:            messages.success(self.request, _("Security code has been sent."))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:308:    def form_valid(self, form):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:310:        invite = form.save(user=self.request.user)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:314:                self.request,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:315:                scheme=self.request.scheme,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:318:        self.request.session["invite_email"] = invite.email
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:321:    def limit_reached(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:322:        return render(self.request, "invitations/templates/locked.html", status=403)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:328:    def get_queryset(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:330:            inviter__province=self.request.user.province, accepted=False
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:346:    def get_queryset(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:347:        queryset = HealthcareUser.objects.filter(province=self.request.user.province)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:350:        if not self.request.user.is_superuser:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:355:            current_user_email=RawSQL("email = %s", (self.request.user.email,))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:366:    def get_context_data(self, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:377:            healthcareuser.id != self.request.user.id
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:378:            and (not self.request.user.is_superuser)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:395:    def get_initial(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:397:        user = self.get_object()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:401:    def get_success_url(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:402:        return reverse_lazy("user_profile", kwargs={"pk": self.kwargs.get("pk")})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:408:    def post(self, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:409:        base_url = self.request.build_absolute_uri("/")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:410:        self.extra_email_context = {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:419:    def get_success_url(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:420:        return reverse_lazy("user_profile", kwargs={"pk": self.kwargs.get("pk")})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:428:    def delete(self, request, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:434:            % {"email": self.object.email},
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:437:        Invitation.objects.filter(email=self.object.email).delete()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/models.py:17:    def __str__(self):  # new
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/models.py:18:        return "{} ({})".format(self.name, self.email)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/models.py:37:    def save(self, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/models.py:38:        if not self.short_code:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/models.py:43:            self.short_code = short_code
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/models.py:44:        super(Location, self).save(*args, **kwargs)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/models.py:46:    def __str__(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/models.py:48:            self.name, self.address, self.city, self.province, self.postal_code
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:12:    def setUp(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:15:    def test_start_page(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:16:        response = self.client.get(reverse("register:start"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:17:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:18:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:24:    def test_email_page(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:25:        response = self.client.get(reverse("register:registrant_email"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:26:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:27:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:33:    def test_name_page(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:36:        response = self.client.get(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:39:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:40:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:46:    def test_confirmation_page(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:50:        session = self.client.session
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:56:        response = self.client.get(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:59:        self.assertEqual(response.status_code, 200)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:60:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:65:        self.assertContains(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:74:    def setUp(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:77:    def test_location_category_empty(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:80:        self.assertEqual(form.errors["category"], ["This field is required."])
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:82:    def test_location_name_empty(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:85:        self.assertEqual(form.errors["name"], ["This field is required."])
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:87:    def test_location_address_address_field_empty(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:90:        self.assertEqual(form.errors["address"], ["This field is required."])
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:92:    def test_location_address_city_field_empty(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:95:        self.assertEqual(form.errors["city"], ["This field is required."])
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:97:    def test_location_address_province_field_empty(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:100:        self.assertEqual(form.errors["province"], ["This field is required."])
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:102:    def test_location_address_postal_field_empty(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:105:        self.assertEqual(form.errors["postal_code"], ["This field is required."])
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:107:    def test_location_contact_email_empty(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:110:        self.assertEqual(form.errors["contact_email"], ["This field is required."])
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:112:    def test_location_contact_email_format(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:115:        self.assertEqual(form.errors["contact_email"], ["Enter a valid email address."])
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:117:    def test_location_contact_phone_empty(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:120:        self.assertEqual(form.errors["contact_phone"], ["This field is required."])
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:122:    def test_location_contact_phone_format(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:125:        self.assertEqual(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:132:    def test_location_model_generates_short_code_on_save(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:144:        self.assertNotEqual(location.short_code, "")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:145:        self.assertEqual(len(location.short_code), 8)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:146:        self.assertTrue(location.short_code.isalnum)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:150:    def test_generate_short_code_default_length(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:152:        self.assertEqual(len(code), 8)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:154:    def test_generate_short_code_custom_length(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:156:        self.assertEqual(len(code), 5)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:158:    def test_generate_short_code_alphanumeric(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/tests.py:160:        self.assertTrue(code.isalnum())
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/views.py:18:    def form_valid(self, form):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/views.py:24:        self._object = obj
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/views.py:25:        self.request.session["registrant_email"] = email
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/views.py:29:    def get_success_url(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/views.py:30:        return reverse_lazy("register:registrant_name", kwargs={"pk": self._object.pk})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/views.py:38:    def get_success_url(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/views.py:41:            kwargs={"pk": self.kwargs.get("pk"), "step": "category"},
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/views.py:59:    def get_template_names(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/views.py:60:        return [TEMPLATES[self.steps.current]]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/views.py:62:    def get_step_url(self, step):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/views.py:64:            self.url_name, kwargs={"pk": self.kwargs.get("pk"), "step": step}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/views.py:67:    def get_context_data(self, form, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/views.py:68:        context = super(LocationWizard, self).get_context_data(form=form, **kwargs)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/views.py:69:        registrant = Registrant.objects.get(id=self.kwargs.get("pk"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/views.py:70:        context["form_data"] = self.get_all_cleaned_data()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/views.py:74:    def done(self, form_list, form_dict, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/views.py:91:            reverse("register:confirmation", kwargs={"pk": self.kwargs.get("pk")})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/views.py:98:    def get_context_data(self, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/views.py:100:        context["registrant_email"] = self.request.session.get("registrant_email")

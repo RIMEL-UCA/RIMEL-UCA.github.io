@@ -1,0 +1,85 @@
+Binary file ../stopcovid-robertsdk-android/.git/index matches
+../stopcovid-robertsdk-android/.gitignore:43:# Keystore files
+../stopcovid-robertsdk-android/.gitignore:44:# Uncomment the following lines if you do not want to check your keystore files in.
+../stopcovid-robertsdk-android/.gitignore:46:#*.keystore
+../stopcovid-robertsdk-android/domain/src/androidTest/java/com/lunabeestudio/domain/SSUBuilderTest.kt:23:    fun `build_given_ecc64_ebid64_key64_and_time_should_return_expected_mac64`() {
+../stopcovid-robertsdk-android/domain/src/androidTest/java/com/lunabeestudio/domain/SSUBuilderTest.kt:26:        val key64 = "I5lqt1XfQKstC8TYw6YOVhzfwvsTnJPfHLbwj3HZzTw="
+../stopcovid-robertsdk-android/domain/src/androidTest/java/com/lunabeestudio/domain/SSUBuilderTest.kt:38:            key = Base64.decode(key64, Base64.NO_WRAP))
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/extension/SecretKeySpecExt.kt:13:import javax.crypto.SecretKey
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/extension/SecretKeySpecExt.kt:16:fun SecretKey.safeDestroy() {
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/extension/SecretKeySpecExt.kt:24:fun <T> SecretKey.safeUse(block: (SecretKey) -> T): T {
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/HelloBuilder.kt:16:import javax.crypto.spec.SecretKeySpec
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/HelloBuilder.kt:21:    key: ByteArray
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/HelloBuilder.kt:25:    private val secretKeySpec: SecretKeySpec = SecretKeySpec(key, settings.algorithm)
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/HelloBuilder.kt:29:        mac.init(secretKeySpec)
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/HelloBuilder.kt:55:            secretKeySpec.safeDestroy()
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/RegisterReport.kt:14:    val key: String,
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/SSUBuilder.kt:17:import javax.crypto.spec.SecretKeySpec
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/SSUBuilder.kt:22:    key: ByteArray
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/SSUBuilder.kt:24:    private val secretKeySpec = SecretKeySpec(key, settings.algorithm)
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/SSUBuilder.kt:28:        mac.init(secretKeySpec)
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/SSUBuilder.kt:50:        secretKeySpec.safeDestroy()
+../stopcovid-robertsdk-android/domain/src/test/java/com/lunabeestudio/domain/HelloBuilderTest.kt:30:    fun `build given ecc, ebid, key and time should return expected`(ecc: String,
+../stopcovid-robertsdk-android/domain/src/test/java/com/lunabeestudio/domain/HelloBuilderTest.kt:32:        key: String,
+../stopcovid-robertsdk-android/domain/src/test/java/com/lunabeestudio/domain/HelloBuilderTest.kt:47:            key.toByteArray(Charsets.UTF_8))
+../stopcovid-robertsdk-android/domain/src/test/java/com/lunabeestudio/domain/HelloBuilderTest.kt:60:    fun `build given ecc, ebid, key and bad time should throw IllegalArgumentException`(ecc: String,
+../stopcovid-robertsdk-android/domain/src/test/java/com/lunabeestudio/domain/HelloBuilderTest.kt:62:        key: String,
+../stopcovid-robertsdk-android/domain/src/test/java/com/lunabeestudio/domain/HelloBuilderTest.kt:76:            key.toByteArray(Charsets.UTF_8))
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/LocalKeystoreDataSource.kt:15:interface LocalKeystoreDataSource {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/LocalKeystoreDataSource.kt:16:    var sharedKey: ByteArray?
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertException.kt:27:    KEYSTORE_NO_KEY,
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertException.kt:28:    KEYSTORE_DECRYPT
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertException.kt:47:class NoSharedKeyException(message: String = "No shared key found") :
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertException.kt:48:    RobertException(ErrorCode.KEYSTORE_NO_KEY, message)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertException.kt:59:class KeyDecryptionFailed(val throwable: Throwable? = null,
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertException.kt:60:    message: String = throwable?.localizedMessage ?: "The stored key cannot be decrypt") :
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertException.kt:61:    RobertException(ErrorCode.KEYSTORE_DECRYPT, message)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:14:import com.lunabeestudio.robert.datasource.LocalKeystoreDataSource
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:16:internal class KeystoreRepository(
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:17:    private val keystoreDataSource: LocalKeystoreDataSource) {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:19:    var sharedKey: ByteArray?
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:20:        get() = keystoreDataSource.sharedKey
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:22:            keystoreDataSource.sharedKey = value
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:26:        get() = keystoreDataSource.timeStart
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:28:            keystoreDataSource.timeStart = value
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:32:        get() = keystoreDataSource.atRisk
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:34:            keystoreDataSource.atRisk = value
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:38:        get() = keystoreDataSource.lastExposureTimeframe
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:40:            keystoreDataSource.lastExposureTimeframe = value
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:44:        get() = keystoreDataSource.proximityActive
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:46:            keystoreDataSource.proximityActive = value
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:50:        get() = keystoreDataSource.isSick
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:52:            keystoreDataSource.isSick = value
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:56:        get() = keystoreDataSource.filteringInfo
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:58:            keystoreDataSource.filteringInfo = value
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:29:import com.lunabeestudio.robert.datasource.LocalKeystoreDataSource
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:40:import com.lunabeestudio.robert.repository.KeystoreRepository
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:50:    localKeystoreDataSource: LocalKeystoreDataSource,
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:56:    private val keystoreRepository: KeystoreRepository =
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:57:        KeystoreRepository(localKeystoreDataSource)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:70:        get() = keystoreRepository.sharedKey != null
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:73:        get() = keystoreRepository.proximityActive ?: false
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:76:        get() = keystoreRepository.atRisk ?: false
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:79:        get() = keystoreRepository.lastExposureTimeframe ?: 0
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:82:        get() = keystoreRepository.isSick ?: false
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:86:        keystoreRepository.sharedKey = null
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:87:        keystoreRepository.timeStart = null
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:93:                keystoreRepository.sharedKey = Base64.decode(result.data.key, Base64.NO_WRAP)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:94:                keystoreRepository.timeStart = result.data.timeStart
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:95:                keystoreRepository.filteringInfo = result.data.filterings
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:105:        keystoreRepository.proximityActive = true
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:110:        keystoreRepository.proximityActive = false
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:116:        val timeStart = keystoreRepository.timeStart
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:123:                    keystoreRepository.atRisk = result.data.atRisk
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:124:                    keystoreRepository.lastExposureTimeframe = result.data.lastExposureTimeframe
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:148:                keystoreRepository.isSick = true
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:163:            keystoreRepository.sharedKey?.use { key ->
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:164:                val ssuBuilder = SSUBuilder(SSUSettings(prefix = prefix), ephemeralBluetoothIdentifier, key)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:176:            keystoreRepository.sharedKey?.use { key ->
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:177:                val helloBuilder = HelloBuilder(HelloSettings(), ephemeralBluetoothIdentifier, key)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:221:                        keystoreRepository.sharedKey = null
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:222:                        keystoreRepository.timeStart = null
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:223:                        keystoreRepository.atRisk = null
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:224:                        keystoreRepository.lastExposureTimeframe = null
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:225:                        keystoreRepository.proximityActive = null
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:226:                        keystoreRepository.isSick = null

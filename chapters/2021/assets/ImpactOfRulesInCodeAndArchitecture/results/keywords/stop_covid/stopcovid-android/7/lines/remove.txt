@@ -1,0 +1,112 @@
+stopcovid-android/.git/hooks/pre-rebase.sample:49:	echo >&2 "$topic is fully merged to master; better remove it."
+stopcovid-android/.git/hooks/prepare-commit-msg.sample:12:# This hook includes three examples. The first one removes the
+stopcovid-android/ble/src/main/AndroidManifest.xml:29:            tools:node="remove" />
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleScannedDeviceSelector.kt:157:     * Remove all scans with bad DeviceStats
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/tools/ExpiringCache.kt:30:            remove(key)
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/tools/ExpiringCache.kt:47:            .forEach { remove(it.key) }
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/tools/ExpiringCache.kt:50:    private fun remove(key: K) {
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/tools/ExpiringCache.kt:51:        lruCache.remove(key)
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/tools/ExpiringCacheTest.kt:26:    fun get_given_expired_value_should_remove_it_and_return_null() {
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/tools/ExpiringCacheTest.kt:54:    fun cleanUp_given_expired_values_should_remove_them() {
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/fastitem/CardWithActionsItem.kt:100:                    binding.actionsLinearLayout.removeViewAt(0)
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/fragment/FastAdapterFragment.kt:89:            binding?.recyclerView?.removeOnScrollListener(it)
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/KeystoreDataSourceTest.kt:34:        context.getSharedPreferences("robert_prefs", Context.MODE_PRIVATE).edit().remove("shared.pref.shared_key").commit()
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/KeystoreDataSourceTest.kt:35:        context.getSharedPreferences("robert_prefs", Context.MODE_PRIVATE).edit().remove("shared.pref.time_start").commit()
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/KeystoreDataSourceTest.kt:36:        context.getSharedPreferences("robert_prefs", Context.MODE_PRIVATE).edit().remove("shared.pref.db_key").commit()
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/KeystoreDataSourceTest.kt:37:        context.getSharedPreferences("crypto_prefs", Context.MODE_PRIVATE).edit().remove("aes_wrapped_local_protection").commit()
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/KeystoreDataSourceTest.kt:38:        context.getSharedPreferences("crypto_prefs", Context.MODE_PRIVATE).edit().remove("secret_key_generated").commit()
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/KeystoreDataSourceTest.kt:50:        context.getSharedPreferences("robert_prefs", Context.MODE_PRIVATE).edit().remove("shared.pref.shared_key").commit()
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/KeystoreDataSourceTest.kt:51:        context.getSharedPreferences("robert_prefs", Context.MODE_PRIVATE).edit().remove("shared.pref.time_start").commit()
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/KeystoreDataSourceTest.kt:52:        context.getSharedPreferences("robert_prefs", Context.MODE_PRIVATE).edit().remove("shared.pref.db_key").commit()
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/KeystoreDataSourceTest.kt:53:        context.getSharedPreferences("crypto_prefs", Context.MODE_PRIVATE).edit().remove("aes_wrapped_local_protection").commit()
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/KeystoreDataSourceTest.kt:54:        context.getSharedPreferences("crypto_prefs", Context.MODE_PRIVATE).edit().remove("secret_key_generated").commit()
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/KeystoreDataSourceTest.kt:94:    fun saveKA_and_removeKA() {
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileEphemeralBluetoothIdentifierDataSourceTest.kt:62:    fun remove_until_time() = runBlocking {
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileEphemeralBluetoothIdentifierDataSourceTest.kt:69:        secureFileEphemeralBluetoothIdentifierDataSource.removeUntilTimeKeepLast(750L)
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileEphemeralBluetoothIdentifierDataSourceTest.kt:74:        secureFileEphemeralBluetoothIdentifierDataSource.removeUntilTimeKeepLast(2000L)
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileEphemeralBluetoothIdentifierDataSourceTest.kt:82:    fun remove_all() = runBlocking {
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileEphemeralBluetoothIdentifierDataSourceTest.kt:88:        secureFileEphemeralBluetoothIdentifierDataSource.removeAll()
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:65:    fun save_all_remove_all_after_dump() {
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:72:        secureFileLocalProximityDataSource.removeAll()
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:74:        val removedList = secureFileLocalProximityDataSource.getUntilTime(0)
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:75:        assertThat(removedList).isEmpty()
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:79:    fun save_all_remove_all_during_dump() {
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:83:            secureFileLocalProximityDataSource.removeAll() // remove all before dump finished
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:115:    fun remove_until() {
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:126:        secureFileLocalProximityDataSource.removeUntilTime(5 * 60 * 60 * 24)
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/LocalCryptoManagerTest.kt:30:        context.getSharedPreferences("crypto_prefs", Context.MODE_PRIVATE).edit().remove("secret_key_generated").commit()
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/LocalCryptoManagerTest.kt:36:        context.getSharedPreferences("crypto_prefs", Context.MODE_PRIVATE).edit().remove("secret_key_generated").commit()
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileEphemeralBluetoothIdentifierDataSource.kt:90:    override suspend fun removeUntilTimeKeepLast(ntpTimeS: Long) {
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileEphemeralBluetoothIdentifierDataSource.kt:104:    override suspend fun removeAll() {
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:92:    override fun removeUntilTime(ntpTimeS: Long) {
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:103:    override fun removeAll() {
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:104:        dumpJob?.cancel(CancellationException("Remove all local data called"))
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:237:            sharedPreferences.edit().remove(key).apply()
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:271:            sharedPreferences.edit().remove(key).apply()
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:279:            sharedPreferences.edit { remove(oldKey) }
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/manager/LocalProximityFilterImpl.kt:53:                mutableLocalProximityList.removeAll(list)
+stopcovid-android/LICENSE.md:74:	a. for any code that a Contributor has removed from Covered Software; or
+stopcovid-android/LICENSE.md:118:You may not remove or alter the substance of any license notices (including copyright notices, patent notices, disclaimers of warranty, or limitations of liability) contained within the Source Code Form of the Covered Software, except that You may alter any license notices to the extent required to remedy known factual inaccuracies.
+stopcovid-android/LICENSE.md:164:If you create software not governed by this License, and you want to create a new license for such software, you may create and use a modified version of this License if you rename the license and remove any references to the name of the license steward (except to note that such modified license differs from this License).
+stopcovid-android/LICENSE.txt:118:(a) for any code that a Contributor has removed from Covered Software;
+stopcovid-android/LICENSE.txt:200:You may not remove or alter the substance of any license notices
+stopcovid-android/LICENSE.txt:344:modified version of this License if you rename the license and remove
+stopcovid-android/licenses/tests/license-junit4.txt:107:Contributors may not remove or alter any copyright notices contained within the
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/datasource/LocalEphemeralBluetoothIdentifierDataSource.kt:19:    suspend fun removeUntilTimeKeepLast(ntpTimeS: Long)
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/datasource/LocalEphemeralBluetoothIdentifierDataSource.kt:20:    suspend fun removeAll()
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/datasource/LocalLocalProximityDataSource.kt:18:    fun removeUntilTime(ntpTimeS: Long)
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/datasource/LocalLocalProximityDataSource.kt:19:    fun removeAll()
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/repository/EphemeralBluetoothIdentifierRepository.kt:58:    suspend fun removeUntilTimeKeepLast(ntpTimeS: Long) {
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/repository/EphemeralBluetoothIdentifierRepository.kt:59:        localEphemeralBluetoothIdentifierDataSource.removeUntilTimeKeepLast(ntpTimeS)
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/repository/EphemeralBluetoothIdentifierRepository.kt:62:    suspend fun removeAll() {
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/repository/EphemeralBluetoothIdentifierRepository.kt:63:        localEphemeralBluetoothIdentifierDataSource.removeAll()
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/repository/LocalProximityRepository.kt:26:    fun removeUntilTime(ntpTimeS: Long) {
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/repository/LocalProximityRepository.kt:27:        localLocalProximityDataSource.removeUntilTime(ntpTimeS)
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/repository/LocalProximityRepository.kt:30:    fun removeAll() {
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/repository/LocalProximityRepository.kt:31:        localLocalProximityDataSource.removeAll()
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:381:        ephemeralBluetoothIdentifierRepository.removeUntilTimeKeepLast(ephemeralBluetoothIdentifierExpiredTime)
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:386:        localProximityRepository.removeUntilTime(localProximityExpiredTime)
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:502:        localProximityRepository.removeAll()
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:552:        ephemeralBluetoothIdentifierRepository.removeAll()
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:553:        localProximityRepository.removeAll()
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:428:    fun remove_venue() {
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:445:        VenuesManager.removeVenue(keystoreDataSource, VenuesManager.getVenuesQrCode(keystoreDataSource)?.get(1)?.id ?: "")
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:448:            ?.get(0)?.uuid == "491ab3ae-ad35-4301-8dd9-414ecf210711") { "First element shouldn't be removed" }
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:450:            ?.get(1)?.uuid == "491ab3ae-ad35-4301-8dd9-414ecf210713") { "Third element shouldn't be removed" }
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:451:        VenuesManager.removeVenue(keystoreDataSource, VenuesManager.getVenuesQrCode(keystoreDataSource)?.get(0)?.id ?: "")
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:454:            ?.get(0)?.uuid == "491ab3ae-ad35-4301-8dd9-414ecf210713") { "Second element shouldn't be removed" }
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:455:        VenuesManager.removeVenue(keystoreDataSource, VenuesManager.getVenuesQrCode(keystoreDataSource)?.get(0)?.id ?: "")
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/activity/AppMaintenanceActivity.kt:97:                        finishAndRemoveTask()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/activity/AppMaintenanceActivity.kt:112:                        finishAndRemoveTask()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/activity/BaseActivity.kt:25:            finishAndRemoveTask()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/activity/OnBoardingActivity.kt:59:        onDestinationChangeListener?.let { navController.removeOnDestinationChangedListener(it) }
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/activity/SplashScreenActivity.kt:56:                        StringsManager.liveStrings.removeObserver(this)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/activity/SplashScreenActivity.kt:87:            finishAndRemoveTask()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/activity/SplashScreenActivity.kt:102:            finishAndRemoveTask()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/SharedPreferencesExt.kt:80:            remove(Constants.SharedPrefs.CURRENT_VACCINATION_REFERENCE_LATITUDE)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/SharedPreferencesExt.kt:97:            remove(Constants.SharedPrefs.CURRENT_VACCINATION_REFERENCE_LONGITUDE)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/StringExt.kt:72:            val cleanVersion = this.removeSuffix("%")
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/EditTextItem.kt:42:            holder.editText.removeTextChangedListener(textWatcher)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/EditTextItem.kt:77:            holder.editText.removeTextChangedListener(textWatcher)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/OnOffLottieItem.kt:31:        holder.onView.removeAllAnimatorListeners()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/OnOffLottieItem.kt:32:        holder.offView.removeAllAnimatorListeners()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/OnOffLottieItem.kt:54:                holder.onView.removeAnimatorListener(this)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/OnOffLottieItem.kt:57:                        holder.offView.removeAnimatorListener(this)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/OnOffLottieItem.kt:79:                holder.offView.removeAnimatorListener(this)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/OnOffLottieItem.kt:113:        holder.onView.removeAllAnimatorListeners()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/OnOffLottieItem.kt:114:        holder.offView.removeAllAnimatorListeners()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/AttestationsFragment.kt:192:                        viewModel.removeAttestation(attestation)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:104:                remove(Constants.SharedPrefs.ON_BOARDING_DONE)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:105:                remove(Constants.SharedPrefs.PRIVATE_EVENT_QR_CODE_GENERATION_DATE)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:106:                remove(Constants.SharedPrefs.PRIVATE_EVENT_QR_CODE)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:110:            activity?.finishAndRemoveTask()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingGestureFragment.kt:37:        activity?.finishAndRemoveTask()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ProximityFragment.kt:232:            arguments?.remove(START_PROXIMITY_ARG_KEY)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VenuesHistoryFragment.kt:66:                                VenuesManager.removeVenue(requireContext().secureKeystoreDataSource(), venueQrCode.id)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:413:    // DO NOT CHANGE ORDER OR REMOVE !!!
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/VenuesManager.kt:170:    fun removeVenue(keystoreDataSource: SecureKeystoreDataSource, venueId: String) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/VenuesManager.kt:172:        venuesQrCode.firstOrNull { it.id == venueId }?.let(venuesQrCode::remove)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/AttestationsViewModel.kt:26:    fun removeAttestation(attestation: AttestationMap) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/AttestationsViewModel.kt:28:        attestations?.remove(attestation)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/NewAttestationViewModel.kt:42:            infos.remove("datetime")
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/NewAttestationViewModel.kt:43:            infos.remove("reason")

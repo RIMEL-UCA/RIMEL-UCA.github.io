@@ -1,0 +1,4 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim.go:79:		http.Error(w, "forbidden", http.StatusForbidden)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim_test.go:227:	assert.Equal(t, 403, resp.Code, "forbidden response is expected")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim_test.go:228:	assert.Equal(t, "forbidden\n", string(resp.Body.Bytes()), "forbidden response is expected")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/new_key_claim_hash_id_test.rb:58:    assert_response(resp, 403, 'text/plain; charset=utf-8', body: "forbidden\n")

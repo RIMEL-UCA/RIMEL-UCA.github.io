@@ -1,0 +1,7 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:249:- [Indicateurs et traçage](#indicateurs-et-traçage)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:352:## Indicateurs et traçage
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:354:COVID Alert utilise [OpenTelemetry](https://github.com/open-telemetry/opentelemetry-go) pour configurer les indicateurs et le traçage du serveur, à la fois pour la récupération et l’envoi des clés.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:382:### Traçage  
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:384:Actuellement, les options suivantes sont prises en charge pour activer le traçage :
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:387:Le traçage peut être activé en définissant la variable `TRACER_PROVIDER` sur `stdout` ou `pretty`.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:389:Aussi bien `stdout` que `pretty` enverront le traçage de sortie à `stdout`, mais leur mise en forme diffère. `stdout` imprimera le traçage en tant que JSON sur une seule ligne, tandis que `pretty` formatera le JSON de manière lisible pour les humains, avec une séparation sur plusieurs lignes.

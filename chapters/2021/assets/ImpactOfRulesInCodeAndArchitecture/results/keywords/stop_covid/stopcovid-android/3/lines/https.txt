@@ -1,0 +1,836 @@
+stopcovid-android/.git/config:7:	url = https://gitlab.inria.fr/stopcovid19/stopcovid-android.git
+stopcovid-android/.git/hooks/fsmonitor-watchman.sample:8:# (https://facebook.github.io/watchman/) with git to speed up detecting
+stopcovid-android/.git/logs/HEAD:1:0000000000000000000000000000000000000000 25fa78e3d90a4e161537f9426204c488a1e54bcb Florian Focas <florianfocas@gmail.com> 1613460745 +0100	clone: from https://gitlab.inria.fr/stopcovid19/stopcovid-android.git
+stopcovid-android/.git/logs/refs/heads/master:1:0000000000000000000000000000000000000000 25fa78e3d90a4e161537f9426204c488a1e54bcb Florian Focas <florianfocas@gmail.com> 1613460745 +0100	clone: from https://gitlab.inria.fr/stopcovid19/stopcovid-android.git
+stopcovid-android/.git/logs/refs/remotes/origin/HEAD:1:0000000000000000000000000000000000000000 25fa78e3d90a4e161537f9426204c488a1e54bcb Florian Focas <florianfocas@gmail.com> 1613460745 +0100	clone: from https://gitlab.inria.fr/stopcovid19/stopcovid-android.git
+stopcovid-android/ble/build.gradle:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/AndroidManifest.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/advertiser/BleAdvertiser.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/advertiser/BleAdvertiserImpl.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleDeviceId.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BlePayload.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleProximityMetadata.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/. 
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleProximityNotification.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationFactory.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiser.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithoutAdvertiser.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleRecord.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleRecordMapper.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleRecordProvider.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleRecordProviderForScanWithoutPayload.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/. 
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleRecordProviderForScanWithPayload.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleScannedDeviceFilter.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleScannedDeviceSelector.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/BleSettings.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/calibration/BleRssiCalibration.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattClient.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattClientImpl.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattClientProvider.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattClientProviderImpl.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManager.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/scanner/BleScanner.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/scanner/BleScannerImpl.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/scanner/ScanResultExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/. 
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/filter/CollectionExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/filter/ProximityFilter.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/filter/RiskComputer.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/filter/RssiClipper.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/filter/TimestampedRssi.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ProximityInfo.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ProximityNotification.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ProximityNotificationCallback.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ProximityNotificationError.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ProximityNotificationEvent.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ProximityNotificationEventId.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ProximityNotificationLogger.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ProximityNotificationService.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ProximityPayload.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ProximityPayloadIdProvider.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ProximityPayloadIdProviderWithCache.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ProximityPayloadProvider.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/tools/BluetoothStateBroadcastReceiver.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/tools/CoroutineContextProvider.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/tools/ExpiringCache.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/tools/Result.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/tools/TimeUtils.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/ble/advertiser/BleAdvertiserImplTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/ble/BlePayloadTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/ble/BleProximityNotificationFactoryTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiserTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/ble/BleProximityNotificationWithoutAdvertiserTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/ble/BleRecordMapperTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/ble/BleRecordProviderForScanWithoutPayloadTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/. 
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/ble/BleRecordProviderForScanWithPayloadTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/ble/BleRecordTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceFilterTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceSelectorTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/ble/BleTestHelper.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/ble/calibration/BleRssiCalibrationTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/ble/gatt/BleGattClientImplTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImplTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/ble/scanner/BleScannerImplTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/ble/scanner/ScanResultExtKtTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/. 
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/CoroutineTestRule.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/filter/FilterTestHelper.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/filter/ProximityFilterIntTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/filter/ProximityFilterTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/filter/RiskComputerTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/filter/RssiClipperTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/ProximityPayloadIdProviderWithCacheTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/ProximityPayloadTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/tools/CSVReader.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/tools/ExpiringCacheTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/ble/src/test/java/com/orange/proximitynotification/tools/ResultTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/build.gradle:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/build.gradle:23:        // https://issuetracker.google.com/issues/159151549#comment3
+stopcovid-android/build.gradle:34:        maven { url 'https://jitpack.io' }
+stopcovid-android/coreui/build.gradle:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/build.gradle:33:        buildConfigField 'String', 'BASE_URL', '"https://app.stopcovid.gouv.fr"'
+stopcovid-android/coreui/src/main/AndroidManifest.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/custom/BlockingContentLoadingProgressBar.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/extension/ActivityExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/extension/AppBarLayoutExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/extension/ContextExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/extension/FragmentExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/extension/ImageViewExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/extension/IntExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/extension/LocaleListExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/extension/MapExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/extension/RecyclerViewExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/extension/StringExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/extension/ViewExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/fastitem/BaseItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/fastitem/ButtonItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/fastitem/CaptionItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/fastitem/ClickableRowItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/fastitem/DividerItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/fastitem/LightButtonItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/fastitem/SpaceItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/fastitem/SwitchItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/fastitem/TextButtonItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/fastitem/TitleItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/fragment/BaseFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/fragment/FastAdapterFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/manager/ConfigManager.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/manager/ServerManager.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/manager/StringsManager.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/model/ApiConfiguration.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/model/ApiDeviceParameterCorrection.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/model/CardTheme.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/model/ConfigurationEntry.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/model/ConfigurationWrapper.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/network/OkHttpClient.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/UiConstants.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/utils/LoadingVisibilityDelayDelegate.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/utils/SingleLiveEvent.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/anim/fade_in.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/anim/fade_out.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/anim/nav_slide_enter_anim.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/anim/nav_slide_exit_anim.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/anim/nav_slide_pop_enter_anim.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/anim/nav_slide_pop_exit_anim.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/drawable/bg_no_risk.xml:5:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/drawable/bg_risk.xml:5:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/drawable/bg_sick.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/drawable/bg_warning_risk.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/drawable/circle.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/drawable/ic_arrow_right.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/drawable-anydpi-v24/ic_notification_bar.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/font/marianne.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/layout/fragment_recycler_view.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/layout/item_action.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/layout/item_button.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/layout/item_caption.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/layout/item_card_with_actions.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/layout/item_clickable_row.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/layout/item_divider.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/layout/item_light_button.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/layout/item_space.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/layout/item_switch.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/layout/item_text_button.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/layout/item_title.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/layout/layout_button_bottom_sheet.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/layout/layout_confirmation_bottom_sheet.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/layout/layout_content_loading_progress_bar.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/values/colors.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/values/dimens.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/values/ids.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/values/styles.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/values/styles_shape_appearance.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/values/styles_text.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/values/styles_theme_overlay.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/values/styles_widget.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/values/untranslatable_strings.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/values-night/colors.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/values-night/styles.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/values-night/styles_widget.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/values-sw360dp/dimens.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/coreui/src/main/res/values-v23/styles.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/domain/build.gradle:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/domain/src/androidTest/java/com/lunabeestudio/domain/LocalProximityTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/domain/src/androidTest/java/com/lunabeestudio/domain/SSUBuilderTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/domain/src/main/AndroidManifest.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/domain/src/main/java/com/lunabeestudio/domain/extension/LongExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/domain/src/main/java/com/lunabeestudio/domain/extension/SecretKeySpecExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/domain/src/main/java/com/lunabeestudio/domain/model/Configuration.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/domain/src/main/java/com/lunabeestudio/domain/model/DeviceParameterCorrection.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/domain/src/main/java/com/lunabeestudio/domain/model/EphemeralBluetoothIdentifier.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/domain/src/main/java/com/lunabeestudio/domain/model/FormEntry.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/domain/src/main/java/com/lunabeestudio/domain/model/Hello.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/domain/src/main/java/com/lunabeestudio/domain/model/HelloBuilder.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/domain/src/main/java/com/lunabeestudio/domain/model/HelloSettings.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/domain/src/main/java/com/lunabeestudio/domain/model/LocalProximity.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/domain/src/main/java/com/lunabeestudio/domain/model/RegisterReport.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/domain/src/main/java/com/lunabeestudio/domain/model/ReportResponse.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/domain/src/main/java/com/lunabeestudio/domain/model/ServerStatusUpdate.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/domain/src/main/java/com/lunabeestudio/domain/model/SSUBuilder.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/domain/src/main/java/com/lunabeestudio/domain/model/SSUSettings.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/domain/src/main/java/com/lunabeestudio/domain/model/StatusReport.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/domain/src/main/java/com/lunabeestudio/domain/model/WStatusReport.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/domain/src/test/java/com/lunabeestudio/domain/DomainCoercion.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/domain/src/test/java/com/lunabeestudio/domain/HelloBuilderTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/domain/src/test/java/com/lunabeestudio/domain/HelloTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/build.gradle:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/build.gradle:31:        buildConfigField 'String', 'BASE_URL', '"https://api.stopcovid.gouv.fr"'
+stopcovid-android/framework/build.gradle:32:        buildConfigField 'String', 'WARNING_BASE_URL', '"https://tacw.tousanticovid.gouv.fr"'
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/KeystoreDataSourceTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileEphemeralBluetoothIdentifierDataSourceTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/LocalCryptoManagerTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/remote/ServiceTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/sharedcrypto/BouncyCastleCryptoDataSourceTest.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/testutils/ResourcesHelper.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/AndroidManifest.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/ble/extension/ProximityInfoExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/ble/service/RobertProximityService.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/extension/LocalProximityExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileEphemeralBluetoothIdentifierDataSource.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureKeystoreDataSource.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/LocalCryptoManager.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/manager/LocalProximityFilterImpl.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/datasource/ServiceDataSource.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/extension/ExceptionExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/model/ApiCaptchaRS.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/model/ApiCommonRS.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/model/ApiDeleteExposureHistoryRQ.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/model/ApiDistinctiveHelloInfoWithinEpochForSameEBIDRQ.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/model/ApiGroupedHellosReportRQ.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/model/ApiKeyPairRS.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/model/ApiRegisterRQ.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/model/ApiRegisterRS.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/model/ApiRegisterV2RQ.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/model/ApiReportRQ.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/model/ApiReportRS.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/model/ApiStatusRQ.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/model/ApiStatusRS.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/model/ApiUnregisterRQ.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/model/ApiWReportRQ.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/model/ApiWStatusRQ.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/model/ApiWStatusRS.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/model/CaptchaRQ.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/model/GetCaptchaRQ.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/model/ServerException.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/RetrofitClient.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/server/StopCovidApi.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/server/StopCovidWarningApi.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/sharedcrypto/BouncyCastleCryptoDataSource.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/utils/CryptoHelper.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/framework/src/main/res/xml/network_security_config.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/gradle/wrapper/gradle-wrapper.properties:6:distributionUrl=https\://services.gradle.org/distributions/gradle-6.7-all.zip
+stopcovid-android/gradle.properties:4:# file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/gradle.properties:25:# https://developer.android.com/topic/libraries/support-library/androidx-rn
+stopcovid-android/gradlew:10:#      https://www.apache.org/licenses/LICENSE-2.0
+stopcovid-android/gradlew.bat:8:@rem      https://www.apache.org/licenses/LICENSE-2.0
+stopcovid-android/LICENSE.md:172:> This Source Code Form is subject to the terms of the Mozilla Public License, v. 2.0. If a copy of the MPL was not distributed with this file, You can obtain one at https://mozilla.org/MPL/2.0/.  
+stopcovid-android/README.md:11:Ce projet gitlab.inria.fr est un des composants de la solution plus globale [StopCovid](https://gitlab.inria.fr/stopcovid19/accueil/-/blob/master/README.md).
+stopcovid-android/robert/build.gradle:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/robert/src/main/AndroidManifest.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/datasource/ConfigurationDataSource.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/datasource/LocalEphemeralBluetoothIdentifierDataSource.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/datasource/LocalKeystoreDataSource.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/datasource/LocalLocalProximityDataSource.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/datasource/RemoteServiceDataSource.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/datasource/SharedCryptoDataSource.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/extension/BooleanExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/extension/ByteArrayExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/extension/EnumUtil.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/extension/LiveDataExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/extension/StringExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/manager/LocalProximityFilter.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/model/AtRiskStatus.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertException.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertResult.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/repository/EphemeralBluetoothIdentifierRepository.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/repository/LocalProximityRepository.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/RobertApplication.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/RobertConstant.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/RobertManager.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/utils/Event.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/utils/EventObserver.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/worker/StatusWorker.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/settings.gradle:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/build.gradle:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/build.gradle:52:        buildConfigField 'String', 'CAPTCHA_URL', '"https://stopcovid.gouv.fr"'
+stopcovid-android/stopcovid/build.gradle:54:        buildConfigField 'String', 'APP_MAINTENANCE_URL', '"https://app.stopcovid.gouv.fr/maintenance/info-maintenance-v2.json"'
+stopcovid-android/stopcovid/build.gradle:62:        buildConfigField 'String', 'APP_STORE_URL', '"https://play.google.com/store/apps/details?id=fr.gouv.android.stopcovid"'
+stopcovid-android/stopcovid/src/androidTest/java/AndroidManifest.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:203:            "https://www.google.com"
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:209:            "https://tac.gouv.fr/0/491ab3/GA/4/400/"
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:215:            "https://tac.gouv.fr/491ab3ae-ad35-4301-8dd9-414ecf210712/0/GA/4/400/"
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:221:            "https://tac.gouv.fr/-1/491ab3ae-ad35-4301-8dd9-414ecf210712/GA/4/400/"
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:227:            "https://tac.gouv.fr/2/491ab3ae-ad35-4301-8dd9-414ecf210712/GA/4/400/"
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:233:            "https://tac.gouv.fr/0/491ab3ae-ad35-4301-8dd9-414ecf21071/GA/4/400/"
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:239:            "https://tac.gouv.fr/0/491ab3ae-ad35-4301-8dd9-414ecf210712//4/400/"
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:245:            "https://tac.gouv.fr/0/491ab3ae-ad35-4301-8dd9-414ecf210712/1234/4/400/"
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:251:            "https://tac.gouv.fr/0/491ab3ae-ad35-4301-8dd9-414ecf210712/1/-1/400/"
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:257:            "https://tac.gouv.fr/0/491ab3ae-ad35-4301-8dd9-414ecf210712/1/6/400/"
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:263:            "https://tac.gouv.fr/0/491ab3ae-ad35-4301-8dd9-414ecf210712/1/6/-400/"
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:269:            "https://tac.gousv.fr/0/491ab3ae-ad35-4301-8dd9-414ecf210712/l"
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:275:            "https://tac.gouv.fr/0/491ab3ae-ad35-4301-8dd9-414ecf210712/l"
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:292:            "https://tac.gouv.fr/1/491ab3ae-ad35-4301-8dd9-414ecf210713/GA/-/400/"
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:306:            "https://tac.gouv.fr/1/491ab3ae-ad35-4301-8dd9-414ecf210714/GA/4/400/"
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:320:            "https://tac.gouv.fr/1/491ab3ae-ad35-4301-8dd9-414ecf210715/GA/4/-/"
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:334:            "https://tac.gouv.fr/1/491ab3ae-ad35-4301-8dd9-414ecf210716/GA/-/-/"
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:348:            "https://tac.gouv.fr/1/491ab3ae-ad35-4301-8dd9-414ecf210717/GA/-/-/1610621656"
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:369:            "https://tac.gouv.fr/0/491ab3/GA/4/400/"
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:374:            "https://tac.gouv.fr/1/491ab3ae-ad35-4301-8dd9-414ecf210717/GA/-/-"
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:380:            "https://tac.gouv.fr/1/491ab3ae-ad35-4301-8dd9-414ecf210717/GA/-/-/$expiredTimestamp"
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:386:            "https://tac.gouv.fr/1/491ab3ae-ad35-4301-8dd9-414ecf210717/GA/-/-/$notExpiredTimestamp"
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:432:            "https://tac.gouv.fr/0/491ab3ae-ad35-4301-8dd9-414ecf210711/l"
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:437:            "https://tac.gouv.fr/0/491ab3ae-ad35-4301-8dd9-414ecf210712/l"
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:442:            "https://tac.gouv.fr/0/491ab3ae-ad35-4301-8dd9-414ecf210713/l"
+stopcovid-android/stopcovid/src/main/AndroidManifest.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/AndroidManifest.xml:26:            <data android:scheme="https" />
+stopcovid-android/stopcovid/src/main/assets/Links/links-en.json:7:                "url": "https://www.gouvernement.fr/info-coronavirus"
+stopcovid-android/stopcovid/src/main/assets/Links/links-en.json:17:                "url": "https://sante.fr/recherche/trouver/DepistageCovid"
+stopcovid-android/stopcovid/src/main/assets/Links/links-en.json:27:                "url": "https://mesconseilscovid.sante.gouv.fr/?source=TousAntiCovid#introduction"
+stopcovid-android/stopcovid/src/main/assets/Links/links-en.json:37:                "url": "https://declare.ameli.fr/"
+stopcovid-android/stopcovid/src/main/assets/Links/links-en.json:41:                "url": "https://www.ameli.fr/assure/covid-19/tester-alerter-proteger-comprendre-la-strategie-pour-stopper-lepidemie/contact-tracing-arreter-les-chaines-de-transmission"
+stopcovid-android/stopcovid/src/main/assets/Links/links-en.json:45:                "url": "https://www.ameli.fr/assure/covid-19/en-cas-de-contact-avec-une-personne-malade-du-covid-19/en-cas-de-contact-avec-une-personne-malade-de-la-covid-19"
+stopcovid-android/stopcovid/src/main/assets/Links/links-en.json:57:                "url": "https://cnam.briserlachaine.org/accueil"
+stopcovid-android/stopcovid/src/main/assets/Links/links-fr.json:7:                "url": "https://www.gouvernement.fr/info-coronavirus"
+stopcovid-android/stopcovid/src/main/assets/Links/links-fr.json:17:                "url": "https://sante.fr/recherche/trouver/DepistageCovid"
+stopcovid-android/stopcovid/src/main/assets/Links/links-fr.json:27:                "url": "https://mesconseilscovid.sante.gouv.fr/?source=TousAntiCovid#introduction"
+stopcovid-android/stopcovid/src/main/assets/Links/links-fr.json:37:                "url": "https://declare.ameli.fr/"
+stopcovid-android/stopcovid/src/main/assets/Links/links-fr.json:41:                "url": "https://www.ameli.fr/assure/covid-19/tester-alerter-proteger-comprendre-la-strategie-pour-stopper-lepidemie/contact-tracing-arreter-les-chaines-de-transmission"
+stopcovid-android/stopcovid/src/main/assets/Links/links-fr.json:45:                "url": "https://www.ameli.fr/assure/covid-19/en-cas-de-contact-avec-une-personne-malade-du-covid-19/en-cas-de-contact-avec-une-personne-malade-de-la-covid-19"
+stopcovid-android/stopcovid/src/main/assets/Links/links-fr.json:57:                "url": "https://cnam.briserlachaine.org/accueil"
+stopcovid-android/stopcovid/src/main/assets/MoreKeyFigures/morekeyfigures-en.json:8:                "url": "https://bonjour.tousanticovid.gouv.fr/app.html#chiffres"
+stopcovid-android/stopcovid/src/main/assets/MoreKeyFigures/morekeyfigures-en.json:18:                "url": "https://www.santepubliquefrance.fr/dossiers/coronavirus-covid-19/coronavirus-chiffres-cles-et-evolution-de-la-covid-19-en-france-et-dans-le-monde#block-266156"
+stopcovid-android/stopcovid/src/main/assets/MoreKeyFigures/morekeyfigures-fr.json:8:                "url": "https://bonjour.tousanticovid.gouv.fr/app.html#chiffres"
+stopcovid-android/stopcovid/src/main/assets/MoreKeyFigures/morekeyfigures-fr.json:18:                "url": "https://www.santepubliquefrance.fr/dossiers/coronavirus-covid-19/coronavirus-chiffres-cles-et-evolution-de-la-covid-19-en-france-et-dans-le-monde#block-266156"
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-ar.json:8:            "url":"https://bonjour.tousanticovid.gouv.fr/privacy-en.html"
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-ar.json:45:            "url":"https://bonjour.tousanticovid.gouv.fr/stopcovid.html"
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-ar.json:49:            "url":"https://gitlab.inria.fr/stopcovid19/accueil"
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-ar.json:53:            "url":"https://bonjour.tousanticovid.gouv.fr/privacy-en.html"
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-de.json:8:                "url": "https://bonjour.tousanticovid.gouv.fr/privacy-en.html"
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-de.json:45:                "url": "https://bonjour.tousanticovid.gouv.fr/stopcovid.html"
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-de.json:49:                "url": "https://gitlab.inria.fr/stopcovid19/accueil"
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-de.json:53:                "url": "https://bonjour.tousanticovid.gouv.fr/privacy-en.html"
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-en.json:8:                "url": "https://bonjour.tousanticovid.gouv.fr/privacy-en.html"
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-en.json:45:                "url": "https://bonjour.tousanticovid.gouv.fr/stopcovid.html"
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-en.json:49:                "url": "https://gitlab.inria.fr/stopcovid19/accueil"
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-en.json:53:                "url": "https://bonjour.tousanticovid.gouv.fr/privacy-en.html"
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-es.json:8:                "url": "https://bonjour.tousanticovid.gouv.fr/privacy-en.html"
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-es.json:45:                "url": "https://bonjour.tousanticovid.gouv.fr/stopcovid.html"
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-es.json:49:                "url": "https://gitlab.inria.fr/stopcovid19/accueil"
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-es.json:53:                "url": "https://bonjour.tousanticovid.gouv.fr/privacy-en.html"
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-fr.json:8:                "url": "https://bonjour.tousanticovid.gouv.fr/privacy.html"
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-fr.json:45:                "url": "https://bonjour.tousanticovid.gouv.fr/stopcovid.html"
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-fr.json:49:                "url": "https://gitlab.inria.fr/stopcovid19/accueil"
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-fr.json:53:                "url": "https://bonjour.tousanticovid.gouv.fr/privacy.html"
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-it.json:8:            "url":"https://bonjour.tousanticovid.gouv.fr/privacy-en.html"
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-it.json:45:            "url":"https://bonjour.tousanticovid.gouv.fr/stopcovid.html"
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-it.json:49:            "url":"https://gitlab.inria.fr/stopcovid19/accueil"
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-it.json:53:            "url":"https://bonjour.tousanticovid.gouv.fr/privacy-en.html"
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-pt.json:8:                "url": "https://bonjour.tousanticovid.gouv.fr/privacy-en.html"
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-pt.json:45:                "url": "https://bonjour.tousanticovid.gouv.fr/stopcovid.html"
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-pt.json:49:                "url": "https://gitlab.inria.fr/stopcovid19/accueil"
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-pt.json:53:                "url": "https://bonjour.tousanticovid.gouv.fr/privacy-en.html"
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:42:    "sickController.button.myConditionInformation.url": "https://mesconseilscovid.sante.gouv.fr/?source=TousAntiCovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:45:    "sickController.button.recommendations.url": "https://mesconseilscovid.sante.gouv.fr/?source=TousAntiCovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:59:    "sharingController.appSharingMessage": "أنا أستعمل تطبيق TousAntiCovid للمشاركة في المكافحة الجماعية ضد الوباء: لإعلام الآخرين وبقائي على اطلاع. بدورك حمّل التطبيق: https://bonjour.stopcovid.gouv.fr/",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:64:    "aboutController.webpageUrl": "https://bonjour.stopcovid.gouv.fr/app.html",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:68:    "aboutController.opinionUrl": "https://voxusagers.numerique.gouv.fr/Demarches/2543?&view-mode=formulaire-avis&nd_mode=en-ligne-enti%C3%A8rement&nd_source=button&key=d209f7b2be0fca3de1df21eaeff49a97",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:104:    "informationController.step.moreInfo.url": "https://mesconseilscovid.sante.gouv.fr/?source=TousAntiCovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:223:    "onboarding.noBleController.infosUrl": "https://app.stopcovid.gouv.fr/json/version-26/devices.html",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:284:    "myHealthController.covidAdvices.url": "https://mesconseilscovid.sante.gouv.fr/?source=TousAntiCovid#introduction",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:288:    "myHealthController.testingSites.url": "https://sante.fr/recherche/trouver/DepistageCovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:292:    "myHealthController.yourDepartment.url": "https://geodes.santepubliquefrance.fr/#view=map2&c=indicator",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:393:    "home.moreSection.curfewCertificate.url": "https://media.interieur.gouv.fr/attestation-couvre-feu-covid-19/",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:417:    "onboarding.runWithoutBleController.infosUrl": "https://app.stopcovid.gouv.fr/json/version-26/devices.html",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:422:    "keyFigure.sharing.national": "%1$@ (فرنسا): %2$@. تجد الأرقام الأساسية في تطبيق TousAntiCovid على الموقع https://bonjour.tousanticovid.gouv.fr",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:423:    "keyFigure.sharing.department": "%1$@ (%2$@): %3$@. %4$@ (فرنسا): %5$@. الأرقام الأساسية متوفرة على منصة تطبيق TousAntiCovid على الموقع https://bonjour.tousanticovid.gouv.fr",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:424:    "info.sharing.title": "إقرأ في تطبيق TousAntiCovid: \"%@\". تجد جميع المستجدات في تطبيق TousAntiCovid على الموقع https://bonjour.tousanticovid.gouv.fr",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:478:    "attestationsController.termsOfUse.url": "https://bonjour.tousanticovid.gouv.fr/privacy.html",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:527:    "home.moreSection.covidInfo.url": "https://www.gouvernement.fr/info-coronavirus",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:607:    "declareController.codeNotReceived.alert.video.url": "https://youtu.be/uCEMHFr50a0",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:706:   "vaccinationController.eligibility.url": "https://solidarites-sante.gouv.fr/grands-dossiers/vaccin-covid-19/article/la-strategie-vaccinale",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:710:   "vaccinationController.vaccinationLocation.url": "https://www.sante.fr/carte-vaccination-covid?source=TousAntiCovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:711:   "contactUs.url": "https://bonjour.tousanticovid.gouv.fr/contact.html",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:763:   "common.privacyPolicy": "https://bonjour.tousanticovid.gouv.fr/privacy.html"
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:42:    "sickController.button.myConditionInformation.url": "https://mesconseilscovid.sante.gouv.fr/?source=TousAntiCovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:45:    "sickController.button.recommendations.url": "https://mesconseilscovid.sante.gouv.fr/?source=TousAntiCovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:59:    "sharingController.appSharingMessage": "Ich verwende TousAntiCovid, um einen Beitrag zur Bekämpfung der Epidemie zu leisten: informieren und informiert werden. Installieren auch Sie die App: https://bonjour.stopcovid.gouv.fr/",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:64:    "aboutController.webpageUrl": "https://bonjour.tousanticovid.gouv.fr/app.html",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:68:    "aboutController.opinionUrl": "https://voxusagers.numerique.gouv.fr/Demarches/2543?&view-mode=formulaire-avis&nd_mode=en-ligne-enti%C3%A8rement&nd_source=button&key=d209f7b2be0fca3de1df21eaeff49a97",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:104:    "informationController.step.moreInfo.url": "https://mesconseilscovid.sante.gouv.fr/?source=TousAntiCovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:223:    "onboarding.noBleController.infosUrl": "https://app.stopcovid.gouv.fr/json/version-26/devices.html",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:284:    "myHealthController.covidAdvices.url": "https://mesconseilscovid.sante.gouv.fr/?source=TousAntiCovid#introduction",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:288:    "myHealthController.testingSites.url": "https://sante.fr/recherche/trouver/DepistageCovid?source=TousAntiCovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:292:    "myHealthController.yourDepartment.url": "https://geodes.santepubliquefrance.fr/#view=map2&c=indicator",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:393:    "home.moreSection.curfewCertificate.url": "https://media.interieur.gouv.fr/attestation-couvre-feu-covid-19/",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:417:    "onboarding.runWithoutBleController.infosUrl": "https://app.stopcovid.gouv.fr/json/version-26/devices.html",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:422:    "keyFigure.sharing.national": "%1$@ (Frankreich): %2$@. Sie finden alle wichtigen Zahlen in der App TousAntiCovid https://bonjour.tousanticovid.gouv.fr",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:423:    "keyFigure.sharing.department": "%1$@ (%2$@): %3$@. %4$@ (Frankreich): %5$@. Sie finden alle wichtigen Zahlen in der App TousAntiCovid https://bonjour.tousanticovid.gouv.fr",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:424:    "info.sharing.title": "Nachzulesen in der App TousAntiCovid : \"%@\". Lesen Sie den Nachrichtenüberblick in der App TousAntiCovid https://bonjour.tousanticovid.gouv.fr",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:478:    "attestationsController.termsOfUse.url": "https://bonjour.tousanticovid.gouv.fr/privacy.html",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:527:    "home.moreSection.covidInfo.url": "https://www.gouvernement.fr/info-coronavirus",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:607:    "declareController.codeNotReceived.alert.video.url": "https://youtu.be/uCEMHFr50a0",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:706:   "vaccinationController.eligibility.url": "https://solidarites-sante.gouv.fr/grands-dossiers/vaccin-covid-19/article/la-strategie-vaccinale",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:710:   "vaccinationController.vaccinationLocation.url": "https://www.sante.fr/carte-vaccination-covid?source=TousAntiCovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:711:   "contactUs.url": "https://bonjour.tousanticovid.gouv.fr/contact.html",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:763:   "common.privacyPolicy": "https://bonjour.tousanticovid.gouv.fr/privacy.html"
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:42:    "sickController.button.myConditionInformation.url": "https://mesconseilscovid.sante.gouv.fr/?source=TousAntiCovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:45:    "sickController.button.recommendations.url": "https://mesconseilscovid.sante.gouv.fr/?source=TousAntiCovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:59:    "sharingController.appSharingMessage": "I’m using TousAntiCovid to fight the pandemic: to send and receive alerts. You should install the app too: https://bonjour.tousanticovid.gouv.fr/",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:64:    "aboutController.webpageUrl": "https://bonjour.tousanticovid.gouv.fr/app.html",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:68:    "aboutController.opinionUrl": "https://voxusagers.numerique.gouv.fr/Demarches/2543?&view-mode=formulaire-avis&nd_mode=en-ligne-enti%C3%A8rement&nd_source=button&key=d209f7b2be0fca3de1df21eaeff49a97",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:104:    "informationController.step.moreInfo.url": "https://mesconseilscovid.sante.gouv.fr/?source=TousAntiCovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:223:    "onboarding.noBleController.infosUrl": "https://app.stopcovid.gouv.fr/json/version-26/devices.html",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:284:    "myHealthController.covidAdvices.url": "https://mesconseilscovid.sante.gouv.fr/?source=TousAntiCovid#introduction",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:288:    "myHealthController.testingSites.url": "https://sante.fr/recherche/trouver/DepistageCovid?source=TousAntiCovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:292:    "myHealthController.yourDepartment.url": "https://geodes.santepubliquefrance.fr/#view=map2&c=indicator",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:393:    "home.moreSection.curfewCertificate.url": "https://media.interieur.gouv.fr/attestation-couvre-feu-covid-19/",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:417:    "onboarding.runWithoutBleController.infosUrl": "https://app.stopcovid.gouv.fr/json/version-26/devices.html",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:422:    "keyFigure.sharing.national": "%1$@ (France): %2$@. You will find all of the key data in the TousAntiCovid app https://bonjour.tousanticovid.gouv.fr",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:423:    "keyFigure.sharing.department": "%1$@ (%2$@): %3$@. %4$@ (France): %5$@. You will find all of the key data in the TousAntiCovid app https://bonjour.tousanticovid.gouv.fr",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:424:    "info.sharing.title": "See the TousAntiCovid app: \"%@\". View all the latest news in TousAntiCovid https://bonjour.tousanticovid.gouv.fr",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:478:    "attestationsController.termsOfUse.url": "https://bonjour.tousanticovid.gouv.fr/privacy.html#attestation",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:527:    "home.moreSection.covidInfo.url": "https://www.gouvernement.fr/info-coronavirus",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:606:    "declareController.codeNotReceived.alert.video.url": "https://youtu.be/uCEMHFr50a0",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:705:   "vaccinationController.eligibility.url": "https://solidarites-sante.gouv.fr/grands-dossiers/vaccin-covid-19/article/la-strategie-vaccinale",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:709:   "vaccinationController.vaccinationLocation.url": "https://www.sante.fr/carte-vaccination-covid?source=TousAntiCovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:710:   "contactUs.url": "https://bonjour.tousanticovid.gouv.fr/contact.html",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:762:   "common.privacyPolicy": "https://bonjour.tousanticovid.gouv.fr/privacy.html"
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:42:    "sickController.button.myConditionInformation.url": "https://mesconseilscovid.sante.gouv.fr/?source=TousAntiCovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:45:    "sickController.button.recommendations.url": "https://mesconseilscovid.sante.gouv.fr/?source=TousAntiCovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:59:    "sharingController.appSharingMessage": "Utilizo TousAntiCovid para participar en la lucha colectiva contra la pandemia: para enviar y recibir avisos. Instálala tú también: https://bonjour.tousanticovid.gouv.fr/",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:64:    "aboutController.webpageUrl": "https://bonjour.tousanticovid.gouv.fr/app.html",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:66:    "aboutController.faqUrl": "https://solidarites-sante.gouv.fr/soins-et-maladies/maladies/maladies-infectieuses/coronavirus/tousanticovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:68:    "aboutController.opinionUrl": "https://voxusagers.numerique.gouv.fr/Demarches/2543?&view-mode=formulaire-avis&nd_mode=en-ligne-enti%C3%A8rement&nd_source=button&key=d209f7b2be0fca3de1df21eaeff49a97",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:104:    "informationController.step.moreInfo.url": "https://mesconseilscovid.sante.gouv.fr/?source=TousAntiCovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:223:    "onboarding.noBleController.infosUrl": "https://app.stopcovid.gouv.fr/json/version-26/devices.html",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:284:    "myHealthController.covidAdvices.url": "https://mesconseilscovid.sante.gouv.fr/?source=TousAntiCovid#introduction",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:288:    "myHealthController.testingSites.url": "https://sante.fr/recherche/trouver/DepistageCovid?source=TousAntiCovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:292:    "myHealthController.yourDepartment.url": "https://geodes.santepubliquefrance.fr/#view=map2&c=indicator",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:393:    "home.moreSection.curfewCertificate.url": "https://media.interieur.gouv.fr/attestation-couvre-feu-covid-19/",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:417:    "onboarding.runWithoutBleController.infosUrl": "https://app.stopcovid.gouv.fr/json/version-26/devices.html",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:422:    "keyFigure.sharing.national": "%1$@ (Francia): %2$@. Accede a todas las cifras clave a través de la app TousAntiCovid https://bonjour.tousanticovid.gouv.fr",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:423:    "keyFigure.sharing.department": "%1$@ (%2$@): %3$@. %4$@ (Francia): %5$@. Accede a todas las cifras clave a través de la app TousAntiCovid https://bonjour.tousanticovid.gouv.fr",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:424:    "info.sharing.title": "Léelo en la app TousAntiCovid: \"%@\". Accede a toda la actualidad de la COVID a través de TousAntiCovid https://bonjour.tousanticovid.gouv.fr",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:478:    "attestationsController.termsOfUse.url": "https://bonjour.tousanticovid.gouv.fr/privacy.html",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:527:    "home.moreSection.covidInfo.url": "https://www.gouvernement.fr/info-coronavirus",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:606:    "declareController.codeNotReceived.alert.video.url": "https://youtu.be/uCEMHFr50a0",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:705:   "vaccinationController.eligibility.url": "https://solidarites-sante.gouv.fr/grands-dossiers/vaccin-covid-19/article/la-strategie-vaccinale",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:709:   "vaccinationController.vaccinationLocation.url": "https://www.sante.fr/carte-vaccination-covid?source=TousAntiCovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:710:   "contactUs.url": "https://bonjour.tousanticovid.gouv.fr/contact.html",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:762:   "common.privacyPolicy": "https://bonjour.tousanticovid.gouv.fr/privacy.html"
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:42:   "sickController.button.myConditionInformation.url":"https://orientation.covid19.etalab.gouv.fr/",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:45:   "sickController.button.recommendations.url":"https://mesconseilscovid.sante.gouv.fr/?source=TousAntiCovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:59:   "sharingController.appSharingMessage":"J'utilise TousAntiCovid pour participer à la lutte collective contre l’épidémie : pour informer et être informé. Installez-la vous aussi : https://bonjour.tousanticovid.gouv.fr/",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:64:   "aboutController.webpageUrl":"https://bonjour.tousanticovid.gouv.fr/app.html",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:68:   "aboutController.opinionUrl":"https://voxusagers.numerique.gouv.fr/Demarches/2543?&view-mode=formulaire-avis&nd_mode=en-ligne-enti%C3%A8rement&nd_source=button&key=d209f7b2be0fca3de1df21eaeff49a97",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:104:   "informationController.step.moreInfo.url":"https://mesconseilscovid.sante.gouv.fr/?source=TousAntiCovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:223:   "onboarding.noBleController.infosUrl":"https://app.stopcovid.gouv.fr/json/version-26/devices.html",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:284:   "myHealthController.covidAdvices.url":"https://mesconseilscovid.sante.gouv.fr/?source=TousAntiCovid#introduction",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:288:   "myHealthController.testingSites.url":"https://sante.fr/recherche/trouver/DepistageCovid?source=TousAntiCovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:292:   "myHealthController.yourDepartment.url":"https://geodes.santepubliquefrance.fr/#view=map2&c=indicator",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:394:   "home.moreSection.curfewCertificate.url":"https://media.interieur.gouv.fr/attestation-couvre-feu-covid-19/",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:418:   "onboarding.runWithoutBleController.infosUrl":"https://app.stopcovid.gouv.fr/json/version-26/devices.html",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:423:   "keyFigure.sharing.national":"%1$@ (France): %2$@. Retrouve tous les chiffres clés dans l'appli TousAntiCovid https://bonjour.tousanticovid.gouv.fr",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:424:   "keyFigure.sharing.department":"%1$@ (%2$@): %3$@. %4$@ (France): %5$@. Retrouve tous les chiffres clés dans l'appli TousAntiCovid https://bonjour.tousanticovid.gouv.fr",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:425:   "info.sharing.title":"À lire dans l'app TousAntiCovid : \"%@\". Retrouve toutes les actualités dans TousAntiCovid https://bonjour.tousanticovid.gouv.fr",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:492:   "attestationsController.termsOfUse.url":"https://bonjour.tousanticovid.gouv.fr/privacy.html#attestation",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:542:   "home.moreSection.covidInfo.url":"https://www.gouvernement.fr/info-coronavirus",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:633:   "declareController.codeNotReceived.alert.video.url": "https://youtu.be/uCEMHFr50a0",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:758:   "vaccinationController.eligibility.url": "https://solidarites-sante.gouv.fr/grands-dossiers/vaccin-covid-19/article/la-strategie-vaccinale",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:762:   "vaccinationController.vaccinationLocation.url": "https://www.sante.fr/carte-vaccination-covid?source=TousAntiCovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:763:   "contactUs.url": "https://bonjour.tousanticovid.gouv.fr/contact.html",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:815:   "common.privacyPolicy": "https://bonjour.tousanticovid.gouv.fr/privacy.html"
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:42:    "sickController.button.myConditionInformation.url": "https://mesconseilscovid.sante.gouv.fr/?source=TousAntiCovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:45:    "sickController.button.recommendations.url": "https://mesconseilscovid.sante.gouv.fr/?source=TousAntiCovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:59:    "sharingController.appSharingMessage": "Utilizzo TousAntiCovid per partecipare alla lotta comune contro l’epidemia: per informare ed essere informato/a. Installala anche tu: https://bonjour.tousanticovid.gouv.fr/",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:64:    "aboutController.webpageUrl": "https://bonjour.tousanticovid.gouv.fr/app.html",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:66:    "aboutController.faqUrl": "https://solidarites-sante.gouv.fr/soins-et-maladies/maladies/maladies-infectieuses/coronavirus/tousanticovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:68:    "aboutController.opinionUrl": "https://voxusagers.numerique.gouv.fr/Demarches/2543?&view-mode=formulaire-avis&nd_mode=en-ligne-enti%C3%A8rement&nd_source=button&key=d209f7b2be0fca3de1df21eaeff49a97",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:104:    "informationController.step.moreInfo.url": "https://mesconseilscovid.sante.gouv.fr/?source=TousAntiCovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:223:    "onboarding.noBleController.infosUrl": "https://app.stopcovid.gouv.fr/json/version-26/devices.html",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:284:    "myHealthController.covidAdvices.url": "https://mesconseilscovid.sante.gouv.fr/?source=TousAntiCovid#introduction",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:288:    "myHealthController.testingSites.url": "https://sante.fr/recherche/trouver/DepistageCovid?source=TousAntiCovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:292:    "myHealthController.yourDepartment.url": "https://geodes.santepubliquefrance.fr/#view=map2&c=indicator",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:393:    "home.moreSection.curfewCertificate.url": "https://media.interieur.gouv.fr/attestation-couvre-feu-covid-19/",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:417:    "onboarding.runWithoutBleController.infosUrl": "https://app.stopcovid.gouv.fr/json/version-26/devices.html",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:422:    "keyFigure.sharing.national": "%1$@ (Francia): %2$@. Ritrova tutte le cifre chiave nell'app TousAntiCovid https://bonjour.tousanticovid.gouv.fr",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:423:    "keyFigure.sharing.department": "%1$@ (%2$@): %3$@. %4$@ (France): %5$@. Ritrova tutte le cifre chiave nell'app TousAntiCovid https://bonjour.tousanticovid.gouv.fr",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:424:    "info.sharing.title": "Da leggere nell'app TousAntiCovid : \"%@\". Ritrova tutti gli aggiornamenti in TousAntiCovid https://bonjour.tousanticovid.gouv.fr",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:478:    "attestationsController.termsOfUse.url": "https://bonjour.tousanticovid.gouv.fr/privacy.html#attestation",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:527:    "home.moreSection.covidInfo.url": "https://www.gouvernement.fr/info-coronavirus",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:606:    "declareController.codeNotReceived.alert.video.url": "https://youtu.be/uCEMHFr50a0",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:705:   "vaccinationController.eligibility.url": "https://solidarites-sante.gouv.fr/grands-dossiers/vaccin-covid-19/article/la-strategie-vaccinale",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:709:   "vaccinationController.vaccinationLocation.url": "https://www.sante.fr/carte-vaccination-covid?source=TousAntiCovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:710:   "contactUs.url": "https://bonjour.tousanticovid.gouv.fr/contact.html",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:762:   "common.privacyPolicy": "https://bonjour.tousanticovid.gouv.fr/privacy.html"
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:42:    "sickController.button.myConditionInformation.url": "https://orientation.covid19.etalab.gouv.fr/",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:45:    "sickController.button.recommendations.url": "https://mesconseilscovid.sante.gouv.fr/?source=TousAntiCovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:59:    "sharingController.appSharingMessage": "Utilizar a TousAntiCovid para participar no combate coletivo à epidemia: para informar e ser informado. Instale-a também: https://bonjour.tousanticovid.gouv.fr/",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:64:    "aboutController.webpageUrl": "https://bonjour.tousanticovid.gouv.fr/app.html",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:68:    "aboutController.opinionUrl": "https://voxusagers.numerique.gouv.fr/Demarches/2543?&view-mode=formulaire-avis&nd_mode=en-ligne-enti%C3%A8rement&nd_source=button&key=d209f7b2be0fca3de1df21eaeff49a97",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:104:    "informationController.step.moreInfo.url": "https://mesconseilscovid.sante.gouv.fr/?source=TousAntiCovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:223:    "onboarding.noBleController.infosUrl": "https://app.stopcovid.gouv.fr/json/version-26/devices.html",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:284:    "myHealthController.covidAdvices.url": "https://mesconseilscovid.sante.gouv.fr/?source=TousAntiCovid#introduction",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:288:    "myHealthController.testingSites.url": "https://sante.fr/recherche/trouver/DepistageCovid?source=TousAntiCovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:292:    "myHealthController.yourDepartment.url": "https://geodes.santepubliquefrance.fr/#view=map2&c=indicator",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:393:    "home.moreSection.curfewCertificate.url": "https://media.interieur.gouv.fr/attestation-couvre-feu-covid-19/",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:417:    "onboarding.runWithoutBleController.infosUrl": "https://app.stopcovid.gouv.fr/json/version-26/devices.html",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:422:    "keyFigure.sharing.national": "%1$@ (França): %2$@. Obtenha todos os números-chave na aplicação TousAntiCovid https://bonjour.tousanticovid.gouv.fr",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:423:    "keyFigure.sharing.department": "%1$@ (%2$@): %3$@. %4$@ (França): %5$@. Obtenha todos os números-chave na aplicação TousAntiCovid https://bonjour.tousanticovid.gouv.fr",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:424:    "info.sharing.title": "A ler na aplicação TousAntiCovid: \"%@\". Encontre todas as notícias na TousAntiCovid https://bonjour.tousanticovid.gouv.fr",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:478:    "attestationsController.termsOfUse.url": "https://bonjour.tousanticovid.gouv.fr/privacy.html#attestation",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:527:    "home.moreSection.covidInfo.url": "https://www.gouvernement.fr/info-coronavirus",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:606:    "declareController.codeNotReceived.alert.video.url": "https://youtu.be/uCEMHFr50a0",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:705:   "vaccinationController.eligibility.url": "https://solidarites-sante.gouv.fr/grands-dossiers/vaccin-covid-19/article/la-strategie-vaccinale",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:709:   "vaccinationController.vaccinationLocation.url": "https://www.sante.fr/carte-vaccination-covid?source=TousAntiCovid",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:710:   "contactUs.url": "https://bonjour.tousanticovid.gouv.fr/contact.html",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:762:   "common.privacyPolicy": "https://bonjour.tousanticovid.gouv.fr/privacy.html"
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/activity/AppMaintenanceActivity.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/activity/BaseActivity.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/activity/MainActivity.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/activity/OnBoardingActivity.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/Constants.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/Constants.kt:62:        const val VENUE_ROOT_URL: String = "https://tac.gouv.fr/"
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/ContextExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/CovidExceptionExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/ExceptionExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/IntExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/ItemKeyFigureCardBindingExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/KeyFigureExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/MaterialAlertDialogBuilderExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/MaterialAlertDialogBuilderExt.kt:92:    // Fix crash https://issuetracker.google.com/issues/37055335
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/MaterialAlertDialogBuilderExt.kt:143:    // Fix crash https://issuetracker.google.com/issues/37055335
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/NavControllerExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/ProximityFragmentIsolationExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/RobertExceptionExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/SectionsExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/SharedPreferencesExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/StringExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/TextViewExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/extension/VaccinationCenterExt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/KeyFigureCardItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/AttestationQrCodeItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/AudioItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/BigTitleItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/ContactItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/DangerButtonItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/DateItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/DeleteCardItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/DoubleLogoItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/DoubleTextItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/EditTextItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/IconTitleItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/ImageItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/InfoCenterDetailCardItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/IsolationBooleanRadioGroupItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/IsolationStateRadioGroupItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/KeyFigureChartCardItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/LinkCardItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/LinkItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/LogoBodyItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/LogoItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/LottieItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/NumberItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/NumbersCardItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/OnOffLottieItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/PickerEditTextItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/PrivateVenueQrCodeItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/ProgressButtonItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/ProximityButtonItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/SelectionItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/TagItem.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingProximityFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/AboutFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/AboutMainFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/AttestationsFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/BottomSheetMainFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/CaptchaFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/CodeFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ConfirmVenueQrCodeFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/FullscreenAttestationFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/GestureFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/HealthFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/InfoCenterFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/InformationFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/IsolationFormFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/IsSickFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/KeyFigureDetailsFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/KeyFiguresFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/LinksFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/MainFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ManageDataFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/MoreKeyFiguresFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/NewAttestationFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/NewAttestationFragment.kt:249:    // Adapted from here https://stackoverflow.com/a/35745881/2794437
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/NewAttestationFragment.kt:258:                // Fix crash https://issuetracker.google.com/issues/37055335
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/NewAttestationFragment.kt:263:                    // Fix crash https://issuetracker.google.com/issues/37055335
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/NewAttestationPickerFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingBatteryFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingExplanationFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingGestureFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingNoBleFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingNotificationFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingPrivacyFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingVenuesFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingWelcomeFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/PositiveTestFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/PostalCodeBottomSheetFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/PrivacyFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ProximityFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/QRCodeFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ReminderBottomSheetDialogFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ReportFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/ReportQRCodeFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/SendHistoryFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/SymptomsOriginFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/TimeMainFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VaccinationActionsBottomSheetFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VaccinationFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VenueConfirmationFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VenueOnBoardingFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VenueQRCodeFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VenuesHistoryFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VenuesPrivateEventFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/interface/IsolationApplication.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/AppMaintenanceManager.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/ConfigDataSource.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/FormManager.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/GestureManager.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/InfoCenterManager.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/IsolationManager.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/KeyFiguresManager.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/LinksManager.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/MoreKeyFiguresManager.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/PrivacyManager.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/ProximityManager.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/SectionManager.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/ShareManager.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/TimeCheckManager.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/VaccinationCenterManager.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/model/CaptchaNextFragment.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/model/ChartData.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/model/CovidException.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/model/DeviceSetup.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/model/FormField.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/model/Info.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/model/InfoCenterEntry.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/model/InfoCenterLastUpdatedAt.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/model/InfoCenterTag.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/model/IsolationRecommendationStateEnum.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/model/KeyFigure.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/model/Link.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/model/PostalCodeDetails.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/model/Section.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/model/VaccinationCenter.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/model/VaccinationCenterLastUpdate.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/network/LBMaintenanceHttpClient.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/receiver/StartReceiver.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/receiver/TimeChangeReceiver.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/receiver/UpgradeReceiver.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/service/ProximityService.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/StopCovid.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/AttestationsViewModel.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/CaptchaViewModel.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/CodeViewModel.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/HealthViewModel.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/IsolationFormViewModel.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ManageDataViewModel.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/NewAttestationViewModel.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/OnBoardingViewModel.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/viewmodel/ProximityViewModel.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/widget/SquareTextView.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/worker/ActivateReminderNotificationWorker.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/worker/AtRiskNotificationWorker.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/worker/IsolationReminderNotificationWorker.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/worker/MaintenanceWorker.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/worker/NotificationWorker.kt:4: * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ic_down.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ic_map.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/battery.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/declare.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/declare_card.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/diagnosis.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/health_card.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ic_add.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ic_audio.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ic_baseline_share_24.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ic_bell.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ic_cgu.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ic_check.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ic_delete.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ic_document.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ic_faq.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ic_feedback.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ic_gesture_6.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ic_gesture_air.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ic_gesture_aircheck.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ic_gesture_app.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ic_gesture_cough.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ic_gesture_distance.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ic_gesture_face.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ic_gesture_hands.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ic_gesture_mask.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ic_gesture_tissue.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ic_info.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ic_link.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ic_more.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ic_pause.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ic_play.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ic_qr_code_scanner.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ic_refresh.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ic_steady.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ic_up.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ic_visual.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ic_web.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/left_character.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/notification.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/no_ble.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/parties_card.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/protect.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/proximity.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/qr_code_placeholder.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/right_character.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/ripple_rounded.xml:5:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/sante_publique.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/shops.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/shops_card.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/sick.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/splashscreen.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/status_active.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable/status_inactive.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable-night/declare.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable-night/diagnosis.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable-night/ic_gesture_6.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable-night/ic_gesture_air.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable-night/ic_gesture_aircheck.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable-night/ic_gesture_app.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable-night/ic_gesture_cough.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable-night/ic_gesture_distance.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable-night/ic_gesture_face.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable-night/ic_gesture_hands.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable-night/ic_gesture_mask.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable-night/ic_gesture_tissue.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable-night/notification.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable-night/no_ble.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable-night/protect.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable-night/proximity.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable-night/sante_publique.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable-night/sick.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable-night/splashscreen.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable-night-v23/splashscreen.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable-v23/splashscreen.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/drawable-v24/ic_launcher_foreground.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_contact.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/activity_app_maintenance.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/activity_main.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/activity_on_boarding.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/activity_splash_screen.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/date_picker.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/dialog_postal_code_edit_text.xml:5:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/fragment_fullscreen_attestation.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/fragment_fullscreen_attestation.xml:14:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/fragment_postal_code_bottom_sheet.xml:5:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/fragment_qr_code.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/fragment_vaccination_actions_bottom_sheet.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/include_numbers.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_attestation_qr_code.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_audio.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_big_title.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_contact_content.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_danger_button.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_date.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_delete_card.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_double_logo.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_double_text.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_edit_text.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_highlighted_number_card.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_icon_title.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_image.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_info_center_detail_card.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_isolation_boolean_radio_group.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_isolation_state_radio_group.xml:6:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_key_figure_card.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_key_figure_chart_card.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_link.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_link_card.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_logo.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_logo_body.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_lottie.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_no_contact.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_number.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_numbers_card.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_on_off_lottie.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_private_venue_qr_code.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_proximity_button.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_selection.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_tag.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_vaccination_center_card.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/item_warning_contact.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/layout/number_picker.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/menu/notification_menu.xml:5:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/menu/postal_code_menu.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/menu/qr_code_menu.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/menu/text_menu.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/mipmap-anydpi-v26/ic_launcher.xml:5:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml:5:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/navigation/nav_main.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/navigation/nav_main.xml:194:            app:uri="https://bonjour.tousanticovid.gouv.fr/app/attestations"
+stopcovid-android/stopcovid/src/main/res/navigation/nav_main.xml:199:            app:uri="https://bonjour.stopcovid.gouv.fr/app/attestations"
+stopcovid-android/stopcovid/src/main/res/navigation/nav_main.xml:300:            app:uri="https://bonjour.tousanticovid.gouv.fr/app/code/{code}"
+stopcovid-android/stopcovid/src/main/res/navigation/nav_main.xml:305:            app:uri="https://bonjour.stopcovid.gouv.fr/app/code/{code}"
+stopcovid-android/stopcovid/src/main/res/navigation/nav_main.xml:405:            app:uri="https://tac.gouv.fr/0/{venueStaticPath}"
+stopcovid-android/stopcovid/src/main/res/navigation/nav_main.xml:410:            app:uri="https://tac.gouv.fr/1/{venueDynamicPath}"
+stopcovid-android/stopcovid/src/main/res/navigation/nav_on_boarding.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/values/ic_launcher_background.xml:5:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/values/ids.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/values/strings.xml:5:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/values/styles.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/values/untranslatable_strings.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/values-fr/strings.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/stopcovid/src/main/res/xml/file_path.xml:4:  ~ file, You can obtain one at https://mozilla.org/MPL/2.0/.
+stopcovid-android/THIRD-PARTY-library.txt:6:License Text URL: https://github.com/Kotlin/kotlinx.coroutines/blob/master/LICENSE.txt
+stopcovid-android/THIRD-PARTY-library.txt:7:Source Code: https://github.com/Kotlin/kotlinx.coroutines
+stopcovid-android/THIRD-PARTY-library.txt:10:License Text URL: https://github.com/JakeWharton/timber/blob/master/LICENSE.txt
+stopcovid-android/THIRD-PARTY-library.txt:11:Source Code: https://github.com/JakeWharton/timber
+stopcovid-android/THIRD-PARTY-library.txt:14:Source Code: https://github.com/razir/ProgressButton
+stopcovid-android/THIRD-PARTY-library.txt:17:License Text URL: https://github.com/zxing/zxing/blob/master/LICENSE
+stopcovid-android/THIRD-PARTY-library.txt:18:Source Code: https://github.com/zxing/zxing
+stopcovid-android/THIRD-PARTY-library.txt:22:Source Code: https://github.com/journeyapps/zxing-android-embedded
+stopcovid-android/THIRD-PARTY-library.txt:29:License Text URL: https://github.com/NordicSemiconductor/Android-Scanner-Compat-Library/blob/master/LICENSE
+stopcovid-android/THIRD-PARTY-library.txt:30:Source Code: https://github.com/NordicSemiconductor/Android-Scanner-Compat-Library
+stopcovid-android/THIRD-PARTY-tests.txt:6:License Text URL: https://github.com/google/truth/blob/master/LICENSE
+stopcovid-android/THIRD-PARTY-tests.txt:7:Source Code: https://github.com/google/truth
+stopcovid-android/THIRD-PARTY-tests.txt:14:License Text URL: https://github.com/junit-team/junit4/blob/master/LICENSE-junit.txt
+stopcovid-android/THIRD-PARTY-tests.txt:15:Source Code: https://github.com/junit-team/junit4
+stopcovid-android/THIRD-PARTY-tests.txt:22:License Text URL: https://github.com/piotrturski/zohhak/blob/master/LICENSE-LGPL-3.0.txt
+stopcovid-android/THIRD-PARTY-tests.txt:23:Source Code: https://github.com/piotrturski/zohhak
+stopcovid-android/THIRD-PARTY-tests.txt:30:License Text URL: https://github.com/mockito/mockito/blob/release/3.x/LICENSE
+stopcovid-android/THIRD-PARTY-tests.txt:31:Source Code: https://github.com/mockito/mockito
+stopcovid-android/THIRD-PARTY-tests.txt:34:License Text URL: https://github.com/nhaarman/mockito-kotlin/blob/2.x/LICENSE
+stopcovid-android/THIRD-PARTY-tests.txt:35:Source Code: https://github.com/nhaarman/mockito-kotlin
+stopcovid-android/THIRD-PARTY-tests.txt:38:License Text URL: https://github.com/robolectric/robolectric/blob/master/LICENSE
+stopcovid-android/THIRD-PARTY-tests.txt:39:Source Code: https://github.com/robolectric/robolectric

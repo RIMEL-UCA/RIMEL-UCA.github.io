@@ -1,0 +1,166 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/pre-push.sample:31:		# Handle delete
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/pre-rebase.sample:102:   it is deleted.  If you need to build on top of it to correct
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/pre-rebase.sample:124:    Then you can delete it.  More importantly, you should not
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/pre-rebase.sample:149:   and is ready to be deleted.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/pre-rebase.sample:154:B to be deleted.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:13:# hooks.allowdeletetag
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:19:# hooks.allowdeletebranch
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:47:allowdeletebranch=$(git config --bool hooks.allowdeletebranch)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:49:allowdeletetag=$(git config --bool hooks.allowdeletetag)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:62:# if $newrev is 0000...0000, it's a commit to delete a ref.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:65:	newrev_type=delete
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:80:	refs/tags/*,delete)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:81:		# delete tag
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:82:		if [ "$allowdeletetag" != "true" ]; then
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:103:	refs/heads/*,delete)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:104:		# delete branch
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:105:		if [ "$allowdeletebranch" != "true" ]; then
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:113:	refs/remotes/*,delete)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:114:		# delete tracking branch
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:115:		if [ "$allowdeletebranch" != "true" ]; then
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/index matches
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/packed-refs:7:7171c0a88acc4ad8d21b00b0617d72c0e735b937 refs/remotes/origin/cant-delete-backup-code-user
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/about/templates/about/6_admin_accounts.html:21:      <li>{% trans "Delete portal accounts." %}</li>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/migrations/0001_initial.py:32:                ('for_user', models.ForeignKey(blank=True, default=None, null=True, on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL, verbose_name='For User', help_text='If no user is selected the announcement will be shown to all users.')),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/models.py:42:        on_delete=models.CASCADE,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/signals.py:1:from django.db.models.signals import post_delete
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/signals.py:14:@receiver(post_delete, sender=User)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/signals.py:17:    Announcement.objects.filter(for_user=instance).delete()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/signals.py:20:@receiver(post_delete, sender=StaticToken)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:115:        # delete all but 1 code
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:117:            device.token_set.last().delete()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:139:        # delete all but 1 code
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:142:            device.token_set.last().delete()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:277:    def test_admin_can_delete_staff_user_with_security_codes(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:291:            reverse("user_delete", kwargs={"pk": staff_user.id})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:417:        # Delete inviter
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:418:        User.objects.filter(email__exact=self.inviter.email).delete()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:484:        user.staticdevice_set.all().delete()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:521:        user.notifysmsdevice_set.all().delete()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:555:        self.user.staticdevice_set.all().delete()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:581:        self.user.notifysmsdevice_set.all().delete()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:132:    """Creates 10 new backup codes for a user, deletes all previous backup codes."""
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:135:        devices.token_set.all().delete()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/views.py:152:            announcement.delete()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:145:- Red delete button on the "Delete yubikey" page (missed this earlier)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:173:- "Delete" buttons are red (ie, they are destructive actions) and horizontal
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:215:- Add new page and flash messages to handle scenarios where account invitations are expired, deleted or accepted
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:259:- Allow resending invitations whenever no user account exists — previously, an "accepted" invitation for a deleted user would prevent that user from being invited again
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/dashboard.tf:58:                "query": "SOURCE 'covidportal_staging' | fields @message\n| filter @message like /model:profiles.healthcareuser/\n| parse @message \"CRUD event_type:* model:profiles.healthcareuser\" as action\n| stats sum(strcontains(action, \"CREATE\")) as CreatedUsers, sum(strcontains(action,\"DELETE\")) as DeletedUsers\n",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/sns.tf:107:      "SNS:DeleteTopic",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/contact/tests.py:40:            "feedback": "[test please delete] feedback",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/migrations/0001_initial.py:25:                ('created_by', models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, related_name='+', to=settings.AUTH_USER_MODEL)),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/migrations/0002_auto_20200727_0031.py:19:            field=models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to=settings.AUTH_USER_MODEL),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/migrations/0004_auto_20200914_2055.py:24:            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, to=settings.AUTH_USER_MODEL),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/models.py:10:        settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, null=True
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.mo matches
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:271:msgid "Delete portal accounts."
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:420:#: profiles/templates/invitations/templates/invitation_confirm_delete.html:5
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:427:#: profiles/templates/profiles/healthcareuser_confirm_delete.html:5
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:431:#: profiles/templates/profiles/yubikey_delete.html:5
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1440:#: profiles/templates/invitations/templates/invitation_confirm_delete.html:6
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1441:#: profiles/templates/invitations/templates/invitation_confirm_delete.html:12
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1443:msgid "Are you sure you want to delete the invitation sent to %(email)s?"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1446:#: profiles/templates/invitations/templates/invitation_confirm_delete.html:13
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1448:"If you delete their invitation, they will not be able to join the COVID "
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1454:#: profiles/templates/invitations/templates/invitation_confirm_delete.html:15
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1455:#: profiles/templates/profiles/yubikey_delete.html:15
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1459:#: profiles/templates/invitations/templates/invitation_confirm_delete.html:15
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1460:#: profiles/templates/profiles/yubikey_delete.html:15
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1544:msgid "Delete"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1549:msgid "Delete invitation for %(email)s"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1609:#: profiles/templates/profiles/healthcareuser_confirm_delete.html:6
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1610:msgid "Confirm delete user"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1613:#: profiles/templates/profiles/healthcareuser_confirm_delete.html:12
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1615:msgid "Are you sure you want to delete the account at %(email)s?"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1618:#: profiles/templates/profiles/healthcareuser_confirm_delete.html:13
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1620:msgid "%(name)s will not be able to log in and their details will be deleted."
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1625:#: profiles/templates/profiles/healthcareuser_confirm_delete.html:14
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1629:#: profiles/templates/profiles/healthcareuser_confirm_delete.html:16
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1630:msgid "Yes, delete"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1633:#: profiles/templates/profiles/healthcareuser_confirm_delete.html:16
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1757:msgid "Delete account for %(email)s"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:2000:#: profiles/templates/profiles/yubikey_delete.html:6
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:2001:#: profiles/templates/profiles/yubikey_delete.html:13
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:2068:msgid "You deleted the account for ‘%(email)s’."
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/audit_backends.py:39:        if crud_info.get("event_type") == CRUDEvent.DELETE:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/audit_backends.py:40:            event_type = "DELETE"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/audit_backends.py:57:            event_type == "CREATE" or event_type == "DELETE"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/urls.py:19:def disable_delete_permissions(cls, request, obj=None):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/urls.py:23:AccessLogAdmin.has_delete_permission = disable_delete_permissions
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/admin.py:30:    def has_delete_permission(self, request, obj=None):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:504:            # If there is no user account, delete any prior invitations to this email
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:505:            Invitation.objects.filter(email__iexact=email).delete()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/migrations/0004_add_healthcareprovince_model.py:38:                on_delete=django.db.models.deletion.PROTECT,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/mixins.py:24:class ProvinceAdminDeleteMixin(ProvinceAdminEditMixin):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/mixins.py:26:        # you can't delete yourself
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/models.py:75:    province = models.ForeignKey(HealthcareProvince, on_delete=models.PROTECT)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/invitations/templates/invitation_confirm_delete.html:6:  {% blocktrans with email=invitation.email%}Are you sure you want to delete the invitation sent to {{ email }}?{% endblocktrans %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/invitations/templates/invitation_confirm_delete.html:12:  <h1>{% blocktrans with email=invitation.email%}Are you sure you want to delete the invitation sent to {{ email }}?{% endblocktrans %}</h1>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/invitations/templates/invitation_confirm_delete.html:13:  <p>{% trans "If you delete their invitation, they will not be able to join the COVID Alert Portal until they are invited back." %}</p>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/invitations/templates/invite_list.html:41:                    <a href="{% url 'invitation_delete' invitation.id %}" class="danger">
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/invitations/templates/invite_list.html:42:                        <span aria-hidden="true">{% trans "Delete" %}</span>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/invitations/templates/invite_list.html:43:                        <span class="visually-hidden">{% blocktrans with email=invitation.email %}Delete invitation for {{email}}{% endblocktrans %}</span>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/healthcareuser_confirm_delete.html:6:  {% trans "Confirm delete user" %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/healthcareuser_confirm_delete.html:12:  <h1>{% blocktrans with email=profile_user.email %}Are you sure you want to delete the account at {{ email }}?{% endblocktrans %}</h1>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/healthcareuser_confirm_delete.html:13:  <p>{% blocktrans with name=profile_user.name %}{{ name }} will not be able to log in and their details will be deleted.{% endblocktrans %}</p>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/healthcareuser_confirm_delete.html:16:  {% include "includes/cds_form.html" with submit_text=_("Yes, delete") submit_class='danger' secondary_action_before=True secondary_action_text=_('No, keep') secondary_action_url=profiles_url %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/healthcareuser_detail.html:88:                            <a href="{% url 'yubikey_delete' yubikey.id  %}">
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/healthcareuser_list.html:45:              <a href="{% url 'user_delete' healthcareuser.id %}" class="danger">
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/healthcareuser_list.html:46:                <span aria-hidden="true">{% trans "Delete" %}</span>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/healthcareuser_list.html:47:                <span class="visually-hidden">{% blocktrans with email=healthcareuser.email %}Delete account for {{email}}{% endblocktrans %}</span>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:582:    def test_login_attempts_deleted_after_signup(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:797:    def test_delete_invitation(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:807:            reverse("invitation_delete", kwargs={"pk": invitation.id})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:811:    def test_delete_invitation_normal_user(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:825:            reverse("invitation_delete", kwargs={"pk": invitation.id})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:829:    def test_confirm_invitation_deleted(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:847:            reverse("invitation_delete", kwargs={"pk": invitation.id}), follow=True
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:895:        invitation.delete()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:897:        # invitation has been deleted
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1085:class DeleteView(AdminUserTestCase):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1089:    def test_forbidden_see_delete_page_for_self(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1094:        response = self.client.get(reverse("user_delete", kwargs={"pk": self.user.id}))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1097:    def test_admin_forbidden_see_delete_page_for_superuser(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1105:        response = self.client.get(reverse("user_delete", kwargs={"pk": superuser.id}))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1108:    def test_admin_forbidden_see_delete_page_for_other_admin(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1116:        response = self.client.get(reverse("user_delete", kwargs={"pk": admin.id}))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1119:    def test_admin_see_delete_page_for_staff_user(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1124:        response = self.client.get(reverse("user_delete", kwargs={"pk": user2.id}))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1128:            "<h1>Are you sure you want to delete the account at {}?</h1>".format(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1133:    def test_admin_delete_staff_user_generated_keys(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1141:        response = self.client.post(reverse("user_delete", kwargs={"pk": user2.id}))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1145:    def test_superadmin_can_see_delete_page_for_admin(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1151:        response = self.client.get(reverse("user_delete", kwargs={"pk": self.user.id}))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1155:            "<h1>Are you sure you want to delete the account at {}?</h1>".format(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1160:    def test_invitation_deleted(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1166:        # Delete the user with an existing invitation
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1167:        response = self.client.post(reverse("user_delete", kwargs={"pk": user.id}))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1173:        # Try to delete the user without invitation
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1175:        response = self.client.post(reverse("user_delete", kwargs={"pk": user.id}))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/urls.py:15:        "invite/<int:pk>/delete",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/urls.py:16:        views.InvitationDeleteView.as_view(),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/urls.py:17:        name="invitation_delete",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/urls.py:42:        "profiles/<uuid:pk>/delete",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/urls.py:43:        views.UserDeleteView.as_view(),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/urls.py:44:        name="user_delete",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/urls.py:118:        "yubikey/<int:pk>/delete",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/urls.py:119:        views.YubikeyDeleteView.as_view(),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/urls.py:120:        name="yubikey_delete",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:12:    DeleteView,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:43:    ProvinceAdminDeleteMixin,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:116:class YubikeyDeleteView(Is2FAMixin, DeleteView):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:118:    template_name = "profiles/yubikey_delete.html"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:120:    def delete(self, request, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:121:        response = super().delete(request, *args, **kwargs)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:176:        # delete matching access attempts for this user
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:177:        AccessAttempt.objects.filter(username=user.email).delete(),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:178:        HealthcareFailedAccessAttempt.objects.filter(username=user.email).delete()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:334:class InvitationDeleteView(Is2FAMixin, IsAdminMixin, DeleteView):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:338:    template_name = "invitations/templates/invitation_confirm_delete.html"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:423:class UserDeleteView(Is2FAMixin, ProvinceAdminDeleteMixin, DeleteView):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:428:    def delete(self, request, *args, **kwargs):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:429:        response = super().delete(request, *args, **kwargs)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:433:            _("You deleted the account for ‘%(email)s’.")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:437:        Invitation.objects.filter(email=self.object.email).delete()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:217:Feature development on the Portal follows a [trunk-based development](https://trunkbaseddevelopment.com/) workflow. The `main` branch has the most up-to-date code and is always production-ready. When starting a new feature (or a bugfix, etc.), a new branch is created from the tip of the `main` branch. Once the work is complete, the feature is merged back into `main` via a Pull Request (PR). PRs must pass a series of [automated tests](https://github.com/cds-snc/covid-alert-portal#automated-tests) (unit tests, linting, etc), as well as a manual review by another developer. After the automated tests pass and the PR is approved, the code is merged into `main` and the feature branch is deleted. The `main` branch is protected from direct pushes or force pushes — pull requests are mandatory.

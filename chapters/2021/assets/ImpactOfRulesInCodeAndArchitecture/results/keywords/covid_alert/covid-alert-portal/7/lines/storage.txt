@@ -1,0 +1,8 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/bootstrap/provider.tf:6:  bucket = join("",[var.storage_bucket,"-logs"])
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/bootstrap/provider.tf:18:resource "aws_s3_bucket" "storage_bucket" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/bootstrap/provider.tf:19:  bucket = var.storage_bucket
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/bootstrap/variables.auto.tfvars:1:storage_bucket = "covid-portal-terraform"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/bootstrap/variables.tf:5:variable "storage_bucket" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/rds.tf:44:  storage_encrypted         = true
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/variables.auto.tfvars:55:rds_server_allocated_storage = "5"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/variables.tf:245:variable "rds_server_allocated_storage" {

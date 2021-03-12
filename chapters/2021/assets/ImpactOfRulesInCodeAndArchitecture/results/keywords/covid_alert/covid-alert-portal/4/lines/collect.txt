@@ -1,0 +1,7 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Dockerfile:39:RUN python manage.py collectstatic --noinput -i scss
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/heroku.yml:7:    python manage.py collectstatic --noinput -i scss
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/utils/_banned_passwords.py:907:    "islcollective",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:5:The COVID Alert Portal provides authenticated healthcare providers unique temporary codes which can be shared with COVID-diagnosed individuals. The code enables individuals to upload their random IDs via the mobile app if they choose. No personal information is collected by the app and there is no association between the codes and specific tests. The Portal complements the [Government of Canada COVID Alert app](https://github.com/cds-snc/covid-alert-app).
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:119:- `python manage.py collectstatic --noinput -i scss`
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:269:**Démarrage rapide:** Après avoir activé un environnement virtuel, exécutez le script `entrypoint.sh` pour effectuer les migrations de base de données, la collecte de fichiers statiques et la compilation des fichiers CSS. Une instance de l'application sera alors démarré et sera accessible à `http://127.0.0.1:8000 /` ou `http://localhost:8000`.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/views.py:8:from collections import ChainMap

@@ -1,0 +1,12 @@
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/Constant.kt:14:    const val DAYS_TO_ERASE_AFTER: Long = 14L
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/RemoteServiceDataSource.kt:26:    suspend fun eraseRemoteAlert(): RobertResult
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:42:    suspend fun eraseRemoteAlert(): RobertResult =
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:43:        remoteServiceDataSource.eraseRemoteAlert()
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManager.kt:47:    suspend fun eraseLocalHistory(): RobertResult
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManager.kt:49:    suspend fun eraseRemoteExposureHistory(): RobertResult
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManager.kt:51:    suspend fun eraseRemoteAlert(): RobertResult
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:140:            (System.currentTimeMillis() - TimeUnit.DAYS.toMillis(Constant.DAYS_TO_ERASE_AFTER)).unixTimeMsToNtpTimeS()
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:185:    override suspend fun eraseLocalHistory(): RobertResult {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:190:    override suspend fun eraseRemoteExposureHistory(): RobertResult {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:206:    override suspend fun eraseRemoteAlert(): RobertResult {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:207:        return remoteServiceRepository.eraseRemoteAlert()

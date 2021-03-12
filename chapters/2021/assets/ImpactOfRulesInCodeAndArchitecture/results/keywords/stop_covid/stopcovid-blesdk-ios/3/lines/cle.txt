@@ -1,0 +1,14 @@
+stopcovid-blesdk-ios/.git/hooks/pre-rebase.sample:118:    clean up before publishing, and things that have not been
+stopcovid-blesdk-ios/LICENSE.txt:211:behalf of any Contributor. You must make it absolutely clear that any
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:79:            self.cleanPeripherals()
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:194:    private func cleanPeripheral(_ peripheral: CBPeripheral) {
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:195:        logger.debug(message: "clean peripheral \(peripheral)",
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:196:                     source: ProximityNotificationEvent.bluetoothCentralManagerCleanPeripheral.rawValue)
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:205:    private func cleanPeripherals() {
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:206:        logger.debug(message: "clean peripherals (\(connectingPeripherals.count))",
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:207:                     source: ProximityNotificationEvent.bluetoothCentralManagerCleanAllPeripherals.rawValue)
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:226:            cleanPeripheral(peripheral)
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:312:        cleanPeripheral(peripheral)
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:319:        cleanPeripheral(peripheral)
+stopcovid-blesdk-ios/ProximityNotification/ProximityNotificationEvent.swift:44:    case bluetoothCentralManagerCleanPeripheral
+stopcovid-blesdk-ios/ProximityNotification/ProximityNotificationEvent.swift:45:    case bluetoothCentralManagerCleanAllPeripherals

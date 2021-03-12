@@ -1,0 +1,7 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:111:    "django.contrib.auth.middleware.AuthenticationMiddleware",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:162:AUTHENTICATION_BACKENDS = [
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:2:    AuthenticationForm,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:58:class HealthcareAuthenticationForm(HealthcareBaseForm, AuthenticationForm):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:60:    A login form extending the Django default AuthenticationForm.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:75:        super(HealthcareAuthenticationForm, self).__init__(*args, **kwargs)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/urls.py:72:        LoginView.as_view(authentication_form=forms.HealthcareAuthenticationForm),

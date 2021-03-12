@@ -1,0 +1,53 @@
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/index matches
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:407:        self.invite.accepted = True
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:136:  - On login: login accepts a backup code, and allows users to message an administrator
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:215:- Add new page and flash messages to handle scenarios where account invitations are expired, deleted or accepted
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:259:- Allow resending invitations whenever no user account exists — previously, an "accepted" invitation for a deleted user would prevent that user from being invited again
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:288:- No longer flag invitations as accepted when the user clicks on the link
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CODE_OF_CONDUCT.md:24:* Giving and gracefully accepting constructive feedback
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CODE_OF_CONDUCT.md:25:* Accepting responsibility and apologizing to those affected by our mistakes,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CODE_OF_CONDUCT.md:30:Examples of unacceptable behavior include:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CODE_OF_CONDUCT.md:44:acceptable behavior and will take appropriate and fair corrective action in
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CODE_OF_CONDUCT.md:63:Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team at cds-snc@tbs-sct.gc.ca. All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. The project team is obligated to maintain confidentiality with regard to the reporter of an incident. Further details of specific enforcement policies may be posted separately.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CODE_OF_CONDUCT.md:142:* donner des commentaires constructifs et en accepter gracieusement;
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CODE_OF_CONDUCT.md:143:* accepter la responsabilité de nos erreurs et présenter des excuses aux personnes touchées,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CODE_OF_CONDUCT.md:147:Voici des exemples de comportements inacceptables :
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CODE_OF_CONDUCT.md:159:comportement acceptable et ils prendront des mesures correctives appropriées et justes en
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CODE_OF_CONDUCT.md:171:Les cas de comportement abusif, de harcèlement ou d’autres comportements inacceptables peuvent être signalés en communiquant avec l’équipe du projet à cds-snc@tbs-sct.gc.ca. Toutes les plaintes feront l’objet d’un examen et d’une enquête, ce qui donnera lieu à une réponse jugée nécessaire et appropriée selon les circonstances. L’équipe de projet
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.mo matches
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:673:msgstr "Si le patient accepte, textez-lui la clé suivante"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1426:#: profiles/templates/invitations/messages/invite_already_accepted.txt:3
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1855:"<p>En créant un compte, vous acceptez de vous soumettre aux <a href=\"/fr/"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1974:"la santé du Canada autorisés.</p><p>En utilisant le portail, vous acceptez "
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:307:INVITATIONS_GONE_ON_ACCEPT_ERROR = False
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:318:INVITATIONS_ACCEPT_INVITE_AFTER_SIGNUP = True
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/urls.py:7:from invitations.views import AcceptInvite
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/urls.py:64:                r"^accept-invite/(?P<key>\w+)/?$",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/urls.py:65:                AcceptInvite.as_view(),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/urls.py:66:                name="accept-invite",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:513:            # it is no longer possible to get the "already invited" or the "already accepted" error messages
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:420:    def test_root_with_accept_language_header_fr(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:422:        Test we end up on French start page from root url if "Accept-Language" header is "fr"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:425:            HTTP_ACCEPT_LANGUAGE="fr",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:431:    def test_root_with_accept_language_header_en(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:433:        Test we end up on English start page from root url if "Accept-Language" header is "en"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:436:            HTTP_ACCEPT_LANGUAGE="en",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:442:    def test_root_without_accept_language_header(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:444:        Test we end up on English start page from root url if no "Accept-Language" header exists
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:556:    def test_invitation_accepted_after_signup(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:557:        url = reverse("invitations:accept-invite", args=[self.invite.key])
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:559:        # make sure invite is not accepted just by visiting the URL
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:560:        self.assertEqual(self.invite.accepted, False)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:579:        self.assertEqual(self.invite.accepted, True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:608:        url = reverse("invitations:accept-invite", args=[self.invite.key])
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:686:    def test_sent_invite_again_if_accepted_invite_exists_and_user_account_exists(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:699:            accepted=True,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:713:    def test_sent_invite_again_if_accepted_invite_exists_but_no_user_account_exists(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:725:            accepted=True,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:882:        url = reverse("invitations:accept-invite", kwargs={"key": invitation.key})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:898:        url = reverse("invitations:accept-invite", kwargs={"key": invitation_key})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:908:    def test_redirect_to_login_with_account_exists_message_if_invite_accepted(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:910:            email="fake@example.com", inviter=self.user, accepted=True
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:915:        url = reverse("invitations:accept-invite", kwargs={"key": invitation.key})
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:330:            inviter__province=self.request.user.province, accepted=False
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:250:Ce dépôt met en oeuvre un portail de soins de santé qui accompagne l’[application mobile COVID Shield du gouvernement du Canada](https://github.com/cds-snc/covid-shield-mobile). Ce portail fournit des codes temporaires à utilisation unique aux professionnels de la santé authentifiés, et ces codes peuvent être transmis aux personnes ayant un diagnostic de COVID-19. Le code permet aux personnes de téléverser les ID aléatoires de l’application mobile si elles acceptent. Aucune information personnelle n’est recueillie, et aucun lien n’est établi entre les codes et les tests.

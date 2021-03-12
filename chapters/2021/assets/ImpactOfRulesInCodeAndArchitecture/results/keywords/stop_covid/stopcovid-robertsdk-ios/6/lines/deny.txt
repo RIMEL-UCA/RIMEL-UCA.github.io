@@ -1,0 +1,4 @@
+../stopcovid-robertsdk-ios/.git/hooks/push-to-checkout.sample:8:# receive.denyCurrentBranch configuration variable is set to
+../stopcovid-robertsdk-ios/.git/hooks/update.sample:22:# hooks.denycreatebranch
+../stopcovid-robertsdk-ios/.git/hooks/update.sample:48:denycreatebranch=$(git config --type=bool hooks.denycreatebranch)
+../stopcovid-robertsdk-ios/.git/hooks/update.sample:98:		if [ "$oldrev" = "$zero" -a "$denycreatebranch" = "true" ]; then

@@ -1,0 +1,16 @@
+../stopcovid-robertsdk-ios/.git/config:9:	url = https://gitlab.inria.fr/stopcovid19/stopcovid-robertsdk-ios.git
+Binary file ../stopcovid-robertsdk-ios/.git/index matches
+../stopcovid-robertsdk-ios/.git/logs/HEAD:1:0000000000000000000000000000000000000000 38f2e4eb37ef7c492075a47f1e8ec81ed33f6d31 davidbisegna <david.bisegna@etu.unice.fr> 1613461144 +0100	clone: from https://gitlab.inria.fr/stopcovid19/stopcovid-robertsdk-ios.git
+../stopcovid-robertsdk-ios/.git/logs/refs/heads/master:1:0000000000000000000000000000000000000000 38f2e4eb37ef7c492075a47f1e8ec81ed33f6d31 davidbisegna <david.bisegna@etu.unice.fr> 1613461144 +0100	clone: from https://gitlab.inria.fr/stopcovid19/stopcovid-robertsdk-ios.git
+../stopcovid-robertsdk-ios/.git/logs/refs/remotes/origin/HEAD:1:0000000000000000000000000000000000000000 38f2e4eb37ef7c492075a47f1e8ec81ed33f6d31 davidbisegna <david.bisegna@etu.unice.fr> 1613461144 +0100	clone: from https://gitlab.inria.fr/stopcovid19/stopcovid-robertsdk-ios.git
+../stopcovid-robertsdk-ios/README.md:4:Ce composant a pour rôle d'implémenter le protocole ROBERT dans l'application mobile pour iOS
+../stopcovid-robertsdk-ios/Robert/Extensions/NSError+RBExtension.swift:16:        return NSError(domain: "Robert-SDK", code: code, userInfo: [NSLocalizedDescriptionKey: message])
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:5://  RobertMessageManager.swift
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:14:final class RobertMessageManager {
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:16:    let storage: RobertStorage
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:18:    init(storage: RobertStorage) {
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:25:extension RobertMessageManager {
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:49:        let totalMessage: Data = Data([RobertConstants.Prefix.c1]) + message
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:57:extension RobertMessageManager {
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:77:        let totalMessage: Data = Data([RobertConstants.Prefix.c2]) + ebid + timeData
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:87:extension RobertMessageManager {

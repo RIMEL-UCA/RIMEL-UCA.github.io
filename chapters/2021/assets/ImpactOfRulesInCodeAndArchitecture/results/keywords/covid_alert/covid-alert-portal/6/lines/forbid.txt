@@ -1,0 +1,19 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:255:        # forbidden to generate code
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/backup_codes/tests.py:271:        # forbidden to generate code
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/cloudwatch_portal.tf:216:  pattern        = "\"Forbidden: /en/invite/\""
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.mo matches
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:762:msgid "Forbidden"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/403_csrf.html:4:{% block title %}{% trans "Forbidden" %}{% endblock %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/403_csrf.html:7:<h1>{% trans "Forbidden" %}</h1>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:934:    def test_forbidden_if_not_admin(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1002:    def test_forbidden_profile_page_if_non_admin_user_viewing_other_profile(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1026:    def test_forbidden_see_profile_page_superuser(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1066:    def test_forbidden_profile_page_if_admin_user_viewing_other_province_user(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1089:    def test_forbidden_see_delete_page_for_self(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1097:    def test_admin_forbidden_see_delete_page_for_superuser(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1108:    def test_admin_forbidden_see_delete_page_for_other_admin(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1198:    def test_edit_email_forbidden(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1205:    def test_edit_someone_else_account_forbidden(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1226:    def test_admin_edit_staff_password_forbidden(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:1240:    def test_admin_edit_admin_account_forbidden(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:55:- `API_AUTHORIZATION`: The credentials required to authenticate with the one-time code API. Otherwise the request will return a `401` Forbidden response.

@@ -1,0 +1,20 @@
+../stopcovid-robertsdk-ios/.git/hooks/pre-rebase.sample:118:    clean up before publishing, and things that have not been
+../stopcovid-robertsdk-ios/LICENSE.md:228:behalf of any Contributor. You must make it absolutely clear that any
+../stopcovid-robertsdk-ios/Robert/Protocols/RBStorage.swift:57:    // MARK: - Data cleraing -
+../stopcovid-robertsdk-ios/Robert/Protocols/RBStorage.swift:58:    func clearLocalEpochs()
+../stopcovid-robertsdk-ios/Robert/Protocols/RBStorage.swift:59:    func clearLocalProximityList()
+../stopcovid-robertsdk-ios/Robert/Protocols/RBStorage.swift:60:    func clearAll(includingDBKey: Bool)
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:186:            clearAllLocalData()
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:205:                    self.clearAllLocalData()
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:230:                    self.clearAllLocalData()
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:239:    func clearLocalEpochs() {
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:240:        storage.clearLocalEpochs()
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:243:    func clearLocalProximityList() {
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:244:        storage.clearLocalProximityList()
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:247:    func clearAtRiskAlert() {
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:251:    func clearAllLocalData() {
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:252:        storage.clearAll(includingDBKey: false)
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:253:        clearKey()
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:256:    func clearKey() {
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:273:            clearLocalEpochs()
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:282:            clearLocalEpochs()

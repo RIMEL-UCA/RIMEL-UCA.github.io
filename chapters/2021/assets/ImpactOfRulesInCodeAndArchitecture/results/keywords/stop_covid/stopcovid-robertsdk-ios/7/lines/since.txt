@@ -1,0 +1,16 @@
+../stopcovid-robertsdk-ios/.git/hooks/fsmonitor-watchman.sample:13:# all files that have been modified since the update token. Paths must
+../stopcovid-robertsdk-ios/.git/hooks/fsmonitor-watchman.sample:83:	# changed since $last_update_token but not from the .git folder.
+../stopcovid-robertsdk-ios/.git/hooks/fsmonitor-watchman.sample:85:	# To accomplish this, we're using the "since" generator to use the
+../stopcovid-robertsdk-ios/.git/hooks/fsmonitor-watchman.sample:94:			"since": $last_update_token,
+../stopcovid-robertsdk-ios/.git/hooks/pre-commit.sample:29:	# even required, for portability to Solaris 10's /usr/bin/tr), since
+../stopcovid-robertsdk-ios/.git/hooks/pre-rebase.sample:146: * A has one fix since it was merged up to "next".
+../stopcovid-robertsdk-ios/Robert/Extensions/Date+RBExtension.swift:15:    var timeIntervalSince1900: Int {
+../stopcovid-robertsdk-ios/Robert/Extensions/Date+RBExtension.swift:16:        return Int(timeIntervalSince1970) + 2208988800
+../stopcovid-robertsdk-ios/Robert/Extensions/Date+RBExtension.swift:19:    init(timeIntervalSince1900: Int) {
+../stopcovid-robertsdk-ios/Robert/Extensions/Date+RBExtension.swift:20:        self.init(timeIntervalSince1970: Double(timeIntervalSince1900 - 2208988800))
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:29:        let ntpTimestamp: Int = Int(Date().timeIntervalSince1900)
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:61:        let ntpTimestamp: Int = Int(Date().timeIntervalSince1900)
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:58:                let ntpTimestamp: Int = Int(Date().timeIntervalSince1900)
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:122:            let ntpTimestamp: Int = Date().timeIntervalSince1900
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:199:            let ntpTimestamp: Int = Int(Date().timeIntervalSince1900)
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:224:            let ntpTimestamp: Int = Int(Date().timeIntervalSince1900)

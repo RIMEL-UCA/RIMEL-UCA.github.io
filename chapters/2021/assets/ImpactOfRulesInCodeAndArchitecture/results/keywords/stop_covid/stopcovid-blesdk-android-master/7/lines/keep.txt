@@ -1,0 +1,16 @@
+./stopcovid-blesdk-android-master/library/proguard-rules.pro:11:#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+./stopcovid-blesdk-android-master/library/proguard-rules.pro:17:#-keepattributes SourceFile,LineNumberTable
+./stopcovid-blesdk-android-master/library/proguard-rules.pro:19:# If you keep the line number information, uncomment this to
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleScannedDeviceSelector.kt:112:            .keepMostRecentDeviceIdScans()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleScannedDeviceSelector.kt:113:            .keepScansHavingBestStats()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleScannedDeviceSelector.kt:135:     * In that case we should keep only scans with the most recent device id
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleScannedDeviceSelector.kt:137:    private suspend fun List<BleScannedDevice>.keepMostRecentDeviceIdScans(): List<BleScannedDevice> {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleScannedDeviceSelector.kt:141:        // We can't distinguish scans without service data so keep all of them
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleScannedDeviceSelector.kt:144:        // Keep most recent scans having same id
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleScannedDeviceSelector.kt:159:    private suspend fun List<BleScannedDevice>.keepScansHavingBestStats(): List<BleScannedDevice> =
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleSettings.kt:30: * @param deviceSelectorMinConfidenceScore Minimum confidence score in order to keep device
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:347:                            // so we want to inform remote to keep the connection alive
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/tools/ExpiringCache.kt:19: * ExpiringCache uses [LruCache] to store values and keeping them depending on 2 conditions:
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceFilterTest.kt:114:    fun filter_with_same_scanned_devices_should_keep_most_recent_scans_and_order_them_by_timestamp() {
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceFilterTest.kt:143:    fun filter_with_old_scans_should_only_keep_most_recent_ones() {
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/tools/ExpiringCacheTest.kt:82:    fun put_given_max_size_reached_should_keep_most_recent_entries() {

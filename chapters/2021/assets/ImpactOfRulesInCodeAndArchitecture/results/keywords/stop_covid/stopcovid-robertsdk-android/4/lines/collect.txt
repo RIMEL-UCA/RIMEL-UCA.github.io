@@ -1,0 +1,7 @@
+../stopcovid-robertsdk-android/domain/src/androidTest/java/com/lunabeestudio/domain/LocalProximityTest.kt:22:        val collectedTime = 0L
+../stopcovid-robertsdk-android/domain/src/androidTest/java/com/lunabeestudio/domain/LocalProximityTest.kt:31:        val ctor1 = LocalProximity(hello, collectedTime, rawRssi, calibratedRssi)
+../stopcovid-robertsdk-android/domain/src/androidTest/java/com/lunabeestudio/domain/LocalProximityTest.kt:32:        val ctor2 = LocalProximity(ecc64, ebid64, mac64, helloTime, collectedTime, rawRssi, calibratedRssi)
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/LocalProximity.kt:19:    val collectedTime: Long,
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/LocalProximity.kt:23:    constructor(hello: Hello, collectedNtpTimeS: Long, rawRssi: Int, calibratedRssi: Int) : this(
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/LocalProximity.kt:28:        collectedTime = collectedNtpTimeS,
+../stopcovid-robertsdk-android/gradlew:164:# Collect all arguments for the java command, following the shell quoting and substitution rules

@@ -1,0 +1,17 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:229:SECURE_SSL_REDIRECT = is_prod
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:230:SESSION_COOKIE_SECURE = is_prod
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:231:CSRF_COOKIE_SECURE = is_prod
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:233:SECURE_BROWSER_XSS_FILTER = is_prod
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:235:# Prefix session and csrf cookie names so they can not be over ridden by insecure hosts.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:236:SESSION_COOKIE_NAME = "__secure-sessionid"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:237:CSRF_COOKIE_NAME = "__secure-csrftoken"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:242:# Setting SECURE_SSL_REDIRECT on heroku was causing infinite redirects without this
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:244:    SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:246:# For sites that should only be accessed over HTTPS, instruct modern browsers to refuse to connect to your domain name via an insecure connection (for a given period of time)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:248:    SECURE_HSTS_SECONDS = 31536000
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:251:SECURE_REFERRER_POLICY = "same-origin"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/views.py:40:        require_https=request.is_secure(),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/views.py:63:        secure=settings.LANGUAGE_COOKIE_SECURE,
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/utils/_banned_passwords.py:1195:    "holidaysecure123",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/utils/_banned_passwords.py:1244:    "holidaysecure123$",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:237:- LGTM (SaaS): checks for code smells and insecure coding practices

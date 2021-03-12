@@ -1,0 +1,278 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.devcontainer/Dockerfile:12:RUN wget https://dl.google.com/go/go${GO_VERSION}.linux-amd64.tar.gz \
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.devcontainer/Dockerfile:35:RUN wget -P /etc/aws-certs https://s3.amazonaws.com/rds-downloads/rds-ca-2019-root.pem
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/config:9:	url = https://github.com/cds-snc/covid-alert-server.git
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/fsmonitor-watchman.sample:8:# (https://facebook.github.io/watchman/) with git to speed up detecting
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/logs/HEAD:1:0000000000000000000000000000000000000000 7f9cfe159cb5797effdf89c6526713e42ad66096 Yan Conigliaro <yan.conigliaro@etu.univ-cotedazur.fr> 1613460815 +0100	clone: from https://github.com/cds-snc/covid-alert-server.git
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/logs/refs/heads/master:1:0000000000000000000000000000000000000000 7f9cfe159cb5797effdf89c6526713e42ad66096 Yan Conigliaro <yan.conigliaro@etu.univ-cotedazur.fr> 1613460815 +0100	clone: from https://github.com/cds-snc/covid-alert-server.git
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/logs/refs/remotes/origin/HEAD:1:0000000000000000000000000000000000000000 7f9cfe159cb5797effdf89c6526713e42ad66096 Yan Conigliaro <yan.conigliaro@etu.univ-cotedazur.fr> 1613460815 +0100	clone: from https://github.com/cds-snc/covid-alert-server.git
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/packed-refs:8:1aad55ad332cc56b103d8856c5c4fb41396c1ab6 refs/remotes/origin/dw/cf_redirect_https
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.github/workflows/build-push-monolith.yml:21:          curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.github/workflows/codeql-analysis.yml:29:        # https://docs.github.com/en/github/finding-security-vulnerabilities-and-errors-in-your-code/configuring-code-scanning#overriding-automatic-language-detection
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.github/workflows/codeql-analysis.yml:60:    # 📚 https://git.io/JvXDl
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.github/workflows/s3-backup.yml:18:        wget -O ${{ github.repository }}/`basename ${{ github.repository }}`-`date '+%Y-%m-%d'`.zip https://github.com/${{ github.repository }}/archive/master.zip
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.snyk:1:# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/main.py:51:    url = 'https://submission.wild-samphire.cdssandbox.xyz/upload'
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/main.py:90:    url = 'https://submission.wild-samphire.cdssandbox.xyz/new-key-claim'
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/main.py:103:    url = 'https://submission.wild-samphire.cdssandbox.xyz/claim-key'
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CODE_OF_CONDUCT.md:115:https://www.contributor-covenant.org/version/2/0/code_of_conduct.html.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CODE_OF_CONDUCT.md:118:enforcement ladder](https://github.com/mozilla/diversity).
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CODE_OF_CONDUCT.md:120:[homepage]: https://www.contributor-covenant.org
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CODE_OF_CONDUCT.md:123:https://www.contributor-covenant.org/faq. Translations are available at
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CODE_OF_CONDUCT.md:124:https://www.contributor-covenant.org/translations.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CODE_OF_CONDUCT.md:210:Ce Code de conduite est adapté de la [Charte des contributeurs](https://www.contributor-covenant.org)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CODE_OF_CONDUCT.md:211:version 2.0, disponible à https://www.contributor-covenant.org/version/2/0/code_of_conduct.html.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CODE_OF_CONDUCT.md:213:Les consignes relatives à l’incidence communautaire ont été inspirées de [l’échelle de mise en application du Code de conduite de Mozilla](https://github.com/mozilla/diversity).
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CODE_OF_CONDUCT.md:216:https://www.contributor-covenant.org/faq. Les traductions sont disponibles à 
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CODE_OF_CONDUCT.md:217:https://www.contributor-covenant.org/translations.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/commit_msgs.md:9:- **Angular Commit Guidelines**: https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#commit
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/commit_msgs.md:10:- **Conventional Commits**: https://www.conventionalcommits.org/en/v1.0.0/
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/commit_msgs.md:11:- **Semantic Versioning**: https://semver.org/
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/config/infrastructure/aws/README.md:5:This document describes how to deploy and operate a **reference implementation** of the Covid Shield web portal, along with the diagnosis key retrieval and submission services on [AWS](https://aws.amazon.com/).
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/config/infrastructure/aws/README.md:15:| Serverless compute | [Fargate](https://aws.amazon.com/fargate/) |
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/config/infrastructure/aws/README.md:16:| Container registry | [Elastic Container Registry](https://aws.amazon.com/ecr/) |
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/config/infrastructure/aws/README.md:17:| Domain name services | [Route 53](https://aws.amazon.com/route53/) |
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/config/infrastructure/aws/README.md:18:| TLS certificates | [Certificate Manager](https://aws.amazon.com/certificate-manager/) |
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/config/infrastructure/aws/README.md:19:| Load balancing | [Elastic Load Balancing](https://aws.amazon.com/elasticloadbalancing/) |
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/config/infrastructure/aws/README.md:20:| Content delivery network | [CloudFront](https://aws.amazon.com/cloudfront/) |
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/config/infrastructure/aws/README.md:21:| Web application firewall | [WAF](https://aws.amazon.com/waf/) |
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/config/infrastructure/aws/README.md:25:While this infrastructure may be deployed in a number of different ways, this document demonstrates a deploy using a small series of command line operations to generate credentials, and a CI/CD pipeline using [GitHub Actions](https://github.com/features/actions), [Docker](https://www.docker.com/why-docker), and [Terraform](https://www.terraform.io/).
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/config/infrastructure/aws/README.md:29:- A [GitHub repository](https://help.github.com/en/github/getting-started-with-github/create-a-repo) with [Actions](https://github.com/features/actions) enabled
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/config/infrastructure/aws/README.md:31:- [`aws` Command Line Interface](https://aws.amazon.com/cli/) installed and available in your path
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/config/infrastructure/aws/README.md:33:- [`terraform`](https://www.terraform.io/downloads.html) 0.12.x installed and available in your path
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/config/infrastructure/aws/README.md:37:- [`ecs-cli`](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_CLI.html) installed and available in your path
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/config/infrastructure/aws/README.md:79:- Continuous container builds on [new pull requests](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/config/infrastructure/aws/README.md:80:- Releasing new containers on a [successful merge](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/merging-a-pull-request) to the master branch
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/config/infrastructure/aws/README.md:81:- Integrating dependency management using [Dependabot](https://dependabot.com/)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/config/infrastructure/aws/README.md:85:According to GitHub, [Actions](https://github.com/features/actions) makes it easy to automate all your software workflows, now with world-class CI/CD. Build, test, and deploy your code right from GitHub. Make code reviews, branch management, and issue triaging work the way you want.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/config/infrastructure/aws/README.md:107:According to GitHub (because they [own it](https://dependabot.com/blog/hello-github/)), Dependabot creates pull requests to keep your dependencies secure and up-to-date.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/config/infrastructure/aws/README.md:111:1. [Sign up](https://app.dependabot.com/auth/sign-up) and grant Dependabot access to your repositories
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/config/infrastructure/aws/README.md:112:2. You can configure the repository in the UI after signing up. Alternatively, you may specify a [Dependabot config file](https://dependabot.com/docs/config-file/) in your repository at `.dependabot/config.yml`
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/config/infrastructure/aws/README.md:114:Here is the Dependabot configuration we chose for the [Portal](https://github.com/CovidShield/portal):
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/config/infrastructure/aws/README.md:127:This configuration schedules the :robot: to [check for updates](https://dependabot.com/#how-it-works) every week for both the [Bundler](https://bundler.io/) and [Yarn](https://yarnpkg.com/) packages deployed with this application. Feel free to run this configurations through the [configuration validator](https://dependabot.com/docs/config-file/validator/) to attest that it is valid.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:35:1. Fork https://github.com/cds-snc/covid-alert-server to your account.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:36:2. Clone your fork of the **cds-snc/covid-alert-server** repo locally by running `git clone https://github.com/<username>/covid-alert-server.git`.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:49:* [protobuf](https://developers.google.com/protocol-buffers/) (tested with libprotoc 3.11.4)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:50:* [protoc-gen-go](https://github.com/golang/protobuf) (may only be needed to change `proto/*`)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:72:Note that 302 is a [MCC](https://www.mcc-mnc.com/): 302 represents Canada.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:134:1. Fourchez https://github.com/cds-snc/covid-alert-server à votre compte.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:135:2. Clonez localement votre fourche du dépôt **cds-snc/covid-alert-server** en exécutant localement un `git clone https://github.com/<username>/covid-alert-server.git`.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:148:* [protobuf](https://developers.google.com/protocol-buffers/) (testé avec libprotoc 3.11.4)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:149:* [protoc-gen-go](https://github.com/golang/protobuf) (ne peut être nécessaire que pour changer `proto/*`)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:171:Notez que 302 est un [MCC](https://www.mcc-mnc.com/) : 302 représente le Canada.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/Dockerfile:31:RUN wget -P /etc/aws-certs https://s3.amazonaws.com/rds-downloads/rds-ca-2019-root.pem
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/Dockerfile.heroku:31:RUN wget -P /etc/aws-certs https://s3.amazonaws.com/rds-downloads/rds-ca-2019-root.pem
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/examples/new-key-claim/ruby.rb:12:    Net::HTTP.start(SERVER_URI.host, SERVER_URI.port, use_ssl: SERVER_URI.scheme == 'https') do |http|
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/Gemfile:1:source('https://rubygems.org')
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/Gemfile.lock:2:  remote: https://rubygems.org/
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:8:      "resolved": "https://registry.npmjs.org/@babel/code-frame/-/code-frame-7.10.4.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:17:      "resolved": "https://registry.npmjs.org/@babel/helper-validator-identifier/-/helper-validator-identifier-7.10.4.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:23:      "resolved": "https://registry.npmjs.org/@babel/highlight/-/highlight-7.10.4.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:34:          "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-3.2.1.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:43:          "resolved": "https://registry.npmjs.org/chalk/-/chalk-2.4.2.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:54:          "resolved": "https://registry.npmjs.org/color-convert/-/color-convert-1.9.3.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:63:          "resolved": "https://registry.npmjs.org/color-name/-/color-name-1.1.3.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:69:          "resolved": "https://registry.npmjs.org/has-flag/-/has-flag-3.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:75:          "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-5.5.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:86:      "resolved": "https://registry.npmjs.org/@babel/runtime/-/runtime-7.12.5.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:95:      "resolved": "https://registry.npmjs.org/@commitlint/cli/-/cli-11.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:115:      "resolved": "https://registry.npmjs.org/@commitlint/config-conventional/-/config-conventional-11.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:124:      "resolved": "https://registry.npmjs.org/@commitlint/ensure/-/ensure-11.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:134:      "resolved": "https://registry.npmjs.org/@commitlint/execute-rule/-/execute-rule-11.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:140:      "resolved": "https://registry.npmjs.org/@commitlint/format/-/format-11.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:150:      "resolved": "https://registry.npmjs.org/@commitlint/is-ignored/-/is-ignored-11.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:160:      "resolved": "https://registry.npmjs.org/@commitlint/lint/-/lint-11.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:172:      "resolved": "https://registry.npmjs.org/@commitlint/load/-/load-11.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:187:      "resolved": "https://registry.npmjs.org/@commitlint/message/-/message-11.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:193:      "resolved": "https://registry.npmjs.org/@commitlint/parse/-/parse-11.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:203:      "resolved": "https://registry.npmjs.org/@commitlint/read/-/read-11.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:214:      "resolved": "https://registry.npmjs.org/@commitlint/resolve-extends/-/resolve-extends-11.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:226:      "resolved": "https://registry.npmjs.org/@commitlint/rules/-/rules-11.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:238:      "resolved": "https://registry.npmjs.org/@commitlint/to-lines/-/to-lines-11.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:244:      "resolved": "https://registry.npmjs.org/@commitlint/top-level/-/top-level-11.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:253:          "resolved": "https://registry.npmjs.org/find-up/-/find-up-5.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:263:          "resolved": "https://registry.npmjs.org/locate-path/-/locate-path-6.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:272:          "resolved": "https://registry.npmjs.org/p-limit/-/p-limit-3.1.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:281:          "resolved": "https://registry.npmjs.org/p-locate/-/p-locate-5.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:292:      "resolved": "https://registry.npmjs.org/@commitlint/types/-/types-11.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:298:      "resolved": "https://registry.npmjs.org/@types/minimist/-/minimist-1.2.1.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:304:      "resolved": "https://registry.npmjs.org/@types/normalize-package-data/-/normalize-package-data-2.4.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:310:      "resolved": "https://registry.npmjs.org/@types/parse-json/-/parse-json-4.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:316:      "resolved": "https://registry.npmjs.org/JSONStream/-/JSONStream-1.3.5.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:326:      "resolved": "https://registry.npmjs.org/ansi-regex/-/ansi-regex-5.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:332:      "resolved": "https://registry.npmjs.org/ansi-styles/-/ansi-styles-4.3.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:341:      "resolved": "https://registry.npmjs.org/array-ify/-/array-ify-1.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:347:      "resolved": "https://registry.npmjs.org/arrify/-/arrify-1.0.1.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:353:      "resolved": "https://registry.npmjs.org/at-least-node/-/at-least-node-1.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:359:      "resolved": "https://registry.npmjs.org/callsites/-/callsites-3.1.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:365:      "resolved": "https://registry.npmjs.org/camelcase/-/camelcase-5.3.1.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:371:      "resolved": "https://registry.npmjs.org/camelcase-keys/-/camelcase-keys-6.2.2.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:382:      "resolved": "https://registry.npmjs.org/chalk/-/chalk-4.1.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:392:      "resolved": "https://registry.npmjs.org/cliui/-/cliui-6.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:403:      "resolved": "https://registry.npmjs.org/color-convert/-/color-convert-2.0.1.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:412:      "resolved": "https://registry.npmjs.org/color-name/-/color-name-1.1.4.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:418:      "resolved": "https://registry.npmjs.org/compare-func/-/compare-func-2.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:428:      "resolved": "https://registry.npmjs.org/conventional-changelog-angular/-/conventional-changelog-angular-5.0.12.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:438:      "resolved": "https://registry.npmjs.org/conventional-changelog-conventionalcommits/-/conventional-changelog-conventionalcommits-4.5.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:449:      "resolved": "https://registry.npmjs.org/conventional-commits-parser/-/conventional-commits-parser-3.2.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:464:      "resolved": "https://registry.npmjs.org/core-js/-/core-js-3.8.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:470:      "resolved": "https://registry.npmjs.org/core-util-is/-/core-util-is-1.0.2.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:476:      "resolved": "https://registry.npmjs.org/cosmiconfig/-/cosmiconfig-7.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:489:      "resolved": "https://registry.npmjs.org/dargs/-/dargs-7.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:495:      "resolved": "https://registry.npmjs.org/decamelize/-/decamelize-1.2.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:501:      "resolved": "https://registry.npmjs.org/decamelize-keys/-/decamelize-keys-1.1.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:511:          "resolved": "https://registry.npmjs.org/map-obj/-/map-obj-1.0.1.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:519:      "resolved": "https://registry.npmjs.org/dot-prop/-/dot-prop-5.3.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:528:      "resolved": "https://registry.npmjs.org/emoji-regex/-/emoji-regex-8.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:534:      "resolved": "https://registry.npmjs.org/error-ex/-/error-ex-1.3.2.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:543:      "resolved": "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:549:      "resolved": "https://registry.npmjs.org/find-up/-/find-up-4.1.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:559:      "resolved": "https://registry.npmjs.org/fs-extra/-/fs-extra-9.0.1.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:571:      "resolved": "https://registry.npmjs.org/function-bind/-/function-bind-1.1.1.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:577:      "resolved": "https://registry.npmjs.org/get-caller-file/-/get-caller-file-2.0.5.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:583:      "resolved": "https://registry.npmjs.org/get-stdin/-/get-stdin-8.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:589:      "resolved": "https://registry.npmjs.org/git-raw-commits/-/git-raw-commits-2.0.8.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:602:      "resolved": "https://registry.npmjs.org/global-dirs/-/global-dirs-0.1.1.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:611:      "resolved": "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.4.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:617:      "resolved": "https://registry.npmjs.org/hard-rejection/-/hard-rejection-2.1.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:623:      "resolved": "https://registry.npmjs.org/has/-/has-1.0.3.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:632:      "resolved": "https://registry.npmjs.org/has-flag/-/has-flag-4.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:638:      "resolved": "https://registry.npmjs.org/hosted-git-info/-/hosted-git-info-3.0.7.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:647:      "resolved": "https://registry.npmjs.org/import-fresh/-/import-fresh-3.2.2.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:657:          "resolved": "https://registry.npmjs.org/resolve-from/-/resolve-from-4.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:665:      "resolved": "https://registry.npmjs.org/indent-string/-/indent-string-4.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:671:      "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:677:      "resolved": "https://registry.npmjs.org/ini/-/ini-1.3.5.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:683:      "resolved": "https://registry.npmjs.org/is-arrayish/-/is-arrayish-0.2.1.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:689:      "resolved": "https://registry.npmjs.org/is-core-module/-/is-core-module-2.2.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:698:      "resolved": "https://registry.npmjs.org/is-fullwidth-code-point/-/is-fullwidth-code-point-3.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:704:      "resolved": "https://registry.npmjs.org/is-obj/-/is-obj-2.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:710:      "resolved": "https://registry.npmjs.org/is-plain-obj/-/is-plain-obj-1.1.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:716:      "resolved": "https://registry.npmjs.org/is-text-path/-/is-text-path-1.0.1.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:725:      "resolved": "https://registry.npmjs.org/isarray/-/isarray-1.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:731:      "resolved": "https://registry.npmjs.org/js-tokens/-/js-tokens-4.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:737:      "resolved": "https://registry.npmjs.org/json-parse-even-better-errors/-/json-parse-even-better-errors-2.3.1.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:743:      "resolved": "https://registry.npmjs.org/jsonfile/-/jsonfile-6.1.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:753:          "resolved": "https://registry.npmjs.org/universalify/-/universalify-2.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:761:      "resolved": "https://registry.npmjs.org/jsonparse/-/jsonparse-1.3.1.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:767:      "resolved": "https://registry.npmjs.org/kind-of/-/kind-of-6.0.3.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:773:      "resolved": "https://registry.npmjs.org/lines-and-columns/-/lines-and-columns-1.1.6.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:779:      "resolved": "https://registry.npmjs.org/locate-path/-/locate-path-5.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:788:      "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.17.20.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:794:      "resolved": "https://registry.npmjs.org/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:800:      "resolved": "https://registry.npmjs.org/lodash.template/-/lodash.template-4.5.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:810:      "resolved": "https://registry.npmjs.org/lodash.templatesettings/-/lodash.templatesettings-4.2.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:819:      "resolved": "https://registry.npmjs.org/lru-cache/-/lru-cache-6.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:828:      "resolved": "https://registry.npmjs.org/map-obj/-/map-obj-4.1.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:834:      "resolved": "https://registry.npmjs.org/meow/-/meow-8.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:853:      "resolved": "https://registry.npmjs.org/min-indent/-/min-indent-1.0.1.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:859:      "resolved": "https://registry.npmjs.org/minimist-options/-/minimist-options-4.1.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:870:      "resolved": "https://registry.npmjs.org/normalize-package-data/-/normalize-package-data-3.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:882:      "resolved": "https://registry.npmjs.org/p-limit/-/p-limit-2.3.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:891:      "resolved": "https://registry.npmjs.org/p-locate/-/p-locate-4.1.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:900:      "resolved": "https://registry.npmjs.org/p-try/-/p-try-2.2.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:906:      "resolved": "https://registry.npmjs.org/parent-module/-/parent-module-1.0.1.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:915:      "resolved": "https://registry.npmjs.org/parse-json/-/parse-json-5.1.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:927:      "resolved": "https://registry.npmjs.org/path-exists/-/path-exists-4.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:933:      "resolved": "https://registry.npmjs.org/path-parse/-/path-parse-1.0.6.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:939:      "resolved": "https://registry.npmjs.org/path-type/-/path-type-4.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:945:      "resolved": "https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-2.0.1.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:951:      "resolved": "https://registry.npmjs.org/q/-/q-1.5.1.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:957:      "resolved": "https://registry.npmjs.org/quick-lru/-/quick-lru-4.0.1.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:963:      "resolved": "https://registry.npmjs.org/read-pkg/-/read-pkg-5.2.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:975:          "resolved": "https://registry.npmjs.org/hosted-git-info/-/hosted-git-info-2.8.8.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:981:          "resolved": "https://registry.npmjs.org/normalize-package-data/-/normalize-package-data-2.5.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:993:          "resolved": "https://registry.npmjs.org/semver/-/semver-5.7.1.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:999:          "resolved": "https://registry.npmjs.org/type-fest/-/type-fest-0.6.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1007:      "resolved": "https://registry.npmjs.org/read-pkg-up/-/read-pkg-up-7.0.1.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1018:          "resolved": "https://registry.npmjs.org/type-fest/-/type-fest-0.8.1.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1026:      "resolved": "https://registry.npmjs.org/readable-stream/-/readable-stream-2.3.7.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1041:      "resolved": "https://registry.npmjs.org/redent/-/redent-3.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1051:      "resolved": "https://registry.npmjs.org/regenerator-runtime/-/regenerator-runtime-0.13.7.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1057:      "resolved": "https://registry.npmjs.org/require-directory/-/require-directory-2.1.1.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1063:      "resolved": "https://registry.npmjs.org/require-main-filename/-/require-main-filename-2.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1069:      "resolved": "https://registry.npmjs.org/resolve/-/resolve-1.19.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1079:      "resolved": "https://registry.npmjs.org/resolve-from/-/resolve-from-5.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1085:      "resolved": "https://registry.npmjs.org/resolve-global/-/resolve-global-1.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1094:      "resolved": "https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.1.2.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1100:      "resolved": "https://registry.npmjs.org/semver/-/semver-7.3.2.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1106:      "resolved": "https://registry.npmjs.org/set-blocking/-/set-blocking-2.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1112:      "resolved": "https://registry.npmjs.org/spdx-correct/-/spdx-correct-3.1.1.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1122:      "resolved": "https://registry.npmjs.org/spdx-exceptions/-/spdx-exceptions-2.3.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1128:      "resolved": "https://registry.npmjs.org/spdx-expression-parse/-/spdx-expression-parse-3.0.1.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1138:      "resolved": "https://registry.npmjs.org/spdx-license-ids/-/spdx-license-ids-3.0.7.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1144:      "resolved": "https://registry.npmjs.org/split2/-/split2-2.2.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1153:          "resolved": "https://registry.npmjs.org/through2/-/through2-2.0.5.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1165:      "resolved": "https://registry.npmjs.org/string-width/-/string-width-4.2.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1176:      "resolved": "https://registry.npmjs.org/string_decoder/-/string_decoder-1.1.1.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1185:      "resolved": "https://registry.npmjs.org/strip-ansi/-/strip-ansi-6.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1194:      "resolved": "https://registry.npmjs.org/strip-indent/-/strip-indent-3.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1203:      "resolved": "https://registry.npmjs.org/supports-color/-/supports-color-7.2.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1212:      "resolved": "https://registry.npmjs.org/text-extensions/-/text-extensions-1.9.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1218:      "resolved": "https://registry.npmjs.org/through/-/through-2.3.8.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1224:      "resolved": "https://registry.npmjs.org/through2/-/through2-4.0.2.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1233:          "resolved": "https://registry.npmjs.org/readable-stream/-/readable-stream-3.6.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1246:      "resolved": "https://registry.npmjs.org/trim-newlines/-/trim-newlines-3.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1252:      "resolved": "https://registry.npmjs.org/trim-off-newlines/-/trim-off-newlines-1.0.1.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1258:      "resolved": "https://registry.npmjs.org/type-fest/-/type-fest-0.18.1.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1264:      "resolved": "https://registry.npmjs.org/universalify/-/universalify-1.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1270:      "resolved": "https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1276:      "resolved": "https://registry.npmjs.org/validate-npm-package-license/-/validate-npm-package-license-3.0.4.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1286:      "resolved": "https://registry.npmjs.org/which-module/-/which-module-2.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1292:      "resolved": "https://registry.npmjs.org/wrap-ansi/-/wrap-ansi-6.2.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1303:      "resolved": "https://registry.npmjs.org/xtend/-/xtend-4.0.2.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1309:      "resolved": "https://registry.npmjs.org/y18n/-/y18n-4.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1315:      "resolved": "https://registry.npmjs.org/yallist/-/yallist-4.0.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1321:      "resolved": "https://registry.npmjs.org/yaml/-/yaml-1.10.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1327:      "resolved": "https://registry.npmjs.org/yargs/-/yargs-15.4.1.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1346:          "resolved": "https://registry.npmjs.org/yargs-parser/-/yargs-parser-18.1.3.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1358:      "resolved": "https://registry.npmjs.org/yargs-parser/-/yargs-parser-20.2.4.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package-lock.json:1364:      "resolved": "https://registry.npmjs.org/yocto-queue/-/yocto-queue-0.1.0.tgz",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/package.json:10:    "url": "git+https://github.com/cds-snc/covid-shield-server.git"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:411:// See "Security Model" at https://nacl.cr.yp.to/box.html
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:342:// See "Security Model" at https://nacl.cr.yp.to/box.html
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/covidshield.proto:52:// See "Security Model" at https://nacl.cr.yp.to/box.html
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/covidshield.proto:107:// https://developer.apple.com/documentation/exposurenotification/setting_up_an_exposure_notification_server
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/covidshield.proto:110:// https://developers.google.com/android/exposure-notifications/exposure-key-file-format
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/README.md:2:_(Valid for [Exposure Notification API](https://www.apple.com/covid19/contacttracing) v1.2)_
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/README.md:5:Commissioners](https://priv.gc.ca/en/opc-news/speeches/2020/s-d_20200507/) for background on the
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/README.md:9:Diagnosis Server](https://github.com/cds-snc/covid-alert-server) and the soon-to-be-open-sourced COVID
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/README.md:13:Buffers](https://developers.google.com/protocol-buffers). The file containing these definitions is
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/README.md:43:[`examples/new-key-claim`](https://github.com/cds-snc/covid-alert-server/tree/master/examples/new-key-claim).
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/README.md:91:The `region` is an [MCC](https://www.mcc-mnc.com/) (e.g. "302" for Canada).
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/README.md:151:[examples/retrieval/app.rb](https://github.com/cds-snc/covid-alert-server/blob/master/examples/retrieval/app.rb).
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:5:Adapted from <https://github.com/CovidShield/server>
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:8:Notification](https://covid19.apple.com/contacttracing) framework, informed by the [guidance
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:10:Commissioners](https://priv.gc.ca/en/opc-news/speeches/2020/s-d_20200507/).
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:32:_[Apple/Google's Exposure Notification](https://covid19.apple.com/contacttracing) specifications
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:47:[this video](https://www.youtube.com/watch?v=5GNJo1hEj5I).
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:56:The hour of submission is used to group keys into buckets, in order to prevent clients ([COVID Alert mobile app](https://github.com/cds-snc/covid-alert-app)) from having to download a given set of key data
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:65:[_Exposure Configuration_](https://developer.apple.com/documentation/exposurenotification/enexposureconfiguration),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:71:$ curl https://retrieval.covidshield.app/exposure-configuration/ON.json
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:78:Code_ through a web application frontend ([COVID Alert Portal](https://github.com/cds-snc/covid-alert-portal)), which
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:80:[COVID Alert mobile app](https://github.com/cds-snc/covid-alert-app). This code is used to authenticate the
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:147:languages](https://github.com/cds-snc/covid-alert-server/tree/master/examples/new-key-claim). Most
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:151:curl -XPOST -H "Authorization: Bearer $token" "https://submission.covidshield.app/new-key-claim"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:162:WAF](https://aws.amazon.com/waf/)), aggressively throttling users with 400 and 401 responses.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:168:We hope to provide reference implementations on AWS, GCP, and Azure via [Hashicorp Terraform](https://www.terraform.io/).
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:176:COVID Alert uses [OpenTelemetry](https://github.com/open-telemetry/opentelemetry-go) to configure the metrics and tracing for the server, both the key retrieval and key submission.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:196:You can follow the instructions [here](https://prometheus.io/docs/prometheus/latest/installation/) for running Prometheus. 
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:225:COVID Alert was originally developed by [volunteers at Shopify](https://www.covidshield.app/). It was [released free of charge under a flexible open-source license](https://github.com/CovidShield/server).
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:227:This repository is being developed by the [Canadian Digital Service](https://digital.canada.ca/). We can be reached at <cds-snc@tbs-sct.gc.ca>.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:233:Adapté à partir de <https://github.com/CovidShield/server> ([voir les modifications](https://github.com/cds-snc/covid-shield-server/blob/master/FORK.md))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:235:Ce dépôt implémente un serveur de diagnostic à utiliser comme serveur pour le [cadriciel de notification d’exposition](https://covid19.apple.com/contacttracing) d’Apple et de Google, suivant les [directives fournies par les commissaires à la protection de la vie privée du Canada](https://priv.gc.ca/fr/nouvelles-du-commissariat/allocutions/2020/s-d_20200507/).
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:255:_Les [spécifications de la notification d’exposition d’Apple et de Google](https://covid19.apple.com/contacttracing) fournissent des renseignements importants pour contextualiser le reste de ce document._
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:264:Pour une vue d’ensemble technique du code de base, particulièrement du protocole et du schéma de base de données, voir [cette vidéo](https://www.youtube.com/watch?v=5GNJo1hEj5I).
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:270:L’heure d’envoi est utilisée pour regrouper les clés en compartiments, afin d’empêcher que les clients ([l’application mobile _COVID Alert_](https://github.com/cds-snc/covid-alert-app)) aient à télécharger un certain ensemble de données de clés plusieurs fois pour pouvoir vérifier l’exposition de manière répétée.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:276:[_La configuration de l’exposition_](https://developer.apple.com/documentation/exposurenotification/enexposureconfiguration), utilisée pour déterminer le risque d’une exposition donnée, est également récupérée sur le serveur `key-retrieval`. Un document JSON décrivant la configuration d’exposition actuelle pour une région donnée est disponible par le chemin `/exposure-configuration/<region>.json`, par exemple pour l’Ontario (région `ON`) :
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:279:$ curl https://retrieval.covidshield.app/exposure-configuration/ON.json
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:285:En bref, lorsque qu’un diagnostic positif est établi, le professionnel de la santé générera un _code à usage unique_ avec une application Web frontale ([COVID Alert Portal](https://github.com/cds-snc/covid-alert-portal)) qui communique avec `key-submission`. Ce code est envoyé au patient, qui entre le code dans son [application mobile _COVID Alert_](https://github.com/cds-snc/covid-alert-app). Ce code est utilisé pour authentifier l’application (une fois) vis-à-vis le serveur de diagnostic. Les paires de clés de chiffrement sont échangées par l’application et le serveur `key-submission` et sont stockée pendant quatorze jours, et la base de données est immédiatement purgée du code à usage unique.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:328:Nous avons une implémentation à titre d’exemple dont le code source sera bientôt ouvert. Cependant, nous nous attendons à ce que les autorités sanitaires préfèrent intégrer cette fonctionnalité dans leurs systèmes existants. L’intégration est extrêmement simple, et on dispose [d’exemples en plusieurs languages](https://github.com/cds-snc/covid-alert-server/tree/master/examples/new-key-claim). Au minimum :
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:331:curl -XPOST -H "Authorization: Bearer $token" "https://submission.covidshield.app/new-key-claim"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:340:- `key-submission` dépend du déploiement derrière un pare-feu (par exemple [AWS WAF](https://aws.amazon.com/waf/), ce qui freine les utilisateurs de manière agressive par des réponses 400 et 401.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:346:Nous espérons fournir des implémentations de référence sur AWS, GCP et Azure par [Hashicorp Terraform](https://www.terraform.io/).
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:354:COVID Alert utilise [OpenTelemetry](https://github.com/open-telemetry/opentelemetry-go) pour configurer les indicateurs et le traçage du serveur, à la fois pour la récupération et l’envoi des clés.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:372:Vous pouvez suivre les instructions [ici](https://prometheus.io/docs/prometheus/latest/installation/) pour exécuter Prometheus. 
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:399:COVID Alert a été développé à l’origine par [des bénévoles de Shopify](https://www.covidshield.app/). Il a été [diffusé gratuitement en vertu d’une licence ouverte flexible](https://github.com/CovidShield/server).
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:401:Ce dépôt est maintenu par le [Service numérique canadien](https://numerique.canada.ca/). Vous pouvez nous joindre à <cds-snc@tbs-sct.gc.ca>.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/SECURITY.md:5:Please see the [Vulnerability Disclosure Policy for COVID Alert](https://github.com/cds-snc/covid-alert-documentation/blob/main/VulnerabilityDisclosurePolicy.md) for further guidance.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/SECURITY.md:13:Veuillez consulter la [Politique de divulgation des vulnérabilités pour Alerte COVID](https://github.com/cds-snc/covid-alert-documentation/blob/main/PolitiqueDivulgationVulnerabilites.md) pour de plus amples détails.

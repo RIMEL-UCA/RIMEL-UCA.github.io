@@ -1,0 +1,9 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:179:- Update "instructions for patients" screens to reflect new traceback instructions in the app
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:246:- Remove traceback instructions for the instructions for patients. We want to wait for the app to be updated before those go out.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/ecs.tf:40:    tracer_provider                        = var.tracer_provider
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/ecs.tf:79:    tracer_provider                        = var.tracer_provider
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/task-definitions/covid-portal.json:29:        "name": "TRACER_PROVIDER",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/task-definitions/covid-portal.json:30:        "value": "${tracer_provider}"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/variables.auto.tfvars:23:tracer_provider       = "stdout"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/variables.tf:205:variable "tracer_provider" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/register/templates/register/start.html:11:  <p>{% trans "Use this service to create a QR code for display in your venue. Get visitors to scan the QR code when they arrive, using the COVID Alert app. This is to help trace and stop the spread of coronavirus (COVID-19)." %}</p>

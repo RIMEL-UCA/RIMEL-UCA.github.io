@@ -1,0 +1,15 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/pre-rebase.sample:93:This sample hook safeguards topic branches that have been
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:32:# --- Safety check
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/announcements/templates/announcements/announcements.html:22:                    {{announcement.content|safe}}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/templates/covid_key/generate_key.html:17:    <li>{% blocktrans %}<span>To open the app and check they’re connected to the internet.</span><strong class="break-line">OR</strong><span>To find a safe place to record the key right now.</span>{% endblocktrans %}</li>
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.mo matches
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:616:"span><strong class=\"break-line\">OR</strong><span>To find a safe place to "
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1396:"not on the portal’s safelist."
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1588:msgid "You kept these codes somewhere safe."
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1596:msgid "We’ve texted you a code and you also kept codes somewhere safe."
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:10:from django.utils.http import urlsafe_base64_encode
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:285:                "uidb64": urlsafe_base64_encode(force_bytes(user.pk)),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/forms.py:529:                            "You cannot invite ‘%(email)s’ to create an account because ‘@%(domain)s’ is not on the portal’s safelist."
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/2fa.html:16:  <p>{% trans "You kept these codes somewhere safe." %}</p>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/2fa.html:24:    <p>{% trans "We’ve texted you a code and you also kept codes somewhere safe." %}</p>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:239:- `terraform security-scan`: will flag any unsafe configuration changes

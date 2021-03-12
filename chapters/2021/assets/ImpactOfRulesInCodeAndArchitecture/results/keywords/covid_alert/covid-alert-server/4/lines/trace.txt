@@ -1,0 +1,36 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/docker-compose.yml:33:      TRACER_PROVIDER: 
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/docker-compose.yml:57:      TRACER_PROVIDER: ""
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:12:	"go.opentelemetry.io/otel/api/trace"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:15:	tracerstdout "go.opentelemetry.io/otel/exporters/trace/stdout"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:16:	"go.opentelemetry.io/otel/plugin/httptrace"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:19:	sdktrace "go.opentelemetry.io/otel/sdk/trace"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:34:// traceMetricCleaner implements Cleanuper.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:35:type traceMetricCleaner struct {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:36:	tracer func()
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:40:func (c *traceMetricCleaner) Cleanup() {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:41:	c.tracer()
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:46:	return &traceMetricCleaner{tracer: InitTracer(), meter: InitMeter(db)}
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:49:// InitTracer initializes the global trace provider.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:50:func InitTracer() func() {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:54:	tracerProvider := os.Getenv("TRACER_PROVIDER")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:55:	if tracerProvider == "" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:56:		log(nil, nil).Info("TRACER_PROVIDER not set, tracing will not be generated.")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:60:	var exporter *tracerstdout.Exporter
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:62:	switch tracerProvider {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:64:		exporter, err = tracerstdout.NewExporter(tracerstdout.Options{PrettyPrint: tracerProvider == PRETTY})
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:66:		log(nil, nil).WithField("provider", tracerProvider).Fatal("Unsupported trace provider")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:70:		log(nil, err).WithField("provider", tracerProvider).Fatal("failed to initialize exporter")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:73:	// For the demonstration, use sdktrace.AlwaysSample sampler to sample all traces.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:74:	// In a production application, use sdktrace.ProbabilitySampler with a desired probability.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:75:	tp, err := sdktrace.NewProvider(sdktrace.WithConfig(sdktrace.Config{DefaultSampler: sdktrace.AlwaysSample()}),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:76:		sdktrace.WithSyncer(exporter))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:80:	global.SetTraceProvider(tp)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:133:	tracer := global.Tracer("covidshield/request")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:136:		attrs, entries, spanCtx := httptrace.Extract(r.Context(), r)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:141:		_, span := tracer.Start(
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:142:			trace.ContextWithRemoteSpanContext(r.Context(), spanCtx),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:144:			trace.WithAttributes(attrs...),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:211:Tracing can be enabled by setting the `TRACER_PROVIDER` variable to `stdout` or `pretty`.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:213:Both `stdout` and `pretty` will send trace output to stdout but differ in their formatting. `stdout` will print
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:214:the trace as JSON on a single line whereas `pretty` will format the JSON in a human-readable way, split across
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:387:Le traçage peut être activé en définissant la variable `TRACER_PROVIDER` sur `stdout` ou `pretty`.

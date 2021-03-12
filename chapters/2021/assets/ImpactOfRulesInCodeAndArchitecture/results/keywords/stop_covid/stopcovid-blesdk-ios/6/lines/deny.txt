@@ -1,0 +1,3 @@
+stopcovid-blesdk-ios/.git/hooks/update.sample:22:# hooks.denycreatebranch
+stopcovid-blesdk-ios/.git/hooks/update.sample:48:denycreatebranch=$(git config --bool hooks.denycreatebranch)
+stopcovid-blesdk-ios/.git/hooks/update.sample:98:		if [ "$oldrev" = "$zero" -a "$denycreatebranch" = "true" ]; then

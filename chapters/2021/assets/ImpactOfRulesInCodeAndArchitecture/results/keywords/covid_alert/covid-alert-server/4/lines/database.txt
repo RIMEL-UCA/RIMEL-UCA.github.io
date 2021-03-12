@@ -1,0 +1,84 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.devcontainer/docker-compose.yml:22:      DATABASE_URL: "test:password@tcp(db)/test"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.devcontainer/docker-compose.yml:35:      MYSQL_DATABASE: test
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/index matches
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.github/workflows/pr-test-ruby-ci.yml:10:          MYSQL_DATABASE: test
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/get-sg-ids.sh:16:DB="$(getSG "covidshield-database")"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/README.md:14:Add the VPN_SG security group to the covidshield-database security group
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/README.md:24:Removes the VPN_SG security group from the covidshield-database security group
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:8:from google.protobuf import symbol_database as _symbol_database
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:11:_sym_db = _symbol_database.Default()
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:40:**Note**: It is normal to see a few errors from the retrieval service exiting initially while the MySQL database is instantiated
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:63:export DATABASE_URL="root@tcp(localhost)/covidshield"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:76:Set your database connection details using environment variables
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:77:(note that the database will be clobbered so ensure that you don't use a
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:78:production database):
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:84:$ export DB_NAME=<test database name>
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:162:export DATABASE_URL="root@tcp(localhost)/covidshield"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CONTRIBUTING.md:181:$ export DB_NAME=<test database name>
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/docker-compose.yml:11:      MYSQL_DATABASE: covidshield
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/docker-compose.yml:30:      DATABASE_URL: covidshield:covidshield@tcp(mysql)/covidshield
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/docker-compose.yml:54:      DATABASE_URL: covidshield:covidshield@tcp(mysql)/covidshield
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/examples/retrieval/app.rb:8:class Database
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/examples/retrieval/app.rb:41:    @database = Database.new
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/examples/retrieval/app.rb:83:    @database.drop_old_data
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/examples/retrieval/app.rb:88:      fetch_date_number(date_number) unless @database.fetched?(date_number)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/examples/retrieval/app.rb:108:      @database.mark_fetched(date_number)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/mocks/pkg/persistence/queryRower.go:8:	sql "database/sql"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:33:	database          persistence.Conn
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:44:		database:          newDatabase(DatabaseURL()),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:67:	a.servlets = append(a.servlets, server.NewUploadServlet(a.database))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:68:	a.servlets = append(a.servlets, server.NewKeyClaimServlet(a.database, lookup))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:74:	migrateDB(DatabaseURL()) // This is a bit of a weird place for this but it works for now.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:78:	a.components = append(a.components, newExpirationWorker(a.database))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:80:	a.servlets = append(a.servlets, server.NewRetrieveServlet(a.database, retrieval.NewAuthenticator(), retrieval.NewSigner()))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:85:	a.servlets = append(a.servlets, server.NewMetricsServlet(a.database, lookup))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:100:	return &App{&main}, a.database
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:103:func DatabaseURL() string {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:104:	url := os.Getenv("DATABASE_URL")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:106:		panic("DATABASE_URL must be set")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:111:func newDatabase(dbURL string) persistence.Conn {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:140:func migrateDB(databaseURL string) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:141:	log(nil, nil).Info("running database bootstrap / migrations")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:142:	err := persistence.MigrateDatabase(databaseURL)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/app.go:144:		log(nil, err).Fatal("error running database bootstrap / migrations")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/test-tools.go:17:	a.servlets = append(a.servlets, server.NewTestToolsServlet(a.database, lookup))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/test-tools_test.go:21:		database:          nil,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/app/test-tools_test.go:39:		database:          nil,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:8:	"database/sql"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:28:// method for each query we support. The one exception is database
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:115:		log(nil, err).Fatal("Could not connect to database")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:7:	"database/sql/driver"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/events.go:5:	"database/sql"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/main_test.go:4:	"database/sql"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/metric_queries.go:4:	"database/sql"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:4:	"database/sql"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:8:	// inject mysql support for database/sql
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:155:// MigrateDatabase creates the database and migrates it into the correct state.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:156:func MigrateDatabase(url string) error {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:165:	if _, err := dbForCreate.Exec(`CREATE DATABASE IF NOT EXISTS ` + dbName); err != nil {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/otk_duration.go:4:	"database/sql"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:5:	"database/sql"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:5:	"database/sql/driver"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/test_tools.go:5:	"database/sql"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim.go:113:		return requestError(ctx, w, err, "database error checking claim-key ban", http.StatusInternalServerError, kcre)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim.go:162:			msg := "database error recording claim-key failure"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim_test.go:352:	testhelpers.AssertLog(t, hook, 1, logrus.ErrorLevel, "database error checking claim-key ban")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim_test.go:462:	testhelpers.AssertLog(t, hook, 1, logrus.ErrorLevel, "database error recording claim-key failure")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/retrieve.go:124:		return s.fail(log(ctx, err), w, "database error", "", http.StatusInternalServerError)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/retrieve_test.go:207:	testhelpers.AssertLog(t, hook, 1, logrus.ErrorLevel, "database error")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:41:generated from this codebase, and can be deployed independently as long as they share a database. It
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:43:the same database, though there would be little value in deploying multiple configurations of
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:46:For a more technical overview of the codebase, especially of the protocol and database schema, see
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:83:purged from the database.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:86:days, after which they are purged from the database.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/scripts/heroku_run.sh:15:database="${strarr[1]}"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/scripts/heroku_run.sh:21:db="${u_and_p}@tcp(${host})/${database}"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/scripts/heroku_run.sh:23:DATABASE_URL=$db PORT=$PORT /usr/local/bin/server --config_file_path ./
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:28:DATABASE_URL = "#{DB_USER}:#{DB_PASS}@tcp(#{DB_HOST})/#{DB_NAME}"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:38:      Helper.with_server_with_pristine_database do |sub_conn, ret_conn|
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:42:          host: DB_HOST, username: DB_USER, password: DB_PASS, database: DB_NAME,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:197:    def with_server_with_pristine_database(&block)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:198:      with_pristine_database { with_servers(&block) }
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:214:          'DATABASE_URL' => DATABASE_URL,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:240:    def with_pristine_database(&block)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:204:    STDERR.puts("adding many records to the database (takes about 5-12 seconds)...")

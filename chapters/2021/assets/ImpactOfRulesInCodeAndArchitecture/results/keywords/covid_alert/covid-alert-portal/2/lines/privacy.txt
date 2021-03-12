@@ -1,0 +1,26 @@
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/index matches
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/objects/pack/pack-b2d5516249985a8a97b26ce8dac1bd2663fa44fa.pack matches
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:126:- Updated the privacy pages to include new text about Google Analytics.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:267:- Updated content for the Privacy and Terms of use pages
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:370:- The privacy page has been simplified
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.mo matches
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:940:#: profiles/templates/profiles/privacy.html:5
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:941:msgid "Privacy"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1764:#: profiles/templates/profiles/privacy.html:9
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1765:msgid "Privacy notice for COVID Alert Portal"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1768:#: profiles/templates/profiles/privacy.html:10
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1796:"id=26761\"> <em>Standard on Privacy and Web Analytics</em></a>.\n"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1810:"target=\"_blank\">Privacy Commissioner of Canada</a>.\n"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/templates/includes/footer.html:10:                    <li><a href="{% url 'privacy' %}">{% trans "Privacy" %}</a></li>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/privacy.html:5:    {% trans "Privacy" %}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/privacy.html:9:    <h1>{% trans "Privacy notice for COVID Alert Portal" %}</h1>
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/privacy.html:26:            <b>We are allowed to use this information and these services</b> under the <a href="https://laws-lois.justice.gc.ca/eng/acts/H-3.2/"><em>Department of Health Act</em></a> and the <a href="https://laws-lois.justice.gc.ca/eng/acts/f-11/"><em>Financial Administration Act</em></a>. We also follow the <a href="https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=26761"> <em>Standard on Privacy and Web Analytics</em></a>.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/privacy.html:35:            <b>You have the right to complain</b> about how we use your information to the <a href="https://www.priv.gc.ca/en/for-individuals/" target="_blank">Privacy Commissioner of Canada</a>.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:162:    def test_privacy_page(self):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:163:        response = self.client.get(reverse("privacy"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:165:        self.assertContains(response, "<h1>Privacy notice for COVID Alert Portal</h1>")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:417:        response = self.client.get(reverse("privacy"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/tests.py:418:        self.assertContains(response, "<h1>Privacy notice for COVID Alert Portal</h1>")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/urls.py:98:        "privacy/",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/urls.py:99:        TemplateView.as_view(template_name="profiles/privacy.html"),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/urls.py:100:        name="privacy",

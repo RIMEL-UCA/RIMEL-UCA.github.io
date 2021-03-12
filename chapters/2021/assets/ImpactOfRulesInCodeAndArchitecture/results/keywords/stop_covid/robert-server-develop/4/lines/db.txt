@@ -1,0 +1,344 @@
+./robert-server-develop/pom.xml:61:			<groupId>org.mongodb</groupId>
+./robert-server-develop/robert-crypto-grpc-server-messaging/mvnw.cmd:93::findBaseDir
+./robert-server-develop/robert-crypto-grpc-server-messaging/mvnw.cmd:98:goto findBaseDir
+./robert-server-develop/robert-crypto-grpc-server-messaging/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/client/CryptoServerGrpcClientTest.java:308:        byte[] rndBytes = new byte[nbOfbytes];
+./robert-server-develop/robert-crypto-grpc-server-messaging/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/client/CryptoServerGrpcClientTest.java:310:        sr.nextBytes(rndBytes);
+./robert-server-develop/robert-crypto-grpc-server-messaging/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/client/CryptoServerGrpcClientTest.java:311:        return rndBytes;
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/database/repository/ClientIdentifierRepository.java:14:    Optional<ClientIdentifier> findByIdA(String idA);
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/service/impl/ClientKeyStorageServiceImpl.java:66:        } while (this.clientIdentifierRepository.findByIdA(Base64.encode(id)).isPresent() && i < MAX_ID_CREATION_ATTEMPTS);
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/service/impl/ClientKeyStorageServiceImpl.java:98:        byte[] rndBytes = new byte[nbOfbytes];
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/service/impl/ClientKeyStorageServiceImpl.java:100:        sr.nextBytes(rndBytes);
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/service/impl/ClientKeyStorageServiceImpl.java:101:        return rndBytes;
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/service/impl/ClientKeyStorageServiceImpl.java:114:            if (!this.clientIdentifierRepository.findByIdA(tempId).isPresent()) {
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/service/impl/ClientKeyStorageServiceImpl.java:183:        return this.clientIdentifierRepository.findByIdA(Base64.encode(id))
+./robert-server-develop/robert-crypto-grpc-server-storage/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/storage/service/impl/ClientKeyStorageServiceImpl.java:221:        this.clientIdentifierRepository.findByIdA(Base64.encode(id)).ifPresent(this.clientIdentifierRepository::delete);
+./robert-server-develop/robert-crypto-grpc-server-storage/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/storage/service/impl/ClientKeyStorageImplTest.java:98:        public Optional<ClientIdentifier> findByIdA(String idA) {
+./robert-server-develop/robert-crypto-grpc-server-storage/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/storage/service/impl/ClientKeyStorageImplTest.java:179:        public Optional<ClientIdentifier> findById(Long aLong) {
+./robert-server-develop/robert-crypto-grpc-server/mvnw.cmd:93::findBaseDir
+./robert-server-develop/robert-crypto-grpc-server/mvnw.cmd:98:goto findBaseDir
+./robert-server-develop/robert-crypto-grpc-server/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/service/impl/CryptoGrpcServiceBaseImpl.java:138:            Optional<ClientIdentifierBundle> clientIdentifierBundleFromDb = this.clientStorageService.createClientIdUsingKeys(
+./robert-server-develop/robert-crypto-grpc-server/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/service/impl/CryptoGrpcServiceBaseImpl.java:142:            if(!clientIdentifierBundleFromDb.isPresent()) {
+./robert-server-develop/robert-crypto-grpc-server/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/service/impl/CryptoGrpcServiceBaseImpl.java:156:                    clientIdentifierBundleFromDb.get().getKeyForTuples(),
+./robert-server-develop/robert-crypto-grpc-server/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/service/impl/CryptoGrpcServiceBaseImpl.java:157:                    clientIdentifierBundleFromDb.get().getId(),
+./robert-server-develop/robert-crypto-grpc-server/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/service/impl/CryptoGrpcServiceBaseImpl.java:166:                        .setIdA(ByteString.copyFrom(clientIdentifierBundleFromDb.get().getId()))
+./robert-server-develop/robert-crypto-grpc-server/src/main/java/fr/gouv/stopc/robert/crypto/grpc/server/service/impl/CryptoGrpcServiceBaseImpl.java:178:                    .setIdA(ByteString.copyFrom(clientIdentifierBundleFromDb.get().getId()))
+./robert-server-develop/robert-crypto-grpc-server/src/main/resources/application.properties:18:spring.datasource.url= ${ROBERT_CRYPTO_SERVER_DB_URL:jdbc:postgresql://localhost:5432/robert}
+./robert-server-develop/robert-crypto-grpc-server/src/main/resources/application.properties:19:spring.datasource.username=${ROBERT_CRYPTO_SERVER_DB_USR:robert}
+./robert-server-develop/robert-crypto-grpc-server/src/main/resources/application.properties:20:spring.datasource.password=${ROBERT_CRYPTO_SERVER_DB_PWD:robert}
+./robert-server-develop/robert-crypto-grpc-server/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/CryptoServiceGrpcServerTest.java:991:    void testDeleteIdBadMacFails() {
+./robert-server-develop/robert-crypto-grpc-server/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/CryptoServiceGrpcServerTest.java:1871:            byte[] rndBytes = new byte[nbOfbytes];
+./robert-server-develop/robert-crypto-grpc-server/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/CryptoServiceGrpcServerTest.java:1873:            sr.nextBytes(rndBytes);
+./robert-server-develop/robert-crypto-grpc-server/src/test/java/test/fr/gouv/stopc/robert/crypto/grpc/server/CryptoServiceGrpcServerTest.java:1874:            return rndBytes;
+./robert-server-develop/robert-server-batch/mvnw.cmd:93::findBaseDir
+./robert-server-develop/robert-server-batch/mvnw.cmd:98:goto findBaseDir
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/RobertServerBatchApplication.java:6:import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/RobertServerBatchApplication.java:8:import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/configuration/ContactsProcessingConfiguration.java:30:import org.springframework.data.mongodb.core.MongoTemplate;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/configuration/ContactsProcessingConfiguration.java:31:import org.springframework.data.mongodb.core.query.Criteria;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/configuration/ContactsProcessingConfiguration.java:32:import org.springframework.data.mongodb.core.query.Query;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/configuration/ScoringAlgorithmConfiguration.java:25:	// limit power in Db below which the collected value is assumed to be zero
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/model/ItemIdMapping.java:8:import org.springframework.data.mongodb.core.mapping.Document;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/ContactProcessor.java:128:                        Optional<Registration> registrationRecord = registrationService.findById(idA);
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/repository/ItemIdMappingRepository.java:4:import org.springframework.data.mongodb.repository.MongoRepository;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/repository/ItemIdMappingRepository.java:5:import org.springframework.data.mongodb.repository.Query;
+./robert-server-develop/robert-server-batch/src/main/resources/application-dev.properties:1:#spring.data.mongodb.authentication-database= # Authentication database name.
+./robert-server-develop/robert-server-batch/src/main/resources/application-dev.properties:3:# spring.data.mongodb.database=${ROBERT_SERVER_DB_NAME:protectedRobertDB}
+./robert-server-develop/robert-server-batch/src/main/resources/application-dev.properties:4:#spring.data.mongodb.field-naming-strategy= # Fully qualified name of the FieldNamingStrategy to use.
+./robert-server-develop/robert-server-batch/src/main/resources/application-dev.properties:5:#spring.data.mongodb.grid-fs-database= # GridFS database name.
+./robert-server-develop/robert-server-batch/src/main/resources/application-dev.properties:6:# spring.data.mongodb.host=${ROBERT_SERVER_DB_HOST:localhost}
+./robert-server-develop/robert-server-batch/src/main/resources/application-dev.properties:8:#spring.data.mongodb.password= # Login password of the mongo server.
+./robert-server-develop/robert-server-batch/src/main/resources/application-dev.properties:10:# spring.data.mongodb.port=${ROBERT_SERVER_DB_PORT:27017}
+./robert-server-develop/robert-server-batch/src/main/resources/application-dev.properties:11:spring.data.mongodb.uri=${ROBERT_SERVER_DB_URI:mongodb\://${ROBERT_SERVER_DB_HOST:localhost}\:${ROBERT_SERVER_DB_PORT:27017}/${ROBERT_SERVER_DB_NAME:protectedRobertDB}}
+./robert-server-develop/robert-server-batch/src/main/resources/application-dev.properties:24:# RSSI (in dB) at 1 meter used by the scoring algorithm
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:331:					.findById(registrationWithEE.getPermanentIdentifier());
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:335:			assertRiskThresholdExceededBasedOnConfiguration(expectedRegistration.get());
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:406:					.findById(registrationWithEE.getPermanentIdentifier());
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:411:			assertRiskThresholdExceededBasedOnConfiguration(expectedRegistration.get());
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:598:    public void testProcessContactWhenOneHelloMessageHasADifferentEpochShouldBeSuccessfullProcessed() {
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:690:                    .findById(this.registration.get().getPermanentIdentifier());
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:699:            assertRiskThresholdExceededBasedOnConfiguration(expectedRegistration.get());
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:887:					.findById(registrationWithEE.getPermanentIdentifier());
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:893:			assertRiskThresholdExceededBasedOnConfiguration(expectedRegistration.get());
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:997:                    .findById(this.registration.get().getPermanentIdentifier());
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:1005:            assertRiskThresholdExceededBasedOnConfiguration(expectedRegistration.get());
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:1101:					.findById(registrationWithEE.getPermanentIdentifier());
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:1109:			assertRiskThresholdExceededBasedOnConfiguration(expectedRegistration.get());
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ContactProcessorTest.java:1179:	private void assertRiskThresholdExceededBasedOnConfiguration(Registration expectedRegistration) {
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ItemIdProcessorTest.java:69:		byte[] rndBytes1 = new byte[5];
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ItemIdProcessorTest.java:70:		sr.nextBytes(rndBytes1);
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ItemIdProcessorTest.java:72:		byte[] rndBytes2 = new byte[5];
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ItemIdProcessorTest.java:73:		sr.nextBytes(rndBytes2);
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ItemIdProcessorTest.java:75:		Registration registration1 = Registration.builder().permanentIdentifier(rndBytes1).build();
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/ItemIdProcessorTest.java:76:		Registration registration2 = Registration.builder().permanentIdentifier(rndBytes2).build();
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/PurgeOldEpochExpositionsProcessorTest.java:83:        Optional<Registration> reg = this.registrationService.findById(this.registration.get().getPermanentIdentifier());
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/PurgeOldEpochExpositionsProcessorTest.java:114:        Optional<Registration> reg = this.registrationService.findById(this.registration.get().getPermanentIdentifier());
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/PurgeOldEpochExpositionsProcessorTest.java:145:        Optional<Registration> reg = this.registrationService.findById(this.registration.get().getPermanentIdentifier());
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/RegistrationProcessorTest.java:95:        Optional<Registration> reg = this.registrationService.findById(this.registration.get().getPermanentIdentifier());
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/RegistrationProcessorTest.java:123:        Optional<Registration> reg = this.registrationService.findById(this.registration.get().getPermanentIdentifier());
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/RegistrationProcessorTest.java:155:        Optional<Registration> reg = this.registrationService.findById(this.registration.get().getPermanentIdentifier());
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/RegistrationProcessorTest.java:187:        Optional<Registration> reg = this.registrationService.findById(this.registration.get().getPermanentIdentifier());
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/RegistrationProcessorTest.java:197:    public void testNotifiedBecomesFalseIfRiskDetectedSucceeds() {
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/RegistrationProcessorTest.java:275:        Optional<Registration> reg = this.registrationService.findById(this.registration.get().getPermanentIdentifier());
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/UpdateRegistrationFlagsProcessorTest.java:103:    public void testRegistrationShouldNotBeUpdatedWhenAtRiskAndNotifiedButEpochMinimunIsNotReached() {
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/UpdateRegistrationFlagsProcessorTest.java:125:    public void testRegistrationShouldNotBeUpdatedWhenAtRiskAndNotifiedButEpochMinimunIsReached() {
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/processor/UpdateRegistrationFlagsProcessorTest.java:149:    public void testRegistrationShouldNotBeUpdatedWhenAtRiskAndNotifiedButEpochMinimunIsExceeded() {
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/repository/ItemIdMappingRepositoryTest.java:36:        byte[] rndBytes1 = new byte[5];
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/repository/ItemIdMappingRepositoryTest.java:37:        sr.nextBytes(rndBytes1);
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/repository/ItemIdMappingRepositoryTest.java:39:        byte[] rndBytes2 = new byte[5];
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/repository/ItemIdMappingRepositoryTest.java:40:        sr.nextBytes(rndBytes2);
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/repository/ItemIdMappingRepositoryTest.java:42:        byte[] rndBytes3 = new byte[5];
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/repository/ItemIdMappingRepositoryTest.java:43:        sr.nextBytes(rndBytes3);
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/repository/ItemIdMappingRepositoryTest.java:45:        byte[] rndBytes4 = new byte[5];
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/repository/ItemIdMappingRepositoryTest.java:46:        sr.nextBytes(rndBytes4);
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/repository/ItemIdMappingRepositoryTest.java:48:        byte[] rndBytes5 = new byte[5];
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/repository/ItemIdMappingRepositoryTest.java:49:        sr.nextBytes(rndBytes5);
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/repository/ItemIdMappingRepositoryTest.java:51:        ItemIdMapping rh1 = ItemIdMapping.builder().id(1l).itemId(rndBytes1).build();
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/repository/ItemIdMappingRepositoryTest.java:52:        ItemIdMapping rh2 = ItemIdMapping.builder().id(2l).itemId(rndBytes2).build();
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/repository/ItemIdMappingRepositoryTest.java:53:        ItemIdMapping rh3 = ItemIdMapping.builder().id(3l).itemId(rndBytes3).build();
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/repository/ItemIdMappingRepositoryTest.java:54:        ItemIdMapping rh4 = ItemIdMapping.builder().id(4l).itemId(rndBytes4).build();
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/repository/ItemIdMappingRepositoryTest.java:55:        ItemIdMapping rh5 = ItemIdMapping.builder().id(5l).itemId(rndBytes5).build();
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/repository/ItemIdMappingRepositoryTest.java:70:        assertFalse(containsByteArray(itemIdMappings, rndBytes1));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/repository/ItemIdMappingRepositoryTest.java:71:        assertTrue(containsByteArray(itemIdMappings, rndBytes2));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/repository/ItemIdMappingRepositoryTest.java:72:        assertTrue(containsByteArray(itemIdMappings, rndBytes3));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/repository/ItemIdMappingRepositoryTest.java:73:        assertTrue(containsByteArray(itemIdMappings, rndBytes4));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/repository/ItemIdMappingRepositoryTest.java:74:        assertFalse(containsByteArray(itemIdMappings, rndBytes5));
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/utils/ProcessorTestUtils.java:15:        byte[] rndBytes = new byte[size];
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/utils/ProcessorTestUtils.java:17:        sr.nextBytes(rndBytes);
+./robert-server-develop/robert-server-batch/src/test/java/test/fr/gouv/stopc/robertserver/batch/utils/ProcessorTestUtils.java:19:        return rndBytes;
+./robert-server-develop/robert-server-batch/src/test/resources/application.properties:1:#spring.data.mongodb.authentication-database= # Authentication database name.
+./robert-server-develop/robert-server-batch/src/test/resources/application.properties:3:spring.data.mongodb.database=test
+./robert-server-develop/robert-server-batch/src/test/resources/application.properties:4:#spring.data.mongodb.field-naming-strategy= # Fully qualified name of the FieldNamingStrategy to use.
+./robert-server-develop/robert-server-batch/src/test/resources/application.properties:5:#spring.data.mongodb.grid-fs-database= # GridFS database name.
+./robert-server-develop/robert-server-batch/src/test/resources/application.properties:6:spring.data.mongodb.host=localhost
+./robert-server-develop/robert-server-batch/src/test/resources/application.properties:8:#spring.data.mongodb.password= # Login password of the mongo server.
+./robert-server-develop/robert-server-batch/src/test/resources/application.properties:10:spring.data.mongodb.port=27717
+./robert-server-develop/robert-server-batch/src/test/resources/application.properties:20:# RSSI (in dB) at 1 meter used by the scoring algorithm
+./robert-server-develop/robert-server-common/mvnw.cmd:93::findBaseDir
+./robert-server-develop/robert-server-common/mvnw.cmd:98:goto findBaseDir
+./robert-server-develop/robert-server-common/pom.xml:43:			<groupId>org.mongodb</groupId>
+./robert-server-develop/robert-server-common/src/main/java/fr/gouv/stopc/robert/server/common/utils/ByteUtils.java:76:        byte[] rndBytes = new byte[nbOfbytes];
+./robert-server-develop/robert-server-common/src/main/java/fr/gouv/stopc/robert/server/common/utils/ByteUtils.java:78:        sr.nextBytes(rndBytes);
+./robert-server-develop/robert-server-common/src/main/java/fr/gouv/stopc/robert/server/common/utils/ByteUtils.java:79:        return rndBytes;
+./robert-server-develop/robert-server-crypto/mvnw.cmd:93::findBaseDir
+./robert-server-develop/robert-server-crypto/mvnw.cmd:98:goto findBaseDir
+./robert-server-develop/robert-server-crypto/src/test/java/test/fr/gouv/stopc/robert/server/crypto/structure/impl/CryptoSkinny64KeyTest.java:24:			(byte) 0xb2, (byte) 0xdb, (byte) 0xb4, (byte) 0x1b, (byte) 0x42, (byte) 0x2d, (byte) 0xfc, (byte) 0xd0};
+./robert-server-develop/robert-server-crypto/src/test/java/test/fr/gouv/stopc/robert/server/crypto/structure/impl/CryptoSkinny64KeyTest.java:31:			(byte) 0x90, (byte) 0x61, (byte) 0x87, (byte) 0x53, (byte) 0x8f, (byte) 0x60, (byte) 0xb2, (byte) 0xdb,
+./robert-server-develop/robert-server-database/mvnw.cmd:93::findBaseDir
+./robert-server-develop/robert-server-database/mvnw.cmd:98:goto findBaseDir
+./robert-server-develop/robert-server-database/pom.xml:47:			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/model/ApplicationConfigurationModel.java:4:import org.springframework.data.mongodb.core.mapping.Document;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/model/Contact.java:7:import org.springframework.data.mongodb.core.mapping.Document;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/model/Registration.java:8:import org.springframework.data.mongodb.core.mapping.Document;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/repository/ApplicationConfigurationRepository.java:3:import org.springframework.data.mongodb.repository.MongoRepository;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/repository/ContactUUIDRepository.java:8:import org.springframework.data.mongodb.repository.MongoRepository;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/repository/RegistrationRepository.java:3:import org.springframework.data.mongodb.repository.MongoRepository;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/repository/RegistrationRepository.java:4:import org.springframework.data.mongodb.repository.Query;
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/service/IRegistrationService.java:12:	Optional<Registration> findById(byte[] id);
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/service/impl/RegistrationService.java:34:    public Optional<Registration> findById(byte[] id) {
+./robert-server-develop/robert-server-database/src/main/java/fr/gouv/stopc/robertserver/database/service/impl/RegistrationService.java:35:        return this.registrationRepository.findById(id);
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/RegistrationRepositoryTest.java:31:		byte[] rndBytes = new byte[5];
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/RegistrationRepositoryTest.java:32:		sr.nextBytes(rndBytes);
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/RegistrationRepositoryTest.java:36:				Registration.builder().permanentIdentifier(rndBytes).build());
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/RegistrationRepositoryTest.java:47:		byte[] rndBytes = new byte[5];
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/RegistrationRepositoryTest.java:48:		sr.nextBytes(rndBytes);
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/RegistrationRepositoryTest.java:50:		this.registrationRepository.insert(Registration.builder().permanentIdentifier(rndBytes).build());
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/RegistrationRepositoryTest.java:53:		assertTrue(this.registrationRepository.existsById(rndBytes));	
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/RegistrationRepositoryTest.java:88:		byte[] rndBytes1 = new byte[5];
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/RegistrationRepositoryTest.java:89:		sr.nextBytes(rndBytes1);
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/RegistrationRepositoryTest.java:92:		registration1.setPermanentIdentifier(rndBytes1);
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/RegistrationRepositoryTest.java:95:		byte[] rndBytes2 = new byte[5];
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/RegistrationRepositoryTest.java:96:		sr.nextBytes(rndBytes2);
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/RegistrationRepositoryTest.java:98:		registration2.setPermanentIdentifier(rndBytes2);
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/RegistrationRepositoryTest.java:101:		byte[] rndBytes3 = new byte[5];
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/RegistrationRepositoryTest.java:102:		sr.nextBytes(rndBytes3);
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/repository/RegistrationRepositoryTest.java:104:		registration3.setPermanentIdentifier(rndBytes3);
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/service/RegistrationServiceImplTest.java:66:		byte[] rndBytes = new byte[nbOfbytes];
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/service/RegistrationServiceImplTest.java:68:		sr.nextBytes(rndBytes);
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/service/RegistrationServiceImplTest.java:69:		return rndBytes;
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/service/RegistrationServiceImplTest.java:108:	public void testFindById() {
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/service/RegistrationServiceImplTest.java:111:		this.registrationService.findById(ByteUtils.EMPTY_BYTE_ARRAY);
+./robert-server-develop/robert-server-database/src/test/java/test/fr/gouv/stopc/robertserver/database/service/RegistrationServiceImplTest.java:114:		verify(this.registrationRepository).findById(ByteUtils.EMPTY_BYTE_ARRAY);
+./robert-server-develop/robert-server-database/src/test/resources/application.properties:1:#spring.data.mongodb.authentication-database= # Authentication database name.
+./robert-server-develop/robert-server-database/src/test/resources/application.properties:3:spring.data.mongodb.database=test
+./robert-server-develop/robert-server-database/src/test/resources/application.properties:4:#spring.data.mongodb.field-naming-strategy= # Fully qualified name of the FieldNamingStrategy to use.
+./robert-server-develop/robert-server-database/src/test/resources/application.properties:5:#spring.data.mongodb.grid-fs-database= # GridFS database name.
+./robert-server-develop/robert-server-database/src/test/resources/application.properties:6:spring.data.mongodb.host=localhost
+./robert-server-develop/robert-server-database/src/test/resources/application.properties:8:#spring.data.mongodb.password= # Login password of the mongo server.
+./robert-server-develop/robert-server-database/src/test/resources/application.properties:10:spring.data.mongodb.port=27717
+./robert-server-develop/robert-server-database/src/test/resources/application.properties:12:spring.data.mongodb.repositories.enabled=true 
+./robert-server-develop/robert-server-database/src/test/resources/application.properties:14:#spring.data.mongodb.uri=mongodb://localhost/local
+./robert-server-develop/robert-server-dataset-injector/README.md:4:- running instance of crypto-server (which depends on PostgreSQL DB and softHSMv2)
+./robert-server-develop/robert-server-dataset-injector/README.md:5:- MongoDB database instance
+./robert-server-develop/robert-server-dataset-injector/README.md:18:# Reset MongoDB database
+./robert-server-develop/robert-server-dataset-injector/README.md:19:The script script/reset-mongo-db allows to reset the MongoDB database.
+./robert-server-develop/robert-server-dataset-injector/README.md:21:This script takes the database name in parameter. Example : ./reset-mongo-db.sh protectedRobertDB
+./robert-server-develop/robert-server-dataset-injector/mvnw.cmd:93::findBaseDir
+./robert-server-develop/robert-server-dataset-injector/mvnw.cmd:98:goto findBaseDir
+./robert-server-develop/robert-server-dataset-injector/pom.xml:47:			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+./robert-server-develop/robert-server-dataset-injector/script/reset-mongo-db.bat:3:set dbname=%1
+./robert-server-develop/robert-server-dataset-injector/script/reset-mongo-db.bat:4:if [%dbname%] ==[] (
+./robert-server-develop/robert-server-dataset-injector/script/reset-mongo-db.bat:5:echo Please give the database name in parameter. Example : protectedRobertDB.
+./robert-server-develop/robert-server-dataset-injector/script/reset-mongo-db.bat:8:echo Reset the collections idTable and CONTACTS_TO_PROCESS of the database %dbname%.
+./robert-server-develop/robert-server-dataset-injector/script/reset-mongo-db.bat:9:cd C:\Program Files\MongoDB\Server\4.2\bin
+./robert-server-develop/robert-server-dataset-injector/script/reset-mongo-db.bat:10:mongo.exe %dbname% --eval "db.runCommand( { drop: 'idTable' } )"
+./robert-server-develop/robert-server-dataset-injector/script/reset-mongo-db.bat:11:mongo.exe %dbname% --eval "db.runCommand( { drop: 'CONTACTS_TO_PROCESS' } )"
+./robert-server-develop/robert-server-dataset-injector/script/reset-mongo-db.sh:3:dbname=$1
+./robert-server-develop/robert-server-dataset-injector/script/reset-mongo-db.sh:4:if [ -z "${dbname}" ]
+./robert-server-develop/robert-server-dataset-injector/script/reset-mongo-db.sh:6:    echo Please give the database name in parameter. Example : protectedRobertDB.
+./robert-server-develop/robert-server-dataset-injector/script/reset-mongo-db.sh:9:echo Reset the collections idTable and CONTACTS_TO_PROCESS of the database ${dbname}.
+./robert-server-develop/robert-server-dataset-injector/script/reset-mongo-db.sh:10:mongo -d ${dbname} --eval "db.runCommand( { drop: 'idTable' } )"
+./robert-server-develop/robert-server-dataset-injector/script/reset-mongo-db.sh:11:mongo -d ${dbname} --eval "db.runCommand( { drop: 'CONTACTS_TO_PROCESS' } )"
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/RobertServerInjectorDatasetApplication.java:10:import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/RobertServerInjectorDatasetApplication.java:14:import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImpl.java:175:        Optional<ClientIdentifier> clientId = clientIdentifierRepository.findByIdA(Base64.encode(permanentIdentifier));
+./robert-server-develop/robert-server-dataset-injector/src/main/java/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImpl.java:185:            log.error("Could not find id in clientIdentifier DB table.");
+./robert-server-develop/robert-server-dataset-injector/src/main/resources/application.properties:2:#spring.data.mongodb.authentication-database= # Authentication database name.
+./robert-server-develop/robert-server-dataset-injector/src/main/resources/application.properties:4:# spring.data.mongodb.database=${ROBERT_SERVER_DB_NAME:protectedRobertDB}
+./robert-server-develop/robert-server-dataset-injector/src/main/resources/application.properties:5:#spring.data.mongodb.field-naming-strategy= # Fully qualified name of the FieldNamingStrategy to use.
+./robert-server-develop/robert-server-dataset-injector/src/main/resources/application.properties:6:#spring.data.mongodb.grid-fs-database= # GridFS database name.
+./robert-server-develop/robert-server-dataset-injector/src/main/resources/application.properties:7:# spring.data.mongodb.host=${ROBERT_SERVER_DB_HOST:localhost}
+./robert-server-develop/robert-server-dataset-injector/src/main/resources/application.properties:9:#spring.data.mongodb.password= # Login password of the mongo server.
+./robert-server-develop/robert-server-dataset-injector/src/main/resources/application.properties:11:# spring.data.mongodb.port=${ROBERT_SERVER_DB_PORT:27017}
+./robert-server-develop/robert-server-dataset-injector/src/main/resources/application.properties:12:spring.data.mongodb.uri=${ROBERT_SERVER_DB_URI:mongodb\://${ROBERT_SERVER_DB_HOST:localhost}\:${ROBERT_SERVER_DB_PORT:27017}/${ROBERT_SERVER_DB_NAME:protectedRobertDB}}
+./robert-server-develop/robert-server-dataset-injector/src/main/resources/application.properties:22:# RSSI (in dB) at 1 meter used by the scoring algorithm
+./robert-server-develop/robert-server-dataset-injector/src/main/resources/application.properties:46:spring.datasource.url= ${ROBERT_CRYPTO_SERVER_DB_URL:jdbc:postgresql://localhost:5432/robert}
+./robert-server-develop/robert-server-dataset-injector/src/main/resources/application.properties:47:spring.datasource.username=${ROBERT_CRYPTO_SERVER_DB_USR:robert}
+./robert-server-develop/robert-server-dataset-injector/src/main/resources/application.properties:48:spring.datasource.password=${ROBERT_CRYPTO_SERVER_DB_PWD:robert}
+./robert-server-develop/robert-server-dataset-injector/src/test/java/test/fr/gouv/stopc/robertserver/dataset/injector/service/impl/InjectorDataSetServiceImplTest.java:77:        when(clientIdentifierRepository.findByIdA(any()))
+./robert-server-develop/robert-server-dataset-injector/src/test/java/test/fr/gouv/stopc/robertserver/dataset/injector/utils/GenerateIdUtils.java:26:        byte[] rndBytes = new byte[size];
+./robert-server-develop/robert-server-dataset-injector/src/test/java/test/fr/gouv/stopc/robertserver/dataset/injector/utils/GenerateIdUtils.java:28:        sr.nextBytes(rndBytes);
+./robert-server-develop/robert-server-dataset-injector/src/test/java/test/fr/gouv/stopc/robertserver/dataset/injector/utils/GenerateIdUtils.java:30:        return rndBytes;
+./robert-server-develop/robert-server-dataset-injector/src/test/resources/application.properties:1:#spring.data.mongodb.authentication-database= # Authentication database name.
+./robert-server-develop/robert-server-dataset-injector/src/test/resources/application.properties:3:spring.data.mongodb.database=test
+./robert-server-develop/robert-server-dataset-injector/src/test/resources/application.properties:4:#spring.data.mongodb.field-naming-strategy= # Fully qualified name of the FieldNamingStrategy to use.
+./robert-server-develop/robert-server-dataset-injector/src/test/resources/application.properties:5:#spring.data.mongodb.grid-fs-database= # GridFS database name.
+./robert-server-develop/robert-server-dataset-injector/src/test/resources/application.properties:6:spring.data.mongodb.host=localhost
+./robert-server-develop/robert-server-dataset-injector/src/test/resources/application.properties:8:#spring.data.mongodb.password= # Login password of the mongo server.
+./robert-server-develop/robert-server-dataset-injector/src/test/resources/application.properties:10:spring.data.mongodb.port=27717
+./robert-server-develop/robert-server-dataset-injector/src/test/resources/application.properties:12:spring.data.mongodb.repositories.enabled=true 
+./robert-server-develop/robert-server-dataset-injector/src/test/resources/application.properties:14:#spring.data.mongodb.uri=mongodb://localhost/local
+./robert-server-develop/robert-server-dataset-injector/src/test/resources/application.properties:31:spring.datasource.url= ${ROBERT_CRYPTO_SERVER_DB_URL:jdbc:postgresql://localhost:5432/robert}
+./robert-server-develop/robert-server-dataset-injector/src/test/resources/application.properties:32:spring.datasource.username=${ROBERT_CRYPTO_SERVER_DB_USR:robert}
+./robert-server-develop/robert-server-dataset-injector/src/test/resources/application.properties:33:spring.datasource.password=${ROBERT_CRYPTO_SERVER_DB_PWD:robert}
+./robert-server-develop/robert-server-ws-rest/mvnw.cmd:93::findBaseDir
+./robert-server-develop/robert-server-ws-rest/mvnw.cmd:98:goto findBaseDir
+./robert-server-develop/robert-server-ws-rest/pom.xml:89:			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/RobertServerWsRestApplication.java:6:import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/RobertServerWsRestApplication.java:8:import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/DeleteHistoryControllerImpl.java:55:		Optional<Registration> registrationRecord = this.registrationService.findById(authResponse.getIdA().toByteArray());
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/StatusControllerImpl.java:85:			// If there is an error but Id is provided, log error in DB
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/StatusControllerImpl.java:87:				Optional<Registration> record = this.registrationService.findById(response.getIdA().toByteArray());
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/StatusControllerImpl.java:99:		Optional<Registration> record = this.registrationService.findById(response.getIdA().toByteArray());
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/controller/impl/UnregisterControllerImpl.java:49:        Optional<Registration> registrationRecord = this.registrationService.findById(authResponse.getIdA().toByteArray());
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/dto/RobertServerKpi.java:33:	private Long nbExposedButNotAtRiskUsers;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/service/impl/AuthRequestValidationServiceImpl.java:92:        // Moved timestamp difference check to after request sent to cryptoserver to be able to store drift in db
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/service/impl/AuthRequestValidationServiceImpl.java:221:            Optional<Registration> registration = this.registrationService.findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/service/impl/KpiServiceImpl.java:23:	private IRegistrationService registrationDbService;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/service/impl/KpiServiceImpl.java:28:	 * @param registrationDbService the <code>IRegistrationService</code> bean to
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/service/impl/KpiServiceImpl.java:31:	public KpiServiceImpl(IRegistrationService registrationDbService) {
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/service/impl/KpiServiceImpl.java:32:		this.registrationDbService = registrationDbService;
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/service/impl/KpiServiceImpl.java:43:		Long nbAlertedUsers = registrationDbService.countNbUsersAtRiskAgain()
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/service/impl/KpiServiceImpl.java:44:				+ registrationDbService.countNbUsersNotified();
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/service/impl/KpiServiceImpl.java:45:		Long nbExposedUsersNotAtRisk = registrationDbService.countNbExposedUsersButNotAtRisk();
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/service/impl/KpiServiceImpl.java:46:		Long nbInfectedUsersNotNotified = registrationDbService.countNbUsersAtRiskAndNotNotified();
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/service/impl/KpiServiceImpl.java:47:		Long nbNotifiedUsersScoredAgain = registrationDbService.countNbNotifiedUsersScoredAgain();
+./robert-server-develop/robert-server-ws-rest/src/main/java/fr/gouv/stopc/robertserver/ws/vo/RobertServerKpi.java:33:	private Long nbExposedButNotAtRiskUsers;
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application-dev.properties:13:#spring.data.mongodb.authentication-database= # Authentication database name.
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application-dev.properties:15:#spring.data.mongodb.database=${ROBERT_SERVER_DB_NAME:protectedRobertDB}
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application-dev.properties:16:#spring.data.mongodb.field-naming-strategy= # Fully qualified name of the FieldNamingStrategy to use.
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application-dev.properties:17:#spring.data.mongodb.grid-fs-database= # GridFS database name.
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application-dev.properties:18:#spring.data.mongodb.host=${ROBERT_SERVER_DB_HOST:localhost}
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application-dev.properties:20:#spring.data.mongodb.password= # Login password of the mongo server.
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application-dev.properties:22:#spring.data.mongodb.port=${ROBERT_SERVER_DB_PORT:27017}
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application-dev.properties:27:## Giving a value to $ROBERT_SERVER_DB_URI will bypass ROBERT_SERVER_DB_HOST, ROBERT_SERVER_DB_PORT and ROBERT_SERVER_DB_NAME
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application-dev.properties:28:spring.data.mongodb.uri=${ROBERT_SERVER_DB_URI:mongodb\://${ROBERT_SERVER_DB_HOST:localhost}\:${ROBERT_SERVER_DB_PORT:27017}/${ROBERT_SERVER_DB_NAME:protectedRobertDB}}
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application.properties:13:#spring.data.mongodb.authentication-database= # Authentication database name.
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application.properties:15:#spring.data.mongodb.database=${ROBERT_SERVER_DB_NAME:protectedRobertDB}
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application.properties:16:#spring.data.mongodb.field-naming-strategy= # Fully qualified name of the FieldNamingStrategy to use.
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application.properties:17:#spring.data.mongodb.grid-fs-database= # GridFS database name.
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application.properties:18:#spring.data.mongodb.host=${ROBERT_SERVER_DB_HOST:localhost}
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application.properties:20:#spring.data.mongodb.password= # Login password of the mongo server.
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application.properties:22:#spring.data.mongodb.port=${ROBERT_SERVER_DB_PORT:27017}
+./robert-server-develop/robert-server-ws-rest/src/main/resources/application.properties:27:## Giving a value to $ROBERT_SERVER_DB_URI will bypass ROBERT_SERVER_DB_HOST, ROBERT_SERVER_DB_PORT and ROBERT_SERVER_DB_NAME
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/DeleteHistoryControllerWsRestTest.java:163:        doReturn(Optional.of(reg)).when(this.registrationService).findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/DeleteHistoryControllerWsRestTest.java:211:        doReturn(Optional.of(reg)).when(this.registrationService).findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/DeleteHistoryControllerWsRestTest.java:234:        verify(this.registrationService, times(2)).findById(ArgumentMatchers.any());
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/DeleteHistoryControllerWsRestTest.java:253:        doReturn(Optional.empty()).when(this.registrationService).findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/DeleteHistoryControllerWsRestTest.java:306:        doReturn(Optional.of(reg)).when(this.registrationService).findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/DeleteHistoryControllerWsRestTest.java:410:        doReturn(Optional.of(reg)).when(this.registrationService).findById(ArgumentMatchers.any());
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/DeleteHistoryControllerWsRestTest.java:451:        byte[] rndBytes = new byte[nbOfbytes];
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/DeleteHistoryControllerWsRestTest.java:453:        sr.nextBytes(rndBytes);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/DeleteHistoryControllerWsRestTest.java:454:        return rndBytes;
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/DeleteHistoryControllerWsRestTest.java:521:            HttpStatus expectedStatus, int findByIdCalls, int saveRegistrationCalls) {
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/DeleteHistoryControllerWsRestTest.java:528:        verify(this.registrationService, times(findByIdCalls)).findById(ArgumentMatchers.any());
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:161:        verify(this.registrationService, times(0)).findById(ArgumentMatchers.any());
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:175:        doReturn(Optional.of(reg)).when(this.registrationService).findById(ArgumentMatchers.any());
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:191:        verify(this.registrationService, times(0)).findById(ArgumentMatchers.any());
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:215:        doReturn(Optional.of(reg)).when(this.registrationService).findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:236:        verify(this.registrationService, times(2)).findById(ArgumentMatchers.any());
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:260:        when(this.registrationService.findById(modifiedIdA)).thenReturn(Optional.empty());
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:277:        verify(this.registrationService, times(2)).findById(ArgumentMatchers.any());
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:292:        doReturn(Optional.of(reg)).when(this.registrationService).findById(ArgumentMatchers.any());
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:309:        verify(this.registrationService, times(0)).findById(ArgumentMatchers.any());
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:324:        doReturn(Optional.of(reg)).when(this.registrationService).findById(ArgumentMatchers.any());
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:346:        verify(this.registrationService, times(0)).findById(ArgumentMatchers.any());
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:361:        doReturn(Optional.of(reg)).when(this.registrationService).findById(ArgumentMatchers.any());
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:378:        verify(this.registrationService, times(0)).findById(ArgumentMatchers.any());
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:394:        doReturn(Optional.of(reg)).when(this.registrationService).findById(ArgumentMatchers.any());
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:420:        verify(this.registrationService, times(0)).findById(ArgumentMatchers.any());
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:435:        doReturn(Optional.of(reg)).when(this.registrationService).findById(ArgumentMatchers.any());
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:453:        verify(this.registrationService, times(0)).findById(ArgumentMatchers.any());
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:467:        doReturn(Optional.of(reg)).when(this.registrationService).findById(ArgumentMatchers.any());
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:484:        verify(this.registrationService, times(0)).findById(ArgumentMatchers.any());
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:500:        doReturn(Optional.of(reg)).when(this.registrationService).findById(ArgumentMatchers.any());
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:525:        verify(this.registrationService, times(0)).findById(ArgumentMatchers.any());
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:552:        byte[] rndBytes = new byte[nbOfbytes];
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:554:        sr.nextBytes(rndBytes);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:555:        return rndBytes;
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:668:        doReturn(Optional.of(reg)).when(this.registrationService).findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:690:        verify(this.registrationService, times(2)).findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:722:        doReturn(Optional.of(reg)).when(this.registrationService).findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:742:        verify(this.registrationService, times(2)).findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:786:        doReturn(Optional.of(reg)).when(this.registrationService).findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:815:        verify(this.registrationService, times(2)).findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:858:        doReturn(Optional.of(reg)).when(this.registrationService).findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:886:        verify(this.registrationService, times(2)).findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:924:        doReturn(Optional.of(reg)).when(this.registrationService).findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:945:        verify(this.registrationService, times(2)).findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:991:        doReturn(Optional.of(reg)).when(this.registrationService).findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:1012:        verify(this.registrationService, times(2)).findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:1042:        doReturn(Optional.of(reg)).when(this.registrationService).findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:1066:        verify(this.registrationService, times(2)).findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:1103:        doReturn(Optional.of(reg)).when(this.registrationService).findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:1127:        verify(this.registrationService, times(2)).findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:1174:        doReturn(Optional.of(reg)).when(this.registrationService).findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:1204:        verify(this.registrationService, times(2)).findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:1234:        doReturn(Optional.of(reg)).when(this.registrationService).findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/StatusControllerWsRestTest.java:1254:        verify(this.registrationService, times(2)).findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/UnregisterControllerWsRestTest.java:161:        verify(this.registrationService, never()).findById(ArgumentMatchers.any());
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/UnregisterControllerWsRestTest.java:202:        doReturn(Optional.of(reg)).when(this.registrationService).findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/UnregisterControllerWsRestTest.java:225:        verify(this.registrationService, times(2)).findById(ArgumentMatchers.any());
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/UnregisterControllerWsRestTest.java:253:        verify(this.registrationService, never()).findById(ArgumentMatchers.any());
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/UnregisterControllerWsRestTest.java:280:        verify(this.registrationService, never()).findById(ArgumentMatchers.any());
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/UnregisterControllerWsRestTest.java:303:        verify(this.registrationService, never()).findById(ArgumentMatchers.any());
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/UnregisterControllerWsRestTest.java:326:        verify(this.registrationService, never()).findById(ArgumentMatchers.any());
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/UnregisterControllerWsRestTest.java:348:        doReturn(Optional.of(reg)).when(this.registrationService).findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/UnregisterControllerWsRestTest.java:368:        verify(this.registrationService, never()).findById(ArgumentMatchers.any());
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/UnregisterControllerWsRestTest.java:390:        byte[] rndBytes = new byte[nbOfbytes];
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/UnregisterControllerWsRestTest.java:392:        sr.nextBytes(rndBytes);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/UnregisterControllerWsRestTest.java:393:        return rndBytes;
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/UnregisterControllerWsRestTest.java:470:        doReturn(Optional.of(reg)).when(this.registrationService).findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/UnregisterControllerWsRestTest.java:491:        verify(this.registrationService, times(2)).findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/UnregisterControllerWsRestTest.java:514:        doReturn(Optional.empty()).when(this.registrationService).findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/UnregisterControllerWsRestTest.java:531:        verify(this.registrationService, times(2)).findById(ArgumentMatchers.any());
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/UnregisterControllerWsRestTest.java:551:        verify(this.registrationService, times(2)).findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/UnregisterControllerWsRestTest.java:572:        verify(this.registrationService, times(2)).findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/test/java/test/fr/gouv/stopc/robertserver/ws/UnregisterControllerWsRestTest.java:591:        doReturn(Optional.of(reg)).when(this.registrationService).findById(idA);
+./robert-server-develop/robert-server-ws-rest/src/test/resources/application.properties:12:#spring.data.mongodb.authentication-database= # Authentication database name.
+./robert-server-develop/robert-server-ws-rest/src/test/resources/application.properties:14:#spring.data.mongodb.database=test
+./robert-server-develop/robert-server-ws-rest/src/test/resources/application.properties:15:#spring.data.mongodb.field-naming-strategy= # Fully qualified name of the FieldNamingStrategy to use.
+./robert-server-develop/robert-server-ws-rest/src/test/resources/application.properties:16:#spring.data.mongodb.grid-fs-database= # GridFS database name.
+./robert-server-develop/robert-server-ws-rest/src/test/resources/application.properties:17:#spring.data.mongodb.host=localhost
+./robert-server-develop/robert-server-ws-rest/src/test/resources/application.properties:19:#spring.data.mongodb.password= # Login password of the mongo server.
+./robert-server-develop/robert-server-ws-rest/src/test/resources/application.properties:21:#spring.data.mongodb.port=27717
+./robert-server-develop/robert-server-ws-rest/src/test/resources/application.properties:24:#spring.data.mongodb.uri=mongodb://localhost/local

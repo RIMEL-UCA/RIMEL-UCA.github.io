@@ -1,0 +1,8 @@
+./results/git/stop_covid/commit_file_gitlab.txt:192:Merge branch 'fix-merge-in-develop-deleteExposure' into 'develop'
+./results/git/stop_covid/commit_file_gitlab.txt:194:chore: Removing /v1 in deleteExposureHistory
+./results/git/stop_covid/commit_file_gitlab.txt:197:chore: Removing /v1 in deleteExposureHistory
+./results/git/stop_covid/commit_file_gitlab.txt:215:delete register (v1) , captcha (v1) , report (v1) , unregister (v1) , deleteHistory (v1) and all tests
+./results/git/stop_covid/commit_file_gitlab.txt:218:delete register (v1) , captcha (v1) , report (v1) , unregister (v1) , deleteHistory (v1) and all tests
+./results/git/stop_covid/issue_file_gitlab.txt:177:52830,ClientIdentifier keys are not being deleted in the database,When a user unregisters, he sends a "deleteId" command to the GRPC server. This server then deletes this data from the PostgreSQL database.
+./results/git/stop_covid/issue_file_gitlab.txt:178:However, when the ClientIdentifier keys gets deleted, it is in fact saved in an audit table, as you can see on this line:
+./results/git/stop_covid/issue_file_gitlab.txt:183:I believe that when a user wants his data deleted, you should delete all of it.,[]

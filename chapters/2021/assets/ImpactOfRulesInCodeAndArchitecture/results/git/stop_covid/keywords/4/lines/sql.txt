@@ -1,0 +1,1 @@
+./results/git/stop_covid/issue_file_gitlab.txt:177:52830,ClientIdentifier keys are not being deleted in the database,When a user unregisters, he sends a "deleteId" command to the GRPC server. This server then deletes this data from the PostgreSQL database.

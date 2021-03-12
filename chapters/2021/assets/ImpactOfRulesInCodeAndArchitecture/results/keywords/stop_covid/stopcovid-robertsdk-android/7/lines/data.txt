@@ -1,0 +1,122 @@
+Binary file ../stopcovid-robertsdk-android/.git/index matches
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/EphemeralBluetoothIdentifier.kt:15:data class EphemeralBluetoothIdentifier(
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/Hello.kt:13:data class Hello(
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/Hello.kt:20:    constructor(rawData: ByteArray) : this() {
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/Hello.kt:21:        if (rawData.size < 16) {
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/Hello.kt:22:            throw IllegalArgumentException("Expecting a byte array >= 16 bytes. Got ${rawData.size}.")
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/Hello.kt:24:        rawData.copyInto(eccArray, startIndex = 0, endIndex = 1)
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/Hello.kt:25:        rawData.copyInto(ebidArray, startIndex = 1, endIndex = 9)
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/Hello.kt:26:        rawData.copyInto(timeArray, startIndex = 9, endIndex = 11)
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/Hello.kt:27:        rawData.copyInto(macArray, startIndex = 11, endIndex = 16)
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/Hello.kt:30:    val data: ByteArray
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/Hello.kt:47:        if (!data.contentEquals(other.data)) return false
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/Hello.kt:57:        result = 31 * result + data.contentHashCode()
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/HelloSettings.kt:19:data class HelloSettings(
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/LocalProximity.kt:15:data class LocalProximity(val eccBase64: String,
+../stopcovid-robertsdk-android/domain/src/main/java/com/lunabeestudio/domain/model/SSUSettings.kt:17:data class SSUSettings(
+../stopcovid-robertsdk-android/domain/src/test/java/com/lunabeestudio/domain/HelloTest.kt:27:    fun `time given data should return expected`(data: ByteArray, expected: Int) {
+../stopcovid-robertsdk-android/domain/src/test/java/com/lunabeestudio/domain/HelloTest.kt:28:        val hello = Hello(data)
+../stopcovid-robertsdk-android/domain/src/test/java/com/lunabeestudio/domain/HelloTest.kt:37:    fun `ecc, ebid, time and mac given data should return expected`(data: ByteArray,
+../stopcovid-robertsdk-android/domain/src/test/java/com/lunabeestudio/domain/HelloTest.kt:43:        val hello = Hello(data)
+../stopcovid-robertsdk-android/domain/src/test/java/com/lunabeestudio/domain/HelloTest.kt:55:    fun `ctor given too short data should throw illegal argument exception`(data: ByteArray) {
+../stopcovid-robertsdk-android/domain/src/test/java/com/lunabeestudio/domain/HelloTest.kt:57:            Hello(data)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/LocalEphemeralBluetoothIdentifierDataSource.kt:11:package com.lunabeestudio.robert.datasource
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/LocalEphemeralBluetoothIdentifierDataSource.kt:15:interface LocalEphemeralBluetoothIdentifierDataSource {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/LocalKeystoreDataSource.kt:11:package com.lunabeestudio.robert.datasource
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/LocalKeystoreDataSource.kt:15:interface LocalKeystoreDataSource {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/LocalLocalProximityDataSource.kt:11:package com.lunabeestudio.robert.datasource
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/LocalLocalProximityDataSource.kt:17:interface LocalLocalProximityDataSource {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/RemoteServiceDataSource.kt:11:package com.lunabeestudio.robert.datasource
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/RemoteServiceDataSource.kt:18:import com.lunabeestudio.robert.model.RobertResultData
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/RemoteServiceDataSource.kt:20:interface RemoteServiceDataSource {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/RemoteServiceDataSource.kt:21:    suspend fun register(captcha: String): RobertResultData<RegisterReport>
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/RemoteServiceDataSource.kt:23:    suspend fun status(serverStatusUpdate: ServerStatusUpdate, ntpInitialTimeS: Long): RobertResultData<StatusReport>
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertResult.kt:18:sealed class RobertResultData<T> {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertResult.kt:19:    open class Success<T>(val data: T) : RobertResultData<T>()
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/model/RobertResult.kt:20:    open class Failure<T>(var error: RobertException? = null) : RobertResultData<T>()
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/EphemeralBluetoothIdentifierRepository.kt:16:import com.lunabeestudio.robert.datasource.LocalEphemeralBluetoothIdentifierDataSource
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/EphemeralBluetoothIdentifierRepository.kt:20:    private val localEphemeralBluetoothIdentifierDataSource: LocalEphemeralBluetoothIdentifierDataSource
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/EphemeralBluetoothIdentifierRepository.kt:23:        localEphemeralBluetoothIdentifierDataSource.saveAll(*ephemeralBluetoothIdentifiers)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/EphemeralBluetoothIdentifierRepository.kt:27:        return localEphemeralBluetoothIdentifierDataSource.getAll()
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/EphemeralBluetoothIdentifierRepository.kt:31:        return localEphemeralBluetoothIdentifierDataSource.getForTime(ntpTimeS)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/EphemeralBluetoothIdentifierRepository.kt:35:        localEphemeralBluetoothIdentifierDataSource.removeUntilTimeKeepLast(ntpTimeS)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/EphemeralBluetoothIdentifierRepository.kt:39:        localEphemeralBluetoothIdentifierDataSource.removeAll()
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:14:import com.lunabeestudio.robert.datasource.LocalKeystoreDataSource
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:17:    private val keystoreDataSource: LocalKeystoreDataSource) {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:20:        get() = keystoreDataSource.sharedKey
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:22:            keystoreDataSource.sharedKey = value
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:26:        get() = keystoreDataSource.timeStart
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:28:            keystoreDataSource.timeStart = value
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:32:        get() = keystoreDataSource.atRisk
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:34:            keystoreDataSource.atRisk = value
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:38:        get() = keystoreDataSource.lastExposureTimeframe
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:40:            keystoreDataSource.lastExposureTimeframe = value
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:44:        get() = keystoreDataSource.proximityActive
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:46:            keystoreDataSource.proximityActive = value
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:50:        get() = keystoreDataSource.isSick
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:52:            keystoreDataSource.isSick = value
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:56:        get() = keystoreDataSource.filteringInfo
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/KeystoreRepository.kt:58:            keystoreDataSource.filteringInfo = value
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/LocalProximityRepository.kt:14:import com.lunabeestudio.robert.datasource.LocalLocalProximityDataSource
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/LocalProximityRepository.kt:16:internal class LocalProximityRepository(private val localLocalProximityDataSource: LocalLocalProximityDataSource) {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/LocalProximityRepository.kt:19:        localLocalProximityDataSource.saveAll(*localProximity)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/LocalProximityRepository.kt:23:        return localLocalProximityDataSource.getAll()
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/LocalProximityRepository.kt:27:        localLocalProximityDataSource.removeUntilTime(ntpTimeS)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/LocalProximityRepository.kt:31:        localLocalProximityDataSource.removeAll()
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:18:import com.lunabeestudio.robert.datasource.RemoteServiceDataSource
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:20:import com.lunabeestudio.robert.model.RobertResultData
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:24:    private val remoteServiceDataSource: RemoteServiceDataSource
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:27:    suspend fun register(captcha: String): RobertResultData<RegisterReport> =
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:28:        remoteServiceDataSource.register(captcha)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:31:        remoteServiceDataSource.unregister(serverStatusUpdate)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:33:    suspend fun status(serverStatusUpdate: ServerStatusUpdate, ntpInitialTimeS: Long): RobertResultData<StatusReport> =
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:34:        remoteServiceDataSource.status(serverStatusUpdate, ntpInitialTimeS)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:37:        remoteServiceDataSource.report(token, localProximityList)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:40:        remoteServiceDataSource.deleteExposureHistory(serverStatusUpdate)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:43:        remoteServiceDataSource.eraseRemoteAlert()
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManager.kt:17:import com.lunabeestudio.robert.model.RobertResultData
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManager.kt:39:    fun clearOldData()
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManager.kt:45:    fun getCurrentHelloBuilder(): RobertResultData<HelloBuilder>
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:28:import com.lunabeestudio.robert.datasource.LocalEphemeralBluetoothIdentifierDataSource
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:29:import com.lunabeestudio.robert.datasource.LocalKeystoreDataSource
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:30:import com.lunabeestudio.robert.datasource.LocalLocalProximityDataSource
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:31:import com.lunabeestudio.robert.datasource.RemoteServiceDataSource
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:36:import com.lunabeestudio.robert.model.RobertResultData
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:49:    localEphemeralBluetoothIdentifierDataSource: LocalEphemeralBluetoothIdentifierDataSource,
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:50:    localKeystoreDataSource: LocalKeystoreDataSource,
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:51:    localLocalProximityDataSource: LocalLocalProximityDataSource,
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:52:    serviceDataSource: RemoteServiceDataSource
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:55:        EphemeralBluetoothIdentifierRepository(localEphemeralBluetoothIdentifierDataSource)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:57:        KeystoreRepository(localKeystoreDataSource)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:59:        LocalProximityRepository(localLocalProximityDataSource)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:61:        RemoteServiceRepository(serviceDataSource)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:91:            is RobertResultData.Success -> {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:92:                ephemeralBluetoothIdentifierRepository.save(*result.data.ephemeralBluetoothIdentifierList.toTypedArray())
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:93:                keystoreRepository.sharedKey = Base64.decode(result.data.key, Base64.NO_WRAP)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:94:                keystoreRepository.timeStart = result.data.timeStart
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:95:                keystoreRepository.filteringInfo = result.data.filterings
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:100:            is RobertResultData.Failure -> RobertResult.Failure(result.error)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:117:        return if (ssu is RobertResultData.Success && timeStart != null) {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:118:            val result = remoteServiceRepository.status(ssu.data, timeStart)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:121:                is RobertResultData.Success -> {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:122:                    ephemeralBluetoothIdentifierRepository.save(*result.data.ephemeralBluetoothIdentifierList.toTypedArray())
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:123:                    keystoreRepository.atRisk = result.data.atRisk
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:124:                    keystoreRepository.lastExposureTimeframe = result.data.lastExposureTimeframe
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:127:                is RobertResultData.Failure -> RobertResult.Failure(result.error)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:135:    override fun clearOldData() {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:136:        Timber.d("clear old data")
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:159:    private fun getSSU(prefix: Byte): RobertResultData<ServerStatusUpdate> {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:165:                RobertResultData.Success(ssuBuilder.build())
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:166:            } ?: RobertResultData.Failure(RobertUnknownException())
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:168:            RobertResultData.Failure(NoEphemeralBluetoothIdentifierFound())
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:172:    override fun getCurrentHelloBuilder(): RobertResultData<HelloBuilder> {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:178:                RobertResultData.Success(helloBuilder)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:179:            } ?: RobertResultData.Failure(RobertUnknownException())
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:181:            RobertResultData.Failure(NoEphemeralBluetoothIdentifierFoundForEpoch())
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:193:            is RobertResultData.Success -> {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:194:                val result = remoteServiceRepository.deleteExposureHistory(ssu.data)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:200:            is RobertResultData.Failure -> {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:213:            is RobertResultData.Success -> {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:214:                val result = remoteServiceRepository.unregister(ssu.data)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:232:            is RobertResultData.Failure -> {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/worker/StatusWorker.kt:38:                robertManager.clearOldData()

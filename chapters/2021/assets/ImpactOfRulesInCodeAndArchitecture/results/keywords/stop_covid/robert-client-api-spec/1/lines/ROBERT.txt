@@ -1,0 +1,17 @@
+../robert-client-api-spec/.git/config:9:	url = https://gitlab.inria.fr/stopcovid19/robert-client-api-spec.git
+../robert-client-api-spec/.git/logs/HEAD:1:0000000000000000000000000000000000000000 35828714dbb62bfd5f69f5f0d32275271730f9a1 davidbisegna <david.bisegna@etu.unice.fr> 1613463917 +0100	clone: from https://gitlab.inria.fr/stopcovid19/robert-client-api-spec.git
+../robert-client-api-spec/.git/logs/refs/heads/develop:1:0000000000000000000000000000000000000000 35828714dbb62bfd5f69f5f0d32275271730f9a1 davidbisegna <david.bisegna@etu.unice.fr> 1613463917 +0100	clone: from https://gitlab.inria.fr/stopcovid19/robert-client-api-spec.git
+../robert-client-api-spec/.git/logs/refs/remotes/origin/HEAD:1:0000000000000000000000000000000000000000 35828714dbb62bfd5f69f5f0d32275271730f9a1 davidbisegna <david.bisegna@etu.unice.fr> 1613463917 +0100	clone: from https://gitlab.inria.fr/stopcovid19/robert-client-api-spec.git
+../robert-client-api-spec/openapi.yaml:3:  description: "#STOPCOVID, Robert Proximity Tracing Client API"
+../robert-client-api-spec/openapi.yaml:5:  title: "#STOPCOVID, Robert Proximity Tracing"
+../robert-client-api-spec/openapi.yaml:6:  termsOfService: https://github.com/ROBERT-proximity-tracing/
+../robert-client-api-spec/openapi.yaml:106:        Register the app to the ROBERT service.
+../robert-client-api-spec/openapi.yaml:198:        User wants to stop using the ROBERT service. Delete all data related to this user from the server
+../robert-client-api-spec/openapi.yaml:240:  description: Find out more about ROBERT
+../robert-client-api-spec/openapi.yaml:241:  url: https://github.com/ROBERT-proximity-tracing/
+../robert-client-api-spec/openapi.yaml:243:  - url: https://yourrobertserver.org/v3
+../robert-client-api-spec/openapi.yaml:399:          description: The time from which epochs were started for the ROBERT service
+../robert-client-api-spec/README.md:4:Cette spécifiation décrit l'API REST exposée par le composant [ROBERT-server](https://gitlab.inria.fr/stopcovid19/robert-server) et consommée par les applications mobiles StopCovid.
+../robert-client-api-spec/USING.md:1:# ROBERT Client API spec
+../robert-client-api-spec/USING.md:3:The Client API specification of the Stop-Covid project for communications between the Stop-Covid mobile apps and the ROBERT server.
+../robert-client-api-spec/USING.md:25:$ redoc-cli bundle -o robert-client-api-spec.html swagger.json

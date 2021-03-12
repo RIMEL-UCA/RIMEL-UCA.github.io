@@ -1,0 +1,188 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/extensions/TemporaryExposureKeyExtensions.kt:11:        rollingPeriod = rollingPeriod,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/models/ExposureKey.kt:8:    @SerializedName("rollingPeriod") val rollingPeriod: Int,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/ExposureCheckSchedulerModule.kt:6:import androidx.work.PeriodicWorkRequest.MIN_PERIODIC_FLEX_MILLIS
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/ExposureCheckSchedulerModule.kt:7:import androidx.work.PeriodicWorkRequest.MIN_PERIODIC_INTERVAL_MILLIS
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/ExposureCheckSchedulerModule.kt:39:        val config = data.toHashMap().toJson().parse(PeriodicWorkPayload::class.java)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/ExposureCheckSchedulerModule.kt:41:        Log.d("Minimum Repeat Interval", MIN_PERIODIC_INTERVAL_MILLIS.toString())
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/ExposureCheckSchedulerModule.kt:43:        Log.d("Minimum Flex Time", MIN_PERIODIC_FLEX_MILLIS.toString())
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/ExposureCheckSchedulerModule.kt:44:        val workerRequest: PeriodicWorkRequest = PeriodicWorkRequestBuilder<ExposureCheckSchedulerWorker>(config.repeatInterval, TimeUnit.MILLISECONDS)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/ExposureCheckSchedulerModule.kt:49:        workManager.enqueueUniquePeriodicWork("exposureCheckSchedulerWorker", ExistingPeriodicWorkPolicy.REPLACE, workerRequest)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/ExposureCheckSchedulerModule.kt:75:private class PeriodicWorkPayload(
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/ExposureCheckSchedulerModule.kt:81:        if (repeatIntervalMillis > MIN_PERIODIC_INTERVAL_MILLIS) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/ExposureCheckSchedulerModule.kt:84:            MIN_PERIODIC_INTERVAL_MILLIS
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/PushNotificationModule.kt:107:        Log.d("CovidAlert", "MIN_PERIODIC_INTERVAL_MILLIS: ${PeriodicWorkRequest.MIN_PERIODIC_INTERVAL_MILLIS}")
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/PushNotificationModule.kt:109:        Log.d("CovidAlert", "MIN_PERIODIC_FLEX_MILLIS: ${PeriodicWorkRequest.MIN_PERIODIC_FLEX_MILLIS}")
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/PushNotificationModule.kt:125:        val notificationWorkerRequest: PeriodicWorkRequest = PeriodicWorkRequestBuilder<NotificationWorker>(config.repeatInterval, TimeUnit.MILLISECONDS)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/PushNotificationModule.kt:131:        workManager.enqueueUniquePeriodicWork("notificationReminder", ExistingPeriodicWorkPolicy.REPLACE, notificationWorkerRequest)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/java/app/covidshield/module/PushNotificationModule.kt:159:        if (_repeatInterval > PeriodicWorkRequest.MIN_PERIODIC_INTERVAL_MILLIS) _repeatInterval else PeriodicWorkRequest.MIN_PERIODIC_INTERVAL_MILLIS
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/CODE_OF_CONDUCT.md:86:those enforcing the Code of Conduct, for a specified period of time. This
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/CODE_OF_CONDUCT.md:97:communication with the community for a specified period of time. No public or
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/CODE_OF_CONDUCT.md:99:with those enforcing the Code of Conduct, is allowed during this period.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/e2e/exploreDemoMenu.e2e.js:5: * This is a method that returns a promise that waits for the given time period
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield/ExposureNotification.m:70:      if (activityFlags & ENActivityFlagsPeriodicRun) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/CovidShield/ExposureNotification.m:152:          @"rollingPeriod": @(key.rollingPeriod),
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/bridge/ExposureNotification/types.ts:52:  rollingPeriod: number;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/bridge/PushNotification.ts:4:export interface PeriodicWorkPayload {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/index.ts:24:  BackgroundScheduler.registerAndroidHeadlessPeriodicTask(async () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/index.ts:38:  BackgroundScheduler.registerAndroidHeadlessExposureCheckPeriodicTask(async () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/testScreen/MockBackend.ts:36:  retrieveDiagnosisKeys = async (_period: number) => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.spec.ts:107:      rollingPeriod: 144,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.spec.ts:145:        .map(({rollingStartIntervalNumber, rollingPeriod}) => ({rollingStartIntervalNumber, rollingPeriod}))
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.spec.ts:237:        .map(({rollingStartIntervalNumber, rollingPeriod}) => ({rollingStartIntervalNumber, rollingPeriod}));
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.spec.ts:286:    it('returns keys file for set period', async () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.spec.ts:296:    it('returns keys file for 14 days if period is 0', async () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:27:const TEN_MINUTE_PERIODS_PER_HOUR = 6;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:31:const LAST_14_DAYS_PERIOD = '00000';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:54:  async retrieveDiagnosisKeys(period: number) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:55:    const periodStr = `${period > 0 ? period : LAST_14_DAYS_PERIOD}`;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:56:    const message = `${MCC_CODE}:${periodStr}:${Math.floor(getMillisSinceUTCEpoch() / 1000 / 3600)}`;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:58:    const url = `${this.retrieveUrl}/retrieve/${MCC_CODE}/${periodStr}/${hmac}`;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:143:      // rollingPeriod = A number describing how long a key is valid. It is expressed in
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:157:      const rollingEndIntervalNumber = key.rollingStartIntervalNumber + key.rollingPeriod;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:158:      const rollingEndIntervalHoursSinceEpoch = rollingEndIntervalNumber / TEN_MINUTE_PERIODS_PER_HOUR;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:160:        // the TEK is before the contagious period
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:224:          rollingPeriod: key.rollingPeriod,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:433:            INVALID_ROLLING_PERIOD = 10,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:783:        /** TemporaryExposureKey rollingPeriod */
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:784:        rollingPeriod?: (number|null);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:811:        /** TemporaryExposureKey rollingPeriod. */
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.d.ts:812:        public rollingPeriod: number;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:1062:                case "INVALID_ROLLING_PERIOD":
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:1130:             * @property {number} INVALID_ROLLING_PERIOD=10 INVALID_ROLLING_PERIOD value
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:1147:                values[valuesById[10] = "INVALID_ROLLING_PERIOD"] = 10;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:2070:             * @property {number|null} [rollingPeriod] TemporaryExposureKey rollingPeriod
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:2115:             * TemporaryExposureKey rollingPeriod.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:2116:             * @member {number} rollingPeriod
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:2120:            TemporaryExposureKey.prototype.rollingPeriod = 144;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:2168:                if (message.rollingPeriod != null && Object.hasOwnProperty.call(message, "rollingPeriod"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:2169:                    writer.uint32(/* id 4, wireType 0 =*/32).int32(message.rollingPeriod);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:2218:                        message.rollingPeriod = reader.int32();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:2270:                if (message.rollingPeriod != null && message.hasOwnProperty("rollingPeriod"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:2271:                    if (!$util.isInteger(message.rollingPeriod))
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:2272:                        return "rollingPeriod: integer expected";
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:2312:                if (object.rollingPeriod != null)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:2313:                    message.rollingPeriod = object.rollingPeriod | 0;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:2368:                    object.rollingPeriod = 144;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:2378:                if (message.rollingPeriod != null && message.hasOwnProperty("rollingPeriod"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.js:2379:                    object.rollingPeriod = message.rollingPeriod;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.proto:89:    INVALID_ROLLING_PERIOD = 10;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.proto:186:  // Number of intervals in a period.
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.proto:187:  optional int32 rolling_period = 4 [default = 144];
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/types.ts:19:  retrieveDiagnosisKeys(period: number): Promise<string>;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:8:import {PeriodicWorkPayload} from '../../bridge/PushNotification';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:19:interface PeriodicTask {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:23:export const PERIODIC_TASK_INTERVAL_IN_MINUTES = TEST_MODE ? 15 : 240;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:24:export const PERIODIC_TASK_DELAY_IN_MINUTES = TEST_MODE ? 1 : PERIODIC_TASK_INTERVAL_IN_MINUTES + 5;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:26:const registerPeriodicTask = async (task: PeriodicTask, exposureNotificationService?: ExposureNotificationService) => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:31:        minimumFetchInterval: PERIODIC_TASK_INTERVAL_IN_MINUTES,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:43:              message: `runPeriodicTask: ${taskId}`,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:50:                message: 'runPeriodicTask',
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:59:    const result = await BackgroundFetch.scheduleTask({taskId: BACKGROUND_TASK_ID, delay: 0, periodic: true}).catch(
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:64:      message: `registerPeriodicTask: ${result}`,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:68:    let delay = PERIODIC_TASK_DELAY_IN_MINUTES;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:81:    const payload: PeriodicWorkPayload = {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:83:      repeatInterval: PERIODIC_TASK_INTERVAL_IN_MINUTES,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:87:      message: 'registerPeriodicTask - Android',
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:98: * @deprecated Replaced by `registerAndroidHeadlessExposureCheckPeriodicTask`
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:104:const registerAndroidHeadlessPeriodicTask = (task: PeriodicTask) => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:109:  // Scheduling the periodic task itself handled by ExposureCheckScheduler
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:113:      message: `runAndroidHeadlessPeriodicTask: ${taskId}`,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:120:      // Stop and remove legacy periodic tasks that were scheduled using react-native-background-fetch
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:123:      // Setup new periodic task to use WorkManager
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:134:      registerPeriodicTask(async () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:140:        message: 'runAndroidHeadlessPeriodicTask',
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:147:    message: 'registerAndroidHeadlessPeriodicTask',
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:151:const registerAndroidHeadlessExposureCheckPeriodicTask = (task: PeriodicTask) => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:164:        message: 'runAndroidHeadlessExposureCheckPeriodicTask',
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:173:    message: 'registerAndroidHeadlessExposureCheckPeriodicTask',
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:178:  registerPeriodicTask,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:179:  registerAndroidHeadlessPeriodicTask,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:180:  registerAndroidHeadlessExposureCheckPeriodicTask,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:5:import {periodSinceEpoch} from '../../shared/date-fns';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:9:import {PERIODIC_TASK_INTERVAL_IN_MINUTES} from '../BackgroundSchedulerService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:16:  HOURS_PER_PERIOD,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:393:        period: periodSinceEpoch(new OriginalDate('2020-05-19T06:10:00+0000'), HOURS_PER_PERIOD),
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:406:        period: periodSinceEpoch(new OriginalDate('2020-05-18T05:10:00+0000'), HOURS_PER_PERIOD),
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:417:        period: periodSinceEpoch(new OriginalDate('2020-05-17T23:10:00+0000'), HOURS_PER_PERIOD),
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:441:        period: periodSinceEpoch(new OriginalDate('2020-05-18T04:10:00+0000'), HOURS_PER_PERIOD),
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:445:    const currentPeriod = periodSinceEpoch(currentDatetime, HOURS_PER_PERIOD);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:447:      .calledWith(currentPeriod)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:457:          period: currentPeriod - 1,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:605:      const period = periodSinceEpoch(today, HOURS_PER_PERIOD);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:611:          period,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:621:            period,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:636:      const period = periodSinceEpoch(today, HOURS_PER_PERIOD);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:641:          period,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:657:            period,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:667:      const period = periodSinceEpoch(today, HOURS_PER_PERIOD);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:671:          period,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:688:            period,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:702:      const period = periodSinceEpoch(today, HOURS_PER_PERIOD);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:714:          period,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:715:          timestamp: today.getTime() - PERIODIC_TASK_INTERVAL_IN_MINUTES * 60 * 1000 - 3600 * 1000,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:731:      const period = periodSinceEpoch(today, HOURS_PER_PERIOD);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:748:          period,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:794:    it('stays diagnosed if within countdown period', async () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:795:      const period = periodSinceEpoch(today, HOURS_PER_PERIOD);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:807:          period,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:808:          timestamp: today.getTime() - PERIODIC_TASK_INTERVAL_IN_MINUTES * 60 * 1000 - 3600 * 1000,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:829:          period: periodSinceEpoch(today, HOURS_PER_PERIOD),
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:914:  describe('getPeriodsSinceLastFetch', () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:915:    it('returns an array of [0, runningPeriod] if _lastCheckedPeriod is undefined', () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:916:      expect(service.getPeriodsSinceLastFetch()).toStrictEqual([0, 18400]);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:919:    it('returns an array of checkdates between lastCheckedPeriod and runningPeriod', () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:920:      expect(service.getPeriodsSinceLastFetch(18395)).toStrictEqual([18400, 18399, 18398, 18397, 18396, 18395]);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:923:    it('returns an array of runningPeriod when current runningPeriod == _lastCheckedPeriod', () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:924:      expect(service.getPeriodsSinceLastFetch(18400)).toStrictEqual([18400]);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:927:    it('returns an array of [runningPeriod, runningPeriod - 1] when current runningPeriod = _lastCheckedPeriod + 1', () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:928:      expect(service.getPeriodsSinceLastFetch(18399)).toStrictEqual([18400, 18399]);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:947:          period: periodSinceEpoch(today, HOURS_PER_PERIOD),
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:961:          period: periodSinceEpoch(today, HOURS_PER_PERIOD),
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:13:  periodSinceEpoch,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:33:import {PERIODIC_TASK_INTERVAL_IN_MINUTES} from '../BackgroundSchedulerService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:49:export const HOURS_PER_PERIOD = 24;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:66:  period: number;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:326:  public getPeriodsSinceLastFetch = (_lastCheckedPeriod?: number): number[] => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:328:    let runningPeriod = periodSinceEpoch(runningDate, HOURS_PER_PERIOD);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:329:    if (!_lastCheckedPeriod) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:330:      return [0, runningPeriod];
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:332:    const lastCheckedPeriod = Math.max(_lastCheckedPeriod - 1, runningPeriod - EXPOSURE_NOTIFICATION_CYCLE);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:333:    const periodsToFetch = [];
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:334:    while (runningPeriod > lastCheckedPeriod) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:335:      periodsToFetch.push(runningPeriod);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:336:      runningPeriod -= 1;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:338:    return periodsToFetch;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:602:    const {keysFileUrls, lastCheckedPeriod} = await this.getKeysFileUrls();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:623:        this.setExposed(summary, currentExposureStatus, lastCheckedPeriod);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:626:      return this.finalize({}, lastCheckedPeriod);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:655:      if (minutes < PERIODIC_TASK_INTERVAL_IN_MINUTES) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:661:            taskInterval: PERIODIC_TASK_INTERVAL_IN_MINUTES,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:675:            taskInterval: PERIODIC_TASK_INTERVAL_IN_MINUTES,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:689:        taskInterval: PERIODIC_TASK_INTERVAL_IN_MINUTES,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:776:    const {keysFileUrls, lastCheckedPeriod} = await this.getKeysFileUrls();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:790:        this.setExposed(summariesContainingExposures[0], updatedExposure, lastCheckedPeriod);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:792:      return this.finalize({}, lastCheckedPeriod);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:803:    lastCheckedPeriod: number,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:812:      return this.finalize({}, lastCheckedPeriod);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:815:      return this.setExposureDetectedAt(summary, lastCheckedPeriod);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:825:      return this.setExposureDetectedAt(summary, lastCheckedPeriod);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:843:  public async setExposureDetectedAt(summary: ExposureSummary, lastCheckedPeriod: number) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:858:      lastCheckedPeriod,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:962:    lastCheckedPeriod: number | undefined = undefined,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:966:    const period =
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:967:      lastCheckedPeriod === undefined
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:968:        ? status.lastChecked?.period || previousExposureStatus.lastChecked?.period || 0
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:969:        : lastCheckedPeriod;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:974:        period,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:991:    let lastCheckedPeriod = currentStatus.lastChecked?.period;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:992:    const periodsSinceLastFetch = this.getPeriodsSinceLastFetch(lastCheckedPeriod);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:994:      for (const period of periodsSinceLastFetch) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:995:        const keysFileUrl = await this.backendInterface.retrieveDiagnosisKeys(period);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:997:        lastCheckedPeriod = Math.max(lastCheckedPeriod || 0, period);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:1002:    return {keysFileUrls, lastCheckedPeriod};
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:1025:    const lastCheckedPeriod = periodSinceEpoch(today, HOURS_PER_PERIOD);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:1026:    this.setExposed(summariesContainingExposures[0], exposureStatus, lastCheckedPeriod);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationServiceProvider.tsx:57:    backgroundScheduler.registerPeriodicTask(async () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationServiceProvider.tsx:75:      backgroundScheduler.registerPeriodicTask(async () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/date-fns.ts:12:export function periodSinceEpoch(date: Date, hoursPerPeriod: number) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/date-fns.ts:13:  return Math.floor(date.getTime() / (1000 * 3600 * hoursPerPeriod));

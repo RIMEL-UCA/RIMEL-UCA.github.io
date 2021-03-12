@@ -1,0 +1,206 @@
+stopcovid-android/.git/hooks/pre-push.sample:31:		# Handle delete
+stopcovid-android/.git/hooks/pre-rebase.sample:102:   it is deleted.  If you need to build on top of it to correct
+stopcovid-android/.git/hooks/pre-rebase.sample:124:    Then you can delete it.  More importantly, you should not
+stopcovid-android/.git/hooks/pre-rebase.sample:149:   and is ready to be deleted.
+stopcovid-android/.git/hooks/pre-rebase.sample:154:B to be deleted.
+stopcovid-android/.git/hooks/update.sample:13:# hooks.allowdeletetag
+stopcovid-android/.git/hooks/update.sample:19:# hooks.allowdeletebranch
+stopcovid-android/.git/hooks/update.sample:47:allowdeletebranch=$(git config --bool hooks.allowdeletebranch)
+stopcovid-android/.git/hooks/update.sample:49:allowdeletetag=$(git config --bool hooks.allowdeletetag)
+stopcovid-android/.git/hooks/update.sample:62:# if $newrev is 0000...0000, it's a commit to delete a ref.
+stopcovid-android/.git/hooks/update.sample:65:	newrev_type=delete
+stopcovid-android/.git/hooks/update.sample:80:	refs/tags/*,delete)
+stopcovid-android/.git/hooks/update.sample:81:		# delete tag
+stopcovid-android/.git/hooks/update.sample:82:		if [ "$allowdeletetag" != "true" ]; then
+stopcovid-android/.git/hooks/update.sample:103:	refs/heads/*,delete)
+stopcovid-android/.git/hooks/update.sample:104:		# delete branch
+stopcovid-android/.git/hooks/update.sample:105:		if [ "$allowdeletebranch" != "true" ]; then
+stopcovid-android/.git/hooks/update.sample:113:	refs/remotes/*,delete)
+stopcovid-android/.git/hooks/update.sample:114:		# delete tracking branch
+stopcovid-android/.git/hooks/update.sample:115:		if [ "$allowdeletebranch" != "true" ]; then
+Fichier binaire stopcovid-android/.git/index correspondant
+stopcovid-android/build.gradle:38:task clean(type: Delete) {
+stopcovid-android/build.gradle:39:    delete rootProject.buildDir
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/manager/ConfigManager.kt:88:        File(context.filesDir, BuildConfig.CONFIG_JSON).delete()
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/manager/ServerManager.kt:117:        File(context.filesDir, filename).delete()
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/manager/ServerManager.kt:119:        File(context.filesDir, defaultFilename).delete()
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/KeystoreDataSourceTest.kt:32:        keystore.deleteEntry("aes_local_protection")
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/KeystoreDataSourceTest.kt:33:        keystore.deleteEntry("rsa_wrap_local_protection")
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/KeystoreDataSourceTest.kt:48:        keystore.deleteEntry("aes_local_protection")
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/KeystoreDataSourceTest.kt:49:        keystore.deleteEntry("rsa_wrap_local_protection")
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileEphemeralBluetoothIdentifierDataSourceTest.kt:35:        File(context.filesDir, "epochs").delete()
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileEphemeralBluetoothIdentifierDataSourceTest.kt:40:        File(ApplicationProvider.getApplicationContext<Context>().filesDir, "epochs").delete()
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:38:        localStorage.deleteRecursively()
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSourceTest.kt:48:        File(ApplicationProvider.getApplicationContext<Context>().filesDir, "local_proximity_test").deleteRecursively()
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/remote/ServiceTest.kt:181:    fun deleteExposureHistory() {
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/remote/ServiceTest.kt:184:                .setBody(ResourcesHelper.readTestFileAsString("deleteExposureHistorySuccess"))
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/remote/ServiceTest.kt:187:            dataSource.deleteExposureHistory("", ServerStatusUpdate("", 0L, "", ""))
+stopcovid-android/framework/src/androidTest/java/com/lunabeestudio/framework/remote/ServiceTest.kt:192:            dataSource.deleteExposureHistory("", ServerStatusUpdate("", 0L, "", ""))
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileEphemeralBluetoothIdentifierDataSource.kt:106:            epochFile.delete()
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:98:                file.deleteRecursively()
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/local/datasource/SecureFileLocalProximityDataSource.kt:107:            file.deleteRecursively()
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/datasource/ServiceDataSource.kt:25:import com.lunabeestudio.framework.remote.model.ApiDeleteExposureHistoryRQ
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/datasource/ServiceDataSource.kt:164:    override suspend fun deleteExposureHistory(apiVersion: String, ssu: ServerStatusUpdate): RobertResult {
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/datasource/ServiceDataSource.kt:166:            api.deleteExposureHistory(
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/datasource/ServiceDataSource.kt:168:                ApiDeleteExposureHistoryRQ(ebid = ssu.ebid, epochId = ssu.epochId, time = ssu.time, mac = ssu.mac)
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/model/ApiDeleteExposureHistoryRQ.kt:13:internal class ApiDeleteExposureHistoryRQ(
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/server/StopCovidApi.kt:15:import com.lunabeestudio.framework.remote.model.ApiDeleteExposureHistoryRQ
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/server/StopCovidApi.kt:55:    @POST("/api/{apiVersion}/deleteExposureHistory")
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/server/StopCovidApi.kt:56:    suspend fun deleteExposureHistory(
+stopcovid-android/framework/src/main/java/com/lunabeestudio/framework/remote/server/StopCovidApi.kt:58:        @Body deleteExposureHistoryRQ: ApiDeleteExposureHistoryRQ,
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/datasource/RemoteServiceDataSource.kt:38:    suspend fun deleteExposureHistory(apiVersion: String, ssu: ServerStatusUpdate): RobertResult
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:87:    suspend fun deleteExposureHistory(apiVersion: String, serverStatusUpdate: ServerStatusUpdate): RobertResult =
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/repository/RemoteServiceRepository.kt:88:        remoteServiceDataSource.deleteExposureHistory(apiVersion, serverStatusUpdate)
+stopcovid-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:510:                val result = remoteServiceRepository.deleteExposureHistory(apiVersion, ssu.data)
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/IsolationManagerTest.kt:26:        keystore.deleteEntry("aes_local_protection")
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/IsolationManagerTest.kt:27:        keystore.deleteEntry("rsa_wrap_local_protection")
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/IsolationManagerTest.kt:37:        keystore.deleteEntry("aes_local_protection")
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/IsolationManagerTest.kt:38:        keystore.deleteEntry("rsa_wrap_local_protection")
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:40:        keystore.deleteEntry("aes_local_protection")
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:41:        keystore.deleteEntry("rsa_wrap_local_protection")
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:55:        keystore.deleteEntry("aes_local_protection")
+stopcovid-android/stopcovid/src/androidTest/java/com/lunabeestudio/stopcovid/manager/VenuesManagerTest.kt:56:        keystore.deleteEntry("rsa_wrap_local_protection")
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-en.json:26:        "description": "The data stored on your phone and on the server are automatically deleted after 14 days."
+stopcovid-android/stopcovid/src/main/assets/Privacy/privacy-en.json:30:        "description": "In compliance with the General Data Protection Regulation (GDPR), you can delete the data stored on your phone, the data stored on the server and the data relating to your registration, and you can cancel your registration."
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:53:    "sickController.state.deleteNotification": "حذف الإشعار",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:54:    "sickController.state.deleteNotification.alert.title": "هل تريد فعلًا حذف الإشعار؟",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:113:    "common.delete": "الحذف",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:403:    "home.infoSection.updatePostalCode.alert.deletePostalCode": "حدف رمز البريد",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:489:    "attestationsController.menu.delete": "حدف الإفادة",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:490:    "attestationsController.menu.delete.alert.title": "التأكيد",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:491:    "attestationsController.menu.delete.alert.message": "هل أنت متأكد من أنك تريد حذف إفادة التنقل هذه؟",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:688:    "venuesHistoryController.delete.alert.title": "هل تريد حذف هذا المكان؟",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:689:    "venuesHistoryController.delete.alert.message": "ان حذفت هذا المكان فلن يتمّ اشعارك بحالات الاصابة التي قد يُعلن عنها والتي ربما تواجدت في نفس الوقت معها بذات المكان.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:53:    "sickController.state.deleteNotification": "Benachrichtigung löschen",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:54:    "sickController.state.deleteNotification.alert.title": "Möchten Sie die Benachrichtigung wirklich löschen?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:113:    "common.delete": "Löschen",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:403:    "home.infoSection.updatePostalCode.alert.deletePostalCode": "Postleitzahl löschen",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:489:    "attestationsController.menu.delete": "Bescheinigung löschen",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:490:    "attestationsController.menu.delete.alert.title": "Bestätigung",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:491:    "attestationsController.menu.delete.alert.message": "Möchten Sie diese Ausgangsbescheinigung tatsächlich löschen?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:688:    "venuesHistoryController.delete.alert.title": "Möchten Sie diesen Ort löschen?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:689:    "venuesHistoryController.delete.alert.message": "Nach dem Löschen werden Sie nicht benachrichtigt, wenn sich jemand, der zur gleichen Zeit wie Sie an diesem Ort war, krank meldet.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:53:    "sickController.state.deleteNotification": "Delete notification",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:54:    "sickController.state.deleteNotification.alert.title": "Are you sure you want to delete this notification?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:113:    "common.delete": "Delete",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:162:    "manageDataController.eraseLocalHistory.subtitle": "This will delete all of the information on \"Bluetooth contacts \" stored on your phone.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:163:    "manageDataController.eraseLocalHistory.button": "Delete from my phone",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:164:    "manageDataController.eraseLocalHistory.success": "Data successfully deleted",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:166:    "manageDataController.eraseLocalHistory.confirmationDialog.message": "Are you sure that you want to delete your entire history of \"Bluetooth contacts\"? This cannot be undone.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:168:    "manageDataController.eraseRemoteContact.subtitle": "This will delete all of your own user IDs that have been shared with other phones and uploaded to the server.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:169:    "manageDataController.eraseRemoteContact.button": "Delete from server",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:170:    "manageDataController.eraseRemoteContact.success": "Data successfully deleted",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:172:    "manageDataController.eraseRemoteContact.confirmationDialog.message": "This cannot be undone. Are you sure you want to delete your temporary user IDs from the server?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:174:    "manageDataController.eraseRemoteAlert.subtitle": "Whenever you come into close contact with users who have tested positive for COVID-19, you will be sent an alert. Please note, this will delete all of your alerts.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:175:    "manageDataController.eraseRemoteAlert.button": "Delete my alerts",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:176:    "manageDataController.eraseRemoteAlert.success": "Alerts successfully deleted",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:178:    "manageDataController.eraseRemoteAlert.confirmationDialog.message": "This cannot be undone. Are you sure you want to delete your alerts?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:180:    "manageDataController.quitStopCovid.subtitle": "You can stop using TousAntiCovid and delete all of your personal information at any time.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:182:    "manageDataController.quitStopCovid.success": "All of your information has been deleted",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:403:    "home.infoSection.updatePostalCode.alert.deletePostalCode": "Delete postcode",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:477:    "attestationsController.termsOfUse.alert.message": "The manager of the \"TousAntiCovid\" app will not use any of the information entered into the form generator.\n\nYou may delete all of this information at any time by going to the app and selecting \"Settings\".",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:482:    "newAttestationController.footer": "You can save this information on your phone for your next form. Your personal data will only be stored on the phone used to generate the form, in accordance with the general measures introduced to tackle the COVID-19 pandemic in the context of the state of health emergency. You can delete this data at any time by going to the app and selecting \"Settings\".",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:484:    "manageDataController.attestationsData.subtitle": "This will delete all the data on your phone relating to your forms, including any saved forms and data.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:485:    "manageDataController.attestationsData.button": "Delete from my phone",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:487:    "manageDataController.attestationsData.confirmationDialog.message": "Are you sure you want to delete all of the data related to your forms? This cannot be undone.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:489:    "attestationsController.menu.delete": "Delete form",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:490:    "attestationsController.menu.delete.alert.title": "Confirmation",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:491:    "attestationsController.menu.delete.alert.message": "Are you sure you want to delete this form?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:502:    "attestationsController.expiredSection.subtitle": "These forms will be deleted automatically (within 24 hours, next time you open the app). You can delete all of this information at any time by going to the app and selecting \"Settings\".",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:566:    "manageDataController.venuesData.subtitle": "This will delete all of the data on your phone relating to locations where you scanned QR codes.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:567:    "manageDataController.venuesData.button": "Delete locations history",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:569:    "manageDataController.venuesData.confirmationDialog.message": "Are you sure you want to delete your location history? This cannot be undone.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:576:    "venuesHistoryController.noVenuesEmptyView.title": "No locations have been recorded on your phone. Please note that all locations are deleted after 2 weeks.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:687:    "venuesHistoryController.delete.alert.title": "Do you want to delete this location?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:688:    "venuesHistoryController.delete.alert.message": "Once it has been deleted, you will not be notified if someone who was at this location at the same time as you is identified as having COVID-19.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:690:    "manageDataController.isolationData.subtitle": "You can delete self-isolation information from your phone.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:691:    "manageDataController.isolationData.button": "Delete from my phone",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:693:    "manageDataController.isolationData.confirmationDialog.message": "Are you sure you want to delete all of your self-isolation information?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:53:    "sickController.state.deleteNotification": "Suprimir la notificación",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:54:    "sickController.state.deleteNotification.alert.title": "¿Seguro que quieres suprimir la notificación?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:113:    "common.delete": "Suprimir",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:403:    "home.infoSection.updatePostalCode.alert.deletePostalCode": "Suprimir el código postal",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:489:    "attestationsController.menu.delete": "\nSuprimir la declaración",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:490:    "attestationsController.menu.delete.alert.title": "Confirmación",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:491:    "attestationsController.menu.delete.alert.message": "¿Seguro que quieres suprimir esta declaración responsable?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:687:    "venuesHistoryController.delete.alert.title": "¿Quieres eliminar esta ubicación?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:688:    "venuesHistoryController.delete.alert.message": "Si lo eliminas, no recibirás un aviso en caso de que alquien que haya coincidido contigo en este lugar comunique un positivo.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:53:   "sickController.state.deleteNotification":"Supprimer la notification",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:54:   "sickController.state.deleteNotification.alert.title":"Voulez-vous vraiment supprimer la notification ?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:113:   "common.delete":"Supprimer",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:404:   "home.infoSection.updatePostalCode.alert.deletePostalCode":"Supprimer le code postal",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:503:   "attestationsController.menu.delete":"Supprimer l'attestation",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:504:   "attestationsController.menu.delete.alert.title":"Confirmation",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:505:   "attestationsController.menu.delete.alert.message":"Êtes-vous sûr de vouloir supprimer cette attestation de déplacement ?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:740:   "venuesHistoryController.delete.alert.title": "Souhaitez-vous supprimer ce lieu ?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:741:   "venuesHistoryController.delete.alert.message": "Une fois supprimé, si une personne qui a fréquenté ce lieu en même temps que vous se déclare positif, alors vous ne serez pas notifié.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:53:    "sickController.state.deleteNotification": "Elimina la notifica",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:54:    "sickController.state.deleteNotification.alert.title": "Sei sicuro/a di volere eliminare la notifica?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:113:    "common.delete": "Elimina",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:403:    "home.infoSection.updatePostalCode.alert.deletePostalCode": "Cancella il codice postale",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:489:    "attestationsController.menu.delete": "Cancella il certificato",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:490:    "attestationsController.menu.delete.alert.title": "Conferma",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:491:    "attestationsController.menu.delete.alert.message": "Sei sicuro/a di voler cancellare questo certificato di spostamento?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:687:    "venuesHistoryController.delete.alert.title": "Desideri cancellare questo luogo?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:688:    "venuesHistoryController.delete.alert.message": "Una volta cancellato, se una persona che è stata in quel luogo contemporaneamente a te si dichiara malata, non riceverai alcuna segnalazione.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:53:    "sickController.state.deleteNotification": "Eliminar a notificação",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:54:    "sickController.state.deleteNotification.alert.title": "Tem a certeza de que pretende eliminar a notificação?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:113:    "common.delete": "Eliminar",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:403:    "home.infoSection.updatePostalCode.alert.deletePostalCode": "Eliminar o código postal",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:489:    "attestationsController.menu.delete": "Eliminar o certificado",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:490:    "attestationsController.menu.delete.alert.title": "Confirmação",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:491:    "attestationsController.menu.delete.alert.message": "Tem a certeza de que pretende eliminar este certificado de deslocação?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:687:    "venuesHistoryController.delete.alert.title": "Pretende eliminar este local?",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:688:    "venuesHistoryController.delete.alert.message": "Após a sua eliminação, se as pessoas que tiverem frequentado o local ao mesmo tempo se declararem doentes, não será notificado.",
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/AttestationQrCodeItem.kt:27:    var delete: String? = null
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/AttestationQrCodeItem.kt:30:    var onDelete: (() -> Unit)? = null
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/AttestationQrCodeItem.kt:60:            menu.findItem(R.id.qr_code_menu_delete).title = delete
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/AttestationQrCodeItem.kt:69:            R.id.qr_code_menu_delete -> {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/AttestationQrCodeItem.kt:70:                onDelete?.invoke()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/DeleteCardItem.kt:18:import com.lunabeestudio.stopcovid.databinding.ItemDeleteCardBinding
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/DeleteCardItem.kt:21:class DeleteCardItem : AbstractBindingItem<ItemDeleteCardBinding>() {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/DeleteCardItem.kt:24:    var deleteContentDescription: String? = null
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/DeleteCardItem.kt:25:    var onDelete: (() -> Unit)? = null
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/DeleteCardItem.kt:27:    override val type: Int = R.id.item_delete_card
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/DeleteCardItem.kt:29:    override fun createBinding(inflater: LayoutInflater, parent: ViewGroup?): ItemDeleteCardBinding {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/DeleteCardItem.kt:30:        return ItemDeleteCardBinding.inflate(inflater, parent, false)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/DeleteCardItem.kt:33:    override fun bindView(binding: ItemDeleteCardBinding, payloads: List<Any>) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/DeleteCardItem.kt:40:        binding.deleteImageView.isVisible = onDelete != null
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/DeleteCardItem.kt:41:        binding.deleteImageView.contentDescription = deleteContentDescription
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/DeleteCardItem.kt:42:        binding.deleteImageView.setOnClickListener {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/DeleteCardItem.kt:43:            onDelete?.invoke()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fastitem/DeleteCardItem.kt:48:fun deleteCardItem(block: (DeleteCardItem.() -> Unit)): DeleteCardItem = DeleteCardItem().apply(
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/AttestationsFragment.kt:174:            delete = strings["attestationsController.menu.delete"]
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/AttestationsFragment.kt:186:            onDelete = {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/AttestationsFragment.kt:188:                    .setTitle(strings["attestationsController.menu.delete.alert.title"])
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/AttestationsFragment.kt:189:                    .setMessage(strings["attestationsController.menu.delete.alert.message"])
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/CaptchaFragment.kt:120:        imageFile.delete()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/CaptchaFragment.kt:121:        audioFile.delete()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/HealthFragment.kt:93:            menu.findItem(R.id.notification_menu_delete).title = strings["sickController.state.deleteNotification"]
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/HealthFragment.kt:102:            R.id.notification_menu_delete -> {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/HealthFragment.kt:104:                    .setTitle(strings["sickController.state.deleteNotification"])
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/HealthFragment.kt:105:                    .setMessage(strings["sickController.state.deleteNotification.alert.title"])
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/PostalCodeBottomSheetFragment.kt:50:        binding.deleteButton.apply {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/PostalCodeBottomSheetFragment.kt:51:            text = strings["home.infoSection.updatePostalCode.alert.deletePostalCode"]
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VenuesHistoryFragment.kt:22:import com.lunabeestudio.stopcovid.fastitem.deleteCardItem
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VenuesHistoryFragment.kt:57:                deleteCardItem {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VenuesHistoryFragment.kt:60:                    deleteContentDescription = strings["common.delete"]
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VenuesHistoryFragment.kt:61:                    onDelete = {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VenuesHistoryFragment.kt:63:                            .setTitle(strings["venuesHistoryController.delete.alert.title"])
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VenuesHistoryFragment.kt:64:                            .setMessage(strings["venuesHistoryController.delete.alert.message"])
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/VenuesHistoryFragment.kt:65:                            .setPositiveButton(strings["common.delete"]) { _, _ ->
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/FormManager.kt:100:        File(context.filesDir, cacheFileName).delete()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/KeyFiguresManager.kt:99:            tmpFile.delete()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/StopCovid.kt:188:        File("${cacheDir.absolutePath}/shared_images").deleteRecursively()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/StopCovid.kt:229:        deleteOldAttestations()
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/StopCovid.kt:476:    private fun deleteOldAttestations() {
+stopcovid-android/stopcovid/src/main/res/layout/fragment_postal_code_bottom_sheet.xml:31:        android:id="@+id/deleteButton"
+stopcovid-android/stopcovid/src/main/res/layout/item_delete_card.xml:36:            app:layout_constraintEnd_toStartOf="@id/deleteImageView"
+stopcovid-android/stopcovid/src/main/res/layout/item_delete_card.xml:49:            app:layout_constraintEnd_toStartOf="@id/deleteImageView"
+stopcovid-android/stopcovid/src/main/res/layout/item_delete_card.xml:55:            android:id="@+id/deleteImageView"
+stopcovid-android/stopcovid/src/main/res/layout/item_delete_card.xml:60:            android:src="@drawable/ic_delete"
+stopcovid-android/stopcovid/src/main/res/menu/notification_menu.xml:20:        android:id="@+id/notification_menu_delete"
+stopcovid-android/stopcovid/src/main/res/menu/notification_menu.xml:23:        android:title="Delete" />
+stopcovid-android/stopcovid/src/main/res/menu/qr_code_menu.xml:19:        android:id="@+id/qr_code_menu_delete"
+stopcovid-android/stopcovid/src/main/res/menu/qr_code_menu.xml:21:        android:title="Delete"
+stopcovid-android/stopcovid/src/main/res/values/ids.xml:19:    <item name="item_delete_card" type="id" />

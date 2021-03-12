@@ -1,0 +1,17 @@
+stopcovid-blesdk-ios/.git/hooks/fsmonitor-watchman.sample:13:# modified since the given time. Paths must be relative to the root of
+stopcovid-blesdk-ios/.git/hooks/fsmonitor-watchman.sample:51:	# changed since $time but were not transient (ie created after
+stopcovid-blesdk-ios/.git/hooks/fsmonitor-watchman.sample:54:	# To accomplish this, we're using the "since" generator to use the
+stopcovid-blesdk-ios/.git/hooks/fsmonitor-watchman.sample:65:			"since": $time,
+stopcovid-blesdk-ios/.git/hooks/fsmonitor-watchman.sample:67:			"expression": ["not", ["allof", ["since", $time, "cclock"], ["not", "exists"]]]
+stopcovid-blesdk-ios/.git/hooks/pre-commit.sample:29:	# even required, for portability to Solaris 10's /usr/bin/tr), since
+stopcovid-blesdk-ios/.git/hooks/pre-rebase.sample:146: * A has one fix since it was merged up to "next".
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:49:        let expirationDate = Date(timeIntervalSinceNow: expirationDelay)
+stopcovid-blesdk-ios/ProximityNotification/Filter/ProximityFilter.swift:43:        let firstTimestamp = sortedTimestampedRSSIs.first?.timestamp.timeIntervalSince1970 ?? 0
+stopcovid-blesdk-ios/ProximityNotification/Filter/ProximityFilter.swift:44:        let lastTimestamp = sortedTimestampedRSSIs.last?.timestamp.timeIntervalSince1970 ?? 0
+stopcovid-blesdk-ios/ProximityNotification/Filter/RiskComputer.swift:48:            let timestampDelta = timestampedRSSI.timestamp.timeIntervalSince1970 - epochStartDate.timeIntervalSince1970
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:16:    private let epochStartDate = Date(timeIntervalSince1970: 0)
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:138:            let epochStartDate = Date(timeIntervalSinceNow: duration * (1.0 - drand48()))
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:143:                let timestamp = Date(timeInterval: epochDuration * drand48(), since: epochStartDate)
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:226:            let timestamp = Date(timeIntervalSince1970: TimeInterval(timeInterval))
+stopcovid-blesdk-ios/ProximityNotificationTests/RiskComputerTests.swift:49:        let timestamp = Date(timeInterval: -1.0, since: epochStartDate)
+stopcovid-blesdk-ios/ProximityNotificationTests/RiskComputerTests.swift:62:        let timestamp = Date(timeInterval: epochDuration + 1.0, since: epochStartDate)

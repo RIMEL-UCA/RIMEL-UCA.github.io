@@ -1,0 +1,15 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/bootstrap/provider.tf:9:  server_side_encryption_configuration {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/bootstrap/provider.tf:11:      apply_server_side_encryption_by_default {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/bootstrap/provider.tf:28:  server_side_encryption_configuration {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/bootstrap/provider.tf:30:      apply_server_side_encryption_by_default {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/kinesis.tf:66:  server_side_encryption {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/kms.tf:24:        "kms:Encrypt*",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/kms.tf:26:        "kms:ReEncrypt*",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/kms.tf:52:        "kms:Encrypt*",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/kms.tf:54:        "kms:ReEncrypt*",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/provider.tf:23:    encrypt        = true
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/rds.tf:44:  storage_encrypted         = true
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/s3.tf:7:  server_side_encryption_configuration {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/s3.tf:9:      apply_server_side_encryption_by_default {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/s3.tf:23:  server_side_encryption_configuration {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/s3.tf:25:      apply_server_side_encryption_by_default {

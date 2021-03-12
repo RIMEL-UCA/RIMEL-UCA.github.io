@@ -1,0 +1,182 @@
+./stopcovid-blesdk-android-master/README.md:3:ProximityNotification SDK uses Bluetooth Low Energy (BLE) in order to exchange data with proximity nearby
+./stopcovid-blesdk-android-master/README.md:6:- Proximity payload containing exchanged data
+./stopcovid-blesdk-android-master/README.md:8:- Some metadata such as BLE calibrated RSSI, txPowerLevel
+./stopcovid-blesdk-android-master/README.md:33:    backgroundServiceManufacturerDataIOS = byteArrayOf(), // Byte array of manufacturer data advertised by iOS in background. It depends on your service UUID
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityInfo.kt:15:interface ProximityMetadata
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityInfo.kt:17:data class ProximityInfo(
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityInfo.kt:20:    val metadata: ProximityMetadata
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationError.kt:13:data class ProximityNotificationError(
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationEvent.kt:17:    data class Verbose(
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationEvent.kt:22:    data class Debug(
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationEvent.kt:27:    data class Info(
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityNotificationEvent.kt:32:    data class Error(
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityPayload.kt:14: * ProximityPayload holding data to be exchanged.
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityPayload.kt:16:data class ProximityPayload(val data: ByteArray) {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityPayload.kt:23:        require(data.size == SIZE) { "Expecting a byte array of $SIZE bytes. Got ${data.size}." }
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityPayload.kt:32:        if (!data.contentEquals(other.data)) return false
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ProximityPayload.kt:38:        return data.contentHashCode()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BlePayload.kt:15:data class BlePayload(
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BlePayload.kt:38:        fun from(data: ByteArray): BlePayload {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BlePayload.kt:40:            require(data.size >= SIZE) { "Expecting a byte array of $SIZE bytes. Got ${data.size}." }
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BlePayload.kt:44:                    data.copyOfRange(
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BlePayload.kt:49:                version = data[VERSION_OFFSET].toInt(),
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BlePayload.kt:50:                txPowerLevel = data[TX_POWER_LEVEL_OFFSET].toInt(),
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BlePayload.kt:51:                calibratedRssi = data.getOrNull(CALIBRATED_RSSI_OFFSET)?.toInt()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BlePayload.kt:55:        fun fromOrNull(data: ByteArray): BlePayload? {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BlePayload.kt:57:                from(data)
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BlePayload.kt:69:        proximityPayload.data.copyInto(result, PROXIMITY_PAYLOAD_OFFSET)
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityMetadata.kt:13:import com.orange.proximitynotification.ProximityMetadata
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityMetadata.kt:15:data class BleProximityMetadata(
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityMetadata.kt:19:) : ProximityMetadata
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotification.kt:119:                val serviceData = scannedDevice.serviceData
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotification.kt:121:                if (serviceData != null) {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotification.kt:123:                    decodePayload(serviceData)?.let {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiser.kt:80:                data = buildPayload(proximityPayload),
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithoutAdvertiser.kt:51:private data class BleScannerException(
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleProximityNotificationWithoutAdvertiser.kt:345:        val shouldReadRemotePayload = scannedDevice.serviceData == null
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleRecord.kt:15:internal data class BleRecord(
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleRecordMapper.kt:21:        metadata = record.toProximityMetadata()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleRecordMapper.kt:24:    private fun BleRecord.toProximityMetadata() = BleProximityMetadata(
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleScannedDeviceFilter.kt:26:                it.serviceData?.contentHashCode() ?: run { it.device.address }
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleScannedDeviceSelector.kt:141:        // We can't distinguish scans without service data so keep all of them
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleScannedDeviceSelector.kt:142:        result.addAll(filter { it.serviceData == null })
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleScannedDeviceSelector.kt:145:        filter { it.serviceData != null }
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleScannedDeviceSelector.kt:176:    private suspend fun BleScannedDevice.remoteId(): BleScannedDeviceRemoteId = when (serviceData) {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleScannedDeviceSelector.kt:178:        else -> BlePayload.fromOrNull(serviceData)?.proximityPayload?.let {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleScannedDeviceSelector.kt:180:        } ?: serviceData.contentHashCode()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleScannedDeviceSelector.kt:184:private data class DeviceScansByRemoteId(
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleScannedDeviceSelector.kt:196:private data class DeviceStats(
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleSettings.kt:18: * @param backgroundServiceManufacturerDataIOS Byte array of manufacturer data advertised by iOS in background
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleSettings.kt:33:@Suppress("ArrayInDataClass")
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleSettings.kt:34:data class BleSettings(
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/BleSettings.kt:37:    val backgroundServiceManufacturerDataIOS: ByteArray,
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/advertiser/BleAdvertiser.kt:22:    fun start(data: ByteArray, callback: Callback): Boolean
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/advertiser/BleAdvertiserImpl.kt:14:import android.bluetooth.le.AdvertiseData
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/advertiser/BleAdvertiserImpl.kt:29:    override fun start(data: ByteArray, callback: BleAdvertiser.Callback): Boolean {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/advertiser/BleAdvertiserImpl.kt:36:        return doStart(data, callback)
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/advertiser/BleAdvertiserImpl.kt:48:    private fun doStart(data: ByteArray, callback: BleAdvertiser.Callback): Boolean {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/advertiser/BleAdvertiserImpl.kt:54:                buildAdvertiseData(data),
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/advertiser/BleAdvertiserImpl.kt:86:    private fun buildAdvertiseData(data: ByteArray): AdvertiseData {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/advertiser/BleAdvertiserImpl.kt:87:        return AdvertiseData.Builder()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/advertiser/BleAdvertiserImpl.kt:89:            .addServiceData(ParcelUuid(settings.serviceUuid), data)
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattClientImpl.kt:238:    private data class ValueWithStatus<out T>(val status: Int, val value: T)
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManager.kt:22:internal data class BleGattConnectionException(
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/scanner/BleScanner.kt:17:data class BleScannedDevice(
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/scanner/BleScanner.kt:20:    val serviceData: ByteArray? = null,
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/scanner/BleScanner.kt:31:        if (serviceData != null) {
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/scanner/BleScanner.kt:32:            if (other.serviceData == null) return false
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/scanner/BleScanner.kt:33:            if (!serviceData.contentEquals(other.serviceData)) return false
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/scanner/BleScanner.kt:34:        } else if (other.serviceData != null) return false
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/scanner/BleScanner.kt:43:        result = 31 * result + (serviceData?.contentHashCode() ?: 0)
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/scanner/BleScannerImpl.kt:143:            .setManufacturerData(
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/scanner/BleScannerImpl.kt:228:    private fun ScanRecord.isServiceScan() = serviceData?.get(serviceParcelUuid) != null
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/scanner/BleScannerImpl.kt:234:        (serviceData == null && manufacturerSpecificData?.get(APPLE_MANUFACTURER_ID)
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/scanner/BleScannerImpl.kt:235:            .contentEquals(settings.backgroundServiceManufacturerDataIOS))
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/ble/scanner/ScanResultExt.kt:21:        serviceData = scanRecord?.serviceData?.get(serviceUuid),
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/filter/ProximityFilter.kt:34:    data class Config(
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/filter/ProximityFilter.kt:81:        data class Accepted(
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/filter/RssiClipper.kt:14:    data class Output(
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/filter/TimestampedRssi.kt:15:data class TimestampedRssi(
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/tools/ExpiringCache.kt:16:private data class ExpiringValue<V>(val value: V, val expireTime: Long)
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/tools/Result.kt:20:    data class Success<out T>(val value: T) : Result<T>()
+./stopcovid-blesdk-android-master/library/src/main/java/com/orange/proximitynotification/tools/Result.kt:21:    data class Failure(val throwable: Throwable?) : Result<Nothing>()
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ProximityPayloadTest.kt:28:    fun init_with_incorrect_data_size_should_throw_IllegalArgumentException(size: Int) {
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ProximityPayloadTest.kt:30:        val data = ByteArray(size)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ProximityPayloadTest.kt:34:            ProximityPayload(data)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ProximityPayloadTest.kt:45:    fun init_with_correct_data_size_should_succeed() {
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ProximityPayloadTest.kt:47:        val data = ByteArray(ProximityPayload.SIZE)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ProximityPayloadTest.kt:50:        val result = ProximityPayload(data)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ProximityPayloadTest.kt:53:        assertThat(result.data).isEqualTo(data)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BlePayloadTest.kt:29:    fun from_with_incorrect_data_should_throw_IllegalArgumentException(size: Int) {
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BlePayloadTest.kt:32:        val data = ByteArray(size)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BlePayloadTest.kt:36:            BlePayload.from(data)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BlePayloadTest.kt:49:    fun fromOrNull_with_incorrect_data_should_return_null(size: Int) {
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BlePayloadTest.kt:52:        val data = ByteArray(size)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BlePayloadTest.kt:55:        val result = BlePayload.fromOrNull(data)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BlePayloadTest.kt:69:            proximityPayload.data + byteArrayOf(version.toByte()) + byteArrayOf(txCompensationGain.toByte())
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BlePayloadTest.kt:91:            proximityPayload.data + byteArrayOf(version.toByte()) + byteArrayOf(
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleProximityNotificationFactoryTest.kt:31:        backgroundServiceManufacturerDataIOS = byteArrayOf(),
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiserTest.kt:56:        backgroundServiceManufacturerDataIOS = byteArrayOf(),
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiserTest.kt:80:            val scannedDevice = bleScannedDevice(serviceData = payload.toByteArray(), rssi = 6)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiserTest.kt:92:                    with(proximityInfo.metadata as BleProximityMetadata) {
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiserTest.kt:124:            val scannedDevice = bleScannedDevice(serviceData = badPayload, rssi = 6)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiserTest.kt:335:                bleScannedDevice(device = bluetoothDevice, serviceData = null, rssi = 6)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiserTest.kt:364:                    with(proximityInfo.metadata as BleProximityMetadata) {
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiserTest.kt:412:                    with(proximityInfo.metadata as BleProximityMetadata) {
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleProximityNotificationWithAdvertiserTest.kt:499:                    return proximityPayload.data
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleRecordMapperTest.kt:55:            metadata = BleProximityMetadata(
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleRecordMapperTest.kt:88:            metadata = BleProximityMetadata(
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleRecordProviderForScanWithPayloadTest.kt:29:        val device1Scan1 = bleScannedDevice(serviceData = payload.proximityPayload.data)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleRecordProviderForScanWithPayloadTest.kt:43:        val device1Scan1 = bleScannedDevice(serviceData = payload.proximityPayload.data)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleRecordProviderForScanWithoutPayloadTest.kt:39:        val device1Scan1 = bleScannedDevice(serviceData = null)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleRecordProviderForScanWithoutPayloadTest.kt:53:        val device1Scan1 = bleScannedDevice(device = device, serviceData = null)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleRecordProviderForScanWithoutPayloadTest.kt:70:        val device1Scan1 = bleScannedDevice(device = device, rssi = 1, serviceData = null)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleRecordProviderForScanWithoutPayloadTest.kt:76:        val device1Scan2 = bleScannedDevice(device = device, rssi = 2, serviceData = null)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleRecordProviderForScanWithoutPayloadTest.kt:102:        val device1Scan1 = bleScannedDevice(device = device, serviceData = null)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleRecordProviderForScanWithoutPayloadTest.kt:123:                serviceData = payload.proximityPayload.data
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleRecordProviderForScanWithoutPayloadTest.kt:197:        val device4Scan1 = bleScannedDevice(device4, serviceData = null)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleRecordProviderForScanWithoutPayloadTest.kt:219:        val device2Scan1 = bleScannedDevice(device2, serviceData = null)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceFilterTest.kt:45:            bleScannedDevice(device1, timestamp = now.minus(1), serviceData = null),
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceFilterTest.kt:46:            bleScannedDevice(device2, timestamp = now, serviceData = null)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceFilterTest.kt:69:            bleScannedDevice(device1, timestamp = now, serviceData = null),
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceFilterTest.kt:70:            bleScannedDevice(device2, timestamp = now, serviceData = null),
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceFilterTest.kt:71:            bleScannedDevice(device3, timestamp = now, serviceData = byteArrayOf(1)),
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceFilterTest.kt:72:            bleScannedDevice(device4, timestamp = now, serviceData = byteArrayOf(2))
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceFilterTest.kt:83:    fun filter_with_different_scanned_devices_having_same_service_data_should_squash() {
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceFilterTest.kt:96:            bleScannedDevice(device1, timestamp = now, serviceData = null),
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceFilterTest.kt:97:            bleScannedDevice(device2, timestamp = now, serviceData = null),
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceFilterTest.kt:98:            bleScannedDevice(device3, timestamp = now.minus(2), serviceData = byteArrayOf(1)),
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceFilterTest.kt:99:            bleScannedDevice(device4, timestamp = now, serviceData = byteArrayOf(1))
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceFilterTest.kt:107:            bleScannedDevice(device1, timestamp = now, serviceData = null),
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceFilterTest.kt:108:            bleScannedDevice(device2, timestamp = now, serviceData = null),
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceFilterTest.kt:109:            bleScannedDevice(device4, timestamp = now, serviceData = byteArrayOf(1))
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceFilterTest.kt:122:        val serviceData = byteArrayOf(1)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceFilterTest.kt:125:            bleScannedDevice(device = device2, serviceData = null, timestamp = now.plus(5)),
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceFilterTest.kt:126:            bleScannedDevice(device = device2, serviceData = null, timestamp = now.plus(4)),
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceFilterTest.kt:127:            bleScannedDevice(device = device1, serviceData = serviceData, timestamp = now.plus(3)),
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceFilterTest.kt:128:            bleScannedDevice(device = device1, serviceData = serviceData, timestamp = now.plus(2)),
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceFilterTest.kt:129:            bleScannedDevice(device = device1, serviceData = serviceData, timestamp = now.plus(1))
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceFilterTest.kt:137:            bleScannedDevice(device = device1, serviceData = serviceData, timestamp = now.plus(3)),
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceFilterTest.kt:138:            bleScannedDevice(device = device2, serviceData = null, timestamp = now.plus(5))
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceFilterTest.kt:154:            bleScannedDevice(device1, timestamp = now.plus(1_000), serviceData = null),
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceFilterTest.kt:155:            bleScannedDevice(device2, timestamp = now.plus(1_001), serviceData = null)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceFilterTest.kt:161:            bleScannedDevice(device1, timestamp = now.plus(1_000), serviceData = null),
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceFilterTest.kt:162:            bleScannedDevice(device2, timestamp = now.plus(1_001), serviceData = null),
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceFilterTest.kt:163:            bleScannedDevice(device3, timestamp = now.plus(1_002), serviceData = null)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceFilterTest.kt:171:            bleScannedDevice(device3, timestamp = now.plus(1_002), serviceData = null)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceSelectorTest.kt:194:    fun select_given_multiple_address_for_a_same_device_having_unique_service_data_should_select_most_recent_one() =
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceSelectorTest.kt:199:            val serviceData = byteArrayOf(1, 2, 3)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceSelectorTest.kt:203:                bleScannedDevice(device(1), rssi, serviceData, timestamp.plus(1)),
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceSelectorTest.kt:204:                bleScannedDevice(device(2), rssi, serviceData, timestamp.plus(2)),
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceSelectorTest.kt:205:                bleScannedDevice(device(3), rssi, serviceData, timestamp.plus(3)),
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceSelectorTest.kt:206:                bleScannedDevice(device(4), rssi, serviceData, timestamp.plus(4)),
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceSelectorTest.kt:207:                bleScannedDevice(device(5), rssi, serviceData, timestamp.plus(5))
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceSelectorTest.kt:216:                bleScannedDevice(device(5), rssi, serviceData, timestamp.plus(5))
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleScannedDeviceSelectorTest.kt:393:                    return proximityPayload.data
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleTestHelper.kt:17:import com.orange.proximitynotification.ProximityMetadata
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleTestHelper.kt:56:    serviceData: ByteArray? = null,
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleTestHelper.kt:61:    serviceData = serviceData,
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleTestHelper.kt:74:    metadata: ProximityMetadata = bleProximityMetadata()
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleTestHelper.kt:78:    metadata = metadata
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleTestHelper.kt:81:internal fun bleProximityMetadata(
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/BleTestHelper.kt:85:) = BleProximityMetadata(
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/advertiser/BleAdvertiserImplTest.kt:30:        backgroundServiceManufacturerDataIOS = byteArrayOf(),
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImplTest.kt:40:        backgroundServiceManufacturerDataIOS = byteArrayOf(),
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/scanner/BleScannerImplTest.kt:30:        backgroundServiceManufacturerDataIOS = byteArrayOf(),
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/scanner/ScanResultExtKtTest.kt:31:            "data",
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/scanner/ScanResultExtKtTest.kt:34:    fun toBleScannedDevice_should_create_BLEScannedDevice(data: String?) {
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/scanner/ScanResultExtKtTest.kt:42:            serviceData = data?.toByteArray()
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/scanner/ScanResultExtKtTest.kt:45:            data = data?.toByteArray()
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/scanner/ScanResultExtKtTest.kt:77:    private fun givenScanRecord(data: ByteArray? = null): ScanRecord {
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/scanner/ScanResultExtKtTest.kt:79:        val serviceData = mock<Map<ParcelUuid, ByteArray>>()
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/scanner/ScanResultExtKtTest.kt:80:        whenever(scanRecord.serviceData).thenReturn(serviceData)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/ble/scanner/ScanResultExtKtTest.kt:81:        whenever(serviceData[any()]).thenReturn(data)
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/filter/ProximityFilterIntTest.kt:33:        val csvReader = CSVReader("timestamp_rssi_dataset.csv")
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/filter/ProximityFilterTest.kt:26:    fun filter_given_empty_data_should_return_rejected() {
+./stopcovid-blesdk-android-master/library/src/test/java/com/orange/proximitynotification/filter/RiskComputerTest.kt:48:    fun compute_without_data_should_not_return_any_risks() {
+./stopcovid-blesdk-android-master/licenses/library/license-Android-Scanner-Compat-Library.txt:24:SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+./stopcovid-blesdk-android-master/licenses/tests/license-junit4.txt:156:data, programs or equipment, and unavailability or interruption of operations.
+./stopcovid-blesdk-android-master/licenses/tests/license-zohhak.txt:38:object code and/or source code for the Application, including any data
+./stopcovid-blesdk-android-master/licenses/tests/license-zohhak.txt:50:facility refers to a function or data to be supplied by an Application
+./stopcovid-blesdk-android-master/licenses/tests/license-zohhak.txt:57:   function or data, the facility still operates, and performs
+./stopcovid-blesdk-android-master/licenses/tests/license-zohhak.txt:68:material is not limited to numerical parameters, data structure

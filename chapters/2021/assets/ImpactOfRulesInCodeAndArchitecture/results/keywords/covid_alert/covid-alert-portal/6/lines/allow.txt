@@ -1,0 +1,103 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/applypatch-msg.sample:8:# allowed to edit the commit message file.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/commit-msg.sample:7:# commit.  The hook is allowed to edit the commit message file.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/pre-commit.sample:18:# If you want to allow non-ASCII filenames set this variable to true.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/pre-commit.sample:19:allownonascii=$(git config --bool hooks.allownonascii)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/pre-commit.sample:27:if [ "$allownonascii" != "true" ] &&
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/pre-commit.sample:43:  git config hooks.allownonascii true
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/pre-rebase.sample:15:# merged to 'next' branch from getting rebased, because allowing it
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/pre-rebase.sample:50:	exit 1 ;# we could allow it, but there is no point.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/pre-rebase.sample:62:		exit 1 ;# we could allow it, but there is no point.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/pre-rebase.sample:153:We would want to allow C to be rebased, refuse A, and encourage
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:10:# hooks.allowunannotated
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:11:#   This boolean sets whether unannotated tags will be allowed into the
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:13:# hooks.allowdeletetag
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:14:#   This boolean sets whether deleting tags will be allowed in the
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:16:# hooks.allowmodifytag
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:19:# hooks.allowdeletebranch
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:20:#   This boolean sets whether deleting branches will be allowed in the
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:24:#   in the repository.  By default this is allowed.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:46:allowunannotated=$(git config --bool hooks.allowunannotated)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:47:allowdeletebranch=$(git config --bool hooks.allowdeletebranch)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:49:allowdeletetag=$(git config --bool hooks.allowdeletetag)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:50:allowmodifytag=$(git config --bool hooks.allowmodifytag)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:74:		if [ "$allowunannotated" != "true" ]; then
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:75:			echo "*** The un-annotated tag, $short_refname, is not allowed in this repository" >&2
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:82:		if [ "$allowdeletetag" != "true" ]; then
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:83:			echo "*** Deleting a tag is not allowed in this repository" >&2
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:89:		if [ "$allowmodifytag" != "true" ] && git rev-parse $refname > /dev/null 2>&1
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:92:			echo "*** Modifying a tag is not allowed in this repository." >&2
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:99:			echo "*** Creating a branch is not allowed in this repository" >&2
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:105:		if [ "$allowdeletebranch" != "true" ]; then
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:106:			echo "*** Deleting a branch is not allowed in this repository" >&2
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:115:		if [ "$allowdeletebranch" != "true" ]; then
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/.git/hooks/update.sample:116:			echo "*** Deleting a tracking branch is not allowed in this repository" >&2
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:136:  - On login: login accepts a backup code, and allows users to message an administrator
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CHANGELOG.md:259:- Allow resending invitations whenever no user account exists — previously, an "accepted" invitation for a deleted user would prevent that user from being invited again
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/CODE_OF_CONDUCT.md:99:with those enforcing the Code of Conduct, is allowed during this period.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/certificates.tf:32:  allow_overwrite = true
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/certificates.tf:73:  allow_overwrite = true
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/cloudfront.tf:29:    allowed_methods  = ["GET", "HEAD"]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/dashboard.tf:173:                    [ ".", "AllowedRequests", ".", ".", ".", ".", ".", "." ]
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/dashboard.tf:177:                "title": "Allowed vs Blocked Requests"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/ecs.tf:59:    django_allowed_hosts                   = var.django_allowed_hosts
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/ecs.tf:98:    django_allowed_hosts                   = var.django_allowed_hosts
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/iam.tf:18:    effect = "Allow"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/kinesis.tf:16:      "Effect": "Allow",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/kinesis.tf:36:      "Effect": "Allow",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/kinesis.tf:51:      "Effect": "Allow",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/kms.tf:13:      "Effect" : "Allow",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/kms.tf:21:      "Effect": "Allow",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/kms.tf:33:      "Sid": "Allow_CloudWatch_for_CMK",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/kms.tf:34:      "Effect": "Allow",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/kms.tf:47:      "Effect": "Allow",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/lambda.tf:17:      "Effect": "Allow",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/lambda.tf:49:## Allow SNS to call Lambda function
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/lambda.tf:52:  statement_id  = "AllowExecutionFromSNSWarningAlert"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/lambda.tf:60:  statement_id  = "AllowExecutionFromSNSCriticalAlert"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/lambda.tf:68:  statement_id  = "AllowExecutionFromSNSOkAlert"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/lambda.tf:76:  statement_id  = "AllowExecutionFromSNSDnsCriticalAlert"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/lambda.tf:83:  statement_id  = "AllowExecutionFromSNSDnsOKAlert"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/lambda.tf:90:## Allow Lambda to create Logs in Cloudwatch
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/lambda.tf:108:      "Effect": "Allow"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:540:    action     = "allow"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/networking.tf:549:    action     = "allow"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/sns.tf:98:    effect = "Allow"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/sns.tf:130:    effect = "Allow"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/task-definitions/covid-portal.json:37:        "name": "DJANGO_ALLOWED_HOSTS",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/task-definitions/covid-portal.json:38:        "value": "${django_allowed_hosts}"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/variables.auto.tfvars:25:django_allowed_hosts  = ".cdssandbox.xyz"
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/variables.tf:166:variable "django_allowed_hosts" {
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/vpc_flow_log.tf:23:      "Effect": "Allow",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/vpc_flow_log.tf:50:      "Effect": "Allow",
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/waf.tf:10:    allow {}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/config/terraform/aws/waf.tf:191:    allow {}
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:155:        a province that disallows SMS
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/covid_key/views.py:185:        a province that disallows SMS
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.mo matches
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/locale/fr/LC_MESSAGES/django.po:1791:"            <b>We are allowed to use this information and these services</b> "
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/Pipfile:49:allow_prereleases = true
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/.env.example:4:# DJANGO_ALLOWED_HOSTS =
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:102:        # allow if superuser or admin
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:111:        # if logged in user is superuser, allow operation
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/mixins.py:118:        # if same user, allow operation
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:49:ALLOWED_HOSTS = [
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:60:        ALLOWED_HOSTS.append(host_by_name)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:64:if os.getenv("DJANGO_ALLOWED_HOSTS"):
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:65:    ALLOWED_HOSTS.extend(os.getenv("DJANGO_ALLOWED_HOSTS").split(","))
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:124:# template settings and thus allows us to place the widget templates there.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:291:CORS_ALLOW_CREDENTIALS = False
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/settings.py:293:CORS_ALLOW_METHODS = [
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/tests.py:12:        self.assertContains(response, "User-Agent: *\nDisallow: /")
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/urls.py:35:        lambda x: HttpResponse("User-Agent: *\nDisallow: /", content_type="text/plain"),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/views.py:3:from django.utils.http import url_has_allowed_host_and_scheme
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/views.py:37:    if not url_has_allowed_host_and_scheme(
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/portal/views.py:39:        allowed_hosts={request.get_host()},
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/migrations/0004_add_healthcareprovince_model.py:29:                    models.SlugField(allow_unicode=True, max_length=2, unique=True),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/migrations/0009_add_more_provinces.py:32:            field=models.SlugField(allow_unicode=True, max_length=3, unique=True),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/migrations/0018_add_new_province_alter_province_abbr.py:24:            field=models.SlugField(allow_unicode=True, max_length=5, unique=True),
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/models.py:11:    abbr = models.SlugField(max_length=5, allow_unicode=True, unique=True)
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/templates/profiles/privacy.html:26:            <b>We are allowed to use this information and these services</b> under the <a href="https://laws-lois.justice.gc.ca/eng/acts/H-3.2/"><em>Department of Health Act</em></a> and the <a href="https://laws-lois.justice.gc.ca/eng/acts/f-11/"><em>Financial Administration Act</em></a>. We also follow the <a href="https://www.tbs-sct.gc.ca/pol/doc-eng.aspx?id=26761"> <em>Standard on Privacy and Web Analytics</em></a>.
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:482:        verified_allowed, errors_details = device.verify_is_allowed()
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/profiles/views.py:483:        if verified_allowed is False:
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:43:- `DJANGO_ALLOWED_HOSTS`: A list of strings representing the host/domain names that this Django site can serve. Only needs to be set in prod. [Read the docs here](https://docs.djangoproject.com/en/3.0/ref/settings/#allowed-hosts).
+/mnt/c/Users/conig/Desktop/test/covid-alert-portal/README.md:162:This app allows you to use the Django admininstration panel (`/admin`) to manage users.

@@ -1,0 +1,29 @@
+stopcovid-blesdk-ios/.git/hooks/applypatch-msg.sample:6:# The hook should exit with non-zero status after issuing an
+stopcovid-blesdk-ios/.git/hooks/commit-msg.sample:6:# status after issuing an appropriate message if it wants to stop the
+stopcovid-blesdk-ios/.git/hooks/fsmonitor-watchman.sample:51:	# changed since $time but were not transient (ie created after
+stopcovid-blesdk-ios/.git/hooks/pre-applypatch.sample:6:# The hook should exit with non-zero status after issuing an
+stopcovid-blesdk-ios/.git/hooks/pre-commit.sample:5:# exit with non-zero status after issuing an appropriate message if
+stopcovid-blesdk-ios/.git/hooks/pre-push.sample:4:# push" after it has checked the remote status, but before anything has been
+stopcovid-blesdk-ios/.git/hooks/update.sample:17:#   This boolean sets whether a tag may be modified after creation. By default
+stopcovid-blesdk-ios/LICENSE.txt:241:non-compliance by some reasonable means prior to 60 days after You have
+stopcovid-blesdk-ios/LICENSE.txt:246:from such Contributor, and You become compliant prior to 30 days after
+stopcovid-blesdk-ios/LICENSE.txt:320:that the language of a contract shall be construed against the drafter
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:362:            dispatchQueue.asyncAfter(deadline: .now() + 2.0) { [weak self] in
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothCentralManagerMock.swift:31:        dispatchQueue.asyncAfter(deadline: .now() + startDelay) {
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothCentralManagerMock.swift:42:                      after delay: TimeInterval) {
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothCentralManagerMock.swift:43:        dispatchQueue.asyncAfter(deadline: .now() + startDelay + delay) {
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothCentralManagerMock.swift:49:                self.dispatchQueue.asyncAfter(deadline: .now() + self.readCharacteristicDelay) {
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothPeripheralManagerMock.swift:30:                                      after delay: TimeInterval) {
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothPeripheralManagerMock.swift:31:        dispatchQueue.asyncAfter(deadline: .now() + delay) {
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:102:                                        after: 1.0)
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:137:        centralManagerMock.scheduleScan(peripheral: peripheral, payload: payload, isPayloadAdvertised: true, after: 1.0)
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:138:        centralManagerMock.scheduleScan(peripheral: peripheral, payload: payload, isPayloadAdvertised: true, after: 2.0)
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:139:        // Schedule a scan after connectionTimeInterval is expired
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:140:        centralManagerMock.scheduleScan(peripheral: peripheral, payload: payload, isPayloadAdvertised: true, after: 2.0 + settings.connectionTimeInterval + 1.0)
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:190:                                        after: 1.0)
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:225:        centralManagerMock.scheduleScan(peripheral: peripheral, payload: payload, isPayloadAdvertised: false, after: 1.0)
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:226:        centralManagerMock.scheduleScan(peripheral: peripheral, payload: payload, isPayloadAdvertised: false, after: 3.0)
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:227:        // Schedule a scan after connectionTimeInterval is expired
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:229:        centralManagerMock.scheduleScan(peripheral: peripheral, payload: payload, isPayloadAdvertised: false, after: 3.0 + settings.connectionTimeInterval + 1.0)
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:276:                                                           after: 1.0)
+stopcovid-blesdk-ios/ProximityNotificationTests/RiskComputerTests.swift:59:    func testComputeRiskWithOneTimestampedRSSIAfterEpochEndDateShouldReturnZeroRisk() throws {

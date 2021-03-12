@@ -1,0 +1,5 @@
+../robert-client-api-spec/openapi.yaml:174:        Once the app has successfully reported its data, it should call the /unregister endpoint to remove its id from the server.
+../robert-client-api-spec/openapi.yaml:198:        User wants to stop using the ROBERT service. Delete all data related to this user from the server
+../robert-client-api-spec/openapi.yaml:314:              description: The push token that is associated with the app in order to delete it from the database
+../robert-client-api-spec/openapi.yaml:454:            A protobuf containing the same data as the 'contacts' parameter. Encoded as Base64
+../robert-client-api-spec/openapi.yaml:574:          description: The timezone of the phone as a TZ Database name (e.g. Europe/Paris, Indian/Reunion, America/Cayenne), used to schedule the sending of the notification during the day only

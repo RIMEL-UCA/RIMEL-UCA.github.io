@@ -1,0 +1,132 @@
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:45:        self.settings = settings
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:46:        self.dispatchQueue = dispatchQueue
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:47:        self.logger = logger
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:59:        self.proximityPayloadProvider = proximityPayloadProvider
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:64:        centralManager = CBCentralManager(delegate: self,
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:79:            self.cleanPeripherals()
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:121:        let timer = Timer(timeInterval: 5, repeats: false) { [weak self] _ in
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:122:            guard let `self` = self else { return }
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:124:            self.dispatchQueue.async {
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:126:                    self.logger.error(message: "central manager connection timeout to peripheral \(peripheral)",
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:128:                    self.disconnectPeripheral(peripheral)
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:138:        peripheral.delegate = self
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:154:            delegate?.bluetoothCentralManager(self, didNotFindServiceForPeripheralIdentifier: peripheral.identifier)
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:253:        delegate?.bluetoothCentralManager(self, stateDidChange: central.state.toProximityNotificationState())
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:283:        let shouldAttemptConnection = delegate?.bluetoothCentralManager(self,
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:347:            delegate?.bluetoothCentralManager(self,
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:362:            dispatchQueue.asyncAfter(deadline: .now() + 2.0) { [weak self] in
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:363:                self?.disconnectPeripheral(peripheral)
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothCentralManager.swift:375:            delegate?.bluetoothCentralManager(self, didNotFindServiceForPeripheralIdentifier: peripheral.identifier)
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothPeripheralManager.swift:33:        self.settings = settings
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothPeripheralManager.swift:34:        self.dispatchQueue = dispatchQueue
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothPeripheralManager.swift:35:        self.logger = logger
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothPeripheralManager.swift:42:        self.proximityPayloadProvider = proximityPayloadProvider
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothPeripheralManager.swift:47:        peripheralManager = CBPeripheralManager(delegate: self,
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothPeripheralManager.swift:154:                delegate?.bluetoothPeripheralManager(self,
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:48:        self.settings = settings
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:49:        self.stateChangedHandler = stateChangedHandler
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:50:        self.dispatchQueue = dispatchQueue
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:51:        self.centralManager = centralManager
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:52:        self.peripheralManager = peripheralManager
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:57:        self.centralManager.delegate = self
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:58:        self.peripheralManager.delegate = self
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:64:        self.proximityInfoUpdateHandler = proximityInfoUpdateHandler
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:65:        self.identifierFromProximityPayload = identifierFromProximityPayload
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:96:        let timer = Timer(timeInterval: settings.cacheExpirationDelay / 5.0, repeats: true) { [weak self] _ in
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:97:            guard let `self` = self else { return }
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:99:            self.scannedPeripheralForPeripheralIdentifier.removeExpiredValues()
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:100:            self.bluetoothProximityPayloadForPeripheralIdentifier.removeExpiredValues()
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:101:            self.connectionDateForPayloadIdentifier.removeExpiredValues()
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:122:            self.stateChangedHandler(state)
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:141:            if let proximityInfo = self.proximityInfo(for: peripheral, from: bluetoothProximityPayload) {
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:161:            if let proximityInfo = self.proximityInfo(for: peripheral, from: bluetoothProximityPayload) {
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityNotification.swift:179:        if let proximityInfo = self.proximityInfo(for: peripheral, from: bluetoothProximityPayload) {
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityPayload.swift:38:        self.data = payload.data + metadata
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityPayload.swift:39:        self.payload = payload
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityPayload.swift:48:        self.data = data
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothProximityPayload.swift:49:        self.payload = payload
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothRSSICalibrator.swift:18:        self.settings = settings
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothSettings.swift:48:        self.serviceUniqueIdentifier = serviceUniqueIdentifier
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothSettings.swift:49:        self.serviceCharacteristicUniqueIdentifier = serviceCharacteristicUniqueIdentifier
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothSettings.swift:50:        self.txCompensationGain = txCompensationGain
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothSettings.swift:51:        self.rxCompensationGain = rxCompensationGain
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothSettings.swift:52:        self.connectionTimeInterval = connectionTimeInterval
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/BluetoothSettings.swift:53:        self.cacheExpirationDelay = cacheExpirationDelay
+stopcovid-blesdk-ios/ProximityNotification/Bluetooth/CBManagerState+BluetoothProximityNotification.swift:17:        switch self {
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:24:        self.expirationDelay = expirationDelay
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:28:        cache.delegate = self
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:53:            self.keys.insert(key)
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:82:                _ = self.value(forKey: key)
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:93:            self.keys.remove(entry.key)
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:105:            self.key = key
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:133:            self.key = key
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:134:            self.value = value
+stopcovid-blesdk-ios/ProximityNotification/Cache.swift:135:            self.expirationDate = expirationDate
+stopcovid-blesdk-ios/ProximityNotification/Filter/ProximityFilter.swift:22:        self.configuration = configuration
+stopcovid-blesdk-ios/ProximityNotification/Filter/ProximityFilterConfiguration.swift:63:        self.durationThreshold = durationThreshold
+stopcovid-blesdk-ios/ProximityNotification/Filter/ProximityFilterConfiguration.swift:64:        self.rssiThreshold = rssiThreshold
+stopcovid-blesdk-ios/ProximityNotification/Filter/ProximityFilterConfiguration.swift:65:        self.riskThreshold = riskThreshold
+stopcovid-blesdk-ios/ProximityNotification/Filter/ProximityFilterConfiguration.swift:66:        self.deltas = deltas
+stopcovid-blesdk-ios/ProximityNotification/Filter/ProximityFilterConfiguration.swift:67:        self.p0 = p0
+stopcovid-blesdk-ios/ProximityNotification/Filter/ProximityFilterConfiguration.swift:68:        self.a = a
+stopcovid-blesdk-ios/ProximityNotification/Filter/ProximityFilterConfiguration.swift:69:        self.b = b
+stopcovid-blesdk-ios/ProximityNotification/Filter/ProximityFilterConfiguration.swift:70:        self.timeWindow = timeWindow
+stopcovid-blesdk-ios/ProximityNotification/Filter/ProximityFilterConfiguration.swift:71:        self.timeOverlap = timeOverlap
+stopcovid-blesdk-ios/ProximityNotification/Filter/ProximityFilterOutput.swift:52:        self.timestampedRSSIs = timestampedRSSIs
+stopcovid-blesdk-ios/ProximityNotification/Filter/ProximityFilterOutput.swift:53:        self.areTimestampedRSSIsUpdated = areTimestampedRSSIsUpdated
+stopcovid-blesdk-ios/ProximityNotification/Filter/ProximityFilterOutput.swift:54:        self.windowRisks = windowRisks
+stopcovid-blesdk-ios/ProximityNotification/Filter/ProximityFilterOutput.swift:55:        self.meanPeak = meanPeak
+stopcovid-blesdk-ios/ProximityNotification/Filter/ProximityFilterOutput.swift:56:        self.peakCount = peakCount
+stopcovid-blesdk-ios/ProximityNotification/Filter/ProximityFilterOutput.swift:57:        self.intermediateRisk = intermediateRisk
+stopcovid-blesdk-ios/ProximityNotification/Filter/ProximityFilterOutput.swift:58:        self.risk = risk
+stopcovid-blesdk-ios/ProximityNotification/Filter/ProximityFilterOutput.swift:59:        self.durationInMinutes = durationInMinutes
+stopcovid-blesdk-ios/ProximityNotification/Filter/ProximityFilterOutput.swift:60:        self.riskDensity = riskDensity
+stopcovid-blesdk-ios/ProximityNotification/Filter/RiskComputer.swift:30:        self.deltas = deltas
+stopcovid-blesdk-ios/ProximityNotification/Filter/RiskComputer.swift:31:        self.p0 = p0
+stopcovid-blesdk-ios/ProximityNotification/Filter/RiskComputer.swift:32:        self.a = a
+stopcovid-blesdk-ios/ProximityNotification/Filter/RiskComputer.swift:33:        self.timeWindow = timeWindow
+stopcovid-blesdk-ios/ProximityNotification/Filter/RiskComputer.swift:34:        self.timeOverlap = timeOverlap
+stopcovid-blesdk-ios/ProximityNotification/Filter/RSSIClipper.swift:18:        self.threshold = threshold
+stopcovid-blesdk-ios/ProximityNotification/Filter/TimestampedRSSI.swift:33:        self.rssi = rssi
+stopcovid-blesdk-ios/ProximityNotification/Filter/TimestampedRSSI.swift:34:        self.identifier = identifier
+stopcovid-blesdk-ios/ProximityNotification/Filter/TimestampedRSSI.swift:35:        self.timestamp = timestamp
+stopcovid-blesdk-ios/ProximityNotification/ProximityNotificationLogger.swift:31:        switch self {
+stopcovid-blesdk-ios/ProximityNotification/ProximityNotificationLogger.swift:91:        self.logger = logger
+stopcovid-blesdk-ios/ProximityNotification/ProximityNotificationService.swift:91:        self.init(settings: settings, stateChangedHandler: stateChangedHandler, logger: ProximityNotificationConsoleLogger())
+stopcovid-blesdk-ios/ProximityNotification/ProximityNotificationSettings.swift:22:        self.bluetoothSettings = bluetoothSettings
+stopcovid-blesdk-ios/ProximityNotification/ProximityPayload.swift:29:        self.data = data
+stopcovid-blesdk-ios/ProximityNotification.xcodeproj/project.pbxproj:415:				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+stopcovid-blesdk-ios/ProximityNotification.xcodeproj/project.pbxproj:475:				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+stopcovid-blesdk-ios/ProximityNotification.xcodeproj/project.pbxproj:553:				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+stopcovid-blesdk-ios/ProximityNotification.xcodeproj/project.xcworkspace/contents.xcworkspacedata:5:      location = "self:ProximityNotification.xcodeproj">
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothCentralManagerMock.swift:27:        self.dispatchQueue = dispatchQueue
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothCentralManagerMock.swift:32:            self.state = .on
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothCentralManagerMock.swift:33:            self.delegate?.bluetoothCentralManager(self, stateDidChange: .on)
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothCentralManagerMock.swift:44:            let shouldAttemptConnection = self.delegate?.bluetoothCentralManager(self,
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothCentralManagerMock.swift:49:                self.dispatchQueue.asyncAfter(deadline: .now() + self.readCharacteristicDelay) {
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothCentralManagerMock.swift:50:                    self.delegate?.bluetoothCentralManager(self,
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothPeripheralManagerMock.swift:21:        self.dispatchQueue = dispatchQueue
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothPeripheralManagerMock.swift:32:            self.delegate?.bluetoothPeripheralManager(self,
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:87:                XCTAssertEqual(rssi - Int(txPowerLevel) - Int(self.settings.rxCompensationGain), metadata.calibratedRSSI)
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:175:                XCTAssertEqual(rssi - Int(txPowerLevel) - Int(self.settings.rxCompensationGain), metadata.calibratedRSSI)
+stopcovid-blesdk-ios/ProximityNotificationTests/BluetoothProximityNotificationTests.swift:265:                XCTAssertEqual(rssi - Int(self.settings.txCompensationGain), metadata.calibratedRSSI)
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:205:        guard let url = Bundle(for: type(of: self)).url(forResource: "TimestampedRSSIDataSet", withExtension: "csv"),
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:258:            self.timestampedRSSIs = inputTimestampedRSSIs
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:260:            self.configuration = ProximityFilterConfiguration(durationThreshold: input.durationThreshold,
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:284:            self.expectedResult = expectedResult
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:314:            self.dataSet = dataSet
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:315:            self.durationThreshold = durationThreshold
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:316:            self.rssiThreshold = rssiThreshold
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:317:            self.riskThreshold = riskThreshold
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:318:            self.p0 = p0
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:319:            self.a = a
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:320:            self.b = b
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:353:            self.error = error
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:354:            self.windowRisks = windowRisks
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:355:            self.meanPeak = meanPeak
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:356:            self.peakCount = peakCount
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:357:            self.intermediateRisk = intermediateRisk
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:358:            self.risk = risk
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:359:            self.durationInMinutes = durationInMinutes
+stopcovid-blesdk-ios/ProximityNotificationTests/ProximityFilterTests.swift:360:            self.riskDensity = riskDensity
+stopcovid-blesdk-ios/ProximityNotificationTests/RSSIClipperTests.swift:66:            self.threshold = threshold

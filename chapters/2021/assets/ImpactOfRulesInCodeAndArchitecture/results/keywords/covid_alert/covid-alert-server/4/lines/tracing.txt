@@ -1,0 +1,13 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/go.sum:226:github.com/opentracing/opentracing-go v1.1.1-0.20190913142402-a7454ce5950e/go.mod h1:UkNAQd3GIcIGf0SeVgPpRdFStlNbqXla1AfSYxPUl2o=
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/telemetry/telemetry.go:56:		log(nil, nil).Info("TRACER_PROVIDER not set, tracing will not be generated.")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/README.md:2:_(Valid for [Exposure Notification API](https://www.apple.com/covid19/contacttracing) v1.2)_
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:8:Notification](https://covid19.apple.com/contacttracing) framework, informed by the [guidance
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:26:- [Metrics and Tracing](#metrics-and-tracing)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:32:_[Apple/Google's Exposure Notification](https://covid19.apple.com/contacttracing) specifications
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:174:## Metrics and Tracing
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:176:COVID Alert uses [OpenTelemetry](https://github.com/open-telemetry/opentelemetry-go) to configure the metrics and tracing for the server, both the key retrieval and key submission.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:206:### Tracing 
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:208:Currently, the following options are supported for enabling Tracing:
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:211:Tracing can be enabled by setting the `TRACER_PROVIDER` variable to `stdout` or `pretty`.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:235:Ce dépôt implémente un serveur de diagnostic à utiliser comme serveur pour le [cadriciel de notification d’exposition](https://covid19.apple.com/contacttracing) d’Apple et de Google, suivant les [directives fournies par les commissaires à la protection de la vie privée du Canada](https://priv.gc.ca/fr/nouvelles-du-commissariat/allocutions/2020/s-d_20200507/).
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:255:_Les [spécifications de la notification d’exposition d’Apple et de Google](https://covid19.apple.com/contacttracing) fournissent des renseignements importants pour contextualiser le reste de ce document._

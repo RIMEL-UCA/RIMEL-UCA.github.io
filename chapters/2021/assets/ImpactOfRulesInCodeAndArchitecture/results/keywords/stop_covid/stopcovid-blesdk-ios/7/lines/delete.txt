@@ -1,0 +1,20 @@
+stopcovid-blesdk-ios/.git/hooks/pre-push.sample:31:		# Handle delete
+stopcovid-blesdk-ios/.git/hooks/pre-rebase.sample:102:   it is deleted.  If you need to build on top of it to correct
+stopcovid-blesdk-ios/.git/hooks/pre-rebase.sample:124:    Then you can delete it.  More importantly, you should not
+stopcovid-blesdk-ios/.git/hooks/pre-rebase.sample:149:   and is ready to be deleted.
+stopcovid-blesdk-ios/.git/hooks/pre-rebase.sample:154:B to be deleted.
+stopcovid-blesdk-ios/.git/hooks/update.sample:13:# hooks.allowdeletetag
+stopcovid-blesdk-ios/.git/hooks/update.sample:19:# hooks.allowdeletebranch
+stopcovid-blesdk-ios/.git/hooks/update.sample:47:allowdeletebranch=$(git config --bool hooks.allowdeletebranch)
+stopcovid-blesdk-ios/.git/hooks/update.sample:49:allowdeletetag=$(git config --bool hooks.allowdeletetag)
+stopcovid-blesdk-ios/.git/hooks/update.sample:62:# if $newrev is 0000...0000, it's a commit to delete a ref.
+stopcovid-blesdk-ios/.git/hooks/update.sample:65:	newrev_type=delete
+stopcovid-blesdk-ios/.git/hooks/update.sample:80:	refs/tags/*,delete)
+stopcovid-blesdk-ios/.git/hooks/update.sample:81:		# delete tag
+stopcovid-blesdk-ios/.git/hooks/update.sample:82:		if [ "$allowdeletetag" != "true" ]; then
+stopcovid-blesdk-ios/.git/hooks/update.sample:103:	refs/heads/*,delete)
+stopcovid-blesdk-ios/.git/hooks/update.sample:104:		# delete branch
+stopcovid-blesdk-ios/.git/hooks/update.sample:105:		if [ "$allowdeletebranch" != "true" ]; then
+stopcovid-blesdk-ios/.git/hooks/update.sample:113:	refs/remotes/*,delete)
+stopcovid-blesdk-ios/.git/hooks/update.sample:114:		# delete tracking branch
+stopcovid-blesdk-ios/.git/hooks/update.sample:115:		if [ "$allowdeletebranch" != "true" ]; then

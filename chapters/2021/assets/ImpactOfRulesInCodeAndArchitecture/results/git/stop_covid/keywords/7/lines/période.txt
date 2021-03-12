@@ -1,0 +1,1 @@
+./results/git/stop_covid/issue_file_gitlab.txt:359:3. Régulièrement, les utilisateurs envoient les UUID masqués + timestamp de leur liste.  Le serveur vérifie si un des UUID est à risque pendant la période correspondante (pour chaque UUID envoyé par un malade, il calcule SHA256(sel+UUID) avec tous les sels possibles).

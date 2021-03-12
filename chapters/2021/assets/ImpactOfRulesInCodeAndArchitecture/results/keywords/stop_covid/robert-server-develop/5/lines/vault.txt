@@ -1,0 +1,14 @@
+./robert-server-develop/robert-server-batch/pom.xml:116:			<artifactId>spring-cloud-vault-config-consul</artifactId>
+./robert-server-develop/robert-server-batch/src/main/resources/bootstrap.yml:21:    vault:
+./robert-server-develop/robert-server-batch/src/main/resources/bootstrap.yml:22:      enabled: ${VAULT_ENABLED:false}
+./robert-server-develop/robert-server-batch/src/main/resources/bootstrap.yml:23:      host: ${VAULT_HOST:localhost}
+./robert-server-develop/robert-server-batch/src/main/resources/bootstrap.yml:24:      port: ${VAULT_PORT:8200}
+./robert-server-develop/robert-server-batch/src/main/resources/bootstrap.yml:25:      token: ${VAULT_TOKEN:token}
+./robert-server-develop/robert-server-batch/src/main/resources/bootstrap.yml:26:      scheme: ${VAULT_SCHEME:http}
+./robert-server-develop/robert-server-ws-rest/pom.xml:117:			<artifactId>spring-cloud-vault-config-consul</artifactId>
+./robert-server-develop/robert-server-ws-rest/src/main/resources/bootstrap.yml:19:    vault:
+./robert-server-develop/robert-server-ws-rest/src/main/resources/bootstrap.yml:20:      enabled: ${VAULT_ENABLED:false}
+./robert-server-develop/robert-server-ws-rest/src/main/resources/bootstrap.yml:21:      host: ${VAULT_HOST:localhost}
+./robert-server-develop/robert-server-ws-rest/src/main/resources/bootstrap.yml:22:      port: ${VAULT_PORT:8200}
+./robert-server-develop/robert-server-ws-rest/src/main/resources/bootstrap.yml:23:      token: ${VAULT_TOKEN:token}
+./robert-server-develop/robert-server-ws-rest/src/main/resources/bootstrap.yml:24:      scheme: ${VAULT_SCHEME:http}

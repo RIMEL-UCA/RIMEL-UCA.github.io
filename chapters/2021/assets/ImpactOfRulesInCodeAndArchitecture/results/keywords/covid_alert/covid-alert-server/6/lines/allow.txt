@@ -1,0 +1,75 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/applypatch-msg.sample:8:# allowed to edit the commit message file.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/commit-msg.sample:7:# commit.  The hook is allowed to edit the commit message file.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/pre-commit.sample:18:# If you want to allow non-ASCII filenames set this variable to true.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/pre-commit.sample:19:allownonascii=$(git config --bool hooks.allownonascii)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/pre-commit.sample:27:if [ "$allownonascii" != "true" ] &&
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/pre-commit.sample:43:  git config hooks.allownonascii true
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/pre-rebase.sample:15:# merged to 'next' branch from getting rebased, because allowing it
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/pre-rebase.sample:50:	exit 1 ;# we could allow it, but there is no point.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/pre-rebase.sample:62:		exit 1 ;# we could allow it, but there is no point.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/pre-rebase.sample:153:We would want to allow C to be rebased, refuse A, and encourage
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:10:# hooks.allowunannotated
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:11:#   This boolean sets whether unannotated tags will be allowed into the
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:13:# hooks.allowdeletetag
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:14:#   This boolean sets whether deleting tags will be allowed in the
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:16:# hooks.allowmodifytag
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:19:# hooks.allowdeletebranch
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:20:#   This boolean sets whether deleting branches will be allowed in the
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:24:#   in the repository.  By default this is allowed.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:46:allowunannotated=$(git config --bool hooks.allowunannotated)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:47:allowdeletebranch=$(git config --bool hooks.allowdeletebranch)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:49:allowdeletetag=$(git config --bool hooks.allowdeletetag)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:50:allowmodifytag=$(git config --bool hooks.allowmodifytag)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:74:		if [ "$allowunannotated" != "true" ]; then
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:75:			echo "*** The un-annotated tag, $short_refname, is not allowed in this repository" >&2
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:82:		if [ "$allowdeletetag" != "true" ]; then
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:83:			echo "*** Deleting a tag is not allowed in this repository" >&2
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:89:		if [ "$allowmodifytag" != "true" ] && git rev-parse $refname > /dev/null 2>&1
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:92:			echo "*** Modifying a tag is not allowed in this repository." >&2
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:99:			echo "*** Creating a branch is not allowed in this repository" >&2
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:105:		if [ "$allowdeletebranch" != "true" ]; then
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:106:			echo "*** Deleting a branch is not allowed in this repository" >&2
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:115:		if [ "$allowdeletebranch" != "true" ]; then
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.git/hooks/update.sample:116:			echo "*** Deleting a tracking branch is not allowed in this repository" >&2
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.github/workflows/deploy-containers.yml:90:          jq  --argjson port "$CONTAINER_PORT" --arg cname "$CONTAINER_NAME" --arg taskdefarn "$TASKDEF_ARN" --arg lambda "${{ matrix.LAMBDA }}" '.Resources[0].TargetService.Properties.TaskDefinition = $taskdefarn | .Resources[0].TargetService.Properties.LoadBalancerInfo.ContainerName = $cname | .Resources[0].TargetService.Properties.LoadBalancerInfo.ContainerPort = $port | .Hooks[0].BeforeAllowTraffic = $lambda ' config/infrastructure/aws/appspec-template.json > ${{ matrix.APPSPEC_FILE }}
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/CODE_OF_CONDUCT.md:99:with those enforcing the Code of Conduct, is allowed during this period.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/config/infrastructure/aws/appspec-template.json:20:			"BeforeAllowTraffic": "placeholder"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/config/infrastructure/aws/README.md:62:- `TF_VAR_new_key_claim_allow_list` (use ["0.0.0.0/1", "128.0.0.0/1"] for any)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/config.yaml:28:corsAccessControlAllowOrigin: "*"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/config/config.go:25:	CORSAccessControlAllowOrigin       string
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/config/config.go:64:	viper.SetDefault("corsAccessControlAllowOrigin", "*")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/deviceType.go:17:// IsValid validates the Device Type against a list of allowed strings
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/eventType.go:24:// IsValid validates the Event Type against a list of allowed strings
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/main_test.go:20:// TestMain this gets called instead of the regular testing main method and allows us to run setup code
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:622:	// Rolls back if more keys are inserted that are allowed
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:661:	assert.Equal(t, expectedErr, receivedErr, "Expected error more keys than allowed are inserted")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:724:	assert.Equal(t, expectedErr, receivedErr, "Expected error more keys than allowed are inserted")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/test_tools.go:17:		panic("un-allowed attempt to call clearDiagnosis keys")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim.go:41:		w.Header().Add("Access-Control-Allow-Origin", config.AppConstants.CORSAccessControlAllowOrigin)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim.go:42:		w.Header().Add("Access-Control-Allow-Methods", "POST")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim.go:43:		w.Header().Add("Access-Control-Allow-Headers", "Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, Referer, User-Agent")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim.go:51:		log(ctx, nil).WithField("method", r.Method).Info("disallowed method")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim.go:87:	w.Header().Add("Access-Control-Allow-Origin", config.AppConstants.CORSAccessControlAllowOrigin)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim_test.go:70:	assert.Contains(t, resp.Header()["Access-Control-Allow-Origin"], config.AppConstants.CORSAccessControlAllowOrigin, "Access-Control-Allow-Origin should be set to the config value")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim_test.go:71:	assert.Contains(t, resp.Header()["Access-Control-Allow-Methods"], "POST", "Access-Control-Allow-Methods should be set to POST")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim_test.go:72:	assert.Contains(t, resp.Header()["Access-Control-Allow-Headers"], "Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, Referer, User-Agent", "Access-Control-Allow-Headers should be set to Accept, Content-Type, Content-Length, Accept-Encoding, X-CSRF-Token, Authorization, Referer, User-Agent")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim_test.go:291:	testhelpers.AssertLog(t, hook, 1, logrus.InfoLevel, "disallowed method")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/main_test.go:28:// TestMain this gets called instead of the regular testing main method and allows us to run setup code
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/metrics.go:68:		log(ctx, nil).WithField("method", r.Method).Info("disallowed method")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/metrics.go:123:		log(ctx, nil).WithField("method", r.Method).Info("disallowed method")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/metrics.go:178:		log(ctx, nil).WithField("method", r.Method).Info("disallowed method")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/metrics_test.go:96:func TestMetricsServlet_DisallowedMethods(t *testing.T) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/retrieve.go:73:		return s.fail(log(ctx, nil).WithField("method", r.Method), w, "method not allowed", "", http.StatusMethodNotAllowed)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/retrieve_test.go:92:	assert.Equal(t, 405, resp.Code, "Method not allowed response is expected")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/retrieve_test.go:93:	assert.Equal(t, "method not allowed\n", string(resp.Body.Bytes()), "Correct response is expected")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/retrieve_test.go:95:	testhelpers.AssertLog(t, hook, 1, logrus.WarnLevel, "method not allowed")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/test_tools.go:43:		log(ctx, nil).WithField("method", r.Method).Info("disallowed method")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/test_tools_test.go:131:	testhelpers.AssertLog(t, hook, 1, logrus.InfoLevel, "disallowed method")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/README.md:137:Framework never allows extraction of a key that is still active, there is little value in retrieving
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:60:Distribution Network (CDN), backed by `key-retrieval`. This allows a functionally-arbitrary number
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:139:We use a one-time code generation scheme that allows authenticated case workers to issue codes,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/expiration_worker_test.rb:42:    # Doesn't expire if it's the last one allowed
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:227:      sleep(0.1) # Allows the server to run the worker
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:66:  def test_disallowed_methods
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:67:    # Disallowed methods
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/retrieve_test.rb:70:      assert_response(resp, 405, 'text/plain; charset=utf-8', body: "method not allowed\n")

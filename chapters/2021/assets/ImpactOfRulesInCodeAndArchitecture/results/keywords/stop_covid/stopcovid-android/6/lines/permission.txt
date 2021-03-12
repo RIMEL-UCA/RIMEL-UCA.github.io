@@ -1,0 +1,85 @@
+stopcovid-android/ble/src/main/AndroidManifest.xml:15:    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+stopcovid-android/ble/src/main/AndroidManifest.xml:16:    <uses-permission android:name="android.permission.BLUETOOTH" />
+stopcovid-android/ble/src/main/AndroidManifest.xml:17:    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+stopcovid-android/ble/src/main/AndroidManifest.xml:18:    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+stopcovid-android/ble/src/main/AndroidManifest.xml:19:    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+stopcovid-android/ble/src/main/AndroidManifest.xml:20:    <uses-permission android:name="android.permission.WAKE_LOCK" />
+stopcovid-android/ble/src/main/java/com/orange/proximitynotification/ble/gatt/BleGattManagerImpl.kt:57:        BluetoothGattCharacteristic.PERMISSION_WRITE
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/extension/ContextExt.kt:54:fun Context.showPermissionRationale(
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/extension/ContextExt.kt:65:        setTitle(strings["common.permissionsNeeded"])
+stopcovid-android/coreui/src/main/java/com/lunabeestudio/stopcovid/coreui/UiConstants.kt:18:    enum class Permissions {
+stopcovid-android/framework/src/main/AndroidManifest.xml:15:    <uses-permission android:name="android.permission.INTERNET" />
+stopcovid-android/gradlew:15:# See the License for the specific language governing permissions and
+stopcovid-android/gradlew.bat:13:@rem See the License for the specific language governing permissions and
+stopcovid-android/licenses/library/license-Android-Scanner-Compat-Library.txt:16:  this software without specific prior written permission.
+stopcovid-android/licenses/library/license-kotlinx-couroutines.txt:25:      exercising permissions granted by this License.
+stopcovid-android/licenses/library/license-kotlinx-couroutines.txt:139:   6. Trademarks. This License does not grant permission to use the trade
+stopcovid-android/licenses/library/license-kotlinx-couroutines.txt:152:      risks associated with Your exercise of permissions under this License.
+stopcovid-android/licenses/library/license-kotlinx-couroutines.txt:201:   See the License for the specific language governing permissions and
+stopcovid-android/licenses/library/license-timber.txt:25:      exercising permissions granted by this License.
+stopcovid-android/licenses/library/license-timber.txt:139:   6. Trademarks. This License does not grant permission to use the trade
+stopcovid-android/licenses/library/license-timber.txt:152:      risks associated with Your exercise of permissions under this License.
+stopcovid-android/licenses/library/license-timber.txt:201:   See the License for the specific language governing permissions and
+stopcovid-android/licenses/tests/license-mockito-kotlin.txt:6:Permission is hereby granted, free of charge, to any person obtaining a copy
+stopcovid-android/licenses/tests/license-mockito-kotlin.txt:13:The above copyright notice and this permission notice shall be included in
+stopcovid-android/licenses/tests/license-mockito.txt:5:Permission is hereby granted, free of charge, to any person obtaining a copy
+stopcovid-android/licenses/tests/license-mockito.txt:12:The above copyright notice and this permission notice shall be included in
+stopcovid-android/licenses/tests/license-robolectric.txt:5:Permission is hereby granted, free of charge, to any person obtaining a copy
+stopcovid-android/licenses/tests/license-robolectric.txt:12:The above copyright notice and this permission notice shall be included in
+stopcovid-android/licenses/tests/license-truth.txt:25:      exercising permissions granted by this License.
+stopcovid-android/licenses/tests/license-truth.txt:139:   6. Trademarks. This License does not grant permission to use the trade
+stopcovid-android/licenses/tests/license-truth.txt:152:      risks associated with Your exercise of permissions under this License.
+stopcovid-android/licenses/tests/license-truth.txt:201:   See the License for the specific language governing permissions and
+stopcovid-android/licenses/tests/license-zohhak.txt:11:License, supplemented by the additional permissions listed below.
+stopcovid-android/licenses/tests/license-zohhak.txt:60:   b) under the GNU GPL, with none of the additional permissions of
+stopcovid-android/robert/src/main/AndroidManifest.xml:20:            android:permission="android.permission.BIND_JOB_SERVICE"
+stopcovid-android/stopcovid/src/main/AndroidManifest.xml:15:    <uses-permission android:name="android.permission.CAMERA" />
+stopcovid-android/stopcovid/src/main/AndroidManifest.xml:16:    <uses-permission android:name="android.permission.INTERNET" />
+stopcovid-android/stopcovid/src/main/AndroidManifest.xml:17:    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+stopcovid-android/stopcovid/src/main/AndroidManifest.xml:18:    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+stopcovid-android/stopcovid/src/main/AndroidManifest.xml:135:            android:grantUriPermissions="true">
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-ar.json:126:    "common.permissionsNeeded": "رسالة مهمة",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-de.json:126:    "common.permissionsNeeded": "Wichtige Nachricht",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:126:    "common.permissionsNeeded": "Important message",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-en.json:206:    "scanCodeController.camera.authorizationNeeded.message": "You have refused permission for the camera to be used. You need to give permission in your iPhone settings in order to scan QR codes.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-es.json:126:    "common.permissionsNeeded": "Mensaje importante",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:126:   "common.permissionsNeeded":"Message important",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:206:   "scanCodeController.camera.authorizationNeeded.message":"Vous avez refusé les permissions pour utiliser la caméra. Pour scanner un QR code, il faut autoriser cette permission dans les réglages de l’iPhone.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-fr.json:224:   "common.error.unauthorized":"Vous n'avez pas les permissions requises pour effectuer cette action.",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-it.json:126:    "common.permissionsNeeded": "Messaggio importante",
+stopcovid-android/stopcovid/src/main/assets/Strings/strings-pt.json:126:    "common.permissionsNeeded": "Mensagem importante",
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingProximityFragment.kt:24:import com.lunabeestudio.stopcovid.coreui.extension.showPermissionRationale
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingProximityFragment.kt:44:        if (ContextCompat.checkSelfPermission(requireContext(), ProximityManager.getManifestLocationPermission())
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingProximityFragment.kt:45:            != PackageManager.PERMISSION_GRANTED) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingProximityFragment.kt:47:                .setTitle(strings["common.permissionsNeeded"])
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingProximityFragment.kt:50:                    requestPermissions(
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingProximityFragment.kt:51:                        arrayOf(ProximityManager.getManifestLocationPermission()),
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingProximityFragment.kt:52:                        UiConstants.Permissions.LOCATION.ordinal
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingProximityFragment.kt:92:    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingProximityFragment.kt:93:        if (requestCode == UiConstants.Permissions.LOCATION.ordinal) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingProximityFragment.kt:94:            if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingProximityFragment.kt:104:            } else if (!shouldShowRequestPermissionRationale(ProximityManager.getManifestLocationPermission())) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingProximityFragment.kt:105:                context?.showPermissionRationale(
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/OnBoardingProximityFragment.kt:121:            super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/QRCodeFragment.kt:25:import com.lunabeestudio.stopcovid.coreui.extension.showPermissionRationale
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/QRCodeFragment.kt:52:            if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.CAMERA)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/QRCodeFragment.kt:53:                != PackageManager.PERMISSION_GRANTED) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/QRCodeFragment.kt:56:                    context?.showPermissionRationale(
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/QRCodeFragment.kt:63:                            requestPermissions(
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/QRCodeFragment.kt:64:                                arrayOf(Manifest.permission.CAMERA),
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/QRCodeFragment.kt:65:                                UiConstants.Permissions.CAMERA.ordinal
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/QRCodeFragment.kt:106:    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/QRCodeFragment.kt:107:        if (requestCode == UiConstants.Permissions.CAMERA.ordinal) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/QRCodeFragment.kt:108:            if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/QRCodeFragment.kt:110:            } else if (!shouldShowRequestPermissionRationale(Manifest.permission.CAMERA)) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/QRCodeFragment.kt:112:                context?.showPermissionRationale(
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/fragment/QRCodeFragment.kt:133:            super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/ProximityManager.kt:72:        ContextCompat.checkSelfPermission(context, getManifestLocationPermission()) == PackageManager.PERMISSION_GRANTED
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/ProximityManager.kt:74:    fun getManifestLocationPermission(): String = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/ProximityManager.kt:75:        Manifest.permission.ACCESS_FINE_LOCATION
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/ProximityManager.kt:77:        Manifest.permission.ACCESS_COARSE_LOCATION
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/ProximityManager.kt:149:        Intent().setComponent(ComponentName("com.coloros.safecenter", "com.coloros.safecenter.permission.startup.StartupAppListActivity")),
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/ProximityManager.kt:151:        Intent().setComponent(ComponentName("com.oppo.safe", "com.oppo.safe.permission.startup.StartupAppListActivity")),
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/ProximityManager.kt:154:        Intent().setComponent(ComponentName("com.vivo.permissionmanager", "com.vivo.permissionmanager.activity.BgStartUpManagerActivity")),
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/ShareManager.kt:37:            context.grantUriPermission(ANDROID_PACKAGE, uri, Intent.FLAG_GRANT_READ_URI_PERMISSION)
+stopcovid-android/stopcovid/src/main/java/com/lunabeestudio/stopcovid/manager/ShareManager.kt:39:            shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)

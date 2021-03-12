@@ -1,0 +1,422 @@
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-app/.git/index matches
+Binary file /mnt/c/Users/conig/Desktop/test/covid-alert-app/.git/objects/pack/pack-2eee96e38f6668f4725249e4ef9c31892516bc60.pack matches
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/.git/packed-refs:7:0414ca529dfa9c11d672c1db2d9eb33904d47140 refs/remotes/origin/feature/clear-key-storage
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/.git/packed-refs:18:1cb500dcf80dcc8350de7945931815f779b12db8 refs/remotes/origin/feature/storage-revamp
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/debug/AndroidManifest.xml:11:        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/AndroidManifest.xml:16:    <uses-permission tools:node="remove" android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/main/AndroidManifest.xml:17:    <uses-permission tools:node="remove" android:name="android.permission.READ_EXTERNAL_STORAGE" />
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/app/src/release/AndroidManifest.xml:9:        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/settings.gradle:12:include ':@react-native-community_async-storage'
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/android/settings.gradle:13:project(':@react-native-community_async-storage').projectDir = new File(rootProject.projectDir, '../node_modules/@react-native-community/async-storage/android')
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/docs/notifications/readme.md:35:- The mobile app should have a local storage mechanism to track receipts using the unique id of the message (sqlite)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/e2e/README.md:38:> Task :@react-native-community_async-storage:processDebugAndroidTestResources FAILED
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/fastlane/Matchfile:3:storage_mode("git")
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/Gemfile.lock:111:      google-cloud-storage (>= 1.15.0, < 2.0.0)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/Gemfile.lock:156:    google-apis-storage_v1 (0.2.0)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/Gemfile.lock:164:    google-cloud-storage (1.30.0)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/Gemfile.lock:168:      google-apis-storage_v1 (~> 0.1)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/Podfile.lock:284:  - RNCAsyncStorage (1.9.0):
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/Podfile.lock:378:  - "RNCAsyncStorage (from `../node_modules/@react-native-community/async-storage`)"
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/Podfile.lock:487:  RNCAsyncStorage:
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/Podfile.lock:488:    :path: "../node_modules/@react-native-community/async-storage"
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/ios/Podfile.lock:578:  RNCAsyncStorage: 453cd7c335ec9ba3b877e27d02238956b76f3268
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/jest.setup.js:1:import mockAsyncStorage from '@react-native-community/async-storage/jest/async-storage-mock';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/jest.setup.js:4:jest.mock('@react-native-community/async-storage', () => mockAsyncStorage);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/package.json:35:    "@react-native-community/async-storage": "1.9.0",
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/patches/@react-native-community+async-storage+1.9.0.patch:1:diff --git a/node_modules/@react-native-community/async-storage/ios/RNCAsyncStorage.m b/node_modules/@react-native-community/async-storage/ios/RNCAsyncStorage.m
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/patches/@react-native-community+async-storage+1.9.0.patch:3:--- a/node_modules/@react-native-community/async-storage/ios/RNCAsyncStorage.m
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/patches/@react-native-community+async-storage+1.9.0.patch:4:+++ b/node_modules/@react-native-community/async-storage/ios/RNCAsyncStorage.m
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/patches/@react-native-community+async-storage+1.9.0.patch:14:-  [serialized writeToFile:RCTCreateStorageDirectoryPath(RCTGetManifestFilePath()) atomically:YES encoding:NSUTF8StringEncoding error:&error];
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/patches/@react-native-community+async-storage+1.9.0.patch:22:+  success = [serialized writeToFile:RCTCreateStorageDirectoryPath(RCTGetManifestFilePath()) atomically:YES encoding:NSUTF8StringEncoding error:&error];
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/patches/@react-native-community+async-storage+1.9.0.patch:28:+  NSString *filePath = RCTCreateStorageDirectoryPath(RCTGetManifestFilePath());
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/App.tsx:14:import {StorageServiceProvider, useStorageService} from 'services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/App.tsx:46:  const storageService = useStorageService();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/App.tsx:47:  const backendService = useMemo(() => new BackendService(RETRIEVE_URL, SUBMIT_URL, HMAC_KEY, storageService?.region), [
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/App.tsx:48:    storageService,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/App.tsx:101:      <StorageServiceProvider>
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/App.tsx:105:      </StorageServiceProvider>
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/components/CodeInput.spec.tsx:4:import {StorageServiceProvider} from 'services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/components/CodeInput.spec.tsx:21:        <StorageServiceProvider>
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/components/CodeInput.spec.tsx:25:        </StorageServiceProvider>,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/components/ExposedHelpButton.tsx:5:import {useStorage} from 'services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/components/ExposedHelpButton.tsx:11:  const {region} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/components/LanguageToggle.tsx:3:import {useStorage} from 'services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/components/LanguageToggle.tsx:8:  const {setLocale} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/index.ts:6:import AsyncStorage from '@react-native-community/async-storage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/index.ts:18:import {createStorageService} from './services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/index.ts:25:    const storageService = await createStorageService();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/index.ts:26:    const backendService = new BackendService(RETRIEVE_URL, SUBMIT_URL, HMAC_KEY, storageService?.region);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/index.ts:31:      AsyncStorage,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/index.ts:39:    const storageService = await createStorageService();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/index.ts:40:    const backendService = new BackendService(RETRIEVE_URL, SUBMIT_URL, HMAC_KEY, storageService?.region);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/index.ts:45:      AsyncStorage,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/locale/locale.tsx:3:import {createStorageService, useStorage} from 'services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/locale/locale.tsx:25:  const storageService = await createStorageService();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/locale/locale.tsx:26:  const locale = forceLocale || storageService.locale.get();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/locale/locale.tsx:36:  const {locale: persistedLocale} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/locale/regional.tsx:2:import {useStorage} from 'services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/locale/regional.tsx:36:  const {locale: persistedLocale} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/navigation/DevPersistedNavigationContainer.tsx:2:import AsyncStorage from '@react-native-community/async-storage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/navigation/DevPersistedNavigationContainer.tsx:23:          await AsyncStorage.setItem(persistKey, JSON.stringify(state));
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/navigation/DevPersistedNavigationContainer.tsx:47:        const jsonString = await AsyncStorage.getItem(persistKey);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/navigation/MainNavigator.tsx:17:import {useStorage} from 'services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/navigation/MainNavigator.tsx:144:  const {hasViewedQrInstructions} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/navigation/MainNavigator.tsx:166:  const {isOnboarding} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/datasharing/components/BaseTekUploadView.tsx:9:import AsyncStorage from '@react-native-community/async-storage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/datasharing/components/BaseTekUploadView.tsx:39:    AsyncStorage.setItem(INITIAL_TEK_UPLOAD_COMPLETE, 'true');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/datasharing/FormScreen.tsx:9:import AsyncStorage from '@react-native-community/async-storage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/datasharing/FormScreen.tsx:24:    AsyncStorage.setItem(INITIAL_TEK_UPLOAD_COMPLETE, 'false');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/home/components/OnOffButton.tsx:12:import {useStorage} from 'services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/home/components/OnOffButton.tsx:18:  const {userStopped} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/home/components/Tip.tsx:5:import {useStorage} from 'services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/home/components/Tip.tsx:11:  const {region} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/home/HomeScreen.tsx:16:import {useStorage} from 'services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/home/HomeScreen.tsx:63:  const {region, userStopped} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/home/HomeScreen.tsx:89:  const {forceScreen} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/home/HomeScreen.tsx:197:  const {userStopped} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/home/views/DiagnosedShareUploadView.tsx:6:import AsyncStorage from '@react-native-community/async-storage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/home/views/DiagnosedShareUploadView.tsx:15:    const initialTekUploadComplete = await AsyncStorage.getItem(INITIAL_TEK_UPLOAD_COMPLETE);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/home/views/DiagnosedShareView.tsx:6:import AsyncStorage from '@react-native-community/async-storage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/home/views/DiagnosedShareView.tsx:15:    const initialTekUploadComplete = await AsyncStorage.getItem(INITIAL_TEK_UPLOAD_COMPLETE);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/home/views/DiagnosedView.tsx:7:import {useStorage} from 'services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/home/views/DiagnosedView.tsx:19:  const {region} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/home/views/ExposureDateView.tsx:7:import {useStorage} from 'services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/home/views/ExposureDateView.tsx:13:  const {forceScreen} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/home/views/ExposureView.tsx:6:import {useStorage} from 'services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/home/views/ExposureView.tsx:23:  const {region} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/home/views/InfoShareView.tsx:7:import {useStorage} from 'services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/home/views/InfoShareView.tsx:16:  const {region} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/home/views/NoExposureCoveredRegionView.tsx:4:import {useStorage} from 'services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/home/views/NoExposureCoveredRegionView.tsx:40:  const {onboardedDatetime, skipAllSet} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/home/views/NoExposureNoRegionView.tsx:4:import {useStorage} from 'services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/home/views/NoExposureNoRegionView.tsx:40:  const {onboardedDatetime, skipAllSet} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/home/views/NoExposureUncoveredRegionView.tsx:4:import {useStorage} from 'services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/home/views/NoExposureUncoveredRegionView.tsx:13:  const {onboardedDatetime, skipAllSet} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/home/views/OverlayView.tsx:19:import {useStorage} from 'services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/home/views/OverlayView.tsx:261:  const {userStopped} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/landing/LandingScreen.tsx:3:import {useStorage} from 'services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/landing/LandingScreen.tsx:13:  const {setLocale} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/language/Language.tsx:4:import {useStorage} from 'services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/language/Language.tsx:51:  const {setLocale} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/nocode/NoCode.tsx:6:import {useStorage} from 'services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/nocode/NoCode.tsx:17:  const {region} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/nocode/views/ActiveListView.tsx:3:import {useStorage} from 'services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/nocode/views/ActiveListView.tsx:12:  const {region} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/nocode/views/ActiveParagraphView.tsx:6:import {useStorage} from 'services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/nocode/views/ActiveParagraphView.tsx:11:  const {region} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/onboarding/Onboarding.tsx:8:import {useStorage} from 'services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/onboarding/Onboarding.tsx:22:  const {setOnboarded, setOnboardedDatetime, setRegion} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/onboarding/views/Region.tsx:4:import {useStorage} from 'services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/onboarding/views/Region.tsx:12:  const {region, setRegion} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/qr/QRCodeIntroScreen.tsx:5:import {useStorage} from 'services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/qr/QRCodeIntroScreen.tsx:11:  const {setHasViewedQr} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/regionPicker/RegionPickerSettings.tsx:6:import {useStorage} from 'services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/regionPicker/RegionPickerSettings.tsx:15:  const {region, setRegion} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/testScreen/TestScreen.tsx:7:import {useStorage} from 'services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/testScreen/TestScreen.tsx:31:  const {forceScreen, setForceScreen} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/testScreen/TestScreen.tsx:71:  const {skipAllSet, setSkipAllSet} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/screens/testScreen/TestScreen.tsx:107:  const {reset} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.spec.ts:5:import AsyncStorage from '@react-native-community/async-storage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.spec.ts:242:      expect(AsyncStorage.setItem).toHaveBeenCalledWith(
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.spec.ts:251:      AsyncStorage.getItem.mockReturnValueOnce(keys[1].rollingStartIntervalNumber.toString());
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.spec.ts:268:      expect(AsyncStorage.setItem).toHaveBeenCalledWith(
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.spec.ts:428:    it('returns {status: 400, payload: null} if there is not storage item', async () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.spec.ts:430:      expect(AsyncStorage.getItem).toHaveBeenCalledWith('http://localhost/exposure-configuration/region.json');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.spec.ts:434:    it('returns {status: 200, payload: content} if there is a storage item', async () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.spec.ts:437:      AsyncStorage.getItem.mockReturnValue(JSON.stringify(payload));
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.spec.ts:439:      expect(AsyncStorage.getItem).toHaveBeenCalledWith(key);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.spec.ts:478:    it('saves the content to AsyncStorage and returns it as {status: 200, payload}', async () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.spec.ts:485:      expect(AsyncStorage.setItem).toHaveBeenCalledWith(
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:13:import AsyncStorage from '@react-native-community/async-storage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:76:    const storedRegionContent = await AsyncStorage.getItem(this.getRegionContentUrl());
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:89:      await AsyncStorage.setItem(this.getRegionContentUrl(), JSON.stringify(payload));
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:172:    await AsyncStorage.setItem(LAST_UPLOADED_TEK_START_TIME, lastUploadedTekStartTime);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/BackendService.ts:176:    const lastUploadedTekStartTime = Number(await AsyncStorage.getItem(LAST_UPLOADED_TEK_START_TIME));
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackendService/covidshield/covidshield.proto:12:// local storage for the duration of this reporting window (the next 14 days).
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:4:import AsyncStorage from '@react-native-community/async-storage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:12:import {createStorageService} from '../StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:124:      const storageService = await createStorageService();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:125:      const backendService = new BackendService(RETRIEVE_URL, SUBMIT_URL, HMAC_KEY, storageService?.region);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/BackgroundSchedulerService/BackgroundSchedulerService.ts:130:        AsyncStorage,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:8:import {Key} from '../StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:68:const storage: any = {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:72:const secureStorage: any = {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:168:    service = new ExposureNotificationService(server, i18n, storage, secureStorage, bridge);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:171:    when(storage.getItem)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:452:    expect(storage.setItem).toHaveBeenCalledWith(
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:482:  it('restores "diagnosed" status from storage', async () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:483:    when(storage.getItem)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:523:    when(secureStorage.get)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:528:    expect(storage.setItem).toHaveBeenCalledWith(
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.spec.ts:934:      when(storage.getItem)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:34:import {Key} from '../StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:103:  set(key: string, value: string, options: SecureStorageOptions): Promise<null>;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:107:export interface SecureStorageOptions {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:130:  private storage: PersistencyProvider;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:131:  private secureStorage: SecurePersistencyProvider;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:136:    storage: PersistencyProvider,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:137:    secureStorage: SecurePersistencyProvider,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:146:    this.storage = storage;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:147:    this.secureStorage = secureStorage;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:149:      this.storage.setItem(EXPOSURE_STATUS, JSON.stringify(status));
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:152:      this.secureStorage.set(EXPOSURE_HISTORY, history.join(','), {});
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:392:      await this.secureStorage.set(SUBMISSION_AUTH_KEYS, serialized, {});
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:407:    const submissionKeysStr = await this.secureStorage.get(SUBMISSION_AUTH_KEYS);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:637:    const onboardedDatetime = await this.storage.getItem(Key.OnboardedDatetime);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:899:    const exposureStatus = JSON.parse((await this.storage.getItem(EXPOSURE_STATUS)) || 'null');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:905:      const _exposureHistory = await this.secureStorage.get(EXPOSURE_HISTORY);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:924:      const exposureConfigurationStr = await this.storage.getItem(EXPOSURE_CONFIGURATION);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:1043:      await this.storage.setItem(EXPOSURE_CONFIGURATION, serialized);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationService.ts:1046:        message: 'Saving exposure configuration to secure storage.',
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationServiceProvider.tsx:2:import AsyncStorage from '@react-native-community/async-storage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationServiceProvider.tsx:9:import {useStorage} from 'services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationServiceProvider.tsx:29:  storage?: PersistencyProvider;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationServiceProvider.tsx:30:  secureStorage?: SecurePersistencyProvider;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationServiceProvider.tsx:38:  storage,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationServiceProvider.tsx:39:  secureStorage,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationServiceProvider.tsx:43:  const {setUserStopped} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationServiceProvider.tsx:49:        storage || AsyncStorage,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationServiceProvider.tsx:50:        secureStorage || RNSecureKeyStore,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationServiceProvider.tsx:53:    [backendInterface, exposureNotification, i18n, secureStorage, storage],
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationServiceProvider.tsx:103:  const {setUserStopped, onboardedDatetime} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationServiceProvider.tsx:136:  const {setUserStopped, onboardedDatetime} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationServiceV2.spec.ts:54:const storage: any = {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationServiceV2.spec.ts:58:const secureStorage: any = {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/ExposureNotificationService/ExposureNotificationServiceV2.spec.ts:94:    service = new ExposureNotificationService(server, i18n, storage, secureStorage, bridge);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/FilteredMetricsService.ts:1:import AsyncStorage from '@react-native-community/async-storage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/FilteredMetricsService.ts:7:import {Key} from 'services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/FilteredMetricsService.ts:11:import {DefaultFilteredMetricsStateStorage, FilteredMetricsStateStorage} from './FilteredMetricsStateStorage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/FilteredMetricsService.ts:15:import {DefaultSecureKeyValueStore} from './SecureKeyValueStorage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/FilteredMetricsService.ts:73:  private stateStorage: FilteredMetricsStateStorage;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/FilteredMetricsService.ts:81:    this.stateStorage = new DefaultFilteredMetricsStateStorage(new DefaultSecureKeyValueStore());
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/FilteredMetricsService.ts:91:          return this.stateStorage.markOnboardedEventShouldBePublished();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/FilteredMetricsService.ts:135:        this.stateStorage.markInstalledEventAsPublished(),
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/FilteredMetricsService.ts:138:    return this.stateStorage.isInstalledEventPublished().then(isPublished => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/FilteredMetricsService.ts:150:      ]).then(() => this.stateStorage.markOnboardedEventShouldNotBePublished());
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/FilteredMetricsService.ts:152:    return this.stateStorage.shouldOnboardedEventBePublished().then(shouldPublish => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/FilteredMetricsService.ts:183:      ]).then(() => this.stateStorage.saveBackgroundCheckEvents([newBackgroundCheckEvent]));
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/FilteredMetricsService.ts:188:    return this.stateStorage.getBackgroundCheckEvents().then(events => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/FilteredMetricsService.ts:192:          return this.stateStorage.saveBackgroundCheckEvents(events.concat(newBackgroundCheckEvent));
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/FilteredMetricsService.ts:197:        return this.stateStorage.saveBackgroundCheckEvents([newBackgroundCheckEvent]);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/FilteredMetricsService.ts:215:    const regionOpt = await AsyncStorage.getItem(Key.Region);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/FilteredMetricsStateStorage.ts:1:import {SecureKeyValueStore} from './SecureKeyValueStorage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/FilteredMetricsStateStorage.ts:7:export interface FilteredMetricsStateStorage {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/FilteredMetricsStateStorage.ts:19:export class DefaultFilteredMetricsStateStorage implements FilteredMetricsStateStorage {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsProvider.ts:2:import {MetricsStorageReader} from './MetricsStorage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsProvider.ts:10:  private metricsStorage: MetricsStorageReader;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsProvider.ts:12:  constructor(metricsStorage: MetricsStorageReader) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsProvider.ts:13:    this.metricsStorage = metricsStorage;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsProvider.ts:17:    return this.metricsStorage.retrieve();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsPublisher.ts:2:import {MetricsStorageWriter} from './MetricsStorage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsPublisher.ts:9:  private metricsStorage: MetricsStorageWriter;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsPublisher.ts:11:  constructor(metricsStorage: MetricsStorageWriter) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsPublisher.ts:12:    this.metricsStorage = metricsStorage;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsPublisher.ts:16:    return this.metricsStorage.save(metrics);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsService.ts:11:import {DefaultMetricsStorage, MetricsStorageCleaner} from './MetricsStorage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsService.ts:12:import {DefaultSecureKeyValueStore, SecureKeyValueStore} from './SecureKeyValueStorage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsService.ts:37:      const metricsStorage = new DefaultMetricsStorage(secureKeyValueStore);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsService.ts:38:      const metricsPublisher = new DefaultMetricsPublisher(metricsStorage);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsService.ts:39:      const metricsProvider = new DefaultMetricsProvider(metricsStorage);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsService.ts:45:        metricsStorage,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsService.ts:57:  private metricsStorageCleaner: MetricsStorageCleaner;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsService.ts:67:    metricsStorageCleaner: MetricsStorageCleaner,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsService.ts:74:    this.metricsStorageCleaner = metricsStorageCleaner;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsService.ts:141:                this.metricsStorageCleaner.deleteUntilTimestamp(lastPushedMetric!.timestamp),
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsStorage.ts:5:import {SecureKeyValueStore} from './SecureKeyValueStorage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsStorage.ts:7:const MetricsStorageKeyValueUniqueIdentifier = 'AE6AE306-523B-4D92-871E-9D13D5CA9B23';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsStorage.ts:9:export interface MetricsStorageWriter {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsStorage.ts:13:export interface MetricsStorageReader {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsStorage.ts:17:export interface MetricsStorageCleaner {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsStorage.ts:21:export class DefaultMetricsStorage implements MetricsStorageWriter, MetricsStorageReader {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsStorage.ts:38:        .retrieve(MetricsStorageKeyValueUniqueIdentifier)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsStorage.ts:40:        .then(serializedMetrics => this.keyValueStore.save(MetricsStorageKeyValueUniqueIdentifier, serializedMetrics));
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsStorage.ts:46:      return this.keyValueStore.retrieve(MetricsStorageKeyValueUniqueIdentifier).then(serializedMetrics => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsStorage.ts:61:        .retrieve(MetricsStorageKeyValueUniqueIdentifier)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/MetricsStorage.ts:65:        .then(filteredMetrics => this.keyValueStore.save(MetricsStorageKeyValueUniqueIdentifier, filteredMetrics));
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/tests/MetricsProvider.spec.ts:3:import {DefaultMetricsStorage} from '../MetricsStorage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/tests/MetricsProvider.spec.ts:13:    const metricsStorage = new DefaultMetricsStorage(new RNSecureKeyStoreMock());
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/tests/MetricsProvider.spec.ts:14:    metricsPublisher = new DefaultMetricsPublisher(metricsStorage);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/tests/MetricsProvider.spec.ts:15:    sut = new DefaultMetricsProvider(metricsStorage);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/tests/MetricsStorage.spec.ts:1:import {DefaultMetricsStorage} from '../MetricsStorage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/tests/MetricsStorage.spec.ts:6:describe('MetricsStorage', () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/tests/MetricsStorage.spec.ts:7:  let sut: DefaultMetricsStorage;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/tests/MetricsStorage.spec.ts:10:    sut = new DefaultMetricsStorage(new RNSecureKeyStoreMock());
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/MetricsService/tests/RNSecureKeyStoreMock.ts:1:import {SecureKeyValueStore} from '../SecureKeyValueStorage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/PollNotificationService/PollNotificationService.ts:2:import AsyncStorage from '@react-native-community/async-storage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/PollNotificationService/PollNotificationService.ts:13:const ETAG_STORAGE_KEY = 'NotificationsEtag';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/PollNotificationService/PollNotificationService.ts:30:  const selectedRegion: string = (await AsyncStorage.getItem('Region')) || 'CA';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/PollNotificationService/PollNotificationService.ts:31:  const selectedLocale: string = (await AsyncStorage.getItem('Locale')) || 'en';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/PollNotificationService/PollNotificationService.ts:54:  const readReceipts = await AsyncStorage.getItem(READ_RECEIPTS_KEY);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/PollNotificationService/PollNotificationService.ts:64:  await AsyncStorage.setItem(READ_RECEIPTS_KEY, JSON.stringify(receipts));
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/PollNotificationService/PollNotificationService.ts:68:  await AsyncStorage.removeItem(READ_RECEIPTS_KEY);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/PollNotificationService/PollNotificationService.ts:116:  const etag = await AsyncStorage.getItem(ETAG_STORAGE_KEY);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/PollNotificationService/PollNotificationService.ts:129:        message: 'Received etag from storage',
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/PollNotificationService/PollNotificationService.ts:166:      await AsyncStorage.setItem(ETAG_STORAGE_KEY, newEtag);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/index.ts:1:export * from './StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/index.ts:2:export * from './StorageServiceProvider';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:1:import AsyncStorage from '@react-native-community/async-storage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:3:import {StorageService, Key, createStorageService} from './StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:9:describe('StorageService', () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:10:  let storageService;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:15:    storageService = await createStorageService();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:18:  describe('createStorageService', () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:19:    it('initializes onboarding status from persistent storage', async () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:20:      expect(AsyncStorage.getItem).toHaveBeenCalledWith(Key.IsOnboarded);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:23:    it('initializes locale from persistent storage', async () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:24:      expect(AsyncStorage.getItem).toHaveBeenCalledWith(Key.Locale);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:27:    it('initalizes region from persistent storage', async () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:28:      expect(AsyncStorage.getItem).toHaveBeenCalledWith(Key.Region);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:31:    it('initializes onboardedDateTime from persistent storage', async () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:32:      expect(AsyncStorage.getItem).toHaveBeenCalledWith(Key.OnboardedDatetime);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:35:    it('initializes forceScreen from persistent storage', async () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:36:      expect(AsyncStorage.getItem).toHaveBeenCalledWith(Key.ForceScreen);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:39:    it('initializes skipAllSet from persistent storage', async () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:40:      expect(AsyncStorage.getItem).toHaveBeenCalledWith(Key.SkipAllSet);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:45:    it('stores the onboarded status to permanent storage', async () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:46:      await storageService.setOnboarded(true);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:47:      expect(AsyncStorage.setItem).toHaveBeenCalledWith(Key.IsOnboarded, '1');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:49:      await storageService.setOnboarded(false);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:50:      expect(AsyncStorage.setItem).toHaveBeenCalledWith(Key.IsOnboarded, '0');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:53:    it('exposes set value as StorageService attribute', async () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:54:      await storageService.setOnboarded(true);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:55:      expect(storageService.isOnboarding.get()).toStrictEqual(false);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:57:      await storageService.setOnboarded(false);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:58:      expect(storageService.isOnboarding.get()).toStrictEqual(true);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:63:    it('stores the locale to permanent storage', async () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:64:      await storageService.setLocale('en');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:65:      expect(AsyncStorage.setItem).toHaveBeenCalledWith(Key.Locale, 'en');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:67:      await storageService.setLocale('fr_CA');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:68:      expect(AsyncStorage.setItem).toHaveBeenCalledWith(Key.Locale, 'fr_CA');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:71:    it('exposes set value as StorageService attribute', async () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:72:      await storageService.setLocale('en_US');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:73:      expect(storageService.locale.get()).toStrictEqual('en_US');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:75:      await storageService.setLocale('fr');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:76:      expect(storageService.locale.get()).toStrictEqual('fr');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:81:    it('stores the region to permanent storage', async () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:82:      await storageService.setRegion('ABC');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:83:      expect(AsyncStorage.setItem).toHaveBeenCalledWith(Key.Region, 'ABC');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:85:      await storageService.setRegion('asd');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:86:      expect(AsyncStorage.setItem).toHaveBeenCalledWith(Key.Region, 'asd');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:89:    it('exposes set value as StorageService attribute', async () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:90:      await storageService.setRegion('qwe');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:91:      expect(storageService.region.get()).toStrictEqual('qwe');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:93:      await storageService.setRegion('fddd');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:94:      expect(storageService.region.get()).toStrictEqual('fddd');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:99:    it('stores the onboarded date to permanent storage', async () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:101:      await storageService.setOnboardedDatetime(d1);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:102:      expect(AsyncStorage.setItem).toHaveBeenCalledWith(Key.OnboardedDatetime, d1.toISOString());
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:105:      await storageService.setOnboardedDatetime(d2);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:106:      expect(AsyncStorage.setItem).toHaveBeenCalledWith(Key.OnboardedDatetime, d2.toISOString());
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:109:    it('exposes set value as StorageService attribute', async () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:111:      await storageService.setOnboardedDatetime(d1);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:112:      expect(storageService.onboardedDatetime.get()).toStrictEqual(d1);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:115:      await storageService.setOnboardedDatetime(d2);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:116:      expect(storageService.onboardedDatetime.get()).toStrictEqual(d2);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:121:    it('stores the forceScreen flag to permanent storage', async () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:122:      await storageService.setForceScreen('testing');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:123:      expect(AsyncStorage.setItem).toHaveBeenCalledWith(Key.ForceScreen, 'testing');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:125:      await storageService.setForceScreen('xaz');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:126:      expect(AsyncStorage.setItem).toHaveBeenCalledWith(Key.ForceScreen, 'xaz');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:129:    it('exposes set value as StorageService attribute', async () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:130:      await storageService.setForceScreen('testing');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:131:      expect(storageService.forceScreen.get()).toStrictEqual('testing');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:133:      await storageService.setForceScreen('xaz');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:134:      expect(storageService.forceScreen.get()).toStrictEqual('xaz');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:139:    it('stores the SkipAllSet flag to permanent storage', async () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:140:      await storageService.setSkipAllSet(true);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:141:      expect(AsyncStorage.setItem).toHaveBeenCalledWith(Key.SkipAllSet, '1');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:143:      await storageService.setSkipAllSet(false);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:144:      expect(AsyncStorage.setItem).toHaveBeenCalledWith(Key.SkipAllSet, '0');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:147:    it('exposes set value as StorageService attribute', async () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:148:      await storageService.setSkipAllSet(false);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:149:      expect(storageService.skipAllSet.get()).toStrictEqual(false);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:151:      await storageService.setSkipAllSet(true);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.spec.ts:152:      expect(storageService.skipAllSet.get()).toStrictEqual(true);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.ts:1:import AsyncStorage from '@react-native-community/async-storage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.ts:19:export class StorageService {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.ts:41:    await AsyncStorage.setItem(Key.IsOnboarded, value ? '1' : '0');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.ts:46:    await AsyncStorage.setItem(Key.Locale, value);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.ts:51:    await AsyncStorage.setItem(Key.Region, value ? value : '');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.ts:56:    await AsyncStorage.setItem(Key.OnboardedDatetime, value ? value.toISOString() : '');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.ts:61:    await AsyncStorage.setItem(Key.ForceScreen, value ? value : '');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.ts:66:    await AsyncStorage.setItem(Key.SkipAllSet, value ? '1' : '0');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.ts:71:    await AsyncStorage.setItem(Key.UserStopped, value ? '1' : '0');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.ts:76:    await AsyncStorage.setItem(Key.HasViewedQrInstructions, value ? '1' : '0');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.ts:81:    const isOnboarded = (await AsyncStorage.getItem(Key.IsOnboarded)) === '1';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.ts:84:    const locale = (await AsyncStorage.getItem(Key.Locale)) || this.locale.get();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.ts:87:    const region = ((await AsyncStorage.getItem(Key.Region)) as Region | undefined) || undefined;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.ts:91:      ((await AsyncStorage.getItem(Key.OnboardedDatetime)) as string | undefined) || undefined;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.ts:95:    const forceScreen = ((await AsyncStorage.getItem(Key.ForceScreen)) as ForceScreen | undefined) || undefined;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.ts:98:    const skipAllSet = (await AsyncStorage.getItem(Key.SkipAllSet)) === '1';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.ts:101:    const userStopped = (await AsyncStorage.getItem(Key.UserStopped)) === '1';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.ts:104:    const hasViewedQrInstructions = (await AsyncStorage.getItem(Key.HasViewedQrInstructions)) === '1';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.ts:109:export const createStorageService = async () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.ts:110:  const storageService = new StorageService();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.ts:111:  await storageService.init();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageService.ts:112:  return storageService;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:2:import AsyncStorage from '@react-native-community/async-storage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:7:import {StorageService, createStorageService} from './StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:9:const StorageServiceContext = createContext<StorageService | undefined>(undefined);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:11:export interface StorageServiceProviderProps {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:15:export const StorageServiceProvider = ({children}: StorageServiceProviderProps) => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:16:  const [storageService, setStorageService] = useState<StorageService>();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:19:    const {callable, cancelable} = createCancellableCallbackPromise(() => createStorageService(), setStorageService);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:25:    <StorageServiceContext.Provider value={storageService}>{storageService && children}</StorageServiceContext.Provider>
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:29:export const useStorageService = () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:30:  return useContext(StorageServiceContext)!!;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:33:export const useStorage = () => {
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:34:  const storageService = useContext(StorageServiceContext)!;
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:36:  const [isOnboarding, setIsOnboarding] = useState(storageService.isOnboarding.get());
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:37:  const setOnboarded = useMemo(() => storageService.setOnboarded, [storageService.setOnboarded]);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:38:  const [userStopped, setUserStoppedInternal] = useState(storageService.userStopped.get());
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:42:      storageService.setUserStopped(newVal);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:44:    [storageService],
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:47:  const [locale, setLocaleInternal] = useState(storageService.locale.get());
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:50:      storageService.setLocale(newLocale);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:52:    [storageService],
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:55:  const [region, setRegionInternal] = useState(storageService.region.get());
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:56:  const setRegion = useMemo(() => storageService.setRegion, [storageService.setRegion]);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:58:  const [onboardedDatetime, setOnboardedDatetimeInternal] = useState(storageService.onboardedDatetime.get());
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:59:  const setOnboardedDatetime = useMemo(() => storageService.setOnboardedDatetime, [
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:60:    storageService.setOnboardedDatetime,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:63:  const [forceScreen, setForceScreenInternal] = useState(storageService.forceScreen.get());
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:64:  const setForceScreen = useMemo(() => storageService.setForceScreen, [storageService.setForceScreen]);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:66:  const [skipAllSet, setSkipAllSetInternal] = useState(storageService.skipAllSet.get());
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:67:  const setSkipAllSet = useMemo(() => storageService.setSkipAllSet, [storageService.setSkipAllSet]);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:69:  const [hasViewedQrInstructions, setHasViewedQrInstructions] = useState(storageService.hasViewedQrInstructions.get());
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:70:  const setHasViewedQr = useMemo(() => storageService.setHasViewedQrInstructions, [
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:71:    storageService.setHasViewedQrInstructions,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:74:  useEffect(() => storageService.isOnboarding.observe(setIsOnboarding), [storageService.isOnboarding]);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:75:  useEffect(() => storageService.locale.observe(setLocaleInternal), [storageService.locale]);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:76:  useEffect(() => storageService.region.observe(setRegionInternal), [storageService.region]);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:77:  useEffect(() => storageService.onboardedDatetime.observe(setOnboardedDatetimeInternal), [
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:78:    storageService.onboardedDatetime,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:80:  useEffect(() => storageService.forceScreen.observe(setForceScreenInternal), [storageService.forceScreen]);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:81:  useEffect(() => storageService.skipAllSet.observe(setSkipAllSetInternal), [storageService.skipAllSet]);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:82:  useEffect(() => storageService.userStopped.observe(setUserStoppedInternal), [storageService.userStopped]);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:83:  useEffect(() => storageService.hasViewedQrInstructions.observe(setHasViewedQrInstructions), [
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:84:    storageService.hasViewedQrInstructions,
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/services/StorageService/StorageServiceProvider.tsx:95:    await AsyncStorage.clear();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/logging/transports/loggly.ts:4:import AsyncStorage from '@react-native-community/async-storage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/logging/transports/loggly.ts:21:    const exposureStatusJson = await AsyncStorage.getItem('exposureStatus');
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/logging/uuid.ts:1:import AsyncStorage from '@react-native-community/async-storage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/logging/uuid.ts:12:const cachedUUID = AsyncStorage.getItem(UUID_KEY)
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/logging/uuid.ts:15:    AsyncStorage.setItem(UUID_KEY, uuid);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/logging/uuid.ts:22:  AsyncStorage.setItem(UUID_KEY, uuid);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/OutbreakProvider.tsx:1:import AsyncStorage from '@react-native-community/async-storage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/OutbreakProvider.tsx:3:import {Key} from 'services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/OutbreakProvider.tsx:23:    await AsyncStorage.setItem(Key.OutbreakStatus, JSON.stringify(value));
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/OutbreakProvider.tsx:28:    const _checkInHistory = (await AsyncStorage.getItem(Key.CheckInHistory)) || '[]';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/OutbreakProvider.tsx:31:    await AsyncStorage.setItem(Key.CheckInHistory, JSON.stringify(checkInHistory));
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/OutbreakProvider.tsx:37:    const _checkInHistory = (await AsyncStorage.getItem(Key.CheckInHistory)) || '[]';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/OutbreakProvider.tsx:40:    await AsyncStorage.setItem(Key.CheckInHistory, JSON.stringify(newCheckInHistory));
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/OutbreakProvider.tsx:45:    const outbreakStatus = (await AsyncStorage.getItem(Key.OutbreakStatus)) || JSON.stringify(initialOutbreakStatus);
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/OutbreakProvider.tsx:48:    const checkInHistory = (await AsyncStorage.getItem(Key.CheckInHistory)) || '[]';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/qr.ts:1:// import AsyncStorage from '@react-native-community/async-storage';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/qr.ts:3:// import {Key} from 'services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/theme/ThemeProvider.tsx:2:import {useStorage} from 'services/StorageService';
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/theme/ThemeProvider.tsx:13:  // Need to also get value for light/dark theme from storage
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/src/shared/theme/ThemeProvider.tsx:14:  const {region} = useStorage();
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:2306:"@react-native-community/async-storage@1.9.0":
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/yarn.lock:2308:  resolved "https://registry.yarnpkg.com/@react-native-community/async-storage/-/async-storage-1.9.0.tgz#af26a8879bd2987970fbbe81a9623851d29a56f1"
+/mnt/c/Users/conig/Desktop/test/covid-alert-app/__mocks__/@react-native-community/async-storage.ts:1:export {default} from '@react-native-community/async-storage/jest/async-storage-mock';

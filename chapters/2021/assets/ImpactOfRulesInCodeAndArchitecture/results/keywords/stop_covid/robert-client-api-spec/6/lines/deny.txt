@@ -1,0 +1,4 @@
+../robert-client-api-spec/.git/hooks/push-to-checkout.sample:8:# receive.denyCurrentBranch configuration variable is set to
+../robert-client-api-spec/.git/hooks/update.sample:22:# hooks.denycreatebranch
+../robert-client-api-spec/.git/hooks/update.sample:48:denycreatebranch=$(git config --type=bool hooks.denycreatebranch)
+../robert-client-api-spec/.git/hooks/update.sample:98:		if [ "$oldrev" = "$zero" -a "$denycreatebranch" = "true" ]; then

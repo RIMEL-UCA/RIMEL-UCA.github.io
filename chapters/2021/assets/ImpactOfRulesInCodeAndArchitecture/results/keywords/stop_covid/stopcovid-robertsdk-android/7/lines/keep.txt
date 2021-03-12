@@ -1,0 +1,7 @@
+../stopcovid-robertsdk-android/.git/hooks/pre-rebase.sample:105:   it makes it easier to keep your history simple.
+../stopcovid-robertsdk-android/.git/hooks/push-to-checkout.sample:38:# branches while keeping the local changes in the working tree that do
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/datasource/LocalEphemeralBluetoothIdentifierDataSource.kt:19:    fun removeUntilTimeKeepLast(ntpTimeS: Long)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/EphemeralBluetoothIdentifierRepository.kt:34:    fun removeUntilTimeKeepLast(ntpTimeS: Long) {
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/repository/EphemeralBluetoothIdentifierRepository.kt:35:        localEphemeralBluetoothIdentifierDataSource.removeUntilTimeKeepLast(ntpTimeS)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:138:        ephemeralBluetoothIdentifierRepository.removeUntilTimeKeepLast(ephemeralBluetoothIdentifierExpiredTime)
+../stopcovid-robertsdk-android/robert/src/main/java/com/lunabeestudio/robert/RobertManagerImpl.kt:247:            .enqueueUniquePeriodicWork(Constant.STATUS_WORKER_NAME, ExistingPeriodicWorkPolicy.KEEP, statusWorkRequest)

@@ -1,0 +1,19 @@
+./robert-server-develop/CHANGELOG.md:5:Le présent format s'appuie sur [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
+./robert-server-develop/robert-crypto-grpc-server/CHANGELOG.md:5:Le présent format s'appuie sur [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
+./robert-server-develop/robert-server-batch/CHANGELOG.md:5:Le présent format s'appuie sur [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/ContactProcessor.java:159:        List<EpochExposition> epochsToKeep = step9ScoreAndAddContactInListOfExposedEpochs(contact, epoch, registration);
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/ContactProcessor.java:163:                epochsToKeep,
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/ContactProcessor.java:243:        List<EpochExposition> epochsToKeep = ScoringUtils.getExposedEpochsWithoutEpochsOlderThanContagiousPeriod(
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/ContactProcessor.java:248:        registrationRecord.setExposedEpochs(epochsToKeep);
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/ContactProcessor.java:249:        return epochsToKeep;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/PurgeOldEpochExpositionsProcessor.java:37:        List<EpochExposition> epochsToKeep = ScoringUtils.getExposedEpochsWithoutEpochsOlderThanContagiousPeriod(
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/PurgeOldEpochExpositionsProcessor.java:43:        registration.setExposedEpochs(epochsToKeep);
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/RegistrationProcessor.java:30:        List<EpochExposition> epochsToKeep = ScoringUtils.getExposedEpochsWithoutEpochsOlderThanContagiousPeriod(
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/processor/RegistrationProcessor.java:38:                epochsToKeep,
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/utils/ScoringUtils.java:23:     * Keep epochs within the contagious period
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/utils/ScoringUtils.java:37:            int nbOfEpochsToKeep = (contagiousPeriod * 24 * 3600) / epochDuration;
+./robert-server-develop/robert-server-batch/src/main/java/fr/gouv/stopc/robert/server/batch/utils/ScoringUtils.java:38:            return (currentEpochId - epoch.getEpochId()) <= nbOfEpochsToKeep;
+./robert-server-develop/robert-server-crypto/CHANGELOG.md:5:Le présent format s'appuie sur [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
+./robert-server-develop/robert-server-database/CHANGELOG.md:5:Le présent format s'appuie sur [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
+./robert-server-develop/robert-server-dataset-injector/CHANGELOG.md:5:Le présent format s'appuie sur [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).
+./robert-server-develop/robert-server-ws-rest/CHANGELOG.md:5:Le présent format s'appuie sur [Keep a Changelog](http://keepachangelog.com/en/1.0.0/).

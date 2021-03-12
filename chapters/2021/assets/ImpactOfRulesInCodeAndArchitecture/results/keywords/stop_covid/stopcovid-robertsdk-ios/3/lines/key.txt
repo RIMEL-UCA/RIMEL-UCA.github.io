@@ -1,0 +1,65 @@
+../stopcovid-robertsdk-ios/Robert/Extensions/Data+RBExtension.swift:18:    func hmac(key: Data) -> Data {
+../stopcovid-robertsdk-ios/Robert/Extensions/Data+RBExtension.swift:21:        let keyString: [CUnsignedChar] = [UInt8](key)
+../stopcovid-robertsdk-ios/Robert/Extensions/Data+RBExtension.swift:22:        let keyLength: Int = key.bytes.count
+../stopcovid-robertsdk-ios/Robert/Extensions/Data+RBExtension.swift:24:        CCHmac(CCHmacAlgorithm(kCCHmacAlgSHA256), keyString, keyLength, string, stringLength, &result)
+../stopcovid-robertsdk-ios/Robert/Extensions/NSError+RBExtension.swift:16:        return NSError(domain: "Robert-SDK", code: code, userInfo: [NSLocalizedDescriptionKey: message])
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:30:        let key: String = try storage.getKey()
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:31:        return generateHelloMessage(for: epoch, ntpTimestamp: ntpTimestamp, key: key)
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:34:    func generateHelloMessage(for epoch: RBEpoch, ntpTimestamp: Int, key: String) -> Data {
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:35:        let message: Data = generateMessage(for: epoch, ntpTimestamp: ntpTimestamp, key: key)
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:36:        let mac: Data = generateHelloMessageMac(key: key, message: message)
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:40:    private func generateMessage(for epoch: RBEpoch, ntpTimestamp: Int, key: String) -> Data {
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:48:    private func generateHelloMessageMac(key: String, message: Data) -> Data {
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:50:        let parsedKey: String = String(data: Data(base64Encoded: key)!, encoding: .ascii)!
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:51:        return totalMessage.hmac(key: parsedKey)[0..<5]
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:62:        let key: String = try storage.getKey()
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:63:        return try generateStatusMessage(for: epoch, ntpTimestamp: ntpTimestamp, key: key)
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:66:    func generateStatusMessage(for epoch: RBEpoch, ntpTimestamp: Int, key: String) throws -> RBStatusMessage {
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:69:        let mac: Data = try generateStatusMessageMAC(key: key, epoch: epoch, timeData: timeData)
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:73:    private func generateStatusMessageMAC(key: String, epoch: RBEpoch, timeData: Data) throws -> Data {
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:78:        guard let data = Data(base64Encoded: key), let parsedKey = String(data: data, encoding: .ascii) else {
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:79:            throw NSError.localizedError(message: "Malformed key provided for mac calculation", code: 0)
+../stopcovid-robertsdk-ios/Robert/Message/MessageManager.swift:81:        return totalMessage.hmac(key: parsedKey)
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:16:    static func generateHelloMessage(for epoch: RBEpoch, ntpTimestamp: Int, key: Data) throws -> Data {
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:18:        let mac: Data = try generateHelloMessageMac(key: key, message: message)
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:34:    private static func generateHelloMessageMac(key: Data, message: Data) throws -> Data {
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:36:        return totalMessage.hmac(key: key)[0..<5]
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:40:    static func generateStatusMessage(for epoch: RBEpoch, ntpTimestamp: Int, key: Data) throws -> RBStatusMessage {
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:43:        let mac: Data = try generateStatusMessageMAC(key: key, epoch: epoch, timeData: timeData)
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:47:    private static func generateStatusMessageMAC(key: Data, epoch: RBEpoch, timeData: Data) throws -> Data {
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:52:        return totalMessage.hmac(key: key)
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:56:    static func generateUnregisterMessage(for epoch: RBEpoch, ntpTimestamp: Int, key: Data) throws -> RBUnregisterMessage {
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:59:        let mac: Data = try generateUnregisterMessageMAC(key: key, epoch: epoch, timeData: timeData)
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:63:    private static func generateUnregisterMessageMAC(key: Data, epoch: RBEpoch, timeData: Data) throws -> Data {
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:68:        return totalMessage.hmac(key: key)
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:72:    static func generateDeleteExposureHistoryMessage(for epoch: RBEpoch, ntpTimestamp: Int, key: Data) throws -> RBDeleteExposureHistoryMessage {
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:75:        let mac: Data = try generateDeleteExposureHistoryMessageMAC(key: key, epoch: epoch, timeData: timeData)
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:79:    private static func generateDeleteExposureHistoryMessageMAC(key: Data, epoch: RBEpoch, timeData: Data) throws -> Data {
+../stopcovid-robertsdk-ios/Robert/Message/RBMessageGenerator.swift:84:        return totalMessage.hmac(key: key)
+../stopcovid-robertsdk-ios/Robert/Model/RBRegisterResponse.swift:15:    let key: String
+../stopcovid-robertsdk-ios/Robert/Protocols/RBStorage.swift:28:    // MARK: - Key -
+../stopcovid-robertsdk-ios/Robert/Protocols/RBStorage.swift:29:    func save(key: Data)
+../stopcovid-robertsdk-ios/Robert/Protocols/RBStorage.swift:30:    func getKey() -> Data?
+../stopcovid-robertsdk-ios/Robert/Protocols/RBStorage.swift:31:    func isKeyStored() -> Bool
+../stopcovid-robertsdk-ios/Robert/Protocols/RBStorage.swift:60:    func clearAll(includingDBKey: Bool)
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:22:    var isRegistered: Bool { storage.isKeyStored() && storage.getLastEpoch() != nil }
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:47:        loadKey()
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:60:                    return try RBMessageGenerator.generateHelloMessage(for: epoch, ntpTimestamp: ntpTimestamp, key: ka)
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:92:    private func loadKey() {
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:93:        if let key = storage.getKey() {
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:94:            ka = key
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:98:    private func wipeKey() {
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:103:        wipeKey()
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:114:            completion(NSError.rbLocalizedError(message: "No key found to make request", code: 0))
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:123:            let statusMessage: RBStatusMessage = try RBMessageGenerator.generateStatusMessage(for: epoch, ntpTimestamp: ntpTimestamp, key: ka)
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:160:        if storage.isKeyStored() {
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:191:            completion(NSError.rbLocalizedError(message: "No key found to make request", code: 0))
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:200:            let statusMessage: RBUnregisterMessage = try RBMessageGenerator.generateUnregisterMessage(for: epoch, ntpTimestamp: ntpTimestamp, key: ka)
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:216:            completion(NSError.rbLocalizedError(message: "No key found to make request", code: 0))
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:225:            let statusMessage: RBDeleteExposureHistoryMessage = try RBMessageGenerator.generateDeleteExposureHistoryMessage(for: epoch, ntpTimestamp: ntpTimestamp, key: ka)
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:252:        storage.clearAll(includingDBKey: false)
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:253:        clearKey()
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:256:    func clearKey() {
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:266:        guard let data = Data(base64Encoded: response.key) else {
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:267:            throw NSError.rbLocalizedError(message: "The provided key is not a valid base64 string", code: 0)
+../stopcovid-robertsdk-ios/Robert/RBManager.swift:269:        storage.save(key: data)

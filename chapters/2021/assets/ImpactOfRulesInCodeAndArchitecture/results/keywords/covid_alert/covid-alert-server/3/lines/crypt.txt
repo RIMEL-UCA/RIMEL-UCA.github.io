@@ -1,0 +1,532 @@
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/.golangci.yml:14:      text: "weak cryptographic primitive"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:24:  serialized_pb=b'\n\x11\x63ovidshield.proto\x12\x0b\x63ovidshield\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1egoogle/protobuf/duration.proto\"@\n\x0fKeyClaimRequest\x12\x15\n\rone_time_code\x18\x01 \x02(\t\x12\x16\n\x0e\x61pp_public_key\x18\x02 \x02(\x0c\"\xae\x02\n\x10KeyClaimResponse\x12\x36\n\x05\x65rror\x18\x01 \x01(\x0e\x32\'.covidshield.KeyClaimResponse.ErrorCode\x12\x19\n\x11server_public_key\x18\x02 \x01(\x0c\x12\x17\n\x0ftries_remaining\x18\x03 \x01(\r\x12\x39\n\x16remaining_ban_duration\x18\x04 \x01(\x0b\x32\x19.google.protobuf.Duration\"s\n\tErrorCode\x12\x08\n\x04NONE\x10\x00\x12\x0b\n\x07UNKNOWN\x10\x01\x12\x19\n\x15INVALID_ONE_TIME_CODE\x10\x02\x12\x10\n\x0cSERVER_ERROR\x10\x03\x12\x0f\n\x0bINVALID_KEY\x10\x04\x12\x11\n\rTEMPORARY_BAN\x10\x05\"k\n\x16\x45ncryptedUploadRequest\x12\x19\n\x11server_public_key\x18\x01 \x02(\x0c\x12\x16\n\x0e\x61pp_public_key\x18\x02 \x02(\x0c\x12\r\n\x05nonce\x18\x03 \x02(\x0c\x12\x0f\n\x07payload\x18\x04 \x02(\x0c\"\xb3\x03\n\x17\x45ncryptedUploadResponse\x12=\n\x05\x65rror\x18\x01 \x02(\x0e\x32..covidshield.EncryptedUploadResponse.ErrorCode\"\xd8\x02\n\tErrorCode\x12\x08\n\x04NONE\x10\x00\x12\x0b\n\x07UNKNOWN\x10\x01\x12\x13\n\x0fINVALID_KEYPAIR\x10\x02\x12\x15\n\x11\x44\x45\x43RYPTION_FAILED\x10\x03\x12\x13\n\x0fINVALID_PAYLOAD\x10\x04\x12\x10\n\x0cSERVER_ERROR\x10\x05\x12\x1d\n\x19INVALID_CRYPTO_PARAMETERS\x10\x06\x12\x11\n\rTOO_MANY_KEYS\x10\x07\x12\x15\n\x11INVALID_TIMESTAMP\x10\x08\x12\x1a\n\x16INVALID_ROLLING_PERIOD\x10\n\x12\x14\n\x10INVALID_KEY_DATA\x10\x0b\x12)\n%INVALID_ROLLING_START_INTERVAL_NUMBER\x10\x0c\x12#\n\x1fINVALID_TRANSMISSION_RISK_LEVEL\x10\r\x12\x16\n\x12NO_KEYS_IN_PAYLOAD\x10\x0e\"h\n\x06Upload\x12-\n\ttimestamp\x18\x01 \x02(\x0b\x32\x1a.google.protobuf.Timestamp\x12/\n\x04keys\x18\x02 \x03(\x0b\x32!.covidshield.TemporaryExposureKey\"\xe9\x01\n\x1aTemporaryExposureKeyExport\x12\x17\n\x0fstart_timestamp\x18\x01 \x01(\x06\x12\x15\n\rend_timestamp\x18\x02 \x01(\x06\x12\x0e\n\x06region\x18\x03 \x01(\t\x12\x11\n\tbatch_num\x18\x04 \x01(\x05\x12\x12\n\nbatch_size\x18\x05 \x01(\x05\x12\x33\n\x0fsignature_infos\x18\x06 \x03(\x0b\x32\x1a.covidshield.SignatureInfo\x12/\n\x04keys\x18\x07 \x03(\x0b\x32!.covidshield.TemporaryExposureKey\"\x97\x01\n\rSignatureInfo\x12 \n\x18verification_key_version\x18\x03 \x01(\t\x12\x1b\n\x13verification_key_id\x18\x04 \x01(\t\x12\x1b\n\x13signature_algorithm\x18\x05 \x01(\tJ\x04\x08\x01\x10\x02J\x04\x08\x02\x10\x03R\rapp_bundle_idR\x0f\x61ndroid_package\"\x8d\x01\n\x14TemporaryExposureKey\x12\x10\n\x08key_data\x18\x01 \x01(\x0c\x12\x1f\n\x17transmission_risk_level\x18\x02 \x01(\x05\x12%\n\x1drolling_start_interval_number\x18\x03 \x01(\x05\x12\x1b\n\x0erolling_period\x18\x04 \x01(\x05:\x03\x31\x34\x34\"A\n\x10TEKSignatureList\x12-\n\nsignatures\x18\x01 \x03(\x0b\x32\x19.covidshield.TEKSignature\"|\n\x0cTEKSignature\x12\x32\n\x0esignature_info\x18\x01 \x01(\x0b\x32\x1a.covidshield.SignatureInfo\x12\x11\n\tbatch_num\x18\x02 \x01(\x05\x12\x12\n\nbatch_size\x18\x03 \x01(\x05\x12\x11\n\tsignature\x18\x04 \x01(\x0c\x42\x17Z\x15pkg/proto/covidshield'
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:75:_ENCRYPTEDUPLOADRESPONSE_ERRORCODE = _descriptor.EnumDescriptor(
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:77:  full_name='covidshield.EncryptedUploadResponse.ErrorCode',
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:98:      name='DECRYPTION_FAILED', index=3, number=3,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:113:      name='INVALID_CRYPTO_PARAMETERS', index=6, number=6,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:158:_sym_db.RegisterEnumDescriptor(_ENCRYPTEDUPLOADRESPONSE_ERRORCODE)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:254:_ENCRYPTEDUPLOADREQUEST = _descriptor.Descriptor(
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:255:  name='EncryptedUploadRequest',
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:256:  full_name='covidshield.EncryptedUploadRequest',
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:263:      name='server_public_key', full_name='covidshield.EncryptedUploadRequest.server_public_key', index=0,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:270:      name='app_public_key', full_name='covidshield.EncryptedUploadRequest.app_public_key', index=1,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:277:      name='nonce', full_name='covidshield.EncryptedUploadRequest.nonce', index=2,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:284:      name='payload', full_name='covidshield.EncryptedUploadRequest.payload', index=3,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:307:_ENCRYPTEDUPLOADRESPONSE = _descriptor.Descriptor(
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:308:  name='EncryptedUploadResponse',
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:309:  full_name='covidshield.EncryptedUploadResponse',
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:316:      name='error', full_name='covidshield.EncryptedUploadResponse.error', index=0,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:327:    _ENCRYPTEDUPLOADRESPONSE_ERRORCODE,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:639:_ENCRYPTEDUPLOADRESPONSE.fields_by_name['error'].enum_type = _ENCRYPTEDUPLOADRESPONSE_ERRORCODE
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:640:_ENCRYPTEDUPLOADRESPONSE_ERRORCODE.containing_type = _ENCRYPTEDUPLOADRESPONSE
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:649:DESCRIPTOR.message_types_by_name['EncryptedUploadRequest'] = _ENCRYPTEDUPLOADREQUEST
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:650:DESCRIPTOR.message_types_by_name['EncryptedUploadResponse'] = _ENCRYPTEDUPLOADRESPONSE
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:673:EncryptedUploadRequest = _reflection.GeneratedProtocolMessageType('EncryptedUploadRequest', (_message.Message,), {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:674:  'DESCRIPTOR' : _ENCRYPTEDUPLOADREQUEST,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:676:  # @@protoc_insertion_point(class_scope:covidshield.EncryptedUploadRequest)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:678:_sym_db.RegisterMessage(EncryptedUploadRequest)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:680:EncryptedUploadResponse = _reflection.GeneratedProtocolMessageType('EncryptedUploadResponse', (_message.Message,), {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:681:  'DESCRIPTOR' : _ENCRYPTEDUPLOADRESPONSE,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:683:  # @@protoc_insertion_point(class_scope:covidshield.EncryptedUploadResponse)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/covidshield_pb2.py:685:_sym_db.RegisterMessage(EncryptedUploadResponse)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/main.py:55:    ep_req = EncryptedUploadRequest()
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/main.py:74:    ep_req.payload = upload_box.encrypt(upload_str, nonce)[Box.NONCE_SIZE:]
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/bin/stuff-database/main.py:78:    ep_resp = EncryptedUploadResponse()
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/cmd/generate-ecdsa-private-key/main.go:4:	"crypto/ecdsa"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/cmd/generate-ecdsa-private-key/main.go:5:	"crypto/elliptic"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/cmd/generate-ecdsa-private-key/main.go:6:	"crypto/rand"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/cmd/generate-ecdsa-private-key/main.go:7:	"crypto/x509"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/config.yaml:22:encryptionKeyValidityDays: 15
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/go.mod:19:	golang.org/x/crypto v0.0.0-20191011191535-87dc89f01550
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/go.sum:45:github.com/bketelsen/crypt v0.0.3-0.20200106085610-5cbc8cc4026c/go.mod h1:MKsuJmJgSg28kpZDP6UIiPt0e0Oz0kqKNGyRaWEPv84=
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/go.sum:310:golang.org/x/crypto v0.0.0-20180904163835-0709b304e793/go.mod h1:6SG95UA2DQfeDnfUPMdvaQW0Q7yPrPDi9nlGo2tz2b4=
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/go.sum:311:golang.org/x/crypto v0.0.0-20181029021203-45a5f77698d3/go.mod h1:6SG95UA2DQfeDnfUPMdvaQW0Q7yPrPDi9nlGo2tz2b4=
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/go.sum:312:golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod h1:djNgcEr1/C05ACkg1iLfiJU5Ep61QUkGW8qpdssI0+w=
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/go.sum:313:golang.org/x/crypto v0.0.0-20190510104115-cbcb75029529/go.mod h1:yigFU9vqHzYiE8UmvKecakEJjdnWj3jj499lnFckfCI=
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/go.sum:314:golang.org/x/crypto v0.0.0-20190605123033-f99c8df09eb5/go.mod h1:yigFU9vqHzYiE8UmvKecakEJjdnWj3jj499lnFckfCI=
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/go.sum:315:golang.org/x/crypto v0.0.0-20191011191535-87dc89f01550 h1:ObdrDkeb4kJdCP557AjRjq69pTHfNouLtWZG7j9rPN8=
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/go.sum:316:golang.org/x/crypto v0.0.0-20191011191535-87dc89f01550/go.mod h1:yigFU9vqHzYiE8UmvKecakEJjdnWj3jj499lnFckfCI=
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/config/config.go:21:	EncryptionKeyValidityDays          uint32
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/config/config.go:60:	viper.SetDefault("encryptionKeyValidityDays", 15)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:5:	"crypto/rand"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:6:	"crypto/tls"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:7:	"crypto/x509"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:20:	"golang.org/x/crypto/nacl/box"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:182:			err = persistEncryptionKeyWithHashID(c.db, region, originator, hashID, pub, priv, oneTimeCode)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db.go:184:			err = persistEncryptionKey(c.db, region, originator, pub, priv, oneTimeCode)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:5:	"crypto/rand"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:6:	"crypto/sha512"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:22:	"golang.org/x/crypto/nacl/box"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:63:	mock.ExpectQuery(fmt.Sprintf(`SELECT originator, COUNT(*) FROM encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:65:		GROUP BY encryption_keys.originator`,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:66:		config.AppConstants.EncryptionKeyValidityDays),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:68:	mock.ExpectQuery(fmt.Sprintf(`SELECT originator, COUNT(*) FROM encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:70:		GROUP BY encryption_keys.originator`,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:97:		SELECT originator, count(*) FROM encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:99:		GROUP BY encryption_keys.originator `,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:124:		SELECT originator, COUNT(*) FROM encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:126:		GROUP BY encryption_keys.originator`,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:156:	mock.ExpectQuery(`SELECT COUNT(*) FROM encryption_keys WHERE app_public_key = ?`).WithArgs(pub[:]).WillReturnRows(rows)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:161:	mock.ExpectQuery(`SELECT created, originator FROM encryption_keys WHERE one_time_code = ?`).WithArgs(oneTimeCode).WillReturnRows(rows)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:165:	query := `UPDATE encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:183:	mock.ExpectPrepare(`SELECT server_public_key FROM encryption_keys WHERE app_public_key = ?`).ExpectQuery().WithArgs(pub[:]).WillReturnRows(rows)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:219:		`INSERT INTO encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:270:		`INSERT INTO encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:313:		`INSERT INTO encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:325:		`INSERT INTO encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:381:			`INSERT INTO encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:428:		`INSERT INTO encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:442:		`SELECT one_time_code FROM encryption_keys WHERE hash_id = ? FOR UPDATE`).WithArgs(hashID).WillReturnRows(rows)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:443:	mock.ExpectExec(`DELETE FROM encryption_keys WHERE hash_id = ? AND one_time_code IS NOT NULL`).WithArgs(hashID).WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:446:		`INSERT INTO encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:502:		`INSERT INTO encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:516:		`SELECT one_time_code FROM encryption_keys WHERE hash_id = ? FOR UPDATE`).WithArgs(hashID).WillReturnRows(rows)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:590:	mock.ExpectQuery(`SELECT region, originator, remaining_keys FROM encryption_keys WHERE app_public_key = ? FOR UPDATE`).WillReturnRows(row)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/db_test.go:624:		`UPDATE encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/metric_queries.go:10:func countUnclaimedEncryptionKeysByOriginator(tx *sql.Tx) ([]CountByOriginator, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/metric_queries.go:12:			SELECT originator, count(*) FROM encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/metric_queries.go:14:			GROUP BY encryption_keys.originator `, config.AppConstants.OneTimeCodeExpiryInMinutes))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/metric_queries.go:17:func countExpiredClaimedEncryptionKeysByOriginator(tx *sql.Tx) ([]CountByOriginator, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/metric_queries.go:19:			SELECT originator, COUNT(*) FROM encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/metric_queries.go:21:			GROUP BY encryption_keys.originator
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/metric_queries.go:22:		`, config.AppConstants.EncryptionKeyValidityDays))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/metric_queries.go:25:func countExpiredClaimedEncryptionKeysWithNoUploadsByOriginator(tx *sql.Tx) ([]CountByOriginator, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/metric_queries.go:27:			SELECT originator, COUNT(*) FROM encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/metric_queries.go:29:			GROUP BY encryption_keys.originator
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/metric_queries.go:30:		`, config.AppConstants.EncryptionKeyValidityDays, config.AppConstants.InitialRemainingKeys))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/metric_queries.go:33:func countExhaustedEncryptionKeysByOriginator(tx *sql.Tx) ([]CountByOriginator, error) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/metric_queries.go:35:			SELECT originator, COUNT(*) FROM encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/metric_queries.go:37:			GROUP BY encryption_keys.originator
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:41:CREATE TABLE IF NOT EXISTS encryption_keys (
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:72:			`ALTER TABLE encryption_keys ADD COLUMN originator VARCHAR(64)`,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:74:			`ALTER TABLE encryption_keys ADD INDEX (originator)`,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:79:			`ALTER TABLE encryption_keys ADD COLUMN hash_id VARCHAR(128)`,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:80:			`ALTER TABLE encryption_keys ADD INDEX (hash_id)`,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:85:			`ALTER TABLE encryption_keys MODIFY one_time_code VARCHAR(10)`,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:90:			`UPDATE encryption_keys SET hash_id = NULL WHERE hash_id = ''`,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/migrator.go:91:			`ALTER TABLE encryption_keys ADD UNIQUE (hash_id)`,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:58:	if expiredCounts, countErr = countExpiredClaimedEncryptionKeysByOriginator(tx); countErr != nil {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:59:		log(ctx, countErr).Info("Unable to count expired encryption keys")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:62:	if expiredCountsNoUploads, countErr = countExpiredClaimedEncryptionKeysWithNoUploadsByOriginator(tx); countErr != nil {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:63:		log(ctx, countErr).Info("Unable to count expired encryption keys with no uploads")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:67:		DELETE FROM encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:69:		config.AppConstants.EncryptionKeyValidityDays,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:106:	if unclaimedCounts, countErr = countUnclaimedEncryptionKeysByOriginator(tx); countErr != nil {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:107:		log(ctx, countErr).Info("Unable to count unclaimed encryption keys")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:111:		DELETE FROM encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:150:	if exhaustedCounts, countErr = countExhaustedEncryptionKeysByOriginator(tx); countErr != nil {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:151:		log(ctx, countErr).Info("Unable to count exhausted encryption keys")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:155:		DELETE FROM encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:186:	if err := tx.QueryRow("SELECT COUNT(*) FROM encryption_keys WHERE app_public_key = ?", appPublicKey).Scan(&exists); err != nil {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:204:	row := tx.QueryRow("SELECT created, originator FROM encryption_keys WHERE one_time_code = ?", oneTimeCode)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:224:		UPDATE encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:263:		`SELECT server_public_key FROM encryption_keys WHERE app_public_key = ?`,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:299:func persistEncryptionKey(db *sql.DB, region, originator string, pub *[32]byte, priv *[32]byte, oneTimeCode string) error {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:301:		`INSERT INTO encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:309:func persistEncryptionKeyWithHashID(db *sql.DB, region, originator, hashID string, pub *[32]byte, priv *[32]byte, oneTimeCode string) error {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:311:		`INSERT INTO encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:322:		row := db.QueryRow("SELECT one_time_code FROM encryption_keys WHERE hash_id = ?", hashID)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:326:			_, err = db.Exec(`DELETE FROM encryption_keys WHERE hash_id = ? AND one_time_code IS NOT NULL`, hashID)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:339:		SELECT server_private_key FROM encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:343:		config.AppConstants.EncryptionKeyValidityDays,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:377:	if err := tx.QueryRow("SELECT region, originator, remaining_keys FROM encryption_keys WHERE app_public_key = ? FOR UPDATE", appPubKey[:]).Scan(&region, &originator, &remainingKeys); err != nil {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:451:		UPDATE encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:557:	row := db.QueryRow("SELECT COUNT(*) FROM encryption_keys WHERE one_time_code IS NULL")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries.go:583:	row := db.QueryRow("SELECT COUNT(*) FROM encryption_keys WHERE one_time_code IS NOT NULL")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:4:	"crypto/rand"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:15:	"golang.org/x/crypto/nacl/box"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:45:	mock.ExpectQuery(`SELECT COUNT(*) FROM encryption_keys WHERE app_public_key = ?`).WithArgs(pub[:]).WillReturnError(fmt.Errorf("error"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:59:	mock.ExpectQuery(`SELECT COUNT(*) FROM encryption_keys WHERE app_public_key = ?`).WithArgs(pub[:]).WillReturnRows(rows)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:73:	mock.ExpectQuery(`SELECT COUNT(*) FROM encryption_keys WHERE app_public_key = ?`).WithArgs(pub[:]).WillReturnRows(rows)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:90:	mock.ExpectQuery(`SELECT COUNT(*) FROM encryption_keys WHERE app_public_key = ?`).WithArgs(pub[:]).WillReturnRows(rows)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:94:	query := `UPDATE encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:116:	mock.ExpectQuery(`SELECT COUNT(*) FROM encryption_keys WHERE app_public_key = ?`).WithArgs(pub[:]).WillReturnRows(rows)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:147:	mock.ExpectQuery(`SELECT COUNT(*) FROM encryption_keys WHERE app_public_key = ?`).WithArgs(pub[:]).WillReturnRows(rows)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:178:	mock.ExpectQuery(`SELECT COUNT(*) FROM encryption_keys WHERE app_public_key = ?`).WithArgs(pub[:]).WillReturnRows(rows)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:196:	mock.ExpectPrepare(`SELECT server_public_key FROM encryption_keys WHERE app_public_key = ?`).ExpectQuery().WithArgs(pub[:]).WillReturnError(fmt.Errorf("error"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:211:	mock.ExpectQuery(`SELECT COUNT(*) FROM encryption_keys WHERE app_public_key = ?`).WithArgs(pub[:]).WillReturnRows(rows)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:230:	mock.ExpectPrepare(`SELECT server_public_key FROM encryption_keys WHERE app_public_key = ?`).ExpectQuery().WithArgs(pub[:]).WillReturnRows(rows)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:246:	mock.ExpectQuery(`SELECT created, originator FROM encryption_keys WHERE one_time_code = ?`).WithArgs(oneTimeCode).WillReturnRows(rows)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:249:func TestPersistEncryptionKey(t *testing.T) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:260:		`INSERT INTO encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:271:	receivedErr := persistEncryptionKey(db, region, originator, pub, priv, oneTimeCode)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:282:		`INSERT INTO encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:293:	receivedResult := persistEncryptionKey(db, region, originator, pub, priv, oneTimeCode)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:303:func testPersistEncryptionKeyWithHashID(t *testing.T) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:315:		`INSERT INTO encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:327:	receivedErr := persistEncryptionKeyWithHashID(db, region, originator, hashID, pub, priv, oneTimeCode)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:338:		`INSERT INTO encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:350:	receivedErr = persistEncryptionKeyWithHashID(db, region, originator, hashID, pub, priv, oneTimeCode)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:361:		`INSERT INTO encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:375:		`SELECT one_time_code FROM encryption_keys WHERE hash_id = ? FOR UPDATE`).WithArgs(hashID).WillReturnRows(rows)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:377:	receivedErr = persistEncryptionKeyWithHashID(db, region, originator, hashID, pub, priv, oneTimeCode)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:388:		`INSERT INTO encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:402:		`SELECT one_time_code FROM encryption_keys WHERE hash_id = ? FOR UPDATE`).WithArgs(hashID).WillReturnRows(rows)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:403:	mock.ExpectExec(`DELETE FROM encryption_keys WHERE hash_id = ? AND one_time_code IS NOT NULL`).WithArgs(hashID).WillReturnError(fmt.Errorf("error"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:405:	receivedErr = persistEncryptionKeyWithHashID(db, region, originator, hashID, pub, priv, oneTimeCode)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:416:		`INSERT INTO encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:430:		`SELECT one_time_code FROM encryption_keys WHERE hash_id = ? FOR UPDATE`).WithArgs(hashID).WillReturnRows(rows)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:431:	mock.ExpectExec(`DELETE FROM encryption_keys WHERE hash_id = ? AND one_time_code IS NOT NULL`).WithArgs(hashID).WillReturnResult(sqlmock.NewResult(1, 1))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:433:	receivedErr = persistEncryptionKeyWithHashID(db, region, originator, hashID, pub, priv, oneTimeCode)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:444:		`INSERT INTO encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:456:	receivedResult := persistEncryptionKeyWithHashID(db, region, originator, hashID, pub, priv, oneTimeCode)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:473:	SELECT server_private_key FROM encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:477:		config.AppConstants.EncryptionKeyValidityDays,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:544:	mock.ExpectQuery(`SELECT region, originator, remaining_keys FROM encryption_keys WHERE app_public_key = ? FOR UPDATE`).WithArgs(pub[:]).WillReturnError(fmt.Errorf("error"))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:558:	mock.ExpectQuery(`SELECT region, originator, remaining_keys FROM encryption_keys WHERE app_public_key = ? FOR UPDATE`).WillReturnRows(row)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:572:	mock.ExpectQuery(`SELECT region, originator, remaining_keys FROM encryption_keys WHERE app_public_key = ? FOR UPDATE`).WillReturnRows(row)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:597:	mock.ExpectQuery(`SELECT region, originator, remaining_keys FROM encryption_keys WHERE app_public_key = ? FOR UPDATE`).WillReturnRows(row)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:631:	mock.ExpectQuery(`SELECT region, originator, remaining_keys FROM encryption_keys WHERE app_public_key = ? FOR UPDATE`).WillReturnRows(row)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:672:	mock.ExpectQuery(`SELECT region, originator, remaining_keys FROM encryption_keys WHERE app_public_key = ? FOR UPDATE`).WillReturnRows(row)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:706:		`UPDATE encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:735:	mock.ExpectQuery(`SELECT region, originator, remaining_keys FROM encryption_keys WHERE app_public_key = ? FOR UPDATE`).WillReturnRows(row)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:769:		`UPDATE encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:1012:	mock.ExpectQuery(`SELECT COUNT(*) FROM encryption_keys WHERE one_time_code IS NULL`).WillReturnRows(row)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/persistence/queries_test.go:1050:	mock.ExpectQuery(`SELECT COUNT(*) FROM encryption_keys WHERE one_time_code IS NOT NULL`).WillReturnRows(row)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:99:type EncryptedUploadResponse_ErrorCode int32
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:102:	EncryptedUploadResponse_NONE                      EncryptedUploadResponse_ErrorCode = 0
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:103:	EncryptedUploadResponse_UNKNOWN                   EncryptedUploadResponse_ErrorCode = 1
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:104:	EncryptedUploadResponse_INVALID_KEYPAIR           EncryptedUploadResponse_ErrorCode = 2
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:105:	EncryptedUploadResponse_DECRYPTION_FAILED         EncryptedUploadResponse_ErrorCode = 3
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:106:	EncryptedUploadResponse_INVALID_PAYLOAD           EncryptedUploadResponse_ErrorCode = 4
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:107:	EncryptedUploadResponse_SERVER_ERROR              EncryptedUploadResponse_ErrorCode = 5
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:108:	EncryptedUploadResponse_INVALID_CRYPTO_PARAMETERS EncryptedUploadResponse_ErrorCode = 6
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:109:	EncryptedUploadResponse_TOO_MANY_KEYS             EncryptedUploadResponse_ErrorCode = 7
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:112:	EncryptedUploadResponse_INVALID_TIMESTAMP                     EncryptedUploadResponse_ErrorCode = 8
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:113:	EncryptedUploadResponse_INVALID_ROLLING_PERIOD                EncryptedUploadResponse_ErrorCode = 10
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:114:	EncryptedUploadResponse_INVALID_KEY_DATA                      EncryptedUploadResponse_ErrorCode = 11
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:115:	EncryptedUploadResponse_INVALID_ROLLING_START_INTERVAL_NUMBER EncryptedUploadResponse_ErrorCode = 12
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:116:	EncryptedUploadResponse_INVALID_TRANSMISSION_RISK_LEVEL       EncryptedUploadResponse_ErrorCode = 13
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:117:	EncryptedUploadResponse_NO_KEYS_IN_PAYLOAD                    EncryptedUploadResponse_ErrorCode = 14
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:120:// Enum value maps for EncryptedUploadResponse_ErrorCode.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:122:	EncryptedUploadResponse_ErrorCode_name = map[int32]string{
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:126:		3:  "DECRYPTION_FAILED",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:129:		6:  "INVALID_CRYPTO_PARAMETERS",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:138:	EncryptedUploadResponse_ErrorCode_value = map[string]int32{
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:142:		"DECRYPTION_FAILED":                     3,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:145:		"INVALID_CRYPTO_PARAMETERS":             6,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:156:func (x EncryptedUploadResponse_ErrorCode) Enum() *EncryptedUploadResponse_ErrorCode {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:157:	p := new(EncryptedUploadResponse_ErrorCode)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:162:func (x EncryptedUploadResponse_ErrorCode) String() string {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:166:func (EncryptedUploadResponse_ErrorCode) Descriptor() protoreflect.EnumDescriptor {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:170:func (EncryptedUploadResponse_ErrorCode) Type() protoreflect.EnumType {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:174:func (x EncryptedUploadResponse_ErrorCode) Number() protoreflect.EnumNumber {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:179:func (x *EncryptedUploadResponse_ErrorCode) UnmarshalJSON(b []byte) error {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:184:	*x = EncryptedUploadResponse_ErrorCode(num)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:188:// Deprecated: Use EncryptedUploadResponse_ErrorCode.Descriptor instead.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:189:func (EncryptedUploadResponse_ErrorCode) EnumDescriptor() ([]byte, []int) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:402:// We are using a NaCl Box (Curve25519+XSalsa20+Poly1305) to encrypt and
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:412:type EncryptedUploadRequest struct {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:418:	// used to encrypt the payload. This key should be stored locally for 14
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:429:	// encryption library to generate the ciphertext.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:431:	// payload is the result of encoding/marshalling, and then encrypting, an
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:433:	// field, because we need to encrypt a byte stream, not an object.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:437:func (x *EncryptedUploadRequest) Reset() {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:438:	*x = EncryptedUploadRequest{}
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:446:func (x *EncryptedUploadRequest) String() string {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:450:func (*EncryptedUploadRequest) ProtoMessage() {}
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:452:func (x *EncryptedUploadRequest) ProtoReflect() protoreflect.Message {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:464:// Deprecated: Use EncryptedUploadRequest.ProtoReflect.Descriptor instead.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:465:func (*EncryptedUploadRequest) Descriptor() ([]byte, []int) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:469:func (x *EncryptedUploadRequest) GetServerPublicKey() []byte {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:476:func (x *EncryptedUploadRequest) GetAppPublicKey() []byte {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:483:func (x *EncryptedUploadRequest) GetNonce() []byte {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:490:func (x *EncryptedUploadRequest) GetPayload() []byte {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:497:// EncryptedUploadResponse is received from the server in response to a
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:498:// EncryptedUploadRequest. If the request was successful, error will be NONE.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:499:type EncryptedUploadResponse struct {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:504:	Error *EncryptedUploadResponse_ErrorCode `protobuf:"varint,1,opt,name=error,enum=covidshield.EncryptedUploadResponse_ErrorCode" json:"error,omitempty"`
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:507:func (x *EncryptedUploadResponse) Reset() {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:508:	*x = EncryptedUploadResponse{}
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:516:func (x *EncryptedUploadResponse) String() string {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:520:func (*EncryptedUploadResponse) ProtoMessage() {}
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:522:func (x *EncryptedUploadResponse) ProtoReflect() protoreflect.Message {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:534:// Deprecated: Use EncryptedUploadResponse.ProtoReflect.Descriptor instead.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:535:func (*EncryptedUploadResponse) Descriptor() ([]byte, []int) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:539:func (x *EncryptedUploadResponse) GetError() EncryptedUploadResponse_ErrorCode {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:543:	return EncryptedUploadResponse_NONE
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:546:// Upload is the decrypted type of the `payload` field in EncryptedUploadRequest.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:1205:	(EncryptedUploadResponse_ErrorCode)(0), // 1: covidshield.EncryptedUploadResponse.ErrorCode
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:1209:	(*EncryptedUploadRequest)(nil),         // 5: covidshield.EncryptedUploadRequest
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:1210:	(*EncryptedUploadResponse)(nil),        // 6: covidshield.EncryptedUploadResponse
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:1223:	1,  // 2: covidshield.EncryptedUploadResponse.error:type_name -> covidshield.EncryptedUploadResponse.ErrorCode
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:1270:			switch v := v.(*EncryptedUploadRequest); i {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshield/proto.pb.go:1282:			switch v := v.(*EncryptedUploadResponse); i {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:99:type EncryptedUploadResponse_ErrorCode int32
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:102:	EncryptedUploadResponse_NONE                      EncryptedUploadResponse_ErrorCode = 0
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:103:	EncryptedUploadResponse_UNKNOWN                   EncryptedUploadResponse_ErrorCode = 1
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:104:	EncryptedUploadResponse_INVALID_KEYPAIR           EncryptedUploadResponse_ErrorCode = 2
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:105:	EncryptedUploadResponse_DECRYPTION_FAILED         EncryptedUploadResponse_ErrorCode = 3
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:106:	EncryptedUploadResponse_INVALID_PAYLOAD           EncryptedUploadResponse_ErrorCode = 4
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:107:	EncryptedUploadResponse_SERVER_ERROR              EncryptedUploadResponse_ErrorCode = 5
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:108:	EncryptedUploadResponse_INVALID_CRYPTO_PARAMETERS EncryptedUploadResponse_ErrorCode = 6
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:109:	EncryptedUploadResponse_TOO_MANY_KEYS             EncryptedUploadResponse_ErrorCode = 7
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:112:	EncryptedUploadResponse_INVALID_TIMESTAMP                     EncryptedUploadResponse_ErrorCode = 8
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:113:	EncryptedUploadResponse_INVALID_ROLLING_PERIOD                EncryptedUploadResponse_ErrorCode = 10
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:114:	EncryptedUploadResponse_INVALID_KEY_DATA                      EncryptedUploadResponse_ErrorCode = 11
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:115:	EncryptedUploadResponse_INVALID_ROLLING_START_INTERVAL_NUMBER EncryptedUploadResponse_ErrorCode = 12
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:116:	EncryptedUploadResponse_INVALID_TRANSMISSION_RISK_LEVEL       EncryptedUploadResponse_ErrorCode = 13
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:117:	EncryptedUploadResponse_NO_KEYS_IN_PAYLOAD                    EncryptedUploadResponse_ErrorCode = 14
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:120:// Enum value maps for EncryptedUploadResponse_ErrorCode.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:122:	EncryptedUploadResponse_ErrorCode_name = map[int32]string{
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:126:		3:  "DECRYPTION_FAILED",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:129:		6:  "INVALID_CRYPTO_PARAMETERS",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:138:	EncryptedUploadResponse_ErrorCode_value = map[string]int32{
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:142:		"DECRYPTION_FAILED":                     3,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:145:		"INVALID_CRYPTO_PARAMETERS":             6,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:156:func (x EncryptedUploadResponse_ErrorCode) Enum() *EncryptedUploadResponse_ErrorCode {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:157:	p := new(EncryptedUploadResponse_ErrorCode)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:162:func (x EncryptedUploadResponse_ErrorCode) String() string {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:166:func (EncryptedUploadResponse_ErrorCode) Descriptor() protoreflect.EnumDescriptor {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:170:func (EncryptedUploadResponse_ErrorCode) Type() protoreflect.EnumType {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:174:func (x EncryptedUploadResponse_ErrorCode) Number() protoreflect.EnumNumber {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:179:func (x *EncryptedUploadResponse_ErrorCode) UnmarshalJSON(b []byte) error {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:184:	*x = EncryptedUploadResponse_ErrorCode(num)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:188:// Deprecated: Use EncryptedUploadResponse_ErrorCode.Descriptor instead.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:189:func (EncryptedUploadResponse_ErrorCode) EnumDescriptor() ([]byte, []int) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:333:// We are using a NaCl Box (Curve25519+XSalsa20+Poly1305) to encrypt and
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:343:type EncryptedUploadRequest struct {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:349:	// used to encrypt the payload. This key should be stored locally for 14
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:360:	// encryption library to generate the ciphertext.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:362:	// payload is the result of encoding/marshalling, and then encrypting, an
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:364:	// field, because we need to encrypt a byte stream, not an object.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:368:func (x *EncryptedUploadRequest) Reset() {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:369:	*x = EncryptedUploadRequest{}
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:377:func (x *EncryptedUploadRequest) String() string {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:381:func (*EncryptedUploadRequest) ProtoMessage() {}
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:383:func (x *EncryptedUploadRequest) ProtoReflect() protoreflect.Message {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:395:// Deprecated: Use EncryptedUploadRequest.ProtoReflect.Descriptor instead.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:396:func (*EncryptedUploadRequest) Descriptor() ([]byte, []int) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:400:func (x *EncryptedUploadRequest) GetServerPublicKey() []byte {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:407:func (x *EncryptedUploadRequest) GetAppPublicKey() []byte {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:414:func (x *EncryptedUploadRequest) GetNonce() []byte {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:421:func (x *EncryptedUploadRequest) GetPayload() []byte {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:428:// EncryptedUploadResponse is received from the server in response to a
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:429:// EncryptedUploadRequest. If the request was successful, error will be NONE.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:430:type EncryptedUploadResponse struct {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:435:	Error *EncryptedUploadResponse_ErrorCode `protobuf:"varint,1,opt,name=error,enum=covidshieldv1.EncryptedUploadResponse_ErrorCode" json:"error,omitempty"`
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:438:func (x *EncryptedUploadResponse) Reset() {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:439:	*x = EncryptedUploadResponse{}
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:447:func (x *EncryptedUploadResponse) String() string {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:451:func (*EncryptedUploadResponse) ProtoMessage() {}
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:453:func (x *EncryptedUploadResponse) ProtoReflect() protoreflect.Message {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:465:// Deprecated: Use EncryptedUploadResponse.ProtoReflect.Descriptor instead.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:466:func (*EncryptedUploadResponse) Descriptor() ([]byte, []int) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:470:func (x *EncryptedUploadResponse) GetError() EncryptedUploadResponse_ErrorCode {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:474:	return EncryptedUploadResponse_NONE
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:477:// Upload is the decrypted type of the `payload` field in EncryptedUploadRequest.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:1086:	(EncryptedUploadResponse_ErrorCode)(0), // 1: covidshieldv1.EncryptedUploadResponse.ErrorCode
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:1089:	(*EncryptedUploadRequest)(nil),         // 4: covidshieldv1.EncryptedUploadRequest
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:1090:	(*EncryptedUploadResponse)(nil),        // 5: covidshieldv1.EncryptedUploadResponse
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:1103:	1,  // 2: covidshieldv1.EncryptedUploadResponse.error:type_name -> covidshieldv1.EncryptedUploadResponse.ErrorCode
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:1148:			switch v := v.(*EncryptedUploadRequest); i {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/proto/covidshieldv1/proto.pb.go:1160:			switch v := v.(*EncryptedUploadResponse); i {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/authenticator.go:4:	"crypto/hmac"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/authenticator.go:5:	"crypto/sha256"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/authenticator_test.go:4:	"crypto/hmac"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/authenticator_test.go:5:	"crypto/sha256"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/retrieval_test.go:4:	"crypto/rand"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/signer.go:4:	"crypto"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/signer.go:5:	"crypto/ecdsa"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/signer.go:6:	"crypto/rand"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/signer.go:7:	"crypto/sha256"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/signer.go:8:	"crypto/x509"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/signer.go:41:	sig, err := s.privateKey.Sign(rand.Reader, digest[:], crypto.SHA256)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/signer_test.go:4:	"crypto/ecdsa"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/signer_test.go:5:	"crypto/elliptic"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/signer_test.go:6:	"crypto/rand"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/signer_test.go:7:	"crypto/sha256"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/retrieval/signer_test.go:8:	"crypto/x509"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim_test.go:5:	"crypto/rand"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim_test.go:6:	"crypto/sha512"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/keyclaim_test.go:28:	"golang.org/x/crypto/nacl/box"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/retrieve_test.go:4:	"crypto/rand"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:16:	"golang.org/x/crypto/nacl/box"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:32:func uploadError(errCode pb.EncryptedUploadResponse_ErrorCode) *pb.EncryptedUploadResponse {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:33:	return &pb.EncryptedUploadResponse{Error: &errCode}
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:46:			http.StatusBadRequest, uploadError(pb.EncryptedUploadResponse_UNKNOWN),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:51:	var seu pb.EncryptedUploadRequest
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:55:			http.StatusBadRequest, uploadError(pb.EncryptedUploadResponse_UNKNOWN),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:64:			http.StatusBadRequest, uploadError(pb.EncryptedUploadResponse_INVALID_CRYPTO_PARAMETERS),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:73:			http.StatusUnauthorized, uploadError(pb.EncryptedUploadResponse_INVALID_KEYPAIR),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:82:			http.StatusBadRequest, uploadError(pb.EncryptedUploadResponse_INVALID_CRYPTO_PARAMETERS),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:91:			http.StatusBadRequest, uploadError(pb.EncryptedUploadResponse_INVALID_CRYPTO_PARAMETERS),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:100:			http.StatusInternalServerError, uploadError(pb.EncryptedUploadResponse_SERVER_ERROR),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:105:	// decrypt payload
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:109:			ctx, w, nil, "failure to decrypt payload",
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:110:			http.StatusBadRequest, uploadError(pb.EncryptedUploadResponse_DECRYPTION_FAILED),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:120:			http.StatusBadRequest, uploadError(pb.EncryptedUploadResponse_INVALID_PAYLOAD),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:128:			http.StatusBadRequest, uploadError(pb.EncryptedUploadResponse_NO_KEYS_IN_PAYLOAD),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:136:			http.StatusBadRequest, uploadError(pb.EncryptedUploadResponse_TOO_MANY_KEYS),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:145:			http.StatusBadRequest, uploadError(pb.EncryptedUploadResponse_INVALID_TIMESTAMP),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:158:			http.StatusBadRequest, uploadError(pb.EncryptedUploadResponse_INVALID_KEYPAIR),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:164:			http.StatusBadRequest, uploadError(pb.EncryptedUploadResponse_TOO_MANY_KEYS),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:170:			http.StatusInternalServerError, uploadError(pb.EncryptedUploadResponse_SERVER_ERROR),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:175:	resp := uploadError(pb.EncryptedUploadResponse_NONE)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:180:			http.StatusInternalServerError, uploadError(pb.EncryptedUploadResponse_SERVER_ERROR),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:194:			http.StatusBadRequest, uploadError(pb.EncryptedUploadResponse_INVALID_ROLLING_PERIOD),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:202:			http.StatusBadRequest, uploadError(pb.EncryptedUploadResponse_INVALID_KEY_DATA),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:210:			http.StatusBadRequest, uploadError(pb.EncryptedUploadResponse_INVALID_ROLLING_START_INTERVAL_NUMBER),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:219:			http.StatusBadRequest, uploadError(pb.EncryptedUploadResponse_INVALID_TRANSMISSION_RISK_LEVEL),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload.go:251:			http.StatusBadRequest, uploadError(pb.EncryptedUploadResponse_INVALID_ROLLING_START_INTERVAL_NUMBER),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:5:	"crypto/rand"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:16:	"golang.org/x/crypto/nacl/box"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:54:	err := pb.EncryptedUploadResponse_UNKNOWN
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:55:	expected := &pb.EncryptedUploadResponse{Error: &err}
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:79:	assert.True(t, checkUploadResponse(resp.Body.Bytes(), pb.EncryptedUploadResponse_UNKNOWN))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:96:	assert.True(t, checkUploadResponse(resp.Body.Bytes(), pb.EncryptedUploadResponse_INVALID_CRYPTO_PARAMETERS))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:116:	assert.True(t, checkUploadResponse(resp.Body.Bytes(), pb.EncryptedUploadResponse_INVALID_KEYPAIR))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:136:	assert.True(t, checkUploadResponse(resp.Body.Bytes(), pb.EncryptedUploadResponse_INVALID_CRYPTO_PARAMETERS))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:155:	assert.True(t, checkUploadResponse(resp.Body.Bytes(), pb.EncryptedUploadResponse_INVALID_CRYPTO_PARAMETERS))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:174:	assert.True(t, checkUploadResponse(resp.Body.Bytes(), pb.EncryptedUploadResponse_SERVER_ERROR))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:179:func TestUpload_FailsToDecryptPayload(t *testing.T) {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:190:	// Fails to decrypt payload
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:196:	encrypted := box.Seal(msg[:], []byte("hello world"), &nonce, goodAppPub, badServerPub)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:198:	payload, _ := proto.Marshal(buildUploadRequest(goodServerPub[:], nonce[:], goodAppPub[:], encrypted))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:204:	assert.True(t, checkUploadResponse(resp.Body.Bytes(), pb.EncryptedUploadResponse_DECRYPTION_FAILED))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:206:	testhelpers.AssertLog(t, hook, 1, logrus.WarnLevel, "failure to decrypt payload")
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:228:	encrypted := box.Seal(msg[:], []byte("hello world"), &nonce, goodAppPub, goodServerPriv)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:230:	payload, _ := proto.Marshal(buildUploadRequest(goodServerPub[:], nonce[:], goodAppPub[:], encrypted))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:236:	assert.True(t, checkUploadResponse(resp.Body.Bytes(), pb.EncryptedUploadResponse_INVALID_PAYLOAD))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:262:	encrypted := box.Seal(msg[:], marshalledUpload, &nonce, goodServerPub, goodAppPriv)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:264:	payload, _ := proto.Marshal(buildUploadRequest(goodServerPub[:], nonce[:], goodAppPub[:], encrypted))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:270:	assert.True(t, checkUploadResponse(resp.Body.Bytes(), pb.EncryptedUploadResponse_NO_KEYS_IN_PAYLOAD))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:298:	encrypted := box.Seal(msg[:], marshalledUpload, &nonce, goodServerPub, goodAppPriv)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:300:	payload, _ := proto.Marshal(buildUploadRequest(goodServerPub[:], nonce[:], goodAppPub[:], encrypted))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:306:	assert.True(t, checkUploadResponse(resp.Body.Bytes(), pb.EncryptedUploadResponse_TOO_MANY_KEYS))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:334:	encrypted := box.Seal(msg[:], marshalledUpload, &nonce, goodServerPub, goodAppPriv)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:336:	payload, _ := proto.Marshal(buildUploadRequest(goodServerPub[:], nonce[:], goodAppPub[:], encrypted))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:342:	assert.True(t, checkUploadResponse(resp.Body.Bytes(), pb.EncryptedUploadResponse_INVALID_TIMESTAMP))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:370:	encrypted := box.Seal(msg[:], marshalledUpload, &nonce, goodServerPub, goodAppPrivKeyUsed)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:372:	payload, _ := proto.Marshal(buildUploadRequest(goodServerPub[:], nonce[:], goodAppPubKeyUsed[:], encrypted))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:378:	assert.True(t, checkUploadResponse(resp.Body.Bytes(), pb.EncryptedUploadResponse_INVALID_KEYPAIR))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:406:	encrypted := box.Seal(msg[:], marshalledUpload, &nonce, goodServerPub, goodAppPrivDBError)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:408:	payload, _ := proto.Marshal(buildUploadRequest(goodServerPub[:], nonce[:], goodAppPubDBError[:], encrypted))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:414:	assert.True(t, checkUploadResponse(resp.Body.Bytes(), pb.EncryptedUploadResponse_SERVER_ERROR))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:443:	encrypted := box.Seal(msg[:], marshalledUpload, &nonce, goodServerPubNoKeysRemaining, goodAppPrivNoKeysRemaining)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:445:	payload, _ := proto.Marshal(buildUploadRequest(goodServerPubNoKeysRemaining[:], nonce[:], goodAppPubNoKeysRemaining[:], encrypted))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:451:	assert.True(t, checkUploadResponse(resp.Body.Bytes(), pb.EncryptedUploadResponse_TOO_MANY_KEYS))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:483:	encrypted := box.Seal(msg[:], marshalledUpload, &nonce, goodServerPub, goodAppPriv)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:485:	payload, _ := proto.Marshal(buildUploadRequest(goodServerPub[:], nonce[:], goodAppPub[:], encrypted))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:491:	assert.True(t, checkUploadResponse(resp.Body.Bytes(), pb.EncryptedUploadResponse_NONE))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:514:	assert.True(t, checkUploadResponse(resp.Body.Bytes(), pb.EncryptedUploadResponse_INVALID_ROLLING_PERIOD))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:540:	assert.True(t, checkUploadResponse(resp.Body.Bytes(), pb.EncryptedUploadResponse_INVALID_ROLLING_PERIOD))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:566:	assert.True(t, checkUploadResponse(resp.Body.Bytes(), pb.EncryptedUploadResponse_INVALID_KEY_DATA))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:591:	assert.True(t, checkUploadResponse(resp.Body.Bytes(), pb.EncryptedUploadResponse_INVALID_ROLLING_START_INTERVAL_NUMBER))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:618:	assert.True(t, checkUploadResponse(resp.Body.Bytes(), pb.EncryptedUploadResponse_INVALID_TRANSMISSION_RISK_LEVEL))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:644:	assert.True(t, checkUploadResponse(resp.Body.Bytes(), pb.EncryptedUploadResponse_INVALID_TRANSMISSION_RISK_LEVEL))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:706:	assert.True(t, checkUploadResponse(resp.Body.Bytes(), pb.EncryptedUploadResponse_INVALID_ROLLING_START_INTERVAL_NUMBER))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:727:func buildUploadRequest(serverPubKey []byte, nonce []byte, appPublicKey []byte, payload []byte) *pb.EncryptedUploadRequest {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:728:	upload := &pb.EncryptedUploadRequest{
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:749:func checkUploadResponse(data []byte, expectedCode pb.EncryptedUploadResponse_ErrorCode) bool {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/pkg/server/upload_test.go:750:	var response pb.EncryptedUploadResponse
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/covidshield.proto:43:// We are using a NaCl Box (Curve25519+XSalsa20+Poly1305) to encrypt and
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/covidshield.proto:53:message EncryptedUploadRequest {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/covidshield.proto:55:  // used to encrypt the payload. This key should be stored locally for 14
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/covidshield.proto:66:  // encryption library to generate the ciphertext.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/covidshield.proto:68:  // payload is the result of encoding/marshalling, and then encrypting, an
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/covidshield.proto:70:  // field, because we need to encrypt a byte stream, not an object.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/covidshield.proto:74:// EncryptedUploadResponse is received from the server in response to a
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/covidshield.proto:75:// EncryptedUploadRequest. If the request was successful, error will be NONE.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/covidshield.proto:76:message EncryptedUploadResponse {
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/covidshield.proto:81:    DECRYPTION_FAILED = 3;
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/covidshield.proto:84:    INVALID_CRYPTO_PARAMETERS = 6;
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/covidshield.proto:98:// Upload is the decrypted type of the `payload` field in EncryptedUploadRequest.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/README.md:69:[EncryptedUploadRequest](covidshield.proto). The server responds with an
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/README.md:70:[EncryptedUploadResponse](covidshield.proto). Additional documentation can be found attached to the
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/README.md:77:    <serialized EncryptedUploadRequest>
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/README.md:82:    <serialized EncryptedUploadResponse>
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/proto/README.md:87:encryption and authorization will become invalid and be purged.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:81:Application (once) to the diagnosis server. Encryption keypairs are exchanged by the Application
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:85:These keypairs are used to encrypt and authorize _Diagnosis Key_ uploads for the next fourteen
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:88:The encryption scheme employed for key upload is _NaCl Box_ (a public-key encryption scheme using
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:90:of Elliptic-Curve cryptography.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/README.md:289:Le schéma de chiffrement utilisé pour le téléchargement de clés est _NaCl Box_ (un schéma de chiffrement de clé publique utilisant Curve25519, XSalsa20 et Poly1305). Il s’agit d’une implémentation considérée extrêmement sécuritaire de la cryptographie à courbe elliptique.
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/expiration_worker_test.rb:11:    req = encrypted_request(dummy_payload, new_valid_keyset)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/expiration_worker_test.rb:15:    expire_and_assert(encryption: 1, diagnosis: 1)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/expiration_worker_test.rb:18:    expire_and_assert(encryption: 2, diagnosis: 1)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/expiration_worker_test.rb:22:    expire_and_assert(encryption: 2, diagnosis: 1)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/expiration_worker_test.rb:25:    expire_and_assert(encryption: 1, diagnosis: 1)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/expiration_worker_test.rb:29:    req = encrypted_request(dummy_payload, new_valid_keyset)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/expiration_worker_test.rb:33:    expire_and_assert(encryption: 1, diagnosis: 1)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/expiration_worker_test.rb:51:  def test_claimed_encryption_key_expiration
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/expiration_worker_test.rb:52:    req = encrypted_request(dummy_payload, new_valid_keyset)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/expiration_worker_test.rb:61:    expire_and_assert(encryption: 1)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/expiration_worker_test.rb:64:    expire_and_assert(encryption: 0)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/expiration_worker_test.rb:75:  def expire_and_assert(encryption: nil, diagnosis: nil)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/expiration_worker_test.rb:78:    assert_equal(encryption, count_encryption_keys, "  (from #{caller[0]})") if encryption
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/expiration_worker_test.rb:85:  def count_encryption_keys
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/expiration_worker_test.rb:86:    @dbconn.query("SELECT COUNT(*) FROM encryption_keys").first.values.first
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/expiration_worker_test.rb:93:  def encrypted_request(
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/expiration_worker_test.rb:100:    encrypted_payload: box.encrypt(nonce, payload)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/expiration_worker_test.rb:102:    Covidshield::EncryptedUploadRequest.new(
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/expiration_worker_test.rb:106:      payload: encrypted_payload,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/expiration_worker_test.rb:113:      Covidshield::EncryptedUploadResponse.new(error: error),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/expiration_worker_test.rb:114:      Covidshield::EncryptedUploadResponse.decode(resp.body)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:79:    def encryption_originators
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:80:      @dbconn.query("SELECT originator FROM encryption_keys").map(&:values).map(&:first)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:135:        UPDATE encryption_keys SET created = created - INTERVAL ? SECOND
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/helper.rb:141:        UPDATE encryption_keys SET created = created - INTERVAL ? HOUR
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/protocol/covidshield_pb.rb:28:    add_message "covidshield.EncryptedUploadRequest" do
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/protocol/covidshield_pb.rb:34:    add_message "covidshield.EncryptedUploadResponse" do
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/protocol/covidshield_pb.rb:35:      optional :error, :enum, 1, "covidshield.EncryptedUploadResponse.ErrorCode"
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/protocol/covidshield_pb.rb:37:    add_enum "covidshield.EncryptedUploadResponse.ErrorCode" do
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/protocol/covidshield_pb.rb:41:      value :DECRYPTION_FAILED, 3
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/protocol/covidshield_pb.rb:44:      value :INVALID_CRYPTO_PARAMETERS, 6
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/protocol/covidshield_pb.rb:104:  EncryptedUploadRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("covidshield.EncryptedUploadRequest").msgclass
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/protocol/covidshield_pb.rb:105:  EncryptedUploadResponse = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("covidshield.EncryptedUploadResponse").msgclass
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/lib/protocol/covidshield_pb.rb:106:  EncryptedUploadResponse::ErrorCode = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("covidshield.EncryptedUploadResponse.ErrorCode").enummodule
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/new_key_claim_test.rb:23:    assert_equal(['first-very-long-token'], encryption_originators)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/new_key_claim_test.rb:30:    assert_equal(['first-very-long-token', 'second-very-long-token'], encryption_originators)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/roundtrip_test.rb:42:    resp = @sub_conn.post('/upload', encrypted_request(payload, credentials).to_proto)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/roundtrip_test.rb:54:    resp = @sub_conn.post('/upload', encrypted_request(payload, credentials).to_proto)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/roundtrip_test.rb:69:    resp = @sub_conn.post('/upload', encrypted_request(payload, credentials).to_proto)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/roundtrip_test.rb:89:    resp = @sub_conn.post('/upload', encrypted_request(payload, credentials).to_proto)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/roundtrip_test.rb:130:  def encrypted_request(
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/roundtrip_test.rb:137:    encrypted_payload: box.encrypt(nonce, payload)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/roundtrip_test.rb:139:    Covidshield::EncryptedUploadRequest.new(
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/roundtrip_test.rb:143:      payload: encrypted_payload,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/roundtrip_test.rb:150:      Covidshield::EncryptedUploadResponse.new(error: error),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/roundtrip_test.rb:151:      Covidshield::EncryptedUploadResponse.decode(resp.body)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:19:    req = encrypted_request(dummy_payload, new_valid_keyset)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:25:    req = encrypted_request(dummy_payload(timestamp: Time.at(Time.now.to_i - 59*60)), new_valid_keyset)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:30:    req = encrypted_request(dummy_payload(timestamp: Time.at(Time.now.to_i - 3600)), new_valid_keyset)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:35:    req = encrypted_request(dummy_payload, new_valid_keyset, app_public_to_send:("a"*50))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:37:    assert_result(resp, 400, :INVALID_CRYPTO_PARAMETERS)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:40:    req = encrypted_request(dummy_payload, new_valid_keyset, app_public_to_send:("a"*4))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:42:    assert_result(resp, 400, :INVALID_CRYPTO_PARAMETERS)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:45:    req = encrypted_request(dummy_payload, new_valid_keyset, server_public_to_send:("a"*4))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:47:    assert_result(resp, 400, :INVALID_CRYPTO_PARAMETERS)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:50:    req = encrypted_request(dummy_payload, new_valid_keyset, server_public_to_send:("a"*50))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:52:    assert_result(resp, 400, :INVALID_CRYPTO_PARAMETERS)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:55:    req = encrypted_request(dummy_payload, new_valid_keyset, server_public_to_send:("a"*32))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:60:    req = encrypted_request(dummy_payload, new_valid_keyset, server_public_to_send:("a"*4))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:62:    assert_result(resp, 400, :INVALID_CRYPTO_PARAMETERS)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:65:    req = encrypted_request(dummy_payload, new_valid_keyset, server_public_to_send:("a"*50))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:67:    assert_result(resp, 400, :INVALID_CRYPTO_PARAMETERS)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:70:    req = encrypted_request(dummy_payload, new_valid_keyset, nonce_to_send:("a"*23))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:72:    assert_result(resp, 400, :INVALID_CRYPTO_PARAMETERS)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:75:    req = encrypted_request(dummy_payload, new_valid_keyset, nonce_to_send:("a"*32))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:77:    assert_result(resp, 400, :INVALID_CRYPTO_PARAMETERS)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:79:    # invalid encrypted payload
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:80:    req = encrypted_request(dummy_payload, new_valid_keyset, encrypted_payload:("a"*64))
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:82:    assert_result(resp, 400, :DECRYPTION_FAILED)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:84:    # invalid contents of valid encrypted payload
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:85:    req = encrypted_request("aaaaaaaaaa", new_valid_keyset)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:90:    req = encrypted_request(dummy_payload(28, make_half_day=true), new_valid_keyset)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:95:    req = encrypted_request(dummy_payload(0), new_valid_keyset)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:100:    req = encrypted_request(dummy_payload(29), new_valid_keyset)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:159:    req = encrypted_request(payload, new_valid_keyset)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:166:    req = encrypted_request(payload, new_valid_keyset)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:188:    req = encrypted_request(payload, keyset)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:196:    req = encrypted_request(payload, keyset)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:204:    req = encrypted_request(payload, keyset)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:212:    req = encrypted_request(payload, keyset)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:220:    req = encrypted_request(payload, keyset)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:233:    req = encrypted_request(tek_payload(tek(**kwargs)), new_valid_keyset)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:253:  def encrypted_request(
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:260:    encrypted_payload: box.encrypt(nonce, payload)
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:262:    Covidshield::EncryptedUploadRequest.new(
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:266:      payload: encrypted_payload,
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:282:      Covidshield::EncryptedUploadResponse.new(error: error),
+/mnt/c/Users/conig/Desktop/test/covid-alert-server/test/upload_test.rb:283:      Covidshield::EncryptedUploadResponse.decode(resp.body)
