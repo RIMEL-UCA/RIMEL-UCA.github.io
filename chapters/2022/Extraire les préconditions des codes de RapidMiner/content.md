@@ -7,10 +7,10 @@ date:   2022-01-08 17:08:00 +0100
 
 ## Authors
 
-We are four students in last year of Polytech' Nice-Sophia specialized in Software Architecture :
+We are five students in last year of Polytech' Nice-Sophia specialized in Software Architecture :
 
 * Tigran Nersissian &lt;tigran.nersissian@etu.univ-cotedazur.fr&gt;
-* Yann Martin D&#039;Escrienne &lt;yann.martin&Adash;d&#039;escrienne@etu.univ-cotedazur.fr&gt;
+* Yann Martin D&#039;Escrienne &lt;yann.martin&dash;d&#039;escrienne@etu.univ-cotedazur.fr&gt;
 * Valentin Campello &lt;valentin.campello@etu.univ-cotedazur.fr&gt;
 * Lucie Morant &lt;lucie.morant@etu.univ-cotedazur.fr&gt;
 * Yohann Tognetii  &lt;yohann.tognetti@etu.univ-cotedazur.fr&gt;
