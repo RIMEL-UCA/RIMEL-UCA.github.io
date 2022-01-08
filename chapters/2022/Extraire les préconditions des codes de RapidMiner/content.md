@@ -3,31 +3,32 @@ layout: default
 title : Extraire les préconditions des codes de RapidMiner
 date:   2022-01-08 17:08:00 +0100
 ---
-
----
-
-> **Date de rendu finale : Mars 2021 au plus tard**
-> - Respecter la structure pour que les chapitres soient bien indépendants
-> - Remarques :
->>    - Les titres peuvent changer pour être en adéquation avec votre étude.
->>    - De même il est possible de modifier la structure, celle qui est proposée ici est là pour vous aider.
->>    - Utiliser des références pour justifier votre argumentaire, vos choix etc.
-
----
-
-**_janvier 2021_**
+**_January 2022_**
 
 ## Authors
 
 We are four students in last year of Polytech' Nice-Sophia specialized in Software Architecture :
 
-* .... &lt;xxx@gmail.com&gt;
+* Tigran Nersissian &lt;tigran.nersissian@etu.univ-cotedazur.fr&gt;
+* Yann Martin D&#039;Escrienne &lt;yann.martin&Adash;d&#039;escrienne@etu.univ-cotedazur.fr&gt;
+* Valentin Campello &lt;valentin.campello@etu.univ-cotedazur.fr&gt;
+* Lucie Morant &lt;lucie.morant@etu.univ-cotedazur.fr&gt;
+* Yohann Tognetii  &lt;yohann.tognetti@etu.univ-cotedazur.fr&gt;
 
 ## I. Research context /Project
+Extraire les préconditions des opérateurs par analyse des codes de RapidMiner ou par IHM.
 
-Préciser ici votre contexte.
+RapidMiner est un outil très avancé de construction de workflows de ML.
+Il intègre notamment la possibilité de définir de nouveaux opérateurs (algorithmes) en précisant les préconditions sur ces algorithmes et l’impact sur les données en sortie. Cette information est utilisée pour aider l’utilisateur en l’empêchant de connecter des data sets et des opérateurs inadaptés. 
 
-Pourquoi c'est intéressant.
+En partant des codes de RapidMiner, nous aurions aimé “sortir” cette connaissance pour l’étudier et la ré-injecter dans un environnement dédié à l’enseignement.
+
+Voici une première visualisation des classes impliquées dans la vérification des préconditions.
+
+Sauriez-vous extraire des codes de RapidMiner
+les préconditions sur les opérators ? les associer à la hiérarchie de définition des opérateurs, sachant que nous avons déjà identifié que par surcharge, certaines “capabilities” n’en sont plus dans les sous classes.
+Faire des stats sur l’utilisation des préconditions?
+Analyser les impacts (comment les données sont modifiées).
 
 
 ![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](../assets/model/UCAlogoQlarge.png){:height="25px" }
