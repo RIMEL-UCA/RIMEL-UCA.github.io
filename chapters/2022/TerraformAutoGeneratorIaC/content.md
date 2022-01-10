@@ -87,7 +87,7 @@ baser.
 6)  Utiliser les règles explicites et implicites identifiées pour créer
     des outils de génération de Templates Terraform.
 ​
-Bibliographie :
+## Bibliographie :
 ​
 Règles et bonnes pratiques Terraform sur SonarSource :
 <https://rules.sonarsource.com/terraform>
