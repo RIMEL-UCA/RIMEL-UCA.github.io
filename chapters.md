@@ -4,7 +4,10 @@ title:  "Chapters"
 date:   2021-12-02 22:00:00 +0100
 ---
 ## 2022
+
 ### [Extraire les préconditions des codes de RapidMiner]({{ site.url }}/chapters/2022/Extraire les préconditions des codes de RapidMiner/content)
+### [Les bonnes pratiques lors de l'utilisation de Terraform]({{ site.url }}/chapters/2022/TerraformGoodPractices/content)
+
 ## 2021
 
 ### [Etude sur les methodes permettant d'étudier le flot de données d'une application de traçage]({{ site.url }}/chapters/2021/DataFlowAnalysisCovid/content)
