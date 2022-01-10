@@ -89,16 +89,16 @@ baser.
 ​
 ## Bibliographie :
 ​
-Règles et bonnes pratiques Terraform sur SonarSource :
+-	Règles et bonnes pratiques Terraform sur SonarSource :
 <https://rules.sonarsource.com/terraform>
 ​
-Trouver des projets utilisant Terraform :
+-	Trouver des projets utilisant Terraform :
 <https://awesomeopensource.com/projects/terraform>
 ​
-Projet Terraformer sur GitHub :
+-	Projet Terraformer sur GitHub :
 <https://github.com/GoogleCloudPlatform/terraformer>
 ​
-Comparaison Terraform et Ansible :
+-	Comparaison Terraform et Ansible :
 <https://k21academy.com/ansible/terraform-vs-ansible/>
 ​
-Site officiel de Terraform : <https://www.terraform.io/>
+-	Site officiel de Terraform : <https://www.terraform.io/>
