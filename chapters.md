@@ -7,6 +7,7 @@ date:   2021-12-02 22:00:00 +0100
 
 ### [Extraire les préconditions des codes de RapidMiner]({{ site.url }}/chapters/2022/Extraire les préconditions des codes de RapidMiner/content)
 ### [Les bonnes pratiques lors de l'utilisation de Terraform]({{ site.url }}/chapters/2022/TerraformGoodPractices/content)
+### [Étude de la causalité configurabilité d'un système et d'une CI]({{ site.url }}/chapters/2022/Étude de la causalité configurabilité d'un système et d'une CI/content)
 
 ## 2021
 
