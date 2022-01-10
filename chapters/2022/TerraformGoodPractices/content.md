@@ -1,10 +1,10 @@
 ---
 layout: default
 title:  Les bonnes pratiques lors de l'utilisation de Terraform
-date:   2022-01-10 18:03:33 +0100
+date:   2022-01-10 18:25:00 +0100
 ---
 
-**_janvier 2021_**
+**_janvier 2022_**
 
 ## Authors
 
@@ -45,7 +45,7 @@ Préciser vos zones de recherches en fonction de votre projet,
 
 ## IV. Hypothesis & Experiences
 
-1. Il s'agit ici d'énoncer sous forme d'hypothèses ce que vous allez chercher à démontrer. Vous devez définir vos hypothèses de façon à pouvoir les _mesurer facilement_. Bien sûr, votre hypothèse devrait être construite de manière à v_ous aider à répondre à votre question initiale. Explicitez ces différents points.
+1. Il s'agit ici d'énoncer sous forme d'hypothèses ce que vous allez chercher à démontrer. Vous devez définir vos hypothèses de façon à pouvoir les _mesurer facilement_. Bien sûr, votre hypothèse devrait être construite de manière à vous aider à répondre à votre question initiale. Explicitez ces différents points.
 2. Test de l’hypothèse par l’expérimentation. 
    1. Vos tests d’expérimentations permettent de vérifier si vos hypothèses sont vraies ou fausses.
    2. Il est possible que vous deviez répéter vos expérimentations pour vous assurer que les premiers résultats ne sont pas seulement un accident.
