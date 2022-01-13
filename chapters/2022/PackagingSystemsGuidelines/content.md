@@ -1,6 +1,6 @@
 ---
 layout: default
-title : Comment les systèmes de packaging influencent-ils la mise en production d’un projet open source ?
+title : Quelles sont les bonnes pratiques de mise en place d’un système de packaging ?
 date:   2022-01-08 20:00:00 +0100
 ---
 
