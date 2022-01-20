@@ -44,7 +44,7 @@ Nous avons ensuite affiné cette question générale en sous-questions :
 - Quelles sont les étapes récurrentes dans la configuration d’un système ?
 (metrics : identification manuelle puis taux d'occurrence parmi différents projets. Example d'étapes type : linter, minimiseur, offuscation...)
 
-- Qu’est-ce qui fait une bonne pratique ? Est-ce qu’il y a des contraintes à utiliser les pratiques de webpack ou celles présentées par les developpeurs (dans les forums, blogs...) ? 
+- Qu’est-ce qui fait une bonne pratique ? Est-ce qu’il y a des contraintes à utiliser les pratiques de gulp/webpack ou celles présentées par les developpeurs (dans les forums, blogs...) ? 
 
 - Quels sont les paramètres d'un projets qui influent sur ces différentes étapes ?
 On se penchera particulièrement sur la taille d'un projet à l'égard de l'utilisation d'un minimizer.
@@ -60,14 +60,42 @@ Pour ce faire, nous avons prévu d'adopter la démarche suivante :
 - Trouver les pratiques mises en place dans ces projets
 - Evaluer les pratiques dans les projets
 
+## III. Collecte d'informations
 
-## III. information gathering
+Afin de réaliser ce projet, nous allons concentrer nos recherches sur des projets Open Source hébergés sur Github, des générateurs de fichiers de configutation ainsi que les forums/blogs.
 
-A venir
+Nous avons utilisé l'API de Github afin d'obtenir un échantillon conséquent. 
+
+Nous avons ensuite filtré ces échantillons après avoir remarqué que des fichiers de configuration (gulpfile.js) étaient présents dans des node_modules et faussaient nos premiers résultats. 
+
+
+## III. Hypothèses & Expériences
  
-## IV. Hypothesis & Experiences
+### Intuitions initiales
 
-A venir
+La documentation Gulp met en avant certains plugins : gulp-uglify (minimizer), gulp-concat (concatenation). Nous nous attendons donc à retrouver ces plugins et plus généralement nous pensons voir des minimizers, de plugins de concaténation, des linters, pas de plugin d'offuscation (puisqu'il s'agit ici de projets Open Source), et enfin des transcompilateurs javascript (le système de packaging rend les nouveaux projets utilisant ES6 compatible avec les anciens navigateurs).
+
+Concernant les bonnes pratiques, nous pensons pouvoir les définir en nous appuyant sur l'occurrence et la pertinance dans les projets, les recommandations dans les forums, et la présence dans les générateurs de fichiers de configuration pour systèmes de packaging.
+
+Nous supposons enfin que la taille d'un projet (en terme de lignes de code), et que la date influent sur ces étapes. Ainsi nous pensons voir des minizers dans de grands projets (où il y a un besoin d'optimiser la taille du code) et des concatenateur avant une certaine date car ces derniers permettent de supporter les anciens naviagteurs.
+
+
+### Expérimentation. (En cours...)
+
+Pour vérifier nos hypothèses, nous avons mis en place un premier script Python analysant les fichiers de configurations de Gulp. Nous avons fait le choix de commencer par Gulp puisque les fichiers de configuration (gulpfile.js) sont facilement détectables au sein de projets et exploitables rapidement.	Notre script Python permet donc de comptabiliser et catégoriser le nombre de tâches gulp, les imports de plugins et les dates/tailles du projet.
+
+Outils utilisés : 
+- API Github pour la recherche de gulpfile.js
+- Python pour lancer les requetes, lire les fichiers de configuration et regrouper les données 
+
+
+2. Il est possible que vous deviez répéter vos expérimentations pour vous assurer que les premiers résultats ne sont pas seulement un accident : fichier gulp qui revient par des nodes modules => fausse les stats => nouvel échantillon
+
+Explicitez bien les outils utilisés et comment.
+
+Justifiez vos choix
+
+
 
 ## V. Result Analysis and Conclusion
 
