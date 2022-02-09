@@ -4,17 +4,15 @@ title: Quelle est la relation entre les algorithmes, préprocesseurs et leur uti
 date: 2022-01-10 22:00:00 +0100
 ---
 
-**_janvier 2022_**
-
 ## Auteurs
 
 Nous sommes 5 étudiants en dernière année à Polytech Nice Sophia, dans la spécialité **Architecture Logicielle** :
 
-* Eric Boudin <eric.boudin@etu.univ-cotedazur.fr>
-* Clément Monestier <clement.monestier@etu.univ-cotedazur.fr>
-* Florian Naud <florian.naud@etu.univ-cotedazur.fr>
-* Lucas Rakotomalala <lucas.rakotomalala@etu.univ-cotedazur.fr>
-* Loïc Rizzo <loic.rizzo@etu.univ-cotedazur.fr>
+* Eric Boudin (<eric.boudin@etu.univ-cotedazur.fr>)
+* Clément Monestier (<clement.monestier@etu.univ-cotedazur.fr>)
+* Florian Naud (<florian.naud@etu.univ-cotedazur.fr>)
+* Lucas Rakotomalala (<lucas.rakotomalala@etu.univ-cotedazur.fr>)
+* Loïc Rizzo (<loic.rizzo@etu.univ-cotedazur.fr>)
 
 ## I. Contexte
 
@@ -45,19 +43,21 @@ Finalement, pour nous aider à répondre à cette question, nous l'avons découp
 ## III. Collecte d'informations
 
 Nous pouvons extraire les tâches (*tasks*) et les flux (*flows*) terminés grâce à l'**API Python d'OpenML** et [sa documentation](https://docs.openml.org/Python-API/).
-Pour cela, on utilise une librairie `Python` existante ([OpenML](https://pypi.org/project/openml/), et nous les traitons avec `Pandas` et `Matplotlib`, pour en faire des graphes.
+Pour cela, on utilise une librairie `Python` existante ([OpenML](https://pypi.org/project/openml/)), et nous les traitons avec `Pandas` et `Matplotlib`, pour en faire des graphes.
 
 ## IV. Hypotèses & Expériences
 
-    1. Il s'agit ici d'énoncer sous forme d' hypothèses ce que vous allez chercher à démontrer. Vous devez définir vos hypothèses de façon à pouvoir les mesurer facilement. Bien sûr, votre hypothèse devrait être construite de manière à v_ous aider à répondre à votre question initiale_.Explicitez ces différents points.
-    2. Test de l’hypothèse par l’expérimentation. 1. Vos tests d’expérimentations permettent de vérifier si vos hypothèses sont vraies ou fausses. 2. Il est possible que vous deviez répéter vos expérimentations pour vous assurer que les premiers résultats ne sont pas seulement un accident.
-    3. Explicitez bien les outils utilisés et comment.
-    4. Justifiez vos choix
+> 1. Il s'agit ici d'énoncer sous forme d' hypothèses ce que vous allez chercher à démontrer. Vous devez définir vos hypothèses de façon à pouvoir les mesurer facilement. Bien sûr, votre hypothèse devrait être construite de manière à _vous aider à répondre à votre question initiale_. Explicitez ces différents points.
+> 2. Test de l’hypothèse par l’expérimentation. 
+>> 1. Vos tests d’expérimentations permettent de vérifier si vos hypothèses sont vraies ou fausses.
+ >> 2. Il est possible que vous deviez répéter vos expérimentations pour vous assurer que les premiers résultats ne sont pas seulement un accident.
+> 3. Explicitez bien les outils utilisés et comment.
+> 4. Justifiez vos choix
 
 We think that it exists some alogrithms and preprocessing that are better used in some conditions than others.  
-Our focus will be to find the different approach used by searchers on OpenM.  
+Our focus will be to find the different approach used by searchers on OpenML.  
 Then study the link between data, algorithms, preprocessing, flow and result.  
-Finaly visualize our results.
+Finally, we visualize our results.
 
 ## V. Analyse des résultats & Conclusion
 
