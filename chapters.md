@@ -10,6 +10,7 @@ date:   2021-12-02 22:00:00 +0100
 ### [Les bonnes pratiques lors de l'utilisation de Terraform]({{ site.url }}/chapters/2022/TerraformGoodPractices/content)
 ### [Étude de la causalité configurabilité d'un système et d'une CI]({{ site.url }}/chapters/2022/Étude de la causalité configurabilité d'un système et d'une CI/content)
 ### [Quelles sont les bonnes pratiques de mise en place d’un système de packaging ?]({{ site.url }}/chapters/2022/PackagingSystemsGuidelines/content)
+### [Les bonnes pratiques définies et encouragées par Webpack sont-elles respectées par la communauté Open Source ?]({{ site.url }}/chapters/2022/WebpackGoodPractices/content)
 
 ## 2021
 
