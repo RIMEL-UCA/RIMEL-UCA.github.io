@@ -1,3 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vis Network | Basic usage</title>
+
+    <script
+      type="text/javascript"
+      src="./node_modules/vis-network/standalone/umd/vis-network.min.js"
+    ></script>
+
+    <style type="text/css">
+      #mynetwork {
+        width: 1200px;
+        height: 800px;
+        border: 1px solid lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Create a simple network with some nodes and edges.</p>
+
+    <div id="mynetwork"></div>
+
+    <script src="app.js"></script>
+    
+  </body>
+</html>
+
+
 ---
 layout: default
 title : Extraire les préconditions des codes de RapidMiner
