@@ -33,7 +33,7 @@ We are five students in last year of Polytech' Nice-Sophia specialized in Softwa
     </style>
   </head>
   <body>
-    <p>Create a simple network with some nodes and edges.</p>
+    <p>Graph orienté avec poids de chaînage des operateurs</p>
 
     <div id="mynetwork"></div>
 
