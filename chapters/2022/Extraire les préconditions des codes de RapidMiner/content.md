@@ -1,11 +1,10 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Vis Network | Basic usage</title>
 
     <script
       type="text/javascript"
-      src="./node_modules/vis-network/standalone/umd/vis-network.min.js"
+      src="./umd/vis-network.min.js"
     ></script>
 
     <style type="text/css">
