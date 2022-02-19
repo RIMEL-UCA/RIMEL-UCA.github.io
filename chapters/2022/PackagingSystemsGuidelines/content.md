@@ -262,7 +262,7 @@ Nous constatons clairement un lien entre la taille du projet et la taille d’un
   
 
 ![](https://lh3.googleusercontent.com/MyrqLJmGEiTSKZpPn4F6UV0aHMbyyP900iAq2DIa7VWGNgafBY6o2QAxMFGcH4oVyuoYKCWZRkFkaeX4Q9wx0clUKXLBiFTq9oOhQySmVJUicIciBkauoVwzDjyemUVeUgVuMjtc)
-
+Concernant la présence de concatenateurs, nous en retrouvons aussi bien sur des anciens projets que sur des projets récents. Il nous faudrait élargir notre *dataset* pour voir un contraste plus important.
   
   
 
