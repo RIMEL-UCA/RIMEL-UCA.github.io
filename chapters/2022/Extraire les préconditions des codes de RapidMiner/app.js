@@ -170,21 +170,33 @@ function draw() {
       document.getElementById("loadingBar").style.display = "none";
     }, 500);
   });
-
+  let table = document.querySelector('table');
   let lastNodedClique="null"
   network.on("click", function(params) {
     var nodeID = params['nodes']['0'];
     if (nodeID in mergedGraph){
     if (JSON.stringify(mergedGraph[nodeID])=="{}"){
-      document.getElementById("demo").textContent = "No capabilities in RapidMinerStudio Interface";
+      document.getElementById("demo").textContent = nodeID+" have no capabilities in RapidMinerStudio Interface";
+      table.innerHTML=""
     }
     else {
-      document.getElementById("demo").textContent = JSON.stringify(mergedGraph[nodeID]);
+      let capabilitiesName = "<tr>"
+      let capabilitiesValue = "<tr>"
+      for (let opCapabilities in mergedGraph[nodeID]){
+          capabilitiesName=capabilitiesName+"<td>"+opCapabilities+"</td>"
+          capabilitiesValue = capabilitiesValue+ "<td>"+mergedGraph[nodeID][opCapabilities]+"</td>"
     }
+    capabilitiesName=capabilitiesName+"</tr>"
+    capabilitiesValue = capabilitiesValue+"</tr>"
+    table.innerHTML=capabilitiesName+capabilitiesValue
+    document.getElementById("demo").textContent = nodeID;
     }
+  }
     else {
-      document.getElementById("demo").textContent = "Operator info not in dataSet";
+      document.getElementById("demo").textContent = nodeID +" Operator info not in dataSet";
+      table.innerHTML=""
     }
+
     if (nodeID) {
       if (lastNodedClique != "null"){
         nodes.update(lastNodedClique)
