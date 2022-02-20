@@ -20,7 +20,7 @@ We are five students in last year of Polytech' Nice-Sophia specialized in Softwa
 
     <script
       type="text/javascript"
-      src="./node_modules/vis-network/standalone/umd/vis-network.min.js"
+      src="./umd/vis-network.min.js"
     ></script>
 
     <style type="text/css">
