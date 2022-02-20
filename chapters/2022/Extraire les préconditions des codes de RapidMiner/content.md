@@ -128,11 +128,17 @@ We are five students in last year of Polytech' Nice-Sophia specialized in Softwa
         background: rgb(0, 173, 246); /* Old browsers */
         box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.4);
       }
+      th,td {
+        border: 1px solid black;
+        padding: 10px;
+    }
       
     </style>
   </head>
   <body>
     <p>Graph orienté avec poids de chaînage des operateurs</p>
+    <table>
+    </table>
     <p id="demo">Click on node to see here capabilities.</p>
     <div id="wrapper">
       <div id="mynetwork"></div>
