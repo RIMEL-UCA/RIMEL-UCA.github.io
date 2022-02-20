@@ -18,6 +18,7 @@ for (let elem in uniqueDict){
   }
 }
 const dictGraph=dictGraphUnfilter
+const mergedGraph={"Retrieve": {}, "DecisionTree": {"numerical attributes": true, "formula provider": false, "numerical label": true, "binominal attributes": true, "one class label": false, "binominal label": true, "updatable": false, "unlabeled": false, "polynominal label": true, "polynominal attributes": true, "weighted examples": true, "missing values": true}, "Apply Model": {}, "Apply Threshold": {}, "PolynomialRegression": {"numerical attributes": true, "formula provider": false, "binominal attributes": false, "numerical label": true, "one class label": false, "binominal label": false, "unlabeled": false, "polynominal label": false, "updatable": false, "polynominal attributes": false, "weighted examples": true, "missing values": false}, "Select Attributes": {}, "Aggregate": {}, "Set Role": {}, "Generate Data": {}, "Loop Values": {}, "SetData": {}, "Sample": {}, "DecisionStump": {"numerical attributes": true, "formula provider": false, "numerical label": false, "binominal attributes": true, "one class label": false, "binominal label": true, "updatable": false, "unlabeled": false, "polynominal label": true, "polynominal attributes": true, "weighted examples": true, "missing values": true}, "NaiveBayes": {"numerical attributes": true, "formula provider": false, "numerical label": false, "binominal attributes": true, "one class label": false, "binominal label": true, "unlabeled": false, "polynominal label": true, "updatable": true, "polynominal attributes": true, "weighted examples": true, "missing values": true}, "Cross Validation": {"numerical attributes": true, "formula provider": true, "numerical label": true, "binominal attributes": true, "one class label": true, "binominal label": true, "unlabeled": false, "polynominal label": true, "updatable": true, "polynominal attributes": true, "weighted examples": true, "missing values": true}, "T-Test": {}, "Performance": {"numerical attributes": true, "formula provider": false, "binominal attributes": true, "numerical label": true, "one class label": true, "binominal label": true, "unlabeled": false, "updatable": false, "polynominal label": true, "polynominal attributes": true, "weighted examples": true, "missing values": true}, "Nominal to Binominal": {}, "Numerical to Polynominal": {}, "Branch": {}, "Work on Subset": {}, "Remove Unused Values": {}, "Nominal to Text": {}, "Text to Nominal": {}, "Numerical to Real": {}, "Replace Missing Values": {}, "Remove Useless Attributes": {}, "Normalize": {}, "Recall": {}, "Unsupervised Feature Selection": {}, "Apply Feature Set": {}, "Reorder Attributes": {}, "De-Normalize": {}, "Cluster Model Visualizer": {}, "Sort": {}, "Generate Attributes": {}, "Decision Tree": {"numerical attributes": true, "formula provider": false, "numerical label": true, "binominal attributes": true, "one class label": false, "binominal label": true, "updatable": false, "unlabeled": false, "polynominal label": true, "polynominal attributes": true, "weighted examples": true, "missing values": true}, "Generate ID": {}, "Multiply": {}, "Join": {}, "Loop Attributes": {}, "Append": {}, "Transpose": {}, "Create ExampleSet": {}, "Rename by Replacing": {}, "Filter Examples": {}, "Split Data": {}, "Handle Unknown Values": {}, "Replace All Missings": {}, "Explain Predictions": {}, "Create Lift Chart": {}, "Generate Batch": {}, "Model Simulator": {}, "Statistics": {}, "LinearRegression": {"numerical attributes": true, "formula provider": false, "binominal attributes": false, "numerical label": true, "one class label": false, "binominal label": true, "unlabeled": false, "updatable": false, "polynominal label": false, "polynominal attributes": false, "weighted examples": true, "missing values": false}, "Neural Net": {"numerical attributes": true, "formula provider": false, "binominal attributes": false, "numerical label": true, "one class label": false, "binominal label": true, "unlabeled": false, "updatable": false, "polynominal label": true, "polynominal attributes": false, "weighted examples": true, "missing values": false}, "Bagging": {"numerical attributes": true, "formula provider": false, "binominal attributes": true, "numerical label": true, "one class label": true, "binominal label": true, "unlabeled": false, "updatable": false, "polynominal label": true, "polynominal attributes": true, "weighted examples": true, "missing values": true}, "RemoveUselessAttributes": {}, "ANOVAMatrix": {}, "AgglomerativeClustering": {"numerical attributes": true, "formula provider": false, "binominal attributes": true, "numerical label": true, "one class label": true, "binominal label": true, "updatable": false, "polynominal label": true, "unlabeled": true, "polynominal attributes": true, "weighted examples": false, "missing values": false}, "TopDownClustering": {}, "AdaBoost": {"numerical attributes": true, "formula provider": false, "numerical label": false, "binominal attributes": true, "one class label": true, "binominal label": true, "unlabeled": false, "updatable": false, "polynominal label": true, "polynominal attributes": true, "weighted examples": true, "missing values": true}, "Stacking": {"numerical attributes": true, "formula provider": true, "numerical label": true, "binominal attributes": true, "one class label": true, "binominal label": true, "polynominal label": true, "unlabeled": true, "updatable": true, "polynominal attributes": true, "weighted examples": true, "missing values": true}, "Vote": {"numerical attributes": true, "formula provider": false, "numerical label": true, "binominal attributes": true, "one class label": false, "binominal label": true, "unlabeled": false, "updatable": false, "polynominal label": true, "polynominal attributes": true, "weighted examples": false, "missing values": false}, "SupportVectorClustering": {"numerical attributes": true, "formula provider": true, "binominal attributes": false, "numerical label": true, "one class label": true, "binominal label": true, "polynominal label": true, "unlabeled": true, "updatable": true, "polynominal attributes": false, "weighted examples": true, "missing values": true}, "Extract Macro": {}, "FP-Growth": {}, "Pivot": {}, "Remember": {}, "Log": {}, "Anova": {}, "Nominal to Numerical": {}, "Set Parameters": {}, "Annotate": {}}
 
 const MIN = 2
 const MEDIUM = 4
@@ -43,6 +44,30 @@ function dictGraphToNodes(dictGraph){
           }
         }
         
+        if (elem in mergedGraph){
+          if(Object.keys(mergedGraph[elem]).length >0){
+          nodes.push({ id: elem, value: cpt, label:elem,color: {
+            border: '#000000',
+            background: '#0000FF',
+            highlight: {
+              border: '#0000FF',
+              background: '#0000FF'
+            }
+          }})
+        }
+        else {
+          nodes.push({ id: elem, value: cpt, label:elem,color: {
+            border: '#000000',
+            background: '#00FF00',
+            highlight: {
+              border: '#00FF00',
+              background: '#00FF00'
+            }
+          }})
+
+        }
+      }
+      else {
         nodes.push({ id: elem, value: cpt, label:elem,color: {
           border: '#000000',
           background: '#FFFFFF',
@@ -51,6 +76,7 @@ function dictGraphToNodes(dictGraph){
             background: '#FFFFFF'
           }
         }})
+      }
         
 
     }
@@ -97,28 +123,70 @@ function draw() {
 
   //uncomment pour le mode hierarchique de droite à gauche , haut en bas etc avec les options UD,DU,LR,RL
   console.log(JSON.stringify(nodes))
-  let options = {
+  var options = {
     nodes: {
       shape: "dot",
-      scaling: {
-        label: {
-          min: 8,
-          max: 20,
-        },
+      size: 16,
+    },
+    layout: {
+      randomSeed: 34,
+      improvedLayout:false
+    },
+    physics: {
+      forceAtlas2Based: {
+        gravitationalConstant: -26,
+        centralGravity: 0.005,
+        springLength: 230,
+        springConstant: 0.18,
+      },
+      maxVelocity: 146,
+      solver: "forceAtlas2Based",
+      timestep: 0.35,
+      stabilization: {
+        enabled: true,
+        iterations: 2000,
+        updateInterval: 25,
       },
     },
   };
-  network = new vis.Network(container, data, options);
-  var mySelectionOrder = [];
-  var previouslySelected = {};
+  var network = new vis.Network(container, data, options);
 
+  network.on("stabilizationProgress", function (params) {
+    var maxWidth = 496;
+    var minWidth = 20;
+    var widthFactor = params.iterations / params.total;
+    var width = Math.max(minWidth, maxWidth * widthFactor);
+
+    document.getElementById("bar").style.width = width + "px";
+    document.getElementById("text").innerText =
+      Math.round(widthFactor * 100) + "%";
+  });
+  network.once("stabilizationIterationsDone", function () {
+    document.getElementById("text").innerText = "100%";
+    document.getElementById("bar").style.width = "496px";
+    document.getElementById("loadingBar").style.opacity = 0;
+    // really clean the dom element
+    setTimeout(function () {
+      document.getElementById("loadingBar").style.display = "none";
+    }, 500);
+  });
 
   let lastNodedClique="null"
   network.on("click", function(params) {
     var nodeID = params['nodes']['0'];
+    if (nodeID in mergedGraph){
+    if (JSON.stringify(mergedGraph[nodeID])=="{}"){
+      document.getElementById("demo").textContent = "No capabilities in RapidMinerStudio Interface";
+    }
+    else {
+      document.getElementById("demo").textContent = JSON.stringify(mergedGraph[nodeID]);
+    }
+    }
+    else {
+      document.getElementById("demo").textContent = "Operator info not in dataSet";
+    }
     if (nodeID) {
       if (lastNodedClique != "null"){
-        console.log("TOTOTO"+JSON.stringify(lastNodedClique))
         nodes.update(lastNodedClique)
       }
       var clickedNode = nodes.get(nodeID);
@@ -131,7 +199,6 @@ function draw() {
           background: '#F00020'
         }
       }
-      console.log("TATATATATAT"+JSON.stringify(lastNodedClique))
       nodes.update(clickedNode);
     }
   });
