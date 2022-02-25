@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Quelle est la relation entre les algorithmes, préprocesseurs et leur utilisation dans les séries temporelles ?
-date: 2022-01-10 22:00:00 +0100
+date: 2022-02-25 18:00:00 +0100
 ---
 
 ## Auteurs
@@ -31,11 +31,11 @@ La découverte d'**OpenML** a fait émerger une question en nous :
 
 Cette question est d'autant plus intéressante que les secteurs des séries temporelles est très vaste, puisqu'ils vont de la météoriologie aux prix en bourse en passant par la démographie. En effet, elles permettent notamment de trouver des tendances ou encore de prédire des données futures.
 
-Ainsi, dans le cas où nous arrivons à mettre en avant des algorithmes, il serait intéressant de pouvoir les optimiser, grâce à des `SAT Solver` ou encore en utilisant la `théorie des graphes` **si cela est possible**. Pleins de branches de métier seraient donc intéressées par nos trouvailles.
+Ainsi, dans le cas où nous arrivons à mettre en avant des algorithmes, il serait intéressant de pouvoir les optimiser, grâce à des `SAT Solver` ou encore en utilisant la `théorie des graphes` **si cela est possible**. Beaucoup de branches de métier seraient donc intéressées par nos trouvailles.
 
-Finalement, pour nous aider à répondre à cette question, nous l'avons découpée en plusieurs sous-questions :
+Finalement, pour nous aider à répondre à cette question, nous l'avons découpée en plusieurs sous-questions, à savoir :
 
-1. Quels sont les principaux types de tâches sur les données issues des datasets de séries temporelles sur **OpenML** (*classification*, *clustering*, *détection d'anomalies*) ?
+1. Quels sont les principaux types de tâches sur les données issues des datasets de séries temporelles sur **OpenML** (Exemples: *classification*, *clustering*, *détection d'anomalies*) ?
 2. Quels sont les algorithmes et prétraitements les plus fréquemment utilisés ? Peut-on identifier des sous-workflows, des occurrences conjointes des mêmes algorithmes ?
 3. Existe-t-il des algorithmes qui ne sont utilisés que sur les séries temporelles ?
 
@@ -44,11 +44,16 @@ Finalement, pour nous aider à répondre à cette question, nous l'avons découp
 Nous pouvons extraire les tâches (*tasks*) et les flux (*flows*) terminés grâce à l'**API Python d'OpenML** et [sa documentation](https://docs.openml.org/Python-API/).
 Pour cela, on utilise une librairie `Python` existante ([OpenML](https://pypi.org/project/openml/)), et nous les traitons avec `Pandas` et `Matplotlib`, pour en faire des graphes.
 
-## IV. Hypotèses & Expériences
+## IV. Hypothèses & Expériences
 
-### 1. Quels sont les principaux types de tâches sur les données issues des datasets de séries temporelles sur **OpenML** (*classification*, *clustering*, *détection d'anomalies*) ?
+### 1. Quels sont les principaux types de tâches sur les données issues des datasets de séries temporelles sur **OpenML** (Exemples: *classification*, *clustering*, *détection d'anomalies*) ?
 
 #### Hypothèse
+
+Lors de la découverte du sujet et de sa lecture, nous nous sommes rapidement dits qu'au vue du petit nombre de *datasets* et de *tâches* disponibles sur **OpenML**, il y a de fortes chances que seuls quelques types de tâches soient utilisés.
+En regardant manuellement un *dataset*, à savoir [JapaneseVowels](https://www.openml.org/d/375), on remarque que les tâches où il y a plus de *runs* sont les tâches de type *Classification Supervisée*.
+
+On cherche donc à démontrer qu'uniquement certaines tâches sont effectuées sur des séries temporelles. Cela nous permettra d'avoir un point de départ pour la recherche des algorithmes les plus fréquemment utilisés pour les séries temporelles.
 
 #### Expérimentation
 
