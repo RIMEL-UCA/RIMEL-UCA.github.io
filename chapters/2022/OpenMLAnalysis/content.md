@@ -45,7 +45,7 @@ Finalement, pour nous aider à répondre à cette question, nous l'avons découp
 Nous pouvons extraire les tâches (*tasks*) et les flux (*flows*) terminés grâce à l'**API Python d'OpenML** et [sa documentation](https://docs.openml.org/Python-API/).
 Pour cela, on utilise une librairie `Python` existante ([OpenML](https://pypi.org/project/openml/)), et nous les traitons avec `Pandas` et `Matplotlib`, pour en faire des graphes.
 
-{% include assets/graph_occurence_conjointe.html %}
+{% include graph_occurence_conjointe.html %}
 
 ## IV. Hypotèses & Expériences
 
