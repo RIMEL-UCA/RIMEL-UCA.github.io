@@ -33,21 +33,39 @@ Cette question est d'autant plus intéressante que les secteurs des séries temp
 
 Ainsi, dans le cas où nous arrivons à mettre en avant des algorithmes, il serait intéressant de pouvoir les optimiser, grâce à des `SAT Solver` ou encore en utilisant la `théorie des graphes` **si cela est possible**. Pleins de branches de métier seraient donc intéressées par nos trouvailles.
 
-Finalement, pour nous aider à répondre à cette question, nous l'avons découper en plusieurs sous-questions :
+Finalement, pour nous aider à répondre à cette question, nous l'avons découpée en plusieurs sous-questions :
 
-1. Quels sont les principaux types de tâches sur ces données sur **OpenML** (*classification*, *clustering*, *détection d'anomalies*) ?
+1. Quels sont les principaux types de tâches sur les données issues des datasets de séries temporelles sur **OpenML** (*classification*, *clustering*, *détection d'anomalies*) ?
 2. Quels sont les algorithmes et prétraitements les plus fréquemment utilisés ? Peut-on identifier des sous-workflows, des occurrences conjointes des mêmes algorithmes ?
-3. En analysant les occurrences communes et l’ordre dans lequel ces algorithmes sont appelés, pouvons-nous identifier des conditions préalables sur les algorithmes ?
-4. Existe-t-il des algorithmes qui ne sont utilisés que sur les séries temporelles ?
+3. Existe-t-il des algorithmes qui ne sont utilisés que sur les séries temporelles ?
 
 ## III. Collecte d'informations
 
 Nous pouvons extraire les tâches (*tasks*) et les flux (*flows*) terminés grâce à l'**API Python d'OpenML** et [sa documentation](https://docs.openml.org/Python-API/).
 Pour cela, on utilise une librairie `Python` existante ([OpenML](https://pypi.org/project/openml/)), et nous les traitons avec `Pandas` et `Matplotlib`, pour en faire des graphes.
 
-<iframe src="../assets/OpenMLAnalysis/graph_occurence_conjointe.html" width="100%" height="500px"></iframe>
-
 ## IV. Hypotèses & Expériences
+
+### 1. Quels sont les principaux types de tâches sur les données issues des datasets de séries temporelles sur **OpenML** (*classification*, *clustering*, *détection d'anomalies*) ?
+
+#### Hypothèse
+
+#### Expérimentation
+
+### 2. Quels sont les algorithmes et prétraitements les plus fréquemment utilisés ? Peut-on identifier des sous-workflows, des occurrences conjointes des mêmes algorithmes ?
+
+#### Hypothèse
+
+#### Expérimentation
+
+<iframe src="../assets/OpenMLAnalysis/graph_occurrence_conjointe.html" width="100%" height="500px"></iframe>
+
+### 3. Existe-t-il des algorithmes qui ne sont utilisés que sur les séries temporelles ?
+
+#### Hypothèse
+
+#### Expérimentation
+
 
 > 1. Il s'agit ici d'énoncer sous forme d' hypothèses ce que vous allez chercher à démontrer. Vous devez définir vos hypothèses de façon à pouvoir les mesurer facilement. Bien sûr, votre hypothèse devrait être construite de manière à _vous aider à répondre à votre question initiale_. Explicitez ces différents points.
 > 2. Test de l’hypothèse par l’expérimentation. 
