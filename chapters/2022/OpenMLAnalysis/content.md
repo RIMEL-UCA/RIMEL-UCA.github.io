@@ -50,7 +50,7 @@ Pour cela, on utilise une librairie `Python` existante ([OpenML](https://pypi.or
 
 #### Hypothèse
 
-Lors de la découverte du sujet et de sa lecture, nous nous sommes rapidement dits qu'au vue du petit nombre de *datasets* et de *tâches* disponibles sur **OpenML**, il y a de fortes chances que seuls quelques types de tâches soient utilisés.
+Lors de la découverte du sujet et de sa lecture, nous nous sommes rapidement dit qu'au vue du petit nombre de *datasets* et de *tâches* disponibles sur **OpenML**, il y a de fortes chances que seuls quelques types de tâches soient utilisés.
 En regardant manuellement un *dataset*, à savoir [JapaneseVowels](https://www.openml.org/d/375), on remarque que les tâches où il y a plus de *runs* sont les tâches de type *Classification Supervisée*.
 
 On cherche donc à démontrer qu'uniquement certaines tâches sont effectuées sur des séries temporelles. Cela nous permettra d'avoir un point de départ pour la recherche des algorithmes les plus fréquemment utilisés pour les séries temporelles.
@@ -62,8 +62,6 @@ On cherche donc à démontrer qu'uniquement certaines tâches sont effectuées s
 #### Hypothèse
 
 #### Expérimentation
-
-<iframe src="../assets/OpenMLAnalysis/graph_occurrence_conjointe.html" width="100%" height="500px"></iframe>
 
 ### 3. Existe-t-il des algorithmes qui ne sont utilisés que sur les séries temporelles ?
 
@@ -85,6 +83,14 @@ Then study the link between data, algorithms, preprocessing, flow and result.
 Finally, we visualize our results.
 
 ## V. Analyse des résultats & Conclusion
+
+### 1. Quels sont les principaux types de tâches sur les données issues des datasets de séries temporelles sur **OpenML** (Exemples: *classification*, *clustering*, *détection d'anomalies*) ?
+
+### 2. Quels sont les algorithmes et prétraitements les plus fréquemment utilisés ? Peut-on identifier des sous-workflows, des occurrences conjointes des mêmes algorithmes ?
+
+<iframe src="../assets/OpenMLAnalysis/graph_occurrence_conjointe.html" width="100%" height="500px"></iframe>
+
+### 3. Existe-t-il des algorithmes qui ne sont utilisés que sur les séries temporelles ?
 
 *Analyse des résultats & construction d’une conclusion : Une fois votre expérience terminée, vous récupérez vos mesures et vous les analysez pour voir si votre hypothèse tient la route.*
 
