@@ -72,20 +72,13 @@ Finalement, nous avons utilisé l'**API Python d'OpenML** pour extraire les *tâ
 
 #### Hypothèse
 
+On s'attend à trouver des algorithmes qui ne sont utilisés que sur les séries temporelles. Cela nous permettra de mettre en évidence de bonnes pratiques pour le traitement de séries temporelles.
+
 #### Expérimentation
 
+Pour savoir si notre hypothèse est la bonne, nous avons pris des datasets qui **ne sont pas des séries temporelles** parmi les plus utilisés sur **OpenML**. Nous avons ensuite comparé les occurences de *flows* (et donc d'algorithmes) entre les datasets de *séries temporelles* et ceux qui ne le sont pas, dans le but de trouver des algorithmes étant davantage utilisés pour le traitements des séries temporelles et peu utilisés dans l'autre cas. Pour cela, nous avons utilisé le même code qu'à la sous-question précédente afin d'obtenir le même type de résultat sur l'occurence des *flows*.
 
-> 1. Il s'agit ici d'énoncer sous forme d' hypothèses ce que vous allez chercher à démontrer. Vous devez définir vos hypothèses de façon à pouvoir les mesurer facilement. Bien sûr, votre hypothèse devrait être construite de manière à _vous aider à répondre à votre question initiale_. Explicitez ces différents points.
-> 2. Test de l’hypothèse par l’expérimentation. 
->> 1. Vos tests d’expérimentations permettent de vérifier si vos hypothèses sont vraies ou fausses.
->> 2. Il est possible que vous deviez répéter vos expérimentations pour vous assurer que les premiers résultats ne sont pas seulement un accident.
-> 3. Explicitez bien les outils utilisés et comment.
-> 4. Justifiez vos choix
-
-We think that it exists some alogrithms and preprocessing that are better used in some conditions than others.  
-Our focus will be to find the different approach used by searchers on OpenML.  
-Then study the link between data, algorithms, preprocessing, flow and result.  
-Finally, we visualize our results.
+Finalement, on a comparé les résultats obtenus avec ceux de la saous-question précédente.
 
 ## V. Analyse des résultats & Conclusion
 
