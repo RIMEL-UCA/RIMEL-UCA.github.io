@@ -46,16 +46,21 @@ Pour cela, on utilise une librairie `Python` existante ([OpenML](https://pypi.or
 
 ## IV. Hypothèses & Expériences
 
-### 1. Quels sont les principaux types de tâches sur les données issues des datasets de séries temporelles sur **OpenML** (Exemples: *classification*, *clustering*, *détection d'anomalies*) ?
+### 1. Quels sont les principaux types de tâches sur les données issues des datasets de séries temporelles sur **OpenML** (Exemples: *classification*, *clustering*, *détection d'anomalies*) ?
 
 #### Hypothèse
 
 Lors de la découverte du sujet et de sa lecture, nous nous sommes rapidement dit qu'au vue du petit nombre de *datasets* et de *tâches* disponibles sur **OpenML**, il y a de fortes chances que seuls quelques types de tâches soient utilisés.
-En regardant manuellement un *dataset*, à savoir [JapaneseVowels](https://www.openml.org/d/375), on remarque que les tâches où il y a plus de *runs* sont les tâches de type *Classification Supervisée*.
 
 On cherche donc à démontrer qu'uniquement certaines tâches sont effectuées sur des séries temporelles. Cela nous permettra d'avoir un point de départ pour la recherche des algorithmes les plus fréquemment utilisés pour les séries temporelles.
 
 #### Expérimentation
+
+Dans un premier, nous avons regardé manuellement un *dataset*, à savoir [JapaneseVowels](https://www.openml.org/d/375), pour chercher les types de tâche les plus utilisés. On remarque que les tâches où il y a plus de *runs* sont les tâches de type *Découverte de sous-groupes*.
+
+Dans un second temps, nous avons utilisé l'**API Python d'OpenML** pour extraire les *tâches* du dataset [JapaneseVowels](https://www.openml.org/d/375) et les afficher sous forme de digramme en bâtons.
+
+Finalement, nous avons utilisé l'**API Python d'OpenML** pour extraire les *tâches* de tous les datasets fournis et afficher sous forme de diagramme en bâtons les tâches les plus réalisées. Pour cela, nous avons repris le code existant développé pour le dataset [JapaneseVowels](https://www.openml.org/d/375) et nous l'avons adapté pour extraire les *tâches* de tous les datasets.
 
 ### 2. Quels sont les algorithmes et prétraitements les plus fréquemment utilisés ? Peut-on identifier des sous-workflows, des occurrences conjointes des mêmes algorithmes ?
 
@@ -84,7 +89,13 @@ Finally, we visualize our results.
 
 ## V. Analyse des résultats & Conclusion
 
-### 1. Quels sont les principaux types de tâches sur les données issues des datasets de séries temporelles sur **OpenML** (Exemples: *classification*, *clustering*, *détection d'anomalies*) ?
+### 1. Quels sont les principaux types de tâches sur les données issues des datasets de séries temporelles sur **OpenML** (Exemples: *classification*, *clustering*, *détection d'anomalies*) ?
+
+Voici les tâches par type les plus réalisées sur le dataset [JapaneseVowels](https://www.openml.org/d/375) :
+![Occurence des tâches par type pour JapaneseVowels](../assets/OpenMLAnalysis/Occurence%20des%20tâches%20par%20type%20pour%20JapaneseVowels.png "Occurence des tâches par type pour JapaneseVowels")
+
+Voici les tâches par type les plus réalisées sur les datasets de séries temporelles sur **OpenML** :
+![Occurence des tâches par type](../assets/OpenMLAnalysis/Occurence%20des%20tâches%20par%20type.png "Occurence des tâches par type")
 
 ### 2. Quels sont les algorithmes et prétraitements les plus fréquemment utilisés ? Peut-on identifier des sous-workflows, des occurrences conjointes des mêmes algorithmes ?
 
