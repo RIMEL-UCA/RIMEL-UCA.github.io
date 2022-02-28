@@ -96,6 +96,215 @@ Voici les tâches par type les plus réalisées sur les datasets de séries temp
 
 ### 3. Existe-t-il des algorithmes qui ne sont utilisés que sur les séries temporelles ?
 
+```json
+{
+  "135": {
+    "nonTimeSeries": 0,
+    "timeSeries": 16
+  },
+  "364": {
+    "nonTimeSeries": 7,
+    "timeSeries": 20
+  },
+  "365": {
+    "nonTimeSeries": 13,
+    "timeSeries": 35
+  },
+  "375": {
+    "nonTimeSeries": 9,
+    "timeSeries": 22
+  },
+  "377": {
+    "nonTimeSeries": 20,
+    "timeSeries": 55
+  },
+  "379": {
+    "nonTimeSeries": 6,
+    "timeSeries": 17
+  },
+  "380": {
+    "nonTimeSeries": 10,
+    "timeSeries": 30
+  },
+  "386": {
+    "nonTimeSeries": 10,
+    "timeSeries": 25
+  },
+  "389": {
+    "nonTimeSeries": 6,
+    "timeSeries": 18
+  },
+  "390": {
+    "nonTimeSeries": 9,
+    "timeSeries": 32
+  },
+  "391": {
+    "nonTimeSeries": 8,
+    "timeSeries": 19
+  },
+  "414": {
+    "nonTimeSeries": 6,
+    "timeSeries": 16
+  },
+  "421": {
+    "nonTimeSeries": 10,
+    "timeSeries": 22
+  },
+  "424": {
+    "nonTimeSeries": 7,
+    "timeSeries": 16
+  },
+  "1068": {
+    "nonTimeSeries": 42,
+    "timeSeries": 98
+  },
+  "1069": {
+    "nonTimeSeries": 19,
+    "timeSeries": 49
+  },
+  "1077": {
+    "nonTimeSeries": 20,
+    "timeSeries": 48
+  },
+  "1080": {
+    "nonTimeSeries": 7,
+    "timeSeries": 16
+  },
+  "1090": {
+    "nonTimeSeries": 50,
+    "timeSeries": 113
+  },
+  "1097": {
+    "nonTimeSeries": 12,
+    "timeSeries": 30
+  },
+  "1105": {
+    "nonTimeSeries": 7,
+    "timeSeries": 17
+  },
+  "1110": {
+    "nonTimeSeries": 10,
+    "timeSeries": 20
+  },
+  "1112": {
+    "nonTimeSeries": 7,
+    "timeSeries": 17
+  },
+  "1154": {
+    "nonTimeSeries": 14,
+    "timeSeries": 34
+  },
+  "1164": {
+    "nonTimeSeries": 12,
+    "timeSeries": 26
+  },
+  "1165": {
+    "nonTimeSeries": 5,
+    "timeSeries": 17
+  },
+  "1168": {
+    "nonTimeSeries": 10,
+    "timeSeries": 27
+  },
+  "1169": {
+    "nonTimeSeries": 10,
+    "timeSeries": 27
+  },
+  "1172": {
+    "nonTimeSeries": 6,
+    "timeSeries": 17
+  },
+  "1175": {
+    "nonTimeSeries": 10,
+    "timeSeries": 21
+  },
+  "1185": {
+    "nonTimeSeries": 7,
+    "timeSeries": 16
+  },
+  "1191": {
+    "nonTimeSeries": 8,
+    "timeSeries": 18
+  },
+  "1194": {
+    "nonTimeSeries": 7,
+    "timeSeries": 17
+  },
+  "1720": {
+    "nonTimeSeries": 64,
+    "timeSeries": 31
+  },
+  "1721": {
+    "nonTimeSeries": 38,
+    "timeSeries": 20
+  },
+  "1724": {
+    "nonTimeSeries": 52,
+    "timeSeries": 24
+  },
+  "1728": {
+    "nonTimeSeries": 27,
+    "timeSeries": 16
+  },
+  "1729": {
+    "nonTimeSeries": 62,
+    "timeSeries": 30
+  },
+  "1745": {
+    "nonTimeSeries": 47,
+    "timeSeries": 24
+  },
+  "1820": {
+    "nonTimeSeries": 37,
+    "timeSeries": 23
+  },
+  "2049": {
+    "nonTimeSeries": 30,
+    "timeSeries": 16
+  },
+  "2050": {
+    "nonTimeSeries": 31,
+    "timeSeries": 16
+  },
+  "2118": {
+    "nonTimeSeries": 48,
+    "timeSeries": 24
+  },
+  "8775": {
+    "nonTimeSeries": 34,
+    "timeSeries": 16
+  },
+  "8776": {
+    "nonTimeSeries": 34,
+    "timeSeries": 16
+  },
+  "8777": {
+    "nonTimeSeries": 34,
+    "timeSeries": 16
+  },
+  "8778": {
+    "nonTimeSeries": 46,
+    "timeSeries": 22
+  },
+  "8779": {
+    "nonTimeSeries": 46,
+    "timeSeries": 22
+  },
+  "8780": {
+    "nonTimeSeries": 46,
+    "timeSeries": 22
+  },
+  "8781": {
+    "nonTimeSeries": 46,
+    "timeSeries": 22
+  },
+  "8782": {
+    "nonTimeSeries": 46,
+    "timeSeries": 22
+  }
+}
+```
+
 *Analyse des résultats & construction d’une conclusion : Une fois votre expérience terminée, vous récupérez vos mesures et vous les analysez pour voir si votre hypothèse tient la route.*
 
 ## VI. Outils & Ressources
