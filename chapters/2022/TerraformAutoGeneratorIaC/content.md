@@ -51,20 +51,14 @@ complets ou des Templates sur lesquels les développeurs peuvent se
 baser.
 ​
 ## Sous questions :
-​
--   Comment analyser les fichiers d'un projet pour permettre la
-    génération du fichier (IaC)
-​
--   Quelles sont les fichiers à analyser en priorité ? (Le type et le
-    contenu des fichier de build, Dockerfiles présents dans un projet,
-    nous indiquera le type de projet et nous permettra de générer les
-    fichiers terraform).
-​
--   Quels sont les outils dont on aura besoin afin d'analyser un
-    projet ? (Parseur, Antlr).
-​
--   Est-ce que les fichiers de configuration (IaC) sont
-    \"templatables\" ?
+​    Est-ce que les fichiers de configuration (IaC) sont "templatables" ?​
+
+    Comment identifier les bonnes pratiques et reconnaitre qu'elles sont automatisables?​
+
+
+## Good practices
+
+## Templating
 ​
 ## Démarche à suivre :
 ​
@@ -87,6 +81,8 @@ baser.
 6)  Utiliser les règles explicites et implicites identifiées pour créer
     des outils de génération de Templates Terraform.
 ​
+## Conclusion
+
 ## Bibliographie :
 ​
 -	Règles et bonnes pratiques Terraform sur SonarSource :
