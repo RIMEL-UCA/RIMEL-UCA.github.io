@@ -78,7 +78,7 @@ On s'attend à trouver des algorithmes qui ne sont utilisés que sur les séries
 
 Pour savoir si notre hypothèse est la bonne, nous avons pris des datasets qui **ne sont pas des séries temporelles** parmi les plus utilisés sur **OpenML**. Nous avons ensuite comparé les occurences de *flows* (et donc d'algorithmes) entre les datasets de *séries temporelles* et ceux qui ne le sont pas, dans le but de trouver des algorithmes étant davantage utilisés pour le traitements des séries temporelles et peu utilisés dans l'autre cas. Pour cela, nous avons utilisé le même code qu'à la sous-question précédente afin d'obtenir le même type de résultat sur l'occurence des *flows*.
 
-Finalement, on a comparé les résultats obtenus avec ceux de la saous-question précédente.
+Finalement, on a comparé les résultats obtenus avec ceux de la sous-question précédente.
 
 ## V. Analyse des résultats & Conclusion
 
@@ -93,7 +93,7 @@ Voici les tâches par type les plus réalisées sur les datasets de séries temp
 ### 2. Quels sont les algorithmes et prétraitements les plus fréquemment utilisés ? Peut-on identifier des sous-workflows, des occurrences conjointes des mêmes algorithmes ?
 
 <iframe src="../assets/OpenMLAnalysis/graph_occurrence_conjointe.html" width="100%" height="500px"></iframe>
-[Afficher en grand](../assets/OpenMLAnalysis/graph_occurrence_conjointe.html)
+Cliquez [ici](../assets/OpenMLAnalysis/graph_occurrence_conjointe.html){:target="_blank" } pour afficher en grand
 
 
 ### 3. Existe-t-il des algorithmes qui ne sont utilisés que sur les séries temporelles ?
