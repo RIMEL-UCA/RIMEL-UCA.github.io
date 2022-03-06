@@ -72,6 +72,8 @@ On s’attend à trouver des algorithmes plus utilisés que d’autres, et des s
 
 Nous avons utilisé l'**API Python d'OpenML** pour extraire les *flows* des dataset considéré comme des séries temporelles. Pour cela on a d'abord récupéré toutes tentatives de runs effectués sur toutes les tâches des datasets. Puis nous avons trié les flows de façon à ne pas avoir d’utilisation doublon, c'est-à-dire lorsqu’une même tâche est effectuée par le même auteur avec le même flow. De cette manière, nous pouvons obtenir les occurrences de flow sans compter les simples changements de paramètre.  
 
+On construit deux types de graphiques, un premier diagramme en bâton montrant  simplement les flows les plus utilisés. Puis un graphe valué permettant de visualiser les liens et l'occurrence de chaque flows, pour cette dernière visualisation, nous trions les flows à afficher pour plus de lisibilité, autrement dit, ne pas afficher les flows à occurrence très faible (< 20) et sans lien à d’autres flows.  
+
 
 ### 3. Existe-t-il des algorithmes qui ne sont utilisés que sur les séries temporelles ?
 
@@ -81,7 +83,7 @@ On s'attend à trouver des algorithmes qui ne sont utilisés que sur les séries
 
 #### Expérimentation
 
-Pour savoir si notre hypothèse est la bonne, nous avons pris des datasets qui **ne sont pas des séries temporelles** parmi les plus utilisés sur **OpenML**. Nous avons ensuite comparé les occurences de *flows* (et donc d'algorithmes) entre les datasets de *séries temporelles* et ceux qui ne le sont pas, dans le but de trouver des algorithmes étant davantage utilisés pour le traitements des séries temporelles et peu utilisés dans l'autre cas. Pour cela, nous avons utilisé le même code qu'à la sous-question précédente afin d'obtenir le même type de résultat sur l'occurence des *flows*.
+Pour savoir si notre hypothèse est la bonne, nous avons pris des datasets qui **ne sont pas des séries temporelles** parmi les plus utilisés sur **OpenML**. Nous avons ensuite comparé les Occurrences de *flows* (et donc d'algorithmes) entre les datasets de *séries temporelles* et ceux qui ne le sont pas, dans le but de trouver des algorithmes étant davantage utilisés pour le traitements des séries temporelles et peu utilisés dans l'autre cas. Pour cela, nous avons utilisé le même code qu'à la sous-question précédente afin d'obtenir le même type de résultat sur l'Occurrence des *flows*.
 
 Finalement, on a comparé les résultats obtenus avec ceux de la sous-question précédente.
 
@@ -89,16 +91,22 @@ Finalement, on a comparé les résultats obtenus avec ceux de la sous-question p
 
 ### 1. Quels sont les principaux types de tâches sur les données issues des datasets de séries temporelles sur **OpenML** (Exemples: *classification*, *clustering*, *détection d'anomalies*) ?
 
+Sur le dataset JapaneseVowels le type de tache majoritaire est la **découverte de sous-groupe**. 
+
 Voici les tâches par type les plus réalisées sur le dataset [JapaneseVowels](https://www.openml.org/d/375) :
-![Occurence des tâches par type pour JapaneseVowels](../assets/OpenMLAnalysis/Occurence%20des%20tâches%20par%20type%20pour%20JapaneseVowels.png "Occurence des tâches par type pour JapaneseVowels")
+![Occurrence des tâches par type pour JapaneseVowels](../assets/OpenMLAnalysis/Occurrence%20des%20tâches%20par%20type%20pour%20JapaneseVowels.png "Occurrence des tâches par type pour JapaneseVowels")
+
+Sur l’ensemble des datasets de séries temporelles les types de tâches dominants représentés sont : la **classification supervisée** et la  **découverte de sous-groupe**. 
 
 Voici les tâches par type les plus réalisées sur les datasets de séries temporelles sur **OpenML** :
-![Occurence des tâches par type](../assets/OpenMLAnalysis/Occurence%20des%20tâches%20par%20type.png "Occurence des tâches par type")
+![Occurrence des tâches par type](../assets/OpenMLAnalysis/Occurrence%20des%20tâches%20par%20type.png "Occurrence des tâches par type")
+
+Les types de travaux sont restreints majoritairement à deux tâches, mais cela peut différer d’un dataset à l’autre. Comme le montre les résultats sur le dataset JapaneseVowels qui présente peu de runs sur les tâches de type classification supervisée. 
 
 ### 2. Quels sont les algorithmes et prétraitements les plus fréquemment utilisés ? Peut-on identifier des sous-workflows, des occurrences conjointes des mêmes algorithmes ?
 
 Voici les flows les plus utilisés sur les datasets de séries temporelles sur **OpenML** :
-![Occurence des flows](../assets/OpenMLAnalysis/Flows%20les%20plus%20fréquemment%20utilisés.png "Occurence des flows")
+![Occurrence des flows](../assets/OpenMLAnalysis/Flows%20les%20plus%20fréquemment%20utilisés.png "Occurrence des flows")
 
 <iframe src="../assets/OpenMLAnalysis/graph_occurrence_conjointe.html" width="100%" height="500px"></iframe>
 Cliquez [ici](../assets/OpenMLAnalysis/graph_occurrence_conjointe.html){:target="_blank" } pour afficher en grand
@@ -318,7 +326,7 @@ Cliquez [ici](../assets/OpenMLAnalysis/graph_occurrence_conjointe_filtré.html){
 }
 ```
 Voici les flows les plus utilisés sur les datasets qui ne sont pas des séries temporelles sur **OpenML** :
-![Occurence des flows](../assets/OpenMLAnalysis/Flows%20les%20plus%20fréquemment%20utilisés%20sur%20les%20datasets%20qui%20ne%20sont%20pas%20des%20series%20temporelles.png "Occurence des flows")
+![Occurrence des flows](../assets/OpenMLAnalysis/Flows%20les%20plus%20fréquemment%20utilisés%20sur%20les%20datasets%20qui%20ne%20sont%20pas%20des%20series%20temporelles.png "Occurrence des flows")
 
 
 *Analyse des résultats & construction d’une conclusion : Une fois votre expérience terminée, vous récupérez vos mesures et vous les analysez pour voir si votre hypothèse tient la route.*

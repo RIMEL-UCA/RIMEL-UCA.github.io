@@ -1,0 +1,1 @@
+Pour répondre à la questions générale que nous nous sommes posés, nous avons travaillé ensemble sur la plateforme en ligne [Google Colab](https://colab.research.google.com/). Vous trouverez donc l'accès à notre Notebook [ici](https://colab.research.google.com/).
