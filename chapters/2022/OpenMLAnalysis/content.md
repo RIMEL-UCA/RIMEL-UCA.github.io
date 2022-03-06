@@ -66,7 +66,12 @@ Finalement, nous avons utilisé l'**API Python d'OpenML** pour extraire les *tâ
 
 #### Hypothèse
 
+On s’attend à trouver des algorithmes plus utilisés que d’autres, et des sous-workflows apparaissant plusieurs fois ensemble pour construire une chaîne d'algorithmes. 
+
 #### Expérimentation
+
+Nous avons utilisé l'**API Python d'OpenML** pour extraire les *flows* des dataset considéré comme des séries temporelles. Pour cela on a d'abord récupéré toutes tentatives de runs effectués sur toutes les tâches des datasets. Puis nous avons trié les flows de façon à ne pas avoir d’utilisation doublon, c'est-à-dire lorsqu’une même tâche est effectuée par le même auteur avec le même flow. De cette manière, nous pouvons obtenir les occurrences de flow sans compter les simples changements de paramètre.  
+
 
 ### 3. Existe-t-il des algorithmes qui ne sont utilisés que sur les séries temporelles ?
 
@@ -92,8 +97,14 @@ Voici les tâches par type les plus réalisées sur les datasets de séries temp
 
 ### 2. Quels sont les algorithmes et prétraitements les plus fréquemment utilisés ? Peut-on identifier des sous-workflows, des occurrences conjointes des mêmes algorithmes ?
 
+Voici les flows les plus utilisés sur les datasets de séries temporelles sur **OpenML** :
+![Occurence des flows](../assets/OpenMLAnalysis/Flows%20les%20plus%20fréquemment%20utilisés.png "Occurence des flows")
+
 <iframe src="../assets/OpenMLAnalysis/graph_occurrence_conjointe.html" width="100%" height="500px"></iframe>
 Cliquez [ici](../assets/OpenMLAnalysis/graph_occurrence_conjointe.html){:target="_blank" } pour afficher en grand
+
+<iframe src="../assets/OpenMLAnalysis/graph_occurrence_conjointe_filtré.html" width="100%" height="500px"></iframe>
+Cliquez [ici](../assets/OpenMLAnalysis/graph_occurrence_conjointe_filtré.html){:target="_blank" } pour afficher en grand
 
 
 ### 3. Existe-t-il des algorithmes qui ne sont utilisés que sur les séries temporelles ?
@@ -306,6 +317,9 @@ Cliquez [ici](../assets/OpenMLAnalysis/graph_occurrence_conjointe.html){:target=
   }
 }
 ```
+Voici les flows les plus utilisés sur les datasets qui ne sont pas des séries temporelles sur **OpenML** :
+![Occurence des flows](../assets/OpenMLAnalysis/Flows%20les%20plus%20fréquemment%20utilisés%20sur%20les%20datasets%20qui%20ne%20sont%20pas%20des%20series%20temporelles.png "Occurence des flows")
+
 
 *Analyse des résultats & construction d’une conclusion : Une fois votre expérience terminée, vous récupérez vos mesures et vous les analysez pour voir si votre hypothèse tient la route.*
 
