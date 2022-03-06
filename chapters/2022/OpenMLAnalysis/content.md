@@ -93,6 +93,8 @@ Voici les tâches par type les plus réalisées sur les datasets de séries temp
 ### 2. Quels sont les algorithmes et prétraitements les plus fréquemment utilisés ? Peut-on identifier des sous-workflows, des occurrences conjointes des mêmes algorithmes ?
 
 <iframe src="../assets/OpenMLAnalysis/graph_occurrence_conjointe.html" width="100%" height="500px"></iframe>
+[Afficher en grand](../assets/OpenMLAnalysis/graph_occurrence_conjointe.html)
+
 
 ### 3. Existe-t-il des algorithmes qui ne sont utilisés que sur les séries temporelles ?
 
