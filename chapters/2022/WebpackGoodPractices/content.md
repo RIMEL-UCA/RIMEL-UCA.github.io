@@ -211,6 +211,8 @@ Pour ce qui est des dev dependency, il est difficile de conclure dans un sens ou
 
 # 6. Outils
 
+[Consultable ici](../assets/WebpackGoodPractices/tool)
+
 Dans l’objectif d’extraire des informations de façon automatisée sur les différents projets open-source de GitHub, nous avons développé différents scripts en Typescript.
 Nous n’avons pas utilisé d’outils autre que des librairies npm pour nous aider à utiliser l’API de GitHub, ou pour stocker nos données dans une base de données SQLite.
 Nous avons développé 4 outils différents.
