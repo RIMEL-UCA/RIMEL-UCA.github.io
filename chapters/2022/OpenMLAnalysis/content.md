@@ -62,7 +62,7 @@ Dans un second temps, nous avons utilisé l'**API Python d'OpenML** pour extrair
 
 Finalement, nous avons utilisé l'**API Python d'OpenML** pour extraire les *tâches* de tous les datasets fournis et afficher sous forme de diagramme en bâtons les *tâches* les plus réalisées. Pour cela, nous avons repris le code existant développé pour le dataset [JapaneseVowels](https://www.openml.org/d/375) et nous l'avons adapté pour extraire les *tâches* de tous les datasets.
 
-### 2. Quels sont les algorithmes et prétraitements les plus fréquemment utilisés ? Peut-on identifier des sous-workflows, des occurrences conjointes des mêmes algorithmes ?
+### <a name="4HE"></a> 2. Quels sont les algorithmes et prétraitements les plus fréquemment utilisés ? Peut-on identifier des sous-workflows, des occurrences conjointes des mêmes algorithmes ?
 
 #### Hypothèse
 
@@ -108,7 +108,7 @@ Voici les `flows` les plus utilisés sur les *datasets* de séries temporelles s
 
 ![Occurrence des flows](../assets/OpenMLAnalysis/Flows%20les%20plus%20fréquemment%20utilisés.png "Occurrence des flows")
 
-Parmis les cinq algorithmes les plus utilisés, on remarque que **DecisionStump** est présent deux fois dans le classement, à la première et la troisième place. Seule sa version diffère, cela fait de lui l'algorithme le plus utilisé pour les taches sur les datasets de séries temporels disponible sur OpenML. 
+Parmis les cinq algorithmes les plus utilisés, on remarque que **DecisionStump** est présent deux fois dans le classement, à la première et la troisième place. Seule sa version diffère, cela fait de lui l'algorithme le plus utilisé pour les taches sur les datasets de séries temporelles disponible sur OpenML. 
 Parmi ces quatre algorithmes, on a :
 - **DecisionStump** qui est un modèle d'apprentissage automatique composé d'un arbre de décision à un niveau. C'est-à-dire qu'il s'agit d'un arbre de décision avec un nœud interne (la racine) qui est immédiatement connecté aux nœuds terminaux (ses feuilles). Une souche de décision fait une prédiction basée sur la valeur d'une seule caractéristique d'entrée.
 - **J48 (C4.5)** est un algorithme de classification supervisé, publié par Ross Quinlan. Il est basé sur l'algorithme ID3 auquel il apporte plusieurs améliorations. Il a pour but de produire un modèle de type arbre de décision à partir d'un échantillon d'apprentissage.
@@ -118,11 +118,22 @@ Parmi ces quatre algorithmes, on a :
 On constate logiquement que le types de tâche majoritaire sur les séries temporels influe sur les algorithmes utilisés, en effet on retrouve des algorithmes permettant de réaliser de la **classification supervisée** parmi les plus utilisés. 
 De plus, on remarque une forte utilisation d’**arbre de décision** pour le traitement de séries temporelles. 
 
+On s'intéresse maintenant au lien entre les algorithmes, sur les graphiques suivant on a représenté chaque algorithme par un point de plus en plus gros suivant son nombre d’utilisations, et les liens entre deux algorithmes représente le nombre d'apparitions ensemble dans la même chaîne de travail, plus le lien est épais plus ce nombre est élevé.  
+
 <iframe src="../assets/OpenMLAnalysis/graph_occurrence_conjointe.html" width="100%" height="500px"></iframe>
 Cliquez [ici](../assets/OpenMLAnalysis/graph_occurrence_conjointe.html){:target="_blank"} pour afficher le graphique en grand.
 
+Sur ce premier graphique, il est difficile d’en ressortir un quelconque résultat. Nous avons donc effectué un tri comme expliqué dans la section [Hypothèses & Expériences](#4HE) pour obtenir une meilleure visualisation. 
+
 <iframe src="../assets/OpenMLAnalysis/graph_occurrence_conjointe_filtré.html" width="100%" height="500px"></iframe>
 Cliquez [ici](../assets/OpenMLAnalysis/graph_occurrence_conjointe_filtré.html){:target="_blank"} pour afficher le graphique en grand.
+
+Dans cette nouvelle visualisation, on distingue différents groupes d'algorithmes. Parmi ces algorithmes utilisés conjointement plusieurs fois avec d’autres algorithmes. 
+
+**Todo :  étudier les chaines d’algo, c’est quoi le plus souvent ?**
+
+On remarque aussi que les algorithmes les plus utilisés sont souvent utilisés seuls. 
+
 
 
 ### 3. Existe-t-il des algorithmes qui ne sont utilisés que sur les séries temporelles ?
