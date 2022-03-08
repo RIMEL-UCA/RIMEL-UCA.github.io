@@ -128,11 +128,11 @@ Sur ce premier graphique, il est difficile d’en ressortir un quelconque résul
 <iframe src="../assets/OpenMLAnalysis/graph_occurrence_conjointe_filtré.html" width="100%" height="500px"></iframe>
 Cliquez [ici](../assets/OpenMLAnalysis/graph_occurrence_conjointe_filtré.html){:target="_blank"} pour afficher le graphique en grand.
 
-Dans cette nouvelle visualisation, on distingue différents groupes d'algorithmes. Parmi ces algorithmes utilisés conjointement plusieurs fois avec d’autres algorithmes. 
+Dans cette nouvelle visualisation, on distingue différents groupes d'algorithmes. Parmi ces algorithmes utilisés conjointement plusieurs fois avec d’autres algorithmes, on remarque... 
 
 **Todo :  étudier les chaines d’algo, c’est quoi le plus souvent ?**
 
-On remarque aussi que les algorithmes les plus utilisés sont souvent utilisés seuls. 
+On remarque aussi que les algorithmes les plus utilisés sont souvent isolés. 
 
 
 
