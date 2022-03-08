@@ -108,6 +108,16 @@ Voici les `flows` les plus utilisés sur les *datasets* de séries temporelles s
 
 ![Occurrence des flows](../assets/OpenMLAnalysis/Flows%20les%20plus%20fréquemment%20utilisés.png "Occurrence des flows")
 
+Parmis les cinq algorithmes les plus utilisés, on remarque que **DecisionStump** est présent deux fois dans le classement, à la première et la troisième place. Seule sa version diffère, cela fait de lui l'algorithme le plus utilisé pour les taches sur les datasets de séries temporels disponible sur OpenML. 
+Parmi ces quatre algorithmes, on a :
+- **DecisionStump** qui est un modèle d'apprentissage automatique composé d'un arbre de décision à un niveau. C'est-à-dire qu'il s'agit d'un arbre de décision avec un nœud interne (la racine) qui est immédiatement connecté aux nœuds terminaux (ses feuilles). Une souche de décision fait une prédiction basée sur la valeur d'une seule caractéristique d'entrée.
+- **J48 (C4.5)** est un algorithme de classification supervisé, publié par Ross Quinlan. Il est basé sur l'algorithme ID3 auquel il apporte plusieurs améliorations. Il a pour but de produire un modèle de type arbre de décision à partir d'un échantillon d'apprentissage.
+- **RepTree** est une méthode pour générer un arbre de décision à partir d'un ensemble de données donné. Il est considéré comme une extension de C4.5 en améliorant la phase d'élagage en utilisant l'élagage à erreur réduite.
+- **ZeroR** est la méthode de classification la plus simple qui s’appuie sur la cible et ignore tous les prédicteurs. Le classificateur ZeroR prédit simplement la catégorie majoritaire (classe). Bien qu'il n'offre aucune fonctionnalité de prédiction, il est utile pour déterminer une performance de base servant de référence pour d'autres méthodes de classification.
+
+On constate logiquement que le types de tâche majoritaire sur les séries temporels influe sur les algorithmes utilisés, en effet on retrouve des algorithmes permettant de réaliser de la **classification supervisée** parmi les plus utilisés. 
+De plus, on remarque une forte utilisation d’**arbre de décision** pour le traitement de séries temporelles. 
+
 <iframe src="../assets/OpenMLAnalysis/graph_occurrence_conjointe.html" width="100%" height="500px"></iframe>
 Cliquez [ici](../assets/OpenMLAnalysis/graph_occurrence_conjointe.html){:target="_blank"} pour afficher le graphique en grand.
 
