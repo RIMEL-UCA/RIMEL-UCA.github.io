@@ -1,0 +1,28 @@
+"sep=,"
+FILENAME,LINE_START,LINE_END,TYPE,EXPRESSION,CONSTANTS
+/home/user/RIMEL/cppstats/results/_cppstats_featurelocations/calculator/src/CalcManager/Ratpack/ratpak.h.xml,161,197,#if,defined(DEBUG_RATPAK),DEBUG_RATPAK
+/home/user/RIMEL/cppstats/results/_cppstats_featurelocations/calculator/src/CalcManager/Ratpack/ratpak.h.xml,197,202,#else,!(defined(DEBUG_RATPAK)),DEBUG_RATPAK
+/home/user/RIMEL/cppstats/results/_cppstats_featurelocations/calculator/src/CalcManager/sal_cross_platform.h.xml,3,7,#if,defined(_WIN32) && defined(_MSC_VER),_MSC_VER;_WIN32
+/home/user/RIMEL/cppstats/results/_cppstats_featurelocations/calculator/src/CalcManager/sal_cross_platform.h.xml,7,19,#else,!(defined(_WIN32) && defined(_MSC_VER)),_MSC_VER;_WIN32
+/home/user/RIMEL/cppstats/results/_cppstats_featurelocations/calculator/src/CalcManager/winerror_cross_platform.h.xml,3,7,#if,defined(_WIN32) && defined(_MSC_VER),_MSC_VER;_WIN32
+/home/user/RIMEL/cppstats/results/_cppstats_featurelocations/calculator/src/CalcManager/winerror_cross_platform.h.xml,7,25,#else,!(defined(_WIN32) && defined(_MSC_VER)),_MSC_VER;_WIN32
+/home/user/RIMEL/cppstats/results/_cppstats_featurelocations/calculator/src/CalcViewModel/Common/Utils.h.xml,122,132,#if,!defined(UNIT_TESTS),UNIT_TESTS
+/home/user/RIMEL/cppstats/results/_cppstats_featurelocations/calculator/src/CalcViewModel/Common/Utils.h.xml,132,141,#else,!(!defined(UNIT_TESTS)),UNIT_TESTS
+/home/user/RIMEL/cppstats/results/_cppstats_featurelocations/calculator/src/CalcViewModel/Common/Utils.h.xml,145,156,#if,!defined(UNIT_TESTS),UNIT_TESTS
+/home/user/RIMEL/cppstats/results/_cppstats_featurelocations/calculator/src/CalcViewModel/Common/Utils.h.xml,156,166,#else,!(!defined(UNIT_TESTS)),UNIT_TESTS
+/home/user/RIMEL/cppstats/results/_cppstats_featurelocations/calculator/src/CalcViewModel/pch.h.xml,8,10,#if,!defined(WIN32_LEAN_AND_MEAN),WIN32_LEAN_AND_MEAN
+/home/user/RIMEL/cppstats/results/_cppstats_featurelocations/calculator/src/Calculator/DesignData/DesignAppViewModel.h.xml,13,44,#if,defined(_DEBUG),_DEBUG
+/home/user/RIMEL/cppstats/results/_cppstats_featurelocations/calculator/src/Calculator/DesignData/DesignStandardCalculatorViewModel.h.xml,10,74,#if,defined(_DEBUG),_DEBUG
+/home/user/RIMEL/cppstats/results/_cppstats_featurelocations/calculator/src/Calculator/DesignData/DesignUnitConverterViewModel.h.xml,10,120,#if,defined(_DEBUG),_DEBUG
+/home/user/RIMEL/cppstats/results/_cppstats_featurelocations/calculator/src/CalculatorUnitTests/pch.h.xml,11,13,#if,!defined(WIN32_LEAN_AND_MEAN),WIN32_LEAN_AND_MEAN
+/home/user/RIMEL/cppstats/results/_cppstats_featurelocations/calculator/src/CalculatorUnitTests/resource.h.xml,7,14,#if,defined(APSTUDIO_INVOKED),APSTUDIO_INVOKED
+/home/user/RIMEL/cppstats/results/_cppstats_featurelocations/calculator/src/CalculatorUnitTests/resource.h.xml,8,13,#if,(defined(APSTUDIO_INVOKED)) && (!defined(APSTUDIO_READONLY_SYMBOLS)),APSTUDIO_INVOKED;APSTUDIO_READONLY_SYMBOLS
+/home/user/RIMEL/cppstats/results/_cppstats_featurelocations/calculator/src/GraphControl/DirectX/DirectXHelper.h.xml,46,65,#if,defined(_DEBUG),_DEBUG
+/home/user/RIMEL/cppstats/results/_cppstats_featurelocations/calculator/src/GraphControl/Utils.h.xml,118,128,#if,!defined(UNIT_TESTS),UNIT_TESTS
+/home/user/RIMEL/cppstats/results/_cppstats_featurelocations/calculator/src/GraphControl/Utils.h.xml,128,137,#else,!(!defined(UNIT_TESTS)),UNIT_TESTS
+/home/user/RIMEL/cppstats/results/_cppstats_featurelocations/calculator/src/GraphControl/Utils.h.xml,141,152,#if,!defined(UNIT_TESTS),UNIT_TESTS
+/home/user/RIMEL/cppstats/results/_cppstats_featurelocations/calculator/src/GraphControl/Utils.h.xml,152,162,#else,!(!defined(UNIT_TESTS)),UNIT_TESTS
+/home/user/RIMEL/cppstats/results/_cppstats_featurelocations/calculator/src/GraphingImpl/pch.h.xml,5,7,#if,!defined(WIN32_LEAN_AND_MEAN),WIN32_LEAN_AND_MEAN
+/home/user/RIMEL/cppstats/results/_cppstats_featurelocations/calculator/src/GraphingInterfaces/Common.h.xml,9,15,#if,!defined(GRAPHINGAPI),GRAPHINGAPI
+/home/user/RIMEL/cppstats/results/_cppstats_featurelocations/calculator/src/GraphingInterfaces/Common.h.xml,10,12,#if,(!defined(GRAPHINGAPI)) && (defined(GRAPHING_ENGINE_IMPL)),GRAPHINGAPI;GRAPHING_ENGINE_IMPL
+/home/user/RIMEL/cppstats/results/_cppstats_featurelocations/calculator/src/GraphingInterfaces/Common.h.xml,12,14,#else,(!defined(GRAPHINGAPI)) && (!(defined(GRAPHING_ENGINE_IMPL))),GRAPHINGAPI;GRAPHING_ENGINE_IMPL
