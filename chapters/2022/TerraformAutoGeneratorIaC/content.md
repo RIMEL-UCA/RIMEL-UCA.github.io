@@ -59,6 +59,7 @@ Il existe des outils qui permettent de tester et vérifier le code Terraform.
 Limite : Aucun trouvé
 
 • Checkov, c’est un outil qui va scanner les fichiers de IaC pour détecter les erreurs de configuration du cloud pendant la phase de construction pour Terraform, CloudFormation, Kubernetes, les frameworks serverless et d'autres langages IaC.
+
 Limite : Dépend de python, il faut installer python 3 sur la machine avant de pouvoir installer et utiliser Checkov.
 
 • Deepsource, est un framework qui permet d’aider le développeur à écrire du code terraform en respectant les coding convention de terrafom, et sans avoir des problèmes de sécurité dans le code IaC. Il permet aussi de détecter les problèmes de sécurité, lors de l’écriture d’un fichier terraform, et proposer automatiquement des recommandations de bons pratiques à appliquer dans les fichiers .tf pour assurer les bonnes configurations des fichier Terraform du projet. Minimiser ainsi les erreurs lors du déploiement. 
