@@ -53,22 +53,20 @@ Terraform est un outil où le développeur écrit du code pour décrire comment 
 ### Bonnes pratiques : Vérification automatique du code et test
 Terraform permet d’écrit du code. Il est donc important de pouvoir tester ce code notamment parce qu’un mauvais code de déploiement peut être débité par le fournisseur Cloud et peut faire écrouler les services déployés. La question est donc de savoir si et comment on peut tester du code Terraform.
 Il existe des outils qui permettent de tester et vérifier le code Terraform.
-    • Terratest est un framework de test Terraform populaire (également utilisé pour les tests unitaires et E2E), les tests sont écrits en Go. Il peut également être utilisé pour tester Packer, Docker, Kubernetes, Vault et de nombreux autres produits.
 
-    • Limite : Rien
+ • Terratest est un framework de test Terraform populaire (également utilisé pour les tests unitaires et E2E), les tests sont écrits en Go. Il peut également être utilisé pour tester Packer, Docker, Kubernetes, Vault et de nombreux autres produits.
 
-    • Checkov, c’est un outil qui va scanner les fichiers de IaC pour détecter les erreurs de configuration du cloud pendant la phase de construction pour Terraform, CloudFormation, Kubernetes, les frameworks serverless et d'autres langages IaC.
+Limite : Aucun trouvé
 
-    • Limite : Dépend de python, il faut installer python 3 sur la machine avant de pouvoir installer et utiliser Checkov.
+• Checkov, c’est un outil qui va scanner les fichiers de IaC pour détecter les erreurs de configuration du cloud pendant la phase de construction pour Terraform, CloudFormation, Kubernetes, les frameworks serverless et d'autres langages IaC.
+Limite : Dépend de python, il faut installer python 3 sur la machine avant de pouvoir installer et utiliser Checkov.
 
-    • Deepsource, est un framework qui permet d’aider le développeur à écrire du code terraform en respectant les coding convention de terrafom, et sans avoir des problèmes 
-    • de sécurité dans le code IaC. Il permet aussi de détecter les problèmes de sécurité, lors de l’écriture d’un fichier terraform, et proposer automatiquement des recommandations de bons pratiques à appliquer dans les fichiers .tf pour assurer les bonnes configurations des fichier Terraform du projet. Minimiser ainsi les erreurs lors du déploiement. 
+• Deepsource, est un framework qui permet d’aider le développeur à écrire du code terraform en respectant les coding convention de terrafom, et sans avoir des problèmes de sécurité dans le code IaC. Il permet aussi de détecter les problèmes de sécurité, lors de l’écriture d’un fichier terraform, et proposer automatiquement des recommandations de bons pratiques à appliquer dans les fichiers .tf pour assurer les bonnes configurations des fichier Terraform du projet. Minimiser ainsi les erreurs lors du déploiement. 
+Limite : Framework payant pour les grands projets.
 
-    • Limite : Framework payant pour les grands projets.
+• SonarQube : SonarQube est une plate-forme open-source développée par SonarSource pour l'inspection continue de la qualité du code afin d'effectuer des revues automatiques avec une analyse statique du code pour détecter les bugs, les codes smells sur plus de 20 langages de programmation.
 
-    • SonarQube : SonarQube est une plate-forme open-source développée par SonarSource pour l'inspection continue de la qualité du code afin d'effectuer des revues automatiques avec une analyse statique du code pour détecter les bugs, les codes smells sur plus de 20 langages de programmation.
-
-    • Limite : On ne peut pas personnaliser les règles de scan de SonarQube
+Limite : On ne peut pas personnaliser les règles de scan de SonarQube
 
 Nous avons lancé ces outils sur certains des projets que nous avons trouvé
 
@@ -91,7 +89,7 @@ Nous avons lancé ces outils sur certains des projets que nous avons trouvé
 | [https://github.com/Dzhuneyt/hotelster](https://github.com/Dzhuneyt/hotelster)                                                                                                  | 3 checks ont passés, 4 ont échoués 0 ignorés                                         | 1 problème : "\`aws\_instance\` resource should activate session tokens for Instance Metadata Service"                                                                                                                                                                                                                                                                                                                              |
 | [https://github.com/HaberkornJonas/DevOps\_T-NSA-700](https://github.com/HaberkornJonas/DevOps_T-NSA-700)                                                                       | 16 checks ont passés, 16 checks ont échoués et 0 ignorés                             | 1 problème de sécurité : "Detected password authentication instead of \`SSH\` keys"                                                                                                                                                                                                                                                                                                                                                 |
 | [https://github.com/Murph9/dash.murph9.com/blob/main/dash/site\_contents/index.html](https://github.com/Murph9/dash.murph9.com/blob/main/dash/site_contents/index.html)         | 7 checks ont passés, 10 checks ont échoués et 0 ignorés                              | 8 problèmes de sécurité : "CloudFront distribution should have Access Logging configured", "CloudFront distribution uses outdated SSL/TLS protocols", "S3 Bucket has an ACL defined which allows public access", "S3 Bucket does not have logging enabled", "Unencrypted S3 bucket", "S3 Data should be versioned" et "CloudFront distribution does not have a WAF in front"                                                        |
-| [https://github.com/OlesYudin/demo_ci-cd](https://github.com/OlesYudin/demo_ci-cd)                                                                                             | 6 checks ont passés, 5 ont échoués et 0 ignorés                                      | 3 problème de sécurité : "\`aws\_instance\` resource should activate session tokens for Instance Metadata Service", "An inline ingress security group rule allows traffic from \`/0\`" et "An inline egress security group rule allows traffic to \`/0\`"                                                                                                                                                                           |
+| [https://github.com/OlesYudin/demo_ci-cd](https://github.com/OlesYudin/demo_ci-cd)                                                                                             | 6 checks ont passés, 5 ont échoués et 0 ignorés                                      | 3 problème de sécurité : "\`aws\_instance\` resource should activate session tokens for Instance Metadata Service", "An inline ingress security group rule allows traffic from \`/0\`" et "An inline egress security group rule allows traffic to `/0\`"                                                                                                                                                                           |
 
 ### Bonnes pratiques : Utilisation des modules
 Ensemble de fichiers de configurations réutilisables, comme des fonctions dans les langages de programmation. Un projet peut placer certaines configurations dans des dossiers et les appeler dans d’autres configurations. Terraform a aussi des registres (dépôts) de configurations publiques et privées pour partager et réutiliser des configurations dans la communauté ou dans des organisations.
@@ -120,8 +118,8 @@ Nous n’avons pas beaucoup de grands projets déployant des choses avec Terrafo
 Notre question principale était assez ambitieuse. En effet, on souhaitait étudier la possibilité de générer du code Terraform en partant d’une application existante. Même si nous n’avons pas pu directement apporter des réponses à cette question nous avons néanmoins pu trouver des pistes pour répondre aux questions sur les bonnes pratiques et la “templatabilité” du code Terraform. Nous avons rencontré assez de difficulté sur le fait qu’il n’existe pas beaucoup de projets publics d’envergure déployés avec Terraform disponibles sur GitHub.  La plupart des projets sont des tutoriels ou des modules.
 
 ### Bibliographie
-Règles et bonnes pratiques Terraform sur SonarSource : https://rules.sonarsource.com/terraform
-Trouver des projets utilisant Terraform : https://awesomeopensource.com/projects/terraform
-Comparaison Terraform et Ansible : https://k21academy.com/ansible/terraform-vs-ansible/
-Site officiel de Terraform : https://www.terraform.io/
-Librairie Java pour parser du HCL: https://github.com/bertramdev/hcl4j
+- Règles et bonnes pratiques Terraform sur SonarSource : https://rules.sonarsource.com/terraform
+- Trouver des projets utilisant Terraform : https://awesomeopensource.com/projects/terraform
+- Comparaison Terraform et Ansible : https://k21academy.com/ansible/terraform-vs-ansible/
+- Site officiel de Terraform : https://www.terraform.io/
+- Librairie Java pour parser du HCL: https://github.com/bertramdev/hcl4j
