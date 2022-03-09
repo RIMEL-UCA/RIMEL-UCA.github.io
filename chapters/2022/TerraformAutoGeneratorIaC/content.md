@@ -8,13 +8,18 @@ date:   2022-01-10 21:241:00 +0100
 
 Sujet 5 : Quelles (bonnes) pratiques automatisables pour les systèmes de déploiement comme Ansible ou Terraform ?
 ## Auteurs
-ANAGONOU Patrick : anagonousourou - sourou-patrick.anagonou@etu.unice.fr 
-FRANCIS Anas : FRANCISAnas – anas.francis@etu.unice.fr
-ANIGLO Jonas : JIV-DLS - jonas-vihoale.aniglo@etu.unice.fr
-ZABOURDINE Soulaiman : ZabourdineSoulaiman - mohamedsoulaiman-tha.zabourdine@etu.unice.fr
+- ANAGONOU Patrick : [anagonousourou](https://github.com/anagonousourou/) - sourou-patrick.anagonou@etu.unice.fr 
+
+- FRANCIS Anas : [FRANCISAnas](https://github.com/FRANCISAnas) – anas.francis@etu.unice.fr
+
+- ANIGLO Jonas : [JIV-DLS](https://github.com/JIV-DLS) - jonas-vihoale.aniglo@etu.unice.fr
+
+- ZABOURDINE Soulaiman : [ZabourdineSoulaiman](https://github.com/ZabourdineSoulaiman) - mohamedsoulaiman-tha.zabourdine@etu.unice.fr
+
 
 ## Contexte
 Des technologies comme Ansible ou Terraform permettent d’automatiser le déploiement de systèmes sur des infrastructures cloud et d’en configurer plusieurs aspects (ex. cloud provider, …). Chacun de ces deux systèmes IaC (Infrastructure As Code) dispose de sa propre organisation, de certains outillages standards (linter, afficheur, …) ou fournis par la communauté, et de bonnes pratiques qui émergent sans être forcément bien établis. On trouve des réponses dans des forums connus (StackOverflow), des billets de blog dont on ne sait pas si ce sont des pratiques répétées ou un retour d’expérience après un seul déploiement, etc. L’ensemble forme une jungle désorganisée de pratiques.
+
 ## Question principale :
 Comment automatiser la génération des fichiers de configuration (IaC) en Terraform d'un projet existant ?
 Nous pensons que cette question est pertinente parce qu’un Template de configuration peut aider les développeurs à développer et déployer plus vite.  Nous avons fait le choix d’utiliser Terraform au lieu d’Ansible parce qu’il a sa propre extension de fichier et langage dédié HCL (contrairement à Ansible qui utilise YAML) ce qui peut rendre l’identification d’un projet utilisant Terraform plus facile. Etant un outil déclaratif Terraform nous permettra de définir le modèle d’exécution du projet à automatiser contrairement à Ansible (impératif) qui est plus orienté sur comment le faire.
