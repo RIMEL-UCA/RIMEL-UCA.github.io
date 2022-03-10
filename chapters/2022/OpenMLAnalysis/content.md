@@ -360,7 +360,7 @@ Finalement, notre étude ne semble pas montrer qu’il existe d’algorithmes d�
 
 ## VI. Outils & Ressources
 
-Pour répondre à la question générale et aux sous-questions que nous nous sommes posés, nous avons travaillé ensemble sur la plateforme en ligne [Google Colab](https://colab.research.google.com/). Vous trouverez l'accès à notre Notebook [ici](https://colab.research.google.com/drive/1oU2_6NU-mEvBCcgkTCeQFOOK52kMT9fN?usp=sharing). Ce même Notebook est disponible [ici](../assets/OpenMLAnalysis/Notebook_RIMEL_Groupe_H.ipynb).
+Pour répondre à la question générale et aux sous-questions que nous nous sommes posés, nous avons travaillé ensemble sur la plateforme en ligne [Google Colab](https://colab.research.google.com/). Vous trouverez l'accès à notre Notebook [ici](https://colab.research.google.com/drive/1oU2_6NU-mEvBCcgkTCeQFOOK52kMT9fN?usp=sharing). Ce même Notebook est aussi disponible [ici](../assets/OpenMLAnalysis/Notebook_RIMEL_Groupe_H.ipynb).
 Nous avons utilisé [`Pandas`](https://pandas.pydata.org/), [`Matplotlib`](https://matplotlib.org/), [`Plotly`](https://plotly.com/) et [`NetworkX`](https://networkx.org/) pour traiter les données et créer des graphiques sur lesquels nous avons basé nos analyses et conclusions.
 
 ## VII. Références
