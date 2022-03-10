@@ -98,7 +98,7 @@ Nous avons lancé ces outils sur certains des projets que nous avons trouvé
 | [https://github.com/OlesYudin/demo_ci-cd](https://github.com/OlesYudin/demo_ci-cd)                                                                                             | 6 checks ont passés, 5 ont échoués et 0 ignorés                                      | 3 problème de sécurité : "\`aws\_instance\` resource should activate session tokens for Instance Metadata Service", "An inline ingress security group rule allows traffic from \`/0\`" et "An inline egress security group rule allows traffic to `/0\`"                                                                                                                                                                           |
 
 ### Bonnes pratiques : Utilisation des modules
-Ensemble de fichiers de configurations réutilisables, comme des fonctions dans les langages de programmation. Un projet peut placer certaines configurations dans des dossiers et les appeler dans d’autres configurations. Terraform a aussi des registres (dépôts) de configurations publiques et privées pour partager et réutiliser des configurations dans la communauté ou dans des organisations.
+Un module est un ensemble de fichiers de configurations réutilisables, comme des fonctions dans les langages de programmation. Un projet peut placer certaines configurations dans des dossiers et les appeler dans d’autres configurations. Terraform a aussi des registres (dépôts) de configurations publiques et privées pour partager et réutiliser des configurations dans la communauté ou dans des organisations.
 Les modules ont donc de très bonnes propriétés et leur utilisation est une bonne pratique Terraform.
 
 ### Infrastructure as Code  “Templatable”
