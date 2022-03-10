@@ -31,10 +31,10 @@ Nous avons détaillé notre question principale en deux sous-questions auxquelle
     • Comment identifier les bonnes pratiques et reconnaitre qu'elles sont automatisables ?
 
 ### Terraform
-Terraform est un outil logiciel d'Infrastructure as Code créé par HashiCorp. Les utilisateurs définissent leur infrastructure en utilisant le langage HCL. Il a été créé le 28 juillet 2014 par la société Hashicorp. Terraform permet de décrire le déploiement d’une solution logicielle dans le cloud sous forme de fichiers. Il supporte notamment les principaux fournisseurs de cloud : Google, Amazon web services, Azure.
+Terraform est un outil logiciel d'Infrastructure as Code créé le 28 juillet 2014 par la société HashiCorp. Les utilisateurs définissent leur infrastructure en utilisant le langage HCL. Terraform permet de décrire le déploiement d’une solution logicielle dans le cloud sous forme de fichiers. Il supporte notamment les principaux fournisseurs de cloud comme par exemple Google, Amazon web services, Azure.
 
 ### Bonnes pratiques : Conventions d’écriture de code
-Terraform est un outil où le développeur écrit du code pour décrire comment il veut déployer une application sur le cloud. Certaines conventions sont encouragées par les développeurs de Terraform pour rendre le code Terraform plus accessible. Ainsi le nommage suivant est encouragé pour un projet de taille moyenne.
+Terraform est un outil permettant au développeur de configurer comment il veut déployer une application sur le cloud. Certaines conventions sont encouragées par les développeurs de Terraform pour rendre le code Terraform plus accessible. Ainsi le nommage suivant est encouragé pour un projet de taille moyenne.
     • main.tf - appelle les modules, les variables locales et les sources de données pour créer toutes les ressources
     • variables.tf - contient les variables qui seront utilisées dans main.tf
     • outputs.tf - contient les sorties des ressources créées dans main.tf
@@ -56,21 +56,21 @@ Terraform est un outil où le développeur écrit du code pour décrire comment 
 |[https://github.com/combinatorist/terraform-demo](https://github.com/combinatorist/terraform-demo)                                                                             |Demo de déploiement sur AWS                                                                                                                                                                                                                                                                  |\-                                                                                                       |Fichiers séparé pour pour la configuration AWS                                                                               |Pas de fichiers output / variables      |
 
 ### Bonnes pratiques : Vérification automatique du code et test
-Terraform permet d’écrit du code. Il est donc important de pouvoir tester ce code notamment parce qu’un mauvais code de déploiement peut être débité par le fournisseur Cloud et peut faire écrouler les services déployés. La question est donc de savoir si et comment on peut tester du code Terraform.
+Terraform permet d’écrire du code. Il est donc important de pouvoir tester ce code notamment parce qu’un mauvais code de déploiement peut être débité par le fournisseur Cloud et peut faire écrouler les services déployés. La question est donc de savoir si et comment on peut tester du code Terraform.
 Il existe des outils qui permettent de tester et vérifier le code Terraform.
 
  • Terratest est un framework de test Terraform populaire (également utilisé pour les tests unitaires et E2E), les tests sont écrits en Go. Il peut également être utilisé pour tester Packer, Docker, Kubernetes, Vault et de nombreux autres produits.
 
 Limite : Aucun trouvé
 
-• Checkov, c’est un outil qui va scanner les fichiers de IaC pour détecter les erreurs de configuration du cloud pendant la phase de construction pour Terraform, CloudFormation, Kubernetes, les frameworks serverless et d'autres langages IaC.
+• -	Checkov est un outil qui permet de scanner les fichiers de IaC afin de détecter les erreurs de configuration du cloud pendant la phase de construction pour Terraform, CloudFormation, Kubernetes, les frameworks serverless et d'autres langages IaC.
 
-Limite : Dépend de python, il faut installer python 3 sur la machine avant de pouvoir installer et utiliser Checkov.
+Limite : Nécessite Python3 afin d’installer Checkov sur une machine
 
-• Deepsource, est un framework qui permet d’aider le développeur à écrire du code terraform en respectant les coding convention de terrafom, et sans avoir des problèmes de sécurité dans le code IaC. Il permet aussi de détecter les problèmes de sécurité, lors de l’écriture d’un fichier terraform, et proposer automatiquement des recommandations de bons pratiques à appliquer dans les fichiers .tf pour assurer les bonnes configurations des fichier Terraform du projet. Minimiser ainsi les erreurs lors du déploiement. 
+• -	Deepsource est un Framework qui aide le développeur à écrire du code terraform en respectant les conventions de codage de terrafom, et en évitant d’être confronté à des problèmes de sécurité dans le code IaC. Il permet donc de détecter les problèmes de sécurité, lors de l’écriture d’un fichier terraform, et propose automatiquement des recommandations de bonnes pratiques à appliquer dans les fichiers .tf pour assurer la bonne configuration des fichiers Terraform du projet. Cela permet par extension de minimiser les erreurs lors du déploiement. 
 Limite : Framework payant pour les grands projets.
 
-• SonarQube : SonarQube est une plate-forme open-source développée par SonarSource pour l'inspection continue de la qualité du code afin d'effectuer des revues automatiques avec une analyse statique du code pour détecter les bugs, les codes smells sur plus de 20 langages de programmation.
+• SonarQube : SonarQube est une plateforme open-source développée par SonarSource pour l'inspection continue de la qualité du code afin d'effectuer des revues automatiques avec une analyse statique du code pour détecter les bugs, les codes smells sur plus de 20 langages de programmation.
 
 Limite : On ne peut pas personnaliser les règles de scan de SonarQube
 
@@ -102,7 +102,7 @@ Un module est un ensemble de fichiers de configurations réutilisables, comme de
 Les modules ont donc de très bonnes propriétés et leur utilisation est une bonne pratique Terraform.
 
 ### Infrastructure as Code  “Templatable”
-Notre première idée de départ sur les outils Infrastructure as Code était de se demander s’il était possible de partir du code source d’un projet n’étant pas encore déployé dans le Cloud pour définir le code Terraform pour le déployer sur le fournisseur de Cloud de notre choix. Après quelques recherches sur le mode de fonctionnement de Terraform nous n’avions pas de pistes sur comment étudié répondre à cette question. Lorsque nous avons découvert l’existence des modules au sein de Terraform nous avons alors décidé de réorienter la question. En effet vu que les modules permettent de factoriser du code qui accomplit des tâches répétables, nous nous sommes posé la question de comment un développeur peut savoir s’il peut utiliser des modules existants dans son code Terraform pour le simplifier et quels modules existants pourraient l’aider.
+Notre idée de départ sur les outils Infrastructure as Code, consistait partir du code source d’un projet n’étant pas encore déployé dans le Cloud afin de définir le code Terraform pour le déployer sur le fournisseur de Cloud de notre choix. Après quelques recherches sur le mode de fonctionnement de Terraform nous n’avions pas de pistes pour répondre à cette question. Lorsque nous avons découvert l’existence des modules au sein de Terraform nous avons alors décidé de réorienter la question. En effet vu que les modules permettent de factoriser du code qui accomplit des tâches répétables, nous nous sommes posé la question de comment un développeur peut savoir s’il peut utiliser des modules existants dans son code Terraform pour le simplifier et quels modules existants pourraient l’aider.
 Les modules publics de Terraform sont accessibles à partir de l’API REST de Terraform. Nous avons développé un script qui récupère les informations de tous les modules publics (dernières versions) sur Terraform. Nous avons ensuite récupéré pour chaque module existant les ressources utilisées par le module. Les ressources sont des éléments de base du langage Terraform qui permettent d’utiliser un élément particulier du fournisseur cloud. Les ressources sont spécifiques au fournisseur cloud.
 Nous avons écrit des fonctions qui nous permettent de récupérer les ressources utilisées dans un code utilisateur (on entend par là du code terraform qui déploie effectivement des applications). Nous comparons ensuite les ressources utilisées aux ressources de tous les modules recensés. Nous appliquons pour cela un bonus de similarité si une ressource est utilisée dans le code utilisateur et dans le module et un malus si une ressource est utilisée dans le module sans être dans le code utilisateur.  L’idée étant que si l’utilisateur est en train d’écrire du code terraform qui fait quelque chose déjà implémenté dans un module existant il utilisera les mêmes ressources que le module. Nous allons montrer les résultats obtenus. 
 
