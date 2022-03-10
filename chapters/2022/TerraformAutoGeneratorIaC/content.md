@@ -129,3 +129,7 @@ Notre question principale était assez ambitieuse. En effet, on souhaitait étud
 - Comparaison Terraform et Ansible : https://k21academy.com/ansible/terraform-vs-ansible/
 - Site officiel de Terraform : https://www.terraform.io/
 - Librairie Java pour parser du HCL: https://github.com/bertramdev/hcl4j
+
+### Code
+
+Notre code se trouve [ici](../assets/TerraformAutoGeneratorIaC).
