@@ -74,6 +74,7 @@ Limite : Aucun trouvé
 Limite : Nécessite Python3 afin d’installer Checkov sur une machine
 
 - Deepsource est un Framework qui aide le développeur à écrire du code terraform en respectant les conventions de codage de terrafom, et en évitant d’être confronté à des problèmes de sécurité dans le code IaC. Il permet donc de détecter les problèmes de sécurité, lors de l’écriture d’un fichier terraform, et propose automatiquement des recommandations de bonnes pratiques à appliquer dans les fichiers .tf pour assurer la bonne configuration des fichiers Terraform du projet. Cela permet par extension de minimiser les erreurs lors du déploiement. 
+
 Limite : Framework payant pour les grands projets.
 
 - SonarQube : SonarQube est une plateforme open-source développée par SonarSource pour l'inspection continue de la qualité du code afin d'effectuer des revues automatiques avec une analyse statique du code pour détecter les bugs, les codes smells sur plus de 20 langages de programmation.
