@@ -41,8 +41,7 @@ Finalement, pour nous aider à répondre à cette question, nous l'avons découp
 
 ## III. Collecte d'informations
 
-Nous pouvons extraire les tâches (*tasks*) et les flux (*flows*) terminés grâce à l'**API Python d'OpenML** et [sa documentation](https://docs.openml.org/Python-API/).
-Pour cela, on utilise une librairie `Python` existante ([OpenML](https://pypi.org/project/openml/)), et nous les traitons avec `Pandas` et `Matplotlib`, pour en faire des graphes.
+Nous extrayons les tâches (*tasks*), les runs  (*runs*), les flux (*flows*) sur différents datasets grâce à l’[**API Python d'OpenML**](https://docs.openml.org/Python-API/).
 
 ## IV. Hypothèses & Expériences
 
@@ -133,13 +132,15 @@ Sur ce premier graphique, il est difficile de ressortir un quelconque résultat.
 <iframe src="../assets/OpenMLAnalysis/graph_occurrence_conjointe_filtré.html" width="100%" height="500px"></iframe>
 Cliquez [ici](../assets/OpenMLAnalysis/graph_occurrence_conjointe_filtré.html){:target="_blank"} pour afficher le graphique en grand.
 
-Dans cette nouvelle visualisation, on distingue différents groupes d'algorithmes. Parmi ces algorithmes utilisés conjointement plusieurs fois avec d’autres algorithmes, on remarque... 
-
-**Todo :  étudier les chaines d’algo, c’est quoi le plus souvent ?**
+Dans cette nouvelle visualisation, on distingue différents groupes d'algorithmes. Parmi ces algorithmes utilisés conjointement plusieurs fois avec d’autres algorithmes, créant ainsi des chaînes de travail clairement identifiées, aucune tâche ne se distingue. Ces groupes de *workflows* sont parfois destinés à du prétraitement, ou au traitement pur des données, ou encore à l'évaluation des résultats.
 
 On remarque aussi que les algorithmes les plus utilisés sont souvent isolés. 
 
+Enfin, cette visualisation permet de mettre en évidence qu’il n’y a pas de dépendance entre les différentes chaînes de *workflow*. L’utilisation d’une sous-chaîne ne semble pas influer le choix de l’utilisation d’un algorithme de traitement (comme **DecisionStump**). De la même manière, on remarque aussi que l’utilisation d’un algorithme de traitement ne force pas l’utilisation d’une même sous-chaîne d’algorithmes de prétraitement.
+
 ### 3. Existe-t-il des algorithmes qui ne sont utilisés que sur les séries temporelles ?
+
+On a déjà montré l'influence qu'avait une tâche effectuée sur le choix de l’algorithme pour les séries temporelles. Sur des tâches similaires (**Classification supervisée** et **découverte de sous groupe**), parmi les algorithmes les plus utilisés, aucun ne semble être spécifique au traitement des séries temporelles. On obtient quelques résultats par exemple, le flow (id : `135`) **BestFirst**, mais les différences entre les datasets de séries temporelles et ceux qui ne le sont pas sont trop minces. En effet cet écart pourrait être dû à la sélection des datasets pour représenter ceux qui ne sont pas des séries temporelles. 
 
 ```json
 {
@@ -354,11 +355,13 @@ Voici les `flows` les plus utilisés sur les datasets qui ne sont pas des série
 
 ![Occurrence des flows](../assets/OpenMLAnalysis/Flows%20les%20plus%20fréquemment%20utilisés%20sur%20les%20datasets%20qui%20ne%20sont%20pas%20des%20series%20temporelles.png "Occurrence des flows")
 
-*Analyse des résultats & construction d’une conclusion : Une fois votre expérience terminée, vous récupérez vos mesures et vous les analysez pour voir si votre hypothèse tient la route.*
+Une nouvelle fois, on retrouve la forte utilisation des deux algorithmes **DecisionStump** et **J48**. À fortiori, le choix des algorithmes n’est influencé que par le type de tâches à exécuter, quel que soit le type de dataset sur lequel on lance la tâche.
+Finalement, notre étude ne semble pas montrer qu’il existe d’algorithmes dédiés au traitement des séries temporelles.
 
 ## VI. Outils & Ressources
 
-Pour répondre à la questions générale que nous nous sommes posés, nous avons travaillé ensemble sur la plateforme en ligne [Google Colab](https://colab.research.google.com/). Vous trouverez donc l'accès à notre Notebook [ici](https://colab.research.google.com/drive/1oU2_6NU-mEvBCcgkTCeQFOOK52kMT9fN?usp=sharing).
+Pour répondre à la question générale et aux sous-questions que nous nous sommes posés, nous avons travaillé ensemble sur la plateforme en ligne [Google Colab](https://colab.research.google.com/). Vous trouverez l'accès à notre Notebook [ici](https://colab.research.google.com/drive/1oU2_6NU-mEvBCcgkTCeQFOOK52kMT9fN?usp=sharing). Ce même Notebook est disponible [ici](../assets/OpenMLAnalysis/Notebook_RIMEL_Groupe_H.ipynb).
+Nous avons utilisé [`Pandas`](https://pandas.pydata.org/), [`Matplotlib`](https://matplotlib.org/), [`Plotly`](https://plotly.com/) et [`NetworkX`](https://networkx.org/) pour traiter les données et créer des graphiques sur lesquels nous avons basé nos analyses et conclusions.
 
 ## VII. Références
 
