@@ -65,18 +65,18 @@ Terraform est un outil permettant au développeur de configurer comment il veut 
 Terraform permet d’écrire du code. Il est donc important de pouvoir tester ce code notamment parce qu’un mauvais code de déploiement peut être débité par le fournisseur Cloud et peut faire écrouler les services déployés. La question est donc de savoir si et comment on peut tester du code Terraform.
 Il existe des outils qui permettent de tester et vérifier le code Terraform.
 
- • Terratest est un framework de test Terraform populaire (également utilisé pour les tests unitaires et E2E), les tests sont écrits en Go. Il peut également être utilisé pour tester Packer, Docker, Kubernetes, Vault et de nombreux autres produits.
+- Terratest est un framework de test Terraform populaire (également utilisé pour les tests unitaires et E2E), les tests sont écrits en Go. Il peut également être utilisé pour tester Packer, Docker, Kubernetes, Vault et de nombreux autres produits.
 
 Limite : Aucun trouvé
 
-• -	Checkov est un outil qui permet de scanner les fichiers de IaC afin de détecter les erreurs de configuration du cloud pendant la phase de construction pour Terraform, CloudFormation, Kubernetes, les frameworks serverless et d'autres langages IaC.
+- Checkov est un outil qui permet de scanner les fichiers de IaC afin de détecter les erreurs de configuration du cloud pendant la phase de construction pour Terraform, CloudFormation, Kubernetes, les frameworks serverless et d'autres langages IaC.
 
 Limite : Nécessite Python3 afin d’installer Checkov sur une machine
 
-• -	Deepsource est un Framework qui aide le développeur à écrire du code terraform en respectant les conventions de codage de terrafom, et en évitant d’être confronté à des problèmes de sécurité dans le code IaC. Il permet donc de détecter les problèmes de sécurité, lors de l’écriture d’un fichier terraform, et propose automatiquement des recommandations de bonnes pratiques à appliquer dans les fichiers .tf pour assurer la bonne configuration des fichiers Terraform du projet. Cela permet par extension de minimiser les erreurs lors du déploiement. 
+- Deepsource est un Framework qui aide le développeur à écrire du code terraform en respectant les conventions de codage de terrafom, et en évitant d’être confronté à des problèmes de sécurité dans le code IaC. Il permet donc de détecter les problèmes de sécurité, lors de l’écriture d’un fichier terraform, et propose automatiquement des recommandations de bonnes pratiques à appliquer dans les fichiers .tf pour assurer la bonne configuration des fichiers Terraform du projet. Cela permet par extension de minimiser les erreurs lors du déploiement. 
 Limite : Framework payant pour les grands projets.
 
-• SonarQube : SonarQube est une plateforme open-source développée par SonarSource pour l'inspection continue de la qualité du code afin d'effectuer des revues automatiques avec une analyse statique du code pour détecter les bugs, les codes smells sur plus de 20 langages de programmation.
+- SonarQube : SonarQube est une plateforme open-source développée par SonarSource pour l'inspection continue de la qualité du code afin d'effectuer des revues automatiques avec une analyse statique du code pour détecter les bugs, les codes smells sur plus de 20 langages de programmation.
 
 Limite : On ne peut pas personnaliser les règles de scan de SonarQube
 
