@@ -27,7 +27,9 @@ Nous pensons que cette question est pertinente parce qu’un Template de configu
 ## Recherches
 
 Nous avons détaillé notre question principale en deux sous-questions auxquelles nous allons essayer de répondre.
+
     - Est-ce que les fichiers de configuration (IaC) sont "templatables" ? 
+
     - Comment identifier les bonnes pratiques et reconnaitre qu'elles sont automatisables ?
 
 ### Terraform
@@ -35,9 +37,13 @@ Terraform est un outil logiciel d'Infrastructure as Code créé le 28 juillet 20
 
 ### Bonnes pratiques : Conventions d’écriture de code
 Terraform est un outil permettant au développeur de configurer comment il veut déployer une application sur le cloud. Certaines conventions sont encouragées par les développeurs de Terraform pour rendre le code Terraform plus accessible. Ainsi le nommage suivant est encouragé pour un projet de taille moyenne.
+
     - main.tf - appelle les modules, les variables locales et les sources de données pour créer toutes les ressources
+
     - variables.tf - contient les variables qui seront utilisées dans main.tf
+
     - outputs.tf - contient les sorties des ressources créées dans main.tf
+    
     - versions.tf - contient les exigences de version pour Terraform et les fournisseurs
 
  
