@@ -16,15 +16,15 @@ A noter pour les futures explications que `index DF` correspond à `index DataFr
 
 ```jsonc
 { // The root schema
-    "0": { // occurrence root : name index DF
+    "0": { // occurrence root, name : index DF
         "0": 1090, // flow id
         "1": 113 // nombre d'utilisations
     },
-    "1": { // occurrence root : name index DF
+    "1": { // occurrence root, name : index DF
         "0": 1068, // flow id
         "1": 98 // nombre d'utilisations
     },
-    "2": { // occurrence root : name index DF
+    "2": { // occurrence root, name : index DF
         "0": 377, // flow id
         "1": 55 // nombre d'utilisations
     }

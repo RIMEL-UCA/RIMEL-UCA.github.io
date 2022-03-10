@@ -358,7 +358,7 @@ Voici les `flows` les plus utilisés sur les datasets qui ne sont pas des série
 
 ## VI. Outils & Ressources
 
-Pour répondre à la questions générale que nous nous sommes posés, nous avons travaillé ensemble sur la plateforme en ligne [Google Colab](https://colab.research.google.com/). Vous trouverez donc l'accès à notre Notebook [ici](https://colab.research.google.com/).
+Pour répondre à la questions générale que nous nous sommes posés, nous avons travaillé ensemble sur la plateforme en ligne [Google Colab](https://colab.research.google.com/). Vous trouverez donc l'accès à notre Notebook [ici](https://colab.research.google.com/drive/1oU2_6NU-mEvBCcgkTCeQFOOK52kMT9fN?usp=sharing).
 
 ## VII. Références
 
