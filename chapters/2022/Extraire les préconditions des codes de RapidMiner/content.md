@@ -9,7 +9,7 @@ date:   2022-01-08 17:08:00 +0100
 Nous sommes cinq étudiants de dernière année à Polytech Nice Sophia spécialisés en Architecture Logicielle :
 
 * Tigran Nersissian <tigran.nersissian@etu.univ-cotedazur.fr>
-* Yann Martin D&#039;Escrienne [yann.martin&dash;d&#039;escrienne@etu.univ-cotedazur.fr](mailto:yann.martin-d'escrienne@etu.univ-cotedazur.fr)
+* Yann Martin D&#039;Escrienne [yann.martin-d'escrienne@etu.univ-cotedazur.fr](mailto:yann.martin-d'escrienne@etu.univ-cotedazur.fr)
 * Valentin Campello <valentin.campello@etu.univ-cotedazur.fr>
 * Lucie Morant <lucie.morant@etu.univ-cotedazur.fr>
 * Yohann Tognetti <yohann.tognetti@etu.univ-cotedazur.fr>
