@@ -5,6 +5,7 @@ date:   2022-01-08 17:08:00 +0100
 ---
 **_January 2022_**
 
+[Trouver l’extrait dans github](https://github.com/SI5-I-2021-2022/RIMEL/blob/c65db1896fd8a1cc25b91445848443db33380c82/rapidminer-studio-modular-master/rapidminer-studio-core/src/main/java/com/rapidminer/operator/learner/functions/FunctionFitting.java#L224-L238)
 ## Authors
 
 We are five students in last year of Polytech' Nice-Sophia specialized in Software Architecture :
@@ -155,6 +156,149 @@ We are five students in last year of Polytech' Nice-Sophia specialized in Softwa
     
   </body>
 </html>
+
+<html lang="en">
+  <head>
+    <title>Vis Network | Basic usage</title>
+
+    <script
+      type="text/javascript"
+      src="./umd/vis-network.min.js"
+    ></script>
+
+    <style type="text/css">
+      #mynetwork {
+        width: 900px;
+        height: 900px;
+        border: 1px solid lightgray;
+      }
+      #loadingBar {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 902px;
+        height: 902px;
+        background-color: rgba(200, 200, 200, 0.8);
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        opacity: 1;
+      }
+      #wrapper {
+        position: relative;
+        width: 900px;
+        height: 900px;
+      }
+      
+      #text {
+        position: absolute;
+        top: 8px;
+        left: 530px;
+        width: 30px;
+        height: 50px;
+        margin: auto auto auto auto;
+        font-size: 22px;
+        color: #000000;
+      }
+      
+      div.outerBorder {
+        position: relative;
+        top: 400px;
+        width: 600px;
+        height: 44px;
+        margin: auto auto auto auto;
+        border: 8px solid rgba(0, 0, 0, 0.1);
+        background: rgb(252, 252, 252); /* Old browsers */
+        background: -moz-linear-gradient(
+          top,
+          rgba(252, 252, 252, 1) 0%,
+          rgba(237, 237, 237, 1) 100%
+        ); /* FF3.6+ */
+        background: -webkit-gradient(
+          linear,
+          left top,
+          left bottom,
+          color-stop(0%, rgba(252, 252, 252, 1)),
+          color-stop(100%, rgba(237, 237, 237, 1))
+        ); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(
+          top,
+          rgba(252, 252, 252, 1) 0%,
+          rgba(237, 237, 237, 1) 100%
+        ); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(
+          top,
+          rgba(252, 252, 252, 1) 0%,
+          rgba(237, 237, 237, 1) 100%
+        ); /* Opera 11.10+ */
+        background: -ms-linear-gradient(
+          top,
+          rgba(252, 252, 252, 1) 0%,
+          rgba(237, 237, 237, 1) 100%
+        ); /* IE10+ */
+        background: linear-gradient(
+          to bottom,
+          rgba(252, 252, 252, 1) 0%,
+          rgba(237, 237, 237, 1) 100%
+        ); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+        border-radius: 72px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      }
+      
+      #border {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 500px;
+        height: 23px;
+        margin: auto auto auto auto;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+      }
+      
+      #bar {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 20px;
+        height: 20px;
+        margin: auto auto auto auto;
+        border-radius: 11px;
+        border: 2px solid rgba(30, 30, 30, 0.05);
+        background: rgb(0, 173, 246); /* Old browsers */
+        box-shadow: 2px 0px 4px rgba(0, 0, 0, 0.4);
+      }
+      th,td {
+        border: 1px solid black;
+        padding: 10px;
+    }
+      
+    </style>
+  </head>
+  <body>
+    <p>Graph orienté avec poids de chaînage des operateurs</p>
+    <table>
+    </table>
+    <p id="demo">Click on node to see here capabilities.</p>
+    <div id="wrapper">
+      <div id="mynetwork"></div>
+      <div id="loadingBar">
+        <div class="outerBorder">
+          <div id="text">0%</div>
+          <div id="border">
+            <div id="bar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="app2.js"></script>
+    
+  </body>
+</html>
+
 
 
 
