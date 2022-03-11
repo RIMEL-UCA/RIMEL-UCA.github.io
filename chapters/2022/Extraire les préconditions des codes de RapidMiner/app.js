@@ -7,7 +7,7 @@ const dictGraphUnfilter ={"Retrieve": ["Decision Tree", "LinearRegression", "Neu
 let uniqueDict={}
 for (let elem in dictGraphUnfilter){
   for (let op of dictGraphUnfilter[elem]){
-    uniqueDict[op.lower().replace(" ","")]=[]
+    uniqueDict[op]=[]
   }
 }
 
@@ -16,7 +16,7 @@ for (let elem in uniqueDict){
     continue
   }
   else {
-    dictGraphUnfilter[elem.lower().replace(" ","")]=[]
+    dictGraphUnfilter[elem]=[]
   }
 }
 const dictGraph=dictGraphUnfilter
