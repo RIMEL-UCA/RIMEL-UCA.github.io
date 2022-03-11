@@ -25,19 +25,21 @@ Ce chapitre est écrit dans le cadre du module Retro-ingénierie, maintenance et
 
 Plusieurs sujets de recherche ont été proposés aux groupes d'étudiants parmi lesquels : extraire des informations sur les systèmes de build (variabilité des builds), sujet que nous avons choisis.
 À la lecture du sujet, l’une des premières choses que nous nous sommes dit est l’idée selon laquelle la variabilité d’un système est forcément reflétée sur sa chaîne de CI. À une époque où les fausses informations se véhiculent principalement par les impressions, nous pensions cela intéressant de vérifier la véracité de cette ‘impression’. Nous nous sommes aussi intéressés à ce sujet afin de parfaire nos connaissances sur les CI de système où nous avons peu d’expérience.
+
 Dans notre étude, nous admettrons que configurabilité et variabilité sont des termes similaires car cela est hors de notre contexte. Pour voir s'il y a une différence entre les termes , il faudrait faire une étude bibliographique sur la "configurabilité" et la “variabilité”.
+
 Enfin, nous tentions initialement de répondre à la problématique suivante : est-ce qu’une forte variabilité d’un système implique une forte variabilité de sa CI ? Mais cette problématique, assez large, a été redécoupée en plusieurs sous questions dont l’une sera le sujet de ce chapitre.
-##II. Question générale
+## II. Question générale
 ---
 Nous avons commencé notre travail par l’étude d’un premier système, freeBSD, dont nous parlerons plus précisément en fin de chapitre, et les premiers résultats trouvés nous ont tout de suite orienté vers une nouvelle question qui constituera notre étude et le contenu de cet article.
-</br></br>
+</br>
 En effet, nous avons remarqué que la variabilité de la CI de freeBSD était composée en majorité de points de variations en lien avec la plateforme (qu’elle soit matérielle ou logicielle). Nous reviendrons sur cette démarche dans la partie suivante.
-</br></br>
+</br>
 Nous avons donc recentré notre question sur les liens qui existent entre variabilité du système et de la CI au niveau de la plateforme.
-</br></br>
+</br>
 La problématique sur laquelle nous avons travaillé tout au long de ce module est donc la suivante : est-ce que posséder une variabilité de plateforme au sein d’un système (matérielle ou logicielle) implique une variabilité de la CI ?
 
-##III. Collecte d’informations
+## III. Collecte d’informations
 ---
 Afin de choisir des projets qui constitueront notre base de travail, nous nous sommes posés les questions suivantes:      
 - Qu'est ce que la variabilité au sein d’un système ?       
@@ -56,9 +58,9 @@ un projet OpenSource utilisant le Préprocesseur C
 qui comporte des fichiers de configuration CI.
 Nous avons étudié FreeBSD, Redis, la calculette Windows, OpenVPN et OpenCorePkg  qui sont des systèmes Open Source implémentés en partie en C/C++. Nous avons utilisé le logiciel CppStats qui permet d’obtenir des mesures sur la variabilité des systèmes basés sur le préprocesseur C.
 
-##IV. Hypothèses et Expérimentations
+## IV. Hypothèses et Expérimentations
 ---
-####Hypothèses :</br>
+#### Hypothèses :</br>
 Afin de vérifier l’assertion selon laquelle un système ayant une configurabilité au niveau de la plateforme implique une configurabilité de sa CI, nous avons simplement étudié un ensemble de systèmes, sur chaque système nous avons étudié le pourcentage de variabilité concernant l'OS ou l'architecture puis nous avons étudié la configurabilité de leurs CI.
 
 Ainsi nous avons formulé deux hypothèses:   
@@ -66,7 +68,7 @@ Ainsi nous avons formulé deux hypothèses:
 - Les CI de systèmes sans variabilité plateforme ne possèdent pas de configuration plateforme.
  </br>
 
-####Expérimentation :</br>
+#### Expérimentation :</br>
 Dans un premier temps, nous avons recherché manuellement des similarités dans le repository github du code source et de la CI de FreeBsd et nous y avons déduit un protocole à appliquer pour nos autres analyses de projets.
 Dans le code source, nous avons cherché les occurrences des “#ifdef” qui correspondent aux directives de compilation conditionnelles. Nous nous sommes basés sur les mots clés ( #ifdef, #if ) qui correspondaient à notre corpus de mots pour détecter les points de variabilités au sein du code source car les variables présentes dans les #ifdef représentaient les conditions d'exécution du code.</br>
 Afin de simplifier l’étude, nous avons considéré que la présence d’un #ifdef correspond à un point de variabilité dans le projet bien que cela ne soit pas toujours le cas.</br>
@@ -142,7 +144,7 @@ OS | <=> | OS
  OS+Archi | <=> | OS+Archi   
 
 Ainsi le lien entre les variabilités platforme CI et système ne semble pas exister, donc notre hypothèse 1 n'est pas valide.
-####Conclusion
+#### Conclusion
 Ainsi, notre hypothèse n°2 n'est pas vérifiable, et la n°1 n'est pas valide. On ne peut pas prouver de causalité directe entre la variabilité plateforme d'une CI et celle de son système. 
 
 Cette conclusion n'est pas définitive, il nous faudrait tester plus de projets, avec des critères de variabilités plateforme différents, pour confirmer ces propos.
@@ -151,9 +153,9 @@ Cette conclusion n'est pas définitive, il nous faudrait tester plus de projets,
 ---
 Pour extraire les données dont nous avions besoin pour les projets. Nous avons créé des scripts python qui analysent les résultats de cppstats pour en sortir nos metrics. Vous pourrez y accéder dans les assets du projet.
 
-##VI. References
+## VI. References
 ---
-###Articles </br>
+### Articles </br>
 [1] J. van Gurp, J. Bosch, and M. Svahnberg. 2001. On the notion of variability in software product lines. In Proceedings Working IEEE/IFIP Conference on Software Architecture, IEEE Comput. Soc, Amsterdam, Netherlands, 45–54. </br>
 [2] (Hunsen, C., Zhang, B., Siegmund, J., Kästner, C., Leßenich, O., Becker, M., & Apel, S. (2016). Preprocessor-based variability in open-source and industrial software systems: An empirical study. Empirical Software Engineering, 21(2), 449-482.)
 ###Projets </br>
