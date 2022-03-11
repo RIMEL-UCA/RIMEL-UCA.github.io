@@ -8,11 +8,11 @@ date:   2022-01-08 17:08:00 +0100
 
 Nous sommes cinq étudiants de dernière année à Polytech Nice Sophia spécialisés en Architecture Logicielle :
 
-* Tigran Nersissian &lt;tigran.nersissian@etu.univ-cotedazur.fr&gt;
-* Yann Martin D&#039;Escrienne &lt;yann.martin&dash;d&#039;escrienne@etu.univ-cotedazur.fr&gt;
-* Valentin Campello &lt;valentin.campello@etu.univ-cotedazur.fr&gt;
-* Lucie Morant &lt;lucie.morant@etu.univ-cotedazur.fr&gt;
-* Yohann Tognetii  &lt;yohann.tognetti@etu.univ-cotedazur.fr&gt;
+* Tigran Nersissian <tigran.nersissian@etu.univ-cotedazur.fr>
+* Yann Martin D&#039;Escrienne <yann.martin-d'escrienne@etu.univ-cotedazur.fr>
+* Valentin Campello <valentin.campello@etu.univ-cotedazur.fr>
+* Lucie Morant <lucie.morant@etu.univ-cotedazur.fr>
+* Yohann Tognetti <yohann.tognetti@etu.univ-cotedazur.fr>
 
 ## I. Contexte
 Dans le domaine du machine learning, tous les algorithmes utilisés requièrent des préconditions sur leur données d’entrée. Ces préconditions sont parfois très restrictives et il est donc difficile de les satisfaire. Notamment lorsque plusieurs de ses algorithmes s'utilisent les uns à la suite des autres.    
@@ -270,10 +270,6 @@ Nous avons réussi à augmenter la complexité du graph en terme de chaînage, c
     </style>
   </head>
   <body>
-    <p>Graph orienté avec poids de chaînage des operateurs</p>
-    <table>
-    </table>
-    <p id="demo">Click on node to see here capabilities.</p>
     <div id="wrapper">
       <div id="mynetwork"></div>
       <div id="loadingBar">
@@ -289,10 +285,8 @@ Nous avons réussi à augmenter la complexité du graph en terme de chaînage, c
     
   </body>
 </html>
-
+     
 ### V.2 Liaisons entre capabilities et préconditions
-
-Pour ce qui concerne la liaison entre les capabilites et les préconditions, nous avons obtenus les résultats suivants :
 
 Lorsque nous avons voulu lier nos résultats sur les capabilities (extraction depuis Sikulix) avec les préconditions que nous avons extraites depuis le code, un des obstacles majeurs a été que les développeurs de RapidMiner n’ont pas appelé dans le code les opérateurs de la même manière que les opérateurs qui sont nommés sur l’interface de rapidMiner, nous n’avons donc pas pu trouver une méthode générique permettant de faire cette liaison.       
 
