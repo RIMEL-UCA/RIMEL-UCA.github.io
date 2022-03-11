@@ -9,11 +9,11 @@ date:   2022-01-10 20:08:00 +0100
 
 Nous sommes 5 étudiants en dernière année à Polytech Nice-Sophia spécialisés en Architecture Logicielles :
 
-* Sofian Moumen <sofian.moumen@etu.univ-cotedazur.fr\>
-* Zaïd Burkutally <mohummad-zaid.burkutally@etu.univ-cotedazur.fr\>
-* Loïc Filippi <loic.filippi@etu.univ-cotedazur.fr\>
-* Yannis Falco <yannis.falco@etu.univ-cotedazur.fr\>
-* Kilian Clark <kilian.clark@etu.univ-cotedazur.fr\>
+* <a href="mailto:sofian.moumen@etu.univ-cotedazur.fr">Sofian Moumen</a>
+* <a href="mailto:mohummad-zaid.burkutally@etu.univ-cotedazur.fr">Zaïd Burkutally</a>
+* <a href="mailto:loic.filippi@etu.univ-cotedazur.fr">Loïc Filippi</a>
+* <a href="mailto:yannis.falco@etu.univ-cotedazur.fr">Yannis Falco</a>
+* <a href="mailto:kilian.clark@etu.univ-cotedazur.fr">Kilian Clark</a>
 
 ## I. Contexte de recherche/Projet
 
@@ -123,8 +123,9 @@ Pour visualiser les données à chaque compilation, nous avons utilisé une libr
 
 ## VII. Références
 
-1. https://www.ansible.com/blog/ansible-best-practices-essentials
-2. https://ansible.github.io/workshops/decks/ansible_best_practices.pdf
+[1] Appnel Timothy (2013). Ansible Best Practices. Retrieved from https://www.ansible.com/blog/ansible-best-practices-essentials
+
+[2] Soudan Benjamin (2016). Ansible Best Practices. Retrieved from https://aap2.demoredhat.com/decks/ansible_best_practices.pdf
 
 
 
