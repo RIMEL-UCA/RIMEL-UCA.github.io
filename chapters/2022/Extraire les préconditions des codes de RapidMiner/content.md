@@ -376,10 +376,9 @@ Avant d’appuyer sur le bouton Exécuter dans Sikulix IDE, il est préférable 
 A la fin, on obtient donc un dictionnaire qui nous donne toutes les connexions entre les opérateurs et leurs poids. Plus le poids est fort, plus les deux opérateurs ont été souvent mentionnés ensemble.
 Pour lancer le script, il suffit d’installer Jupyter Notebook et de lancer chaque “partie” les unes après les autres afin d’obtenir le dictionnaire décrit. Il est aussi possible de changer ListFile afin de parcourir d’autres fichiers ou d’autres projets et d’y extraire les connexions entre les opérateurs (si les fichiers en question contiennt “from_op” et “to_op”).
 
-Lien script graphe + explication + explication lien capabilities TIGRAN
 Pour la visualisation des graphes orientés nous avons utilisé vis-network:
-    Pour l’élaboration du graph nous devons rajouter les 2 JSON nécessaires pour la construction de celui-ci en copiant les contenus des fichiers JSON générés lorsque nous avons exécuté notre script Sikulix et le script parserV0.
-Il faut renommer dans le ficher app.js la variable dictGraphUnfilter par le contenu du fichier JSON
+    Pour l’élaboration du graph nous devons rajouter les 2 JSON nécessaires pour la construction de celui-ci en copiant les contenus des fichiers JSON générés lorsque nous avons exécuté notre [script](https://github.com/SI5-I-2021-2022/RIMEL/blob/a4180439fa8ad292e781a607c1320a0ee8d262cf/RapidMiner.sikuli/Test2.py#L1) depuis Sikulix IDE et le script [parserV0.ipynb](https://github.com/SI5-I-2021-2022/RIMEL/blob/1ad7579bfaff76f6385475a95f2afff38bd44779/parserV0.ipynb) depuis un interpreteur [jupyter notebook](https://jupyter.org/)
+Il faut renommer dans le ficher [app.js](https://github.com/SI5-I-2021-2022/RIMEL/blob/6fb240078ec1b999715ea35f733c1b81488819d3/AlmiumTeahter/app.js#L1) la variable [dictGraphUnfilter](https://github.com/SI5-I-2021-2022/RIMEL/blob/6fb240078ec1b999715ea35f733c1b81488819d3/AlmiumTeahter/app.js#L1) par le contenu du fichier JSON [dictGraph.json](https://github.com/SI5-I-2021-2022/RIMEL/blob/35f78c3e7b8a9a1e69f8189b37c14e5a5063ad6c/dictGraph.json) et rennomer la variable [mergedGraph](https://github.com/SI5-I-2021-2022/RIMEL/blob/6fb240078ec1b999715ea35f733c1b81488819d3/AlmiumTeahter/app.js#L21) avec le contenu du fichier [json_data.json](https://github.com/SI5-I-2021-2022/RIMEL/blob/a4180439fa8ad292e781a607c1320a0ee8d262cf/RapidMiner.sikuli/json_data.json#L1)
 
 ## VI. References
 
