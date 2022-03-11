@@ -373,12 +373,12 @@ Il faut renommer dans le ficher [app.js](https://github.com/SI5-I-2021-2022/RIME
 
 ## VI. Références
 
-[1] Mierswa, I., & Klinkenberg, R. (2018). RapidMiner Studio (9.1) [Data science, machine learning, predictive analytics]. Retrieved from https://rapidminer.com/ https://docs.rapidminer.com/downloads/RapidMiner-v6-user-manual.pdf
+[1] Mierswa, I., & Klinkenberg, R. (2018). RapidMiner Studio (9.1) [Data science, machine learning, predictive analytics]. Retrieved from [https://rapidminer.com/ https://docs.rapidminer.com/downloads/RapidMiner-v6-user-manual.pdf](https://rapidminer.com/ https://docs.rapidminer.com/downloads/RapidMiner-v6-user-manual.pdf)
 
-[2] Renaud Pawlak, Martin Monperrus, Nicolas Petitprez, Carlos Noguera, Lionel Seinturier. Spoon: A Library for Implementing Analyses and Transformations of Java Source Code. Software: Practice and Experience, Wiley, 2015, 46, pp.1155-1179. ff10.1002/spe.2346ff. ffhal-01078532v2f https://hal.inria.fr/hal-01078532v2/document
+[2] Renaud Pawlak, Martin Monperrus, Nicolas Petitprez, Carlos Noguera, Lionel Seinturier. Spoon: A Library for Implementing Analyses and Transformations of Java Source Code. Software: Practice and Experience, Wiley, 2015, 46, pp.1155-1179. ff10.1002/spe.2346ff. ffhal-01078532v2f [https://hal.inria.fr/hal-01078532v2/document](https://hal.inria.fr/hal-01078532v2/document)
 
-[3] P. Olz, Conny and Biundo, Susanne and Bercher, “Revealing Hidden pré-conditions and Effects of Compound HTN Planning Tasks–A Complexity Analysis,” in 35th AAAI Conference on Artificial Intelligence (AAAI). AAAI Press, 2021, Accessed: Jan. 03, 2022. [Online]. https://www.aaai.org/AAAI21Papers/AAAI-655.OlzC.pdf.
+[3] P. Olz, Conny and Biundo, Susanne and Bercher, “Revealing Hidden pré-conditions and Effects of Compound HTN Planning Tasks–A Complexity Analysis,” in 35th AAAI Conference on Artificial Intelligence (AAAI). AAAI Press, 2021, Accessed: Jan. 03, 2022. [Online]. [https://www.aaai.org/AAAI21Papers/AAAI-655.OlzC.pdf](https://www.aaai.org/AAAI21Papers/AAAI-655.OlzC.pdf).
 
-[4] Kietz, J U; Serban, F; Bernstein, A; Fischer, S (2010). Data mining workflow templates for intelligent discovery assistance in RapidMiner. In: Proc of RCOMM'10, Dortmund, Germany, 13 September 2010 - 16 September 2010, 19-26. https://www.zora.uzh.ch/id/eprint/44865/3/Kietz_Serban_Bernstein_Fischer_2010-2V.pdf
+[4] Kietz, J U; Serban, F; Bernstein, A; Fischer, S (2010). Data mining workflow templates for intelligent discovery assistance in RapidMiner. In: Proc of RCOMM'10, Dortmund, Germany, 13 September 2010 - 16 September 2010, 19-26. [https://www.zora.uzh.ch/id/eprint/44865/3/Kietz_Serban_Bernstein_Fischer_2010-2V.pdf](https://www.zora.uzh.ch/id/eprint/44865/3/Kietz_Serban_Bernstein_Fischer_2010-2V.pdf)
 
-[5] A. P. Tampubolon, B. Hendradjaya and W. D. Sunindyo, "Feature identification of program source code using regular expression," 2016 International Conference on Data and Software Engineering (ICoDSE), 2016, pp. 1-6, doi: 10.1109/ICODSE.2016.7936133.         https://ieeexplore.ieee.org/abstract/document/7936133/keywords#keywords
+[5] A. P. Tampubolon, B. Hendradjaya and W. D. Sunindyo, "Feature identification of program source code using regular expression," 2016 International Conference on Data and Software Engineering (ICoDSE), 2016, pp. 1-6, doi: 10.1109/ICODSE.2016.7936133.         [https://ieeexplore.ieee.org/abstract/document/7936133/keywords#keywords](https://ieeexplore.ieee.org/abstract/document/7936133/keywords#keywords)
