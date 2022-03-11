@@ -59,7 +59,7 @@ Nous définirons une définition en vérifiant les points suivants :
 source, une explication, un potentiel exemple et une estimation de mesurabilité. Enfin, nous regroupons ces pratiques à
 l’aide de tags qui permettent de cerner certaines catégories de pratique (sécurité, lisibilité, …). 
 
-Vous trouverez l’ensemble des pratiques répertoriées dans ce tableau.
+[Vous trouverez l’ensemble des pratiques répertoriées dans ce tableau.](asset/good_practices.md)
 
 Maintenant que nous avons des pratiques, il nous faut estimer si elles sont bien utilisées en pratique.
 
@@ -170,7 +170,7 @@ de combler ce manque, nous mettons en place une méthodologie de recherche et de
 
 #### Recherche de projet - Méthodologie
 
-Afin d’effectuer une recherche des projets GitHub contenant au moins un fichier Terraform, nous avons tenté une première
+Afin d’effectuer une recherche des projets GitHub contenant au moins un fichier Terraform, nous essayons une première
 approche à base de requêtes à l'API de GitHub :
 
 - `extension:tf language:hcl` (2 096 750 fichiers trouvés)
@@ -190,8 +190,8 @@ Terraform (déclaration des dépendances). Évidemment, il est toujours possible
 à ces critères dans un projet. Cependant, cela semble être grandement limité au vu du nombre de fichiers trouvés lors de
 chaque requête. Malheureusement, l'API de GitHub impose de nombreuses limites d'utilisation. Elle limite notamment le
 nombre de requêtes de recherche à 30 requêtes/min, le nombre de résultats par page à 100, ainsi que le nombre de
-résultats accessibles par requête à 1000 (même lorsque l’on utilise la pagination). Il est donc nécessaire de trouver
-une stratégie afin de récupérer le maximum de fichiers (et donc de projets associés). Pour cela, nous avons utilisé
+résultats accessibles par requête à 1000 (même lorsque l’on utilise la pagination). Nous devons donc trouver
+une stratégie afin de récupérer le maximum de fichiers (et donc de projets associés). Pour cela, nous allons utilisé
 l'argument size dans la requête qui permet d'indiquer la taille des fichiers (en octets) que nous souhaitons trouver.
 
 Première stratégie : Envoyer une requête par taille de 0 à 203 000 octets, cette grande taille n’étant pas arbitraire,
@@ -225,12 +225,14 @@ fichier Terraform.
 
 ## V. Résultats et Conclusion
 
-Une fois que nous avons récupéré la liste des repositories, nous utilisons un second script pour analyser chaque
-repository avec Checkov :
+Une fois que nous avons récupéré la liste des repositories, nous utilisons un [second script pour analyser chaque
+repository avec Checkov](asset/analyse.sh) :
 
 | Nombre de projet | Taux de succès moyen | Projets ayant 100% de succès |
 |:-----------------|:--------------------:|:----------------------------:|
 | 92               |        88,04%        |            80,43%            |
+
+[Vous trouverez les détails de l'analyse ici.](asset/analyse_result.md)
 
 À première vue, Terraform semble être bien utilisé en pratique. Du moins, cette affirmation est basée sur les bonnes
 pratiques que nous avons nous-mêmes sélectionnées. Afin de généraliser cette affirmation, il serait nécessaire de
