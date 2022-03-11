@@ -6,7 +6,7 @@ date:   2022-01-08 17:08:00 +0100
 
 ## Auteurs
 
-Nous sommes cinq étudiants de dernière année à Polytech Nice Sophia spécifialisé en Architecture Logicielle :
+Nous sommes cinq étudiants de dernière année à Polytech Nice Sophia spécialisés en Architecture Logicielle :
 
 * Tigran Nersissian &lt;tigran.nersissian@etu.univ-cotedazur.fr&gt;
 * Yann Martin D&#039;Escrienne &lt;yann.martin&dash;d&#039;escrienne@etu.univ-cotedazur.fr&gt;
@@ -67,7 +67,7 @@ Au cours des recherches sur la question précédente, nous avons remarqué que b
 
 ![image2](./images/2.PNG)
 
-Nous avons alors décidé de nous concentrer sur les différentes surcharges dans le code source. Chaque override avait de nombreux contenus assez hétérogène mais deux comportements ressortent souvent : l’ajout de comportement sur la vérification et le fait qu’une propriété n’est plus obligatoire. 
+Nous avons alors décidé de nous concentrer sur les différentes surcharges dans le code source. Chaque override avait de nombreux contenus assez hétérogènes mais deux comportements ressortent souvent : l’ajout de comportement sur la vérification et le fait qu’une propriété n’est plus obligatoire. 
 
 ![image3](./images/3.PNG)
 
@@ -294,7 +294,7 @@ Nous avons réussi à augmenter la complexité du graph en terme de chaînage, c
 
 Pour ce qui concerne la liaison entre les capabilites et les préconditions, nous avons obtenus les résultats suivants :
 
-Lorsque nous avons voulu lier nos résultats sur les capabilities (extraction depuis Sikulix) avec les préconditions que nous avons extraite depuis le code, un des obstacles majeurs a été que les développeurs de RapidMiner n’ont pas appelé dans le code les opérateurs de la même manière que les opérateurs qui sont nommés sur l’interface de rapidMiner, nous n’avons donc pas pu trouver une méthode générique permettant de faire cette liaison.       
+Lorsque nous avons voulu lier nos résultats sur les capabilities (extraction depuis Sikulix) avec les préconditions que nous avons extraites depuis le code, un des obstacles majeurs a été que les développeurs de RapidMiner n’ont pas appelé dans le code les opérateurs de la même manière que les opérateurs qui sont nommés sur l’interface de rapidMiner, nous n’avons donc pas pu trouver une méthode générique permettant de faire cette liaison.       
 
 Pour ce qui est des surcharges de méthodes redondantes (makeAdditionalChecks et isMandatory), le fait qu’une propriété n’était plus obligatoire ne semblait pas apporter d’information pour créer facilement des liens entre les deux sources de données. En effet, la surcharge se contente de faire un “return false”. Néanmoins, elles pourraient avoir un impact sur les capabilities. Cet impact serait qu'elles soient cochées ou non sur l’interface pour chaque opérateur surchargé. Cela ne reste qu’une intuition, nous laissons la chance aux lecteurs de pouvoir reprendre et approfondir notre travail. De l’autre côté, l’ajout de comportement supplémentaire sur la vérification ajoute un comportement beaucoup trop irrégulier et spécifique. Il n’était pas possible de sortir un comportement identifiable aux capabilities avec cela sans faire du cas par cas. 
 Pour ce qui est des messages d’erreur, nous avons essayé de récupérer les informations dans les messages, ceci dans le but d’associer préconditions et capabilities. La création de l’erreur se constitue de différentes informations comme le message d’erreur, de sa sévérité et de variables qui ne sont pas toujours présentes. Mais en raison de l’inconsistance des messages donnés, nous n’avons pas pu réaliser un lien avec les capabilites de l’interface. C’est une piste qui, avec peut être plus d’analyse, aurait pu apporter des informations cruciales mais nous n’avons pas réussi à les identifier pour le moment.       
@@ -303,7 +303,7 @@ On voit ci-dessous une capture d'écran de notre [script](https://github.com/SI5
 
 ![image9](./images/9.PNG)
 
-### V.3 Recherche de precondition à l'aide d’outils (JAVA)
+### V.3 Recherche de précondition à l'aide d’outils (JAVA)
 
 L’une de nos solutions initiales était d’utiliser la librairie Spoon ainsi que la réflexion de Java. Cela avait pour but de récupérer les préconditions directement à l'exécution du code. Cependant, des problèmes techniques nous ont empêchés de continuer sur cette voie.     
 
@@ -371,7 +371,7 @@ Pour la visualisation des graphes orientés nous avons utilisé vis-network :
 Pour l’élaboration du graph nous devons rajouter les 2 JSON nécessaires pour la construction de celui-ci en copiant les contenus des fichiers JSON générés lorsque nous avons exécuté notre [script](https://github.com/SI5-I-2021-2022/RIMEL/blob/a4180439fa8ad292e781a607c1320a0ee8d262cf/RapidMiner.sikuli/Test2.py#L1) depuis Sikulix IDE et le script [parserV0.ipynb](https://github.com/SI5-I-2021-2022/RIMEL/blob/1ad7579bfaff76f6385475a95f2afff38bd44779/parserV0.ipynb) depuis un interpréteur [jupyter notebook](https://jupyter.org/).
 Il faut renommer dans le ficher [app.js](https://github.com/SI5-I-2021-2022/RIMEL/blob/6fb240078ec1b999715ea35f733c1b81488819d3/AlmiumTeahter/app.js#L1) la variable [dictGraphUnfilter](https://github.com/SI5-I-2021-2022/RIMEL/blob/6fb240078ec1b999715ea35f733c1b81488819d3/AlmiumTeahter/app.js#L1) par le contenu du fichier JSON [dictGraph.json](https://github.com/SI5-I-2021-2022/RIMEL/blob/35f78c3e7b8a9a1e69f8189b37c14e5a5063ad6c/dictGraph.json) et rennomer la variable [mergedGraph](https://github.com/SI5-I-2021-2022/RIMEL/blob/6fb240078ec1b999715ea35f733c1b81488819d3/AlmiumTeahter/app.js#L21) avec le contenu du fichier [json_data.json](https://github.com/SI5-I-2021-2022/RIMEL/blob/a4180439fa8ad292e781a607c1320a0ee8d262cf/RapidMiner.sikuli/json_data.json#L1).
 
-## VI. References
+## VI. Références
 
 [1] Mierswa, I., & Klinkenberg, R. (2018). RapidMiner Studio (9.1) [Data science, machine learning, predictive analytics]. Retrieved from https://rapidminer.com/ https://docs.rapidminer.com/downloads/RapidMiner-v6-user-manual.pdf
 
