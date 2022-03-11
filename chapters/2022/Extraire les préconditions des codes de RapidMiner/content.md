@@ -37,7 +37,7 @@ Nous avons donc réfléchi à des manières d’affiner cette question afin de m
 
 
 ## III. information gathering
-Nous avons d’abord tous récupéré le même projet GitHub RapidMiner pour s’assurer que nous avions tous la même base pour la collecte d’informations. Comme il existait plusieurs repositories RapidMiner, notre choix s’est orienté vers celui le plus populaire, ainsi que le plus récent : rapidminer-studio-modular. 
+Nous avons d’abord tous récupéré le même projet GitHub RapidMiner pour s’assurer que nous avions tous la même base pour la collecte d’informations. Comme il existait plusieurs repositories RapidMiner, notre choix s’est orienté vers celui le plus populaire, ainsi que le plus récent : [rapidminer-studio-modular](https://github.com/rapidminer/rapidminer-studio-modular). 
 Afin d’extraire les différentes données récupérables dans RapidMiner, on utilise Sikulix pour ce qui est lié à l’interface graphique et les expressions régulières (Python) ainsi que Spoon pour ce qui est lié au code source. Quant au traitement des métriques prélevées, un tableur classique (du type Excel) nous permet de créer des tableaux et des histogrammes. De plus, nous utilisons du HTML + PureJS avec la libraire vis-network pour visualiser les graphes de chaînages des opérateurs, ainsi que les capabilities de manière dynamique directement sur Github.io.
 
 ## IV. Hypothesis & Experiences
@@ -323,13 +323,13 @@ Nous avons donc eu comme idée d’essayer de récupérer les JAR directement da
 Ensuite, nous avons vu que tous les plugins dont java-basics et java-publishing existe dans des répertoires git séparés. Nous avons donc essayé de les récupérer afin de les build. De nouveau nous n’avions pas les dépendances.
 
 Pour finir, nous avons essayé de récupérer l'ensemble des plugins du repertories pour essayer d’avoir toutes les dépendances suivantes :
-* gradle-plugin-rapidminer-java-signing
-* gradle-plugin-rapidminer-gradle-plugin
-* gradle-plugin-rapidminer-code-quality
-* gradle-plugin-rapidminer-extension
-* gradle-plugin-rapidminer-java-publishing
-* gradle-plugin-rapidminer-java-basics
-* gradle-plugin-rapidminer-release
+* [gradle-plugin-rapidminer-java-signing](https://github.com/rapidminer/gradle-plugin-rapidminer-java-signing)
+* [gradle-plugin-rapidminer-gradle-plugin](https://github.com/rapidminer/gradle-plugin-rapidminer-gradle-plugin)
+* [gradle-plugin-rapidminer-code-quality](https://github.com/rapidminer/gradle-plugin-rapidminer-code-quality)
+* [gradle-plugin-rapidminer-extension](https://github.com/rapidminer/gradle-plugin-rapidminer-extension)
+* [gradle-plugin-rapidminer-java-publishing](https://github.com/rapidminer/gradle-plugin-rapidminer-java-publishing)
+* [gradle-plugin-rapidminer-java-basics](https://github.com/rapidminer/gradle-plugin-rapidminer-java-basics)
+* [gradle-plugin-rapidminer-release](https://github.com/rapidminer/gradle-plugin-rapidminer-release)
 
 Cela ne nous a pas permis de résoudre les problèmes car nous n’avons pas réussi à en build un seul. Nous avons alors décidé de ne pas aller plus loin sur cette piste ne donnant pas de résultat.
 
@@ -337,7 +337,7 @@ Suite à la première présentation de notre avancée, on nous a donné la piste
 
 ## VI. Tools \(facultatif\)
 
-Tout au long de notre projet, nous avons codé ensemble sur un repository GitHub dédié au cours de Rétro-Ingénierie, que voici. Dedans s’y trouve des fichiers Python qui nous ont permis l’extraction des données dans le code source de RapidMiner. Il y est également présent les images utilisées pour le lancement du script sur Sikulix.
+Tout au long de notre projet, nous avons codé ensemble sur un repository GitHub dédié au cours de Rétro-Ingénierie, que [voici](https://github.com/SI5-I-2021-2022/RIMEL). Dedans s’y trouve des fichiers Python qui nous ont permis l’extraction des données dans le code source de RapidMiner. Il y est également présent les images utilisées pour le lancement du script sur Sikulix.
 
 
 [parserV0.py](https://github.com/SI5-I-2021-2022/RIMEL/blob/V1.0/parserV0.py) est un script qui permet de récupérer les différents résultats dans des fichiers textes. Ces différents résultats sont l’agglomération des scripts ci-dessous. Lancez donc celui-ci si vous voulez tout le contenu directement. Pour des résultats plus précis, lancez les scripts suivants séparément.
@@ -383,5 +383,13 @@ Il faut renommer dans le ficher app.js la variable dictGraphUnfilter par le cont
 
 ## VI. References
 
-1. ref1
-1. ref2
+[1] Mierswa, I., & Klinkenberg, R. (2018). RapidMiner Studio (9.1) [Data science, machine learning, predictive analytics]. Retrieved from https://rapidminer.com/ https://docs.rapidminer.com/downloads/RapidMiner-v6-user-manual.pdf
+
+[2] Renaud Pawlak, Martin Monperrus, Nicolas Petitprez, Carlos Noguera, Lionel Seinturier. Spoon: A Library for Implementing Analyses and Transformations of Java Source Code. Software: Practice and Experience, Wiley, 2015, 46, pp.1155-1179. ff10.1002/spe.2346ff. ffhal-01078532v2f https://hal.inria.fr/hal-01078532v2/document
+
+[3] P. Olz, Conny and Biundo, Susanne and Bercher, “Revealing Hidden pré-conditions and Effects of Compound HTN Planning Tasks–A Complexity Analysis,” in 35th AAAI Conference on Artificial Intelligence (AAAI). AAAI Press, 2021, Accessed: Jan. 03, 2022. [Online]. https://www.aaai.org/AAAI21Papers/AAAI-655.OlzC.pdf.
+
+[4] Kietz, J U; Serban, F; Bernstein, A; Fischer, S (2010). Data mining workflow templates for intelligent discovery assistance in RapidMiner. In: Proc of RCOMM'10, Dortmund, Germany, 13 September 2010 - 16 September 2010, 19-26. https://www.zora.uzh.ch/id/eprint/44865/3/Kietz_Serban_Bernstein_Fischer_2010-2V.pdf
+
+[5] A. P. Tampubolon, B. Hendradjaya and W. D. Sunindyo, "Feature identification of program source code using regular expression," 2016 International Conference on Data and Software Engineering (ICoDSE), 2016, pp. 1-6, doi: 10.1109/ICODSE.2016.7936133.         https://ieeexplore.ieee.org/abstract/document/7936133/keywords#keywords
+
