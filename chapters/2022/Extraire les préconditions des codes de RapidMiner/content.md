@@ -63,7 +63,7 @@ Au cours des recherches sur la question précédente, nous avons remarqué que b
 
 ![image1](./images/1.PNG)
 
-[Extrait du code dans GitHub](https://github.com/SI5-I-2021-2022/RIMEL/blob/c65db1896fd8a1cc25b91445848443db33380c82/rapidminer-studio-modular-master/rapidminer-studio-core/src/main/java/com/rapidminer/operator/learner/functions/FunctionFitting.java#L224-L238)
+[Extrait du code dans GitHub](https://github.com/SI5-I-2021-2022/RIMEL/blob/V1.0/rapidminer-studio-modular-master/rapidminer-studio-core/src/main/java/com/rapidminer/operator/learner/functions/FunctionFitting.java#L224-L238)
 
 ![image2](./images/2.PNG)
 
@@ -71,17 +71,17 @@ Nous avons alors décidé de nous concentrer sur les différentes surcharges dan
 
 ![image3](./images/3.PNG)
 
-[Lien vers le code dans le GitHub](https://github.com/SI5-I-2021-2022/RIMEL/blob/c65db1896fd8a1cc25b91445848443db33380c82/rapidminer-studio-modular-master/rapidminer-studio-core/src/main/java/com/rapidminer/operator/ports/metadata/TableCapabilityPrecondition.java#L75-L100)
+[Lien vers le code dans le GitHub](https://github.com/SI5-I-2021-2022/RIMEL/blob/V1.0/rapidminer-studio-modular-master/rapidminer-studio-core/src/main/java/com/rapidminer/operator/ports/metadata/TableCapabilityPrecondition.java#L75-L100)
 
 ![image4](./images/4.PNG)
 
-[Lien vers le code dans le GitHub](https://github.com/SI5-I-2021-2022/RIMEL/blob/c65db1896fd8a1cc25b91445848443db33380c82/rapidminer-studio-modular-master/rapidminer-studio-core/src/main/java/com/rapidminer/operator/visualization/LiftParetoChartGenerator.java#L107-L122)
+[Lien vers le code dans le GitHub](https://github.com/SI5-I-2021-2022/RIMEL/blob/V1.0/rapidminer-studio-modular-master/rapidminer-studio-core/src/main/java/com/rapidminer/operator/visualization/LiftParetoChartGenerator.java#L107-L122)
 
 A côté de cela, nous avons remarqué que les méthodes dans les surcharges réalisaient beaucoup de lancement de messages d'erreur. Ces messages d’erreur ressemblaient pour la plupart à ce qui pourrait être notifié lorsqu’une des capabilities n’était pas satisfaite. Cette information pouvait donc nous offrir un lien pour lier ces deux parties. Voici un exemple de message d’erreur : “exception_checking_precondition”.     
 
 ![image1](./images/5.PNG)
 
-[Lien vers la méthode checkPreconditions() ](https://github.com/SI5-I-2021-2022/RIMEL/blob/c65db1896fd8a1cc25b91445848443db33380c82/rapidminer-studio-modular-master/rapidminer-studio-core/src/main/java/com/rapidminer/operator/ports/impl/AbstractInputPort.java#L134-L147)
+[Lien vers la méthode checkPreconditions() ](https://github.com/SI5-I-2021-2022/RIMEL/blob/V1.0/rapidminer-studio-modular-master/rapidminer-studio-core/src/main/java/com/rapidminer/operator/ports/impl/AbstractInputPort.java#L134-L147)
 
 Ce warning est levé dans le cas où les préconditions sur les metadata ne sont pas respectées.
 
@@ -120,12 +120,12 @@ L'hypothèse serait que plus nous aurions des projets pour enrichir notre datase
 
 Pour notre première sous-question “Quels sont les types de préconditions ? Quels types de données ?”, nous avons eu les résultats suivants :
 
-[Lien vers l’excel stocké sur notre GitHub](https://github.com/SI5-I-2021-2022/RIMEL/blob/96070dfd57f7f521e2b87f1d8a254c70289ed06f/Nombre_Preconditions_par_fichier_java.csv#L1)
+[Lien vers l’excel stocké sur notre GitHub](https://github.com/SI5-I-2021-2022/RIMEL/blob/V1.0/Nombre_Preconditions_par_fichier_java.csv#L1)
 
 Nous avons ainsi réussi à tirer le nom de plusieurs préconditions et la fréquence à laquelle elles sont utilisées dans le code de RapidMiner. Cela permet de nous dire qu’il est possible d’extraire les préconditions, de les identifier par un nom et de connaître celles les plus communes. Ici, on voit que SimplePrecondition, ExampleSetPrecondition et AttributeSetPrecondition sont grandement utilisés par rapport aux autres préconditions.      
 Également, nous avons pu obtenir ceci sur l’overview des opérateurs qui informent des données supportées ou non : 
 
-[Lien vers l’excel stocké sur notre GitHub](https://github.com/SI5-I-2021-2022/RIMEL/blob/2761e1c0ae7040f26bad43dc219332e901ad26ce/RapidMiner.sikuli/Extraction_Sikulix_Capabilities_Synthese.csv)
+[Lien vers l’excel stocké sur notre GitHub](https://github.com/SI5-I-2021-2022/RIMEL/blob/V1.0/RapidMiner.sikuli/Extraction_Sikulix_Capabilities_Synthese.csv)
 
 On remarque qu’on obtient peu d’informations par rapport à l’ensemble des données traitées. En effet, sur à peu 450 opérateurs, on a seulement des informations sur les capabilities qu’ils gèrent (ou non) de 100 d’entre eux. Et encore, cela diminue après les 12 premières capabilities. Cela reste intéressant de pouvoir extraire ceci puisque toute information est bonne à prendre pour identifier le pré-traitement que fait RapidMiner mais il est dommage que nous ne puissions pas obtenir plus de renseignements.
 Une autre donnée que nous avons pu récupérer est les connexions qu’il existe entre les différents opérateurs. Cela a été mis sous forme d’un graphe orienté afin d’avoir par exemple des poids entre deux opérateurs, dans quel sens la connexion se fait et avoir une information visuelle claire lorsque deux opérateurs sont souvent utilisés ensemble. Nous arrivons à cette arborescence :
@@ -140,11 +140,11 @@ Aussi lorsque nous avons créé le graph avec les opérateurs présents dans les
 
 Lorsque nous avons ajoutés les 3 fichier .RMP suivants :
 
-* [cluster.rmp](https://github.com/SI5-I-2021-2022/RIMEL/blob/d0b928a66822c33b17ee5e19ffa94bbf67b017d2/rapidminer-studio-modular-master/rapidminer-studio-core/src/main/resources/com/rapidminer/resources/samples/processes/08_Other/cluster.rmp)
+* [cluster.rmp](https://github.com/SI5-I-2021-2022/RIMEL/blob/V1.0/rapidminer-studio-modular-master/rapidminer-studio-core/src/main/resources/com/rapidminer/resources/samples/processes/08_Other/cluster.rmp)
 
-* [outliners.rmp](https://github.com/SI5-I-2021-2022/RIMEL/blob/d0b928a66822c33b17ee5e19ffa94bbf67b017d2/rapidminer-studio-modular-master/rapidminer-studio-core/src/main/resources/com/rapidminer/resources/samples/processes/08_Other/outliners.rmp)
+* [outliners.rmp](https://github.com/SI5-I-2021-2022/RIMEL/blob/V1.0/rapidminer-studio-modular-master/rapidminer-studio-core/src/main/resources/com/rapidminer/resources/samples/processes/08_Other/outliners.rmp)
 
-* [predict.rmp](https://github.com/SI5-I-2021-2022/RIMEL/blob/d0b928a66822c33b17ee5e19ffa94bbf67b017d2/rapidminer-studio-modular-master/rapidminer-studio-core/src/main/resources/com/rapidminer/resources/samples/processes/08_Other/predict.rmp)
+* [predict.rmp](https://github.com/SI5-I-2021-2022/RIMEL/blob/V1.0/rapidminer-studio-modular-master/rapidminer-studio-core/src/main/resources/com/rapidminer/resources/samples/processes/08_Other/predict.rmp)
 
 Nous avons réussi à augmenter la complexité du graph en terme de chaînage, ce qui prouve que plus nous fournirons des projets en entrée, plus pertinent deviendra la connaissance de l’utilisateur sur les différentes chaînages possibles des opérateurs comme nous pouvons le voir ci dessous :
 
@@ -293,7 +293,7 @@ Lorsque nous avons voulu lier nos résultats sur les capabilities (extraction de
 Pour ce qui est des surcharges de méthodes redondantes (makeAdditionalChecks et isMandatory), le fait qu’une propriété n’était plus obligatoire ne semblait pas apporter d’information pour créer facilement des liens entre les deux sources de données. En effet, la surcharge se contente de faire un “return false”. Néanmoins, elles pourraient avoir un impact sur les capabilities. Cet impact serait qu'elles soient cochées ou non sur l’interface pour chaque opérateur surchargé. Cela ne reste qu’une intuition, nous laissons la chance aux lecteurs de pouvoir reprendre et approfondir notre travail. De l’autre côté, l’ajout de comportement supplémentaire sur la vérification ajoute un comportement beaucoup trop irrégulier et spécifique. Il n’était pas possible de sortir un comportement identifiable aux capabilities avec cela sans faire du cas par cas. 
 Pour ce qui est des messages d’erreur, nous avons essayé de récupérer les informations dans les messages, ceci dans le but d’associer préconditions et capabilities. La création de l’erreur se constitue de différentes informations comme le message d’erreur, de sa sévérité et de variables qui ne sont pas toujours présentes. Mais en raison de l’inconsistance des messages donnés, nous n’avons pas pu réaliser un lien avec les capabilites de l’interface. C’est une piste qui, avec peut être plus d’analyse, aurait pu apporter des informations cruciales mais nous n’avons pas réussi à les identifier pour le moment.       
 
-On voit ci-dessous une capture d'écran de notre [script](https://github.com/SI5-I-2021-2022/RIMEL/blob/96070dfd57f7f521e2b87f1d8a254c70289ed06f/parserError.py#L1-L76) récupérant les erreurs : 
+On voit ci-dessous une capture d'écran de notre [script](https://github.com/SI5-I-2021-2022/RIMEL/blob/V1.0/parserError.py#L1-L76) récupérant les erreurs : 
 
 ![image9](./images/9.PNG)
 
@@ -362,8 +362,8 @@ A la fin, on obtient donc un dictionnaire qui nous donne toutes les connexions e
 Pour lancer le script, il suffit d’installer Jupyter Notebook et de lancer chaque “partie” les unes après les autres afin d’obtenir le dictionnaire décrit. Il est aussi possible de changer ListFile afin de parcourir d’autres fichiers ou d’autres projets et d’y extraire les connexions entre les opérateurs (si les fichiers en question contiennt “from_op” et “to_op”).      
 
 Pour la visualisation des graphes orientés nous avons utilisé vis-network :
-Pour l’élaboration du graph nous devons rajouter les 2 JSON nécessaires pour la construction de celui-ci en copiant les contenus des fichiers JSON générés lorsque nous avons exécuté notre [script](https://github.com/SI5-I-2021-2022/RIMEL/blob/a4180439fa8ad292e781a607c1320a0ee8d262cf/RapidMiner.sikuli/Test2.py#L1) depuis Sikulix IDE et le script [parserV0.ipynb](https://github.com/SI5-I-2021-2022/RIMEL/blob/1ad7579bfaff76f6385475a95f2afff38bd44779/parserV0.ipynb) depuis un interpréteur [jupyter notebook](https://jupyter.org/).
-Il faut renommer dans le ficher [app.js](https://github.com/SI5-I-2021-2022/RIMEL/blob/6fb240078ec1b999715ea35f733c1b81488819d3/AlmiumTeahter/app.js#L1) la variable [dictGraphUnfilter](https://github.com/SI5-I-2021-2022/RIMEL/blob/6fb240078ec1b999715ea35f733c1b81488819d3/AlmiumTeahter/app.js#L1) par le contenu du fichier JSON [dictGraph.json](https://github.com/SI5-I-2021-2022/RIMEL/blob/35f78c3e7b8a9a1e69f8189b37c14e5a5063ad6c/dictGraph.json) et rennomer la variable [mergedGraph](https://github.com/SI5-I-2021-2022/RIMEL/blob/6fb240078ec1b999715ea35f733c1b81488819d3/AlmiumTeahter/app.js#L21) avec le contenu du fichier [json_data.json](https://github.com/SI5-I-2021-2022/RIMEL/blob/a4180439fa8ad292e781a607c1320a0ee8d262cf/RapidMiner.sikuli/json_data.json#L1).
+Pour l’élaboration du graph nous devons rajouter les 2 JSON nécessaires pour la construction de celui-ci en copiant les contenus des fichiers JSON générés lorsque nous avons exécuté notre [script](https://github.com/SI5-I-2021-2022/RIMEL/blob/V1.0/RapidMiner.sikuli/Test2.py#L1) depuis Sikulix IDE et le script [parserV0.ipynb](https://github.com/SI5-I-2021-2022/RIMEL/blob/V1.0/parserV0.ipynb) depuis un interpréteur [jupyter notebook](https://jupyter.org/).
+Il faut renommer dans le ficher [app.js](https://github.com/SI5-I-2021-2022/RIMEL/blob/V1.0/AlmiumTeahter/app.js#L1) la variable [dictGraphUnfilter](https://github.com/SI5-I-2021-2022/RIMEL/blob/V1.0/AlmiumTeahter/app.js#L1) par le contenu du fichier JSON [dictGraph.json](https://github.com/SI5-I-2021-2022/RIMEL/blob/V1.0/dictGraph.json) et rennomer la variable [mergedGraph](https://github.com/SI5-I-2021-2022/RIMEL/blob/V1.0/AlmiumTeahter/app.js#L21) avec le contenu du fichier [json_data.json](https://github.com/SI5-I-2021-2022/RIMEL/blob/V1.0/RapidMiner.sikuli/json_data.json#L1).
 
 ## VI. Références
 
