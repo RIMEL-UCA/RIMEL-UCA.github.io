@@ -122,8 +122,38 @@ Pour augmenter la quantité des données, nous avons aussi utilisés les options
 L'hypothèse serait que plus nous aurions des projets pour enrichir notre dataset, plus le graph deviendra complet et représentatif de tous les chaînages d'opérateurs possibles de telle sorte à ce que l’utilisateur de notre solution contribue directement à la capitalisation du savoir-faire pour l'entièreté de la communauté, ceci en continuant d’utiliser RapidMiner comme à son habitude. Il aura juste à exporter son fichier .rmp et le partager avec la communauté.
 
 ## V. Result Analysis and Conclusion
+### V.1 Récupération des préconditions
 
-1. Analyse des résultats & construction d’une conclusion : Une fois votre expérience terminée, vous récupérez vos mesures et vous les analysez pour voir si votre hypothèse tient la route. 
+Pour notre première sous-question “Quels sont les types de préconditions ? Quels types de données ?”, nous avons eu les résultats suivants :
+
+[Lien vers l’excel stocké sur notre GitHub](https://github.com/SI5-I-2021-2022/RIMEL/blob/96070dfd57f7f521e2b87f1d8a254c70289ed06f/Nombre_Preconditions_par_fichier_java.csv#L1)
+
+Nous avons ainsi réussi à tirer le nom de plusieurs préconditions et la fréquence à laquelle elles sont utilisées dans le code de RapidMiner. Cela permet de nous dire qu’il est possible d’extraire les préconditions, de les identifier par un nom et de connaître celles les plus communes. Ici, on voit que SimplePrecondition, ExampleSetPrecondition et AttributeSetPrecondition sont grandement utilisés par rapport aux autres préconditions.
+Également, nous avons pu obtenir ceci sur l’overview des opérateurs qui informent des données supportées ou non : 
+
+[Lien vers l’excel stocké sur notre GitHub](https://github.com/SI5-I-2021-2022/RIMEL/blob/2761e1c0ae7040f26bad43dc219332e901ad26ce/RapidMiner.sikuli/Extraction_Sikulix_Capabilities_Synthese.csv)
+
+On remarque qu’on obtient peu d’informations par rapport à l’ensemble des données traitées. En effet, sur à peu 450 opérateurs, on a seulement des informations sur les capabilities qu’ils gèrent (ou non) de 100 d’entre eux. Et encore, cela diminue après les 12 premières capabilities. Cela reste intéressant de pouvoir extraire ceci puisque toute information est bonne à prendre pour identifier le pré-traitement que fait RapidMiner mais il est dommage que nous ne puissions pas obtenir plus de renseignements.
+Une autre donnée que nous avons pu récupérer est les connexions qu’il existe entre les différents opérateurs. Cela a été mis sous forme d’un graphe orienté afin d’avoir par exemple des poids entre deux opérateurs, dans quel sens la connexion se fait et avoir une information visuelle claire lorsque deux opérateurs sont souvent utilisés ensemble. Nous arrivons à cette arborescence :
+
+![image7](./images/7.PNG)
+
+Ici, nous pouvons voir quel type de capabilities prend en charge l'opérateur “Performance”,  quel opérateur produit des données respectant les capabilities suivantes : “Applier”, ”Apply Threshold”, ”Apply Model”, etc… et les opérateurs qui peuvent prendre les données en sortie de l'opérateur “Performance” (qui sont “Add binary” et “Process Log”).
+Nous pouvons donc visualiser l’impact des opérateurs sur les données qu’ils produisent et la corrélation qu’il y a entre les capabilities et ces opérateurs de manière interactive.
+Aussi lorsque nous avons créé le graph avec les opérateurs présents dans les fichiers d’exemple fournis dans l’interface de RapidMiner Studio, nous avions un graph peu dense en terme de nœud : 
+
+![image8](./images/8.PNG)
+
+Lorsque nous avons ajoutés les 3 fichier .RMP suivants :
+
+* [cluster.rmp](https://github.com/SI5-I-2021-2022/RIMEL/blob/d0b928a66822c33b17ee5e19ffa94bbf67b017d2/rapidminer-studio-modular-master/rapidminer-studio-core/src/main/resources/com/rapidminer/resources/samples/processes/08_Other/cluster.rmp)
+
+* [outliners.rmp](https://github.com/SI5-I-2021-2022/RIMEL/blob/d0b928a66822c33b17ee5e19ffa94bbf67b017d2/rapidminer-studio-modular-master/rapidminer-studio-core/src/main/resources/com/rapidminer/resources/samples/processes/08_Other/outliners.rmp)
+
+* [predict.rmp](https://github.com/SI5-I-2021-2022/RIMEL/blob/d0b928a66822c33b17ee5e19ffa94bbf67b017d2/rapidminer-studio-modular-master/rapidminer-studio-core/src/main/resources/com/rapidminer/resources/samples/processes/08_Other/predict.rmp)
+
+Nous avons réussi à augmenter la complexité du graph en terme de chaînage, ce qui prouve que plus nous fournirons des projets en entrée, plus pertinent deviendra la connaissance de l’utilisateur sur les différentes chaînages possibles des opérateurs comme nous pouvons le voir ci dessous :
+
 <html lang="en">
   <head>
     <title>Vis Network | Basic usage</title>
@@ -265,6 +295,46 @@ L'hypothèse serait que plus nous aurions des projets pour enrichir notre datase
     
   </body>
 </html>
+
+### V.2 Liaisons entre capabilities et préconditions
+
+Pour ce qui concerne la liaison entre les capabilites et les préconditions, nous avons obtenus les résultats suivants :
+
+Lorsque nous avons voulu lier nos résultats sur les capabilities (extraction depuis Sikulix) avec les préconditions que nous avons extraite depuis le code, un des obstacles majeurs a été que les développeurs de RapidMiner n’ont pas appelé dans le code les opérateurs de la même manière que les opérateurs qui sont nommés sur l’interface de rapidMiner, nous n’avons donc pas pu trouver une méthode générique permettant de faire cette liaison.
+
+Pour ce qui est des surcharges de méthodes redondantes (makeAdditionalChecks et isMandatory), le fait qu’une propriété n’était plus obligatoire ne semblait pas apporter d’information pour créer facilement des liens entre les deux sources de données. En effet, la surcharge se contente de faire un “return false”. Néanmoins, elles pourraient avoir un impact sur les capabilities. Cet impact serait qu'elles soient cochées ou non sur l’interface pour chaque opérateur surchargé. Cela ne reste qu’une intuition, nous laissons la chance aux lecteurs de pouvoir reprendre et approfondir notre travail. De l’autre côté, l’ajout de comportement supplémentaire sur la vérification ajoute un comportement beaucoup trop irrégulier et spécifique. Il n’était pas possible de sortir un comportement identifiable aux capabilities avec cela sans faire du cas par cas. 
+Pour ce qui est des messages d’erreur, nous avons essayé de récupérer les informations dans les messages, ceci dans le but d’associer préconditions et capabilities. La création de l’erreur se constitue de différentes informations comme le message d’erreur, de sa sévérité et de variables qui ne sont pas toujours présentes. Mais en raison de l’inconsistance des messages donnés, nous n’avons pas pu réaliser un lien avec les capabilites de l’interface. C’est une piste qui, avec peut être plus d’analyse, aurait pu apporter des informations cruciales mais nous n’avons pas réussi à les identifier pour le moment. 
+
+On voit ci-dessous une capture d'écran de notre [script](https://github.com/SI5-I-2021-2022/RIMEL/blob/96070dfd57f7f521e2b87f1d8a254c70289ed06f/parserError.py#L1-L76) récupérant les erreurs : 
+
+![image9](./images/9.PNG)
+
+### V.3 Recherche de precondition à l'aide d’outils (JAVA)
+
+L’une de nos solutions initiales était d’utiliser la librairie Spoon ainsi que la réflexion de Java. Cela avait pour but de récupérer les préconditions directement à l'exécution du code. Cependant, des problèmes techniques nous ont empêchés de continuer sur cette voie.
+
+Tout d’abord, nous avons essayé de compiler le projet à l'aide de Gradle (Gradle est le gestionnaire de version du projet). Il s'est avéré que les dépendances ne sont plus hébergées en ligne, Gradle a donc échoué lors de la récupération. Les dépendances suivantes ne sont plus disponible : 
+
+* com.rapidminer.gradle:java-basics:0.4.3
+* classpath 'com.rapidminer.gradle:java-publishing:0.2.2
+
+Nous avons donc eu comme idée d’essayer de récupérer les JAR directement dans l'exécutable de RapidMiner Studio. Après avoir chercher dans le fichier, nous avons trouvé les libraires qui permettent les fonctionnements. Elle se situe dans le répertoire “lib” du fichier d'installation. Cependant, nous n'avons pas réussi à remplacer les dépendance dû à notre manque de connaissance sur gradle. De plus, nous ne savons pas si cela est possible à l'aide d’un JAR déjà compilé pour l'exécution.
+
+Ensuite, nous avons vu que tous les plugins dont java-basics et java-publishing existe dans des répertoires git séparés. Nous avons donc essayé de les récupérer afin de les build. De nouveau nous n’avions pas les dépendances.
+
+Pour finir, nous avons essayé de récupérer l'ensemble des plugins du repertories pour essayer d’avoir toutes les dépendances suivantes :
+* gradle-plugin-rapidminer-java-signing
+* gradle-plugin-rapidminer-gradle-plugin
+* gradle-plugin-rapidminer-code-quality
+* gradle-plugin-rapidminer-extension
+* gradle-plugin-rapidminer-java-publishing
+* gradle-plugin-rapidminer-java-basics
+* gradle-plugin-rapidminer-release
+
+Cela ne nous a pas permis de résoudre les problèmes car nous n’avons pas réussi à en build un seul. Nous avons alors décidé de ne pas aller plus loin sur cette piste ne donnant pas de résultat.
+
+Suite à la première présentation de notre avancée, on nous a donné la piste de Eclipse JDT qui utilise “Core Tools”. Cette solution est ce qui permet de naviguer dans les classes et fonction au sein de l’ide Eclipse. Cette solution est donc une solution très intéressante, n’a pas besoin que le code soit compilé et accessible depuis un programme JAVA. Cependant, nous avons déjà à ce moment là une grosse partie des données qu’il aurait été possible. Nous avons donc décidé d'améliorer notre base et ne pas explorer cette solution.
+
 ## VI. Tools \(facultatif\)
 
 Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à \(1\) pouvoir reproduire vos expérimentations, \(2\) partager/expliquer à d'autres l'usage des outils.
