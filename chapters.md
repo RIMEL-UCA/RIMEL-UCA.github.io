@@ -11,6 +11,7 @@ date:   2021-12-02 22:00:00 +0100
 ### [Étude de la causalité configurabilité d'un système et d'une CI]({{ site.url }}/chapters/2022/Étude de la causalité configurabilité d'un système et d'une CI/content)
 ### [Quelles sont les bonnes pratiques de mise en place d’un système de packaging ?]({{ site.url }}/chapters/2022/PackagingSystemsGuidelines/content)
 ### [Les bonnes pratiques définies et encouragées par Webpack sont-elles respectées par la communauté Open Source ?]({{ site.url }}/chapters/2022/WebpackGoodPractices/content)
+### [Comment configure-t-on une chaîne d’intégration continue pour s’assurer du bon fonctionnement d’un logiciel dans différents environnements ?]({{ site.url }}/chapters/2022/Comment configure-t-on une chaîne d’intégration continue pour s’assurer du bon fonctionnement d’un logiciel dans différents environnements/content)
 
 ## 2021
 
