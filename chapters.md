@@ -8,6 +8,7 @@ date:   2021-12-02 22:00:00 +0100
 ### [Quelle est la relation entre les algorithmes, préprocesseurs et leur utilisation dans les séries temporelles ?]({{ site.url }}/chapters/2022/OpenMLAnalysis/content)
 ### [Extraire les préconditions des codes de RapidMiner]({{ site.url }}/chapters/2022/Extraire les préconditions des codes de RapidMiner/content)
 ### [Les bonnes pratiques lors de l'utilisation de Terraform]({{ site.url }}/chapters/2022/TerraformGoodPractices/content)
+### [Ansible Good Practices]({{ site.url }}/chapters/2022/AnsibleGoodPractices/content)
 ### [Étude de la causalité configurabilité d'un système et d'une CI]({{ site.url }}/chapters/2022/Étude de la causalité configurabilité d'un système et d'une CI/content)
 ### [Quelles sont les bonnes pratiques de mise en place d’un système de packaging ?]({{ site.url }}/chapters/2022/PackagingSystemsGuidelines/content)
 ### [Les bonnes pratiques définies et encouragées par Webpack sont-elles respectées par la communauté Open Source ?]({{ site.url }}/chapters/2022/WebpackGoodPractices/content)
