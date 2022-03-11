@@ -27,9 +27,6 @@ C’est le cas dans RapidMiner est un outil open source très avancé de constru
 Ainsi, en partant des codes de RapidMiner, nous aimerions “sortir” cette connaissance pour l’étudier et la ré-injecter dans un environnement dédié à l’enseignement. Plus précisément, nous voudrions extraire les préconditions des opérateurs, afin de possiblement les associer à la hiérarchie de définition des opérateurs. Nous pourrions ainsi savoir plus facilement les différentes préconditions de ceux-ci de manière générale mais aussi précise. Il serait ainsi intéressant d’avoir des statistiques sur l’utilisation des préconditions, ainsi qu’une analyse des impacts de ces différentes algorithmes (comment les données sont modifiées en sortie).
 
 
-![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](../assets/model/UCAlogoQlarge.png){:height="25px" }
-
-
 ## II. Observations/General question
 RapidMiner étant un outil nouveau pour nous, la première question que nous nous sommes posés est : “Est-il possible d’extraire les pré-conditions des opérateurs à l’aide de l’analyse de RapidMiner ?”. 
 Cela nous a paru être une question intéressante à se poser, car, tout d’abord, le thème du machine learning nous semble intéressant et de nombreuses approches toutes différentes nous sont venues au sein du groupe. Également, s’il est effectivement possible de tirer des informations à partir du code de RapidMiner, alors notre travail sera réutilisé dans un environnement dédié à l’enseignement. Cela nous a donc encore plus motivé à trouver diverses solutions pour permettre aux étudiants d’utiliser nos outils de visualisation de manière interactive.
@@ -69,17 +66,28 @@ Suite à nos recherches sur la première sous question, nous nous sommes retrouv
 Avec cet ensemble de données, nous aurions voulu pouvoir établir des liens entre les deux.
 Car les développeurs ne nomment pas les Opérateurs dans le code de la même manière qu’elle sont affichés sur l’interface de RapidMiner Studio, la différence de noms des fonctions de préconditions et les capabilities était trop grande. Nous n’avons pas pu le faire de façon algorithmique avec uniquement l’information sur les noms. Nous avons alors commencé à chercher un nouveau moyen de déterminer différents éléments de liaison entre préconditions et capabilities, cela s’est fait en parcourant le code source où les préconditions étaient utilisées. 
 Au cours des recherches sur la question précédente, nous avons remarqué que beaucoup de préconditions étaient surchargées lors de leurs utilisations. Certaines de ces surcharges semblaient ajouter des types de données obligatoires en entrée. Du côté de l’interface, nous avons remarqué que deux des opérateurs (DBscan et Function Fitting) avaient un nombre de capabilities différentes des autres, qui eux en comptaient 8 normalement. Nous avons alors conclu que cela était lié à la surcharge précédente, comme le montre les captures d’écrans ci-dessous :
+
 ![image1](./images/1.PNG)
+
 [Extrait du code dans github](https://github.com/SI5-I-2021-2022/RIMEL/blob/c65db1896fd8a1cc25b91445848443db33380c82/rapidminer-studio-modular-master/rapidminer-studio-core/src/main/java/com/rapidminer/operator/learner/functions/FunctionFitting.java#L224-L238)
+
 ![image2](./images/2.PNG)
+
 Nous avons alors décidé de nous concentrer sur les différentes surcharges dans le code source. Chaque override avait de nombreux contenus assez hétérogène mais deux comportements ressortent souvent : l’ajout de comportement sur la vérification et le fait qu’une propriété n’est plus obligatoire. 
 
-[Lien vers le code dans le github] (https://github.com/SI5-I-2021-2022/RIMEL/blob/c65db1896fd8a1cc25b91445848443db33380c82/rapidminer-studio-modular-master/rapidminer-studio-core/src/main/java/com/rapidminer/operator/ports/metadata/TableCapabilityPrecondition.java#L75-L100)
+![image3](./images/3.PNG)
 
-[Lien vers le code dans le github] (https://github.com/SI5-I-2021-2022/RIMEL/blob/c65db1896fd8a1cc25b91445848443db33380c82/rapidminer-studio-modular-master/rapidminer-studio-core/src/main/java/com/rapidminer/operator/visualization/LiftParetoChartGenerator.java#L107-L122)
+[Lien vers le code dans le github](https://github.com/SI5-I-2021-2022/RIMEL/blob/c65db1896fd8a1cc25b91445848443db33380c82/rapidminer-studio-modular-master/rapidminer-studio-core/src/main/java/com/rapidminer/operator/ports/metadata/TableCapabilityPrecondition.java#L75-L100)
+
+![image4](./images/4.PNG)
+
+[Lien vers le code dans le github](https://github.com/SI5-I-2021-2022/RIMEL/blob/c65db1896fd8a1cc25b91445848443db33380c82/rapidminer-studio-modular-master/rapidminer-studio-core/src/main/java/com/rapidminer/operator/visualization/LiftParetoChartGenerator.java#L107-L122)
+
 A côté de cela, nous avons remarqué que les méthodes dans les surcharges réalisaient beaucoup de lancement de messages d'erreur. Ces messages d’erreur ressemblaient pour la plupart à ce qui pourrait être notifié lorsqu’une des capabilities n’était pas satisfaite. Cette information pouvait donc nous offrir un lien pour lier ces deux parties. Voici un exemple de message d’erreur : “exception_checking_precondition”.
 
-[lien vers la méthode checkPreconditions() ] (https://github.com/SI5-I-2021-2022/RIMEL/blob/c65db1896fd8a1cc25b91445848443db33380c82/rapidminer-studio-modular-master/rapidminer-studio-core/src/main/java/com/rapidminer/operator/ports/impl/AbstractInputPort.java#L134-L147)
+![image1](./images/5.PNG)
+
+[lien vers la méthode checkPreconditions() ](https://github.com/SI5-I-2021-2022/RIMEL/blob/c65db1896fd8a1cc25b91445848443db33380c82/rapidminer-studio-modular-master/rapidminer-studio-core/src/main/java/com/rapidminer/operator/ports/impl/AbstractInputPort.java#L134-L147)
 
 Ce warning est levé dans le cas où les préconditions sur les metadata ne sont pas respectées.
 
@@ -92,32 +100,24 @@ Nous nous attendons à ce que les capabilities impactent les formats des donnée
 Expérimentation
 
 Pour cette expérimentation, nous avons utilisé Sikulix pour extraire les capabilites de tous les opérateurs depuis l’interface graphique de RapidMinerStudio. Nous avons construit un JSON contenant comme clé le nom de l'opérateur extrait depuis l’interface graphique (en appliquant un OCR sur les captures d’écran des vues détaillées des capabilities) et comme valeur un autre JSON contenant comme clé le nom de la capabilities (binomial attributes, polynomial attributes, etc…) et comme valeur true/false (true si la capabilitie est supportée par l'opérateur, false sinon).
+
 Puis nous avons extrait depuis le code source des projets (sample project) inclus dans RapidMiner (fichier .rmp) le chaînage entre les opérateurs au sein des projets. Pour finir, quand cela a été possible, nous avons relié les capabilities et les chaînages des opérateurs dans un même graph orienté.
 Pour cela, nous avons utilisé la librairie vis-network pour visualiser le graph et avons utilisé différentes légendes de couleur pour chaque nœud:
-Vert pour les opérateurs qui n’ont pas de capabilties affichées dans l’interface de RapidMiner Studio,
-Bleu pour pour les opérateurs ayant des capabilties renseignées,
-Rouge pour indiquer les opérateurs qui peuvent être chaînés à l'opérateur sélectionné,
-Blanc pour les opérateurs qui ne sont pas dans le dataset que nous avons construit.
+
+* Vert pour les opérateurs qui n’ont pas de capabilties affichées dans l’interface de RapidMiner Studio,
+* Bleu pour pour les opérateurs ayant des capabilties renseignées,
+* Rouge pour indiquer les opérateurs qui peuvent être chaînés à l'opérateur sélectionné,
+* Blanc pour les opérateurs qui ne sont pas dans le dataset que nous avons construit.
+
 Nous affichons aussi les capabilities quand on clique sur un nœud/opérateur de couleur bleu dans une table en utilisant Javascript. Également, la taille des flèches orientées dépend du nombre de fois qu’un opérateur est lié à un autre.
+
 Pour augmenter la quantité des données, nous avons aussi utilisés les options de RapidMiner Studio permettant de construire des projets en fonction de trois besoins :
-Prédire la valeur d’une colonne dans un dataset,
-Identifier des groupes (cluster) dans nos données,
-Détecter les valeurs aberrantes dans nos données.
 
+* Prédire la valeur d’une colonne dans un dataset,
+* Identifier des groupes (cluster) dans nos données,
+* Détecter les valeurs aberrantes dans nos données.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+![image6](./images/6.PNG)
 
 L'hypothèse serait que plus nous aurions des projets pour enrichir notre dataset, plus le graph deviendra complet et représentatif de tous les chaînages d'opérateurs possibles de telle sorte à ce que l’utilisateur de notre solution contribue directement à la capitalisation du savoir-faire pour l'entièreté de la communauté, ceci en continuant d’utiliser RapidMiner comme à son habitude. Il aura juste à exporter son fichier .rmp et le partager avec la communauté.
 
