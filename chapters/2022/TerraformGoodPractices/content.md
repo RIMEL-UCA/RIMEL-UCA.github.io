@@ -59,7 +59,7 @@ Nous définirons une définition en vérifiant les points suivants :
 source, une explication, un potentiel exemple et une estimation de mesurabilité. Enfin, nous regroupons ces pratiques à
 l’aide de tags qui permettent de cerner certaines catégories de pratique (sécurité, lisibilité, …). 
 
-[Vous trouverez l’ensemble des pratiques répertoriées dans ce tableau.](asset/good_practices.md)
+[Vous trouverez l’ensemble des pratiques répertoriées dans ce tableau.](assets/good_practices.md)
 
 Maintenant que nous avons des pratiques, il nous faut estimer si elles sont bien utilisées en pratique.
 
@@ -226,13 +226,13 @@ fichier Terraform.
 ## V. Résultats et Conclusion
 
 Une fois que nous avons récupéré la liste des repositories, nous utilisons un [second script pour analyser chaque
-repository avec Checkov](asset/analyse.sh) :
+repository avec Checkov](assets/analyse.sh) :
 
 | Nombre de projet | Taux de succès moyen | Projets ayant 100% de succès |
 |:-----------------|:--------------------:|:----------------------------:|
 | 92               |        88,04%        |            80,43%            |
 
-[Vous trouverez les détails de l'analyse ici.](asset/analyse_result.md)
+[Vous trouverez les détails de l'analyse ici.](assets/analyse_result.md)
 
 À première vue, Terraform semble être bien utilisé en pratique. Du moins, cette affirmation est basée sur les bonnes
 pratiques que nous avons nous-mêmes sélectionnées. Afin de généraliser cette affirmation, il serait nécessaire de
