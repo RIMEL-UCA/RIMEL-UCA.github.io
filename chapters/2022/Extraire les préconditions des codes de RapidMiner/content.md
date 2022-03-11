@@ -15,6 +15,115 @@ We are five students in last year of Polytech' Nice-Sophia specialized in Softwa
 * Valentin Campello &lt;valentin.campello@etu.univ-cotedazur.fr&gt;
 * Lucie Morant &lt;lucie.morant@etu.univ-cotedazur.fr&gt;
 * Yohann Tognetii  &lt;yohann.tognetti@etu.univ-cotedazur.fr&gt;
+
+
+
+
+## I. Research context /Project
+Dans le domaine du machine learning, tous les algorithmes utilisés requièrent des préconditions sur leur données d’entrée. Ces préconditions sont parfois très restrictives et il est donc difficile de les satisfaire. Notamment lorsque plusieurs de ses algorithmes s'utilisent les uns à la suite des autres.
+ 
+C’est le cas dans RapidMiner est un outil open source très avancé de construction de workflows de machine learning. Il intègre notamment la possibilité de définir de nouveaux opérateurs (algorithmes) en précisant les préconditions sur ces algorithmes et l’impact sur les données en sortie. Cette information est utilisée pour aider l’utilisateur en l’empêchant de connecter des datasets et des opérateurs inadaptés. Mais bien souvent les informations ne sont pas toujours claires ou disponibles et il n’y a qu’au moment du lancement des algorithmes que l’erreur de préconditions apparaît. 
+
+Ainsi, en partant des codes de RapidMiner, nous aimerions “sortir” cette connaissance pour l’étudier et la ré-injecter dans un environnement dédié à l’enseignement. Plus précisément, nous voudrions extraire les préconditions des opérateurs, afin de possiblement les associer à la hiérarchie de définition des opérateurs. Nous pourrions ainsi savoir plus facilement les différentes préconditions de ceux-ci de manière générale mais aussi précise. Il serait ainsi intéressant d’avoir des statistiques sur l’utilisation des préconditions, ainsi qu’une analyse des impacts de ces différentes algorithmes (comment les données sont modifiées en sortie).
+
+
+![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](../assets/model/UCAlogoQlarge.png){:height="25px" }
+
+
+## II. Observations/General question
+RapidMiner étant un outil nouveau pour nous, la première question que nous nous sommes posés est : “Est-il possible d’extraire les pré-conditions des opérateurs à l’aide de l’analyse de RapidMiner ?”. 
+Cela nous a paru être une question intéressante à se poser, car, tout d’abord, le thème du machine learning nous semble intéressant et de nombreuses approches toutes différentes nous sont venues au sein du groupe. Également, s’il est effectivement possible de tirer des informations à partir du code de RapidMiner, alors notre travail sera réutilisé dans un environnement dédié à l’enseignement. Cela nous a donc encore plus motivé à trouver diverses solutions pour permettre aux étudiants d’utiliser nos outils de visualisation de manière interactive.
+Nous avons donc réfléchi à des manières d’affiner cette question afin de mieux y répondre et en sommes venus à trois sous-questions : 
+1. Quels sont les types de préconditions ? Quels types de données ?
+2. A quel niveau les préconditions sont-elles associées ?
+3. Quels sont les impacts des opérateurs sur les données ?
+
+
+## III. information gathering
+Nous avons d’abord tous récupéré le même projet GitHub RapidMiner pour s’assurer que nous avions tous la même base pour la collecte d’informations. Comme il existait plusieurs repositories RapidMiner, notre choix s’est orienté vers celui le plus populaire, ainsi que le plus récent : rapidminer-studio-modular. 
+Afin d’extraire les différentes données récupérables dans RapidMiner, on utilise Sikulix pour ce qui est lié à l’interface graphique et les expressions régulières (Python) ainsi que Spoon pour ce qui est lié au code source. Quant au traitement des métriques prélevées, un tableur classique (du type Excel) nous permet de créer des tableaux et des histogrammes. De plus, nous utilisons du HTML + PureJS avec la libraire vis-network pour visualiser les graphes de chaînages des opérateurs, ainsi que les capabilities de manière dynamique directement sur Github.io.
+
+## IV. Hypothesis & Experiences
+1. Quels sont les types de préconditions ?Quels types de données ?
+
+Hypothèse
+
+Le code source ajoute des préconditions sur chaque classe correspondant aux opérateurs de manière relativement uniforme. L’interface affiche des capabilities de manière similaire entre les opérateurs. Un héritage est assez fort entre les opérateurs et chacun hérite des préconditions de son parent. 
+
+Expérimentation
+
+Pour découvrir les types de préconditions existantes, nous avons effectué en parallèle une analyse sur l’interface graphique à l’aide de Sikulix et une analyse sur le code source avec les expressions régulières et Spoon.
+Sikulix nous a servi à récupérer l'overview des opérateurs qui informent des données supportées ou non afin d'en faire un tableau de résultats par la suite, chaque colonne étant l'acceptation ou non des différents types d'entrées. L’emploi de l’OCR pour récupérer les noms et les types de capabilities s’est fait aisément grâce aux fonctions built-in intégrées dans Sikulix (librairie openCV utilisant Tesseract).
+Au niveau des expressions régulières, celles-ci nous ont permis d’effectuer une analyse directe sur le code source de RapidMiner et d’obtenir la fréquence à laquelle la classe d’une certaine précondition est présente. Nous avons pu, à l’aide de ces informations, créer un histogramme montrant le nombre de fois qu’une classe est appelée et ainsi identifier les classes les plus utilisées. Également, nous avons traité et exporté les données sur les connexions existantes entre les opérateurs de RapidMiner (un exemple de connexion serait qu’un opérateur X produit des données que l’on peut fournir en entrée d’un opérateur Y).  Ce résultat a été affiché sous la forme d’un graphe avec des poids à l’aide de vis-network. Nous avons essayé de faire la même chose avec des flows déjà lancés au moins une fois dans OpenML mais les résultats n’étaient pas concluants car la version de RapidMiner Studio qu’avait été utilisée pour créer ces projets n’étaient pas compatible avec notre version de RapidMiner Studio.
+Quant à Spoon, nous n’avons pas réussi à en tirer quelque chose car il nous était impossible de le faire compiler avec nos outils car nous n’avons pas pu avoir les fichiers .jar de dépendance nécessaire à la compilation du projet open source mise à disposition sur le GitHub officiel de RapidMiner car la solution RapidMiner est devenue une solution propriétaire et commercialisée, le code n’est donc plus open source. Nous avons donc vite abandonné cette piste afin de nous concentrer sur nos autres approches (parseur avec python, extraction des données avec Sikulix, etc...).
+ 
+2. A quel niveau les préconditions sont-elles associées ?
+
+Hypothèse
+
+Nous nous attendons à minima à découvrir que les préconditions sont associées et ont un lien direct avec les opérateurs que ce soit par le nom ou par un autre élément. Nous souhaitons pouvoir retrouver des préconditions communes à des familles d’opérateurs.
+
+Expérimentation
+
+Suite à nos recherches sur la première sous question, nous nous sommes retrouvés avec des données sur les préconditions ainsi que sur les capabilities extraites des opérateurs. 
+Avec cet ensemble de données, nous aurions voulu pouvoir établir des liens entre les deux.
+Car les développeurs ne nomment pas les Opérateurs dans le code de la même manière qu’elle sont affichés sur l’interface de RapidMiner Studio, la différence de noms des fonctions de préconditions et les capabilities était trop grande. Nous n’avons pas pu le faire de façon algorithmique avec uniquement l’information sur les noms. Nous avons alors commencé à chercher un nouveau moyen de déterminer différents éléments de liaison entre préconditions et capabilities, cela s’est fait en parcourant le code source où les préconditions étaient utilisées. 
+Au cours des recherches sur la question précédente, nous avons remarqué que beaucoup de préconditions étaient surchargées lors de leurs utilisations. Certaines de ces surcharges semblaient ajouter des types de données obligatoires en entrée. Du côté de l’interface, nous avons remarqué que deux des opérateurs (DBscan et Function Fitting) avaient un nombre de capabilities différentes des autres, qui eux en comptaient 8 normalement. Nous avons alors conclu que cela était lié à la surcharge précédente, comme le montre les captures d’écrans ci-dessous :
+![image1](./images/1.PNG)
+[Extrait du code dans github](https://github.com/SI5-I-2021-2022/RIMEL/blob/c65db1896fd8a1cc25b91445848443db33380c82/rapidminer-studio-modular-master/rapidminer-studio-core/src/main/java/com/rapidminer/operator/learner/functions/FunctionFitting.java#L224-L238)
+![image2](./images/2.PNG)
+Nous avons alors décidé de nous concentrer sur les différentes surcharges dans le code source. Chaque override avait de nombreux contenus assez hétérogène mais deux comportements ressortent souvent : l’ajout de comportement sur la vérification et le fait qu’une propriété n’est plus obligatoire. 
+
+[Lien vers le code dans le github] (https://github.com/SI5-I-2021-2022/RIMEL/blob/c65db1896fd8a1cc25b91445848443db33380c82/rapidminer-studio-modular-master/rapidminer-studio-core/src/main/java/com/rapidminer/operator/ports/metadata/TableCapabilityPrecondition.java#L75-L100)
+
+[Lien vers le code dans le github] (https://github.com/SI5-I-2021-2022/RIMEL/blob/c65db1896fd8a1cc25b91445848443db33380c82/rapidminer-studio-modular-master/rapidminer-studio-core/src/main/java/com/rapidminer/operator/visualization/LiftParetoChartGenerator.java#L107-L122)
+A côté de cela, nous avons remarqué que les méthodes dans les surcharges réalisaient beaucoup de lancement de messages d'erreur. Ces messages d’erreur ressemblaient pour la plupart à ce qui pourrait être notifié lorsqu’une des capabilities n’était pas satisfaite. Cette information pouvait donc nous offrir un lien pour lier ces deux parties. Voici un exemple de message d’erreur : “exception_checking_precondition”.
+
+[lien vers la méthode checkPreconditions() ] (https://github.com/SI5-I-2021-2022/RIMEL/blob/c65db1896fd8a1cc25b91445848443db33380c82/rapidminer-studio-modular-master/rapidminer-studio-core/src/main/java/com/rapidminer/operator/ports/impl/AbstractInputPort.java#L134-L147)
+
+Ce warning est levé dans le cas où les préconditions sur les metadata ne sont pas respectées.
+
+3. Quels sont les impacts des opérateurs sur les données ?
+
+Hypothèse
+
+Nous nous attendons à ce que les capabilities impactent les formats des données en sortie des opérateurs, que les chaînages des opérateurs au sein des projets fournis dans le code source de RapidMiner Studio soit correctement constitué (pas de chaînage d'opérateur incompatible).
+
+Expérimentation
+
+Pour cette expérimentation, nous avons utilisé Sikulix pour extraire les capabilites de tous les opérateurs depuis l’interface graphique de RapidMinerStudio. Nous avons construit un JSON contenant comme clé le nom de l'opérateur extrait depuis l’interface graphique (en appliquant un OCR sur les captures d’écran des vues détaillées des capabilities) et comme valeur un autre JSON contenant comme clé le nom de la capabilities (binomial attributes, polynomial attributes, etc…) et comme valeur true/false (true si la capabilitie est supportée par l'opérateur, false sinon).
+Puis nous avons extrait depuis le code source des projets (sample project) inclus dans RapidMiner (fichier .rmp) le chaînage entre les opérateurs au sein des projets. Pour finir, quand cela a été possible, nous avons relié les capabilities et les chaînages des opérateurs dans un même graph orienté.
+Pour cela, nous avons utilisé la librairie vis-network pour visualiser le graph et avons utilisé différentes légendes de couleur pour chaque nœud:
+Vert pour les opérateurs qui n’ont pas de capabilties affichées dans l’interface de RapidMiner Studio,
+Bleu pour pour les opérateurs ayant des capabilties renseignées,
+Rouge pour indiquer les opérateurs qui peuvent être chaînés à l'opérateur sélectionné,
+Blanc pour les opérateurs qui ne sont pas dans le dataset que nous avons construit.
+Nous affichons aussi les capabilities quand on clique sur un nœud/opérateur de couleur bleu dans une table en utilisant Javascript. Également, la taille des flèches orientées dépend du nombre de fois qu’un opérateur est lié à un autre.
+Pour augmenter la quantité des données, nous avons aussi utilisés les options de RapidMiner Studio permettant de construire des projets en fonction de trois besoins :
+Prédire la valeur d’une colonne dans un dataset,
+Identifier des groupes (cluster) dans nos données,
+Détecter les valeurs aberrantes dans nos données.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+L'hypothèse serait que plus nous aurions des projets pour enrichir notre dataset, plus le graph deviendra complet et représentatif de tous les chaînages d'opérateurs possibles de telle sorte à ce que l’utilisateur de notre solution contribue directement à la capitalisation du savoir-faire pour l'entièreté de la communauté, ceci en continuant d’utiliser RapidMiner comme à son habitude. Il aura juste à exporter son fichier .rmp et le partager avec la communauté.
+
+## V. Result Analysis and Conclusion
+
+1. Analyse des résultats & construction d’une conclusion : Une fois votre expérience terminée, vous récupérez vos mesures et vous les analysez pour voir si votre hypothèse tient la route. 
 <html lang="en">
   <head>
     <title>Vis Network | Basic usage</title>
@@ -156,103 +265,6 @@ We are five students in last year of Polytech' Nice-Sophia specialized in Softwa
     
   </body>
 </html>
-
-
-
-## I. Research context /Project
-Dans le domaine du machine learning, tous les algorithmes utilisés requièrent des préconditions sur leur données d’entrée. Ces préconditions sont parfois très restrictives et il est donc difficile de les satisfaire. Notamment lorsque plusieurs de ses algorithmes s'utilisent les uns à la suite des autres.
- 
-C’est le cas dans RapidMiner est un outil open source très avancé de construction de workflows de machine learning. Il intègre notamment la possibilité de définir de nouveaux opérateurs (algorithmes) en précisant les préconditions sur ces algorithmes et l’impact sur les données en sortie. Cette information est utilisée pour aider l’utilisateur en l’empêchant de connecter des datasets et des opérateurs inadaptés. Mais bien souvent les informations ne sont pas toujours claires ou disponibles et il n’y a qu’au moment du lancement des algorithmes que l’erreur de préconditions apparaît. 
-
-Ainsi, en partant des codes de RapidMiner, nous aimerions “sortir” cette connaissance pour l’étudier et la ré-injecter dans un environnement dédié à l’enseignement. Plus précisément, nous voudrions extraire les préconditions des opérateurs, afin de possiblement les associer à la hiérarchie de définition des opérateurs. Nous pourrions ainsi savoir plus facilement les différentes préconditions de ceux-ci de manière générale mais aussi précise. Il serait ainsi intéressant d’avoir des statistiques sur l’utilisation des préconditions, ainsi qu’une analyse des impacts de ces différentes algorithmes (comment les données sont modifiées en sortie).
-
-
-![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](../assets/model/UCAlogoQlarge.png){:height="25px" }
-
-
-## II. Observations/General question
-RapidMiner étant un outil nouveau pour nous, la première question que nous nous sommes posés est : “Est-il possible d’extraire les pré-conditions des opérateurs à l’aide de l’analyse de RapidMiner ?”. 
-Cela nous a paru être une question intéressante à se poser, car, tout d’abord, le thème du machine learning nous semble intéressant et de nombreuses approches toutes différentes nous sont venues au sein du groupe. Également, s’il est effectivement possible de tirer des informations à partir du code de RapidMiner, alors notre travail sera réutilisé dans un environnement dédié à l’enseignement. Cela nous a donc encore plus motivé à trouver diverses solutions pour permettre aux étudiants d’utiliser nos outils de visualisation de manière interactive.
-Nous avons donc réfléchi à des manières d’affiner cette question afin de mieux y répondre et en sommes venus à trois sous-questions : 
-1. Quels sont les types de préconditions ? Quels types de données ?
-2. A quel niveau les préconditions sont-elles associées ?
-3. Quels sont les impacts des opérateurs sur les données ?
-
-
-## III. information gathering
-Nous avons d’abord tous récupéré le même projet GitHub RapidMiner pour s’assurer que nous avions tous la même base pour la collecte d’informations. Comme il existait plusieurs repositories RapidMiner, notre choix s’est orienté vers celui le plus populaire, ainsi que le plus récent : rapidminer-studio-modular. 
-Afin d’extraire les différentes données récupérables dans RapidMiner, on utilise Sikulix pour ce qui est lié à l’interface graphique et les expressions régulières (Python) ainsi que Spoon pour ce qui est lié au code source. Quant au traitement des métriques prélevées, un tableur classique (du type Excel) nous permet de créer des tableaux et des histogrammes. De plus, nous utilisons du HTML + PureJS avec la libraire vis-network pour visualiser les graphes de chaînages des opérateurs, ainsi que les capabilities de manière dynamique directement sur Github.io.
-
-## IV. Hypothesis & Experiences
-1. Quels sont les types de préconditions ? Quels types de données ?
-Hypothèse
-Le code source ajoute des préconditions sur chaque classe correspondant aux opérateurs de manière relativement uniforme. L’interface affiche des capabilities de manière similaire entre les opérateurs. Un héritage est assez fort entre les opérateurs et chacun hérite des préconditions de son parent. 
-Expérimentation
-Pour découvrir les types de préconditions existantes, nous avons effectué en parallèle une analyse sur l’interface graphique à l’aide de Sikulix et une analyse sur le code source avec les expressions régulières et Spoon.
-Sikulix nous a servi à récupérer l'overview des opérateurs qui informent des données supportées ou non afin d'en faire un tableau de résultats par la suite, chaque colonne étant l'acceptation ou non des différents types d'entrées. L’emploi de l’OCR pour récupérer les noms et les types de capabilities s’est fait aisément grâce aux fonctions built-in intégrées dans Sikulix (librairie openCV utilisant Tesseract).
-Au niveau des expressions régulières, celles-ci nous ont permis d’effectuer une analyse directe sur le code source de RapidMiner et d’obtenir la fréquence à laquelle la classe d’une certaine précondition est présente. Nous avons pu, à l’aide de ces informations, créer un histogramme montrant le nombre de fois qu’une classe est appelée et ainsi identifier les classes les plus utilisées. Également, nous avons traité et exporté les données sur les connexions existantes entre les opérateurs de RapidMiner (un exemple de connexion serait qu’un opérateur X produit des données que l’on peut fournir en entrée d’un opérateur Y).  Ce résultat a été affiché sous la forme d’un graphe avec des poids à l’aide de vis-network. Nous avons essayé de faire la même chose avec des flows déjà lancés au moins une fois dans OpenML mais les résultats n’étaient pas concluants car la version de RapidMiner Studio qu’avait été utilisée pour créer ces projets n’étaient pas compatible avec notre version de RapidMiner Studio.
-Quant à Spoon, nous n’avons pas réussi à en tirer quelque chose car il nous était impossible de le faire compiler avec nos outils car nous n’avons pas pu avoir les fichiers .jar de dépendance nécessaire à la compilation du projet open source mise à disposition sur le GitHub officiel de RapidMiner car la solution RapidMiner est devenue une solution propriétaire et commercialisée, le code n’est donc plus open source. Nous avons donc vite abandonné cette piste afin de nous concentrer sur nos autres approches (parseur avec python, extraction des données avec Sikulix, etc...).
- 
-3. A quel niveau les préconditions sont-elles associées ?
-Hypothèse
-Nous nous attendons à minima à découvrir que les préconditions sont associées et ont un lien direct avec les opérateurs que ce soit par le nom ou par un autre élément. Nous souhaitons pouvoir retrouver des préconditions communes à des familles d’opérateurs.
-Expérimentation
-
-Suite à nos recherches sur la première sous question, nous nous sommes retrouvés avec des données sur les préconditions ainsi que sur les capabilities extraites des opérateurs. 
-Avec cet ensemble de données, nous aurions voulu pouvoir établir des liens entre les deux.
-Car les développeurs ne nomment pas les Opérateurs dans le code de la même manière qu’elle sont affichés sur l’interface de RapidMiner Studio, la différence de noms des fonctions de préconditions et les capabilities était trop grande. Nous n’avons pas pu le faire de façon algorithmique avec uniquement l’information sur les noms. Nous avons alors commencé à chercher un nouveau moyen de déterminer différents éléments de liaison entre préconditions et capabilities, cela s’est fait en parcourant le code source où les préconditions étaient utilisées. 
-Au cours des recherches sur la question précédente, nous avons remarqué que beaucoup de préconditions étaient surchargées lors de leurs utilisations. Certaines de ces surcharges semblaient ajouter des types de données obligatoires en entrée. Du côté de l’interface, nous avons remarqué que deux des opérateurs (DBscan et Function Fitting) avaient un nombre de capabilities différentes des autres, qui eux en comptaient 8 normalement. Nous avons alors conclu que cela était lié à la surcharge précédente, comme le montre les captures d’écrans ci-dessous :
-![image1](./images/1.PNG)
-[Extrait du code dans github](https://github.com/SI5-I-2021-2022/RIMEL/blob/c65db1896fd8a1cc25b91445848443db33380c82/rapidminer-studio-modular-master/rapidminer-studio-core/src/main/java/com/rapidminer/operator/learner/functions/FunctionFitting.java#L224-L238)
-
-Nous avons alors décidé de nous concentrer sur les différentes surcharges dans le code source. Chaque override avait de nombreux contenus assez hétérogène mais deux comportements ressortent souvent : l’ajout de comportement sur la vérification et le fait qu’une propriété n’est plus obligatoire. 
-
-[Lien vers le code dans le github] (https://github.com/SI5-I-2021-2022/RIMEL/blob/c65db1896fd8a1cc25b91445848443db33380c82/rapidminer-studio-modular-master/rapidminer-studio-core/src/main/java/com/rapidminer/operator/ports/metadata/TableCapabilityPrecondition.java#L75-L100)
-
-[Lien vers le code dans le github] (https://github.com/SI5-I-2021-2022/RIMEL/blob/c65db1896fd8a1cc25b91445848443db33380c82/rapidminer-studio-modular-master/rapidminer-studio-core/src/main/java/com/rapidminer/operator/visualization/LiftParetoChartGenerator.java#L107-L122)
-A côté de cela, nous avons remarqué que les méthodes dans les surcharges réalisaient beaucoup de lancement de messages d'erreur. Ces messages d’erreur ressemblaient pour la plupart à ce qui pourrait être notifié lorsqu’une des capabilities n’était pas satisfaite. Cette information pouvait donc nous offrir un lien pour lier ces deux parties. Voici un exemple de message d’erreur : “exception_checking_precondition”.
-
-[lien vers la méthode checkPreconditions() ] (https://github.com/SI5-I-2021-2022/RIMEL/blob/c65db1896fd8a1cc25b91445848443db33380c82/rapidminer-studio-modular-master/rapidminer-studio-core/src/main/java/com/rapidminer/operator/ports/impl/AbstractInputPort.java#L134-L147)
-
-Ce warning est levé dans le cas où les préconditions sur les metadata ne sont pas respectées.
-Quels sont les impacts des opérateurs sur les données ?
-Hypothèse
-Nous nous attendons à ce que les capabilities impactent les formats des données en sortie des opérateurs, que les chaînages des opérateurs au sein des projets fournis dans le code source de RapidMiner Studio soit correctement constitué (pas de chaînage d'opérateur incompatible).
-Expérimentation
-Pour cette expérimentation, nous avons utilisé Sikulix pour extraire les capabilites de tous les opérateurs depuis l’interface graphique de RapidMinerStudio. Nous avons construit un JSON contenant comme clé le nom de l'opérateur extrait depuis l’interface graphique (en appliquant un OCR sur les captures d’écran des vues détaillées des capabilities) et comme valeur un autre JSON contenant comme clé le nom de la capabilities (binomial attributes, polynomial attributes, etc…) et comme valeur true/false (true si la capabilitie est supportée par l'opérateur, false sinon).
-Puis nous avons extrait depuis le code source des projets (sample project) inclus dans RapidMiner (fichier .rmp) le chaînage entre les opérateurs au sein des projets. Pour finir, quand cela a été possible, nous avons relié les capabilities et les chaînages des opérateurs dans un même graph orienté.
-Pour cela, nous avons utilisé la librairie vis-network pour visualiser le graph et avons utilisé différentes légendes de couleur pour chaque nœud:
-Vert pour les opérateurs qui n’ont pas de capabilties affichées dans l’interface de RapidMiner Studio,
-Bleu pour pour les opérateurs ayant des capabilties renseignées,
-Rouge pour indiquer les opérateurs qui peuvent être chaînés à l'opérateur sélectionné,
-Blanc pour les opérateurs qui ne sont pas dans le dataset que nous avons construit.
-Nous affichons aussi les capabilities quand on clique sur un nœud/opérateur de couleur bleu dans une table en utilisant Javascript. Également, la taille des flèches orientées dépend du nombre de fois qu’un opérateur est lié à un autre.
-Pour augmenter la quantité des données, nous avons aussi utilisés les options de RapidMiner Studio permettant de construire des projets en fonction de trois besoins :
-Prédire la valeur d’une colonne dans un dataset,
-Identifier des groupes (cluster) dans nos données,
-Détecter les valeurs aberrantes dans nos données.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-L'hypothèse serait que plus nous aurions des projets pour enrichir notre dataset, plus le graph deviendra complet et représentatif de tous les chaînages d'opérateurs possibles de telle sorte à ce que l’utilisateur de notre solution contribue directement à la capitalisation du savoir-faire pour l'entièreté de la communauté, ceci en continuant d’utiliser RapidMiner comme à son habitude. Il aura juste à exporter son fichier .rmp et le partager avec la communauté.
-
-## V. Result Analysis and Conclusion
-
-1. Analyse des résultats & construction d’une conclusion : Une fois votre expérience terminée, vous récupérez vos mesures et vous les analysez pour voir si votre hypothèse tient la route. 
-
 ## VI. Tools \(facultatif\)
 
 Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à \(1\) pouvoir reproduire vos expérimentations, \(2\) partager/expliquer à d'autres l'usage des outils.
