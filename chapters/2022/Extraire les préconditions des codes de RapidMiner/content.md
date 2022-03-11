@@ -373,7 +373,7 @@ Il faut renommer dans le ficher [app.js](https://github.com/SI5-I-2021-2022/RIME
 
 ## VI. Références
 
-[1] Mierswa, I., & Klinkenberg, R. (2018). RapidMiner Studio (9.1) [Data science, machine learning, predictive analytics]. Retrieved from [https://rapidminer.com/ https://docs.rapidminer.com/downloads/RapidMiner-v6-user-manual.pdf](https://rapidminer.com/ https://docs.rapidminer.com/downloads/RapidMiner-v6-user-manual.pdf)
+[1] Mierswa, I., & Klinkenberg, R. (2018). RapidMiner Studio (9.1) [Data science, machine learning, predictive analytics]. Retrieved from [https://docs.rapidminer.com/downloads/RapidMiner-v6-user-manual.pdf](https://docs.rapidminer.com/downloads/RapidMiner-v6-user-manual.pdf)
 
 [2] Renaud Pawlak, Martin Monperrus, Nicolas Petitprez, Carlos Noguera, Lionel Seinturier. Spoon: A Library for Implementing Analyses and Transformations of Java Source Code. Software: Practice and Experience, Wiley, 2015, 46, pp.1155-1179. ff10.1002/spe.2346ff. ffhal-01078532v2f [https://hal.inria.fr/hal-01078532v2/document](https://hal.inria.fr/hal-01078532v2/document)
 
