@@ -9,7 +9,7 @@ date:   2022-01-08 17:08:00 +0100
 Nous sommes cinq étudiants de dernière année à Polytech Nice Sophia spécialisés en Architecture Logicielle :
 
 * Tigran Nersissian <tigran.nersissian@etu.univ-cotedazur.fr>
-* Yann Martin D&#039;Escrienne <yann.martin-d'escrienne@etu.univ-cotedazur.fr>
+* Yann Martin D&#039;Escrienne <yann.martin&dash;d&#039;escrienne@etu.univ-cotedazur.fr>
 * Valentin Campello <valentin.campello@etu.univ-cotedazur.fr>
 * Lucie Morant <lucie.morant@etu.univ-cotedazur.fr>
 * Yohann Tognetti <yohann.tognetti@etu.univ-cotedazur.fr>
@@ -115,7 +115,7 @@ Pour augmenter la quantité des données, nous avons aussi utilisés les options
 
 L'hypothèse serait que plus nous aurions des projets pour enrichir notre dataset, plus le graph deviendra complet et représentatif de tous les chaînages d'opérateurs possibles de telle sorte à ce que l’utilisateur de notre solution contribue directement à la capitalisation du savoir-faire pour l'entièreté de la communauté, ceci en continuant d’utiliser RapidMiner comme à son habitude. Il aura juste à exporter son fichier .rmp et le partager avec la communauté.     
 
-## V. Result Analysis and Conclusion
+## V. Analyse des résultats & Conclusion
 ### V.1 Récupération des préconditions
 
 Pour notre première sous-question “Quels sont les types de préconditions ? Quels types de données ?”, nous avons eu les résultats suivants :
