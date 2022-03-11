@@ -37,17 +37,17 @@ Nous avons donc réfléchi à des manières d’affiner cette question afin de m
 
 
 ## III. information gathering
-Nous avons d’abord tous récupéré le même projet GitHub RapidMiner pour s’assurer que nous avions tous la même base pour la collecte d’informations. Comme il existait plusieurs repositories RapidMiner, notre choix s’est orienté vers celui le plus populaire, ainsi que le plus récent : rapidminer-studio-modular. 
+Nous avons d’abord tous récupéré le même projet GitHub RapidMiner pour s’assurer que nous avions tous la même base pour la collecte d’informations. Comme il existait plusieurs repositories RapidMiner, notre choix s’est orienté vers celui le plus populaire, ainsi que le plus récent : [rapidminer-studio-modular](https://github.com/rapidminer/rapidminer-studio-modular). 
 Afin d’extraire les différentes données récupérables dans RapidMiner, on utilise Sikulix pour ce qui est lié à l’interface graphique et les expressions régulières (Python) ainsi que Spoon pour ce qui est lié au code source. Quant au traitement des métriques prélevées, un tableur classique (du type Excel) nous permet de créer des tableaux et des histogrammes. De plus, nous utilisons du HTML + PureJS avec la libraire vis-network pour visualiser les graphes de chaînages des opérateurs, ainsi que les capabilities de manière dynamique directement sur Github.io.
 
 ## IV. Hypothesis & Experiences
 1. Quels sont les types de préconditions ?Quels types de données ?
 
-Hypothèse
+### Hypothèse
 
 Le code source ajoute des préconditions sur chaque classe correspondant aux opérateurs de manière relativement uniforme. L’interface affiche des capabilities de manière similaire entre les opérateurs. Un héritage est assez fort entre les opérateurs et chacun hérite des préconditions de son parent. 
 
-Expérimentation
+### Expérimentation
 
 Pour découvrir les types de préconditions existantes, nous avons effectué en parallèle une analyse sur l’interface graphique à l’aide de Sikulix et une analyse sur le code source avec les expressions régulières et Spoon.
 Sikulix nous a servi à récupérer l'overview des opérateurs qui informent des données supportées ou non afin d'en faire un tableau de résultats par la suite, chaque colonne étant l'acceptation ou non des différents types d'entrées. L’emploi de l’OCR pour récupérer les noms et les types de capabilities s’est fait aisément grâce aux fonctions built-in intégrées dans Sikulix (librairie openCV utilisant Tesseract).
@@ -56,11 +56,11 @@ Quant à Spoon, nous n’avons pas réussi à en tirer quelque chose car il nous
  
 2. A quel niveau les préconditions sont-elles associées ?
 
-Hypothèse
+### Hypothèse
 
 Nous nous attendons à minima à découvrir que les préconditions sont associées et ont un lien direct avec les opérateurs que ce soit par le nom ou par un autre élément. Nous souhaitons pouvoir retrouver des préconditions communes à des familles d’opérateurs.
 
-Expérimentation
+### Expérimentation
 
 Suite à nos recherches sur la première sous question, nous nous sommes retrouvés avec des données sur les préconditions ainsi que sur les capabilities extraites des opérateurs. 
 Avec cet ensemble de données, nous aurions voulu pouvoir établir des liens entre les deux.
@@ -93,11 +93,11 @@ Ce warning est levé dans le cas où les préconditions sur les metadata ne sont
 
 3. Quels sont les impacts des opérateurs sur les données ?
 
-Hypothèse
+### Hypothèse
 
 Nous nous attendons à ce que les capabilities impactent les formats des données en sortie des opérateurs, que les chaînages des opérateurs au sein des projets fournis dans le code source de RapidMiner Studio soit correctement constitué (pas de chaînage d'opérateur incompatible).
 
-Expérimentation
+### Expérimentation
 
 Pour cette expérimentation, nous avons utilisé Sikulix pour extraire les capabilites de tous les opérateurs depuis l’interface graphique de RapidMinerStudio. Nous avons construit un JSON contenant comme clé le nom de l'opérateur extrait depuis l’interface graphique (en appliquant un OCR sur les captures d’écran des vues détaillées des capabilities) et comme valeur un autre JSON contenant comme clé le nom de la capabilities (binomial attributes, polynomial attributes, etc…) et comme valeur true/false (true si la capabilitie est supportée par l'opérateur, false sinon).
 
@@ -323,13 +323,13 @@ Nous avons donc eu comme idée d’essayer de récupérer les JAR directement da
 Ensuite, nous avons vu que tous les plugins dont java-basics et java-publishing existe dans des répertoires git séparés. Nous avons donc essayé de les récupérer afin de les build. De nouveau nous n’avions pas les dépendances.
 
 Pour finir, nous avons essayé de récupérer l'ensemble des plugins du repertories pour essayer d’avoir toutes les dépendances suivantes :
-* gradle-plugin-rapidminer-java-signing
-* gradle-plugin-rapidminer-gradle-plugin
-* gradle-plugin-rapidminer-code-quality
-* gradle-plugin-rapidminer-extension
-* gradle-plugin-rapidminer-java-publishing
-* gradle-plugin-rapidminer-java-basics
-* gradle-plugin-rapidminer-release
+* [gradle-plugin-rapidminer-java-signing](https://github.com/rapidminer/gradle-plugin-rapidminer-java-signing)
+* [gradle-plugin-rapidminer-gradle-plugin](https://github.com/rapidminer/gradle-plugin-rapidminer-gradle-plugin)
+* [gradle-plugin-rapidminer-code-quality](https://github.com/rapidminer/gradle-plugin-rapidminer-code-quality)
+* [gradle-plugin-rapidminer-extension](https://github.com/rapidminer/gradle-plugin-rapidminer-extension)
+* [gradle-plugin-rapidminer-java-publishing](https://github.com/rapidminer/gradle-plugin-rapidminer-java-publishing)
+* [gradle-plugin-rapidminer-java-basics](https://github.com/rapidminer/gradle-plugin-rapidminer-java-basics)
+* [gradle-plugin-rapidminer-release](https://github.com/rapidminer/gradle-plugin-rapidminer-release)
 
 Cela ne nous a pas permis de résoudre les problèmes car nous n’avons pas réussi à en build un seul. Nous avons alors décidé de ne pas aller plus loin sur cette piste ne donnant pas de résultat.
 
@@ -337,9 +337,59 @@ Suite à la première présentation de notre avancée, on nous a donné la piste
 
 ## VI. Tools \(facultatif\)
 
-Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à \(1\) pouvoir reproduire vos expérimentations, \(2\) partager/expliquer à d'autres l'usage des outils.
+Tout au long de notre projet, nous avons codé ensemble sur un repository GitHub dédié au cours de Rétro-Ingénierie, que [voici](https://github.com/SI5-I-2021-2022/RIMEL). Dedans s’y trouve des fichiers Python qui nous ont permis l’extraction des données dans le code source de RapidMiner. Il y est également présent les images utilisées pour le lancement du script sur Sikulix.
+
+
+[parserV0.py](https://github.com/SI5-I-2021-2022/RIMEL/blob/V1.0/parserV0.py) est un script qui permet de récupérer les différents résultats dans des fichiers textes. Ces différents résultats sont l’agglomération des scripts ci-dessous. Lancez donc celui-ci si vous voulez tout le contenu directement. Pour des résultats plus précis, lancez les scripts suivants séparément.
+
+[Ce script](https://github.com/SI5-I-2021-2022/RIMEL/blob/V1.0/parserPrecondition.py) permet de récupérer les différentes préconditions dans chacune des classes java des opérateurs. Les préconditions sont ici indifférenciées et mises dans un fichier texte dédié. C’est le script qui récupère les données les plus brutes. 
+
+[Ce script](https://github.com/SI5-I-2021-2022/RIMEL/blob/V1.0/parserOverride.py) permet de récupérer toutes les préconditions override. Il va alors écrire le résultat dans le fichier correspondant. 
+
+
+[Ce script](https://github.com/SI5-I-2021-2022/RIMEL/blob/V1.0/parserError.py) permet la récupération des messages d’erreurs dans leur totalité ou bien les données plus précises contenues dans la création des erreurs comme le message, la sévérité et les variables. 
+
+
+
+Lien script Sikulix et tuto pour l’utiliser
+Pré-requis :
+* Pour lancer SikulixIDE, il faut avoir java 64 bit installé.
+* Récupérer le fichier sikulixide-2.0.5-win.jar depuis le GitHub.
+
+Se placer avec la ligne de commande sur le dossier contenant le jar puis exécuter la commande suivante :
+* java -jar sikulixide-2.0.5-win.jar
+
+
+Respecter ces étapes :
+1. Dans l'IDE, cliquer sur Fichier->Ouvrir puis sélectionner le dossier Test.sikulix,
+2. Enfin, ouvrir RapidMiner Studio Version 9.10 avec un écran ayant une résolution de 1920x1080 sous Windows 10,
+3. Fermer toutes les fenêtres différentes de "Operators" puis cliquer sur le premier dossier dans Operators->Data Access afin qu'il soit surligné en bleu clair,
+4. Lancer la première fois en mode "Exécuter en ralenti" et se placer directement sur RapidMiner Studio avec la fenêtre agrandi.
+
+Conseil d'affichage :
+* Cocher "Always Highlight" en cliquant sur Fichier->Préferences->more options dans SikulixIDE afin d'afficher les éléments reconnu avant de cliquer.
+
+WARNING : Si vous perdez la main (c’est-à-dire que Sikulix ne reconnaît pas les bons éléments et clique aux mauvais endroits), il faut fermer le processus Java ayant lancé SikulixIDE. Vous pouvez soit faire CTRL+C sur l'invite de commande, soit fermer directement la fenêtre du cmd.
+Avant d’appuyer sur le bouton Exécuter dans Sikulix IDE, il est préférable de vérifier en cliquant sur chacune des images dans le code de l’IDE, afin de voir la prévisualisation des correspondances possibles.
+
+[Ce script](https://github.com/SI5-I-2021-2022/RIMEL/blob/V1.0/processes_operators.ipynb) a pour but de récupérer dans le code brut des processus de RapidMiner Studio les connexions qui se font d’un opérateur à un autre. Il va donc parcourir chaque fichier .rmp et chercher s’il contient un “from_op”. Si c’est le cas, il regarde si, dans sa ligne, on trouve un “to_op” (pour avoir la connexion d’un opérateur vers un autre). Si ces deux conditions sont réunies, alors on sait que l’opérateur de “from_op” se connecte à celui de “to_op” et qu’un lien existe entre eux. On renseigne donc ce lien dans un dictionnaire qui a comme clé l’opérateur “from_op” et qui a comme valeur l’opérateur “to_op” ainsi que le nombre de fois que les deux ont été observés ensemble dans le code brut des processus de RapidMiner.
+A la fin, on obtient donc un dictionnaire qui nous donne toutes les connexions entre les opérateurs et leurs poids. Plus le poids est fort, plus les deux opérateurs ont été souvent mentionnés ensemble.
+Pour lancer le script, il suffit d’installer Jupyter Notebook et de lancer chaque “partie” les unes après les autres afin d’obtenir le dictionnaire décrit. Il est aussi possible de changer ListFile afin de parcourir d’autres fichiers ou d’autres projets et d’y extraire les connexions entre les opérateurs (si les fichiers en question contiennt “from_op” et “to_op”).
+
+Lien script graphe + explication + explication lien capabilities TIGRAN
+Pour la visualisation des graphes orientés nous avons utilisé vis-network:
+    Pour l’élaboration du graph nous devons rajouter les 2 JSON nécessaires pour la construction de celui-ci en copiant les contenus des fichiers JSON générés lorsque nous avons exécuté notre script Sikulix et le script parserV0.
+Il faut renommer dans le ficher app.js la variable dictGraphUnfilter par le contenu du fichier JSON
 
 ## VI. References
 
-1. ref1
-1. ref2
+[1] Mierswa, I., & Klinkenberg, R. (2018). RapidMiner Studio (9.1) [Data science, machine learning, predictive analytics]. Retrieved from https://rapidminer.com/ https://docs.rapidminer.com/downloads/RapidMiner-v6-user-manual.pdf
+
+[2] Renaud Pawlak, Martin Monperrus, Nicolas Petitprez, Carlos Noguera, Lionel Seinturier. Spoon: A Library for Implementing Analyses and Transformations of Java Source Code. Software: Practice and Experience, Wiley, 2015, 46, pp.1155-1179. ff10.1002/spe.2346ff. ffhal-01078532v2f https://hal.inria.fr/hal-01078532v2/document
+
+[3] P. Olz, Conny and Biundo, Susanne and Bercher, “Revealing Hidden pré-conditions and Effects of Compound HTN Planning Tasks–A Complexity Analysis,” in 35th AAAI Conference on Artificial Intelligence (AAAI). AAAI Press, 2021, Accessed: Jan. 03, 2022. [Online]. https://www.aaai.org/AAAI21Papers/AAAI-655.OlzC.pdf.
+
+[4] Kietz, J U; Serban, F; Bernstein, A; Fischer, S (2010). Data mining workflow templates for intelligent discovery assistance in RapidMiner. In: Proc of RCOMM'10, Dortmund, Germany, 13 September 2010 - 16 September 2010, 19-26. https://www.zora.uzh.ch/id/eprint/44865/3/Kietz_Serban_Bernstein_Fischer_2010-2V.pdf
+
+[5] A. P. Tampubolon, B. Hendradjaya and W. D. Sunindyo, "Feature identification of program source code using regular expression," 2016 International Conference on Data and Software Engineering (ICoDSE), 2016, pp. 1-6, doi: 10.1109/ICODSE.2016.7936133.         https://ieeexplore.ieee.org/abstract/document/7936133/keywords#keywords
+
