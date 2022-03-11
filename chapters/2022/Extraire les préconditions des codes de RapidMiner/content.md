@@ -6,7 +6,7 @@ date:   2022-01-08 17:08:00 +0100
 
 ## Auteurs
 
-Nous sommes cinq étudiants de dernière année à Polytech Nice Sophia spécifialisé en Architecture Logicielle :
+Nous sommes cinq étudiants de dernière année à Polytech Nice Sophia spécialisés en Architecture Logicielle :
 
 * Tigran Nersissian &lt;tigran.nersissian@etu.univ-cotedazur.fr&gt;
 * Yann Martin D&#039;Escrienne &lt;yann.martin&dash;d&#039;escrienne@etu.univ-cotedazur.fr&gt;
