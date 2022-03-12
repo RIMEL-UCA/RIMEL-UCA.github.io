@@ -270,6 +270,10 @@ Nous avons réussi à augmenter la complexité du graph en terme de chaînage, c
     </style>
   </head>
   <body>
+    <p>Graph orienté avec poids de chaînage des operateurs</p>
+    <table>
+    </table>
+    <p id="demo">Click on node to see here capabilities.</p>
     <div id="wrapper">
       <div id="mynetwork"></div>
       <div id="loadingBar">
