@@ -16,6 +16,10 @@ date:   2021-12-02 22:00:00 +0100
 
 ### [Extraire des informations sur les systèmes de build (variabilité des builds)]({{ site.url }}/chapters/2022/Comment%20la%20configurabilit%C3%A9%20du%20code%20est%20g%C3%A9r%C3%A9e%20dans%20sa%20CI/content)
 
+### [Automatiser la génération des fichiers de configuration (IaC) en Terraform d'un projet existant ?]({{ site.url }}/chapters/2022//TerraformAutoGeneratorIaC/content)
+
+
+
 ## 2021
 
 ### [Etude sur les methodes permettant d'étudier le flot de données d'une application de traçage]({{ site.url }}/chapters/2021/DataFlowAnalysisCovid/content)
