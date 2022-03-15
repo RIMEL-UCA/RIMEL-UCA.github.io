@@ -14,6 +14,8 @@ date:   2021-12-02 22:00:00 +0100
 ### [Les bonnes pratiques définies et encouragées par Webpack sont-elles respectées par la communauté Open Source ?]({{ site.url }}/chapters/2022/WebpackGoodPractices/content)
 ### [Comment configure-t-on une chaîne d’intégration continue pour s’assurer du bon fonctionnement d’un logiciel dans différents environnements ?]({{ site.url }}/chapters/2022/Comment configure-t-on une chaîne d’intégration continue pour s’assurer du bon fonctionnement d’un logiciel dans différents environnements/content)
 
+### [Comment configure-t-on une chaîne d’intégration continue pour s’assurer du bon fonctionnement d’un logiciel dans différents environnements ?]({{ site.url }}/chapters/2022/Comment%20la%20configurabilit%C3%A9%20du%20code%20est%20g%C3%A9r%C3%A9e%20dans%20sa%20CI/content.md)
+
 ## 2021
 
 ### [Etude sur les methodes permettant d'étudier le flot de données d'une application de traçage]({{ site.url }}/chapters/2021/DataFlowAnalysisCovid/content)
