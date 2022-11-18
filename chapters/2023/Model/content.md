@@ -24,7 +24,7 @@ We are four students in M2 or in last year of Polytech' Nice-Sophia specialized 
 
 * .... &lt;xxx@gmail.com&gt;
 
-> Les chapitres restant accessibles longtemps, si vous le souhaitez, vous pouvez utiliser ici une adresse pérenne pour être contacté ultérieurement.
+    Les chapitres restant accessibles longtemps, si vous le souhaitez, vous pouvez utiliser ici une adresse pérenne pour être contacté ultérieurement.
 
 ## I. Research context /Project
 
