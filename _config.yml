@@ -13,6 +13,7 @@ exclude: [ _posts/source/, _posts/_private/ ]
 
 gems:
   - jekyll-pandoc
+  - jemoji
 
 #markdown: pandoc
 
@@ -26,9 +27,8 @@ repo: https://github.com/RIMEL-UCA/RIMEL-UCA.github.io # used in linking history
 
 baseurl: '/'
 
-plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
-- jemoji
+
+
 
 #markdown: redcarpet
 #redcarpet:
