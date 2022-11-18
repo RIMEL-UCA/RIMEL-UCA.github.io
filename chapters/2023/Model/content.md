@@ -6,16 +6,17 @@ date:   2022-11
 
 ---
 
-> **Date de rendu finale : fin février**
-> - Respecter la structure pour que les chapitres soient bien indépendants
-> - Remarques :
->>    - La structure proposée est là pour vous aider, mais peut-être adaptée à votre projet
->>      - Les titres peuvent être modifiés pour être en adéquation avec votre étude. 
->>    - Utiliser des références pour justifier votre argumentaire, vos choix, etc.
->>    - Vous avez le choix d'utiliser le français ou l'anglais.
+   **Date de rendu finale : fin février**
+   - Respecter la structure pour que les chapitres soient bien indépendants
+   - Remarques :
+        - La structure proposée est là pour vous aider, mais peut-être adaptée à votre projet
+        - Les titres peuvent être modifiés pour être en adéquation avec votre étude. 
+        - Utiliser des références pour justifier votre argumentaire, vos choix, etc.
+        - Vous avez le choix d'utiliser le français ou l'anglais.
 
->> Dans l'article de Blog [Debret 2020], l'auteure donne les éléments principaux de la démarche d'une manière simple et très facile à lire, dans la partie [Quelles sont les étapes d’une bonne démarche scientifique ?](https://www.scribbr.fr/article-scientifique/demarche-scientifique/#:~:text=La%20d%C3%A9marche%20scientifique%20permet%20d,de%20nouvelles%20hypoth%C3%A8ses%20%C3%A0%20tester.)
---
+    Dans l'article de Blog [Debret 2020], l'auteure donne les éléments principaux de la démarche d'une manière simple et très facile à lire, dans la partie [Quelles sont les étapes d’une bonne démarche scientifique ?](https://www.scribbr.fr/article-scientifique/demarche-scientifique/#:~:text=La%20d%C3%A9marche%20scientifique%20permet%20d,de%20nouvelles%20hypoth%C3%A8ses%20%C3%A0%20tester.)
+
+---
 
 **_février 2023_**
 
