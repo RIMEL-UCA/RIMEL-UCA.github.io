@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Ajouter un chapitre en 2022"
+title:  "Ajouter un chapitre en 2023"
 date:   2022-10-30 18:25:00 +0100
 categories: jekyll update
 ---
