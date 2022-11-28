@@ -8,7 +8,7 @@ date: 2022-11-18 6:00:00 +0100
 
 ### [VOTRE TITRE]({{ site.url }}/chapters/2023/Model/content)
 
-### [Utilisation de la POO dans les notebooks jupiter python]({{ site.url }}/chapters/2023/Utilisation de la POO dans les notebooks jupiter python/content)
+### [Utilisation de la POO dans les notebooks jupyter python]({{ site.url }}/chapters/2023/Utilisation de la POO dans les notebooks jupyter python/content)
 
 ### [Qualité logicielle dans les notebooks Jupyter]({{ site.url }}/chapters/2023/Qualité logicielle dans les notebooks Jupyter/content)
 
