@@ -6,7 +6,7 @@ date: 2022-11-18 6:00:00 +0100
 
 ## 2023
 
-### [VOTRE TITRE]({{ site.url }}/chapters/2023/Model/content)
+### [Visualisation et classification des dépendances au sein d’une pipeline d’intégration vis-à-vis de ses actions d'origine internes et/ou externes]({{ site.url }}/chapters/2023/team-a/content)
 
 ### [Utilisation de la POO dans les notebooks jupyter python]({{ site.url }}/chapters/2023/Utilisation de la POO dans les notebooks jupyter python/content)
 
