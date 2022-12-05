@@ -1,6 +1,6 @@
 ---
 layout: default
-title : Visualisation et classification des dépendances au sein d’une pipeline d’intégration vis-à-vis de ses actions d'origine internes et/ou externes
+title : Maintenabilité d’une pipeline : paternité et dépendances de l’implémentation des jobs et steps
 date:  2022-11
 ---
 
