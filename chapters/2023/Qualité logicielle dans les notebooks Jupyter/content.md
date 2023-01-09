@@ -114,7 +114,7 @@ activités étaient au moins modérément importantes pour les scientifiques des
     
     Date de publication : 25 juillet 2019
     
-    Ce qui nous est montré par cet article : 
+    Ce qui nous est montré par cet article : Des analyses robustes et reproductibles sont au cœur de la science, et plusieurs articles ont déjà fourni d'excellents conseils généraux sur la manière de réaliser et de documenter la science informatique. Cependant, l'avènement des notebooks informatiques présente de nouvelles opportunités et de nouveaux défis, facilitant la documentation précise de flux de travail complexes tout en la compliquant par l'interactivité. Nous présentons 10 règles simples pour écrire et partager des analyses dans des carnets Jupyter, en nous concentrant sur l'annotation de l'analyse, l'organisation du code, et la facilité d'accès et de réutilisation. Informés par notre expérience, nous espérons qu'ils contribueront à l'écosystème des individus, des laboratoires, des éditeurs et des organisations qui utilisent les notebooks pour performer et partager leurs recherches informatiques.
 
 4. [Managing Messes in Computational Notebooks](https://lms.univ-cotedazur.fr/2022/pluginfile.php/399461/mod_folder/content/0/Head2019.pdf?forcedownload=1) 
     
