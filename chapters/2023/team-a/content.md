@@ -1,28 +1,14 @@
 ---
 layout: default
 title : Maintenabilité d’une pipeline : paternité et dépendances de l’implémentation des jobs et steps
-date:  2022-11
----
-
----
-
-   **Date de rendu finale : fin février**
-   - Respecter la structure pour que les chapitres soient bien indépendants
-   - Remarques :
-        - La structure proposée est là pour vous aider, mais peut-être adaptée à votre projet
-        - Les titres peuvent être modifiés pour être en adéquation avec votre étude.
-        - Utiliser des références pour justifier votre argumentaire, vos choix, etc.
-        - Vous avez le choix d'utiliser le français ou l'anglais.
-
-    Dans l'article de Blog [Debret 2020], l'auteure donne les éléments principaux de la démarche d'une manière simple et très facile à lire, dans la partie [Quelles sont les étapes d’une bonne démarche scientifique ?](https://www.scribbr.fr/article-scientifique/demarche-scientifique/#:~:text=La%20d%C3%A9marche%20scientifique%20permet%20d,de%20nouvelles%20hypoth%C3%A8ses%20%C3%A0%20tester.)
-
+date:  2023-01
 ---
 
 **_février 2023_**
 
-## Authors
+## Auteurs
 
-Nous sommes cinq étudiants en dernière année à Polytech Nice-Sophia specialisés en Architecture Logicielle :
+Nous sommes cinq étudiants en dernière année à Polytech Nice-Sophia specialisés en Architecture Logicielle (AL) :
 
 - Antoine Amiard ([@AntoineAmiard](https://github.com/AntoineAmiard)),
 - Romain Kugler ([@romainkugler](https://github.com/romainkugler)),
@@ -30,14 +16,19 @@ Nous sommes cinq étudiants en dernière année à Polytech Nice-Sophia speciali
 - Julien Satti ([@juliensatti](https://github.com/juliensatti)).
 
 
-## I. Research context /Project
+## I. Contexte
 
-Préciser ici votre contexte et Pourquoi il est intéressant. **
+L'intégration continue (CI) est de plus en plus utilisée et préconisée dans l'utilisation de dépôts de contrôle de version (type GitHub, GitLab...). Au fil des années, de nouveaux outils ont été implémentés dans les langages descriptifs d'exécution d'intégration continue (type GitHub Action, GitLab CI/CD ; tous deux sous format YAML). Un de ces ajouts : la réutilisation d'étapes/actions (steps) au travers d'actions partagées/"empaquetées" par la plateforme, par des tiers ou par nous même dans un autre dépôt par exemple.
 
+Ainsi, avec cette réutilisation d'actions au travers des fichiers d'intégration continue, nous nous sommes posés la question de la maintenabilité de ces fichiers. En effet, si une action est modifiée, il faut modifier tous les fichiers d'intégration continue qui l'utilisent. De plus, si une action est supprimée, il faut supprimer tous les fichiers d'intégration continue qui l'utilisent. Enfin, si une action est déplacée, il faut modifier tous les fichiers d'intégration continue qui l'utilisent.
 
-## II. Observations/General question
+**Nous nous sommes donc demandés s'il était possible de visualiser les dépendances en actions dans chaque tâche d'un fichier d'intégration continue, avec pour chaque action empaquetée détectée : leur origine, leur niveau de confiance et si une version plus récente existe.**
 
-1. Commencez par formuler une question sur quelque chose que vous observez ou constatez ou encore une idée émergente.
+**Nous fournirons également une visualisation plus parlante de la précédence de chaque tâche (job) au sein d'une chaîne d'intégration continue.**
+
+## II. Question générale
+
+ "Comment visualiser les dépendances, leur origine et leur niveau de confiance relatif dans les tâches d’une chaîne d’intégration continue ?"
 
 2. Préciser pourquoi cette question est intéressante de votre point de vue.
 
@@ -45,7 +36,7 @@ Attention pour répondre à cette question, vous devrez être capable d'émettre
 
      :bulb: Cette première étape nécessite beaucoup de réflexion pour se définir la bonne question afin de poser les bonnes bases pour la suite.
 
-## III. Information gathering
+## III. Recueil des données
 
 Préciser vos zones de recherches en fonction de votre projet, les informations dont vous disposez, ... :
 
@@ -55,7 +46,7 @@ Préciser vos zones de recherches en fonction de votre projet, les informations 
 
      :bulb: Cette étape est fortement liée à la suivante. Vous ne pouvez émettre d'hypothèses à vérifier que si vous avez les informations, inversement, vous cherchez à recueillir des informations en fonction de vos hypothèses.
 
-## IV. Hypothesis & Experiences
+## IV. Hypothèses & Expériences
 
 1. Il s'agit ici d'**énoncer sous forme d'hypothèses** ce que vous allez chercher à démontrer. Vous devez définir vos hypothèses de façon à pouvoir les _mesurer/vérifier facilement._ Bien sûr, votre hypothèse devrait être construite de manière à _vous aider à répondre à votre question initiale_. Explicitez ces différents points.
 2. Vous **explicitez les expérimentations que vous allez mener** pour vérifier si vos hypothèses sont vraies ou fausses. Il y a forcément des choix, des limites, explicitez-les.
@@ -63,7 +54,7 @@ Préciser vos zones de recherches en fonction de votre projet, les informations 
      :bulb: Structurez cette partie à votre convenance : Hypothèse 1 => Expériences, Hypothèse 2 => Expériences ou l'ensemble des hypothèses et les expériences....
 
 
-## V. Result Analysis and Conclusion
+## V. Analyse des résultats & Conclusion
 
 1. Présentation des résultats
 2. Interprétation/Analyse des résultats en fonction de vos hypothèses
@@ -71,7 +62,7 @@ Préciser vos zones de recherches en fonction de votre projet, les informations 
 
      :bulb:  Vos résultats et donc votre analyse sont nécessairement limités. Préciser bien ces limites : par exemple, jeux de données insuffisants, analyse réduite à quelques critères, dépendance aux projets analysés, ...
 
-## VI. Tools \(facultatif\)
+## VI. Outillage
 
 Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à \(1\) pouvoir reproduire vos expérimentations, \(2\) partager/expliquer à d'autres l'usage des outils.
 
