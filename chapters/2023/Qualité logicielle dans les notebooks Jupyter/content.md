@@ -129,8 +129,6 @@ activités étaient au moins modérément importantes pour les scientifiques des
     
     Ce qui nous est montré par cet article : L'étude qualitative menée de scientifiques a confirmé que le nettoyage des notebooks consiste principalement à supprimer le code d'analyse indésirable et les résultats indésirables. La tâche de nettoyage peut également comporter des étapes secondaires telles que l'amélioration de la qualité du code, la rédaction de la documentation, l'adaptation de la présentation des résultats pour un nouveau public cible, ou la création de scripts. Les participants considèrent que la tâche principale de nettoyage est un travail de bureau et qu'elle est sujette à des erreurs.
 Ils ont donc réagi positivement aux outils de collecte de code qui produisent automatiquement le code minimal nécessaire pour reproduire un ensemble choisi de résultats d'analyse, en utilisant une nouvelle application de découpage de programme. Les analystes ont principalement utilisé la collecte de code en dernière action pour partager leur travail, mais y ont aussi trouvé des utilisations inattendues comme la génération de matériel dede référence, la création de branches plus légères dans leur code, et créer des résumés pour des publics multiples.
-
-Traduit avec www.DeepL.com/Translator (version gratuite)
     
 ### Outils
 Les outils que nous envisageons d'utiliser pour effectuer notre étude sont :
