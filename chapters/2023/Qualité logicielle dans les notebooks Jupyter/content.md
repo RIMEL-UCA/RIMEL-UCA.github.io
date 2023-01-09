@@ -66,7 +66,7 @@ Préciser vos zones de recherches en fonction de votre projet, les informations 
 
 ### Articles
 Pour notre recherche, nous allons nous baser sur les quatre articles suivants : 
-1. [Eliciting Best Practices for Collaboration with Computational Notebooks](https://s3.us-west-amazonaws.com/secure.notion-static.com/28337085-da8f-41ef-a9af-7070497bd728/Quaranta2022.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221209%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221209T175202Z&X-Amz-Expires=86400&X-Amz-Signature=13c5f03162c44048743a585207c6882688f2f946134e2d86dbef7c2da8268d1b&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Quaranta2022.pdf%22&x-id=GetObject). 
+1. [Eliciting Best Practices for Collaboration with Computational Notebooks](https://s3.us-west-amazonaws.com/secure.notion-static.com/28337085-da8f-41ef-a9af-7070497bd728/Quaranta2022.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221209%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221209T175202Z&X-Amz-Expires=86400&X-Amz-Signature=13c5f03162c44048743a585207c6882688f2f946134e2d86dbef7c2da8268d1b&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Quaranta2022.pdf%22&x-id=GetObject) 
     
     Auteurs : 
     * Luigi QUARANTA, *University of Bari, Italy*
@@ -75,9 +75,13 @@ Pour notre recherche, nous allons nous baser sur les quatre articles suivants :
     
     Date de publication : Avril 2022
     
-    Hypothèse : 
+    Ce qui nous est montré par cet article : Dans cet article, une revue de littérature multivocale a été effectuée afin de construire un catalogue de 17 meilleures pratiques pour la collaboration avec les notebooks. Ensuite, sont évalués qualitativement et quantitativement la mesure dans laquelle les experts en sciences des données les connaissent et les respectent. Dans l'ensemble, cet article permet de constater que les scientifiques spécialistes des données connaissent les meilleures pratiques identifiées et ont tendance à les adopter dans leur routine de travail quotidienne. 
+Néanmoins, certains d'entre eux ont des opinions contradictoires sur des recommandations spécifiques, en raison de facteurs contextuels variables. En outre, nous avons constaté que les meilleures pratiques les plus négligées ont trait à la modularisation du code, aux tests de code et au respect des normes de codage.
+Cela met en évidence ce qui semblerait être une tension entre la vitesse et la qualité.
+Pour résoudre cette tension, les plateformes de carnets de calcul devraient mettre en œuvre des fonctionnalités natives qui facilitent l'adoption des pratiques de collaboration susmentionnées. En disposant de cadres de test et de linting intégrés et spécifiques aux blocs-notes, ainsi que de fonctions de refactoring et de modularisation du code des blocs-notes, nous pouvons nous attendre à ce que les blocs-notes de données soient plus faciles à utiliser, nous pouvons espérer que les scientifiques des données écrivent des notebooks de haute qualité sans compromettre
+sur la rapidité d'exécution. 
 
-2. [What’s Wrong with Computational Notebooks? Pain Points, Needs, and Design Opportunities](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8ae72282-8712-4a68-9dc6-6b00ebd7ecc2/Chattopadhyay2020.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221209%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221209T175805Z&X-Amz-Expires=86400&X-Amz-Signature=220ed3e43a86e520074fb22271a707ba5d6806312c80b0c99a5ebbf300bb9d6c&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Chattopadhyay2020.pdf%22&x-id=GetObject). 
+2. [What’s Wrong with Computational Notebooks? Pain Points, Needs, and Design Opportunities](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8ae72282-8712-4a68-9dc6-6b00ebd7ecc2/Chattopadhyay2020.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221209%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221209T175805Z&X-Amz-Expires=86400&X-Amz-Signature=220ed3e43a86e520074fb22271a707ba5d6806312c80b0c99a5ebbf300bb9d6c&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Chattopadhyay2020.pdf%22&x-id=GetObject)
     
     Auteurs : 
     * Souti CHATTOPADHYAY, *Oregon State University*
@@ -88,7 +92,7 @@ Pour notre recherche, nous allons nous baser sur les quatre articles suivants :
     
     Date de publication : 25 au 30 avril 2020
     
-    Hypothèse : 
+    Ce qui nous est montré par cet article :  
 
 3. [Ten simple rules for writing and sharing computational analyses in Jupyter Notebook](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4709bfe2-0ac6-4dac-aaaa-b64063ca688c/Rule2019.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221209%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221209T175915Z&X-Amz-Expires=86400&X-Amz-Signature=f9aa043bb454b0c802d2ab9420a9cd8bfb76ef9f080a8a3c459385c06a3fe143&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Rule2019.pdf%22&x-id=GetObject). 
     
@@ -109,7 +113,7 @@ Pour notre recherche, nous allons nous baser sur les quatre articles suivants :
     
     Hypothèse : 
 
-4. [Managing Messes in Computational Notebooks](https://lms.univ-cotedazur.fr/2022/pluginfile.php/399461/mod_folder/content/0/Head2019.pdf?forcedownload=1). 
+4. [Managing Messes in Computational Notebooks](https://lms.univ-cotedazur.fr/2022/pluginfile.php/399461/mod_folder/content/0/Head2019.pdf?forcedownload=1) 
     
     Auteurs : 
     * Andrew HEAD, *UC Berkeley*
