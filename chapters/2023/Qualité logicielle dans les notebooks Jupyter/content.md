@@ -81,7 +81,7 @@ Cela met en évidence ce qui semblerait être une tension entre la vitesse et la
 Pour résoudre cette tension, les plateformes de carnets de calcul devraient mettre en œuvre des fonctionnalités natives qui facilitent l'adoption des pratiques de collaboration susmentionnées. En disposant de cadres de test et de linting intégrés et spécifiques aux blocs-notes, ainsi que de fonctions de refactoring et de modularisation du code des blocs-notes, nous pouvons nous attendre à ce que les blocs-notes de données soient plus faciles à utiliser, nous pouvons espérer que les scientifiques des données écrivent des notebooks de haute qualité sans compromettre
 sur la rapidité d'exécution. 
 
-2. [What’s Wrong with Computational Notebooks? Pain Points, Needs, and Design Opportunities](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8ae72282-8712-4a68-9dc6-6b00ebd7ecc2/Chattopadhyay2020.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221209%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221209T175805Z&X-Amz-Expires=86400&X-Amz-Signature=220ed3e43a86e520074fb22271a707ba5d6806312c80b0c99a5ebbf300bb9d6c&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Chattopadhyay2020.pdf%22&x-id=GetObject)
+2. [What’s Wrong with Computational Notebooks? Pain Points, Needs, and Design Opportunities](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8ae72282-8712-4a68-9dc6-6b00ebd7ecc2/Chattopadhyay2020.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230109%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230109T152624Z&X-Amz-Expires=86400&X-Amz-Signature=28a23fcdfdaca9ae48c01c82bbadc3b5f8c5b2dcb7185c2129b0b2e99c4f65b3&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Chattopadhyay2020.pdf%22&x-id=GetObject)
     
     Auteurs : 
     * Souti CHATTOPADHYAY, *Oregon State University*
@@ -92,9 +92,12 @@ sur la rapidité d'exécution.
     
     Date de publication : 25 au 30 avril 2020
     
-    Ce qui nous est montré par cet article :  
+    Ce qui nous est montré par cet article :  Dans cet article, une étude à méthode mixte a été menée avec des scientifiques spécialisés dans les données en utilisant des observations sur le terrain, des entretiens et une enquête. Lors des études sur le terrain et des entretiens, les spécialistes des données ont signalé diverses difficultés lorsqu'ils travaillaient avec des ordinateurs portables et synthétisé ces difficultés dans une taxonomie des points de douleur.
+Nous avons validé les activités difficiles qui contribuent à ces points de douleur par le biais d'une enquête et nous avons constaté que le soutien de toutes les
+activités étaient au moins modérément importantes pour les scientifiques des données, et que quatre activités - la refonte du code, le déploiement en production, la gestion et l'utilisation de l'historique, et l'exécution de tâches de longue durée - étaient à la fois difficiles et importantes, ce qui en fait des activités à fort impact. Nos résultats suggèrent plusieurs possibilités de conception pour les chercheurs et les développeurs de notebooks. La résolution de ces problèmes peut améliorer considérablement l'utilité, la productivité et l'expérience utilisateur des scientifiques qui travaillent avec des notebooks.
 
-3. [Ten simple rules for writing and sharing computational analyses in Jupyter Notebook](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4709bfe2-0ac6-4dac-aaaa-b64063ca688c/Rule2019.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20221209%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20221209T175915Z&X-Amz-Expires=86400&X-Amz-Signature=f9aa043bb454b0c802d2ab9420a9cd8bfb76ef9f080a8a3c459385c06a3fe143&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Rule2019.pdf%22&x-id=GetObject). 
+
+3. [Ten simple rules for writing and sharing computational analyses in Jupyter Notebook](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4709bfe2-0ac6-4dac-aaaa-b64063ca688c/Rule2019.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230109%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230109T153113Z&X-Amz-Expires=86400&X-Amz-Signature=9d4bc9f5c3d2b85884e0673e1512dad09aa007390f71429f27db5b47294bf0ca&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Rule2019.pdf%22&x-id=GetObject). 
     
     Auteurs : 
     * Adam RULE, *Design Lab, UC San Diego*
@@ -111,7 +114,7 @@ sur la rapidité d'exécution.
     
     Date de publication : 25 juillet 2019
     
-    Hypothèse : 
+    Ce qui nous est montré par cet article : 
 
 4. [Managing Messes in Computational Notebooks](https://lms.univ-cotedazur.fr/2022/pluginfile.php/399461/mod_folder/content/0/Head2019.pdf?forcedownload=1) 
     
@@ -124,7 +127,7 @@ sur la rapidité d'exécution.
     
     Date de publication : 4 au 9 mai 2019
     
-    Hypothèse : 
+    Ce qui nous est montré par cet article : 
     
 ### Outils
 Les outils que nous envisageons d'utiliser pour effectuer notre étude sont :
