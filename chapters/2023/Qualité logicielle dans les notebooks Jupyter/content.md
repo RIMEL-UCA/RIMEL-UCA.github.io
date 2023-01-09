@@ -1,6 +1,6 @@
 ---
 layout: default
-title : Qualié logicielle dans les notebooks Jupyter
+title : Qualité logicielle dans les notebooks Jupyter
 date:   2022-11
 ---
 
