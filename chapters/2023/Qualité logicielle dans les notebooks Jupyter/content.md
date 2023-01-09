@@ -36,7 +36,7 @@ Préciser ici votre contexte et Pourquoi il est intéressant. **
 Le sujet d'étude de la qualité logicielle dans les notebooks Jupyter nous a intéressé de part des expériences personnelles passées avec ce type de projet. 
 
 Plusieurs points nous ont poussé à nous poser des questions sur la qualité du code des notebooks Jupyter. Dans de précédents projets collaboratifs, les notebooks Jupyter ont dû être utilisés.
-*** A COMPLETER AVEC LES EXPERIENCES PERSONNELLES ET PLUS PARTICULIEREMENT CELLE D'ARTHUR QUI SEMBLE TRES PERTINENTE DANS NOTRE CAS)
+Lors de son stage de 4ème année, un des membres de l'équipe a dut convertir un notebook jupyter d’IA en code Python dans le but d’une démonstration destinée à un client. Il a donc eu à récupérer tous les bouts de code du notebook utilisé et les assembler en un script Python tout en le rendant lisible, en optimisant les imports et en commentant du code. Lors de cette expérience, il a été confronté à un code qui n’avait pas été écrit par un développeur mais un data scientist. Les noms des variables et des fonctions n’étaient pas explicites, de plus il manquait des commentaires essentiels à la compréhension de chaque partie du programme. N’ayant pas participé à la création du notebook, il a donc eu beaucoup de difficultés à le comprendre, le reprendre et le convertir en quelque chose d’acceptable pour un développeur. 
 
 Ce sujet est intéressant à aborder car il nous permettrait de savoir sur quels critères de qualité logicielle mesurer la qualité du code d'un notebook Jupyter. Ce sujet n'étant que peu voire pas abordé la question reste assez nébuleuse. On pourrait ainsi savoir quels sont les forces et faiblesses des codes des notebooks.
 
