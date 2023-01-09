@@ -161,6 +161,8 @@ La démarche que nous avons prévu pour l’analyse de ce sujet se découpe en s
 5. Exploiter les résultats, et voir si ceux-ci pourraient mener à des conclusions intéressantes dont les métriques pertinentes dans l'analyse des notebooks
 6. Classer les notebooks récupérés d'après les notes référentes récupérées d'après notre hypothèse de départ de qualité des notebooks
 
+Cette première démarche terminée, nous avons décidé d'utiliser CodeClimate pour analyser nos notebooks. CodeClimate propose l'équivalent d'un PyLint Python, c'est-à-dire un outil qui analyse votre code sans l'exécuter. Il vérifie les erreurs, applique une norme de codage, recherche les odeurs de code et peut faire des suggestions sur la façon dont le code pourrait être remanié. Pylint peut déduire les valeurs réelles de votre code en utilisant sa représentation interne du code.
+Malheureusement, l'application de CodeClimate à nos notebooks de référence cause des erreurs, nous sommes donc à la recherche d'autres solutions d'analyse des projets Noteboook et de la qualité du code Python. Une première étape serait l'utilisation du plugin PyLint simple sur nos notebooks de référence pour analyse de leur qualité.
 
 ## V. Analyse des résultats obtenus et Conclusion
 
