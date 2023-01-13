@@ -1,5 +1,9 @@
 
-# Usage de la programmation orientée objet (POO) dans les notebooks Jupyter et qualité logicielle
+---
+layout: default
+title : Usage de la programmation orientée objet (POO) dans les notebooks Jupyter et qualité logicielle
+date:   2022-11
+---
 
 **_février 2023_**
 
@@ -74,14 +78,25 @@ Préciser vos zones de recherches en fonction de votre projet, les informations 
 
      :bulb:  Vos résultats et donc votre analyse sont nécessairement limités. Préciser bien ces limites : par exemple, jeux de données insuffisants, analyse réduite à quelques critères, dépendance aux projets analysés, ...
 
-## VI. Outils
+## VI. Outils utilisés
 
 Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à \(1\) pouvoir reproduire vos expérimentations, \(2\) partager/expliquer à d'autres l'usage des outils.
 
-![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](assets/images/logo_uca.png){:height="25px"}
+Nous avons mis en place un [outil](https://github.com/ABBARNABIL/github-repository-scrapper/tree/main/github-repo-scraping/github-repo-scraping) (en réalité des scripts python automatisés) qui nous ont permis de récupérer des notebooks Jupyter python sur Github; de déterminer la présence de l'utilisation de la POO dans ces derniers; d'analyser la qualité du code dans ces notebooks et de visualiser les résultats obtenus grâce à des graphiques. 
+
+Cet outil mise en place se base sur les outils suivant : 
+
+* [Pylint](https://www.pylint.org/) afin d'analyser la qualité du code dans les notebooks Jupyter python.
+* [L'API GitHub](https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api?apiVersion=2022-11-28) afin de récupérer les notebooks Jupyter python sur Github et ainsi éviter de les télécharger manuellement.
+* [PyGithub](https://pygithub.readthedocs.io/en/latest/index.html) afin de récupérer de manière automatisée les notebooks Jupyter python dans les scripts python mis en place. 
+* [Matplotlib](https://matplotlib.org/stable/index.html) afin de visualiser les résultats obtenus. 
+
+
 
 
 ## VI. Références
+
+* [An Introduction to Object Oriented Data Science in Python](https://opendatascience.com/an-introduction-to-object-oriented-data-science-in-python)
 
 [Debret 2020] Debret, J. (2020) La démarche scientifique : tout ce que vous devez savoir ! Available at: https://www.scribbr.fr/article-scientifique/demarche-scientifique/ (Accessed: 18 November 2022).
 
