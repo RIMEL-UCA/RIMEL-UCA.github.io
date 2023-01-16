@@ -18,7 +18,7 @@ date:   2022-11
 
 ---
 
-**_février 2023_**
+**_3 février 2023_**
 
 ## Auteurs
 
@@ -136,6 +136,7 @@ Les outils que nous envisageons d'utiliser pour effectuer notre étude sont :
 * Bandit : outil d'analyse des vulnérabilités de sécurité Python qui analyse les packages Python à la recherche de failles de sécurité. C'est un outil qui permet de créer un code conforme aux normes organisationnelles et qui génère un rapport de vulnérabilité de sécurité avec des informations détaillées sur le problème de sécurité.
 * Code Climate : outil d'analyse proposant deux produits : le premier identifiant les failles logiques et les mauvais modèles de conception dans le code se concentrant sur l'amélioration de la qualité fonctionnelle du code et le second axé sur la qualité du code en termes de formatage, d'importations inutilisées, de variables et de couverture des tests unitaires garantissant la qualité du code avant la fusion.
 * RATS : “Rough-Auditing-Tool-for-Security”, outil d’analyse de plusieurs langages dont Python pouvant signaler les erreurs de code courantes liées à la sécurité, au buffer overflow et runtime TOCTOU.
+* PyLint : linter vérificateur de code permettant de signaler les erreurs Python ainsi que toutes les parties de code qui ne respectent pas un ensemble de conventions prédéfinies. Il permet donc d’éviter les erreurs et d’avoir un code homogène. Les règles qu’impose Pylint par défaut suivent le guide de style Python PEP 8.
 
 ### Jeux de données
 Les codes que nous analyserons pour notre études seront des projets de différentes tailles et auteurs proposées sur Github avec pour choix un sujet commun : la réalité augmentée. Un script de récupération automatisé de projets de type notebook Jupyter (avec extension .ipynb) sera utilisé pour avoir une diversité de projets. Ils seront ensuite transformés en code Python de qualité mesurable grâce aux outils cités dans la partie précédente par ce même script. Ce choix a été fait de par le fait que la majorité des notebooks Jupyter sont codés dans ce même langage et que cela n'entrainera donc pas de transformation du code. A ces projets récupérés, nous ajouterons plusieurs projets de réalitée augmentée effectués en cours à Polytech Nice-Sophia lors de nos études.
@@ -161,7 +162,7 @@ La démarche que nous avons prévu pour l’analyse de ce sujet se découpe en s
 5. Exploiter les résultats, et voir si ceux-ci pourraient mener à des conclusions intéressantes dont les métriques pertinentes dans l'analyse des notebooks
 6. Classer les notebooks récupérés d'après les notes référentes récupérées d'après notre hypothèse de départ de qualité des notebooks
 
-Cette première démarche terminée, nous avons décidé d'utiliser CodeClimate pour analyser nos notebooks. CodeClimate propose l'équivalent d'un PyLint Python, c'est-à-dire un outil qui analyse votre code sans l'exécuter. Il vérifie les erreurs, applique une norme de codage, recherche les odeurs de code et peut faire des suggestions sur la façon dont le code pourrait être remanié. Pylint peut déduire les valeurs réelles de votre code en utilisant sa représentation interne du code.
+Cette première démarche terminée, nous avons décidé d'utiliser CodeClimate pour analyser nos notebooks. Après des recherches plus approfondies, CodeClimate propose l'équivalent d'un PyLint Python, c'est-à-dire un outil qui analyse votre code sans l'exécuter. Il vérifie les erreurs, applique une norme de codage, recherche les odeurs de code et peut faire des suggestions sur la façon dont le code pourrait être remanié. Pylint peut déduire les valeurs réelles de votre code en utilisant sa représentation interne du code.
 Malheureusement, l'application de CodeClimate à nos notebooks de référence cause des erreurs, nous sommes donc à la recherche d'autres solutions d'analyse des projets Noteboook et de la qualité du code Python. Une première étape serait l'utilisation du plugin PyLint simple sur nos notebooks de référence pour analyse de leur qualité.
 
 ## V. Analyse des résultats obtenus et Conclusion
@@ -176,9 +177,10 @@ Malheureusement, l'application de CodeClimate à nos notebooks de référence ca
 
 Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à \(1\) pouvoir reproduire vos expérimentations, \(2\) partager/expliquer à d'autres l'usage des outils.
 
-En plus des [outils](#outils) cités précédemment pour l'analyse de la qualité du code des notebooks, nous avons utilisé des scripts shell pour la récupération automatique de notebooks Jupyter sur Github.
+En plus des [outils](#outils) cités précédemment pour l'analyse de la qualité du code des notebooks, nous avons utilisé des scripts shell pour la récupération automatique de notebooks Jupyter sur Github et les invite de commande Windows et WSL.
 
-![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](images/logo_uca.png){:height="25px"}
+![Figure 1: Logo UCA](images/logo_uca.png){:height="25px"}
+![Figure 2: Logo Polytch](images/logo_polytech.png){:height="25px"}
 
 
 ## VI. Références
