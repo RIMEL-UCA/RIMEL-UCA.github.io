@@ -180,7 +180,7 @@ Précisez votre utilisation des outils ou les développements \(e.g. scripts\) r
 En plus des [outils](#outils) cités précédemment pour l'analyse de la qualité du code des notebooks, nous avons utilisé des scripts shell pour la récupération automatique de notebooks Jupyter sur Github et les invite de commande Windows et WSL.
 
 ![Figure 1: Logo UCA](images/logo_uca.png){:height="25px"}
-![Figure 2: Logo Polytch](images/logo_polytech.png){:height="25px"}
+![Figure 2: Logo Polytech](images/logoPolytechUCA.png){:height="25px"}
 
 
 ## VI. Références
