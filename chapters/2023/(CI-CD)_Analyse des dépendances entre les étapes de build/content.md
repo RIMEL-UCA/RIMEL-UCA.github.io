@@ -27,15 +27,20 @@ date: 2022-11
 We are four students in last year of M2 Nice-Sophia specialized in Software Architecture :
 
 - KHERROUBI Abdelkader ([@abdelkader1996](https://github.com/abdelkader1996)),
--
--
--
+- SI DEHBI Ahmed El Hanafi ([@AhmedElHanafi](https://github.com/AhmedElHanafi)),
+- HERAUD Antoine  ([@herauda](https://github.com/herauda)),
+- NAJI Abdellah ([@abdellah07](https://github.com/abdellah07)). 
 
-## I. Research context /Project
-
+## I. Contexte de recherche /Projet
 Préciser ici votre contexte et Pourquoi il est intéressant. \*\*
 
-## II. Observations/General question
+Dans cette étude, on examinent le DockerFile pour analyser les dépendances entre les différentes étapes de construction. Le DockerFile est un fichier qui contient des instructions qui sont utilisées par Docker pour créer et exécuter une image docker. Les images docker sont des ensembles d'instruction utilisés pour construire et déployer des applications logicielles sur le cloud.
+Lors de la construction d'une image Docker, il est important de comprendre les dépendances entre les étapes de construction, 
+la définition des dépendances est la partie la plus importante du fichier Dockerfile lors de la construction d'une image Docker. La gestion des dépendances améliore les performances et la stabilité de la construction du projet. 
+
+Peut-on analyser l'existence et la validité des dépendances contenues dans les étapes de construction d'image Docker a l'interieure d'un workflow de github action ? 
+
+## II. Questions General /Observations
 
 1. Commencez par formuler une question sur quelque chose que vous observez ou constatez ou encore une idée émergente.
 
@@ -44,6 +49,12 @@ Préciser ici votre contexte et Pourquoi il est intéressant. \*\*
 Attention pour répondre à cette question, vous devrez être capable d'émettre des hypothèses vérifiables, de quantifier vos réponses, ...
 
      :bulb: Cette première étape nécessite beaucoup de réflexion pour se définir la bonne question afin de poser les bonnes bases pour la suite.
+
+- Comment identifier les différentes dépendances dans un Dockerfile?
+- Comment valider la stabilité d’un build Docker à l’aide de l’analyse de ses dépendances contenues dans les steps du workflow?
+- Comment relever différentes mauvaises pratiques empêchant une meilleure analyse? 
+
+Limites : Quelles sont les mauvaise pratiques pour l'ecriture d'un DockerFile ? 
 
 ## III. Information gathering
 
