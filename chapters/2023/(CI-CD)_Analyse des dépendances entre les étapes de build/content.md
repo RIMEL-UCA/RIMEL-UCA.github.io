@@ -73,11 +73,13 @@ Les projets utilisés comme références sont les projets récupérés à partir
 - <a href="https://hub.docker.com/">Docker Hub</a>
 
 3. Code utilisé :
-* <a href="https://github.com/kartoza/docker-postgis">Docker Postgris Project</a> by Kartoza
-* <a href="https://github.com/moby/moby">Moby Project</a>
-* <a href="https://github.com/camuflon/camuflon-api">Camuflon - Api</a>
-* <a href="https://github.com/uandisson/desafio_backend">Desafio Backend</a>
-* <a href="https://github.com/openzipkin/">OpenZipkin</a>
+   | Nom du Repository                                            |   Taille   | Popularité |  Régularité  | Contributeurs |
+   |:-------------------------------------------------------------|:----------:|:----------:|:------------:|:-------------:|
+   | [Docker Postgris](https://github.com/kartoza/docker-postgis) |  1027 ko   | 560 stars  | 316 commits  |       38      |
+   | [Moby Project](https://github.com/moby/moby)                 | 77 496 ko  | 65k stars  | 45446 commits|     2195      |
+   | [Camuflon - Api](https://github.com/camuflon/camuflon-api)   |   432 ko   |   0 stars  | 34 commits   |        1      |
+   | [Desafio Backend](https://github.com/uandisson/desafio_backend)| 6 774 ko   | 1 stars | 46 commits   |        1      |
+   | [OpenZipkin](https://github.com/openzipkin/zipkin-go)        |   572 ko   | 565 stars  | 287 commits  |      19       |
 
    :bulb: Cette étape est fortement liée à la suivante. Vous ne pouvez émettre d'hypothèses à vérifier que si vous avez les informations, inversement, vous cherchez à recueillir des informations en fonction de vos hypothèses.
 
