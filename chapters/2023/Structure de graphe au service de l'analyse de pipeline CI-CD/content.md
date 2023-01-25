@@ -40,44 +40,9 @@ Préciser vos zones de recherches en fonction de votre projet, les informations 
 3. les jeux de données/codes que vous allez utiliser, pourquoi ceux-ci, ...
 
 Pour notre recherche, nous comptions nous baser sur trois articles :
-* [Who broke the build?: automatically identifying changes that induce test failures in continuous integration at Google scale](https://storage.googleapis.com/pub-tools-public-publication-data/pdf/45794.pdf)
-  * Auteurs : Celal Ziftci, Jim Reardon
-  * Date de publication : 2017/5/20
-  * Conférence Proceedings of the 39th International Conference on Software Engineering: Software Engineering in Practice Track 
-  * Pages 113-122
-  * Description
-    * Quickly identifying and fixing code changes that introduce regressions is critical to keep the momentum on 
-    software development, especially in very large scale software repositories with rapid development cycles, such as at
-    Google. Identifying and fixing such regressions is one of the most expensive, tedious, and time consuming tasks in
-    the software development life-cycle. Therefore, there is a high demand for automated techniques that can help 
-    developers identify such changes while minimizing manual human intervention…
-* [Mining Metrics to Predict Component Failures](http://linyun.info/micode/micode.pdf)
-  * Auteurs : Yun Lin, Guozhu Meng, Yinxing Xue, Zhenchang Xing, Jun Sun, Xin Peng, Yang Liu, Wenyun Zhao, Jinsong Dong 
-  * Date de publication : 2017/10
-  * Conférence The 32nd IEEE/ACM International Conference on Automated Software Engineering
-  * Pages 394–404
-  * Description
-    * In this paper, we propose an approach to detecting project-specific recurring designs in code base and abstracting
-    them into design templates as reuse opportunities. The mined templates allow programmers to make further 
-    customization for generating new code. The generated code involves the code skeleton of recurring design as well as 
-    the semi-implemented code bodies annotated with comments to remind programmers of necessary modification. We 
-    implemented our approach as an Eclipse plugin called…
-* [When Life Gives You Oranges: Detecting and Diagnosing Intermittent Job Failures at Mozilla](https://www.se.cs.uni-saarland.de/publications/docs/LJA+21.pdf)
-  * J. Lampel, S. Just, S. Apel, and A. Zeller,
-  * in ESEC/FSE 2021 - Proceedings of the 29th ACM Joint Meeting European Software Engineering Conference and Symposium on the Foundations of Software Engineering, 2021,  
-  * vol. 21, pp. 1381–1392, doi: 10.1145/3468264.3473931.
-  * Continuous delivery of cloud systems requires constant running of jobs (build processes, tests, etc.). One issue 
-  that plagues this continuous integration (CI) process are intermittent failures-non-deterministic, false alarms that 
-  do not result from a bug in the software or job specification, but rather from issues in the underlying infrastructure.
-  At Mozilla, such intermittent failures are called oranges as a reference to the color of the build status indicator. 
-  As such intermittent failures disrupt CI and lead to failures, they erode the developers' trust in the jobs. We present
-  a novel approach that automatically classifies failing jobs to determine whether job execution failures arise from an 
-  actual software bug or were caused by flakiness in the job (e.g., test) or the underlying infrastructure. For this
-  purpose, we train classification models using job telemetry data to diagnose failure patterns involving features such 
-  as runtime, cpu load, operating system version, or specific platform with high precision. In an evaluation on a set of 
-  Mozilla CI jobs, our approach achieves precision scores of 73%, on average, across all data sets with some test suites 
-  achieving precision scores good enough for fully automated classification (i.e., precision scores of up to 100%), and 
-  recall scores of 82% on average (up to 94%).
+* Who broke the build?: automatically identifying changes that induce test failures in continuous integration at Google scale[^1]
+* Mining Metrics to Predict Component Failures[^2]
+* When Life Gives You Oranges: Detecting and Diagnosing Intermittent Job Failures at Mozilla[^3]
 
 Pour notre étude, nous allons analyser les projets GitHub suivant :
 * [Audacity](https://github.com/audacity/audacity)
@@ -91,8 +56,6 @@ Pour notre étude, nous allons analyser les projets GitHub suivant :
 Pour chacun de ces projets, nous allons générer des graphes de dépendances en utilisant un script Python et une visualisation
 en graphe faite avec [Graphviz](https://graphviz.org/).
 
-     :bulb: Cette étape est fortement liée à la suivante. Vous ne pouvez émettre d'hypothèses à vérifier que si vous avez les informations, inversement, vous cherchez à recueillir des informations en fonction de vos hypothèses. 
- 
 ## IV. Hypothèse et expériences
 Avant la réalisation de notre recherche, nous allons expliciter nos suppositions quant au résultat que nous allons 
 obtenir.
@@ -116,11 +79,13 @@ Concernant la topologie des graphes, on s'attend à obtenir deux types de graphe
   parallèlement. Si le graphe avait un cycle, alors un job A pourrait dépendre du résultat d'un job B qui n'aurait pas été
   exécuté or c'est impossible.
 
+<br />
 
-1. Il s'agit ici d'**énoncer sous forme d'hypothèses** ce que vous allez chercher à démontrer. Vous devez définir vos hypothèses de façon à pouvoir les _mesurer/vérifier facilement._ Bien sûr, votre hypothèse devrait être construite de manière à _vous aider à répondre à votre question initiale_. Explicitez ces différents points.
-2. Vous **explicitez les expérimentations que vous allez mener** pour vérifier si vos hypothèses sont vraies ou fausses. Il y a forcément des choix, des limites, explicitez-les.
-
-     :bulb: Structurez cette partie à votre convenance : Hypothèse 1 => Expériences, Hypothèse 2 => Expériences ou l'ensemble des hypothèses et les expériences....
+> 1. Il s'agit ici d'**énoncer sous forme d'hypothèses** ce que vous allez chercher à démontrer. Vous devez définir vos hypothèses de façon à pouvoir les _mesurer/vérifier facilement._ Bien sûr, votre hypothèse devrait être construite de manière à _vous aider à répondre à votre question initiale_. Explicitez ces différents points.
+> 2. Vous **explicitez les expérimentations que vous allez mener** pour vérifier si vos hypothèses sont vraies ou fausses. Il y a forcément des choix, des limites, explicitez-les.
+>
+>
+>     :bulb: Structurez cette partie à votre convenance : Hypothèse 1 => Expériences, Hypothèse 2 => Expériences ou l'ensemble des hypothèses et les expériences....
 
 
 ## V. Analyse des résultats et conclusion
@@ -135,11 +100,53 @@ Concernant la topologie des graphes, on s'attend à obtenir deux types de graphe
 
 Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à \(1\) pouvoir reproduire vos expérimentations, \(2\) partager/expliquer à d'autres l'usage des outils.
 
-![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](./images/logo_uca.png)
+Script python...
+
+
+![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](./images/logo_uca.png){:height="25px"}
 
 
 ## VII. Références
-[^Debret 2020] Debret, J. (2020) La démarche scientifique : tout ce que vous devez savoir ! Available at: https://www.scribbr.fr/article-scientifique/demarche-scientifique/ (Accessed: 18 November 2022).
+[^1]: [Who broke the build?: automatically identifying changes that induce test failures in continuous integration at Google scale](https://storage.googleapis.com/pub-tools-public-publication-data/pdf/45794.pdf)
+* Auteurs : Celal Ziftci, Jim Reardon
+* Date de publication : 2017/5/20
+* Conférence Proceedings of the 39th International Conference on Software Engineering: Software Engineering in Practice Track
+* Pages 113-122
+* Description
+  * Quickly identifying and fixing code changes that introduce regressions is critical to keep the momentum on
+    software development, especially in very large scale software repositories with rapid development cycles, such as at
+    Google. Identifying and fixing such regressions is one of the most expensive, tedious, and time consuming tasks in
+    the software development life-cycle. Therefore, there is a high demand for automated techniques that can help
+    developers identify such changes while minimizing manual human intervention…
+
+[^2]: [Mining Metrics to Predict Component Failures](http://linyun.info/micode/micode.pdf)
+* Auteurs : Yun Lin, Guozhu Meng, Yinxing Xue, Zhenchang Xing, Jun Sun, Xin Peng, Yang Liu, Wenyun Zhao, Jinsong Dong
+* Date de publication : 2017/10
+* Conférence The 32nd IEEE/ACM International Conference on Automated Software Engineering
+* Pages 394–404
+* Description
+  * In this paper, we propose an approach to detecting project-specific recurring designs in code base and abstracting
+    them into design templates as reuse opportunities. The mined templates allow programmers to make further
+    customization for generating new code. The generated code involves the code skeleton of recurring design as well as
+    the semi-implemented code bodies annotated with comments to remind programmers of necessary modification. We
+    implemented our approach as an Eclipse plugin called…
+
+[^3]: [When Life Gives You Oranges: Detecting and Diagnosing Intermittent Job Failures at Mozilla](https://www.se.cs.uni-saarland.de/publications/docs/LJA+21.pdf)
+* J. Lampel, S. Just, S. Apel, and A. Zeller,
+* in ESEC/FSE 2021 - Proceedings of the 29th ACM Joint Meeting European Software Engineering Conference and Symposium on the Foundations of Software Engineering, 2021,
+  * vol. 21, pp. 1381–1392, doi: 10.1145/3468264.3473931.
+* Continuous delivery of cloud systems requires constant running of jobs (build processes, tests, etc.). One issue
+  that plagues this continuous integration (CI) process are intermittent failures-non-deterministic, false alarms that
+  do not result from a bug in the software or job specification, but rather from issues in the underlying infrastructure.
+  At Mozilla, such intermittent failures are called oranges as a reference to the color of the build status indicator.
+  As such intermittent failures disrupt CI and lead to failures, they erode the developers' trust in the jobs. We present
+  a novel approach that automatically classifies failing jobs to determine whether job execution failures arise from an
+  actual software bug or were caused by flakiness in the job (e.g., test) or the underlying infrastructure. For this
+  purpose, we train classification models using job telemetry data to diagnose failure patterns involving features such
+  as runtime, cpu load, operating system version, or specific platform with high precision. In an evaluation on a set of
+  Mozilla CI jobs, our approach achieves precision scores of 73%, on average, across all data sets with some test suites
+  achieving precision scores good enough for fully automated classification (i.e., precision scores of up to 100%), and
+  recall scores of 82% on average (up to 94%).
 
 ## VIII. Glossaire
 [^job]: Job : Action décrite dans un pipeline, composée de plusieurs étapes.
