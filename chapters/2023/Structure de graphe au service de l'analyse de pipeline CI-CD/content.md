@@ -1,4 +1,10 @@
-**_Février 2023_**
+---
+layout: default
+title : Structure de graphe au service de l'analyse de pipeline CI-CD
+date:   2022-11
+---
+
+**_février 2023_**
 
 ## Auteurs
 Nous sommes quatre étudiants ingénieurs en dernière année à Polytech Nice Sophia, spécialisés en Architecture Logiciel :
@@ -103,7 +109,7 @@ Précisez votre utilisation des outils ou les développements \(e.g. scripts\) r
 Script python...
 
 
-![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](./images/logo_uca.png){:height="25px"}
+![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](assets/images/logo_uca.png){:height="25px"}
 
 
 ## VII. Références
