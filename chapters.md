@@ -14,6 +14,8 @@ date: 2022-11-18 6:00:00 +0100
 
 ### [Variability paternity environment variables]({{site.url}}/chapters/2023/Variability paternity environment variables/content)
 
+### [Structure de graphe au service de l'analyse de pipeline CI-CD]({{site.url}}/chapters/2023/Structure de graphe au service de l'analyse de pipeline CI-CD/content)
+
 ## 2022
 
 <!-- ### [Quelle est la relation entre les algorithmes, préprocesseurs et leur utilisation dans les séries temporelles ?]({{ site.url }}/chapters/2022/OpenMLAnalysis/content) -->

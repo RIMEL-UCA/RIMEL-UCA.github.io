@@ -9,10 +9,10 @@ date:   2022-11
 ## Auteurs
 Nous sommes quatre étudiants ingénieurs en dernière année à Polytech Nice Sophia, spécialisés en Architecture Logiciel :
 
-* Gabriel Cogne &lt;gabriel.cogne@etu.unice.fr&gt;
-* Marine Demonchaux &lt;marine.demonchaux@etu.unice.fr&gt;
-* William Fernandes &lt;william.fernandes@etu.unice.fr&gt;
-* Taha Kherraf &lt;taha.kherraf@etu.unice.fr&gt;
+* Gabriel Cogne (gabriel.cogne@etu.unice.fr);
+* Marine Demonchaux (marine.demonchaux@etu.unice.fr);
+* William Fernandes (william.fernandes@etu.unice.fr);
+* Taha Kherraf (taha.kherraf@etu.unice.fr);
     
 ## I. Contexte de la recherche / projet
 De plus en plus, les projets sont accompagnés d'un pipeline CI/CD afin de les construire, tester et déployer automatiquement.
@@ -59,8 +59,7 @@ Pour notre étude, nous allons analyser les projets GitHub suivant :
 * [Tail Wind CSS](https://github.com/tailwindlabs/tailwindcss)
 * [DGS Framework](https://github.com/Netflix/dgs-framework)
 
-Pour chacun de ces projets, nous allons générer des graphes de dépendances en utilisant un script Python et une visualisation
-en graphe faite avec [Graphviz](https://graphviz.org/).
+Pour chacun de ces projets, nous allons générer des graphes de dépendances en utilisant un [module Python](https://github.com/FernandesWilliam/retro) que nous avons implémenté et une visualisation en graphe faite avec [Graphviz](https://graphviz.org/).
 
 ## IV. Hypothèse et expériences
 Avant la réalisation de notre recherche, nous allons expliciter nos suppositions quant au résultat que nous allons 
@@ -87,11 +86,13 @@ Concernant la topologie des graphes, on s'attend à obtenir deux types de graphe
 
 <br />
 
+<!-- 
 > 1. Il s'agit ici d'**énoncer sous forme d'hypothèses** ce que vous allez chercher à démontrer. Vous devez définir vos hypothèses de façon à pouvoir les _mesurer/vérifier facilement._ Bien sûr, votre hypothèse devrait être construite de manière à _vous aider à répondre à votre question initiale_. Explicitez ces différents points.
 > 2. Vous **explicitez les expérimentations que vous allez mener** pour vérifier si vos hypothèses sont vraies ou fausses. Il y a forcément des choix, des limites, explicitez-les.
 >
 >
->     :bulb: Structurez cette partie à votre convenance : Hypothèse 1 => Expériences, Hypothèse 2 => Expériences ou l'ensemble des hypothèses et les expériences....
+>     :bulb: Structurez cette partie à votre convenance : Hypothèse 1 => Expériences, Hypothèse 2 => Expériences ou l'ensemble des hypothèses et les expériences.... 
+-->
 
 
 ## V. Analyse des résultats et conclusion
@@ -102,11 +103,28 @@ Concernant la topologie des graphes, on s'attend à obtenir deux types de graphe
 
      :bulb:  Vos résultats et donc votre analyse sont nécessairement limités. Préciser bien ces limites : par exemple, jeux de données insuffisants, analyse réduite à quelques critères, dépendance aux projets analysés, ...
 
-## VI. Outils \(facultatif\)
+## VI. Outils
 
-Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à \(1\) pouvoir reproduire vos expérimentations, \(2\) partager/expliquer à d'autres l'usage des outils.
+<!-- Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à \(1\) pouvoir reproduire vos expérimentations, \(2\) partager/expliquer à d'autres l'usage des outils. -->
 
-Script python...
+Afin de réaliser nos expériementations, nous avons développé un module Python. Les sources de ce
+module sont disponible à [cette adresse](https://github.com/FernandesWilliam/retro).
+Le module va lire un fichier YAML ayant un certain format pour télécharger et analyser un repository github avant de produire un graphe de dépendance sous forme d'un fichier PNG.
+
+Exemple d'utilisation:
+```yml
+# Configuration file template
+projects:
+  project_name:
+    git_url: "url_git.git"
+    actions:
+      - name: "pipeline_to_analyse_name"
+        parsers: ["pattern_to_discover"]
+```
+
+```shell
+python3 main.py path/to/config.yml
+```
 
 
 ![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](assets/images/logo_uca.png){:height="25px"}
