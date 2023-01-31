@@ -20,21 +20,22 @@ date:   2022-12
 
 **_février 2023_**
 
-## Authors
+## Auteurs
 
-We are four students in M2 or in last year of Polytech' Nice-Sophia specialized in Software Architecture :
+Nous sommes 4 étudiants en dérnière année du cursus ingnéieur informatique de Polytech' Nice-Sophia spécialisés en Architecture Logiciel :
 
 - Alexandre Arcil ([@Alexandre-Arcil](https://github.com/AlexandreArcil)),
 - Mohamed Belhassen ([@Mohamed-Belhassen](https://github.com/mohamedlouay)),
 - Thomas Di Grande ([@Thomas-Di-Grande](https://github.com/DigrandeArduino)),
 - Dan Nakache ([@Dan-Nakache](https://github.com/danlux18)).
 
-## I. Research context /Project
+## I. Contexte de recherche/Projet
 
 Préciser ici votre contexte et Pourquoi il est intéressant. **
+Dans un monde ou l'informatique est de plus en plus présent, de nombreux logiciels voient le jour. 
+Pour écrire ces logiciels, les développeurs peuvent intégrer une équipe en cours de développement ou même modifier des logiciels déjà existant.
 
-
-## II. Observations/General question
+## II. Observations/Question générale
 
 1. Commencez par formuler une question sur quelque chose que vous observez ou constatez ou encore une idée émergente. 
     
@@ -44,7 +45,7 @@ Attention pour répondre à cette question, vous devrez être capable d'émettre
 
      :bulb: Cette première étape nécessite beaucoup de réflexion pour se définir la bonne question afin de poser les bonnes bases pour la suite.
 
-## III. Information gathering
+## III. Collecte d'informations
 
 Préciser vos zones de recherches en fonction de votre projet, les informations dont vous disposez, ... :
 
@@ -54,7 +55,7 @@ Préciser vos zones de recherches en fonction de votre projet, les informations 
 
      :bulb: Cette étape est fortement liée à la suivante. Vous ne pouvez émettre d'hypothèses à vérifier que si vous avez les informations, inversement, vous cherchez à recueillir des informations en fonction de vos hypothèses. 
  
-## IV. Hypothesis & Experiences
+## IV. Hypothèses et Experience
 
 1. Il s'agit ici d'**énoncer sous forme d'hypothèses** ce que vous allez chercher à démontrer. Vous devez définir vos hypothèses de façon à pouvoir les _mesurer/vérifier facilement._ Bien sûr, votre hypothèse devrait être construite de manière à _vous aider à répondre à votre question initiale_. Explicitez ces différents points.
 2. Vous **explicitez les expérimentations que vous allez mener** pour vérifier si vos hypothèses sont vraies ou fausses. Il y a forcément des choix, des limites, explicitez-les.
@@ -62,7 +63,7 @@ Préciser vos zones de recherches en fonction de votre projet, les informations 
      :bulb: Structurez cette partie à votre convenance : Hypothèse 1 => Expériences, Hypothèse 2 => Expériences ou l'ensemble des hypothèses et les expériences....
 
 
-## V. Result Analysis and Conclusion
+## V. Résultat d'analyse et Conclusion
 
 1. Présentation des résultats
 2. Interprétation/Analyse des résultats en fonction de vos hypothèses
@@ -70,14 +71,14 @@ Préciser vos zones de recherches en fonction de votre projet, les informations 
 
      :bulb:  Vos résultats et donc votre analyse sont nécessairement limités. Préciser bien ces limites : par exemple, jeux de données insuffisants, analyse réduite à quelques critères, dépendance aux projets analysés, ...
 
-## VI. Tools \(facultatif\)
+## VI. Outils \(facultatif\)
 
 Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à \(1\) pouvoir reproduire vos expérimentations, \(2\) partager/expliquer à d'autres l'usage des outils.
 
 ![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](assets/images/logo_uca.png){:height="25px"}
 
 
-## VI. References
+## VI. Références
 
 [Debret 2020] Debret, J. (2020) La démarche scientifique : tout ce que vous devez savoir ! Available at: https://www.scribbr.fr/article-scientifique/demarche-scientifique/ (Accessed: 18 November 2022).
 
