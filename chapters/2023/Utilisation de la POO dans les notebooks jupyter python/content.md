@@ -99,6 +99,11 @@ Nous avons cherché des documents de recherche et articles rédigés sur des blo
 ## V. Analyse des résultats et conclusion
 
 1. Présentation des résultats
+![](./assets/images/Figure_usage.png)
+![](./assets/images/nb_stars_oop.png)
+![](./assets/images/nb_stars_no_oop.png)
+![](./assets/images/pylint_poo.png)
+![](./assets/images/pylint_no_oop.png)
 2. Interprétation/Analyse des résultats en fonction de vos hypothèses
 3. Construction d’une conclusion 
 
