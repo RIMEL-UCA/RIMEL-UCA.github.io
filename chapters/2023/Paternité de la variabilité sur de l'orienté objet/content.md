@@ -18,11 +18,11 @@ date:   2022-12
 
 ---
 
-**_février 2023_**
+**_Février 2023_**
 
 ## Auteurs
 
-Nous sommes 4 étudiants en dérnière année du cursus ingnéieur informatique de Polytech' Nice-Sophia spécialisés en Architecture Logiciel :
+Nous sommes 4 étudiants en dernière année du cursus ingénieur informatique de Polytech' Nice-Sophia spécialisés en Architecture Logiciel :
 
 - Alexandre Arcil ([@Alexandre-Arcil](https://github.com/AlexandreArcil)),
 - Mohamed Belhassen ([@Mohamed-Belhassen](https://github.com/mohamedlouay)),
@@ -32,8 +32,19 @@ Nous sommes 4 étudiants en dérnière année du cursus ingnéieur informatique 
 ## I. Contexte de recherche/Projet
 
 Préciser ici votre contexte et Pourquoi il est intéressant. **
-Dans un monde ou l'informatique est de plus en plus présent, de nombreux logiciels voient le jour. 
-Pour écrire ces logiciels, les développeurs peuvent intégrer une équipe en cours de développement ou même modifier des logiciels déjà existant.
+
+Dans un monde où l'informatique est de plus en plus présent, de nombreux logiciels voient le jour. 
+Pour écrire ces logiciels, les développeurs peuvent intégrer une équipe en cours de développement ou même modifier des logiciels déjà existants.
+Cependant, la complexité des logiciels augmente rapidement et le code est en constante évolution.
+C'est dans ce contexte qu'a été créé un outil d'analyse de la variabilité pour du code orienté objet en Java. 
+Cet outil va permettre de visualiser les endroits (classes, méthodes, attributs...) où il y a de la variabilité.
+Cette analyse du code peut servir de base pour avoir une vision d'ensemble des parties complexes du code. 
+L'étape suivante est de comprendre ces points de variation pour participer au développement du logiciel.
+Si la documentation est absente et que le développeur ne sait pas à qui s'adresser pour comprendre, il peut rester bloqué dans son coin.
+Il serait donc intéressant de savoir qui est l'auteur de cette variabilité afin de lui poser directement des questions.
+À partir de la variabilité, il faut donc être capable de savoir qui l'a écrit, c'est ce que l'on va chercher à faire.
+
+
 
 ## II. Observations/Question générale
 
@@ -45,7 +56,15 @@ Attention pour répondre à cette question, vous devrez être capable d'émettre
 
      :bulb: Cette première étape nécessite beaucoup de réflexion pour se définir la bonne question afin de poser les bonnes bases pour la suite.
 
-## III. Collecte d'informations
+Comment la variabilité est distribuée entre plusieurs auteurs dans du code orienté objet ?
+
+Selon le type d’application développée et le fonctionnement en entreprise, le développement peut être fait par une ou plusieurs personnes.  
+Dans une entreprise, il peut y avoir des départs, des changements de postes, des nouveaux arrivants ce qui impliquent que les personnes qui s’occupent d’une application peuvent varier.  
+C’est dans cette optique que l’analyse de la paternité est un outil qui va permettre d’améliorer la transmission de connaissances et la découverte du fonctionnement d’une application sur les parties complexes qui peuvent nécessiter une grande maitrise de ce qui a déjà été développé.  
+En effet, savoir qui est ou sont les développeurs principaux d’une partie de l’application permet d’améliorer la montée en compétence de ce qui n’ont pas ces connaissances.  
+La mise en place de cet outil serait donc une grande amélioration dans le monde du développement.
+
+## III. Collecte d'information
 
 Préciser vos zones de recherches en fonction de votre projet, les informations dont vous disposez, ... :
 
