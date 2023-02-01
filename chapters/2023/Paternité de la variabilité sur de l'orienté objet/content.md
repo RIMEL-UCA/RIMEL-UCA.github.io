@@ -92,13 +92,10 @@ sur un pattern spécifique afin de trouver les auteurs auprès de qui poser des 
 
 Préciser vos zones de recherches en fonction de votre projet, les informations dont vous disposez, ... :
 
-1. les articles ou documents utiles à votre projet
-2. les outils
-3. les jeux de données/codes que vous allez utiliser, pourquoi ceux-ci, ...
-
      :bulb: Cette étape est fortement liée à la suivante. Vous ne pouvez émettre d'hypothèses à vérifier que si vous avez les informations, inversement, vous cherchez à recueillir des informations en fonction de vos hypothèses. 
 
 1. Les articles ou documents utiles à votre projet📝
+
 Dans le cadre de notre recherche, nous prévoyons de nous baser sur les ressources suivantes :
 - [On the notion of variability in software product lines](https://doi.org/10.1109/WICSA.2001.948406)
 - [Visualization of Object-Oriented Variability Implementations as Cities](https://hal.archives-ouvertes.fr/hal-03312487)
@@ -108,13 +105,15 @@ Dans le cadre de notre recherche, nous prévoyons de nous baser sur les ressourc
 
 
 2. Les jeux de données 💾
+
 Nous procéderons à l'analyse des projets GitHub présents dans le répertoire Assets/data,Nous allons examiner ces projets en raison de leur nombre conséquent de contributeurs (entre 10 et 40) ainsi que de leur taille inférieure à 500KB, ce qui nous permettra de faciliter notre procédure d'analyse à l'aide de notre outil "ScraperPV"."
 
 3. Les outils🔨🪓
 
 - git blame
 - Symfinder (Pour connaître la variabilité d’un projet orienté objet à un instant donné, on a utilisé Symfinder. Cela va servir de point de départ pour remonter le nom de la ou les personnes responsables de cette variation. )
- 
+- Docker/Docker-Compose
+- Scripts Python
 
 ## IV. Hypothèses et Experience
 
@@ -125,14 +124,60 @@ Nous procéderons à l'analyse des projets GitHub présents dans le répertoire 
 
 ### Hypothèses
 
-- Paternité de gros projets partagés entre les développeurs
-- Un fichier est souvent modifié par le même développeur -> les ?
-- Sur de petits projets, la paternité est par la même personne
+#### Hypothèse 1
+
+*La variabilité est bien distribuée à travers tous les contributeurs quand le projet est de grande taille (beaucoup de line de code, beaucoup de développeurs).*
+
+Sous-question :
+
+*Comment la paternité de la variabilité est répartie entre les contributeurs dans un gros projet ?*
+
+Résultats attendus :
+
+Une paternité très fragmentée avec un faible pourcentage pour chaque auteur GitHub
+
+#### Hypothèse 2
+
+*Pour de petit projet, il y a peu de développeur, voire potentiellement un seul pour qui la paternité de la variabilité est la plus importante, ou autrement dit, un développeur apparais comme principale dans le projet.*
+
+Sous-question :
+
+La paternité de la variabilité est-elle répartie de la même façon dans de petit projet, ou dans des projets avec peu de développeur ?
+
+Résultats attendus :
+
+En l'occurrence ici on s'attend à confirmer l'hypothèse notamment due au fait que dans des petits projets, il y a souvent un ou deux développeurs experts, pères de la majeure partie de la variabilité.
+
+#### Hypothèse 3
+
+*La paternité de variabilité est le même pour tous les types de variabilité (tjs les mêmes contributeurs pour les différentes variabilités).*
+
+Sous-question :
+
+Est-ce que la répartition de la paternité suit un schéma par rapport aux patterns de variabilité ?
+
+Résultats attendus :
+
+On s'attend à ce qu'un développeur qui produit de la variance d'un type produise de la variance sur les autres types du même niveau.
 
 ### Experiences
 
-Échantillon de 40 gros projets, analyse de ces projets et observation des statistiques de paternité
+#### Hypothèse 1
 
+Projets ciblés :
+- amitshekhariitbhu/from-java-to-kotlin (https://github.com/amitshekhariitbhu/from-java-to-kotlin)
+- EnterpriseQualityCoding/FizzBuzzEnterpriseEdition
+- frohoff/ysoserial
+- gcacace/android-signaturepad
+- spotify/dockerfile-maven
+
+#### Hypothèse 2
+
+Petits projets ou projets avec peu de développeur.
+
+#### Hypothèse 3
+
+Projets avec peu de contributeurs, mais beaucoup de code.
 
 ## V. Résultat d'analyse et Conclusion
 
