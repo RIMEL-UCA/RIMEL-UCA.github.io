@@ -221,7 +221,7 @@ Comme formulé en hypothèse, le taux de couverture de tests retrouvé est nul. 
 ##### Taux de duplication du code
 Voici le résultat à une métrique le plus étonnant, le taux de duplication du code. Il est connu que les notebooks contiennent des lignes dupliquées, le fait de n'en trouver aucune lors de l'analyse par SonarQube parait donc suspect car l'on devrait au moins tomber sur des déclarations multiples de mêmes variables et ainsi des duplications de code. On peut donc penser que cette
 
-#### Expérience 2  Evaluation de la qualité du code Python des notebooks par CodeClimate
+#### Expérience 2 : Evaluation de la qualité du code Python des notebooks par CodeClimate
 Pour cette seconde expérience nous avons voulu mesurer la qualité du code de nos notebooks à l'aide de l'outil CodeClimate afin d'avoir des résultats mais aussi des métriques complémentaire à ce que nous avions pu trouver avec l'outil SonarQube. 
 Malheureusement, de l'intégration à notre script d'évaluation de la qualité de l'outil CodeClimate n'a résulté que l'erreur suivante ne nous permettant donc par d'analyser nos projets.
 
