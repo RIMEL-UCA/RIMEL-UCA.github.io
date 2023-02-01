@@ -46,23 +46,16 @@ Pour que notre étude ne devienne pas trop complexe, nous ne considèrerons que 
 ## II. Observations & Question générale
 
 1. Commencez par formuler une question sur quelque chose que vous observez ou constatez ou encore une idée émergente.
-Nous allons nous demander dans cette étude comment mesure-t-on la qualité d’un notebook et quelles métriques de qualité de code sont pertinentes dans le cas d’un notebook Jupyter ?
+Nous allons nous demander dans cette étude comment mesure-t-on la qualité d’un notebook ? Nous en avons déduit deux sous-questions :
+Afin de compléter notre étude et pouvoir mieux répondre à cette question nous allons chercher à répondre aux deux sous-questions suivantes :
+* Quelles métriques de qualité de code sont pertinentes dans le cas d'un notebook Jupyter ?
+* Comment reconnaître une métrique pertinente ? : Notre travail se base sur 
 
 2. Préciser pourquoi cette question est intéressante de votre point de vue.
 
 Attention pour répondre à cette question, vous devrez être capable d'émettre des hypothèses vérifiables, de quantifier vos réponses, ...
 
-     :bulb: Cette première étape nécessite beaucoup de réflexion pour se définir la bonne question afin de poser les bonnes bases pour la suite.
-
 ## III. Collecte d'informations
-
-Préciser vos zones de recherches en fonction de votre projet, les informations dont vous disposez, ... :
-
-1. les articles ou documents utiles à votre projet
-2. les outils
-3. les jeux de données/codes que vous allez utiliser, pourquoi ceux-ci, ...
-
-     :bulb: Cette étape est fortement liée à la suivante. Vous ne pouvez émettre d'hypothèses à vérifier que si vous avez les informations, inversement, vous cherchez à recueillir des informations en fonction de vos hypothèses.
 
 ### Articles
 Pour notre recherche, nous allons nous baser sur les quatre articles suivants : 
