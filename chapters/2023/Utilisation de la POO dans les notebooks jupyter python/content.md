@@ -38,9 +38,6 @@ De la question générale en découle plusieurs sous-questions qui nous permette
 
 Cette sous-question vise à déterminer l'utilisation de la POO dans les notebooks Jupyter en termes de pourcentage. Cela pourrait être fait en examinant un échantillon de notebooks Jupyter python trouvés sur kaggle et/ou Github et en comptant le nombre de notebooks qui utilisent la POO (grâce à un ensemble de règles/patterns que nous deffinirons et qui nous permettrons de reconnaitre l'usage de la POO dans ces notebooks)par rapport au nombre total de notebooks.
 
-- **Les data scientistes ont-ils toujours utilisé la POO ?**
-
-Cette sous-question vise à savoir si les data scientistes ont toujours utilisé la POO dans leur travail avec les notebooks Jupyter python, ou s'ils ont adopté la POO plus récemment. Cela pourrait être déterminé en analysant des notebooks issues de divers périodes. 
 
 - **Quel est l’impact de l’utilisation de la POO sur la qualité logicielle dans les notebooks Jupyter ?**
 
@@ -61,8 +58,8 @@ Préciser vos zones de recherches en fonction de votre projet, les informations 
 
      :bulb: Cette étape est fortement liée à la suivante. Vous ne pouvez émettre d'hypothèses à vérifier que si vous avez les informations, inversement, vous cherchez à recueillir des informations en fonction de vos hypothèses. *
 
-     ### Articles 
 
+### Articles 
 
 Nous avons cherché des documents de recherche et articles rédigés sur des blogs traitant de l'utilisation de la POO par les datascientistes et de l'usage de la POO dans les notebooks Jupyter python. Voici une synthèse de ce sur quoi nous avons basé notre travail : 
 
@@ -90,7 +87,7 @@ Nous avons cherché des documents de recherche et articles rédigés sur des blo
      Cet article présente les bases de la POO en python et explique comment reconnaitre l'utilisation de la POO dans un code python. Il explique comment créer des classes et des objets, comment les utiliser pour stocker des données et comment les utiliser pour créer des fonctions et des méthodes. Il explique également comment représenter les grands conceptes de la POO en python comme l'héritage, l'encapsulation et la polymorphisme.  
 
 
-     ### Jeux de données 
+### Jeux de données 
 
  
 ## IV. Hypothèses et Expériences
@@ -148,8 +145,8 @@ Cet outil mise en place se base sur les outils suivant :
 
 ## VI. Références
 
-* [An Introduction to Object Oriented Data Science in Python](https://opendatascience.com/an-introduction-to-object-oriented-data-science-in-python)
-
-[Debret 2020] Debret, J. (2020) La démarche scientifique : tout ce que vous devez savoir ! Available at: https://www.scribbr.fr/article-scientifique/demarche-scientifique/ (Accessed: 18 November 2022).
-
+1. [An Introduction to Object Oriented Data Science in Python](https://opendatascience.com/an-introduction-to-object-oriented-data-science-in-python)
+2. [A Large-Scale Study About Quality and Reproducibility of Jupyter Notebooks](https://ieeexplore.ieee.org/abstract/document/8816763)
+3. [Assessing and restoring reproducibility of Jupyter notebooks](https://dl.acm.org/doi/abs/10.1145/3324884.3416585)
+4. [Better code, better sharing: on the need of analyzing jupyter notebooks](https://dl.acm.org/doi/abs/10.1145/3377816.3381724)
 
