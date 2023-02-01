@@ -16,6 +16,8 @@ date: 2022-11-18 6:00:00 +0100
 
 ### [Structure de graphe au service de l'analyse de pipeline CI-CD]({{site.url}}/chapters/2023/Structure de graphe au service de l'analyse de pipeline CI-CD/content)
 
+### [Jupyter Notebooks et bonnes pratiques, entre conventions implicites et besoin de formalisation]({{ site.url }}/chapters/2023/Jupyter Notebooks et bonnes pratiques_entre conventions implicites et besoin de formalisation/content)
+
 ## 2022
 
 <!-- ### [Quelle est la relation entre les algorithmes, préprocesseurs et leur utilisation dans les séries temporelles ?]({{ site.url }}/chapters/2022/OpenMLAnalysis/content) -->
