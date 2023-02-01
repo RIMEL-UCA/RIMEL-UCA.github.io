@@ -92,9 +92,8 @@ sur la rapidité d'exécution.
     
     Date de publication : 25 au 30 avril 2020
     
-    Ce qui nous est montré par cet article :  Dans cet article, une étude à méthode mixte a été menée avec des scientifiques spécialisés dans les données en utilisant des observations sur le terrain, des entretiens et une enquête. Lors des études sur le terrain et des entretiens, les spécialistes des données ont signalé diverses difficultés lorsqu'ils travaillaient avec des ordinateurs portables et synthétisé ces difficultés dans une taxonomie des points de douleur.
-Nous avons validé les activités difficiles qui contribuent à ces points de douleur par le biais d'une enquête et nous avons constaté que le soutien de toutes les
-activités étaient au moins modérément importantes pour les scientifiques des données, et que quatre activités - la refonte du code, le déploiement en production, la gestion et l'utilisation de l'historique, et l'exécution de tâches de longue durée - étaient à la fois difficiles et importantes, ce qui en fait des activités à fort impact. Nos résultats suggèrent plusieurs possibilités de conception pour les chercheurs et les développeurs de notebooks. La résolution de ces problèmes peut améliorer considérablement l'utilité, la productivité et l'expérience utilisateur des scientifiques qui travaillent avec des notebooks.
+    Ce qui nous est montré par cet article :  Dans cet article, une étude à méthode mixte a été menée avec des scientifiques spécialisés dans les données en utilisant des observations sur le terrain, des entretiens et une enquête. Lors des études sur le terrain et des entretiens, les spécialistes des données ont signalé diverses difficultés lorsqu'ils travaillaient avec des ordinateurs portables et synthétisé ces difficultés dans une classification des points posant problème dans le code.
+Nous avons validé les activités difficiles qui contribuent à ces points posant problème dans le code par le biais d'une enquête et nous avons constaté que le soutien de toutes les activités étaient au moins modérément importantes pour les scientifiques spécialistes des données, et que quatre activités - la refonte du code, le déploiement en production, la gestion et l'utilisation de l'historique, et l'exécution de tâches de longue durée - étaient à la fois difficiles et importantes, ce qui en fait des activités à fort impact. Nos résultats suggèrent plusieurs possibilités de conception pour les chercheurs et les développeurs de notebooks. La résolution de ces problèmes peut améliorer considérablement l'utilité, la productivité et l'expérience utilisateur des scientifiques qui travaillent avec des notebooks.
 
 
 3. [Ten simple rules for writing and sharing computational analyses in Jupyter Notebook](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4709bfe2-0ac6-4dac-aaaa-b64063ca688c/Rule2019.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230109%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230109T153113Z&X-Amz-Expires=86400&X-Amz-Signature=9d4bc9f5c3d2b85884e0673e1512dad09aa007390f71429f27db5b47294bf0ca&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Rule2019.pdf%22&x-id=GetObject). 
@@ -138,12 +137,14 @@ Les outils que nous envisageons d'utiliser pour effectuer notre étude sont :
 * RATS : “Rough-Auditing-Tool-for-Security”, outil d’analyse de plusieurs langages dont Python pouvant signaler les erreurs de code courantes liées à la sécurité, au buffer overflow et runtime TOCTOU.
 * PyLint : linter vérificateur de code permettant de signaler les erreurs Python ainsi que toutes les parties de code qui ne respectent pas un ensemble de conventions prédéfinies. Il permet donc d’éviter les erreurs et d’avoir un code homogène. Les règles qu’impose Pylint par défaut suivent le guide de style Python PEP 8.
 
-### Jeux de données
-Les codes que nous analyserons pour notre études seront des projets de différentes tailles et auteurs proposées sur Github avec pour choix un sujet commun : la réalité augmentée. Un script de récupération automatisé de projets de type notebook Jupyter (avec extension .ipynb) sera utilisé pour avoir une diversité de projets. Ils seront ensuite transformés en code Python de qualité mesurable grâce aux outils cités dans la partie précédente par ce même script. Ce choix a été fait de par le fait que la majorité des notebooks Jupyter sont codés dans ce même langage et que cela n'entrainera donc pas de transformation du code. A ces projets récupérés, nous ajouterons plusieurs projets de réalitée augmentée effectués en cours à Polytech Nice-Sophia lors de nos études.
+### Jeu de données
+Les codes que nous analyserons pour notre études seront des projets de différentes tailles et auteurs proposées sur GitHub avec pour choix un sujet commun : la réalité augmentée. Un script de récupération automatisé de projets de type notebook Jupyter (avec extension .ipynb) sera utilisé pour avoir une diversité de projets. Nous récupérons un fichier par page de projets publics GitHub afin de contribuer à cette diversité de taille et d'origine des notebooks. Ils seront ensuite transformés en code Python de qualité mesurable grâce aux outils cités dans la partie précédente par ce même script. Ce choix a été fait de par le fait que la majorité des notebooks Jupyter sont codés dans ce même langage et que cela n'entrainera donc pas de transformation du code. A ces projets récupérés, nous ajouterons des projets de réalité augmentée effectués en cours à Polytech Nice-Sophia lors de nos études.
 
 ## IV. Hypothèses & Expériences
 
 1. Il s'agit ici d'**énoncer sous forme d'hypothèses** ce que vous allez chercher à démontrer. Vous devez définir vos hypothèses de façon à pouvoir les _mesurer/vérifier facilement._ Bien sûr, votre hypothèse devrait être construite de manière à _vous aider à répondre à votre question initiale_. Explicitez ces différents points.
+
+### Hypothèses de travail 
 
 Nous avons émis plusieurs hypothèses au début de notre étude :
 * Le code analysé est la somme de toutes les cellules du notebook
@@ -154,16 +155,40 @@ Nous avons émis plusieurs hypothèses au début de notre étude :
 2. Vous **explicitez les expérimentations que vous allez mener** pour vérifier si vos hypothèses sont vraies ou fausses. Il y a forcément des choix, des limites, explicitez-les.
      :bulb: Structurez cette partie à votre convenance : Hypothèse 1 => Expériences, Hypothèse 2 => Expériences ou l'ensemble des hypothèses et les expériences....
 
-La démarche que nous avons prévu pour l’analyse de ce sujet se découpe en six étapes : 
-1. Récupérer plusieurs notebooks Jupyter en langage Python conséquents ou non dont nos propres projets parmi ceux présents sur Github
-2. Analyser ces projets à travers Sonar et d’autres outils de qualimétrie cités auparavant 
-3. Faire les modifications nécessaires si l’étape précédente ne fonctionne pas (à voir si cela possible)
-4. Récupérer toutes les analyses sur les métriques choisies par Sonar
-5. Exploiter les résultats, et voir si ceux-ci pourraient mener à des conclusions intéressantes dont les métriques pertinentes dans l'analyse des notebooks
-6. Classer les notebooks récupérés d'après les notes référentes récupérées d'après notre hypothèse de départ de qualité des notebooks
+### Expériences
 
-Cette première démarche terminée, nous avons décidé d'utiliser CodeClimate pour analyser nos notebooks. Après des recherches plus approfondies, CodeClimate propose l'équivalent d'un PyLint Python, c'est-à-dire un outil qui analyse votre code sans l'exécuter. Il vérifie les erreurs, applique une norme de codage, recherche les odeurs de code et peut faire des suggestions sur la façon dont le code pourrait être remanié. Pylint peut déduire les valeurs réelles de votre code en utilisant sa représentation interne du code.
-Malheureusement, l'application de CodeClimate à nos notebooks de référence cause des erreurs, nous sommes donc à la recherche d'autres solutions d'analyse des projets Noteboook et de la qualité du code Python. Une première étape serait l'utilisation du plugin PyLint simple sur nos notebooks de référence pour analyse de leur qualité.
+Préalablement à la mise en place de nos expériences, nous avons eu à récupérer un ensemble de notebooks Jupyter. Le code des fichiers .ipynb récupérés est par la suite transformé en un unique code, somme de toutes les cellules du notebook, via passage dans notre script. L'extension de ce fichier est celle du langage de programmation utilisé dans le notebook. Le script filtre ensuite les fichiers obtenus afin de ne garder que ceux dont l'extension est celle des codes Python. 
+
+#### Expérience 1 : Evaluation de la qualité du code Python par SonarQube
+
+La démarche que nous avons prévu pour l’analyse de ce sujet se découpe en quatre étapes : 
+1. Lancement de notre script passant nos fichiers Python récupérés auparavant sur SonarQube
+2. Récupération de toutes les analyses sur les métriques choisies par SonarQube
+3. Exploitation des résultats, et voir si ceux-ci pourraient mener à des hypothèses supplémentaires ou conclusions intéressantes dont les métriques pertinentes dans l'analyse des notebooks
+4. Classification des notebooks de notre jeu de données d'après les notes référentes récupérées d'après notre hypothèse de départ de qualité des notebooks
+
+
+#### Expérience 2 : Evaluation de la qualité du code Python par CodeClimate
+
+Cette première démarche terminée, nous avons décidé d'utiliser CodeClimate pour analyser nos notebooks. Malheureusement, l'application de CodeClimate à nos notebooks de référence cause des erreurs, nous sommes donc à la recherche d'autres solutions d'analyse des projets Noteboook et de la qualité du code Python. 
+
+#### Expérience 3 : Evaluation de la qualité du code Python par PyLint
+
+Après des recherches plus approfondies, CodeClimate propose l'équivalent d'un PyLint Python, c'est-à-dire un outil qui analyse votre code sans l'exécuter. Il vérifie les erreurs, applique une norme de codage, recherche les odeurs de code et peut faire des suggestions sur la façon dont le code pourrait être remanié. Pylint peut déduire les valeurs réelles de votre code en utilisant sa représentation interne du code. Une première étape serait l'utilisation du plugin PyLint simple sur nos notebooks de référence pour analyse de leur qualité.
+Après une première utilisation de PyLint nous nous sommes aperçus que ses configurations de base ne sont pas forcément pertinentes dans le cas des notebooks. Nous avons donc écrit un script de configuration de PyLint afin d'exclure de ses vérification la liste d'exceptions suivante :
+* *bad-inline-exception* 
+* *locally-disabled*
+* *file-ignored*
+* *suppressed-image*
+* *useless-suppression*
+* *deprecated-pragma*
+* *use-symbolic-message-instead*
+* *too-many-lines*
+* *trailing-whitespace*
+* *line-too-long*
+* *import-error*
+* *too-few-public-methods*
+Ces erreurs sont récurrentes mais en vérité peu pertinentes dans le cas des notebooks.
 
 ## V. Analyse des résultats obtenus et Conclusion
 
@@ -172,6 +197,12 @@ Malheureusement, l'application de CodeClimate à nos notebooks de référence ca
 3. Construction d’une conclusion
 
      :bulb:  Vos résultats et donc votre analyse sont nécessairement limités. Préciser bien ces limites : par exemple, jeux de données insuffisants, analyse réduite à quelques critères, dépendance aux projets analysés, ...
+     
+### Expérience 1
+
+### Expérience 2
+
+### Expérience 3
 
 ## VI. Outils \(facultatif\)
 
