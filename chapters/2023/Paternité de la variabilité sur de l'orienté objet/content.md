@@ -33,18 +33,27 @@ Nous sommes 4 étudiants en dernière année du cursus ingénieur informatique d
 
 Préciser ici votre contexte et Pourquoi il est intéressant. **
 
-Dans un monde où l'informatique est de plus en plus présent, de nombreux logiciels voient le jour. 
-Pour écrire ces logiciels, les développeurs peuvent intégrer une équipe en cours de développement ou même modifier des logiciels déjà existants.
-Cependant, la complexité des logiciels augmente rapidement et le code est en constante évolution.
+Dans un monde où l'informatique est de plus en plus présent, de nombreux logiciels voient le jour.
+Les entreprises réalisent des projets toujours plus grands et la complexité de ces projets augmente en conséquence.
+Les équipes grandissent et le nombre de développeurs devient parfois si important qu’il est difficile d'intégrer de nouvelles recrues. 
+De plus, certains développeurs peuvent quitter le développement d’un projet pendant sa réalisation. 
+Il devient donc d’autant plus important de pouvoir engager de nouveaux salariés tout en les intégrants rapidement dans le projet.
+Les nouveaux développeurs intégrant une équipe en cours de développement sont amenés à modifier des logiciels déjà existants.
+Le problème principal est la complexité des logiciels qui augmente rapidement et le code qui est en constante évolution.
+
+Mais alors se pose un premier problème de taille.
+Comment faire en sorte de correctement intégrer ces nouveaux ingénieurs dans le projet existant ?
+La solution la plus simple est de les confier à un développeur expert du projet pour leur transmettre les bases.
+Mais si cela n’est pas possible ? 
+Il faudrait ainsi répertorier les développeurs et les parties du code sur lesquelles ils ont travaillé.
+
 C'est dans ce contexte qu'a été créé un outil d'analyse de la variabilité pour du code orienté objet en Java. 
 Cet outil va permettre de visualiser les endroits (classes, méthodes, attributs...) où il y a de la variabilité.
 Cette analyse du code peut servir de base pour avoir une vision d'ensemble des parties complexes du code. 
 L'étape suivante est de comprendre ces points de variation pour participer au développement du logiciel.
-Si la documentation est absente et que le développeur ne sait pas à qui s'adresser pour comprendre, il peut rester bloqué dans son coin.
+Si la documentation est absente et que le développeur ne sait pas à qui s'adresser pour comprendre, il peut rester bloqué de son côté.
 Il serait donc intéressant de savoir qui est l'auteur de cette variabilité afin de lui poser directement des questions.
-À partir de la variabilité, il faut donc être capable de savoir qui l'a écrit, c'est ce que l'on va chercher à faire.
-
-
+Nous ne traiterons que le développement de projet orienté objets ici pour rester dans le cadre de notre sujet.
 
 ## II. Observations/Question générale
 
@@ -64,6 +73,21 @@ C’est dans cette optique que l’analyse de la paternité est un outil qui va 
 En effet, savoir qui est ou sont les développeurs principaux d’une partie de l’application permet d’améliorer la montée en compétence de ce qui n’ont pas ces connaissances.  
 La mise en place de cet outil serait donc une grande amélioration dans le monde du développement.
 
+Notre question générale sera donc :
+Comment déterminer la paternité de la variabilité du code d’un projet orienté objet ?
+
+La première étape est donc de bien déterminer quel type de variabilité nous allons considérer.
+Grâce à un outil de Git, il est possible d’obtenir à un instant “t” du projet, tous les auteurs d’un fichier précis.
+
+À partir des résultats obtenus, nous avons donc reformuler la question :
+Comment analyser ces résultats pour identifier les différents auteurs de la variabilité et ressortir des statistiques sur la paternité du projet à un instant “t” ?
+
+Comme dit précédemment, l’identification de la paternité va permettre de faciliter la transmission de connaissance 
+sur les points complexes du code entre les développeurs experts et les nouveaux arrivants.
+La variabilité pouvant être décomposée sous forme de patterns, le nouveau développeur pourrait cibler sa recherche 
+sur un pattern spécifique afin de trouver les auteurs auprès de qui poser des questions pour comprendre le fonctionnement du pattern à travers le code.
+
+
 ## III. Collecte d'information
 
 Préciser vos zones de recherches en fonction de votre projet, les informations dont vous disposez, ... :
@@ -73,13 +97,41 @@ Préciser vos zones de recherches en fonction de votre projet, les informations 
 3. les jeux de données/codes que vous allez utiliser, pourquoi ceux-ci, ...
 
      :bulb: Cette étape est fortement liée à la suivante. Vous ne pouvez émettre d'hypothèses à vérifier que si vous avez les informations, inversement, vous cherchez à recueillir des informations en fonction de vos hypothèses. 
+
+1. Les articles ou documents utiles à votre projet📝
+Dans le cadre de notre recherche, nous prévoyons de nous baser sur les ressources suivantes :
+- [On the notion of variability in software product lines](https://doi.org/10.1109/WICSA.2001.948406)
+- [Visualization of Object-Oriented Variability Implementations as Cities](https://hal.archives-ouvertes.fr/hal-03312487)
+- [An analysis of the variability in forty preprocessor-based software product lines](https://doi.org/10.1145/1806799.1806819)
+- [On the usefulness of ownership metrics in open-source software projects](https://www.sciencedirect.com/science/article/abs/pii/S0950584915000294)
+
+
+
+2. Les jeux de données 💾
+Nous procéderons à l'analyse des projets GitHub présents dans le répertoire Assets/data,Nous allons examiner ces projets en raison de leur nombre conséquent de contributeurs (entre 10 et 40) ainsi que de leur taille inférieure à 500KB, ce qui nous permettra de faciliter notre procédure d'analyse à l'aide de notre outil "ScraperPV"."
+
+3. Les outils🔨🪓
+
+- git blame
+- Symfinder (Pour connaître la variabilité d’un projet orienté objet à un instant donné, on a utilisé Symfinder. Cela va servir de point de départ pour remonter le nom de la ou les personnes responsables de cette variation. )
  
+
 ## IV. Hypothèses et Experience
 
 1. Il s'agit ici d'**énoncer sous forme d'hypothèses** ce que vous allez chercher à démontrer. Vous devez définir vos hypothèses de façon à pouvoir les _mesurer/vérifier facilement._ Bien sûr, votre hypothèse devrait être construite de manière à _vous aider à répondre à votre question initiale_. Explicitez ces différents points.
 2. Vous **explicitez les expérimentations que vous allez mener** pour vérifier si vos hypothèses sont vraies ou fausses. Il y a forcément des choix, des limites, explicitez-les.
 
      :bulb: Structurez cette partie à votre convenance : Hypothèse 1 => Expériences, Hypothèse 2 => Expériences ou l'ensemble des hypothèses et les expériences....
+
+### Hypothèses
+
+- Paternité de gros projets partagés entre les développeurs
+- Un fichier est souvent modifié par le même développeur -> les ?
+- Sur de petits projets, la paternité est par la même personne
+
+### Experiences
+
+Échantillon de 40 gros projets, analyse de ces projets et observation des statistiques de paternité
 
 
 ## V. Résultat d'analyse et Conclusion
