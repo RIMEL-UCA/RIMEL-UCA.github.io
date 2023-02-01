@@ -59,33 +59,38 @@ Préciser vos zones de recherches en fonction de votre projet, les informations 
 2. les outils
 3. les jeux de données/codes que vous allez utiliser, pourquoi ceux-ci, ...
 
-     :bulb: Cette étape est fortement liée à la suivante. Vous ne pouvez émettre d'hypothèses à vérifier que si vous avez les informations, inversement, vous cherchez à recueillir des informations en fonction de vos hypothèses. 
+     :bulb: Cette étape est fortement liée à la suivante. Vous ne pouvez émettre d'hypothèses à vérifier que si vous avez les informations, inversement, vous cherchez à recueillir des informations en fonction de vos hypothèses. *
+
+     ### Articles 
 
 
 Nous avons cherché des documents de recherche et articles rédigés sur des blogs traitant de l'utilisation de la POO par les datascientistes et de l'usage de la POO dans les notebooks Jupyter python. Voici une synthèse de ce sur quoi nous avons basé notre travail : 
 
 * [An Introduction to Object Oriented Data Science in Python](https://opendatascience.com/an-introduction-to-object-oriented-data-science-in-python)
 
-     | Auteur     |   Date de publication   | Type de document     |
-     | ------------- | ------------- | ------------- |
-     | Sev Leonard (Portland Data Science Group)     | 2016-11-29     | Article      |
+     **Auteur :** Sev Leonard (Portland Data Science Group)
 
-     Résumé
+     **Date de publication :** 2016-11-29
+
+     **Type de document :** Article 
+     
+     **Résumé :**
 
      Cet article présente les bases de la POO en python et explique comment l'utiliser dans le cadre de l'analyse de données et de la science des données. Il explique comment créer des classes et des objets, comment les utiliser pour stocker des données et comment les utiliser pour créer des fonctions et des méthodes. Il explique également comment utiliser la POO pour créer des pipelines de données et des modèles de machine learning.
 
 
 * [Object-Oriented Programming (OOP) in Python 3](https://realpython.com/python3-object-oriented-programming/)
 
-     | Auteur     |   Date de publication   | Type de document     |
-     | ------------- | ------------- | ------------- |
-     | David Amos (programmer and mathematician passionate about exploring mathematics through code)     |      | Article      |
+     **Auteur :** David Amos (programmer and mathematician passionate about exploring mathematics through code)
 
-
-     Résumé
+     **Type de document :** Article 
      
-     ... 
+     **Résumé :**
+     
+     Cet article présente les bases de la POO en python et explique comment reconnaitre l'utilisation de la POO dans un code python. Il explique comment créer des classes et des objets, comment les utiliser pour stocker des données et comment les utiliser pour créer des fonctions et des méthodes. Il explique également comment représenter les grands conceptes de la POO en python comme l'héritage, l'encapsulation et la polymorphisme.  
 
+
+     ### Jeux de données 
 
  
 ## IV. Hypothèses et Expériences
@@ -99,6 +104,12 @@ Nous avons cherché des documents de recherche et articles rédigés sur des blo
 ## V. Analyse des résultats et conclusion
 
 1. Présentation des résultats
+
+![](./assets/images/Figure_usage.png)
+![](./assets/images/nb_stars_oop.png)
+![](./assets/images/nb_stars_no_oop.png)
+![](./assets/images/pylint_poo.png)
+![](./assets/images/pylint_no_oop.png)
 2. Interprétation/Analyse des résultats en fonction de vos hypothèses
 3. Construction d’une conclusion 
 
