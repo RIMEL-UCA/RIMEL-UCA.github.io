@@ -188,6 +188,7 @@ Après une première utilisation de PyLint nous nous sommes aperçus que ses con
 * *line-too-long*
 * *import-error*
 * *too-few-public-methods*
+
 Ces erreurs sont récurrentes mais en vérité peu pertinentes dans le cas des notebooks.
 
 ## V. Analyse des résultats obtenus et Conclusion
