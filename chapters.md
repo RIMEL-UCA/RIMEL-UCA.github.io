@@ -6,7 +6,7 @@ date: 2022-11-18 6:00:00 +0100
 
 ## 2023
 
-### [Maintenabilité d’une pipeline : paternité et dépendances de l’implémentation des jobs et steps ]({{ site.url }}/chapters/2023/team-a/content)
+### [Comment visualiser les dépendances d’une chaîne d’intégration continue, leur origine et leur niveau de confiance ?]({{ site.url }}/chapters/2023/team-a/content)
 
 ### [Utilisation de la POO dans les notebooks jupyter python]({{ site.url }}/chapters/2023/Utilisation de la POO dans les notebooks jupyter python/content)
 
