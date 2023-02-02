@@ -50,15 +50,6 @@ Cette sous-question vise à évaluer l'impact de l'utilisation de la POO sur la 
 
 ## III. Collecte d'informations
 
-Préciser vos zones de recherches en fonction de votre projet, les informations dont vous disposez, ... :
-
-1. les articles ou documents utiles à votre projet
-2. les outils
-3. les jeux de données/codes que vous allez utiliser, pourquoi ceux-ci, ...
-
-     :bulb: Cette étape est fortement liée à la suivante. Vous ne pouvez émettre d'hypothèses à vérifier que si vous avez les informations, inversement, vous cherchez à recueillir des informations en fonction de vos hypothèses. *
-
-
 ### Articles 
 
 Nous avons cherché des documents de recherche et articles rédigés sur des blogs traitant de l'utilisation de la POO par les datascientistes et de l'usage de la POO dans les notebooks Jupyter python. Voici une synthèse de ce sur quoi nous avons basé notre travail : 
@@ -200,7 +191,7 @@ Cet outil mise en place se base sur les outils suivant :
 
 
 
-## VI. Références
+## IX. Références
 
 1. [An Introduction to Object Oriented Data Science in Python](https://opendatascience.com/an-introduction-to-object-oriented-data-science-in-python)
 2. [A Large-Scale Study About Quality and Reproducibility of Jupyter Notebooks](https://ieeexplore.ieee.org/abstract/document/8816763)
