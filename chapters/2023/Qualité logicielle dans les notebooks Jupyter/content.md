@@ -245,9 +245,12 @@ Une fois nos critères de notations précisés, il nous est donc resté à analy
 
 ![Figure 7: 20 erreurs les plus retrouvées par Pylint](images/pylint-top-20-errors.png)
 
-On remarque que les deux erreurs les plus récurrentes concernent un problème de nommage de variable. C'est une erreur qui sera probablement commise par des personne peu adeptes des principes de qualité. Ce problème de nommage n'est pas une erreur importante car il ne va pas empêcher la compréhension ni l'exécution d'un notebook. En revanche, si le problème est étendu à tout le fichier, on pourrait perdre le lecteur dans la compréhension du notebook. Cette erreur est donc mineure et n'impactera pas énormement la note finale.   
+On remarque que les deux erreurs les plus récurrentes concernent un problème de nommage de variable. C'est une erreur qui sera probablement commise par des personne peu adeptes des principes de qualité. Ce problème de nommage n'est pas une erreur importante car il ne va pas empêcher la compréhension ni l'exécution d'un notebook. En revanche, si le problème est étendu à tout le fichier, on pourrait perdre le lecteur dans la compréhension du notebook. Cette erreur est donc mineure et n'impactera pas énormement la note finale.  
+
 Cependant, les erreurs suivantes concernent des variables inutilisées, des erreurs de syntaxe ou encore un surplus d'arguments pour une méthode. Ces erreurs sont plus lourdes et impacteront grandement la note car elles peuvent rendre un notebook inutilisable ou non-reproductible. On se rend assez vite compte que plus une erreur est impactante, moins elle est commise. C'est un résultat cohérent dans la mesure où une erreur qui rendrait un notebook non-reproductible est plus connue qu'une simple erreur d'inattention et donc plus corrigée.  
+
 On a maintenant les preuves que PyLint est un indicateur de qualité pertinent dans l'évaluation d'un notebook. Certaines erreurs comme le nommage des variables ou la documentation des fonctions manquante pourraient former une première métrique de lisibilité. D'autres erreurs  comme le nombre trop élevé d'arguments dans une fonction ou une mauvaise syntaxe sont des erreurs plus lourdes et pourraient constituer des métriques d'erreurs d'exécution. On pourrait alors évaluer la qualité d'un notebook sur la base de sa lisibilité et de son exécution.
+
 
 Nous avons ensuite voulu visualiser la répartition des notes des différents notebook dans le but de vérifier si les nombreuses erreurs repérées influaient sur la note des notebooks. Nous obtenons la figure suivante représentant le nombre de notebook par note (arrondie à 1 chiffre après la virgule) : 
 
