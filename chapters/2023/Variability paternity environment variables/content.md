@@ -6,33 +6,44 @@ date: 2022-11
 
 **_février 2023_**
 
-## Authors
+## Auteurs
 
 Nous sommes quatre étudiants ingénieurs en dernière année à Polytech Nice Sophia, spécialisés en Architecture Logiciel :
 
-- Guillaume Piccina, [Github](https://github.com/guillaume-piccina)
-- William D'Andrea, [Github](https://github.com/william-dandrea)
-- Nicolas Fernandez [Github](https://github.com/Nicolas-Fern)
-- Yann Brault [Github](https://github.com/Yann-Brault)
+- Guillaume Piccina ([Github](https://github.com/guillaume-piccina))
+- William D'Andrea ([Github](https://github.com/william-dandrea))
+- Nicolas Fernandez ([Github](https://github.com/Nicolas-Fern))
+- Yann Brault ([Github](https://github.com/Yann-Brault))
 
 
 ## I. Contexte de la recherche / projet
 
-Notre contexte de recherche est le suivant:
+Notre contexte de recherche porte sur la variabilité et la paternité dans le code, dans ce sujet on se pose la question suivante :
 
-> Dans ce sujet on se pose la question suivante : Peut-on déterminer la paternité de l’implémentation (et l’évolution) d’une fonctionnalité variable à > partir du code en appliquant les méthodes de détermination de paternité aux endroits où la variabilité est implémentée ?
-> Et en particulier, peut-on se concentrer sur la chaîne complète (depuis des outils de construction qui exploitent les variables d’environnement jusqu’au code)
+> Peut-on déterminer la paternité de l’implémentation (et l’évolution) d’une fonctionnalité variable à partir du code en appliquant les méthodes de détermination de paternité aux endroits où la variabilité est implémentée ?
+> Et en particulier, peut-on se concentrer sur la chaîne complète (depuis des outils de construction qui exploitent les variables d’environnement jusqu’au code) ?
 
 Ce sujet est intéréssant à aborder puisque dans le métier de développeur nous sommes tout le temps amené à travailler sur des projets avec une base de code écrite par d'autres développeurs. Dans ce contexte il est important de pouvoir comprendre le code et également la manière dont il a été implémenté. C'est ainsi que le concept de paternité rentre en jeu : il peut être intéressant d'avoir des outils capables de nous donner rapidement quels sont les personnes qui ont travaillés sur certaines parties du code et donc qui sont les plus aptes à nous renseigner sur leur implémentation. Concernant la variabilité celle-ci peut être définie comme l’ensemble des mécanismes permettant de configurer un logiciel pour l’adapter à un contexte précis. La variabilité joue donc un rôle important dans le code d'un logicel, quel que soit le projet on retrouve de la variabilité et notamment sous forme de variable d'environnement (ce sur quoi nous nous sommes concentrés). Notre sujet relit ainsi ces deux concepts de variabilité et de paternité dans le but de répondre à la problématique ci-dessus.
 
 ## II. Observations / Question générale
+  
+Dans un premier temps nous avons établi une première question générale à savoir :
 
-1. Commencez par formuler une question sur quelque chose que vous observez ou constatez ou encore une idée émergente.
-2. Préciser pourquoi cette question est intéressante de votre point de vue.
+     Peut-on identifier, à gros grain, la paternité des variables d'environnement dans un code ?
+     
+L'objectif de cette question est de trouver le premier créateur d’une variable d’environnement, et ensuite suivre qui l’a édité au fur et à mesure du temps (jusqu’à sa potentielle suppression)
 
-Attention pour répondre à cette question, vous devrez être capable d'émettre des hypothèses vérifiables, de quantifier vos réponses, ...
+Pour répondre à cette question et réaliser l'objectif nous avons établi deux autres sous-questions pour mieux définir ce que l'on cherche. La première étant :
 
-     :bulb: Cette première étape nécessite beaucoup de réflexion pour se définir la bonne question afin de poser les bonnes bases pour la suite.
+     Qui a créé pour la première fois une variable d’environnement ?
+     
+On fait l'hypothèse que lorsqu'un utilisateur ajoute une variable d’environnement au projet, il l’ajoute en premier lieu dans un fichier de configuration comme par exemple (le fichier .properties pour les projets Gradle). Nous avons réduit le scope de la question au projet Maven et Gradle.
+
+La deuxième sous-question est :
+
+     Qui a utilisé cette variable d’environnement dans le code ?
+     
+Pour cette question on fait l'hypothèse que ...
 
 ## III. Collecte d'informations
 
@@ -43,6 +54,8 @@ Préciser vos zones de recherches en fonction de votre projet, les informations 
 3. les jeux de données/codes que vous allez utiliser, pourquoi ceux-ci, ...
 
    :bulb: Cette étape est fortement liée à la suivante. Vous ne pouvez émettre d'hypothèses à vérifier que si vous avez les informations, inversement, vous cherchez à recueillir des informations en fonction de vos hypothèses.
+   
+Pour ce sujet nous nous sommes appuyés
 
 ## IV. Hypothèses et expériences
 
