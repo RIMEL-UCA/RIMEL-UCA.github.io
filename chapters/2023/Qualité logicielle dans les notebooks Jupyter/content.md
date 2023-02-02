@@ -241,22 +241,35 @@ A la note suivante après application des configurations à désactiver.
 
 ![Figure 6: Note projet après configuration Pylint](images/pylint-after-config.png)
 
-Une fois nos critères de notations précisés, il nous est donc resté à analyser les erreurs les plus courantes dans les notebooks analysés afin de déterminer de potentielles métriques de qualité de notre code. Ainsi, après analyse, les vingt erreurs les plus rencontrées lors de notre analyse étaient les suivantes :
+Une fois nos critères de notations précisés, il nous est donc resté à analyser les erreurs les plus courantes dans les notebooks analysés afin de déterminer de potentielles métriques de qualité de notre code. Ainsi, après analyse de 649 notebooks, les vingt erreurs les plus rencontrées lors de notre analyse étaient les suivantes :
 
 ![Figure 7: 20 erreurs les plus retrouvées par Pylint](images/pylint-top-20-errors.png)
 
-???? CE QU'ON VOIT ET CE QU'ON EN DEDUIT ????
-???? LIEN AUX PONDERATIONS DE CES CRITERES DE NOTATION ????
+On remarque que les deux erreurs les plus récurrentes concernent un problème de nommage de variable. C'est une erreur qui sera probablement commise par des personne peu adeptes des principes de qualité. Ce problème de nommage n'est pas une erreur importante car il ne va pas empêcher la compréhension ni l'exécution d'un notebook. En revanche, si le problème est étendu à tout le fichier, on pourrait perdre le lecteur dans la compréhension du notebook. Cette erreur est donc mineure et n'impactera pas énormement la note finale.   
+Cependant, les erreurs suivantes concernent des variables inutilisées, des erreurs de syntaxe ou encore un surplus d'arguments pour une méthode. Ces erreurs sont plus lourdes et impacteront grandement la note car elles peuvent rendre un notebook inutilisable ou non-reproductible. On se rend assez vite compte que plus une erreur est impactante, moins elle est commise. C'est un résultat cohérent dans la mesure où une erreur qui rendrait un notebook non-reproductible est plus connue qu'une simple erreur d'inattention et donc plus corrigée.  
+On a maintenant les preuves que PyLint est un indicateur de qualité pertinent dans l'évaluation d'un notebook. Certaines erreurs comme le nommage des variables ou la documentation des fonctions manquante pourraient former une première métrique de lisibilité. D'autres erreurs  comme le nombre trop élevé d'arguments dans une fonction ou une mauvaise syntaxe sont des erreurs plus lourdes et pourraient constituer des métriques d'erreurs d'exécution. On pourrait alors évaluer la qualité d'un notebook sur la base de sa lisibilité et de son exécution.
 
-???? INTRODUCTION DE CE SCHEMA - JE N'ARRIVE PAS A LA FORMULER ????
+Nous avons ensuite voulu visualiser la répartition des notes des différents notebook dans le but de vérifier si les nombreuses erreurs repérées influaient sur la note des notebooks. Nous obtenons la figure suivante représentant le nombre de notebook par note (arrondie à 1 chiffre après la virgule) : 
 
 ![Figure 8: Répartition des notes de projets Pylint](images/pylint-nb-per-rate.png)
 
-La répartition des projets sur notre schéma même si elle est moins disparate que celle observée avec SonarQube semble classer les mêmes projets comme de bons projets. Nous avons toutefois une bien plus grande répartition de projets moyens qu'auparavant.
+La répartition des notes sur notre schéma, même si elle est moins disparate que celle observée avec SonarQube, semble classer les précédents bons projets comme de bons projets. Nous avons toutefois une bien plus grande répartition des projets moyens qu'auparavant. On peut également remarquer une légère courbe de Gauss décalée vers la droite, on peut en déduire que les projets semblent tendre vers une qualité acceptable. 
+
+Nous avons également voulu rassembler les projets par tranche de note afin de mieux visualiser la répartition des notes obtenues. Nous avons établi 4 sections :  
+- [0 - 3] rassemblant les notebooks qu'on peut classer comme mauvais
+- [3 - 5] rassemblant les notebooks qu'on peut classer comme moyen 
+- [5 - 8] rassemblant les notebooks qu'on peut classer comme moyen mais meilleurs que les précédents
+- [8 - 10] rassemblant les notebooks qu'on peut classer comme bons
+
+![Figure 9: Répartition des notebook par tranche de notes](images/pylint-nb-ranges.png)
+
+On retrouve la courbe de Gauss décalée vers la droite du précédent schéma qui semblent indiquer que la majorité des notebooks analysés se trouvent dans la tranche haute des notebooks moyens. 
+
+Ces deux graphiques utilisant la note générée par PyLint montrent que la majorité des notebooks sont de qualité moyenne. Cela semble indiquer que PyLint est un bon outil pour mesurer la qualité d'un notebook.
 
 Pour terminer, nous avons voulu vérifier notre hypothèse de bonne qualité des notebooks Microsoft avec Pylint. Nous avons ainsi pu observer que nous obtenions pour ces notebooks de bonnes notes avec par exmple une note de ??? pour le projet Microsoft suivant.
 
-![Figure 9: Note projet Microsoft Pylint](images/pylint-microsoft.png) ???? A CAPTURER ????
+![Figure 10: Note projet Microsoft Pylint](images/pylint-microsoft.png) ???? A CAPTURER ????
 
 Nous pouvons donc ???? notre hypothèse de départ de bonne qualité des notebooks Microsoft.
 
@@ -269,8 +282,8 @@ Précisez votre utilisation des outils ou les développements \(e.g. scripts\) r
 
 En plus des [outils](#outils) cités précédemment pour l'analyse de la qualité du code des notebooks, nous avons utilisé des scripts shell pour la récupération automatique de notebooks Jupyter sur Github et les invite de commande Windows et WSL.
 
-![Figure 10: Logo UCA](images/logo_uca.png)
-![Figure 11: Logo Polytech](images/logoPolytechUCA.png)
+![Figure 11: Logo UCA](images/logo_uca.png)
+![Figure 12: Logo Polytech](images/logoPolytechUCA.png)
 
 
 ## VI. Références
