@@ -21,7 +21,7 @@ Nous sommes quatre étudiants ingénieurs en dernière année à Polytech Nice S
 Le sujet d'étude de la qualité logicielle dans les notebooks Jupyter nous a intéressé de part des expériences personnelles passées avec ce type de projet. 
 
 Plusieurs points nous ont poussé à nous poser des questions sur la qualité du code des notebooks Jupyter. Dans de précédents projets collaboratifs, les notebooks Jupyter ont dû être utilisés.
-Lors de son stage de 4ème année, un des membres de l'équipe a dut convertir un notebook jupyter d’IA en code Python dans le but d’une démonstration destinée à un client. Il a donc eu à récupérer tous les bouts de code du notebook utilisé et les assembler en un script Python tout en le rendant lisible, en optimisant les imports et en commentant du code. Lors de cette expérience, il a été confronté à un code qui n’avait pas été écrit par un développeur mais un data scientist. Les noms des variables et des fonctions n’étaient pas explicites, de plus il manquait des commentaires essentiels à la compréhension de chaque partie du programme. N’ayant pas participé à la création du notebook, il a donc eu beaucoup de difficultés à le comprendre, le reprendre et le convertir en quelque chose d’acceptable pour un développeur. 
+Lors de son stage de 4ème année, un des membres de l'équipe a dû convertir un notebook Jupyter d’intelligence artificielle en code Python dans le but d’une démonstration destinée à un client. Il a donc eu à récupérer tous les bouts de code du notebook utilisé et les assembler en un script Python tout en le rendant lisible, en optimisant les imports et en commentant du code. Lors de cette expérience, il a été confronté à un code qui n’avait pas été écrit par un développeur mais un data scientist. Les noms des variables et des fonctions n’étaient pas explicites, de plus il manquait des commentaires essentiels à la compréhension de chaque partie du programme. N’ayant pas participé à la création du notebook, il a donc eu beaucoup de difficultés à le comprendre, le reprendre et le convertir en quelque chose d’acceptable pour un développeur. 
 
 Ce sujet est intéressant à aborder car il nous permettrait de savoir sur quels critères de qualité logicielle mesurer la qualité du code d'un notebook Jupyter. Ce sujet n'étant que peu voire pas abordé la question reste assez nébuleuse. On pourrait ainsi savoir quels sont les forces et faiblesses des codes des notebooks.
 
@@ -48,7 +48,7 @@ Pour notre recherche, nous allons nous baser sur les quatre articles suivants :
     
     Date de publication : Avril 2022
     
-    Ce qui nous est montré par cet article : Dans cet article, une revue de littérature multivocale a été effectuée afin de construire un catalogue de 17 meilleures pratiques pour la collaboration avec les notebooks. Ensuite, sont évalués qualitativement et quantitativement la mesure dans laquelle les experts en sciences des données les connaissent et les respectent. Dans l'ensemble, cet article permet de constater que les scientifiques spécialistes des données connaissent les meilleures pratiques identifiées et ont tendance à les adopter dans leur routine de travail quotidienne. 
+    Ce qui nous est montré par cet article : Dans cet article, une revue de littérature a été effectuée afin de construire un catalogue de 17 meilleures pratiques pour la collaboration avec les notebooks. Ensuite, sont évalués qualitativement et quantitativement la mesure dans laquelle les experts en sciences des données les connaissent et les respectent. Dans l'ensemble, cet article permet de constater que les scientifiques spécialistes des données connaissent les meilleures pratiques identifiées et ont tendance à les adopter dans leur routine de travail quotidienne. 
    Néanmoins, certains d'entre eux ont des opinions contradictoires sur des recommandations spécifiques, en raison de facteurs contextuels variables. En outre, nous avons constaté que les meilleures pratiques les plus négligées ont trait à la modularisation du code, aux tests de code et au respect des normes de codage.
    Cela met en évidence ce qui semblerait être une tension entre la vitesse et la qualité.
    Pour résoudre cette tension, les plateformes de notebooks devraient mettre en œuvre des fonctionnalités natives qui facilitent l'adoption des pratiques de collaboration susmentionnées. En disposant de cadres de test et de linting intégrés et spécifiques aux blocs-notes, ainsi que de fonctions de refactoring et de modularisation du code des blocs-notes, nous pouvons nous attendre à ce que les blocs-notes de données soient plus faciles à utiliser, nous pouvons espérer que les scientifiques des données écrivent des notebooks de haute qualité sans compromettre
@@ -73,7 +73,7 @@ Pour notre recherche, nous allons nous baser sur les quatre articles suivants :
    
     Auteurs : 
     * Adam RULE, *Design Lab, UC San Diego*
-    * Amanda BIRMINGHAM, *Center for Computaional Biology and Bioinformatics, UC San Diego*
+    * Amanda BIRMINGHAM, *Center for Computational Biology and Bioinformatics, UC San Diego*
     * Cristal ZUNIGA, *Department of Pediatrics, UC San Diego*
     * Ilkay ALTINTAS, *Data Science Hub, San Diego Supercompter Center, UC San Diego*
     * Shih-Cheng HUANG, *Data Science Hub, San Diego Supercompter Center, UC San Diego*
@@ -100,18 +100,18 @@ Pour notre recherche, nous allons nous baser sur les quatre articles suivants :
     Date de publication : 4 au 9 mai 2019
     
     Ce qui nous est montré par cet article : L'étude qualitative menée de scientifiques a confirmé que le nettoyage des notebooks consiste principalement à supprimer le code d'analyse indésirable et les résultats indésirables. La tâche de nettoyage peut également comporter des étapes secondaires telles que l'amélioration de la qualité du code, la rédaction de la documentation, l'adaptation de la présentation des résultats pour un nouveau public cible, ou la création de scripts. Les participants considèrent que la tâche principale de nettoyage est un travail de bureau et qu'elle est sujette à des erreurs.
-    Ils ont donc réagi positivement aux outils de collecte de code qui produisent automatiquement le code minimal nécessaire pour reproduire un ensemble choisi de résultats d'analyse, en utilisant une nouvelle application de découpage de programme. Les analystes ont principalement utilisé la collecte de code en dernière action pour partager leur travail, mais y ont aussi trouvé des utilisations inattendues comme la génération de matériel dede référence, la création de branches plus légères dans leur code, et créer des résumés pour des publics multiples.
+    Ils ont donc réagi positivement aux outils de collecte de code qui produisent automatiquement le code minimal nécessaire pour reproduire un ensemble choisi de résultats d'analyse, en utilisant une nouvelle application de découpage de programme. Les analystes ont principalement utilisé la collecte de code en dernière action pour partager leur travail, mais y ont aussi trouvé des utilisations inattendues comme la génération de matériel de référence, la création de branches plus légères dans leur code, et créer des résumés pour des publics multiples.
     
 ### Outils
 Les outils que nous envisageons d'utiliser pour effectuer notre étude sont :
 * SonarQube : logiciel libre de qualimétrie en continu de code. Il aide à la détection, la classification et la résolution de défaut dans le code source, permet d'identifier les duplications de code, de mesurer le niveau de documentation et connaître la couverture de test déployée.
 * Bandit : outil d'analyse des vulnérabilités de sécurité Python qui analyse les packages Python à la recherche de failles de sécurité. C'est un outil qui permet de créer un code conforme aux normes organisationnelles et qui génère un rapport de vulnérabilité de sécurité avec des informations détaillées sur le problème de sécurité.
-* Code Climate : outil d'analyse proposant deux produits : le premier identifiant les failles logiques et les mauvais modèles de conception dans le code se concentrant sur l'amélioration de la qualité fonctionnelle du code et le second axé sur la qualité du code en termes de formatage, d'importations inutilisées, de variables et de couverture des tests unitaires garantissant la qualité du code avant la fusion.
+* CodeClimate : outil d'analyse proposant deux produits : le premier identifiant les failles logiques et les mauvais modèles de conception dans le code se concentrant sur l'amélioration de la qualité fonctionnelle du code et le second axé sur la qualité du code en termes de formatage, d'importations inutilisées, de variables et de couverture des tests unitaires garantissant la qualité du code avant la fusion.
 * RATS : “Rough-Auditing-Tool-for-Security”, outil d’analyse de plusieurs langages dont Python pouvant signaler les erreurs de code courantes liées à la sécurité, au buffer overflow et runtime TOCTOU.
-* PyLint : linter vérificateur de code permettant de signaler les erreurs Python ainsi que toutes les parties de code qui ne respectent pas un ensemble de conventions prédéfinies. Il permet donc d’éviter les erreurs et d’avoir un code homogène. Les règles qu’impose Pylint par défaut suivent le guide de style Python PEP 8.
+* PyLint : linter vérificateur de code permettant de signaler les erreurs Python ainsi que toutes les parties de code qui ne respectent pas un ensemble de conventions prédéfinies. Il permet donc d’éviter les erreurs et d’avoir un code homogène. Les règles qu’impose PyLint par défaut suivent le guide de style Python PEP 8.
 
 ### Jeu de données
-Les codes que nous analyserons pour notre études seront des projets de différentes tailles et auteurs proposées sur GitHub classés par nombre de visites avec pour choix un sujet commun : la réalité augmentée. Un script de récupération automatisé de projets de type notebook Jupyter (avec extension .ipynb) sera utilisé pour avoir une diversité de projets. Nous récupérons un fichier par page de projets publics GitHub. Ils seront ensuite transformés en code Python de qualité mesurable grâce aux outils cités dans la partie précédente par ce même script. Ce choix a été fait de par le fait que la majorité des notebooks Jupyter sont codés dans ce même langage et que cela n'entrainera donc pas de transformation du code. A ces projets récupérés, nous ajouterons des projets de réalité augmentée effectués en cours à Polytech Nice-Sophia lors de nos études.
+Les codes que nous analyserons pour notre étude seront des projets de différentes tailles et auteurs proposées sur GitHub classés par nombre de visites avec pour choix un sujet commun : la réalité augmentée. Un script de récupération automatisé de projets de type notebook Jupyter (avec extension .ipynb) sera utilisé pour avoir une diversité de projets. Nous récupérons un fichier par page de projets publics GitHub. Ils seront ensuite transformés en code Python de qualité mesurable grâce aux outils cités dans la partie précédente par ce même script. Ce choix a été fait de par le fait que la majorité des notebooks Jupyter sont codés dans ce même langage et que cela n'entrainera donc pas de transformation du code. A ces projets récupérés, nous ajouterons des projets de réalité augmentée effectués en cours à Polytech Nice-Sophia lors de nos études.
 
 ## IV. Hypothèses & Expériences
 ### Hypothèses de travail 
@@ -123,11 +123,11 @@ Nous avons émis plusieurs hypothèses au début de notre étude :
 
 ### Limites de notre étude 
 
-Au vu du temps imparti pour mener cette étude, nous sommes bien sûr obliger de faire des expériences avec certaines limitations au niveau de l'analyse des résultats. 
+Au vu du temps imparti pour mener cette étude, nous sommes bien sûr obligés de faire des expériences avec certaines limitations au niveau de l'analyse des résultats. 
 
-Nous ne connaissons pas précisément les critères utilisés par les outils que nous utilisons. Nous ne maitrisons par exemple pas la pondération des différentes erreurs dans Pylint et l'analyse faites par SonarQube s'oriente plus sur l'analyse de la POO. Nous ferons tout ce qu'il est possible pour essayer d'obtenir des résultats objectifs mais l'idéal serait bien sûr de définir beaucoup plus précisément quels sont nos critères que qualité dans le cas spécifique des notebooks Jupyter. 
+Nous ne connaissons pas précisément les critères utilisés par les outils que nous utilisons. Nous ne maitrisons par exemple pas la pondération des différentes erreurs dans PyLint et l'analyse faite par SonarQube s'oriente plus sur l'analyse de la programmation orientée objet ou POO. Nous ferons tout ce qui est possible pour essayer d'obtenir des résultats objectifs mais l'idéal serait bien sûr de définir beaucoup plus précisément quels sont nos critères que qualité dans le cas spécifique des notebooks Jupyter. 
 
-De plus, nous avons décidé de récupérer un notebook par page de résultat GitHub ce qui est tout de même plutôt bien mais cela reste peut-être une quantité un peu faible pour représenter correctement la qualité moyenne des notebooks. Nous aurions pu prendre plusieurs notebooks par page ou encore aller chercher des notebooks sur d'autres plateformes et notamment Kaggle pour que notre jeu de donnée sont complètement représentatif de la moyenne des notebooks qui sont écrits.
+De plus, nous avons décidé de récupérer un notebook par page de résultat GitHub ce qui est bien mais reste peut-être une quantité un peu faible pour représenter correctement la qualité moyenne des notebooks. Nous aurions pu prendre plusieurs notebooks par page ou encore aller chercher des notebooks sur d'autres plateformes et notamment Kaggle pour que notre jeu de donnée sont complètement représentatif de la moyenne des notebooks qui sont écrits.
 
 ### Expériences
 
@@ -154,8 +154,8 @@ Il donnera à chacun de ces critères numériques une note allant de A à F perm
 #### Expérience 2 : Evaluation de la qualité du code Python des notebooks par CodeClimate
 
 Cette première démarche terminée, nous avons décidé d'utiliser CodeClimate pour analyser nos notebooks. 
-CodeClimate permet d'analyser des projets Python et de leur attribuer une note de qualité décrémentale en fonction du nombre d'erreurs, d'exceptions et de non respect de critères de qualité du code tels que les emplacements de déclaration d'imports ou des redéfinitions de variables.
-Malheureusement, l'application de CodeClimate à nos notebooks de référence cause des erreurs, nous sommes donc à la recherche d'autres solutions d'analyse des projets Noteboook et de la qualité du code Python. 
+CodeClimate permet d'analyser des projets Python et de leur attribuer une note de qualité décrémentale en fonction du nombre d'erreurs, d'exceptions et de non-respect de critères de qualité du code tels que les emplacements de déclaration d'imports ou des redéfinitions de variables.
+Malheureusement, l'application de CodeClimate à nos notebooks de référence cause des erreurs, nous sommes donc à la recherche d'autres solutions d'analyse des projets noteboook Jupyter et de la qualité du code Python. 
 
 #### Expérience 3 : Evaluation de la qualité du code Python des notebooks par PyLint
 
@@ -186,7 +186,7 @@ Comme expliqué précédemment, SonarQube nous permet de donner une note de qual
 ![Figure 1: Bons projets Sonar](images/sonar-good-quality.png)
 
 Comme nous le pressentions, les projets Microsoft reçoivent de bonnes notes lors de leur analyse par SonarQube ce qui viendrait appuyer notre hypothèse de départ selon laquelle les projets Microsoft sont de bonne qualité.
-Tous les projets ne sont pas classés comme étant de bonne qualité par SonarQube ce qui démontre une réelle application des critères de classement de cet outil, on peut ainsi voir ci-dessous que parmi les projets que nous avons sélectionné, les scores les plus bas obtenus sont des C.
+Tous les projets ne sont pas classés comme étant de bonne qualité par SonarQube ce qui démontre une réelle application des critères de classement de cet outil, on peut ainsi voir ci-dessous que parmi les projets que nous avons sélectionnés, les scores les plus bas obtenus sont des C soit une qualité moyenne.
 
 ![Figure 2: Mauvais projets Sonar](images/sonar-bad-quality.png)
 
@@ -199,19 +199,19 @@ Nous pouvons toutefois noter plusieurs choses :
 Comme dans tout code informatique nous nous attendons à trouver des vulnérabilités dans le code, d'autant plus que certains des projets étudiés sont des labs écrits par des étudiants, il est donc étonnant de noter que l'ensemble de nos projets obtiennent la note maximale pour ce critère car ne possèdent aucune vulnérabilité.
 
 ##### Taux de couverture de tests
-Comme formulé en hypothèse, le taux de couverture de tests retrouvé est nul. Nous pouvons donc à la fois valider nothre hypothèse de départ et écarter ce critère des métriques de qualimétrie de nos notebooks. Ajoutons à cela que les notebooks sont des types de projets généralement utilisés par des scientifiques spécialistes de données et que les tests de code ne sont pas la priorité ni le but de ces projets.
+Comme formulé en hypothèse, le taux de couverture de tests retrouvé est nul. Nous pouvons donc à la fois valider notre hypothèse de départ et écarter ce critère des métriques de qualimétrie de nos notebooks. Ajoutons à cela que les notebooks sont des types de projets généralement utilisés par des scientifiques spécialistes de données et que les tests de code ne sont pas la priorité ni le but de ces projets.
 
 ##### Taux de duplication du code
 Voici le résultat à une métrique le plus étonnant, le taux de duplication du code. Il est connu que les notebooks contiennent des lignes dupliquées, le fait de n'en trouver aucune lors de l'analyse par SonarQube parait donc suspect car l'on devrait au moins tomber sur des déclarations multiples de mêmes variables et ainsi des duplications de code. On peut donc penser que cette
 
 #### Expérience 2 : Evaluation de la qualité du code Python des notebooks par CodeClimate
-Pour cette seconde expérience nous avons voulu mesurer la qualité du code de nos notebooks à l'aide de l'outil CodeClimate afin d'avoir des résultats mais aussi des métriques complémentaire à ce que nous avions pu trouver avec l'outil SonarQube. 
+Pour cette seconde expérience nous avons voulu mesurer la qualité du code de nos notebooks à l'aide de l'outil CodeClimate afin d'avoir des résultats mais aussi des métriques complémentaires à ce que nous avions pu trouver avec l'outil SonarQube. 
 Malheureusement, de l'intégration à notre script d'évaluation de la qualité de l'outil CodeClimate n'a résulté que l'erreur suivante ne nous permettant donc par d'analyser nos projets.
 
 ![Figure 3: Erreur CodeClimate](images/codeclimate-error.png)
 
 #### Expérience 3 : Evaluation de la qualité du code Python des notebooks par PyLint
-En étudiant de plus près CodeClimate, nous avons pu nous rendre compte que pour une analyse de code Python, l'outil s'appuyait en fait sur le linter PyLint pour évaluer la qualité de code. Nous avons donc tenté d'utiliser PyLint sur nos projets mais les résultats obtenus étaient peu concluants. En effet, de nombreux codes certes de faible qualité mais compilant malgré tout obtenaient la note de 0 sur 10. Nous nous sommes alors posés la question des critères d'évaluations appliqués par PyLint et de leur pertinence dans le cas de notebooks Jupyter. 
+En étudiant de plus près CodeClimate, nous avons pu nous rendre compte que pour une analyse de code Python, l'outil s'appuyait en fait sur le linter PyLint pour évaluer la qualité de code. Nous avons donc tenté d'utiliser PyLint sur nos projets mais les résultats obtenus étaient peu concluants. En effet, de nombreux codes certes de faible qualité mais compilant malgré tout obtenaient la note de 0 sur 10. Nous nous sommes alors posé la question des critères d'évaluations appliqués par PyLint et de leur pertinence dans le cas de notebooks Jupyter. 
 Ainsi, nous avons pu écarter la liste de critères de notation suivants : 
 
 ![Figure 4: Configuration Pylint](images/pylint-config.png)
@@ -230,14 +230,14 @@ Une fois nos critères de notations précisés, il nous est donc resté à analy
 
 ![Figure 7: 20 erreurs les plus retrouvées par Pylint](images/pylint-top-20-errors.png)
 
-On remarque que les deux erreurs les plus récurrentes concernent un problème de nommage de variable. C'est une erreur qui sera probablement commise par des personne peu adeptes des principes de qualité. Ce problème de nommage n'est pas une erreur importante car il ne va pas empêcher la compréhension ni l'exécution d'un notebook. En revanche, si le problème est étendu à tout le fichier, on pourrait perdre le lecteur dans la compréhension du notebook. Cette erreur est donc mineure et n'impactera pas énormement la note finale.  
+On remarque que les deux erreurs les plus récurrentes concernent un problème de nommage de variable. C'est une erreur qui sera probablement commise par des personne peu adeptes des principes de qualité. Ce problème de nommage n'est pas une erreur importante car il ne va pas empêcher la compréhension ni l'exécution d'un notebook. En revanche, si le problème est étendu à tout le fichier, on pourrait perdre le lecteur dans la compréhension du notebook. Cette erreur est donc mineure et n'impactera pas énormément la note finale.  
 
 Cependant, les erreurs suivantes concernent des variables inutilisées, des erreurs de syntaxe ou encore un surplus d'arguments pour une méthode. Ces erreurs sont plus lourdes et impacteront grandement la note car elles peuvent rendre un notebook inutilisable ou non-reproductible. On se rend assez vite compte que plus une erreur est impactante, moins elle est commise. C'est un résultat cohérent dans la mesure où une erreur qui rendrait un notebook non-reproductible est plus connue qu'une simple erreur d'inattention et donc plus corrigée.  
 
 On a maintenant les preuves que PyLint est un indicateur de qualité pertinent dans l'évaluation d'un notebook. Certaines erreurs comme le nommage des variables ou la documentation des fonctions manquante pourraient former une première métrique de lisibilité. D'autres erreurs  comme le nombre trop élevé d'arguments dans une fonction ou une mauvaise syntaxe sont des erreurs plus lourdes et pourraient constituer des métriques d'erreurs d'exécution. On pourrait alors évaluer la qualité d'un notebook sur la base de sa lisibilité et de son exécution.
 
 
-Nous avons ensuite voulu visualiser la répartition des notes des différents notebook dans le but de vérifier si les nombreuses erreurs repérées influaient sur la note des notebooks. Nous obtenons la figure suivante représentant le nombre de notebook par note (arrondie à 1 chiffre après la virgule) : 
+Nous avons ensuite voulu visualiser la répartition des notes des différents notebooks dans le but de vérifier si les nombreuses erreurs repérées influaient sur la note desdits notebooks. Nous obtenons la figure suivante représentant le nombre de notebook par note (arrondie à 1 chiffre après la virgule) : 
 
 ![Figure 8: Répartition des notes de projets Pylint](images/pylint-nb-per-rate.png)
 
@@ -261,12 +261,12 @@ Pour terminer, nous avons voulu vérifier notre hypothèse de bonne qualité des
 ![Figure 11: Note projet Microsoft Pylint 2](images/microsoft-pylint-2.png)
 ![Figure 12: Note projet Microsoft Pylint 3](images/microsoft-pylint-3.png)
 
-Nous avons ainsi pu observer que nous obtenions pour ces notebooks deux notes plutôt moyennes et une bonne note. Ces résultats remettent en question notre hypothèse de départ de bonne qualité des notebooks Microsoft. Il semblerait que les notebooks Microsoft sont en réalité dans la moyenne haute des notebooks analysés mais ne sont pas les meilleurs notebooks que nous avons trouvé. 
+Nous avons ainsi pu observer que nous obtenions pour ces notebooks deux notes plutôt moyennes et une bonne note. Ces résultats remettent en question notre hypothèse de départ de bonne qualité des notebooks Microsoft. Il semblerait que les notebooks Microsoft sont en réalité dans la moyenne haute des notebooks analysés mais ne sont pas les meilleurs notebooks que nous avons trouvés. 
 
 ### Conclusion
 #### Comment reconnaître une métrique pertinente ? 
 
-Pour définir ce qui rend une métrique pertinente, il faut bien remettre en place le contexte dans lequel nous nous trouvons. Les noteboooks Jupyter ne sont pas des logiciels de développement et n'auront jamais à être déployés pour être mis en production. Il s'agit ici de projets conçus pour pouvoir être lus comme des articles scientifiques avec du code servant à la démonstration de concepts et d'hypothèse qui sera interfacé par des écrits. Un notebook étant utilisé dans un but de démonstration de recherche, il devra ainsi être facilement compréhensible que ce soit au niveau du code comme au niveau des explications textuelles qui y sont liées. Le code proposé dans les notebooks servant à la démonstration, il ne sera pas testé, il n'est donc pas intéressant d'en analyser des métriques telles que la couverture de tests. 
+Pour définir ce qui rend une métrique pertinente, il faut bien remettre en place le contexte dans lequel nous nous trouvons. Les notebooks Jupyter ne sont pas des logiciels de développement et n'auront jamais à être déployés pour être mis en production. Il s'agit ici de projets conçus pour pouvoir être lus comme des articles scientifiques avec du code servant à la démonstration de concepts et d'hypothèse qui sera interfacé par des écrits. Un notebook étant utilisé dans un but de démonstration de recherche, il devra ainsi être facilement compréhensible que ce soit au niveau du code comme au niveau des explications textuelles qui y sont liées. Le code proposé dans les notebooks servant à la démonstration, il ne sera pas testé, il n'est donc pas intéressant d'en analyser des métriques telles que la couverture de tests. 
 
 Connaissant le contexte de notre étude, il est pertinent qu'une partie de nos notebooks soit axée sur la lisibilité de ces derniers que ce soit d'un point de vue du code comme de celui des explications. Ainsi des métriques relatives à la complexité du code avec des fonctions trop longues, composées de trop de boucles et conditions ou encore de trop d'arguments pourrait être pertinent dans notre cas. 
 
@@ -283,19 +283,19 @@ Pour terminer, certaines métriques jugées préalablement comme pertinentes pou
 Avec l'analyse de qualité des codes Python de notre jeu de données par l'outil Pylint, nous avons pu faire ressortir plusieurs critères d'évaluation du code relatifs à la lisibilité de ce dernier. Ce critère nous parait être l'un des plus évidents et pertinents à mettre en avant de par la nature même des notebooks. En effet, ces fichiers bien que comportant du code sont avant tout des feuilles de route permettant de suivre une démarche scientifique et les analyses des résultats qu'elle obtient. Ainsi, si un notebook n'est pas lisible il perd grandement de son intérêt premier. Cette lisibilité des notebooks peut se faire à travers divers critères tels que le nom des variables utilisées ou le manque de documentation par exemple.
 
 Pour ce qui est de la qualité du code des notebooks eux-mêmes, les métriques suivantes ont été jugées comme intéressantes à utiliser.
-Les premières métriques intéressante sont donc celle qui nous permettent de determiner la lisibilité d'un notebook. Pour cela nous pouvons détecter les erreurs dans les noms de variable, les variables qui en cachent une autre ou encore, si la documentation est présente sur chacune des fonctions. Ces différentes métrique permettent de rapidement déterminer si le notebook peut être amélioré d'un point de vue de lisibilité.
-Les secondes métriques intéressantes sont celles qui remettent en cause la réusabilité d'un notebook. En effet, les notebooks vont parfois posséder des erreurs les empéchants de pouvoir se lancer. Certaine de ces erreurs peuvent être récupéré, notamment via pylint. Ces métriques sont les syntax-error, les pointless-statements, undefined-variable. Toutes ces erreurs impactent directement la qualité d'un notebook car la qualité n'est pas nécessairement existante d'un point de vu de lisibilité, mais elle l'est aussi d'un point de vu fonctionnelle.
+Les premières métriques intéressante sont donc celle qui nous permettent de déterminer la lisibilité d'un notebook. Pour cela nous pouvons détecter les erreurs dans les noms de variable, les variables qui en cachent une autre ou encore, si la documentation est présente sur chacune des fonctions. Ces différentes métrique permettent de rapidement déterminer si le notebook peut être amélioré d'un point de vue de lisibilité.
+Les secondes métriques intéressantes sont celles qui remettent en cause la réutilisabilité d'un notebook. En effet, les notebooks vont parfois comporter des erreurs les empêchant de pouvoir se lancer. Certaines de ces erreurs peuvent être récupérées, notamment via PyLint. Ces métriques sont les *syntax-error*, les *pointless-statements*, *undefined-variable*. Toutes ces erreurs impactent directement la qualité d'un notebook car la qualité n'est pas nécessairement existante du point de vue de lisibilité, mais elle l'est aussi du point de vue fonctionnel.
 
-D'autres métriques permettant de déterminer la qualité d'un notebook peuvent aussi avoir leur importance. Notamment les bugs à l'aide de l'outil SonarQube. Cependant, l'outil nous donne aussi des métriques inutile dans notre cas. En effet, un notebook ne possèdent pas de test, et ne sera pas déployé. Donc les métriques habituelle de sécurité ou de couverture de tests peuvent être totalement ignoré.
+D'autres métriques permettant de déterminer la qualité d'un notebook peuvent aussi avoir leur importance. Notamment les bugs à l'aide de l'outil SonarQube. Cependant, l'outil nous donne aussi des métriques inutile dans notre cas. En effet, un notebook ne possède pas de tests et ne sera pas déployé, les métriques habituelles de sécurité ou de couverture de tests peuvent être totalement ignorées.
 
 #### Perspectives
-Il pourrait être intéressant d'analyser la qualité de codes Python avec celle de nos notebooks Jupyter pour voir quelles métriques sont les plus influencées par le passage d'un type de projet à l'autre. De cette manière on pourrait alors voir les gains et le pertes de qualité constatés. 
+Il pourrait être intéressant d'analyser la qualité de codes Python avec celle de nos notebooks Jupyter pour voir quelles métriques sont les plus influencées par le passage d'un type de projet à l'autre. De cette manière, on pourrait alors voir les gains et les pertes de qualité constatés. 
 
 ## VI. Outils
 
-Au niveau des outils de développement, nous avons fait un script python nommé *main.py*qui nous permet de gérer massivement toutes les étapes de notre analyse. Le main nous permet de commenter/décommenter les méthodes que nous souhaitons utiliser en modifiant les paramètres des méthodes. Il faut absolument exécuter ce script depuis le dossier dans lequel il est place sans quoi cela ne fonctionnera pas.
+Au niveau des outils de développement, nous avons fait un script python nommé *main.py* qui nous permet de gérer massivement toutes les étapes de notre analyse. Le main nous permet de commenter/décommenter les méthodes que nous souhaitons utiliser en modifiant les paramètres des méthodes. Il faut absolument exécuter ce script depuis le dossier dans lequel il est place sans quoi cela ne fonctionnera pas.
 
-Pour ce qui est des [outils d'évaluation des métriques](#outils), nous avons dans un premier temps utilisé l'outil SonarQube. Nous avons deux container pour deux instances. Ils est possible de les lancer en faisant la commande *docker-compose up*. Nous avons mis en place des volumes qui permettent de conserver les analyses dans le temps. Les fichiers sont analysés en masse grâce au script python.
+Pour ce qui est des [outils d'évaluation des métriques](#outils), nous avons dans un premier temps utilisé l'outil SonarQube. Nous avons deux containers pour deux instances. Il est possible de les lancer en faisant la commande *docker-compose up*. Nous avons mis en place des volumes qui permettent de conserver les analyses dans le temps. Les fichiers sont analysés en masse grâce au script Python.
 
 Au niveau CodeClimate, nous avons utiliser leurs outils de ligne de commande présent sur GitHub pour analyse nos fichiers python avec la commande *codeclimate analyze path_to_file*. Cela est également fait de manière automatique dans notre script.
 
@@ -305,7 +305,7 @@ Pour finir, nous avons un second script *parse_pylint_results.py* qui nous a per
 
 ## VI. Références
 
-[Articles étudiés](#articles) pour une meilleure compréhension des notebooks et du contexte dans lequel ils s'incrivent pour une utilisation par les scientifiques spécilistes des données :
+[Articles étudiés](#articles) pour une meilleure compréhension des notebooks et du contexte dans lequel ils s'inscrivent pour une utilisation par les scientifiques spécialistes des données :
 
 * [Eliciting Best Practices for Collaboration with Computational Notebooks](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/28337085-da8f-41ef-a9af-7070497bd728/Quaranta2022.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230109%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230109T131206Z&X-Amz-Expires=86400&X-Amz-Signature=4bf01bf31aee79119238f238c1b4efac8cda2b7c660ea73c0bf924f43c494301&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Quaranta2022.pdf%22&x-id=GetObject) 
 
