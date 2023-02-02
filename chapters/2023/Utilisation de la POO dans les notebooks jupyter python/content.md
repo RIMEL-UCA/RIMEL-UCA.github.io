@@ -163,7 +163,15 @@ L'hypothèse sera considérée comme vérifiée si le nombre d'étoiles sur Gith
 
 ## VI. Les datas scientistes utilisent de la POO sans le savoir 
 
-De nombreux data scientistes de données utilisent la programmation orientée objet (POO) dans leurs notebooks Jupiter sans même le savoir. Cela est dû au fait que de nombreuses bibliothèques populaires utilisées dans le domaine des sciences des données, telles que scikit-learn et TensorFlow, sont construites en utilisant la POO. En utilisant ces bibliothèques, les scientifiques de données manipulent souvent des objets tels que des modèles de machine learning, des jeux de données, etc. qui sont des instances de classes définies par ces bibliothèques. Même si ces scientifiques n'ont pas nécessairement conscience de la POO, ils en bénéficient tout de même en bénéficiant de la modularité, de l'encapsulation et de l'héritage que cette technique de programmation offre.
+De nombreux datas scientistes utilisent la POO dans leurs notebooks Jupiter sans même le savoir. Cela est dû au fait que de nombreuses bibliothèques populaires utilisées dans le domaine des sciences des données, telles que scikit-learn, TensorFlow et autres, sont construites en utilisant la POO. En utilisant ces bibliothèques, les datas scientistes manipulent souvent des objets tels que des modèles de machine learning, des jeux de données, etc. qui sont des instances de classes définies par ces bibliothèques. Même si ces datas scientistes n'ont pas nécessairement conscience de la POO, ils en bénéficient tout de même en bénéficiant de la modularité, de l'encapsulation et de l'héritage que cette technique de programmation offre. 
+
+Exemples : Création d'un réseau de neurone avec la bibliothèque TensorFlow
+
+<p align="center">
+  <img src="./assets/images/image5.png">
+</p>
+
+Dans ce code, nous utilisons la classe **Sequential** pour définir notre modèle de réseau de neurones en lui fournissant les differents paramètres par argument. Les méthodes **compile** et **fit** sont appelés sur la référence de l'objet **model** créé. Celles-ci font donc parties de la classe **Sequential**; une caractérisation de l'encapsulation. 
 
 ## VII. Outils utilisés
 
