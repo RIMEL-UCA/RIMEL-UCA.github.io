@@ -136,8 +136,6 @@ Nous avons émis plusieurs hypothèses au début de notre étude :
 * On part du principe que les repositories notebooks Microsoft et Jupyter sont de bonne qualité car il s’agit de références et cours. De plus, l’image de marque portée par Microsoft nous laisse penser que les projets qu’ils proposent sont revus avant d’être publiés. Nous nous servirons donc de ces projets pour effectuer une moyenne sur les métriques trouvées afin de mettre en place une échelle de mesure de la bonne qualité du code de nos notebooks et classerons les projets analysés suivant ces mesures référentes.
 * Nous pensons nous concentrer sur les notebooks ayant pour thème la réalité augmentée. Nous formons l’hypothèse que les notebooks de Microsoft étant plus spécialisés sur le sujet de réalité augmentée, ils seront de meilleure qualité que le projet de création de notebook proposé par Jupyter lui-même.
 
-???? Vous **explicitez les expérimentations que vous allez mener** pour vérifier si vos hypothèses sont vraies ou fausses. Il y a forcément des choix, des limites, explicitez-les. ???? 
-
 ### Expériences
 
 Préalablement à la mise en place de nos expériences, nous avons eu à récupérer un ensemble de notebooks Jupyter. Le code des fichiers .ipynb récupérés est par la suite transformé en un unique code, somme de toutes les cellules du notebook, via passage dans notre script. L'extension de ce fichier est celle du langage de programmation utilisé dans le notebook. Le script filtre ensuite les fichiers obtenus afin de ne garder que ceux dont l'extension est celle des codes Python. 
@@ -189,12 +187,6 @@ Ces erreurs sont récurrentes mais en vérité peu pertinentes dans le cas des n
 Les autres outils envisagés n'ont pas été utilisés car ils reprenaient des métriques déjà mesurées au cours de nos autres expériences ou se concentraient au final trop sur l'aspect sécuritaire du code qui est sûrement celui-ci qui a le moins d'intérêt pour nos scientifiques spécialistes des données.
 
 ## V. Analyse des résultats obtenus et Conclusion
-
-1. Présentation des résultats
-2. Interprétation/Analyse des résultats en fonction de vos hypothèses
-3. Construction d’une conclusion
-
-     :bulb:  Vos résultats et donc votre analyse sont nécessairement limités. Préciser bien ces limites : par exemple, jeux de données insuffisants, analyse réduite à quelques critères, dépendance aux projets analysés, ...
    
 ### Analyse de résultats obtenus
 #### Expérience 1 : Evaluation de la qualité du code Python des notebooks par SonarQube
@@ -270,24 +262,19 @@ On retrouve la courbe de Gauss décalée vers la droite du précédent schéma q
 
 Ces deux graphiques utilisant la note générée par PyLint montrent que la majorité des notebooks sont de qualité moyenne. Cela semble indiquer que PyLint est un bon outil pour mesurer la qualité d'un notebook.
 
-Pour terminer, nous avons voulu vérifier notre hypothèse de bonne qualité des notebooks Microsoft avec Pylint. Nous avons ainsi pu observer que nous obtenions pour ces notebooks de bonnes notes avec par exmple une note de ??? pour le projet Microsoft suivant.
+Pour terminer, nous avons voulu vérifier notre hypothèse de bonne qualité des notebooks Microsoft avec Pylint. Nous avons ainsi pu observer que nous obtenions pour ces notebooks de bonnes notes avec par exemple une note de ??? pour le projet Microsoft suivant.
 
 ![Figure 10: Note projet Microsoft Pylint](images/pylint-microsoft.png) ???? A CAPTURER ????
 
-Nous pouvons donc ???? notre hypothèse de départ de bonne qualité des notebooks Microsoft.
+Ces résultats nous poussent donc à remettre en question notre hypothèse de départ de bonne qualité des notebooks Microsoft car nous voyons ici que les notes obtenues par les notebooks Microsoft appartiennent à la moyenne haute des projets mais obtiennent encore un nombre non négligeable d'erreurs.
 
 ### Conclusion
 ???? A COMPLETER ????
 
 ## VI. Outils \(facultatif\)
 
-Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à \(1\) pouvoir reproduire vos expérimentations, \(2\) partager/expliquer à d'autres l'usage des outils.
-
-En plus des [outils](#outils) cités précédemment pour l'analyse de la qualité du code des notebooks, nous avons utilisé des scripts shell pour la récupération automatique de notebooks Jupyter sur Github et les invite de commande Windows et WSL.
-
-![Figure 11: Logo UCA](images/logo_uca.png)
-![Figure 12: Logo Polytech](images/logoPolytechUCA.png)
-
+En plus des [outils](#outils) cités précédemment pour l'analyse de la qualité du code des notebooks, nous avons utilisé des scripts pour la récupération de notebooks Jupyter sur Github et leur évaluation automatisée.
+Nous avons également utilisé les invite de commande Windows et WSL pour lancer les commandes simples d'évaluation de la qualité par PyLint par exemple avant de les intégrer elles aussi à nos scripts.
 
 ## VI. Références
 
@@ -297,3 +284,5 @@ En plus des [outils](#outils) cités précédemment pour l'analyse de la qualit�
 * [Ten simple rules for writing and sharing computational analyses in Jupyter Notebook](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4709bfe2-0ac6-4dac-aaaa-b64063ca688c/Rule2019.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230109%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230109T153113Z&X-Amz-Expires=86400&X-Amz-Signature=9d4bc9f5c3d2b85884e0673e1512dad09aa007390f71429f27db5b47294bf0ca&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Rule2019.pdf%22&x-id=GetObject). 
 * [Managing Messes in Computational Notebooks](https://lms.univ-cotedazur.fr/2022/pluginfile.php/399461/mod_folder/content/0/Head2019.pdf?forcedownload=1)
 
+![Figure 11: Logo UCA](images/logo_uca.png)
+![Figure 12: Logo Polytech](images/logoPolytechUCA.png)
