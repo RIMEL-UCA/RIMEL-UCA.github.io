@@ -271,7 +271,7 @@ Nous avons ainsi pu observer que nous obtenions pour ces notebooks deux notes pl
 
 Au niveau des outils de développement, nous avons fait un script python nommé *main.py*qui nous permet de gérer massivement toutes les étapes de notre analyse. Le main nous permet de commenter/décommenter les méthodes que nous souhaitons utiliser en modifiant les paramètres des méthodes. Il faut absolument exécuter ce script depuis le dossier dans lequel il est place sans quoi cela ne fonctionnera pas.
 
-Pour SonarQube, nous avons deux container pour deux instances. Ils est possible de les lancer en faisant la commande *docker-compose up*. Nous avons mis en place des volumes qui permettent de conserver les analyses dans le temps. Les fichiers sont analysés en masse grâce au script python.
+Pour ce qui est des [outils d'évaluation des métriques](#outils), nous avons dans un premier temps utilisé l'outil SonarQube. Nous avons deux container pour deux instances. Ils est possible de les lancer en faisant la commande *docker-compose up*. Nous avons mis en place des volumes qui permettent de conserver les analyses dans le temps. Les fichiers sont analysés en masse grâce au script python.
 
 Au niveau Code climate, nous avons utiliser leurs outils de ligne de commande présent sur GitHub pour analyse nos fichiers python avec la commande *codeclimate analyze path_to_file*. Cela est également fait de manière automatique dans notre script.
 
