@@ -264,11 +264,29 @@ Pour terminer, nous avons voulu vérifier notre hypothèse de bonne qualité des
 Nous avons ainsi pu observer que nous obtenions pour ces notebooks deux notes plutôt moyennes et une bonne note. Ces résultats remettent en question notre hypothèse de départ de bonne qualité des notebooks Microsoft. Il semblerait que les notebooks Microsoft sont en réalité dans la moyenne haute des notebooks analysés mais ne sont pas les meilleurs notebooks que nous avons trouvé. 
 
 ### Conclusion
-* Quelles métriques de qualité de code sont pertinentes dans le cas d'un notebook Jupyter ?
-Avec l'analyse de qualité des codes Python de notre jeu de données par l'outil Pylint, nous avons pu faire ressortir plusieurs critères d'évaluation du code relatifs à la lisibilité de ce dernier. Ce critère nous parait être l'un des plus évidents et pertinents à mettre en avant de par la nature même des notebooks. En effet, ces fichiers bien que comportant du code sont avant tout des feuilles de route permettant de suivre une démarche scientifique et les analyses des résultats qu'elle obtient. Ainsi, si un notebook n'est pas lisible il perd grandement de son intérêt premier. Cette lisibilité des notebooks peut se faire à travers divers critères tels que le nom des variables utilisées ou le manque de documentation par exemple.
-Pour ce qui est de la qualité du code des notebooks eux-mêmes, les métriques suivantes ont été jugées comme intéressantes à utiliser.
-
 * Comment reconnaître une métrique pertinente ? 
+
+Pour définir ce qui rend une métrique pertinente, il faut bien remettre en place le contexte dans lequel nous nous trouvons. Les noteboooks Jupyter ne sont pas des logiciels de développement et n'auront jamais à être déployés pour être mis en production. Il s'agit ici de projets conçus pour pouvoir être lus comme des articles scientifiques avec du code servant à la démonstration de concepts et d'hypothèse qui sera interfacé par des écrits. Un notebook étant utilisé dans un but de démonstration de recherche, il devra ainsi être facilement compréhensible que ce soit au niveau du code comme au niveau des explications textuelles qui y sont liées. Le code proposé dans les notebooks servant à la démonstration, il ne sera pas testé, il n'est donc pas intéressant d'en analyser des métriques telles que la couverture de tests. 
+
+Connaissant le contexte de notre étude, il est pertinent qu'une partie de nos notebooks soit axée sur la lisibilité de ces derniers que ce soit d'un point de vue du code comme de celui des explications. Ainsi des métriques relatives à la complexité du code avec des fonctions trop longues, composées de trop de boucles et conditions ou encore de trop d'arguments pourrait être pertinent dans notre cas. 
+
+Il est à noter, les notebooks que nous étudions sont des notebooks reproductibles qui s'exécutent sans erreur fatale du code pour que tous les codes de notre jeu de données puissent tous être soumis aux mêmes métriques, nous n'avons ainsi pas de métriques liées à un seul code.
+
+Les métriques proposées par les outils d'analyse mais n'impactant pas la compréhension des lecteurs, elles, pourront être laissées de côté comme dans le cas d'espaces en fin de ligne non visibles à la lecture ou un trop grand nombre de lignes dans notre notebook.
+
+Enfin, certaines des métriques classiques d'évaluation classiques de la qualité du code sont jugées comme pertinentes car elles concernent tout code peu importe le langage dans lequel il est rédigé comme par exemple les métriques de détection de bugs ou d'erreurs dans code. 
+
+Pour terminer, certaines métriques jugées préalablement comme pertinentes pourront être abandonnées après analyse des résultats qu'elles fourniront au cours des expériences de l'étude.
+
+* Quelles métriques de qualité de code sont pertinentes dans le cas d'un notebook Jupyter ?
+
+Avec l'analyse de qualité des codes Python de notre jeu de données par l'outil Pylint, nous avons pu faire ressortir plusieurs critères d'évaluation du code relatifs à la lisibilité de ce dernier. Ce critère nous parait être l'un des plus évidents et pertinents à mettre en avant de par la nature même des notebooks. En effet, ces fichiers bien que comportant du code sont avant tout des feuilles de route permettant de suivre une démarche scientifique et les analyses des résultats qu'elle obtient. Ainsi, si un notebook n'est pas lisible il perd grandement de son intérêt premier. Cette lisibilité des notebooks peut se faire à travers divers critères tels que le nom des variables utilisées ou le manque de documentation par exemple.
+
+Pour ce qui est de la qualité du code des notebooks eux-mêmes, les métriques suivantes ont été jugées comme intéressantes à utiliser.
+Les premières métriques intéressante sont donc celle qui nous permettent de determiner la lisibilité d'un notebook. Pour cela nous pouvons détecter les erreurs dans les noms de variable, les variables qui en cachent une autre ou encore, si la documentation est présente sur chacune des fonctions. Ces différentes métrique permettent de rapidement déterminer si le notebook peut être amélioré d'un point de vue de lisibilité.
+Les secondes métriques intéressantes sont celles qui remettent en cause la réusabilité d'un notebook. En effet, les notebooks vont parfois posséder des erreurs les empéchants de pouvoir se lancer. Certaine de ces erreurs peuvent être récupéré, notamment via pylint. Ces métriques sont les syntax-error, les pointless-statements, undefined-variable. Toutes ces erreurs impactent directement la qualité d'un notebook car la qualité n'est pas nécessairement existante d'un point de vu de lisibilité, mais elle l'est aussi d'un point de vu fonctionnelle.
+
+D'autres métriques permettant de déterminer la qualité d'un notebook peuvent aussi avoir leur importance. Notamment les bugs à l'aide de l'outil SonarQube. Cependant, l'outil nous donne aussi des métriques inutile dans notre cas. En effet, un notebook ne possèdent pas de test, et ne sera pas déployé. Donc les métriques habituelle de sécurité ou de couverture de tests peuvent être totalement ignoré.
 
 ## VI. Outils
 
