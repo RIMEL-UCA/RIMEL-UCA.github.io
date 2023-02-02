@@ -125,9 +125,9 @@ Nous avons émis plusieurs hypothèses au début de notre étude :
 
 Au vu du temps imparti pour mener cette étude, nous sommes bien sûr obliger de faire des expériences avec certaines limitations au niveau de l'analyse des résultats. 
 
-Nous ne connaissons pas précisément les critères utilisés par les outils que nous utilisons. Nous ne maitrisons par exemple pas la pondération des différentes erreurs dans Pylint et l'analyse faites par SonarQube s'oriente plus sur l'analyse de la POO. Nous ferons tout ce qu'il est possible pour essayer d'obtenir des résultats objectifs mais l'idéal serait bien sûr de définir beaucoup plus précisément quels sont nps critères que qualité dans le cas spécifique des notebooks Jupyter. 
+Nous ne connaissons pas précisément les critères utilisés par les outils que nous utilisons. Nous ne maitrisons par exemple pas la pondération des différentes erreurs dans Pylint et l'analyse faites par SonarQube s'oriente plus sur l'analyse de la POO. Nous ferons tout ce qu'il est possible pour essayer d'obtenir des résultats objectifs mais l'idéal serait bien sûr de définir beaucoup plus précisément quels sont nos critères que qualité dans le cas spécifique des notebooks Jupyter. 
 
-De plus, nous avons décidé de récupérer un notebook par page de résultat GitHub ce qui est tout de même plutôt bien mais cela reste peut-être une quantité un peu faible pour représenter correctement la qualité moyenne des notebooks. Nous aurions pu prendre plusieurs notebooks par page ou encore aller chercher des notebooks sur d'autres plateformes et notamment Kaggle pour que note jeu de donnée sont complètement représentatif de la moyenne des notebooks qui sont écrits.
+De plus, nous avons décidé de récupérer un notebook par page de résultat GitHub ce qui est tout de même plutôt bien mais cela reste peut-être une quantité un peu faible pour représenter correctement la qualité moyenne des notebooks. Nous aurions pu prendre plusieurs notebooks par page ou encore aller chercher des notebooks sur d'autres plateformes et notamment Kaggle pour que notre jeu de donnée sont complètement représentatif de la moyenne des notebooks qui sont écrits.
 
 ### Expériences
 
@@ -135,11 +135,10 @@ Préalablement à la mise en place de nos expériences, nous avons eu à récup�
 
 #### Expérience 1 : Evaluation de la qualité du code Python des notebooks par SonarQube
 
-La démarche que nous avons prévu pour l’analyse de ce sujet se découpe en quatre étapes : 
+La démarche que nous avons prévu pour l’analyse de ce sujet se découpe en trois étapes : 
 1. Lancement de notre script passant nos fichiers Python récupérés auparavant sur SonarQube
 2. Récupération de toutes les analyses sur les métriques choisies par SonarQube
 3. Exploitation des résultats, et voir si ceux-ci pourraient mener à des hypothèses supplémentaires ou conclusions intéressantes dont les métriques pertinentes dans l'analyse des notebooks
-4. Classification des notebooks de notre jeu de données d'après les notes référentes récupérées d'après notre hypothèse de départ de qualité des notebooks
 
 SonarQube basera ses analyses du code sur sept critères :
 * Si l'analyse a pu être menée à terme
@@ -150,7 +149,7 @@ SonarQube basera ses analyses du code sur sept critères :
 * Le pourcentage de code couvert par des tests
 * Le pourcentage de code dupliqué
 
-Il donnera a chacun de ces critères numériques une note allant de A à F permettant de juger de sa qualité.
+Il donnera à chacun de ces critères numériques une note allant de A à F permettant de juger de leur qualité.
 
 #### Expérience 2 : Evaluation de la qualité du code Python des notebooks par CodeClimate
 
@@ -175,7 +174,7 @@ Après une première utilisation de PyLint nous nous sommes aperçus que ses con
 * *import-error*
 * *too-few-public-methods*
 
-Ces erreurs sont récurrentes mais en vérité peu pertinentes dans le cas des notebooks.
+Ces erreurs sont récurrentes mais en réalité peu pertinentes dans le cas des notebooks.
 
 Les autres outils envisagés n'ont pas été utilisés car ils reprenaient des métriques déjà mesurées au cours de nos autres expériences ou se concentraient au final trop sur l'aspect sécuritaire du code qui est sûrement celui-ci qui a le moins d'intérêt pour nos scientifiques spécialistes des données.
 
@@ -217,7 +216,7 @@ Ainsi, nous avons pu écarter la liste de critères de notation suivants :
 
 ![Figure 4: Configuration Pylint](images/pylint-config.png)
 
-Les 7 premiers critères ont été placés directement par Pylint et il semble cohérent de les laisser, d'autant plus quand on regarde en détail leur signification. Si on regarde ensuite les critères que nous avons retirés nous-mêmes, on trouve plusieurs critères que nous ne jugeons pas révélateurs de la qualité d'un fichier python en général tels que comme *trailing-whitespace* ou encore *too-many-lines*. Nous avons ensuite retiré certains critères qui ne correspondent pas au cas des notebooks Jupyter comme *too-few-public-methods* et *too-many-lines*. Enfin, nous avons retiré import-error pour des raisons pratiques car nous ne pouvons pas installer tout les packages python avant chaque analyse dans le cadre de plusieurs centaines de fichiers. Il semble de toute manière peu probable que des mauvais imports soit fait puisque cela empêcherait le code de exécuter.	
+Les sept premiers critères ont été placés directement par Pylint et il semble cohérent de les laisser, d'autant plus quand on regarde en détail leur signification. Si on regarde ensuite les critères que nous avons retirés nous-mêmes, on trouve plusieurs critères que nous ne jugeons pas révélateurs de la qualité d'un fichier python en général tels que comme *trailing-whitespace* ou encore *too-many-lines*. Nous avons ensuite retiré certains critères qui ne correspondent pas au cas des notebooks Jupyter comme *too-few-public-methods* et *too-many-lines*. Enfin, nous avons retiré import-error pour des raisons pratiques car nous ne pouvons pas installer tout les packages python avant chaque analyse dans le cadre de plusieurs centaines de fichiers. Il semble de toute manière peu probable que des mauvais imports soit fait puisque cela empêcherait le code de exécuter.	
 
 Cela à ainsi à titre d'exemple fait évoluer la note du projet *NLP_C1_W1_lecture_nb_01* de 3.60 à 8.27 et cela se confirme globalement sur tous nos notebooks même si on retrouve toujours de très mauvaises notes. Cela nous amène à penser que évaluation s'affine et deviens un peu plus juste.
 
@@ -256,16 +255,20 @@ On retrouve la courbe de Gauss décalée vers la droite du précédent schéma q
 
 Ces deux graphiques utilisant la note générée par PyLint montrent que la majorité des notebooks sont de qualité moyenne. Cela semble indiquer que PyLint est un bon outil pour mesurer la qualité d'un notebook.
 
-Pour terminer, nous avons voulu vérifier notre hypothèse de bonne qualité des notebooks Microsoft avec Pylint. Voici les résultats obtenus pour les différents fichiers :
+Pour terminer, nous avons voulu vérifier notre hypothèse de bonne qualité des notebooks Microsoft avec Pylint. Voici les résultats obtenus pour les différents fichiers Python générés à partir des notebooks Microsoft :
 
 ![Figure 10: Note projet Microsoft Pylint 1](images/microsoft-pylint-1.png)
 ![Figure 11: Note projet Microsoft Pylint 2](images/microsoft-pylint-2.png)
 ![Figure 12: Note projet Microsoft Pylint 3](images/microsoft-pylint-3.png)
 
-Nous avons ainsi pu observer que nous obtenions pour ces notebooks deux notes plutôt moyennes et une bonne note. Ces résultats remettent en question notre hypothèse de départ de bonne qualité des notebooks Microsoft car il semblerait qu'ils soient au contraire de qualité plutôt moyenne. 
+Nous avons ainsi pu observer que nous obtenions pour ces notebooks deux notes plutôt moyennes et une bonne note. Ces résultats remettent en question notre hypothèse de départ de bonne qualité des notebooks Microsoft. Il semblerait que les notebooks Microsoft sont en réalité dans la moyenne haute des notebooks analysés mais ne sont pas les meilleurs notebooks que nous avons trouvé. 
 
 ### Conclusion
-???? A COMPLETER ????
+* Quelles métriques de qualité de code sont pertinentes dans le cas d'un notebook Jupyter ?
+Avec l'analyse de qualité des codes Python de notre jeu de données par l'outil Pylint, nous avons pu faire ressortir plusieurs critères d'évaluation du code relatifs à la lisibilité de ce dernier. Ce critère nous parait être l'un des plus évidents et pertinents à mettre en avant de par la nature même des notebooks. En effet, ces fichiers bien que comportant du code sont avant tout des feuilles de route permettant de suivre une démarche scientifique et les analyses des résultats qu'elle obtient. Ainsi, si un notebook n'est pas lisible il perd grandement de son intérêt premier. Cette lisibilité des notebooks peut se faire à travers divers critères tels que le nom des variables utilisées ou le manque de documentation par exemple.
+Pour ce qui est de la qualité du code des notebooks eux-mêmes, les métriques suivantes ont été jugées comme intéressantes à utiliser.
+
+* Comment reconnaître une métrique pertinente ? 
 
 ## VI. Outils
 
@@ -273,7 +276,7 @@ Au niveau des outils de développement, nous avons fait un script python nommé 
 
 Pour ce qui est des [outils d'évaluation des métriques](#outils), nous avons dans un premier temps utilisé l'outil SonarQube. Nous avons deux container pour deux instances. Ils est possible de les lancer en faisant la commande *docker-compose up*. Nous avons mis en place des volumes qui permettent de conserver les analyses dans le temps. Les fichiers sont analysés en masse grâce au script python.
 
-Au niveau Code climate, nous avons utiliser leurs outils de ligne de commande présent sur GitHub pour analyse nos fichiers python avec la commande *codeclimate analyze path_to_file*. Cela est également fait de manière automatique dans notre script.
+Au niveau CodeClimate, nous avons utiliser leurs outils de ligne de commande présent sur GitHub pour analyse nos fichiers python avec la commande *codeclimate analyze path_to_file*. Cela est également fait de manière automatique dans notre script.
 
 Dans le cas de PyLint, nous utilisons simplement la commande *pylint path_to_file* mais cela est à nouveau fait de manière automatisée dans notre script.
 
