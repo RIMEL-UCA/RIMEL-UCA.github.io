@@ -89,6 +89,8 @@ Nous avons cherché des documents de recherche et articles rédigés sur des blo
 
 ### Jeux de données 
 
+     Afin de mener à bien notre projet de recherche sur l'utilisation de la POO dans les notebooks Jupyter Python, nous avons décidé de fouiller sur GitHub car les notebooks ne sont pas de véritables projets en soi. Pour faciliter notre recherche de notebooks Jupyter Python, nous avons écrit des scripts Python qui nous ont permis d'automatiser la recherche de fichiers d'extensions .ipynb sur GitHub grâce à son API. Les fichiers notebooks étant des fichiers scientifiques et pour avoir un grand volume de jeu de données, nous ne nous sommes pas restreins à un domaine spécifique. 
+
  
 ## IV. Hypothèses et Expériences
 
