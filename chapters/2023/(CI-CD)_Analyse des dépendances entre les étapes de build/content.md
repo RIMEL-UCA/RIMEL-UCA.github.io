@@ -114,6 +114,7 @@ On peut voir que les projets font majoritairement usage de la commande `COPY`, a
 Nous considérons donc les commandes `COPY` comme des dépendances de notre *Dockerfile* et après analyse des fichiers et dossiers mentionnés, nous obtenons les résultats suivants : 
 
 ![Figure 2 - Résultat de l'analyse des dépendances Docker](assets/images/docker-dependency-graph.png)
+
 On peut remarquer que les projets *Moby* et *OpenZipkin*, qui présentent plus de dépendances que les autres projets, ont une majorité de dépendances sous forme de dossiers, ce qui permet de rendre les commandes plus compactes en évitant de copier les fichiers un à un. Cependant, cela peut parfois masquer des dépendances non résolues, comme un fichier manquant attendu dans un dossier copié.  On constate également que les projets de plus petite taille ont plus tendance à copier les fichiers par nom. 
   
 
@@ -124,11 +125,13 @@ On peut remarquer que les projets *Moby* et *OpenZipkin*, qui présentent plus d
 Après avoir analysé les *workflows* des projets sélectionnés, en associant certaines de leurs étapes avec les *Dockerfile* qu'elles utilisent et leurs dépendances, nous analysons le projet pour vérifier l'existence des dépendances mentionnées et obtenons les résultats suivants : 
 
 ![Figure 3 - Résultat de l'analyse des workflows et dépendances Docker et vérification](assets/images/docker-dependency-validation-graph.png)
+
 Nous pouvons voir sur ce graphique que la majorité des dépendances ont pu être vérifiées pour chaque projet mais que ces derniers présentent tous des dépendances qui n'ont pas pu être vérifiées. Ces dépendances peuvent ne pas avoir été présentes ou peuvent avoir été masquées derrière des mauvaises pratiques et soient donc invérifiables. 
 
 Grâce à ces données, nous pouvons établir le taux de stabilité pour chacun des projets : 
 
 ![Figure 4 - Résultat du taux de stabilité des projets](assets/images/docker-stability-graph.png)
+
 Nous constatons que les taux de stabilité des projets sont relativement variés et que certains d'entre eux doivent donc présenter des descriptions *Docker* plus précises : nos deux projets les plus conséquents présentent le taux de stabilité le plus bas (*OpenZipkin*) et l'un des plus élevés (*Moby*), et nous pouvons faire référence à l'expérience précédente qui présentait *OpenZipkin* comme ayant beaucoup de dépendances sous forme de dossiers. Nous pouvons imaginer que ces dossiers absents sont générés au cours du *build* mais nous ne pouvons vérifier cette hypothèse sans nous éloigner de notre objectif initial. 
 
   
@@ -147,6 +150,7 @@ Ce dictionnaire est évidemment amené à évoluer et reste arbitraire, mais l'a
 Voici les résultats obtenus après analyse des projets selctionnés : 
 
 ![Figure 5 - Résultat de l'analyse des mauvaises pratiques des projets](assets/images/docker-bad-practice-graph.png)
+
 On peut observer sur ce graphique que les projets analysés présentent certaines mauvaises pratiques : la plus fréquente est de copier un dossier entier d'application avant d'en copier les fichiers séparément, et celle d'effectuer des commandes `COPY . .` est également présente sur plusieurs projets. Seul un projet effectue une commande `ADD` pour un fichier et aucun des ces projets n'effectue plus d'un type de mauvaise pratique. 
 
 Nous avons cependant dû limiter notre liste de pratiques à relever pour rester précis et nous savons qu'il existe sûrement bien d'autres pratiques néfastes à la stabilité de *builds Docker*. Il nous faudrait donc pouvoir élargir nos critères et accepter de nouvelles pratiques à analyser, et utiliser notre outil pour analyser un grand nombre de projets afin d'avoir une idée plus précise de l'impact des mauvaises pratiques dans l'écriture de fichiers *Dockerfile*.     
