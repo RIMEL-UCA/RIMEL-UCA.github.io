@@ -1,0 +1,19 @@
+************* Module load_data
+python-scripts\load_data.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\load_data.py:98:4: W3101: Missing timeout argument for method 'requests.get' can cause your program to hang indefinitely (missing-timeout)
+python-scripts\load_data.py:141:4: W3101: Missing timeout argument for method 'requests.get' can cause your program to hang indefinitely (missing-timeout)
+python-scripts\load_data.py:151:5: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+python-scripts\load_data.py:152:4: C0103: Constant name "c" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\load_data.py:154:16: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\load_data.py:162:5: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+python-scripts\load_data.py:173:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\load_data.py:184:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\load_data.py:211:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\load_data.py:214:68: E0602: Undefined variable 'xrange' (undefined-variable)
+python-scripts\load_data.py:25:0: C0411: standard import "import random" should be placed before "import numpy as np" (wrong-import-order)
+python-scripts\load_data.py:27:0: C0411: standard import "import string" should be placed before "import numpy as np" (wrong-import-order)
+python-scripts\load_data.py:28:0: C0411: standard import "import tarfile" should be placed before "import numpy as np" (wrong-import-order)
+
+------------------------------------------------------------------
+Your code has been rated at 7.91/10 (previous run: 7.91/10, +0.00)
+

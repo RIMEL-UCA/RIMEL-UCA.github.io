@@ -1,0 +1,27 @@
+************* Module TextCNN
+python-scripts\TextCNN.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\TextCNN.py:1:0: C0103: Module name "TextCNN" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\TextCNN.py:10:0: R0402: Use 'from torch import nn' instead (consider-using-from-import)
+python-scripts\TextCNN.py:11:0: R0402: Use 'from torch import optim' instead (consider-using-from-import)
+python-scripts\TextCNN.py:14:0: C0115: Missing class docstring (missing-class-docstring)
+python-scripts\TextCNN.py:18:8: C0103: Attribute name "W" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\TextCNN.py:19:8: C0103: Attribute name "Weight" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\TextCNN.py:20:8: C0103: Attribute name "Bias" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\TextCNN.py:16:8: R1725: Consider using Python 3 style super() without arguments (super-with-arguments)
+python-scripts\TextCNN.py:23:4: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\TextCNN.py:23:22: C0103: Argument name "X" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\TextCNN.py:39:8: W0621: Redefining name 'model' from outer scope (line 58) (redefined-outer-name)
+python-scripts\TextCNN.py:30:12: C0103: Variable name "h" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\TextCNN.py:32:12: C0103: Variable name "mp" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\TextCNN.py:43:4: C0103: Constant name "embedding_size" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\TextCNN.py:44:4: C0103: Constant name "sequence_length" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\TextCNN.py:45:4: C0103: Constant name "num_classes" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\TextCNN.py:47:4: C0103: Constant name "num_filters" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\TextCNN.py:64:31: R1721: Unnecessary use of a comprehension, use labels instead. (unnecessary-comprehension)
+python-scripts\TextCNN.py:74:28: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\TextCNN.py:74:60: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\TextCNN.py:80:4: C0103: Constant name "test_text" doesn't conform to UPPER_CASE naming style (invalid-name)
+
+------------------------------------------------------------------
+Your code has been rated at 6.21/10 (previous run: 6.21/10, +0.00)
+

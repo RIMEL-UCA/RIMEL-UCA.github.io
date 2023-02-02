@@ -1,0 +1,23 @@
+************* Module C4_W2_lecture_notebook_Transformer_Decoder
+python-scripts\C4_W2_lecture_notebook_Transformer_Decoder.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\C4_W2_lecture_notebook_Transformer_Decoder.py:1:0: C0103: Module name "C4_W2_lecture_notebook_Transformer_Decoder" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\C4_W2_lecture_notebook_Transformer_Decoder.py:31:0: C0413: Import "import trax" should be placed at the top of the module (wrong-import-position)
+python-scripts\C4_W2_lecture_notebook_Transformer_Decoder.py:32:0: C0413: Import "from trax import layers as tl" should be placed at the top of the module (wrong-import-position)
+python-scripts\C4_W2_lecture_notebook_Transformer_Decoder.py:33:0: C0413: Import "from trax.fastmath import numpy as jnp" should be placed at the top of the module (wrong-import-position)
+python-scripts\C4_W2_lecture_notebook_Transformer_Decoder.py:44:0: C0103: Function name "PositionalEncoder" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\C4_W2_lecture_notebook_Transformer_Decoder.py:87:0: C0103: Function name "FeedForward" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\C4_W2_lecture_notebook_Transformer_Decoder.py:125:0: C0103: Function name "DecoderBlock" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\C4_W2_lecture_notebook_Transformer_Decoder.py:125:0: R0913: Too many arguments (6/5) (too-many-arguments)
+python-scripts\C4_W2_lecture_notebook_Transformer_Decoder.py:149:29: E0602: Undefined variable 'd_feature' (undefined-variable)
+python-scripts\C4_W2_lecture_notebook_Transformer_Decoder.py:164:0: C0103: Function name "TransformerLM" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\C4_W2_lecture_notebook_Transformer_Decoder.py:164:0: R0913: Too many arguments (9/5) (too-many-arguments)
+python-scripts\C4_W2_lecture_notebook_Transformer_Decoder.py:28:0: C0411: standard import "import textwrap" should be placed before "import numpy as np" (wrong-import-order)
+python-scripts\C4_W2_lecture_notebook_Transformer_Decoder.py:22:0: W0611: Unused import os (unused-import)
+python-scripts\C4_W2_lecture_notebook_Transformer_Decoder.py:24:0: W0611: Unused import time (unused-import)
+python-scripts\C4_W2_lecture_notebook_Transformer_Decoder.py:26:0: W0611: Unused import gin (unused-import)
+python-scripts\C4_W2_lecture_notebook_Transformer_Decoder.py:31:0: W0611: Unused import trax (unused-import)
+python-scripts\C4_W2_lecture_notebook_Transformer_Decoder.py:33:0: W0611: Unused numpy imported from trax.fastmath as jnp (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 0.00/10 (previous run: 0.00/10, +0.00)
+

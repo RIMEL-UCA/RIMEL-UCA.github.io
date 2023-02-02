@@ -1,0 +1,24 @@
+************* Module 14-Curve Inversions
+python-scripts\14-Curve Inversions.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\14-Curve Inversions.py:1:0: C0103: Module name "14-Curve Inversions" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\14-Curve Inversions.py:34:0: C0413: Import "from gs_quant.datetime import business_day_offset" should be placed at the top of the module (wrong-import-position)
+python-scripts\14-Curve Inversions.py:35:0: C0413: Import "from gs_quant.data import Dataset" should be placed at the top of the module (wrong-import-position)
+python-scripts\14-Curve Inversions.py:36:0: C0413: Import "from dateutil.relativedelta import relativedelta" should be placed at the top of the module (wrong-import-position)
+python-scripts\14-Curve Inversions.py:37:0: C0413: Import "from datetime import date" should be placed at the top of the module (wrong-import-position)
+python-scripts\14-Curve Inversions.py:38:0: C0413: Import "import numpy as np" should be placed at the top of the module (wrong-import-position)
+python-scripts\14-Curve Inversions.py:39:0: C0413: Import "import pandas as pd" should be placed at the top of the module (wrong-import-position)
+python-scripts\14-Curve Inversions.py:55:0: C0413: Import "from gs_quant.timeseries import last_value, percentiles" should be placed at the top of the module (wrong-import-position)
+python-scripts\14-Curve Inversions.py:79:0: C0413: Import "import seaborn as sns" should be placed at the top of the module (wrong-import-position)
+python-scripts\14-Curve Inversions.py:80:0: C0413: Import "import matplotlib.pyplot as plt" should be placed at the top of the module (wrong-import-position)
+python-scripts\14-Curve Inversions.py:81:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\14-Curve Inversions.py:81:15: W0621: Redefining name 'cross' from outer scope (line 59) (redefined-outer-name)
+python-scripts\14-Curve Inversions.py:105:0: C0413: Import "from gs_quant.instrument import FXVolatilitySwap" should be placed at the top of the module (wrong-import-position)
+python-scripts\14-Curve Inversions.py:106:0: C0413: Import "from gs_quant.markets.portfolio import Portfolio" should be placed at the top of the module (wrong-import-position)
+python-scripts\14-Curve Inversions.py:114:0: W0104: Statement seems to have no effect (pointless-statement)
+python-scripts\14-Curve Inversions.py:37:0: C0411: standard import "from datetime import date" should be placed before "from gs_quant.session import GsSession" (wrong-import-order)
+python-scripts\14-Curve Inversions.py:55:0: C0412: Imports from package gs_quant are not grouped (ungrouped-imports)
+python-scripts\14-Curve Inversions.py:105:0: C0412: Imports from package gs_quant are not grouped (ungrouped-imports)
+
+------------------------------------------------------------------
+Your code has been rated at 6.04/10 (previous run: 6.04/10, +0.00)
+

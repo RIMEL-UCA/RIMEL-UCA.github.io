@@ -1,0 +1,15 @@
+************* Module 030007_pnl_explain
+python-scripts\030007_pnl_explain.py:72:0: C0305: Trailing newlines (trailing-newlines)
+python-scripts\030007_pnl_explain.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\030007_pnl_explain.py:1:0: C0103: Module name "030007_pnl_explain" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\030007_pnl_explain.py:9:0: C0103: Constant name "client_id" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\030007_pnl_explain.py:10:0: C0103: Constant name "client_secret" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\030007_pnl_explain.py:19:0: C0413: Import "from gs_quant.instrument import IRSwap, IRSwaption" should be placed at the top of the module (wrong-import-position)
+python-scripts\030007_pnl_explain.py:20:0: C0413: Import "from gs_quant.markets.portfolio import Portfolio" should be placed at the top of the module (wrong-import-position)
+python-scripts\030007_pnl_explain.py:33:0: C0413: Import "from gs_quant.datetime.date import business_day_offset" should be placed at the top of the module (wrong-import-position)
+python-scripts\030007_pnl_explain.py:34:0: C0413: Import "from gs_quant.markets import CloseMarket, PricingContext, close_market_date" should be placed at the top of the module (wrong-import-position)
+python-scripts\030007_pnl_explain.py:35:0: C0413: Import "from gs_quant.risk import DollarPrice, PnlExplain" should be placed at the top of the module (wrong-import-position)
+
+------------------------------------------------------------------
+Your code has been rated at 6.55/10 (previous run: 6.55/10, +0.00)
+

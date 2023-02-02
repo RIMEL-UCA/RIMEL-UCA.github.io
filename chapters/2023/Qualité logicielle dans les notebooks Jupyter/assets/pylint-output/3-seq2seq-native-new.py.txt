@@ -1,0 +1,18 @@
+************* Module 3-seq2seq-native-new
+python-scripts\3-seq2seq-native-new.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\3-seq2seq-native-new.py:1:0: C0103: Module name "3-seq2seq-native-new" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\3-seq2seq-native-new.py:25:0: W0104: Statement seems to have no effect (pointless-statement)
+python-scripts\3-seq2seq-native-new.py:64:14: R1735: Consider using {} instead of dict() (use-dict-literal)
+python-scripts\3-seq2seq-native-new.py:66:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\3-seq2seq-native-new.py:66:13: W0621: Redefining name 'session' from outer scope (line 35) (redefined-outer-name)
+python-scripts\3-seq2seq-native-new.py:66:22: W0621: Redefining name 'model' from outer scope (line 39) (redefined-outer-name)
+python-scripts\3-seq2seq-native-new.py:75:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\3-seq2seq-native-new.py:143:0: C0413: Import "import time" should be placed at the top of the module (wrong-import-position)
+python-scripts\3-seq2seq-native-new.py:19:0: C0411: standard import "import warnings" should be placed before "import numpy as np" (wrong-import-order)
+python-scripts\3-seq2seq-native-new.py:143:0: C0411: standard import "import time" should be placed before "import numpy as np" (wrong-import-order)
+python-scripts\3-seq2seq-native-new.py:12:0: W0611: Unused numpy imported as np (unused-import)
+python-scripts\3-seq2seq-native-new.py:17:0: W0611: Unused import helpers (unused-import)
+
+-----------------------------------
+Your code has been rated at 8.40/10
+

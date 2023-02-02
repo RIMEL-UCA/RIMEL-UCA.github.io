@@ -1,0 +1,18 @@
+************* Module 0008_filter_flagship_baskets_by_basket_type
+python-scripts\0008_filter_flagship_baskets_by_basket_type.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\0008_filter_flagship_baskets_by_basket_type.py:1:0: C0103: Module name "0008_filter_flagship_baskets_by_basket_type" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\0008_filter_flagship_baskets_by_basket_type.py:7:0: W0401: Wildcard import gs_quant.markets.indices_utils (wildcard-import)
+python-scripts\0008_filter_flagship_baskets_by_basket_type.py:13:0: C0103: Constant name "client" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\0008_filter_flagship_baskets_by_basket_type.py:14:0: C0103: Constant name "secret" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\0008_filter_flagship_baskets_by_basket_type.py:28:0: E0602: Undefined variable 'get_flagship_baskets' (undefined-variable)
+python-scripts\0008_filter_flagship_baskets_by_basket_type.py:28:34: E0602: Undefined variable 'BasketType' (undefined-variable)
+python-scripts\0008_filter_flagship_baskets_by_basket_type.py:30:0: E0602: Undefined variable 'get_flagships_with_assets' (undefined-variable)
+python-scripts\0008_filter_flagship_baskets_by_basket_type.py:30:64: E0602: Undefined variable 'BasketType' (undefined-variable)
+python-scripts\0008_filter_flagship_baskets_by_basket_type.py:32:0: E0602: Undefined variable 'get_flagships_performance' (undefined-variable)
+python-scripts\0008_filter_flagship_baskets_by_basket_type.py:32:39: E0602: Undefined variable 'BasketType' (undefined-variable)
+python-scripts\0008_filter_flagship_baskets_by_basket_type.py:34:0: E0602: Undefined variable 'get_flagships_constituents' (undefined-variable)
+python-scripts\0008_filter_flagship_baskets_by_basket_type.py:34:40: E0602: Undefined variable 'BasketType' (undefined-variable)
+
+------------------------------------------------------------------
+Your code has been rated at 0.00/10 (previous run: 0.00/10, +0.00)
+

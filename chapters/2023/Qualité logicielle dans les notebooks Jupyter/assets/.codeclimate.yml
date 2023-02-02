@@ -1,0 +1,16 @@
+version: "2"
+
+plugins:
+  python:
+    enabled: true
+
+engines:
+  python:
+    enabled: true
+    config:
+      # You can use the `pipenv` or `pip` commands to install your Python dependencies.
+      install:
+        - "pipenv install --dev"
+      # You can use any command that runs your test suite.
+      test:
+        - "pipenv run pytest"

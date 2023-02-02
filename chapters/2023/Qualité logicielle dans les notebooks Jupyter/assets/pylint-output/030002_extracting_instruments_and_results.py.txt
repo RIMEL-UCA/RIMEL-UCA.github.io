@@ -1,0 +1,24 @@
+************* Module 030002_extracting_instruments_and_results
+python-scripts\030002_extracting_instruments_and_results.py:142:0: C0305: Trailing newlines (trailing-newlines)
+python-scripts\030002_extracting_instruments_and_results.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\030002_extracting_instruments_and_results.py:1:0: C0103: Module name "030002_extracting_instruments_and_results" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\030002_extracting_instruments_and_results.py:20:0: C0413: Import "from gs_quant.session import GsSession" should be placed at the top of the module (wrong-import-position)
+python-scripts\030002_extracting_instruments_and_results.py:57:0: W0104: Statement seems to have no effect (pointless-statement)
+python-scripts\030002_extracting_instruments_and_results.py:63:6: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\030002_extracting_instruments_and_results.py:64:6: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\030002_extracting_instruments_and_results.py:65:6: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\030002_extracting_instruments_and_results.py:68:6: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\030002_extracting_instruments_and_results.py:76:6: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\030002_extracting_instruments_and_results.py:77:6: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\030002_extracting_instruments_and_results.py:89:0: W0104: Statement seems to have no effect (pointless-statement)
+python-scripts\030002_extracting_instruments_and_results.py:101:6: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\030002_extracting_instruments_and_results.py:102:6: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\030002_extracting_instruments_and_results.py:119:0: W0104: Statement seems to have no effect (pointless-statement)
+python-scripts\030002_extracting_instruments_and_results.py:131:0: W0106: Expression "hist_results[Price].aggregate().at[dt.date(2019, 4, 30)]" is assigned to nothing (expression-not-assigned)
+python-scripts\030002_extracting_instruments_and_results.py:137:0: W0104: Statement seems to have no effect (pointless-statement)
+python-scripts\030002_extracting_instruments_and_results.py:11:0: C0411: standard import "import datetime as dt" should be placed before "from gs_quant.markets.portfolio import Portfolio" (wrong-import-order)
+python-scripts\030002_extracting_instruments_and_results.py:20:0: C0412: Imports from package gs_quant are not grouped (ungrouped-imports)
+
+------------------------------------------------------------------
+Your code has been rated at 5.48/10 (previous run: 5.48/10, +0.00)
+

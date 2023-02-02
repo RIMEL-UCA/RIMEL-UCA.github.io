@@ -1,0 +1,25 @@
+************* Module 010101_basic_use_of_rollfwd_scenario
+python-scripts\010101_basic_use_of_rollfwd_scenario.py:104:0: C0305: Trailing newlines (trailing-newlines)
+python-scripts\010101_basic_use_of_rollfwd_scenario.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\010101_basic_use_of_rollfwd_scenario.py:1:0: C0103: Module name "010101_basic_use_of_rollfwd_scenario" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\010101_basic_use_of_rollfwd_scenario.py:39:6: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\010101_basic_use_of_rollfwd_scenario.py:40:6: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\010101_basic_use_of_rollfwd_scenario.py:72:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\010101_basic_use_of_rollfwd_scenario.py:72:0: R0913: Too many arguments (7/5) (too-many-arguments)
+python-scripts\010101_basic_use_of_rollfwd_scenario.py:72:21: W0621: Redefining name 'ccy' from outer scope (line 91) (redefined-outer-name)
+python-scripts\010101_basic_use_of_rollfwd_scenario.py:72:26: W0621: Redefining name 'strike' from outer scope (line 92) (redefined-outer-name)
+python-scripts\010101_basic_use_of_rollfwd_scenario.py:72:34: W0621: Redefining name 'pay_rec' from outer scope (line 93) (redefined-outer-name)
+python-scripts\010101_basic_use_of_rollfwd_scenario.py:72:43: W0621: Redefining name 'date' from outer scope (line 94) (redefined-outer-name)
+python-scripts\010101_basic_use_of_rollfwd_scenario.py:72:49: W0621: Redefining name 'roll_to_fwds' from outer scope (line 95) (redefined-outer-name)
+python-scripts\010101_basic_use_of_rollfwd_scenario.py:72:63: W0621: Redefining name 'expiries' from outer scope (line 96) (redefined-outer-name)
+python-scripts\010101_basic_use_of_rollfwd_scenario.py:72:73: W0621: Redefining name 'tenors' from outer scope (line 97) (redefined-outer-name)
+python-scripts\010101_basic_use_of_rollfwd_scenario.py:74:82: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\010101_basic_use_of_rollfwd_scenario.py:91:0: C0103: Constant name "ccy" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\010101_basic_use_of_rollfwd_scenario.py:92:0: C0103: Constant name "strike" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\010101_basic_use_of_rollfwd_scenario.py:93:0: C0103: Constant name "pay_rec" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\010101_basic_use_of_rollfwd_scenario.py:94:0: C0103: Constant name "date" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\010101_basic_use_of_rollfwd_scenario.py:95:0: C0103: Constant name "roll_to_fwds" doesn't conform to UPPER_CASE naming style (invalid-name)
+
+------------------------------------------------------------------
+Your code has been rated at 5.83/10 (previous run: 5.83/10, +0.00)
+

@@ -1,0 +1,26 @@
+************* Module image_transformation
+python-scripts\image_transformation.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\image_transformation.py:35:4: W3101: Missing timeout argument for method 'requests.get' can cause your program to hang indefinitely (missing-timeout)
+python-scripts\image_transformation.py:57:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\image_transformation.py:70:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\image_transformation.py:71:4: C0103: Variable name "r" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\image_transformation.py:85:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\image_transformation.py:86:4: C0103: Variable name "r" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\image_transformation.py:100:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\image_transformation.py:101:4: C0103: Variable name "r" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\image_transformation.py:115:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\image_transformation.py:116:4: C0103: Variable name "r" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\image_transformation.py:130:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\image_transformation.py:130:0: R0913: Too many arguments (6/5) (too-many-arguments)
+python-scripts\image_transformation.py:135:16: W0613: Unused argument 'scope' (unused-argument)
+python-scripts\image_transformation.py:146:27: W0612: Unused variable 'distort_bbox' (unused-variable)
+python-scripts\image_transformation.py:163:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\image_transformation.py:183:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\image_transformation.py:27:0: C0411: standard import "import random" should be placed before "from IPython.display import Image as IImage, display" (wrong-import-order)
+python-scripts\image_transformation.py:23:0: W0611: Unused Image imported from IPython.display as IImage (unused-import)
+python-scripts\image_transformation.py:23:0: W0611: Unused display imported from IPython.display (unused-import)
+python-scripts\image_transformation.py:27:0: W0611: Unused import random (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 6.50/10 (previous run: 6.50/10, +0.00)
+

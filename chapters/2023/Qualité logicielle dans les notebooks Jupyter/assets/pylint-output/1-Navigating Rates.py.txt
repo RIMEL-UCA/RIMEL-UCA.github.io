@@ -1,0 +1,28 @@
+************* Module 1-Navigating Rates
+python-scripts\1-Navigating Rates.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\1-Navigating Rates.py:1:0: C0103: Module name "1-Navigating Rates" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\1-Navigating Rates.py:41:0: C0413: Import "from gs_quant.markets.portfolio import Portfolio" should be placed at the top of the module (wrong-import-position)
+python-scripts\1-Navigating Rates.py:42:0: C0413: Import "from gs_quant.common import Currency, PayReceive" should be placed at the top of the module (wrong-import-position)
+python-scripts\1-Navigating Rates.py:43:0: C0413: Import "from gs_quant.instrument import IRSwaption" should be placed at the top of the module (wrong-import-position)
+python-scripts\1-Navigating Rates.py:46:0: C0103: Constant name "expiry" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\1-Navigating Rates.py:47:0: C0103: Constant name "notional" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\1-Navigating Rates.py:53:131: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\1-Navigating Rates.py:54:124: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\1-Navigating Rates.py:64:0: C0413: Import "from gs_quant.markets import HistoricalPricingContext" should be placed at the top of the module (wrong-import-position)
+python-scripts\1-Navigating Rates.py:65:0: C0413: Import "from gs_quant.risk import IRAnnualImpliedVol" should be placed at the top of the module (wrong-import-position)
+python-scripts\1-Navigating Rates.py:66:0: C0413: Import "import pandas as pd" should be placed at the top of the module (wrong-import-position)
+python-scripts\1-Navigating Rates.py:67:0: C0413: Import "import datetime as dt" should be placed at the top of the module (wrong-import-position)
+python-scripts\1-Navigating Rates.py:80:0: C0413: Import "import matplotlib.pyplot as plt" should be placed at the top of the module (wrong-import-position)
+python-scripts\1-Navigating Rates.py:142:0: C0413: Import "from gs_quant.risk import MarketDataShockBasedScenario, MarketDataPattern, MarketDataShock, MarketDataShockType" should be placed at the top of the module (wrong-import-position)
+python-scripts\1-Navigating Rates.py:143:0: C0413: Import "from gs_quant.markets import PricingContext" should be placed at the top of the module (wrong-import-position)
+python-scripts\1-Navigating Rates.py:144:0: C0413: Import "from gs_quant.risk import IRVegaParallel, Price" should be placed at the top of the module (wrong-import-position)
+python-scripts\1-Navigating Rates.py:145:0: C0413: Import "from collections import defaultdict" should be placed at the top of the module (wrong-import-position)
+python-scripts\1-Navigating Rates.py:147:9: R1721: Unnecessary use of a comprehension, use list(range(-50, 55, 5)) instead. (unnecessary-comprehension)
+python-scripts\1-Navigating Rates.py:185:0: C0413: Import "from gs_quant.risk import IRSpotRate" should be placed at the top of the module (wrong-import-position)
+python-scripts\1-Navigating Rates.py:67:0: C0411: standard import "import datetime as dt" should be placed before "from gs_quant.session import GsSession" (wrong-import-order)
+python-scripts\1-Navigating Rates.py:145:0: C0411: standard import "from collections import defaultdict" should be placed before "from gs_quant.session import GsSession" (wrong-import-order)
+python-scripts\1-Navigating Rates.py:142:0: C0412: Imports from package gs_quant are not grouped (ungrouped-imports)
+
+------------------------------------------------------------------
+Your code has been rated at 7.05/10 (previous run: 7.05/10, +0.00)
+

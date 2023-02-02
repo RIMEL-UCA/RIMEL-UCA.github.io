@@ -1,0 +1,18 @@
+************* Module 010700_discount_curve_overlay
+python-scripts\010700_discount_curve_overlay.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\010700_discount_curve_overlay.py:1:0: C0103: Module name "010700_discount_curve_overlay" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\010700_discount_curve_overlay.py:28:6: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\010700_discount_curve_overlay.py:44:0: C0413: Import "import pandas as pd" should be placed at the top of the module (wrong-import-position)
+python-scripts\010700_discount_curve_overlay.py:62:6: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\010700_discount_curve_overlay.py:14:0: C0411: standard import "from datetime import datetime" should be placed before "from gs_quant.instrument import IRSwaption" (wrong-import-order)
+python-scripts\010700_discount_curve_overlay.py:11:0: W0611: Unused MarketDataPattern imported from gs_quant.risk (unused-import)
+python-scripts\010700_discount_curve_overlay.py:11:0: W0611: Unused MarketDataShock imported from gs_quant.risk (unused-import)
+python-scripts\010700_discount_curve_overlay.py:11:0: W0611: Unused MarketDataShockType imported from gs_quant.risk (unused-import)
+python-scripts\010700_discount_curve_overlay.py:11:0: W0611: Unused MarketDataShockBasedScenario imported from gs_quant.risk (unused-import)
+python-scripts\010700_discount_curve_overlay.py:11:0: W0611: Unused RollFwd imported from gs_quant.risk (unused-import)
+python-scripts\010700_discount_curve_overlay.py:11:0: W0611: Unused CurveScenario imported from gs_quant.risk (unused-import)
+python-scripts\010700_discount_curve_overlay.py:11:0: W0611: Unused IndexCurveShift imported from gs_quant.risk (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 2.35/10 (previous run: 2.35/10, +0.00)
+

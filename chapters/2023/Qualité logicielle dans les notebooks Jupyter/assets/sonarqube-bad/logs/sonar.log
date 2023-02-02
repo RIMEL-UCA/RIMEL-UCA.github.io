@@ -1,0 +1,66 @@
+2022.12.18 00:41:52 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /opt/sonarqube/temp
+2022.12.18 00:41:52 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on [HTTP: 127.0.0.1:9001, TCP: 127.0.0.1:35103]
+2022.12.18 00:41:52 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[ELASTICSEARCH] from [/opt/sonarqube/elasticsearch]: /opt/sonarqube/elasticsearch/bin/elasticsearch
+2022.12.18 00:41:52 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+2022.12.18 00:41:59 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2022.12.18 00:41:59 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[WEB_SERVER] from [/opt/sonarqube]: /usr/lib/jvm/java-11-openjdk/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/opt/sonarqube/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED --add-exports=java.base/jdk.internal.ref=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.management/sun.management=ALL-UNNAMED --add-opens=jdk.management/com.sun.management.internal=ALL-UNNAMED -Dcom.redhat.fips=false -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/sonar-application-9.7.1.62043.jar:/opt/sonarqube/lib/jdbc/h2/h2-2.1.214.jar org.sonar.server.app.WebServer /opt/sonarqube/temp/sq-process13053983917471275321properties
+2022.12.18 00:43:22 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2022.12.18 00:43:22 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[COMPUTE_ENGINE] from [/opt/sonarqube]: /usr/lib/jvm/java-11-openjdk/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/opt/sonarqube/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-exports=java.base/jdk.internal.ref=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.management/sun.management=ALL-UNNAMED --add-opens=jdk.management/com.sun.management.internal=ALL-UNNAMED -Dcom.redhat.fips=false -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/sonar-application-9.7.1.62043.jar:/opt/sonarqube/lib/jdbc/h2/h2-2.1.214.jar org.sonar.ce.app.CeServer /opt/sonarqube/temp/sq-process4335039148739600308properties
+2022.12.18 00:43:22 WARN  app[][startup] ####################################################################################################################
+2022.12.18 00:43:22 WARN  app[][startup] Default Administrator credentials are still being used. Make sure to change the password or deactivate the account.
+2022.12.18 00:43:22 WARN  app[][startup] ####################################################################################################################
+2022.12.18 00:43:26 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2022.12.18 00:43:26 INFO  app[][o.s.a.SchedulerImpl] SonarQube is operational
+2022.12.18 00:47:34 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2022.12.18 00:47:34 INFO  app[][o.s.a.SchedulerImpl] Sonarqube has been requested to stop
+2022.12.18 00:47:34 INFO  app[][o.s.a.SchedulerImpl] Stopping [Compute Engine] process...
+2022.12.18 00:47:35 INFO  app[][o.s.a.SchedulerImpl] Process[Compute Engine] is stopped
+2022.12.18 00:47:35 INFO  app[][o.s.a.SchedulerImpl] Stopping [Web Server] process...
+2022.12.18 00:47:35 INFO  app[][o.s.a.SchedulerImpl] Process[Web Server] is stopped
+2022.12.18 00:47:35 INFO  app[][o.s.a.SchedulerImpl] Stopping [ElasticSearch] process...
+2022.12.18 00:47:36 INFO  app[][o.s.a.SchedulerImpl] Process[ElasticSearch] is stopped
+2022.12.18 00:47:36 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [ElasticSearch]: 143
+2022.12.18 00:47:36 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+2022.12.18 00:48:03 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /opt/sonarqube/temp
+2022.12.18 00:48:03 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on [HTTP: 127.0.0.1:9001, TCP: 127.0.0.1:33107]
+2022.12.18 00:48:03 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[ELASTICSEARCH] from [/opt/sonarqube/elasticsearch]: /opt/sonarqube/elasticsearch/bin/elasticsearch
+2022.12.18 00:48:03 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+2022.12.18 00:48:18 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2022.12.18 00:48:18 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[WEB_SERVER] from [/opt/sonarqube]: /usr/lib/jvm/java-11-openjdk/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/opt/sonarqube/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED --add-exports=java.base/jdk.internal.ref=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.management/sun.management=ALL-UNNAMED --add-opens=jdk.management/com.sun.management.internal=ALL-UNNAMED -Dcom.redhat.fips=false -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/sonar-application-9.7.1.62043.jar:/opt/sonarqube/lib/jdbc/h2/h2-2.1.214.jar org.sonar.server.app.WebServer /opt/sonarqube/temp/sq-process3485445755320601970properties
+2022.12.18 00:48:51 WARN  app[][startup] ####################################################################################################################
+2022.12.18 00:48:51 WARN  app[][startup] Default Administrator credentials are still being used. Make sure to change the password or deactivate the account.
+2022.12.18 00:48:51 WARN  app[][startup] ####################################################################################################################
+2022.12.18 00:48:51 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2022.12.18 00:48:51 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[COMPUTE_ENGINE] from [/opt/sonarqube]: /usr/lib/jvm/java-11-openjdk/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/opt/sonarqube/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-exports=java.base/jdk.internal.ref=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.management/sun.management=ALL-UNNAMED --add-opens=jdk.management/com.sun.management.internal=ALL-UNNAMED -Dcom.redhat.fips=false -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/sonar-application-9.7.1.62043.jar:/opt/sonarqube/lib/jdbc/h2/h2-2.1.214.jar org.sonar.ce.app.CeServer /opt/sonarqube/temp/sq-process9160087423425524096properties
+2022.12.18 00:48:54 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2022.12.18 00:48:54 INFO  app[][o.s.a.SchedulerImpl] SonarQube is operational
+2022.12.18 08:30:16 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2022.12.18 08:30:16 INFO  app[][o.s.a.SchedulerImpl] Sonarqube has been requested to stop
+2022.12.18 08:30:16 INFO  app[][o.s.a.SchedulerImpl] Stopping [Compute Engine] process...
+2022.12.18 08:30:16 INFO  app[][o.s.a.SchedulerImpl] Process[Compute Engine] is stopped
+2022.12.18 08:30:16 INFO  app[][o.s.a.SchedulerImpl] Stopping [Web Server] process...
+2022.12.18 08:30:18 INFO  app[][o.s.a.SchedulerImpl] Process[Web Server] is stopped
+2022.12.18 08:30:18 INFO  app[][o.s.a.SchedulerImpl] Stopping [ElasticSearch] process...
+2022.12.18 08:30:18 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [ElasticSearch]: 143
+2022.12.18 08:30:18 INFO  app[][o.s.a.SchedulerImpl] Process[ElasticSearch] is stopped
+2022.12.18 08:30:18 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped
+2022.12.18 08:49:24 INFO  app[][o.s.a.AppFileSystem] Cleaning or creating temp directory /opt/sonarqube/temp
+2022.12.18 08:49:24 INFO  app[][o.s.a.es.EsSettings] Elasticsearch listening on [HTTP: 127.0.0.1:9001, TCP: 127.0.0.1:46607]
+2022.12.18 08:49:24 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[ELASTICSEARCH] from [/opt/sonarqube/elasticsearch]: /opt/sonarqube/elasticsearch/bin/elasticsearch
+2022.12.18 08:49:24 INFO  app[][o.s.a.SchedulerImpl] Waiting for Elasticsearch to be up and running
+2022.12.18 08:49:45 INFO  app[][o.s.a.SchedulerImpl] Process[es] is up
+2022.12.18 08:49:45 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[WEB_SERVER] from [/opt/sonarqube]: /usr/lib/jvm/java-11-openjdk/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/opt/sonarqube/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED --add-exports=java.base/jdk.internal.ref=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.management/sun.management=ALL-UNNAMED --add-opens=jdk.management/com.sun.management.internal=ALL-UNNAMED -Dcom.redhat.fips=false -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/sonar-application-9.7.1.62043.jar:/opt/sonarqube/lib/jdbc/h2/h2-2.1.214.jar org.sonar.server.app.WebServer /opt/sonarqube/temp/sq-process13433990060458324710properties
+2022.12.18 08:50:23 INFO  app[][o.s.a.SchedulerImpl] Process[web] is up
+2022.12.18 08:50:23 INFO  app[][o.s.a.ProcessLauncherImpl] Launch process[COMPUTE_ENGINE] from [/opt/sonarqube]: /usr/lib/jvm/java-11-openjdk/bin/java -Djava.awt.headless=true -Dfile.encoding=UTF-8 -Djava.io.tmpdir=/opt/sonarqube/temp -XX:-OmitStackTraceInFastThrow --add-opens=java.base/java.util=ALL-UNNAMED --add-exports=java.base/jdk.internal.ref=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.management/sun.management=ALL-UNNAMED --add-opens=jdk.management/com.sun.management.internal=ALL-UNNAMED -Dcom.redhat.fips=false -Xmx512m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Dhttp.nonProxyHosts=localhost|127.*|[::1] -cp ./lib/sonar-application-9.7.1.62043.jar:/opt/sonarqube/lib/jdbc/h2/h2-2.1.214.jar org.sonar.ce.app.CeServer /opt/sonarqube/temp/sq-process15755775077483783644properties
+2022.12.18 08:50:26 INFO  app[][o.s.a.SchedulerImpl] Process[ce] is up
+2022.12.18 08:50:26 INFO  app[][o.s.a.SchedulerImpl] SonarQube is operational
+2022.12.18 08:58:22 INFO  app[][o.s.a.SchedulerImpl] Stopping SonarQube
+2022.12.18 08:58:22 INFO  app[][o.s.a.SchedulerImpl] Sonarqube has been requested to stop
+2022.12.18 08:58:22 INFO  app[][o.s.a.SchedulerImpl] Stopping [Compute Engine] process...
+2022.12.18 08:58:22 INFO  app[][o.s.a.SchedulerImpl] Process[Compute Engine] is stopped
+2022.12.18 08:58:22 INFO  app[][o.s.a.SchedulerImpl] Stopping [Web Server] process...
+2022.12.18 08:58:22 INFO  app[][o.s.a.SchedulerImpl] Process[Web Server] is stopped
+2022.12.18 08:58:22 INFO  app[][o.s.a.SchedulerImpl] Stopping [ElasticSearch] process...
+2022.12.18 08:58:23 WARN  app[][o.s.a.p.AbstractManagedProcess] Process exited with exit value [ElasticSearch]: 143
+2022.12.18 08:58:23 INFO  app[][o.s.a.SchedulerImpl] Process[ElasticSearch] is stopped
+2022.12.18 08:58:23 INFO  app[][o.s.a.SchedulerImpl] SonarQube is stopped

@@ -1,0 +1,19 @@
+************* Module sem11-visualization
+python-scripts\sem11-visualization.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\sem11-visualization.py:1:0: C0103: Module name "sem11-visualization" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\sem11-visualization.py:79:0: C0103: Constant name "feature" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\sem11-visualization.py:90:0: C0103: Constant name "feature" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\sem11-visualization.py:248:0: C0200: Consider using enumerate instead of iterating with range and len (consider-using-enumerate)
+python-scripts\sem11-visualization.py:311:0: C0413: Import "from sklearn.utils import shuffle" should be placed at the top of the module (wrong-import-position)
+python-scripts\sem11-visualization.py:312:0: C0413: Import "from sklearn.preprocessing import scale" should be placed at the top of the module (wrong-import-position)
+python-scripts\sem11-visualization.py:326:0: C0103: Constant name "subset_l" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\sem11-visualization.py:337:0: C0413: Import "from sklearn.manifold import TSNE" should be placed at the top of the module (wrong-import-position)
+python-scripts\sem11-visualization.py:338:0: R0402: Use 'from matplotlib import cm' instead (consider-using-from-import)
+python-scripts\sem11-visualization.py:338:0: C0413: Import "import matplotlib.cm as cm" should be placed at the top of the module (wrong-import-position)
+python-scripts\sem11-visualization.py:358:0: C0413: Import "from sklearn.manifold import MDS" should be placed at the top of the module (wrong-import-position)
+python-scripts\sem11-visualization.py:359:0: C0413: Import "from sklearn.metrics.pairwise import pairwise_distances" should be placed at the top of the module (wrong-import-position)
+python-scripts\sem11-visualization.py:358:0: C0412: Imports from package sklearn are not grouped (ungrouped-imports)
+
+-----------------------------------
+Your code has been rated at 8.98/10
+

@@ -1,0 +1,77 @@
+2022.12.12 15:15:49 INFO  ce[][o.s.p.ProcessEntryPoint] Starting Compute Engine
+2022.12.12 15:15:49 INFO  ce[][o.s.ce.app.CeServer] Compute Engine starting up...
+2022.12.12 15:15:49 INFO  ce[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar;NON_KEYWORDS=VALUE
+2022.12.12 15:15:49 INFO  ce[][c.z.h.HikariDataSource] HikariPool-1 - Starting...
+2022.12.12 15:15:50 INFO  ce[][c.z.h.p.HikariPool] HikariPool-1 - Added connection conn0: url=jdbc:h2:tcp://127.0.0.1:9092/sonar user=
+2022.12.12 15:15:50 INFO  ce[][c.z.h.HikariDataSource] HikariPool-1 - Start completed.
+2022.12.12 15:15:50 WARN  ce[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2022.12.12 15:15:51 INFO  ce[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /opt/sonarqube
+2022.12.12 15:15:51 INFO  ce[][o.s.c.c.CePluginRepository] Load plugins
+2022.12.12 15:15:52 INFO  ce[][o.s.c.c.ComputeEngineContainerImpl] Running Community edition
+2022.12.12 15:15:52 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is started
+2022.12.12 15:34:06 INFO  ce[][o.s.c.t.CeWorkerImpl] Execute task | project=01_the_machine_learning_landscape | type=REPORT | id=AYUG-Mwi4MWKgx2Yeohk | submitter=admin
+2022.12.12 15:34:07 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Extract report | status=SUCCESS | time=10ms
+2022.12.12 15:34:07 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Persist scanner context | status=SUCCESS | time=10ms
+2022.12.12 15:34:07 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Propagate analysis warnings from scanner report | status=SUCCESS | time=29ms
+2022.12.12 15:34:07 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Generate analysis UUID | status=SUCCESS | time=0ms
+2022.12.12 15:34:07 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Load analysis metadata | status=SUCCESS | time=68ms
+2022.12.12 15:34:07 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Initialize | status=SUCCESS | time=0ms
+2022.12.12 15:34:07 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Build tree of components | components=3 | status=SUCCESS | time=53ms
+2022.12.12 15:34:07 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Validate project | status=SUCCESS | time=5ms
+2022.12.12 15:34:07 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [http://localhost:9001]
+2022.12.12 15:34:11 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Load quality profiles | status=SUCCESS | time=3139ms
+2022.12.12 15:34:11 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Load file hashes and statuses | status=SUCCESS | time=6ms
+2022.12.12 15:34:11 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Load Quality gate | status=SUCCESS | time=18ms
+2022.12.12 15:34:11 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Load new code period | status=SUCCESS | time=7ms
+2022.12.12 15:34:11 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Detect file moves | status=SUCCESS | time=0ms
+2022.12.12 15:34:11 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Load duplications | duplications=2 | status=SUCCESS | time=12ms
+2022.12.12 15:34:11 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Compute cross project duplications | status=SUCCESS | time=0ms
+2022.12.12 15:34:11 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Compute size measures | status=SUCCESS | time=16ms
+2022.12.12 15:34:11 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Compute new coverage | status=SUCCESS | time=7ms
+2022.12.12 15:34:11 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Compute coverage measures | status=SUCCESS | time=8ms
+2022.12.12 15:34:11 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Compute comment measures | status=SUCCESS | time=2ms
+2022.12.12 15:34:11 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Compute duplication measures | status=SUCCESS | time=3ms
+2022.12.12 15:34:11 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Compute size measures on new code | status=SUCCESS | time=2ms
+2022.12.12 15:34:11 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Compute language distribution | status=SUCCESS | time=28ms
+2022.12.12 15:34:11 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Compute test measures | status=SUCCESS | time=1ms
+2022.12.12 15:34:11 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Compute complexity measures | status=SUCCESS | time=2ms
+2022.12.12 15:34:11 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Load measure computers | status=SUCCESS | time=5ms
+2022.12.12 15:34:11 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Compute Quality Profile status | status=SUCCESS | time=5ms
+2022.12.12 15:34:11 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Execute component visitors | status=SUCCESS | time=439ms
+2022.12.12 15:34:11 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Checks executed after computation of measures | status=SUCCESS | time=0ms
+2022.12.12 15:34:11 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Compute Quality Gate measures | status=SUCCESS | time=13ms
+2022.12.12 15:34:11 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Compute Quality profile measures | status=SUCCESS | time=12ms
+2022.12.12 15:34:11 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Generate Quality profile events | status=SUCCESS | time=3ms
+2022.12.12 15:34:11 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Generate Quality gate events | status=SUCCESS | time=3ms
+2022.12.12 15:34:11 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Check upgrade possibility for not analyzed code files. | status=SUCCESS | time=2ms
+2022.12.12 15:34:11 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Persist scanner analysis cache | status=SUCCESS | time=0ms
+2022.12.12 15:34:12 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Persist components | status=SUCCESS | time=29ms
+2022.12.12 15:34:12 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Persist analysis | status=SUCCESS | time=5ms
+2022.12.12 15:34:12 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Persist analysis properties | status=SUCCESS | time=8ms
+2022.12.12 15:34:12 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Persist measures | inserts=50 | status=SUCCESS | time=101ms
+2022.12.12 15:34:12 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Persist live measures | insertsOrUpdates=138 | status=SUCCESS | time=104ms
+2022.12.12 15:34:12 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Persist duplication data | insertsOrUpdates=0 | status=SUCCESS | time=14ms
+2022.12.12 15:34:12 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Persist new ad hoc Rules | status=SUCCESS | time=0ms
+2022.12.12 15:34:12 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Persist issues | cacheSize=8.9 kB | inserts=14 | updates=0 | merged=0 | status=SUCCESS | time=27ms
+2022.12.12 15:34:12 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Delete issue changes | changes=0 | status=SUCCESS | time=1ms
+2022.12.12 15:34:12 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Persist project links | status=SUCCESS | time=6ms
+2022.12.12 15:34:12 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Persist events | status=SUCCESS | time=9ms
+2022.12.12 15:34:12 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Persist sources | status=SUCCESS | time=143ms
+2022.12.12 15:34:12 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Persist cross project duplications | status=SUCCESS | time=0ms
+2022.12.12 15:34:12 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Enable analysis | status=SUCCESS | time=5ms
+2022.12.12 15:34:12 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Update last usage date of quality profiles | status=SUCCESS | time=14ms
+2022.12.12 15:34:12 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Purge db | status=SUCCESS | time=150ms
+2022.12.12 15:34:13 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Index analysis | status=SUCCESS | time=1197ms
+2022.12.12 15:34:13 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Update need issue sync for branch | status=SUCCESS | time=3ms
+2022.12.12 15:34:13 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Publishing taint vulnerabilities events | status=SUCCESS | time=3ms
+2022.12.12 15:34:13 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Send issue notifications | newIssuesNotifs=0 | newIssuesDeliveries=0 | myNewIssuesNotifs=0 | myNewIssuesDeliveries=0 | changesNotifs=0 | changesDeliveries=0 | status=SUCCESS | time=7ms
+2022.12.12 15:34:13 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Publish task results | status=SUCCESS | time=1ms
+2022.12.12 15:34:13 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.s.ComputationStepExecutor] Trigger refresh of Portfolios and Applications | status=SUCCESS | time=0ms
+2022.12.12 15:34:13 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.p.a.p.PostProjectAnalysisTasksExecutor] Webhooks | globalWebhooks=0 | projectWebhooks=0 | status=SUCCESS | time=8ms
+2022.12.12 15:34:13 INFO  ce[AYUG-Mwi4MWKgx2Yeohk][o.s.c.t.CeWorkerImpl] Executed task | project=01_the_machine_learning_landscape | type=REPORT | id=AYUG-Mwi4MWKgx2Yeohk | submitter=admin | status=SUCCESS | time=7071ms
+2022.12.12 15:53:15 INFO  ce[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2022.12.12 15:53:15 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopping...
+2022.12.12 15:53:15 INFO  ce[][o.s.c.t.CeProcessingSchedulerImpl] Gracefully stopping workers...
+2022.12.12 15:53:15 INFO  ce[][c.z.h.HikariDataSource] HikariPool-1 - Shutdown initiated...
+2022.12.12 15:53:15 INFO  ce[][c.z.h.HikariDataSource] HikariPool-1 - Shutdown completed.
+2022.12.12 15:53:15 INFO  ce[][o.s.ce.app.CeServer] Compute Engine is stopped

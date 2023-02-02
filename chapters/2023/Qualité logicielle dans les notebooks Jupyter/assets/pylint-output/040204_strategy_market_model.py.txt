@@ -1,0 +1,25 @@
+************* Module 040204_strategy_market_model
+python-scripts\040204_strategy_market_model.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\040204_strategy_market_model.py:1:0: C0103: Module name "040204_strategy_market_model" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\040204_strategy_market_model.py:10:0: W0401: Wildcard import gs_quant.backtests.triggers (wildcard-import)
+python-scripts\040204_strategy_market_model.py:11:0: W0401: Wildcard import gs_quant.backtests.actions (wildcard-import)
+python-scripts\040204_strategy_market_model.py:12:0: W0401: Wildcard import gs_quant.backtests.equity_vol_engine (wildcard-import)
+python-scripts\040204_strategy_market_model.py:39:15: E0602: Undefined variable 'EnterPositionQuantityScaledAction' (undefined-variable)
+python-scripts\040204_strategy_market_model.py:39:134: E0602: Undefined variable 'BacktestTradingQuantityType' (undefined-variable)
+python-scripts\040204_strategy_market_model.py:40:16: E0602: Undefined variable 'PeriodicTrigger' (undefined-variable)
+python-scripts\040204_strategy_market_model.py:40:53: E0602: Undefined variable 'PeriodicTriggerRequirements' (undefined-variable)
+python-scripts\040204_strategy_market_model.py:52:11: E0602: Undefined variable 'EquityVolEngine' (undefined-variable)
+python-scripts\040204_strategy_market_model.py:53:38: E0602: Undefined variable 'FlowVolBacktestMeasure' (undefined-variable)
+python-scripts\040204_strategy_market_model.py:54:40: E0602: Undefined variable 'FlowVolBacktestMeasure' (undefined-variable)
+python-scripts\040204_strategy_market_model.py:55:40: E0602: Undefined variable 'FlowVolBacktestMeasure' (undefined-variable)
+python-scripts\040204_strategy_market_model.py:56:39: E0602: Undefined variable 'FlowVolBacktestMeasure' (undefined-variable)
+python-scripts\040204_strategy_market_model.py:62:11: E0602: Undefined variable 'EquityVolEngine' (undefined-variable)
+python-scripts\040204_strategy_market_model.py:63:38: E0602: Undefined variable 'FlowVolBacktestMeasure' (undefined-variable)
+python-scripts\040204_strategy_market_model.py:64:40: E0602: Undefined variable 'FlowVolBacktestMeasure' (undefined-variable)
+python-scripts\040204_strategy_market_model.py:65:40: E0602: Undefined variable 'FlowVolBacktestMeasure' (undefined-variable)
+python-scripts\040204_strategy_market_model.py:66:39: E0602: Undefined variable 'FlowVolBacktestMeasure' (undefined-variable)
+python-scripts\040204_strategy_market_model.py:14:0: C0411: standard import "from datetime import date" should be placed before "from gs_quant.session import GsSession, Environment" (wrong-import-order)
+
+------------------------------------------------------------------
+Your code has been rated at 0.00/10 (previous run: 0.00/10, +0.00)
+

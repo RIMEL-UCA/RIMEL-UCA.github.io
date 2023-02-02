@@ -1,0 +1,16 @@
+************* Module C4_W2_lecture_notebook_Attention
+python-scripts\C4_W2_lecture_notebook_Attention.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\C4_W2_lecture_notebook_Attention.py:1:0: C0103: Module name "C4_W2_lecture_notebook_Attention" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\C4_W2_lecture_notebook_Attention.py:63:18: C0103: Argument name "t" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\C4_W2_lecture_notebook_Attention.py:68:19: C0103: Argument name "t" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\C4_W2_lecture_notebook_Attention.py:95:0: C0103: Function name "DotProductAttention" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\C4_W2_lecture_notebook_Attention.py:143:31: C0103: Argument name "q" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\C4_W2_lecture_notebook_Attention.py:143:37: C0103: Argument name "v" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\C4_W2_lecture_notebook_Attention.py:143:31: W0621: Redefining name 'q' from outer scope (line 78) (redefined-outer-name)
+python-scripts\C4_W2_lecture_notebook_Attention.py:143:34: W0621: Redefining name 'k' from outer scope (line 80) (redefined-outer-name)
+python-scripts\C4_W2_lecture_notebook_Attention.py:143:37: W0621: Redefining name 'v' from outer scope (line 82) (redefined-outer-name)
+python-scripts\C4_W2_lecture_notebook_Attention.py:49:0: C0411: standard import "import textwrap" should be placed before "import numpy as np" (wrong-import-order)
+
+------------------------------------------------------------------
+Your code has been rated at 6.94/10 (previous run: 6.94/10, +0.00)
+

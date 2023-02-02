@@ -1,0 +1,24 @@
+************* Module 040201_strategy_delta_hedged
+python-scripts\040201_strategy_delta_hedged.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\040201_strategy_delta_hedged.py:1:0: C0103: Module name "040201_strategy_delta_hedged" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\040201_strategy_delta_hedged.py:10:0: W0401: Wildcard import gs_quant.backtests.triggers (wildcard-import)
+python-scripts\040201_strategy_delta_hedged.py:11:0: W0401: Wildcard import gs_quant.backtests.actions (wildcard-import)
+python-scripts\040201_strategy_delta_hedged.py:12:0: W0401: Wildcard import gs_quant.backtests.equity_vol_engine (wildcard-import)
+python-scripts\040201_strategy_delta_hedged.py:36:65: E0602: Undefined variable 'BuySell' (undefined-variable)
+python-scripts\040201_strategy_delta_hedged.py:38:65: E0602: Undefined variable 'BuySell' (undefined-variable)
+python-scripts\040201_strategy_delta_hedged.py:40:18: E0602: Undefined variable 'Portfolio' (undefined-variable)
+python-scripts\040201_strategy_delta_hedged.py:48:15: E0602: Undefined variable 'EnterPositionQuantityScaledAction' (undefined-variable)
+python-scripts\040201_strategy_delta_hedged.py:48:130: E0602: Undefined variable 'BacktestTradingQuantityType' (undefined-variable)
+python-scripts\040201_strategy_delta_hedged.py:49:16: E0602: Undefined variable 'PeriodicTrigger' (undefined-variable)
+python-scripts\040201_strategy_delta_hedged.py:49:53: E0602: Undefined variable 'PeriodicTriggerRequirements' (undefined-variable)
+python-scripts\040201_strategy_delta_hedged.py:53:15: E0602: Undefined variable 'HedgeAction' (undefined-variable)
+python-scripts\040201_strategy_delta_hedged.py:53:27: E0602: Undefined variable 'EqDelta' (undefined-variable)
+python-scripts\040201_strategy_delta_hedged.py:54:16: E0602: Undefined variable 'PeriodicTrigger' (undefined-variable)
+python-scripts\040201_strategy_delta_hedged.py:54:53: E0602: Undefined variable 'PeriodicTriggerRequirements' (undefined-variable)
+python-scripts\040201_strategy_delta_hedged.py:68:11: E0602: Undefined variable 'EquityVolEngine' (undefined-variable)
+python-scripts\040201_strategy_delta_hedged.py:74:34: E0602: Undefined variable 'FlowVolBacktestMeasure' (undefined-variable)
+python-scripts\040201_strategy_delta_hedged.py:14:0: C0411: standard import "from datetime import date" should be placed before "from gs_quant.session import GsSession, Environment" (wrong-import-order)
+
+------------------------------------------------------------------
+Your code has been rated at 0.00/10 (previous run: 0.00/10, +0.00)
+

@@ -1,0 +1,24 @@
+************* Module 13-Cyclicals
+python-scripts\13-Cyclicals.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\13-Cyclicals.py:1:0: C0103: Module name "13-Cyclicals" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\13-Cyclicals.py:36:0: C0413: Import "from gs_quant.data import Dataset" should be placed at the top of the module (wrong-import-position)
+python-scripts\13-Cyclicals.py:37:0: C0413: Import "from gs_quant.api.fred.data import FredDataApi" should be placed at the top of the module (wrong-import-position)
+python-scripts\13-Cyclicals.py:38:0: C0413: Import "from gs_quant.timeseries import returns" should be placed at the top of the module (wrong-import-position)
+python-scripts\13-Cyclicals.py:39:0: C0413: Import "from datetime import date" should be placed at the top of the module (wrong-import-position)
+python-scripts\13-Cyclicals.py:40:0: C0413: Import "import pandas as pd" should be placed at the top of the module (wrong-import-position)
+python-scripts\13-Cyclicals.py:55:0: W0106: Expression "rets.head(3) * 100" is assigned to nothing (expression-not-assigned)
+python-scripts\13-Cyclicals.py:62:0: C0413: Import "from scipy.stats import pearsonr" should be placed at the top of the module (wrong-import-position)
+python-scripts\13-Cyclicals.py:75:0: C0413: Import "import seaborn as sns" should be placed at the top of the module (wrong-import-position)
+python-scripts\13-Cyclicals.py:87:0: C0413: Import "from gs_quant.markets import PricingContext" should be placed at the top of the module (wrong-import-position)
+python-scripts\13-Cyclicals.py:88:0: C0413: Import "from gs_quant.markets.portfolio import Portfolio" should be placed at the top of the module (wrong-import-position)
+python-scripts\13-Cyclicals.py:89:0: C0413: Import "from gs_quant.instrument import FXBinary" should be placed at the top of the module (wrong-import-position)
+python-scripts\13-Cyclicals.py:90:0: C0413: Import "from gs_quant.risk import FXSpot" should be placed at the top of the module (wrong-import-position)
+python-scripts\13-Cyclicals.py:92:0: C0103: Constant name "payout_ratio" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\13-Cyclicals.py:104:0: C0413: Import "from gs_quant.timeseries import volatility" should be placed at the top of the module (wrong-import-position)
+python-scripts\13-Cyclicals.py:124:0: C0413: Import "import matplotlib.pyplot as plt" should be placed at the top of the module (wrong-import-position)
+python-scripts\13-Cyclicals.py:39:0: C0411: standard import "from datetime import date" should be placed before "from gs_quant.session import GsSession" (wrong-import-order)
+python-scripts\13-Cyclicals.py:87:0: C0412: Imports from package gs_quant are not grouped (ungrouped-imports)
+
+------------------------------------------------------------------
+Your code has been rated at 6.42/10 (previous run: 6.42/10, +0.00)
+

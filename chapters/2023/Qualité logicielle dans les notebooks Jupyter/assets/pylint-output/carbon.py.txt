@@ -1,0 +1,11 @@
+************* Module carbon
+python-scripts\carbon.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\carbon.py:25:0: C0103: Constant name "client" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\carbon.py:26:0: C0103: Constant name "secret" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\carbon.py:27:0: C0103: Constant name "scopes" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\carbon.py:120:0: C0103: Constant name "identifier" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\carbon.py:125:4: W0707: Consider explicitly re-raising using 'except Exception as exc' and 'raise ValueError('Error in resolving the following identifier: ' + identifier) from exc' (raise-missing-from)
+
+------------------------------------------------------------------
+Your code has been rated at 7.78/10 (previous run: 7.78/10, +0.00)
+

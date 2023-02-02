@@ -1,0 +1,22 @@
+************* Module 02.1-Machine-Learning-Intro
+python-scripts\02.1-Machine-Learning-Intro.py:219:0: W0301: Unnecessary semicolon (unnecessary-semicolon)
+python-scripts\02.1-Machine-Learning-Intro.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\02.1-Machine-Learning-Intro.py:1:0: C0103: Module name "1-Machine-Learning-Intro" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\02.1-Machine-Learning-Intro.py:55:0: C0413: Import "from fig_code import plot_sgd_separator" should be placed at the top of the module (wrong-import-position)
+python-scripts\02.1-Machine-Learning-Intro.py:72:0: C0413: Import "from fig_code import plot_linear_regression" should be placed at the top of the module (wrong-import-position)
+python-scripts\02.1-Machine-Learning-Intro.py:122:0: C0413: Import "from IPython.core.display import Image, display" should be placed at the top of the module (wrong-import-position)
+python-scripts\02.1-Machine-Learning-Intro.py:168:0: C0413: Import "from sklearn.datasets import load_iris" should be placed at the top of the module (wrong-import-position)
+python-scripts\02.1-Machine-Learning-Intro.py:205:0: C0413: Import "import numpy as np" should be placed at the top of the module (wrong-import-position)
+python-scripts\02.1-Machine-Learning-Intro.py:206:0: W0404: Reimport 'matplotlib.pyplot' (imported line 47) (reimported)
+python-scripts\02.1-Machine-Learning-Intro.py:206:0: C0413: Import "import matplotlib.pyplot as plt" should be placed at the top of the module (wrong-import-position)
+python-scripts\02.1-Machine-Learning-Intro.py:208:0: C0103: Constant name "x_index" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\02.1-Machine-Learning-Intro.py:209:0: C0103: Constant name "y_index" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\02.1-Machine-Learning-Intro.py:259:0: C0413: Import "from sklearn import datasets" should be placed at the top of the module (wrong-import-position)
+python-scripts\02.1-Machine-Learning-Intro.py:206:0: C0412: Imports from package matplotlib are not grouped (ungrouped-imports)
+python-scripts\02.1-Machine-Learning-Intro.py:259:0: C0412: Imports from package sklearn are not grouped (ungrouped-imports)
+python-scripts\02.1-Machine-Learning-Intro.py:205:0: W0611: Unused numpy imported as np (unused-import)
+python-scripts\02.1-Machine-Learning-Intro.py:259:0: W0611: Unused datasets imported from sklearn (unused-import)
+
+-----------------------------------
+Your code has been rated at 5.00/10
+

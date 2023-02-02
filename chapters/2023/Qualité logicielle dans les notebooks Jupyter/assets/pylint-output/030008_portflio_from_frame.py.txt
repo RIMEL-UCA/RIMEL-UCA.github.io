@@ -1,0 +1,10 @@
+************* Module 030008_portflio_from_frame
+python-scripts\030008_portflio_from_frame.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\030008_portflio_from_frame.py:1:0: C0103: Module name "030008_portflio_from_frame" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\030008_portflio_from_frame.py:28:0: C0413: Import "import pandas as pd" should be placed at the top of the module (wrong-import-position)
+python-scripts\030008_portflio_from_frame.py:77:0: C0413: Import "from gs_quant.markets.portfolio import Portfolio" should be placed at the top of the module (wrong-import-position)
+python-scripts\030008_portflio_from_frame.py:77:0: C0412: Imports from package gs_quant are not grouped (ungrouped-imports)
+
+------------------------------------------------------------------
+Your code has been rated at 3.75/10 (previous run: 3.75/10, +0.00)
+

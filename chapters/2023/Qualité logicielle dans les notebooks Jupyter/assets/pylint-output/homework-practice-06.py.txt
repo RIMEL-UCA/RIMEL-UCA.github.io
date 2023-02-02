@@ -1,0 +1,29 @@
+************* Module homework-practice-06
+python-scripts\homework-practice-06.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\homework-practice-06.py:1:0: C0103: Module name "homework-practice-06" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\homework-practice-06.py:61:0: W0104: Statement seems to have no effect (pointless-statement)
+python-scripts\homework-practice-06.py:129:38: C0103: Argument name "X" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\homework-practice-06.py:129:41: C0103: Argument name "y" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\homework-practice-06.py:129:38: W0621: Redefining name 'X' from outer scope (line 55) (redefined-outer-name)
+python-scripts\homework-practice-06.py:129:41: W0621: Redefining name 'y' from outer scope (line 56) (redefined-outer-name)
+python-scripts\homework-practice-06.py:129:27: W0613: Unused argument 'regressor' (unused-argument)
+python-scripts\homework-practice-06.py:129:38: W0613: Unused argument 'X' (unused-argument)
+python-scripts\homework-practice-06.py:129:41: W0613: Unused argument 'y' (unused-argument)
+python-scripts\homework-practice-06.py:129:44: W0613: Unused argument 'num_runs' (unused-argument)
+python-scripts\homework-practice-06.py:176:32: C0103: Argument name "X" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\homework-practice-06.py:176:35: C0103: Argument name "y" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\homework-practice-06.py:176:0: R0913: Too many arguments (6/5) (too-many-arguments)
+python-scripts\homework-practice-06.py:176:32: W0621: Redefining name 'X' from outer scope (line 55) (redefined-outer-name)
+python-scripts\homework-practice-06.py:176:35: W0621: Redefining name 'y' from outer scope (line 56) (redefined-outer-name)
+python-scripts\homework-practice-06.py:176:21: W0613: Unused argument 'regressor' (unused-argument)
+python-scripts\homework-practice-06.py:176:32: W0613: Unused argument 'X' (unused-argument)
+python-scripts\homework-practice-06.py:176:35: W0613: Unused argument 'y' (unused-argument)
+python-scripts\homework-practice-06.py:176:38: W0613: Unused argument 'num_runs' (unused-argument)
+python-scripts\homework-practice-06.py:176:52: W0613: Unused argument 'num_test_objects' (unused-argument)
+python-scripts\homework-practice-06.py:176:73: W0613: Unused argument 'title' (unused-argument)
+python-scripts\homework-practice-06.py:39:0: W0611: Unused pandas imported as pd (unused-import)
+python-scripts\homework-practice-06.py:40:0: W0611: Unused pyplot imported from matplotlib as plt (unused-import)
+
+-----------------------------------
+Your code has been rated at 0.00/10
+

@@ -1,0 +1,16 @@
+************* Module adjust_text_polar_patched
+python-scripts\adjust_text_polar_patched.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\adjust_text_polar_patched.py:7:0: W0401: Wildcard import adjustText (wildcard-import)
+python-scripts\adjust_text_polar_patched.py:24:22: W0621: Redefining name 'angles' from outer scope (line 137) (redefined-outer-name)
+python-scripts\adjust_text_polar_patched.py:24:29: W0621: Redefining name 'values' from outer scope (line 161) (redefined-outer-name)
+python-scripts\adjust_text_polar_patched.py:121:12: R1735: Consider using {} instead of dict() (use-dict-literal)
+python-scripts\adjust_text_polar_patched.py:156:9: R1734: Consider using [] instead of list() (use-list-literal)
+python-scripts\adjust_text_polar_patched.py:166:4: C0103: Constant name "size" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\adjust_text_polar_patched.py:167:4: C0103: Constant name "color" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\adjust_text_polar_patched.py:171:8: C0103: Constant name "labeled" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\adjust_text_polar_patched.py:172:0: E0602: Undefined variable 'adjust_text' (undefined-variable)
+python-scripts\adjust_text_polar_patched.py:13:0: C0411: standard import "from math import pi" should be placed before "from adjustText import *" (wrong-import-order)
+
+-----------------------------------
+Your code has been rated at 7.66/10
+

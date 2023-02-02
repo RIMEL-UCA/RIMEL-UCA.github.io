@@ -1,0 +1,19 @@
+************* Module 0005_get_vol_surface
+python-scripts\0005_get_vol_surface.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\0005_get_vol_surface.py:1:0: C0103: Module name "0005_get_vol_surface" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\0005_get_vol_surface.py:15:0: C0413: Import "from gs_quant.data import Dataset" should be placed at the top of the module (wrong-import-position)
+python-scripts\0005_get_vol_surface.py:16:0: C0413: Import "import datetime as dt" should be placed at the top of the module (wrong-import-position)
+python-scripts\0005_get_vol_surface.py:23:0: C0103: Constant name "dataset_id" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\0005_get_vol_surface.py:32:0: W0104: Statement seems to have no effect (pointless-statement)
+python-scripts\0005_get_vol_surface.py:49:5: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+python-scripts\0005_get_vol_surface.py:57:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\0005_get_vol_surface.py:64:4: W0621: Redefining name 'df' from outer scope (line 40) (redefined-outer-name)
+python-scripts\0005_get_vol_surface.py:67:49: W0621: Redefining name 'f' from outer scope (line 49) (redefined-outer-name)
+python-scripts\0005_get_vol_surface.py:64:4: C0103: Variable name "df" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\0005_get_vol_surface.py:67:9: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+python-scripts\0005_get_vol_surface.py:67:49: C0103: Variable name "f" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\0005_get_vol_surface.py:16:0: C0411: standard import "import datetime as dt" should be placed before "from gs_quant.session import GsSession" (wrong-import-order)
+
+------------------------------------------------------------------
+Your code has been rated at 3.91/10 (previous run: 3.91/10, +0.00)
+

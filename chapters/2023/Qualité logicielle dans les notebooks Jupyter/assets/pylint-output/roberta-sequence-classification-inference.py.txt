@@ -1,0 +1,15 @@
+************* Module roberta-sequence-classification-inference
+python-scripts\roberta-sequence-classification-inference.py:57:0: C0325: Unnecessary parens after 'if' keyword (superfluous-parens)
+python-scripts\roberta-sequence-classification-inference.py:59:0: C0325: Unnecessary parens after 'elif' keyword (superfluous-parens)
+python-scripts\roberta-sequence-classification-inference.py:65:0: C0305: Trailing newlines (trailing-newlines)
+python-scripts\roberta-sequence-classification-inference.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\roberta-sequence-classification-inference.py:1:0: C0103: Module name "roberta-sequence-classification-inference" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\roberta-sequence-classification-inference.py:22:0: C0103: Constant name "text" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\roberta-sequence-classification-inference.py:34:0: C0413: Import "import onnxruntime" should be placed at the top of the module (wrong-import-position)
+python-scripts\roberta-sequence-classification-inference.py:43:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\roberta-sequence-classification-inference.py:19:0: W0611: Unused TransformerModel imported from simpletransformers.model (unused-import)
+python-scripts\roberta-sequence-classification-inference.py:20:0: W0611: Unused RobertaForSequenceClassification imported from transformers (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 4.44/10 (previous run: 4.44/10, +0.00)
+

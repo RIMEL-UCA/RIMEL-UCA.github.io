@@ -1,0 +1,22 @@
+************* Module 10-autoencoder
+python-scripts\10-autoencoder.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\10-autoencoder.py:1:0: C0103: Module name "10-autoencoder" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\10-autoencoder.py:24:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\10-autoencoder.py:24:11: C0103: Argument name "y" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\10-autoencoder.py:24:11: W0621: Redefining name 'y' from outer scope (line 275) (redefined-outer-name)
+python-scripts\10-autoencoder.py:34:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\10-autoencoder.py:34:29: C0103: Argument name "n" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\10-autoencoder.py:35:8: W0621: Redefining name 'N' from outer scope (line 287) (redefined-outer-name)
+python-scripts\10-autoencoder.py:39:16: W0621: Redefining name 'i' from outer scope (line 240) (redefined-outer-name)
+python-scripts\10-autoencoder.py:35:8: C0103: Variable name "N" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\10-autoencoder.py:55:0: C0103: Constant name "batch_size" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\10-autoencoder.py:76:0: C0103: Constant name "d" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\10-autoencoder.py:79:0: C0115: Missing class docstring (missing-class-docstring)
+python-scripts\10-autoencoder.py:91:4: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\10-autoencoder.py:91:22: C0103: Argument name "y" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\10-autoencoder.py:91:22: W0621: Redefining name 'y' from outer scope (line 275) (redefined-outer-name)
+python-scripts\10-autoencoder.py:1:0: F0002: python-scripts\10-autoencoder.py: Fatal error while checking 'python-scripts\10-autoencoder.py'. Please open an issue in our bug tracker so we address this. There is a pre-filled template that you can use in 'C:\Users\arthd\AppData\Local\pylint\pylint\Cache\pylint-crash-2023-02-01-20-34-25.txt'. (astroid-error)
+
+------------------------------------------------------------------
+Your code has been rated at 0.00/10 (previous run: 0.00/10, +0.00)
+

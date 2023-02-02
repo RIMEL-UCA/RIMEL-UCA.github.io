@@ -1,0 +1,24 @@
+************* Module custom_augmenter
+python-scripts\custom_augmenter.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\custom_augmenter.py:18:0: C0103: Constant name "text" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\custom_augmenter.py:25:0: C0413: Import "from nlpaug.augmenter.char import CharAugmenter" should be placed at the top of the module (wrong-import-position)
+python-scripts\custom_augmenter.py:30:0: C0115: Missing class docstring (missing-class-docstring)
+python-scripts\custom_augmenter.py:31:4: R0913: Too many arguments (14/5) (too-many-arguments)
+python-scripts\custom_augmenter.py:43:4: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\custom_augmenter.py:77:4: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\custom_augmenter.py:81:0: C0115: Missing class docstring (missing-class-docstring)
+python-scripts\custom_augmenter.py:99:4: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\custom_augmenter.py:99:22: C0103: Argument name "x" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\custom_augmenter.py:114:0: C0413: Import "from nlpaug.augmenter.word import WordAugmenter" should be placed at the top of the module (wrong-import-position)
+python-scripts\custom_augmenter.py:119:0: C0115: Missing class docstring (missing-class-docstring)
+python-scripts\custom_augmenter.py:120:4: R0913: Too many arguments (11/5) (too-many-arguments)
+python-scripts\custom_augmenter.py:123:8: R1725: Consider using Python 3 style super() without arguments (super-with-arguments)
+python-scripts\custom_augmenter.py:122:31: W0613: Unused argument 'verbose' (unused-argument)
+python-scripts\custom_augmenter.py:149:4: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\custom_augmenter.py:9:0: W0611: Unused nlpaug.augmenter.char imported as nac (unused-import)
+python-scripts\custom_augmenter.py:10:0: W0611: Unused nlpaug.augmenter.word imported as naw (unused-import)
+python-scripts\custom_augmenter.py:11:0: W0611: Unused nlpaug.flow imported as naf (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 6.94/10 (previous run: 6.77/10, +0.16)
+

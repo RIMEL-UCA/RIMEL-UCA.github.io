@@ -1,0 +1,19 @@
+************* Module lab-10_2_mnist_deep_cnn
+python-scripts\lab-10_2_mnist_deep_cnn.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\lab-10_2_mnist_deep_cnn.py:1:0: C0103: Module name "lab-10_2_mnist_deep_cnn" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\lab-10_2_mnist_deep_cnn.py:10:0: R0402: Use 'from torchvision import transforms' instead (consider-using-from-import)
+python-scripts\lab-10_2_mnist_deep_cnn.py:16:0: C0103: Constant name "device" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-10_2_mnist_deep_cnn.py:27:0: C0103: Constant name "learning_rate" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-10_2_mnist_deep_cnn.py:28:0: C0103: Constant name "training_epochs" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-10_2_mnist_deep_cnn.py:29:0: C0103: Constant name "batch_size" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-10_2_mnist_deep_cnn.py:58:0: C0115: Missing class docstring (missing-class-docstring)
+python-scripts\lab-10_2_mnist_deep_cnn.py:61:8: R1725: Consider using Python 3 style super() without arguments (super-with-arguments)
+python-scripts\lab-10_2_mnist_deep_cnn.py:96:4: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\lab-10_2_mnist_deep_cnn.py:96:22: C0103: Argument name "x" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\lab-10_2_mnist_deep_cnn.py:126:4: C0103: Constant name "avg_cost" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-10_2_mnist_deep_cnn.py:142:10: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\lab-10_2_mnist_deep_cnn.py:11:0: C0412: Imports from package torch are not grouped (ungrouped-imports)
+
+------------------------------------------------------------------
+Your code has been rated at 7.70/10 (previous run: 7.54/10, +0.16)
+
