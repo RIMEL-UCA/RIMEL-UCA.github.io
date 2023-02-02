@@ -40,7 +40,7 @@ Afin de compléter notre étude et pouvoir mieux répondre à cette question nou
 ### Articles
 Pour notre recherche, nous allons nous baser sur les quatre articles suivants : 
 1. [Eliciting Best Practices for Collaboration with Computational Notebooks](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/28337085-da8f-41ef-a9af-7070497bd728/Quaranta2022.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230109%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230109T131206Z&X-Amz-Expires=86400&X-Amz-Signature=4bf01bf31aee79119238f238c1b4efac8cda2b7c660ea73c0bf924f43c494301&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Quaranta2022.pdf%22&x-id=GetObject) 
-    
+   
     Auteurs : 
     * Luigi QUARANTA, *University of Bari, Italy*
     * Fabio CALEFATO, *University of Bari, Italy*
@@ -49,13 +49,13 @@ Pour notre recherche, nous allons nous baser sur les quatre articles suivants :
     Date de publication : Avril 2022
     
     Ce qui nous est montré par cet article : Dans cet article, une revue de littérature multivocale a été effectuée afin de construire un catalogue de 17 meilleures pratiques pour la collaboration avec les notebooks. Ensuite, sont évalués qualitativement et quantitativement la mesure dans laquelle les experts en sciences des données les connaissent et les respectent. Dans l'ensemble, cet article permet de constater que les scientifiques spécialistes des données connaissent les meilleures pratiques identifiées et ont tendance à les adopter dans leur routine de travail quotidienne. 
-Néanmoins, certains d'entre eux ont des opinions contradictoires sur des recommandations spécifiques, en raison de facteurs contextuels variables. En outre, nous avons constaté que les meilleures pratiques les plus négligées ont trait à la modularisation du code, aux tests de code et au respect des normes de codage.
-Cela met en évidence ce qui semblerait être une tension entre la vitesse et la qualité.
-Pour résoudre cette tension, les plateformes de notebooks devraient mettre en œuvre des fonctionnalités natives qui facilitent l'adoption des pratiques de collaboration susmentionnées. En disposant de cadres de test et de linting intégrés et spécifiques aux blocs-notes, ainsi que de fonctions de refactoring et de modularisation du code des blocs-notes, nous pouvons nous attendre à ce que les blocs-notes de données soient plus faciles à utiliser, nous pouvons espérer que les scientifiques des données écrivent des notebooks de haute qualité sans compromettre
-sur la rapidité d'exécution. 
+   Néanmoins, certains d'entre eux ont des opinions contradictoires sur des recommandations spécifiques, en raison de facteurs contextuels variables. En outre, nous avons constaté que les meilleures pratiques les plus négligées ont trait à la modularisation du code, aux tests de code et au respect des normes de codage.
+   Cela met en évidence ce qui semblerait être une tension entre la vitesse et la qualité.
+   Pour résoudre cette tension, les plateformes de notebooks devraient mettre en œuvre des fonctionnalités natives qui facilitent l'adoption des pratiques de collaboration susmentionnées. En disposant de cadres de test et de linting intégrés et spécifiques aux blocs-notes, ainsi que de fonctions de refactoring et de modularisation du code des blocs-notes, nous pouvons nous attendre à ce que les blocs-notes de données soient plus faciles à utiliser, nous pouvons espérer que les scientifiques des données écrivent des notebooks de haute qualité sans compromettre
+   sur la rapidité d'exécution. 
 
 2. [What’s Wrong with Computational Notebooks? Pain Points, Needs, and Design Opportunities](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8ae72282-8712-4a68-9dc6-6b00ebd7ecc2/Chattopadhyay2020.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230109%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230109T152624Z&X-Amz-Expires=86400&X-Amz-Signature=28a23fcdfdaca9ae48c01c82bbadc3b5f8c5b2dcb7185c2129b0b2e99c4f65b3&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Chattopadhyay2020.pdf%22&x-id=GetObject)
-    
+   
     Auteurs : 
     * Souti CHATTOPADHYAY, *Oregon State University*
     * Ishita PRASAD, *Microsoft*
@@ -66,11 +66,11 @@ sur la rapidité d'exécution.
     Date de publication : 25 au 30 avril 2020
     
     Ce qui nous est montré par cet article : Dans cet article, une étude à méthode mixte a été menée avec des scientifiques spécialisés dans les données en utilisant des observations sur le terrain, des entretiens et une enquête. Lors des études sur le terrain et des entretiens, les spécialistes des données ont signalé diverses difficultés lorsqu'ils travaillaient avec des ordinateurs portables et synthétisé ces difficultés dans une classification des points posant problème dans le code.
-Nous avons validé les activités difficiles qui contribuent à ces points posant problème dans le code par le biais d'une enquête et nous avons constaté que le soutien de toutes les activités étaient au moins modérément importantes pour les scientifiques spécialistes des données, et que quatre activités - la refonte du code, le déploiement en production, la gestion et l'utilisation de l'historique, et l'exécution de tâches de longue durée - étaient à la fois difficiles et importantes, ce qui en fait des activités à fort impact. Nos résultats suggèrent plusieurs possibilités de conception pour les chercheurs et les développeurs de notebooks. La résolution de ces problèmes peut améliorer considérablement l'utilité, la productivité et l'expérience utilisateur des scientifiques qui travaillent avec des notebooks.
+   Nous avons validé les activités difficiles qui contribuent à ces points posant problème dans le code par le biais d'une enquête et nous avons constaté que le soutien de toutes les activités étaient au moins modérément importantes pour les scientifiques spécialistes des données, et que quatre activités - la refonte du code, le déploiement en production, la gestion et l'utilisation de l'historique, et l'exécution de tâches de longue durée - étaient à la fois difficiles et importantes, ce qui en fait des activités à fort impact. Nos résultats suggèrent plusieurs possibilités de conception pour les chercheurs et les développeurs de notebooks. La résolution de ces problèmes peut améliorer considérablement l'utilité, la productivité et l'expérience utilisateur des scientifiques qui travaillent avec des notebooks.
 
 
 3. [Ten simple rules for writing and sharing computational analyses in Jupyter Notebook](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4709bfe2-0ac6-4dac-aaaa-b64063ca688c/Rule2019.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230109%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230109T153113Z&X-Amz-Expires=86400&X-Amz-Signature=9d4bc9f5c3d2b85884e0673e1512dad09aa007390f71429f27db5b47294bf0ca&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Rule2019.pdf%22&x-id=GetObject). 
-    
+   
     Auteurs : 
     * Adam RULE, *Design Lab, UC San Diego*
     * Amanda BIRMINGHAM, *Center for Computaional Biology and Bioinformatics, UC San Diego*
@@ -89,7 +89,7 @@ Nous avons validé les activités difficiles qui contribuent à ces points posan
     Ce qui nous est montré par cet article : Des analyses robustes et reproductibles sont au cœur de la science, et plusieurs articles ont déjà fourni d'excellents conseils généraux sur la manière de réaliser et de documenter la science informatique. Cependant, l'avènement des notebooks informatiques présente de nouvelles opportunités et de nouveaux défis, facilitant la documentation précise de flux de travail complexes tout en la compliquant par l'interactivité. Nous présentons 10 règles simples pour écrire et partager des analyses dans des carnets Jupyter, en nous concentrant sur l'annotation de l'analyse, l'organisation du code, et la facilité d'accès et de réutilisation. Informés par notre expérience, nous espérons qu'ils contribueront à l'écosystème des individus, des laboratoires, des éditeurs et des organisations qui utilisent les notebooks pour performer et partager leurs recherches informatiques.
 
 4. [Managing Messes in Computational Notebooks](https://lms.univ-cotedazur.fr/2022/pluginfile.php/399461/mod_folder/content/0/Head2019.pdf?forcedownload=1) 
-    
+   
     Auteurs : 
     * Andrew HEAD, *UC Berkeley*
     * Fred HOHMAN, *Georgia Institute of Technology*
@@ -100,7 +100,7 @@ Nous avons validé les activités difficiles qui contribuent à ces points posan
     Date de publication : 4 au 9 mai 2019
     
     Ce qui nous est montré par cet article : L'étude qualitative menée de scientifiques a confirmé que le nettoyage des notebooks consiste principalement à supprimer le code d'analyse indésirable et les résultats indésirables. La tâche de nettoyage peut également comporter des étapes secondaires telles que l'amélioration de la qualité du code, la rédaction de la documentation, l'adaptation de la présentation des résultats pour un nouveau public cible, ou la création de scripts. Les participants considèrent que la tâche principale de nettoyage est un travail de bureau et qu'elle est sujette à des erreurs.
-Ils ont donc réagi positivement aux outils de collecte de code qui produisent automatiquement le code minimal nécessaire pour reproduire un ensemble choisi de résultats d'analyse, en utilisant une nouvelle application de découpage de programme. Les analystes ont principalement utilisé la collecte de code en dernière action pour partager leur travail, mais y ont aussi trouvé des utilisations inattendues comme la génération de matériel dede référence, la création de branches plus légères dans leur code, et créer des résumés pour des publics multiples.
+    Ils ont donc réagi positivement aux outils de collecte de code qui produisent automatiquement le code minimal nécessaire pour reproduire un ensemble choisi de résultats d'analyse, en utilisant une nouvelle application de découpage de programme. Les analystes ont principalement utilisé la collecte de code en dernière action pour partager leur travail, mais y ont aussi trouvé des utilisations inattendues comme la génération de matériel dede référence, la création de branches plus légères dans leur code, et créer des résumés pour des publics multiples.
     
 ### Outils
 Les outils que nous envisageons d'utiliser pour effectuer notre étude sont :
@@ -120,9 +120,14 @@ Nous avons émis plusieurs hypothèses au début de notre étude :
 * Le code analysé est la somme de toutes les cellules du notebook
 * La couverture de tests ne fait pas partie des métriques que nous pensons étudier compte tenu qu’il n’y a pas de tests unitaires du code dans les notebooks
 * On part du principe que les repositories notebooks Microsoft et Jupyter sont de bonne qualité car il s’agit de références et cours. De plus, l’image de marque portée par Microsoft nous laisse penser que les projets qu’ils proposent sont revus avant d’être publiés. Nous nous servirons donc de ces projets pour effectuer une moyenne sur les métriques trouvées afin de mettre en place une échelle de mesure de la bonne qualité du code de nos notebooks et classerons les projets analysés suivant ces mesures référentes.
-* Nous pensons nous concentrer sur les notebooks ayant pour thème la réalité augmentée. Nous formons l’hypothèse que les notebooks de Microsoft étant plus spécialisés sur le sujet de réalité augmentée, ils seront de meilleure qualité que le projet de création de notebook proposé par Jupyter lui-même.
 
-???? Vous **explicitez les expérimentations que vous allez mener** pour vérifier si vos hypothèses sont vraies ou fausses. Il y a forcément des choix, des limites, explicitez-les. ???? 
+### Limites de notre étude 
+
+Au vu du temps imparti pour mener cette étude, nous sommes bien sûr obliger de faire des expériences avec certaines limitations au niveau de l'analyse des résultats. 
+
+Nous ne connaissons pas précisément les critères utilisés par les outils que nous utilisons. Nous ne maitrisons par exemple pas la pondération des différentes erreurs dans Pylint et l'analyse faites par SonarQube s'oriente plus sur l'analyse de la POO. Nous ferons tout ce qu'il est possible pour essayer d'obtenir des résultats objectifs mais l'idéal serait bien sûr de définir beaucoup plus précisément quels sont nps critères que qualité dans le cas spécifique des notebooks Jupyter. 
+
+De plus, nous avons décidé de récupérer un notebook par page de résultat GitHub ce qui est tout de même plutôt bien mais cela reste peut-être une quantité un peu faible pour représenter correctement la qualité moyenne des notebooks. Nous aurions pu prendre plusieurs notebooks par page ou encore aller chercher des notebooks sur d'autres plateformes et notamment Kaggle pour que note jeu de donnée sont complètement représentatif de la moyenne des notebooks qui sont écrits.
 
 ### Expériences
 
@@ -212,7 +217,9 @@ Ainsi, nous avons pu écarter la liste de critères de notation suivants :
 
 ![Figure 4: Configuration Pylint](images/pylint-config.png)
 
-Faisant évoluer nos notes de 3.60 pour le projet *NLP_C1_W1_lecture_nb_01*
+Les 7 premiers critères ont été placés directement par Pylint et il semble cohérent de les laisser, d'autant plus quand on regarde en détail leur signification. Si on regarde ensuite les critères que nous avons retirés nous-mêmes, on trouve plusieurs critères que nous ne jugeons pas révélateurs de la qualité d'un fichier python en général tels que comme *trailing-whitespace* ou encore *too-many-lines*. Nous avons ensuite retiré certains critères qui ne correspondent pas au cas des notebooks Jupyter comme *too-few-public-methods* et *too-many-lines*. Enfin, nous avons retiré import-error pour des raisons pratiques car nous ne pouvons pas installer tout les packages python avant chaque analyse dans le cadre de plusieurs centaines de fichiers. Il semble de toute manière peu probable que des mauvais imports soit fait puisque cela empêcherait le code de exécuter.	
+
+Cela à ainsi à titre d'exemple fait évoluer la note du projet *NLP_C1_W1_lecture_nb_01* de 3.60 à 8.27 et cela se confirme globalement sur tous nos notebooks même si on retrouve toujours de très mauvaises notes. Cela nous amène à penser que évaluation s'affine et deviens un peu plus juste.
 
 ![Figure 5: Note projet avant configuration Pylint](images/pylint-before-config.png)
 
@@ -260,21 +267,31 @@ Nous avons ainsi pu observer que nous obtenions pour ces notebooks deux notes pl
 ### Conclusion
 ???? A COMPLETER ????
 
-## VI. Outils \(facultatif\)
+## VI. Outils
 
-Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à \(1\) pouvoir reproduire vos expérimentations, \(2\) partager/expliquer à d'autres l'usage des outils.
+Au niveau des outils de développement, nous avons fait un script python nommé *main.py*qui nous permet de gérer massivement toutes les étapes de notre analyse. Le main nous permet de commenter/décommenter les méthodes que nous souhaitons utiliser en modifiant les paramètres des méthodes. Il faut absolument exécuter ce script depuis le dossier dans lequel il est place sans quoi cela ne fonctionnera pas.
 
-En plus des [outils](#outils) cités précédemment pour l'analyse de la qualité du code des notebooks, nous avons utilisé des scripts shell pour la récupération automatique de notebooks Jupyter sur Github et les invite de commande Windows et WSL.
+Pour SonarQube, nous avons deux container pour deux instances. Ils est possible de les lancer en faisant la commande *docker-compose up*. Nous avons mis en place des volumes qui permettent de conserver les analyses dans le temps. Les fichiers sont analysés en masse grâce au script python.
 
-![Figure 13: Logo UCA](images/logo_uca.png)
-![Figure 14: Logo Polytech](images/logoPolytechUCA.png)
+Au niveau Code climate, nous avons utiliser leurs outils de ligne de commande présent sur GitHub pour analyse nos fichiers python avec la commande *codeclimate analyze path_to_file*. Cela est également fait de manière automatique dans notre script.
 
+Dans le cas de PyLint, nous utilisons simplement la commande *pylint path_to_file* mais cela est à nouveau fait de manière automatisée dans notre script.
+
+Pour finir, nous avons un second script *parse_pylint_results.py* qui nous a permis de générer les graphiques présentés ci-dessus.
 
 ## VI. Références
 
 [Articles étudiés](#articles) pour une meilleure compréhension des notebooks et du contexte dans lequel ils s'incrivent pour une utilisation par les scientifiques spécilistes des données :
+
 * [Eliciting Best Practices for Collaboration with Computational Notebooks](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/28337085-da8f-41ef-a9af-7070497bd728/Quaranta2022.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230109%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230109T131206Z&X-Amz-Expires=86400&X-Amz-Signature=4bf01bf31aee79119238f238c1b4efac8cda2b7c660ea73c0bf924f43c494301&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Quaranta2022.pdf%22&x-id=GetObject) 
+
 * [What’s Wrong with Computational Notebooks? Pain Points, Needs, and Design Opportunities](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8ae72282-8712-4a68-9dc6-6b00ebd7ecc2/Chattopadhyay2020.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230109%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230109T152624Z&X-Amz-Expires=86400&X-Amz-Signature=28a23fcdfdaca9ae48c01c82bbadc3b5f8c5b2dcb7185c2129b0b2e99c4f65b3&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Chattopadhyay2020.pdf%22&x-id=GetObject)
+
 * [Ten simple rules for writing and sharing computational analyses in Jupyter Notebook](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4709bfe2-0ac6-4dac-aaaa-b64063ca688c/Rule2019.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230109%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230109T153113Z&X-Amz-Expires=86400&X-Amz-Signature=9d4bc9f5c3d2b85884e0673e1512dad09aa007390f71429f27db5b47294bf0ca&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Rule2019.pdf%22&x-id=GetObject). 
+
 * [Managing Messes in Computational Notebooks](https://lms.univ-cotedazur.fr/2022/pluginfile.php/399461/mod_folder/content/0/Head2019.pdf?forcedownload=1)
 
+  
+
+![Figure 10: Logo UCA](images/logo_uca.png)
+![Figure 11: Logo Polytech](images/logoPolytechUCA.png)
