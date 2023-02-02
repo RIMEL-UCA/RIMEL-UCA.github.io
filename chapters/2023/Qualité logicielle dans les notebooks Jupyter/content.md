@@ -4,18 +4,6 @@ title : Qualité logicielle dans les notebooks Jupyter
 date:   2022-11
 ---
 
----
-
-   **Date de rendu finale : fin février**
-   - Respecter la structure pour que les chapitres soient bien indépendants
-   - Remarques :
-        - La structure proposée est là pour vous aider, mais peut-être adaptée à votre projet
-        - Les titres peuvent être modifiés pour être en adéquation avec votre étude.
-        - Utiliser des références pour justifier votre argumentaire, vos choix, etc.
-        - Vous avez le choix d'utiliser le français ou l'anglais.
-
----
-
 **_3 février 2023_**
 
 ## Auteurs
@@ -49,7 +37,6 @@ Afin de compléter notre étude et pouvoir mieux répondre à cette question nou
 
 
 ## III. Collecte d'informations
-
 ### Articles
 Pour notre recherche, nous allons nous baser sur les quatre articles suivants : 
 1. [Eliciting Best Practices for Collaboration with Computational Notebooks](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/28337085-da8f-41ef-a9af-7070497bd728/Quaranta2022.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230109%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230109T131206Z&X-Amz-Expires=86400&X-Amz-Signature=4bf01bf31aee79119238f238c1b4efac8cda2b7c660ea73c0bf924f43c494301&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Quaranta2022.pdf%22&x-id=GetObject) 
@@ -127,7 +114,6 @@ Les outils que nous envisageons d'utiliser pour effectuer notre étude sont :
 Les codes que nous analyserons pour notre études seront des projets de différentes tailles et auteurs proposées sur GitHub classés par nombre de visites avec pour choix un sujet commun : la réalité augmentée. Un script de récupération automatisé de projets de type notebook Jupyter (avec extension .ipynb) sera utilisé pour avoir une diversité de projets. Nous récupérons un fichier par page de projets publics GitHub. Ils seront ensuite transformés en code Python de qualité mesurable grâce aux outils cités dans la partie précédente par ce même script. Ce choix a été fait de par le fait que la majorité des notebooks Jupyter sont codés dans ce même langage et que cela n'entrainera donc pas de transformation du code. A ces projets récupérés, nous ajouterons des projets de réalité augmentée effectués en cours à Polytech Nice-Sophia lors de nos études.
 
 ## IV. Hypothèses & Expériences
-
 ### Hypothèses de travail 
 
 Nous avons émis plusieurs hypothèses au début de notre étude :
@@ -135,6 +121,8 @@ Nous avons émis plusieurs hypothèses au début de notre étude :
 * La couverture de tests ne fait pas partie des métriques que nous pensons étudier compte tenu qu’il n’y a pas de tests unitaires du code dans les notebooks
 * On part du principe que les repositories notebooks Microsoft et Jupyter sont de bonne qualité car il s’agit de références et cours. De plus, l’image de marque portée par Microsoft nous laisse penser que les projets qu’ils proposent sont revus avant d’être publiés. Nous nous servirons donc de ces projets pour effectuer une moyenne sur les métriques trouvées afin de mettre en place une échelle de mesure de la bonne qualité du code de nos notebooks et classerons les projets analysés suivant ces mesures référentes.
 * Nous pensons nous concentrer sur les notebooks ayant pour thème la réalité augmentée. Nous formons l’hypothèse que les notebooks de Microsoft étant plus spécialisés sur le sujet de réalité augmentée, ils seront de meilleure qualité que le projet de création de notebook proposé par Jupyter lui-même.
+
+???? Vous **explicitez les expérimentations que vous allez mener** pour vérifier si vos hypothèses sont vraies ou fausses. Il y a forcément des choix, des limites, explicitez-les. ???? 
 
 ### Expériences
 
@@ -186,8 +174,7 @@ Ces erreurs sont récurrentes mais en vérité peu pertinentes dans le cas des n
 
 Les autres outils envisagés n'ont pas été utilisés car ils reprenaient des métriques déjà mesurées au cours de nos autres expériences ou se concentraient au final trop sur l'aspect sécuritaire du code qui est sûrement celui-ci qui a le moins d'intérêt pour nos scientifiques spécialistes des données.
 
-## V. Analyse des résultats obtenus et Conclusion
-   
+## V. Analyse des résultats obtenus et Conclusion   
 ### Analyse de résultats obtenus
 #### Expérience 1 : Evaluation de la qualité du code Python des notebooks par SonarQube
 Comme expliqué précédemment, SonarQube nous permet de donner une note de qualité aux projets évalués. Ci-dessous, des résultats observés sur les projets proposés par Microsoft :
@@ -262,19 +249,26 @@ On retrouve la courbe de Gauss décalée vers la droite du précédent schéma q
 
 Ces deux graphiques utilisant la note générée par PyLint montrent que la majorité des notebooks sont de qualité moyenne. Cela semble indiquer que PyLint est un bon outil pour mesurer la qualité d'un notebook.
 
-Pour terminer, nous avons voulu vérifier notre hypothèse de bonne qualité des notebooks Microsoft avec Pylint. Nous avons ainsi pu observer que nous obtenions pour ces notebooks de bonnes notes avec par exemple une note de ??? pour le projet Microsoft suivant.
+Pour terminer, nous avons voulu vérifier notre hypothèse de bonne qualité des notebooks Microsoft avec Pylint. Voici les résultats obtenus pour les différents fichiers :
 
-![Figure 10: Note projet Microsoft Pylint](images/pylint-microsoft.png) ???? A CAPTURER ????
+![Figure 10: Note projet Microsoft Pylint 1](images/microsoft-pylint-1.png)
+![Figure 11: Note projet Microsoft Pylint 2](images/microsoft-pylint-2.png)
+![Figure 12: Note projet Microsoft Pylint 3](images/microsoft-pylint-3.png)
 
-Ces résultats nous poussent donc à remettre en question notre hypothèse de départ de bonne qualité des notebooks Microsoft car nous voyons ici que les notes obtenues par les notebooks Microsoft appartiennent à la moyenne haute des projets mais obtiennent encore un nombre non négligeable d'erreurs.
+Nous avons ainsi pu observer que nous obtenions pour ces notebooks deux notes plutôt moyennes et une bonne note. Ces résultats remettent en question notre hypothèse de départ de bonne qualité des notebooks Microsoft car il semblerait qu'ils soient au contraire de qualité plutôt moyenne. 
 
 ### Conclusion
 ???? A COMPLETER ????
 
 ## VI. Outils \(facultatif\)
 
-En plus des [outils](#outils) cités précédemment pour l'analyse de la qualité du code des notebooks, nous avons utilisé des scripts pour la récupération de notebooks Jupyter sur Github et leur évaluation automatisée.
-Nous avons également utilisé les invite de commande Windows et WSL pour lancer les commandes simples d'évaluation de la qualité par PyLint par exemple avant de les intégrer elles aussi à nos scripts.
+Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à \(1\) pouvoir reproduire vos expérimentations, \(2\) partager/expliquer à d'autres l'usage des outils.
+
+En plus des [outils](#outils) cités précédemment pour l'analyse de la qualité du code des notebooks, nous avons utilisé des scripts shell pour la récupération automatique de notebooks Jupyter sur Github et les invite de commande Windows et WSL.
+
+![Figure 13: Logo UCA](images/logo_uca.png)
+![Figure 14: Logo Polytech](images/logoPolytechUCA.png)
+
 
 ## VI. Références
 
@@ -284,5 +278,3 @@ Nous avons également utilisé les invite de commande Windows et WSL pour lancer
 * [Ten simple rules for writing and sharing computational analyses in Jupyter Notebook](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/4709bfe2-0ac6-4dac-aaaa-b64063ca688c/Rule2019.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20230109%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20230109T153113Z&X-Amz-Expires=86400&X-Amz-Signature=9d4bc9f5c3d2b85884e0673e1512dad09aa007390f71429f27db5b47294bf0ca&X-Amz-SignedHeaders=host&response-content-disposition=filename%3D%22Rule2019.pdf%22&x-id=GetObject). 
 * [Managing Messes in Computational Notebooks](https://lms.univ-cotedazur.fr/2022/pluginfile.php/399461/mod_folder/content/0/Head2019.pdf?forcedownload=1)
 
-![Figure 11: Logo UCA](images/logo_uca.png)
-![Figure 12: Logo Polytech](images/logoPolytechUCA.png)
