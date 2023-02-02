@@ -135,7 +135,20 @@ L'hypothèse sera considérée comme vérifiée si le nombre d'étoiles sur Gith
   <img src="./assets/images/image1.png">
 </p>
 
-### 2. 
+rejeté car beaucoup de personnes ne l'utilise pas. 
+
+### 2. Qualité logicielle des notebooks 
+
+
+<p align="center">
+  <img src="./assets/images/image4.png">
+</p>
+
+comparaison de 13 repos poo et 13 repos non POo 
+accepté dans la limite des repos
+
+
+### 3. Popularité des notebooks qui utilisent la POO
 
 <p align="center">
   <img src="./assets/images/image2.png">
@@ -145,13 +158,8 @@ L'hypothèse sera considérée comme vérifiée si le nombre d'étoiles sur Gith
   <img src="./assets/images/image3.png">
 </p>
 
+accepé
 
-### 3. 
-
-
-<p align="center">
-  <img src="./assets/images/image4.png">
-</p>
 
 
 
@@ -160,6 +168,7 @@ L'hypothèse sera considérée comme vérifiée si le nombre d'étoiles sur Gith
 
      :bulb:  Vos résultats et donc votre analyse sont nécessairement limités. Préciser bien ces limites : par exemple, jeux de données insuffisants, analyse réduite à quelques critères, dépendance aux projets analysés, ...
 
+limites : limitation du nombre de repos utilisants la POO donc pas assez de données
 
 ## VI. Les datas scientistes utilisent de la POO sans le savoir 
 
@@ -187,6 +196,8 @@ Cet outil mise en place se base sur les outils suivant :
 * [Matplotlib](https://matplotlib.org/stable/index.html) afin de visualiser les résultats obtenus. 
 
 
+## VIII. Conclusion
+
 
 
 ## VI. Références
@@ -195,4 +206,5 @@ Cet outil mise en place se base sur les outils suivant :
 2. [A Large-Scale Study About Quality and Reproducibility of Jupyter Notebooks](https://ieeexplore.ieee.org/abstract/document/8816763)
 3. [Assessing and restoring reproducibility of Jupyter notebooks](https://dl.acm.org/doi/abs/10.1145/3324884.3416585)
 4. [Better code, better sharing: on the need of analyzing jupyter notebooks](https://dl.acm.org/doi/abs/10.1145/3377816.3381724)
+5. [API TensorFlow](https://www.tensorflow.org/api_docs/python/tf/all_symbols)
 
