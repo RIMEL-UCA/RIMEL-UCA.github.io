@@ -4,111 +4,202 @@ title: Analyse des dépendances entre les étapes de build
 date: 2022-11
 ---
 
----
-
-**Date de rendu finale : fin février**
-
-- Respecter la structure pour que les chapitres soient bien indépendants
-- Remarques :
-
-    - La structure proposée est là pour vous aider, mais peut-être adaptée à votre projet
-    - Les titres peuvent être modifiés pour être en adéquation avec votre étude.
-    - Utiliser des références pour justifier votre argumentaire, vos choix, etc.
-    - Vous avez le choix d'utiliser le français ou l'anglais.
-
-      Dans l'article de Blog [Debret 2020], l'auteure donne les éléments principaux de la démarche d'une manière simple et très facile à lire, dans la partie [Quelles sont les étapes d’une bonne démarche scientifique ?](https://www.scribbr.fr/article-scientifique/demarche-scientifique/#:~:text=La%20d%C3%A9marche%20scientifique%20permet%20d,de%20nouvelles%20hypoth%C3%A8ses%20%C3%A0%20tester.)
-
----
-
-**_février 2023_**
-
 ## Authors
 
 Nous sommes quatre étudiants en dernière année de M2 Nice-Sophia spécialisés en architecture logicielle :
 
 - KHERROUBI Abdelkader ([@abdelkader1996](https://github.com/abdelkader1996)),
 - SI DEHBI Ahmed El Hanafi ([@AhmedElHanafi](https://github.com/AhmedElHanafi)),
-- HERAUD Antoine  ([@herauda](https://github.com/herauda)),
-- NAJI Abdellah ([@abdellah07](https://github.com/abdellah07)).
+- NAJI Abdellah ([@abdellah07](https://github.com/abdellah07)),
+- HERAUD Antoine  ([@herauda](https://github.com/herauda)).
 
-## I. Contexte de recherche /Projet
+## I. Contexte de recherche 
 
-Dans cette étude, on examinent le DockerFile pour analyser les dépendances entre les différentes étapes de construction. Le DockerFile est un fichier qui contient des instructions qui sont utilisées par Docker pour créer et exécuter une image docker. Les images docker sont des ensembles d'instruction utilisés pour construire et déployer des applications logicielles sur le cloud.
-Lors de la construction d'une image Docker, il est important de comprendre les dépendances entre les étapes de construction,
-la définition des dépendances est la partie la plus importante du fichier Dockerfile lors de la construction d'une image Docker. La gestion des dépendances améliore les performances et la stabilité de la construction du projet.
+**Docker** est une plateforme de conteneurs permettant d’embarquer des applications dans des environnements d’exécution légers afin d’en créer des instances facilement ou de pouvoir isoler complètement les logiques entre applications. La montée en utilisation de services *cloud* pour le déploiement d’applications a popularisé l’utilisation de *Docker*, étant l’une des meilleure solution pour conteneuriser ses applications. Cependant, la manière dont sont interprétés les *Dockerfile*, fichier décrivant la construction d'une image *Docker*, peut être considérée comme valide par le moteur mais pourrait tout de même résulter en un échec lors de l'exécution de l’application pour de multiples raisons.
 
-## II. Questions General /Observations
+  
 
-### Peut-on analyser l'existence et la validité des dépendances contenues dans les étapes de construction d'image Docker a l'interieure d'un workflow de Github action ?
+Ainsi dans ce projet, nous souhaitons examiner les *Dockerfile* décrivant des images utilisées par des *workflows*, qui décrivent eux-même la construction d'une application, afin d’établir un degré de certitude quant à la stabilité de ce *build*. Nous chercherons à savoir si les commandes décrites dans un *Dockerfile* peuvent nous permettre d’établir une liste de ses dépendances et de valider leur présence, et d’attribuer un score selon le taux de dépendances vérifiées. Nous chercherons également à trouver d’éventuelles problèmes de description de *Dockerfile*, c'est-à-dire des mauvaises pratiques de syntaxe, qui pourraient nous empêcher d’analyser correctement ce dernier et mesurer l'impact de ces derniers sur la stabilité générale des *builds* *Docker*.
 
-Comme point de départ a notre recherche et analyse, on veut s'assurer de l'existence des dépendances dans le fichier Dockerfile, avoir une bonne compréhension de succession des étapes de construction de l'image Docker.
+## II. Observations et Question générale
 
+Face au grand nombre de projets *Dockerisés* dans l’ensemble des applications modernes, nous nous sommes posé la question suivante :
 
-### II.1- Comment identifier les différentes dépendances dans un Dockerfile?
+**Comment déterminer la stabilité du *build* *Docker* d'une application à partir de l'analyse de ses dépendances ?**
 
-Dans un premier temps, il est intéressant de savoir les différentes étapes de création d'une image Docker, ce qui nous conduit directement à l'importance d'avoir toutes les dépendances nécessaires et la présence des ressources dans le bon emplacement.  
+Nous chercherons donc à savoir si le *build* *Docker* d'une application, décrit dans un fichier de *workflow* par un certain nombre d’étapes, peut être analysé au préalable afin de valider que ce dernier est stable : il doit être reproductible et invariant. Nous chercherons à analyser les fichiers *Dockerfile* décrits utilisés par les étapes de *build* du *workflow* analysé et valider que les dépendances décrites par ces *Dockerfile* sont présentes.
 
-### II.2- Comment valider la stabilité d’un build Docker à l’aide de l’analyse de ses dépendances contenues dans les steps du workflow?
+L’ensemble des pratiques empêchant la visibilité sur les dépendances nécessaires sera considéré comme participant à l’instabilité du projet.
 
-En se basant sur les ressources qu'on va exploiter, on veut savoir si dans l'historique de l'exécution des workflow, on ne retrouve pas des erreurs liées aux dépendances d'un Dockerfile.
+*Docker* étant largement utilisé aujourd’hui, nous pensons que les résultats à cette question de recherche pourraient servir aux acteurs produisant des applications *Dockerisées* et que l’analyse préalable de la stabilité des builds pourrait bénéficier à ces acteurs, afin d’améliorer la stabilité globale des builds *Docker*.
 
-### II.3- Comment relever différentes mauvaises pratiques empêchant une meilleure analyse?
+Afin de répondre à cette question de recherche, nous nous sommes posé les questions suivantes : 
 
-Dans la majorité des erreurs rencontrer lors de l'exécution du code, c'est le manque de compétences, l'ignorance de la documentation et la négligence des bonnes pratiques liée au travail à faire.
-Le cas des mauvaises pratiques est l'un des limites qui pourraient nous empêcher de bien jugé nos résultats. Comment on peut identifier ces mauvaises pratiques ? c'est quoi l'impact sur notre étude ?
+1.  Comment identifier les différentes dépendances dans un *Dockerfile*?
+    
+2.   Comment valider la stabilité d’un build *Docker* dans son ensemble à l'aide des étapes de son *workflow*?
+    
+3.  Comment relever les différentes mauvaises pratiques empêchant une meilleure analyse?
+    
 
-### II.4- Limites : Quelles sont les bonnes pratiques pour d'écriture d'un DockerFile ?
-
-Pour répondre à cette question, il est intéressant de connaitre les bonnes pratiques d'abord, puis d'émettre un référentiel des erreurs les plus répondus entre les développeurs, on va se pencher dans l'étude sur des dépôts (repository) de code publier sur GitHub et qui sont aussi déployés comme image dans Docker Hub.
+//Limites : Quelles sont les mauvaises pratiques pour l'écriture d'un DockerFile ?
 
 ## III. Collecte d'informations
 
-Notre projet se concentre sur la détection de  l'existence des fichiers important pour l'étape de build de l'image Docker, ainsi que l'application des bonnes pratiques de l'écriture du Dockerfile.
+Afin de pouvoir répondre à nos questions de recherche, nous avons cherché des projets correspondant à certains critères afin que nous puissions y effectuer notre analyse. Nous avons premièrement recherché les projets les plus populaires de *DockerHub* (ayant plus de 500 étoiles), qui utiliseraient donc des *Dockerfile*, et avons sélectionné les projets dont les *workflows* de build étaient publics, dans notre cas présent sur *GitHub* où les projets sont hébergés.  
+  
+Une fois un échantillon varié de projets sélectionné (en termes d'utilisation et de structure), nous procédons à l’analyse du projet grâce à plusieurs scripts *Python* : un script sera chargé de parser le contenu des fichiers de *workflow*, un autre sera chargé de déterminer l’ensemble des dépendances pour un *Dockerfile* et un dernier aura pour rôle d’agglomérer les données et produire des informations d’analyse pour l’utilisateur.  
+  
+  
 
-Les projets utilisés comme références sont les projets récupérés à partir du Docker Hub sous condition d'avoir un fichier de GitHub workflow.
+## IV. Hypothèses et expériences
 
-1. les articles ou documents utiles à votre projet
+### 1. Comment identifier les différentes dépendances dans un *Dockerfile*?
 
-2. Outils  :
-    - Notre outil Python: <a href="https://github.com/AhmedElHanafi/Dockerfile-Analyser">Dockerfile-Analyser</a>
-      Un outil qu'on a développé dans l'équipe dans le but d'analyser les dépendances utilisées dans le Dockerfile, de faire une recherche dans le dossier du projet pour déterminer si les dépendances sont existantes ou manquantes.
+**Hypothèse :**  
 
-      Par la suite, on a une levée de drapeaux sur l'état de notre Dockerfile pour dire s'il est stable ou pas (prendre en compte les limitations mentionner dans cet article).
-
-    - <a href="https://github.com/">Github</a>
-    - <a href="https://hub.docker.com/">Docker Hub</a>
-
-3. Bases de code utilisé :
-
-   | Nom du Repository                                            |   Taille   | Popularité |  Régularité  | Contributeurs |
-   |:-------------------------------------------------------------|:----------:|:----------:|:------------:|:-------------:|
-   | [Docker Postgris](https://github.com/kartoza/docker-postgis) |  1027 ko   | 560 stars  | 316 commits  |       38      |
-   | [Moby Project](https://github.com/moby/moby)                 | 77 496 ko  | 65k stars  | 45446 commits|     2195      |
-   | [Camuflon - Api](https://github.com/camuflon/camuflon-api)   |   432 ko   |   0 stars  | 34 commits   |        1      |
-   | [Desafio Backend](https://github.com/uandisson/desafio_backend)| 6 774 ko   | 1 stars | 46 commits   |        1      |
-   | [OpenZipkin](https://github.com/openzipkin/zipkin-go)        |   572 ko   | 565 stars  | 287 commits  |      19       |
+Les dépendances que nous considérons dans notre étude devront être limitées selon certains critères si nous souhaitons offrir un haut degré de précision pour ces dernières. Ainsi, nous nous limiterons à la présence de fichiers mentionnés dans les *Dockerfile* et aux utilisations qui pourraient en être faite par différents scripts. Nous pensons donc que ces fichiers impliqués dans les *builds* représentent la forme de dépendance la plus stricte :  ces fichiers doivent être présents s'ils sont utilisés, sans quoi le *build* sera en échec. Si leur présence ne peut être vérifiée, on considérera la dépendance comme absente.
 
 
-## IV. Hypothèse et expériences
+**Expérience :** 
 
-1. Il s'agit ici d'**énoncer sous forme d'hypothèses** ce que vous allez chercher à démontrer. Vous devez définir vos hypothèses de façon à pouvoir les _mesurer/vérifier facilement._ Bien sûr, votre hypothèse devrait être construite de manière à _vous aider à répondre à votre question initiale_. Explicitez ces différents points.
-2. Vous **explicitez les expérimentations que vous allez mener** pour vérifier si vos hypothèses sont vraies ou fausses. Il y a forcément des choix, des limites, explicitez-les.
+Nous allons donc effectuer un *parsing* des *Dockerfile* pour y chercher des commandes `COPY` et `ADD` qui manipulent des fichiers ou des archives. En effectuant ce *parsing*, nous stockons le nom des fichiers considérés comme dépendances au sein des *builds*, que nous vérifierons contre le système de fichiers à l’étape suivante. Ceci nous permet de déterminer quels éléments à analyser et à attribuer des validations ou des alertes.
 
+  
+
+### 2. Comment valider la stabilité d’un build Docker à l’aide de l’analyse de ses dépendances contenues dans les steps du workflow?
+
+**Hypothèse :**  
+
+Pour cette expérience, il nous faudra examiner les étapes du *workflow* du projet en cours d’analyse et déterminer lesquelles utilisent des *Dockerfile*, que nous pouvons analyser grâce à l’étape précédente. Grâce à l’agglomération des dépendances des *Dockerfile*, nous pouvons en déduire l’ensemble des dépendances nécessaires à l’exécution d’une étape. Ainsi, en analysant les *Dockerfile* composant un *workflow*, nous pouvons vérifier la validité de leurs dépendances (leur existence pour des fichiers) et calculer le degré de stabilité d’un *workflow*, basé sur les *Dockerfile* utilisés par ses différentes étapes.
+
+Si un projet possède un nombre trop élevé de dépendances à risque, donc non vérifiables, ce dernier sera considéré comme instable. Le taux exact de dépendances à risque reste encore à déterminer et nécessitera une analyse de nombreux projets. Nous partons également du principe que les steps du *workflow* seront visibles à l’analyse, et allons donc pour notre cas utiliser uniquement des projets ayant des *workflows*  *GitHub* publics auxquels nous aurons accès. D’autres outils tels que Jenkins pourraient également être analysés mais cet outil est largement utilisé par des organismes privés sur des pipelines auxquelles nous n’aurions pas accès.  
+  
+
+**Expérience :** 
+
+Le but de cette expérience serait de montrer que nous pouvons élargir notre analyse au projet entier en examinant les étapes de son *workflow*. En examinant les étapes et les *Dockerfile* qu’elles mentionnent, nous pouvons établir un taux de stabilité global à l’ensemble du *workflow*.
+
+Afin de mener à bien cette expérience, nous analysons un build possédant toutes ses dépendances et validons que son build est stable. Nous effectuons la même analyse sur le *workflow* et que ce dernier a toutes ses dépendances stables. Ensuite, nous modifions un *Dockerfile* pour qu'il possède une dépendance manquante, et validons que ce dernier est marqué comme instable car manquant une dépendance. Nous effectuons ensuite à nouveau l’analyse sur le *workflow* et validons que ce dernier est désormais marqué comme instable car une de ses dépendances, un *Dockerfile*, possède lui-même une dépendance manquante. Nous restaurons ensuite le fichier et validons que le build est redevenu stable.
+
+Nous pouvons ensuite effectuer cette analyse sur les dépôts que nous avons choisis et analyser les résultats produits.
+
+  
+
+### 3. Comment relever différentes mauvaises pratiques empêchant une meilleure analyse?
+
+**Hypothèse :** 
+
+Nous partons du principe que toutes les mauvaises pratiques ne sont pas connues et peuvent aussi être arbitraires, mais certaines nous indiquent une impossibilité de vérification, tels que des commandes `COPY . .` , qui masquent des fichiers derrière un chemin invérifiable et que nous ne pouvons donc pas valider. Certains scripts peuvent également renommer certains fichiers et la vérification de ces derniers nécessiterait une analyse extensive de ces scripts, ce qui s’éloignerait de l’objectif initial de notre étude et de la création de notre outil. Nous nous contenterons donc d’examiner les quelques mauvaises pratiques les plus courantes et pourront faire évoluer notre étude selon de nouvelles données.  
+
+**Expérience :** 
+
+L’expérience serait d’analyser un haut nombre de *Dockerfile* et de repérer parmi ces derniers quelles seraient les mauvaises pratiques les plus fréquentes. Cela serait évidemment limité aux mauvaises pratiques que nous définirions et pourrait donc être donc limité. Il nous faudrait ainsi mettre cette expérience à jour avec une recherche plus complète des mauvaises pratiques durant l’écriture de *Dockerfile*.
+
+Nous chercherons à valider que notre outil permet de reconnaître de telles mauvaises pratiques et que les builds concernés soient marqués comme en alerte. Nous pourrions également chercher à valider qu’une mauvaise pratique, telle qu’une commande `COPY . .`, pourrait mener un *build* à l’échec sans que nous puissions le valider. Nous placerions un dossier vide là où un build aurait besoin d’un fichier, tout en effectuant une commande `COPY . .` qui serait accepté par le moteur *Docker*, et qui provoquerait une erreur lors de l’exécution de l’application.
+
+Nous pourrions également fournir des recommandations et des alertes plus spécifiques si nous choisissons d’effectuer plus de recherches sur ce sujet.  
+  
 
 ## V. Analyse des résultats et conclusion
 
-1. Présentation des résultats
-2. Interprétation/Analyse des résultats en fonction de vos hypothèses
-3. Construction d’une conclusion
+Analyse builds en fail comparé aux prédictions de l’outil
 
-   :bulb: Vos résultats et donc votre analyse sont nécessairement limités. Préciser bien ces limites : par exemple, jeux de données insuffisants, analyse réduite à quelques critères, dépendance aux projets analysés, ...
+1.  Présentation des résultats  
+      
+    
 
-## VI. Outils \(facultatif\)
+Plusieurs étapes → Une qui montre juste les deps pour un Dockerfile donné?  
+→ Une qui sort les deps depuis workflow
 
-Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à \(1\) pouvoir reproduire vos expérimentations, \(2\) partager/expliquer à d'autres l'usage des outils.
+  
 
-![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](images/logo_uca.png){:height="25px"}
+Found / Total → Comparé à un taux considéré “stable”
+
+### 1. Comment identifier les différentes dépendances dans un *Dockerfile*?
+
+Après analyse des projets sélectionnés par notre outil, nous observons les proportions suivantes de commandes *Docker* au sein des *Dockerfiles* : 
+
+![Figure 1 - Résultat de l'analyse des commandes Docker](assets/images/docker-command-graph.png)
+On peut voir que les projets font majoritairement usage de la commande `COPY`, avec 10 commandes `COPY` en moyenne par *Dockerfile*. Nous avons dans nos échantillons des projets de petite et grande taille : *Moby* et *Postgris* étant des projets de grande taille, ces derniers font usage de la commande `RUN` plus fréquemment, avec 35 commandes `COPY` contre 70 `RUN` pour *Moby* et 3 `COPY` contre 19 `RUN` pour *Postgris*. Pour l'analyse des dépendances, nous nous limiterons cependant 
+
+Nous considérons donc les commandes `COPY` comme des dépendances de notre *Dockerfile* et après analyse des fichiers mentionnés, nous obtenons les résultats suivants : 
+
+  
+
+  
+
+### 2. Comment valider la stabilité d’un build Docker à l’aide de l’analyse de ses dépendances contenues dans les steps du workflow?
+
+
+
+  
+
+### 3. Comment relever différentes mauvaises pratiques empêchant une meilleure analyse?
+
+
+  
+
+  
+
+
+2.  Interprétation/Analyse des résultats en fonction de vos hypothèses  
+      
+    
+3.  Construction d’une conclusion  
+      
+    💡 Vos résultats et donc votre analyse sont nécessairement limités. Préciser bien ces limites : par exemple, jeux de données insuffisants, analyse réduite à quelques critères, dépendance aux projets analysés, …  
+      
+    
+
+  
+  
+
+## VI. Outils
+
+Pour les recherches sur l’analyse de dépendances *Docker* que nous avons effectué, il nous a fallu développer un outil permettant d’analyser ces dépendances au sein de fichiers *Dockerfile* en recoupant leur utilisation faite par les différents *workflows* de *build* de l’application analysée. Cette dernière devait également permettre de détecter différentes anomalies selon les dépendances analysées (absence de fichiers, exécution de scripts?) ou non (mauvaises pratiques).
+
+A cet effet nous avons écrit un script *python* effectuant ces opérations :
+
+-   *Parsing* d’un fichier de *workflow* spécifié en entrée et recherche d’étapes mentionnant l’utilisation de *Dockerfile*,  
+      
+    
+-   *Parsing* de *Dockerfile* cherchant des commandes `COPY` mentionnant des fichiers :
+    
+
+	-   Le chemin est atteignable et nous pouvons vérifier leur existence donc *valide*,
+    
+	-   Le chemin n’est pas atteignable et il est impossible de vérifier donc *danger*,
+    
+	-   Le chemin est atteignable mais le fichier ne s’y trouve pas donc *alerte*.  
+   Il est cependant possible que le fichier mentionné soit produit lors du build mais sans vérification certaine cela reste une *alerte*.
+    
+
+- Recherche de commandes `ADD` mentionnant fichiers, qui suivra le même traitement que `COPY`, ou des archives dont la présence sera vérifiée également.
+
+- Durant ce *parsing*, le script analyse également les commandes pour déterminer si elles représentent une mauvaise pratique et seront remontées en tant que zones de danger car elles apportent de l’incertitude à notre analyse.
+
+- Une fois ces dépendances analysées, nous chercherons à valider la présence des fichiers ou des archives mentionnés. Pour cela, nous effectuons une vérification dans le dossier du projet de l’existence des fichiers nécessaires. S’ils ne sont pas trouvés, la dépendance est notée comme absente.  
+  
+- Une fois les dépendances présentes et absentes catégorisées, nous calculons le taux de stabilité pour chaque *Dockerfile*, et pour chaque étape du *workflow* les utilisant.
+
+- L’outil affiche les données concernant la stabilité du projet analysé à l’utilisateur.  
+  
+  
 
 ## VI. Références
 
-[Debret 2020] Debret, J. (2020) La démarche scientifique : tout ce que vous devez savoir ! Available at: https://www.scribbr.fr/article-scientifique/demarche-scientifique/ (Accessed: 18 November 2022).
+1. [Debret 2020] Debret, J. (2020) La démarche scientifique : tout ce que vous devez savoir ! Available at: [https://www.scribbr.fr/article-scientifique/demarche-scientifique/](https://www.scribbr.fr/article-scientifique/demarche-scientifique/) (Accessed: 18 November 2022).
+
+  
+
+2. Notre outil *Python*: [Dockerfile-Analyser](https://github.com/AhmedElHanafi/Dockerfile-Analyser) est un outil développé par l'équipe dans le but d'analyser les dépendances utilisées dans le *Dockerfile* et *workflows* et valider la présence de ces dernières.
+
+3. Projets avec *build Docker* utilisés après recherche sur [*Dockerhub*](https://hub.docker.com/) et *GitHub* :  
+	- [Docker Postgris Project](https://github.com/kartoza/docker-postgis)  
+	-  [Moby Project](https://github.com/moby/moby)
+    -   [Camuflon - API](https://github.com/camuflon/camuflon-api)
+    -   [Desafio Backend](https://github.com/uandisson/desafio_backend)
+    -   [OpenZipkin](https://github.com/openzipkin/)
+   
+ 4. Documentation sur [bonnes](https://sysdig.com/blog/dockerfile-best-practices/) et [mauvaises pratiques *Docker*](https://runnable.com/blog/9-common-dockerfile-mistakes) 
