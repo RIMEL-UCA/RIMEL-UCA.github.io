@@ -245,7 +245,7 @@ Une fois nos critères de notations précisés, il nous est donc resté à analy
 
 ![Figure 7: 20 erreurs les plus retrouvées par Pylint](images/pylint-top-20-errors.png)
 
-???? CE QU'ON VOIT ET CE QU'ON EN DEDUIT ????
+On remarque que les deux erreurs les plus récurrentes sont des problèmes de nommage de variable. C'est une erreur qui sera probablement effectuée par des personne peu adepte des principes de qualité. Ce problème de nommage n'est pas une erreur importante, il ne va pas empecher la compréhension d'un notebook. Cependant, si trop de variable utilise le même nom, on pourrait perdre le lecteur dans la compréhension du notebook. Cette erreur est donc minoritaire et n'impactera pas enormement la note. En revanche, en descendant dans les erreurs on remarque que certaine variable sont inutilisées, qu'il y a des syntax-error ou trop d'argument pour une méthode. Ces erreurs sont plus lourdes et impacteront grandement la note. On se rends assez vite compte que plus une erreur est impactante, moins elle est commise. Ce qui est une comportement attendu sur une population de 600 notebooks. On a maintenant les preuves que pylint est un indicateur de qualité pertinent dans l'évaluation d'un notebook. Et que certaines erreurs concernant le nommage des variables, la documentation des fonctions non faites, ou encore le nombre d'arguments dans une fonction trop élevés sont des erreurs pertinentes du point de vu de la lisibilité et donc de la qualité d'un notebook.
 ???? LIEN AUX PONDERATIONS DE CES CRITERES DE NOTATION ????
 
 ???? INTRODUCTION DE CE SCHEMA - JE N'ARRIVE PAS A LA FORMULER ????
