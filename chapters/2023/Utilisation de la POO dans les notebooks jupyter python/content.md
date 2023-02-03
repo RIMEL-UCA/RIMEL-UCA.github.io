@@ -211,6 +211,17 @@ limites : limitation du nombre de repos utilisants la POO donc pas assez de donn
 
 ## VI. Les limites de notre étude
 
+Durant cette étude, nous avons rencontré plusieurs limitations qui ont affecté notre capacité à acquérir les données souhaitées.
+<ul>
+  <li><b>Insuffisance de données</b>: Il y a peu de répositories qui utilisent la programmation orientée objet, ce qui rend difficile leur identification.</li>
+
+  <li><b>Limitations de l'API Github</b>: La limitation de la capacité de webscraping imposée par l'API Github a restreint notre capacité à collecter les données.</li>
+
+  <li><b>Accès limité à certaines métriques</b>: L'API Github ne donne pas accès à toutes les métriques, telles que le nombre de consultations d'un repository, qui peuvent aider à déterminer la popularité d'un repository. Les métriques utilisées dans cette étude (forks et étoiles) sont également subjectives et ne reflètent pas nécessairement la qualité d'un repository.</li>
+
+</ul>
+
+
 
 
 
