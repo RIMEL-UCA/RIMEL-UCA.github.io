@@ -263,7 +263,7 @@ et identifier les différents auteurs ainsi que leur pourcentage de participatio
 Une fois que la variabilité est analysée (grâce à Symfinder), la démarche à suivre est composée des étapes suivantes :
 1. Execution du script python ``paternity_variability_detail.py`` avec comme argument ``lien_github_du_projet``
    Obtention pour chaque "VARIANT" de ses auteurs ainsi que de leur pourcentage de participation (nombre de lignes écrites/nombre de lignes totales).
-2. Execution du script ````
+2. Execution du script ``pourcentage_vp_author_var`` git + dossier du projet
 
 ## V. Résultat d'analyse et Conclusion
 
