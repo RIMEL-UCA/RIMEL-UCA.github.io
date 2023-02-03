@@ -1,6 +1,5 @@
 import os
 import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
 
 
 def main():
@@ -129,6 +128,19 @@ def main():
     ax.set_title(f"Reasons for unsafe actions")
     plt.show()
 
+
+    # same thing but counting the safe actions
+    fig, ax = plt.subplots(figsize=(5, 3), subplot_kw=dict(aspect="equal"), dpi=300)
+    # the number of unsafe actions that have an upgrade available and that are public third-party actions
+    colors = ['#5e918c', '#613636', '#854848', '#c99797']
+    ax.pie([nb_action - unsafe_actions, update_and_public, upgrade_avail_actions - update_and_public, public_actions - update_and_public],
+              labels=['safe', 'outdated & public', 'outdated', 'public'], autopct='%1.1f%%', colors=colors)
+
+    ax.set_title(f"Repartition of the safety of actions")
+    plt.show()
+
+
+
     # plot
     fig, ax = plt.subplots(figsize=(10, 5), dpi=300)
     colors = ['#5e918c', '#2b3a57', '#945454', '#71a36f', '#b0d4ba']
@@ -205,6 +217,51 @@ def main():
     plt.tight_layout()
     ax.legend()
     plt.show()
+
+    # list all project separated by a comma
+    projects = list(repartition_per_project.keys())
+    projects = ", ".join(projects)
+    print(projects)
+
+    # generate a .md file with the results, ordered by project
+    with open("results.md", "w") as f:
+        f.write(f"# {dataset_name}\n\n")
+        f.write(f"\n## Corpus\n\n")
+        f.write(f"The corpus contains {nb_action} actions from {len(data)} projects: ")
+        f.write(f"{projects}\n")
+
+        f.write(f"## Repartition of actions types dataset-wide\n\n")
+        for key in percentages:
+            f.write(f"- {round(percentages[key] / nb_action * 100, 2)}% {key} [ {percentages[key]}/{nb_action} ]\n")
+        f.write(f"\n## Projects\n\n")
+        for project in data:
+            f.write(f"### {project}\n\n")
+            f.write(f"#### Repartition of actions types\n\n")
+            # table markdown
+            f.write(f"| Action type | Percentage | Number of actions |\n")
+            f.write(f"| --- | --- | --- |\n")
+            for key in percentages:
+                f.write(f"| {key} | {round(repartition_per_project[project][key] / nb_action * 100, 2)}% | {repartition_per_project[project][key]} |\n")
+            f.write(f"\n#### List of actions\n\n")
+            f.write(f"| Action type | Action name | Up to date |\n")
+            f.write(f"| --- | --- | --- |\n")
+            for ci in data[project]:
+                for action in data[project][ci]:
+                    f.write(f"| {action['type']} | {action['action']} | {action['up_to_date']} |\n")
+
+            f.write(f"\n#### Precedence\n\n")
+
+            # for each workflow in project
+            for ci in data[project]:
+                f.write(f"![Precedence {ci}](results/{dataset_name}/{project}/precedence/{ci.replace('.yml','').replace('.yaml','')}.png)\n")
+
+            f.write("\n")
+
+            f.write(f"\n#### Dependencies\n\n")
+
+            # for each workflow in project
+            for ci in data[project]:
+                f.write(f"![Dependencies {ci}](results/{dataset_name}/{project}/dependencies/{ci.replace('.yml','').replace('.yaml','')}.png)\n")
 
 if __name__ == '__main__':
     main()
