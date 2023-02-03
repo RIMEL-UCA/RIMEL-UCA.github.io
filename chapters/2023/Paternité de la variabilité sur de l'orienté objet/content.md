@@ -149,7 +149,8 @@ Un projet peut donc être défini par son nombre de lignes de code, son nombre d
 - [git blame](https://git-scm.com/docs/git-blame) : Outil d'identification des derniers auteurs qui ont modifié les lignes de code d'un fichier. 
 - [Symfinder](https://deathstar3.github.io/symfinder-demo/) : Outil d'analyse de la variabilité d’un projet orienté objet à un instant donné.
 - [Docker/Docker-Compose](https://docs.docker.com/get-started/overview/) : Outil de lancement de l'analyse de la variabilité
-- [Scripts Python](chapters/2023/Paternité de la variabilité sur de l'orienté objet/assets/code)
+- Scripts Python disponible dans le répertoire ``assets/code``
+
 
 Pour plus de détails sur comment utiliser ces outils, voir partie [VI. Outils](#vi-outils).
 
@@ -304,14 +305,45 @@ Cela montre bien que l'augmentation de développeurs sur un projet va répartir 
 
 ### Limites rencontrées
 
-Dans un 1er temps, la démarche initiale était de récupérer des projets aléatoires en utilisant l'API GitHub
+Dans un 1er temps, la démarche initiale était de récupérer des projets aléatoires en utilisant l'API GitHub.
+Cependant, certains projets étaient entièrement écrits par des bots, par exemple des projets générés automatiquement.
+Dans ce cas-là, il n'y avait qu'un seul auteur de la variabilité. 
+Grâce à cette observation, la selection des projets s'est faite en fonction du nombre de développeurs.
 
-### Recul et pertinence des remarques
+Pour l'expérience 1, les projets réalisés en Open-Source sont organisés différemment que les projets d'entreprises. 
+En effet, pour les projets Open-Source, seuls quelques responsables du projet ont le droit de modifier tout le code sans contrainte. 
+Il y a donc un grand nombre de développeurs qui peuvent seulement effectuer de petites modifications. 
+À l'inverse, dans les projets d'entreprises, toute l'équipe participe à l'implémentation du projet et donc de sa variabilité.
+
+Un critère qui peut jouer sur l'évolution de la variabilité du projet est son ancienneté. 
+Sur des projets assez jeunes (entre quelques mois et 1 à 2 ans), les développeurs sont les mêmes tout le long. 
+Sur des projets plus vieux (à partir de 2 ans), certains développeurs ont eu le temps de partir pour être remplacé.
+La conséquence est que la variabilité a été réécrite par les nouveaux arrivés.
+
+Une très grande limite à notre analyse et la quantité de projets analysés. 
+En effet, pour les 2 experiences, seul 3 projets ont été analysés ce qui fait un échantillon très faible pour faire des observations.
+
 
 ### Conclusion
 
+#### Répartition de la variabilité à travers un projet
 
-     :bulb:  Vos résultats et donc votre analyse sont nécessairement limités. Préciser bien ces limites : par exemple, jeux de données insuffisants, analyse réduite à quelques critères, dépendance aux projets analysés, ...
+On a pu observer que la variabilité est répartie globalement sur peu de personne malgré un grand nombre de développeurs.
+En effet, même si le code est de plus en plus complexe et la quantité de lignes de plus en plus importantes, 
+seul un sous-ensemble des développeurs serait apte à expliquer facilement la variabilité du code.
+
+#### Association de l'implémentation d'un VP et de ses VARIANTS
+
+On a pu observer que la taille des projets peut avoir des conséquences sur l'implémentation d'un "VP" et de ses "VARIANTS" par le même auteur.
+On peut donc nuancer notre hypothèse en y intégrant la notion de quantité de variabilité. 
+En effet, plus la quantité est importante, moins les auteurs de "VP" implémentent leurs "VARIANTS" associés.
+
+#### Perspectives
+
+Les principales perspectives que seraient :
+- De faire l'analyse sur beaucoup plus de projets,
+- D'analyser la variabilité sur plusieurs commits,
+- De rentrer plus en profondeur dans l'analyse des patterns.
 
 ## VI. Outils
 
