@@ -1,17 +1,16 @@
+---
+layout: default
+title : Comment visualiser les dépendances d’une chaîne d’intégration continue, leur origine et leur niveau de confiance ?
+date:   2023-02
+---
+
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;margin-bottom: 20px;}
 .tg td{font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
 .tg th{font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
 blockquote { background-color: #cecece !important; padding: 14px 10px 5px 20px !important; border-radius: 5px !important;}
-img { border-radius: 5px!important; max-width: 90%; margin-left: 5%;margin-right: 5%; margin-bottom: 15px; margin-top: 15px}
+img { border-radius: 5px!important; max-width: 90%; margin: 15px 5%;}
 </style>
-
----
-layout: default
-title : Comment visualiser les dépendances d’une chaîne d’intégration continue, leur origine et leur niveau de
-confiance ?
-date:  2023-01
----
 
 **_février 2023_**
 
