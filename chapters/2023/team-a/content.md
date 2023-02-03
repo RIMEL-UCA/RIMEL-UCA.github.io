@@ -18,34 +18,37 @@ Nous sommes cinq étudiants en dernière année à Polytech Nice-Sophia speciali
 
 ## I. Contexte
 
-L'intégration continue (CI) est de plus en plus utilisée et préconisée dans l'utilisation de dépôts de contrôle de version (type GitHub, GitLab...). Au fil des années, de nouveaux outils ont été implémentés dans les langages descriptifs d'intégration continue (type GitHub Actions, GitLab CI/CD ; tous deux sous le format YAML). Un de ces ajouts : la réutilisation d'étapes/actions (steps) au travers d'actions partagées/"empaquetées" par la plateforme, par des tiers ou par nous même dans un autre dépôt par exemple.
+L'intégration continue (CI) est de plus en plus utilisée et préconisée dans l'utilisation de dépôts de contrôle de version (type GitHub, GitLab...). Au fil des années, de nouveaux outils ont été implémentés dans les langages descriptifs d'intégration continue (type GitHub Actions, GitLab CI/CD ; tous deux sous le format YAML). Un de ces ajouts réside la réutilisation d'étapes/actions (steps) au travers d'actions partagées/"empaquetées" par la plateforme, par des tiers ou par nous même dans un autre dépôt par exemple (mot clé ``uses``).
 
-Ainsi, avec cette réutilisation d'actions au travers des fichiers d'intégration continue, nous nous sommes posés la question de la maintenabilité de ces fichiers. En effet, si une action est modifiée, il faut modifier tous les fichiers d'intégration continue qui l'utilisent. De plus, si une action est supprimée, il faut supprimer tous les fichiers d'intégration continue qui l'utilisent. Même chose si elle est déplacée ou mise à jour. Cela peut vite devenir un problème.
+Ainsi, avec cette réutilisation d'actions au travers des fichiers d'intégration continue, nous nous sommes posés la question de la maintenabilité de ces fichiers. En effet, si une action est modifiée, il faut modifier tous les fichiers d'intégration continue qui l'utilisent. De plus, si une action est supprimée, il faut la supprimer tous les fichiers d'intégration continue qui l'utilisent (ou en trouver une autre). Même chose si elle est déplacée ou mise à jour. Cela peut vite devenir un problème.
 
 Nous nous sommes donc demandés s'il était possible de visualiser les dépendances en actions dans chaque tâche d'un fichier d'intégration continue, avec pour chaque action empaquetée détectée : leur origine, leur niveau de confiance associée et si elles sont à jour ou non. Nous avons donc décidé de développer un outil permettant de répondre à cette problématique.
 
-Pour réaliser cela, nous réaliserons aussi une visualisation plus parlante de la précédence de chaque tâche (job) au sein d'une chaîne d'intégration continue.
+Pour ajouter à cela, nous réaliserons également une visualisation plus parlante de la précédence de chaque tâche (job) au sein d'une chaîne d'intégration continue.
 
 ## II. Question générale
 
  **"Comment visualiser les dépendances d’une chaîne d’intégration continue, leur origine et leur niveau de confiance ?"**
 
-Cette question a le mérite d'être très large et de couvrir plusieurs problématiques. Nous avons donc décidé de la décomposer en plusieurs questions plus précises :
+Cette question a le mérite d'être très large et de couvrir plusieurs problématiques. Nous avons donc décidé de la décomposer en plusieurs sous questions plus précises :
    1. Comment détecter l’obsolescence de l’implémentation d’une tâche dans une chaine d’intégration continue ?
-   2. Comment s’assurer de la pérennité de tâches tierces dans une chaîne d’intégration continue ?
-   3. Comment représenter toutes ces informations clairement ?
+   2. Comment s’assurer de la pérennité des tâches tierces dans une chaîne d’intégration continue ?
+   3. Comment représenter toutes ces informations clairement sous forme de graphes ?
 
-Au terme de ce projet, nous espérons pouvoir répondre à ces questions et ainsi fournir un outil permettant de proposer une visualisation viable de la chaîne d'intégration continue de n'importe quel projet.
+Au terme de ce projet, nous espérons pouvoir répondre à ces questions et ainsi fournir un outil permettant de proposer une visualisation viable de la chaîne d'intégration continue de n'importe quel projet (sur GitHub — pour le moment).
 
 ## III. Recueil des données
 
-Préciser vos zones de recherches en fonction de votre projet, les informations dont vous disposez, ... :
+Pour réaliser cette recherche, nous nous sommes focalisés sur un corpus de 34 dépôts jugés populaires (en nombre d'étoiles sur GitHub ou en notoriété). Il s'agit de : *public-apis/public-apis, vercel/next.js, twbs/bootstrap, ytdl-org/youtube-dl, vuejs/vue, vuejs/docs, vuejs/router, microsoft/FluidFramework, microsoft/TypeScript, microsoft/winget-cli, microsoft/fluentui-react-native, microsoft/azuredatastudio, microsoft/vscode, collet/cucumber-demo, mathiascouste/qgl-template, vitest-dev/vitest, i18next/next-i18next, jwasham/coding-interview-university, EbookFoundation/free-programming-books, flutter/flutter, mobileandyou/api, facebook/react, freeCodeCamp/freeCodeCamp, d3/d3, mui/material-ui, trekhleb/javascript-algorithms, mantinedev/mantine, mattermost/mattermost-server, pynecone-io/pynecone, TheAlgorithms/Python, stefanzweifel/git-auto-commit-action, axios/axios, raspberrypi/linux et kamranahmedse/developer-roadmap*.
 
-1. les articles ou documents utiles à votre projet
-2. les outils
-3. les jeux de données/codes que vous allez utiliser, pourquoi ceux-ci, ...
+Nous avons ensuite récupéré les fichiers d'intégration continue de ces dépôts (``.yml`` et ``.yaml``) et les avons analysés. Nous avons ensuite extrait les actions utilisées dans ces fichiers d'intégration continue. Nous avons ensuite récupéré les informations sur ces actions (origine, niveau de confiance, version, ...).
 
-     :bulb: Cette étape est fortement liée à la suivante. Vous ne pouvez émettre d'hypothèses à vérifier que si vous avez les informations, inversement, vous cherchez à recueillir des informations en fonction de vos hypothèses.
+La motivation de ce projet de recherche est axé en partie sur un cas d'école concernant la disparition d'un paquet sur npmjs [1]. Ce problème est transposable à GitHub, où les actions sont également hébergées et détenus par différentes sources. Il est donc important de pouvoir détecter les actions qui ne sont pas issues de sources fiables et/ou durables. Nous avons rajouté à cette problématique les enjeux de sécurité au travers des informations de mise à jour des actions et de leur niveau de confiance.
+
+Afin de réaliser ces analyses, nous avons utilisé les outils suivants :
+   - un analyseur de fichiers d'intégration continue (``.yml`` et ``.yaml``) propriétaire, développé en Python, permettant de récupérer les actions utilisées dans les fichiers d'un corpus de dépôts ;
+   - l'API GitHub permettant de récupérer les fichiers de workflows et les informations de release des actions ;
+   - un dernier script Python permettant d'agréger les résultats du premier script pour en faire une visualisation plus parlante et ensembliste.
 
 ## IV. Hypothèses & Expériences
 
@@ -77,11 +80,18 @@ Grâce aux outils qui ont été créés pour répondre à nos questions, nous av
 
 Le corpus de dépôts utilisé pour réaliser ces visualisations se base une écrasante majorité de dépôts de projets open-source et populaires (étoiles), ce qui peut expliquer les résultats obtenus. Il est composé de :
 
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+</style>
+
 | Indice                          | Valeur |
 |---------------------------------|--------|
 | Dépôts                          | 34     |
 | Fichiers d'intégration continue | 151    |
 | Actions                         | 339    |
+{: .tg}
 
 Les statistiques globales obtenues sont les suivantes :
 
@@ -91,6 +101,7 @@ Les statistiques globales obtenues sont les suivantes :
 | Nombre d'actions par workflow | 2.25   |
 | Nombre d'actions par dépôt    | 9.97   |
 | Nombre de workflows par dépôt | 4.44   |
+{: .tg}
 
 Cela signifie que, en moyenne, un dépôt utilise 9.97 actions dans 4.44 fichiers d'intégration continue.
 
@@ -103,6 +114,7 @@ Les types d'actions utilisées sont variées :
 | Privée/Interne     | 2                    | 0.59%       |
 | Tiers de confiance | 2                    | 0.59%       |
 | Forkée             | 0                    | 0%          |
+{: .tg}
 
 *On notera ici que le concept de "tiers de confiance" est un concept qui n'a pas été utilisé très largement dans le cadre de ce projet, mais qui pourrait être intéressant à explorer. Il convient à chaque propriétaire de dépôt de définir les utilisateurs qui sont tiers de confiance et dont leurs actions seraient considérées comme sûres. Cela permettrait de définir des actions publiques comme sûres par le propriétaire du dépôt, comme par exemple des actions émanant de comptes affiliés à l'organisation du dépôt (robots, créateur unique, etc.).*
 
@@ -137,7 +149,7 @@ La répartition des types d'actions par dépôt montre que les actions fournies 
 
 La répartition du niveau de confiance des actions montre qu'au travers des 339 actions étudiées, dans les 34 dépôts du corpus, 216 actions sont à risque ! Parmi ces 216 actions, 120 sont des actions publiques et 180 sont des actions avec une mise à jour disponible. Cela représente 2.16 actions à risque par workflow, ce qui est un chiffre assez élevé au vu de la moyenne de 2.25 actions par workflow !
 
-En d'autres termes, sur toutes les actions du corpus, environ 64% sont à risque. Cela représente plus de 66% de workflows à risque et 91.18% des dépôts du corpus. Cette répartition est très inquiétante et montre que les actions utilisées dans les fichiers d'intégration continue sont très peu mises à jour et que les actions publiques qui n'émanent pas d'une origine à faible chance de disparaitre sans avertissement, sont très utilisées.
+En d'autres termes, sur toutes les actions du corpus, environ 64% sont à risque. Cela représente plus de 66% de workflows à risque et 91.18% des dépôts du corpus. Cette répartition est très inquiétante et montre que les actions utilisées dans les fichiers d'intégration continue sont très peu mises à jour et que les actions publiques, qui n'émanent pas d'une origine à faible chance de disparaitre sans avertissement, sont très utilisées.
 
 **Ces résultats contredisent donc notre hypothèse H2. L'attention des propriétaires des depots les plus populaires ne semble pas accorder un effort plus important sur la sécurisation de leurs fichiers de workflow.**
 
@@ -155,12 +167,12 @@ Les résultats de notre étude montrent que les actions utilisées dans les fich
 
 Une véritable attention doit être portée sur l'origine des actions utilisées dans les fichiers d'intégration continue des dépôts GitHub. En effet, les actions publiques sont très utilisées et ne sont pas mises à jour régulièrement. De plus, les actions publiques ne sont pas toujours issues d'une source fiable. Il est donc important de vérifier l'origine des actions utilisées dans les fichiers d'intégration continue des dépôts GitHub. Il est également important de mettre à jour constamment les actions utilisées dans les fichiers d'intégration continue des dépôts GitHub, peu importe leur origine.
 
-La pérennité des actions utilisées dans les fichiers d'intégration continue des dépôts GitHub est également un point important. En effet, si une action est supprimée, le workflow ne sera plus fonctionnel. Il est donc important de vérifier que les actions utilisées dans les fichiers d'intégration continue des dépôts GitHub sont de sources fiables. On souhaite en effet éviter que des actions soient supprimées sans avertissement comme cela a été le cas pour npmjs et le package `left-pad` en 2016 qui a causé des problèmes à de nombreux projets [1].
+La pérennité des actions utilisées dans les fichiers d'intégration continue des dépôts GitHub est également un point important. En effet, si une action est supprimée, le workflow ne sera plus fonctionnel. Il est donc important de vérifier que les actions utilisées dans les fichiers d'intégration continue des dépôts GitHub sont de sources fiables. On souhaite en effet éviter que des actions soient supprimées sans avertissement comme cela a été le cas pour npmjs et le package `left-pad` en 2016 qui a causé des problèmes à de nombreux projets qui se sont retrouvé en manque d'une dépendance avec toutes les conséquences que cela provoque [1] [2]. La même chose est arrivée pour les paquets `colors` et `fakerjs` en 2022 [3].
 
 Cette conclusion nous permet de répondre clairement à nos trois questions :
 
-1. les visualisation générées et générables permettent de vérifier d'un coup d'œil la présence d'actions obsolètes dans les fichiers d'intégration continue des dépôts GitHub ;
-2. les visualisation générées et générables permettent de vérifier la provenance des actions utilisées dans les fichiers d'intégration continue des dépôts GitHub et donc de vérifier si elles sont fiables (dans le sens sécurité de traitement et pérénité)
+1. les visualisations générées et générables permettent de vérifier d'un coup d'œil la présence d'actions obsolètes dans les fichiers d'intégration continue des dépôts GitHub ;
+2. les visualisations générées et générables permettent de vérifier la provenance des actions utilisées dans les fichiers d'intégration continue des dépôts GitHub et donc de vérifier si elles sont fiables (dans le sens sécurité de traitement et pérénité)
 3. nous obtenons une visualisation complète des dépendances inter workflow (précédence d'actions) et des graphes de dépendances enrichis par des informations sur les actions utilisées.
 
 ## VI. Outillage
@@ -228,6 +240,8 @@ On se retrouve avec un espace de travail qui ressemble à ceci :
 
 ## VI. References
 
-1. (2016, March 27). How one programmer broke the internet by deleting a tiny piece of Code. Quartz. Retrieved February 3, 2023, from https://qz.com/646467/how-one-programmer-broke-the-internet-by-deleting-a-tiny-piece-of-code
+1. Collins, K. (2016, March 27). How one programmer broke the internet by deleting a tiny piece of Code. Quartz. Retrieved February 3, 2023, from https://qz.com/646467/how-one-programmer-broke-the-internet-by-deleting-a-tiny-piece-of-code
+2. Williams, C. (2020, June 28). How one developer just broke node, Babel and thousands of projects in 11 lines of JavaScript. • The Register. Retrieved February 3, 2023, from https://www.theregister.co.uk/2016/03/23/npm_left_pad_chaos/
+3. Lucero, M. (2022, December 28). The story behind Colors.js and Faker.js. Revenera Blog. Retrieved February 3, 2023, from https://www.revenera.com/blog/software-composition-analysis/the-story-behind-colors-js-and-faker-js/
 
-![Figure 1: Logo UCA](assets/images/logo_uca.png){:height="25px"}
+   ![Figure 1: Logo UCA](assets/images/logo_uca.png){:height="25px"}
