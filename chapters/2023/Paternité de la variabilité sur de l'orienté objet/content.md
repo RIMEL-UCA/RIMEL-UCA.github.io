@@ -47,8 +47,11 @@ La solution la plus simple est de les confier à un développeur expert du proje
 Mais si cela n’est pas possible ? 
 Il faudrait ainsi répertorier les développeurs et les parties du code sur lesquelles ils ont travaillé.
 
-C'est dans ce contexte qu'a été créé un outil d'analyse de la variabilité pour du code orienté objet en Java. 
-Cet outil va permettre de visualiser les endroits (classes, méthodes, attributs...) où il y a de la variabilité.
+C'est dans ce contexte qu'a été créé un outil d'analyse de la variabilité pour du code orienté objet en Java.
+La variabilité est l’ensemble des mécanismes permettant de configurer du logiciel pour l’adapter à un contexte précis.
+La variabilité peut être implémentée dans le code par différents mécanismes génériques, comme l’héritage, la surcharge 
+et certains patrons de conception dans des systèmes orientés objets.
+L'outil créé va permettre de visualiser les endroits (classes, méthodes, attributs...) où on peut trouver cette variabilité.
 Cette analyse du code peut servir de base pour avoir une vision d'ensemble des parties complexes du code. 
 L'étape suivante est de comprendre ces points de variation pour participer au développement du logiciel.
 Si la documentation est absente et que le développeur ne sait pas à qui s'adresser pour comprendre, il peut rester bloqué de son côté.
@@ -79,12 +82,12 @@ Comment déterminer la paternité de la variabilité du code d’un projet orien
 La première étape est donc de bien déterminer quel type de variabilité nous allons considérer.
 Grâce à un outil de Git, il est possible d’obtenir à un instant “t” du projet, tous les auteurs d’un fichier précis.
 
-À partir des résultats obtenus, nous avons donc reformuler la question :
+À partir des résultats obtenus, nous avons donc reformulé la question :
 Comment analyser ces résultats pour identifier les différents auteurs de la variabilité et ressortir des statistiques sur la paternité du projet à un instant “t” ?
 
 Comme dit précédemment, l’identification de la paternité va permettre de faciliter la transmission de connaissance 
 sur les points complexes du code entre les développeurs experts et les nouveaux arrivants.
-La variabilité pouvant être décomposée sous forme de patterns, le nouveau développeur pourrait cibler sa recherche 
+La variabilité pouvant être décomposée sous forme de "patterns" (patron de conception), le nouveau développeur pourrait cibler sa recherche 
 sur un pattern spécifique afin de trouver les auteurs auprès de qui poser des questions pour comprendre le fonctionnement du pattern à travers le code.
 
 
@@ -97,16 +100,30 @@ Préciser vos zones de recherches en fonction de votre projet, les informations 
 1. Les articles ou documents utiles à votre projet📝
 
 Dans le cadre de notre recherche, nous prévoyons de nous baser sur les ressources suivantes :
-- [On the notion of variability in software product lines](https://doi.org/10.1109/WICSA.2001.948406)
-- [Visualization of Object-Oriented Variability Implementations as Cities](https://hal.archives-ouvertes.fr/hal-03312487)
-- [An analysis of the variability in forty preprocessor-based software product lines](https://doi.org/10.1145/1806799.1806819)
+- [On the notion of variability in software product lines](https://doi.org/10.1109/WICSA.2001.948406) :
+  Définition de la notion de variabilité dans les lignes de produits logiciels.
+- [Visualization of Object-Oriented Variability Implementations as Cities](https://hal.archives-ouvertes.fr/hal-03312487) :
+  Création d'un outil permettant l'analyse de la variabilité dans un code orienté objet.
 - [On the usefulness of ownership metrics in open-source software projects](https://www.sciencedirect.com/science/article/abs/pii/S0950584915000294)
-
+  Mesures sur les propriétaires de code.
 
 
 2. Les jeux de données 💾
 
-Nous procéderons à l'analyse des projets GitHub présents dans le répertoire Assets/data,Nous allons examiner ces projets en raison de leur nombre conséquent de contributeurs (entre 10 et 40) ainsi que de leur taille inférieure à 500KB, ce qui nous permettra de faciliter notre procédure d'analyse à l'aide de notre outil "ScraperPV"."
+Nous procéderons à l'analyse de projets GitHub. 
+La liste des projets se trouve dans un excel disponible [ici](chapters/2023/Paternité de la variabilité sur de l'orienté objet/assets/data/GitHub_projects_list.xlsx)
+Les projets GitHub que nous allons analyser comportent les critères suivants :
+- langage de développement : JAVA (orienté objet),
+- nombre de contributeurs : entre 10 et 40,
+- taille : inférieure à 500 KB.
+
+Ces critères sont définis pour limiter le choix des projets à analyser. 
+Pour faire ressortir la notion de paternité, il faut avoir plus d'un seul contributeur. 
+Cependant, avec un nombre trop conséquent de contributeur, l'analyse risque d'être trop morcelée donc une limite expérimentale est fixée à 40 contributeurs.
+
+La taille choisie est directement liée au temps d'analyse du projet pour calculer la variabilité de celui-ci. 
+Un trop gros projet mettrait beaucoup de temps à être analysé donc nous ciblons des projets de taille moyenne ou petite.
+
 
 3. Les outils🔨🪓
 
