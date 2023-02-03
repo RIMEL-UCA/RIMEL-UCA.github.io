@@ -248,7 +248,7 @@ un **README.md** contenant les instructions d'utilisation de l'outil est disponi
 
 ## IX. Conclusion
 
-En conclusion, bien que seulement 4.3% des data scientistes utilisent explicitement la programmation orientée objet (POO) dans les notebooks Jupyter Python, ils en bénéficient en utilisant les nombreuses librairies de data science qui recourent à la POO. Cependant, l'utilisation de la POO n'augmente pas de manière significative la qualité du code dans les notebooks jupyter. 
+En conclusion, bien que seulement 4.3% des data scientistes utilisent explicitement la programmation orientée objet (POO) dans les notebooks Jupyter Python, ils en bénéficient en utilisant les nombreuses librairies de data science qui recourent à la POO. Cependant, l'utilisation de la POO n'augmente pas de manière significative la qualité du code dans les notebooks jupyter. Quant à la popularité des notebooks, il semble que ceux utilisant la POO de manière explicite sont plus populaires auprès de la communauté que ceux n'utilisant pas la POO. 
 
 Comme perspectives futures, nous pensons étendre et approfondir notre recherche en étudiant l'évolution de l'utilisation de la POO dans le notebooks jupyter python. Nous prévoyons également d'élargir notre étude aux notebooks jupyter utilisants le langage *R*.
 
