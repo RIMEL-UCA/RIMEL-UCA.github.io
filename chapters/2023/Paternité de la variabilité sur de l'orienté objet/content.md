@@ -212,31 +212,33 @@ et itérer sur chacun afin d'appliquer ``git blame`` sur le fichier contenant le
 et identifier les différents auteurs ainsi que leur pourcentage de participation à l'écriture de ce fichier.
 
 #### Démarche
+
 Une fois que la variabilité est analysée (grâce à Symfinder), la démarche à suivre est composée des étapes suivantes :
 
-1. Execution du script python ``paternity_variability_detail.py`` avec comme argument ``lien_github_du_projet``
+1. Execution du script python ``paternity_variability_detail.py`` avec comme argument ``lien_github_du_projet``.
    Obtention pour chaque "VARIANT" de ses auteurs ainsi que de leur pourcentage de participation (nombre de lignes écrites/nombre de lignes totales).
-2. Execution du script ``mean_contributors.py`` avec comme argument ``results/nom_du_repository_paternity_result_detail.txt``
-   Obtention du nombre moyen de contributeurs ayant participé à l'écriture de la variabilité
+2. Execution du script ``mean_contributors.py`` avec comme argument ``results/nom_du_repository_paternity_result_detail.txt``.
+   Obtention du nombre moyen de contributeurs ayant participé à l'écriture de la variabilité.
 
 
 ### 2. Paternité commune sur la variabilité de type "VP" (Variant Point) et "VARIANT"
 
-**Hypothèse**
+#### Hypothèse
 
 *Un contributeur qui modifie un VP va aussi modifier ses VARIANTS.*
 
-**Sous-question**
+#### Sous-question
 
 > Y a-t-il une relation de paternité entre la variabilité présente dans un VP et son implémentation dans ses VARIANTS ?
 
-**Métriques**
+#### Métriques
 - Nombre (et liste) de contributeurs ayant participé à l'écriture d'un VP
 - Nombre (et liste) de contributeurs ayant participé à l'écriture des VARIANTS associés au VP
 - Pourcentage de corrélation entre les deux
 - Le nombre moyen de contributeurs supplémentaires sur les VARIANTS (pas dans les VPs)
 
-**Experience**  
+#### Experience
+##### Source
 Les projets que nous avons choisis pour cette expérience sont les suivants : 
 
 |                      Projet                       | Lien                                                                 | Nombre de contributeurs | Nombre de développeurs | Nombre de VP | Nombre de VARIANT |
