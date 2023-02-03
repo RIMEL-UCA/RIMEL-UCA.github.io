@@ -41,11 +41,11 @@ Au terme de ce projet, nous espérons pouvoir répondre à ces questions et ains
 
 Pour réaliser cette recherche, nous nous sommes focalisés sur un corpus de 34 dépôts jugés populaires (en nombre d'étoiles sur GitHub ou en notoriété). Il s'agit de : *public-apis/public-apis, vercel/next.js, twbs/bootstrap, ytdl-org/youtube-dl, vuejs/vue, vuejs/docs, vuejs/router, microsoft/FluidFramework, microsoft/TypeScript, microsoft/winget-cli, microsoft/fluentui-react-native, microsoft/azuredatastudio, microsoft/vscode, collet/cucumber-demo, mathiascouste/qgl-template, vitest-dev/vitest, i18next/next-i18next, jwasham/coding-interview-university, EbookFoundation/free-programming-books, flutter/flutter, mobileandyou/api, facebook/react, freeCodeCamp/freeCodeCamp, d3/d3, mui/material-ui, trekhleb/javascript-algorithms, mantinedev/mantine, mattermost/mattermost-server, pynecone-io/pynecone, TheAlgorithms/Python, stefanzweifel/git-auto-commit-action, axios/axios, raspberrypi/linux et kamranahmedse/developer-roadmap*.
 
-Nous avons ensuite récupéré les fichiers d'intégration continue de ces dépôts (``.yml`` et ``.yaml``) et les avons analysés. Nous avons ensuite extrait les actions utilisées dans ces fichiers d'intégration continue. Nous avons ensuite récupéré les informations sur ces actions (origine, niveau de confiance, version, ...).
+Nous avons ensuite récupéré les fichiers d'intégration continue de ces dépôts (``.yml`` et ``.yaml``) et les avons analysés. Puis, nous avons extrait les actions utilisées dans ces fichiers d'intégration continue. Enfin, grâce à l'API GitHub, nous avons récupéré les informations sur ces actions (origine, niveau de confiance, version et version upstream, etc).
 
-La motivation de ce projet de recherche est axé en partie sur un cas d'école concernant la disparition d'un paquet sur npmjs [1]. Ce problème est transposable à GitHub, où les actions sont également hébergées et détenus par différentes sources. Il est donc important de pouvoir détecter les actions qui ne sont pas issues de sources fiables et/ou durables. Nous avons rajouté à cette problématique les enjeux de sécurité au travers des informations de mise à jour des actions et de leur niveau de confiance.
+La motivation de ce projet de recherche est axée en partie sur un cas d'école concernant la disparition d'un paquet sur npmjs [1]. Ce problème est transposable à GitHub, où les actions sont également hébergées et détenues par différentes sources. Il est donc important de pouvoir détecter les actions qui ne sont pas issues de sources fiables et/ou durables. Nous avons ajouté à cette problématique les enjeux de sécurité au travers des informations de mise à jour des actions et de leur niveau de confiance.
 
-Afin de réaliser ces analyses, nous avons utilisé les outils suivants :
+Afin de réaliser ces analyses, nous avons donc utilisé les outils suivants :
    - un analyseur de fichiers d'intégration continue (``.yml`` et ``.yaml``) propriétaire, développé en Python, permettant de récupérer les actions utilisées dans les fichiers d'un corpus de dépôts ;
    - l'API GitHub permettant de récupérer les fichiers de workflows et les informations de release des actions ;
    - un dernier script Python permettant d'agréger les résultats du premier script pour en faire une visualisation plus parlante et ensembliste.
@@ -81,9 +81,9 @@ Grâce aux outils qui ont été créés pour répondre à nos questions, nous av
 Le corpus de dépôts utilisé pour réaliser ces visualisations se base une écrasante majorité de dépôts de projets open-source et populaires (étoiles), ce qui peut expliquer les résultats obtenus. Il est composé de :
 
 <style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
+.tg  {border-collapse:collapse;border-spacing:0;margin-bottom: 20px;}
 .tg td{font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg th{font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
 </style>
 
 | Indice                          | Valeur |
@@ -132,28 +132,33 @@ Les conséquences pour la sûreté des actions utilisées sont les suivantes :
 | Nombre de workflows non sûrs                             | 3.23   | 66.23% de tous les workflows          |
 | Nombre d'actions avec une mise à jour majeure disponible | 180    | 53.3% de toutes les actions           |
 | Nombre d'actions publiques non mises à jour              | 84     | 70.0% de toutes les actions publiques |
+{: .tg}
 
 ### 2. Interprétation
 
 #### 2.1. H1 — Répartition des types d'actions
 
+La répartition des types d'actions par dépôt sous forme de diagramme de barres, nous permet, en numéraire, de visualiser clairement les types d'actions dominants. Il montre en effet ici que les actions fournies par GitHub sont bien les plus utilisées, mais que les actions publiques sont également très utilisées.
+
 ![Répartition des types d'action](assets/images/repartition_action_types_global.png)
 
-La répartition des types d'actions par dépôt montre que les actions fournies par GitHub sont bien les plus utilisées, mais que les actions publiques sont également très utilisées. Cela peut s'expliquer par le fait que les actions publiques sont plus faciles à trouver et à utiliser que les actions privées, mais aussi par le fait que les actions publiques sont plus flexibles et nombreuses que les actions fournies par GitHub.
+Cela peut s'expliquer par le fait que les actions publiques sont plus faciles à trouver sur des sources de savoir alternatives (type forum) et à utiliser que les actions privées, mais aussi par le fait qu'elles sont plus flexibles et nombreuses (car créées par la communauté) que les actions fournies par GitHub.
 
 **Ces résultats sont très inquiétants, car cela signifie que les actions utilisées dans les fichiers d'intégration continue des dépôts les plus populaires de GitHub sont à risque en utilisant une très grande proportion d'actions publiques. Malgré cela, l'hypothèse de départ est confirmée : les actions les plus utilisées dans les fichiers d'intégration continue des dépôts les plus populaires de GitHub, en général, provient du dépôt ``actions`` que l'on assimile à des actions sûres.**
 
 #### 2.2. H2 — Répartition du niveau de confiance des actions
 
-![Répartition des types d'action](assets/images/repartition_safety.png)
-
 La répartition du niveau de confiance des actions montre qu'au travers des 339 actions étudiées, dans les 34 dépôts du corpus, 216 actions sont à risque ! Parmi ces 216 actions, 120 sont des actions publiques et 180 sont des actions avec une mise à jour disponible. Cela représente 2.16 actions à risque par workflow, ce qui est un chiffre assez élevé au vu de la moyenne de 2.25 actions par workflow !
+
+![Répartition des types d'action](assets/images/repartition_safety.png)
 
 En d'autres termes, sur toutes les actions du corpus, environ 64% sont à risque. Cela représente plus de 66% de workflows à risque et 91.18% des dépôts du corpus. Cette répartition est très inquiétante et montre que les actions utilisées dans les fichiers d'intégration continue sont très peu mises à jour et que les actions publiques, qui n'émanent pas d'une origine à faible chance de disparaitre sans avertissement, sont très utilisées.
 
 **Ces résultats contredisent donc notre hypothèse H2. L'attention des propriétaires des depots les plus populaires ne semble pas accorder un effort plus important sur la sécurisation de leurs fichiers de workflow.**
 
 #### 2.3. H3 — Répartition des types d'actions par dépôt
+
+En comparant au travers d'un diagramme de barres les types d'actions utilisés par dépôt, on peut plus facilement discerner les dépôts qui utilisent beaucoup d'actions publiques et celles qui utilisent beaucoup d'actions fournies par GitHub — mais surtout la proportion de chacune.
 
 ![Répartition des types d'action par dépôt](assets/images/repartition_per_repo.png)
 
@@ -215,7 +220,7 @@ Il est à l'issue de l'exécution du script possible visualiser les résultats o
 
 ![Résultats exemples](assets/images/example_dependencies.png)
 
-On remarque qu'il est alors d'un coup d'œil possible de voir quelles sont les actions les plus utilisées dans un fichier de CI, quelles sont les actions les plus utilisées dans chaque fichier de CI, mais surtout de visualiser clairement les problèmes de sécurité éventuels au travers d'une dépendance/action qui n'est pas à jour ou qui vient d'un dépôt public qui n'est pas en provenance de GitHub Actions (organisation "actions") et qui ne fait non plus partie de comptes affiliés au projet. *Nous gérons les dépendances circulaires et les dépendances linéaires dans les graphiques.*
+On remarque qu'il est alors d'un coup d'œil possible de voir quelles sont les actions les plus utilisées dans un fichier de CI, mais surtout de visualiser clairement les problèmes de sécurité éventuels au travers d'une alerte visuelle sur les dépendances/actions qui ne sont pas à jour ou qui proviennent d'un dépôt public qui n'est pas celui de GitHub Actions (organisation ``actions``) et qui ne sont pas hébergées non plus par des comptes affiliés au projet. *Nous gérons les dépendances circulaires et les dépendances linéaires dans les graphiques.*
 
 Mais ce n'est pas tout, puisqu'en plus de ces représentations essentielles à notre recherche, nous avons également des visualisations de précédence parmi les actions de chaque fichier de workflow, ce qui nous permet aisément de voir le parallélisme possible des actions ou les dépendances entre elles. C'est un petit plus qui permet d'avoir une représentation précise de la structure du fichier de CI.
 
