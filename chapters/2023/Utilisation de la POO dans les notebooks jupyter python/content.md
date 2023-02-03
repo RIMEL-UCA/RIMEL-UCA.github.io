@@ -180,8 +180,11 @@ L'hypothèse 1 soutenait que "l'utilisation de la POO est largement adoptée par
   <img src="./assets/images/image4.png">
 </p>
 
-comparaison de 13 repos poo et 13 repos non POo 
-accepté dans la limite des repos
+Au cours de notre étude, nous avons observé que les notebooks qui utilisent la programmation orientée objet (POO) et ceux qui ne l'utilisent pas, ont tous les deux une quantité presque identique de notebooks qui ne peuvent pas être compilés par Pylint. Le score "-1" étant attribué aux notebooks non compilés par Pylint. Pour les notebooks pour lesquels Pylint a pu évaluer leur qualité (score >= 0), nous n'avons pas constaté de grandes différences entre les deux groupes de notebooks. Cela montre que l'utilisation de la POO n'augmente pas de manière significative la qualité logicielle des notebooks. Ce fait peut également être justifié par le fait que le notebook ayant le score le plus élevé dans notre jeu de données n'utilise pas la POO.
+
+En conclusion, nous pouvons affirmer que l'application de bonnes pratiques de développement, y compris la POO, peut contribuer à améliorer la qualité logicielle des notebooks. Cependant, il n'est pas nécessaire d'utiliser la POO pour créer des notebooks de haute qualité. Cette hypothèse est donc validée.
+
+Notez cependant que cette étude est limitée par le nombre restreint de notebooks utilisés pour l'étude.
 
 
 ### 3. Popularité des notebooks qui utilisent la POO
@@ -197,17 +200,6 @@ Les résultas ci-dessus représentent
 </p>
 
 accepé
-
-
-
-
-2. Interprétation/Analyse des résultats en fonction de vos hypothèses
-3. Construction d’une conclusion 
-
-     :bulb:  Vos résultats et donc votre analyse sont nécessairement limités. Préciser bien ces limites : par exemple, jeux de données insuffisants, analyse réduite à quelques critères, dépendance aux projets analysés, ...
-
-limites : limitation du nombre de repos utilisants la POO donc pas assez de données
-
 
 ## VI. Les limites de notre étude
 
