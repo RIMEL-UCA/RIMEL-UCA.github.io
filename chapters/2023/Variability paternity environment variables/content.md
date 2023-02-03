@@ -1,3 +1,11 @@
+---
+layout: default
+title: Variability paternity environment variables
+date: 2022-11
+---
+
+**_février 2023_**
+
 # Sujet
 
 Peut-on déterminer la paternité de l’implémentation (et l’évolution) d’une fonctionnalité variable à partir du code en appliquant les méthodes de détermination de paternité aux endroits où la variabilité est implémentée ?
@@ -559,3 +567,7 @@ Malgré le fait que nous soyons un peu attristés de ne pas avoir pu pousser l'a
 
 - [Dalci&Steven] A framework for creating custom rules for static analysis tools, Eric Dalci John Steven, https://www.academia.edu/download/30668250/SP500_262.pdf#page=49
 - [Walker et al] Automated Microservice Code-Smell Detection, Andrew Walker, Dipta Das, and Tomas Cerny, https://par.nsf.gov/servlets/purl/10310336#
+
+
+
+![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](assets/images/logo_uca.png)
