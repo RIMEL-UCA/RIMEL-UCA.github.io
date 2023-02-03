@@ -234,9 +234,9 @@ Les projets que nous avons choisis pour cette expérience sont les suivants :
 
 Le but de cette expérience est de déterminer s'il y a une relation entre les auteurs d'un "VP" et ceux des "VARIANTS" associés.
 Pour cela, on a sélectionné des projets contenant un grand nombre de "VP" et de "VARIANT".
-À partir de l'analyse de la variabilité de chaque projet, un filtre est appliqué pour isolé tous les "VARIANTS"
-et itérer sur chacun afin d'appliquer ``git blame`` sur le fichier contenant le "VARIANT"
-et identifier les différents auteurs ainsi que leur pourcentage de participation à l'écriture de ce fichier.
+À partir de l'analyse de la variabilité de chaque projet, un filtre est appliqué pour identifier les "VPs". 
+Après identification des auteurs du "VP", le filtre est appliqué sur les "VARIANTS" associés afin de recueillir les auteurs des "VARIANTS".
+Puis, une corrélation entre les deux ensembles d'auteurs est faite pour vérifier si les auteurs des "VPs" sont aussi ceux des "VARIANTS".
 
 ##### Démarche
 
@@ -261,6 +261,8 @@ Projet 1 (peu de développeurs)
 
 ![Pourcentage de variabilité moyenne par contributeur](assets/images/experience_1_galen.png)
 
+Nombre moyen de développeurs ayant participé à l'implémentation de la variabilité : environ 1.35
+
 Projet 2 
 - Nom : ``EngineHub/WorldEdit``
 - Nombre de développeurs : ``52``
@@ -268,6 +270,8 @@ Projet 2
 - Nombre de VARIANT : ``700``
 
 ![Pourcentage de variabilité moyenne par contributeur](assets/images/experience_1_worledit.png)
+
+Nombre moyen de développeurs ayant participé à l'implémentation de la variabilité : environ 3.25
 
 Projet 3 (beaucoup de développeurs)
 - Nom : ``netty/netty``
@@ -277,6 +281,7 @@ Projet 3 (beaucoup de développeurs)
 
 ![Pourcentage de variabilité moyenne par contributeur](assets/images/experience_1_netty.png)
 
+Nombre moyen de développeurs ayant participé à l'implémentation de la variabilité : environ 5.37
 
 #### Experience 2
 
@@ -293,12 +298,17 @@ Sur ``Netty``, 48.61% des auteurs de VP ont modifié leurs VARIANTS. 77.94% des 
 Quand les auteurs de VP modifient leurs VARIANTS, ils vont en général modifier 76.23% du contenu.  
 
 ### Analyse et interprétation des résultats en fonction des hypothèses
+
 #### Hypothèse 1
 
-Nous avons analysé trois les  projets(galen, WorldEdit et netty) et nous avons constaté que dans chacun d'entre eux, la contribution à la variabilité était faible, même si le nombre de développeurs était relativement élevé. Cela signifie que dans ces projets, un petit nombre de développeurs contribue davantage à la variabilité que les autres, ce qui va à l'encontre de notre hypothèse initiale.
+Nous avons analysé trois les projets (``galen``, ``WorldEdit`` et ``netty``) et nous avons constaté que dans chacun d'entre eux,
+la contribution à la variabilité était faible, même si le nombre de développeurs était relativement élevé.
+Cela signifie que dans ces projets, un petit nombre de développeurs contribue davantage à la variabilité que les autres, ce qui va à l'encontre de notre hypothèse initiale.
 Cela montre que le nombre de contributeurs n'est peut-être pas le seul facteur qui influence la répartition de la variabilité dans un projet.
 
-
+Le nombre de développeurs évoluent grandement entre nos 3 projets, 9, 52, et 497 pour ``galen``, ``WorldEdit`` et ``netty`` ce qui fait une augmentation facteur 10 entre chaque projet.
+Cependant, le nombre moyen lui ne suit par cette augmentation puisqu'on a 1.35, 3.25, et 5.37, respectivement pour ``galen``, ``WorldEdit`` et ``netty``.
+Ces résultats corroborent bien l'analyse précédente.
 
 #### Hypothèse 2
 
