@@ -6,8 +6,6 @@ blockquote { background-color: #cecece !important; padding: 14px 10px 5px 20px !
 img { border-radius: 5px!important; max-width: 90%; margin-left: 5%;margin-right: 5%; margin-bottom: 15px; margin-top: 15px}
 </style>
 
-
-
 ---
 layout: default
 title : Comment visualiser les dépendances d’une chaîne d’intégration continue, leur origine et leur niveau de
