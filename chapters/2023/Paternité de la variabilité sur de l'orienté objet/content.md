@@ -290,8 +290,15 @@ Projet 3 (beaucoup de développeurs)
 
 
 #### Experience 2
+Sur Galen, 87.5% des auteurs de VP ont modifiés leurs Variants. 35.42% des modifications d'un Variants n'est pas dû à un auteur du VP. Quand les auteurs de VP modifient leurs Variants, ils vont en général modifier 98.71% du coutenues.  
+Sur WorlEdit, 70.17% des auteurs de VP ont modifiés leurs Variants. 56.91% des modifications d'un Variants n'est pas dû à un auteur du VP. Quand les auteurs de VP modifient leurs Variants, ils vont en général modifier 87.46% du coutenues.  
+Sur Netty, 48.61% des auteurs de VP ont modifiés leurs Variants. 77.94% des modifications d'un Variants n'est pas dû à un auteur du VP. Quand les auteurs de VP modifient leurs Variants, ils vont en général modifier 76.23% du coutenues.  
 
 ### Analyse et interprétation des résultats en fonction des hypothèses
+
+#### Hypothèse 2
+On remarque que plus le nombre de développeurs augmentent, moins la paternité entre un VP et ses variants est le même. Les auteurs de VP vont moins être parent de leurs Variants, la paternalité de contributeurs externes augmentent et les auteurs vont globalement avoir moins de paternalité sur le contenues des Variants.
+Cela montre bien que l'augmentation de développeurs sur un projet va répartir la paternalité d'un VP et de ses variants, faisant que les contributeurs d'un VP va être de moins en moins modifier ses Variants.
 
 ### Limites rencontrées
 
