@@ -1,0 +1,89 @@
+name: microsoft/FluidFramework - codeql-analysis.yml
+
+Type: GITHUB
+  - actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+  - github/codeql-action/init@a34ca99b4610d924e04c68db79e503e1f79f9f02 ; utd: False
+  - github/codeql-action/autobuild@a34ca99b4610d924e04c68db79e503e1f79f9f02 ; utd: False
+  - github/codeql-action/analyze@a34ca99b4610d924e04c68db79e503e1f79f9f02 ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/FluidFramework - linkcheck-reporter.yml
+
+Type: GITHUB
+Type: INTERNAL
+Type: PUBLIC
+  - dawidd6/action-download-artifact@bd10f381a96414ce2b13a11bfa89902ba7cea07f ; utd: False
+  - marocchino/sticky-pull-request-comment@fcf6fe9e4a0409cd9316a5011435be0f3327f1e1 ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/FluidFramework - merge-commits.yml
+
+Type: GITHUB
+  - actions/github-script@d556feaca394842dc55e4734bf3bb9f685482fa0 ; utd: False
+  - actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c ; utd: False
+  - actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/FluidFramework - pr-labeler.yml
+
+Type: GITHUB
+  - actions/labeler@5c7539237e04b714afd8ad9b4aed733815b9fab4 ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+  - srvaroa/labeler@97fabbad5804e8a22d5f027aa94c98614facb571 ; utd: False
+  - tylerbutler/labelmaker-action@49487085eebc5be6b766198e231f0688e4b4a7c2 ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/FluidFramework - pr-validation.yml
+
+Type: GITHUB
+  - actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+  - dorny/paths-filter@4512585405083f25c027a35db413c2b3b9006d50 ; utd: False
+  - mszostok/codeowners-validator@7f3f5e28c6d7b8dfae5731e54ce2272ca384592f ; utd: False
+  - sitezen/pr-comment-checker@f1e956fac00c6d1163d15841886ae80b7ae58ecb ; utd: False
+  - pnpm/action-setup@c3b53f6a16e57305370b4ae5a540c2077a1d50dd ; utd: False
+  - JulienKode/pull-request-name-linter-action@8c05fb989d9f156ce61e33754f9802c9d3cffa58 ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/FluidFramework - push-queue.yml
+
+Type: GITHUB
+  - actions/github-script@d556feaca394842dc55e4734bf3bb9f685482fa0 ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/FluidFramework - stale-branches.yml
+
+Type: GITHUB
+  - actions/checkout@7884fcad6b5d53d10323aee724dc68d8b9096a2e ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+  - beatlabs/delete-old-branches-action@db61ade054731e37b5740e23336445fbc75ccd7b ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/FluidFramework - website-validation.yml
+
+Type: GITHUB
+  - actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c ; utd: False
+  - actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c ; utd: False
+  - actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce ; utd: False
+  - actions/download-artifact@9bc31d5ccc31df68ecc42ccf4149144866c47d8a ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+

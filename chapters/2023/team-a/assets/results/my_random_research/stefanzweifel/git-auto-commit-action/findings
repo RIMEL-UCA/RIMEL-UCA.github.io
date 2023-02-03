@@ -1,0 +1,46 @@
+name: stefanzweifel/git-auto-commit-action - git-auto-commit.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: stefanzweifel/git-auto-commit-action - linter.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+  - github/super-linter@v4 ; utd: True
+Type: TRUSTED
+Type: FORKED
+
+name: stefanzweifel/git-auto-commit-action - release-drafter.yml
+
+Type: GITHUB
+Type: INTERNAL
+Type: PUBLIC
+  - release-drafter/release-drafter@v5 ; utd: True
+Type: TRUSTED
+Type: FORKED
+
+name: stefanzweifel/git-auto-commit-action - tests.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: stefanzweifel/git-auto-commit-action - versioning.yml
+
+Type: GITHUB
+Type: INTERNAL
+Type: PUBLIC
+  - Actions-R-Us/actions-tagger@latest ; utd: False
+Type: TRUSTED
+Type: FORKED
+

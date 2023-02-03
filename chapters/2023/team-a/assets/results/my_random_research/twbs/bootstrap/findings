@@ -1,0 +1,131 @@
+name: twbs/bootstrap - browserstack.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+  - actions/setup-node@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: twbs/bootstrap - bundlewatch.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+  - actions/setup-node@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: twbs/bootstrap - calibreapp-image-actions.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+  - calibreapp/image-actions@1.1.0 ; utd: True
+Type: TRUSTED
+Type: FORKED
+
+name: twbs/bootstrap - codeql.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+  - github/codeql-action/init@v2 ; utd: False
+  - github/codeql-action/autobuild@v2 ; utd: False
+  - github/codeql-action/analyze@v2 ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: twbs/bootstrap - cspell.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+  - streetsidesoftware/cspell-action@v2 ; utd: True
+Type: TRUSTED
+Type: FORKED
+
+name: twbs/bootstrap - css.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+  - actions/setup-node@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: twbs/bootstrap - docs.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+  - actions/setup-node@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+  - JustinBeckwith/linkinator-action@v1 ; utd: True
+Type: TRUSTED
+Type: FORKED
+
+name: twbs/bootstrap - issue-close-require.yml
+
+Type: GITHUB
+Type: INTERNAL
+Type: PUBLIC
+  - actions-cool/issues-helper@v3 ; utd: True
+Type: TRUSTED
+Type: FORKED
+
+name: twbs/bootstrap - issue-labeled.yml
+
+Type: GITHUB
+Type: INTERNAL
+Type: PUBLIC
+  - actions-cool/issues-helper@v3 ; utd: True
+Type: TRUSTED
+Type: FORKED
+
+name: twbs/bootstrap - js.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+  - actions/setup-node@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+  - coverallsapp/github-action@1.1.3 ; utd: True
+Type: TRUSTED
+Type: FORKED
+
+name: twbs/bootstrap - lint.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+  - actions/setup-node@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: twbs/bootstrap - node-sass.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+  - actions/setup-node@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: twbs/bootstrap - release-notes.yml
+
+Type: GITHUB
+Type: INTERNAL
+Type: PUBLIC
+  - release-drafter/release-drafter@v5 ; utd: True
+Type: TRUSTED
+Type: FORKED
+

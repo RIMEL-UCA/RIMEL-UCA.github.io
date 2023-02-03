@@ -1,0 +1,104 @@
+name: vercel/next.js - build_test_deploy.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+  - actions/setup-node@v3 ; utd: True
+  - actions/cache@v3 ; utd: True
+  - actions/download-artifact@v3 ; utd: True
+  - actions/upload-artifact@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+  - actions-rs/toolchain@v1 ; utd: True
+  - EndBug/add-and-commit@v7 ; utd: False
+  - addnab/docker-run-action@v3 ; utd: True
+  - vmactions/freebsd-vm@v0 ; utd: True
+  - datadog/agent-github-action@v1 ; utd: True
+Type: TRUSTED
+Type: FORKED
+
+name: vercel/next.js - cancel.yml
+
+Type: GITHUB
+Type: INTERNAL
+Type: PUBLIC
+  - styfle/cancel-workflow-action@0.9.1 ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: vercel/next.js - issue_labeler.yml
+
+Type: GITHUB
+Type: INTERNAL
+Type: PUBLIC
+  - github/issue-labeler@v2.6 ; utd: True
+Type: TRUSTED
+Type: FORKED
+
+name: vercel/next.js - issue_lock.yml
+
+Type: GITHUB
+Type: INTERNAL
+Type: PUBLIC
+  - dessant/lock-threads@v3 ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: vercel/next.js - issue_on_comment.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: vercel/next.js - issue_on_label.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: vercel/next.js - issue_stale.yml
+
+Type: GITHUB
+  - actions/stale@v4 ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: vercel/next.js - issue_validator.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+  - actions/setup-node@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: vercel/next.js - notify_release.yml
+
+Type: GITHUB
+  - actions/github-script@v6 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: vercel/next.js - pull_request_stats.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+  - actions/cache@v3 ; utd: True
+  - actions/upload-artifact@v3 ; utd: True
+  - actions/download-artifact@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+  - addnab/docker-run-action@v3 ; utd: True
+Type: TRUSTED
+Type: FORKED
+

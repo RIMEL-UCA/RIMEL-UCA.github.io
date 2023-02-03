@@ -1,28 +1,14 @@
 ---
 layout: default
-title : Maintenabilité d’une pipeline : paternité et dépendances de l’implémentation des jobs et steps
-date:  2022-11
----
-
----
-
-   **Date de rendu finale : fin février**
-   - Respecter la structure pour que les chapitres soient bien indépendants
-   - Remarques :
-        - La structure proposée est là pour vous aider, mais peut-être adaptée à votre projet
-        - Les titres peuvent être modifiés pour être en adéquation avec votre étude.
-        - Utiliser des références pour justifier votre argumentaire, vos choix, etc.
-        - Vous avez le choix d'utiliser le français ou l'anglais.
-
-    Dans l'article de Blog [Debret 2020], l'auteure donne les éléments principaux de la démarche d'une manière simple et très facile à lire, dans la partie [Quelles sont les étapes d’une bonne démarche scientifique ?](https://www.scribbr.fr/article-scientifique/demarche-scientifique/#:~:text=La%20d%C3%A9marche%20scientifique%20permet%20d,de%20nouvelles%20hypoth%C3%A8ses%20%C3%A0%20tester.)
-
+title : Comment visualiser les dépendances d’une chaîne d’intégration continue, leur origine et leur niveau de confiance ?
+date:  2023-01
 ---
 
 **_février 2023_**
 
-## Authors
+## Auteurs
 
-Nous sommes cinq étudiants en dernière année à Polytech Nice-Sophia specialisés en Architecture Logicielle :
+Nous sommes cinq étudiants en dernière année à Polytech Nice-Sophia specialisés en Architecture Logicielle (AL) :
 
 - Antoine Amiard ([@AntoineAmiard](https://github.com/AntoineAmiard)),
 - Romain Kugler ([@romainkugler](https://github.com/romainkugler)),
@@ -30,22 +16,28 @@ Nous sommes cinq étudiants en dernière année à Polytech Nice-Sophia speciali
 - Julien Satti ([@juliensatti](https://github.com/juliensatti)).
 
 
-## I. Research context /Project
+## I. Contexte
 
-Préciser ici votre contexte et Pourquoi il est intéressant. **
+L'intégration continue (CI) est de plus en plus utilisée et préconisée dans l'utilisation de dépôts de contrôle de version (type GitHub, GitLab...). Au fil des années, de nouveaux outils ont été implémentés dans les langages descriptifs d'intégration continue (type GitHub Actions, GitLab CI/CD ; tous deux sous le format YAML). Un de ces ajouts : la réutilisation d'étapes/actions (steps) au travers d'actions partagées/"empaquetées" par la plateforme, par des tiers ou par nous même dans un autre dépôt par exemple.
 
+Ainsi, avec cette réutilisation d'actions au travers des fichiers d'intégration continue, nous nous sommes posés la question de la maintenabilité de ces fichiers. En effet, si une action est modifiée, il faut modifier tous les fichiers d'intégration continue qui l'utilisent. De plus, si une action est supprimée, il faut supprimer tous les fichiers d'intégration continue qui l'utilisent. Même chose si elle est déplacée ou mise à jour. Cela peut vite devenir un problème.
 
-## II. Observations/General question
+Nous nous sommes donc demandés s'il était possible de visualiser les dépendances en actions dans chaque tâche d'un fichier d'intégration continue, avec pour chaque action empaquetée détectée : leur origine, leur niveau de confiance associée et si elles sont à jour ou non. Nous avons donc décidé de développer un outil permettant de répondre à cette problématique.
 
-1. Commencez par formuler une question sur quelque chose que vous observez ou constatez ou encore une idée émergente.
+Pour réaliser cela, nous réaliserons aussi une visualisation plus parlante de la précédence de chaque tâche (job) au sein d'une chaîne d'intégration continue.
 
-2. Préciser pourquoi cette question est intéressante de votre point de vue.
+## II. Question générale
 
-Attention pour répondre à cette question, vous devrez être capable d'émettre des hypothèses vérifiables, de quantifier vos réponses, ...
+ **"Comment visualiser les dépendances d’une chaîne d’intégration continue, leur origine et leur niveau de confiance ?"**
 
-     :bulb: Cette première étape nécessite beaucoup de réflexion pour se définir la bonne question afin de poser les bonnes bases pour la suite.
+Cette question a le mérite d'être très large et de couvrir plusieurs problématiques. Nous avons donc décidé de la décomposer en plusieurs questions plus précises :
+   1. Comment détecter l’obsolescence de l’implémentation d’une tâche dans une chaine d’intégration continue ?
+   2. Comment s’assurer de la pérennité de tâches tierces dans une chaîne d’intégration continue ?
+   3. Comment représenter toutes ces informations clairement ?
 
-## III. Information gathering
+Au terme de ce projet, nous espérons pouvoir répondre à ces questions et ainsi fournir un outil permettant de proposer une visualisation viable de la chaîne d'intégration continue de n'importe quel projet.
+
+## III. Recueil des données
 
 Préciser vos zones de recherches en fonction de votre projet, les informations dont vous disposez, ... :
 
@@ -55,7 +47,7 @@ Préciser vos zones de recherches en fonction de votre projet, les informations 
 
      :bulb: Cette étape est fortement liée à la suivante. Vous ne pouvez émettre d'hypothèses à vérifier que si vous avez les informations, inversement, vous cherchez à recueillir des informations en fonction de vos hypothèses.
 
-## IV. Hypothesis & Experiences
+## IV. Hypothèses & Expériences
 
 1. Il s'agit ici d'**énoncer sous forme d'hypothèses** ce que vous allez chercher à démontrer. Vous devez définir vos hypothèses de façon à pouvoir les _mesurer/vérifier facilement._ Bien sûr, votre hypothèse devrait être construite de manière à _vous aider à répondre à votre question initiale_. Explicitez ces différents points.
 2. Vous **explicitez les expérimentations que vous allez mener** pour vérifier si vos hypothèses sont vraies ou fausses. Il y a forcément des choix, des limites, explicitez-les.
@@ -63,7 +55,7 @@ Préciser vos zones de recherches en fonction de votre projet, les informations 
      :bulb: Structurez cette partie à votre convenance : Hypothèse 1 => Expériences, Hypothèse 2 => Expériences ou l'ensemble des hypothèses et les expériences....
 
 
-## V. Result Analysis and Conclusion
+## V. Analyse des résultats & Conclusion
 
 1. Présentation des résultats
 2. Interprétation/Analyse des résultats en fonction de vos hypothèses
@@ -71,15 +63,54 @@ Préciser vos zones de recherches en fonction de votre projet, les informations 
 
      :bulb:  Vos résultats et donc votre analyse sont nécessairement limités. Préciser bien ces limites : par exemple, jeux de données insuffisants, analyse réduite à quelques critères, dépendance aux projets analysés, ...
 
-## VI. Tools \(facultatif\)
+![Répartition des types d'action par dépôt](assets/images/repartition_per_repo.png)
 
-Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à \(1\) pouvoir reproduire vos expérimentations, \(2\) partager/expliquer à d'autres l'usage des outils.
+## VI. Outillage
 
-![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](images/logo_uca.png){:height="25px"}
+Afin de réaliser ce projet, nous avons créé des outils permettant de détecter les actions utilisées dans un fichier d'intégration continue, de les analyser et de les visualiser.
 
+### 1. Génération des visualisations et des résultats
+
+Pour générer les visualisations et les résultats, nous avons utilisé le script `main.py` qui permet de récupérer les informations sur les actions utilisées dans les fichiers d'intégration continue des dépôts GitHub (importés dans un fichier de recherche sous format YML). Pour cela, nous avons utilisé l'API GitHub et le langage Python.
+
+Il suffit de créer un corpus de dépôts dans le format YML suivant :
+
+```yaml
+name: "My Research Corpus"
+
+subjects:
+
+   your_group_name:
+      repositories:
+         - "repo_owner/repo_name"
+
+   your_group_name_advanced:
+      repositories:
+         - "repo_owner/repo_name"
+      trusted-owners:
+         - "github_username"
+```
+
+Puis de lancer le script `main.py` avec le fichier YML en paramètre :
+
+```bash
+python3 main.py -P my_corpus.yml
+```
+
+Le script va alors récupérer les informations sur les actions utilisées dans les fichiers d'intégration continue des dépôts GitHub et les exporter dans un fichier de résultats au format propriétaire "findings". En plus de réaliser cela, des graphiques sont générés à partir des résultats obtenus et organisés dans un dossier `results` à la racine du projet. Ce dossier contient le nom du corpus utilisé pour générer les résultats et détient chacun des dépôts analysés dans un dossier portant le nom du propriétaire du dépôt. Dans chacun de ces dossier, les dépôts sont organisés dans des sous-dossiers portant le nom du dépôt. Dans chacun de ces sous-dossiers, les graphiques de précédence sont générés dans un dossier `precedence` et les graphiques de dépendances (ceux qui nous intéressent le plus) dans un dossier `dependencies`. Les fichiers de workflow sont également copiés dans un dossier `workflows` à la racine du dossier du dépôt.
+
+![Arborescence des résultats](assets/images/results_tree.png)
+
+### 2. Analyse des résultats
+
+Afin de compiler les résultats obtenus précédemment sous format de fichier propriétaire "findings", nous avons utilisé le script `compyte.py` qui permet de compiler des graphiques et des données statistiques à partir des résultats obtenus par le script `main.py`. Pour cela, nous avons utilisé le langage Python également. Les images présentes dans ce rapport ont été générées à l'aide de ce script.
+
+Il suffit de lancer le script `compyte.py` qui va récupérer les résultats dans le dossier `results` à la racine du projet et générer les graphiques et les données statistiques dans le dossier `results` à la racine du projet. Les graphiques sont générés dans la mémoire et les données statistiques sont exportées dans la console.
+
+> 🤘🏻 Tout le code source de ce projet de recherche est disponible [ici](assets/code), avec un guide d'utilisation.
 
 ## VI. References
 
 [Debret 2020] Debret, J. (2020) La démarche scientifique : tout ce que vous devez savoir ! Available at: https://www.scribbr.fr/article-scientifique/demarche-scientifique/ (Accessed: 18 November 2022).
 
-
+![Figure 1: Logo UCA](assets/images/logo_uca.png){:height="25px"}

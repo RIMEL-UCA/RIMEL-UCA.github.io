@@ -1,0 +1,30 @@
+name: Update link report
+on:
+  workflow_run:
+    workflows: [ "Website validation" ]
+    types:
+      - completed
+
+jobs:
+  load_report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download results
+        uses: dawidd6/action-download-artifact@bd10f381a96414ce2b13a11bfa89902ba7cea07f # ratchet:dawidd6/action-download-artifact@v2.24.3
+        with:
+          workflow: website-validation.yml
+          # workflow_conclusion: completed
+          run_id: ${{ github.event.workflow_run.id }}
+          name: website-validation-results
+          path: ./results
+      - name: Load PR number
+        id: load_pr
+        run: echo "pr=$(cat pr)" >> $GITHUB_OUTPUT
+        working-directory: ./results
+      - name: Post report in comment
+        uses: marocchino/sticky-pull-request-comment@fcf6fe9e4a0409cd9316a5011435be0f3327f1e1 # ratchet:marocchino/sticky-pull-request-comment@v2.3.1
+        with:
+          header: linkreport
+          recreate: true
+          number: ${{ steps.load_pr.outputs.pr }}
+          path: ./results/linkcheck

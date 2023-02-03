@@ -1,0 +1,61 @@
+name: microsoft/TypeScript - ci.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+  - actions/setup-node@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/TypeScript - codeql.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+  - github/codeql-action/init@v2 ; utd: False
+  - github/codeql-action/autobuild@v2 ; utd: False
+  - github/codeql-action/analyze@v2 ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/TypeScript - ensure-related-repos-run-crons.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/TypeScript - rich-navigation.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+  - actions/setup-node@v3 ; utd: True
+Type: INTERNAL
+  - microsoft/RichCodeNavIndexer@v0.1 ; utd: False
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/TypeScript - sync-wiki.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/TypeScript - update-lkg.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+  - actions/setup-node@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+

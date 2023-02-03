@@ -1,0 +1,23 @@
+name: mattermost/mattermost-server - codeql-analysis.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+  - github/codeql-action/init@v2 ; utd: False
+  - github/codeql-action/analyze@v2 ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: mattermost/mattermost-server - scorecards-analysis.yml
+
+Type: GITHUB
+  - actions/checkout@ec3a7ce113134d7a93b817d10a8272cb61118579 ; utd: False
+  - actions/upload-artifact@82c141cc518b40d92cc801eee768e7aafc9c2fa2 ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+  - ossf/scorecard-action@c1aec4ac820532bab364f02a81873c555a0ba3a1 ; utd: False
+  - github/codeql-action/upload-sarif@5f532563584d71fdef14ee64d17bafb34f751ce5 ; utd: False
+Type: TRUSTED
+Type: FORKED
+

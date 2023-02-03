@@ -1,0 +1,23 @@
+name: facebook/react - commit_artifacts.yml
+
+Type: GITHUB
+  - actions/setup-node@v3 ; utd: True
+  - actions/github-script@v6 ; utd: True
+  - actions/upload-artifact@v3 ; utd: True
+  - actions/checkout@v3 ; utd: True
+  - actions/download-artifact@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+  - stefanzweifel/git-auto-commit-action@v4 ; utd: True
+Type: TRUSTED
+Type: FORKED
+
+name: facebook/react - devtools_check_repro.yml
+
+Type: GITHUB
+  - actions/github-script@v3 ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
