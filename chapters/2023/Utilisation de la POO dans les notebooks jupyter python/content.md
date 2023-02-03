@@ -105,7 +105,7 @@ Nous prendrons en compte les limites de cette analyse, telles que le nombre limi
 ### Hypothèse 2 : L'utilisation de la programmation orientée objet (POO) améliore la qualité des notebooks Jupyter.
 ### Expérimentations : 
 
-Pour vérifier cette hypothèse, nous allons mener une comparaison rigoureuse entre la qualité des notebooks Jupyter utilisant la POO et ceux qui n'en utilisent pas. Nous allons mesurer la qualité du code en utilisant les critères suivants : la lisibilité, la modularité, la réutilisabilité et la documentation. 
+Pour vérifier cette hypothèse, nous allons mener une comparaison rigoureuse entre la qualité des notebooks Jupyter utilisant la POO et ceux qui n'en utilisent pas. Nous allons mesurer la qualité du code en utilisant les critères suivants : la <b>lisibilité</b>, <b>la modularité</b>, <b>la réutilisabilité</b> et la <b>documentation</b>. 
 
 Pour effectuer cette comparaison, nous allons sélectionner un échantillon représentatif de notebooks Jupyter utilisant la POO et ceux qui n'en utilisent pas. Nous allons évaluer les critères de mesure de la qualité pour chacun des notebooks, puis comparer les résultats pour déterminer s'il y a une différence significative entre les deux groupes de notebooks. 
 
@@ -135,7 +135,9 @@ L'hypothèse sera considérée comme vérifiée si le nombre d'étoiles sur Gith
   <img src="./assets/images/image1.png">
 </p>
 
-rejeté car beaucoup de personnes ne l'utilise pas. 
+D'après les données représentées sur le graphique, il est clair que l'utilisation de la Programmation Orientée Objet (POO) est très peu répandue chez les utilisateurs de notebooks. Seulement <b>4,3%</b> des utilisateurs de notebooks utilisent la POO, tandis que <b>95,7%</b> n'en font pas usage. Cependant, il est important de prendre en compte les limites de l'étude, notamment le nombre restreint d'échantillons disponibles et la restriction de collecte des notebooks via l'Api Github.
+
+L'hypothèse 1 soutenait que "l'utilisation de la POO est largement adoptée par les data scientistes pour améliorer la qualité de leurs notebooks". Cependant, en considérant les données obtenues avec nos limites, nous pouvons conclure que l'utilisation de la POO est très peu fréquente dans les notebooks Jupyter. Par conséquent, nous rejetons <b>l'hypothèse 1</b>.
 
 ### 2. Qualité logicielle des notebooks 
 
