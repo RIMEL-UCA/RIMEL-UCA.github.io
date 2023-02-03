@@ -122,7 +122,7 @@ Dans le cadre de notre recherche, nous avons basé notre travail sur les ressour
 **2. Les jeux de données 💾**
 
 Nous procéderons à l'analyse de projets GitHub. 
-La liste contenant la totalité des projets récupérés se trouve dans un excel disponible [ici.](chapters/2023/Paternité de la variabilité sur de l'orienté objet/assets/data/GitHub_projects_list.xlsx)
+La liste contenant la totalité des projets récupérés se trouve dans un excel disponible [ici.](assets/data/GitHub_projects_list.xlsx)
 
 Les projets GitHub que nous allons analyser comportent les caractéristiques suivants :
 - langage de développement : JAVA (orienté objet),
