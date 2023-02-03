@@ -155,11 +155,13 @@ Les projets GitHub que nous allons analyser comportent les critères suivants :
 Ces critères sont définis pour limiter le choix des projets à analyser. 
 Pour faire ressortir la notion de paternité, il faut avoir plus d'un seul contributeur. 
 Cependant, avec un nombre trop conséquent de contributeur, l'analyse risque d'être trop morcelée donc une limite expérimentale est fixée à 40 contributeurs.
+Il est important de noter que tous les contributeurs dans le projet sur GitHub n'ont pas forcément participé à l'écriture de la variabilité.
+Notre analyse va donc prendre en compte seulement ceux qui y ont participé, ils seront dorénavant appelés "Développeurs"."
 
 La taille de la base de code choisie est directement liée au temps d'analyse du projet pour calculer la variabilité de celui-ci. 
 Un trop gros projet mettrait beaucoup de temps à être analysé donc nous ciblons des projets de taille moyenne ou petite.
 
-Un projet peut donc être défini par son nombre de lignes de code, son nombre de contributeurs et sa quantité de variabilité.
+Un projet peut donc être défini par son nombre de lignes de code, son nombre de contributeurs et sa quantité de variabilité (nombre de "VP" et de "VARIANT").
 
 **3. Les outils🔨🪓**
 
@@ -200,17 +202,14 @@ Les projets que nous avons choisis pour cette expérience sont les suivants :
 
 |                      Projet                       | Lien                                                                 | Nombre de contributeurs | Nombre de développeurs |
 |:-------------------------------------------------:|:---------------------------------------------------------------------|:-----------------------:|:----------------------:|
-|             JakeWharton/DiskLruCache              | https://github.com/JakeWharton/DiskLruCache                          |           10            |           ?            |
-|                JakeWharton/RxRelay                | https://github.com/JakeWharton/RxRelay                               |           15            |           ?            |
-|               Flipboard/bottomsheet               | https://github.com/Flipboard/bottomsheet                             |           20            |           ?            |
-|      VerbalExpressions/JavaVerbalExpressions      | https://github.com/VerbalExpressions/JavaVerbalExpressions           |           25            |           ?            |
-| EnterpriseQualityCoding/FizzBuzzEnterpriseEdition | https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition |           31            |           ?            |
+|               galenframework/galen                | https://github.com/galenframework/galen                              |           13            |           9            |
 |                EngineHub/WorldEdit                | https://github.com/EngineHub/WorldEdit                               |           96            |           52           |
+|                    netty/netty                    | https://github.com/netty/netty                                       |           605           |          497           |
 
 #### Description
 
 Le but de cette expérience est de déterminer si le nombre de contributeurs influe sur la répartition de la variabilité.
-Pour cela, on a sélectionné des projets contenant de la variabilité avec un nombre de contributeurs croissant (de 10 à 52).
+Pour cela, on a sélectionné des projets contenant de la variabilité avec un nombre de contributeurs croissant (de 13 à 605).
 À partir de l'analyse de la variabilité de chaque projet, un filtre est appliqué pour isolé tous les "VARIANTS" 
 et itérer sur chacun afin d'appliquer ``git blame`` sur le fichier contenant le "VARIANT" 
 et identifier les différents auteurs ainsi que leur pourcentage de participation à l'écriture de ce fichier.
@@ -271,6 +270,33 @@ Une fois que la variabilité est analysée (grâce à Symfinder), la démarche �
 ### Présentation des résultats
 
 #### Experience 1
+
+L'expérience se fait sur 3 projets un nombre de développeurs croissant.
+
+Projet 1 (peu de développeurs) 
+- Nom : ``galenframework/galen``
+- Nombre de développeurs : ``9``
+- Nombre de VP : ``71``
+- Nombre de VARIANT : ``226``
+
+![Pourcentage de variabilité moyenne par contributeur](assets/images/experience_1_galen.png)
+
+Projet 2 
+- Nom : ``EngineHub/WorldEdit``
+- Nombre de développeurs : ``52``
+- Nombre de VP : ``265``
+- Nombre de VARIANT : ``700``
+
+![Pourcentage de variabilité moyenne par contributeur](assets/images/experience_1_worledit.png)
+
+Projet 3 (beaucoup de développeurs)
+- Nom : ``netty/netty``
+- Nombre de développeurs : ``497``
+- Nombre de VP : ``722``
+- Nombre de VARIANT : ``1574``
+
+![Pourcentage de variabilité moyenne par contributeur](assets/images/experience_1_netty.png)
+
 
 #### Experience 2
 
