@@ -1,5 +1,6 @@
 # Sujet 1 : Quelle qualité logicielle dans les codes des notebooks?
-## Authors
+
+## Auteurs
 
 Nous sommes quatre étudiants ingénieurs en dernière année à Polytech Nice Sophia, spécialisés en Architecture Logicielle :
 
@@ -71,7 +72,7 @@ Notre premier échantillon est constitué de “notebooks populaires”. Cette q
 
 Notre dataset est donc constitué de :
 
-* Échantillon populaire
+* Échantillon des notebooks populaires
 * Échantillon des références
 * Échantillon aléatoire représentatif
 
@@ -208,8 +209,8 @@ Ainsi, plus il y a de "statements" (instructions en français), plus l'impact d'
 Pour cette étude, nous avons identifié certaines limites :
 
 * Les notebooks non populaires peuvent éventuellement être un fork d'un notebook populaire. Ainsi, une partie des pratiques d'un notebook populaire peut être utilisée dans le fork, ce qui peut amener à biaiser les résultats. Il s'agirait, à l'avenir, de détecter si un dépôt extrait provient d'un fork afin de l'exclure de la sélection des données. Ce phénomène est toutefois assez rare.
-* Une fuite mémoire présente dans l’outil Pylint lorsqu’il est utilisé programmatiquement limite le nombre d’analyses simultanées impactant ainsi le temps d’analyse
-* Certains notebooks (<1%) étant écrits en R, nous avons fait le choix de ne pas les supporter
+* Une fuite mémoire présente dans l’outil Pylint lorsqu’il est utilisé programmatiquement limite le nombre d’analyses simultanées impactant ainsi le temps d’analyse.
+* Certains notebooks (<1%) étant écrits en R, nous avons fait le choix de ne pas les supporter.
 * Bien qu'il soit possible qu'un auteur de notebook privilégie les commentaires dans les cellules de code, nous avons fait le choix, pour la qualité structurelle d'un notebook, de ne pas identifier les commentaires dans les cellules de code Python.
 
 ## VI. Outils
