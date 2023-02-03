@@ -75,7 +75,7 @@ Pour générer les visualisations et les résultats, nous avons utilisé le scri
 
 Il suffit de créer un corpus de dépôts dans le format YML suivant :
 
-```yaml
+{% highlight yaml linenos %}
 name: "My Research Corpus"
 
 subjects:
@@ -89,7 +89,7 @@ subjects:
          - "repo_owner/repo_name"
       trusted-owners:
          - "github_username"
-```
+{% endhighlight %}
 
 Puis de lancer le script `main.py` avec le fichier YML en paramètre :
 
