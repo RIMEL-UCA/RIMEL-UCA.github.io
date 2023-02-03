@@ -235,11 +235,11 @@ Une fois que la variabilité est analysée (grâce à Symfinder), la démarche �
 ##### Source
 Les projets que nous avons choisis pour cette expérience sont les suivants : 
 
-|                      Projet                       | Lien                                                                 | Nombre de contributeurs | Nombre de développeurs | Nombre de VP | Nombre de VARIANT |
-|:-------------------------------------------------:|:---------------------------------------------------------------------|:-----------------------:|:----------------------:|:------------:|:-----------------:|
-| EnterpriseQualityCoding/FizzBuzzEnterpriseEdition | https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition |           31            |           ?            |      46      |        19         | 
-|                EngineHub/WorldEdit                | https://github.com/EngineHub/WorldEdit                               |           96            |           52           |      0       |         0         |
-|               galenframework/galen                | https://github.com/galenframework/galen                              |           13            |           9            |      0       |         0         |
+|                      Projet                       | Lien                                                                 | Nombre de contributeurs | Nombre de développeurs |
+|:-------------------------------------------------:|:---------------------------------------------------------------------|:-----------------------:|:----------------------:|
+|               galenframework/galen                | https://github.com/galenframework/galen                              |           13            |           9            |
+|                EngineHub/WorldEdit                | https://github.com/EngineHub/WorldEdit                               |           96            |           52           |
+|                    netty/netty                    | https://github.com/netty/netty                                       |           605           |          497           |
 
 ##### Description
 
