@@ -1,11 +1,11 @@
 # my_random_research
 
 <style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;margin-bottom: 20px;}
-.tg td{font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg th{font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-blockquote { background-color: #cecece !important; padding: 14px 10px 5px 20px !important; border-radius: 5px !important;}
-.tgimg { border-radius: 5px!important; max-width: 90%; margin: 15px 5%;}
+.tg  {border-spacing:5px;margin-bottom: 20px !important;}
+.tg td{font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#111; border-radius: 5px;}
+.tg th{font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#111; border-radius: 5px;}
+blockquote { background-color: #d5d5d5 !important; padding: 14px 10px 5px 20px !important; border-radius: 5px !important;}
+.tgimg > img { border-radius: 5px!important; max-width: 90%; margin: 15px 5%;}
 </style>
 
 ## Corpus
