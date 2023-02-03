@@ -24,7 +24,7 @@ Depuis sa création en 2011, Jupyter est devenue une plateforme populaire pour l
 
 Cependant, il est important de se demander si la POO est utilisée dans les notebooks Jupyter et quel est son impact sur la qualité logicielle. En effet, la POO peut aider à structurer et à organiser le code de manière cohérente, ce qui peut améliorer la lisibilité et la maintenabilité du code. Cependant, il est également possible que la POO puisse rendre le code plus complexe et difficile à comprendre pour certains utilisateurs.
 
-Il est donc intéressant de mener une étude pour évaluer l'utilisation de la POO dans les notebooks Jupyter et son impact sur la qualité logicielle. Cela pourrait être fait en examinant un échantillon de notebooks Jupyter populaires sur Github et en analysant leur utilisation de la POO, en interrogeant les développeurs sur leur utilisation de la POO dans leur travail quotidien avec Jupyter (ce qui n'est pas applicable au contexte de ce cours), et en utilisant des outils d'analyse de code pour évaluer la qualité du code dans les notebooks Jupyter qui utilisent la POO. Les résultats de cette étude pourraient être utiles pour les développeurs de logiciels qui utilisent Jupyter plus particulièrement les Data Scientistes. 
+Il est donc intéressant de mener une étude pour évaluer l'utilisation de la POO dans les notebooks Jupyter et son impact sur la qualité logicielle. Cela pourrait être fait en examinant un échantillon de notebooks Jupyter populaire sur Github et en analysant leur utilisation de la POO, en interrogeant les développeurs sur leur utilisation de la POO dans leur travail quotidien avec Jupyter (ce qui n'est pas applicable au contexte de ce cours), et en utilisant des outils d'analyse de code pour évaluer la qualité du code dans les notebooks Jupyter qui utilisent la POO. Les résultats de cette étude pourraient être utiles pour les développeurs de logiciels qui utilisent Jupyter plus particulièrement les Data Scientistes. 
 
 
 ## II. Observations / Question générale
@@ -36,14 +36,14 @@ Cette question nous intéresse car la POO est un paradigme de programmation larg
 De la question générale en découle plusieurs sous-questions qui nous permettent de mieux comprendre le sujet et d'aborder de manière plus précise et approfondie les différents aspects de la question : 
 - **Quel est le pourcentage d’utilisation de la POO dans les notebooks Jupyter ?**
 
-Cette sous-question vise à déterminer l'utilisation de la POO dans les notebooks Jupyter en termes de pourcentage. Cela pourrait être fait en examinant un échantillon de notebooks Jupyter python trouvés sur Github et en comptant le nombre de notebooks qui utilisent la POO (grâce à un ensemble de règles/patterns que nous deffinirons et qui nous permettrons de reconnaitre l'usage de la POO dans ces notebooks)par rapport au nombre total de notebooks.
+Cette sous-question vise à déterminer l'utilisation de la POO dans les notebooks Jupyter en matière de pourcentage. Cela pourrait être fait en examinant un échantillon de notebooks Jupyter python trouvé sur Github et en comptant le nombre de notebooks qui utilisent la POO (grâce à un ensemble de règles/patterns que nous définirons et qui nous permettrons de reconnaitre l'usage de la POO dans ces notebooks)par rapport au nombre total de notebooks.
 
 
 - **Quel est l’impact de l’utilisation de la POO sur la qualité logicielle dans les notebooks Jupyter ?**
 
 Cette sous-question vise à évaluer l'impact de l'utilisation de la POO sur la qualité logicielle dans les notebooks Jupyter python. Cela pourrait être fait en utilisant des outils d'analyse de code pour évaluer la qualité du code dans les notebooks Jupyter qui utilisent la POO, et en comparant cette qualité avec celle des notebooks qui n'utilisent pas la POO. On s'intéressera à **Pylint** qui est un outil de vérification de code python qui vise à améliorer la qualité du code en détectant les erreurs et en proposant des suggestions pour le rendre plus propre et plus maintenable.
 
-- **Y-a-t-il une corrélation entre l'usage de la POO dans les notebooks Jupyter et leur popularité ?**
+- **Y a-t-il une corrélation entre l'usage de la POO dans les notebooks Jupyter et leur popularité ?**
 
 Cette sous-question vise à évaluer l'impact de l'utilisation de la POO sur la popularité des notebooks Jupyter python. Cela pourrait être fait en utilisant le nombre d'étoiles et de forks sur Github. 
 
@@ -52,7 +52,7 @@ Cette sous-question vise à évaluer l'impact de l'utilisation de la POO sur la 
 
 ### Articles 
 
-Nous avons cherché des documents de recherche et articles rédigés sur des blogs traitant de l'utilisation de la POO par les datascientistes et de l'usage de la POO dans les notebooks Jupyter python. Voici une synthèse de ce sur quoi nous avons basé notre travail : 
+Nous avons examiné des sources telles que des documents de recherche et des articles publiés sur des blogs qui traitent de l'utilisation de la programmation orientée objet (POO) par les scientifiques des données et de son utilisation dans les notebooks Jupyter de Python. Voici un résumé de la base sur laquelle nous avons fondé notre travail :
 
 * [Object-Oriented Programming (OOP) in Python 3](https://realpython.com/python3-object-oriented-programming/)
 
@@ -62,7 +62,7 @@ Nous avons cherché des documents de recherche et articles rédigés sur des blo
      
      **Résumé :**
      
-     Cet article présente les bases de la POO en python et explique comment reconnaitre l'utilisation de la POO dans un code python. Il explique comment créer des classes et des objets, comment les utiliser pour stocker des données et comment les utiliser pour créer des fonctions et des méthodes. Il explique également comment représenter les grands conceptes de la POO en python comme l'héritage, l'encapsulation et la polymorphisme. Grâce à cet article, nous avons appris les différents mots clés utilisés pour la POO en Python.
+     Cet article présente les bases de la POO en python et explique comment reconnaitre l'utilisation de la POO dans un code python. Il explique comment créer des classes et des objets, comment les utiliser pour stocker des données et comment les utiliser pour créer des fonctions et des méthodes. Il explique également comment représenter les grands concepts de la POO en python comme l'héritage, l'encapsulation et la polymorphisme. Grâce à cet article, nous avons appris les différents mots clés utilisés pour la POO en Python.
 
      Nous avons : 
 
@@ -77,27 +77,27 @@ Nous avons cherché des documents de recherche et articles rédigés sur des blo
 
 ### Jeux de données 
 
-Afin de mener à bien notre projet de recherche sur l'utilisation de la POO dans les notebooks Jupyter Python, nous envisageons de rechercher sur GitHub les notebooks jupyter python. Pour faciliter notre recherche de notebooks, nous envisageons d'écrire des scripts Python qui vons nous nous permettre d'automatiser la recherche de fichiers d'extensions .ipynb sur GitHub grâce à son API. Les fichiers notebooks étant des fichiers scientifiques et pour avoir un grand volume de données, nous ne nous restreindrons pas à un domaine spécifique. Cela pour maximiser nos chances de trouver des notebooks utilisants la POO. 
+Afin de mener à bien notre projet de recherche sur l'utilisation de la POO dans les notebooks Jupyter Python, nous envisageons de rechercher sur GitHub les notebooks jupyter python. Pour faciliter notre recherche de notebooks, nous envisageons d'écrire des scripts Python qui vons nous nous permettre d'automatiser la recherche de fichiers d'extensions .ipynb sur GitHub grâce à son API. Les fichiers notebooks étant des fichiers scientifiques et pour avoir un grand volume de données, nous ne nous restreindrons pas à un domaine spécifique. Cela pour maximiser nos chances de trouver des notebooks utilisant la POO. 
 
 
 ### Outils 
 
-Les outils que nous envisageons utiliser pour notre étude sont : 
+Les outils utiliser pour notre étude sont : 
 
 * [Pylint](https://www.pylint.org/) est un outil puissant pour vérifier la qualité du code en Python. Il offre une analyse détaillée du code et fournit des commentaires sur les erreurs, les avertissements et les bonnes pratiques. Cet outil est simple à utiliser et facile à configurer, ce qui le rend idéal pour les petits projets.
 * [SonarQube](https://www.sonarqube.org/) est un logiciel libre de qualimétrie en continu de code. Il aide à la détection, la classification et la résolution de défaut dans le code source, permet d'identifier les duplications de code, de mesurer le niveau de documentation et connaître la couverture de test déployée. 
-* [PyGithub](https://pygithub.readthedocs.io/en/latest/index.html) est une bibliothèque Python pour accéder à l' API REST de GitHub. Cette bibliothèque permet de gérer les ressources GitHub telles que les référentiels, les profils utilisateur et les organisations dans les applications Python. Elle nous permettra de récupérer de manière automatisée les notebooks Jupyter python dans les scripts python qu'on mettra en place. 
+* [PyGithub](https://pygithub.readthedocs.io/en/latest/index.html) est une bibliothèque Python pour accéder à l'API REST de GitHub. Cette bibliothèque permet de gérer les ressources GitHub telles que les référentiels, les profils utilisateur et les organisations dans les applications Python. Elle nous permettra de récupérer de manière automatisée les notebooks Jupyter python dans les scripts python qu'on mettra en place. 
 * [Matplotlib](https://matplotlib.org/stable/index.html) est une bibliothèque du langage de programmation Python destinée à tracer et visualiser des données sous forme de graphiques. Elle nous permettra de visualiser les résultats obtenus. 
 
  
 ## IV. Hypothèses et Expériences
 
-### Hypothèse 1 : L'utilisation de la Programmation Orientée Objet (POO) est largement adoptée par les data scientistes pour améliorer la qualité de leurs notebooks.
+### Hypothèse 1 : L'utilisation de la Programmation Orientée Objets (POO) est largement adoptée par les data scientistes pour améliorer la qualité de leurs notebooks.
 ### Expérimentations : 
 
-Pour vérifier notre hypothèse, nous avons collecté un échantillon représentatif de notebooks Jupyter publiés par des data scientists en utilisant différentes sources telles que Github et les sites de partage de code. Au total, nous avons récupéré <b>262 repositories</b> contenant des notebooks Jupyter.
+Pour vérifier notre hypothèse, nous avons collecté un échantillon représentatif de notebooks Jupyter publié par des data scientists en utilisant différentes sources telles que Github et les sites de partage de code. Au total, nous avons récupéré <b>262 repositories</b> contenant des notebooks Jupyter.
 
-Pour déterminer si chaque notebook utilise ou non la programmation orientée objet, nous avons utilisé un script automatisé que nous avons écrit. Cette méthode est basée sur l'analyse des fichiers sources pour identifier les caractéristiques de la POO. Pour identifier l'utilisation de la POO, nous avons utilisé les caractéristiques suivantes :
+  Pour déterminer si chaque notebook utilise ou non la programmation orientée objet, nous avons utilisé un script automatisé que nous avons écrit. Cette méthode est basée sur l'analyse des fichiers sources pour identifier les caractéristiques de la POO. Pour identifier l'utilisation de la POO, nous avons utilisé les caractéristiques suivantes :
 
 <ul>
   <li><b>La définition de classes</b> : nous avons utilisé le mot-clé <b>class</b> en Python pour définir une classe, ainsi que d'autres mots-clés tels que <b>def</b>, <b>init</b>, et <b>self</b> pour améliorer la précision de notre analyse.</li>
@@ -198,7 +198,7 @@ Nous constatons sur le graphique 1 que les notebooks sur Github qui utilisent la
 
 En ce qui concerne le nombre d'étoiles sur Github (graphique 2), il semble que les notebooks sans POO ont en effet plus d'étoiles que ceux qui utilisent explicitement la POO.
 
-En conclusion, le nombre d'étoiles et de forks sur Github nous indique que les notebooks utilisant la POO sont plus populaires que ceux n'utilisant pa la POO. Cette hypothèse est donc validée.
+En conclusion, le nombre d'étoiles et de forks sur Github nous indique que les notebooks utilisant la POO sont plus populaires que ceux n'utilisant pas la POO. Cette hypothèse est donc validée.
 
 Notez toujours que cette étude est limitée par le nombre restreint de notebooks utilisés pour l'étude.
 
@@ -218,7 +218,7 @@ Durant cette étude, nous avons rencontré plusieurs limitations qui ont affect�
 
 ## VII. Les datas scientistes utilisent de la POO sans le savoir 
 
-De nombreux datas scientistes utilisent la POO dans leurs notebooks Jupyter sans même le savoir. Cela est dû au fait que de nombreuses bibliothèques populaires utilisées dans le domaine des sciences des données, telles que scikit-learn, TensorFlow et autres, sont construites en utilisant la POO. En utilisant ces bibliothèques, les datas scientistes manipulent souvent des objets tels que des modèles de machine learning, des jeux de données, etc. qui sont des instances de classes définies par ces bibliothèques. Même si ces datas scientistes n'ont pas nécessairement conscience de la POO, ils en bénéficient tout de même en bénéficiant de la modularité, de l'encapsulation et de l'héritage que cette technique de programmation offre. Nous l'avons constaté suite à une étude menée sur les libraires les plus populaires utilisées par les scientistes. 
+De nombreux data scientistes utilisent la POO dans leurs notebooks Jupyter sans même le savoir. Cela est dû au fait que de nombreuses bibliothèques populaires utilisées dans le domaine des sciences des données, telles que scikit-learn, TensorFlow et autres, sont construites en utilisant la POO. En utilisant ces bibliothèques, les data scientistes manipulent souvent des objets tels que des modèles de machine learning, des jeux de données, etc. qui sont des instances de classes définies par ces bibliothèques. Même si ces data scientistes n'ont pas nécessairement conscience de la POO, ils en bénéficient tout de même en bénéficiant de la modularité, de l'encapsulation et de l'héritage que cette technique de programmation offre. Nous l'avons constaté suite à une étude menée sur les libraires les plus populaires utilisées par les scientistes. 
 
 **Exemple 1 : Création d'un réseau de neurone avec la bibliothèque TensorFlow**
 
@@ -226,7 +226,7 @@ De nombreux datas scientistes utilisent la POO dans leurs notebooks Jupyter sans
   <img src="./assets/images/image5.png">
 </p>
 
-Dans ce code, nous utilisons la classe **Sequential** pour définir notre modèle de réseau de neurones en lui fournissant les differents paramètres par argument. Les méthodes **compile** et **fit** sont appelés sur la référence de l'objet **model** créé. Celles-ci font donc parties de la classe **Sequential**; une caractérisation de l'encapsulation. 
+Dans ce code, nous utilisons la classe **Sequential** pour définir notre modèle de réseau de neurones en lui fournissant les différents paramètres par argument. Les méthodes **compile** et **fit** sont appelés sur la référence de l'objet **model** créé. Celles-ci font donc partie de la classe **Sequential**; une caractérisation de l'encapsulation. 
 
 **Exemple 2 : Création d'un model de regression linéaire avec la bibliothèque Scikit learn**
 
@@ -234,23 +234,23 @@ Dans ce code, nous utilisons la classe **Sequential** pour définir notre modèl
   <img src="./assets/images/image6.png">
 </p>
 
-Dans ce code, nous utilisons la classe **LinearRegression** pour définir notre modèle de regression linéaire en lui fournissant les differents paramètres par argument. La méthode **fit** est appelé sur la référence de l'objet **model** créé. Celle-ci fait donc parties de la classe **LinearRegression**; une caractérisation de l'encapsulation. L'attribut **req_** fait également partie de la classe **LinearRegression**
+Dans ce code, nous utilisons la classe **LinearRegression** pour définir notre modèle de régression linéaire en lui fournissant les differents paramètres par argument. La méthode **fit** est appelée sur la référence de l'objet **model** créé. Celle-ci fait donc partie de la classe **LinearRegression**; une caractérisation de l'encapsulation. L'attribut **req_** fait également partie de la classe **LinearRegression**
 
 
 ## VIII. Outils utilisés
 
-Pour vérifier l'utilisation de la POO dans les fichiers notebooks, nous avons effectué une recherche de mots clés (décrit dans la section III. Collecte d'informations) en premier lieu en parcourant manuellement les fichiers, puis nous avons automatisé ce processus en utilisant des expressions régulières (regex). Cela nous a permis d'automatiser la tâche et d'augmenter notre productivité. 
+Pour vérifier l'utilisation de la POO dans les fichiers notebooks, nous avons effectué une recherche de mots clés (décrits dans la section III. Collecte d'informations) en premier lieu en parcourant manuellement les fichiers, puis nous avons automatisé ce processus en utilisant des expressions régulières (regex). Cela nous a permis d'automatiser la tâche et d'augmenter notre productivité. 
 
 Nous avons mis en place un [outil](https://github.com/ABBARNABIL/github-repository-scrapper/tree/main/github-repo-scraping/github-repo-scraping) (en réalité des scripts python automatisés) qui nous ont permis de récupérer des notebooks Jupyter python sur Github; de transformer ces notebooks en fichiers python (pour mieux les traiter); de déterminer la présence de l'utilisation de la POO dans ces derniers; d'analyser la qualité du code dans ces notebooks et de visualiser les résultats obtenus grâce à des graphiques. 
 
-un **README.md** contenant les instructions d'utilisation de l'outil est disponible dans le repertoire **/code/** du rendu. 
+un **README.md** contenant les instructions d'utilisation de l'outil est disponible dans le répertoire **/code/** du rendu. 
 
 
 ## IX. Conclusion
 
-En conclusion, bien que seulement 4.3% des data scientistes utilisent explicitement la programmation orientée objet (POO) dans les notebooks Jupyter Python, ils en bénéficient en utilisant les nombreuses librairies de data science qui recourent à la POO. Cependant, l'utilisation de la POO n'augmente pas de manière significative la qualité du code dans les notebooks jupyter. Quant à la popularité des notebooks, il semble que ceux utilisant la POO de manière explicite sont plus populaires auprès de la communauté que ceux n'utilisant pas la POO. 
+En conclusion, bien que seulement 4.3% des data scientistes utilisent explicitement la programmation orientée objet (POO) dans les notebooks Jupyter Python, ils en bénéficient en utilisant les nombreuses librairies de data science qui recourt à la POO. Cependant, l'utilisation de la POO n'augmente pas de manière significative la qualité du code dans les notebooks jupyter. Quant à la popularité des notebooks, il semble que ceux utilisant la POO de manière explicite sont plus populaires auprès de la communauté que ceux n'utilisant pas la POO. 
 
-Comme perspectives futures, nous pensons étendre et approfondir notre recherche en étudiant l'évolution de l'utilisation de la POO dans le notebooks jupyter python. Nous prévoyons également d'élargir notre étude aux notebooks jupyter utilisants le langage *R*.
+Comme perspectives futures, nous pensons étendre et approfondir notre recherche en étudiant l'évolution de l'utilisation de la POO dans le notebooks jupyter python. Nous prévoyons également d'élargir notre étude aux notebooks jupyter utilisant le langage *R*.
 
 
 ## X. Références
