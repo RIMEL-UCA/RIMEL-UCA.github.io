@@ -35,9 +35,9 @@ Ce qui nous amènera à nous poser les sous questions suivantes :
 ### Articles  
 
 Pour nous aider dans cette étude, nous avons décidé d’analyser les articles suivants :
-* L'article *"Who broke the build?: automatically identifying changes that induce test failures in continuous integration at Google scale"*[^1] peut nous donner des pistes pour cette étude car il se concentre sur la détection automatique des modifications qui causent des échecs de tests dans un environnement de construction en continu à grande échelle. Il décrit comment Google a mis en place un système pour identifier les causes des échecs de tests dans leur pipeline de construction en continu.
-* L'article *"Mining Metrics to Predict Component Failures"*[^2] se concentre sur l'analyse des métriques de performance pour prédire les échecs de composants dans un système logiciel. Il peut aider dans l'étude en cours en fournissant des méthodologies pour extraire des métriques à partir des pipelines CI/CD et les utiliser pour identifier les dépendances entre les jobs et les artefacts.
-* L'article *"When Life Gives You Oranges: Detecting and Diagnosing Intermittent Job Failures at Mozilla"*[^3] se concentre sur la détection et le diagnostic des échecs intermittents de jobs dans les systèmes de construction et de test automatisés. Il peut être utile pour cette étude en fournissant des méthodologies pour identifier les dépendances entre les jobs et les artefacts qui peuvent causer des échecs intermittents.
+* L'article *"Who broke the build?: automatically identifying changes that induce test failures in continuous integration at Google scale"*[1] peut nous donner des pistes pour cette étude car il se concentre sur la détection automatique des modifications qui causent des échecs de tests dans un environnement de construction en continu à grande échelle. Il décrit comment Google a mis en place un système pour identifier les causes des échecs de tests dans leur pipeline de construction en continu.
+* L'article *"Mining Metrics to Predict Component Failures"*[2] se concentre sur l'analyse des métriques de performance pour prédire les échecs de composants dans un système logiciel. Il peut aider dans l'étude en cours en fournissant des méthodologies pour extraire des métriques à partir des pipelines CI/CD et les utiliser pour identifier les dépendances entre les jobs et les artefacts.
+* L'article *"When Life Gives You Oranges: Detecting and Diagnosing Intermittent Job Failures at Mozilla"*[3] se concentre sur la détection et le diagnostic des échecs intermittents de jobs dans les systèmes de construction et de test automatisés. Il peut être utile pour cette étude en fournissant des méthodologies pour identifier les dépendances entre les jobs et les artefacts qui peuvent causer des échecs intermittents.
 
 ### Jeux de donnée 
 Nous avons sélectionné des projets open source sur Github de tailles différentes pour déterminer si la taille du projet a une influence sur les dépendances dans les pipelines. Nous avons également choisi les projets en fonction de leur taille et du nombre de pipelines qu'ils proposent.Nous avons retenus certains projets qui respectait nos conditions de recherches :
@@ -105,52 +105,46 @@ En étudiant ces différentes pipelines, nous avons identifié d'autres patterns
 **<span style="text-decoration:underline;">Exemples</span>**
 
 - **<span style="text-decoration:underline;">Utilisation direct du fichier :</span>**
-      - name: "Check out Git repository"
-
-        uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f
-
-      - name: "Execute smoke test on Docker"
-
-        run: docker-compose -f docker-compose.test.yml up --exit-code-from sut
+<pre>
+- name: "Check out Git repository"
+  uses: actions/checkout@5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f
+- name: "Execute smoke test on Docker"
+  run: docker-compose -f docker-compose.test.yml up --exit-code-from sut
+</pre>
 
 - **<span style="text-decoration:underline;">Utilisation indirect du fichier </span>:**
 
-      - name: Install dependencies
-
-        run: **<span style="text-decoration:underline;">npm install</span>**
-
-      - name: Build Tailwind CSS
-
-        run: **<span style="text-decoration:underline;">npm run build</span>**
-
-      - name: Test
-
-        run: **<span style="text-decoration:underline;">npm run test</span>**
-
-      - name: Lint
-
-        run: **<span style="text-decoration:underline;">npm run style</span>**
+<pre>
+- name: Install dependencies
+  run: <b style="text-decoration:underline;">npm install</b>
+- name: Build Tailwind CSS
+  run: <b style="text-decoration:underline;">npm run build</b>
+- name: Test
+  run: <b style="text-decoration:underline;">npm run test</b>
+- name: Lint
+  run: <b style="text-decoration:underline;">npm run style</b>
+</pre>
 
 **<span style="text-decoration:underline;">Programming language Usage</span>** : Nous avons également remarqué que pour exécuter certaines commandes, les tâches en cours sont obligées d'intégrer des versions de certains langages via des actions Github pour pouvoir automatiser les étapes de compilation, de test et de déploiement d'un projet. Il nous a semblé intéressant de les identifier comme des dépendances, car de nombreux projets que nous avons sélectionnés en comportent. Ces actions github sont de la forme : actions/setup-<language>.
 
 **<span style="text-decoration:underline;">Exemple</span>**
 
-      - name: Use Node.js
-
-	      uses: actions/setup-node@v3   # Setup node to access to npm
-
-      - name: Install dependencies
-
-        run: npm install              # Install the dependencies of the project
+<pre>
+- name: Use Node.js
+  uses: actions/setup-node@v3   <i style="color: green;"># Setup node to access to npm</i>
+- name: Install dependencies
+  run: npm install              <i style="color: green;"># Install the dependencies of the project</i>
+</pre>
 
 
 **<span style="text-decoration:underline;">Checkout</span>** : En examinant les étapes d'une tâche, nous avons constaté que l'utilisation d'une action Github checkout était presque systématique. Cela permet à la tâche d'accéder au projet en cours. Il est donc important de considérer ce checkout comme une dépendance, car si les actions suivantes doivent manipuler des fichiers appartenant au projet, elles ont besoin d'y avoir accès.
 
 **<span style="text-decoration:underline;">Exemple</span>**
 
-      - name: checkout
-
-        uses: actions/checkout@v3   # Give access to the repository
+<pre>
+- name: checkout
+  uses: actions/checkout@v3   <i style="color: green;"># Give access to the repository</i>
+</pre>
 
 ### Choix de la représentation des graphes 
 
@@ -162,7 +156,7 @@ Nous avons donc modélisé nos graphes grâce à un outil que nous avons créé.
 
 Nous allons décomposer cette analyse en 2 parties :
 
-#### Analyse inter-job[^inter-job]
+#### Analyse inter-job[5]
 
 ![Exemple Audacity](./assets/images/audacity_correct_example.png)
 
@@ -180,21 +174,20 @@ Le degré "<span style="color: red;">error</span>" permet de signaler qu’une �
 
 ![Exemple d'erreur](./assets/images/error-level_example.png)
 
-#### Analyse intra-job[^intra-job]
+#### Analyse intra-job[6]
 
 ![Exemple intra-job](./assets/images/intra-job_example.png)
 
-    - name: Install dependencies
-
-      run: **<span style="text-decoration:underline;">npm install</span>**
-
-    - name: Build Tailwind CSS
-
-      run: **<span style="text-decoration:underline;">npm run build</span>**
-
-    - name: Test
-
-      run: **<span style="text-decoration:underline;">npm run test</span>**
+<pre>
+- name: Install dependencies
+  run: <b style="text-decoration:underline;">npm install</b>
+- name: Build Tailwind CSS
+  run: <b style="text-decoration:underline;">npm run build</b>
+- name: Test
+  run: <b style="text-decoration:underline;">npm run test</b>
+- name: Lint
+  run: <b style="text-decoration:underline;">npm run style</b>
+</pre>
 
 Le graphique ci-dessus représente le job _build_ du pipeline _ci-stable_ pour le projet TailWindCSS. Il montre les différentes étapes séquentielles du processus sous forme de rectangles. Cependant, ce graphique est généré avec une erreur. Nous avons supprimé le fichier _package.json_ du projet et, comme le montre le graphique, chaque étape dépend de ce fichier pour fonctionner en utilisant la commande _NPM_. Cette dépendance est implicite, car la pipeline est construite à partir de commandes _NPM_.
 
@@ -240,7 +233,7 @@ Nous sommes convaincus que notre solution peut être encore plus efficace grâce
 
 ## IX. Références
 
-[^1]: [Who broke the build?: automatically identifying changes that induce test failures in continuous integration at Google scale](https://storage.googleapis.com/pub-tools-public-publication-data/pdf/45794.pdf)
+[1]: [Who broke the build?: automatically identifying changes that induce test failures in continuous integration at Google scale](https://storage.googleapis.com/pub-tools-public-publication-data/pdf/45794.pdf)
 * Auteurs : Celal Ziftci, Jim Reardon
 * Date de publication : 2017/5/20
 * Conférence Proceedings of the 39th International Conference on Software Engineering: Software Engineering in Practice Track
@@ -252,7 +245,7 @@ Nous sommes convaincus que notre solution peut être encore plus efficace grâce
     the software development life-cycle. Therefore, there is a high demand for automated techniques that can help
     developers identify such changes while minimizing manual human intervention…
 
-[^2]: [Mining Metrics to Predict Component Failures](http://linyun.info/micode/micode.pdf)
+[2]: [Mining Metrics to Predict Component Failures](http://linyun.info/micode/micode.pdf)
 * Auteurs : Yun Lin, Guozhu Meng, Yinxing Xue, Zhenchang Xing, Jun Sun, Xin Peng, Yang Liu, Wenyun Zhao, Jinsong Dong
 * Date de publication : 2017/10
 * Conférence The 32nd IEEE/ACM International Conference on Automated Software Engineering
@@ -264,7 +257,7 @@ Nous sommes convaincus que notre solution peut être encore plus efficace grâce
     the semi-implemented code bodies annotated with comments to remind programmers of necessary modification. We
     implemented our approach as an Eclipse plugin called…
 
-[^3]: [When Life Gives You Oranges: Detecting and Diagnosing Intermittent Job Failures at Mozilla](https://www.se.cs.uni-saarland.de/publications/docs/LJA+21.pdf)
+[3]: [When Life Gives You Oranges: Detecting and Diagnosing Intermittent Job Failures at Mozilla](https://www.se.cs.uni-saarland.de/publications/docs/LJA+21.pdf)
 * J. Lampel, S. Just, S. Apel, and A. Zeller,
 * in ESEC/FSE 2021 - Proceedings of the 29th ACM Joint Meeting European Software Engineering Conference and Symposium on the Foundations of Software Engineering, 2021,
   * vol. 21, pp. 1381–1392, doi: 10.1145/3468264.3473931.
@@ -283,9 +276,11 @@ Nous sommes convaincus que notre solution peut être encore plus efficace grâce
 
 ## X. Glossaire
 
-[^job]: Job : Action décrite dans un pipeline, composée de plusieurs étapes.
-[^intra-job]: Dépendance intra-job : Une dépendance entre deux étapes d'un même job
-[^inter-job]: Dépendance inter-job : Une dépendance entre des étapes de deux jobs différents
+[4]: Job : Action décrite dans un pipeline, composée de plusieurs étapes.
+
+[5]: Dépendance intra-job : Une dépendance entre deux étapes d'un même job
+
+[6]: Dépendance inter-job : Une dépendance entre des étapes de deux jobs différents
 
 
 ![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](assets/images/logo_uca.png){:height="25px"}
