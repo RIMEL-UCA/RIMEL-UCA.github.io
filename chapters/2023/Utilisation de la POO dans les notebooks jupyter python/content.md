@@ -95,32 +95,67 @@ Les outils que nous envisageons utiliser pour notre étude sont :
 ### Hypothèse 1 : L'utilisation de la Programmation Orientée Objet (POO) est largement adoptée par les data scientistes pour améliorer la qualité de leurs notebooks.
 ### Expérimentations : 
 
-Pour vérifier cette hypothèse, nous allons collecter un échantillon représentatif de notebooks Jupyter publiés par des data scientists. Nous allons utiliser différentes sources telles que Github, et les sites de partage de code pour trouver ces notebooks.
+Pour vérifier notre hypothèse, nous avons collecté un échantillon représentatif de notebooks Jupyter publiés par des data scientists en utilisant différentes sources telles que Github et les sites de partage de code. Au total, nous avons récupéré <b>262 repositories</b> contenant des notebooks Jupyter.
 
-Puis, nous allons utiliser une méthode automatisée pour déterminer si chaque notebook utilise ou non la POO. Cette méthode pourra être basée sur des algorithmes de reconnaissance de code ou sur l'analyse des fichiers source pour identifier les caractéristiques de la POO.
+Pour déterminer si chaque notebook utilise ou non la programmation orientée objet, nous avons utilisé un script automatisé que nous avons écrit. Cette méthode est basée sur l'analyse des fichiers sources pour identifier les caractéristiques de la POO. Pour identifier l'utilisation de la POO, nous avons utilisé les caractéristiques suivantes :
 
-Nous prendrons en compte les limites de cette analyse, telles que le nombre limité d'échantillons disponibles et la restriction de collecte des notebooks par l’Api Github.
+<ul>
+  <li><b>La définition de classes</b> : nous avons utilisé le mot-clé <b>class</b> en Python pour définir une classe, ainsi que d'autres mots-clés tels que <b>def</b>, <b>init</b>, et <b>self</b> pour améliorer la précision de notre analyse.</li>
+  <li><b>Héritage</b> : nous avons également basé notre analyse sur l'héritage en vérifiant s'il y a utilisation de l'héritage après la déclaration d'une classe en utilisant la syntaxe <b>(</b>classeMère<b>)</b>.</li>
+</ul>
+
+Cependant, cette étude présente des limites telles que le nombre limité d'échantillons disponibles et la restriction de collecte des notebooks par l'API Github.
 
 
 ### Hypothèse 2 : L'utilisation de la programmation orientée objet (POO) améliore la qualité des notebooks Jupyter.
 ### Expérimentations : 
 
-Pour vérifier cette hypothèse, nous allons mener une comparaison rigoureuse entre la qualité des notebooks Jupyter utilisant la POO et ceux qui n'en utilisent pas. Nous allons mesurer la qualité du code en utilisant les critères suivants : la <b>lisibilité</b>, <b>la modularité</b>, <b>la réutilisabilité</b> et la <b>documentation</b>. 
+Afin de vérifier notre hypothèse, nous avons décidé de faire une comparaison rigoureuse entre les notebooks Jupyter qui utilisent la POO et ceux qui ne l'utilisent pas. Pour atteindre cet objectif, nous avons sélectionné les notebooks qui utilisent la POO que nous avions identifiés lors de notre première étude, puis avons choisi un nombre égal de notebooks qui ne l'utilisent pas pour avoir des résultats équilibrés. Ensuite, nous avons évalué la qualité de ces notebooks en utilisant plusieurs critères tels que :
+<ul>
+  <li><b>la lisibilité</b></li>
+  <li><b>la modularité</b></li>
+  <li><b>la réutilisabilité</b></li>
+  <li><b>la documentation</b></li>
+</ul>
 
-Pour effectuer cette comparaison, nous allons sélectionner un échantillon représentatif de notebooks Jupyter utilisant la POO et ceux qui n'en utilisent pas. Nous allons évaluer les critères de mesure de la qualité pour chacun des notebooks, puis comparer les résultats pour déterminer s'il y a une différence significative entre les deux groupes de notebooks. 
+Le résultat final qui nous permettra de vérifier notre hypothèse sera la comparaison des résultats pour déterminer s'il existait une différence significative entre les deux groupes de notebooks.
 
-Pylint est l’outil qui sera utilisé pour effectuer la mesure de la qualité du code comme il permet d’évaluer les notebooks en analysant différents aspects tels que : le nombre de lignes de code, le nombre de commentaires, le nombre de lignes vides, le nombre de fonctions et de méthodes, le nombre d'expressions complexes, le nombre de variables et le nombre de classes. Il peut également signaler des erreurs et des problèmes potentiels dans le code.
+###### Expérience 1 : Analyse de la qualité de code avec SonarQube
 
-Les choix et les limites de cette expérience incluent la taille de l'échantillon de notebooks sélectionnés, les critères choisis pour mesurer la qualité, ainsi que la méthodologie d'évaluation. L'hypothèse sera considérée comme vérifiée si les résultats montrent une différence significative en faveur des notebooks utilisant la POO par rapport à ceux qui n'en utilisent pas.
+Afin de vérifier notre hypothèse concernant la qualité des codes dans les notebooks Jupyter, nous avons décidé d'utiliser l'outil populaire SonarQube pour l'analyse. Nous avons utilisé SonarQube pour mesurer la qualité du code présent dans les notebooks Jupyter en suivant les critères définis précédemment. Cependant, les résultats obtenus ont indiqué un score de zéro sur chaque critère, ce qui signifiait qu'il n'y avait aucun problème. Cela peut être dû au fait que SonarQube n'a pas été conçu pour analyser les codes scientifiques, et que les codes que nous avons analysés étaient écrits par des data scientists. Les critères pour évaluer la qualité du code peuvent différer de ceux utilisés dans d'autres projets. Pour remédier à ce problème, nous avons décidé de changer d'outil et de recommencer l'analyse en utilisant un outil différent appelé Pylint.
+
+###### Expérience 2 : Analyse de la qualité de code avec Pylint
+
+Après un premier essai qui n'a pas donné les résultats escomptés, nous avons décidé d'utiliser Pylint pour mesurer la qualité du code. Pylint est un outil qui permet d'évaluer les notebooks en analysant différents critères tels que le nombre de lignes de code, de commentaires, de lignes vides, de fonctions et de méthodes, d'expressions complexes, de variables et de classes. Il peut également signaler des erreurs et des problèmes potentiels dans le code.
+
+Pour mener à bien cette tâche, nous avons effectué les étapes suivantes :
+
+<ul>
+  <li>Nous avons collecté un échantillon représentatif de notebooks Jupyter et les avons classifiés en deux groupes : ceux qui utilisent la POO et ceux qui ne l'utilisent pas. Pour analyser les notebooks, nous avons dû les convertir en fichiers Python car Pylint ne peut pas traiter les fichiers .ipynb directement.</li>
+
+  <li>Chaque dossier contient un ou plusieurs fichiers .py correspondant aux notebooks convertis en .py.</li>
+
+  <li>Pylint a été exécuté dans chaque dossier pour calculer le score moyen de tous les scripts .py.</li>
+
+  <li>Les résultats ont été enregistrés dans un fichier score.txt.</li>
+
+  <li>Nous avons récupéré tous les fichiers score.txt pour effectuer des statistiques.</li>
+</ul>
+Tout ceci a été automatisé grâce à un script .bash fourni avec l'outil.
+
+
 
 ### Hypothèse 3 : L'utilisation de la POO augmente le nombre d'étoiles sur Github des notebooks Jupyter
 ### Expérimentations :
 
-Pour vérifier cette hypothèse, nous allons collecter des notebooks Jupyter publiés sur Github qui couvrent les mêmes algorithmes et traitements de données. Nous divisons ensuite ces notebooks en deux groupes - ceux qui utilisent la POO et ceux qui n'utilisent pas la POO.
+Afin de vérifier l'hypothèse, nous allons utiliser les mêmes référentiels que ceux utilisés pour l'étude de l'hypothèse 2. Nous avons toujours deux groupes de référentiels : ceux qui utilisent la programmation orientée objet et ceux qui n'utilisent pas la programmation orientée objet.
 
-Nous allons comparer le nombre d'étoiles sur Github pour les notebooks de chaque groupe pour déterminer s'il y a une différence significative entre les scores des notebooks utilisant la POO et ceux n'utilisant pas la POO. Cette comparaison nous permettra de mesurer le succès relatif des notebooks utilisant la POO par rapport aux autres.
-
-Les choix et les limites de cette expérience incluent la qualité de la mise en œuvre de la POO dans les notebooks utilisant la POO, ainsi que l'effet éventuel de tout autre facteur qui pourrait influencer les étoiles sur Github.
+Nous utilisons l'API Github pour obtenir:
+<ul> 
+  <li>le nombre d'étoiles d'un référentiel donné: <a>https://pygithub.readthedocs.io/en/latest/examples/Repository.html?highlight=stars#get-count-of-stars </a> </li>
+  <li>le nombre de forks effectués sur ce référentiel: <a> https://pygithub.readthedocs.io/en/latest/github_objects/Repository.html?highlight=forks#github.Repository.Repository.get_forks </a></li>
+</ul>
+Malheureusement, nous n'avons pas accès au nombre de clones, ce qui aurait été une information intéressante à inclure.
 
 L'hypothèse sera considérée comme vérifiée si le nombre d'étoiles sur Github des notebooks utilisant la POO sont significativement supérieurs à ceux des notebooks n'utilisant pas la POO.
 
@@ -154,6 +189,8 @@ accepté dans la limite des repos
 <p align="center">
   <img src="./assets/images/image2.png">
 </p>
+
+Les résultas ci-dessus représentent 
 
 <p align="center">
   <img src="./assets/images/image3.png">
