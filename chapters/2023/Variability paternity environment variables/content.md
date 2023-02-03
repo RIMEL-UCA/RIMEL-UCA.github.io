@@ -507,7 +507,7 @@ Nous avons volontairement retiré certains contributeurs afin que ce ne soit pas
 total_contribution_percentage = (additionsUser + deletionsUser) / (additionsTotal + deletionsTotal)
 ```
 
-![img.png](assets/pie-chart-spring-boot-admin.png)
+![img.png](assets/images/pie-chart-spring-boot-admin.png)
 
 Il donne ainsi le pourcentage de paternité associé à cet utilisateur. Ce programme nous permet donc rapidement de visualiser qui est le responsable majoritaire des modifications. De plus, grâce à un pie-chart, nous pouvons visualiser encore plus simplement et directement voir s'il y a un déséquilibre dans le projet ou non, ce qui permet au chef de projet de prendre des dispositions.
 
