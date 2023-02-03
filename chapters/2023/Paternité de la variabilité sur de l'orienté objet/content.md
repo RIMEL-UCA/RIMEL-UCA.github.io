@@ -200,7 +200,7 @@ Ce script calcule la paternité de la variabilité dans un projet Git donné. Il
 **Visualization.py**
 Ce script définit une classe PlotPie qui permet de tracer des graphiques en secteurs (pie charts) à partir de données générer précédemment. Le script prend en entrée le chemin vers le fichier JSON, lit les données à partir du fichier, les trie et les utilise pour tracer un graphique en secteurs pour chaque type de variabilité. Les graphiques sont enregistrés dans un sous-dossier "Visualization" avec le même nom du projet. 
 
-
+![Figure 1: Workflow](assets/images/workflow.png)
 ![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](assets/images/logo_uca.png){:height="25px"}
 
 
