@@ -43,21 +43,12 @@ Cette sous-question vise à déterminer l'utilisation de la POO dans les noteboo
 
 Cette sous-question vise à évaluer l'impact de l'utilisation de la POO sur la qualité logicielle dans les notebooks Jupyter python. Cela pourrait être fait en utilisant des outils d'analyse de code pour évaluer la qualité du code dans les notebooks Jupyter qui utilisent la POO, et en comparant cette qualité avec celle des notebooks qui n'utilisent pas la POO. On s'intéressera à **Pylint** qui est un outil de vérification de code python qui vise à améliorer la qualité du code en détectant les erreurs et en proposant des suggestions pour le rendre plus propre et plus maintenable.
 
-- **Y-a-t-il une corrélation entre l'usage de la POO dans les notebooks Jupiter et leur popularité ?**
+- **Y-a-t-il une corrélation entre l'usage de la POO dans les notebooks Jupyter et leur popularité ?**
 
 Cette sous-question vise à évaluer l'impact de l'utilisation de la POO sur la popularité des notebooks Jupyter python. Cela pourrait être fait en utilisant le nombre d'étoiles et de forks sur Github. 
 
 
 ## III. Collecte d'informations
-
-Préciser vos zones de recherches en fonction de votre projet, les informations dont vous disposez, ... :
-
-1. les articles ou documents utiles à votre projet
-2. les outils
-3. les jeux de données/codes que vous allez utiliser, pourquoi ceux-ci, ...
-
-     :bulb: Cette étape est fortement liée à la suivante. Vous ne pouvez émettre d'hypothèses à vérifier que si vous avez les informations, inversement, vous cherchez à recueillir des informations en fonction de vos hypothèses. *
-
 
 ### Articles 
 
@@ -79,15 +70,24 @@ Nous avons cherché des documents de recherche et articles rédigés sur des blo
 
      **object** : classe de base pour toutes les classes en Python, définit les méthodes de base pour les objets.
 
-     *self* : une référence à l'objet courant lors de l'exécution d'une méthode.
+     **self** : une référence à l'objet courant lors de l'exécution d'une méthode.
 
-     *__init__()* : une méthode spéciale appelée lors de la création d'un objet, utilisée pour initialiser les attributs de l'objet : le constructeur. 
-
+     **__init__()** : une méthode spéciale appelée lors de la création d'un objet, utilisée pour initialiser les attributs de l'objet : le constructeur. 
 
 
 ### Jeux de données 
 
-Afin de mener à bien notre projet de recherche sur l'utilisation de la POO dans les notebooks Jupyter Python, nous avons décidé de fouiller sur GitHub car les notebooks ne sont pas de véritables projets en soi. Pour faciliter notre recherche de notebooks Jupyter Python, nous avons écrit des scripts Python qui nous ont permis d'automatiser la recherche de fichiers d'extensions .ipynb sur GitHub grâce à son API. Les fichiers notebooks étant des fichiers scientifiques et pour avoir un grand volume de jeu de données, nous ne nous sommes pas restreins à un domaine spécifique. 
+Afin de mener à bien notre projet de recherche sur l'utilisation de la POO dans les notebooks Jupyter Python, nous envisageons de rechercher sur GitHub les notebooks jupyter python. Pour faciliter notre recherche de notebooks, nous envisageons d'écrire des scripts Python qui vons nous nous permettre d'automatiser la recherche de fichiers d'extensions .ipynb sur GitHub grâce à son API. Les fichiers notebooks étant des fichiers scientifiques et pour avoir un grand volume de données, nous ne nous restreindrons pas à un domaine spécifique. Cela pour maximiser nos chances de trouver des notebooks utilisants la POO. 
+
+
+### Outils 
+
+Les outils que nous envisageons utiliser pour notre étude sont : 
+
+* [Pylint](https://www.pylint.org/) est un outil puissant pour vérifier la qualité du code en Python. Il offre une analyse détaillée du code et fournit des commentaires sur les erreurs, les avertissements et les bonnes pratiques. Cet outil est simple à utiliser et facile à configurer, ce qui le rend idéal pour les petits projets.
+* [SonarQube](https://www.sonarqube.org/) est un logiciel libre de qualimétrie en continu de code. Il aide à la détection, la classification et la résolution de défaut dans le code source, permet d'identifier les duplications de code, de mesurer le niveau de documentation et connaître la couverture de test déployée. 
+* [PyGithub](https://pygithub.readthedocs.io/en/latest/index.html) est une bibliothèque Python pour accéder à l' API REST de GitHub. Cette bibliothèque permet de gérer les ressources GitHub telles que les référentiels, les profils utilisateur et les organisations dans les applications Python. Elle nous permettra de récupérer de manière automatisée les notebooks Jupyter python dans les scripts python qu'on mettra en place. 
+* [Matplotlib](https://matplotlib.org/stable/index.html) est une bibliothèque du langage de programmation Python destinée à tracer et visualiser des données sous forme de graphiques. Elle nous permettra de visualiser les résultats obtenus. 
 
  
 ## IV. Hypothèses et Expériences
@@ -172,9 +172,10 @@ accepé
 
 limites : limitation du nombre de repos utilisants la POO donc pas assez de données
 
+
 ## VI. Les datas scientistes utilisent de la POO sans le savoir 
 
-De nombreux datas scientistes utilisent la POO dans leurs notebooks Jupiter sans même le savoir. Cela est dû au fait que de nombreuses bibliothèques populaires utilisées dans le domaine des sciences des données, telles que scikit-learn, TensorFlow et autres, sont construites en utilisant la POO. En utilisant ces bibliothèques, les datas scientistes manipulent souvent des objets tels que des modèles de machine learning, des jeux de données, etc. qui sont des instances de classes définies par ces bibliothèques. Même si ces datas scientistes n'ont pas nécessairement conscience de la POO, ils en bénéficient tout de même en bénéficiant de la modularité, de l'encapsulation et de l'héritage que cette technique de programmation offre. 
+De nombreux datas scientistes utilisent la POO dans leurs notebooks Jupyter sans même le savoir. Cela est dû au fait que de nombreuses bibliothèques populaires utilisées dans le domaine des sciences des données, telles que scikit-learn, TensorFlow et autres, sont construites en utilisant la POO. En utilisant ces bibliothèques, les datas scientistes manipulent souvent des objets tels que des modèles de machine learning, des jeux de données, etc. qui sont des instances de classes définies par ces bibliothèques. Même si ces datas scientistes n'ont pas nécessairement conscience de la POO, ils en bénéficient tout de même en bénéficiant de la modularité, de l'encapsulation et de l'héritage que cette technique de programmation offre. 
 
 Exemples : Création d'un réseau de neurone avec la bibliothèque TensorFlow
 
@@ -186,23 +187,26 @@ Dans ce code, nous utilisons la classe **Sequential** pour définir notre modèl
 
 ## VII. Outils utilisés
 
-Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à \(1\) pouvoir reproduire vos expérimentations, \(2\) partager/expliquer à d'autres l'usage des outils.
+Pour vérifier l'utilisation de la POO dans les fichiers notebooks, nous avons effectué une recherche de mots clés (décrit dans la section III. Collecte d'informations) en premier lieu en parcourant manuellement les fichiers, puis nous avons automatisé ce processus en utilisant des expressions régulières (regex). Cela nous a permis d'automatiser la tâche et d'augmenter notre productivité. 
 
-Nous avons mis en place un [outil](https://github.com/ABBARNABIL/github-repository-scrapper/tree/main/github-repo-scraping/github-repo-scraping) (en réalité des scripts python automatisés) qui nous ont permis de récupérer des notebooks Jupyter python sur Github; de déterminer la présence de l'utilisation de la POO dans ces derniers; d'analyser la qualité du code dans ces notebooks et de visualiser les résultats obtenus grâce à des graphiques. 
+Nous avons mis en place un [outil](https://github.com/ABBARNABIL/github-repository-scrapper/tree/main/github-repo-scraping/github-repo-scraping) (en réalité des scripts python automatisés) qui nous ont permis de récupérer des notebooks Jupyter python sur Github; de transformer ces notebooks en fichiers python (pour mieux les traiter); de déterminer la présence de l'utilisation de la POO dans ces derniers; d'analyser la qualité du code dans ces notebooks et de visualiser les résultats obtenus grâce à des graphiques. 
 
-Cet outil mise en place se base sur les outils suivant : 
+Cet outil mis en place se base sur les outils suivants : 
 
-* [Pylint](https://www.pylint.org/) afin d'analyser la qualité du code dans les notebooks Jupyter python.
-* [L'API GitHub](https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api?apiVersion=2022-11-28) afin de récupérer les notebooks Jupyter python sur Github et ainsi éviter de les télécharger manuellement.
-* [PyGithub](https://pygithub.readthedocs.io/en/latest/index.html) afin de récupérer de manière automatisée les notebooks Jupyter python dans les scripts python mis en place. 
-* [Matplotlib](https://matplotlib.org/stable/index.html) afin de visualiser les résultats obtenus. 
+
+Lors de l'analyse de la qualité du code dans les notebooks Jupyter, nous avons d'abord utilisé **SonarQube**, mais nous nous sommes rapidement rendus compte qu'il n'était pas adapté aux petits projets, mais plutôt aux grands projets. Par conséquent, nous avons opté pour Pylint, un outil plus approprié pour les petits projets.
+
+
 
 
 ## VIII. Conclusion
 
+................
+
+Comme perspectives futures, nous pensons étendre et approfondir notre recherche en étudiant l'évolution de l'utilisation de la POO dans le notebooks jupyter python. Nous prévoyons également d'élargir notre étude aux notebooks de fichiers R.
 
 
-## VI. Références
+## IX. Références
 
 1. [An Introduction to Object Oriented Data Science in Python](https://opendatascience.com/an-introduction-to-object-oriented-data-science-in-python)
 2. [A Large-Scale Study About Quality and Reproducibility of Jupyter Notebooks](https://ieeexplore.ieee.org/abstract/document/8816763)
