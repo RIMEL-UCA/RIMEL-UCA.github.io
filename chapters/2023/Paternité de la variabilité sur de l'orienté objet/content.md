@@ -31,9 +31,7 @@ Nous sommes 4 étudiants en dernière année du cursus ingénieur informatique d
 
 ## I. Contexte de recherche/Projet
 
-Préciser ici votre contexte et Pourquoi il est intéressant. **
-
-Dans un monde où l'informatique est de plus en plus présent, de nombreux logiciels voient le jour.
+Dans un monde où l'informatique est de plus en plus présente, de nombreux logiciels voient le jour.
 Les entreprises réalisent des projets toujours plus grands et la complexité de ces projets augmente en conséquence.
 Les équipes grandissent et le nombre de développeurs devient parfois si important qu’il est difficile d'intégrer de nouvelles recrues. 
 De plus, certains développeurs peuvent quitter le développement d’un projet pendant sa réalisation. 
@@ -41,33 +39,26 @@ Il devient donc d’autant plus important de pouvoir engager de nouveaux salari�
 Les nouveaux développeurs intégrant une équipe en cours de développement sont amenés à modifier des logiciels déjà existants.
 Le problème principal est la complexité des logiciels qui augmente rapidement et le code qui est en constante évolution.
 
-Mais alors se pose un premier problème de taille.
+Mais alors se pose un problème de taille.
 Comment faire en sorte de correctement intégrer ces nouveaux ingénieurs dans le projet existant ?
 La solution la plus simple est de les confier à un développeur expert du projet pour leur transmettre les bases.
 Mais si cela n’est pas possible ? 
 Il faudrait ainsi répertorier les développeurs et les parties du code sur lesquelles ils ont travaillé.
 
-C'est dans ce contexte qu'a été créé un outil d'analyse de la variabilité pour du code orienté objet en Java.
+C'est dans ce contexte qu'a été créé un outil d'analyse de la variabilité ``Symfinder`` pour du code orienté objet en Java.
 La variabilité est l’ensemble des mécanismes permettant de configurer du logiciel pour l’adapter à un contexte précis.
 La variabilité peut être implémentée dans le code par différents mécanismes génériques, comme l’héritage, la surcharge 
 et certains patrons de conception dans des systèmes orientés objets.
+
 L'outil créé va permettre de visualiser les endroits (classes, méthodes, attributs...) où on peut trouver cette variabilité.
 Cette analyse du code peut servir de base pour avoir une vision d'ensemble des parties complexes du code. 
 L'étape suivante est de comprendre ces points de variation pour participer au développement du logiciel.
 Si la documentation est absente et que le développeur ne sait pas à qui s'adresser pour comprendre, il peut rester bloqué de son côté.
 Il serait donc intéressant de savoir qui est l'auteur de cette variabilité afin de lui poser directement des questions.
-Nous ne traiterons que le développement de projet orienté objets ici pour rester dans le cadre de notre sujet.
+
+Nous ne traiterons que le développement de projet orienté objets pour rester dans le cadre de notre sujet.
 
 ## II. Observations/Question générale
-
-1. Commencez par formuler une question sur quelque chose que vous observez ou constatez ou encore une idée émergente. 
-    
-2. Préciser pourquoi cette question est intéressante de votre point de vue.
-
-Attention pour répondre à cette question, vous devrez être capable d'émettre des hypothèses vérifiables, de quantifier vos réponses, ...
-
-     :bulb: Cette première étape nécessite beaucoup de réflexion pour se définir la bonne question afin de poser les bonnes bases pour la suite.
-
 ### Reformulation du sujet 
 
 On peut reformuler le sujet en question de la façon suivante :
@@ -263,7 +254,7 @@ et identifier les différents auteurs ainsi que leur pourcentage de participatio
 Une fois que la variabilité est analysée (grâce à Symfinder), la démarche à suivre est composée des étapes suivantes :
 1. Execution du script python ``paternity_variability_detail.py`` avec comme argument ``lien_github_du_projet``
    Obtention pour chaque "VARIANT" de ses auteurs ainsi que de leur pourcentage de participation (nombre de lignes écrites/nombre de lignes totales).
-2. Execution du script ``pourcentage_vp_author_var`` git + dossier du projet
+2. Execution du script ``percentage_vp_authors_in_vars.py`` avec comme argument ``lien_github_du_projet`` suivi git + dossier du projet
 
 ## V. Résultat d'analyse et Conclusion
 
