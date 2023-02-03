@@ -83,8 +83,6 @@ sur un pattern spécifique afin de trouver les auteurs auprès de qui poser des 
 Dans notre approche, on peut identifier les limites suivantes :
 - L'analyse du code se fait à un instant t, on prend le dernier commit de la branche principale du repository. 
   Une extension intéressante serait d'analyser les modifications à travers les différentes versions du projet.
-- Plus les projets sont vieux, plus la variabilité peut être diluée à travers les différents contributeurs. 
-  Les résultats obtenus pourraient être différents selon l'ancienneté du projet.
 - Plusieurs contributeurs peuvent être une seule et même personne sur un projet avec des adresses mail différentes. 
   L'identification de l'auteur peut être faussée.
 - Les patterns de variabilité étudiés sont "VP" et "VARIANT". 
@@ -119,7 +117,7 @@ Dans le cadre de notre recherche, nous avons basé notre travail sur les ressour
    Ce papier réplique une étude sur la relation entre les métriques d'appartenance et la qualité du logiciel dans les projets Java Open Source. 
    Les résultats ont montré une faible corrélation entre les métriques d'appartenance et les erreurs de module et la taille de module avait un plus grand impact sur les erreurs que l'appartenance.
 
-**2. Les jeux de données 💾**
+**2. Les jeux de données**
 
 Nous procéderons à l'analyse de projets GitHub. 
 La liste contenant la totalité des projets récupérés se trouve dans un excel disponible [ici.](assets/data/GitHub_projects_list.xlsx)
@@ -127,7 +125,7 @@ La liste contenant la totalité des projets récupérés se trouve dans un excel
 Les projets GitHub que nous allons analyser comportent les caractéristiques suivants :
 - langage de développement : JAVA (orienté objet),
 - nombre de contributeurs : entre 10 et 605,
-- taille de la base de code : maximum de 7.3 Mo.
+- taille de la base de code : maximum 7.3 Mo.
 
 Pour faire ressortir la notion de paternité, il faut avoir plus d'un seul contributeur. 
 Il est important de noter que tous les contributeurs dans le projet sur GitHub n'ont pas forcément participé à l'écriture de la variabilité.
@@ -135,7 +133,7 @@ Notre analyse va donc prendre en compte seulement ceux qui y ont participé, ils
 
 Un projet peut donc être défini par son nombre de lignes de code, son nombre de contributeurs et sa quantité de variabilité (nombre de "VP" et de "VARIANT").
 
-**3. Les outils🔨🪓**
+**3. Les outils**
 
 - [git blame](https://git-scm.com/docs/git-blame) : Outil d'identification des derniers auteurs qui ont modifié les lignes de code d'un fichier. 
 - [Symfinder](https://deathstar3.github.io/symfinder-demo/) : Outil d'analyse de la variabilité d’un projet orienté objet à un instant donné.
@@ -190,8 +188,8 @@ Une fois que la variabilité est analysée (grâce à ``Symfinder``), la démarc
 
 1. Execution du script python ``paternity_variability_detail.py`` avec comme argument ``lien_github_du_projet``.
    Obtention pour chaque "VARIANT" de ses auteurs ainsi que de leur pourcentage de participation (nombre de lignes écrites/nombre de lignes totales).
-2. Execution du script ``mean_contributors.py`` avec comme argument ``results/nom_du_repository_paternity_result_detail.txt``.
-   Obtention du nombre moyen de contributeurs ayant participé à l'écriture de la variabilité.
+2. Execution du script ``mean_contributors.py`` avec comme argument ``results/nom_du_repository_paternity_result_detail.txt``. Obtention du nombre moyen de contributeurs ayant participé à l'écriture de la variabilité. 
+3. Execution du script ``percentage_contribution_mean.py`` avec comme argument ``lien_github_du_projet``.
 
 
 ### 2. Paternité commune sur la variabilité de type "VP" (Variant Point) et "VARIANT"
@@ -206,10 +204,9 @@ Une fois que la variabilité est analysée (grâce à ``Symfinder``), la démarc
 
 #### Métriques
 
-- Nombre (et liste) de contributeurs ayant participé à l'écriture d'un VP
-- Nombre (et liste) de contributeurs ayant participé à l'écriture des VARIANTS associés au VP
-- Pourcentage de corrélation entre les deux
-- Le nombre moyen de contributeurs supplémentaires sur les VARIANTS (pas dans les VPs)
+- Le pourcentage d'auteurs d'un VP qui ont contribué à ses VARIANTS
+- Le pourcentage de Groupe de Variants (VP et ses VARIANTS) avec au moins un contributeur sur un Variant mais pas sur le VP 
+- Le pourcentage de la moyenne de la contribution des auteurs de VP sur les VARIANTS.
 
 #### Experience
 
@@ -218,7 +215,7 @@ Une fois que la variabilité est analysée (grâce à ``Symfinder``), la démarc
 Les projets que nous avons choisis pour cette expérience sont les suivants : 
 
 |        Projet        | Lien                                    | Nombre de contributeurs | Nombre de développeurs | Nombre de VPs | Nombre de VARIANTS |
-|:--------------------:|:----------------------------------------|:-----------------------:|:----------------------:|:-------------:|:------------------:|
+|:--------------------:|:---------------------------------------:|:-----------------------:|:----------------------:|:-------------:|:------------------:|
 | galenframework/galen | https://github.com/galenframework/galen |           13            |           9            |      71       |        226         |
 | EngineHub/WorldEdit  | https://github.com/EngineHub/WorldEdit  |           96            |           52           |      265      |        700         |
 |     netty/netty      | https://github.com/netty/netty          |           605           |          497           |      722      |        1574        |
@@ -236,7 +233,7 @@ Puis, une corrélation entre les deux ensembles d'auteurs est faite pour vérifi
 Une fois que la variabilité est analysée (grâce à Symfinder), la démarche à suivre est composée des étapes suivantes :
 1. Execution du script python ``paternity_variability_detail.py`` avec comme argument ``lien_github_du_projet``
    Obtention pour chaque "VARIANT" de ses auteurs ainsi que de leur pourcentage de participation (nombre de lignes écrites/nombre de lignes totales).
-2. Execution du script ``percentage_vp_authors_in_vars.py`` avec comme argument ``lien_github_du_projet`` suivi git + dossier du projet
+2. Execution du script ``percentage_vp_authors_in_vars.py`` avec comme argument ``results/nom_du_repository_paternity_result.txt`` et le dossier du projet. Obtention du nombre moyen de contributeurs ayant participé à l'écriture de la variabilité. 
 
 ## V. Résultat d'analyse et Conclusion
 
@@ -295,7 +292,7 @@ Quand les auteurs de VP modifient leurs VARIANTS, ils vont en général modifier
 #### Hypothèse 1
 
 Nous avons analysé trois les projets (``galen``, ``WorldEdit`` et ``netty``) et nous avons constaté que dans chacun d'entre eux,
-la contribution à la variabilité était faible, même si le nombre de développeurs était relativement élevé.
+la contribution à la variabilité était répartie de manière inéquitable, même si le nombre de développeurs était relativement faible.
 Cela signifie que dans ces projets, un petit nombre de développeurs contribue davantage à la variabilité que les autres, ce qui va à l'encontre de notre hypothèse initiale.
 Cela montre que le nombre de contributeurs n'est peut-être pas le seul facteur qui influence la répartition de la variabilité dans un projet.
 
@@ -379,7 +376,7 @@ Calcul le pourcentage de modification des VARIANTS pour chaque développeur dans
 
 **percentage_vp_authors_in_vars.py**
 Calcul les statistiques utilisées par l'expérience 2:
-Le pourcentage d'auteur d'un VP qui ont contribué à ses VARIANTS, le pourcentage de Groupe de Variants (VP et ses VARIANTS) avec au moins un contributeur sur un Variant mais pas sur le VP et le pourcentage de la moyenne de la contribution des auteurs de VP sur les VARIANTS.
+Le pourcentage d'auteurs d'un VP qui ont contribué à ses VARIANTS, le pourcentage de Groupe de Variants (VP et ses VARIANTS) avec au moins un contributeur sur un Variant mais pas sur le VP et le pourcentage de la moyenne de la contribution des auteurs de VP sur les VARIANTS.
 
 **stats**
 Donne le nombre de VP et de VARIANTS d'un projet.
