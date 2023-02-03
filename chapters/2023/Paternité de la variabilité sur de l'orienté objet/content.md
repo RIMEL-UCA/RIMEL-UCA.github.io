@@ -59,6 +59,7 @@ Il serait donc intéressant de savoir qui est l'auteur de cette variabilité afi
 Nous ne traiterons que le développement de projet orienté objets pour rester dans le cadre de notre sujet.
 
 ## II. Observations/Question générale
+
 ### Reformulation du sujet 
 
 On peut reformuler le sujet en question de la façon suivante :
@@ -73,6 +74,7 @@ En effet, savoir qui est où sont les développeurs principaux d’une partie de
 La mise en place de cet outil serait donc une grande amélioration dans le monde du développement.
 
 ### Question générale
+
 Notre question générale sera donc :
 > Comment la variabilité est distribuée entre plusieurs auteurs dans du code orienté objet ?
 
@@ -89,6 +91,7 @@ La variabilité pouvant être décomposée sous forme de "patterns" (patron de c
 sur un pattern spécifique afin de trouver les auteurs auprès de qui poser des questions pour comprendre le fonctionnement du pattern à travers le code.
 
 ### Limites
+
 Dans notre approche, on peut identifier les limites suivantes :
 - L'analyse du code se fait à un instant t, on prend le dernier commit de la branche principale du repository. 
   Une extension intéressante serait d'analyser les modifications à travers les différentes versions du projet.
@@ -106,27 +109,27 @@ Dans notre approche, on peut identifier les limites suivantes :
 
 Dans le cadre de notre recherche, nous avons basé notre travail sur les ressources suivantes :
 1. [On the notion of variability in software product lines](https://doi.org/10.1109/WICSA.2001.948406)  
- Les auteurs abordent la notion de variabilité dans le développement de logiciels. 
- Ils fournissent un cadre de terminologie et de concepts, identifient des modèles courants de variabilité 
- et proposent une méthodologie pour gérer la variabilité dans les systèmes de logiciels industriels.
+   Les auteurs abordent la notion de variabilité dans le développement de logiciels. 
+   Ils fournissent un cadre de terminologie et de concepts, identifient des modèles courants de variabilité 
+   et proposent une méthodologie pour gérer la variabilité dans les systèmes de logiciels industriels.
 
 
 2. [Visualization of Object-Oriented Variability Implementations as Cities](https://hal.archives-ouvertes.fr/hal-03312487)  
    VariCity est un outil de visualisation qui représente un code orienté objet comme une ville 
    pour aider les nouveaux venus à comprendre les parties les plus importantes du projet, 
-   en particulier en ce qui concerne la mise en œuvre de la variabilité. Il détecte la variabilité à travers les symétries du code 
+   en particulier en ce qui concerne la mise en œuvre de la variabilité. Il détecte la variabilité à travers les symétries du code.
    et la représente à travers la taille des bâtiments, la couleur et des formes de bâtiments spécifiques. 
    Les rues de la ville sont agencées en fonction des relations entre les classes. 
 
 
 3. [On the usefulness of ownership metrics in open-source software projects](https://www.sciencedirect.com/science/article/abs/pii/S0950584915000294)  
-  Le papier examine la relation entre les métriques de propriété de code et la qualité du logiciel dans les projets de logiciels libres.
-  Les résultats montrent une relation entre les deux, mais d'autres métriques ont un plus grand impact sur la qualité du logiciel
-  
-  4.[Code ownership in open-source software](https://hal.science/hal-00976024v1)
+   Le papier examine la relation entre les métriques de propriété de code et la qualité du logiciel dans les projets de logiciels libres.
+   Les résultats montrent une relation entre les deux, mais d'autres métriques ont un plus grand impact sur la qualité du logiciel.
 
-  Ce papier réplique une étude sur la relation entre les métriques d'appartenance et la qualité du logiciel dans les projets Java Open Source. Les résultats ont montré une     faible corrélation entre les métriques d'appartenance et les erreurs de module, et la taille de module avait un plus grand impact sur les erreurs que l'appartenance
 
+4. [Code ownership in open-source software](https://hal.science/hal-00976024v1)
+   Ce papier réplique une étude sur la relation entre les métriques d'appartenance et la qualité du logiciel dans les projets Java Open Source. 
+   Les résultats ont montré une faible corrélation entre les métriques d'appartenance et les erreurs de module et la taille de module avait un plus grand impact sur les erreurs que l'appartenance.
 
 **2. Les jeux de données 💾**
 
