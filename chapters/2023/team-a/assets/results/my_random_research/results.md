@@ -1,5 +1,13 @@
 # my_random_research
 
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;margin-bottom: 20px;}
+.tg td{font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+blockquote { background-color: #cecece !important; padding: 14px 10px 5px 20px !important; border-radius: 5px !important;}
+img { border-radius: 5px!important; max-width: 90%; margin: 15px 5%;}
+</style>
+
 ## Corpus
 
 The corpus contains 339 actions from 34 projects: public-apis/public-apis, vercel/next.js, twbs/bootstrap,
