@@ -1,3 +1,13 @@
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;margin-bottom: 20px;}
+.tg td{font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+.tg th{font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+blockquote { background-color: #cecece !important; padding: 14px 10px 5px 20px !important; border-radius: 5px !important;}
+img { border-radius: 5px!important; max-width: 90%; margin-left: 5%;margin-right: 5%; margin-bottom: 15px; margin-top: 15px}
+</style>
+
+
+
 ---
 layout: default
 title : Comment visualiser les dépendances d’une chaîne d’intégration continue, leur origine et leur niveau de
@@ -127,18 +137,11 @@ Grâce aux outils qui ont été créés pour répondre à nos questions, nous av
 Le corpus de dépôts utilisé pour réaliser ces visualisations se base une écrasante majorité de dépôts de projets
 open-source et populaires (étoiles), ce qui peut expliquer les résultats obtenus. Il est composé de :
 
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;margin-bottom: 20px;}
-.tg td{font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-.tg th{font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
-</style>
-
 | Indice                          | Valeur |
 |---------------------------------|--------|
 | Dépôts                          | 34     |
 | Fichiers d'intégration continue | 151    |
 | Actions                         | 339    |
-
 {: .tg}
 
 Les statistiques globales obtenues sont les suivantes :
@@ -148,7 +151,6 @@ Les statistiques globales obtenues sont les suivantes :
 | Nombre d'actions par workflow | 2.25   |
 | Nombre d'actions par dépôt    | 9.97   |
 | Nombre de workflows par dépôt | 4.44   |
-
 {: .tg}
 
 Cela signifie que, en moyenne, un dépôt utilise 9.97 actions dans 4.44 fichiers d'intégration continue.
@@ -162,7 +164,6 @@ Les types d'actions utilisées sont variées :
 | Privée/Interne     | 2                    | 0.59%       |
 | Tiers de confiance | 2                    | 0.59%       |
 | Forkée             | 0                    | 0%          |
-
 {: .tg}
 
 *On notera ici que le concept de "tiers de confiance" est un concept qui n'a pas été utilisé très largement dans le
@@ -187,7 +188,6 @@ Les conséquences pour la sûreté des actions utilisées sont les suivantes :
 | Nombre de workflows non sûrs                             | 3.23   | 66.23% de tous les workflows          |
 | Nombre d'actions avec une mise à jour majeure disponible | 180    | 53.3% de toutes les actions           |
 | Nombre d'actions publiques non mises à jour              | 84     | 70.0% de toutes les actions publiques |
-
 {: .tg}
 
 ### 2. Interprétation
