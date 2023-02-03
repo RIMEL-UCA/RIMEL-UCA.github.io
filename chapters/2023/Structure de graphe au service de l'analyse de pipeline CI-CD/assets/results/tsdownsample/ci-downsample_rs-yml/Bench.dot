@@ -1,0 +1,15 @@
+digraph {
+	Checkout [shape=rect]
+	"Install Rust toolchain" [shape=rect]
+	"Setup Rust" [shape=rect]
+	"Cache Dependencies" [shape=rect]
+	"Run benchmarks" [shape=rect]
+	"?" [shape=rect]
+	"?" [color=red fontcolor=red shape=ellipse]
+	Checkout -> "Install Rust toolchain" [style=dotted xlabel=""]
+	"Install Rust toolchain" -> "Setup Rust" [style=dotted xlabel=""]
+	"Setup Rust" -> "Cache Dependencies" [style=dotted xlabel=""]
+	"Cache Dependencies" -> "Run benchmarks" [style=dotted xlabel=""]
+	"?" -> "Setup Rust" [color=red fontcolor=red style=dashed xlabel="Unknown method \"rustup\""]
+	"?" -> "Run benchmarks" [color=red fontcolor=red style=dashed xlabel="Unknown method \"cargo\""]
+}

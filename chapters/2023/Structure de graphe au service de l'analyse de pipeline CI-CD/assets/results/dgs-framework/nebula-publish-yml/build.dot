@@ -1,0 +1,15 @@
+digraph {
+	"actions/checkout@v3.1.0" [shape=rect]
+	"Setup jdk 8" [shape=rect]
+	"gradle-cache" [shape=rect]
+	"gradle-wrapper-cache" [shape=rect]
+	"Publish candidate" [shape=rect]
+	"Publish release" [shape=rect]
+	"actions/checkout@v3.1.0" -> "Publish candidate" [decorate=false xlabel="./gradlew"]
+	"actions/checkout@v3.1.0" -> "Publish release" [decorate=false xlabel="./gradlew"]
+	"actions/checkout@v3.1.0" -> "Setup jdk 8" [style=dotted xlabel=""]
+	"Setup jdk 8" -> "gradle-cache" [style=dotted xlabel=""]
+	"gradle-cache" -> "gradle-wrapper-cache" [style=dotted xlabel=""]
+	"gradle-wrapper-cache" -> "Publish candidate" [style=dotted xlabel=""]
+	"Publish candidate" -> "Publish release" [style=dotted xlabel=""]
+}

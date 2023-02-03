@@ -1,0 +1,14 @@
+digraph {
+	"Checkout Audacity" [shape=rect]
+	"actions/download-artifact@v2" [shape=rect]
+	"Untar files" [shape=rect]
+	"geekyeggo/delete-artifact@v1" [shape=rect]
+	"Install Apple codesigning certificates" [shape=rect]
+	Package [shape=rect]
+	"Checkout Audacity" -> "actions/download-artifact@v2" [style=dotted xlabel=""]
+	"actions/download-artifact@v2" -> "actions/download-artifact@v2" [style=dotted xlabel=""]
+	"actions/download-artifact@v2" -> "Untar files" [style=dotted xlabel=""]
+	"Untar files" -> "geekyeggo/delete-artifact@v1" [style=dotted xlabel=""]
+	"geekyeggo/delete-artifact@v1" -> "Install Apple codesigning certificates" [style=dotted xlabel=""]
+	"Install Apple codesigning certificates" -> Package [style=dotted xlabel=""]
+}

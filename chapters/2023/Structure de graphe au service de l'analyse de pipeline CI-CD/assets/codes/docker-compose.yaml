@@ -1,0 +1,9 @@
+services:
+  app:
+    image: github_action_parser
+    build:
+      context: .
+      target: development
+    volumes:
+      - "./images/:/app/images/"
+      - "./projects/:/app/projects/"

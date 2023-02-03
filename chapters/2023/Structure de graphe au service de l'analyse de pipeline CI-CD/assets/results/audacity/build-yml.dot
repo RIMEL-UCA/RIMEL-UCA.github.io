@@ -1,0 +1,14 @@
+digraph {
+	build_macos_intel [shape=rect]
+	"?" [shape=rect]
+	build_linux [shape=rect]
+	build_windows [shape=rect]
+	build_macos_arm64 [shape=rect]
+	package_macos [shape=rect]
+	sources [shape=rect]
+	"?" [color=red fontcolor=red shape=ellipse]
+	build_macos_intel -> package_macos [decorate=false xlabel="macos-intel-{run_id}-{run_attempt}"]
+	build_macos_intel -> package_macos [style=dotted xlabel=""]
+	"?" -> package_macos [color=orange decorate=false xlabel="macos-arm64-{run_id}-{run_attempt}"]
+	build_macos_arm64 -> package_macos [style=dotted xlabel=""]
+}

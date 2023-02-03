@@ -1,0 +1,23 @@
+projects:
+  audacity:
+    git_url: "https://github.com/audacity/audacity.git"
+    actions:
+      - "build.yml"
+  cloudyWeatherAPI:
+    git_url: "https://github.com/iiTONELOC/cloudyWeatherAPI.git"
+    actions:
+      - "main_cloudyweatherapi.yml"
+  dgs-framework:
+    git_url: "https://github.com/Netflix/dgs-framework.git"
+  django-api:
+    git_url: "https://github.com/awaisanjumx2/django-api.git"
+    actions:
+      - "main_djangowebapi.yml"
+  juiceshop:
+    git_url: "https://github.com/miguelmemm16/juiceshop.git"
+    actions:
+      - "ci.yml"
+  tailwindcss:
+    git_url: "https://github.com/tailwindlabs/tailwindcss.git"
+  tsdownsample:
+    git_url: "https://github.com/predict-idlab/tsdownsample.git"

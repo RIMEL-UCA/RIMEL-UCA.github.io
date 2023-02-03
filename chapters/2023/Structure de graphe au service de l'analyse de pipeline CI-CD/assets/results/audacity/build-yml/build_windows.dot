@@ -1,0 +1,18 @@
+digraph {
+	"Checkout Audacity" [shape=rect]
+	"Setup Dependencies" [shape=rect]
+	Configure [shape=rect]
+	Build [shape=rect]
+	Test [shape=rect]
+	Package [shape=rect]
+	"?" [shape=rect]
+	"?" [color=red fontcolor=red shape=ellipse]
+	"Checkout Audacity" -> "Setup Dependencies" [style=dotted xlabel=""]
+	"Setup Dependencies" -> Configure [style=dotted xlabel=""]
+	Configure -> Build [style=dotted xlabel=""]
+	Build -> Test [style=dotted xlabel=""]
+	Test -> Package [style=dotted xlabel=""]
+	"?" -> Test [color=red fontcolor=red style=dashed xlabel="Unknown method \"pushd\""]
+	"?" -> Test [color=red fontcolor=red style=dashed xlabel="Unknown method \"ctest\""]
+	"?" -> Test [color=red fontcolor=red style=dashed xlabel="Unknown method \"popd\""]
+}

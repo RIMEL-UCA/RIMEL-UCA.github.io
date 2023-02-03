@@ -1,0 +1,194 @@
+{
+  "a991b05a5b1b1f0eb4bca9107bc35cc3e9940664": {
+    "author": "Farkas P\u00e9ter",
+    "date": 1665605146,
+    "addition": [
+      {
+        "src/main/java/kafdrop/controller/TopicController.java": {
+          "value": "                         @Value(\"${topic.deleteEnabled:true}\") Boolean topicDeleteEnabled) {"
+        }
+      }
+    ],
+    "deletion": []
+  },
+  "62f5fb06b50cf9152cd44accd68e7b8a56deeadb": {
+    "author": "gebinic",
+    "date": 1655632936,
+    "addition": [
+      {
+        "src/test/java/kafdrop/kafka/KafkaTestConfiguration.java": {
+          "value": "\t@Value(\"${kafka.brokerConnect}\")"
+        }
+      }
+    ],
+    "deletion": []
+  },
+  "a907335a93156c23d4ba47ed885027005f0b4595": {
+    "author": "Toby Bowman",
+    "date": 1655632848,
+    "addition": [
+      {
+        "src/test/java/kafdrop/KafdropTest.java": {
+          "value": "  @Autowired"
+        }
+      }
+    ],
+    "deletion": []
+  },
+  "9d16be5da79b3f23e9076c22221dc93dd96ccc00": {
+    "author": "jorkzijlstra",
+    "date": 1644317071,
+    "addition": [
+      {
+        "src/main/java/kafdrop/controller/TopicController.java": {
+          "value": "                         @Value(\"${topic.deleteEnabled:true}\") Boolean topicDeleteEnabled) {"
+        }
+      }
+    ],
+    "deletion": []
+  },
+  "d9243d86d63ae9376a09b12c86724ae51313fc83": {
+    "author": "Jork Zijlstra",
+    "date": 1643616725,
+    "addition": [
+      {
+        "src/main/java/kafdrop/controller/TopicController.java": {
+          "value": "                         @Value(\"${topic.deleteEnabled:true}\") Boolean topicDeleteEnabled) {"
+        }
+      }
+    ],
+    "deletion": []
+  },
+  "8dab4a94612f57c3ea561fe43704ad53f9830773": {
+    "author": "Emil Koutanov",
+    "date": 1640210852,
+    "addition": [
+      {
+        "src/main/java/kafdrop/controller/TopicController.java": {
+          "value": "                         @Value(\"${topic.deleteEnabled:true}\") Boolean topicDeleteEnabled) {"
+        }
+      }
+    ],
+    "deletion": []
+  },
+  "e453b32ae1faeb42927b641ad060d0293d087d4d": {
+    "author": "Marcus Krassmann",
+    "date": 1639956537,
+    "addition": [
+      {
+        "src/main/java/kafdrop/controller/TopicController.java": {
+          "value": "                         @Value(\"${topic.deleteEnabled:true}\") Boolean topicDeleteEnabled) {"
+        }
+      }
+    ],
+    "deletion": []
+  },
+  "de6430ba54a77b2a82022471e88cb7003d9e6d9f": {
+    "author": "kchibui",
+    "date": 1610064753,
+    "addition": [
+      {
+        "src/main/java/kafdrop/controller/TopicController.java": {
+          "value": "                         @Value(\"${topic.deleteEnabled:true}\") Boolean topicDeleteEnabled) {"
+        }
+      }
+    ],
+    "deletion": []
+  },
+  "652f5b22582626f9164f04d548c3fd103241a96f": {
+    "author": "Emil Koutanov",
+    "date": 1591852446,
+    "addition": [
+      {
+        "src/main/java/kafdrop/controller/TopicController.java": {
+          "value": "                         @Value(\"${topic.deleteEnabled:true}\") Boolean topicDeleteEnabled) {"
+        }
+      }
+    ],
+    "deletion": []
+  },
+  "036510bab60f0a3ec46bfe6332cd3c65f2beedba": {
+    "author": "ohjongsung",
+    "date": 1591849198,
+    "addition": [
+      {
+        "src/main/java/kafdrop/controller/TopicController.java": {
+          "value": "                         @Value(\"${topic.deleteEnabled:true}\") Boolean topicDeleteEnabled) {"
+        }
+      }
+    ],
+    "deletion": []
+  },
+  "48a4df29eb8d39d753bdf2141b9051745df203d4": {
+    "author": "ohjongsung",
+    "date": 1591839453,
+    "addition": [
+      {
+        "src/main/java/kafdrop/controller/TopicController.java": {
+          "value": "                         @Value(\"${topic.deleteEnabled:true}\") Boolean topicDeleteEnabled) {"
+        }
+      }
+    ],
+    "deletion": []
+  },
+  "3df1db02b225ce8647ea922a61be49b0cac01932": {
+    "author": "kchibui",
+    "date": 1590880538,
+    "addition": [
+      {
+        "src/main/java/kafdrop/controller/TopicController.java": {
+          "value": "                         @Value(\"${topic.deleteEnabled:true}\") Boolean topicDeleteEnabled) {"
+        }
+      }
+    ],
+    "deletion": []
+  },
+  "e37b01185f91d66fe2ebbac21315d6297d2cd32c": {
+    "author": "Kacey B",
+    "date": 1590880311,
+    "addition": [
+      {
+        "src/main/java/kafdrop/controller/TopicController.java": {
+          "value": "                         @Value(\"${topic.deleteEnabled:true}\") Boolean topicDeleteEnabled) {"
+        }
+      }
+    ],
+    "deletion": []
+  },
+  "e78736d81c882d66b97e5bc3e70dd421aa0376a2": {
+    "author": "Emil Koutanov",
+    "date": 1568884525,
+    "addition": [
+      {
+        ".mvn/wrapper/MavenWrapperDownloader.java": {
+          "value": "            char[] password = System.getenv(\"MVNW_PASSWORD\").toCharArray();"
+        }
+      }
+    ],
+    "deletion": []
+  },
+  "aed25a44d81f68448376750c08a518943591fd58": {
+    "author": "Kacey B",
+    "date": 1563626932,
+    "addition": [
+      {
+        ".mvn/wrapper/MavenWrapperDownloader.java": {
+          "value": "            char[] password = System.getenv(\"MVNW_PASSWORD\").toCharArray();"
+        }
+      }
+    ],
+    "deletion": []
+  },
+  "57214ee6043f03fbf53ff9d4ef7f0ce1acf9e20e": {
+    "author": "Emil Koutanov",
+    "date": 1561953157,
+    "addition": [
+      {
+        ".mvn/wrapper/MavenWrapperDownloader.java": {
+          "value": "            char[] password = System.getenv(\"MVNW_PASSWORD\").toCharArray();"
+        }
+      }
+    ],
+    "deletion": []
+  }
+}

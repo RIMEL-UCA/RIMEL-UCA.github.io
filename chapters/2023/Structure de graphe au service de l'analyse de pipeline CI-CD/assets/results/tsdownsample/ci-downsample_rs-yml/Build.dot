@@ -1,0 +1,12 @@
+digraph {
+	"actions/checkout@v2" [shape=rect]
+	"Setup Rust" [shape=rect]
+	"Build (release)" [shape=rect]
+	"?" [shape=rect]
+	"?" [color=red fontcolor=red shape=ellipse]
+	"actions/checkout@v2" -> "Setup Rust" [style=dotted xlabel=""]
+	"Setup Rust" -> "Build (release)" [style=dotted xlabel=""]
+	"?" -> "Setup Rust" [color=red fontcolor=red style=dashed xlabel="Unknown method \"rustup\""]
+	"?" -> "Setup Rust" [color=red fontcolor=red style=dashed xlabel="Unknown method \"#\""]
+	"?" -> "Build (release)" [color=red fontcolor=red style=dashed xlabel="Unknown method \"cargo\""]
+}

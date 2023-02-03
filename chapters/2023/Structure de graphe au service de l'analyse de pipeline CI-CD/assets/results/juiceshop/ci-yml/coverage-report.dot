@@ -1,0 +1,12 @@
+digraph {
+	"Check out Git repository" [shape=rect]
+	"Download unit test coverage data" [shape=rect]
+	"Download API test coverage data" [shape=rect]
+	"Publish coverage to Codeclimate" [shape=rect]
+	"?" [shape=rect]
+	"?" [color=red fontcolor=red shape=ellipse]
+	"Check out Git repository" -> "Download unit test coverage data" [style=dotted xlabel=""]
+	"Download unit test coverage data" -> "Download API test coverage data" [style=dotted xlabel=""]
+	"Download API test coverage data" -> "Publish coverage to Codeclimate" [style=dotted xlabel=""]
+	"?" -> "Publish coverage to Codeclimate" [color=red fontcolor=red style=dashed xlabel="Unknown method \"./cc-test-reporter\""]
+}
