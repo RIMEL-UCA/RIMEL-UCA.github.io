@@ -1,0 +1,22 @@
+************* Module 04.3-Density-GMM
+python-scripts\04.3-Density-GMM.py:37:0: W0301: Unnecessary semicolon (unnecessary-semicolon)
+python-scripts\04.3-Density-GMM.py:59:0: W0301: Unnecessary semicolon (unnecessary-semicolon)
+python-scripts\04.3-Density-GMM.py:89:0: W0301: Unnecessary semicolon (unnecessary-semicolon)
+python-scripts\04.3-Density-GMM.py:117:0: W0301: Unnecessary semicolon (unnecessary-semicolon)
+python-scripts\04.3-Density-GMM.py:147:0: W0301: Unnecessary semicolon (unnecessary-semicolon)
+python-scripts\04.3-Density-GMM.py:156:0: W0301: Unnecessary semicolon (unnecessary-semicolon)
+python-scripts\04.3-Density-GMM.py:201:0: W0301: Unnecessary semicolon (unnecessary-semicolon)
+python-scripts\04.3-Density-GMM.py:208:0: C0305: Trailing newlines (trailing-newlines)
+python-scripts\04.3-Density-GMM.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\04.3-Density-GMM.py:1:0: C0103: Module name "3-Density-GMM" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\04.3-Density-GMM.py:44:0: C0413: Import "from sklearn.mixture import GaussianMixture as GMM" should be placed at the top of the module (wrong-import-position)
+python-scripts\04.3-Density-GMM.py:66:0: W0104: Statement seems to have no effect (pointless-statement)
+python-scripts\04.3-Density-GMM.py:71:0: W0104: Statement seems to have no effect (pointless-statement)
+python-scripts\04.3-Density-GMM.py:76:0: W0104: Statement seems to have no effect (pointless-statement)
+python-scripts\04.3-Density-GMM.py:175:0: W0106: Expression "set(true_outliers) - set(detected_outliers)" is assigned to nothing (expression-not-assigned)
+python-scripts\04.3-Density-GMM.py:182:0: W0106: Expression "set(detected_outliers) - set(true_outliers)" is assigned to nothing (expression-not-assigned)
+python-scripts\04.3-Density-GMM.py:193:0: C0413: Import "from sklearn.neighbors import KernelDensity" should be placed at the top of the module (wrong-import-position)
+
+-----------------------------------
+Your code has been rated at 7.21/10
+

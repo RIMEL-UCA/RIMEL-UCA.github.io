@@ -1,0 +1,18 @@
+************* Module 17-optimal_control
+python-scripts\17-optimal_control.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\17-optimal_control.py:1:0: C0103: Module name "17-optimal_control" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\17-optimal_control.py:48:0: C0103: Function name "f" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\17-optimal_control.py:48:6: C0103: Argument name "x" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\17-optimal_control.py:48:9: C0103: Argument name "u" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\17-optimal_control.py:48:12: C0103: Argument name "t" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\17-optimal_control.py:48:6: W0621: Redefining name 'x' from outer scope (line 113) (redefined-outer-name)
+python-scripts\17-optimal_control.py:48:9: W0621: Redefining name 'u' from outer scope (line 115) (redefined-outer-name)
+python-scripts\17-optimal_control.py:48:12: W0621: Redefining name 't' from outer scope (line 134) (redefined-outer-name)
+python-scripts\17-optimal_control.py:63:4: W0621: Redefining name 'f' from outer scope (line 48) (redefined-outer-name)
+python-scripts\17-optimal_control.py:59:4: C0103: Variable name "L" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\17-optimal_control.py:60:7: C0103: Variable name "y" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\17-optimal_control.py:1:0: F0002: python-scripts\17-optimal_control.py: Fatal error while checking 'python-scripts\17-optimal_control.py'. Please open an issue in our bug tracker so we address this. There is a pre-filled template that you can use in 'C:\Users\arthd\AppData\Local\pylint\pylint\Cache\pylint-crash-2023-02-01-20-34-35.txt'. (astroid-error)
+
+------------------------------------------------------------------
+Your code has been rated at 0.00/10 (previous run: 0.00/10, +0.00)
+

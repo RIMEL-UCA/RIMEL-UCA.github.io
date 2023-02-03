@@ -1,0 +1,15 @@
+************* Module lab-07-4-mnist_introduction
+python-scripts\lab-07-4-mnist_introduction.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\lab-07-4-mnist_introduction.py:1:0: C0103: Module name "lab-07-4-mnist_introduction" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\lab-07-4-mnist_introduction.py:10:0: R0402: Use 'from torchvision import transforms' instead (consider-using-from-import)
+python-scripts\lab-07-4-mnist_introduction.py:17:0: C0103: Constant name "device" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-07-4-mnist_introduction.py:29:0: C0103: Constant name "training_epochs" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-07-4-mnist_introduction.py:30:0: C0103: Constant name "batch_size" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-07-4-mnist_introduction.py:72:4: C0103: Constant name "avg_cost" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-07-4-mnist_introduction.py:89:20: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\lab-07-4-mnist_introduction.py:89:52: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\lab-07-4-mnist_introduction.py:12:0: C0411: standard import "import random" should be placed before "import torch" (wrong-import-order)
+
+------------------------------------------------------------------
+Your code has been rated at 7.87/10 (previous run: 7.87/10, +0.00)
+

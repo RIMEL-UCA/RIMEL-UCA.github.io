@@ -1,0 +1,14 @@
+************* Module 010001_market_objects
+python-scripts\010001_market_objects.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\010001_market_objects.py:1:0: C0103: Module name "010001_market_objects" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\010001_market_objects.py:43:0: C0413: Import "from gs_quant.markets import CloseMarket, LiveMarket, TimestampedMarket, OverlayMarket, RelativeMarket" should be placed at the top of the module (wrong-import-position)
+python-scripts\010001_market_objects.py:53:0: C0413: Import "from gs_quant.common import PricingLocation" should be placed at the top of the module (wrong-import-position)
+python-scripts\010001_market_objects.py:61:0: C0413: Import "import time as t" should be placed at the top of the module (wrong-import-position)
+python-scripts\010001_market_objects.py:61:0: C0411: standard import "import time as t" should be placed before "from gs_quant.markets import PricingContext" (wrong-import-order)
+python-scripts\010001_market_objects.py:43:0: W0611: Unused CloseMarket imported from gs_quant.markets (unused-import)
+python-scripts\010001_market_objects.py:43:0: W0611: Unused OverlayMarket imported from gs_quant.markets (unused-import)
+python-scripts\010001_market_objects.py:43:0: W0611: Unused RelativeMarket imported from gs_quant.markets (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 4.00/10 (previous run: 4.00/10, +0.00)
+

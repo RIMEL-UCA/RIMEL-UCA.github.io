@@ -1,0 +1,26 @@
+************* Module autoencoder
+python-scripts\autoencoder.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\autoencoder.py:40:0: C0103: Constant name "num_features" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\autoencoder.py:43:0: C0103: Constant name "learning_rate" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\autoencoder.py:44:0: C0103: Constant name "training_steps" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\autoencoder.py:45:0: C0103: Constant name "batch_size" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\autoencoder.py:46:0: C0103: Constant name "display_step" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\autoencoder.py:49:0: C0103: Constant name "num_hidden_1" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\autoencoder.py:50:0: C0103: Constant name "num_hidden_2" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\autoencoder.py:56:0: C0413: Import "from tensorflow.keras.datasets import mnist" should be placed at the top of the module (wrong-import-position)
+python-scripts\autoencoder.py:100:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\autoencoder.py:100:12: C0103: Argument name "x" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\autoencoder.py:111:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\autoencoder.py:111:12: C0103: Argument name "x" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\autoencoder.py:124:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\autoencoder.py:134:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\autoencoder.py:134:21: C0103: Argument name "x" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\autoencoder.py:138:8: W0621: Redefining name 'loss' from outer scope (line 158) (redefined-outer-name)
+python-scripts\autoencoder.py:136:30: C0103: Variable name "g" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\autoencoder.py:161:14: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\autoencoder.py:167:0: C0413: Import "import matplotlib.pyplot as plt" should be placed at the top of the module (wrong-import-position)
+python-scripts\autoencoder.py:173:0: C0103: Constant name "n" doesn't conform to UPPER_CASE naming style (invalid-name)
+
+------------------------------------------------------------------
+Your code has been rated at 6.77/10 (previous run: 6.77/10, +0.00)
+

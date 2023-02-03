@@ -1,0 +1,12 @@
+************* Module 000402_cdindex_option_risks
+python-scripts\000402_cdindex_option_risks.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\000402_cdindex_option_risks.py:1:0: C0103: Module name "000402_cdindex_option_risks" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\000402_cdindex_option_risks.py:62:0: C0413: Import "import matplotlib.pyplot as plt" should be placed at the top of the module (wrong-import-position)
+python-scripts\000402_cdindex_option_risks.py:63:0: C0413: Import "from pandas.plotting import register_matplotlib_converters" should be placed at the top of the module (wrong-import-position)
+python-scripts\000402_cdindex_option_risks.py:8:0: W0611: Unused PayReceive imported from gs_quant.common (unused-import)
+python-scripts\000402_cdindex_option_risks.py:8:0: W0611: Unused Currency imported from gs_quant.common (unused-import)
+python-scripts\000402_cdindex_option_risks.py:10:0: W0611: Unused DollarPrice imported from gs_quant.risk (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 7.20/10 (previous run: 7.20/10, +0.00)
+

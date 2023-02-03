@@ -1,0 +1,17 @@
+************* Module lab-09_5_mnist_nn_dropout
+python-scripts\lab-09_5_mnist_nn_dropout.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\lab-09_5_mnist_nn_dropout.py:1:0: C0103: Module name "lab-09_5_mnist_nn_dropout" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\lab-09_5_mnist_nn_dropout.py:10:0: R0402: Use 'from torchvision import transforms' instead (consider-using-from-import)
+python-scripts\lab-09_5_mnist_nn_dropout.py:16:0: C0103: Constant name "device" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-09_5_mnist_nn_dropout.py:28:0: C0103: Constant name "learning_rate" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-09_5_mnist_nn_dropout.py:29:0: C0103: Constant name "training_epochs" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-09_5_mnist_nn_dropout.py:30:0: C0103: Constant name "batch_size" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-09_5_mnist_nn_dropout.py:31:0: C0103: Constant name "drop_prob" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-09_5_mnist_nn_dropout.py:101:4: C0103: Constant name "avg_cost" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-09_5_mnist_nn_dropout.py:117:20: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\lab-09_5_mnist_nn_dropout.py:117:52: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\lab-09_5_mnist_nn_dropout.py:11:0: C0411: standard import "import random" should be placed before "import torch" (wrong-import-order)
+
+------------------------------------------------------------------
+Your code has been rated at 8.00/10 (previous run: 8.00/10, +0.00)
+

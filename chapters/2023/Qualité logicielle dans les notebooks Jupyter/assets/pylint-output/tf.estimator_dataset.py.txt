@@ -1,0 +1,15 @@
+************* Module tf.estimator_dataset
+python-scripts\tf.estimator_dataset.py:79:0: C0305: Trailing newlines (trailing-newlines)
+python-scripts\tf.estimator_dataset.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\tf.estimator_dataset.py:8:0: W0104: Statement seems to have no effect (pointless-statement)
+python-scripts\tf.estimator_dataset.py:20:0: W0104: Statement seems to have no effect (pointless-statement)
+python-scripts\tf.estimator_dataset.py:25:0: W0106: Expression "iter(dataset).next()[0]" is assigned to nothing (expression-not-assigned)
+python-scripts\tf.estimator_dataset.py:30:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\tf.estimator_dataset.py:36:8: W0621: Redefining name 'feature_idx' from outer scope (line 53) (redefined-outer-name)
+python-scripts\tf.estimator_dataset.py:35:18: R1735: Consider using {} instead of dict() (use-dict-literal)
+python-scripts\tf.estimator_dataset.py:67:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\tf.estimator_dataset.py:68:4: W0621: Redefining name 'dataset' from outer scope (line 19) (redefined-outer-name)
+
+------------------------------------------------------------------
+Your code has been rated at 6.15/10 (previous run: 6.15/10, +0.00)
+

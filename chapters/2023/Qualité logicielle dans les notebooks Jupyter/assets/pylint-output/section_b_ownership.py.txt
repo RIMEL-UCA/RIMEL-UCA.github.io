@@ -1,0 +1,14 @@
+************* Module section_b_ownership
+python-scripts\section_b_ownership.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\section_b_ownership.py:60:14: E0602: Undefined variable 'Environment' (undefined-variable)
+python-scripts\section_b_ownership.py:60:42: E0602: Undefined variable 'client_id' (undefined-variable)
+python-scripts\section_b_ownership.py:60:67: E0602: Undefined variable 'client_secret' (undefined-variable)
+python-scripts\section_b_ownership.py:70:0: W0104: Statement seems to have no effect (pointless-statement)
+python-scripts\section_b_ownership.py:153:0: C0103: Constant name "cnc" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\section_b_ownership.py:156:4: C0103: Constant name "slc" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\section_b_ownership.py:182:0: W0104: Statement seems to have no effect (pointless-statement)
+python-scripts\section_b_ownership.py:51:0: C0411: standard import "import datetime as dt" should be placed before "import pandas as pd" (wrong-import-order)
+
+------------------------------------------------------------------
+Your code has been rated at 6.25/10 (previous run: 6.25/10, +0.00)
+

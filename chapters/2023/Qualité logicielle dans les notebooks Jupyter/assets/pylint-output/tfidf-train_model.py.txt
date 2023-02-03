@@ -1,0 +1,16 @@
+************* Module tfidf-train_model
+python-scripts\tfidf-train_model.py:53:0: C0305: Trailing newlines (trailing-newlines)
+python-scripts\tfidf-train_model.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\tfidf-train_model.py:1:0: C0103: Module name "tfidf-train_model" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\tfidf-train_model.py:13:0: C0413: Import "import sklearn.datasets" should be placed at the top of the module (wrong-import-position)
+python-scripts\tfidf-train_model.py:14:0: C0413: Import "import re" should be placed at the top of the module (wrong-import-position)
+python-scripts\tfidf-train_model.py:16:0: C0413: Import "import nlpaug.augmenter.word as naw" should be placed at the top of the module (wrong-import-position)
+python-scripts\tfidf-train_model.py:17:0: C0413: Import "import nlpaug.model.word_stats as nmw" should be placed at the top of the module (wrong-import-position)
+python-scripts\tfidf-train_model.py:19:15: W0621: Redefining name 'text' from outer scope (line 43) (redefined-outer-name)
+python-scripts\tfidf-train_model.py:47:10: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\tfidf-train_model.py:48:10: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\tfidf-train_model.py:14:0: C0411: standard import "import re" should be placed before "import sklearn.datasets" (wrong-import-order)
+
+------------------------------------------------------------------
+Your code has been rated at 5.00/10 (previous run: 5.00/10, +0.00)
+

@@ -1,0 +1,17 @@
+************* Module Portfolios
+python-scripts\Portfolios.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\Portfolios.py:1:0: C0103: Module name "Portfolios" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\Portfolios.py:23:0: C0413: Import "from gs_quant.instrument import IRSwaption" should be placed at the top of the module (wrong-import-position)
+python-scripts\Portfolios.py:24:0: C0413: Import "from gs_quant.common import PayReceive, Currency" should be placed at the top of the module (wrong-import-position)
+python-scripts\Portfolios.py:33:0: C0413: Import "from gs_quant.markets.portfolio import Portfolio" should be placed at the top of the module (wrong-import-position)
+python-scripts\Portfolios.py:50:0: W0104: Statement seems to have no effect (pointless-statement)
+python-scripts\Portfolios.py:51:0: W0104: Statement seems to have no effect (pointless-statement)
+python-scripts\Portfolios.py:52:0: W0104: Statement seems to have no effect (pointless-statement)
+python-scripts\Portfolios.py:68:0: R0402: Use 'from gs_quant import risk' instead (consider-using-from-import)
+python-scripts\Portfolios.py:68:0: C0413: Import "import gs_quant.risk as risk" should be placed at the top of the module (wrong-import-position)
+python-scripts\Portfolios.py:76:0: W0104: Statement seems to have no effect (pointless-statement)
+python-scripts\Portfolios.py:77:0: W0104: Statement seems to have no effect (pointless-statement)
+
+------------------------------------------------------------------
+Your code has been rated at 4.00/10 (previous run: 4.00/10, +0.00)
+

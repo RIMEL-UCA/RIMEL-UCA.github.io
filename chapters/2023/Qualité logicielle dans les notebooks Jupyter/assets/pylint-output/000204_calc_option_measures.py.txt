@@ -1,0 +1,11 @@
+************* Module 000204_calc_option_measures
+python-scripts\000204_calc_option_measures.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\000204_calc_option_measures.py:1:0: C0103: Module name "000204_calc_option_measures" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\000204_calc_option_measures.py:24:0: W0104: Statement seems to have no effect (pointless-statement)
+python-scripts\000204_calc_option_measures.py:10:0: C0411: standard import "from datetime import date" should be placed before "from gs_quant.session import Environment, GsSession" (wrong-import-order)
+python-scripts\000204_calc_option_measures.py:10:0: W0611: Unused date imported from datetime (unused-import)
+python-scripts\000204_calc_option_measures.py:11:0: W0611: Unused pandas imported as pd (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 3.33/10 (previous run: 3.33/10, +0.00)
+

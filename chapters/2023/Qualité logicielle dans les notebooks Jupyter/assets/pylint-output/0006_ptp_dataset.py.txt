@@ -1,0 +1,9 @@
+************* Module 0006_ptp_dataset
+python-scripts\0006_ptp_dataset.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\0006_ptp_dataset.py:1:0: C0103: Module name "0006_ptp_dataset" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\0006_ptp_dataset.py:10:0: C0411: standard import "from datetime import date" should be placed before "from gs_quant.session import GsSession, Environment" (wrong-import-order)
+python-scripts\0006_ptp_dataset.py:12:0: W0611: Unused import pydash (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 6.36/10 (previous run: 6.36/10, +0.00)
+

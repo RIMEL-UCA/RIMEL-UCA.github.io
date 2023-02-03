@@ -1,0 +1,19 @@
+************* Module Upload_Factor_Models
+python-scripts\Upload_Factor_Models.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\Upload_Factor_Models.py:1:0: C0103: Module name "Upload_Factor_Models" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\Upload_Factor_Models.py:35:0: C0413: Import "from gs_quant.models.risk_model import FactorRiskModel, RiskModelCalendar, Term, CoverageType, UniverseIdentifier" should be placed at the top of the module (wrong-import-position)
+python-scripts\Upload_Factor_Models.py:36:0: C0413: Import "from gs_quant.entities.entitlements import Group, Entitlements, User, EntitlementBlock" should be placed at the top of the module (wrong-import-position)
+python-scripts\Upload_Factor_Models.py:38:0: C0103: Constant name "model_id" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\Upload_Factor_Models.py:39:0: C0103: Constant name "model_name" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\Upload_Factor_Models.py:40:0: C0103: Constant name "description" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\Upload_Factor_Models.py:44:0: C0103: Constant name "vendor" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\Upload_Factor_Models.py:231:0: C0413: Import "from gs_quant.models.risk_model import RiskModelEventType" should be placed at the top of the module (wrong-import-position)
+python-scripts\Upload_Factor_Models.py:266:0: C0413: Import "from gs_quant.models.risk_model import FactorType, RiskModelFactor" should be placed at the top of the module (wrong-import-position)
+python-scripts\Upload_Factor_Models.py:268:0: C0103: Constant name "identifier" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\Upload_Factor_Models.py:269:0: C0103: Constant name "tooltip" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\Upload_Factor_Models.py:270:0: C0103: Constant name "description" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\Upload_Factor_Models.py:271:0: C0103: Constant name "glossary_description" doesn't conform to UPPER_CASE naming style (invalid-name)
+
+------------------------------------------------------------------
+Your code has been rated at 5.76/10 (previous run: 5.76/10, +0.00)
+

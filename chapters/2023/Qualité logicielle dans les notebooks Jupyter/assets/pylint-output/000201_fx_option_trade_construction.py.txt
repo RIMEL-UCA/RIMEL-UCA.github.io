@@ -1,0 +1,15 @@
+************* Module 000201_fx_option_trade_construction
+python-scripts\000201_fx_option_trade_construction.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\000201_fx_option_trade_construction.py:1:0: C0103: Module name "000201_fx_option_trade_construction" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\000201_fx_option_trade_construction.py:36:0: C0413: Import "from gs_quant.common import BuySell" should be placed at the top of the module (wrong-import-position)
+python-scripts\000201_fx_option_trade_construction.py:45:0: C0413: Import "from gs_quant.common import OptionType" should be placed at the top of the module (wrong-import-position)
+python-scripts\000201_fx_option_trade_construction.py:69:0: C0413: Import "from gs_quant.common import Currency" should be placed at the top of the module (wrong-import-position)
+python-scripts\000201_fx_option_trade_construction.py:86:0: W0105: String statement has no effect (pointless-string-statement)
+python-scripts\000201_fx_option_trade_construction.py:133:0: C0413: Import "from gs_quant.common import OptionSettlementMethod" should be placed at the top of the module (wrong-import-position)
+python-scripts\000201_fx_option_trade_construction.py:10:0: C0411: standard import "from datetime import date" should be placed before "from gs_quant.session import Environment, GsSession" (wrong-import-order)
+python-scripts\000201_fx_option_trade_construction.py:36:0: C0412: Imports from package gs_quant are not grouped (ungrouped-imports)
+python-scripts\000201_fx_option_trade_construction.py:10:0: W0611: Unused date imported from datetime (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 7.06/10 (previous run: 7.06/10, +0.00)
+

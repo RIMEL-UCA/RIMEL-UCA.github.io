@@ -1,0 +1,14 @@
+************* Module hello_sequence
+python-scripts\hello_sequence.py:72:0: C0305: Trailing newlines (trailing-newlines)
+python-scripts\hello_sequence.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\hello_sequence.py:23:0: C0413: Import "from sklearn.preprocessing import MinMaxScaler" should be placed at the top of the module (wrong-import-position)
+python-scripts\hello_sequence.py:42:0: C0413: Import "from keras.models import Sequential" should be placed at the top of the module (wrong-import-position)
+python-scripts\hello_sequence.py:43:0: C0413: Import "from keras.layers import Dense" should be placed at the top of the module (wrong-import-position)
+python-scripts\hello_sequence.py:44:0: C0413: Import "from keras.layers import LSTM" should be placed at the top of the module (wrong-import-position)
+python-scripts\hello_sequence.py:45:0: C0413: Import "from keras.layers import Dropout" should be placed at the top of the module (wrong-import-position)
+python-scripts\hello_sequence.py:10:0: W0611: Unused matplotlib.pyplot imported as plt (unused-import)
+python-scripts\hello_sequence.py:45:0: W0611: Unused Dropout imported from keras.layers (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 6.67/10 (previous run: 6.67/10, +0.00)
+

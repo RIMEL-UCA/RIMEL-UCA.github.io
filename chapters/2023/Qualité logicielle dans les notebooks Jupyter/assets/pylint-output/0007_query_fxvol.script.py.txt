@@ -1,0 +1,23 @@
+************* Module 0007_query_fxvol.script
+python-scripts\0007_query_fxvol.script.py:186:0: C0305: Trailing newlines (trailing-newlines)
+python-scripts\0007_query_fxvol.script.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\0007_query_fxvol.script.py:19:18: C0103: Argument name "ds" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\0007_query_fxvol.script.py:34:34: C0103: Argument name "ds" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\0007_query_fxvol.script.py:34:38: W0621: Redefining name 'start_date' from outer scope (line 133) (redefined-outer-name)
+python-scripts\0007_query_fxvol.script.py:34:50: W0621: Redefining name 'end_date' from outer scope (line 134) (redefined-outer-name)
+python-scripts\0007_query_fxvol.script.py:39:8: C0103: Variable name "ch" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\0007_query_fxvol.script.py:50:8: C0103: Variable name "ch" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\0007_query_fxvol.script.py:59:15: C0103: Argument name "ds" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\0007_query_fxvol.script.py:59:0: R0913: Too many arguments (8/5) (too-many-arguments)
+python-scripts\0007_query_fxvol.script.py:60:15: W0621: Redefining name 'start_date' from outer scope (line 133) (redefined-outer-name)
+python-scripts\0007_query_fxvol.script.py:60:49: W0621: Redefining name 'end_date' from outer scope (line 134) (redefined-outer-name)
+python-scripts\0007_query_fxvol.script.py:72:12: R1735: Consider using {} instead of dict() (use-dict-literal)
+python-scripts\0007_query_fxvol.script.py:102:15: C0103: Argument name "ds" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\0007_query_fxvol.script.py:102:0: R0913: Too many arguments (6/5) (too-many-arguments)
+python-scripts\0007_query_fxvol.script.py:103:15: W0621: Redefining name 'start_date' from outer scope (line 133) (redefined-outer-name)
+python-scripts\0007_query_fxvol.script.py:103:49: W0621: Redefining name 'end_date' from outer scope (line 134) (redefined-outer-name)
+python-scripts\0007_query_fxvol.script.py:113:11: R1735: Consider using {} instead of dict() (use-dict-literal)
+
+------------------------------------------------------------------
+Your code has been rated at 7.78/10 (previous run: 7.78/10, +0.00)
+

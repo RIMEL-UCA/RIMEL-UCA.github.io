@@ -1,0 +1,9 @@
+************* Module Instruments
+python-scripts\Instruments.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\Instruments.py:1:0: C0103: Module name "Instruments" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\Instruments.py:34:0: C0413: Import "from gs_quant.instrument import IRSwaption" should be placed at the top of the module (wrong-import-position)
+python-scripts\Instruments.py:35:0: C0413: Import "from gs_quant.common import PayReceive, Currency" should be placed at the top of the module (wrong-import-position)
+
+------------------------------------------------------------------
+Your code has been rated at 5.00/10 (previous run: 5.00/10, +0.00)
+

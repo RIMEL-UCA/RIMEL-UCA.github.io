@@ -1,0 +1,21 @@
+************* Module lab-10_4_2_ImageFolder_2
+python-scripts\lab-10_4_2_ImageFolder_2.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\lab-10_4_2_ImageFolder_2.py:1:0: C0103: Module name "lab-10_4_2_ImageFolder_2" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\lab-10_4_2_ImageFolder_2.py:10:0: R0402: Use 'from torch import nn' instead (consider-using-from-import)
+python-scripts\lab-10_4_2_ImageFolder_2.py:13:0: R0402: Use 'from torch import optim' instead (consider-using-from-import)
+python-scripts\lab-10_4_2_ImageFolder_2.py:17:0: R0402: Use 'from torchvision import transforms' instead (consider-using-from-import)
+python-scripts\lab-10_4_2_ImageFolder_2.py:22:0: C0103: Constant name "device" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-10_4_2_ImageFolder_2.py:45:0: C0115: Missing class docstring (missing-class-docstring)
+python-scripts\lab-10_4_2_ImageFolder_2.py:47:8: R1725: Consider using Python 3 style super() without arguments (super-with-arguments)
+python-scripts\lab-10_4_2_ImageFolder_2.py:64:4: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\lab-10_4_2_ImageFolder_2.py:64:22: C0103: Argument name "x" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\lab-10_4_2_ImageFolder_2.py:65:8: W0621: Redefining name 'out' from outer scope (line 99) (redefined-outer-name)
+python-scripts\lab-10_4_2_ImageFolder_2.py:91:0: C0103: Constant name "epochs" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-10_4_2_ImageFolder_2.py:93:4: C0103: Constant name "avg_cost" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-10_4_2_ImageFolder_2.py:106:10: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\lab-10_4_2_ImageFolder_2.py:133:0: W0104: Statement seems to have no effect (pointless-statement)
+python-scripts\lab-10_4_2_ImageFolder_2.py:11:0: W0611: Unused torch.nn.functional imported as F (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 7.61/10 (previous run: 7.46/10, +0.15)
+

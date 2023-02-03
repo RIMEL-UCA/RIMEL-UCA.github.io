@@ -1,0 +1,12 @@
+************* Module spectrogram_augmenter
+python-scripts\spectrogram_augmenter.py:70:0: C0305: Trailing newlines (trailing-newlines)
+python-scripts\spectrogram_augmenter.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\spectrogram_augmenter.py:12:0: C0103: Constant name "path" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\spectrogram_augmenter.py:20:0: C0413: Import "import nlpaug.augmenter.spectrogram as nas" should be placed at the top of the module (wrong-import-position)
+python-scripts\spectrogram_augmenter.py:21:0: C0413: Import "import nlpaug.flow as naf" should be placed at the top of the module (wrong-import-position)
+python-scripts\spectrogram_augmenter.py:58:0: W0404: Reimport 'nlpaug.flow' (imported line 21) (reimported)
+python-scripts\spectrogram_augmenter.py:58:0: C0413: Import "import nlpaug.flow as naf" should be placed at the top of the module (wrong-import-position)
+
+------------------------------------------------------------------
+Your code has been rated at 6.50/10 (previous run: 6.50/10, +0.00)
+

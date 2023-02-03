@@ -1,0 +1,25 @@
+************* Module 9-Hedging using Machine Learning Techniques
+python-scripts\9-Hedging using Machine Learning Techniques.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\9-Hedging using Machine Learning Techniques.py:1:0: C0103: Module name "9-Hedging using Machine Learning Techniques" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\9-Hedging using Machine Learning Techniques.py:41:0: C0413: Import "import logging" should be placed at the top of the module (wrong-import-position)
+python-scripts\9-Hedging using Machine Learning Techniques.py:57:0: C0413: Import "from gs_quant.api.gs.hedges import GsHedgeApi" should be placed at the top of the module (wrong-import-position)
+python-scripts\9-Hedging using Machine Learning Techniques.py:58:0: C0413: Import "from gs_quant.markets.securities import SecurityMaster, AssetIdentifier" should be placed at the top of the module (wrong-import-position)
+python-scripts\9-Hedging using Machine Learning Techniques.py:59:0: C0413: Import "from datetime import date" should be placed at the top of the module (wrong-import-position)
+python-scripts\9-Hedging using Machine Learning Techniques.py:60:0: C0413: Import "import pandas as pd" should be placed at the top of the module (wrong-import-position)
+python-scripts\9-Hedging using Machine Learning Techniques.py:120:0: C0413: Import "import matplotlib.pyplot as plt" should be placed at the top of the module (wrong-import-position)
+python-scripts\9-Hedging using Machine Learning Techniques.py:121:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\9-Hedging using Machine Learning Techniques.py:121:56: W0621: Redefining name 'standard_results' from outer scope (line 114) (redefined-outer-name)
+python-scripts\9-Hedging using Machine Learning Techniques.py:126:4: W0621: Redefining name 'results' from outer scope (line 74) (redefined-outer-name)
+python-scripts\9-Hedging using Machine Learning Techniques.py:121:74: W0613: Unused argument 'figsize' (unused-argument)
+python-scripts\9-Hedging using Machine Learning Techniques.py:164:0: C0413: Import "from gs_quant.markets.hedge import Hedge" should be placed at the top of the module (wrong-import-position)
+python-scripts\9-Hedging using Machine Learning Techniques.py:190:0: C0103: Constant name "metric_to_optimize" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\9-Hedging using Machine Learning Techniques.py:197:0: W0404: Reimport 'Hedge' (imported line 164) (reimported)
+python-scripts\9-Hedging using Machine Learning Techniques.py:197:0: C0413: Import "from gs_quant.markets.hedge import Hedge" should be placed at the top of the module (wrong-import-position)
+python-scripts\9-Hedging using Machine Learning Techniques.py:41:0: C0411: standard import "import logging" should be placed before "from gs_quant.session import GsSession, Environment" (wrong-import-order)
+python-scripts\9-Hedging using Machine Learning Techniques.py:59:0: C0411: standard import "from datetime import date" should be placed before "from gs_quant.session import GsSession, Environment" (wrong-import-order)
+python-scripts\9-Hedging using Machine Learning Techniques.py:164:0: C0412: Imports from package gs_quant are not grouped (ungrouped-imports)
+python-scripts\9-Hedging using Machine Learning Techniques.py:33:0: W0611: Unused Environment imported from gs_quant.session (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 5.12/10 (previous run: 5.12/10, +0.00)
+

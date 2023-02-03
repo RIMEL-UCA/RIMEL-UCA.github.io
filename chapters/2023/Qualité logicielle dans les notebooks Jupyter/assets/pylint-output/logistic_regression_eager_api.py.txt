@@ -1,0 +1,23 @@
+************* Module logistic_regression_eager_api
+python-scripts\logistic_regression_eager_api.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\logistic_regression_eager_api.py:37:0: C0413: Import "from tensorflow.examples.tutorials.mnist import input_data" should be placed at the top of the module (wrong-import-position)
+python-scripts\logistic_regression_eager_api.py:44:0: C0103: Constant name "learning_rate" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\logistic_regression_eager_api.py:45:0: C0103: Constant name "batch_size" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\logistic_regression_eager_api.py:46:0: C0103: Constant name "num_steps" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\logistic_regression_eager_api.py:47:0: C0103: Constant name "display_step" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\logistic_regression_eager_api.py:66:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\logistic_regression_eager_api.py:70:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\logistic_regression_eager_api.py:76:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\logistic_regression_eager_api.py:94:0: C0103: Constant name "average_loss" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\logistic_regression_eager_api.py:95:0: C0103: Constant name "average_acc" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\logistic_regression_eager_api.py:115:14: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\logistic_regression_eager_api.py:125:23: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\logistic_regression_eager_api.py:126:14: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\logistic_regression_eager_api.py:127:14: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\logistic_regression_eager_api.py:128:8: C0103: Constant name "average_loss" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\logistic_regression_eager_api.py:129:8: C0103: Constant name "average_acc" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\logistic_regression_eager_api.py:139:6: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+
+------------------------------------------------------------------
+Your code has been rated at 6.33/10 (previous run: 6.33/10, +0.00)
+

@@ -1,0 +1,27 @@
+************* Module tfrecords
+python-scripts\tfrecords.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\tfrecords.py:57:4: W3101: Missing timeout argument for method 'requests.get' can cause your program to hang indefinitely (missing-timeout)
+python-scripts\tfrecords.py:67:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\tfrecords.py:67:24: W0621: Redefining name 'data' from outer scope (line 138) (redefined-outer-name)
+python-scripts\tfrecords.py:71:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\tfrecords.py:71:24: W0621: Redefining name 'data' from outer scope (line 138) (redefined-outer-name)
+python-scripts\tfrecords.py:75:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\tfrecords.py:75:25: W0621: Redefining name 'data' from outer scope (line 138) (redefined-outer-name)
+python-scripts\tfrecords.py:79:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\tfrecords.py:79:0: R0913: Too many arguments (9/5) (too-many-arguments)
+python-scripts\tfrecords.py:79:25: W0621: Redefining name 'survived' from outer scope (line 109) (redefined-outer-name)
+python-scripts\tfrecords.py:79:35: W0621: Redefining name 'pclass' from outer scope (line 109) (redefined-outer-name)
+python-scripts\tfrecords.py:79:43: W0621: Redefining name 'name' from outer scope (line 109) (redefined-outer-name)
+python-scripts\tfrecords.py:79:49: W0621: Redefining name 'sex' from outer scope (line 109) (redefined-outer-name)
+python-scripts\tfrecords.py:79:54: W0621: Redefining name 'age' from outer scope (line 109) (redefined-outer-name)
+python-scripts\tfrecords.py:79:59: W0621: Redefining name 'sibsp' from outer scope (line 109) (redefined-outer-name)
+python-scripts\tfrecords.py:79:66: W0621: Redefining name 'parch' from outer scope (line 109) (redefined-outer-name)
+python-scripts\tfrecords.py:79:73: W0621: Redefining name 'ticket' from outer scope (line 109) (redefined-outer-name)
+python-scripts\tfrecords.py:79:81: W0621: Redefining name 'fare' from outer scope (line 109) (redefined-outer-name)
+python-scripts\tfrecords.py:99:5: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+python-scripts\tfrecords.py:141:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\tfrecords.py:141:17: W0621: Redefining name 'record' from outer scope (line 105) (redefined-outer-name)
+
+------------------------------------------------------------------
+Your code has been rated at 4.21/10 (previous run: 4.21/10, +0.00)
+
