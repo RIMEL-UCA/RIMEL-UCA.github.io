@@ -67,20 +67,43 @@ Préciser vos zones de recherches en fonction de votre projet, les informations 
 
 ## VI. Outillage
 
-Afin de réaliser ce projet, nous avons créé un outil permettant de détecter les actions utilisées dans un fichier d'intégration continue, de les analyser et de les visualiser.
+Afin de réaliser ce projet, nous avons créé des outils permettant de détecter les actions utilisées dans un fichier d'intégration continue, de les analyser et de les visualiser.
 
 ### 1. Génération des visualisations et des résultats
 
 Pour générer les visualisations et les résultats, nous avons utilisé le script `main.py` qui permet de récupérer les informations sur les actions utilisées dans les fichiers d'intégration continue des dépôts GitHub (importés dans un fichier de recherche sous format YML). Pour cela, nous avons utilisé l'API GitHub et le langage Python.
 
-XXX
+Il suffit de créer un corpus de dépôts dans le format YML suivant :
+
+```yaml
+name: "My Research Corpus"
+
+subjects:
+
+   your_group_name:
+      repositories:
+         - "repo_owner/repo_name"
+
+   your_group_name_advanced:
+      repositories:
+         - "repo_owner/repo_name"
+      trusted-owners:
+         - "github_username"
+```
+
+Puis de lancer le script `main.py` avec le fichier YML en paramètre :
+
+```bash
+python3 main.py -P my_corpus.yml
+```
+
+Le script va alors récupérer les informations sur les actions utilisées dans les fichiers d'intégration continue des dépôts GitHub et les exporter dans un fichier de résultats au format propriétaire "findings". En plus de réaliser cela, des graphiques sont générés à partir des résultats obtenus et organisés dans un dossier `results` à la racine du projet. Ce dossier contient le nom du corpus utilisé pour générer les résultats et détient chacun des dépôts analysés dans un dossier portant le nom du propriétaire du dépôt. Dans chacun de ces dossier, les dépôts sont organisés dans des sous-dossiers portant le nom du dépôt. Dans chacun de ces sous-dossiers, les graphiques de précédence sont générés dans un dossier `precedence` et les graphiques de dépendances (ceux qui nous intéressent le plus) dans un dossier `dependencies`. Les fichiers de workflow sont également copiés dans un dossier `workflows` à la racine du dossier du dépôt.
 
 ### 2. Analyse des résultats
 
 Afin de compiler les résultats obtenus précédemment sous format de fichier propriétaire "findings", nous avons utilisé le script `compyte.py` qui permet de compiler des graphiques et des données statistiques à partir des résultats obtenus par le script `main.py`. Pour cela, nous avons utilisé le langage Python également. Les images présentes dans ce rapport ont été générées à l'aide de ce script.
 
 > 🤘🏻 Tout le code source de ce projet de recherche est disponible [ici](assets/code), avec un guide d'utilisation.
-
 
 ## VI. References
 
