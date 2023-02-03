@@ -1,0 +1,7 @@
+digraph {
+	"actions/checkout@v3.1.0" [shape=rect]
+	"Set up JDK 1.8" [shape=rect]
+	"Update Gradle Wrapper" [shape=rect]
+	"actions/checkout@v3.1.0" -> "Set up JDK 1.8" [style=dotted xlabel=""]
+	"Set up JDK 1.8" -> "Update Gradle Wrapper" [style=dotted xlabel=""]
+}

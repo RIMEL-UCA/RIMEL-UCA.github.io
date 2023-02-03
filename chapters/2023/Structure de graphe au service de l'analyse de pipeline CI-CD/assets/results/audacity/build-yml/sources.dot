@@ -1,0 +1,11 @@
+digraph {
+	"Checkout Audacity" [shape=rect]
+	"Setup Dependencies" [shape=rect]
+	Configure [shape=rect]
+	Package [shape=rect]
+	"Upload sources" [shape=rect]
+	"Checkout Audacity" -> "Setup Dependencies" [style=dotted xlabel=""]
+	"Setup Dependencies" -> Configure [style=dotted xlabel=""]
+	Configure -> Package [style=dotted xlabel=""]
+	Package -> "Upload sources" [style=dotted xlabel=""]
+}

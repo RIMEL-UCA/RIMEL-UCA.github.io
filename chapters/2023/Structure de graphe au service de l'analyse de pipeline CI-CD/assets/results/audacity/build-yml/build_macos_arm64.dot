@@ -1,0 +1,15 @@
+digraph {
+	"Checkout Audacity" [shape=rect]
+	"Setup Dependencies" [shape=rect]
+	"Configure x86_64" [shape=rect]
+	"Build x86_64" [shape=rect]
+	"Configure arm64" [shape=rect]
+	"Build arm64" [shape=rect]
+	"Tar files" [shape=rect]
+	"Checkout Audacity" -> "Setup Dependencies" [style=dotted xlabel=""]
+	"Setup Dependencies" -> "Configure x86_64" [style=dotted xlabel=""]
+	"Configure x86_64" -> "Build x86_64" [style=dotted xlabel=""]
+	"Build x86_64" -> "Configure arm64" [style=dotted xlabel=""]
+	"Configure arm64" -> "Build arm64" [style=dotted xlabel=""]
+	"Build arm64" -> "Tar files" [style=dotted xlabel=""]
+}

@@ -1,0 +1,6 @@
+digraph {
+	"Check out Git repository" [shape=rect]
+	"Execute smoke test on Docker" [shape=rect]
+	"Check out Git repository" -> "Execute smoke test on Docker" [decorate=false xlabel="docker-compose.test.yml"]
+	"Check out Git repository" -> "Execute smoke test on Docker" [style=dotted xlabel=""]
+}

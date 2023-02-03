@@ -1,0 +1,17 @@
+digraph {
+	"actions/checkout@v3" [shape=rect]
+	"set up python" [shape=rect]
+	"Anonymous step" [color=orange shape=rect]
+	"get dist artifacts" [shape=rect]
+	"upload to pypi" [shape=rect]
+	"?" [shape=rect]
+	"?" [color=red fontcolor=red shape=ellipse]
+	"actions/checkout@v3" -> "set up python" [style=dotted xlabel=""]
+	"set up python" -> "Anonymous step" [style=dotted xlabel=""]
+	"Anonymous step" -> "get dist artifacts" [style=dotted xlabel=""]
+	"Anonymous step" -> "upload to pypi" [style=dotted xlabel=""]
+	"get dist artifacts" -> "Anonymous step" [style=dotted xlabel=""]
+	"?" -> "Anonymous step" [color=red fontcolor=red style=dashed xlabel="Unknown method \"pip\""]
+	"?" -> "Anonymous step" [color=red fontcolor=red style=dashed xlabel="Unknown method \"twine\""]
+	"?" -> "upload to pypi" [color=red fontcolor=red style=dashed xlabel="Unknown method \"twine\""]
+}

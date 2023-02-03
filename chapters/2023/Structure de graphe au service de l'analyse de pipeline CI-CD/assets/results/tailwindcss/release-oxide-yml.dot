@@ -1,0 +1,14 @@
+digraph {
+	"?" [shape=rect]
+	"oxide-build" [shape=rect]
+	"oxide-build-apple-silicon" [shape=rect]
+	"oxide-build-linux" [shape=rect]
+	"oxide-release" [shape=rect]
+	tailwind_oxide_release [shape=rect]
+	"?" [color=red fontcolor=red shape=ellipse]
+	"?" -> "oxide-release" [color=orange decorate=false xlabel="??"]
+	"oxide-build" -> "oxide-release" [style=dotted xlabel=""]
+	"oxide-build-apple-silicon" -> "oxide-release" [style=dotted xlabel=""]
+	"oxide-build-linux" -> "oxide-release" [style=dotted xlabel=""]
+	"oxide-release" -> tailwind_oxide_release [style=dotted xlabel=""]
+}

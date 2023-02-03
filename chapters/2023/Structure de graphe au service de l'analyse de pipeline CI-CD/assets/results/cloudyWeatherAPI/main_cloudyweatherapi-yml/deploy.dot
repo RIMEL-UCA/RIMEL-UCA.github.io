@@ -1,0 +1,5 @@
+digraph {
+	"Download artifact from build job" [shape=rect]
+	"Deploy to Azure Web App" [shape=rect]
+	"Download artifact from build job" -> "Deploy to Azure Web App" [style=dotted xlabel=""]
+}
