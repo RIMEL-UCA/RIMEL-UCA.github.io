@@ -68,7 +68,8 @@ Attention pour répondre à cette question, vous devrez être capable d'émettre
 
      :bulb: Cette première étape nécessite beaucoup de réflexion pour se définir la bonne question afin de poser les bonnes bases pour la suite.
 
-Comment la variabilité est distribuée entre plusieurs auteurs dans du code orienté objet ?
+
+> Comment la variabilité est distribuée entre plusieurs auteurs dans du code orienté objet ?
 
 Selon le type d’application développée et le fonctionnement en entreprise, le développement peut être fait par une ou plusieurs personnes.  
 Dans une entreprise, il peut y avoir des départs, des changements de postes, des nouveaux arrivants ce qui impliquent que les personnes qui s’occupent d’une application peuvent varier.  
@@ -90,6 +91,15 @@ sur les points complexes du code entre les développeurs experts et les nouveaux
 La variabilité pouvant être décomposée sous forme de "patterns" (patron de conception), le nouveau développeur pourrait cibler sa recherche 
 sur un pattern spécifique afin de trouver les auteurs auprès de qui poser des questions pour comprendre le fonctionnement du pattern à travers le code.
 
+Dans notre approche, on peut identifier les limites suivantes :
+- L'analyse du code se fait à un instant t, on prend le dernier commit de la branche principale du repository. 
+  Une extension intéressante serait d'analyser les modifications à travers les différentes versions du projet.
+- Plus les projets sont vieux, plus la variabilité peut être diluée à travers les différents contributeurs. 
+  Les résultats obtenus pourraient être différents selon l'ancienneté du projet.
+- Plusieurs contributeurs peuvent être une seule et même personne sur un projet avec des adresses mail différentes. 
+  L'identification de l'auteur peut être faussée.
+- Les patterns de variabilité étudiés sont "VP" et "VARIANT". 
+  Ces deux patterns permettent d'identifier facilement quelles sont leurs lignes de code associées.  
 
 ## III. Collecte d'information
 
@@ -97,40 +107,43 @@ Préciser vos zones de recherches en fonction de votre projet, les informations 
 
      :bulb: Cette étape est fortement liée à la suivante. Vous ne pouvez émettre d'hypothèses à vérifier que si vous avez les informations, inversement, vous cherchez à recueillir des informations en fonction de vos hypothèses. 
 
-1. Les articles ou documents utiles à votre projet📝
+**1. Les articles ou documents utiles à votre projet📝**
 
 Dans le cadre de notre recherche, nous prévoyons de nous baser sur les ressources suivantes :
 - [On the notion of variability in software product lines](https://doi.org/10.1109/WICSA.2001.948406) :
   Définition de la notion de variabilité dans les lignes de produits logiciels.
 - [Visualization of Object-Oriented Variability Implementations as Cities](https://hal.archives-ouvertes.fr/hal-03312487) :
-  Création d'un outil permettant l'analyse de la variabilité dans un code orienté objet.
+  Création d'un outil permettant l'analyse et la visualisation de la variabilité dans un code orienté objet.
 - [On the usefulness of ownership metrics in open-source software projects](https://www.sciencedirect.com/science/article/abs/pii/S0950584915000294)
-  Mesures sur les propriétaires de code.
+  Métriques sur la paternité de projets Open-Source.
 
 
-2. Les jeux de données 💾
+**2. Les jeux de données 💾**
 
 Nous procéderons à l'analyse de projets GitHub. 
 La liste des projets se trouve dans un excel disponible [ici](chapters/2023/Paternité de la variabilité sur de l'orienté objet/assets/data/GitHub_projects_list.xlsx)
 Les projets GitHub que nous allons analyser comportent les critères suivants :
 - langage de développement : JAVA (orienté objet),
 - nombre de contributeurs : entre 10 et 40,
-- taille : inférieure à 500 KB.
+- taille de la base de code : inférieure à 500 KB.
 
 Ces critères sont définis pour limiter le choix des projets à analyser. 
 Pour faire ressortir la notion de paternité, il faut avoir plus d'un seul contributeur. 
 Cependant, avec un nombre trop conséquent de contributeur, l'analyse risque d'être trop morcelée donc une limite expérimentale est fixée à 40 contributeurs.
 
-La taille choisie est directement liée au temps d'analyse du projet pour calculer la variabilité de celui-ci. 
+La taille de la base de code choisie est directement liée au temps d'analyse du projet pour calculer la variabilité de celui-ci. 
 Un trop gros projet mettrait beaucoup de temps à être analysé donc nous ciblons des projets de taille moyenne ou petite.
 
+Un projet peut donc être défini par son nombre de lignes de code, son nombre de contributeurs et sa quantité de variabilité.
 
-3. Les outils🔨🪓
+**3. Les outils🔨🪓**
 
-- git blame
-- Symfinder (Pour connaître la variabilité d’un projet orienté objet à un instant donné, on a utilisé Symfinder. Cela va servir de point de départ pour remonter le nom de la ou les personnes responsables de cette variation. )
-- Docker/Docker-Compose
-- Scripts Python
+- [git blame](https://git-scm.com/docs/git-blame) : Outil d'identification des derniers auteurs qui ont modifié les lignes de code d'un fichier. 
+- [Symfinder](https://deathstar3.github.io/symfinder-demo/) : Outil d'analyse de la variabilité d’un projet orienté objet à un instant donné.
+- [Docker/Docker-Compose](https://docs.docker.com/get-started/overview/) : Outil de lancement de l'analyse de la variabilité
+- [Scripts Python](chapters/2023/Paternité de la variabilité sur de l'orienté objet/assets/code)
+
+Pour plus de détails sur comment utiliser ces outils, voir partie [VI. Outils](#vi-outils).
 
 ## IV. Hypothèses et Experience
 
@@ -139,90 +152,113 @@ Un trop gros projet mettrait beaucoup de temps à être analysé donc nous ciblo
 
      :bulb: Structurez cette partie à votre convenance : Hypothèse 1 => Expériences, Hypothèse 2 => Expériences ou l'ensemble des hypothèses et les expériences....
 
-### Hypothèses
+Pour notre analyse, on va seulement considérer les contributeurs qui ont participé à l'écriture de code contenant de la variabilité.
 
-#### Hypothèse 1
+### 1. Répartition de la variabilité selon le nombre de contributeurs
 
-*La variabilité est bien distribuée à travers tous les contributeurs quand le projet est de grande taille (beaucoup de line de code, beaucoup de développeurs).*
+#### Hypothèse
 
-Sous-question :
+*La variabilité est distribuée dans le projet selon le nombre de contributeurs. Plus le nombre de contributeurs est élevé, plus la variabilité est répartie entre eux.*
 
-*Comment la paternité de la variabilité est répartie entre les contributeurs dans un gros projet ?*
+#### Sous-question
 
-Résultats attendus :
+> Comment évolue la répartition de la variabilité avec le nombre de contributeurs qui augmentent ?
 
-Une paternité très fragmentée avec un faible pourcentage pour chaque auteur GitHub
+#### Métriques
+- Pourcentage de variabilité moyenne par contributeur (%/personne)
+- Nombre moyen de contributeurs ayant participé à l'écriture de la variabilité (N personnes)
 
-#### Hypothèse 2
+#### Experience
+##### Source
+Les projets que nous avons choisis pour cette expérience sont les suivants :
 
-*Pour de petit projet, il y a peu de développeur, voire potentiellement un seul pour qui la paternité de la variabilité est la plus importante, ou autrement dit, un développeur apparais comme principale dans le projet.*
+|                      Projet                       | Lien                                                                 | Nombre de contributeurs |
+|:-------------------------------------------------:|:---------------------------------------------------------------------|:-----------------------:|
+|             JakeWharton/DiskLruCache              | https://github.com/JakeWharton/DiskLruCache                          |           10            |
+|                JakeWharton/RxRelay                | https://github.com/JakeWharton/RxRelay                               |           15            |
+|               Flipboard/bottomsheet               | https://github.com/Flipboard/bottomsheet                             |           20            |
+|      VerbalExpressions/JavaVerbalExpressions      | https://github.com/VerbalExpressions/JavaVerbalExpressions           |           25            |
+| EnterpriseQualityCoding/FizzBuzzEnterpriseEdition | https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition |           31            |
 
-Sous-question :
+#### Description
+Le but de cette expérience est de déterminer si le nombre de contributeurs influe sur la répartition de la variabilité.
+Pour cela, on a sélectionné des projets contenant de la variabilité avec un nombre de contributeurs croissant (de 10 à 31).
+À partir de l'analyse de la variabilité de chaque projet, un filtre est appliqué pour isolé tous les "VARIANTS" 
+et itérer sur chacun afin d'appliquer ``git blame`` sur le fichier contenant le "VARIANT" 
+et identifier les différents auteurs ainsi que leur pourcentage de participation à l'écriture de ce fichier.
 
-La paternité de la variabilité est-elle répartie de la même façon dans de petit projet, ou dans des projets avec peu de développeur ?
 
-Résultats attendus :
+### 2. Paternité commune sur la variabilité de type "VP" (Variant Point) et "VARIANT"
 
-En l'occurrence ici on s'attend à confirmer l'hypothèse notamment due au fait que dans des petits projets, il y a souvent un ou deux développeurs experts, pères de la majeure partie de la variabilité.
+**Hypothèse**
 
-#### Hypothèse 3
+*Un contributeur qui modifie un VP va aussi modifier ses VARIANTS.*
 
-*La paternité de variabilité est le même pour tous les types de variabilité (tjs les mêmes contributeurs pour les différentes variabilités).*
+**Sous-question**
 
-Sous-question :
+> Y a-t-il une relation de paternité entre la variabilité présente dans un VP et son implémentation dans ses VARIANTS ?
 
-Est-ce que la répartition de la paternité suit un schéma par rapport aux patterns de variabilité ?
+**Métriques**
+- Nombre (et liste) de contributeurs ayant participé à l'écriture d'un VP
+- Nombre (et liste) de contributeurs ayant participé à l'écriture des VARIANTS associés au VP
+- Pourcentage de corrélation entre les deux
+- Le nombre moyen de contributeurs supplémentaires sur les VARIANTS (pas dans les VPs)
 
-Résultats attendus :
+**Experience**  
+Les projets que nous avons choisis pour cette expérience sont les suivants : 
 
-On s'attend à ce qu'un développeur qui produit de la variance d'un type produise de la variance sur les autres types du même niveau.
+|                      Projet                       | Lien                                                                 | Nombre de contributeurs |
+|:-------------------------------------------------:|:---------------------------------------------------------------------|:-----------------------:|
+| EnterpriseQualityCoding/FizzBuzzEnterpriseEdition | https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition |           31            |
 
-### Experiences
+### 3. 
 
-#### Hypothèse 1
+**Hypothèse**
 
-Projets ciblés :
-- amitshekhariitbhu/from-java-to-kotlin (https://github.com/amitshekhariitbhu/from-java-to-kotlin)
-- EnterpriseQualityCoding/FizzBuzzEnterpriseEdition
-- frohoff/ysoserial
-- gcacace/android-signaturepad
-- spotify/dockerfile-maven
+**Sous-question**
 
-#### Hypothèse 2
-
-Petits projets ou projets avec peu de développeur.
-
-#### Hypothèse 3
-
-Projets avec peu de contributeurs, mais beaucoup de code.
+**Experience**
 
 ## V. Résultat d'analyse et Conclusion
 
-1. Présentation des résultats
-2. Interprétation/Analyse des résultats en fonction de vos hypothèses
-3. Construction d’une conclusion 
+### Présentation des résultats
+
+#### Experience 1
+
+#### Experience 2
+
+### Analyse et interprétation des résultats en fonction des hypothèses
+
+### Limites rencontrées
+
+### Recul et pertinence des remarques
+
+### Conclusion
+
 
      :bulb:  Vos résultats et donc votre analyse sont nécessairement limités. Préciser bien ces limites : par exemple, jeux de données insuffisants, analyse réduite à quelques critères, dépendance aux projets analysés, ...
 
-## VI. Outils \(facultatif\)
+## VI. Outils
 
-Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à \(1\) pouvoir reproduire vos expérimentations, \(2\) partager/expliquer à d'autres l'usage des outils.
+Précisez votre utilisation des outils ou les développements (e.g. scripts) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à (1) pouvoir reproduire vos expérimentations, (2) partager/expliquer à d'autres l'usage des outils.
 
-**Scraper.py**
+### Scripts Python
+**scraper.py**  
 Ce script permet d’analyser la variabilité des projets java. Il utilise l'API Github pour obtenir une liste de dépôts, puis pour chaque dépôt, il utilise l’outil  "SymFinder"  pour effectuer une analyse de la variabilité et enregistre le résultat sous forme de fichier JSON. Ensuite, le script "paternity_variability.py" est exécuté pour trouver la paternité de la variabilité. 
 
-**paternity_variability.py**
+**paternity_variability.py**  
 Ce script calcule la paternité de la variabilité dans un projet Git donné. Il utilise la sortie de "SymFinder" (stockée dans un fichier JSON appelé db.json) pour trouver les classes de variabilité dans le projet. Pour chaque classe de variabilité trouvée, il utilise la commande Git "blame" pour trouver les auteurs des lignes de code modifiées pour cette classe et calcule la fraction de lignes modifiées par chaque auteur. Les résultats sont ensuite stockés dans un fichier de sortie au format JSON qui va être consommer par le script ‘’ Visualization’’.
 
-**Visualization.py**
+**visualization.py**  
 Ce script définit une classe PlotPie qui permet de tracer des graphiques en secteurs (pie charts) à partir de données générer précédemment. Le script prend en entrée le chemin vers le fichier JSON, lit les données à partir du fichier, les trie et les utilise pour tracer un graphique en secteurs pour chaque type de variabilité. Les graphiques sont enregistrés dans un sous-dossier "Visualization" avec le même nom du projet. 
 
 ![Figure 1: Workflow](assets/images/workflow.svg)
-![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](assets/images/logo_uca.png){:height="25px"}
+
+![Figure 1: Logo UCA](assets/images/logo_uca.png)
 
 
 ## VI. Références
 
-[Debret 2020] Debret, J. (2020) La démarche scientifique : tout ce que vous devez savoir ! Available at: https://www.scribbr.fr/article-scientifique/demarche-scientifique/ (Accessed: 18 November 2022).
-
+- [Debret 2020] Debret, J. (2020) La démarche scientifique : tout ce que vous devez savoir ! Disponible sur : https://www.scribbr.fr/article-scientifique/demarche-scientifique/ (Accessed: 18 November 2022).  
+- [On the notion of variability in software product lines] ... Disponible sur : https://doi.org/10.1109/WICSA.2001.948406)
 
