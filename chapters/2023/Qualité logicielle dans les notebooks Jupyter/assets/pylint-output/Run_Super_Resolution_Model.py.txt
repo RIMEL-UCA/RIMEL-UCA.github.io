@@ -1,0 +1,31 @@
+************* Module Run_Super_Resolution_Model
+python-scripts\Run_Super_Resolution_Model.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\Run_Super_Resolution_Model.py:1:0: C0103: Module name "Run_Super_Resolution_Model" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\Run_Super_Resolution_Model.py:13:0: R0402: Use 'from torch.utils import model_zoo' instead (consider-using-from-import)
+python-scripts\Run_Super_Resolution_Model.py:15:0: W0404: Reimport 'torch.nn' (imported line 12) (reimported)
+python-scripts\Run_Super_Resolution_Model.py:15:0: R0402: Use 'from torch import nn' instead (consider-using-from-import)
+python-scripts\Run_Super_Resolution_Model.py:16:0: R0402: Use 'from torch.nn import init' instead (consider-using-from-import)
+python-scripts\Run_Super_Resolution_Model.py:21:0: W0404: Reimport 'numpy' (imported line 10) (reimported)
+python-scripts\Run_Super_Resolution_Model.py:30:0: C0115: Missing class docstring (missing-class-docstring)
+python-scripts\Run_Super_Resolution_Model.py:32:8: R1725: Consider using Python 3 style super() without arguments (super-with-arguments)
+python-scripts\Run_Super_Resolution_Model.py:43:4: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\Run_Super_Resolution_Model.py:43:22: C0103: Argument name "x" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\Run_Super_Resolution_Model.py:43:22: W0621: Redefining name 'x' from outer scope (line 79) (redefined-outer-name)
+python-scripts\Run_Super_Resolution_Model.py:64:0: C0103: Constant name "model_url" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\Run_Super_Resolution_Model.py:65:0: C0103: Constant name "batch_size" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\Run_Super_Resolution_Model.py:68:15: C3001: Lambda expression assigned to a variable. Define a function using the "def" keyword instead. (unnecessary-lambda-assignment)
+python-scripts\Run_Super_Resolution_Model.py:70:4: C0103: Constant name "map_location" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\Run_Super_Resolution_Model.py:95:0: W0104: Statement seems to have no effect (pointless-statement)
+python-scripts\Run_Super_Resolution_Model.py:18:0: C0411: standard import "import json" should be placed before "import numpy as np" (wrong-import-order)
+python-scripts\Run_Super_Resolution_Model.py:22:0: C0411: standard import "import pdb" should be placed before "import numpy as np" (wrong-import-order)
+python-scripts\Run_Super_Resolution_Model.py:21:0: C0412: Imports from package numpy are not grouped (ungrouped-imports)
+python-scripts\Run_Super_Resolution_Model.py:9:0: W0611: Unused import io (unused-import)
+python-scripts\Run_Super_Resolution_Model.py:18:0: W0611: Unused import json (unused-import)
+python-scripts\Run_Super_Resolution_Model.py:19:0: W0611: Unused ImageDraw imported from PIL (unused-import)
+python-scripts\Run_Super_Resolution_Model.py:19:0: W0611: Unused ImageFont imported from PIL (unused-import)
+python-scripts\Run_Super_Resolution_Model.py:22:0: W0611: Unused import pdb (unused-import)
+python-scripts\Run_Super_Resolution_Model.py:23:0: W0611: Unused import onnx (unused-import)
+
+-----------------------------------
+Your code has been rated at 5.81/10
+

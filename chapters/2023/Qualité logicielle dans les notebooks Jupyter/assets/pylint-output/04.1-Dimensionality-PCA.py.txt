@@ -1,0 +1,30 @@
+************* Module 04.1-Dimensionality-PCA
+python-scripts\04.1-Dimensionality-PCA.py:33:0: W0301: Unnecessary semicolon (unnecessary-semicolon)
+python-scripts\04.1-Dimensionality-PCA.py:55:0: W0301: Unnecessary semicolon (unnecessary-semicolon)
+python-scripts\04.1-Dimensionality-PCA.py:78:0: W0301: Unnecessary semicolon (unnecessary-semicolon)
+python-scripts\04.1-Dimensionality-PCA.py:109:0: W0301: Unnecessary semicolon (unnecessary-semicolon)
+python-scripts\04.1-Dimensionality-PCA.py:167:0: W0301: Unnecessary semicolon (unnecessary-semicolon)
+python-scripts\04.1-Dimensionality-PCA.py:218:0: W0301: Unnecessary semicolon (unnecessary-semicolon)
+python-scripts\04.1-Dimensionality-PCA.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\04.1-Dimensionality-PCA.py:1:0: C0103: Module name "1-Dimensionality-PCA" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\04.1-Dimensionality-PCA.py:40:0: C0413: Import "from sklearn.decomposition import PCA" should be placed at the top of the module (wrong-import-position)
+python-scripts\04.1-Dimensionality-PCA.py:91:0: C0413: Import "from sklearn.datasets import load_digits" should be placed at the top of the module (wrong-import-position)
+python-scripts\04.1-Dimensionality-PCA.py:133:0: C0413: Import "from fig_code.figures import plot_image_components" should be placed at the top of the module (wrong-import-position)
+python-scripts\04.1-Dimensionality-PCA.py:150:0: C0413: Import "from fig_code.figures import plot_pca_interactive" should be placed at the top of the module (wrong-import-position)
+python-scripts\04.1-Dimensionality-PCA.py:188:24: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\04.1-Dimensionality-PCA.py:198:0: C0413: Import "from ipywidgets import interact" should be placed at the top of the module (wrong-import-position)
+python-scripts\04.1-Dimensionality-PCA.py:200:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\04.1-Dimensionality-PCA.py:201:4: W0621: Redefining name 'fig' from outer scope (line 180) (redefined-outer-name)
+python-scripts\04.1-Dimensionality-PCA.py:205:4: W0621: Redefining name 'pca' from outer scope (line 41) (redefined-outer-name)
+python-scripts\04.1-Dimensionality-PCA.py:206:4: W0621: Redefining name 'Xproj' from outer scope (line 100) (redefined-outer-name)
+python-scripts\04.1-Dimensionality-PCA.py:210:4: W0621: Redefining name 'im' from outer scope (line 185) (redefined-outer-name)
+python-scripts\04.1-Dimensionality-PCA.py:206:4: C0103: Variable name "Xproj" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\04.1-Dimensionality-PCA.py:207:4: C0103: Variable name "Xproj" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\04.1-Dimensionality-PCA.py:210:4: C0103: Variable name "im" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\04.1-Dimensionality-PCA.py:214:14: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\04.1-Dimensionality-PCA.py:201:4: W0612: Unused variable 'fig' (unused-variable)
+python-scripts\04.1-Dimensionality-PCA.py:19:0: W0611: Unused stats imported from scipy (unused-import)
+
+-----------------------------------
+Your code has been rated at 6.43/10
+

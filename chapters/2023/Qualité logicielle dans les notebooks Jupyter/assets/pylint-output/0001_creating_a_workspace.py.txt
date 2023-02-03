@@ -1,0 +1,27 @@
+************* Module 0001_creating_a_workspace
+python-scripts\0001_creating_a_workspace.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\0001_creating_a_workspace.py:1:0: C0103: Module name "0001_creating_a_workspace" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\0001_creating_a_workspace.py:10:0: W0401: Wildcard import gs_quant.target.workspaces_markets (wildcard-import)
+python-scripts\0001_creating_a_workspace.py:24:0: C0103: Constant name "name" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\0001_creating_a_workspace.py:25:0: C0103: Constant name "alias" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\0001_creating_a_workspace.py:26:0: C0103: Constant name "description" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\0001_creating_a_workspace.py:30:15: E0602: Undefined variable 'Entitlements' (undefined-variable)
+python-scripts\0001_creating_a_workspace.py:50:15: E0602: Undefined variable 'PromoComponentParameters' (undefined-variable)
+python-scripts\0001_creating_a_workspace.py:51:18: E0602: Undefined variable 'WorkspaceComponent' (undefined-variable)
+python-scripts\0001_creating_a_workspace.py:51:58: E0602: Undefined variable 'ComponentType' (undefined-variable)
+python-scripts\0001_creating_a_workspace.py:60:0: C0103: Constant name "layout" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\0001_creating_a_workspace.py:61:13: E0602: Undefined variable 'WorkspaceParameters' (undefined-variable)
+python-scripts\0001_creating_a_workspace.py:62:12: E0602: Undefined variable 'Workspace' (undefined-variable)
+python-scripts\0001_creating_a_workspace.py:89:14: E0602: Undefined variable 'PlotComponentParameters' (undefined-variable)
+python-scripts\0001_creating_a_workspace.py:90:0: C0103: Constant name "plot_id" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\0001_creating_a_workspace.py:93:18: E0602: Undefined variable 'WorkspaceComponent' (undefined-variable)
+python-scripts\0001_creating_a_workspace.py:93:56: E0602: Undefined variable 'ComponentType' (undefined-variable)
+python-scripts\0001_creating_a_workspace.py:100:0: C0103: Constant name "channel_1" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\0001_creating_a_workspace.py:101:0: C0103: Constant name "channel_2" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\0001_creating_a_workspace.py:102:20: E0602: Undefined variable 'CommentaryComponentParameters' (undefined-variable)
+python-scripts\0001_creating_a_workspace.py:103:18: E0602: Undefined variable 'WorkspaceComponent' (undefined-variable)
+python-scripts\0001_creating_a_workspace.py:103:73: E0602: Undefined variable 'ComponentType' (undefined-variable)
+
+------------------------------------------------------------------
+Your code has been rated at 0.00/10 (previous run: 0.00/10, +0.00)
+

@@ -1,0 +1,27 @@
+************* Module TextLSTM
+python-scripts\TextLSTM.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\TextLSTM.py:1:0: C0103: Module name "TextLSTM" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\TextLSTM.py:10:0: R0402: Use 'from torch import nn' instead (consider-using-from-import)
+python-scripts\TextLSTM.py:11:0: R0402: Use 'from torch import optim' instead (consider-using-from-import)
+python-scripts\TextLSTM.py:13:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\TextLSTM.py:14:4: W0621: Redefining name 'input_batch' from outer scope (line 59) (redefined-outer-name)
+python-scripts\TextLSTM.py:14:17: W0621: Redefining name 'target_batch' from outer scope (line 59) (redefined-outer-name)
+python-scripts\TextLSTM.py:17:8: W0622: Redefining built-in 'input' (redefined-builtin)
+python-scripts\TextLSTM.py:24:0: C0115: Missing class docstring (missing-class-docstring)
+python-scripts\TextLSTM.py:29:8: C0103: Attribute name "W" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\TextLSTM.py:30:8: C0103: Attribute name "b" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\TextLSTM.py:26:8: R1725: Consider using Python 3 style super() without arguments (super-with-arguments)
+python-scripts\TextLSTM.py:32:4: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\TextLSTM.py:32:22: C0103: Argument name "X" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\TextLSTM.py:33:8: W0622: Redefining built-in 'input' (redefined-builtin)
+python-scripts\TextLSTM.py:40:8: W0621: Redefining name 'model' from outer scope (line 54) (redefined-outer-name)
+python-scripts\TextLSTM.py:44:4: C0103: Constant name "n_step" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\TextLSTM.py:45:4: C0103: Constant name "n_hidden" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\TextLSTM.py:47:15: R1721: Unnecessary use of a comprehension, use list('abcdefghijklmnopqrstuvwxyz') instead. (unnecessary-comprehension)
+python-scripts\TextLSTM.py:49:18: R1721: Unnecessary use of a comprehension, use dict(enumerate(char_arr)) instead. (unnecessary-comprehension)
+python-scripts\TextLSTM.py:70:28: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\TextLSTM.py:70:60: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+
+------------------------------------------------------------------
+Your code has been rated at 5.69/10 (previous run: 5.69/10, +0.00)
+

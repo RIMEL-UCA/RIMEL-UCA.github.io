@@ -1,0 +1,23 @@
+************* Module 0000_vol_fixed_strike_grid
+python-scripts\0000_vol_fixed_strike_grid.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\0000_vol_fixed_strike_grid.py:1:0: C0103: Module name "0000_vol_fixed_strike_grid" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\0000_vol_fixed_strike_grid.py:18:0: C0413: Import "from gs_quant.instrument import IRSwaption" should be placed at the top of the module (wrong-import-position)
+python-scripts\0000_vol_fixed_strike_grid.py:19:0: C0413: Import "from gs_quant.common import PayReceive" should be placed at the top of the module (wrong-import-position)
+python-scripts\0000_vol_fixed_strike_grid.py:20:0: C0413: Import "from gs_quant.markets.portfolio import Portfolio" should be placed at the top of the module (wrong-import-position)
+python-scripts\0000_vol_fixed_strike_grid.py:21:0: C0413: Import "from gs_quant.risk import IRAnnualImpliedVol" should be placed at the top of the module (wrong-import-position)
+python-scripts\0000_vol_fixed_strike_grid.py:22:0: C0413: Import "import matplotlib.pyplot as plt" should be placed at the top of the module (wrong-import-position)
+python-scripts\0000_vol_fixed_strike_grid.py:23:0: C0413: Import "import pandas as pd" should be placed at the top of the module (wrong-import-position)
+python-scripts\0000_vol_fixed_strike_grid.py:24:0: C0413: Import "import seaborn as sns" should be placed at the top of the module (wrong-import-position)
+python-scripts\0000_vol_fixed_strike_grid.py:27:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\0000_vol_fixed_strike_grid.py:27:21: W0621: Redefining name 'expiries' from outer scope (line 45) (redefined-outer-name)
+python-scripts\0000_vol_fixed_strike_grid.py:27:31: W0621: Redefining name 'termination' from outer scope (line 46) (redefined-outer-name)
+python-scripts\0000_vol_fixed_strike_grid.py:27:44: W0621: Redefining name 'pay_rec' from outer scope (line 47) (redefined-outer-name)
+python-scripts\0000_vol_fixed_strike_grid.py:27:53: W0621: Redefining name 'ccy' from outer scope (line 48) (redefined-outer-name)
+python-scripts\0000_vol_fixed_strike_grid.py:27:58: W0621: Redefining name 'moneyness' from outer scope (line 49) (redefined-outer-name)
+python-scripts\0000_vol_fixed_strike_grid.py:37:4: C0103: Variable name "ax" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\0000_vol_fixed_strike_grid.py:48:0: C0103: Constant name "ccy" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\0000_vol_fixed_strike_grid.py:49:0: C0103: Constant name "moneyness" doesn't conform to UPPER_CASE naming style (invalid-name)
+
+------------------------------------------------------------------
+Your code has been rated at 3.57/10 (previous run: 3.57/10, +0.00)
+

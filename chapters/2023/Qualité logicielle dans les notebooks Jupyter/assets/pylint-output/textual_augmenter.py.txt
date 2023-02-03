@@ -1,0 +1,28 @@
+************* Module textual_augmenter
+python-scripts\textual_augmenter.py:487:0: C0305: Trailing newlines (trailing-newlines)
+python-scripts\textual_augmenter.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\textual_augmenter.py:35:0: C0413: Import "import nlpaug.augmenter.char as nac" should be placed at the top of the module (wrong-import-position)
+python-scripts\textual_augmenter.py:36:0: C0413: Import "import nlpaug.augmenter.word as naw" should be placed at the top of the module (wrong-import-position)
+python-scripts\textual_augmenter.py:37:0: C0413: Import "import nlpaug.augmenter.sentence as nas" should be placed at the top of the module (wrong-import-position)
+python-scripts\textual_augmenter.py:38:0: C0413: Import "import nlpaug.flow as nafc" should be placed at the top of the module (wrong-import-position)
+python-scripts\textual_augmenter.py:40:0: C0413: Import "from nlpaug.util import Action" should be placed at the top of the module (wrong-import-position)
+python-scripts\textual_augmenter.py:45:0: C0103: Constant name "text" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\textual_augmenter.py:167:38: E0602: Undefined variable 'model_dir' (undefined-variable)
+python-scripts\textual_augmenter.py:182:38: E0602: Undefined variable 'model_dir' (undefined-variable)
+python-scripts\textual_augmenter.py:304:0: C0103: Constant name "_text" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\textual_augmenter.py:368:0: W0404: Reimport 'nlpaug.augmenter.word' (imported line 36) (reimported)
+python-scripts\textual_augmenter.py:368:0: C0413: Import "import nlpaug.augmenter.word as naw" should be placed at the top of the module (wrong-import-position)
+python-scripts\textual_augmenter.py:370:0: C0103: Constant name "text" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\textual_augmenter.py:381:0: W0404: Reimport 'nlpaug.augmenter.word' (imported line 36) (reimported)
+python-scripts\textual_augmenter.py:381:0: C0413: Import "import nlpaug.augmenter.word as naw" should be placed at the top of the module (wrong-import-position)
+python-scripts\textual_augmenter.py:386:0: C0103: Constant name "text" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\textual_augmenter.py:399:0: W0404: Reimport 'nlpaug.augmenter.word' (imported line 36) (reimported)
+python-scripts\textual_augmenter.py:399:0: C0413: Import "import nlpaug.augmenter.word as naw" should be placed at the top of the module (wrong-import-position)
+python-scripts\textual_augmenter.py:401:0: C0103: Constant name "text" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\textual_augmenter.py:465:0: C0103: Constant name "article" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\textual_augmenter.py:38:0: W0611: Unused nlpaug.flow imported as nafc (unused-import)
+python-scripts\textual_augmenter.py:40:0: W0611: Unused Action imported from nlpaug.util (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 8.43/10 (previous run: 8.43/10, +0.00)
+

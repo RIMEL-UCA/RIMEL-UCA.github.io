@@ -1,0 +1,25 @@
+************* Module fx_covid19_recovery_trade
+python-scripts\fx_covid19_recovery_trade.py:346:0: C0305: Trailing newlines (trailing-newlines)
+python-scripts\fx_covid19_recovery_trade.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\fx_covid19_recovery_trade.py:47:0: C0103: Constant name "tenor" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\fx_covid19_recovery_trade.py:55:0: R0913: Too many arguments (7/5) (too-many-arguments)
+python-scripts\fx_covid19_recovery_trade.py:55:17: W0621: Redefining name 'tenor' from outer scope (line 47) (redefined-outer-name)
+python-scripts\fx_covid19_recovery_trade.py:55:24: W0621: Redefining name 'cross' from outer scope (line 126) (redefined-outer-name)
+python-scripts\fx_covid19_recovery_trade.py:55:31: W0621: Redefining name 'strike' from outer scope (line 126) (redefined-outer-name)
+python-scripts\fx_covid19_recovery_trade.py:55:39: W0621: Redefining name 'opt_type' from outer scope (line 126) (redefined-outer-name)
+python-scripts\fx_covid19_recovery_trade.py:72:22: W0621: Redefining name 'tenor' from outer scope (line 47) (redefined-outer-name)
+python-scripts\fx_covid19_recovery_trade.py:72:29: W0621: Redefining name 'legs' from outer scope (line 157) (redefined-outer-name)
+python-scripts\fx_covid19_recovery_trade.py:79:71: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\fx_covid19_recovery_trade.py:95:4: C0103: Variable name "ax" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\fx_covid19_recovery_trade.py:101:20: C0103: Argument name "p1" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\fx_covid19_recovery_trade.py:101:24: C0103: Argument name "p2" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\fx_covid19_recovery_trade.py:116:0: W0106: Expression "binary.price() / 10000000.0" is assigned to nothing (expression-not-assigned)
+python-scripts\fx_covid19_recovery_trade.py:193:36: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\fx_covid19_recovery_trade.py:196:35: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\fx_covid19_recovery_trade.py:198:43: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\fx_covid19_recovery_trade.py:199:43: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\fx_covid19_recovery_trade.py:312:0: W0106: Expression "carry_table.head(10)[['cross1', 'cross2', 'price', 'savings', 'static_carry_1m']]" is assigned to nothing (expression-not-assigned)
+
+------------------------------------------------------------------
+Your code has been rated at 8.08/10 (previous run: 8.08/10, +0.00)
+

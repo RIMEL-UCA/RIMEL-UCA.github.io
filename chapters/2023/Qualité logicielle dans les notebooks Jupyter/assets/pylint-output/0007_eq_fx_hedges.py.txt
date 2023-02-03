@@ -1,0 +1,26 @@
+************* Module 0007_eq_fx_hedges
+python-scripts\0007_eq_fx_hedges.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\0007_eq_fx_hedges.py:1:0: C0103: Module name "0007_eq_fx_hedges" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\0007_eq_fx_hedges.py:14:0: C0413: Import "from gs_quant.instrument import FXOption, EqOption" should be placed at the top of the module (wrong-import-position)
+python-scripts\0007_eq_fx_hedges.py:15:0: C0413: Import "from gs_quant.data import Dataset" should be placed at the top of the module (wrong-import-position)
+python-scripts\0007_eq_fx_hedges.py:16:0: C0413: Import "from gs_quant.timeseries import last_value, correlation, percentiles, volatility, Returns" should be placed at the top of the module (wrong-import-position)
+python-scripts\0007_eq_fx_hedges.py:17:0: C0413: Import "from gs_quant.risk import FXSpot" should be placed at the top of the module (wrong-import-position)
+python-scripts\0007_eq_fx_hedges.py:18:0: C0413: Import "from gs_quant.datetime.relative_date import RelativeDate" should be placed at the top of the module (wrong-import-position)
+python-scripts\0007_eq_fx_hedges.py:19:0: C0413: Import "from gs_quant.markets.portfolio import Portfolio" should be placed at the top of the module (wrong-import-position)
+python-scripts\0007_eq_fx_hedges.py:20:0: C0413: Import "import pandas as pd" should be placed at the top of the module (wrong-import-position)
+python-scripts\0007_eq_fx_hedges.py:21:0: C0413: Import "import seaborn as sns" should be placed at the top of the module (wrong-import-position)
+python-scripts\0007_eq_fx_hedges.py:22:0: C0413: Import "import matplotlib.pyplot as plt" should be placed at the top of the module (wrong-import-position)
+python-scripts\0007_eq_fx_hedges.py:23:0: C0413: Import "import warnings" should be placed at the top of the module (wrong-import-position)
+python-scripts\0007_eq_fx_hedges.py:36:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\0007_eq_fx_hedges.py:36:0: R0914: Too many local variables (21/15) (too-many-locals)
+python-scripts\0007_eq_fx_hedges.py:36:21: W0621: Redefining name 'eq_ric' from outer scope (line 79) (redefined-outer-name)
+python-scripts\0007_eq_fx_hedges.py:36:41: W0621: Redefining name 'start' from outer scope (line 74) (redefined-outer-name)
+python-scripts\0007_eq_fx_hedges.py:36:81: W0621: Redefining name 'end' from outer scope (line 75) (redefined-outer-name)
+python-scripts\0007_eq_fx_hedges.py:46:4: W0621: Redefining name 'table' from outer scope (line 80) (redefined-outer-name)
+python-scripts\0007_eq_fx_hedges.py:39:4: C0103: Variable name "eq" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\0007_eq_fx_hedges.py:79:0: C0103: Constant name "eq_ric" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\0007_eq_fx_hedges.py:23:0: C0411: standard import "import warnings" should be placed before "from gs_quant.session import GsSession" (wrong-import-order)
+
+------------------------------------------------------------------
+Your code has been rated at 6.04/10 (previous run: 6.04/10, +0.00)
+

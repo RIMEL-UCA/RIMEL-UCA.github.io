@@ -1,0 +1,28 @@
+************* Module TextRNN
+python-scripts\TextRNN.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\TextRNN.py:1:0: C0103: Module name "TextRNN" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\TextRNN.py:82:4: W0622: Redefining built-in 'input' (redefined-builtin)
+python-scripts\TextRNN.py:10:0: R0402: Use 'from torch import nn' instead (consider-using-from-import)
+python-scripts\TextRNN.py:11:0: R0402: Use 'from torch import optim' instead (consider-using-from-import)
+python-scripts\TextRNN.py:13:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\TextRNN.py:14:4: W0621: Redefining name 'input_batch' from outer scope (line 61) (redefined-outer-name)
+python-scripts\TextRNN.py:15:4: W0621: Redefining name 'target_batch' from outer scope (line 61) (redefined-outer-name)
+python-scripts\TextRNN.py:19:8: W0621: Redefining name 'input' from outer scope (line 82) (redefined-outer-name)
+python-scripts\TextRNN.py:27:0: C0115: Missing class docstring (missing-class-docstring)
+python-scripts\TextRNN.py:31:8: C0103: Attribute name "W" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\TextRNN.py:32:8: C0103: Attribute name "b" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\TextRNN.py:29:8: R1725: Consider using Python 3 style super() without arguments (super-with-arguments)
+python-scripts\TextRNN.py:34:4: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\TextRNN.py:34:30: C0103: Argument name "X" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\TextRNN.py:34:22: W0621: Redefining name 'hidden' from outer scope (line 70) (redefined-outer-name)
+python-scripts\TextRNN.py:40:8: W0621: Redefining name 'model' from outer scope (line 56) (redefined-outer-name)
+python-scripts\TextRNN.py:44:4: C0103: Constant name "n_step" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\TextRNN.py:45:4: C0103: Constant name "n_hidden" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\TextRNN.py:52:18: R1721: Unnecessary use of a comprehension, use dict(enumerate(word_list)) instead. (unnecessary-comprehension)
+python-scripts\TextRNN.py:54:4: C0103: Constant name "batch_size" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\TextRNN.py:77:28: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\TextRNN.py:77:60: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+
+------------------------------------------------------------------
+Your code has been rated at 5.82/10 (previous run: 5.82/10, +0.00)
+

@@ -1,0 +1,14 @@
+************* Module Basket Create
+python-scripts\Basket Create.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\Basket Create.py:1:0: C0103: Module name "Basket Create" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\Basket Create.py:25:0: C0103: Constant name "client" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\Basket Create.py:26:0: C0103: Constant name "secret" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\Basket Create.py:128:0: C0413: Import "from gs_quant.entities.entitlements import User" should be placed at the top of the module (wrong-import-position)
+python-scripts\Basket Create.py:131:0: E0602: Undefined variable 'basket' (undefined-variable)
+python-scripts\Basket Create.py:133:0: E0602: Undefined variable 'basket' (undefined-variable)
+python-scripts\Basket Create.py:19:0: C0411: standard import "from datetime import date" should be placed before "import pandas as pd" (wrong-import-order)
+python-scripts\Basket Create.py:19:0: W0611: Unused date imported from datetime (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 4.69/10 (previous run: 4.69/10, +0.00)
+

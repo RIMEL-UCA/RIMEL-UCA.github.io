@@ -1,0 +1,26 @@
+************* Module 6-Evolving Correlations
+python-scripts\6-Evolving Correlations.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\6-Evolving Correlations.py:1:0: C0103: Module name "6-Evolving Correlations" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\6-Evolving Correlations.py:93:0: C0413: Import "from gs_quant.timeseries import returns, diff" should be placed at the top of the module (wrong-import-position)
+python-scripts\6-Evolving Correlations.py:107:0: C0413: Import "from sklearn.decomposition import PCA" should be placed at the top of the module (wrong-import-position)
+python-scripts\6-Evolving Correlations.py:108:0: C0413: Import "from collections import defaultdict" should be placed at the top of the module (wrong-import-position)
+python-scripts\6-Evolving Correlations.py:110:0: C0103: Constant name "period" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\6-Evolving Correlations.py:111:0: C0103: Constant name "components" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\6-Evolving Correlations.py:131:0: C0413: Import "import matplotlib.pyplot as plt" should be placed at the top of the module (wrong-import-position)
+python-scripts\6-Evolving Correlations.py:230:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\6-Evolving Correlations.py:230:21: W0621: Redefining name 'since' from outer scope (line 239) (redefined-outer-name)
+python-scripts\6-Evolving Correlations.py:232:8: W0621: Redefining name 'key' from outer scope (line 96) (redefined-outer-name)
+python-scripts\6-Evolving Correlations.py:232:13: W0621: Redefining name 'v' from outer scope (line 96) (redefined-outer-name)
+python-scripts\6-Evolving Correlations.py:232:13: C0103: Variable name "v" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\6-Evolving Correlations.py:232:13: W0612: Unused variable 'v' (unused-variable)
+python-scripts\6-Evolving Correlations.py:239:0: C0103: Constant name "since" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\6-Evolving Correlations.py:246:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\6-Evolving Correlations.py:246:17: W0621: Redefining name 'asset' from outer scope (line 262) (redefined-outer-name)
+python-scripts\6-Evolving Correlations.py:246:24: W0621: Redefining name 'actual' from outer scope (line 241) (redefined-outer-name)
+python-scripts\6-Evolving Correlations.py:246:32: W0621: Redefining name 'predicted' from outer scope (line 240) (redefined-outer-name)
+python-scripts\6-Evolving Correlations.py:258:0: C0103: Constant name "since" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\6-Evolving Correlations.py:108:0: C0411: standard import "from collections import defaultdict" should be placed before "import pandas as pd" (wrong-import-order)
+
+------------------------------------------------------------------
+Your code has been rated at 7.56/10 (previous run: 7.56/10, +0.00)
+

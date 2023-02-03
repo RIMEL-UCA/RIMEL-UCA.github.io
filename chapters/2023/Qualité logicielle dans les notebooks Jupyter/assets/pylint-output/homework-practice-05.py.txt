@@ -1,0 +1,30 @@
+************* Module homework-practice-05
+python-scripts\homework-practice-05.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\homework-practice-05.py:1:0: C0103: Module name "homework-practice-05" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\homework-practice-05.py:57:0: C0413: Import "import warnings" should be placed at the top of the module (wrong-import-position)
+python-scripts\homework-practice-05.py:68:0: C0413: Import "from sklearn.datasets import make_moons, make_circles, make_classification" should be placed at the top of the module (wrong-import-position)
+python-scripts\homework-practice-05.py:97:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\homework-practice-05.py:97:22: C0103: Argument name "X" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\homework-practice-05.py:97:25: C0103: Argument name "y" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\homework-practice-05.py:97:22: W0621: Redefining name 'X' from outer scope (line 119) (redefined-outer-name)
+python-scripts\homework-practice-05.py:97:25: W0621: Redefining name 'y' from outer scope (line 86) (redefined-outer-name)
+python-scripts\homework-practice-05.py:99:4: W0621: Redefining name 'palette' from outer scope (line 79) (redefined-outer-name)
+python-scripts\homework-practice-05.py:100:4: W0621: Redefining name 'cmap' from outer scope (line 80) (redefined-outer-name)
+python-scripts\homework-practice-05.py:103:4: C0103: Variable name "xx" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\homework-practice-05.py:103:8: C0103: Variable name "yy" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\homework-practice-05.py:107:4: C0103: Variable name "Z" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\homework-practice-05.py:108:4: C0103: Variable name "Z" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\homework-practice-05.py:109:4: C0103: Variable name "cs" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\homework-practice-05.py:109:4: W0612: Unused variable 'cs' (unused-variable)
+python-scripts\homework-practice-05.py:118:0: C0413: Import "from sklearn.linear_model import LinearRegression" should be placed at the top of the module (wrong-import-position)
+python-scripts\homework-practice-05.py:57:0: C0411: standard import "import warnings" should be placed before "import numpy as np" (wrong-import-order)
+python-scripts\homework-practice-05.py:53:0: C0412: Imports from package sklearn are not grouped (ungrouped-imports)
+python-scripts\homework-practice-05.py:68:0: C0412: Imports from package sklearn are not grouped (ungrouped-imports)
+python-scripts\homework-practice-05.py:50:0: W0611: Unused DecisionTreeClassifier imported from sklearn.tree (unused-import)
+python-scripts\homework-practice-05.py:51:0: W0611: Unused Colormap imported from matplotlib.colors (unused-import)
+python-scripts\homework-practice-05.py:52:0: W0611: Unused pandas imported as pd (unused-import)
+python-scripts\homework-practice-05.py:53:0: W0611: Unused train_test_split imported from sklearn.model_selection (unused-import)
+
+-----------------------------------
+Your code has been rated at 2.65/10
+

@@ -1,0 +1,26 @@
+************* Module lab-05_logistic_classification
+python-scripts\lab-05_logistic_classification.py:401:0: C0305: Trailing newlines (trailing-newlines)
+python-scripts\lab-05_logistic_classification.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\lab-05_logistic_classification.py:1:0: C0103: Module name "lab-05_logistic_classification" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\lab-05_logistic_classification.py:37:0: R0402: Use 'from torch import nn' instead (consider-using-from-import)
+python-scripts\lab-05_logistic_classification.py:39:0: R0402: Use 'from torch import optim' instead (consider-using-from-import)
+python-scripts\lab-05_logistic_classification.py:138:0: W0106: Expression "-(y_train[0] * torch.log(hypothesis[0]) + (1 - y_train[0]) * torch.log(1 - hypothesis[0]))" is assigned to nothing (expression-not-assigned)
+python-scripts\lab-05_logistic_classification.py:186:0: C0103: Constant name "nb_epochs" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-05_logistic_classification.py:201:14: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\lab-05_logistic_classification.py:216:0: C0103: Constant name "nb_epochs" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-05_logistic_classification.py:230:14: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\lab-05_logistic_classification.py:239:0: C0413: Import "import numpy as np" should be placed at the top of the module (wrong-import-position)
+python-scripts\lab-05_logistic_classification.py:267:0: C0103: Constant name "nb_epochs" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-05_logistic_classification.py:281:14: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\lab-05_logistic_classification.py:296:0: C0103: Constant name "nb_epochs" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-05_logistic_classification.py:310:14: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\lab-05_logistic_classification.py:352:6: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\lab-05_logistic_classification.py:359:0: C0115: Missing class docstring (missing-class-docstring)
+python-scripts\lab-05_logistic_classification.py:365:4: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\lab-05_logistic_classification.py:365:22: C0103: Argument name "x" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\lab-05_logistic_classification.py:379:0: C0103: Constant name "nb_epochs" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-05_logistic_classification.py:398:14: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+
+------------------------------------------------------------------
+Your code has been rated at 8.25/10 (previous run: 8.17/10, +0.08)
+

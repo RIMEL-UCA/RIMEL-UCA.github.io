@@ -1,0 +1,17 @@
+************* Module Measures
+python-scripts\Measures.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\Measures.py:1:0: C0103: Module name "Measures" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\Measures.py:67:0: C0413: Import "from gs_quant.instrument import IRSwap" should be placed at the top of the module (wrong-import-position)
+python-scripts\Measures.py:68:0: C0413: Import "from gs_quant.common import PayReceive, Currency" should be placed at the top of the module (wrong-import-position)
+python-scripts\Measures.py:91:0: C0413: Import "from gs_quant.instrument import IRSwaption" should be placed at the top of the module (wrong-import-position)
+python-scripts\Measures.py:92:0: W0404: Reimport 'PayReceive' (imported line 68) (reimported)
+python-scripts\Measures.py:92:0: W0404: Reimport 'Currency' (imported line 68) (reimported)
+python-scripts\Measures.py:92:0: C0413: Import "from gs_quant.common import PayReceive, Currency" should be placed at the top of the module (wrong-import-position)
+python-scripts\Measures.py:115:0: R0402: Use 'from gs_quant import risk' instead (consider-using-from-import)
+python-scripts\Measures.py:115:0: C0413: Import "import gs_quant.risk as risk" should be placed at the top of the module (wrong-import-position)
+python-scripts\Measures.py:117:0: W0106: Expression "swaption.calc(risk.IRAnnualImpliedVol) * 10000" is assigned to nothing (expression-not-assigned)
+python-scripts\Measures.py:131:0: C0413: Import "from gs_quant.common import AggregationLevel" should be placed at the top of the module (wrong-import-position)
+
+------------------------------------------------------------------
+Your code has been rated at 6.00/10 (previous run: 6.00/10, +0.00)
+

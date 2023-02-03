@@ -1,0 +1,12 @@
+************* Module 010601_eq_vol_override_eod
+python-scripts\010601_eq_vol_override_eod.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\010601_eq_vol_override_eod.py:1:0: C0103: Module name "010601_eq_vol_override_eod" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\010601_eq_vol_override_eod.py:11:0: W0401: Wildcard import gs_quant.risk.scenario_utils (wildcard-import)
+python-scripts\010601_eq_vol_override_eod.py:31:18: E0602: Undefined variable 'build_eq_vol_scenario_eod' (undefined-variable)
+python-scripts\010601_eq_vol_override_eod.py:50:6: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\010601_eq_vol_override_eod.py:51:6: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\010601_eq_vol_override_eod.py:14:0: C0411: standard import "from datetime import date" should be placed before "from gs_quant.common import OptionType, OptionStyle" (wrong-import-order)
+
+------------------------------------------------------------------
+Your code has been rated at 3.53/10 (previous run: 3.53/10, +0.00)
+

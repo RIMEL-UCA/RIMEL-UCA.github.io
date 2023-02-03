@@ -1,0 +1,13 @@
+************* Module Performance Report
+python-scripts\Performance Report.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\Performance Report.py:1:0: C0103: Module name "Performance Report" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\Performance Report.py:35:0: C0103: Constant name "client" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\Performance Report.py:36:0: C0103: Constant name "secret" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\Performance Report.py:37:0: C0103: Constant name "scopes" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\Performance Report.py:61:0: C0103: Constant name "portfolio_id" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\Performance Report.py:149:0: E0602: Undefined variable 'display' (undefined-variable)
+python-scripts\Performance Report.py:28:0: C0411: standard import "from time import sleep" should be placed before "import pandas as pd" (wrong-import-order)
+
+------------------------------------------------------------------
+Your code has been rated at 6.47/10 (previous run: 6.47/10, +0.00)
+

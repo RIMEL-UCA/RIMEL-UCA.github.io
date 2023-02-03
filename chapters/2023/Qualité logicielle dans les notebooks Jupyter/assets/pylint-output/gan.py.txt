@@ -1,0 +1,20 @@
+************* Module gan
+python-scripts\gan.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\gan.py:50:0: C0103: Constant name "num_steps" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\gan.py:51:0: C0103: Constant name "batch_size" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\gan.py:52:0: C0103: Constant name "learning_rate" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\gan.py:55:0: C0103: Constant name "image_dim" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\gan.py:56:0: C0103: Constant name "gen_hidden_dim" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\gan.py:57:0: C0103: Constant name "disc_hidden_dim" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\gan.py:58:0: C0103: Constant name "noise_dim" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\gan.py:61:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\gan.py:85:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\gan.py:85:14: C0103: Argument name "x" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\gan.py:96:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\gan.py:96:18: C0103: Argument name "x" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\gan.py:165:14: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\gan.py:172:0: C0103: Constant name "n" doesn't conform to UPPER_CASE naming style (invalid-name)
+
+------------------------------------------------------------------
+Your code has been rated at 7.76/10 (previous run: 7.76/10, +0.00)
+

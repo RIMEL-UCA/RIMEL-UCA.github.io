@@ -1,0 +1,14 @@
+************* Module flow
+python-scripts\flow.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\flow.py:20:0: C0413: Import "import nlpaug.augmenter.char as nac" should be placed at the top of the module (wrong-import-position)
+python-scripts\flow.py:21:0: C0413: Import "import nlpaug.augmenter.word as naw" should be placed at the top of the module (wrong-import-position)
+python-scripts\flow.py:22:0: C0413: Import "import nlpaug.augmenter.sentence as nas" should be placed at the top of the module (wrong-import-position)
+python-scripts\flow.py:23:0: C0413: Import "import nlpaug.flow as naf" should be placed at the top of the module (wrong-import-position)
+python-scripts\flow.py:25:0: C0413: Import "from nlpaug.util import Action" should be placed at the top of the module (wrong-import-position)
+python-scripts\flow.py:30:0: C0103: Constant name "text" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\flow.py:22:0: W0611: Unused nlpaug.augmenter.sentence imported as nas (unused-import)
+python-scripts\flow.py:25:0: W0611: Unused Action imported from nlpaug.util (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 4.00/10 (previous run: 4.00/10, +0.00)
+

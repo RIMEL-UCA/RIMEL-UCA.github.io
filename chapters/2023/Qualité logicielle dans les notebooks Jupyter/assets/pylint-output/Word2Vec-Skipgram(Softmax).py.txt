@@ -1,0 +1,22 @@
+************* Module Word2Vec-Skipgram(Softmax)
+python-scripts\Word2Vec-Skipgram(Softmax).py:88:0: C0305: Trailing newlines (trailing-newlines)
+python-scripts\Word2Vec-Skipgram(Softmax).py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\Word2Vec-Skipgram(Softmax).py:1:0: C0103: Module name "Word2Vec-Skipgram(Softmax)" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\Word2Vec-Skipgram(Softmax).py:10:0: R0402: Use 'from torch import nn' instead (consider-using-from-import)
+python-scripts\Word2Vec-Skipgram(Softmax).py:11:0: R0402: Use 'from torch import optim' instead (consider-using-from-import)
+python-scripts\Word2Vec-Skipgram(Softmax).py:14:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\Word2Vec-Skipgram(Softmax).py:19:8: W0621: Redefining name 'i' from outer scope (line 54) (redefined-outer-name)
+python-scripts\Word2Vec-Skipgram(Softmax).py:26:0: C0115: Missing class docstring (missing-class-docstring)
+python-scripts\Word2Vec-Skipgram(Softmax).py:30:8: C0103: Attribute name "W" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\Word2Vec-Skipgram(Softmax).py:31:8: C0103: Attribute name "WT" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\Word2Vec-Skipgram(Softmax).py:28:8: R1725: Consider using Python 3 style super() without arguments (super-with-arguments)
+python-scripts\Word2Vec-Skipgram(Softmax).py:33:4: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\Word2Vec-Skipgram(Softmax).py:33:22: C0103: Argument name "X" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\Word2Vec-Skipgram(Softmax).py:40:4: C0103: Constant name "batch_size" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\Word2Vec-Skipgram(Softmax).py:41:4: C0103: Constant name "embedding_size" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\Word2Vec-Skipgram(Softmax).py:77:28: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\Word2Vec-Skipgram(Softmax).py:77:60: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+
+------------------------------------------------------------------
+Your code has been rated at 7.02/10 (previous run: 7.02/10, +0.00)
+

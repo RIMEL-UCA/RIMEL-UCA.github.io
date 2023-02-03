@@ -1,0 +1,17 @@
+************* Module 040200_strategy_simple
+python-scripts\040200_strategy_simple.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\040200_strategy_simple.py:1:0: C0103: Module name "040200_strategy_simple" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\040200_strategy_simple.py:10:0: W0401: Wildcard import gs_quant.backtests.triggers (wildcard-import)
+python-scripts\040200_strategy_simple.py:11:0: W0401: Wildcard import gs_quant.backtests.actions (wildcard-import)
+python-scripts\040200_strategy_simple.py:12:0: W0401: Wildcard import gs_quant.backtests.equity_vol_engine (wildcard-import)
+python-scripts\040200_strategy_simple.py:44:15: E0602: Undefined variable 'EnterPositionQuantityScaledAction' (undefined-variable)
+python-scripts\040200_strategy_simple.py:44:134: E0602: Undefined variable 'BacktestTradingQuantityType' (undefined-variable)
+python-scripts\040200_strategy_simple.py:45:16: E0602: Undefined variable 'PeriodicTrigger' (undefined-variable)
+python-scripts\040200_strategy_simple.py:45:53: E0602: Undefined variable 'PeriodicTriggerRequirements' (undefined-variable)
+python-scripts\040200_strategy_simple.py:58:11: E0602: Undefined variable 'EquityVolEngine' (undefined-variable)
+python-scripts\040200_strategy_simple.py:64:34: E0602: Undefined variable 'FlowVolBacktestMeasure' (undefined-variable)
+python-scripts\040200_strategy_simple.py:14:0: C0411: standard import "from datetime import date" should be placed before "from gs_quant.session import GsSession, Environment" (wrong-import-order)
+
+------------------------------------------------------------------
+Your code has been rated at 0.00/10 (previous run: 0.00/10, +0.00)
+

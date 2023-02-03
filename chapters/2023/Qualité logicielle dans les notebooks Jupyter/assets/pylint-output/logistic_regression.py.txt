@@ -1,0 +1,28 @@
+************* Module logistic_regression
+python-scripts\logistic_regression.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\logistic_regression.py:35:0: C0103: Constant name "num_classes" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\logistic_regression.py:36:0: C0103: Constant name "num_features" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\logistic_regression.py:39:0: C0103: Constant name "learning_rate" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\logistic_regression.py:40:0: C0103: Constant name "training_steps" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\logistic_regression.py:41:0: C0103: Constant name "batch_size" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\logistic_regression.py:42:0: C0103: Constant name "display_step" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\logistic_regression.py:48:0: C0413: Import "from tensorflow.keras.datasets import mnist" should be placed at the top of the module (wrong-import-position)
+python-scripts\logistic_regression.py:73:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\logistic_regression.py:73:24: C0103: Argument name "x" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\logistic_regression.py:78:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\logistic_regression.py:87:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\logistic_regression.py:99:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\logistic_regression.py:99:21: C0103: Argument name "x" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\logistic_regression.py:99:24: C0103: Argument name "y" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\logistic_regression.py:102:8: W0621: Redefining name 'pred' from outer scope (line 120) (redefined-outer-name)
+python-scripts\logistic_regression.py:103:8: W0621: Redefining name 'loss' from outer scope (line 121) (redefined-outer-name)
+python-scripts\logistic_regression.py:101:30: C0103: Variable name "g" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\logistic_regression.py:123:14: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\logistic_regression.py:130:6: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\logistic_regression.py:136:0: C0413: Import "import matplotlib.pyplot as plt" should be placed at the top of the module (wrong-import-position)
+python-scripts\logistic_regression.py:142:0: C0103: Constant name "n_images" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\logistic_regression.py:150:10: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+
+------------------------------------------------------------------
+Your code has been rated at 5.49/10 (previous run: 5.49/10, +0.00)
+

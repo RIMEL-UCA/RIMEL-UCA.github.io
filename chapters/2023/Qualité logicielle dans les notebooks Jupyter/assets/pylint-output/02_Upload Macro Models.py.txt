@@ -1,0 +1,16 @@
+************* Module 02_Upload Macro Models
+python-scripts\02_Upload Macro Models.py:172:0: C0305: Trailing newlines (trailing-newlines)
+python-scripts\02_Upload Macro Models.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\02_Upload Macro Models.py:1:0: C0103: Module name "02_Upload Macro Models" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\02_Upload Macro Models.py:35:0: C0413: Import "from gs_quant.models.risk_model import MacroRiskModel, RiskModelCalendar, Term, CoverageType, UniverseIdentifier" should be placed at the top of the module (wrong-import-position)
+python-scripts\02_Upload Macro Models.py:37:0: C0103: Constant name "model_id" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\02_Upload Macro Models.py:38:0: C0103: Constant name "model_name" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\02_Upload Macro Models.py:39:0: C0103: Constant name "description" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\02_Upload Macro Models.py:43:0: C0103: Constant name "vendor" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\02_Upload Macro Models.py:150:0: C0413: Import "from gs_quant.models.risk_model import Measure, DataAssetsRequest" should be placed at the top of the module (wrong-import-position)
+python-scripts\02_Upload Macro Models.py:151:0: C0413: Import "import datetime as dt" should be placed at the top of the module (wrong-import-position)
+python-scripts\02_Upload Macro Models.py:151:0: C0411: standard import "import datetime as dt" should be placed before "from gs_quant.session import Environment, GsSession" (wrong-import-order)
+
+------------------------------------------------------------------
+Your code has been rated at 5.42/10 (previous run: 5.42/10, +0.00)
+

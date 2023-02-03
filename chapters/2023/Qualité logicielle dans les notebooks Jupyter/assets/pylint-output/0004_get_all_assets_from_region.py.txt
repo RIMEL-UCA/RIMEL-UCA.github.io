@@ -1,0 +1,11 @@
+************* Module 0004_get_all_assets_from_region
+python-scripts\0004_get_all_assets_from_region.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\0004_get_all_assets_from_region.py:1:0: C0103: Module name "0004_get_all_assets_from_region" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\0004_get_all_assets_from_region.py:15:0: C0413: Import "from gs_quant.api.gs.assets import GsAssetApi" should be placed at the top of the module (wrong-import-position)
+python-scripts\0004_get_all_assets_from_region.py:16:0: C0413: Import "from gs_quant.data import Dataset" should be placed at the top of the module (wrong-import-position)
+python-scripts\0004_get_all_assets_from_region.py:17:0: C0413: Import "import pandas as pd" should be placed at the top of the module (wrong-import-position)
+python-scripts\0004_get_all_assets_from_region.py:33:0: C0116: Missing function or method docstring (missing-function-docstring)
+
+------------------------------------------------------------------
+Your code has been rated at 6.84/10 (previous run: 6.84/10, +0.00)
+
