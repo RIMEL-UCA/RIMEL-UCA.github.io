@@ -135,6 +135,9 @@ Dans le cadre de notre recherche, nous avons basé notre travail sur les ressour
 3. [On the usefulness of ownership metrics in open-source software projects](https://www.sciencedirect.com/science/article/abs/pii/S0950584915000294)  
   Le papier examine la relation entre les métriques de propriété de code et la qualité du logiciel dans les projets de logiciels libres.
   Les résultats montrent une relation entre les deux, mais d'autres métriques ont un plus grand impact sur la qualité du logiciel
+  
+4.[Code ownership in open-source software](https://hal.science/hal-00976024v1)
+Ce papier replique une étude sur la relation entre les métriques d'appartenance et la qualité du logiciel dans les projets FLOSS Java. Les résultats ont montré une faible corrélation entre les métriques d'appartenance et les erreurs de module, et la taille de module avait un plus grand impact sur les erreurs que l'appartenance
 
 
 **2. Les jeux de données 💾**
@@ -309,5 +312,6 @@ Ce script définit une classe PlotPie qui permet de tracer des graphiques en sec
  
 [3] Foucault, M., Teyton, C., Lo, D., Blanc, X., & Falleri, J. R. (2015). On the usefulness of ownership metrics in open-source software projects. Information and Software Technology, 64, 102-112. https://www.sciencedirect.com/science/article/abs/pii/S0950584915
 
+[4]Matthieu Foucault, Jean-Rémy Falleri, Xavier Blanc. Code Ownership in Open-Source Software. 2014. ⟨hal-00976024⟩https://hal.science/hal-00976024v1
 
 
