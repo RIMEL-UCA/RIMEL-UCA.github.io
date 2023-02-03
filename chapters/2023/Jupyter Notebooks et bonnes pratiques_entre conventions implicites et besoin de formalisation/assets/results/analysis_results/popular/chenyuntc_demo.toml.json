@@ -1,0 +1,66 @@
+{
+    "title": "demo.toml",
+    "notebook": "/src/notebooks/github/chenyuntc-pytorch-book/demo.ipynb",
+    "metadata": "/src/notebooks/github/chenyuntc-pytorch-book/demo.toml",
+    "metrics": {
+        "nb_code_cells": 5,
+        "nb_markdown_cells": 0,
+        "dependencies_installation_detected": false,
+        "code_quality": {
+            "pylint_score": {
+                "score": 0,
+                "count_by_severity": {
+                    "convention": 4,
+                    "error": 11,
+                    "fatal": 0,
+                    "info": 0,
+                    "refactor": 0,
+                    "statement": 30,
+                    "warning": 5
+                },
+                "count_by_messages": {
+                    "trailing-whitespace": 2,
+                    "bad-indentation": 1,
+                    "trailing-newlines": 1,
+                    "missing-module-docstring": 1,
+                    "unnecessary-pass": 2,
+                    "wildcard-import": 1,
+                    "undefined-variable": 11,
+                    "unused-wildcard-import": 1
+                }
+            },
+            "mypy_score": {
+                "score": 0.8441558441558441,
+                "count_by_severity": {
+                    "error": 12
+                },
+                "count_by_messages": {
+                    "import": 1,
+                    "name-defined": 11
+                }
+            }
+        }
+    },
+    "profile": [
+        {
+            "cell_type": "code",
+            "nb_lines": 3
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 5
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 16
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 9
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 8
+        }
+    ]
+}

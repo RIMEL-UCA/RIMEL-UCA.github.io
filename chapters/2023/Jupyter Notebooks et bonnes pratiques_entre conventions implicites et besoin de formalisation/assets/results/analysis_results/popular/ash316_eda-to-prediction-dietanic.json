@@ -1,0 +1,642 @@
+{
+    "title": "eda-to-prediction-dietanic",
+    "notebook": "/src/notebooks/kaggle/ash316-eda-to-prediction-dietanic/eda-to-prediction-dietanic.ipynb",
+    "metadata": "/src/notebooks/kaggle/ash316-eda-to-prediction-dietanic/eda-to-prediction-dietanic.toml",
+    "metrics": {
+        "nb_code_cells": 71,
+        "nb_markdown_cells": 78,
+        "dependencies_installation_detected": false,
+        "code_quality": {
+            "pylint_score": {
+                "score": 6.771428571428571,
+                "count_by_severity": {
+                    "convention": 43,
+                    "error": 13,
+                    "fatal": 0,
+                    "info": 0,
+                    "refactor": 0,
+                    "statement": 350,
+                    "warning": 5
+                },
+                "count_by_messages": {
+                    "trailing-whitespace": 6,
+                    "line-too-long": 15,
+                    "trailing-newlines": 1,
+                    "anomalous-backslash-in-string": 1,
+                    "missing-module-docstring": 1,
+                    "wrong-import-position": 19,
+                    "unnecessary-pass": 1,
+                    "too-many-function-args": 12,
+                    "self-assigning-variable": 1,
+                    "pointless-statement": 1,
+                    "no-member": 1,
+                    "wrong-import-order": 1,
+                    "unused-import": 1
+                }
+            },
+            "mypy_score": {
+                "score": -1,
+                "count_by_severity": {},
+                "count_by_messages": {}
+            }
+        }
+    },
+    "profile": [
+        {
+            "cell_type": "markdown",
+            "nb_lines": 43
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 351
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 969
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 463
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 40
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 195
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 38
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 11
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 51
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 73
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 23
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 267
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 533
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 1017
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 25
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 29
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 52
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 246
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 375
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 29
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 94
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 312
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 561
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 105
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 66
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 498
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 28
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 182
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 358
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 344
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 609
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 121
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 213
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 115
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 143
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 214
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 77
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 20
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 374
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 56
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 377
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 207
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 70
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 75
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 32
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 121
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 47
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 97
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 84
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 499
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 518
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 81
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 333
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 103
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 41
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 51
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 183
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 82
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 240
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 78
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 562
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 8
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 78
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 62
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 240
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 367
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 28
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 137
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 57
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 315
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 224
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 922
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 35
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 149
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 1342
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 582
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 776
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 282
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 131
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 71
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 432
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 413
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 266
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 78
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 511
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 144
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 237
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 251
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 68
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 322
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 205
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 511
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 283
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 207
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 506
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 601
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 258
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 43
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 179
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 45
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 186
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 23
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 184
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 17
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 181
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 29
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 169
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 189
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 464
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 24
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 158
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 18
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 186
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 1657
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 961
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 116
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 141
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 332
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 1360
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 737
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 553
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 343
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 19
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 224
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 131
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 533
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 265
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 1013
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 512
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 424
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 25
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 386
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 583
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 173
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 244
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 80
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 271
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 12
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 207
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 138
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 300
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 104
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 39
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 201
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 21
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 1093
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 721
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 571
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 0
+        }
+    ]
+}

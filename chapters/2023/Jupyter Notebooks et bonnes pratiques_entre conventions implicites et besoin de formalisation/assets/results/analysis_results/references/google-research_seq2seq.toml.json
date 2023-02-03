@@ -1,0 +1,111 @@
+{
+    "title": "seq2seq.toml",
+    "notebook": "notebooks/github/references/google-research-google-research/seq2seq.ipynb",
+    "metadata": "notebooks/github/references/google-research-google-research/seq2seq.toml",
+    "metrics": {
+        "nb_code_cells": 12,
+        "nb_markdown_cells": 0,
+        "dependencies_installation_detected": false,
+        "code_quality": {
+            "pylint_score": {
+                "score": 0,
+                "count_by_severity": {
+                    "convention": 127,
+                    "error": 3,
+                    "fatal": 0,
+                    "info": 0,
+                    "refactor": 71,
+                    "statement": 1303,
+                    "warning": 1361
+                },
+                "count_by_messages": {
+                    "bad-indentation": 1240,
+                    "line-too-long": 32,
+                    "unnecessary-semicolon": 2,
+                    "too-many-lines": 1,
+                    "trailing-newlines": 1,
+                    "missing-module-docstring": 1,
+                    "import-error": 1,
+                    "missing-function-docstring": 27,
+                    "too-many-arguments": 21,
+                    "redefined-outer-name": 68,
+                    "invalid-name": 44,
+                    "consider-using-enumerate": 9,
+                    "unused-argument": 1,
+                    "too-many-locals": 16,
+                    "redefined-builtin": 1,
+                    "too-many-branches": 4,
+                    "unused-variable": 27,
+                    "too-many-statements": 5,
+                    "consider-using-in": 5,
+                    "no-else-return": 4,
+                    "missing-class-docstring": 7,
+                    "too-many-instance-attributes": 5,
+                    "super-with-arguments": 7,
+                    "too-few-public-methods": 3,
+                    "too-many-return-statements": 1,
+                    "undefined-variable": 2,
+                    "cell-var-from-loop": 19,
+                    "consider-using-f-string": 4,
+                    "wrong-import-order": 1,
+                    "unused-import": 3
+                }
+            },
+            "mypy_score": {
+                "score": -1,
+                "count_by_severity": {},
+                "count_by_messages": {}
+            }
+        }
+    },
+    "profile": [
+        {
+            "cell_type": "code",
+            "nb_lines": 16
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 95
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 156
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 345
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 144
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 126
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 170
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 274
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 599
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 349
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 18
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 64
+        }
+    ]
+}

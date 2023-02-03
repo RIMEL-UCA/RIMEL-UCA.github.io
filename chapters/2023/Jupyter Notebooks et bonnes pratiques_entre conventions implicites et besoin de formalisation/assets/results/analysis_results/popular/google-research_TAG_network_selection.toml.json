@@ -1,0 +1,96 @@
+{
+    "title": "TAG_network_selection.toml",
+    "notebook": "notebooks/github/google-research-google-research/TAG_network_selection.ipynb",
+    "metadata": "notebooks/github/google-research-google-research/TAG_network_selection.toml",
+    "metrics": {
+        "nb_code_cells": 7,
+        "nb_markdown_cells": 4,
+        "dependencies_installation_detected": false,
+        "code_quality": {
+            "pylint_score": {
+                "score": 0,
+                "count_by_severity": {
+                    "convention": 24,
+                    "error": 1,
+                    "fatal": 0,
+                    "info": 0,
+                    "refactor": 3,
+                    "statement": 67,
+                    "warning": 52
+                },
+                "count_by_messages": {
+                    "line-too-long": 4,
+                    "trailing-whitespace": 9,
+                    "bad-indentation": 46,
+                    "trailing-newlines": 1,
+                    "missing-module-docstring": 1,
+                    "wrong-import-position": 2,
+                    "missing-function-docstring": 2,
+                    "redefined-outer-name": 5,
+                    "unnecessary-comprehension": 3,
+                    "consider-using-f-string": 1,
+                    "invalid-name": 2,
+                    "assignment-from-none": 1,
+                    "consider-using-dict-items": 1,
+                    "multiple-statements": 1,
+                    "unused-import": 1
+                }
+            },
+            "mypy_score": {
+                "score": 0.988950276243094,
+                "count_by_severity": {
+                    "error": 2
+                },
+                "count_by_messages": {
+                    "var-annotated": 2
+                }
+            }
+        }
+    },
+    "profile": [
+        {
+            "cell_type": "markdown",
+            "nb_lines": 4
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 1
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 2
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 2
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 1
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 2
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 2
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 1
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 30
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 15
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 41
+        }
+    ]
+}

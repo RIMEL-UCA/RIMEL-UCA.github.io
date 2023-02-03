@@ -1,0 +1,75 @@
+{
+    "title": "tutorial_attack_imagenet.toml",
+    "notebook": "notebooks/github/lower/BorealisAI-advertorch/tutorial_attack_imagenet.ipynb",
+    "metadata": "notebooks/github/lower/BorealisAI-advertorch/tutorial_attack_imagenet.toml",
+    "metrics": {
+        "nb_code_cells": 7,
+        "nb_markdown_cells": 0,
+        "dependencies_installation_detected": false,
+        "code_quality": {
+            "pylint_score": {
+                "score": 0,
+                "count_by_severity": {
+                    "convention": 23,
+                    "error": 14,
+                    "fatal": 0,
+                    "info": 0,
+                    "refactor": 1,
+                    "statement": 54,
+                    "warning": 1
+                },
+                "count_by_messages": {
+                    "trailing-whitespace": 3,
+                    "trailing-newlines": 1,
+                    "missing-module-docstring": 1,
+                    "consider-using-from-import": 1,
+                    "invalid-name": 2,
+                    "import-error": 10,
+                    "wrong-import-position": 10,
+                    "no-member": 2,
+                    "missing-function-docstring": 1,
+                    "not-callable": 2,
+                    "import-outside-toplevel": 1,
+                    "unnecessary-pass": 1,
+                    "consider-using-f-string": 3,
+                    "ungrouped-imports": 1
+                }
+            },
+            "mypy_score": {
+                "score": -1,
+                "count_by_severity": {},
+                "count_by_messages": {}
+            }
+        }
+    },
+    "profile": [
+        {
+            "cell_type": "code",
+            "nb_lines": 3
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 10
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 10
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 33
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 5
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 6
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 5
+        }
+    ]
+}

@@ -1,0 +1,94 @@
+{
+    "title": "didi_dataset.toml",
+    "notebook": "notebooks/github/google-research-google-research/didi_dataset.ipynb",
+    "metadata": "notebooks/github/google-research-google-research/didi_dataset.toml",
+    "metrics": {
+        "nb_code_cells": 8,
+        "nb_markdown_cells": 1,
+        "dependencies_installation_detected": false,
+        "code_quality": {
+            "pylint_score": {
+                "score": 0,
+                "count_by_severity": {
+                    "convention": 45,
+                    "error": 7,
+                    "fatal": 0,
+                    "info": 0,
+                    "refactor": 3,
+                    "statement": 205,
+                    "warning": 191
+                },
+                "count_by_messages": {
+                    "bad-indentation": 163,
+                    "line-too-long": 5,
+                    "trailing-newlines": 1,
+                    "missing-module-docstring": 1,
+                    "import-error": 5,
+                    "no-name-in-module": 2,
+                    "unnecessary-pass": 1,
+                    "missing-function-docstring": 12,
+                    "redefined-outer-name": 15,
+                    "invalid-name": 19,
+                    "consider-using-f-string": 6,
+                    "redefined-builtin": 2,
+                    "unnecessary-comprehension": 2,
+                    "unspecified-encoding": 4,
+                    "unused-variable": 2,
+                    "consider-using-generator": 1,
+                    "ungrouped-imports": 1,
+                    "unused-import": 4
+                }
+            },
+            "mypy_score": {
+                "score": 0.9862542955326461,
+                "count_by_severity": {
+                    "error": 8
+                },
+                "count_by_messages": {
+                    "import": 3,
+                    "var-annotated": 2,
+                    "assignment": 2,
+                    "call-overload": 1
+                }
+            }
+        }
+    },
+    "profile": [
+        {
+            "cell_type": "code",
+            "nb_lines": 11
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 10
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 22
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 13
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 25
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 44
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 148
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 7
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 25
+        }
+    ]
+}

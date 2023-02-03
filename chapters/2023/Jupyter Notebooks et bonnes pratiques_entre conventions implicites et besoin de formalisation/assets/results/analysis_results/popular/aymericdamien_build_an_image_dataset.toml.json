@@ -1,0 +1,69 @@
+{
+    "title": "build_an_image_dataset.toml",
+    "notebook": "notebooks/github/aymericdamien-TensorFlow-Examples/build_an_image_dataset.ipynb",
+    "metadata": "notebooks/github/aymericdamien-TensorFlow-Examples/build_an_image_dataset.toml",
+    "metrics": {
+        "nb_code_cells": 5,
+        "nb_markdown_cells": 1,
+        "dependencies_installation_detected": false,
+        "code_quality": {
+            "pylint_score": {
+                "score": 0,
+                "count_by_severity": {
+                    "convention": 18,
+                    "error": 20,
+                    "fatal": 0,
+                    "info": 0,
+                    "refactor": 3,
+                    "statement": 81,
+                    "warning": 7
+                },
+                "count_by_messages": {
+                    "trailing-newlines": 1,
+                    "missing-module-docstring": 1,
+                    "missing-function-docstring": 2,
+                    "too-many-locals": 1,
+                    "redefined-outer-name": 4,
+                    "use-list-literal": 2,
+                    "unspecified-encoding": 1,
+                    "invalid-name": 11,
+                    "broad-except": 2,
+                    "no-member": 20,
+                    "consider-using-f-string": 2,
+                    "wrong-import-order": 1
+                }
+            },
+            "mypy_score": {
+                "score": 100,
+                "count_by_severity": {},
+                "count_by_messages": {}
+            }
+        }
+    },
+    "profile": [
+        {
+            "cell_type": "markdown",
+            "nb_lines": 38
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 14
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 59
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 16
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 30
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 50
+        }
+    ]
+}

@@ -1,0 +1,85 @@
+{
+    "title": "locoprop_training.toml",
+    "notebook": "notebooks/github/google-research-google-research/locoprop_training.ipynb",
+    "metadata": "notebooks/github/google-research-google-research/locoprop_training.toml",
+    "metrics": {
+        "nb_code_cells": 4,
+        "nb_markdown_cells": 5,
+        "dependencies_installation_detected": false,
+        "code_quality": {
+            "pylint_score": {
+                "score": 0.6666666666666661,
+                "count_by_severity": {
+                    "convention": 40,
+                    "error": 1,
+                    "fatal": 0,
+                    "info": 0,
+                    "refactor": 4,
+                    "statement": 255,
+                    "warning": 189
+                },
+                "count_by_messages": {
+                    "bad-indentation": 178,
+                    "trailing-whitespace": 2,
+                    "too-many-lines": 1,
+                    "trailing-newlines": 1,
+                    "import-error": 1,
+                    "redefined-outer-name": 9,
+                    "missing-function-docstring": 2,
+                    "too-many-arguments": 1,
+                    "too-many-locals": 1,
+                    "consider-using-f-string": 14,
+                    "invalid-name": 18,
+                    "consider-using-enumerate": 2,
+                    "too-many-branches": 1,
+                    "too-many-statements": 1,
+                    "unused-argument": 1,
+                    "unused-import": 1
+                }
+            },
+            "mypy_score": {
+                "score": 100,
+                "count_by_severity": {},
+                "count_by_messages": {}
+            }
+        }
+    },
+    "profile": [
+        {
+            "cell_type": "markdown",
+            "nb_lines": 6
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 16
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 58
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 1
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 257
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 1
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 188
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 1
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 22
+        }
+    ]
+}

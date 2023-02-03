@@ -1,0 +1,83 @@
+{
+    "title": "cogs_tagging.toml",
+    "notebook": "notebooks/github/google-research-google-research/cogs_tagging.ipynb",
+    "metadata": "notebooks/github/google-research-google-research/cogs_tagging.toml",
+    "metrics": {
+        "nb_code_cells": 6,
+        "nb_markdown_cells": 0,
+        "dependencies_installation_detected": false,
+        "code_quality": {
+            "pylint_score": {
+                "score": 0,
+                "count_by_severity": {
+                    "convention": 74,
+                    "error": 1,
+                    "fatal": 0,
+                    "info": 0,
+                    "refactor": 40,
+                    "statement": 625,
+                    "warning": 644
+                },
+                "count_by_messages": {
+                    "bad-indentation": 601,
+                    "line-too-long": 17,
+                    "too-many-lines": 1,
+                    "trailing-newlines": 1,
+                    "missing-module-docstring": 1,
+                    "import-error": 1,
+                    "missing-function-docstring": 19,
+                    "invalid-name": 14,
+                    "consider-using-dict-items": 1,
+                    "too-many-arguments": 11,
+                    "too-many-locals": 7,
+                    "redefined-outer-name": 4,
+                    "consider-using-f-string": 9,
+                    "too-many-branches": 3,
+                    "too-many-statements": 3,
+                    "no-else-return": 1,
+                    "missing-class-docstring": 5,
+                    "too-many-instance-attributes": 3,
+                    "super-with-arguments": 5,
+                    "consider-using-in": 5,
+                    "too-few-public-methods": 2,
+                    "unused-argument": 1,
+                    "cell-var-from-loop": 35,
+                    "consider-using-enumerate": 5,
+                    "wrong-import-order": 1,
+                    "unused-import": 3
+                }
+            },
+            "mypy_score": {
+                "score": 100,
+                "count_by_severity": {},
+                "count_by_messages": {}
+            }
+        }
+    },
+    "profile": [
+        {
+            "cell_type": "code",
+            "nb_lines": 16
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 252
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 390
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 370
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 22
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 10
+        }
+    ]
+}

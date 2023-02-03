@@ -1,0 +1,67 @@
+{
+    "title": "plot_results.toml",
+    "notebook": "notebooks/github/google-research-google-research/plot_results.ipynb",
+    "metadata": "notebooks/github/google-research-google-research/plot_results.toml",
+    "metrics": {
+        "nb_code_cells": 4,
+        "nb_markdown_cells": 1,
+        "dependencies_installation_detected": false,
+        "code_quality": {
+            "pylint_score": {
+                "score": 0.24390243902439046,
+                "count_by_severity": {
+                    "convention": 13,
+                    "error": 1,
+                    "fatal": 0,
+                    "info": 0,
+                    "refactor": 0,
+                    "statement": 41,
+                    "warning": 22
+                },
+                "count_by_messages": {
+                    "bad-indentation": 21,
+                    "line-too-long": 2,
+                    "trailing-newlines": 1,
+                    "missing-module-docstring": 1,
+                    "import-error": 1,
+                    "invalid-name": 5,
+                    "consider-iterating-dictionary": 1,
+                    "consider-using-f-string": 2,
+                    "wrong-import-order": 1,
+                    "unused-import": 1
+                }
+            },
+            "mypy_score": {
+                "score": 0.9923076923076923,
+                "count_by_severity": {
+                    "error": 1
+                },
+                "count_by_messages": {
+                    "import": 1
+                }
+            }
+        }
+    },
+    "profile": [
+        {
+            "cell_type": "markdown",
+            "nb_lines": 11
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 5
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 8
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 22
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 32
+        }
+    ]
+}

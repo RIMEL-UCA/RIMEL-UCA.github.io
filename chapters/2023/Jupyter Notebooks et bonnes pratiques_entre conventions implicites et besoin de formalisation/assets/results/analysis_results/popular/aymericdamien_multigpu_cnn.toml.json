@@ -1,0 +1,73 @@
+{
+    "title": "multigpu_cnn.toml",
+    "notebook": "notebooks/github/aymericdamien-TensorFlow-Examples/multigpu_cnn.ipynb",
+    "metadata": "notebooks/github/aymericdamien-TensorFlow-Examples/multigpu_cnn.toml",
+    "metrics": {
+        "nb_code_cells": 5,
+        "nb_markdown_cells": 2,
+        "dependencies_installation_detected": false,
+        "code_quality": {
+            "pylint_score": {
+                "score": 0,
+                "count_by_severity": {
+                    "convention": 26,
+                    "error": 20,
+                    "fatal": 0,
+                    "info": 0,
+                    "refactor": 1,
+                    "statement": 87,
+                    "warning": 3
+                },
+                "count_by_messages": {
+                    "line-too-long": 1,
+                    "trailing-newlines": 1,
+                    "missing-module-docstring": 1,
+                    "import-error": 1,
+                    "no-name-in-module": 1,
+                    "invalid-name": 15,
+                    "missing-function-docstring": 3,
+                    "redefined-outer-name": 3,
+                    "no-member": 18,
+                    "no-else-return": 1,
+                    "consider-using-f-string": 4,
+                    "wrong-import-order": 1
+                }
+            },
+            "mypy_score": {
+                "score": 100,
+                "count_by_severity": {},
+                "count_by_messages": {}
+            }
+        }
+    },
+    "profile": [
+        {
+            "cell_type": "markdown",
+            "nb_lines": 9
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 15
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 21
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 41
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 25
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 14
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 74
+        }
+    ]
+}

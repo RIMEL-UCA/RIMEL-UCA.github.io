@@ -1,0 +1,62 @@
+{
+    "title": "so8_omega_colab.toml",
+    "notebook": "notebooks/github/google-research-google-research/so8_omega_colab.ipynb",
+    "metadata": "notebooks/github/google-research-google-research/so8_omega_colab.toml",
+    "metrics": {
+        "nb_code_cells": 2,
+        "nb_markdown_cells": 1,
+        "dependencies_installation_detected": false,
+        "code_quality": {
+            "pylint_score": {
+                "score": 0,
+                "count_by_severity": {
+                    "convention": 21,
+                    "error": 6,
+                    "fatal": 0,
+                    "info": 0,
+                    "refactor": 0,
+                    "statement": 62,
+                    "warning": 50
+                },
+                "count_by_messages": {
+                    "line-too-long": 1,
+                    "bad-indentation": 39,
+                    "trailing-newlines": 1,
+                    "missing-module-docstring": 1,
+                    "invalid-name": 3,
+                    "wrong-import-position": 12,
+                    "redefined-outer-name": 3,
+                    "import-error": 5,
+                    "import-outside-toplevel": 3,
+                    "no-name-in-module": 1,
+                    "reimported": 2,
+                    "subprocess-run-check": 1,
+                    "unused-import": 5
+                }
+            },
+            "mypy_score": {
+                "score": 0.9874213836477987,
+                "count_by_severity": {
+                    "error": 2
+                },
+                "count_by_messages": {
+                    "import": 2
+                }
+            }
+        }
+    },
+    "profile": [
+        {
+            "cell_type": "markdown",
+            "nb_lines": 13
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 62
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 18
+        }
+    ]
+}

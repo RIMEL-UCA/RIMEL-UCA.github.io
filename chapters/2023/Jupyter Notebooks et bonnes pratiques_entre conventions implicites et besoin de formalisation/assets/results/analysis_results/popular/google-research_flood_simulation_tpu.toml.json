@@ -1,0 +1,124 @@
+{
+    "title": "flood_simulation_tpu.toml",
+    "notebook": "notebooks/github/google-research-google-research/flood_simulation_tpu.ipynb",
+    "metadata": "notebooks/github/google-research-google-research/flood_simulation_tpu.toml",
+    "metrics": {
+        "nb_code_cells": 7,
+        "nb_markdown_cells": 4,
+        "dependencies_installation_detected": false,
+        "code_quality": {
+            "pylint_score": {
+                "score": 0,
+                "count_by_severity": {
+                    "convention": 185,
+                    "error": 13,
+                    "fatal": 0,
+                    "info": 0,
+                    "refactor": 64,
+                    "statement": 1218,
+                    "warning": 1298
+                },
+                "count_by_messages": {
+                    "unknown-option-value": 10,
+                    "bad-indentation": 1212,
+                    "line-too-long": 1,
+                    "trailing-whitespace": 1,
+                    "too-many-lines": 1,
+                    "trailing-newlines": 1,
+                    "missing-module-docstring": 1,
+                    "import-error": 6,
+                    "no-name-in-module": 5,
+                    "wrong-import-position": 15,
+                    "too-many-instance-attributes": 6,
+                    "too-many-arguments": 19,
+                    "no-else-return": 7,
+                    "inconsistent-return-statements": 3,
+                    "too-few-public-methods": 12,
+                    "too-many-locals": 9,
+                    "redefined-outer-name": 71,
+                    "super-with-arguments": 5,
+                    "invalid-name": 110,
+                    "no-member": 1,
+                    "consider-using-f-string": 17,
+                    "missing-function-docstring": 31,
+                    "arguments-differ": 1,
+                    "consider-using-with": 3,
+                    "consider-using-dict-items": 1,
+                    "consider-iterating-dictionary": 1,
+                    "attribute-defined-outside-init": 1,
+                    "unnecessary-pass": 1,
+                    "unnecessary-lambda": 1,
+                    "undefined-variable": 1,
+                    "wrong-import-order": 4,
+                    "ungrouped-imports": 1,
+                    "unused-import": 1
+                }
+            },
+            "mypy_score": {
+                "score": 0.9929328621908127,
+                "count_by_severity": {
+                    "error": 44
+                },
+                "count_by_messages": {
+                    "import": 4,
+                    "assignment": 9,
+                    "override": 1,
+                    "var-annotated": 4,
+                    "operator": 8,
+                    "misc": 3,
+                    "return": 1,
+                    "arg-type": 10,
+                    "return-value": 1,
+                    "call-overload": 2,
+                    "name-defined": 1
+                }
+            }
+        }
+    },
+    "profile": [
+        {
+            "cell_type": "markdown",
+            "nb_lines": 7
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 2
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 3031
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 1
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 14
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 15
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 17
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 7
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 20
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 1
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 26
+        }
+    ]
+}
