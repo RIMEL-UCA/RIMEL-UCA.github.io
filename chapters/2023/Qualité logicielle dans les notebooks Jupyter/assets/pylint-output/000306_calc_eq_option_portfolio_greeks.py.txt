@@ -1,0 +1,14 @@
+************* Module 000306_calc_eq_option_portfolio_greeks
+python-scripts\000306_calc_eq_option_portfolio_greeks.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\000306_calc_eq_option_portfolio_greeks.py:1:0: C0103: Module name "000306_calc_eq_option_portfolio_greeks" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\000306_calc_eq_option_portfolio_greeks.py:28:0: C0413: Import "from gs_quant.risk import MarketDataPattern, MarketDataShock, MarketDataShockType, MarketDataShockBasedScenario" should be placed at the top of the module (wrong-import-position)
+python-scripts\000306_calc_eq_option_portfolio_greeks.py:111:0: C0413: Import "import matplotlib.pyplot as plt" should be placed at the top of the module (wrong-import-position)
+python-scripts\000306_calc_eq_option_portfolio_greeks.py:112:0: C0413: Import "from pandas.plotting import register_matplotlib_converters" should be placed at the top of the module (wrong-import-position)
+python-scripts\000306_calc_eq_option_portfolio_greeks.py:118:0: C0103: Constant name "color" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\000306_calc_eq_option_portfolio_greeks.py:123:0: C0103: Constant name "color" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\000306_calc_eq_option_portfolio_greeks.py:135:0: C0103: Constant name "color" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\000306_calc_eq_option_portfolio_greeks.py:140:0: C0103: Constant name "color" doesn't conform to UPPER_CASE naming style (invalid-name)
+
+------------------------------------------------------------------
+Your code has been rated at 8.62/10 (previous run: 8.62/10, +0.00)
+

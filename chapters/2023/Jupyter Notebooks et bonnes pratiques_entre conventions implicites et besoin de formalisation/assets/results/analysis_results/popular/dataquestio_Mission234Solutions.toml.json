@@ -1,0 +1,51 @@
+{
+    "title": "Mission234Solutions.toml",
+    "notebook": "notebooks/github/lower/dataquestio-solutions/Mission234Solutions.ipynb",
+    "metadata": "notebooks/github/lower/dataquestio-solutions/Mission234Solutions.toml",
+    "metrics": {
+        "nb_code_cells": 2,
+        "nb_markdown_cells": 0,
+        "dependencies_installation_detected": false,
+        "code_quality": {
+            "pylint_score": {
+                "score": 5.0,
+                "count_by_severity": {
+                    "convention": 20,
+                    "error": 1,
+                    "fatal": 0,
+                    "info": 0,
+                    "refactor": 0,
+                    "statement": 54,
+                    "warning": 2
+                },
+                "count_by_messages": {
+                    "trailing-whitespace": 7,
+                    "trailing-newlines": 1,
+                    "missing-module-docstring": 1,
+                    "import-error": 1,
+                    "missing-class-docstring": 1,
+                    "unused-argument": 1,
+                    "missing-function-docstring": 6,
+                    "consider-using-f-string": 2,
+                    "invalid-name": 2,
+                    "unused-import": 1
+                }
+            },
+            "mypy_score": {
+                "score": -1,
+                "count_by_severity": {},
+                "count_by_messages": {}
+            }
+        }
+    },
+    "profile": [
+        {
+            "cell_type": "code",
+            "nb_lines": 51
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 19
+        }
+    ]
+}

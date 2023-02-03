@@ -1,0 +1,23 @@
+************* Module tensorboard_advanced
+python-scripts\tensorboard_advanced.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\tensorboard_advanced.py:27:0: C0103: Constant name "learning_rate" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\tensorboard_advanced.py:28:0: C0103: Constant name "training_epochs" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\tensorboard_advanced.py:29:0: C0103: Constant name "batch_size" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\tensorboard_advanced.py:30:0: C0103: Constant name "display_step" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\tensorboard_advanced.py:31:0: C0103: Constant name "logs_path" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\tensorboard_advanced.py:34:0: C0103: Constant name "n_hidden_1" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\tensorboard_advanced.py:35:0: C0103: Constant name "n_hidden_2" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\tensorboard_advanced.py:36:0: C0103: Constant name "n_input" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\tensorboard_advanced.py:37:0: C0103: Constant name "n_classes" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\tensorboard_advanced.py:49:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\tensorboard_advanced.py:49:26: C0103: Argument name "x" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\tensorboard_advanced.py:49:26: W0621: Redefining name 'x' from outer scope (line 41) (redefined-outer-name)
+python-scripts\tensorboard_advanced.py:49:29: W0621: Redefining name 'weights' from outer scope (line 65) (redefined-outer-name)
+python-scripts\tensorboard_advanced.py:49:38: W0621: Redefining name 'biases' from outer scope (line 70) (redefined-outer-name)
+python-scripts\tensorboard_advanced.py:137:8: C0103: Constant name "avg_cost" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\tensorboard_advanced.py:152:28: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\tensorboard_advanced.py:152:57: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+
+------------------------------------------------------------------
+Your code has been rated at 7.10/10 (previous run: 7.10/10, +0.00)
+

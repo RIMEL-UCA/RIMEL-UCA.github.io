@@ -1,0 +1,18 @@
+digraph {
+	"Check out Git repository" [shape=rect]
+	"Set up QEMU" [shape=rect]
+	"Set up Docker Buildx" [shape=rect]
+	"Login to DockerHub" [shape=rect]
+	"Set tag & labels for {github.ref}" [shape=rect]
+	"Build and push for AMD processors" [shape=rect]
+	"Build and push for ARM processors" [shape=rect]
+	"?" [shape=rect]
+	"?" [color=red fontcolor=red shape=ellipse]
+	"Check out Git repository" -> "Set up QEMU" [style=dotted xlabel=""]
+	"Set up QEMU" -> "Set up Docker Buildx" [style=dotted xlabel=""]
+	"Set up Docker Buildx" -> "Login to DockerHub" [style=dotted xlabel=""]
+	"Login to DockerHub" -> "Set tag & labels for {github.ref}" [style=dotted xlabel=""]
+	"Set tag & labels for {github.ref}" -> "Build and push for AMD processors" [style=dotted xlabel=""]
+	"Build and push for AMD processors" -> "Build and push for ARM processors" [style=dotted xlabel=""]
+	"?" -> "Set tag & labels for {github.ref}" [color=red fontcolor=red style=dashed xlabel="Unknown method \"if\""]
+}

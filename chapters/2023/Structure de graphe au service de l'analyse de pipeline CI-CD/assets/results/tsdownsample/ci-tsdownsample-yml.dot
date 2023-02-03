@@ -1,0 +1,10 @@
+digraph {
+	Build [shape=rect]
+	Lint_and_Check [shape=rect]
+	Test [shape=rect]
+	Release [shape=rect]
+	Build -> Release [decorate=false xlabel=pypi_files]
+	Build -> Release [style=dotted xlabel=""]
+	Lint_and_Check -> Release [style=dotted xlabel=""]
+	Test -> Release [style=dotted xlabel=""]
+}

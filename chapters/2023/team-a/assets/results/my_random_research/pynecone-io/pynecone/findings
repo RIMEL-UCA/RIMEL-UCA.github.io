@@ -1,0 +1,25 @@
+name: pynecone-io/pynecone - build.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+  - actions/setup-python@v4 ; utd: True
+  - actions/cache@v2 ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+  - snok/install-poetry@v1 ; utd: True
+Type: TRUSTED
+Type: FORKED
+
+name: pynecone-io/pynecone - integration.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+  - actions/setup-node@v3 ; utd: True
+  - actions/setup-python@v4 ; utd: True
+  - actions/cache@v2 ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+  - snok/install-poetry@v1 ; utd: True
+Type: TRUSTED
+Type: FORKED
+

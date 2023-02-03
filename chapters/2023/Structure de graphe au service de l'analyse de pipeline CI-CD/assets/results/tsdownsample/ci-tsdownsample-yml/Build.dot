@@ -1,0 +1,17 @@
+digraph {
+	"actions/checkout@v3" [shape=rect]
+	"set up python" [shape=rect]
+	"build sdist" [shape=rect]
+	"build wheels" [shape=rect]
+	"Anonymous step" [color=orange shape=rect]
+	"actions/upload-artifact@v3" [shape=rect]
+	"?" [shape=rect]
+	"?" [color=red fontcolor=red shape=ellipse]
+	"actions/checkout@v3" -> "set up python" [style=dotted xlabel=""]
+	"set up python" -> "build sdist" [style=dotted xlabel=""]
+	"build sdist" -> "build wheels" [style=dotted xlabel=""]
+	"build wheels" -> "Anonymous step" [style=dotted xlabel=""]
+	"Anonymous step" -> "actions/upload-artifact@v3" [style=dotted xlabel=""]
+	"?" -> "Anonymous step" [color=red fontcolor=red style=dashed xlabel="Unknown method \"${{\""]
+	"?" -> "Anonymous step" [color=red fontcolor=red style=dashed xlabel="Unknown method \"'ls\""]
+}

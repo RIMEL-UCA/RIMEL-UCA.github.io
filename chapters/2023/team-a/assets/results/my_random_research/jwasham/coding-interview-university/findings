@@ -1,0 +1,13 @@
+name: jwasham/coding-interview-university - links_checker.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+  - lycheeverse/lychee-action@v1.4.1 ; utd: False
+  - micalevisk/last-issue-action@v1.2 ; utd: False
+  - peter-evans/create-issue-from-file@v4 ; utd: True
+  - peter-evans/close-issue@v2 ; utd: True
+Type: TRUSTED
+Type: FORKED
+

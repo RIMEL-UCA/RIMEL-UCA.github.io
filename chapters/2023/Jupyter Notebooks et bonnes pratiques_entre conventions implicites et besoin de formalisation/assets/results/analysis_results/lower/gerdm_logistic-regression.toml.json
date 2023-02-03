@@ -1,0 +1,101 @@
+{
+    "title": "logistic-regression.toml",
+    "notebook": "notebooks/github/lower/gerdm-prml/logistic-regression.ipynb",
+    "metadata": "notebooks/github/lower/gerdm-prml/logistic-regression.toml",
+    "metrics": {
+        "nb_code_cells": 9,
+        "nb_markdown_cells": 5,
+        "dependencies_installation_detected": false,
+        "code_quality": {
+            "pylint_score": {
+                "score": 3.095238095238095,
+                "count_by_severity": {
+                    "convention": 15,
+                    "error": 2,
+                    "fatal": 0,
+                    "info": 0,
+                    "refactor": 0,
+                    "statement": 42,
+                    "warning": 4
+                },
+                "count_by_messages": {
+                    "unnecessary-semicolon": 1,
+                    "trailing-newlines": 1,
+                    "anomalous-backslash-in-string": 2,
+                    "missing-module-docstring": 1,
+                    "import-error": 1,
+                    "unnecessary-pass": 1,
+                    "missing-function-docstring": 3,
+                    "invalid-name": 6,
+                    "wrong-import-position": 1,
+                    "no-name-in-module": 1,
+                    "multiple-statements": 2,
+                    "consider-using-f-string": 1
+                }
+            },
+            "mypy_score": {
+                "score": -1,
+                "count_by_severity": {},
+                "count_by_messages": {}
+            }
+        }
+    },
+    "profile": [
+        {
+            "cell_type": "markdown",
+            "nb_lines": 1
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 4
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 1
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 19
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 5
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 10
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 6
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 1
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 26
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 4
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 5
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 1
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 1
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 6
+        }
+    ]
+}

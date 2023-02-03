@@ -1,0 +1,39 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+kaggle = "*"
+typer = {extras = ["all"], version = "*"}
+beautifulsoup4 = "*"
+tomli-w = "*"
+matplotlib = "*"
+requests = "*"
+tomli = "*"
+
+[dev-packages]
+pylint = "*"
+black = "*"
+flake8 = "*"
+bandit = "*"
+mypy = "*"
+
+[requires]
+python_version = "3.10"
+
+[popular]
+requests = "*"
+numpy = "*"
+pandas = "*"
+pyarrow = "*"
+scipy = "*"
+keras = "*"
+tensorboard = "*"
+tensorflow = "*"
+scikit-learn = "*"
+wheel = "*"
+optuna = "*"
+matplotlib = "*"
+torch = "*"
+ipython = "*"

@@ -1,0 +1,31 @@
+name: TheAlgorithms/Python - build.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+  - actions/setup-python@v4 ; utd: True
+  - actions/cache@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: TheAlgorithms/Python - directory_writer.yml
+
+Type: GITHUB
+  - actions/checkout@v1 ; utd: False
+  - actions/setup-python@v4 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: TheAlgorithms/Python - project_euler.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+  - actions/setup-python@v4 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+

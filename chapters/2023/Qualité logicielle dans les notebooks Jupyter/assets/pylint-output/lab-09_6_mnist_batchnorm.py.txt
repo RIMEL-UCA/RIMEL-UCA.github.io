@@ -1,0 +1,17 @@
+************* Module lab-09_6_mnist_batchnorm
+python-scripts\lab-09_6_mnist_batchnorm.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\lab-09_6_mnist_batchnorm.py:1:0: C0103: Module name "lab-09_6_mnist_batchnorm" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\lab-09_6_mnist_batchnorm.py:10:0: R0402: Use 'from torchvision import transforms' instead (consider-using-from-import)
+python-scripts\lab-09_6_mnist_batchnorm.py:16:0: C0103: Constant name "device" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-09_6_mnist_batchnorm.py:27:0: C0103: Constant name "learning_rate" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-09_6_mnist_batchnorm.py:28:0: C0103: Constant name "training_epochs" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-09_6_mnist_batchnorm.py:29:0: C0103: Constant name "batch_size" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-09_6_mnist_batchnorm.py:152:12: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\lab-09_6_mnist_batchnorm.py:176:12: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\lab-09_6_mnist_batchnorm.py:185:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\lab-09_6_mnist_batchnorm.py:186:4: C0103: Variable name "bn" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\lab-09_6_mnist_batchnorm.py:187:4: C0103: Variable name "nn" doesn't conform to snake_case naming style (invalid-name)
+
+------------------------------------------------------------------
+Your code has been rated at 8.83/10 (previous run: 8.83/10, +0.00)
+

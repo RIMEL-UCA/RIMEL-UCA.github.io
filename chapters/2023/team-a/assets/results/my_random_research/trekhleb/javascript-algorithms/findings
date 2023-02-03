@@ -1,0 +1,11 @@
+name: trekhleb/javascript-algorithms - CI.yml
+
+Type: GITHUB
+  - actions/checkout@v2 ; utd: False
+  - actions/setup-node@v1 ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+  - codecov/codecov-action@v1 ; utd: False
+Type: TRUSTED
+Type: FORKED
+

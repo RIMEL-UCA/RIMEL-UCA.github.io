@@ -1,0 +1,11 @@
+name: ytdl-org/youtube-dl - ci.yml
+
+Type: GITHUB
+  - actions/checkout@v2 ; utd: False
+  - actions/setup-python@v2 ; utd: False
+  - actions/setup-java@v1 ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+

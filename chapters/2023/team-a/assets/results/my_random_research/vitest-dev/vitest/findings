@@ -1,0 +1,48 @@
+name: vitest-dev/vitest - bench.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+  - actions/setup-node@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+  - pnpm/action-setup@v2 ; utd: True
+Type: TRUSTED
+Type: FORKED
+
+name: vitest-dev/vitest - ci.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: vitest-dev/vitest - issue-close-require.yml
+
+Type: GITHUB
+Type: INTERNAL
+Type: PUBLIC
+  - actions-cool/issues-helper@v3 ; utd: True
+Type: TRUSTED
+Type: FORKED
+
+name: vitest-dev/vitest - issue-labeled.yml
+
+Type: GITHUB
+Type: INTERNAL
+Type: PUBLIC
+  - actions-cool/issues-helper@v3 ; utd: True
+Type: TRUSTED
+Type: FORKED
+
+name: vitest-dev/vitest - release.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+  - actions/setup-node@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+

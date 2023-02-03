@@ -1,0 +1,18 @@
+************* Module linear_regression
+python-scripts\linear_regression.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\linear_regression.py:29:0: C0103: Constant name "learning_rate" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\linear_regression.py:30:0: C0103: Constant name "training_steps" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\linear_regression.py:31:0: C0103: Constant name "display_step" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\linear_regression.py:51:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\linear_regression.py:51:22: C0103: Argument name "x" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\linear_regression.py:55:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\linear_regression.py:65:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\linear_regression.py:68:8: W0621: Redefining name 'pred' from outer scope (line 86) (redefined-outer-name)
+python-scripts\linear_regression.py:69:8: W0621: Redefining name 'loss' from outer scope (line 87) (redefined-outer-name)
+python-scripts\linear_regression.py:67:30: C0103: Variable name "g" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\linear_regression.py:88:14: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\linear_regression.py:93:0: C0413: Import "import matplotlib.pyplot as plt" should be placed at the top of the module (wrong-import-position)
+
+------------------------------------------------------------------
+Your code has been rated at 6.06/10 (previous run: 6.06/10, +0.00)
+

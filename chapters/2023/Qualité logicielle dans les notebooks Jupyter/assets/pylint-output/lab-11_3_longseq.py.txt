@@ -1,0 +1,25 @@
+************* Module lab-11_3_longseq
+python-scripts\lab-11_3_longseq.py:129:0: C0305: Trailing newlines (trailing-newlines)
+python-scripts\lab-11_3_longseq.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\lab-11_3_longseq.py:1:0: C0103: Module name "lab-11_3_longseq" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\lab-11_3_longseq.py:8:0: R0402: Use 'from torch import optim' instead (consider-using-from-import)
+python-scripts\lab-11_3_longseq.py:20:0: C0103: Constant name "sentence" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-11_3_longseq.py:37:0: C0103: Constant name "sequence_length" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-11_3_longseq.py:38:0: C0103: Constant name "learning_rate" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-11_3_longseq.py:68:0: C0115: Missing class docstring (missing-class-docstring)
+python-scripts\lab-11_3_longseq.py:72:8: C0103: Attribute name "fc" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\lab-11_3_longseq.py:70:8: E1003: Bad first argument 'Net' given to super() (bad-super-call)
+python-scripts\lab-11_3_longseq.py:70:8: R1725: Consider using Python 3 style super() without arguments (super-with-arguments)
+python-scripts\lab-11_3_longseq.py:74:4: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\lab-11_3_longseq.py:74:22: C0103: Argument name "x" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\lab-11_3_longseq.py:83:0: C0115: Missing class docstring (missing-class-docstring)
+python-scripts\lab-11_3_longseq.py:87:8: C0103: Attribute name "fc" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\lab-11_3_longseq.py:83:0: E0102: class already defined line 68 (function-redefined)
+python-scripts\lab-11_3_longseq.py:85:8: R1725: Consider using Python 3 style super() without arguments (super-with-arguments)
+python-scripts\lab-11_3_longseq.py:89:4: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\lab-11_3_longseq.py:89:22: C0103: Argument name "x" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\lab-11_3_longseq.py:116:4: C0103: Constant name "predict_str" doesn't conform to UPPER_CASE naming style (invalid-name)
+
+------------------------------------------------------------------
+Your code has been rated at 5.00/10 (previous run: 4.64/10, +0.36)
+

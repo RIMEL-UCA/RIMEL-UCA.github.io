@@ -1,0 +1,75 @@
+{
+    "title": "tl-gan-demo",
+    "notebook": "/src/notebooks/kaggle/summitkwan-tl-gan-demo/tl-gan-demo.ipynb",
+    "metadata": "/src/notebooks/kaggle/summitkwan-tl-gan-demo/tl-gan-demo.toml",
+    "metrics": {
+        "nb_code_cells": 5,
+        "nb_markdown_cells": 1,
+        "dependencies_installation_detected": false,
+        "code_quality": {
+            "pylint_score": {
+                "score": 0,
+                "count_by_severity": {
+                    "convention": 60,
+                    "error": 9,
+                    "fatal": 0,
+                    "info": 0,
+                    "refactor": 4,
+                    "statement": 107,
+                    "warning": 15
+                },
+                "count_by_messages": {
+                    "line-too-long": 6,
+                    "trailing-whitespace": 17,
+                    "trailing-newlines": 1,
+                    "consider-using-f-string": 8,
+                    "pointless-string-statement": 3,
+                    "reimported": 1,
+                    "wrong-import-position": 12,
+                    "consider-using-from-import": 3,
+                    "import-error": 3,
+                    "no-name-in-module": 3,
+                    "invalid-name": 9,
+                    "no-member": 2,
+                    "redefined-outer-name": 8,
+                    "useless-object-inheritance": 1,
+                    "missing-function-docstring": 5,
+                    "unused-argument": 3,
+                    "undefined-variable": 1,
+                    "wrong-import-order": 2
+                }
+            },
+            "mypy_score": {
+                "score": -1,
+                "count_by_severity": {},
+                "count_by_messages": {}
+            }
+        }
+    },
+    "profile": [
+        {
+            "cell_type": "markdown",
+            "nb_lines": 1153
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 278
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 968
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 871
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 5557
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 0
+        }
+    ]
+}

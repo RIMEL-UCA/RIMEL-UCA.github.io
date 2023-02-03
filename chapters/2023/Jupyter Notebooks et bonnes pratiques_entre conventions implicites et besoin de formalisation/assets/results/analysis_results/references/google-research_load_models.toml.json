@@ -1,0 +1,68 @@
+{
+    "title": "load_models.toml",
+    "notebook": "notebooks/github/references/google-research-google-research/load_models.ipynb",
+    "metadata": "notebooks/github/references/google-research-google-research/load_models.toml",
+    "metrics": {
+        "nb_code_cells": 3,
+        "nb_markdown_cells": 3,
+        "dependencies_installation_detected": false,
+        "code_quality": {
+            "pylint_score": {
+                "score": 0,
+                "count_by_severity": {
+                    "convention": 11,
+                    "error": 4,
+                    "fatal": 0,
+                    "info": 0,
+                    "refactor": 0,
+                    "statement": 37,
+                    "warning": 14
+                },
+                "count_by_messages": {
+                    "bad-indentation": 12,
+                    "trailing-newlines": 1,
+                    "missing-module-docstring": 1,
+                    "import-error": 3,
+                    "invalid-name": 6,
+                    "missing-function-docstring": 1,
+                    "reimported": 1,
+                    "wrong-import-position": 1,
+                    "not-context-manager": 1,
+                    "expression-not-assigned": 1,
+                    "ungrouped-imports": 1
+                }
+            },
+            "mypy_score": {
+                "score": -1,
+                "count_by_severity": {},
+                "count_by_messages": {}
+            }
+        }
+    },
+    "profile": [
+        {
+            "cell_type": "markdown",
+            "nb_lines": 15
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 7
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 5
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 41
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 1
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 23
+        }
+    ]
+}

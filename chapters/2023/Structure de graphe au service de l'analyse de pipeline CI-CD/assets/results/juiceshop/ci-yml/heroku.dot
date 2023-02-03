@@ -1,0 +1,10 @@
+digraph {
+	"Check out Git repository" [shape=rect]
+	"Set Heroku app & branch for {github.ref}" [shape=rect]
+	"Deploy {github.ref} to Heroku" [shape=rect]
+	"?" [shape=rect]
+	"?" [color=red fontcolor=red shape=ellipse]
+	"Check out Git repository" -> "Set Heroku app & branch for {github.ref}" [style=dotted xlabel=""]
+	"Set Heroku app & branch for {github.ref}" -> "Deploy {github.ref} to Heroku" [style=dotted xlabel=""]
+	"?" -> "Set Heroku app & branch for {github.ref}" [color=red fontcolor=red style=dashed xlabel="Unknown method \"if\""]
+}

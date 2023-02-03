@@ -1,0 +1,174 @@
+{
+    "title": "triple-stratified-kfold-with-tfrecords",
+    "notebook": "/src/notebooks/kaggle/cdeotte-triple-stratified-kfold-with-tfrecords/triple-stratified-kfold-with-tfrecords.ipynb",
+    "metadata": "/src/notebooks/kaggle/cdeotte-triple-stratified-kfold-with-tfrecords/triple-stratified-kfold-with-tfrecords.toml",
+    "metrics": {
+        "nb_code_cells": 17,
+        "nb_markdown_cells": 12,
+        "dependencies_installation_detected": false,
+        "code_quality": {
+            "pylint_score": {
+                "score": 1.075268817204302,
+                "count_by_severity": {
+                    "convention": 175,
+                    "error": 12,
+                    "fatal": 0,
+                    "info": 0,
+                    "refactor": 4,
+                    "statement": 279,
+                    "warning": 10
+                },
+                "count_by_messages": {
+                    "trailing-whitespace": 77,
+                    "line-too-long": 7,
+                    "unnecessary-semicolon": 1,
+                    "trailing-newlines": 1,
+                    "missing-module-docstring": 1,
+                    "multiple-imports": 3,
+                    "no-member": 6,
+                    "consider-using-f-string": 15,
+                    "multiple-statements": 17,
+                    "reimported": 2,
+                    "wrong-import-position": 11,
+                    "no-name-in-module": 1,
+                    "import-error": 1,
+                    "invalid-name": 30,
+                    "undefined-variable": 1,
+                    "missing-function-docstring": 9,
+                    "too-many-arguments": 2,
+                    "too-many-locals": 2,
+                    "unexpected-keyword-arg": 1,
+                    "no-value-for-parameter": 1,
+                    "invalid-unary-operand-type": 1,
+                    "redefined-outer-name": 6,
+                    "undefined-loop-variable": 1,
+                    "wrong-import-order": 2,
+                    "ungrouped-imports": 2
+                }
+            },
+            "mypy_score": {
+                "score": -1,
+                "count_by_severity": {},
+                "count_by_messages": {}
+            }
+        }
+    },
+    "profile": [
+        {
+            "cell_type": "markdown",
+            "nb_lines": 1469
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 424
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 809
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 24
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 41
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 297
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 1899
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 564
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 1003
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 526
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 388
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 1054
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 77
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 2788
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 1907
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 995
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 196
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 699
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 324
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 655
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 481
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 5749
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 318
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 394
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 154
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 18
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 260
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 192
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 47
+        }
+    ]
+}

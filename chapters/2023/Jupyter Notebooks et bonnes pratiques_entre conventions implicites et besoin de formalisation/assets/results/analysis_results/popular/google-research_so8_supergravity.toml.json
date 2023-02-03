@@ -1,0 +1,77 @@
+{
+    "title": "so8_supergravity.toml",
+    "notebook": "notebooks/github/google-research-google-research/so8_supergravity.ipynb",
+    "metadata": "notebooks/github/google-research-google-research/so8_supergravity.toml",
+    "metrics": {
+        "nb_code_cells": 5,
+        "nb_markdown_cells": 1,
+        "dependencies_installation_detected": false,
+        "code_quality": {
+            "pylint_score": {
+                "score": 0,
+                "count_by_severity": {
+                    "convention": 66,
+                    "error": 3,
+                    "fatal": 0,
+                    "info": 0,
+                    "refactor": 16,
+                    "statement": 279,
+                    "warning": 248
+                },
+                "count_by_messages": {
+                    "bad-indentation": 243,
+                    "too-many-lines": 1,
+                    "trailing-newlines": 1,
+                    "missing-module-docstring": 1,
+                    "missing-class-docstring": 2,
+                    "useless-object-inheritance": 5,
+                    "missing-function-docstring": 6,
+                    "invalid-name": 47,
+                    "too-many-arguments": 3,
+                    "too-many-locals": 3,
+                    "consider-using-f-string": 6,
+                    "unnecessary-comprehension": 1,
+                    "unused-variable": 3,
+                    "too-few-public-methods": 3,
+                    "redefined-outer-name": 2,
+                    "too-many-function-args": 1,
+                    "consider-using-in": 1,
+                    "no-member": 1,
+                    "not-callable": 1,
+                    "wrong-import-order": 2
+                }
+            },
+            "mypy_score": {
+                "score": 100,
+                "count_by_severity": {},
+                "count_by_messages": {}
+            }
+        }
+    },
+    "profile": [
+        {
+            "cell_type": "markdown",
+            "nb_lines": 13
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 3
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 281
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 16
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 228
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 21
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+************* Module 040307_strategy_seagull_bullish
+python-scripts\040307_strategy_seagull_bullish.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\040307_strategy_seagull_bullish.py:1:0: C0103: Module name "040307_strategy_seagull_bullish" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\040307_strategy_seagull_bullish.py:34:0: C0103: Constant name "freq_int" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\040307_strategy_seagull_bullish.py:35:0: C0103: Constant name "ramp_up_freq" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\040307_strategy_seagull_bullish.py:36:0: C0103: Constant name "freq" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\040307_strategy_seagull_bullish.py:37:0: C0103: Constant name "ramp_up_mult" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\040307_strategy_seagull_bullish.py:38:0: C0103: Constant name "ramp_up_period" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\040307_strategy_seagull_bullish.py:39:0: C0103: Constant name "holding_period" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\040307_strategy_seagull_bullish.py:40:0: C0103: Constant name "strategy_notional" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\040307_strategy_seagull_bullish.py:51:0: C0103: Constant name "ccy" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\040307_strategy_seagull_bullish.py:52:0: C0103: Constant name "expiry" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\040307_strategy_seagull_bullish.py:53:0: C0103: Constant name "tail" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\040307_strategy_seagull_bullish.py:54:0: C0103: Constant name "rate_option" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\040307_strategy_seagull_bullish.py:61:0: C0200: Consider using enumerate instead of iterating with range and len (consider-using-enumerate)
+python-scripts\040307_strategy_seagull_bullish.py:72:0: C0103: Constant name "csa_string" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\040307_strategy_seagull_bullish.py:97:0: W0104: Statement seems to have no effect (pointless-statement)
+python-scripts\040307_strategy_seagull_bullish.py:16:0: C0411: standard import "from datetime import date" should be placed before "from gs_quant.common import AggregationLevel" (wrong-import-order)
+
+------------------------------------------------------------------
+Your code has been rated at 7.02/10 (previous run: 7.02/10, +0.00)
+

@@ -1,0 +1,16 @@
+************* Module lab-10-2-mnist_nn
+python-scripts\lab-10-2-mnist_nn.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\lab-10-2-mnist_nn.py:1:0: C0103: Module name "lab-10-2-mnist_nn" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\lab-10-2-mnist_nn.py:10:0: R0402: Use 'from torchvision import transforms' instead (consider-using-from-import)
+python-scripts\lab-10-2-mnist_nn.py:16:0: C0103: Constant name "device" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-10-2-mnist_nn.py:28:0: C0103: Constant name "learning_rate" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-10-2-mnist_nn.py:29:0: C0103: Constant name "training_epochs" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-10-2-mnist_nn.py:30:0: C0103: Constant name "batch_size" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-10-2-mnist_nn.py:82:4: C0103: Constant name "avg_cost" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-10-2-mnist_nn.py:98:20: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\lab-10-2-mnist_nn.py:98:52: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\lab-10-2-mnist_nn.py:11:0: C0411: standard import "import random" should be placed before "import torch" (wrong-import-order)
+
+------------------------------------------------------------------
+Your code has been rated at 7.76/10 (previous run: 7.76/10, +0.00)
+

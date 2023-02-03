@@ -1,0 +1,78 @@
+{
+    "title": "data-leakage",
+    "notebook": "/src/notebooks/kaggle/alexisbcook-data-leakage/data-leakage.ipynb",
+    "metadata": "/src/notebooks/kaggle/alexisbcook-data-leakage/data-leakage.toml",
+    "metrics": {
+        "nb_code_cells": 4,
+        "nb_markdown_cells": 7,
+        "dependencies_installation_detected": false,
+        "code_quality": {
+            "pylint_score": {
+                "score": 0,
+                "count_by_severity": {
+                    "convention": 0,
+                    "error": 1,
+                    "fatal": 0,
+                    "info": 0,
+                    "refactor": 0,
+                    "statement": 0,
+                    "warning": 0
+                },
+                "count_by_messages": {
+                    "syntax-error": 1
+                }
+            },
+            "mypy_score": {
+                "score": -1,
+                "count_by_severity": {},
+                "count_by_messages": {}
+            }
+        }
+    },
+    "profile": [
+        {
+            "cell_type": "markdown",
+            "nb_lines": 2689
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 1751
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 305
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 105
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 498
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 1118
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 357
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 738
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 375
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 851
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 173
+        }
+    ]
+}

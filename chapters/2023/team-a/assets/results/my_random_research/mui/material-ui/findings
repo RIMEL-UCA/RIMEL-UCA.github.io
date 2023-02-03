@@ -1,0 +1,85 @@
+name: mui/material-ui - check-if-pr-has-label.yml
+
+Type: GITHUB
+Type: INTERNAL
+Type: PUBLIC
+  - mnajdova/github-action-required-labels@ca0df9249827e43aa4b4a0d25d9fe3e9b19b0705 ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: mui/material-ui - ci-check.yml
+
+Type: GITHUB
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: mui/material-ui - ci.yml
+
+Type: GITHUB
+  - actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b ; utd: False
+  - actions/setup-node@8c91899e586c5b171469028077307d293428b516 ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: mui/material-ui - codeql.yml
+
+Type: GITHUB
+  - actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+  - github/codeql-action/init@959cbb7472c4d4ad70cdfe6f4976053fe48ab394 ; utd: False
+  - github/codeql-action/analyze@959cbb7472c4d4ad70cdfe6f4976053fe48ab394 ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: mui/material-ui - maintenance.yml
+
+Type: GITHUB
+Type: INTERNAL
+Type: PUBLIC
+  - eps1lon/actions-label-merge-conflict@fd1f295ee7443d13745804bc49fe158e240f6c6e ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: mui/material-ui - mark-duplicate.yml
+
+Type: GITHUB
+Type: INTERNAL
+Type: PUBLIC
+  - actions-cool/issues-helper@275328970dbc3bfc3bc43f5fe741bf3638300c0a ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: mui/material-ui - no-response.yml
+
+Type: GITHUB
+Type: INTERNAL
+Type: PUBLIC
+  - lee-dohm/no-response@9bb0a4b5e6a45046f00353d5de7d90fb8bd773bb ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: mui/material-ui - scorecards.yml
+
+Type: GITHUB
+  - actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+  - ossf/scorecard-action@e38b1902ae4f44df626f11ba0734b14fb91f8f86 ; utd: False
+  - github/codeql-action/upload-sarif@959cbb7472c4d4ad70cdfe6f4976053fe48ab394 ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: mui/material-ui - support-stackoverflow.yml
+
+Type: GITHUB
+Type: INTERNAL
+Type: PUBLIC
+  - dessant/support-requests@b1303caf4438e66dea1130aa4c30189dc28e690d ; utd: False
+Type: TRUSTED
+Type: FORKED
+

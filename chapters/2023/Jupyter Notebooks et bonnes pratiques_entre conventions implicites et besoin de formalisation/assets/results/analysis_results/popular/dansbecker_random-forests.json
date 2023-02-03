@@ -1,0 +1,62 @@
+{
+    "title": "random-forests",
+    "notebook": "/src/notebooks/kaggle/dansbecker-random-forests/random-forests.ipynb",
+    "metadata": "/src/notebooks/kaggle/dansbecker-random-forests/random-forests.toml",
+    "metrics": {
+        "nb_code_cells": 2,
+        "nb_markdown_cells": 4,
+        "dependencies_installation_detected": false,
+        "code_quality": {
+            "pylint_score": {
+                "score": 4.0,
+                "count_by_severity": {
+                    "convention": 9,
+                    "error": 0,
+                    "fatal": 0,
+                    "info": 0,
+                    "refactor": 0,
+                    "statement": 15,
+                    "warning": 0
+                },
+                "count_by_messages": {
+                    "trailing-whitespace": 3,
+                    "trailing-newlines": 1,
+                    "missing-module-docstring": 1,
+                    "invalid-name": 1,
+                    "wrong-import-position": 3
+                }
+            },
+            "mypy_score": {
+                "score": -1,
+                "count_by_severity": {},
+                "count_by_messages": {}
+            }
+        }
+    },
+    "profile": [
+        {
+            "cell_type": "markdown",
+            "nb_lines": 1105
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 850
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 176
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 274
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 550
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 169
+        }
+    ]
+}

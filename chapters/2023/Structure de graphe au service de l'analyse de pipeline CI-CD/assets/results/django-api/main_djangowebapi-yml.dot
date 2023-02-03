@@ -1,0 +1,6 @@
+digraph {
+	build [shape=rect]
+	deploy [shape=rect]
+	build -> deploy [decorate=false xlabel="python-app"]
+	build -> deploy [style=dotted xlabel=""]
+}

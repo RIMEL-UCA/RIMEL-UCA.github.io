@@ -1,0 +1,106 @@
+{
+    "title": "memory_efficient_attention.toml",
+    "notebook": "notebooks/github/google-research-google-research/memory_efficient_attention.ipynb",
+    "metadata": "notebooks/github/google-research-google-research/memory_efficient_attention.toml",
+    "metrics": {
+        "nb_code_cells": 6,
+        "nb_markdown_cells": 7,
+        "dependencies_installation_detected": false,
+        "code_quality": {
+            "pylint_score": {
+                "score": 0,
+                "count_by_severity": {
+                    "convention": 37,
+                    "error": 7,
+                    "fatal": 0,
+                    "info": 0,
+                    "refactor": 3,
+                    "statement": 167,
+                    "warning": 163
+                },
+                "count_by_messages": {
+                    "bad-indentation": 127,
+                    "trailing-whitespace": 2,
+                    "line-too-long": 1,
+                    "trailing-newlines": 1,
+                    "missing-module-docstring": 1,
+                    "import-error": 7,
+                    "missing-function-docstring": 6,
+                    "invalid-name": 13,
+                    "global-statement": 1,
+                    "redefined-outer-name": 28,
+                    "reimported": 4,
+                    "multiple-imports": 1,
+                    "wrong-import-position": 5,
+                    "too-many-arguments": 2,
+                    "too-many-locals": 1,
+                    "wrong-import-order": 7,
+                    "unused-import": 3
+                }
+            },
+            "mypy_score": {
+                "score": 0.994140625,
+                "count_by_severity": {
+                    "error": 3
+                },
+                "count_by_messages": {
+                    "import": 3
+                }
+            }
+        }
+    },
+    "profile": [
+        {
+            "cell_type": "markdown",
+            "nb_lines": 7
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 1
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 15
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 1
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 14
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 17
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 1
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 13
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 1
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 74
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 1
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 68
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 73
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+************* Module C1_W3_Assignment_Solution
+python-scripts\C1_W3_Assignment_Solution.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\C1_W3_Assignment_Solution.py:1:0: C0103: Module name "C1_W3_Assignment_Solution" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\C1_W3_Assignment_Solution.py:111:30: R1732: Consider using 'with' for resource-allocating operations (consider-using-with)
+python-scripts\C1_W3_Assignment_Solution.py:119:6: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\C1_W3_Assignment_Solution.py:170:22: C0103: Argument name "A" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\C1_W3_Assignment_Solution.py:170:25: C0103: Argument name "B" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\C1_W3_Assignment_Solution.py:229:14: C0103: Argument name "A" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\C1_W3_Assignment_Solution.py:229:17: C0103: Argument name "B" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\C1_W3_Assignment_Solution.py:242:4: C0103: Variable name "d" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\C1_W3_Assignment_Solution.py:317:8: W0621: Redefining name 'word' from outer scope (line 617) (redefined-outer-name)
+python-scripts\C1_W3_Assignment_Solution.py:373:17: W0621: Redefining name 'word_embeddings' from outer scope (line 111) (redefined-outer-name)
+python-scripts\C1_W3_Assignment_Solution.py:373:34: W0621: Redefining name 'data' from outer scope (line 53) (redefined-outer-name)
+python-scripts\C1_W3_Assignment_Solution.py:388:8: W0621: Redefining name 'i' from outer scope (line 617) (redefined-outer-name)
+python-scripts\C1_W3_Assignment_Solution.py:414:4: W0621: Redefining name 'accuracy' from outer scope (line 425) (redefined-outer-name)
+python-scripts\C1_W3_Assignment_Solution.py:411:4: C0103: Variable name "m" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\C1_W3_Assignment_Solution.py:388:8: W0612: Unused variable 'i' (unused-variable)
+python-scripts\C1_W3_Assignment_Solution.py:503:16: C0103: Argument name "X" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\C1_W3_Assignment_Solution.py:503:16: W0621: Redefining name 'X' from outer scope (line 553) (redefined-outer-name)
+python-scripts\C1_W3_Assignment_Solution.py:541:4: W0621: Redefining name 'X_reduced' from outer scope (line 554) (redefined-outer-name)
+python-scripts\C1_W3_Assignment_Solution.py:514:4: C0103: Variable name "X_demeaned" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\C1_W3_Assignment_Solution.py:541:4: C0103: Variable name "X_reduced" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\C1_W3_Assignment_Solution.py:529:4: W0612: Unused variable 'eigen_vals_sorted' (unused-variable)
+
+------------------------------------------------------------------
+Your code has been rated at 7.25/10 (previous run: 7.25/10, +0.00)
+

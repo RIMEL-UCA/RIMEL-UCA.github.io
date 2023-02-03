@@ -1,0 +1,17 @@
+************* Module lab-03_minimizing_cost
+python-scripts\lab-03_minimizing_cost.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\lab-03_minimizing_cost.py:1:0: C0103: Module name "lab-03_minimizing_cost" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\lab-03_minimizing_cost.py:31:0: R0402: Use 'from torch import nn' instead (consider-using-from-import)
+python-scripts\lab-03_minimizing_cost.py:33:0: R0402: Use 'from torch import optim' instead (consider-using-from-import)
+python-scripts\lab-03_minimizing_cost.py:107:0: C0103: Constant name "lr" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-03_minimizing_cost.py:122:0: C0103: Constant name "lr" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-03_minimizing_cost.py:124:0: C0103: Constant name "nb_epochs" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-03_minimizing_cost.py:134:10: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\lab-03_minimizing_cost.py:154:0: C0103: Constant name "nb_epochs" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\lab-03_minimizing_cost.py:163:10: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\lab-03_minimizing_cost.py:31:0: W0611: Unused torch.nn imported as nn (unused-import)
+python-scripts\lab-03_minimizing_cost.py:32:0: W0611: Unused torch.nn.functional imported as F (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 7.65/10 (previous run: 7.65/10, +0.00)
+

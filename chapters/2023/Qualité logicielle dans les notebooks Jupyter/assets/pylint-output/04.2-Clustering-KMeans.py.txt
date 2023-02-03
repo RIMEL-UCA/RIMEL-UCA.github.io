@@ -1,0 +1,31 @@
+************* Module 04.2-Clustering-KMeans
+python-scripts\04.2-Clustering-KMeans.py:35:0: W0301: Unnecessary semicolon (unnecessary-semicolon)
+python-scripts\04.2-Clustering-KMeans.py:46:0: W0301: Unnecessary semicolon (unnecessary-semicolon)
+python-scripts\04.2-Clustering-KMeans.py:66:0: W0301: Unnecessary semicolon (unnecessary-semicolon)
+python-scripts\04.2-Clustering-KMeans.py:133:0: W0301: Unnecessary semicolon (unnecessary-semicolon)
+python-scripts\04.2-Clustering-KMeans.py:156:0: W0301: Unnecessary semicolon (unnecessary-semicolon)
+python-scripts\04.2-Clustering-KMeans.py:172:0: W0301: Unnecessary semicolon (unnecessary-semicolon)
+python-scripts\04.2-Clustering-KMeans.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\04.2-Clustering-KMeans.py:1:0: C0103: Module name "2-Clustering-KMeans" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\04.2-Clustering-KMeans.py:32:0: C0413: Import "from sklearn.datasets.samples_generator import make_blobs" should be placed at the top of the module (wrong-import-position)
+python-scripts\04.2-Clustering-KMeans.py:42:0: C0413: Import "from sklearn.cluster import KMeans" should be placed at the top of the module (wrong-import-position)
+python-scripts\04.2-Clustering-KMeans.py:65:0: C0413: Import "from fig_code import plot_kmeans_interactive" should be placed at the top of the module (wrong-import-position)
+python-scripts\04.2-Clustering-KMeans.py:83:0: C0413: Import "from sklearn.datasets import load_digits" should be placed at the top of the module (wrong-import-position)
+python-scripts\04.2-Clustering-KMeans.py:91:0: W0104: Statement seems to have no effect (pointless-statement)
+python-scripts\04.2-Clustering-KMeans.py:110:0: C0413: Import "from scipy.stats import mode" should be placed at the top of the module (wrong-import-position)
+python-scripts\04.2-Clustering-KMeans.py:122:0: C0413: Import "from sklearn.decomposition import PCA" should be placed at the top of the module (wrong-import-position)
+python-scripts\04.2-Clustering-KMeans.py:140:0: C0413: Import "from sklearn.metrics import accuracy_score" should be placed at the top of the module (wrong-import-position)
+python-scripts\04.2-Clustering-KMeans.py:148:0: C0413: Import "from sklearn.metrics import confusion_matrix" should be placed at the top of the module (wrong-import-position)
+python-scripts\04.2-Clustering-KMeans.py:169:0: C0413: Import "from sklearn.datasets import load_sample_image" should be placed at the top of the module (wrong-import-position)
+python-scripts\04.2-Clustering-KMeans.py:179:0: W0104: Statement seems to have no effect (pointless-statement)
+python-scripts\04.2-Clustering-KMeans.py:198:0: C0413: Import "from sklearn.cluster import MiniBatchKMeans" should be placed at the top of the module (wrong-import-position)
+python-scripts\04.2-Clustering-KMeans.py:204:0: C0103: Constant name "n_colors" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\04.2-Clustering-KMeans.py:222:14: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\04.2-Clustering-KMeans.py:83:0: C0412: Imports from package sklearn are not grouped (ungrouped-imports)
+python-scripts\04.2-Clustering-KMeans.py:110:0: C0412: Imports from package scipy are not grouped (ungrouped-imports)
+python-scripts\04.2-Clustering-KMeans.py:122:0: C0412: Imports from package sklearn are not grouped (ungrouped-imports)
+python-scripts\04.2-Clustering-KMeans.py:17:0: W0611: Unused stats imported from scipy (unused-import)
+
+-----------------------------------
+Your code has been rated at 6.12/10
+

@@ -1,0 +1,15 @@
+************* Module random_forest
+python-scripts\random_forest.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\random_forest.py:30:0: C0413: Import "from tensorflow.examples.tutorials.mnist import input_data" should be placed at the top of the module (wrong-import-position)
+python-scripts\random_forest.py:37:0: C0103: Constant name "num_steps" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\random_forest.py:38:0: C0103: Constant name "batch_size" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\random_forest.py:39:0: C0103: Constant name "num_classes" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\random_forest.py:40:0: C0103: Constant name "num_features" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\random_forest.py:41:0: C0103: Constant name "num_trees" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\random_forest.py:42:0: C0103: Constant name "max_nodes" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\random_forest.py:90:14: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\random_forest.py:23:0: C0411: standard import "import os" should be placed before "import tensorflow as tf" (wrong-import-order)
+
+------------------------------------------------------------------
+Your code has been rated at 7.06/10 (previous run: 7.06/10, +0.00)
+

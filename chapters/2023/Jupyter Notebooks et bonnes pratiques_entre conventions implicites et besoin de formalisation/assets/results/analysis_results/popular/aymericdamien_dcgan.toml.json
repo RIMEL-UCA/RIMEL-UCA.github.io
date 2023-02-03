@@ -1,0 +1,95 @@
+{
+    "title": "dcgan.toml",
+    "notebook": "notebooks/github/aymericdamien-TensorFlow-Examples/dcgan.ipynb",
+    "metadata": "notebooks/github/aymericdamien-TensorFlow-Examples/dcgan.toml",
+    "metrics": {
+        "nb_code_cells": 10,
+        "nb_markdown_cells": 2,
+        "dependencies_installation_detected": false,
+        "code_quality": {
+            "pylint_score": {
+                "score": 4.821428571428571,
+                "count_by_severity": {
+                    "convention": 38,
+                    "error": 2,
+                    "fatal": 0,
+                    "info": 0,
+                    "refactor": 5,
+                    "statement": 112,
+                    "warning": 5
+                },
+                "count_by_messages": {
+                    "trailing-whitespace": 12,
+                    "trailing-newlines": 1,
+                    "missing-module-docstring": 1,
+                    "import-error": 2,
+                    "invalid-name": 12,
+                    "wrong-import-position": 2,
+                    "missing-class-docstring": 2,
+                    "super-with-arguments": 2,
+                    "missing-function-docstring": 5,
+                    "too-few-public-methods": 2,
+                    "too-many-instance-attributes": 1,
+                    "redefined-outer-name": 5,
+                    "consider-using-f-string": 2,
+                    "ungrouped-imports": 1
+                }
+            },
+            "mypy_score": {
+                "score": 100,
+                "count_by_severity": {},
+                "count_by_messages": {}
+            }
+        }
+    },
+    "profile": [
+        {
+            "cell_type": "markdown",
+            "nb_lines": 6
+        },
+        {
+            "cell_type": "markdown",
+            "nb_lines": 18
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 5
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 12
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 7
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 3
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 63
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 16
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 35
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 16
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 2
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 20
+        }
+    ]
+}

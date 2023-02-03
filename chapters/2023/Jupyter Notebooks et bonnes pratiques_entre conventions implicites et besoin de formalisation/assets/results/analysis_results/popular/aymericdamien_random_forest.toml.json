@@ -1,0 +1,66 @@
+{
+    "title": "random_forest.toml",
+    "notebook": "notebooks/github/aymericdamien-TensorFlow-Examples/random_forest.ipynb",
+    "metadata": "notebooks/github/aymericdamien-TensorFlow-Examples/random_forest.toml",
+    "metrics": {
+        "nb_code_cells": 5,
+        "nb_markdown_cells": 1,
+        "dependencies_installation_detected": false,
+        "code_quality": {
+            "pylint_score": {
+                "score": 0,
+                "count_by_severity": {
+                    "convention": 11,
+                    "error": 9,
+                    "fatal": 0,
+                    "info": 0,
+                    "refactor": 0,
+                    "statement": 34,
+                    "warning": 0
+                },
+                "count_by_messages": {
+                    "trailing-newlines": 1,
+                    "missing-module-docstring": 1,
+                    "no-name-in-module": 3,
+                    "import-error": 2,
+                    "wrong-import-position": 1,
+                    "invalid-name": 6,
+                    "no-member": 4,
+                    "consider-using-f-string": 1,
+                    "wrong-import-order": 1
+                }
+            },
+            "mypy_score": {
+                "score": 100,
+                "count_by_severity": {},
+                "count_by_messages": {}
+            }
+        }
+    },
+    "profile": [
+        {
+            "cell_type": "markdown",
+            "nb_lines": 8
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 9
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 3
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 18
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 14
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 19
+        }
+    ]
+}

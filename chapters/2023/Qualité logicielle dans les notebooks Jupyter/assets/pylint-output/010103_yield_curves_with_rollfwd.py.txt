@@ -1,0 +1,12 @@
+************* Module 010103_yield_curves_with_rollfwd
+python-scripts\010103_yield_curves_with_rollfwd.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\010103_yield_curves_with_rollfwd.py:1:0: C0103: Module name "010103_yield_curves_with_rollfwd" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\010103_yield_curves_with_rollfwd.py:26:0: C0103: Constant name "ccy" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\010103_yield_curves_with_rollfwd.py:28:58: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\010103_yield_curves_with_rollfwd.py:12:0: C0411: standard import "from datetime import datetime" should be placed before "from gs_quant.session import GsSession, Environment" (wrong-import-order)
+python-scripts\010103_yield_curves_with_rollfwd.py:11:0: W0611: Unused PricingContext imported from gs_quant.markets (unused-import)
+python-scripts\010103_yield_curves_with_rollfwd.py:12:0: W0611: Unused datetime imported from datetime (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 7.50/10 (previous run: 7.50/10, +0.00)
+

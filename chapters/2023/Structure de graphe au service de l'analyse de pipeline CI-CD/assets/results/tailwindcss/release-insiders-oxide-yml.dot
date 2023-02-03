@@ -1,0 +1,14 @@
+digraph {
+	"?" [shape=rect]
+	build [shape=rect]
+	"build-apple-silicon" [shape=rect]
+	"build-linux" [shape=rect]
+	release [shape=rect]
+	tailwind_oxide_release [shape=rect]
+	"?" [color=red fontcolor=red shape=ellipse]
+	"?" -> release [color=orange decorate=false xlabel="??"]
+	build -> release [style=dotted xlabel=""]
+	"build-apple-silicon" -> release [style=dotted xlabel=""]
+	"build-linux" -> release [style=dotted xlabel=""]
+	release -> tailwind_oxide_release [style=dotted xlabel=""]
+}

@@ -1,0 +1,20 @@
+************* Module imagenet_validation
+python-scripts\imagenet_validation.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\imagenet_validation.py:59:0: C0103: Constant name "data_dir" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\imagenet_validation.py:62:0: C0103: Constant name "batch_size" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\imagenet_validation.py:68:0: C0103: Constant name "model_path" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\imagenet_validation.py:117:22: W0212: Access to a protected member _label_shapes of a client class (protected-access)
+python-scripts\imagenet_validation.py:130:0: C0103: Constant name "num_batches" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\imagenet_validation.py:131:6: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\imagenet_validation.py:144:14: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\imagenet_validation.py:155:6: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\imagenet_validation.py:43:0: C0411: standard import "from collections import namedtuple" should be placed before "import matplotlib" (wrong-import-order)
+python-scripts\imagenet_validation.py:44:0: C0411: standard import "import multiprocessing" should be placed before "import matplotlib" (wrong-import-order)
+python-scripts\imagenet_validation.py:45:0: C0412: Imports from package mxnet are not grouped (ungrouped-imports)
+python-scripts\imagenet_validation.py:37:0: W0611: Unused import matplotlib (unused-import)
+python-scripts\imagenet_validation.py:39:0: W0611: Unused numpy imported as np (unused-import)
+python-scripts\imagenet_validation.py:40:0: W0611: Unused nd imported from mxnet (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 6.43/10 (previous run: 6.43/10, +0.00)
+

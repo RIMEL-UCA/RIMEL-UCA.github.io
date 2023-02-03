@@ -1,0 +1,21 @@
+************* Module 0002_past_elections
+python-scripts\0002_past_elections.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\0002_past_elections.py:1:0: C0103: Module name "0002_past_elections" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\0002_past_elections.py:56:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\0002_past_elections.py:56:15: C0103: Argument name "df" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\0002_past_elections.py:56:19: W0613: Unused argument 'y_0' (unused-argument)
+python-scripts\0002_past_elections.py:65:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\0002_past_elections.py:66:4: C0103: Variable name "ax" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\0002_past_elections.py:118:0: C0103: Constant name "time_window" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\0002_past_elections.py:129:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\0002_past_elections.py:142:0: W0104: Statement seems to have no effect (pointless-statement)
+python-scripts\0002_past_elections.py:171:0: C0103: Constant name "threshold" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\0002_past_elections.py:179:0: W0104: Statement seems to have no effect (pointless-statement)
+python-scripts\0002_past_elections.py:186:0: W0104: Statement seems to have no effect (pointless-statement)
+python-scripts\0002_past_elections.py:14:0: C0411: standard import "import datetime" should be placed before "from gs_quant.data import Dataset" (wrong-import-order)
+python-scripts\0002_past_elections.py:18:0: C0412: Imports from package gs_quant are not grouped (ungrouped-imports)
+python-scripts\0002_past_elections.py:9:0: W0611: Unused returns imported from gs_quant.timeseries (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 8.05/10 (previous run: 8.05/10, +0.00)
+

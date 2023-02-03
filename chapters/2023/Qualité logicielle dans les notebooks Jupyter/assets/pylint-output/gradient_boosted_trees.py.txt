@@ -1,0 +1,24 @@
+************* Module gradient_boosted_trees
+python-scripts\gradient_boosted_trees.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\gradient_boosted_trees.py:32:0: C0413: Import "import tensorflow as tf" should be placed at the top of the module (wrong-import-position)
+python-scripts\gradient_boosted_trees.py:33:0: C0413: Import "import numpy as np" should be placed at the top of the module (wrong-import-position)
+python-scripts\gradient_boosted_trees.py:34:0: C0413: Import "import copy" should be placed at the top of the module (wrong-import-position)
+python-scripts\gradient_boosted_trees.py:40:0: C0103: Constant name "num_classes" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\gradient_boosted_trees.py:41:0: C0103: Constant name "num_features" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\gradient_boosted_trees.py:44:0: C0103: Constant name "max_steps" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\gradient_boosted_trees.py:45:0: C0103: Constant name "batch_size" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\gradient_boosted_trees.py:46:0: C0103: Constant name "learning_rate" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\gradient_boosted_trees.py:47:0: C0103: Constant name "l1_regul" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\gradient_boosted_trees.py:48:0: C0103: Constant name "l2_regul" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\gradient_boosted_trees.py:51:0: C0103: Constant name "num_batches_per_layer" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\gradient_boosted_trees.py:52:0: C0103: Constant name "num_trees" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\gradient_boosted_trees.py:53:0: C0103: Constant name "max_depth" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\gradient_boosted_trees.py:59:0: C0413: Import "from tensorflow.keras.datasets import boston_housing" should be placed at the top of the module (wrong-import-position)
+python-scripts\gradient_boosted_trees.py:63:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\gradient_boosted_trees.py:63:20: C0103: Argument name "y" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\gradient_boosted_trees.py:34:0: C0411: standard import "import copy" should be placed before "import tensorflow as tf" (wrong-import-order)
+python-scripts\gradient_boosted_trees.py:33:0: W0611: Unused numpy imported as np (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 5.37/10 (previous run: 5.37/10, +0.00)
+

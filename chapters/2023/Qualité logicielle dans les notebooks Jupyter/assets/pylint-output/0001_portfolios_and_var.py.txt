@@ -1,0 +1,18 @@
+************* Module 0001_portfolios_and_var
+python-scripts\0001_portfolios_and_var.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\0001_portfolios_and_var.py:1:0: C0103: Module name "0001_portfolios_and_var" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\0001_portfolios_and_var.py:20:0: C0413: Import "from gs_quant.session import GsSession" should be placed at the top of the module (wrong-import-position)
+python-scripts\0001_portfolios_and_var.py:62:0: C0413: Import "from gs_quant.datetime.date import business_day_offset" should be placed at the top of the module (wrong-import-position)
+python-scripts\0001_portfolios_and_var.py:63:0: W0404: Reimport 'PricingContext' (imported line 14) (reimported)
+python-scripts\0001_portfolios_and_var.py:63:0: C0413: Import "from gs_quant.markets import CloseMarket, PricingContext, close_market_date" should be placed at the top of the module (wrong-import-position)
+python-scripts\0001_portfolios_and_var.py:64:0: W0404: Reimport 'PnlExplain' (imported line 13) (reimported)
+python-scripts\0001_portfolios_and_var.py:64:0: C0413: Import "from gs_quant.risk import Price, DollarPrice, PnlExplain, Theta, FXDelta, FXGamma, FXVega" should be placed at the top of the module (wrong-import-position)
+python-scripts\0001_portfolios_and_var.py:148:6: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\0001_portfolios_and_var.py:149:6: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\0001_portfolios_and_var.py:9:0: C0411: standard import "import datetime" should be placed before "import pandas as pd" (wrong-import-order)
+python-scripts\0001_portfolios_and_var.py:9:0: W0611: Unused import datetime (unused-import)
+python-scripts\0001_portfolios_and_var.py:64:0: W0611: Unused Price imported from gs_quant.risk (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 7.90/10 (previous run: 7.90/10, +0.00)
+

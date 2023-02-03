@@ -1,0 +1,19 @@
+************* Module imagenet_inference
+python-scripts\imagenet_inference.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\imagenet_inference.py:57:5: W1514: Using open without explicitly specifying an encoding (unspecified-encoding)
+python-scripts\imagenet_inference.py:67:0: C0103: Constant name "model_path" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\imagenet_inference.py:77:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\imagenet_inference.py:92:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\imagenet_inference.py:109:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\imagenet_inference.py:114:13: E1101: Class 'ndarray' has no 'softmax' member (no-member)
+python-scripts\imagenet_inference.py:117:4: C0103: Variable name "a" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\imagenet_inference.py:119:14: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\imagenet_inference.py:135:22: W0212: Access to a protected member _label_shapes of a client class (protected-access)
+python-scripts\imagenet_inference.py:145:0: C0103: Constant name "img_path" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\imagenet_inference.py:37:0: C0411: standard import "from collections import namedtuple" should be placed before "import mxnet as mx" (wrong-import-order)
+python-scripts\imagenet_inference.py:40:0: C0411: standard import "import os" should be placed before "import mxnet as mx" (wrong-import-order)
+python-scripts\imagenet_inference.py:40:0: W0611: Unused import os (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 5.91/10 (previous run: 5.91/10, +0.00)
+

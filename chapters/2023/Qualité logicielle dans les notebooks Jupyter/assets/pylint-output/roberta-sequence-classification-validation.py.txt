@@ -1,0 +1,15 @@
+************* Module roberta-sequence-classification-validation
+python-scripts\roberta-sequence-classification-validation.py:45:0: C0305: Trailing newlines (trailing-newlines)
+python-scripts\roberta-sequence-classification-validation.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\roberta-sequence-classification-validation.py:1:0: C0103: Module name "roberta-sequence-classification-validation" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\roberta-sequence-classification-validation.py:15:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\roberta-sequence-classification-validation.py:27:8: W0621: Redefining name 'train' from outer scope (line 31) (redefined-outer-name)
+python-scripts\roberta-sequence-classification-validation.py:27:15: W0621: Redefining name 'test' from outer scope (line 31) (redefined-outer-name)
+python-scripts\roberta-sequence-classification-validation.py:17:4: C0103: Variable name "X" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\roberta-sequence-classification-validation.py:17:7: C0103: Variable name "y" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\roberta-sequence-classification-validation.py:24:4: R1705: Unnecessary "else" after "return", remove the "else" and de-indent the code inside it (no-else-return)
+python-scripts\roberta-sequence-classification-validation.py:7:0: W0611: Unused import argparse (unused-import)
+
+------------------------------------------------------------------
+Your code has been rated at 4.74/10 (previous run: 4.74/10, +0.00)
+

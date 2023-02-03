@@ -1,0 +1,15 @@
+digraph {
+	"Check out Git repository" [shape=rect]
+	"Use Node.js 16" [shape=rect]
+	"Install CLI tools" [shape=rect]
+	"Install application" [shape=rect]
+	"Execute server tests for each custom configuration" [shape=rect]
+	"Check out Git repository" -> "Install CLI tools" [decorate=false xlabel="package.json"]
+	"Check out Git repository" -> "Install application" [decorate=false xlabel="package.json"]
+	"Check out Git repository" -> "Use Node.js 16" [style=dotted xlabel=""]
+	"Use Node.js 16" -> "Install CLI tools" [style=dashed xlabel=npm]
+	"Use Node.js 16" -> "Install application" [style=dashed xlabel=npm]
+	"Use Node.js 16" -> "Install CLI tools" [style=dotted xlabel=""]
+	"Install CLI tools" -> "Install application" [style=dotted xlabel=""]
+	"Install application" -> "Execute server tests for each custom configuration" [style=dotted xlabel=""]
+}

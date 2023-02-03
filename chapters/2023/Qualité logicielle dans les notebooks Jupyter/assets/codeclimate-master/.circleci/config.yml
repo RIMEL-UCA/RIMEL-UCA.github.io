@@ -1,0 +1,60 @@
+version: 2
+
+init: &init
+  run:
+    name: init
+    command: |
+      echo '. .circleci/shared.bash' >> "$BASH_ENV"
+
+jobs:
+  build_test:
+    environment:
+      CC_TEST_REPORTER_ID: e70e48da820d9d23eeb2f1fd8c25f8691be05af308dd0ffce8d1ca7e48a5f799
+    machine: true
+    steps:
+      - checkout
+      - run:
+          name: Install test reporter
+          command: |
+            curl -L -o "cc-test-reporter" "https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64"
+            sudo chmod +x ./cc-test-reporter
+      - run: make image
+      - run: make citest
+
+  publish:
+    machine: true
+    steps:
+      - checkout
+      - *init
+      - run:
+          name: Install Hub dependency
+          command: install_hub
+      - run:
+          name: Login on Dockerhub
+          command: login_to_dockerhub
+      - run:
+          name: Login on RubyGems
+          command: login_to_rubygems
+      - run:
+          name: Publish new version
+          command: |
+            if [ `git diff --quiet HEAD~ VERSION; echo $?` -eq 1 ]; then
+              publish_new_version
+            fi
+
+workflows:
+  version: 2
+  build_test:
+    jobs:
+      - build_test
+      - publish:
+          requires:
+            - build_test
+          filters:
+            branches:
+              only:
+                - master
+
+notify:
+  webhooks:
+    - url: https://cc-slack-proxy.herokuapp.com/circle

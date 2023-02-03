@@ -1,0 +1,221 @@
+name: microsoft/vscode - author-verified.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/vscode - bad-tag.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/vscode - basic.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+  - actions/setup-node@v3 ; utd: True
+  - actions/cache@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/vscode - ci.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+  - actions/setup-node@v3 ; utd: True
+  - actions/setup-python@v4 ; utd: True
+  - actions/cache@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/vscode - deep-classifier-assign-monitor.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/vscode - deep-classifier-runner.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+  - actions/setup-python@v4 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/vscode - deep-classifier-scraper.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/vscode - deep-classifier-unassign-monitor.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/vscode - devcontainer-cache.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+  - azure/login@92a5484dfaf04ca78a94597f4f19fea633851fa2 ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/vscode - english-please.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/vscode - feature-request.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/vscode - latest-release-monitor.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/vscode - locker.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/vscode - monaco-editor.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+  - actions/setup-node@v3 ; utd: True
+  - actions/cache@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/vscode - needs-more-info-closer.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/vscode - no-yarn-lock-changes.yml
+
+Type: GITHUB
+Type: INTERNAL
+Type: PUBLIC
+  - octokit/request-action@v2.x ; utd: False
+  - trilom/file-changes-action@ce38c8ce2459ca3c303415eec8cb0409857b4272 ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/vscode - on-comment.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/vscode - on-label.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/vscode - on-open.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/vscode - release-pipeline-labeler.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/vscode - rich-navigation.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+  - actions/cache@v3 ; utd: True
+  - actions/setup-node@v3 ; utd: True
+Type: INTERNAL
+  - microsoft/RichCodeNavIndexer@v0.1 ; utd: False
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/vscode - telemetry.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+  - actions/setup-node@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/vscode - test-plan-item-validator.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+

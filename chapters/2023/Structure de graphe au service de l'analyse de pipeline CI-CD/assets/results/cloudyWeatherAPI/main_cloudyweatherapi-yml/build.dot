@@ -1,0 +1,15 @@
+digraph {
+	"actions/checkout@v2" [shape=rect]
+	"Set up .NET Core" [shape=rect]
+	"Build with dotnet" [shape=rect]
+	"dotnet publish" [shape=rect]
+	"Upload artifact for deployment job" [shape=rect]
+	"?" [shape=rect]
+	"?" [color=red fontcolor=red shape=ellipse]
+	"actions/checkout@v2" -> "Set up .NET Core" [style=dotted xlabel=""]
+	"Set up .NET Core" -> "Build with dotnet" [style=dotted xlabel=""]
+	"Build with dotnet" -> "dotnet publish" [style=dotted xlabel=""]
+	"dotnet publish" -> "Upload artifact for deployment job" [style=dotted xlabel=""]
+	"?" -> "Build with dotnet" [color=red fontcolor=red style=dashed xlabel="Unknown method \"dotnet\""]
+	"?" -> "dotnet publish" [color=red fontcolor=red style=dashed xlabel="Unknown method \"dotnet\""]
+}

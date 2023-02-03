@@ -1,0 +1,509 @@
+2022.12.18 00:42:00 INFO  web[][o.s.p.ProcessEntryPoint] Starting Web Server
+2022.12.18 00:42:01 INFO  web[][o.s.s.p.LogServerVersion] SonarQube Server / 9.7.1.62043 / 13c69ab992096c497badccbdb4a31110594574fd
+2022.12.18 00:42:01 INFO  web[][o.s.s.p.d.EmbeddedDatabase] Starting embedded database on port 9092 with url jdbc:h2:tcp://127.0.0.1:9092/sonar;NON_KEYWORDS=VALUE
+2022.12.18 00:42:01 INFO  web[][o.s.s.p.d.EmbeddedDatabase] Embedded database started. Data stored in: /opt/sonarqube/data
+2022.12.18 00:42:01 INFO  web[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar;NON_KEYWORDS=VALUE
+2022.12.18 00:42:01 INFO  web[][c.z.h.HikariDataSource] HikariPool-1 - Starting...
+2022.12.18 00:42:01 INFO  web[][c.z.h.p.HikariPool] HikariPool-1 - Added connection conn2: url=jdbc:h2:tcp://127.0.0.1:9092/sonar user=
+2022.12.18 00:42:01 INFO  web[][c.z.h.HikariDataSource] HikariPool-1 - Start completed.
+2022.12.18 00:42:01 WARN  web[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2022.12.18 00:42:02 INFO  web[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /opt/sonarqube
+2022.12.18 00:42:02 INFO  web[][o.s.s.u.SystemPasscodeImpl] System authentication by passcode is disabled
+2022.12.18 00:42:02 INFO  web[][o.s.s.p.d.m.h.MigrationHistoryTableImpl] Creating table schema_migrations
+2022.12.18 00:42:03 INFO  web[][o.s.s.p.ServerPluginManager] Deploy C# Code Quality and Security / 8.46.0.54807 / a9f10bf0c980dd16d428c08c7a984e2205a512df
+2022.12.18 00:42:03 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Configuration detection fot Code Quality and Security / 1.2.0.267 / 4f37ba9ffb37a96d5883e52ad392ed32c5c6eaab
+2022.12.18 00:42:03 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Flex Code Quality and Security / 2.7.0.2865 / 9e61d9774455b25eefd0b71bf8903cb030641864
+2022.12.18 00:42:03 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Go Code Quality and Security / 1.11.0.3905 / e1f28bc000e04ca01881e84218d01d464a17a36f
+2022.12.18 00:42:03 INFO  web[][o.s.s.p.ServerPluginManager] Deploy HTML Code Quality and Security / 3.6.0.3106 / 963bdc9f051f5dcb698b418790364231aeea04f2
+2022.12.18 00:42:03 INFO  web[][o.s.s.p.ServerPluginManager] Deploy IaC Code Quality and Security / 1.9.2.2279 / f946157f4bbec5a6a1d40cf3418a0360c8c9c1f6
+2022.12.18 00:42:03 INFO  web[][o.s.s.p.ServerPluginManager] Deploy JaCoCo / 1.1.1.1157 / 83478572b9f23efac29de15e30c7758bbb0c0e47
+2022.12.18 00:42:03 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Java Code Quality and Security / 7.14.0.30229 / 9079835c8f5e43cef40516cc49073e01bb8ad6e6
+2022.12.18 00:42:03 INFO  web[][o.s.s.p.ServerPluginManager] Deploy JavaScript/TypeScript/CSS Code Quality and Security / 9.9.0.19492 / e6156f1886415bd21e0726eb92f61d5605187a29
+2022.12.18 00:42:03 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Kotlin Code Quality and Security / 2.10.0.1456 / 187f0a9c30ba26886ee5975df23e2f31de86a8c1
+2022.12.18 00:42:03 INFO  web[][o.s.s.p.ServerPluginManager] Deploy PHP Code Quality and Security / 3.25.0.9077 / 62146fca3dce550eb1dde73881a14c7af4988269
+2022.12.18 00:42:03 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Python Code Quality and Security / 3.19.0.10254 / 411866233dc7e1f384592447884d27e220cb00ec
+2022.12.18 00:42:03 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Ruby Code Quality and Security / 1.11.0.3905 / e1f28bc000e04ca01881e84218d01d464a17a36f
+2022.12.18 00:42:03 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Scala Code Quality and Security / 1.11.0.3905 / e1f28bc000e04ca01881e84218d01d464a17a36f
+2022.12.18 00:42:03 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Text file Code Quality and Security / 1.1.0.282 / a90347d77706f598413780a08442deec4ae68f4e
+2022.12.18 00:42:03 INFO  web[][o.s.s.p.ServerPluginManager] Deploy VB.NET Code Quality and Security / 8.46.0.54807 / a9f10bf0c980dd16d428c08c7a984e2205a512df
+2022.12.18 00:42:03 INFO  web[][o.s.s.p.ServerPluginManager] Deploy XML Code Quality and Security / 2.6.1.3686 / 8935c6f8341cd50defba2d8245d91dc4d07e24d0
+2022.12.18 00:42:33 INFO  web[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [http://localhost:9001]
+2022.12.18 00:42:33 WARN  web[][o.s.a.s.w.WebService$Action] Description is not set on action api/monitoring/metrics
+2022.12.18 00:42:33 WARN  web[][o.s.a.s.w.WebService$Action] Since is not set on action api/monitoring/metrics
+2022.12.18 00:42:33 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/monitoring/metrics
+2022.12.18 00:42:33 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/system/liveness
+2022.12.18 00:42:33 INFO  web[][o.s.s.p.d.m.AutoDbMigration] Automatically perform DB migration on fresh install
+2022.12.18 00:42:33 INFO  web[][DbMigrations] Executing DB migrations...
+2022.12.18 00:42:33 INFO  web[][DbMigrations] #1 'Create initial schema'...
+2022.12.18 00:42:33 INFO  web[][DbMigrations] #1 'Create initial schema': success | time=207ms
+2022.12.18 00:42:33 INFO  web[][DbMigrations] #2 'Populate initial schema'...
+2022.12.18 00:42:33 INFO  web[][DbMigrations] #2 'Populate initial schema': success | time=39ms
+2022.12.18 00:42:33 INFO  web[][DbMigrations] #5001 'Drop PK on 'uuid' for 'ce_activity' table'...
+2022.12.18 00:42:33 INFO  web[][DbMigrations] #5001 'Drop PK on 'uuid' for 'ce_activity' table': success | time=3ms
+2022.12.18 00:42:33 INFO  web[][DbMigrations] #5002 'Drop 'ce_activity_uuid' index'...
+2022.12.18 00:42:33 INFO  web[][DbMigrations] #5002 'Drop 'ce_activity_uuid' index': success | time=5ms
+2022.12.18 00:42:33 INFO  web[][DbMigrations] #5003 'Recreate PK on 'uuid' for 'ce_activity' table'...
+2022.12.18 00:42:33 INFO  web[][DbMigrations] #5003 'Recreate PK on 'uuid' for 'ce_activity' table': success | time=6ms
+2022.12.18 00:42:33 INFO  web[][DbMigrations] #5004 'Drop PK on 'uuid' for 'events' table'...
+2022.12.18 00:42:33 INFO  web[][DbMigrations] #5004 'Drop PK on 'uuid' for 'events' table': success | time=4ms
+2022.12.18 00:42:33 INFO  web[][DbMigrations] #5005 'Drop 'events_uuid' index'...
+2022.12.18 00:42:33 INFO  web[][DbMigrations] #5005 'Drop 'events_uuid' index': success | time=2ms
+2022.12.18 00:42:33 INFO  web[][DbMigrations] #5006 'Recreate PK on 'uuid' for 'events' table'...
+2022.12.18 00:42:33 INFO  web[][DbMigrations] #5006 'Recreate PK on 'uuid' for 'events' table': success | time=3ms
+2022.12.18 00:42:33 INFO  web[][DbMigrations] #5007 'Drop PK on 'kee' for 'issues' table'...
+2022.12.18 00:42:33 INFO  web[][DbMigrations] #5007 'Drop PK on 'kee' for 'issues' table': success | time=1ms
+2022.12.18 00:42:33 INFO  web[][DbMigrations] #5008 'Drop 'issues_kee' index'...
+2022.12.18 00:42:33 INFO  web[][DbMigrations] #5008 'Drop 'issues_kee' index': success | time=2ms
+2022.12.18 00:42:33 INFO  web[][DbMigrations] #5009 'Recreate PK on 'kee' for 'issues' table'...
+2022.12.18 00:42:33 INFO  web[][DbMigrations] #5009 'Recreate PK on 'kee' for 'issues' table': success | time=2ms
+2022.12.18 00:42:33 INFO  web[][DbMigrations] #5010 'Drop PK on 'kee' for 'snapshots' table'...
+2022.12.18 00:42:33 INFO  web[][DbMigrations] #5010 'Drop PK on 'kee' for 'snapshots' table': success | time=3ms
+2022.12.18 00:42:33 INFO  web[][DbMigrations] #5011 'Drop 'analyses_uuid' index'...
+2022.12.18 00:42:33 INFO  web[][DbMigrations] #5011 'Drop 'analyses_uuid' index': success | time=2ms
+2022.12.18 00:42:33 INFO  web[][DbMigrations] #5012 'Recreate PK on 'kee' for 'snapshots' table'...
+2022.12.18 00:42:33 INFO  web[][DbMigrations] #5012 'Recreate PK on 'kee' for 'snapshots' table': success | time=4ms
+2022.12.18 00:42:33 INFO  web[][DbMigrations] #6001 'Drop 'manual_measures_component_uuid' index'...
+2022.12.18 00:42:33 INFO  web[][DbMigrations] #6001 'Drop 'manual_measures_component_uuid' index': success | time=3ms
+2022.12.18 00:42:33 INFO  web[][DbMigrations] #6002 'Drop 'manual_measures' table'...
+2022.12.18 00:42:33 INFO  web[][DbMigrations] #6002 'Drop 'manual_measures' table': success | time=8ms
+2022.12.18 00:42:33 INFO  web[][DbMigrations] #6003 'Drop custom metrics data from 'live_measures' table'...
+2022.12.18 00:42:34 INFO  web[][o.s.s.p.d.m.s.MassUpdate] 0 rows processed (0 items/sec)
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6003 'Drop custom metrics data from 'live_measures' table': success | time=16ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6004 'Drop custom metrics data from 'project_measures' table'...
+2022.12.18 00:42:34 INFO  web[][o.s.s.p.d.m.s.MassUpdate] 0 rows processed (0 items/sec)
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6004 'Drop custom metrics data from 'project_measures' table': success | time=11ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6005 'Drop custom metrics data from 'metrics' table'...
+2022.12.18 00:42:34 INFO  web[][o.s.s.p.d.m.s.MassUpdate] 0 rows processed (0 items/sec)
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6005 'Drop custom metrics data from 'metrics' table': success | time=7ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6006 'Drop 'user_managed' column from 'metrics' table'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6006 'Drop 'user_managed' column from 'metrics' table': success | time=11ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6007 'Create Audit table'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6007 'Create Audit table': success | time=7ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6008 'Add column 'removed' to 'plugins' table'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6008 'Add column 'removed' to 'plugins' table': success | time=10ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6009 'Alter column 'client_secret' of 'alm_settings' table to length 160'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6009 'Alter column 'client_secret' of 'alm_settings' table to length 160': success | time=7ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6010 'Alter column 'private_key' of 'alm_settings' table to length 2500'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6010 'Alter column 'private_key' of 'alm_settings' table to length 2500': success | time=2ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6011 'Create 'portfolios' table'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6011 'Create 'portfolios' table': success | time=5ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6012 'Create unique index for 'kee' in 'portfolios''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6012 'Create unique index for 'kee' in 'portfolios'': success | time=5ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6013 'Create 'portfolio_references' table'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6013 'Create 'portfolio_references' table': success | time=3ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6014 'Create unique index for 'portfolio_references''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6014 'Create unique index for 'portfolio_references'': success | time=3ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6015 'Create 'portfolio_projects' table'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6015 'Create 'portfolio_projects' table': success | time=6ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6016 'Create unique index for 'portfolio_projects''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6016 'Create unique index for 'portfolio_projects'': success | time=4ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6017 'Migrate portfolios to new tables'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6017 'Migrate portfolios to new tables': success | time=3ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6018 'Create index for 'issue_changes' on 'issue_key' and 'change_type''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6018 'Create index for 'issue_changes' on 'issue_key' and 'change_type'': success | time=4ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6019 'Remove SVN related properties'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6019 'Remove SVN related properties': success | time=6ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6101 'Change size of column 'selection_expression' in 'Portfolios''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6101 'Change size of column 'selection_expression' in 'Portfolios'': success | time=3ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6102 'Migrate Bitbucket.org authentication plugin settings to built-in authentication settings'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6102 'Migrate Bitbucket.org authentication plugin settings to built-in authentication settings': success | time=7ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6103 'Create column quick_fix_available in 'issues''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6103 'Create column quick_fix_available in 'issues'': success | time=9ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6104 'Create qgate_user_permissions Table'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6104 'Create qgate_user_permissions Table': success | time=4ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6105 'Create qgate_group_permissions Table'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6105 'Create qgate_group_permissions Table': success | time=4ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6106 'Create column sonarlint_ad_seen in 'users''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6106 'Create column sonarlint_ad_seen in 'users'': success | time=8ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6107 'Upsert value of sonarlint_ad_seen in 'users''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6107 'Upsert value of sonarlint_ad_seen in 'users'': success | time=3ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6108 'Change size of column 'kee' in 'components''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6108 'Change size of column 'kee' in 'components'': success | time=1ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6109 'Create table 'portfolio_proj_branches''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6109 'Create table 'portfolio_proj_branches'': success | time=3ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6110 'Add column 'branch_key' to table 'portfolios''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6110 'Add column 'branch_key' to table 'portfolios'': success | time=6ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6111 'Change size of column 'kee' in 'components''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6111 'Change size of column 'kee' in 'components'': success | time=2ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6112 'Create 'project_badge_token' Table'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6112 'Create 'project_badge_token' Table': success | time=4ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6113 'Deprecate quality profile 'Sonar way Recommended' for js and ts'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6113 'Deprecate quality profile 'Sonar way Recommended' for js and ts': success | time=8ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6114 'Drop the 'sonar.lf.aboutText' property value'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6114 'Drop the 'sonar.lf.aboutText' property value': success | time=2ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6201 'Fix usage of deprecated column in MSSQL'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6201 'Fix usage of deprecated column in MSSQL': success | time=3ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6202 'Drop index 'uniq_portfolio_references''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6202 'Drop index 'uniq_portfolio_references'': success | time=3ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6203 'Add column 'branch_uuid' to 'portfolio_references''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6203 'Add column 'branch_uuid' to 'portfolio_references'': success | time=5ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6204 'Create index 'uniq_portfolio_references''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6204 'Create index 'uniq_portfolio_references'': success | time=4ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6205 'Create table 'new_code_reference_branch_issues''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6205 'Create table 'new_code_reference_branch_issues'': success | time=3ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6206 'Create index 'uniq_new_code_reference_issues''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6206 'Create index 'uniq_new_code_reference_issues'': success | time=2ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6301 'Drop unused Issues Column REPORTER'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6301 'Drop unused Issues Column REPORTER': success | time=10ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6302 'Drop unused Issues Column ACTION_PLAN_KEY'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6302 'Drop unused Issues Column ACTION_PLAN_KEY': success | time=9ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6303 'Drop unused Issues Column ISSUE_ATTRIBUTES'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6303 'Drop unused Issues Column ISSUE_ATTRIBUTES': success | time=11ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6304 'Create table 'SCANNER_ANALYSIS_CACHE'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6304 'Create table 'SCANNER_ANALYSIS_CACHE': success | time=5ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6305 'Issue warning for users using SHA1 hash method'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6305 'Issue warning for users using SHA1 hash method': success | time=4ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6306 'Drop table 'user_properties''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6306 'Drop table 'user_properties'': success | time=3ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6401 'Add column 'project_key' to 'user_tokens''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6401 'Add column 'project_key' to 'user_tokens'': success | time=7ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6402 'Add column 'type' to 'user_tokens''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6402 'Add column 'type' to 'user_tokens'': success | time=6ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6403 'Upsert value of type in 'user_tokens''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6403 'Upsert value of type in 'user_tokens'': success | time=3ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6404 'Make column 'type' in 'user_tokens' not nullable'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6404 'Make column 'type' in 'user_tokens' not nullable': success | time=7ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6405 'Create table RULE_DESC_SECTIONS'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6405 'Create table RULE_DESC_SECTIONS': success | time=3ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6406 'Insert description from RULES into RULE_DESC_SECTIONS'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6406 'Insert description from RULES into RULE_DESC_SECTIONS': success | time=4ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6407 'Create index for RULE_DESC_SECTIONS'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6407 'Create index for RULE_DESC_SECTIONS': success | time=3ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6408 'Drop column DESCRIPTIONS from RULES table'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6408 'Drop column DESCRIPTIONS from RULES table': success | time=5ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6409 'Drop column CREATED_AT from RULES_METADATA table'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6409 'Drop column CREATED_AT from RULES_METADATA table': success | time=5ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6410 'Drop column UPDATED_AT from RULES_METADATA table'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6410 'Drop column UPDATED_AT from RULES_METADATA table': success | time=6ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6411 'Overwrite plugin file hash to force reloading rules'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6411 'Overwrite plugin file hash to force reloading rules': success | time=4ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6412 'Add rules_metadata columns to rules table'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6412 'Add rules_metadata columns to rules table': success | time=52ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6413 'Populate rules metadata in rules table'...
+2022.12.18 00:42:34 INFO  web[][o.s.s.p.d.m.s.MassUpdate] 0 rows processed (0 items/sec)
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6413 'Populate rules metadata in rules table': success | time=8ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6414 'Drop rules_metadata table'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6414 'Drop rules_metadata table': success | time=4ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6415 'Migrate hotspot rule descriptions'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6415 'Migrate hotspot rule descriptions': success | time=6ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6416 'Remove onboarded column from User table'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6416 'Remove onboarded column from User table': success | time=10ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6417 'Add column 'user_triggered' to 'audits''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6417 'Add column 'user_triggered' to 'audits'': success | time=8ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6418 'Upsert value of 'user_triggered' in 'audits''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6418 'Upsert value of 'user_triggered' in 'audits'': success | time=4ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6500 'remove root column from users table'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6500 'remove root column from users table': success | time=10ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6501 'Add columns 'context_key' and 'context_display_name' into rule_desc_sections'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6501 'Add columns 'context_key' and 'context_display_name' into rule_desc_sections': success | time=7ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6502 'Drop unique index uniq_rule_desc_sections_kee'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6502 'Drop unique index uniq_rule_desc_sections_kee': success | time=3ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6503 'Create unique uniq_rule_desc_sections'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6503 'Create unique uniq_rule_desc_sections': success | time=2ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6504 'Add column 'expiration_date' to 'user_tokens''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6504 'Add column 'expiration_date' to 'user_tokens'': success | time=5ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6505 'Add column 'rule_description_context_key' to 'issues''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6505 'Add column 'rule_description_context_key' to 'issues'': success | time=11ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6506 'Add column 'education_principles' to 'rules''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6506 'Add column 'education_principles' to 'rules'': success | time=8ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6507 'Overwrite plugin file hash to force reloading rules'...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6507 'Overwrite plugin file hash to force reloading rules': success | time=5ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6508 'Migrate 'sonarlint_ad_seen' from users to properties'...
+2022.12.18 00:42:34 INFO  web[][o.s.s.p.d.m.s.MassUpdate] 0 rows processed (0 items/sec)
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6508 'Migrate 'sonarlint_ad_seen' from users to properties': success | time=9ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6509 'Drop column sonarlint_ad_seen in 'users''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6509 'Drop column sonarlint_ad_seen in 'users'': success | time=9ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6510 'Create table 'push_events''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6510 'Create table 'push_events'': success | time=4ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6511 'Create index 'idx_push_even_crea_uuid_proj' on 'push_events''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6511 'Create index 'idx_push_even_crea_uuid_proj' on 'push_events'': success | time=3ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6512 'Add column 'language' to 'push_events''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6512 'Add column 'language' to 'push_events'': success | time=4ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6513 'Delete duplicated rows in 'project_badge_token''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6513 'Delete duplicated rows in 'project_badge_token'': success | time=3ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6514 'Add unique index on 'project_uuid' in 'project_badge_token''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6514 'Add unique index on 'project_uuid' in 'project_badge_token'': success | time=4ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6600 'Add column 'webhook_secret' to 'alm_settings''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6600 'Add column 'webhook_secret' to 'alm_settings'': success | time=4ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6601 'Drop non unique index on 'uuid' in 'components''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6601 'Drop non unique index on 'uuid' in 'components'': success | time=3ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6602 'Add unique index on 'uuid' in 'components''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6602 'Add unique index on 'uuid' in 'components'': success | time=5ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6603 'Drop index for 'project_uuid' in 'components''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6603 'Drop index for 'project_uuid' in 'components'': success | time=3ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6604 'Rename column 'project_uuid' to 'branch_uuid' in 'components''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6604 'Rename column 'project_uuid' to 'branch_uuid' in 'components'': success | time=13ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6605 'Create index for 'branch_uuid' in 'components''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6605 'Create index for 'branch_uuid' in 'components'': success | time=2ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6606 'Drop index for 'kee' in 'components''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6606 'Drop index for 'kee' in 'components'': success | time=3ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6607 'Fix copy component UUID'...
+2022.12.18 00:42:34 INFO  web[][o.s.s.p.d.m.s.MassUpdate] 0 rows processed (0 items/sec)
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6607 'Fix copy component UUID': success | time=6ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6608 'Remove branch information from 'kee' in 'components''...
+2022.12.18 00:42:34 INFO  web[][o.s.s.p.d.m.s.MassUpdate] 0 rows processed (0 items/sec)
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6608 'Remove branch information from 'kee' in 'components'': success | time=129ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6609 'Add unique index on 'kee','branch_uuid' in 'components''...
+2022.12.18 00:42:34 INFO  web[][DbMigrations] #6609 'Add unique index on 'kee','branch_uuid' in 'components'': success | time=3ms
+2022.12.18 00:42:34 INFO  web[][DbMigrations] Executed DB migrations: success | time=1092ms
+2022.12.18 00:42:34 INFO  web[][o.s.s.p.Platform] Database has been automatically updated
+2022.12.18 00:42:34 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.WebServiceFilter@10bdfbcc [pattern=UrlPattern{inclusions=[/api/system/migrate_db.*, ...], exclusions=[/api/components/update_key, ...]}]
+2022.12.18 00:42:34 INFO  web[][o.s.s.p.DetectPluginChange] Detect plugin changes
+2022.12.18 00:42:34 INFO  web[][o.s.s.a.EmbeddedTomcat] HTTP connector enabled on port 9000
+2022.12.18 00:42:36 INFO  web[][o.s.s.e.IndexCreator] Create index [metadatas]
+2022.12.18 00:42:37 INFO  web[][o.s.s.e.IndexCreator] Create type metadatas/metadata
+2022.12.18 00:42:37 INFO  web[][o.s.s.e.IndexCreator] Create index [components]
+2022.12.18 00:42:39 INFO  web[][o.s.s.e.IndexCreator] Create type components/auth
+2022.12.18 00:42:40 INFO  web[][o.s.s.e.IndexCreator] Create index [projectmeasures]
+2022.12.18 00:42:42 INFO  web[][o.s.s.e.IndexCreator] Create type projectmeasures/auth
+2022.12.18 00:42:42 INFO  web[][o.s.s.e.IndexCreator] Create index [rules]
+2022.12.18 00:42:43 INFO  web[][o.s.s.e.IndexCreator] Create type rules/rule
+2022.12.18 00:42:43 INFO  web[][o.s.s.e.IndexCreator] Create index [issues]
+2022.12.18 00:42:45 INFO  web[][o.s.s.e.IndexCreator] Create type issues/auth
+2022.12.18 00:42:45 INFO  web[][o.s.s.e.IndexCreator] Create index [users]
+2022.12.18 00:42:46 INFO  web[][o.s.s.e.IndexCreator] Create type users/user
+2022.12.18 00:42:46 INFO  web[][o.s.s.e.IndexCreator] Create index [views]
+2022.12.18 00:42:48 INFO  web[][o.s.s.e.IndexCreator] Create type views/view
+2022.12.18 00:42:48 INFO  web[][o.s.s.s.LogServerId] Server ID: 147B411E-AYUirrwOLL9WsZf1t_Wq
+2022.12.18 00:42:48 WARN  web[][o.s.s.a.LogOAuthWarning] For security reasons, OAuth authentication should use HTTPS. You should set the property 'Administration > Configuration > Server base URL' to a HTTPS URL.
+2022.12.18 00:42:48 INFO  web[][o.s.s.p.UpdateCenterClient] Update center: https://update.sonarsource.org/update-center.properties (no proxy)
+2022.12.18 00:42:49 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action saml/validation_init
+2022.12.18 00:42:50 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/system/liveness
+2022.12.18 00:42:50 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/plugins/download
+2022.12.18 00:42:50 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/analysis_cache/get
+2022.12.18 00:42:50 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_integrations/check_pat
+2022.12.18 00:42:50 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/push/sonarlint_events
+2022.12.18 00:42:50 INFO  web[][o.s.s.a.p.ExpiredSessionsCleaner] Purge of expired session tokens has removed 0 elements
+2022.12.18 00:42:50 INFO  web[][o.s.s.a.p.ExpiredSessionsCleaner] Purge of expired SAML message ids has removed 0 elements
+2022.12.18 00:42:50 INFO  web[][o.s.s.n.NotificationDaemon] Notification service started (delay 60 sec.)
+2022.12.18 00:42:50 INFO  web[][o.s.s.t.TelemetryDaemon] Sharing of SonarQube statistics is enabled.
+2022.12.18 00:42:50 INFO  web[][o.s.s.s.GeneratePluginIndex] Generate scanner plugin index
+2022.12.18 00:42:50 INFO  web[][o.s.s.s.RegisterMetrics] Register metrics
+2022.12.18 00:42:50 INFO  web[][o.s.s.q.RegisterQualityGates] Built-in quality gate's conditions of [Sonar way] has been updated
+2022.12.18 00:42:50 INFO  web[][o.s.s.r.RegisterRules] Register rules
+2022.12.18 00:43:16 INFO  web[][o.s.s.q.b.BuiltInQProfileRepositoryImpl] Load quality profiles
+2022.12.18 00:43:16 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register quality profiles
+2022.12.18 00:43:16 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile kubernetes/Sonar way
+2022.12.18 00:43:16 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile css/Sonar way
+2022.12.18 00:43:16 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile scala/Sonar way
+2022.12.18 00:43:16 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile jsp/Sonar way
+2022.12.18 00:43:16 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile kotlin/Sonar way
+2022.12.18 00:43:16 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile go/Sonar way
+2022.12.18 00:43:16 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile js/Sonar way
+2022.12.18 00:43:17 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile py/Sonar way
+2022.12.18 00:43:17 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile ruby/Sonar way
+2022.12.18 00:43:17 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile cs/Sonar way
+2022.12.18 00:43:17 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile java/Sonar way
+2022.12.18 00:43:18 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile web/Sonar way
+2022.12.18 00:43:18 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile flex/Sonar way
+2022.12.18 00:43:18 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile xml/Sonar way
+2022.12.18 00:43:18 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile json/Sonar way
+2022.12.18 00:43:18 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile php/Sonar way
+2022.12.18 00:43:19 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile terraform/Sonar way
+2022.12.18 00:43:19 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile text/Sonar way
+2022.12.18 00:43:19 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile vbnet/Sonar way
+2022.12.18 00:43:19 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile cloudformation/Sonar way
+2022.12.18 00:43:19 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile yaml/Sonar way
+2022.12.18 00:43:19 INFO  web[][o.s.s.q.RegisterQualityProfiles] Register profile ts/Sonar way
+2022.12.18 00:43:19 INFO  web[][o.s.s.s.RegisterPermissionTemplates] Register permission templates
+2022.12.18 00:43:19 INFO  web[][o.s.s.s.RenameDeprecatedPropertyKeys] Rename deprecated property keys
+2022.12.18 00:43:19 INFO  web[][o.s.s.s.RegisterPlugins] Register plugins
+2022.12.18 00:43:19 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.SonarLintConnectionFilter@51811b7f [pattern=UrlPattern{inclusions=[/api/*], exclusions=[]}]
+2022.12.18 00:43:19 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.WebServiceFilter@278692b7 [pattern=UrlPattern{inclusions=[/api/issues/delete_comment.*, ...], exclusions=[/api/authentication/login.*, ...]}]
+2022.12.18 00:43:19 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.WebServiceReroutingFilter@100c2855 [pattern=UrlPattern{inclusions=[/api/components/bulk_update_key, ...], exclusions=[]}]
+2022.12.18 00:43:19 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.DefaultAdminCredentialsVerifierFilter@6b3795f0 [pattern=UrlPattern{inclusions=[/*], exclusions=[*.css, ...]}]
+2022.12.18 00:43:19 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.InitFilter@3234310a [pattern=UrlPattern{inclusions=[/sessions/init/*], exclusions=[]}]
+2022.12.18 00:43:19 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.SamlValidationRedirectionFilter@21341ed1 [pattern=UrlPattern{inclusions=[/oauth2/callback/saml], exclusions=[]}]
+2022.12.18 00:43:19 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.OAuth2CallbackFilter@500bc422 [pattern=UrlPattern{inclusions=[/oauth2/callback/*], exclusions=[]}]
+2022.12.18 00:43:19 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ResetPasswordFilter@7c453c6 [pattern=UrlPattern{inclusions=[/*], exclusions=[*.css, ...]}]
+2022.12.18 00:43:19 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ws.LoginAction@38824f24 [pattern=UrlPattern{inclusions=[/api/authentication/login], exclusions=[]}]
+2022.12.18 00:43:19 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ws.LogoutAction@6311c1f3 [pattern=UrlPattern{inclusions=[/api/authentication/logout], exclusions=[]}]
+2022.12.18 00:43:19 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ws.ValidateAction@6d6ed455 [pattern=UrlPattern{inclusions=[/api/authentication/validate], exclusions=[]}]
+2022.12.18 00:43:19 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.saml.ws.ValidationInitAction@4480f91 [pattern=UrlPattern{inclusions=[/saml/validation_init], exclusions=[]}]
+2022.12.18 00:43:19 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.saml.ws.ValidationAction@2829bfa [pattern=UrlPattern{inclusions=[/saml/validation], exclusions=[]}]
+2022.12.18 00:43:19 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.user.ws.ChangePasswordAction@146b9e55 [pattern=UrlPattern{inclusions=[/api/users/change_password], exclusions=[]}]
+2022.12.18 00:43:19 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.plugins.PluginsRiskConsentFilter@15a8d89f [pattern=UrlPattern{inclusions=[/*], exclusions=[*.css, ...]}]
+2022.12.18 00:43:19 INFO  web[][o.s.s.e.IndexerStartupTask] Indexing of type [users/user]...
+2022.12.18 00:43:20 INFO  web[][o.s.s.e.IndexerStartupTask] Indexing of type [users/user] done | time=624ms
+2022.12.18 00:43:20 INFO  web[][o.s.s.e.IndexerStartupTask] Indexing of type [projectmeasures/auth/projectmeasure]...
+2022.12.18 00:43:20 INFO  web[][o.s.s.e.IndexerStartupTask] Indexing of type [projectmeasures/auth/projectmeasure] done | time=197ms
+2022.12.18 00:43:20 INFO  web[][o.s.s.e.IndexerStartupTask] Indexing of type [components/auth/component]...
+2022.12.18 00:43:20 INFO  web[][o.s.s.e.IndexerStartupTask] Indexing of type [components/auth/component] done | time=140ms
+2022.12.18 00:43:20 INFO  web[][o.s.s.e.IndexerStartupTask] Indexing of type [views/view]...
+2022.12.18 00:43:21 INFO  web[][o.s.s.e.IndexerStartupTask] Indexing of type [views/view] done | time=390ms
+2022.12.18 00:43:21 INFO  web[][o.s.s.e.IndexerStartupTask] Trigger asynchronous indexing of type [issues/auth/issue]...
+2022.12.18 00:43:21 INFO  web[][o.s.s.i.i.AsyncIssueIndexingImpl] 0 pending indexation task found to be deleted...
+2022.12.18 00:43:21 INFO  web[][o.s.s.i.i.AsyncIssueIndexingImpl] 0 completed indexation task found to be deleted...
+2022.12.18 00:43:21 INFO  web[][o.s.s.i.i.AsyncIssueIndexingImpl] Indexation task deletion complete.
+2022.12.18 00:43:21 INFO  web[][o.s.s.i.i.AsyncIssueIndexingImpl] Deleting tasks characteristics...
+2022.12.18 00:43:21 INFO  web[][o.s.s.i.i.AsyncIssueIndexingImpl] Tasks characteristics deletion complete.
+2022.12.18 00:43:21 INFO  web[][o.s.s.i.i.AsyncIssueIndexingImpl] 0 branch found in need of issue sync.
+2022.12.18 00:43:21 INFO  web[][o.s.s.e.IndexerStartupTask] Trigger asynchronous indexing of type [issues/auth/issue] done | time=119ms
+2022.12.18 00:43:21 INFO  web[][o.s.s.e.IndexerStartupTask] Indexing of types [components/auth],[projectmeasures/auth],[issues/auth]...
+2022.12.18 00:43:21 INFO  web[][o.s.s.e.IndexerStartupTask] Indexing of types [components/auth],[projectmeasures/auth],[issues/auth] done | time=369ms
+2022.12.18 00:43:21 INFO  web[][o.s.s.q.ProjectsInWarningDaemon] Counting number of projects in warning is enabled.
+2022.12.18 00:43:21 INFO  web[][o.s.s.p.p.PlatformLevelStartup] Running Community Edition
+2022.12.18 00:43:21 INFO  web[][o.s.s.q.ProjectsInWarningDaemon] Counting number of projects in warning will be disabled as there are no more projects in warning.
+2022.12.18 00:43:22 INFO  web[][o.s.s.p.Platform] Web Server is operational
+2022.12.18 00:47:35 INFO  web[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2022.12.18 00:47:35 INFO  web[][o.s.s.n.NotificationDaemon] Notification service stopped
+2022.12.18 00:47:35 INFO  web[][c.z.h.HikariDataSource] HikariPool-1 - Shutdown initiated...
+2022.12.18 00:47:35 INFO  web[][c.z.h.HikariDataSource] HikariPool-1 - Shutdown completed.
+2022.12.18 00:47:35 INFO  web[][o.s.s.p.d.EmbeddedDatabase] Embedded database stopped
+2022.12.18 00:47:35 INFO  web[][o.s.s.app.WebServer] Web Server stopped
+2022.12.18 00:48:18 INFO  web[][o.s.p.ProcessEntryPoint] Starting Web Server
+2022.12.18 00:48:20 INFO  web[][o.s.s.p.LogServerVersion] SonarQube Server / 9.7.1.62043 / 13c69ab992096c497badccbdb4a31110594574fd
+2022.12.18 00:48:20 INFO  web[][o.s.s.p.d.EmbeddedDatabase] Starting embedded database on port 9092 with url jdbc:h2:tcp://127.0.0.1:9092/sonar;NON_KEYWORDS=VALUE
+2022.12.18 00:48:20 INFO  web[][o.s.s.p.d.EmbeddedDatabase] Embedded database started. Data stored in: /opt/sonarqube/data
+2022.12.18 00:48:20 INFO  web[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar;NON_KEYWORDS=VALUE
+2022.12.18 00:48:20 INFO  web[][c.z.h.HikariDataSource] HikariPool-1 - Starting...
+2022.12.18 00:48:21 INFO  web[][c.z.h.p.HikariPool] HikariPool-1 - Added connection conn2: url=jdbc:h2:tcp://127.0.0.1:9092/sonar user=
+2022.12.18 00:48:21 INFO  web[][c.z.h.HikariDataSource] HikariPool-1 - Start completed.
+2022.12.18 00:48:21 WARN  web[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2022.12.18 00:48:22 INFO  web[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /opt/sonarqube
+2022.12.18 00:48:22 INFO  web[][o.s.s.u.SystemPasscodeImpl] System authentication by passcode is disabled
+2022.12.18 00:48:22 INFO  web[][o.s.s.p.ServerPluginManager] Deploy C# Code Quality and Security / 8.46.0.54807 / a9f10bf0c980dd16d428c08c7a984e2205a512df
+2022.12.18 00:48:22 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Configuration detection fot Code Quality and Security / 1.2.0.267 / 4f37ba9ffb37a96d5883e52ad392ed32c5c6eaab
+2022.12.18 00:48:22 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Flex Code Quality and Security / 2.7.0.2865 / 9e61d9774455b25eefd0b71bf8903cb030641864
+2022.12.18 00:48:22 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Go Code Quality and Security / 1.11.0.3905 / e1f28bc000e04ca01881e84218d01d464a17a36f
+2022.12.18 00:48:22 INFO  web[][o.s.s.p.ServerPluginManager] Deploy HTML Code Quality and Security / 3.6.0.3106 / 963bdc9f051f5dcb698b418790364231aeea04f2
+2022.12.18 00:48:22 INFO  web[][o.s.s.p.ServerPluginManager] Deploy IaC Code Quality and Security / 1.9.2.2279 / f946157f4bbec5a6a1d40cf3418a0360c8c9c1f6
+2022.12.18 00:48:22 INFO  web[][o.s.s.p.ServerPluginManager] Deploy JaCoCo / 1.1.1.1157 / 83478572b9f23efac29de15e30c7758bbb0c0e47
+2022.12.18 00:48:22 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Java Code Quality and Security / 7.14.0.30229 / 9079835c8f5e43cef40516cc49073e01bb8ad6e6
+2022.12.18 00:48:22 INFO  web[][o.s.s.p.ServerPluginManager] Deploy JavaScript/TypeScript/CSS Code Quality and Security / 9.9.0.19492 / e6156f1886415bd21e0726eb92f61d5605187a29
+2022.12.18 00:48:22 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Kotlin Code Quality and Security / 2.10.0.1456 / 187f0a9c30ba26886ee5975df23e2f31de86a8c1
+2022.12.18 00:48:22 INFO  web[][o.s.s.p.ServerPluginManager] Deploy PHP Code Quality and Security / 3.25.0.9077 / 62146fca3dce550eb1dde73881a14c7af4988269
+2022.12.18 00:48:22 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Python Code Quality and Security / 3.19.0.10254 / 411866233dc7e1f384592447884d27e220cb00ec
+2022.12.18 00:48:22 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Ruby Code Quality and Security / 1.11.0.3905 / e1f28bc000e04ca01881e84218d01d464a17a36f
+2022.12.18 00:48:22 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Scala Code Quality and Security / 1.11.0.3905 / e1f28bc000e04ca01881e84218d01d464a17a36f
+2022.12.18 00:48:22 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Text file Code Quality and Security / 1.1.0.282 / a90347d77706f598413780a08442deec4ae68f4e
+2022.12.18 00:48:22 INFO  web[][o.s.s.p.ServerPluginManager] Deploy VB.NET Code Quality and Security / 8.46.0.54807 / a9f10bf0c980dd16d428c08c7a984e2205a512df
+2022.12.18 00:48:22 INFO  web[][o.s.s.p.ServerPluginManager] Deploy XML Code Quality and Security / 2.6.1.3686 / 8935c6f8341cd50defba2d8245d91dc4d07e24d0
+2022.12.18 00:48:47 INFO  web[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [http://localhost:9001]
+2022.12.18 00:48:47 WARN  web[][o.s.a.s.w.WebService$Action] Description is not set on action api/monitoring/metrics
+2022.12.18 00:48:47 WARN  web[][o.s.a.s.w.WebService$Action] Since is not set on action api/monitoring/metrics
+2022.12.18 00:48:47 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/monitoring/metrics
+2022.12.18 00:48:47 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/system/liveness
+2022.12.18 00:48:47 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.WebServiceFilter@6c5747db [pattern=UrlPattern{inclusions=[/api/system/migrate_db.*, ...], exclusions=[/api/components/update_key, ...]}]
+2022.12.18 00:48:48 INFO  web[][o.s.s.p.DetectPluginChange] Detect plugin changes
+2022.12.18 00:48:48 INFO  web[][o.s.s.p.DetectPluginChange] No plugin change detected
+2022.12.18 00:48:48 INFO  web[][o.s.s.a.EmbeddedTomcat] HTTP connector enabled on port 9000
+2022.12.18 00:48:49 INFO  web[][o.s.s.s.LogServerId] Server ID: 147B411E-AYUirrwOLL9WsZf1t_Wq
+2022.12.18 00:48:49 WARN  web[][o.s.s.a.LogOAuthWarning] For security reasons, OAuth authentication should use HTTPS. You should set the property 'Administration > Configuration > Server base URL' to a HTTPS URL.
+2022.12.18 00:48:49 INFO  web[][o.s.s.p.UpdateCenterClient] Update center: https://update.sonarsource.org/update-center.properties (no proxy)
+2022.12.18 00:48:50 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action saml/validation_init
+2022.12.18 00:48:50 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/system/liveness
+2022.12.18 00:48:50 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/plugins/download
+2022.12.18 00:48:50 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/analysis_cache/get
+2022.12.18 00:48:50 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_integrations/check_pat
+2022.12.18 00:48:50 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/push/sonarlint_events
+2022.12.18 00:48:50 INFO  web[][o.s.s.a.p.ExpiredSessionsCleaner] Purge of expired session tokens has removed 0 elements
+2022.12.18 00:48:50 INFO  web[][o.s.s.n.NotificationDaemon] Notification service started (delay 60 sec.)
+2022.12.18 00:48:50 INFO  web[][o.s.s.a.p.ExpiredSessionsCleaner] Purge of expired SAML message ids has removed 0 elements
+2022.12.18 00:48:50 INFO  web[][o.s.s.t.TelemetryDaemon] Sharing of SonarQube statistics is enabled.
+2022.12.18 00:48:50 INFO  web[][o.s.s.s.GeneratePluginIndex] Generate scanner plugin index
+2022.12.18 00:48:50 INFO  web[][o.s.s.s.RegisterPermissionTemplates] Register permission templates
+2022.12.18 00:48:50 INFO  web[][o.s.s.s.RenameDeprecatedPropertyKeys] Rename deprecated property keys
+2022.12.18 00:48:51 INFO  web[][o.s.s.s.RegisterPlugins] Register plugins
+2022.12.18 00:48:51 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.SonarLintConnectionFilter@69fbfa19 [pattern=UrlPattern{inclusions=[/api/*], exclusions=[]}]
+2022.12.18 00:48:51 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.WebServiceFilter@1bffc95e [pattern=UrlPattern{inclusions=[/api/issues/delete_comment.*, ...], exclusions=[/api/authentication/login.*, ...]}]
+2022.12.18 00:48:51 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.WebServiceReroutingFilter@5ffc85b6 [pattern=UrlPattern{inclusions=[/api/components/bulk_update_key, ...], exclusions=[]}]
+2022.12.18 00:48:51 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.DefaultAdminCredentialsVerifierFilter@2fa71da7 [pattern=UrlPattern{inclusions=[/*], exclusions=[*.css, ...]}]
+2022.12.18 00:48:51 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.InitFilter@193a1178 [pattern=UrlPattern{inclusions=[/sessions/init/*], exclusions=[]}]
+2022.12.18 00:48:51 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.SamlValidationRedirectionFilter@7cea9e38 [pattern=UrlPattern{inclusions=[/oauth2/callback/saml], exclusions=[]}]
+2022.12.18 00:48:51 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.OAuth2CallbackFilter@47807526 [pattern=UrlPattern{inclusions=[/oauth2/callback/*], exclusions=[]}]
+2022.12.18 00:48:51 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ResetPasswordFilter@505d0254 [pattern=UrlPattern{inclusions=[/*], exclusions=[*.css, ...]}]
+2022.12.18 00:48:51 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ws.LoginAction@2820ec8c [pattern=UrlPattern{inclusions=[/api/authentication/login], exclusions=[]}]
+2022.12.18 00:48:51 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ws.LogoutAction@580cf16 [pattern=UrlPattern{inclusions=[/api/authentication/logout], exclusions=[]}]
+2022.12.18 00:48:51 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ws.ValidateAction@3c5e17b7 [pattern=UrlPattern{inclusions=[/api/authentication/validate], exclusions=[]}]
+2022.12.18 00:48:51 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.saml.ws.ValidationInitAction@4c54ad68 [pattern=UrlPattern{inclusions=[/saml/validation_init], exclusions=[]}]
+2022.12.18 00:48:51 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.saml.ws.ValidationAction@179c0163 [pattern=UrlPattern{inclusions=[/saml/validation], exclusions=[]}]
+2022.12.18 00:48:51 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.user.ws.ChangePasswordAction@192568f6 [pattern=UrlPattern{inclusions=[/api/users/change_password], exclusions=[]}]
+2022.12.18 00:48:51 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.plugins.PluginsRiskConsentFilter@31163eb4 [pattern=UrlPattern{inclusions=[/*], exclusions=[*.css, ...]}]
+2022.12.18 00:48:51 INFO  web[][o.s.s.q.ProjectsInWarningDaemon] Counting number of projects in warning is not started as there are no projects in this situation.
+2022.12.18 00:48:51 INFO  web[][o.s.s.p.p.PlatformLevelStartup] Running Community Edition
+2022.12.18 00:48:51 INFO  web[][o.s.s.p.Platform] Web Server is operational
+2022.12.18 08:30:17 INFO  web[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2022.12.18 08:30:17 INFO  web[][o.s.s.n.NotificationDaemon] Notification service stopped
+2022.12.18 08:30:17 INFO  web[][c.z.h.HikariDataSource] HikariPool-1 - Shutdown initiated...
+2022.12.18 08:30:17 INFO  web[][c.z.h.HikariDataSource] HikariPool-1 - Shutdown completed.
+2022.12.18 08:30:17 INFO  web[][o.s.s.p.d.EmbeddedDatabase] Embedded database stopped
+2022.12.18 08:30:17 INFO  web[][o.s.s.app.WebServer] Web Server stopped
+2022.12.18 08:49:46 INFO  web[][o.s.p.ProcessEntryPoint] Starting Web Server
+2022.12.18 08:49:47 INFO  web[][o.s.s.p.LogServerVersion] SonarQube Server / 9.7.1.62043 / 13c69ab992096c497badccbdb4a31110594574fd
+2022.12.18 08:49:49 INFO  web[][o.s.s.p.d.EmbeddedDatabase] Starting embedded database on port 9092 with url jdbc:h2:tcp://127.0.0.1:9092/sonar;NON_KEYWORDS=VALUE
+2022.12.18 08:49:49 INFO  web[][o.s.s.p.d.EmbeddedDatabase] Embedded database started. Data stored in: /opt/sonarqube/data
+2022.12.18 08:49:49 INFO  web[][o.sonar.db.Database] Create JDBC data source for jdbc:h2:tcp://127.0.0.1:9092/sonar;NON_KEYWORDS=VALUE
+2022.12.18 08:49:49 INFO  web[][c.z.h.HikariDataSource] HikariPool-1 - Starting...
+2022.12.18 08:49:49 INFO  web[][c.z.h.p.HikariPool] HikariPool-1 - Added connection conn2: url=jdbc:h2:tcp://127.0.0.1:9092/sonar user=
+2022.12.18 08:49:49 INFO  web[][c.z.h.HikariDataSource] HikariPool-1 - Start completed.
+2022.12.18 08:49:49 WARN  web[][o.s.db.dialect.H2] H2 database should be used for evaluation purpose only.
+2022.12.18 08:49:50 INFO  web[][o.s.s.p.ServerFileSystemImpl] SonarQube home: /opt/sonarqube
+2022.12.18 08:49:50 INFO  web[][o.s.s.u.SystemPasscodeImpl] System authentication by passcode is disabled
+2022.12.18 08:49:50 INFO  web[][o.s.s.p.ServerPluginManager] Deploy C# Code Quality and Security / 8.46.0.54807 / a9f10bf0c980dd16d428c08c7a984e2205a512df
+2022.12.18 08:49:50 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Configuration detection fot Code Quality and Security / 1.2.0.267 / 4f37ba9ffb37a96d5883e52ad392ed32c5c6eaab
+2022.12.18 08:49:50 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Flex Code Quality and Security / 2.7.0.2865 / 9e61d9774455b25eefd0b71bf8903cb030641864
+2022.12.18 08:49:50 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Go Code Quality and Security / 1.11.0.3905 / e1f28bc000e04ca01881e84218d01d464a17a36f
+2022.12.18 08:49:50 INFO  web[][o.s.s.p.ServerPluginManager] Deploy HTML Code Quality and Security / 3.6.0.3106 / 963bdc9f051f5dcb698b418790364231aeea04f2
+2022.12.18 08:49:50 INFO  web[][o.s.s.p.ServerPluginManager] Deploy IaC Code Quality and Security / 1.9.2.2279 / f946157f4bbec5a6a1d40cf3418a0360c8c9c1f6
+2022.12.18 08:49:50 INFO  web[][o.s.s.p.ServerPluginManager] Deploy JaCoCo / 1.1.1.1157 / 83478572b9f23efac29de15e30c7758bbb0c0e47
+2022.12.18 08:49:50 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Java Code Quality and Security / 7.14.0.30229 / 9079835c8f5e43cef40516cc49073e01bb8ad6e6
+2022.12.18 08:49:50 INFO  web[][o.s.s.p.ServerPluginManager] Deploy JavaScript/TypeScript/CSS Code Quality and Security / 9.9.0.19492 / e6156f1886415bd21e0726eb92f61d5605187a29
+2022.12.18 08:49:50 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Kotlin Code Quality and Security / 2.10.0.1456 / 187f0a9c30ba26886ee5975df23e2f31de86a8c1
+2022.12.18 08:49:50 INFO  web[][o.s.s.p.ServerPluginManager] Deploy PHP Code Quality and Security / 3.25.0.9077 / 62146fca3dce550eb1dde73881a14c7af4988269
+2022.12.18 08:49:50 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Python Code Quality and Security / 3.19.0.10254 / 411866233dc7e1f384592447884d27e220cb00ec
+2022.12.18 08:49:50 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Ruby Code Quality and Security / 1.11.0.3905 / e1f28bc000e04ca01881e84218d01d464a17a36f
+2022.12.18 08:49:50 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Scala Code Quality and Security / 1.11.0.3905 / e1f28bc000e04ca01881e84218d01d464a17a36f
+2022.12.18 08:49:50 INFO  web[][o.s.s.p.ServerPluginManager] Deploy Text file Code Quality and Security / 1.1.0.282 / a90347d77706f598413780a08442deec4ae68f4e
+2022.12.18 08:49:50 INFO  web[][o.s.s.p.ServerPluginManager] Deploy VB.NET Code Quality and Security / 8.46.0.54807 / a9f10bf0c980dd16d428c08c7a984e2205a512df
+2022.12.18 08:49:50 INFO  web[][o.s.s.p.ServerPluginManager] Deploy XML Code Quality and Security / 2.6.1.3686 / 8935c6f8341cd50defba2d8245d91dc4d07e24d0
+2022.12.18 08:50:18 INFO  web[][o.s.s.e.EsClientProvider] Connected to local Elasticsearch: [http://localhost:9001]
+2022.12.18 08:50:19 WARN  web[][o.s.a.s.w.WebService$Action] Description is not set on action api/monitoring/metrics
+2022.12.18 08:50:19 WARN  web[][o.s.a.s.w.WebService$Action] Since is not set on action api/monitoring/metrics
+2022.12.18 08:50:19 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/monitoring/metrics
+2022.12.18 08:50:19 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/system/liveness
+2022.12.18 08:50:19 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.WebServiceFilter@44ccd75c [pattern=UrlPattern{inclusions=[/api/system/migrate_db.*, ...], exclusions=[/api/components/update_key, ...]}]
+2022.12.18 08:50:19 INFO  web[][o.s.s.p.DetectPluginChange] Detect plugin changes
+2022.12.18 08:50:19 INFO  web[][o.s.s.p.DetectPluginChange] No plugin change detected
+2022.12.18 08:50:19 INFO  web[][o.s.s.a.EmbeddedTomcat] HTTP connector enabled on port 9000
+2022.12.18 08:50:21 INFO  web[][o.s.s.s.LogServerId] Server ID: 147B411E-AYUirrwOLL9WsZf1t_Wq
+2022.12.18 08:50:21 WARN  web[][o.s.s.a.LogOAuthWarning] For security reasons, OAuth authentication should use HTTPS. You should set the property 'Administration > Configuration > Server base URL' to a HTTPS URL.
+2022.12.18 08:50:21 INFO  web[][o.s.s.p.UpdateCenterClient] Update center: https://update.sonarsource.org/update-center.properties (no proxy)
+2022.12.18 08:50:22 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action saml/validation_init
+2022.12.18 08:50:22 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/system/liveness
+2022.12.18 08:50:22 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/plugins/download
+2022.12.18 08:50:22 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/analysis_cache/get
+2022.12.18 08:50:22 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/alm_integrations/check_pat
+2022.12.18 08:50:22 WARN  web[][o.s.a.s.w.WebService$Action] The response example is not set on action api/push/sonarlint_events
+2022.12.18 08:50:22 INFO  web[][o.s.s.a.p.ExpiredSessionsCleaner] Purge of expired session tokens has removed 0 elements
+2022.12.18 08:50:22 INFO  web[][o.s.s.a.p.ExpiredSessionsCleaner] Purge of expired SAML message ids has removed 0 elements
+2022.12.18 08:50:22 INFO  web[][o.s.s.n.NotificationDaemon] Notification service started (delay 60 sec.)
+2022.12.18 08:50:22 INFO  web[][o.s.s.t.TelemetryDaemon] Sharing of SonarQube statistics is enabled.
+2022.12.18 08:50:22 INFO  web[][o.s.s.s.GeneratePluginIndex] Generate scanner plugin index
+2022.12.18 08:50:22 INFO  web[][o.s.s.s.RegisterPermissionTemplates] Register permission templates
+2022.12.18 08:50:22 INFO  web[][o.s.s.s.RenameDeprecatedPropertyKeys] Rename deprecated property keys
+2022.12.18 08:50:22 INFO  web[][o.s.s.s.RegisterPlugins] Register plugins
+2022.12.18 08:50:22 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.SonarLintConnectionFilter@21d7be16 [pattern=UrlPattern{inclusions=[/api/*], exclusions=[]}]
+2022.12.18 08:50:22 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.WebServiceFilter@11008b36 [pattern=UrlPattern{inclusions=[/api/issues/delete_comment.*, ...], exclusions=[/api/authentication/login.*, ...]}]
+2022.12.18 08:50:22 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.platform.web.WebServiceReroutingFilter@7a671f [pattern=UrlPattern{inclusions=[/api/components/bulk_update_key, ...], exclusions=[]}]
+2022.12.18 08:50:22 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.DefaultAdminCredentialsVerifierFilter@6fd030e9 [pattern=UrlPattern{inclusions=[/*], exclusions=[*.css, ...]}]
+2022.12.18 08:50:22 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.InitFilter@736b040b [pattern=UrlPattern{inclusions=[/sessions/init/*], exclusions=[]}]
+2022.12.18 08:50:22 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.SamlValidationRedirectionFilter@6627686b [pattern=UrlPattern{inclusions=[/oauth2/callback/saml], exclusions=[]}]
+2022.12.18 08:50:22 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.OAuth2CallbackFilter@3536b92f [pattern=UrlPattern{inclusions=[/oauth2/callback/*], exclusions=[]}]
+2022.12.18 08:50:22 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ResetPasswordFilter@5b0f9018 [pattern=UrlPattern{inclusions=[/*], exclusions=[*.css, ...]}]
+2022.12.18 08:50:22 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ws.LoginAction@b11786a [pattern=UrlPattern{inclusions=[/api/authentication/login], exclusions=[]}]
+2022.12.18 08:50:22 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ws.LogoutAction@5b7ded9b [pattern=UrlPattern{inclusions=[/api/authentication/logout], exclusions=[]}]
+2022.12.18 08:50:22 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.authentication.ws.ValidateAction@40a55cb1 [pattern=UrlPattern{inclusions=[/api/authentication/validate], exclusions=[]}]
+2022.12.18 08:50:22 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.saml.ws.ValidationInitAction@4e91f4d [pattern=UrlPattern{inclusions=[/saml/validation_init], exclusions=[]}]
+2022.12.18 08:50:22 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.saml.ws.ValidationAction@576c586a [pattern=UrlPattern{inclusions=[/saml/validation], exclusions=[]}]
+2022.12.18 08:50:22 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.user.ws.ChangePasswordAction@706f8c2e [pattern=UrlPattern{inclusions=[/api/users/change_password], exclusions=[]}]
+2022.12.18 08:50:22 INFO  web[][o.s.s.p.w.MasterServletFilter] Initializing servlet filter org.sonar.server.plugins.PluginsRiskConsentFilter@2d56d678 [pattern=UrlPattern{inclusions=[/*], exclusions=[*.css, ...]}]
+2022.12.18 08:50:22 INFO  web[][o.s.s.q.ProjectsInWarningDaemon] Counting number of projects in warning is not started as there are no projects in this situation.
+2022.12.18 08:50:22 INFO  web[][o.s.s.p.p.PlatformLevelStartup] Running Community Edition
+2022.12.18 08:50:23 INFO  web[][o.s.s.p.Platform] Web Server is operational
+2022.12.18 08:58:22 INFO  web[][o.s.p.ProcessEntryPoint] Gracefully stopping process
+2022.12.18 08:58:22 INFO  web[][o.s.s.n.NotificationDaemon] Notification service stopped
+2022.12.18 08:58:22 INFO  web[][c.z.h.HikariDataSource] HikariPool-1 - Shutdown initiated...
+2022.12.18 08:58:22 INFO  web[][c.z.h.HikariDataSource] HikariPool-1 - Shutdown completed.
+2022.12.18 08:58:22 INFO  web[][o.s.s.p.d.EmbeddedDatabase] Embedded database stopped
+2022.12.18 08:58:22 INFO  web[][o.s.s.app.WebServer] Web Server stopped

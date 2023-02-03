@@ -1,0 +1,19 @@
+************* Module tensorflow_dataset_api
+python-scripts\tensorflow_dataset_api.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+python-scripts\tensorflow_dataset_api.py:26:0: C0103: Constant name "learning_rate" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\tensorflow_dataset_api.py:27:0: C0103: Constant name "num_steps" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\tensorflow_dataset_api.py:28:0: C0103: Constant name "batch_size" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\tensorflow_dataset_api.py:29:0: C0103: Constant name "display_step" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\tensorflow_dataset_api.py:32:0: C0103: Constant name "n_input" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\tensorflow_dataset_api.py:33:0: C0103: Constant name "n_classes" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\tensorflow_dataset_api.py:34:0: C0103: Constant name "dropout" doesn't conform to UPPER_CASE naming style (invalid-name)
+python-scripts\tensorflow_dataset_api.py:65:0: C0116: Missing function or method docstring (missing-function-docstring)
+python-scripts\tensorflow_dataset_api.py:65:13: C0103: Argument name "x" doesn't conform to snake_case naming style (invalid-name)
+python-scripts\tensorflow_dataset_api.py:65:16: W0621: Redefining name 'n_classes' from outer scope (line 33) (redefined-outer-name)
+python-scripts\tensorflow_dataset_api.py:65:27: W0621: Redefining name 'dropout' from outer scope (line 34) (redefined-outer-name)
+python-scripts\tensorflow_dataset_api.py:139:14: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+python-scripts\tensorflow_dataset_api.py:140:14: C0209: Formatting a regular string which could be a f-string (consider-using-f-string)
+
+------------------------------------------------------------------
+Your code has been rated at 6.96/10 (previous run: 6.96/10, +0.00)
+

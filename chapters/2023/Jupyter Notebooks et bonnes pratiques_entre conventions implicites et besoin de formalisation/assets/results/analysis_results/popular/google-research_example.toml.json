@@ -1,0 +1,67 @@
+{
+    "title": "example.toml",
+    "notebook": "notebooks/github/google-research-google-research/example.ipynb",
+    "metadata": "notebooks/github/google-research-google-research/example.toml",
+    "metrics": {
+        "nb_code_cells": 3,
+        "nb_markdown_cells": 1,
+        "dependencies_installation_detected": false,
+        "code_quality": {
+            "pylint_score": {
+                "score": 0,
+                "count_by_severity": {
+                    "convention": 18,
+                    "error": 3,
+                    "fatal": 0,
+                    "info": 0,
+                    "refactor": 0,
+                    "statement": 59,
+                    "warning": 30
+                },
+                "count_by_messages": {
+                    "bad-indentation": 26,
+                    "trailing-newlines": 1,
+                    "missing-module-docstring": 1,
+                    "import-error": 2,
+                    "wrong-import-position": 2,
+                    "invalid-name": 6,
+                    "missing-class-docstring": 1,
+                    "abstract-method": 2,
+                    "super-init-not-called": 1,
+                    "missing-function-docstring": 3,
+                    "redefined-outer-name": 1,
+                    "consider-using-f-string": 2,
+                    "function-redefined": 1,
+                    "wrong-import-order": 2
+                }
+            },
+            "mypy_score": {
+                "score": 0.9847715736040609,
+                "count_by_severity": {
+                    "error": 3
+                },
+                "count_by_messages": {
+                    "import": 3
+                }
+            }
+        }
+    },
+    "profile": [
+        {
+            "cell_type": "markdown",
+            "nb_lines": 14
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 51
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 19
+        },
+        {
+            "cell_type": "code",
+            "nb_lines": 30
+        }
+    ]
+}

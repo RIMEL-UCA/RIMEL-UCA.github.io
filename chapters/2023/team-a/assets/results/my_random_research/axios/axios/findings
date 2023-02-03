@@ -1,0 +1,68 @@
+name: axios/axios - ci.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+  - actions/setup-node@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: axios/axios - codeql-analysis.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+  - github/codeql-action/init@v2 ; utd: False
+  - github/codeql-action/analyze@v2 ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: axios/axios - pr.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+  - actions/setup-node@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+  - martinbeentjes/npm-get-version-action@main ; utd: False
+  - ffurrer2/extract-release-notes@v1 ; utd: True
+  - mathiasvr/command-output@v1 ; utd: True
+  - peter-evans/create-pull-request@v4 ; utd: True
+Type: TRUSTED
+Type: FORKED
+
+name: axios/axios - publish.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+  - actions/setup-node@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+  - martinbeentjes/npm-get-version-action@main ; utd: False
+  - ffurrer2/extract-release-notes@v1 ; utd: True
+  - rickstaa/action-create-tag@v1 ; utd: True
+  - ncipollo/release-action@v1 ; utd: True
+Type: TRUSTED
+Type: FORKED
+
+name: axios/axios - release.yml
+
+Type: GITHUB
+  - actions/checkout@v2 ; utd: False
+  - actions/setup-node@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: axios/axios - stale.yml
+
+Type: GITHUB
+  - actions/stale@v7 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
