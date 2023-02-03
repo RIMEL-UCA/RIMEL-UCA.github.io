@@ -304,6 +304,12 @@ Sur ``Netty``, 48.61% des auteurs de VP ont modifié leurs VARIANTS. 77.94% des 
 Quand les auteurs de VP modifient leurs VARIANTS, ils vont en général modifier 76.23% du contenu.  
 
 ### Analyse et interprétation des résultats en fonction des hypothèses
+#### Hypothèse 1
+
+Nous avons analysé trois les  projets(galen, WorldEdit et netty) et nous avons constaté que dans chacun d'entre eux, la contribution à la variabilité était faible, même si le nombre de développeurs était relativement élevé. Cela signifie que dans ces projets, un petit nombre de développeurs contribue davantage à la variabilité que les autres, ce qui va à l'encontre de notre hypothèse initiale.
+Cela montre que le nombre de contributeurs n'est peut-être pas le seul facteur qui influence la répartition de la variabilité dans un projet.
+
+
 
 #### Hypothèse 2
 
