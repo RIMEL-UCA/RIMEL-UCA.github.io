@@ -59,6 +59,7 @@ Il serait donc intéressant de savoir qui est l'auteur de cette variabilité afi
 Nous ne traiterons que le développement de projet orienté objets pour rester dans le cadre de notre sujet.
 
 ## II. Observations/Question générale
+
 ### Reformulation du sujet 
 
 On peut reformuler le sujet en question de la façon suivante :
@@ -73,6 +74,7 @@ En effet, savoir qui est où sont les développeurs principaux d’une partie de
 La mise en place de cet outil serait donc une grande amélioration dans le monde du développement.
 
 ### Question générale
+
 Notre question générale sera donc :
 > Comment la variabilité est distribuée entre plusieurs auteurs dans du code orienté objet ?
 
@@ -89,6 +91,7 @@ La variabilité pouvant être décomposée sous forme de "patterns" (patron de c
 sur un pattern spécifique afin de trouver les auteurs auprès de qui poser des questions pour comprendre le fonctionnement du pattern à travers le code.
 
 ### Limites
+
 Dans notre approche, on peut identifier les limites suivantes :
 - L'analyse du code se fait à un instant t, on prend le dernier commit de la branche principale du repository. 
   Une extension intéressante serait d'analyser les modifications à travers les différentes versions du projet.
@@ -106,27 +109,27 @@ Dans notre approche, on peut identifier les limites suivantes :
 
 Dans le cadre de notre recherche, nous avons basé notre travail sur les ressources suivantes :
 1. [On the notion of variability in software product lines](https://doi.org/10.1109/WICSA.2001.948406)  
- Les auteurs abordent la notion de variabilité dans le développement de logiciels. 
- Ils fournissent un cadre de terminologie et de concepts, identifient des modèles courants de variabilité 
- et proposent une méthodologie pour gérer la variabilité dans les systèmes de logiciels industriels.
+   Les auteurs abordent la notion de variabilité dans le développement de logiciels. 
+   Ils fournissent un cadre de terminologie et de concepts, identifient des modèles courants de variabilité 
+   et proposent une méthodologie pour gérer la variabilité dans les systèmes de logiciels industriels.
 
 
 2. [Visualization of Object-Oriented Variability Implementations as Cities](https://hal.archives-ouvertes.fr/hal-03312487)  
    VariCity est un outil de visualisation qui représente un code orienté objet comme une ville 
    pour aider les nouveaux venus à comprendre les parties les plus importantes du projet, 
-   en particulier en ce qui concerne la mise en œuvre de la variabilité. Il détecte la variabilité à travers les symétries du code 
+   en particulier en ce qui concerne la mise en œuvre de la variabilité. Il détecte la variabilité à travers les symétries du code.
    et la représente à travers la taille des bâtiments, la couleur et des formes de bâtiments spécifiques. 
    Les rues de la ville sont agencées en fonction des relations entre les classes. 
 
 
 3. [On the usefulness of ownership metrics in open-source software projects](https://www.sciencedirect.com/science/article/abs/pii/S0950584915000294)  
-  Le papier examine la relation entre les métriques de propriété de code et la qualité du logiciel dans les projets de logiciels libres.
-  Les résultats montrent une relation entre les deux, mais d'autres métriques ont un plus grand impact sur la qualité du logiciel
-  
-  4.[Code ownership in open-source software](https://hal.science/hal-00976024v1)
+   Le papier examine la relation entre les métriques de propriété de code et la qualité du logiciel dans les projets de logiciels libres.
+   Les résultats montrent une relation entre les deux, mais d'autres métriques ont un plus grand impact sur la qualité du logiciel.
 
-  Ce papier réplique une étude sur la relation entre les métriques d'appartenance et la qualité du logiciel dans les projets Java Open Source. Les résultats ont montré une     faible corrélation entre les métriques d'appartenance et les erreurs de module, et la taille de module avait un plus grand impact sur les erreurs que l'appartenance
 
+4. [Code ownership in open-source software](https://hal.science/hal-00976024v1)
+   Ce papier réplique une étude sur la relation entre les métriques d'appartenance et la qualité du logiciel dans les projets Java Open Source. 
+   Les résultats ont montré une faible corrélation entre les métriques d'appartenance et les erreurs de module et la taille de module avait un plus grand impact sur les erreurs que l'appartenance.
 
 **2. Les jeux de données 💾**
 
@@ -149,7 +152,8 @@ Un projet peut donc être défini par son nombre de lignes de code, son nombre d
 - [git blame](https://git-scm.com/docs/git-blame) : Outil d'identification des derniers auteurs qui ont modifié les lignes de code d'un fichier. 
 - [Symfinder](https://deathstar3.github.io/symfinder-demo/) : Outil d'analyse de la variabilité d’un projet orienté objet à un instant donné.
 - [Docker/Docker-Compose](https://docs.docker.com/get-started/overview/) : Outil de lancement de l'analyse de la variabilité
-- [Scripts Python](chapters/2023/Paternité de la variabilité sur de l'orienté objet/assets/code)
+- Scripts Python disponible dans le répertoire ``assets/code``
+
 
 Pour plus de détails sur comment utiliser ces outils, voir partie [VI. Outils](#vi-outils).
 
@@ -304,14 +308,45 @@ Cela montre bien que l'augmentation de développeurs sur un projet va répartir 
 
 ### Limites rencontrées
 
-Dans un 1er temps, la démarche initiale était de récupérer des projets aléatoires en utilisant l'API GitHub
+Dans un 1er temps, la démarche initiale était de récupérer des projets aléatoires en utilisant l'API GitHub.
+Cependant, certains projets étaient entièrement écrits par des bots, par exemple des projets générés automatiquement.
+Dans ce cas-là, il n'y avait qu'un seul auteur de la variabilité. 
+Grâce à cette observation, la selection des projets s'est faite en fonction du nombre de développeurs.
 
-### Recul et pertinence des remarques
+Pour l'expérience 1, les projets réalisés en Open-Source sont organisés différemment que les projets d'entreprises. 
+En effet, pour les projets Open-Source, seuls quelques responsables du projet ont le droit de modifier tout le code sans contrainte. 
+Il y a donc un grand nombre de développeurs qui peuvent seulement effectuer de petites modifications. 
+À l'inverse, dans les projets d'entreprises, toute l'équipe participe à l'implémentation du projet et donc de sa variabilité.
+
+Un critère qui peut jouer sur l'évolution de la variabilité du projet est son ancienneté. 
+Sur des projets assez jeunes (entre quelques mois et 1 à 2 ans), les développeurs sont les mêmes tout le long. 
+Sur des projets plus vieux (à partir de 2 ans), certains développeurs ont eu le temps de partir pour être remplacé.
+La conséquence est que la variabilité a été réécrite par les nouveaux arrivés.
+
+Une très grande limite à notre analyse et la quantité de projets analysés. 
+En effet, pour les 2 experiences, seul 3 projets ont été analysés ce qui fait un échantillon très faible pour faire des observations.
+
 
 ### Conclusion
 
+#### Répartition de la variabilité à travers un projet
 
-     :bulb:  Vos résultats et donc votre analyse sont nécessairement limités. Préciser bien ces limites : par exemple, jeux de données insuffisants, analyse réduite à quelques critères, dépendance aux projets analysés, ...
+On a pu observer que la variabilité est répartie globalement sur peu de personne malgré un grand nombre de développeurs.
+En effet, même si le code est de plus en plus complexe et la quantité de lignes de plus en plus importantes, 
+seul un sous-ensemble des développeurs serait apte à expliquer facilement la variabilité du code.
+
+#### Association de l'implémentation d'un VP et de ses VARIANTS
+
+On a pu observer que la taille des projets peut avoir des conséquences sur l'implémentation d'un "VP" et de ses "VARIANTS" par le même auteur.
+On peut donc nuancer notre hypothèse en y intégrant la notion de quantité de variabilité. 
+En effet, plus la quantité est importante, moins les auteurs de "VP" implémentent leurs "VARIANTS" associés.
+
+#### Perspectives
+
+Les principales perspectives que seraient :
+- De faire l'analyse sur beaucoup plus de projets,
+- D'analyser la variabilité sur plusieurs commits,
+- De rentrer plus en profondeur dans l'analyse des patterns.
 
 ## VI. Outils
 
