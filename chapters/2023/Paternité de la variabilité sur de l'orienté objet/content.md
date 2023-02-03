@@ -327,7 +327,24 @@ Ce script calcule la paternité de la variabilité dans un projet Git donné. Il
 **visualization.py**  
 Ce script définit une classe PlotPie qui permet de tracer des graphiques en secteurs (pie charts) à partir de données générer précédemment. Le script prend en entrée le chemin vers le fichier JSON, lit les données à partir du fichier, les trie et les utilise pour tracer un graphique en secteurs pour chaque type de variabilité. Les graphiques sont enregistrés dans un sous-dossier "Visualization" avec le même nom du projet. 
 
+**analyse_one_project.py**
+Analyse la variabilité d'un projet avec Symfinder puis exécute "paternity_variability.py".
 
+**mean_contributors.py**
+Calcul la moyenne des contributeurs sur les VARIANTS. Est utilisé pour l'expérience 1.
+
+**paternity_variability_detail.py**
+Similaire à "paternity_variability" mais donne en sortie une liste des contributeurs et leurs pourcentages de modification par VARIANT.
+
+**percentage_contribution_mean.py**
+Calcul le pourcentage de modification des VARIANTS pour chaque développeur dans le projet. Est utilisé pour produire les graphiques de l'expérience 1.
+
+**percentage_vp_authors_in_vars.py**
+Calcul les statistiques utilisées par l'expérience 2:
+Le pourcentage d'auteur d'un VP qui ont contribué à ses VARIANTS, le pourcentage de Groupe de Variants (VP et ses VARIANTS) avec au moins un contributeur sur un Variant mais pas sur le VP et le pourcentage de la moyenne de la contribution des auteurs de VP sur les VARIANTS.
+
+**stats**
+Donne le nombre de VP et de VARIANTS d'un projet.
 
 ## VI. Références
 
