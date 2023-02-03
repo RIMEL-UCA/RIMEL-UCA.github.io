@@ -117,17 +117,17 @@ Préciser vos zones de recherches en fonction de votre projet, les informations 
 
 **1. Les articles ou documents utiles à votre projet📝**
 
-Dans le cadre de notre recherche, nous prévoyons de nous baser sur les ressources suivantes :
+Dans le cadre de notre recherche, nous avons basé notre travail sur les ressources suivantes :
 1. [On the notion of variability in software product lines](https://doi.org/10.1109/WICSA.2001.948406)  
-  Définition de la notion de variabilité dans les lignes de produits logiciels.
+ Les auteurs abordent la notion de variabilité dans le développement de logiciels. Ils fournissent un cadre de terminologie et de concepts, identifient des modèles courants de variabilité et proposent une méthodologie pour gérer la variabilité dans les systèmes de logiciels industriels.
 
 
 2. [Visualization of Object-Oriented Variability Implementations as Cities](https://hal.archives-ouvertes.fr/hal-03312487)  
-  Création d'un outil permettant l'analyse et la visualisation de la variabilité dans un code orienté objet.
+   VariCity est un outil de visualisation qui représente un code orienté objet comme une ville pour aider les nouveaux venus à comprendre les parties les plus importantes du projet, en particulier en ce qui concerne la mise en œuvre de la variabilité. Il détecte la variabilité à travers les symétries du code et la représente à travers la taille des bâtiments, la couleur et des formes de bâtiments spécifiques. Les rues de la ville sont agencées en fonction des relations entre les classes. 
 
 
 3. [On the usefulness of ownership metrics in open-source software projects](https://www.sciencedirect.com/science/article/abs/pii/S0950584915000294)  
-  Métriques sur la paternité de projets Open-Source.
+  Le papier examine la relation entre les métriques de propriété de code et la qualité du logiciel dans les projets de logiciels libres. Les résultats montrent une relation entre les deux, mais d'autres métriques ont un plus grand impact sur la qualité du logiciel
 
 
 **2. Les jeux de données 💾**
@@ -196,7 +196,7 @@ Les projets que nous avons choisis pour cette expérience sont les suivants :
 | EnterpriseQualityCoding/FizzBuzzEnterpriseEdition | https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition |           31            |           ?            |
 |                EngineHub/WorldEdit                | https://github.com/EngineHub/WorldEdit                               |           96            |           52           |
 
-##### Description
+#### Description
 
 Le but de cette expérience est de déterminer si le nombre de contributeurs influe sur la répartition de la variabilité.
 Pour cela, on a sélectionné des projets contenant de la variabilité avec un nombre de contributeurs croissant (de 10 à 52).
@@ -204,54 +204,33 @@ Pour cela, on a sélectionné des projets contenant de la variabilité avec un n
 et itérer sur chacun afin d'appliquer ``git blame`` sur le fichier contenant le "VARIANT" 
 et identifier les différents auteurs ainsi que leur pourcentage de participation à l'écriture de ce fichier.
 
-##### Démarche
-
+#### Démarche
 Une fois que la variabilité est analysée (grâce à Symfinder), la démarche à suivre est composée des étapes suivantes : 
-1. Execution du script python ``paternity_variability_detail.py`` avec comme argument ``lien_github_du_projet``
-   Obtention pour chaque "VARIANT" de ses auteurs ainsi que de leur pourcentage de participation (nombre de lignes écrites/nombre de lignes totales).
-2. Execution du script ````
+1. Execution du script python ``paternity_variability_detail.py`` avec comme arguments  
 
 ### 2. Paternité commune sur la variabilité de type "VP" (Variant Point) et "VARIANT"
 
-#### Hypothèse
+**Hypothèse**
 
 *Un contributeur qui modifie un VP va aussi modifier ses VARIANTS.*
 
-#### Sous-question
+**Sous-question**
 
 > Y a-t-il une relation de paternité entre la variabilité présente dans un VP et son implémentation dans ses VARIANTS ?
 
-#### Métriques
+**Métriques**
 - Nombre (et liste) de contributeurs ayant participé à l'écriture d'un VP
 - Nombre (et liste) de contributeurs ayant participé à l'écriture des VARIANTS associés au VP
 - Pourcentage de corrélation entre les deux
 - Le nombre moyen de contributeurs supplémentaires sur les VARIANTS (pas dans les VPs)
 
-#### Experience 
-##### Source
-
+**Experience**  
 Les projets que nous avons choisis pour cette expérience sont les suivants : 
 
-|                      Projet                       | Lien                                                                 | Nombre de contributeurs | Nombre de développeurs | Nombre de VP | Nombre de VARIANT |
-|:-------------------------------------------------:|:---------------------------------------------------------------------|:-----------------------:|:----------------------:|:------------:|:-----------------:|
-| EnterpriseQualityCoding/FizzBuzzEnterpriseEdition | https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition |           31            |           ?            |      0       |         0         | 
-|                EngineHub/WorldEdit                | https://github.com/EngineHub/WorldEdit                               |           96            |           52           |      0       |         0         |
-|               galenframework/galen                | https://github.com/galenframework/galen                              |           13            |           9            |      0       |         0         |
-
-##### Description
-
-Le but de cette expérience est de déterminer s'il y a une relation entre les auteurs d'un "VP" et ceux des "VARIANTS" associés.
-Pour cela, on a sélectionné des projets contenant un grand nombre de "VP" et de "VARIANT".
-À partir de l'analyse de la variabilité de chaque projet, un filtre est appliqué pour isolé tous les "VARIANTS"
-et itérer sur chacun afin d'appliquer ``git blame`` sur le fichier contenant le "VARIANT"
-et identifier les différents auteurs ainsi que leur pourcentage de participation à l'écriture de ce fichier.
-
-##### Démarche
-
-Une fois que la variabilité est analysée (grâce à Symfinder), la démarche à suivre est composée des étapes suivantes :
-1. Execution du script python ``paternity_variability_detail.py`` avec comme argument ``lien_github_du_projet``
-   Obtention pour chaque "VARIANT" de ses auteurs ainsi que de leur pourcentage de participation (nombre de lignes écrites/nombre de lignes totales).
-2. Execution du script ````
+|                      Projet                       | Lien                                                                 | Nombre de contributeurs | Nombre de développeurs |
+|:-------------------------------------------------:|:---------------------------------------------------------------------|:-----------------------:|:----------------------:|
+| EnterpriseQualityCoding/FizzBuzzEnterpriseEdition | https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition |           31            |           ?            |
+|                EngineHub/WorldEdit                | https://github.com/EngineHub/WorldEdit                               |           96            |           52           |
 
 ## V. Résultat d'analyse et Conclusion
 
@@ -293,6 +272,12 @@ Ce script définit une classe PlotPie qui permet de tracer des graphiques en sec
 
 ## VI. Références
 
-- [Debret 2020] Debret, J. (2020) La démarche scientifique : tout ce que vous devez savoir ! Disponible sur : https://www.scribbr.fr/article-scientifique/demarche-scientifique/ (Accessed: 18 November 2022).
-- [On the notion of variability in software product lines] ... Disponible sur : https://doi.org/10.1109/WICSA.2001.948406)
+
+ [1] J. van Gurp, J. Bosch, and M. Svahnberg. 2001. On the notion of variability in software product lines. In Proceedings Working IEEE/IFIP Conference on Software Architecture, IEEE Comput. Soc, Amsterdam, Netherlands, 45–54. DOI:https://doi.org/10.1109/WICSA.2001.948406
+ 
+ [2] Johann Mortara, Philippe Collet, Anne-Marie Dery-Pinna. Visualization of Object-Oriented Variability Implementations as Cities. 9th IEEE Working Conference on Software Visualization (VISSOFT 2021), Sep 2021, Luxembourg https://hal.archives-ouvertes.fr/hal-03312487
+ 
+[3] Foucault, M., Teyton, C., Lo, D., Blanc, X., & Falleri, J. R. (2015). On the usefulness of ownership metrics in open-source software projects. Information and Software Technology, 64, 102-112. https://www.sciencedirect.com/science/article/abs/pii/S0950584915
+
+
 
