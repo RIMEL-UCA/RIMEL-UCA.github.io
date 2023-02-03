@@ -120,11 +120,11 @@ Afin de vérifier notre hypothèse, nous avons décidé de faire une comparaison
 
 Le résultat final qui nous permettra de vérifier notre hypothèse sera la comparaison des résultats pour déterminer s'il existait une différence significative entre les deux groupes de notebooks.
 
-###### Expérience 1 : Analyse de la qualité de code avec SonarQube
+#### Expérimentation 1 : Analyse de la qualité de code avec SonarQube
 
 Afin de vérifier notre hypothèse concernant la qualité des codes dans les notebooks Jupyter, nous avons décidé d'utiliser l'outil populaire SonarQube pour l'analyse. Nous avons utilisé SonarQube pour mesurer la qualité du code présent dans les notebooks Jupyter en suivant les critères définis précédemment. Cependant, les résultats obtenus ont indiqué un score de zéro sur chaque critère, ce qui signifiait qu'il n'y avait aucun problème. Cela peut être dû au fait que SonarQube n'a pas été conçu pour analyser les codes scientifiques, et que les codes que nous avons analysés étaient écrits par des data scientists. Les critères pour évaluer la qualité du code peuvent différer de ceux utilisés dans d'autres projets. Pour remédier à ce problème, nous avons décidé de changer d'outil et de recommencer l'analyse en utilisant un outil différent appelé Pylint.
 
-###### Expérience 2 : Analyse de la qualité de code avec Pylint
+#### Expérimentation 2 : Analyse de la qualité de code avec Pylint
 
 Après un premier essai qui n'a pas donné les résultats escomptés, nous avons décidé d'utiliser Pylint pour mesurer la qualité du code. Pylint est un outil qui permet d'évaluer les notebooks en analysant différents critères tels que le nombre de lignes de code, de commentaires, de lignes vides, de fonctions et de méthodes, d'expressions complexes, de variables et de classes. Il peut également signaler des erreurs et des problèmes potentiels dans le code.
 
