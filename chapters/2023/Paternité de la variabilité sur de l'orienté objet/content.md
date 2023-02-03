@@ -196,7 +196,7 @@ Les projets que nous avons choisis pour cette expérience sont les suivants :
 | EnterpriseQualityCoding/FizzBuzzEnterpriseEdition | https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition |           31            |           ?            |
 |                EngineHub/WorldEdit                | https://github.com/EngineHub/WorldEdit                               |           96            |           52           |
 
-#### Description
+##### Description
 
 Le but de cette expérience est de déterminer si le nombre de contributeurs influe sur la répartition de la variabilité.
 Pour cela, on a sélectionné des projets contenant de la variabilité avec un nombre de contributeurs croissant (de 10 à 52).
@@ -204,33 +204,54 @@ Pour cela, on a sélectionné des projets contenant de la variabilité avec un n
 et itérer sur chacun afin d'appliquer ``git blame`` sur le fichier contenant le "VARIANT" 
 et identifier les différents auteurs ainsi que leur pourcentage de participation à l'écriture de ce fichier.
 
-#### Démarche
+##### Démarche
+
 Une fois que la variabilité est analysée (grâce à Symfinder), la démarche à suivre est composée des étapes suivantes : 
-1. Execution du script python ``paternity_variability_detail.py`` avec comme arguments  
+1. Execution du script python ``paternity_variability_detail.py`` avec comme argument ``lien_github_du_projet``
+   Obtention pour chaque "VARIANT" de ses auteurs ainsi que de leur pourcentage de participation (nombre de lignes écrites/nombre de lignes totales).
+2. Execution du script ````
 
 ### 2. Paternité commune sur la variabilité de type "VP" (Variant Point) et "VARIANT"
 
-**Hypothèse**
+#### Hypothèse
 
 *Un contributeur qui modifie un VP va aussi modifier ses VARIANTS.*
 
-**Sous-question**
+#### Sous-question
 
 > Y a-t-il une relation de paternité entre la variabilité présente dans un VP et son implémentation dans ses VARIANTS ?
 
-**Métriques**
+#### Métriques
 - Nombre (et liste) de contributeurs ayant participé à l'écriture d'un VP
 - Nombre (et liste) de contributeurs ayant participé à l'écriture des VARIANTS associés au VP
 - Pourcentage de corrélation entre les deux
 - Le nombre moyen de contributeurs supplémentaires sur les VARIANTS (pas dans les VPs)
 
-**Experience**  
+#### Experience 
+##### Source
+
 Les projets que nous avons choisis pour cette expérience sont les suivants : 
 
-|                      Projet                       | Lien                                                                 | Nombre de contributeurs | Nombre de développeurs |
-|:-------------------------------------------------:|:---------------------------------------------------------------------|:-----------------------:|:----------------------:|
-| EnterpriseQualityCoding/FizzBuzzEnterpriseEdition | https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition |           31            |           ?            |
-|                EngineHub/WorldEdit                | https://github.com/EngineHub/WorldEdit                               |           96            |           52           |
+|                      Projet                       | Lien                                                                 | Nombre de contributeurs | Nombre de développeurs | Nombre de VP | Nombre de VARIANT |
+|:-------------------------------------------------:|:---------------------------------------------------------------------|:-----------------------:|:----------------------:|:------------:|:-----------------:|
+| EnterpriseQualityCoding/FizzBuzzEnterpriseEdition | https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition |           31            |           ?            |      0       |         0         | 
+|                EngineHub/WorldEdit                | https://github.com/EngineHub/WorldEdit                               |           96            |           52           |      0       |         0         |
+|               galenframework/galen                | https://github.com/galenframework/galen                              |           13            |           9            |      0       |         0         |
+
+##### Description
+
+Le but de cette expérience est de déterminer s'il y a une relation entre les auteurs d'un "VP" et ceux des "VARIANTS" associés.
+Pour cela, on a sélectionné des projets contenant un grand nombre de "VP" et de "VARIANT".
+À partir de l'analyse de la variabilité de chaque projet, un filtre est appliqué pour isolé tous les "VARIANTS"
+et itérer sur chacun afin d'appliquer ``git blame`` sur le fichier contenant le "VARIANT"
+et identifier les différents auteurs ainsi que leur pourcentage de participation à l'écriture de ce fichier.
+
+##### Démarche
+
+Une fois que la variabilité est analysée (grâce à Symfinder), la démarche à suivre est composée des étapes suivantes :
+1. Execution du script python ``paternity_variability_detail.py`` avec comme argument ``lien_github_du_projet``
+   Obtention pour chaque "VARIANT" de ses auteurs ainsi que de leur pourcentage de participation (nombre de lignes écrites/nombre de lignes totales).
+2. Execution du script ````
 
 ## V. Résultat d'analyse et Conclusion
 
@@ -272,6 +293,6 @@ Ce script définit une classe PlotPie qui permet de tracer des graphiques en sec
 
 ## VI. Références
 
-- [Debret 2020] Debret, J. (2020) La démarche scientifique : tout ce que vous devez savoir ! Disponible sur : https://www.scribbr.fr/article-scientifique/demarche-scientifique/ (Accessed: 18 November 2022).  
+- [Debret 2020] Debret, J. (2020) La démarche scientifique : tout ce que vous devez savoir ! Disponible sur : https://www.scribbr.fr/article-scientifique/demarche-scientifique/ (Accessed: 18 November 2022).
 - [On the notion of variability in software product lines] ... Disponible sur : https://doi.org/10.1109/WICSA.2001.948406)
 
