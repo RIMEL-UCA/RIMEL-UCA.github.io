@@ -119,15 +119,22 @@ Préciser vos zones de recherches en fonction de votre projet, les informations 
 
 Dans le cadre de notre recherche, nous avons basé notre travail sur les ressources suivantes :
 1. [On the notion of variability in software product lines](https://doi.org/10.1109/WICSA.2001.948406)  
- Les auteurs abordent la notion de variabilité dans le développement de logiciels. Ils fournissent un cadre de terminologie et de concepts, identifient des modèles courants de variabilité et proposent une méthodologie pour gérer la variabilité dans les systèmes de logiciels industriels.
+ Les auteurs abordent la notion de variabilité dans le développement de logiciels. 
+ Ils fournissent un cadre de terminologie et de concepts, identifient des modèles courants de variabilité 
+ et proposent une méthodologie pour gérer la variabilité dans les systèmes de logiciels industriels.
 
 
 2. [Visualization of Object-Oriented Variability Implementations as Cities](https://hal.archives-ouvertes.fr/hal-03312487)  
-   VariCity est un outil de visualisation qui représente un code orienté objet comme une ville pour aider les nouveaux venus à comprendre les parties les plus importantes du projet, en particulier en ce qui concerne la mise en œuvre de la variabilité. Il détecte la variabilité à travers les symétries du code et la représente à travers la taille des bâtiments, la couleur et des formes de bâtiments spécifiques. Les rues de la ville sont agencées en fonction des relations entre les classes. 
+   VariCity est un outil de visualisation qui représente un code orienté objet comme une ville 
+   pour aider les nouveaux venus à comprendre les parties les plus importantes du projet, 
+   en particulier en ce qui concerne la mise en œuvre de la variabilité. Il détecte la variabilité à travers les symétries du code 
+   et la représente à travers la taille des bâtiments, la couleur et des formes de bâtiments spécifiques. 
+   Les rues de la ville sont agencées en fonction des relations entre les classes. 
 
 
 3. [On the usefulness of ownership metrics in open-source software projects](https://www.sciencedirect.com/science/article/abs/pii/S0950584915000294)  
-  Le papier examine la relation entre les métriques de propriété de code et la qualité du logiciel dans les projets de logiciels libres. Les résultats montrent une relation entre les deux, mais d'autres métriques ont un plus grand impact sur la qualité du logiciel
+  Le papier examine la relation entre les métriques de propriété de code et la qualité du logiciel dans les projets de logiciels libres.
+  Les résultats montrent une relation entre les deux, mais d'autres métriques ont un plus grand impact sur la qualité du logiciel
 
 
 **2. Les jeux de données 💾**
@@ -205,8 +212,13 @@ et itérer sur chacun afin d'appliquer ``git blame`` sur le fichier contenant le
 et identifier les différents auteurs ainsi que leur pourcentage de participation à l'écriture de ce fichier.
 
 #### Démarche
-Une fois que la variabilité est analysée (grâce à Symfinder), la démarche à suivre est composée des étapes suivantes : 
-1. Execution du script python ``paternity_variability_detail.py`` avec comme arguments  
+Une fois que la variabilité est analysée (grâce à Symfinder), la démarche à suivre est composée des étapes suivantes :
+
+1. Execution du script python ``paternity_variability_detail.py`` avec comme argument ``lien_github_du_projet``
+   Obtention pour chaque "VARIANT" de ses auteurs ainsi que de leur pourcentage de participation (nombre de lignes écrites/nombre de lignes totales).
+2. Execution du script ``mean_contributors.py`` avec comme argument ``results/nom_du_repository_paternity_result_detail.txt``
+   Obtention du nombre moyen de contributeurs ayant participé à l'écriture de la variabilité
+
 
 ### 2. Paternité commune sur la variabilité de type "VP" (Variant Point) et "VARIANT"
 
@@ -227,10 +239,26 @@ Une fois que la variabilité est analysée (grâce à Symfinder), la démarche �
 **Experience**  
 Les projets que nous avons choisis pour cette expérience sont les suivants : 
 
-|                      Projet                       | Lien                                                                 | Nombre de contributeurs | Nombre de développeurs |
-|:-------------------------------------------------:|:---------------------------------------------------------------------|:-----------------------:|:----------------------:|
-| EnterpriseQualityCoding/FizzBuzzEnterpriseEdition | https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition |           31            |           ?            |
-|                EngineHub/WorldEdit                | https://github.com/EngineHub/WorldEdit                               |           96            |           52           |
+|                      Projet                       | Lien                                                                 | Nombre de contributeurs | Nombre de développeurs | Nombre de VP | Nombre de VARIANT |
+|:-------------------------------------------------:|:---------------------------------------------------------------------|:-----------------------:|:----------------------:|:------------:|:-----------------:|
+| EnterpriseQualityCoding/FizzBuzzEnterpriseEdition | https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition |           31            |           ?            |      46      |        19         | 
+|                EngineHub/WorldEdit                | https://github.com/EngineHub/WorldEdit                               |           96            |           52           |      0       |         0         |
+|               galenframework/galen                | https://github.com/galenframework/galen                              |           13            |           9            |      0       |         0         |
+
+##### Description
+
+Le but de cette expérience est de déterminer s'il y a une relation entre les auteurs d'un "VP" et ceux des "VARIANTS" associés.
+Pour cela, on a sélectionné des projets contenant un grand nombre de "VP" et de "VARIANT".
+À partir de l'analyse de la variabilité de chaque projet, un filtre est appliqué pour isolé tous les "VARIANTS"
+et itérer sur chacun afin d'appliquer ``git blame`` sur le fichier contenant le "VARIANT"
+et identifier les différents auteurs ainsi que leur pourcentage de participation à l'écriture de ce fichier.
+
+##### Démarche
+
+Une fois que la variabilité est analysée (grâce à Symfinder), la démarche à suivre est composée des étapes suivantes :
+1. Execution du script python ``paternity_variability_detail.py`` avec comme argument ``lien_github_du_projet``
+   Obtention pour chaque "VARIANT" de ses auteurs ainsi que de leur pourcentage de participation (nombre de lignes écrites/nombre de lignes totales).
+2. Execution du script ````
 
 ## V. Résultat d'analyse et Conclusion
 
