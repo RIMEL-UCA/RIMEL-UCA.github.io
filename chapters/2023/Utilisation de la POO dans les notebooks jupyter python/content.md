@@ -125,7 +125,6 @@ Les choix et les limites de cette expérience incluent la qualité de la mise en
 L'hypothèse sera considérée comme vérifiée si le nombre d'étoiles sur Github des notebooks utilisant la POO sont significativement supérieurs à ceux des notebooks n'utilisant pas la POO.
 
 
-
 ## V. Analyse des résultats et conclusion
 
 ### 1. Fréquence d'usage de la POO dans les notebooks 
@@ -180,7 +179,7 @@ limites : limitation du nombre de repos utilisants la POO donc pas assez de donn
 
 ## VII. Les datas scientistes utilisent de la POO sans le savoir 
 
-De nombreux datas scientistes utilisent la POO dans leurs notebooks Jupyter sans même le savoir. Cela est dû au fait que de nombreuses bibliothèques populaires utilisées dans le domaine des sciences des données, telles que scikit-learn, TensorFlow et autres, sont construites en utilisant la POO. En utilisant ces bibliothèques, les datas scientistes manipulent souvent des objets tels que des modèles de machine learning, des jeux de données, etc. qui sont des instances de classes définies par ces bibliothèques. Même si ces datas scientistes n'ont pas nécessairement conscience de la POO, ils en bénéficient tout de même en bénéficiant de la modularité, de l'encapsulation et de l'héritage que cette technique de programmation offre. 
+De nombreux datas scientistes utilisent la POO dans leurs notebooks Jupyter sans même le savoir. Cela est dû au fait que de nombreuses bibliothèques populaires utilisées dans le domaine des sciences des données, telles que scikit-learn, TensorFlow et autres, sont construites en utilisant la POO. En utilisant ces bibliothèques, les datas scientistes manipulent souvent des objets tels que des modèles de machine learning, des jeux de données, etc. qui sont des instances de classes définies par ces bibliothèques. Même si ces datas scientistes n'ont pas nécessairement conscience de la POO, ils en bénéficient tout de même en bénéficiant de la modularité, de l'encapsulation et de l'héritage que cette technique de programmation offre. Nous l'avons constaté suite à une étude menée sur les libraires les plus populaires utilisées par les scientistes. 
 
 Exemples : Création d'un réseau de neurone avec la bibliothèque TensorFlow
 
@@ -190,18 +189,14 @@ Exemples : Création d'un réseau de neurone avec la bibliothèque TensorFlow
 
 Dans ce code, nous utilisons la classe **Sequential** pour définir notre modèle de réseau de neurones en lui fournissant les differents paramètres par argument. Les méthodes **compile** et **fit** sont appelés sur la référence de l'objet **model** créé. Celles-ci font donc parties de la classe **Sequential**; une caractérisation de l'encapsulation. 
 
+
 ## VIII. Outils utilisés
 
 Pour vérifier l'utilisation de la POO dans les fichiers notebooks, nous avons effectué une recherche de mots clés (décrit dans la section III. Collecte d'informations) en premier lieu en parcourant manuellement les fichiers, puis nous avons automatisé ce processus en utilisant des expressions régulières (regex). Cela nous a permis d'automatiser la tâche et d'augmenter notre productivité. 
 
 Nous avons mis en place un [outil](https://github.com/ABBARNABIL/github-repository-scrapper/tree/main/github-repo-scraping/github-repo-scraping) (en réalité des scripts python automatisés) qui nous ont permis de récupérer des notebooks Jupyter python sur Github; de transformer ces notebooks en fichiers python (pour mieux les traiter); de déterminer la présence de l'utilisation de la POO dans ces derniers; d'analyser la qualité du code dans ces notebooks et de visualiser les résultats obtenus grâce à des graphiques. 
 
-Cet outil mis en place se base sur les outils suivants : 
-
-
-Lors de l'analyse de la qualité du code dans les notebooks Jupyter, nous avons d'abord utilisé **SonarQube**, mais nous nous sommes rapidement rendus compte qu'il n'était pas adapté aux petits projets, mais plutôt aux grands projets. Par conséquent, nous avons opté pour Pylint, un outil plus approprié pour les petits projets.
-
-
+un **README.md** contenant les instructions d'utilisation de l'outil est disponible dans le repertoire **/code/** du rendu. 
 
 
 ## IX. Conclusion
@@ -217,5 +212,3 @@ Comme perspectives futures, nous pensons étendre et approfondir notre recherche
 2. [A Large-Scale Study About Quality and Reproducibility of Jupyter Notebooks](https://ieeexplore.ieee.org/abstract/document/8816763)
 3. [Assessing and restoring reproducibility of Jupyter notebooks](https://dl.acm.org/doi/abs/10.1145/3324884.3416585)
 4. [Better code, better sharing: on the need of analyzing jupyter notebooks](https://dl.acm.org/doi/abs/10.1145/3377816.3381724)
-5. [API TensorFlow](https://www.tensorflow.org/api_docs/python/tf/all_symbols)
-
