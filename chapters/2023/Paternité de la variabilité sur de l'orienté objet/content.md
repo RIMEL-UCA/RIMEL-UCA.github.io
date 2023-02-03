@@ -68,8 +68,12 @@ Attention pour répondre à cette question, vous devrez être capable d'émettre
 
      :bulb: Cette première étape nécessite beaucoup de réflexion pour se définir la bonne question afin de poser les bonnes bases pour la suite.
 
+### Reformulation du sujet 
 
-> Comment la variabilité est distribuée entre plusieurs auteurs dans du code orienté objet ?
+On peut reformuler le sujet en question de la façon suivante :
+> Comment déterminer la paternité de la variabilité du code d’un projet orienté objet ?
+
+### Intérêt
 
 Selon le type d’application développée et le fonctionnement en entreprise, le développement peut être fait par une ou plusieurs personnes.  
 Dans une entreprise, il peut y avoir des départs, des changements de postes, des nouveaux arrivants ce qui impliquent que les personnes qui s’occupent d’une application peuvent varier.  
@@ -77,20 +81,23 @@ C’est dans cette optique que l’analyse de la paternité est un outil qui va 
 En effet, savoir qui est ou sont les développeurs principaux d’une partie de l’application permet d’améliorer la montée en compétence de ce qui n’ont pas ces connaissances.  
 La mise en place de cet outil serait donc une grande amélioration dans le monde du développement.
 
+### Question générale
 Notre question générale sera donc :
-Comment déterminer la paternité de la variabilité du code d’un projet orienté objet ?
+> Comment la variabilité est distribuée entre plusieurs auteurs dans du code orienté objet ?
+
 
 La première étape est donc de bien déterminer quel type de variabilité nous allons considérer.
 Grâce à un outil de Git, il est possible d’obtenir à un instant “t” du projet, tous les auteurs d’un fichier précis.
 
 À partir des résultats obtenus, nous avons donc reformulé la question :
-Comment analyser ces résultats pour identifier les différents auteurs de la variabilité et ressortir des statistiques sur la paternité du projet à un instant “t” ?
+> Comment analyser ces résultats pour identifier les différents auteurs de la variabilité et ressortir des statistiques sur la paternité du projet à un instant “t” ?
 
 Comme dit précédemment, l’identification de la paternité va permettre de faciliter la transmission de connaissance 
 sur les points complexes du code entre les développeurs experts et les nouveaux arrivants.
 La variabilité pouvant être décomposée sous forme de "patterns" (patron de conception), le nouveau développeur pourrait cibler sa recherche 
 sur un pattern spécifique afin de trouver les auteurs auprès de qui poser des questions pour comprendre le fonctionnement du pattern à travers le code.
 
+### Limites
 Dans notre approche, on peut identifier les limites suivantes :
 - L'analyse du code se fait à un instant t, on prend le dernier commit de la branche principale du repository. 
   Une extension intéressante serait d'analyser les modifications à travers les différentes versions du projet.
@@ -99,7 +106,8 @@ Dans notre approche, on peut identifier les limites suivantes :
 - Plusieurs contributeurs peuvent être une seule et même personne sur un projet avec des adresses mail différentes. 
   L'identification de l'auteur peut être faussée.
 - Les patterns de variabilité étudiés sont "VP" et "VARIANT". 
-  Ces deux patterns permettent d'identifier facilement quelles sont leurs lignes de code associées.  
+  VP correspond à un "VARIATION POINT", c'est-à-dire une classe qui peut être implémenter par d'autres et possède des "VARIANTS" qui l'implémente.
+  Ces deux patterns permettent d'identifier facilement quelles sont leurs lignes de code associées (le fichier entier correspond au code du pattern).  
 
 ## III. Collecte d'information
 
@@ -110,18 +118,24 @@ Préciser vos zones de recherches en fonction de votre projet, les informations 
 **1. Les articles ou documents utiles à votre projet📝**
 
 Dans le cadre de notre recherche, nous prévoyons de nous baser sur les ressources suivantes :
-- [On the notion of variability in software product lines](https://doi.org/10.1109/WICSA.2001.948406) :
+1. [On the notion of variability in software product lines](https://doi.org/10.1109/WICSA.2001.948406)  
   Définition de la notion de variabilité dans les lignes de produits logiciels.
-- [Visualization of Object-Oriented Variability Implementations as Cities](https://hal.archives-ouvertes.fr/hal-03312487) :
+
+
+2. [Visualization of Object-Oriented Variability Implementations as Cities](https://hal.archives-ouvertes.fr/hal-03312487)  
   Création d'un outil permettant l'analyse et la visualisation de la variabilité dans un code orienté objet.
-- [On the usefulness of ownership metrics in open-source software projects](https://www.sciencedirect.com/science/article/abs/pii/S0950584915000294)
+
+
+3. [On the usefulness of ownership metrics in open-source software projects](https://www.sciencedirect.com/science/article/abs/pii/S0950584915000294)  
   Métriques sur la paternité de projets Open-Source.
 
 
 **2. Les jeux de données 💾**
 
 Nous procéderons à l'analyse de projets GitHub. 
-La liste des projets se trouve dans un excel disponible [ici](chapters/2023/Paternité de la variabilité sur de l'orienté objet/assets/data/GitHub_projects_list.xlsx)
+La liste contenant la totalité des projets utilisés se trouve dans un excel disponible [ici.](chapters/2023/Paternité de la variabilité sur de l'orienté objet/assets/data/GitHub_projects_list.xlsx)
+Cette liste contient 
+
 Les projets GitHub que nous allons analyser comportent les critères suivants :
 - langage de développement : JAVA (orienté objet),
 - nombre de contributeurs : entre 10 et 40,
@@ -145,7 +159,7 @@ Un projet peut donc être défini par son nombre de lignes de code, son nombre d
 
 Pour plus de détails sur comment utiliser ces outils, voir partie [VI. Outils](#vi-outils).
 
-## IV. Hypothèses et Experience
+## IV. Hypothèses et Expériences
 
 1. Il s'agit ici d'**énoncer sous forme d'hypothèses** ce que vous allez chercher à démontrer. Vous devez définir vos hypothèses de façon à pouvoir les _mesurer/vérifier facilement._ Bien sûr, votre hypothèse devrait être construite de manière à _vous aider à répondre à votre question initiale_. Explicitez ces différents points.
 2. Vous **explicitez les expérimentations que vous allez mener** pour vérifier si vos hypothèses sont vraies ou fausses. Il y a forcément des choix, des limites, explicitez-les.
@@ -170,24 +184,29 @@ Pour notre analyse, on va seulement considérer les contributeurs qui ont partic
 
 #### Experience
 ##### Source
+
 Les projets que nous avons choisis pour cette expérience sont les suivants :
 
 |                      Projet                       | Lien                                                                 | Nombre de contributeurs | Nombre de développeurs |
-|:-------------------------------------------------:|:---------------------------------------------------------------------|:-----------------------:|:-----------------------:|
-|             JakeWharton/DiskLruCache              | https://github.com/JakeWharton/DiskLruCache                          |           10            | ? |
-|                JakeWharton/RxRelay                | https://github.com/JakeWharton/RxRelay                               |           15            | ? |
-|               Flipboard/bottomsheet               | https://github.com/Flipboard/bottomsheet                             |           20            | ? |
-|      VerbalExpressions/JavaVerbalExpressions      | https://github.com/VerbalExpressions/JavaVerbalExpressions           |           25            | ? |
-| EnterpriseQualityCoding/FizzBuzzEnterpriseEdition | https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition |           31            | ? |
-| EngineHub/WorldEdit | https://github.com/EngineHub/WorldEdit |           96            | 52
+|:-------------------------------------------------:|:---------------------------------------------------------------------|:-----------------------:|:----------------------:|
+|             JakeWharton/DiskLruCache              | https://github.com/JakeWharton/DiskLruCache                          |           10            |           ?            |
+|                JakeWharton/RxRelay                | https://github.com/JakeWharton/RxRelay                               |           15            |           ?            |
+|               Flipboard/bottomsheet               | https://github.com/Flipboard/bottomsheet                             |           20            |           ?            |
+|      VerbalExpressions/JavaVerbalExpressions      | https://github.com/VerbalExpressions/JavaVerbalExpressions           |           25            |           ?            |
+| EnterpriseQualityCoding/FizzBuzzEnterpriseEdition | https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition |           31            |           ?            |
+|                EngineHub/WorldEdit                | https://github.com/EngineHub/WorldEdit                               |           96            |           52           |
 
 #### Description
+
 Le but de cette expérience est de déterminer si le nombre de contributeurs influe sur la répartition de la variabilité.
-Pour cela, on a sélectionné des projets contenant de la variabilité avec un nombre de contributeurs croissant (de 10 à 31).
+Pour cela, on a sélectionné des projets contenant de la variabilité avec un nombre de contributeurs croissant (de 10 à 52).
 À partir de l'analyse de la variabilité de chaque projet, un filtre est appliqué pour isolé tous les "VARIANTS" 
 et itérer sur chacun afin d'appliquer ``git blame`` sur le fichier contenant le "VARIANT" 
 et identifier les différents auteurs ainsi que leur pourcentage de participation à l'écriture de ce fichier.
 
+#### Démarche
+Une fois que la variabilité est analysée (grâce à Symfinder), la démarche à suivre est composée des étapes suivantes : 
+1. Execution du script python ``paternity_variability_detail.py`` avec comme arguments  
 
 ### 2. Paternité commune sur la variabilité de type "VP" (Variant Point) et "VARIANT"
 
@@ -208,17 +227,10 @@ et identifier les différents auteurs ainsi que leur pourcentage de participatio
 **Experience**  
 Les projets que nous avons choisis pour cette expérience sont les suivants : 
 
-|                      Projet                       | Lien                                                                 | Nombre de contributeurs |
-|:-------------------------------------------------:|:---------------------------------------------------------------------|:-----------------------:|
-| EnterpriseQualityCoding/FizzBuzzEnterpriseEdition | https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition |           31            |
-
-### 3. 
-
-**Hypothèse**
-
-**Sous-question**
-
-**Experience**
+|                      Projet                       | Lien                                                                 | Nombre de contributeurs | Nombre de développeurs |
+|:-------------------------------------------------:|:---------------------------------------------------------------------|:-----------------------:|:----------------------:|
+| EnterpriseQualityCoding/FizzBuzzEnterpriseEdition | https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition |           31            |           ?            |
+|                EngineHub/WorldEdit                | https://github.com/EngineHub/WorldEdit                               |           96            |           52           |
 
 ## V. Résultat d'analyse et Conclusion
 
