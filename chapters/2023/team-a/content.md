@@ -9,7 +9,7 @@ date:   2023-02
 .tg td{font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
 .tg th{font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
 blockquote { background-color: #cecece !important; padding: 14px 10px 5px 20px !important; border-radius: 5px !important;}
-img { border-radius: 5px!important; max-width: 90%; margin: 15px 5%;}
+.tgimg { border-radius: 5px!important; max-width: 90%; margin: 15px 5%;}
 </style>
 
 **_février 2023_**
@@ -196,6 +196,7 @@ clairement les types d'actions dominants. Il montre en effet ici que les actions
 utilisées, mais que les actions publiques sont également très utilisées.
 
 ![Répartition des types d'action](assets/images/repartition_action_types_global.png)
+{: .tgimg}
 
 Cela peut s'expliquer par le fait que les actions publiques sont plus faciles à trouver sur des sources de savoir
 alternatives (type forum) et à utiliser que les actions privées, mais aussi par le fait qu'elles sont plus flexibles et
@@ -215,6 +216,7 @@ une mise à jour disponible. Cela représente 2.16 actions à risque par workflo
 de la moyenne de 2.25 actions par workflow !
 
 ![Répartition des types d'action](assets/images/repartition_safety.png)
+{: .tgimg}
 
 En d'autres termes, sur toutes les actions du corpus, environ 64% sont à risque. Cela représente plus de 66% de
 workflows à risque et 91.18% des dépôts du corpus. Cette répartition est très inquiétante et montre que les actions
@@ -231,6 +233,7 @@ discerner les dépôts qui utilisent beaucoup d'actions publiques et celles qui 
 GitHub — mais surtout la proportion de chacune.
 
 ![Répartition des types d'action par dépôt](assets/images/repartition_per_repo.png)
+{: .tgimg}
 
 La répartition des types d'actions par dépôt montre que les actions publiques sont très utilisées, mais que les actions
 fournies par GitHub restent en majorité, proportionnellement, les plus utilisées. Cela peut s'expliquer par le fait que
@@ -327,12 +330,14 @@ dossier `dependencies`. Les fichiers de workflow sont également copiés dans un
 dossier du dépôt.
 
 ![Arborescence des résultats](assets/images/results_tree.png)
+{: .tgimg}
 
 Il est à l'issue de l'exécution du script possible visualiser les résultats obtenus pour chaque dépôt et chacun de ses
 fichiers de CI. Les résultats condensés sont inscrits dans le pied de chacune des visualisations. On se retrouve par
 exemple, pour quelques-uns des fichiers de CI, avec les résultats suivants :
 
 ![Résultats exemples](assets/images/example_dependencies.png)
+{: .tgimg}
 
 On remarque qu'il est alors d'un coup d'œil possible de voir quelles sont les actions les plus utilisées dans un fichier
 de CI, mais surtout de visualiser clairement les problèmes de sécurité éventuels au travers d'une alerte visuelle sur
@@ -346,6 +351,7 @@ parallélisme possible des actions ou les dépendances entre elles. C'est un pet
 représentation précise de la structure du fichier de CI.
 
 ![Visualisation de précédence](assets/images/example_precedence.png)
+{: .tgimg}
 
 Ici, on remarque que la plupart des actions au sein d'un fichier de CI sont indépendantes les unes des autres, ce qui
 est un bon point pour la performance de l'exécution du fichier de CI et qui permet de réduire le temps d'exécution de
@@ -368,6 +374,7 @@ graphiques sont générés dans la mémoire et les données statistiques sont ex
 aussi un fichier ``result.md`` qui contient les résultats pour chaque dépôt et chaque fichier de CI.
 
 ![Compute example](assets/images/compute_execution.png)
+{: .tgimg}
 
 On se retrouve avec un espace de travail qui ressemble à ceci :
 
@@ -389,3 +396,4 @@ On se retrouve avec un espace de travail qui ressemble à ceci :
    from https://www.revenera.com/blog/software-composition-analysis/the-story-behind-colors-js-and-faker-js/
 
    ![Figure 1: Logo UCA](assets/images/logo_uca.png){:height="25px"}
+   {: .tgimg}
