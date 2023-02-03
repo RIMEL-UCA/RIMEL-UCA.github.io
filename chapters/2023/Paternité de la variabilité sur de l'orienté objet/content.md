@@ -172,13 +172,14 @@ Pour notre analyse, on va seulement considérer les contributeurs qui ont partic
 ##### Source
 Les projets que nous avons choisis pour cette expérience sont les suivants :
 
-|                      Projet                       | Lien                                                                 | Nombre de contributeurs |
-|:-------------------------------------------------:|:---------------------------------------------------------------------|:-----------------------:|
-|             JakeWharton/DiskLruCache              | https://github.com/JakeWharton/DiskLruCache                          |           10            |
-|                JakeWharton/RxRelay                | https://github.com/JakeWharton/RxRelay                               |           15            |
-|               Flipboard/bottomsheet               | https://github.com/Flipboard/bottomsheet                             |           20            |
-|      VerbalExpressions/JavaVerbalExpressions      | https://github.com/VerbalExpressions/JavaVerbalExpressions           |           25            |
-| EnterpriseQualityCoding/FizzBuzzEnterpriseEdition | https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition |           31            |
+|                      Projet                       | Lien                                                                 | Nombre de contributeurs | Nombre de développeurs |
+|:-------------------------------------------------:|:---------------------------------------------------------------------|:-----------------------:|:-----------------------:|
+|             JakeWharton/DiskLruCache              | https://github.com/JakeWharton/DiskLruCache                          |           10            | ? |
+|                JakeWharton/RxRelay                | https://github.com/JakeWharton/RxRelay                               |           15            | ? |
+|               Flipboard/bottomsheet               | https://github.com/Flipboard/bottomsheet                             |           20            | ? |
+|      VerbalExpressions/JavaVerbalExpressions      | https://github.com/VerbalExpressions/JavaVerbalExpressions           |           25            | ? |
+| EnterpriseQualityCoding/FizzBuzzEnterpriseEdition | https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition |           31            | ? |
+| EngineHub/WorldEdit | https://github.com/EngineHub/WorldEdit |           96            | 52
 
 #### Description
 Le but de cette expérience est de déterminer si le nombre de contributeurs influe sur la répartition de la variabilité.
