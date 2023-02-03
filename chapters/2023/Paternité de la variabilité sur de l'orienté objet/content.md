@@ -172,10 +172,12 @@ Pour notre analyse, on va seulement considérer les contributeurs qui ont partic
 > Comment évolue la répartition de la variabilité avec le nombre de contributeurs qui augmentent ?
 
 #### Métriques
+
 - Pourcentage de variabilité moyenne par contributeur (%/personne)
 - Nombre moyen de contributeurs ayant participé à l'écriture de la variabilité (N personnes)
 
 #### Experience
+
 ##### Source
 
 Les projets que nous avons choisis pour cette expérience sont les suivants :
@@ -215,13 +217,16 @@ Une fois que la variabilité est analysée (grâce à ``Symfinder``), la démarc
 > Y a-t-il une relation de paternité entre la variabilité présente dans un VP et son implémentation dans ses VARIANTS ?
 
 #### Métriques
+
 - Nombre (et liste) de contributeurs ayant participé à l'écriture d'un VP
 - Nombre (et liste) de contributeurs ayant participé à l'écriture des VARIANTS associés au VP
 - Pourcentage de corrélation entre les deux
 - Le nombre moyen de contributeurs supplémentaires sur les VARIANTS (pas dans les VPs)
 
 #### Experience
+
 ##### Source
+
 Les projets que nous avons choisis pour cette expérience sont les suivants : 
 
 |        Projet        | Lien                                    | Nombre de contributeurs | Nombre de développeurs | Nombre de VPs | Nombre de VARIANTS |
