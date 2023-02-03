@@ -120,11 +120,11 @@ Afin de vérifier notre hypothèse, nous avons décidé de faire une comparaison
 
 Le résultat final qui nous permettra de vérifier notre hypothèse sera la comparaison des résultats pour déterminer s'il existait une différence significative entre les deux groupes de notebooks.
 
-###### Expérience 1 : Analyse de la qualité de code avec SonarQube
+#### Expérimentation 1 : Analyse de la qualité de code avec SonarQube
 
 Afin de vérifier notre hypothèse concernant la qualité des codes dans les notebooks Jupyter, nous avons décidé d'utiliser l'outil populaire SonarQube pour l'analyse. Nous avons utilisé SonarQube pour mesurer la qualité du code présent dans les notebooks Jupyter en suivant les critères définis précédemment. Cependant, les résultats obtenus ont indiqué un score de zéro sur chaque critère, ce qui signifiait qu'il n'y avait aucun problème. Cela peut être dû au fait que SonarQube n'a pas été conçu pour analyser les codes scientifiques, et que les codes que nous avons analysés étaient écrits par des data scientists. Les critères pour évaluer la qualité du code peuvent différer de ceux utilisés dans d'autres projets. Pour remédier à ce problème, nous avons décidé de changer d'outil et de recommencer l'analyse en utilisant un outil différent appelé Pylint.
 
-###### Expérience 2 : Analyse de la qualité de code avec Pylint
+#### Expérimentation 2 : Analyse de la qualité de code avec Pylint
 
 Après un premier essai qui n'a pas donné les résultats escomptés, nous avons décidé d'utiliser Pylint pour mesurer la qualité du code. Pylint est un outil qui permet d'évaluer les notebooks en analysant différents critères tels que le nombre de lignes de code, de commentaires, de lignes vides, de fonctions et de méthodes, d'expressions complexes, de variables et de classes. Il peut également signaler des erreurs et des problèmes potentiels dans le code.
 
@@ -180,8 +180,11 @@ L'hypothèse 1 soutenait que "l'utilisation de la POO est largement adoptée par
   <img src="./assets/images/image4.png">
 </p>
 
-comparaison de 13 repos poo et 13 repos non POo 
-accepté dans la limite des repos
+Au cours de notre étude, nous avons observé que les notebooks qui utilisent la programmation orientée objet (POO) et ceux qui ne l'utilisent pas, ont tous les deux une quantité presque identique de notebooks qui ne peuvent pas être compilés par Pylint. Le score "-1" étant attribué aux notebooks non compilés par Pylint. Pour les notebooks pour lesquels Pylint a pu évaluer leur qualité (score >= 0), nous n'avons pas constaté de grandes différences entre les deux groupes de notebooks. Cela montre que l'utilisation de la POO n'augmente pas de manière significative la qualité logicielle des notebooks. Ce fait peut également être justifié par le fait que le notebook ayant le score le plus élevé dans notre jeu de données n'utilise pas la POO.
+
+En conclusion, nous pouvons affirmer que l'application de bonnes pratiques de développement, y compris la POO, peut contribuer à améliorer la qualité logicielle des notebooks. Cependant, il n'est pas nécessaire d'utiliser la POO pour créer des notebooks de haute qualité. Cette hypothèse est donc validée.
+
+Notez cependant que cette étude est limitée par le nombre restreint de notebooks utilisés pour l'étude.
 
 
 ### 3. Popularité des notebooks qui utilisent la POO
@@ -197,17 +200,6 @@ Les résultas ci-dessus représentent
 </p>
 
 accepé
-
-
-
-
-2. Interprétation/Analyse des résultats en fonction de vos hypothèses
-3. Construction d’une conclusion 
-
-     :bulb:  Vos résultats et donc votre analyse sont nécessairement limités. Préciser bien ces limites : par exemple, jeux de données insuffisants, analyse réduite à quelques critères, dépendance aux projets analysés, ...
-
-limites : limitation du nombre de repos utilisants la POO donc pas assez de données
-
 
 ## VI. Les limites de notre étude
 
