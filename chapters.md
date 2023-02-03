@@ -10,6 +10,8 @@ date: 2022-11-18 6:00:00 +0100
 
 ### [Utilisation de la POO dans les notebooks jupyter python]({{ site.url }}/chapters/2023/Utilisation de la POO dans les notebooks jupyter python/content)
 
+### [Paternité de la variabilité sur de l'orienté objet]({{site.url}}/chapters/2023/Paternité de la variabilité sur de l'orienté objet/content)
+
 ### [Qualité logicielle dans les notebooks Jupyter]({{ site.url }}/chapters/2023/Qualité logicielle dans les notebooks Jupyter/content)
 
 ### [Variability paternity environment variables]({{site.url}}/chapters/2023/Variability paternity environment variables/content)
