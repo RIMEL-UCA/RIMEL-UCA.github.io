@@ -75,8 +75,8 @@ local_path = "./data/"+project_name
 
 git_hub_name = split_url[len(split_url)-2]+"/"+split_url[len(split_url)-1]
 
-# Clé d'authentification github (compte d'Alexandre)
-auth = "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"
+# Clé d'authentification github 
+auth = "METTEZ_VOTRE_CLE_API_GITHUB_ICI"
 # Recherche des repositories Github en Java les plus connus
 api_url = "https://api.github.com/repos/"+git_hub_name
 
