@@ -1,0 +1,50 @@
+name: EbookFoundation/free-programming-books - check-urls.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+  - actions/upload-artifact@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+  - tj-actions/changed-files@v35.4.4 ; utd: False
+  - ruby/setup-ruby@v1 ; utd: True
+Type: TRUSTED
+Type: FORKED
+
+name: EbookFoundation/free-programming-books - detect-conflicting-prs.yml
+
+Type: GITHUB
+Type: INTERNAL
+Type: PUBLIC
+  - eps1lon/actions-label-merge-conflict@v2.1.0 ; utd: True
+Type: TRUSTED
+Type: FORKED
+
+name: EbookFoundation/free-programming-books - fpb-lint.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+  - actions/setup-node@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: EbookFoundation/free-programming-books - issues-pinner.yml
+
+Type: GITHUB
+Type: INTERNAL
+Type: PUBLIC
+  - actions-ecosystem/action-add-labels@v1 ; utd: True
+  - actions-ecosystem/action-remove-labels@v1 ; utd: True
+Type: TRUSTED
+Type: FORKED
+
+name: EbookFoundation/free-programming-books - stale.yml
+
+Type: GITHUB
+  - actions/stale@v7 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+

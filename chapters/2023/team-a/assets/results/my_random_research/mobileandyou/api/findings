@@ -1,0 +1,22 @@
+name: mobileandyou/api - api.yml
+
+Type: GITHUB
+  - actions/checkout@v2 ; utd: False
+  - actions/setup-java@v1 ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+  - appleboy/scp-action@master ; utd: False
+  - appleboy/ssh-action@master ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: mobileandyou/api - qodana.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+  - JetBrains/qodana-action@main ; utd: False
+Type: TRUSTED
+Type: FORKED
+

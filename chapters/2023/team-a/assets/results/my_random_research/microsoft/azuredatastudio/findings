@@ -1,0 +1,33 @@
+name: microsoft/azuredatastudio - ci.yml
+
+Type: GITHUB
+  - actions/checkout@v2 ; utd: False
+  - actions/setup-node@v2 ; utd: False
+  - actions/setup-python@v2 ; utd: False
+  - actions/checkout@v2.2.0 ; utd: False
+  - actions/cache@v2 ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+  - coverallsapp/github-action@v1.1.1 ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/azuredatastudio - on-label.yml
+
+Type: GITHUB
+  - actions/checkout@v2 ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+  - hramos/label-actions@v1 ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: microsoft/azuredatastudio - on-pr-open.yml
+
+Type: GITHUB
+  - actions/checkout@v2 ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+

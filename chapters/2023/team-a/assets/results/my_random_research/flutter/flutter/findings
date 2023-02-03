@@ -1,0 +1,31 @@
+name: flutter/flutter - coverage.yml
+
+Type: GITHUB
+  - actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+  - codecov/codecov-action@d9f34f8cd5cb3b3eb79b3e4b5dae3a16df499a70 ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: flutter/flutter - mirror.yml
+
+Type: GITHUB
+Type: INTERNAL
+Type: PUBLIC
+  - google/mirror-branch-action@c6b07e441a7ffc5ae15860c1d0a8107a3a151db8 ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: flutter/flutter - scorecards-analysis.yml
+
+Type: GITHUB
+  - actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c ; utd: False
+  - actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+  - ossf/scorecard-action@e38b1902ae4f44df626f11ba0734b14fb91f8f86 ; utd: False
+  - github/codeql-action/upload-sarif@a34ca99b4610d924e04c68db79e503e1f79f9f02 ; utd: False
+Type: TRUSTED
+Type: FORKED
+

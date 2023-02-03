@@ -1,0 +1,23 @@
+name: vuejs/router - release-tag.yml
+
+Type: GITHUB
+  - actions/checkout@master ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+  - yyx990803/release-tag@master ; utd: False
+Type: FORKED
+
+name: vuejs/router - test.yml
+
+Type: GITHUB
+  - actions/checkout@v3 ; utd: True
+  - actions/setup-node@v2 ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+  - pnpm/action-setup@v2.2.1 ; utd: False
+  - browserstack/github-actions/setup-env@master ; utd: False
+  - codecov/codecov-action@v2 ; utd: False
+Type: TRUSTED
+Type: FORKED
+

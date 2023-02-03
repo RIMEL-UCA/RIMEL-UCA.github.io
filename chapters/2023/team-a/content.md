@@ -63,15 +63,27 @@ Préciser vos zones de recherches en fonction de votre projet, les informations 
 
      :bulb:  Vos résultats et donc votre analyse sont nécessairement limités. Préciser bien ces limites : par exemple, jeux de données insuffisants, analyse réduite à quelques critères, dépendance aux projets analysés, ...
 
+![Répartition des types d'action par dépôt](assets/images/repartition_per_repo.png)
+
 ## VI. Outillage
 
-Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à \(1\) pouvoir reproduire vos expérimentations, \(2\) partager/expliquer à d'autres l'usage des outils.
+Afin de réaliser ce projet, nous avons créé un outil permettant de détecter les actions utilisées dans un fichier d'intégration continue, de les analyser et de les visualiser.
 
-![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](images/logo_uca.png){:height="25px"}
+### 1. Génération des visualisations et des résultats
+
+Pour générer les visualisations et les résultats, nous avons utilisé le script `main.py` qui permet de récupérer les informations sur les actions utilisées dans les fichiers d'intégration continue des dépôts GitHub (importés dans un fichier de recherche sous format YML). Pour cela, nous avons utilisé l'API GitHub et le langage Python.
+
+XXX
+
+### 2. Analyse des résultats
+
+Afin de compiler les résultats obtenus précédemment sous format de fichier propriétaire "findings", nous avons utilisé le script `compyte.py` qui permet de compiler des graphiques et des données statistiques à partir des résultats obtenus par le script `main.py`. Pour cela, nous avons utilisé le langage Python également. Les images présentes dans ce rapport ont été générées à l'aide de ce script.
+
+> 🤘🏻 Tout le code source de ce projet de recherche est disponible [ici](assets/code), avec un guide d'utilisation.
 
 
 ## VI. References
 
 [Debret 2020] Debret, J. (2020) La démarche scientifique : tout ce que vous devez savoir ! Available at: https://www.scribbr.fr/article-scientifique/demarche-scientifique/ (Accessed: 18 November 2022).
 
-
+![Figure 1: Logo UCA](assets/images/logo_uca.png){:height="25px"}

@@ -1,0 +1,21 @@
+name: vuejs/vue - ci.yml
+
+Type: GITHUB
+  - actions/checkout@v2 ; utd: False
+  - actions/setup-node@v2 ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+  - pnpm/action-setup@v2 ; utd: True
+Type: TRUSTED
+Type: FORKED
+
+name: vuejs/vue - release-tag.yml
+
+Type: GITHUB
+  - actions/checkout@master ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+  - yyx990803/release-tag@master ; utd: False
+Type: FORKED
+

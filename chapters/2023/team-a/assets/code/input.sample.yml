@@ -1,0 +1,13 @@
+name: "Sample Research Input File"
+
+subjects:
+
+  your_group_name:
+    repositories:
+      - "repo_owner/repo_name"
+
+  your_group_name_advanced:
+    repositories:
+      - "repo_owner/repo_name"
+    trusted-owners:
+      - "github_username"

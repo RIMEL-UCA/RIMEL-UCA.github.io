@@ -1,0 +1,31 @@
+name: kamranahmedse/developer-roadmap - aws-costs.yml
+
+Type: GITHUB
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: kamranahmedse/developer-roadmap - deploy.yml
+
+Type: GITHUB
+  - actions/checkout@v2 ; utd: False
+  - actions/setup-node@v1 ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+  - pnpm/action-setup@v2.2.2 ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: kamranahmedse/developer-roadmap - update-deps.yml
+
+Type: GITHUB
+  - actions/checkout@v2 ; utd: False
+  - actions/setup-node@v3 ; utd: True
+Type: INTERNAL
+Type: PUBLIC
+  - pnpm/action-setup@v2.2.2 ; utd: False
+  - peter-evans/create-pull-request@v4 ; utd: True
+Type: TRUSTED
+Type: FORKED
+

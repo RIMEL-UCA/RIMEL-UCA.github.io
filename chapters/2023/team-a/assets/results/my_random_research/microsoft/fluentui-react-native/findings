@@ -1,0 +1,12 @@
+name: microsoft/fluentui-react-native - codeql-analysis.yml
+
+Type: GITHUB
+  - actions/checkout@v2 ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+  - github/codeql-action/init@v1 ; utd: False
+  - github/codeql-action/autobuild@v1 ; utd: False
+  - github/codeql-action/analyze@v1 ; utd: False
+Type: TRUSTED
+Type: FORKED
+

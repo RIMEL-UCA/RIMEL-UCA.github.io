@@ -1,0 +1,201 @@
+name: freeCodeCamp/freeCodeCamp - codeql-analysis.yml
+
+Type: GITHUB
+  - actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+  - github/codeql-action/init@3ebbd71c74ef574dbc558c82f70e52732c8b44fe ; utd: False
+  - github/codeql-action/analyze@3ebbd71c74ef574dbc558c82f70e52732c8b44fe ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: freeCodeCamp/freeCodeCamp - codesee-diagram.yml
+
+Type: GITHUB
+Type: INTERNAL
+Type: PUBLIC
+  - Codesee-io/codesee-action@1d109bb07bbd63a6fc3d01b40d28a4c8f0925bf5 ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: freeCodeCamp/freeCodeCamp - crowdin-download.client-ui.yml
+
+Type: GITHUB
+  - actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+  - freecodecamp/crowdin-action@main ; utd: False
+  - crowdin/github-action@master ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: freeCodeCamp/freeCodeCamp - crowdin-download.curriculum.yml
+
+Type: GITHUB
+  - actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c ; utd: False
+  - actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+  - freecodecamp/crowdin-action@main ; utd: False
+  - crowdin/github-action@master ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: freeCodeCamp/freeCodeCamp - crowdin-download.docs.yml
+
+Type: GITHUB
+  - actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+  - freecodecamp/crowdin-action@main ; utd: False
+  - crowdin/github-action@master ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: freeCodeCamp/freeCodeCamp - crowdin-upload.client-ui.yml
+
+Type: GITHUB
+  - actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+  - freecodecamp/crowdin-action@main ; utd: False
+  - crowdin/github-action@master ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: freeCodeCamp/freeCodeCamp - crowdin-upload.curriculum.yml
+
+Type: GITHUB
+  - actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+  - freecodecamp/crowdin-action@main ; utd: False
+  - crowdin/github-action@master ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: freeCodeCamp/freeCodeCamp - crowdin-upload.docs.yml
+
+Type: GITHUB
+  - actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+  - freecodecamp/crowdin-action@main ; utd: False
+  - crowdin/github-action@master ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: freeCodeCamp/freeCodeCamp - e2e-mobile.yml
+
+Type: GITHUB
+  - actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c ; utd: False
+  - actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+  - subosito/flutter-action@dbf1fa04f4d2e52c33185153d06cdb5443aa189d ; utd: False
+  - cypress-io/github-action@v4 ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: freeCodeCamp/freeCodeCamp - e2e-third-party.yml
+
+Type: GITHUB
+  - actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c ; utd: False
+  - actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+  - cypress-io/github-action@v4 ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: freeCodeCamp/freeCodeCamp - e2e-web.yml
+
+Type: GITHUB
+  - actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c ; utd: False
+  - actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c ; utd: False
+  - actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce ; utd: False
+  - actions/download-artifact@9bc31d5ccc31df68ecc42ccf4149144866c47d8a ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+  - cypress-io/github-action@v4 ; utd: False
+Type: TRUSTED
+Type: FORKED
+
+name: freeCodeCamp/freeCodeCamp - github-autoclose.yml
+
+Type: GITHUB
+  - actions/github-script@d556feaca394842dc55e4734bf3bb9f685482fa0 ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: freeCodeCamp/freeCodeCamp - github-no-i18n-via-prs.yml
+
+Type: GITHUB
+  - actions/github-script@d556feaca394842dc55e4734bf3bb9f685482fa0 ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: freeCodeCamp/freeCodeCamp - github-spam.yml
+
+Type: GITHUB
+  - actions/github-script@d556feaca394842dc55e4734bf3bb9f685482fa0 ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: freeCodeCamp/freeCodeCamp - i18n-validate-builds.yml
+
+Type: GITHUB
+  - actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c ; utd: False
+  - actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: freeCodeCamp/freeCodeCamp - i18n-validate-prs.yml
+
+Type: GITHUB
+  - actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c ; utd: False
+  - actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c ; utd: False
+  - actions/github-script@d556feaca394842dc55e4734bf3bb9f685482fa0 ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: freeCodeCamp/freeCodeCamp - node.js-find-unused.yml
+
+Type: GITHUB
+  - actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c ; utd: False
+  - actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: freeCodeCamp/freeCodeCamp - node.js-tests-upcoming.yml
+
+Type: GITHUB
+  - actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c ; utd: False
+  - actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
+name: freeCodeCamp/freeCodeCamp - node.js-tests.yml
+
+Type: GITHUB
+  - actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c ; utd: False
+  - actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c ; utd: False
+Type: INTERNAL
+Type: PUBLIC
+Type: TRUSTED
+Type: FORKED
+
