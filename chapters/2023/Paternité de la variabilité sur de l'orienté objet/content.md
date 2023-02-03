@@ -67,9 +67,9 @@ On peut reformuler le sujet en question de la façon suivante :
 ### Intérêt
 
 Selon le type d’application développée et le fonctionnement en entreprise, le développement peut être fait par une ou plusieurs personnes.  
-Dans une entreprise, il peut y avoir des départs, des changements de postes, des nouveaux arrivants ce qui impliquent que les personnes qui s’occupent d’une application peuvent varier.  
+Dans une entreprise, il peut y avoir des départs, des changements de postes, des nouveaux arrivants ce qui implique que les personnes qui s’occupent d’une application peuvent varier.  
 C’est dans cette optique que l’analyse de la paternité est un outil qui va permettre d’améliorer la transmission de connaissances et la découverte du fonctionnement d’une application sur les parties complexes qui peuvent nécessiter une grande maitrise de ce qui a déjà été développé.  
-En effet, savoir qui est ou sont les développeurs principaux d’une partie de l’application permet d’améliorer la montée en compétence de ce qui n’ont pas ces connaissances.  
+En effet, savoir qui est où sont les développeurs principaux d’une partie de l’application permet d’améliorer la montée en compétence de ce qui n’ont pas ces connaissances.  
 La mise en place de cet outil serait donc une grande amélioration dans le monde du développement.
 
 ### Question générale
@@ -97,14 +97,10 @@ Dans notre approche, on peut identifier les limites suivantes :
 - Plusieurs contributeurs peuvent être une seule et même personne sur un projet avec des adresses mail différentes. 
   L'identification de l'auteur peut être faussée.
 - Les patterns de variabilité étudiés sont "VP" et "VARIANT". 
-  VP correspond à un "VARIATION POINT", c'est-à-dire une classe qui peut être implémenter par d'autres et possède des "VARIANTS" qui l'implémente.
+  VP correspond à un "VARIATION POINT", c'est-à-dire une classe qui peut être implémentée par d'autres et possède des "VARIANTS" qui l'implémente.
   Ces deux patterns permettent d'identifier facilement quelles sont leurs lignes de code associées (le fichier entier correspond au code du pattern).  
 
 ## III. Collecte d'information
-
-Préciser vos zones de recherches en fonction de votre projet, les informations dont vous disposez, ... :
-
-     :bulb: Cette étape est fortement liée à la suivante. Vous ne pouvez émettre d'hypothèses à vérifier que si vous avez les informations, inversement, vous cherchez à recueillir des informations en fonction de vos hypothèses. 
 
 **1. Les articles ou documents utiles à votre projet📝**
 
@@ -129,28 +125,22 @@ Dans le cadre de notre recherche, nous avons basé notre travail sur les ressour
   
   4.[Code ownership in open-source software](https://hal.science/hal-00976024v1)
 
-  Ce papier replique une étude sur la relation entre les métriques d'appartenance et la qualité du logiciel dans les projets Java Open Source. Les résultats ont montré une     faible corrélation entre les métriques d'appartenance et les erreurs de module, et la taille de module avait un plus grand impact sur les erreurs que l'appartenance
+  Ce papier réplique une étude sur la relation entre les métriques d'appartenance et la qualité du logiciel dans les projets Java Open Source. Les résultats ont montré une     faible corrélation entre les métriques d'appartenance et les erreurs de module, et la taille de module avait un plus grand impact sur les erreurs que l'appartenance
 
 
 **2. Les jeux de données 💾**
 
 Nous procéderons à l'analyse de projets GitHub. 
-La liste contenant la totalité des projets utilisés se trouve dans un excel disponible [ici.](chapters/2023/Paternité de la variabilité sur de l'orienté objet/assets/data/GitHub_projects_list.xlsx)
-Cette liste contient 
+La liste contenant la totalité des projets récupérés se trouve dans un excel disponible [ici.](chapters/2023/Paternité de la variabilité sur de l'orienté objet/assets/data/GitHub_projects_list.xlsx)
 
-Les projets GitHub que nous allons analyser comportent les critères suivants :
+Les projets GitHub que nous allons analyser comportent les caractéristiques suivants :
 - langage de développement : JAVA (orienté objet),
-- nombre de contributeurs : entre 10 et 40,
-- taille de la base de code : inférieure à 500 KB.
+- nombre de contributeurs : entre 10 et 605,
+- taille de la base de code : maximum de 7.3 Mo.
 
-Ces critères sont définis pour limiter le choix des projets à analyser. 
 Pour faire ressortir la notion de paternité, il faut avoir plus d'un seul contributeur. 
-Cependant, avec un nombre trop conséquent de contributeur, l'analyse risque d'être trop morcelée donc une limite expérimentale est fixée à 40 contributeurs.
 Il est important de noter que tous les contributeurs dans le projet sur GitHub n'ont pas forcément participé à l'écriture de la variabilité.
-Notre analyse va donc prendre en compte seulement ceux qui y ont participé, ils seront dorénavant appelés "Développeurs"."
-
-La taille de la base de code choisie est directement liée au temps d'analyse du projet pour calculer la variabilité de celui-ci. 
-Un trop gros projet mettrait beaucoup de temps à être analysé donc nous ciblons des projets de taille moyenne ou petite.
+Notre analyse va donc prendre en compte seulement ceux qui y ont participé, ils seront dorénavant appelés "Développeurs".
 
 Un projet peut donc être défini par son nombre de lignes de code, son nombre de contributeurs et sa quantité de variabilité (nombre de "VP" et de "VARIANT").
 
@@ -164,11 +154,6 @@ Un projet peut donc être défini par son nombre de lignes de code, son nombre d
 Pour plus de détails sur comment utiliser ces outils, voir partie [VI. Outils](#vi-outils).
 
 ## IV. Hypothèses et Expériences
-
-1. Il s'agit ici d'**énoncer sous forme d'hypothèses** ce que vous allez chercher à démontrer. Vous devez définir vos hypothèses de façon à pouvoir les _mesurer/vérifier facilement._ Bien sûr, votre hypothèse devrait être construite de manière à _vous aider à répondre à votre question initiale_. Explicitez ces différents points.
-2. Vous **explicitez les expérimentations que vous allez mener** pour vérifier si vos hypothèses sont vraies ou fausses. Il y a forcément des choix, des limites, explicitez-les.
-
-     :bulb: Structurez cette partie à votre convenance : Hypothèse 1 => Expériences, Hypothèse 2 => Expériences ou l'ensemble des hypothèses et les expériences....
 
 Pour notre analyse, on va seulement considérer les contributeurs qui ont participé à l'écriture de code contenant de la variabilité.
 
