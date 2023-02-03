@@ -136,8 +136,9 @@ Dans le cadre de notre recherche, nous avons basé notre travail sur les ressour
   Le papier examine la relation entre les métriques de propriété de code et la qualité du logiciel dans les projets de logiciels libres.
   Les résultats montrent une relation entre les deux, mais d'autres métriques ont un plus grand impact sur la qualité du logiciel
   
-4.[Code ownership in open-source software](https://hal.science/hal-00976024v1)
-Ce papier replique une étude sur la relation entre les métriques d'appartenance et la qualité du logiciel dans les projets FLOSS Java. Les résultats ont montré une faible corrélation entre les métriques d'appartenance et les erreurs de module, et la taille de module avait un plus grand impact sur les erreurs que l'appartenance
+  4.[Code ownership in open-source software](https://hal.science/hal-00976024v1)
+
+  Ce papier replique une étude sur la relation entre les métriques d'appartenance et la qualité du logiciel dans les projets Java Open Source. Les résultats ont montré une     faible corrélation entre les métriques d'appartenance et les erreurs de module, et la taille de module avait un plus grand impact sur les erreurs que l'appartenance
 
 
 **2. Les jeux de données 💾**
