@@ -1,9 +1,12 @@
+---
+layout: default  
+title : Analyse des dépendances entre les étapes de build  
+date:   2022-12  
+---
 
----
-layout: default
-title: Analyse des dépendances entre les étapes de build
-date: 2022-11
----
+# Analyse des dépendances entre les étapes de build
+
+**_Février 2023_**
 
 ## Authors
 
