@@ -1,4 +1,4 @@
-# Sujet 1 : Quelle qualité logicielle dans les codes des notebooks?
+# Quelle qualité logicielle dans les codes des notebooks?
 
 ## Auteurs
 
