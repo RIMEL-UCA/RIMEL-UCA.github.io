@@ -8,17 +8,23 @@ date: 2022-11-18 6:00:00 +0100
 
 ### [Comment visualiser les dépendances d’une chaîne d’intégration continue, leur origine et leur niveau de confiance ?]({{ site.url }}/chapters/2023/team-a/content)
 
-### [Utilisation de la POO dans les notebooks jupyter python]({{ site.url }}/chapters/2023/Utilisation de la POO dans les notebooks jupyter python/content)
+### [Structure de graphe au service de l'analyse de pipeline CI-CD]({{site.url}}/chapters/2023/Structure de graphe au service de l'analyse de pipeline CI-CD/content)
 
-### [Paternité de la variabilité sur de l'orienté objet]({{site.url}}/chapters/2023/Paternité de la variabilité sur de l'orienté objet/content)
+
 
 ### [Qualité logicielle dans les notebooks Jupyter]({{ site.url }}/chapters/2023/Qualité logicielle dans les notebooks Jupyter/content)
 
-### [Variability paternity environment variables]({{site.url}}/chapters/2023/Variability paternity environment variables/content)
-
-### [Structure de graphe au service de l'analyse de pipeline CI-CD]({{site.url}}/chapters/2023/Structure de graphe au service de l'analyse de pipeline CI-CD/content)
+### [Utilisation de la POO dans les notebooks jupyter python]({{ site.url }}/chapters/2023/Utilisation de la POO dans les notebooks jupyter python/content)
 
 ### [Jupyter Notebooks et bonnes pratiques, entre conventions implicites et besoin de formalisation]({{ site.url }}/chapters/2023/Jupyter Notebooks et bonnes pratiques_entre conventions implicites et besoin de formalisation/content)
+
+### [Paternité de la variabilité sur des directives ifdef]({{ site.url }}/chapters/2023/Paternité de la variabilité sur des directives ifdef/content)
+
+### [Paternité de la variabilité sur de l'orienté objet]({{site.url}}/chapters/2023/Paternité de la variabilité sur de l'orienté objet/content)
+
+### [Variability paternity environment variables]({{site.url}}/chapters/2023/Variability paternity environment variables/content)
+
+
 
 ## 2022
 
