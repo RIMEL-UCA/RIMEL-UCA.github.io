@@ -10,6 +10,7 @@ date: 2022-11-18 6:00:00 +0100
 
 ### [Structure de graphe au service de l'analyse de pipeline CI-CD]({{site.url}}/chapters/2023/Structure de graphe au service de l'analyse de pipeline CI-CD/content)
 
+### [Analyse des dépendances entre les étapes de build]({{site.url}}/chapters/2023/(CI-CD)_Analyse des dépendances entre les étapes de build/content)
 
 
 ### [Qualité logicielle dans les notebooks Jupyter]({{ site.url }}/chapters/2023/Qualité logicielle dans les notebooks Jupyter/content)
