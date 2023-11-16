@@ -1,4 +1,4 @@
-# README
+# README : Ajout d'un chapitre par une équipe
 
 **Pour ajouter un nouveau chapitre en 2023-2024**, sous le répertoire 2024 (donc [celui-ci](.)), 
   1. créer votre propre répertoire : 
