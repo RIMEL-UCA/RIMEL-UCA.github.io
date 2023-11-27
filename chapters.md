@@ -5,7 +5,7 @@ date: 2022-11-18 6:00:00 +0100
 ---
 ## 2024
 
-### [Votre Sujet] ({{ site.url }}/chapters/2024/ChapterModel/content)
+### [Les commits structurés (conventional commit, gitmoji) sont-ils utilisés dans les projets open-source (et comment sont-ils utilisés) ?] ({{ site.url }}/chapters/2024/Structured Commits - Team A/content)
 
 ## 2023
 
