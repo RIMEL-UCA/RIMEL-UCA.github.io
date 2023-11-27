@@ -7,7 +7,7 @@ date: 2022-11-18 6:00:00 +0100
 
 ### [Votre Sujet] ({{ site.url }}/chapters/2024/ChapterModel/content)
 
-### [Pipelines personnalisée offertes par LangChain] ({{ site.url }}/chapters/2024/Pipelines personnalisée offertes par LangChain/content)
+### [Pipelines personnalisée offertes par LangChain]({{ site.url }}/chapters/2024/Pipelines personnalisée offertes par LangChain/content)
 
 ## 2023
 
