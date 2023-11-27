@@ -22,7 +22,7 @@ date:   2023-11
 
 ## Authors
 
-We are four students in last year of Polytech Nice-Sophia specialized in Software Architecture :
+Nous sommes quatre étudiants ingénieurs en dernière année à Polytech Nice Sophia, spécialisés en Architecture Logiciel :
 
 * Antoine Buquet &lt;antoine.buquet@etu.unice.fr&gt;
 * Ayoub Imami &lt;ayoub.imami@etu.unice.fr&gt;
