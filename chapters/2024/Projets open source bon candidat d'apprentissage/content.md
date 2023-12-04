@@ -83,7 +83,7 @@ Voici quelques pistes :
 
 Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à \(1\) pouvoir reproduire vos expérimentations, \(2\) partager/expliquer à d'autres l'usage des outils.
 
-![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](assets/images/logo_uca.png){:height="12px"}
+![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](file://assets/images/logo_uca.png) {:height="12px"}
 
 
 ## VI. References
