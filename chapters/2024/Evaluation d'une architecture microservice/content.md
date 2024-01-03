@@ -30,7 +30,9 @@ We are four students in M2 or in last year of Polytech' Nice-Sophia specialized 
 
 ## I. Research context /Project
 
-Préciser ici votre contexte et Pourquoi il est intéressant. **
+Actuellement on trouve beaucoup de projets open source qui suivent une architecture microservice. Cette approche permet d'avoir une structure logicielle modulaire et évolutive, favorisant la flexibilité et la maintenance aisée des applications. Cependant, une architecture microservice doit repondre à plusieurs critères dont le déploiement individualisé, l'approche evenementielle, l'isolation de stockage par microservice et la CI/CD. 
+
+
 
 
 ## II. Observations/General question
