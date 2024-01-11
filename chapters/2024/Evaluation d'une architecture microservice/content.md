@@ -73,6 +73,8 @@ Voici quelques pistes :
 
 ## V. Result Analysis and Conclusion
 
+sqshq/piggymetrics ce répertoire est un bon candidat d'une architecture microservice. Le projet contient une configuration docker ou chaque service est conteneurisé et déployé individuellement (dire les microservices). De plus, il contient une CI/CD à l'aide de l'outil travis et tous les microservices sont testé avec la CI/CD, et il utilise rabbitmq comme message queue ce qui signifie la possibilité d'utilisation  des evenements entres les microservices , et finalement la présence d'une gateway spring. En passant le répertoire dans notre outil, nous arrivons à detecter tous ces patterns dans le répertoire ; ce qui signifie la cohérence entre notre outil et l'analyse manuelle du répertoire. 
+
 1. Présentation des résultats
 2. Interprétation/Analyse des résultats en fonction de vos hypothèses
 3. Construction d’une conclusion 
