@@ -2,8 +2,8 @@
    
 2) Le dossier code contient toute notre base de code :
 
-a. Le script d'analyse des patterns  : retro-ingenierie.py
-
-b. Le script de validation : validation.py
-
-c. le sous-dossier utils contient les classes python propres à chaque pattern cherché dans notre outil principal
+      a. Le script d'analyse des patterns  : retro-ingenierie.py
+      
+      b. Le script de validation : validation.py
+      
+      c. le sous-dossier utils contient les classes python propres à chaque pattern cherché dans notre outil principal
