@@ -6,4 +6,6 @@
       
       b. Le script de validation : validation.py
       
-      c. le sous-dossier utils contient les classes python propres à chaque pattern cherché dans notre outil principal
+      c. le sous-dossier utils contient les classes python propres à chaque pattern cherché dans notre outil principal. 
+
+      d. Le readme dans le dossier code contient plus de spécification pour le lancement des analyses. 
