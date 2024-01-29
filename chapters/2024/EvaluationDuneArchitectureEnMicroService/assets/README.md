@@ -1,3 +1,6 @@
-# Proposition de structuration des assets 
+1) Le dossier artefacts contient les résultats de nos scripts d'analyse sous formats xlsx
+   
+2) Le dossier code contient toute notre base de code :
 
-Séparer les images qui apparaissent dans les chapitres dans un répertoire dédié ici : images
+a. Le script d'analyse des patterns  : retro-ingenierie.py
+b. Le script de validation : validation.py
