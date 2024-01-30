@@ -2,7 +2,7 @@
    
 2) Le dossier code contient toute notre base de code :
 
-      a. Le script d'analyse des patterns  : retro-ingenierie.py
+      a. Le script d'analyse des patterns  : analyse.py
       
       b. Le script de validation : validation.py
       
