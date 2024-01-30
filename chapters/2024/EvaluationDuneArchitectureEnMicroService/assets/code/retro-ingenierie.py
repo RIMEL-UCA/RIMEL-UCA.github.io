@@ -128,7 +128,7 @@ def main(token, input_file):
     validation_output_file = "./output/validation.xlsx"
 
 
-    with open("./extracted_data.csv", "r") as csv_file:
+    with open(input_file, "r") as csv_file:
         for line in csv_file:
             repo_name = line.strip()
             repository = g.get_repo(repo_name)
@@ -142,24 +142,6 @@ def main(token, input_file):
                 print("ERROR : ", e)
                 continue
 
-    with   open("./extracted_data.csv", "r") as csv_file:
-        for line in csv_file:
-            repo_name = line.strip()
-            repository = g.get_repo(repo_name)
-            print(repository)
-            try:
-
-                result_validation = microservice_keywords().identify_microservice_keywords(repository)
-                validation_df = validation_df._append({
-                    'Repo Name': repository.full_name,
-                    'Microservice or not': result_validation
-                }, ignore_index=True)
-
-                save_to_excel(validation_df, validation_output_file)
-                print(validation_df)
-            except Exception as e:
-                print("ERROR : ", e)
-                continue
 
 
 def save_to_excel(results_df, output_file):
