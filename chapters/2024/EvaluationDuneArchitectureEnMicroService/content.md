@@ -317,26 +317,59 @@ Puisque nous ne sommes pas en mesure de détecter correctement si un service est
 Nous avons limité le nombre d'outils à ce qui était réalisable dans le temps imparti, en veillant à avoir suffisamment d'outils pour obtenir une vue globale de l'architecture et pouvoir approfondir l'analyse de ces outils afin d'obtenir une interprétation fiable pour le plus grand nombre de cas possible.
 
 
-## VI. Références
+
+## VI. Améliorations et Perspectives
+
+### Améliorations
+
+**1. Extension des Outils d'Analyse :** Étant donné que nous avons limité le nombre d'outils en raison de contraintes de temps, une amélioration future pourrait consister à étendre la gamme d'outils d'analyse. Par exemple, l'ajout d'outils spécifiques pour détecter le pattern CQRS (Command and Query Responsibility Segregation) ou d'autres patterns couramment utilisés dans les architectures en microservices.
+
+**2. Détection Automatique des Microservices :** Actuellement, notre approche se base sur l'analyse statique des fichiers de configuration. Une amélioration majeure serait de développer des techniques de détection automatique des microservices, peut-être en utilisant des méthodes d'analyse dynamique ou des techniques d'apprentissage automatique pour identifier les frontières des microservices dans le code.
+
+**3. Gestion des Faux Positifs :** L'amélioration de la gestion des faux positifs est un domaine clé. Développer des mécanismes plus sophistiqués pour distinguer les projets qui utilisent des technologies similaires, mais ne suivent pas nécessairement une architecture en microservices, serait bénéfique.
+
+**4. Intégration avec d'Autres Plateformes :** Actuellement, nos outils se concentrent principalement sur les projets GitHub et utilisent l'API GitHub. Une extension possible serait de permettre l'analyse de projets provenant d'autres plateformes telles que GitLab, Bitbucket, ou d'autres dépôts Git autonomes.
+
+### Perspectives
+
+**1. Intégration de Scénarios Réels :** Pour améliorer la validité de nos résultats, une prochaine étape consisterait à intégrer des scénarios réels issus d'entreprises utilisant des architectures en microservices. Cela pourrait fournir une base plus solide pour tester nos outils et garantir leur pertinence dans des situations du monde réel.
+
+**2. Collaboration avec la Communauté :** En ouvrant nos outils à la collaboration avec la communauté, nous pourrions bénéficier des commentaires, des contributions et des ajustements suggérés par d'autres experts en architecture en microservices. Cela pourrait conduire à une amélioration continue et à une adaptation des outils aux besoins diversifiés de la communauté.
+
+**3. Raffinement des Critères d'Évaluation :** Les critères utilisés pour évaluer une architecture en microservices peuvent être continuellement raffinés. Travailler en étroite collaboration avec des experts en architecture logicielle pour affiner ces critères et les adapter aux évolutions technologiques permettrait de garantir la pertinence continue de nos analyses.
+
+**4. Intégration d'Outils d'Analyse Dynamique :** En plus de l'analyse statique, l'intégration d'outils d'analyse dynamique pourrait offrir une vision plus complète des performances et de l'efficacité des architectures en microservices. Cela pourrait inclure des métriques de performance, de disponibilité et de scalabilité des microservices.
+
+**5. Documentation Approfondie :** Fournir une documentation approfondie sur l'utilisation de nos outils, y compris des guides pas à pas et des exemples d'application, pourrait rendre l'ensemble du processus plus accessible aux utilisateurs et aux développeurs intéressés par l'analyse des architectures en microservices.
+
+## VII. Conclusion
 
 
-Google Could :
-https://cloud.google.com/learn/what-is-microservices-architecture?hl=fr#:~:text=Dans%20une%20architecture%20de%20microservices,r%C3%A9pondre%20%C3%A0%20des%20probl%C3%A9matiques%20m%C3%A9tier.
+En conclusion, notre exploration approfondie des architectures en microservices à travers l'analyse statique des fichiers Docker Compose et d'autres éléments clés des projets a permis de formuler des hypothèses, de concevoir des outils d'analyse et d'expérimenter leur validité sur un ensemble diversifié de projets.
 
-Redhat :
-https://www.redhat.com/fr/topics/microservices/what-are-microservices
+L'évaluation de ces outils sur des cas d'utilisation réels a révélé des forces et des limites dans notre approche. La grille de résultats obtenue a fourni des indications précieuses sur la conformité des architectures aux critères définis, tout en soulignant la nécessité d'une validation manuelle et d'une gestion plus fine des faux positifs.
 
-Wikipédia : 
-https://fr.wikipedia.org/wiki/Microservices
+Les améliorations et perspectives identifiées indiquent un chemin vers une évolution continue de nos outils, en mettant l'accent sur la détection automatique des microservices, la gestion des faux positifs, l'extension des critères d'évaluation et l'intégration avec d'autres plateformes. En outre, l'ouverture à la collaboration avec la communauté et l'intégration d'outils d'analyse dynamique sont des éléments clés pour renforcer la pertinence et l'applicabilité de notre approche.
 
-AWS : https://aws.amazon.com/fr/microservices/
+Notre projet a ainsi jeté les bases d'une analyse automatisée des architectures en microservices, offrant une contribution significative à la compréhension et à l'évaluation de ces architectures complexes. Tout en reconnaissant les défis et les limites, notre travail ouvre la voie à des développements futurs visant à rendre ces outils plus robustes, adaptatifs et largement applicables dans des scénarios réels d'ingénierie logicielle.
 
-IBM : https://www.ibm.com/fr-fr/topics/microservices
+## VIII. Références
 
-Datascientest : https://datascientest.com/microservices-tout-savoir
 
-Microsoft : https://learn.microsoft.com/fr-fr/azure/architecture/guide/architecture-styles/microservices
+Qu’est-ce que l’architecture de microservices ? | Google Cloud | Google Cloud. (s. d.). Google Cloud. https://cloud.google.com/learn/what-is-microservices-architecture?hl=fr#:~:text=Dans%20une%20architecture%20de%20microservices,r%C3%A9pondre%20%C3%A0%20des%20probl%C3%A9matiques%20m%C3%A9tier
 
-Mulesoft : https://www.mulesoft.com/fr/resources/api/what-are-microservices
+Les microservices, qu’est-ce que c’est ?  (s. d.). https://www.redhat.com/fr/topics/microservices/what-are-microservices
 
-Oracle : https://docs.oracle.com/fr/solutions/learn-architect-microservice/index.html#GUID-BDCEFE30-C883-45D5-B2E6-325C241388A5
+Contributeurs aux projets Wikimedia. (2023, 17 mai). Microservices. https://fr.wikipedia.org/wiki/Microservices
+
+Que sont les microservices ? | AWS. (s. d.). Amazon Web Services, Inc. https://aws.amazon.com/fr/microservices/
+
+Que sont les microservices ? | IBM. (s. d.). https://www.ibm.com/fr-fr/topics/microservices
+
+Kassel, R. (2023, 9 novembre). Microservices : définition, fonctionnement, avantages. Formation Data Science | DataScientest.com. https://datascientest.com/microservices-tout-savoir
+
+Martinekuan. (s. d.). Style d’architecture orientée microservices - Azure Architecture Center. Microsoft Learn. https://learn.microsoft.com/fr-fr/azure/architecture/guide/architecture-styles/microservices
+
+Que sont les microservices ? définition et architecture. (s. d.). MuleSoft. https://www.mulesoft.com/fr/resources/api/what-are-microservices
+
+En savoir plus sur l’architecture des applications basées sur les microservices sur Oracle Cloud. (s. d.). Oracle Help Center. https://docs.oracle.com/fr/solutions/learn-architect-microservice/index.html#GUID-BDCEFE30-C883-45D5-B2E6-325C241388A5
