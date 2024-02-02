@@ -7,7 +7,7 @@ date: 2022-11-18 6:00:00 +0100
 
 ### [Votre Sujet] ({{ site.url }}/chapters/2024/ChapterModel/content)
 
-### [Etude de comparaison des commits structurés] ({{ site.url }}/chapters/2024/Etude de comparaison des commits structurés/content)
+### [Comparison study of structured commits] ({{ site.url }}/chapters/2024/Comparison study of structured commits/content)
 
 ## 2023
 
