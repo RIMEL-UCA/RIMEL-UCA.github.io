@@ -41,7 +41,7 @@ def delete_folder(project_name):
     if os.path.exists(path):
         print(f"{BCOLORS.OKBLUE}Deleting project {project_name}...{BCOLORS.ENDC}")
         # Delete using absolute path
-        shutil.rmtree(f'{os.getcwd()}\\projects\\{project_name}')
+        os.rmdir(f'{os.getcwd()}/projects/{project_name}')
         print(f"{BCOLORS.OKBLUE}Project {project_name} deleted{BCOLORS.ENDC}")
     else:
         print(f"{BCOLORS.WARNING}Project {project_name} does not exist{BCOLORS.ENDC}")
@@ -69,52 +69,49 @@ def clone_project(project_name):
     print(f"{BCOLORS.OKBLUE}Project {project_name} cloned{BCOLORS.ENDC}")
 
 
-def save_producers(producers_list, producers_output):
+def save_consumers(consumers_list, consumers_output):
     """
     Sauvegarder les producer kafka dans un fichier json
-    :param producers_list: liste des producer kafka
-    :param producers_output: fichier de sortie
+    :param consumers_list: liste des producer kafka
+    :param consumers_output: fichier de sortie
     """
-    if len(producers_list) == 0:
-        print(f"{BCOLORS.WARNING}No producers found{BCOLORS.ENDC}")
+    if len(consumers_list) == 0:
+        print(f"{BCOLORS.WARNING}No consumers found{BCOLORS.ENDC}")
         exit(0)
-    with open(producers_output, 'w') as ofile:
-        json.dump(producers_list, ofile, indent=4)
-        print(f"{BCOLORS.OKGREEN}Producers written in {producers_output}{BCOLORS.ENDC}")
+    with open(consumers_output, 'w') as ofile:
+        json.dump(consumers_list, ofile, indent=4)
+        print(f"{BCOLORS.OKGREEN}Consumers written in {consumers_output}{BCOLORS.ENDC}")
 
 
-def get_producers(content, file, project_name, service, config_value_cache=None):
+def get_consumers(content, file, project_name, service, config_value_cache=None):
     """
-    Extraire les producer kafka d'un fichier
+    Extraire les consommateurs Kafka d'un fichier en trouvant les annotations @KafkaListener
     :param content: contenu du fichier
     :param file: nom du fichier
     :param project_name: nom du projet
-    :return: liste des producer kafka
+    :param service: nom du service
+    :param config_value_cache: cache des valeurs de configuration
+    :return: liste des consommateurs Kafka
     """
-    # Remplacer les valeurs de configuration Spring par leur valeur
     if config_value_cache is None:
         config_value_cache = {}
+    
     content = replace_config_values(content, config_value_cache, service)
 
-    producers = []
-    matches = re.findall(r'\.send\((.*),.*;', content)
-    if matches:
-        pattern = r'^[\'\"](.*?)[\'\"]$'
-        match = re.match(pattern,matches[0]) 
-        topic_name=""
-        if match:
-            topic_name=matches[0]
-        else:
-            topic_name="No topic name found"
-            
-        producers.append({
+    consumers = []
+    matches = re.findall(r'@KafkaListener\(.*?topics.*?=.*?\"(.*?)\"', content, re.MULTILINE | re.DOTALL)
+    
+    for match in matches:
+        consumers.append({
             "project": project_name,
-            "topic": topic_name,
-            "type": "producer",
+            "topic": match,
+            "type": "consumer",
             "file": file,
             "service": service
         })
-    return producers
+    
+    return consumers
+
 
 
 def replace_config_values(content, config_value_cache={}, service=''):
@@ -162,10 +159,11 @@ def get_microservice_name(path):
     return os.path.basename(path)
 
 if __name__ == '__main__':
+
     # Générer un identifiant du run
     run_id = str(uuid.uuid4())
 
-    parser = argparse.ArgumentParser(description='Extract kafka producers from a github project')
+    parser = argparse.ArgumentParser(description='Extract kafka Consumers from a github project')
     parser.add_argument('-p', '--project', metavar='project', type=str, help='github project to analyze')
     parser.add_argument('-o', '--output', metavar='output', type=str, help='output file')
     args = parser.parse_args()
@@ -174,7 +172,7 @@ if __name__ == '__main__':
     project = args.project
     project_name = project.split('/')[1]
     project_folder = f"./projects/{project_name}"
-    output = args.output if args.output else f'./outputs/{project_name}-{run_id}--search-producers.json'
+    output = args.output if args.output else f'./outputs/{project_name}-{run_id}--search-consumers.json'
     print(f"{BCOLORS.HEADER}Analyzing project {project}...{BCOLORS.ENDC}")
 
     # Cloner le projet
@@ -182,19 +180,20 @@ if __name__ == '__main__':
 
     # Parcourir les fichiers du projet
     os.chdir(project_folder)
-    producers = []
+    consumers = []
     config_value_cache = {}
     for root, dirs, files in os.walk('.'):
         for file in files:
+            # print(root, file)
             if file.endswith('.java') or file.endswith('.kt') or file.endswith('.js') or file.endswith(
                     '.py') or file.endswith('.ts') or file.endswith('.go') or file.endswith('.cs'):
                 # Lire le fichier
                 with open(os.path.join(root, file), 'r') as f:
                     service = get_microservice_name(root)
                     content = f.read()
-                    producers_in_file = get_producers(content, file, project_name, service, config_value_cache)
-                    if len(producers_in_file) > 0:
-                        producers.append(producers_in_file)
+                    consumers_in_file = get_consumers(content, file, project_name, service, config_value_cache)
+                    if len(consumers_in_file) > 0:
+                        consumers.append(consumers_in_file)
 
     os.chdir('../..')
     print(f"{BCOLORS.OKGREEN}Project {project_name} analyzed{BCOLORS.ENDC}")
@@ -209,4 +208,4 @@ if __name__ == '__main__':
         print(f"{BCOLORS.OKBLUE}Folder ./outputs created{BCOLORS.ENDC}")
 
     # Ecrire les connexions dans un fichier json
-    save_producers(producers, output)
+    save_consumers(consumers, output)
