@@ -17,7 +17,7 @@ We are four students in M2 or in last year of Polytech’ Nice-Sophia specialize
 
 ## I. Research context 
 
-Préciser ici votre contexte et Pourquoi il est intéressant. **
+<sub>Préciser ici votre contexte et Pourquoi il est intéressant. **</sub>
 
 * Main question: How and to what extent are structured commits used in open-source projects?
 * Interest: Understand the impact of commit standards on the management of software projects (clarity, traceability, maintenance).
