@@ -10,10 +10,10 @@ date:   2024-02
 
 We are four students in M2 or in last year of Polytech’ Nice-Sophia specialized in Software Architecture :
 
-* Hadil AYARI
-* Nicolas GUIBLIN
-* Chahan MOVSESSIAN
-* Floriane PARIS
+* Hadil AYARI <hadil.ayari@etu.univ-cotedazur.fr>
+* Nicolas GUIBLIN <nicolas.guiblin@etu.univ-cotedazur.fr>
+* Chahan MOVSESSIAN <chahan.movsessian@etu.univ-cotedazur.fr>
+* Floriane PARIS <floriane.paris@etu.univ-cotedazur.fr>
 
 ## I. Research context 
 
