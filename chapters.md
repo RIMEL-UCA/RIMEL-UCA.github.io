@@ -7,7 +7,7 @@ date: 2022-11-18 6:00:00 +0100
 
 ### [Votre Sujet] ({{ site.url }}/chapters/2024/ChapterModel/content)
 
-### [Are Data scientists embracing DevOps principles for Model versioning ?]({{ site.url }}/chapters/2024/Are Data scientists embracing DevOps principles for Model versioning ?/content)
+### [Are Data scientists embracing DevOps principles for Model versioning ?]({{ site.url }}/chapters/2024/Are Data scientists embracing DevOps principles for Model versioning %3F/content)
 ### [Comparison study of structured commits]({{ site.url }}/chapters/2024/Comparison study of structured commits/content)
 ### [Abstraction de l’utilisation de LangChain]({{ site.url }}/chapters/2024/Abstraction de l'utilisation de LangChain/content)
 
