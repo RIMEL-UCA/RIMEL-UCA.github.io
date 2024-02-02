@@ -76,7 +76,7 @@ Ces constatations indiquent un écart potentiel par rapport au cadre de versionn
 
 **1.2. _Expérience : Calcul de l'adoption du versionnement traditionnel_**
 
-Dans cette expérience, notre objectif principal était d'examiner de près les noms des modèles car ils contiennent des indications de version. 
+Dans cette expérience, notre objectif principal était d'examiner de près les noms des modèles, car ils contiennent des indications de version. 
 
 Nous avons créé un script qui passe en revue les noms des modèles, vérifie l'existence d'une version sémantique traditionnelle et incrémente le nombre de correspondances avec une version sémantique.
 
