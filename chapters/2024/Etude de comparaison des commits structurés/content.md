@@ -18,24 +18,24 @@ We are four students in M2 or in last year of Polytech’ Nice-Sophia specialize
 ## I. Research context 
 
 The main question we chose to address is : How and to what extent are structured commits used in open-source projects ?
-At first, we wanted to understand the impact of commit standards on the management of software projects (clarity, traceability, maintenance). but we soon realized it is a really vast subject, and most of our interrogations couldn't be answered with the tools we had. How can we attest how useful a structured commit was as a project ? Or how much time was saved thanks to a clear commit message?
+At first, we wanted to understand the impact of commit standards on the management of software projects (clarity, traceability, maintenance). but we soon realized it is a really vast subject, and most of our interrogations couldn't be answered with the tools we had. How can we attest how useful a structured commit was for a project ? Or how much time was saved thanks to a clear commit message ?
 So we changed some questions, and these are the under questions we kept :
-    * How common are conventional commits and gitmojis used in open-source projects?
-    * Do employees structure themselves naturally? Or are there commit conventions on each git-hub?
-    * Do regular contributors make more structured commits?
-    * Is there a collaboration between the number of contributors and commit conventions?
+    * How common are conventional commits and gitmojis used in open-source projects ?
+    * Do employees structure themselves naturally ? Or are there commit conventions on each git-hub repos ?
+    * Do regular contributors make more structured commits ?
+    * Is there a correlation between the number of contributors and commit conventions ?
 
 
 ## II. General question
 
 None of us knew about conventional commit before starting this project, so we were really curious about it. We soon realized most big open source projects used conventional commits and it is part of a standard, but why ? 
-It is indeed a really easy way and clear way to communicate changes and fixes. With just a short message, you can say what was the code alteration and why it was made ; so the message is qualitative and useful for the next developers working on the code. 
-Although, even if we never used conventional commits before, we definitely already used structured commits working in companies. So is the conventional commit really necessary ?
+It is indeed a really easy and clear way to communicate changes and fixes. With just a short message, you can say what was the code alteration and why it was made for ; so the message is qualitative and useful for the next developers working on the code. 
+Although, even if we never used conventional commits before, we definitely already used structured commits working in companies. So is the strict conventional commit really necessary ?
 
 ## III. Information gathering
-We gathered information from several sources. We started with the documentation on commit convention that we didn’t know of to be able to recognize it in projects : conventional commits and gitmojis.
-We also read the suggested article,  “What makes a good commit message?”. This article defines a good commit message by a message explaining “what” changes were made and “why”. The conventional commit definitely helps to express these two elements in a commit message, so it is a good start to why is the conventional commit so popular.
-We made data collection from open source Github repositories ; we analyzed them by using pydriller to create an algorithm able to determine the percentage of structured commits in a project. We used Jupyter notebooks to share codes and graph the commit patterns among different projects. We also studied some smaller projects by hand to test and ensure the accuracy of the tool.
+We gathered information from several sources. We started with the documentation on commit convention that we didn’t know about to be able to recognize it in projects : conventional commits and gitmojis.
+We also read the suggested article,  “What makes a good commit message?”. This article defines a good commit message by a message explaining “what” changes were made and “why”. The conventional commit definitely helps to express these two elements in a commit message, so it is a good start for the question : "why is the conventional commit so popular ?".
+We collected data from open source Github repositories ; we analyzed them by using "pydriller", a python's module, to create an algorithm able to determine the percentage of structured commits in a project. We used Jupyter notebooks to share codes and graph the commit patterns among different projects. We also studied some smaller projects by hand to test and ensure the accuracy of the tool.
 To choose the best data to analyze, we picked big open-source projects that are relatively well-known (filtered by number of stars, watchers, ect…), projects that were able to be easily analyzed and well known companies that have multiple open-source projects.
 We decided not to study some projects like Linux or Rust, because it was too consuming for our tool which is meant to be lightweight. Huge Commit number, won’t be able to test and debug our tools for them easily and it would cause some testing issues.
 For the initial phase, we’ve not studied projects with unclear structures like React, although we’ve decided to study them for a later question.
