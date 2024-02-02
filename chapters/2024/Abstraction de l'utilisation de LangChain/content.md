@@ -342,7 +342,7 @@ informations de ce domaine spécifique.
 <br>
 
 ![CHATBOT-diagramme.png](assets/images/Chatbot-Diagramme.png)
-<p style="text-align: center;">Figure III.4.2 : Diagramme de l’implémentation d’un chatbot réalisé par LangChain et utilisant Internet comme source de données (disponible <a href="http://localhost:8080">ici</a> en HD)</p>
+<p style="text-align: center;">Figure III.4.2 : Diagramme de l’implémentation d’un chatbot réalisé par LangChain et utilisant Internet comme source de données (disponible <a href="[http://localhost:8080](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/blob/master/chapters/2024/Abstraction%20de%20l'utilisation%20de%20LangChain/assets/images/Chatbot-Diagramme.png)">ici</a> en HD)</p>
 <br>
 
 Le répertoire GitHub étudié ici est un exemple produit par LangChain dans le but de démontrer la capacité de LangChain à
