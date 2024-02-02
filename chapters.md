@@ -7,7 +7,9 @@ date: 2022-11-18 6:00:00 +0100
 
 ### [Votre Sujet] ({{ site.url }}/chapters/2024/ChapterModel/content)
 
+### [Comparison study of structured commits]({{ site.url }}/chapters/2024/Comparison study of structured commits/content)
 ### [Abstraction de l’utilisation de LangChain]({{ site.url }}/chapters/2024/Abstraction de l'utilisation de LangChain/content)
+
 
 ## 2023
 
