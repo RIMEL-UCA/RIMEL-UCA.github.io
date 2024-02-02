@@ -57,7 +57,7 @@ For the initial phase, we’ve not studied projects with unclear structures like
 
 * Results: Presentation and interpretation of the data collected.
 Graphs
-    * Companies would rather use their own commit structure rather than conventional commits
+    * Companies prefer using their own commit structure rather than conventional commits
     * Even when adapted, Companies usually don’t stick to using community driven commits like conventional-commits or gitmoji and usually end up swapping them.
     * The top contributors are usually more diligent with their commit structure, making sure to adhere to the conventions.
     * Companies with multiple projects (Meta & Apache) don’t use the same conventions for all their projects. It seems like each team personalizes their commits to each team’s requirements
