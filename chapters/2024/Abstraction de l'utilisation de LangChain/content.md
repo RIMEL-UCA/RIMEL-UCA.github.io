@@ -4,8 +4,6 @@ title: Abstraction de l’utilisation de LangChain
 date: 2024-02
 ---
 
-# Abstraction de l’utilisation de LangChain
-
 **_février 2024_**
 
 ## Auteurs
@@ -19,9 +17,11 @@ Nous sommes quatre étudiants ingénieurs en dernière année à Polytech Nice S
 
 ---
 
-## I. Introduction
+# I. Introduction
 
-### 1. Contexte
+---
+
+## 1. Contexte
 
 LangChain est un framework permettant de développer des applications alimentées par de grands modèles de langage - Large
 Language Models - LLM.
@@ -42,9 +42,11 @@ composants dans divers contextes est un enjeu clé de LangChain.
 
 <br>
 
-![GAR-diagramme-youtube.png](assets/images/GAR-Diagramme-Youtube.png)
-<p style="text-align: center;">Figure I.1.1 : Diagramme de composants d’une application permettant la recherche d’information sur une vidéo YouTube</p>
+<div style="text-align:center">
 
+![GAR-diagramme-youtube.png](assets/images/GAR-Diagramme-Youtube.png)
+</div>
+<p style="text-align: center;">Figure I.1.1 : Diagramme de composants d’une application permettant la recherche d’information sur une vidéo YouTube</p>
 
 *Légende* :
 - YoutubeLoader : Charger une vidéo YouTube en tant que document.
@@ -59,7 +61,7 @@ intégrés dans la chaîne. Il serait ici par exemple totalement possible de rem
 “DocumentLoader” et lire un fichier PDF à la place d’une video YouTube et d’utiliser le “YoutubeLoader” dans un contexte
 totalement différent.
 
-### 2. Motivations
+## 2. Motivations
 
 Notre étude est motivée par plusieurs raisons. Tout d'abord, elle permet d'explorer en profondeur la manière dont
 LangChain répond aux besoins spécifiques des développeurs en matière d'intégration des LLM. En mettant l'accent sur la
@@ -70,7 +72,7 @@ différenciants. Cette comparaison offre des aperçus précieux, identifiant des
 et des aspects clés de la mise en œuvre de LangChain. Elle fournit ainsi une base solide pour guider les développeurs
 dans l'utilisation optimale de ce framework.
 
-## II. Questionnements
+# II. Questionnements
 
 ---
 
@@ -129,13 +131,13 @@ l’identification des différents composants de chaque répertoire. Nous avons 
 mitiger le risque avec plusieurs personnes qui étudiaient le répertoire et qui s'accordent sur les composants trouvés
 dans cette partie.
 
-## III. Abstraction d’applications utilisant LangChain
+# III. Abstraction d’applications utilisant LangChain
 
 ---
 
-### 1. Différents éléments utilisés dans le cas d’usage de la génération augmentée de recherche
+## 1. Différents éléments utilisés dans le cas d’usage de la génération augmentée de recherche
 
-#### a. Cas d’étude : HTML
+### a. Cas d’étude : HTML
 
 Dans ce premier répertoire GitHub, fourni directement par LangChain pour apprendre son fonctionnement, une technique de
 génération augmentée de recherche ー GAR est implémentée. Cette technique permet d’augmenter les connaissances d’un LLM
@@ -156,18 +158,27 @@ une source et de les indexer. La partie récupération et génération, quant à
 pertinentes dans les données indexées auparavant, puis les transmet au LMM pour obtenir une réponse. Chaque partie est
 composée de multiples phases qui vont être expliquées plus précisément lors de l’étude du répertoire GitHub.
 
+<div style="text-align:center">
+
 ![GAR-Indexage.png](assets/images/GAR-Indexage.png)
+</div>
 <p style="text-align: center;">Figure III.1.a.1 : Représentation visuelle de la partie indexage d’une application GAR.</p>
 <br>
 
+<div style="text-align:center">
+
 ![GAR-Recuperation-et-generation.png](assets/images/GAR-Recuperation-et-generation.png)
+</div>
 <p style="text-align: center;">Figure III.1.a.2 : Représentation visuelle de la partie récupération et génération d’une application GAR.</p>
 <br>
 
 L’étude en profondeur du code présent dans le répertoire GitHub utilisé pour analyser ce cas d’utilisation a permis de
 créer le diagramme de composants disponible en *Figure III.1.a.3*.
 
+<div style="text-align:center">
+
 ![GAR-Diagrame-HTML.png](assets/images/GAR-Diagramme-HTML.png)
+</div>
 <p style="text-align: center;">Figure III.1.a.3 : Diagramme de composants pour la génération augmentée de recherche avec des fichiers HTML.</p>
 <br>
 
@@ -210,7 +221,7 @@ utilisés dans le cadre d’une application effectuant de la recherche augmenté
 est cependant important de noter qu'aucun de ces composants n’a été développé spécifiquement pour ce cas d’usage. Ils
 ont tous une fonction très générale et peuvent être utilisés dans d’autres contextes que celui étudié auparavant.
 
-#### b. Cas d’étude : YouTube
+### b. Cas d’étude : YouTube
 
 Nous avons choisi d’étudier le répertoire ci-dessous pour deux raisons. Tout d’abord, d’un point de vue fonctionnel,
 nous avons quelque chose d’utile et d’intéressant que des développeurs utilisant LangChain pourraient être amenés à
@@ -227,7 +238,10 @@ L’étude du répertoire nous a permis de dégager l’architecture mise en pla
 
 <br>
 
+<div style="text-align:center">
+
 ![GAR-diagramme-youtube.png](assets/images/GAR-Diagramme-Youtube.png)
+</div>
 <p style="text-align: center;">Figure III.2.b.1 : Diagramme de composants d’une application de permettant la recherche d’information sur une vidéo YouTube</p>
 
 *Légende* :
@@ -241,29 +255,21 @@ En vert sur le schéma ci-dessus, nous avons identifié les différents élémen
 de cette application et nous avons dégagé un diagramme d’architecture de la manière dont ces composants s’articulent
 ensemble. On remarque alors que l’application passe par plusieurs étapes :
 
-##### 1. Indexage :
+#### 1. Indexage :
 
-###### a. Chargement :
+- Chargement : Tout d'abord, nous devons récupérer la transcription d'une vidéo. Nous utiliserons “YoutubeLoader” pour cela.
 
-Tout d'abord, nous devons récupérer la transcription d'une vidéo. Nous utiliserons “YoutubeLoader” pour cela.
-
-###### b. Découpage :
-
-Comme présenté précédemment, le “RecursiveCharacterSplitter” divise de grands documents en petites parties. Cela est
+- Découpage : Comme présenté précédemment, le “RecursiveCharacterSplitter” divise de grands documents en petites parties. Cela est
 utile à la fois pour indexer des données et pour les transmettre à un modèle, car les gros parties sont plus difficiles
 à rechercher et ne rentrent pas dans la fenêtre contextuelle finie d'un modèle.
 
-##### 2. Récupération et génération
+#### 2. Récupération et génération
 
-###### a. Récupération :
-
-Nous utilisons le “FAISS” (Facebook AI Similarity Search). Il transforme les petites parties en vecteurs et, en fonction
+- Récupération : Nous utilisons le “FAISS” (Facebook AI Similarity Search). Il transforme les petites parties en vecteurs et, en fonction
 d'une question utilisateur, les quatre fragments les plus pertinents sont récupérés et placés dans le modèle OpenAI
 Davanci en respectant la limite de la taille d'entrée.
 
-###### b. Génération :
-
-Un LLM produit une réponse en utilisant un prompt qui inclut la question et les données récupérées.
+- Génération : Un LLM produit une réponse en utilisant un prompt qui inclut la question et les données récupérées.
 
 Nous pouvons observer que ce projet utilise bel et bien divers composants de LangChain. Ces composants sont
 potentiellement réutilisable. En effet, individuellement, les composants pourraient totalement être utilisés dans des
@@ -273,7 +279,7 @@ répond à notre besoin. On peut par exemple complètement imaginer remplacer le
 notre application pourrait alors lire un PDF. C’est très intéressant, car cela nous offre beaucoup de flexibilité et des
 composants très facilement utilisables dans différents contextes de manière efficace.
 
-### 2. Différents éléments utilisés dans le cas d’usage de l’analyse de données structurées
+## 2. Différents éléments utilisés dans le cas d’usage de l’analyse de données structurées
 
 Dans ce répertoire, LangChain nous permet de poser une question, puis d’obtenir une réponse de façon naturelle, en
 interrogeant une base de données SQL et à l’aide de LLamA2-13b, un grand modèle de langage appartenant à Meta. Par
@@ -286,13 +292,19 @@ intéresserons pas à LangSmith ici, de plus, il est actuellement en version bê
 Sur l’image ci-dessous, vous pourrez trouver un exemple de question liée aux joueurs NBA, plus précisément au roster NBA
 de l’année 2023.
 
+<div style="text-align:center">
+
 ![ADS-Roster-NBA.png](assets/images/ADS-Roster-NBA.png)
+</div>
 <p style="text-align: center;">Figure III.3.1 : On demande dans quelle équipe joue Klay Thompson et la réponse est les Golden State Warriors. La question et la réponse sont naturelles.</p>
 <br>
 
 Le schéma suivant illustre le fonctionnement de LangChain dans le cas d’utilisation décrit précédemment. En vert, nous retrouvons les composants de LangChain, en bleu la base de données depuis laquelle nous retrouvons des informations et en violet, le grand modèle de langage de Meta.
 
+<div style="text-align:center">
+
 ![ADS-diagramme-sql.png](assets/images/ADS-Diagramme-SQL.png)
+</div>
 <p style="text-align: center;">Figure III.3.2 : Fonctionnement de l’application prenant en entrée une question naturelle et retournant en sortie une réponse naturelle.</p>
 <br>
 
@@ -321,12 +333,15 @@ En revanche, il est nécessaire de sécuriser l’application, afin d’éviter 
 plus, il faut maintenir les modèles de prompt qui sont spécifiques à cette application et qui peuvent nécessiter des
 ajustements en fonction des changements dans les exigences ou des évolutions des schémas de base de données.
 
-### 3. Différents éléments utilisés dans le cas d’usage de la création de chatbot
+## 3. Différents éléments utilisés dans le cas d’usage de la création de chatbot
 
 Ce répertoire se concentre sur la création d’un chatbot en utilisant LangChain. Avant de nous pencher sur ce dernier,
 nous allons nous concentrer sur la théorie de la création de ces chatbots par la documentation officielle.
 
+<div style="text-align:center">
+
 ![fonctionnement-chatbot.png](assets/images/Chatbot-Fonctionnement.png)
+</div>
 <p style="text-align: center;">Figure III.4.1 : Fonctionnement d’un chatbot</p>
 <br>
 
@@ -341,7 +356,10 @@ informations de ce domaine spécifique.
 
 <br>
 
+<div style="text-align:center">
+
 ![CHATBOT-diagramme.png](assets/images/Chatbot-Diagramme.png)
+</div>
 <p style="text-align: center;">Figure III.4.2 : Diagramme de l’implémentation d’un chatbot réalisé par LangChain et utilisant Internet comme source de données (disponible <a href="[http://localhost:8080](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/blob/master/chapters/2024/Abstraction%20de%20l'utilisation%20de%20LangChain/assets/images/Chatbot-Diagramme.png)">ici</a> en HD)</p>
 <br>
 
@@ -382,7 +400,7 @@ composants de type “Message” sont limités au cas d’utilisation des chatbo
 retrouvés dans cette implémentation sont réutilisables de manière plus générale, particulièrement ceux appartenant à la
 récupération des données, au formatage des données ou à la création de prompts.
 
-## IV. Les éléments similaires utilisés par LangChain entre les différentes solutions
+# IV. Les éléments similaires utilisés par LangChain entre les différentes solutions
 
 ---
 
@@ -440,63 +458,69 @@ catégorie “Message”. Ces composants sont cette fois-ci bien spécifiques au
 
 <br>
 
-|            GAR (HTML)             |           GAR (YouTube)           |      ADS (SQL)       |              Chatbot              |
-|:---------------------------------:|:---------------------------------:|:--------------------:|:---------------------------------:|
-|          Sitemap Loader           |          Youtube Loader           |      Replicate       |         Str Output Parser         |
-| Recursive Character Text Splitter | Recursive Character Text Splitter | Chat Prompt Template | Recursive Character Text Splitter |
-|       Recursive Url Loader        |               FAISS               |     SQL Database     |       Chat Prompt Template        |
-|             Weaviate              |          OpenAI-Davinci           |  Str Output Parser   |       Message Place Holder        |
-|          Base Retriever           |       Chat Prompt Template        |      Base Model      |           Human Message           |
-|       Chat Prompt Template        |                                   |   Runnable Through   |            AI Message             |
-|           GPT-3.5-Turbo           |                                   |                      |           Runnable Map            |
-|         Str Output Parser         |                                   |                      |          Runnable Lambda          |
-|             Runnable              |                                   |                      |          Runnable Branch          |
-|         Open AI Embedding         |                                   |                      |          Base Retriever           |
-|                                   |                                   |                      |          Prompt Template          |
-|                                   |                                   |                      | Contextual Compression Retriever  |
-|                                   |                                   |                      |   Document Compressor Pipeline    |
-|                                   |                                   |                      |         Open AI Embedding         |
-|                                   |                                   |                      |         Embedding Filter          |
-|                                   |                                   |                      |           Chat Open AI            |
-
+<table>
+  <tr><th>GAR (HTML)</th><th>GAR (YouTube)</th><th>ADS (SQL)</th><th>Chatbot</th></tr>
+  <tr><td>Sitemap Loader</td><td>Youtube Loader</td><td>Replicate</td><td>Str Output Parser</td></tr>
+  <tr><td>Recursive Character Text Splitter</td><td>Recursive Character Text Splitter</td><td>Chat Prompt Template</td><td>Recursive Character Text Splitter</td></tr>
+  <tr><td>Recursive Url Loader</td><td>FAISS</td><td>SQL Database</td><td>Chat Prompt Template</td></tr>
+  <tr><td>Weaviate</td><td>OpenAI-Davinci</td><td>Str Output Parser</td><td>Message Place Holder</td></tr>
+  <tr><td>Base Retriever</td><td>Chat Prompt Template</td><td>Base Model</td><td>Human Message</td></tr>
+  <tr><td>Chat Prompt Template</td><td></td><td>Runnable Through</td><td>AI Message</td></tr>
+  <tr><td>GPT-3.5-Turbo</td><td></td><td></td><td>Runnable Map</td></tr>
+  <tr><td>Str Output Parser</td><td></td><td></td><td>Runnable Lambda</td></tr>
+  <tr><td>Runnable</td><td></td><td></td><td>Runnable Branch</td></tr>
+  <tr><td>Open AI Embedding</td><td></td><td></td><td>Base Retriever</td></tr>
+  <tr><td></td><td></td><td></td><td>Prompt Template</td></tr>
+  <tr><td></td><td></td><td></td><td>Contextual Compression Retriever</td></tr>
+  <tr><td></td><td></td><td></td><td>Document Compressor Pipeline</td></tr>
+  <tr><td></td><td></td><td></td><td>Open AI Embedding</td></tr>
+  <tr><td></td><td></td><td></td><td>Embedding Filter</td></tr>
+  <tr><td></td><td></td><td></td><td>Chat Open AI</td></tr>
+</table>
 <p style="text-align: center;">Table IV.1 : Liste des composants LangChain identifiés en fonction du cas d’utilisation.</p>
 <br>
 
-|             Pipe             |   Connector    |            Retriever             |        Loader        |       Message        |     Embedding     | Vector Store |       Template       |             Splitter              |      Parser       | Input Validator |
-|:----------------------------:|:--------------:|:--------------------------------:|:--------------------:|:--------------------:|:-----------------:|:------------:|:--------------------:|:---------------------------------:|:-----------------:|:---------------:|
-|           Runnable           | GPT-3.5-Turbo  |          Base Retriever          |    Sitemap Loader    | Message Place Holder | Open AI Embedding |   Weaviate   | Chat Prompt Template | Recursive Character Text Splitter | Str Output Parser |   Base Model    |
-|       Runnable Through       | OpenAI-Davinci |           SQL Database           |    Youtube Loader    |    Human Message     | Embedding Filter  |    FAISS     |   Prompt Template    |                                   |                   |                 |
-|         Runnable Map         |   Replicate    | Contextual Compression Retriever | Recursive Url Loader |      AI Message      |                   |              |                      |                                   |                   |                 |
-|       Runnable Lambda        |  Chat Open AI  |              FAISS               |                      |                      |                   |              |                      |                                   |                   |                 |
-|       Runnable Branch        |                |                                  |                      |                      |                   |              |                      |                                   |                   |                 |
-| Document Compressor Pipeline |                |                                  |                      |                      |                   |              |                      |                                   |                   |                 |
-
+<table>
+  <tr><th>Pipe</th><th>Connector</th><th>Retriever</th><th>Loader</th><th>Message</th><th>Embedding</th><th>Vector Store</th><th>Template</th><th>Splitter</th><th>Parser</th><th>Input Validator</th></tr>
+  <tr><td>Runnable</td><td>GPT-3.5-Turbo</td><td>Base Retriever</td><td>Sitemap Loader</td><td>Message Place Holder</td><td>Open AI Embedding</td><td>Weaviate</td><td>Chat Prompt Template</td><td>Recursive Character Text Splitter</td><td>Str Output Parser</td><td>Base Model</td></tr>
+  <tr><td>Runnable Through</td><td>OpenAI-Davinci</td><td>SQL Database</td><td>Youtube Loader</td><td>Human Message</td><td>Embedding Filter</td><td>FAISS</td><td>Prompt Template</td><td></td><td></td><td></td></tr>
+  <tr><td>Runnable Map</td><td>Replicate</td><td>Contextual Compression Retriever</td><td>Recursive Url Loader</td><td>AI Message</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td>Runnable Lambda</td><td>Chat Open AI</td><td>FAISS</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td>Runnable Branch</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td>Document Compressor Pipeline</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</table>
 <p style="text-align: center;">Tables IV.2 : Composants LangChain identifiés regroupés en catégories.</p>
 <br>
 
-|                 | GAR (HTML) | GAR (YouTube) | ADS (SQL) | Chatbot |
-|:---------------:|:----------:|:-------------:|:---------:|:-------:|
-|       LLM       |     ✔      |       ✔       |     ✔     |    ✔    |
-|    Retriever    |     ✔      |       ✔       |     ✔     |    ✔    |
-|    Template     |     ✔      |       ✔       |     ✔     |    ✔    |
-|     Parser      |     ✔      |               |     ✔     |    ✔    |
-|      Pipe       |     ✔      |               |     ✔     |    ✔    |
-|    Splitter     |     ✔      |       ✔       |           |    ✔    |
-|     Loader      |     ✔      |       ✔       |           |         |
-|  Vector Store   |     ✔      |       ✔       |           |         |
-|    Embedding    |     ✔      |               |           |    ✔    |
-|     Message     |            |               |           |    ✔    |
-| Input Validator |            |               |     ✔     |         |
-|    Connector    |            |               |     ✔     |         |
-
+<table>
+  <tr>
+    <th></th>
+    <th>GAR (HTML)</th>
+    <th>GAR (YouTube)</th>
+    <th>ADS (SQL)</th>
+    <th>Chatbot</th>
+  </tr>
+  <tr><td>LLM</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+  <tr><td>Retriever</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+  <tr><td>Template</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+  <tr><td>Parser</td><td>✔</td><td></td><td>✔</td><td>✔</td></tr>
+  <tr><td>Pipe</td><td>✔</td><td></td><td>✔</td><td>✔</td></tr>
+  <tr><td>Splitter</td><td>✔</td><td>✔</td><td></td><td>✔</td></tr>
+  <tr><td>Loader</td><td>✔</td><td>✔</td><td></td><td></td></tr>
+  <tr><td>Vector Store</td><td>✔</td><td>✔</td><td></td><td></td></tr>
+  <tr><td>Embedding</td><td>✔</td><td></td><td></td><td>✔</td></tr>
+  <tr><td>Message</td><td></td><td></td><td></td><td>✔</td></tr>
+  <tr><td>Input Validator</td><td></td><td></td><td>✔</td><td></td></tr>
+  <tr><td>Connector</td><td></td><td></td><td>✔</td><td></td></tr>
+</table>
 <p style="text-align: center;">Tables IV.3 : Matrice des cas d’utilisations et des catégories de composants qu’elles contiennent.</p>
 <br>
 
-## V. Bilan
+# V. Bilan
 
 ---
 
-### 1. Conclusion de notre étude
+## 1. Conclusion de notre étude
 
 LangChain a émergé comme un outil important dans l’intégration des LLM, et ce, notamment grâce à l'aspect réutilisable
 de ses composants qui lui offrent une grande flexibilité. Nous nous sommes intéressés aux cas de figures de la
@@ -511,7 +535,7 @@ personnalisées. C’est notamment observable, car les éléments sont souvent u
 pas forcément utilisés avec les mêmes patterns. Cela démontre d’une certaine flexibilité de LangChain quant à sa
 possibilité d’assembler différents types d’éléments ensemble afin de produire un résultat spécifique.
 
-### 2. Limites de notre étude
+## 2. Limites de notre étude
 
 Les résultats de cette étude présentent certaines limites qu'il convient de prendre en considération. Tout d'abord, il
 est important de noter que seuls quatre répertoires GitHub différents ont été inclus dans l'analyse. Cette sélection
@@ -522,7 +546,7 @@ peut varier entre les développeurs, et tous pourraient ne pas adopter les même
 LangChain. En conséquence, la généralisation des résultats doit être faite avec prudence, compte tenu de ces limitations
 inhérentes à la portée restreinte de la sélection des données.
 
-### 3. Prise de recul
+## 3. Prise de recul
 
 Les codes étudiés nous montrent que les Retrievers sont des éléments très utilisés. Il convient de noter que cela
 reflète seulement le résultat obtenu pour ces applications qui implémentent toutes une façon de récupérer de
@@ -532,7 +556,7 @@ L’utilisation des chaînes à un fort intérêt, car elles ajoutent de nombreu
 serait alors plus pertinent d'utiliser les solutions proposées par les différents services d’intelligence artificielle
 comme ChatGPT ou Bard.
 
-### 4. Perspectives
+## 4. Perspectives
 
 Il est important de rappeler que notre analyse s'est focalisée exclusivement sur quatre projets : trois appartenant à
 LangChain et un ne venant pas du framework. Notre échantillon d'étude était ainsi restreint, et pour réaliser une
@@ -543,18 +567,18 @@ pratiques qui, bien qu'elles ne soient pas des conventions officielles, semblent
 projet externe, bien que la même architecture soit présente, les pratiques diffèrent. Ainsi, notre étude pose les bases
 pour l'éventuelle définition de bonnes pratiques dans ce domaine.
 
-## VI. Bibliographie
+# VI. Bibliographie
 
 ---
 
-### Répertoires GitHub
+## Répertoires GitHub
 
 - [Répertoire GitHub de la génération augmentée de recherche avec des fichiers HTML](https://github.com/LangChain-ai/chat-LangChain)
 - [Répertoire GitHub de la génération augmentée de recherche avec des vidéos YouTube](https://github.com/rishabkumar7/youtube-assistant-LangChain)
 - [Répertoire GitHub de l’analyse de données structurées - SQL](https://github.com/LangChain-ai/LangChain/tree/master/templates/sql-llama2)
 - [Répertoire GitHub sur la création de chatbots](https://github.com/LangChain-ai/webLangChain)
 
-### Documentation
+## Documentation
 
 - [LLMs](https://python.langchain.com/docs/modules/model_io/llms/)
 - [LangServ](https://www.langchain.com/langserve)
