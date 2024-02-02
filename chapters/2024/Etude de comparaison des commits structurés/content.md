@@ -4,7 +4,7 @@ title : Etude de comparaison des commits structurés
 date:   2023-11
 ---
 
-**_février 2024_**
+**_02 février 2024_**
 
 ## Authors
 
