@@ -62,31 +62,92 @@ In the context of Hypothesis 4, our initial plan involved testing all projects o
 
 ## V. Result Analysis and Conclusion
 
-* Results: Presentation and interpretation of the data collected.
-Graphs
+# Commit Analysis Overview
+
+![Figure 2: Angular Conventional Commits](assets/images/Commits_Angular_conventional.png)
+
+Angular demonstrates a strong adherence to conventional commits, which is expected given that Angular has been instrumental in establishing these standards.
+
+![Figure 3: Node Conventional Commits](assets/images/Commits_Node_conventional.png)
+
+It's evident that not all repositories align with conventional commit guidelines. As previously mentioned, many opt for custom conventions. This necessitated adaptations in our analysis tool to accommodate the unique conventions of Node.js.
+
+![Figure 4: Node Updated Conventions](assets/images/Commits_Node_updated.png)
+
+A significant number of repositories prefer a "verb-start" approach for commit messages, initiating each entry with an action verb. This approach posed analytical challenges, which were overcome by employing Natural Language Processing techniques. Django serves as a notable case, eschewing conventional commits in favor of exclusively using "verb-start" commits:
+
+![Figure 13: Django Conventional Commits](assets/images/Commits_Django_conventional.png)
+![Figure 14: Django Updated Commits](assets/images/Commits_Django_updated.png)
+
+Regarding the use of gitmojis, few open-source projects consistently incorporate them. The notable exceptions were Gitmoji itself and FastAPI.
+
+![Figure 5: Gitmoji Conventional Commits](assets/images/Commits_GITMOJI_conventional.png)
+![Figure 6: FastAPI Conventional Commits](assets/images/Commits_FastAPI_conventional.png)
+
+An interesting observation is the sporadic adoption and subsequent abandonment of gitmojis in projects, with CPython being a prime example of this trend.
+
+![Figure 7: CPython Conventional Commits](assets/images/Commits_Cpython_updated.png)
+
+# Conclusion
+
+Our comprehensive analysis across various repositories indicates a predominant preference for bespoke commit conventions over standardized ones. These custom conventions often diverge significantly from established norms, underscoring the diversity in commit practices across the software development landscape.
+In short: 
     * Companies would rather use their own commit structure rather than conventional commits
     * Even when adapted, Companies usually don’t stick to using community driven commits like conventional-commits or gitmoji and usually end up swapping them.
-    * The top contributors are usually more diligent with their commit structure, making sure to adhere to the conventions. Analysis of the provided graphs shows:
+    * Gitmoji never used (except gitmoji repository or on a short period then canceled)
+    * Use of automatic commits depending on the project (merge, pull requests, squash, etc.) which makes structuring of commits less necessary because they keep the discussion in the PR of the repo leaders
+
+
+# Top Contributors overview 
+
+   * The top contributors are usually more diligent with their commit structure, making sure to adhere to the conventions. Analysis of the provided graphs shows:
         * For the TensorFlow project, the conventional commit rate among the top contributors varies, with some showing moderate adherence and others demonstrating a higher commitment to conventional commit guidelines. This variation suggests a balance between structured commit practices and individual discretion within the project's contribution process. ![Tensorflow Graph](assets/images/tensorflow_top_contributors_commit_rate_page-0001.jpg)
         * In the Pygwalker project, while top contributors generally maintain a good level of adherence to conventional commit guidelines, there is one contributor with a notably lower adherence rate. This suggests that while there is an inclination towards structured commit practices, the project allows for some flexibility or individual approaches to commit messaging. ![Pygwalker Graph](assets/images/pygwalker_top_contributors_commit_rate_page-0001.jpg)
         * The Node.js project exhibits a significant diversity in adherence to conventional commit guidelines among its top contributors. While one contributor shows an exceptionally high commitment to structured commits, others have moderate to lower rates. This variation may reflect individual contributor preferences or differing sub-project requirements within the Node.js ecosystem. ![Node Graph](assets/images/node_top_contributors_commit_rate_page-0001.jpg)
         * For the Hystrix project, the conventional commit rate among the top contributors is uniformly moderate, with none demonstrating a full adherence (a rate of 1.0) to conventional commits. This indicates a consistent but not rigorous approach to commit messaging that allows for some flexibility within the structured commit guidelines. ![Hystrix Graph](assets/images/Hystrix_top_contributors_commit_rate_page-0001.jpg)
         * The Angular project demonstrates a strong commitment to conventional commit guidelines, as evidenced by the high conventional commit rates of the top contributors. This consistency suggests that the project likely enforces a strict policy regarding commit standards, which may contribute to the maintainability and clarity of the project's codebase. ![Angular Graph](assets/images/angular_top_contributors_commit_rate_page-0001.jpg)
-    * Companies with multiple projects (Meta & Apache) don’t use the same conventions for all their projects. It seems like each team personalizes their commits to each team’s requirements
-    * Comparing Apache with Meta : Apache is comparatively much stricter and much more explicit about their conventions. Apache has no “ultimate” convention, it defines a convention for each project and they’re strict for each convention per project. This doesn’t seem to be the case with Meta. Much more unconventional or “unprofessional” commits found in Meta’s commits [insert figures for meta unconventional commits]
 
-    * Gitmoji never used (except gitmoji repository or on a short period then canceled)
-    * Conventional commit often used BUT derived (adding keywords…)
-     * Commits often structured uniquely to the directory
-     * Use of automatic commits depending on the project (merge, pull requests, squash, etc.) which makes structuring of commits less necessary because they keep the discussion in the PR of the repo leaders
-* Limits : 
-    * Recognition of the limitations of the study (sampling, possible bias)
-    * Our tool was not perfect, in fact, our tool requires a lot of tweaking depending on the project, since every project had its own conventions.
-limitations relating to automated commits vs human made commits. 
-    * Uncertainties when it comes to non-public commit information (Meta’s documentation doesn’t specify commits structure and claims that all commits are squashed [meaning automated commits], however studying their commits, we can notice a few obviously non-robotic commits)
-* Conclusion: Summary of findings and implications for development practices.
-    * Results are inconclusive and are always anecdotal depending on the projects chosen
-    * This topic has a lot of nuance (project structure, team organization, developer priorities, outside team communication etc..) and these things we just cannot interpret through just the commit set.
+
+# Comparing Apache and Meta
+
+To answer our 4th hypothesis, we've decided to take the companies Apacha and Meta. Right off the bat, we can see that our hypothesis was incorrect, as we found that apache defined different conventions for each of its projects in the contributing.md file. So our outlook on this changed, We've decided to compare the attitudes and approach that each company had with their commits.
+
+   * Our Apache graphs :
+
+      ![Figure 8: KAFKA conventional commits](assets/images/Commits_Apache_KAFKA.png)
+      ![Figure 9: SPARK conventional commits](assets/images/Commits_Apache_SPARK.png)
+
+   * Our Meta graphs :
+
+   ![Figure 10: React conventional commits](assets/images/Commits_Meta_REACT.png)
+   ![Figure 11: React Native conventional commits](assets/images/Commits_Meta_REACTNATIVE.png)
+
+# Conclusions :
+Apache is comparatively much stricter and much more explicit about their conventions. Apache has no “ultimate” convention, it defines a convention for each project and they’re strict for each convention per project. 
+This doesn’t seem to be the case with Meta. Not only was meta's conventions unknown. Meta claimed to squash commits so users don't have to worry about commit structure, this implies that meta's commits are all automated and not human. However this does not seem to be the case from our studies. much more unconventional or “unprofessional” commits found in Meta’s commits which make it clear that it was human made. A prominent example is the following : 
+
+![Figure 12: React non conventional commit](assets/images/unconventional_commit.png)
+
+Meta has been very difficult to study from the contradicting results, to the very secretive conventions in comparison to Apache's very straightforward approach to commits.
+    * Companies with multiple projects (Meta & Apache) don’t use the same conventions for all their projects. It seems like each team personalizes their commits to each team’s requirements
+
+
+
+## Limitations
+
+- **Sampling and Bias**: We acknowledge that our analysis might have limitations due to the samples we chose and potential biases in our selection process.
+
+- **Tool Limitations**: Our tool wasn't perfect and required significant adjustments for each project. This is because each project follows its unique set of conventions, making a one-size-fits-all approach challenging.
+
+- **Automated vs. Human-Made Commits**: Differentiating between automated and human-made commits posed a challenge, especially when project documentation was unclear or lacking. For example, Meta's documentation suggests that commits are squashed (implying automation), yet we noticed several commits that appeared to be made by humans.
+
+## Concluding Thoughts
+
+- **Findings**: Our findings do not present a clear-cut conclusion; they vary significantly from one project to another and should be considered as anecdotal evidence rather than definitive statements.
+
+- **Nuance in Development Practices**: The subject of commit conventions is complex, influenced by various factors such as project structure, team dynamics, developer priorities, and communication practices outside the team. These nuances are difficult to capture solely through commit analysis.
+
+This study aimed to shed light on different commit practices but also highlights the intricate nature of software development workflows, underscoring the need for further, more nuanced research in this area.
 
 
 ## VI. Tools 
