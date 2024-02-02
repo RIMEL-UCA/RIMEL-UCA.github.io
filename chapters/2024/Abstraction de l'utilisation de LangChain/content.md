@@ -4,8 +4,6 @@ title: Abstraction de l’utilisation de LangChain
 date: 2024-02
 ---
 
-<style type="text/css"> .tg td{font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#111;} .tg th{font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#111;} </style>
-
 **_février 2024_**
 
 ## Auteurs
@@ -446,56 +444,15 @@ catégorie “Message”. Ces composants sont cette fois-ci bien spécifiques au
 
 <br>
 
-| GAR (HTML)                        | GAR (YouTube)                     | ADS (SQL)            | Chatbot                           |
-|-----------------------------------|-----------------------------------|----------------------|-----------------------------------|
-| Sitemap Loader                    | Youtube Loader                    | Replicate            | Str Output Parser                 |
-| Recursive Character Text Splitter | Recursive Character Text Splitter | Chat Prompt Template | Recursive Character Text Splitter |
-| Recursive Url Loader              | FAISS                             | SQL Database         | Chat Prompt Template              |
-| Weaviate                          | OpenAI-Davinci                    | Str Output Parser    | Message Place Holder              |
-| Base Retriever                    | Chat Prompt Template              | Base Model           | Human Message                     |
-| Chat Prompt Template              |                                   | Runnable Through     | AI Message                        |
-| GPT-3.5-Turbo                     |                                   |                      | Runnable Map                      |
-| Str Output Parser                 |                                   |                      | Runnable Lambda                   |
-| Runnable                          |                                   |                      | Runnable Branch                   |
-| Open AI Embedding                 |                                   |                      | Base Retriever                    |
-|                                   |                                   |                      | Prompt Template                   |
-|                                   |                                   |                      | Contextual Compression Retriever  |
-|                                   |                                   |                      | Document Compressor Pipeline      |
-|                                   |                                   |                      | Open AI Embedding                 |
-|                                   |                                   |                      | Embedding Filter                  |
-|                                   |                                   |                      | Chat Open AI                      |
-
+![Composants-cas-utilisation.png](assets/images/Composants-cas-utilisation.png)
 <p style="text-align: center;">Table IV.1 : Liste des composants LangChain identifiés en fonction du cas d’utilisation.</p>
 <br>
 
-| Pipe                         | Connector      | Retriever                        | Loader               | Message              | Embedding         | Vector Store | Template             | Splitter                          | Parser            | Input Validator |
-|------------------------------|----------------|----------------------------------|----------------------|----------------------|-------------------|--------------|----------------------|-----------------------------------|-------------------|-----------------|
-| Runnable                     | GPT-3.5-Turbo  | Base Retriever                   | Sitemap Loader       | Message Place Holder | Open AI Embedding | Weaviate     | Chat Prompt Template | Recursive Character Text Splitter | Str Output Parser | Base Model      |
-| Runnable Through             | OpenAI-Davinci | SQL Database                     | Youtube Loader       | Human Message        | Embedding Filter  | FAISS        | Prompt Template      |                                   |                   |                 |
-| Runnable Map                 | Replicate      | Contextual Compression Retriever | Recursive Url Loader | AI Message           |                   |              |                      |                                   |                   |                 |
-| Runnable Lambda              | Chat Open AI   | FAISS                            |                      |                      |                   |              |                      |                                   |                   |                 |
-| Runnable Branch              |                |                                  |                      |                      |                   |              |                      |                                   |                   |                 |
-| Document Compressor Pipeline |                |                                  |                      |                      |                   |              |                      |                                   |                   |                 |
-{: .tg}
-
+![Composants-categorie.png](assets/images/Composants-categorie.png)
 <p style="text-align: center;">Tables IV.2 : Composants LangChain identifiés regroupés en catégories.</p>
 <br>
 
-|                 | GAR (HTML) | GAR (YouTube) | ADS (SQL) | Chatbot |
-|-----------------|------------|---------------|-----------|---------|
-| LLM             | ✔          | ✔             | ✔         | ✔       |
-| Retriever       | ✔          | ✔             | ✔         | ✔       |
-| Template        | ✔          | ✔             | ✔         | ✔       |
-| Parser          | ✔          |               | ✔         | ✔       |
-| Pipe            | ✔          |               | ✔         | ✔       |
-| Splitter        | ✔          | ✔             |           | ✔       |
-| Loader          | ✔          | ✔             |           |         |
-| Vector Store    | ✔          | ✔             |           |         |
-| Embedding       | ✔          |               |           | ✔       |
-| Message         |            |               |           | ✔       |
-| Input Validator |            |               | ✔         |         |
-| Connector       |            |               | ✔         |         |{: .tg}
-
+![Matrice-composants.png](assets/images/Matrice-composants.png)
 <p style="text-align: center;">Tables IV.3 : Matrice des cas d’utilisations et des catégories de composants qu’elles contiennent.</p>
 <br>
 
