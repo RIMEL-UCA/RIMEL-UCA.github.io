@@ -16,7 +16,7 @@ Nous sommes quatre étudiants en dernière année à Polytech Nice-Sophia spéci
 
 ## I. Contexte
 
-L'évolution des sciences de la donnée, accompagnées par une intégration progressive des principes DevOps au sein de cette communauté, soulève des questionnements pertinents quant aux méthodologies adoptées pour le versionnement des artefacts, particulièrement les modèles. Notre motivation derrière cette étude réside dans la volonté de démystifier les pratiques actuelles du versionnement des modèles par les data scientistes. Comprendre comment ces professionnels gèrent les différentes versions de leurs modèles revêt une importance capitale dans un contexte où l'apprentissage automatique s'insère de plus en plus dans des pipelines de développement logiciel.
+L'évolution des sciences de données, accompagnées par une intégration progressive des principes DevOps au sein de sa communauté, soulève des questionnements pertinents quant aux méthodologies adoptées pour le versionnement des artefacts, particulièrement les modèles. Notre motivation derrière cette étude réside dans la volonté de démystifier les pratiques actuelles du versionnement des modèles par les data scientistes. Comprendre comment ces professionnels gèrent les différentes versions de leurs modèles revêt une importance capitale dans un contexte où l'apprentissage automatique s'insère de plus en plus dans des pipelines de développement logiciel.
 
 Pour mener à bien cette investigation, notre recherche s'intéresse tout d'abord à Mlflow en tant que plateforme open-source, conçue pour aider les praticiens de l'apprentissage automatique à gérer le cycle de vie de leurs modèles d'apprentissage automatique, de l'exploration à la publication du modèle. Etant donné que Mlflow est destiné à un usage professionnel où les modèles sont gardés privés sans accès à une source interne, il ne fournit qu'un regard extérieur sur la façon à laquelle un outil de versionnement pour les data scientistes pourrait ressembler, et la conduite de notre recherche se tourne vers Hugging Face, en tant que plateforme publique massive, où les modèles de différents contributeurs sont publiquement disponibles, en particulier ceux des grandes entreprises.
 
@@ -59,7 +59,7 @@ Voici les questions sous-jacentes qui en découlent :
 
 ## III. Collecte des données : méthodes et outils
 
-Nous sommes partis collecter des données de Hugging Face. Notre recherche a adopté une approche sélective, en se concentrant uniquement sur les modèles avec des tags qui représentent la tâche du modèle dans Hugging Face. Le raisonnement derrière cela est qu'un modèle qui a été poussé vers ce hub public avec un tag aura probablement plus d'une seule apparition dans le hub.  L'éditeur peut être en train de travailler sur cette tâche et à chaque fois il poussera de nouvelles versions de son modèle amélioré : avoir un but donne un avenir. Cette stratégie ciblée s'est avérée efficace pour extraire les modèles les plus significatifs, compte tenu de la diversité des modèles disponibles sur la plateforme Hugging Face. En outre, nous avons veillé à éviter les doublons, afin de garantir la validité et la fiabilité de notre échantillon.
+Nous sommes partis collecter des données de Hugging Face. Notre recherche a adopté une approche sélective, en se concentrant uniquement sur les modèles avec des tags qui représentent la tâche du modèle dans Hugging Face. Le raisonnement derrière cela est qu'un modèle qui a été poussé vers ce hub public avec un tag aura probablement plus d'une seule apparition dans le hub.  L'éditeur peut être en train de travailler sur cette tâche et à chaque fois, il poussera de nouvelles versions de son modèle amélioré : avoir un but donne un avenir. Cette stratégie ciblée s'est avérée efficace pour extraire les modèles les plus significatifs, compte tenu de la diversité des modèles disponibles sur la plateforme Hugging Face. En outre, nous avons veillé à éviter les doublons, afin de garantir la validité et la fiabilité de notre échantillon.
 
 Pour réaliser cela, nous nous sommes appuyés sur le web scraping en exploitant le langage de programmation Python et en utilisant à des librairies telles que BeautifulSoup pour analyser le HTML et les requests pour traiter les requêtes HTTP. Cette approche a conduit à la création d'une base de données riche, comprenant 230 000 modèles, qui constituent une ressource abondante et adéquate pour répondre aux questions de notre étude de recherche.
 
@@ -76,7 +76,7 @@ Ces constatations indiquent un écart potentiel par rapport au cadre de versionn
 
 **1.2. _Expérience : Calcul de l'adoption du versionnement traditionnel_**
 
-Dans cette expérience, notre objectif principal était d'examiner de près les noms des modèles car ils contiennent des indications de version. 
+Dans cette expérience, notre objectif principal était d'examiner de près les noms des modèles, car ils contiennent des indications de version. 
 
 Nous avons créé un script qui passe en revue les noms des modèles, vérifie l'existence d'une version sémantique traditionnelle et incrémente le nombre de correspondances avec une version sémantique.
 
