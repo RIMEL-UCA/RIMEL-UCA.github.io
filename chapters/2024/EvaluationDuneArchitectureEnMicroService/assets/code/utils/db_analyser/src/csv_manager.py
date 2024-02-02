@@ -11,7 +11,7 @@ class CSV_Manager():
         """
 
         # Le nom du fichier CSV à créer
-        nom_fichier_csv = './datas/DB_analyse/db_usage.csv'
+        nom_fichier_csv = 'db_usage.csv'
 
         # Écrire le dictionnaire dans un fichier CSV
         with open(nom_fichier_csv, mode='w', newline='') as fichier_csv:

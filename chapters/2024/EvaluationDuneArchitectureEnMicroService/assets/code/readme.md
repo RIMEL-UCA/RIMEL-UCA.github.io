@@ -14,11 +14,11 @@ Le résultat du script sera également dans un fichier validation.xlsx dans le d
 
 Analyse des patterns :
 
-python analyse.py --token your_token --input path_of_csv_repos
+python3 analyse.py --token your_token --input path_of_csv_repos
 
 Script de validation : 
 
-python validation.py --token your_token --input path_of_csv_repos
+python3 validation.py --token your_token --input path_of_csv_repos
 
 
 
