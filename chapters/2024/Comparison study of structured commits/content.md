@@ -20,10 +20,10 @@ We are four students in M2 or in last year of Polytech’ Nice-Sophia specialize
 The main question we chose to address is : How and to what extent are structured commits used in open-source projects ?
 At first, we wanted to understand the impact of commit standards on the management of software projects (clarity, traceability, maintenance). but we soon realized it is a really vast subject, and most of our interrogations couldn't be answered with the tools we had. How can we attest how useful a structured commit was for a project ? Or how much time was saved thanks to a clear commit message ?
 So we changed some questions, and these are the under questions we kept :
-    * How common are conventional commits and gitmojis used in open-source projects ?
-    * Do employees structure themselves naturally ? Or are there commit conventions on each git-hub repos ?
-    * Do regular contributors make more structured commits ?
-    * Is there a correlation between the number of contributors and commit conventions ?
+   * How common are conventional commits and gitmojis used in open-source projects ?
+   * Do employees structure themselves naturally ? Or are there commit conventions on each git-hub repos ?
+   * Do regular contributors make more structured commits ?
+   * Is there a correlation between the number of contributors and commit conventions ?
 
 
 ## II. General question
