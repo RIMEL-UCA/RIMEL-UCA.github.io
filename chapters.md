@@ -7,6 +7,8 @@ date: 2022-11-18 6:00:00 +0100
 
 ### [Votre Sujet] ({{ site.url }}/chapters/2024/ChapterModel/content)
 
+### [Abstraction de l’utilisation de LangChain]({{ site.url }}/chapters/2024/Abstraction de l'utilisation de LangChain/content)
+
 ## 2023
 
 ### [Comment visualiser les dépendances d’une chaîne d’intégration continue, leur origine et leur niveau de confiance ?]({{ site.url }}/chapters/2023/team-a/content)
