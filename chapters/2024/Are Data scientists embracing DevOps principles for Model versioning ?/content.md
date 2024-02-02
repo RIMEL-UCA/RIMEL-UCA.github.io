@@ -88,7 +88,7 @@ Les résultats obtenus ont été représentés graphiquement sous la forme d'un 
 
 Le graphique ci-dessous présente les résultats de l'expérience, illustrant le pourcentage d'adoption du versionnement sémantique :
 
-![ratio global](./assets/images/global-ratio.png)
+![ratio global](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/tree/master/chapters/2024/Are%20Data%20scientists%20embracing%20DevOps%20principles%20for%20Model%20versioning%20%3F/assets/images/global-ratio.png)
 
 Cette première expérience a validé notre hypothèse, démontrant qu'environ **79%** des modèles ne se conforment pas au modèle de versionnement traditionnel.
 
@@ -114,7 +114,7 @@ Au cours de cette phase, nous nous sommes concentrés sur les modèles qui suive
 
 Les résultats graphiques ont clairement démontré que le pourcentage d'adoption du versionnement sémantique varie considérablement d'une catégorie de modèle à une autre :
 
-![ratio global](./assets/images/version_ratios_by_file_scatter.png)
+![ratio global](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/tree/master/chapters/2024/Are%20Data%20scientists%20embracing%20DevOps%20principles%20for%20Model%20versioning%20%3F/assets/images/version_ratios_by_file_scatter.png)
 
 - **_Analyse des résultats_**
 
@@ -144,7 +144,7 @@ En outre, les symboles numériques ont été délibérément exclus de notre ana
 
 - **_Résultat_**
 
-![ratio global](./assets/images/tokens.png)
+![ratio global](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/tree/master/chapters/2024/Are%20Data%20scientists%20embracing%20DevOps%20principles%20for%20Model%20versioning%20%3F/assets/images/tokens.png)
 
 - **_Analyse des résultats_**
 
@@ -215,7 +215,7 @@ En utilisant ces données, nous avons créé des graphiques à barres empilées 
 
 - **_Résultat_**
 
-![ratio global](./assets/images/stacked_barcharts.png)
+![ratio global](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/tree/master/chapters/2024/Are%20Data%20scientists%20embracing%20DevOps%20principles%20for%20Model%20versioning%20%3F/assets/images/stacked_barcharts.png)
 
 - **_Analyse des résultats_**
 
@@ -244,7 +244,7 @@ Au cours de cette étude, nous avons spécifiquement sélectionné les entrepris
 
 L'analyse des données obtenues a révélé ce qui suit : 
 
-![ratio global](./assets/images/companies.png)
+![ratio global](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/tree/master/chapters/2024/Are%20Data%20scientists%20embracing%20DevOps%20principles%20for%20Model%20versioning%20%3F/assets/images/companies.png)
 
 Nous observons l'identification de tokens spécifiques liés à la nature des modèles tels que "medium", "large", "base", "small", ou "base". Cependant, aucune tendance claire de versionnement n'a été repérée à l'échelle globale de l'entreprise.
 
