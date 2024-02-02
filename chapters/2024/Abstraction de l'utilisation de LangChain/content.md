@@ -27,8 +27,7 @@ LangChain est un framework permettant de développer des applications alimentée
 Language Models - LLM.
 
 L'étude de la flexibilité de LangChain dans le contexte des LLM représente une exploration cruciale des possibilités
-offertes par ce framework dans le développement d'applications sur mesure. Avec l'avènement de LLM tels que GPT-3 (
-ChatGPT), l'intelligence artificielle a connu une expansion significative, mais le défi réside désormais dans la
+offertes par ce framework dans le développement d'applications sur mesure. Avec l'avènement de LLM tels que GPT-3 (ChatGPT), l'intelligence artificielle a connu une expansion significative, mais le défi réside désormais dans la
 création d'applications adaptées à des cas d'utilisation spécifiques, intégrant de manière harmonieuse ces modèles
 complexes.
 
