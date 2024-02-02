@@ -17,11 +17,9 @@ We are four students in M2 or in last year of Polytech’ Nice-Sophia specialize
 
 ## I. Research context 
 
-<sub>Préciser ici votre contexte et Pourquoi il est intéressant. **
-
-* Main question: How and to what extent are structured commits used in open-source projects?
-* Interest: Understand the impact of commit standards on the management of software projects (clarity, traceability, maintenance).
-* Under questions:
+The main question we chose to adress is : How and to what extent are structured commits used in open-source projects ?
+At first, we wanted to understand the impact of commit standards on the management of software projects (clarity, traceability, maintenance). but we soon realized it is a really vast subject, and most of our interrogations could'nt be answered with the tools we had. How can we attest how useful a strutured commit was is un project ? Or how much time was saved thanks to a clear commit message?
+So we change some questions, and these are the under questions we kept :
     * How common are conventional commits and gitmojis used in open-source projects?
     * Do employees structure themselves naturally? Or are there commit conventions on each git-hub?
     * Do regular contributors make more structured commits?
@@ -30,30 +28,11 @@ We are four students in M2 or in last year of Polytech’ Nice-Sophia specialize
 
 ## II. General question
 
-<sub>1. Commencez par formuler une question sur quelque chose que vous observez ou constatez ou encore une idée émergente. 
-    
-<sub>2. Préciser pourquoi cette question est intéressante de votre point de vue.
-
-<sub>Attention pour répondre à cette question, vous devrez être capable d'émettre des hypothèses vérifiables, de quantifier vos réponses, ...
-
-     <sub>:bulb: Cette première étape nécessite beaucoup de réflexion pour définir la bonne question qui permet de diriger la suite de vos travaux.
-   </sub>
-     
-* Conventional commit is part of a standard, why? (pre-analysis observation, “urban legend of development”)
-* None of us knew about conventional commit before
+None of us knew about conventional commit before starting this project, so we were really curious about it. We soon realized most of big open source projects used conventionnal commit and it is part of a standard, but why ? 
+It is indeed a really easy way and clear way to communicate changes and fixes. With just a short message, you can say what was the code alteration and why it was made ; so the message is qualitative and useful for the next developpers working on the code. 
+Although, even if we never user conventional commits before, we definitely already used strutured commits working in companies. So is the conventional commit really necessary ?
 
 ## III. Information gathering
-
-<sub>Préciser vos zones de recherches en fonction de votre projet, les informations dont vous disposez, ... 
-
-<sub>Voici quelques pistes : 
-
-<sub>1. les articles ou documents utiles à votre projet 
-<sub>2. les outils que vous souhaitez utiliser
-<sub>3. les jeux de données/codes que vous allez utiliser, pourquoi ceux-ci, ...
-
-     <sub>:bulb: Cette étape est fortement liée à la suivante. Vous ne pouvez émettre d'hypothèses à vérifier que si vous avez les informations. inversement, vous cherchez à recueillir des informations en fonction de vos hypothèses.
-</sub>
 
 * Ressources : Articles, documentation on commits'conventions(ex: Conventional Commits, Gitmoji).
 * Tools : GitHub repositories analysis and  pydriller.
@@ -70,19 +49,6 @@ For the initial phase, we’ve not studied projects with unclear structures like
  
 ## IV. Hypothesis & Experiences
 
-<sub>1. Il s'agit ici d'**énoncer sous forme d'hypothèses** ce que vous allez chercher à démontrer. Vous devez définir vos hypothèses de façon à pouvoir les _mesurer/vérifier facilement._ Bien sûr, votre hypothèse devrait être construite de manière à _vous aider à répondre à votre question initiale_. Explicitez ces différents points.
-<sub>2. Vous **explicitez les expérimentations que vous allez mener** pour vérifier si vos hypothèses sont vraies ou fausses. Il y a forcément des choix, des limites, explicitez-les.
-
-     <sub>:bulb: Structurez cette partie à votre convenance : 
-     Par exemples : 
-        Pour Hypothèse 1 => 
-            Nous ferons les Expériences suivantes pour la démontrer
-        Pour Hypothèse 2 => Expériences 
-        
-        ou Vous présentez l'ensemble des hypothèses puis vous expliquer comment les expériences prévues permettront de démontrer vos hypothèses.
-
-</sub>
-
 * Hypothesis : Influence of structured commits on the maintenance and understanding of projects.
     * Hypothesis 1 : Projects would use the already community-driven norm of conventional commits
     * Hypothesis 2 : Top project contributors usually stick to the commits
@@ -95,13 +61,6 @@ For the initial phase, we’ve not studied projects with unclear structures like
 
 
 ## V. Result Analysis and Conclusion
-
-<sub>1. Présentation des résultats
-<sub>2. Interprétation/Analyse des résultats en fonction de vos hypothèses
-<sub>3. Construction d’une conclusion 
-
-     :bulb:  Vos résultats et donc votre analyse sont nécessairement limités. Préciser bien ces limites : par exemple, jeux de données insuffisants, analyse réduite à quelques critères, dépendance aux projets analysés, ...
-</sub>
 
 * Results: Presentation and interpretation of the data collected.
 Graphs
@@ -126,10 +85,6 @@ limitations relating to automated commits vs human made commits.
 
 
 ## VI. Tools \(facultatif\)
-
-<sub>Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à \(1\) pouvoir reproduire vos expérimentations, \(2\) partager/expliquer à d'autres l'usage des outils.
-
-![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](assets/images/logo_uca.png){:height="12px"}
 
 Talk about how it works in detail : 
 Our tool detects conventions by using regex for each convention message. This is simply because most commit conventions require having specific terms at the beginning of a commit.
@@ -171,4 +126,5 @@ While we have done our studies on multiple projects, we have kept only the most 
     * Request-promised (https://github.com/request/request-promise) -> 300 commits
     * Deployd (https://github.com/deployd/deployd) -> 1300 commits
 
+![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](assets/images/logo_uca.png){:height="12px"}
 
