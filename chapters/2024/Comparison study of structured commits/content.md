@@ -62,7 +62,7 @@ In the context of Hypothesis 4, our initial plan involved testing all projects o
 
 ## V. Result Analysis and Conclusion
 
-# Commit Analysis Overview
+### Commit Analysis Overview
 
 ![Figure 2: Angular Conventional Commits](assets/images/Commits_Angular_conventional.png)
 
@@ -88,7 +88,7 @@ An interesting observation is the sporadic adoption and subsequent abandonment o
 
 ![Figure 7: CPython Conventional Commits](assets/images/Commits_Cpython_updated.png)
 
-# Conclusion
+### Conclusion
 
 Our comprehensive analysis across various repositories indicates a predominant preference for bespoke commit conventions over standardized ones. These custom conventions often diverge significantly from established norms, underscoring the diversity in commit practices across the software development landscape.
 In short: 
@@ -98,7 +98,7 @@ In short:
     * Use of automatic commits depending on the project (merge, pull requests, squash, etc.) which makes structuring of commits less necessary because they keep the discussion in the PR of the repo leaders
 
 
-# Top Contributors overview 
+### Top Contributors overview 
 
    * The top contributors are usually more diligent with their commit structure, making sure to adhere to the conventions. Analysis of the provided graphs shows:
         * For the TensorFlow project, the conventional commit rate among the top contributors varies, with some showing moderate adherence and others demonstrating a higher commitment to conventional commit guidelines. This variation suggests a balance between structured commit practices and individual discretion within the project's contribution process. ![Tensorflow Graph](assets/images/tensorflow_top_contributors_commit_rate_page-0001.jpg)
@@ -108,7 +108,7 @@ In short:
         * The Angular project demonstrates a strong commitment to conventional commit guidelines, as evidenced by the high conventional commit rates of the top contributors. This consistency suggests that the project likely enforces a strict policy regarding commit standards, which may contribute to the maintainability and clarity of the project's codebase. ![Angular Graph](assets/images/angular_top_contributors_commit_rate_page-0001.jpg)
 
 
-# Comparing Apache and Meta
+### Comparing Apache and Meta
 
 To answer our 4th hypothesis, we've decided to take the companies Apacha and Meta. Right off the bat, we can see that our hypothesis was incorrect, as we found that apache defined different conventions for each of its projects in the contributing.md file. So our outlook on this changed, We've decided to compare the attitudes and approach that each company had with their commits.
 
@@ -122,7 +122,7 @@ To answer our 4th hypothesis, we've decided to take the companies Apacha and Met
    ![Figure 10: React conventional commits](assets/images/Commits_Meta_REACT.png)
    ![Figure 11: React Native conventional commits](assets/images/Commits_Meta_REACTNATIVE.png)
 
-# Conclusions :
+### Conclusions :
 Apache is comparatively much stricter and much more explicit about their conventions. Apache has no “ultimate” convention, it defines a convention for each project and they’re strict for each convention per project. 
 This doesn’t seem to be the case with Meta. Not only was meta's conventions unknown. Meta claimed to squash commits so users don't have to worry about commit structure, this implies that meta's commits are all automated and not human. However this does not seem to be the case from our studies. much more unconventional or “unprofessional” commits found in Meta’s commits which make it clear that it was human made. A prominent example is the following : 
 
@@ -133,7 +133,7 @@ Meta has been very difficult to study from the contradicting results, to the ver
 
 
 
-## Limitations
+#### Limitations
 
 - **Sampling and Bias**: We acknowledge that our analysis might have limitations due to the samples we chose and potential biases in our selection process.
 
@@ -141,7 +141,7 @@ Meta has been very difficult to study from the contradicting results, to the ver
 
 - **Automated vs. Human-Made Commits**: Differentiating between automated and human-made commits posed a challenge, especially when project documentation was unclear or lacking. For example, Meta's documentation suggests that commits are squashed (implying automation), yet we noticed several commits that appeared to be made by humans.
 
-## Concluding Thoughts
+#### Concluding Thoughts
 
 - **Findings**: Our findings do not present a clear-cut conclusion; they vary significantly from one project to another and should be considered as anecdotal evidence rather than definitive statements.
 
