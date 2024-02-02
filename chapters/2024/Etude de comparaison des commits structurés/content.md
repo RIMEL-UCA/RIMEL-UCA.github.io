@@ -1,6 +1,6 @@
 ---
 layout: default
-title : Etude de comparaison des commits structurés
+title : Comparison study of structured commits
 date:   2024-02
 ---
 
