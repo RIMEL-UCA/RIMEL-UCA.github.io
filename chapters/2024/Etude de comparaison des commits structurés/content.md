@@ -32,11 +32,11 @@ We are four students in M2 or in last year of Polytech’ Nice-Sophia specialize
 
 <sub>1. Commencez par formuler une question sur quelque chose que vous observez ou constatez ou encore une idée émergente. 
     
-2. Préciser pourquoi cette question est intéressante de votre point de vue.
+<sub>2. Préciser pourquoi cette question est intéressante de votre point de vue.
 
-Attention pour répondre à cette question, vous devrez être capable d'émettre des hypothèses vérifiables, de quantifier vos réponses, ...
+<sub>Attention pour répondre à cette question, vous devrez être capable d'émettre des hypothèses vérifiables, de quantifier vos réponses, ...
 
-     :bulb: Cette première étape nécessite beaucoup de réflexion pour définir la bonne question qui permet de diriger la suite de vos travaux.
+     <sub>:bulb: Cette première étape nécessite beaucoup de réflexion pour définir la bonne question qui permet de diriger la suite de vos travaux.
    </sub>
      
 * Conventional commit is part of a standard, why? (pre-analysis observation, “urban legend of development”)
@@ -46,13 +46,13 @@ Attention pour répondre à cette question, vous devrez être capable d'émettre
 
 <sub>Préciser vos zones de recherches en fonction de votre projet, les informations dont vous disposez, ... 
 
-Voici quelques pistes : 
+<sub>Voici quelques pistes : 
 
-1. les articles ou documents utiles à votre projet 
-2. les outils que vous souhaitez utiliser
-3. les jeux de données/codes que vous allez utiliser, pourquoi ceux-ci, ...
+<sub>1. les articles ou documents utiles à votre projet 
+<sub>2. les outils que vous souhaitez utiliser
+<sub>3. les jeux de données/codes que vous allez utiliser, pourquoi ceux-ci, ...
 
-     :bulb: Cette étape est fortement liée à la suivante. Vous ne pouvez émettre d'hypothèses à vérifier que si vous avez les informations. inversement, vous cherchez à recueillir des informations en fonction de vos hypothèses.
+     <sub>:bulb: Cette étape est fortement liée à la suivante. Vous ne pouvez émettre d'hypothèses à vérifier que si vous avez les informations. inversement, vous cherchez à recueillir des informations en fonction de vos hypothèses.
 </sub>
 
 * Sources : Articles, documentation sur les conventions de commits (ex: Conventional Commits, Gitmoji).
@@ -71,9 +71,9 @@ For the initial phase, we’ve not studied projects with unclear structures like
 ## IV. Hypothesis & Experiences
 
 <sub>1. Il s'agit ici d'**énoncer sous forme d'hypothèses** ce que vous allez chercher à démontrer. Vous devez définir vos hypothèses de façon à pouvoir les _mesurer/vérifier facilement._ Bien sûr, votre hypothèse devrait être construite de manière à _vous aider à répondre à votre question initiale_. Explicitez ces différents points.
-2. Vous **explicitez les expérimentations que vous allez mener** pour vérifier si vos hypothèses sont vraies ou fausses. Il y a forcément des choix, des limites, explicitez-les.
+<sub>2. Vous **explicitez les expérimentations que vous allez mener** pour vérifier si vos hypothèses sont vraies ou fausses. Il y a forcément des choix, des limites, explicitez-les.
 
-     :bulb: Structurez cette partie à votre convenance : 
+     <sub>:bulb: Structurez cette partie à votre convenance : 
      Par exemples : 
         Pour Hypothèse 1 => 
             Nous ferons les Expériences suivantes pour la démontrer
@@ -82,6 +82,7 @@ For the initial phase, we’ve not studied projects with unclear structures like
         ou Vous présentez l'ensemble des hypothèses puis vous expliquer comment les expériences prévues permettront de démontrer vos hypothèses.
 
 </sub>
+
 * Hypothèses : Influence des commits structurés sur la maintenance et la compréhension des projets.
     * Hypothesis 1 : Projects would use the already community-driven norm of conventional commits
     * Hypothesis 2 : Top project contributors usually stick to the commits
@@ -96,8 +97,8 @@ For the initial phase, we’ve not studied projects with unclear structures like
 ## V. Result Analysis and Conclusion
 
 <sub>1. Présentation des résultats
-2. Interprétation/Analyse des résultats en fonction de vos hypothèses
-3. Construction d’une conclusion 
+<sub>2. Interprétation/Analyse des résultats en fonction de vos hypothèses
+<sub>3. Construction d’une conclusion 
 
      :bulb:  Vos résultats et donc votre analyse sont nécessairement limités. Préciser bien ces limites : par exemple, jeux de données insuffisants, analyse réduite à quelques critères, dépendance aux projets analysés, ...
 </sub>
@@ -129,7 +130,7 @@ limitations relating to automated commits vs human made commits.
 <sub>Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à \(1\) pouvoir reproduire vos expérimentations, \(2\) partager/expliquer à d'autres l'usage des outils.
 
 ![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](assets/images/logo_uca.png){:height="12px"}
-</sub>
+
 Talk about how it works in detail : 
 Our tool detects conventions by using regex for each convention message. This is simply because most commit conventions require having specific terms at the beginning of a commit.
 Our tool also uses Natural Language Processing to detect some other convention patterns. in fact, many projects have explicitly stated that their convention is simply “have a verb at the beginning of the commit”, some have specified the verb to be in Present form, some have specified in past tense, but most have just specified that it just needs to a verb. 
