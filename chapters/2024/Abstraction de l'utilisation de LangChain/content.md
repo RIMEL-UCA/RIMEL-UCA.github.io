@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Modèle de chapitre pour 2023-24
-date: 2023-11
+title: Abstraction de l’utilisation de LangChain
+date: 2024-02
 ---
 
 # Abstraction de l’utilisation de LangChain
