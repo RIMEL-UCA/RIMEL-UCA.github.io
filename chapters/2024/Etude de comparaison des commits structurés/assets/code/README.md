@@ -3,6 +3,11 @@
 
 Ce projet utilise PyDriller pour l'analyse des dépôts Git, Pandas pour la manipulation des données, Matplotlib pour la visualisation des données, et asyncio avec ThreadPoolExecutor pour l'exécution asynchrone.
 
+## Important
+Please open the file temporal_analysis with an IDE that supports jupyter notebooks in our desired format. You should be able to see the graphs already generated.
+
+Example of an IDE that supports this file : Visual Studio Code
+
 ## Prérequis
 
 Assurez-vous d'avoir Python 3.6 ou une version ultérieure installée sur votre système. Vous pouvez vérifier votre version de Python en exécutant :
