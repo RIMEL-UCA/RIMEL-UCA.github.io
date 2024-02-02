@@ -4,6 +4,8 @@ title: Abstraction de l’utilisation de LangChain
 date: 2024-02
 ---
 
+<style type="text/css"> .tg td{font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#111;} .tg th{font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#111;} </style>
+
 **_février 2024_**
 
 ## Auteurs
@@ -444,54 +446,66 @@ catégorie “Message”. Ces composants sont cette fois-ci bien spécifiques au
 
 <br>
 
-| GAR (HTML)                        | GAR (YouTube)                     | ADS (SQL)            | Chatbot                           |
-|-----------------------------------|-----------------------------------|----------------------|-----------------------------------|
-| Sitemap Loader                    | Youtube Loader                    | Replicate            | Str Output Parser                 |
-| Recursive Character Text Splitter | Recursive Character Text Splitter | Chat Prompt Template | Recursive Character Text Splitter |
-| Recursive Url Loader              | FAISS                             | SQL Database         | Chat Prompt Template              |
-| Weaviate                          | OpenAI-Davinci                    | Str Output Parser    | Message Place Holder              |
-| Base Retriever                    | Chat Prompt Template              | Base Model           | Human Message                     |
-| Chat Prompt Template              |                                   | Runnable Through     | AI Message                        |
-| GPT-3.5-Turbo                     |                                   |                      | Runnable Map                      |
-| Str Output Parser                 |                                   |                      | Runnable Lambda                   |
-| Runnable                          |                                   |                      | Runnable Branch                   |
-| Open AI Embedding                 |                                   |                      | Base Retriever                    |
-|                                   |                                   |                      | Prompt Template                   |
-|                                   |                                   |                      | Contextual Compression Retriever  |
-|                                   |                                   |                      | Document Compressor Pipeline      |
-|                                   |                                   |                      | Open AI Embedding                 |
-|                                   |                                   |                      | Embedding Filter                  |
-|                                   |                                   |                      | Chat Open AI                      |
+<table>
+  <tr><th>GAR (HTML)</th><th>GAR (YouTube)</th><th>ADS (SQL)</th><th>Chatbot</th></tr>
+  <tr><td>Sitemap Loader</td><td>Youtube Loader</td><td>Replicate</td><td>Str Output Parser</td></tr>
+  <tr><td>Recursive Character Text Splitter</td><td>Recursive Character Text Splitter</td><td>Chat Prompt Template</td><td>Recursive Character Text Splitter</td></tr>
+  <tr><td>Recursive Url Loader</td><td>FAISS</td><td>SQL Database</td><td>Chat Prompt Template</td></tr>
+  <tr><td>Weaviate</td><td>OpenAI-Davinci</td><td>Str Output Parser</td><td>Message Place Holder</td></tr>
+  <tr><td>Base Retriever</td><td>Chat Prompt Template</td><td>Base Model</td><td>Human Message</td></tr>
+  <tr><td>Chat Prompt Template</td><td></td><td>Runnable Through</td><td>AI Message</td></tr>
+  <tr><td>GPT-3.5-Turbo</td><td></td><td></td><td>Runnable Map</td></tr>
+  <tr><td>Str Output Parser</td><td></td><td></td><td>Runnable Lambda</td></tr>
+  <tr><td>Runnable</td><td></td><td></td><td>Runnable Branch</td></tr>
+  <tr><td>Open AI Embedding</td><td></td><td></td><td>Base Retriever</td></tr>
+  <tr><td></td><td></td><td></td><td>Prompt Template</td></tr>
+  <tr><td></td><td></td><td></td><td>Contextual Compression Retriever</td></tr>
+  <tr><td></td><td></td><td></td><td>Document Compressor Pipeline</td></tr>
+  <tr><td></td><td></td><td></td><td>Open AI Embedding</td></tr>
+  <tr><td></td><td></td><td></td><td>Embedding Filter</td></tr>
+  <tr><td></td><td></td><td></td><td>Chat Open AI</td></tr>
+</table>
+
 
 <p style="text-align: center;">Table IV.1 : Liste des composants LangChain identifiés en fonction du cas d’utilisation.</p>
 <br>
 
-| Pipe                         | Connector      | Retriever                        | Loader               | Message              | Embedding         | Vector Store | Template             | Splitter                          | Parser            | Input Validator |
-|------------------------------|----------------|----------------------------------|----------------------|----------------------|-------------------|--------------|----------------------|-----------------------------------|-------------------|-----------------|
-| Runnable                     | GPT-3.5-Turbo  | Base Retriever                   | Sitemap Loader       | Message Place Holder | Open AI Embedding | Weaviate     | Chat Prompt Template | Recursive Character Text Splitter | Str Output Parser | Base Model      |
-| Runnable Through             | OpenAI-Davinci | SQL Database                     | Youtube Loader       | Human Message        | Embedding Filter  | FAISS        | Prompt Template      |                                   |                   |                 |
-| Runnable Map                 | Replicate      | Contextual Compression Retriever | Recursive Url Loader | AI Message           |                   |              |                      |                                   |                   |                 |
-| Runnable Lambda              | Chat Open AI   | FAISS                            |                      |                      |                   |              |                      |                                   |                   |                 |
-| Runnable Branch              |                |                                  |                      |                      |                   |              |                      |                                   |                   |                 |
-| Document Compressor Pipeline |                |                                  |                      |                      |                   |              |                      |                                   |                   |                 |
+<table>
+  <tr><th>Pipe</th><th>Connector</th><th>Retriever</th><th>Loader</th><th>Message</th><th>Embedding</th><th>Vector Store</th><th>Template</th><th>Splitter</th><th>Parser</th><th>Input Validator</th></tr>
+  <tr><td>Runnable</td><td>GPT-3.5-Turbo</td><td>Base Retriever</td><td>Sitemap Loader</td><td>Message Place Holder</td><td>Open AI Embedding</td><td>Weaviate</td><td>Chat Prompt Template</td><td>Recursive Character Text Splitter</td><td>Str Output Parser</td><td>Base Model</td></tr>
+  <tr><td>Runnable Through</td><td>OpenAI-Davinci</td><td>SQL Database</td><td>Youtube Loader</td><td>Human Message</td><td>Embedding Filter</td><td>FAISS</td><td>Prompt Template</td><td></td><td></td><td></td></tr>
+  <tr><td>Runnable Map</td><td>Replicate</td><td>Contextual Compression Retriever</td><td>Recursive Url Loader</td><td>AI Message</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td>Runnable Lambda</td><td>Chat Open AI</td><td>FAISS</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td>Runnable Branch</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td>Document Compressor Pipeline</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</table>
+
 
 <p style="text-align: center;">Tables IV.2 : Composants LangChain identifiés regroupés en catégories.</p>
 <br>
 
-|                 | GAR (HTML) | GAR (YouTube) | ADS (SQL) | Chatbot |
-|-----------------|------------|---------------|-----------|---------|
-| LLM             | ✔          | ✔             | ✔         | ✔       |
-| Retriever       | ✔          | ✔             | ✔         | ✔       |
-| Template        | ✔          | ✔             | ✔         | ✔       |
-| Parser          | ✔          |               | ✔         | ✔       |
-| Pipe            | ✔          |               | ✔         | ✔       |
-| Splitter        | ✔          | ✔             |           | ✔       |
-| Loader          | ✔          | ✔             |           |         |
-| Vector Store    | ✔          | ✔             |           |         |
-| Embedding       | ✔          |               |           | ✔       |
-| Message         |            |               |           | ✔       |
-| Input Validator |            |               | ✔         |         |
-| Connector       |            |               | ✔         |         |
+<table>
+  <tr>
+    <th></th>
+    <th>GAR (HTML)</th>
+    <th>GAR (YouTube)</th>
+    <th>ADS (SQL)</th>
+    <th>Chatbot</th>
+  </tr>
+  <tr><td>LLM</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+  <tr><td>Retriever</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+  <tr><td>Template</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
+  <tr><td>Parser</td><td>✔</td><td></td><td>✔</td><td>✔</td></tr>
+  <tr><td>Pipe</td><td>✔</td><td></td><td>✔</td><td>✔</td></tr>
+  <tr><td>Splitter</td><td>✔</td><td>✔</td><td></td><td>✔</td></tr>
+  <tr><td>Loader</td><td>✔</td><td>✔</td><td></td><td></td></tr>
+  <tr><td>Vector Store</td><td>✔</td><td>✔</td><td></td><td></td></tr>
+  <tr><td>Embedding</td><td>✔</td><td></td><td></td><td>✔</td></tr>
+  <tr><td>Message</td><td></td><td></td><td></td><td>✔</td></tr>
+  <tr><td>Input Validator</td><td></td><td></td><td>✔</td><td></td></tr>
+  <tr><td>Connector</td><td></td><td></td><td>✔</td><td></td></tr>
+</table>
+
 
 <p style="text-align: center;">Tables IV.3 : Matrice des cas d’utilisations et des catégories de composants qu’elles contiennent.</p>
 <br>
