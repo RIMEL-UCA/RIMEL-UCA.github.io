@@ -42,15 +42,21 @@ For the initial phase, we’ve not studied projects with unclear structures like
  
 ## IV. Hypothesis & Experiences
 
-* Hypothesis : Influence of structured commits on the maintenance and understanding of projects.
-    * Hypothesis 1 : Projects would use the already community-driven norm of conventional commits
-    * Hypothesis 2 : Top project contributors usually stick to the commits
+Here are our hypothesis on the influence of structured commits on the maintenance and understanding of projects : 
+
+   * Hypothesis 1 : Projects would use the already community-driven norm of conventional commits
+Open-source projects often thrive on collaboration and interoperability. We assume that software development projects, especially those in the open-source community, are likely to adopt the established norm of conventional commits. This is because adhering to a shared standard in commit messages fosters consistency and facilitates cooperation among developers. Projects benefit from using a convention that is widely recognized and accepted by the community, making it easier for contributors to understand and integrate changes.
+   * Hypothesis 2 : Top project contributors usually stick to the commits
+Key contributors in a project, often possessing a deep understanding of the project's goals and conventions, are expected to lead by example. If these influential contributors consistently follow commit conventions, it sets a precedent for other contributors to do the same. Their commitment to adhering to established commit practices not only maintains the project's overall code quality and readability but also encourages a culture of discipline and standardization within the development team.
     * Hypothesis 3 :  The bigger a project is, the more there is the need for commit conventions within that project.
+As projects increase in size and complexity, the likelihood of multiple developers working simultaneously on different aspects of the codebase also increases. In such scenarios, having a standardized commit convention becomes crucial for effective collaboration. It helps in easily tracking changes, understanding the purpose behind each commit, and streamlining the overall development process. Without clear commit conventions, larger projects may face challenges in maintaining a coherent and comprehensible code history.
     * Hypothesis 4 : Companies would use the same commit structure among their top projects to facilitate integration between group members
-* Experiments: Quantitative and qualitative analysis of commit practices in various projects.
-    * Finding the large projects was relatively easy, finding projects with specific commit structures was tricky. Especially for Gitmojis, we struggled to find any project that used only gitmojis.
-    * Struggled with meta projects, as mentioned previously, Meta’s conventions are not public and unclear. Which led us to avoid them at first, but then thought to revisit them. For this, we’ve had to study their commits by hand and get the structure from our own interpretations (for this, it is sure that the accuracy is much lower) 
-    * Initially for hypothesis 4, we planned on testing all the projects of a single company with a single commit structure and see if they use the same conventions for all projects. However, it didn’t make sense to do this for apache, as they have explicitly stated their structure for each project. Instead we decided to test how much they use those conventions.
+Companies often manage multiple projects simultaneously, and developers may contribute to various projects within the organization. For seamless collaboration and integration, it is advantageous for companies to enforce a consistent commit structure across their major projects. This ensures that developers can transition between projects with minimal confusion, as they are already familiar with the commit conventions. Standardizing commit structures across projects within a company promotes a unified approach to version control and aids in knowledge transfer among team members.
+
+In our experimentation, we conducted both quantitative and qualitative analyses of commit practices across diverse projects. While identifying large projects proved relatively straightforward, the challenge lay in locating projects with specific commit structures, particularly those exclusively using Gitmojis.
+Meta projects posed a distinct difficulty, given the non-public and ambiguous nature of their conventions. Initially opting to avoid them, we later reconsidered and embarked on a manual examination of their commits. This approach, relying on our own interpretations, undoubtedly introduced a lower level of accuracy.
+In the context of Hypothesis 4, our initial plan involved testing all projects of a single company with a unified commit structure to assess the consistency across projects. However, this approach was deemed impractical for Apache, as they explicitly detailed unique structures for each project. Consequently, we opted to examine the extent to which Apache projects adhere to their prescribed conventions.
+
 
 
 ## V. Result Analysis and Conclusion
