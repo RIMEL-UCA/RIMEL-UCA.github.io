@@ -42,13 +42,12 @@ composants dans divers contextes est un enjeu clé de LangChain.
 
 <br>
 
-<div style="text-align:center">
-
 ![GAR-diagramme-youtube.png](assets/images/GAR-Diagramme-Youtube.png)
-</div>
 <p style="text-align: center;">Figure I.1.1 : Diagramme de composants d’une application permettant la recherche d’information sur une vidéo YouTube</p>
 
+
 *Légende* :
+
 - YoutubeLoader : Charger une vidéo YouTube en tant que document.
 - RecursiveCharacterTextSplitter : Objet qui divise un document en morceaux plus petits.
 - FAISS (Facebook AI Similarity Search) : Recherche efficace de similarité et regroupement de vecteurs denses.
@@ -92,12 +91,9 @@ Nous allons donc nous intéresser aux points suivants pour notre étude :
 
 **1. Quels sont les différents éléments utilisés dans le cas d’usage de la génération augmentée de recherche ?**
 
-
 **2. Quels sont les différents éléments utilisés dans le cas d’usage de l’analyse de données structurées ?**
 
-
 **3. Quels sont les différents éléments utilisés dans le cas d’usage de la création de chatbots ?**
-
 
 **4. Quels sont les éléments similaires utilisés par LangChain entre les différentes solutions ?**
 
@@ -111,16 +107,21 @@ résultats semblables quant à la réutilisation de composants. Nous avons donc 
 
 **Génération augmentée de recherche** :
 
-- Application permettant de poser des questions sur le contenu d'une page HTML - [Lien du répertoire](https://github.com/LangChain-ai/chat-LangChain)<br>
-- Application permettant de poser des questions sur le contenu d'une vidéo Youtube - [Lien du répertoire](https://github.com/rishabkumar7/youtube-assistant-LangChain)
+- Application permettant de poser des questions sur le contenu d'une page
+  HTML - [Lien du répertoire](https://github.com/LangChain-ai/chat-LangChain)<br>
+- Application permettant de poser des questions sur le contenu d'une vidéo
+  Youtube - [Lien du répertoire](https://github.com/rishabkumar7/youtube-assistant-LangChain)
 
 **Analyse de données structurées - Communication SQL** :
 
-- Application permettant de poser une question et d’obtenir une réponse de façon naturelle, en interrogeant une base de donnée SQL et à l’aide LLamA2-13b - [Lien du répertoire](https://github.com/LangChain-ai/LangChain/tree/master/templates/sql-llama2)
-
+- Application permettant de poser une question et d’obtenir une réponse de façon naturelle, en interrogeant une base de
+  donnée SQL et à l’aide
+  LLamA2-13b - [Lien du répertoire](https://github.com/LangChain-ai/LangChain/tree/master/templates/sql-llama2)
 
 **Création de chatbots** :
-- Ce répertoire se concentre sur la création d’un chatbot en utilisant LangChain - [Lien du répertoire](https://github.com/LangChain-ai/webLangChain)
+
+- Ce répertoire se concentre sur la création d’un chatbot en utilisant
+  LangChain - [Lien du répertoire](https://github.com/LangChain-ai/webLangChain)
 
 <br>
 Notre étude nous permet alors de faire une analyse comparative pour pouvoir répondre à la 4ᵉ sous question et de
@@ -158,27 +159,18 @@ une source et de les indexer. La partie récupération et génération, quant à
 pertinentes dans les données indexées auparavant, puis les transmet au LMM pour obtenir une réponse. Chaque partie est
 composée de multiples phases qui vont être expliquées plus précisément lors de l’étude du répertoire GitHub.
 
-<div style="text-align:center">
-
 ![GAR-Indexage.png](assets/images/GAR-Indexage.png)
-</div>
 <p style="text-align: center;">Figure III.1.a.1 : Représentation visuelle de la partie indexage d’une application GAR.</p>
 <br>
 
-<div style="text-align:center">
-
 ![GAR-Recuperation-et-generation.png](assets/images/GAR-Recuperation-et-generation.png)
-</div>
 <p style="text-align: center;">Figure III.1.a.2 : Représentation visuelle de la partie récupération et génération d’une application GAR.</p>
 <br>
 
 L’étude en profondeur du code présent dans le répertoire GitHub utilisé pour analyser ce cas d’utilisation a permis de
 créer le diagramme de composants disponible en *Figure III.1.a.3*.
 
-<div style="text-align:center">
-
 ![GAR-Diagrame-HTML.png](assets/images/GAR-Diagramme-HTML.png)
-</div>
 <p style="text-align: center;">Figure III.1.a.3 : Diagramme de composants pour la génération augmentée de recherche avec des fichiers HTML.</p>
 <br>
 
@@ -238,17 +230,15 @@ L’étude du répertoire nous a permis de dégager l’architecture mise en pla
 
 <br>
 
-<div style="text-align:center">
-
 ![GAR-diagramme-youtube.png](assets/images/GAR-Diagramme-Youtube.png)
-</div>
 <p style="text-align: center;">Figure III.2.b.1 : Diagramme de composants d’une application de permettant la recherche d’information sur une vidéo YouTube</p>
 
 *Légende* :
+
 - YoutubeLoader : Charger une vidéo YouTube en tant que document.
 - RecursiveCharacterSplitter : Objet qui divise un document en morceaux plus petits.
 - FAISS (Facebook AI Similarity Search) : Recherche efficace de similarité et regroupement de vecteurs denses.
- 
+
 <br>
 
 En vert sur le schéma ci-dessus, nous avons identifié les différents éléments utilisés pour l’intégration dans le cadre
@@ -257,17 +247,21 @@ ensemble. On remarque alors que l’application passe par plusieurs étapes :
 
 #### 1. Indexage :
 
-- Chargement : Tout d'abord, nous devons récupérer la transcription d'une vidéo. Nous utiliserons “YoutubeLoader” pour cela.
+- Chargement : Tout d'abord, nous devons récupérer la transcription d'une vidéo. Nous utiliserons “YoutubeLoader” pour
+  cela.
 
-- Découpage : Comme présenté précédemment, le “RecursiveCharacterSplitter” divise de grands documents en petites parties. Cela est
-utile à la fois pour indexer des données et pour les transmettre à un modèle, car les gros parties sont plus difficiles
-à rechercher et ne rentrent pas dans la fenêtre contextuelle finie d'un modèle.
+- Découpage : Comme présenté précédemment, le “RecursiveCharacterSplitter” divise de grands documents en petites
+  parties. Cela est
+  utile à la fois pour indexer des données et pour les transmettre à un modèle, car les gros parties sont plus
+  difficiles
+  à rechercher et ne rentrent pas dans la fenêtre contextuelle finie d'un modèle.
 
 #### 2. Récupération et génération
 
-- Récupération : Nous utilisons le “FAISS” (Facebook AI Similarity Search). Il transforme les petites parties en vecteurs et, en fonction
-d'une question utilisateur, les quatre fragments les plus pertinents sont récupérés et placés dans le modèle OpenAI
-Davanci en respectant la limite de la taille d'entrée.
+- Récupération : Nous utilisons le “FAISS” (Facebook AI Similarity Search). Il transforme les petites parties en
+  vecteurs et, en fonction
+  d'une question utilisateur, les quatre fragments les plus pertinents sont récupérés et placés dans le modèle OpenAI
+  Davanci en respectant la limite de la taille d'entrée.
 
 - Génération : Un LLM produit une réponse en utilisant un prompt qui inclut la question et les données récupérées.
 
@@ -292,23 +286,21 @@ intéresserons pas à LangSmith ici, de plus, il est actuellement en version bê
 Sur l’image ci-dessous, vous pourrez trouver un exemple de question liée aux joueurs NBA, plus précisément au roster NBA
 de l’année 2023.
 
-<div style="text-align:center">
-
 ![ADS-Roster-NBA.png](assets/images/ADS-Roster-NBA.png)
-</div>
 <p style="text-align: center;">Figure III.3.1 : On demande dans quelle équipe joue Klay Thompson et la réponse est les Golden State Warriors. La question et la réponse sont naturelles.</p>
 <br>
 
-Le schéma suivant illustre le fonctionnement de LangChain dans le cas d’utilisation décrit précédemment. En vert, nous retrouvons les composants de LangChain, en bleu la base de données depuis laquelle nous retrouvons des informations et en violet, le grand modèle de langage de Meta.
-
-<div style="text-align:center">
+Le schéma suivant illustre le fonctionnement de LangChain dans le cas d’utilisation décrit précédemment. En vert, nous
+retrouvons les composants de LangChain, en bleu la base de données depuis laquelle nous retrouvons des informations et
+en violet, le grand modèle de langage de Meta.
 
 ![ADS-diagramme-sql.png](assets/images/ADS-Diagramme-SQL.png)
-</div>
 <p style="text-align: center;">Figure III.3.2 : Fonctionnement de l’application prenant en entrée une question naturelle et retournant en sortie une réponse naturelle.</p>
 <br>
 
-Pour répondre à ce cas d’utilisation, l’application utilise deux chaînes, une première chaîne “A” qui lance une seconde chaîne “B”, permettant d’obtenir une requête SQL à partir d’une phrase interrogative, avant de finalement obtenir une réponse sous la forme d’une phrase affirmative à partir d’une réponse SQL.
+Pour répondre à ce cas d’utilisation, l’application utilise deux chaînes, une première chaîne “A” qui lance une seconde
+chaîne “B”, permettant d’obtenir une requête SQL à partir d’une phrase interrogative, avant de finalement obtenir une
+réponse sous la forme d’une phrase affirmative à partir d’une réponse SQL.
 
 L’utilisateur commence par poser une question de façon naturelle dans la chaîne “A” : “What team is Klay Thompson on?”.
 Ensuite, l’application utilise le composant “BaseModel” qui permet de vérifier si l’input est bien une chaîne de
@@ -338,10 +330,7 @@ ajustements en fonction des changements dans les exigences ou des évolutions de
 Ce répertoire se concentre sur la création d’un chatbot en utilisant LangChain. Avant de nous pencher sur ce dernier,
 nous allons nous concentrer sur la théorie de la création de ces chatbots par la documentation officielle.
 
-<div style="text-align:center">
-
 ![fonctionnement-chatbot.png](assets/images/Chatbot-Fonctionnement.png)
-</div>
 <p style="text-align: center;">Figure III.4.1 : Fonctionnement d’un chatbot</p>
 <br>
 
@@ -356,10 +345,7 @@ informations de ce domaine spécifique.
 
 <br>
 
-<div style="text-align:center">
-
 ![CHATBOT-diagramme.png](assets/images/Chatbot-Diagramme.png)
-</div>
 <p style="text-align: center;">Figure III.4.2 : Diagramme de l’implémentation d’un chatbot réalisé par LangChain et utilisant Internet comme source de données (disponible <a href="[http://localhost:8080](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/blob/master/chapters/2024/Abstraction%20de%20l'utilisation%20de%20LangChain/assets/images/Chatbot-Diagramme.png)">ici</a> en HD)</p>
 <br>
 
@@ -458,61 +444,55 @@ catégorie “Message”. Ces composants sont cette fois-ci bien spécifiques au
 
 <br>
 
-<table>
-  <tr><th>GAR (HTML)</th><th>GAR (YouTube)</th><th>ADS (SQL)</th><th>Chatbot</th></tr>
-  <tr><td>Sitemap Loader</td><td>Youtube Loader</td><td>Replicate</td><td>Str Output Parser</td></tr>
-  <tr><td>Recursive Character Text Splitter</td><td>Recursive Character Text Splitter</td><td>Chat Prompt Template</td><td>Recursive Character Text Splitter</td></tr>
-  <tr><td>Recursive Url Loader</td><td>FAISS</td><td>SQL Database</td><td>Chat Prompt Template</td></tr>
-  <tr><td>Weaviate</td><td>OpenAI-Davinci</td><td>Str Output Parser</td><td>Message Place Holder</td></tr>
-  <tr><td>Base Retriever</td><td>Chat Prompt Template</td><td>Base Model</td><td>Human Message</td></tr>
-  <tr><td>Chat Prompt Template</td><td></td><td>Runnable Through</td><td>AI Message</td></tr>
-  <tr><td>GPT-3.5-Turbo</td><td></td><td></td><td>Runnable Map</td></tr>
-  <tr><td>Str Output Parser</td><td></td><td></td><td>Runnable Lambda</td></tr>
-  <tr><td>Runnable</td><td></td><td></td><td>Runnable Branch</td></tr>
-  <tr><td>Open AI Embedding</td><td></td><td></td><td>Base Retriever</td></tr>
-  <tr><td></td><td></td><td></td><td>Prompt Template</td></tr>
-  <tr><td></td><td></td><td></td><td>Contextual Compression Retriever</td></tr>
-  <tr><td></td><td></td><td></td><td>Document Compressor Pipeline</td></tr>
-  <tr><td></td><td></td><td></td><td>Open AI Embedding</td></tr>
-  <tr><td></td><td></td><td></td><td>Embedding Filter</td></tr>
-  <tr><td></td><td></td><td></td><td>Chat Open AI</td></tr>
-</table>
+| GAR (HTML)                        | GAR (YouTube)                     | ADS (SQL)            | Chatbot                           |
+|-----------------------------------|-----------------------------------|----------------------|-----------------------------------|
+| Sitemap Loader                    | Youtube Loader                    | Replicate            | Str Output Parser                 |
+| Recursive Character Text Splitter | Recursive Character Text Splitter | Chat Prompt Template | Recursive Character Text Splitter |
+| Recursive Url Loader              | FAISS                             | SQL Database         | Chat Prompt Template              |
+| Weaviate                          | OpenAI-Davinci                    | Str Output Parser    | Message Place Holder              |
+| Base Retriever                    | Chat Prompt Template              | Base Model           | Human Message                     |
+| Chat Prompt Template              |                                   | Runnable Through     | AI Message                        |
+| GPT-3.5-Turbo                     |                                   |                      | Runnable Map                      |
+| Str Output Parser                 |                                   |                      | Runnable Lambda                   |
+| Runnable                          |                                   |                      | Runnable Branch                   |
+| Open AI Embedding                 |                                   |                      | Base Retriever                    |
+|                                   |                                   |                      | Prompt Template                   |
+|                                   |                                   |                      | Contextual Compression Retriever  |
+|                                   |                                   |                      | Document Compressor Pipeline      |
+|                                   |                                   |                      | Open AI Embedding                 |
+|                                   |                                   |                      | Embedding Filter                  |
+|                                   |                                   |                      | Chat Open AI                      |
+
 <p style="text-align: center;">Table IV.1 : Liste des composants LangChain identifiés en fonction du cas d’utilisation.</p>
 <br>
 
-<table>
-  <tr><th>Pipe</th><th>Connector</th><th>Retriever</th><th>Loader</th><th>Message</th><th>Embedding</th><th>Vector Store</th><th>Template</th><th>Splitter</th><th>Parser</th><th>Input Validator</th></tr>
-  <tr><td>Runnable</td><td>GPT-3.5-Turbo</td><td>Base Retriever</td><td>Sitemap Loader</td><td>Message Place Holder</td><td>Open AI Embedding</td><td>Weaviate</td><td>Chat Prompt Template</td><td>Recursive Character Text Splitter</td><td>Str Output Parser</td><td>Base Model</td></tr>
-  <tr><td>Runnable Through</td><td>OpenAI-Davinci</td><td>SQL Database</td><td>Youtube Loader</td><td>Human Message</td><td>Embedding Filter</td><td>FAISS</td><td>Prompt Template</td><td></td><td></td><td></td></tr>
-  <tr><td>Runnable Map</td><td>Replicate</td><td>Contextual Compression Retriever</td><td>Recursive Url Loader</td><td>AI Message</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-  <tr><td>Runnable Lambda</td><td>Chat Open AI</td><td>FAISS</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-  <tr><td>Runnable Branch</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-  <tr><td>Document Compressor Pipeline</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-</table>
+| Pipe                         | Connector      | Retriever                        | Loader               | Message              | Embedding         | Vector Store | Template             | Splitter                          | Parser            | Input Validator |
+|------------------------------|----------------|----------------------------------|----------------------|----------------------|-------------------|--------------|----------------------|-----------------------------------|-------------------|-----------------|
+| Runnable                     | GPT-3.5-Turbo  | Base Retriever                   | Sitemap Loader       | Message Place Holder | Open AI Embedding | Weaviate     | Chat Prompt Template | Recursive Character Text Splitter | Str Output Parser | Base Model      |
+| Runnable Through             | OpenAI-Davinci | SQL Database                     | Youtube Loader       | Human Message        | Embedding Filter  | FAISS        | Prompt Template      |                                   |                   |                 |
+| Runnable Map                 | Replicate      | Contextual Compression Retriever | Recursive Url Loader | AI Message           |                   |              |                      |                                   |                   |                 |
+| Runnable Lambda              | Chat Open AI   | FAISS                            |                      |                      |                   |              |                      |                                   |                   |                 |
+| Runnable Branch              |                |                                  |                      |                      |                   |              |                      |                                   |                   |                 |
+| Document Compressor Pipeline |                |                                  |                      |                      |                   |              |                      |                                   |                   |                 |
+
 <p style="text-align: center;">Tables IV.2 : Composants LangChain identifiés regroupés en catégories.</p>
 <br>
 
-<table>
-  <tr>
-    <th></th>
-    <th>GAR (HTML)</th>
-    <th>GAR (YouTube)</th>
-    <th>ADS (SQL)</th>
-    <th>Chatbot</th>
-  </tr>
-  <tr><td>LLM</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
-  <tr><td>Retriever</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
-  <tr><td>Template</td><td>✔</td><td>✔</td><td>✔</td><td>✔</td></tr>
-  <tr><td>Parser</td><td>✔</td><td></td><td>✔</td><td>✔</td></tr>
-  <tr><td>Pipe</td><td>✔</td><td></td><td>✔</td><td>✔</td></tr>
-  <tr><td>Splitter</td><td>✔</td><td>✔</td><td></td><td>✔</td></tr>
-  <tr><td>Loader</td><td>✔</td><td>✔</td><td></td><td></td></tr>
-  <tr><td>Vector Store</td><td>✔</td><td>✔</td><td></td><td></td></tr>
-  <tr><td>Embedding</td><td>✔</td><td></td><td></td><td>✔</td></tr>
-  <tr><td>Message</td><td></td><td></td><td></td><td>✔</td></tr>
-  <tr><td>Input Validator</td><td></td><td></td><td>✔</td><td></td></tr>
-  <tr><td>Connector</td><td></td><td></td><td>✔</td><td></td></tr>
-</table>
+|                 | GAR (HTML) | GAR (YouTube) | ADS (SQL) | Chatbot |
+|-----------------|------------|---------------|-----------|---------|
+| LLM             | ✔          | ✔             | ✔         | ✔       |
+| Retriever       | ✔          | ✔             | ✔         | ✔       |
+| Template        | ✔          | ✔             | ✔         | ✔       |
+| Parser          | ✔          |               | ✔         | ✔       |
+| Pipe            | ✔          |               | ✔         | ✔       |
+| Splitter        | ✔          | ✔             |           | ✔       |
+| Loader          | ✔          | ✔             |           |         |
+| Vector Store    | ✔          | ✔             |           |         |
+| Embedding       | ✔          |               |           | ✔       |
+| Message         |            |               |           | ✔       |
+| Input Validator |            |               | ✔         |         |
+| Connector       |            |               | ✔         |         |
+
 <p style="text-align: center;">Tables IV.3 : Matrice des cas d’utilisations et des catégories de composants qu’elles contiennent.</p>
 <br>
 
