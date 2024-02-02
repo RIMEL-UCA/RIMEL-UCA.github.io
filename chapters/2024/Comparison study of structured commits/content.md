@@ -28,9 +28,10 @@ So we changed some questions, and these are the under questions we kept :
 
 ## II. General question
 
-None of us knew about conventional commit before starting this project, so we were really curious about it. We soon realized most big open source projects used conventional commits and it is part of a standard, but why ? 
-It is indeed a really easy and clear way to communicate changes and fixes. With just a short message, you can say what was the code alteration and why it was made for ; so the message is qualitative and useful for the next developers working on the code. 
-Although, even if we never used conventional commits before, we definitely already used structured commits working in companies. So is the strict conventional commit really necessary ?
+Prior to embarking on this project, none of us were familiar with conventional commits, sparking our curiosity about its prevalence and significance in the open-source community. As we delved into the investigation, we quickly observed that a majority of prominent open-source projects adopted conventional commits as a standard practice. This led us to ponder the reasons behind its widespread adoption.
+Conventional commits emerged as a straightforward and transparent means of communicating code changes and fixes. The simplicity and clarity of this convention became evident, allowing developers to articulate alterations and provide context with concise messages. By encapsulating both the "what" and "why" of code modifications in a brief message, conventional commits offer a qualitative and beneficial communication channel for developers collaborating on the same codebase.
+Interestingly, despite our initial lack of exposure to conventional commits, we recognized that structured commit messages were not entirely foreign to us, particularly in our experiences working within companies. This realization prompted us to question the necessity of adhering strictly to the conventional commit standard.
+This raises an intriguing inquiry: Is the stringent adherence to conventional commits truly imperative, considering that structured commit messages are already employed in professional settings? Our exploration into this aspect seeks to uncover the nuanced perspectives and practical implications of adopting and adhering to the conventional commit standard in the broader context of software development.
 
 ## III. Information gathering
 We gathered information from several sources. We started with the documentation on commit convention that we didn’t know about to be able to recognize it in projects : conventional commits and gitmojis.
@@ -48,9 +49,9 @@ Here are our hypothesis on the influence of structured commits on the maintenanc
 Open-source projects often thrive on collaboration and interoperability. We assume that software development projects, especially those in the open-source community, are likely to adopt the established norm of conventional commits. This is because adhering to a shared standard in commit messages fosters consistency and facilitates cooperation among developers. Projects benefit from using a convention that is widely recognized and accepted by the community, making it easier for contributors to understand and integrate changes.
    * Hypothesis 2 : Top project contributors usually stick to the commits
 Key contributors in a project, often possessing a deep understanding of the project's goals and conventions, are expected to lead by example. If these influential contributors consistently follow commit conventions, it sets a precedent for other contributors to do the same. Their commitment to adhering to established commit practices not only maintains the project's overall code quality and readability but also encourages a culture of discipline and standardization within the development team.
-    * Hypothesis 3 :  The bigger a project is, the more there is the need for commit conventions within that project.
+   * Hypothesis 3 :  The bigger a project is, the more there is the need for commit conventions within that project.
 As projects increase in size and complexity, the likelihood of multiple developers working simultaneously on different aspects of the codebase also increases. In such scenarios, having a standardized commit convention becomes crucial for effective collaboration. It helps in easily tracking changes, understanding the purpose behind each commit, and streamlining the overall development process. Without clear commit conventions, larger projects may face challenges in maintaining a coherent and comprehensible code history.
-    * Hypothesis 4 : Companies would use the same commit structure among their top projects to facilitate integration between group members
+   * Hypothesis 4 : Companies would use the same commit structure among their top projects to facilitate integration between group members
 Companies often manage multiple projects simultaneously, and developers may contribute to various projects within the organization. For seamless collaboration and integration, it is advantageous for companies to enforce a consistent commit structure across their major projects. This ensures that developers can transition between projects with minimal confusion, as they are already familiar with the commit conventions. Standardizing commit structures across projects within a company promotes a unified approach to version control and aids in knowledge transfer among team members.
 
 In our experimentation, we conducted both quantitative and qualitative analyses of commit practices across diverse projects. While identifying large projects proved relatively straightforward, the challenge lay in locating projects with specific commit structures, particularly those exclusively using Gitmojis.
@@ -88,23 +89,18 @@ limitations relating to automated commits vs human made commits.
     * This topic has a lot of nuance (project structure, team organization, developer priorities, outside team communication etc..) and these things we just cannot interpret through just the commit set.
 
 
-## VI. Tools \(facultatif\)
+## VI. Tools 
 
-Talk about how it works in detail : 
 Our tool detects conventions by using regex for each convention message. This is simply because most commit conventions require having specific terms at the beginning of a commit.
 Our tool also uses Natural Language Processing to detect some other convention patterns. In fact, many projects have explicitly stated that their convention is simply “have a verb at the beginning of the commit”, some have specified the verb to be in Present form, some have specified in past tense, but most have just specified that it just needs to be a verb. 
-
 The way most conventions are tweaked is by modifying the subsystems within the regex as most projects use a variation of that same format.
-
 While we have done our studies on multiple projects, we have kept only the most pertinent results in the notebook provided.
 
+In summary, our tool employs a combination of regex and NLP techniques to detect commit message conventions. The regex is adept at capturing structured patterns, while NLP allows for the interpretation of conventions expressed in natural language. The tool's adaptability is further enhanced through the ability to modify subsystems within the regex, ensuring its applicability across a range of convention variations. The results presented in the notebook have been curated to emphasize the most pertinent insights derived from the broader study.
 
 ## VI. References
 
-<sub>[Debret 2020] Debret, J. (2020) La démarche scientifique : tout ce que vous devez savoir ! Available at: https://www.scribbr.fr/article-scientifique/demarche-scientifique/ (Accessed: 18 November 2022).
-</sub>
-
-* Articles Relevant studies on communication and quality of commit messages. :
+* Relevant studies on communication and quality of commit messages. :
     * Tian, Y., Zhang, Y., Stol, K. J., Jiang, L., & Liu, H. (2022, May). What makes a good commit message?. In Proceedings of the 44th International Conference on Software Engineering (pp. 2389-2401). (https://arxiv.org/pdf/2202.02974.pdf)
 * Information about structured commits
     * Conventional commits : https:/www.conventionalcommits.org/en/v1.0.0/
