@@ -65,7 +65,7 @@ Pour réaliser cela, nous nous sommes appuyés sur le web scraping en exploitant
 
 ## IV. Hypothèses, expériences & analyse des résultats
 
-1. **_Adoption du versionnement traditionnel vs versionnement libre des modèles_**
+  **1._Adoption du versionnement traditionnel vs versionnement libre des modèles_**
 
 **1.1. _Hypothèse : Le versionnement des modèles ne suit pas une approche traditionnel - (major,minor,patch)_**
 
@@ -96,7 +96,7 @@ Cependant, il est essentiel de souligner qu'au sein de ces modèles, environ 21%
 
 Ces variations dans les schémas de versionnement peuvent être en partie expliquées par la flexibilité offerte par les plateformes de partage de modèles, telles que Hugging Face, qui permettent aux data scientistes de définir leurs propres conventions de versionnement.
 
-2.  **_Influence de la tâche du modèle sur son versionnement_**
+   **2._Influence de la tâche du modèle sur son versionnement_**
 
   **2.1. _Hypothèse :  La nature de la tâche du modèle influence la  façon avec laquelle on le versionne_**
 
@@ -114,7 +114,7 @@ Au cours de cette phase, nous nous sommes concentrés sur les modèles qui suive
 
 Les résultats graphiques ont clairement démontré que le pourcentage d'adoption du versionnement sémantique varie considérablement d'une catégorie de modèle à une autre :
 
-![ratio global](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/tree/master/chapters/2024/Are%20Data%20scientists%20embracing%20DevOps%20principles%20for%20Model%20versioning%20%3F/assets/images/version_ratios_by_file_scatter.png)
+![ratio global](assets/images/version_ratios_by_file_scatter.png)
 
 - **_Analyse des résultats_**
 
@@ -144,7 +144,7 @@ En outre, les symboles numériques ont été délibérément exclus de notre ana
 
 - **_Résultat_**
 
-![ratio global](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/tree/master/chapters/2024/Are%20Data%20scientists%20embracing%20DevOps%20principles%20for%20Model%20versioning%20%3F/assets/images/tokens.png)
+![ratio global](assets/images/tokens.png)
 
 - **_Analyse des résultats_**
 
@@ -215,7 +215,7 @@ En utilisant ces données, nous avons créé des graphiques à barres empilées 
 
 - **_Résultat_**
 
-![ratio global](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/tree/master/chapters/2024/Are%20Data%20scientists%20embracing%20DevOps%20principles%20for%20Model%20versioning%20%3F/assets/images/stacked_barcharts.png)
+![ratio global](assets/images/stacked_barcharts.png)
 
 - **_Analyse des résultats_**
 
@@ -230,7 +230,7 @@ En utilisant ces données, nous avons créé des graphiques à barres empilées 
 
 En conclusion, il est possible d'affirmer qu'aucun modèle de versionnement n'est unanimement adopté et accepté dans aucune catégorie. De nombreux schémas de versionnement sont détectés, mais leur occurrence est très infime pour être considérée comme une norme.
 
-3.  **_Tendances de versionnement dans les grandes entreprises_**
+  **3._Tendances de versionnement dans les grandes entreprises_**
 
   **3.1. _Hypothèse : Les grandes entreprises standardise leurs manières de versionner les modèles ML en interne_**
 
@@ -244,7 +244,7 @@ Au cours de cette étude, nous avons spécifiquement sélectionné les entrepris
 
 L'analyse des données obtenues a révélé ce qui suit : 
 
-![ratio global](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/tree/master/chapters/2024/Are%20Data%20scientists%20embracing%20DevOps%20principles%20for%20Model%20versioning%20%3F/assets/images/companies.png)
+![ratio global](assets/images/companies.png)
 
 Nous observons l'identification de tokens spécifiques liés à la nature des modèles tels que "medium", "large", "base", "small", ou "base". Cependant, aucune tendance claire de versionnement n'a été repérée à l'échelle globale de l'entreprise.
 
@@ -260,7 +260,7 @@ En résumé, notre analyse révèle une grande diversité au sein de la communau
 
 ## Références
 #### MLflow :
-- Documentation officielle de MLflow : https://mlflow.org/docs/latest/index.html
+- Documentation officielle de MLflow : [](https://mlflow.org/docs/latest/index.html)
 - Chen, A., Chow, A., Davidson, A., DCunha, A., Ghodsi, A., Hong, S. A., ... & Zumar, C.
 (2020, June). Developments in mlflow: A system to accelerate the machine learning lifecycle. In
 Proceedings of the fourth international workshop on data management for end-to-end machine
@@ -277,8 +277,8 @@ Machine Learning Life Cycle with MLflow. United Kingdom: Packt Publishing.
 
 #### Les modèles d'apprentissage automatique :
 - Automatic Speech Recognition : [https://www.demotal.fr/bert-le-modele-de-langue-de-reference-pour-les-taches-de-nlp](https://www.demotal.fr/bert-le-modele-de-langue-de-reference-pour-les-taches-de-nlp/#:~:text=BERT%2C%20qui%20est%20l'acronyme,la%20fois%20bidirectionnel%20et%20contextuel)
-- Reinforcement Learning : https://www.turing.com/kb/reinforcement-learning-algorithms-types-examples
+- Reinforcement Learning : [](https://www.turing.com/kb/reinforcement-learning-algorithms-types-examples)
 - Bert : [https://www.demotal.fr/bert-le-modele-de-langue-de-reference-pour-les-taches-de-nlp](https://www.demotal.fr/bert-le-modele-de-langue-de-reference-pour-les-taches-de-nlp/#:~:text=BERT%2C%20qui%20est%20l'acronyme,la%20fois%20bidirectionnel%20et%20contextuel.)
-- GPTQ Accurate Post-Training Quantization : https://arxiv.org/pdf/2210.17323.pdf
-- GPTQ vs. GGUF vs. AWQ : https://maartengrootendorst.substack.com/p/which-quantization-method-is-right
-- Dreambooth : https://www.dreambooth.fr/
+- GPTQ Accurate Post-Training Quantization : [](https://arxiv.org/pdf/2210.17323.pdf)
+- GPTQ vs. GGUF vs. AWQ : [](https://maartengrootendorst.substack.com/p/which-quantization-method-is-right)
+- Dreambooth : [](https://www.dreambooth.fr/)
