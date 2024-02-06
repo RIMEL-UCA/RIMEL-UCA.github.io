@@ -1,8 +1,5 @@
----
-layout: default
-title : Projets open source bon candidat d'apprentissage
-date:   2024-02
----
+# Projets open source bon candidat d'apprentissage
+
 
 **_Février 2024_**
 
