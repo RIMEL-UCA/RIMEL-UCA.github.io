@@ -6,9 +6,9 @@ date: 2022-11-18 6:00:00 +0100
 ## 2024
 
 
-### [Projets open source microservices bon candidats d'apprentissage] ({{ site.url }}/chapters/2024/Projets open source bon candidats d'apprentissage/content)
+### [Projets open source microservices bon candidats d'apprentissage] ({{ site.url }}/chapters/2024/Projets%20open%20source%20bon%20candidats%20d'apprentissage/content.md)
 
-### [Les commits structurés (conventional commit, gitmoji) sont-ils utilisés dans les projets open-source (et comment sont-ils utilisés) ?] ({{ site.url }}/chapters/2024/Structured Commits - Team A/content)
+### [Les commits structurés (conventional commit, gitmoji) sont-ils utilisés dans les projets open-source (et comment sont-ils utilisés) ?] ({{ site.url }}/chapters/2024/Structured%20Commits%20-%20Team%20A/content.md)
 
 
 ### [Are Data scientists embracing DevOps principles for Model versioning ?]({{ site.url }}/chapters/2024/Are Data scientists embracing DevOps principles for Model versioning %3F/content)
