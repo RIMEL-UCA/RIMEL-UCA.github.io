@@ -6,20 +6,20 @@ date: 2022-11-18 6:00:00 +0100
 ## 2024
 
 
-### [Projets open source microservices bon candidats d'apprentissage] ({{ site.url }}/chapters/2024/Projets%20open%20source%20bon%20candidats%20d'apprentissage/content.md)
-
-### [Les commits structurés (conventional commit, gitmoji) sont-ils utilisés dans les projets open-source (et comment sont-ils utilisés) ?] ({{ site.url }}/chapters/2024/Structured%20Commits%20-%20Team%20A/content.md)
+### [Projets open source microservices bon candidats d'apprentissage]({{ site.url }}/chapters/2024/Projets%20open%20source%20bon%20candidats%20d'apprentissage/content.md)
 
 
-### [Are Data scientists embracing DevOps principles for Model versioning ?]({{ site.url }}/chapters/2024/Are Data scientists embracing DevOps principles for Model versioning %3F/content)
+### [Les commits structurés (conventional commit, gitmoji) sont-ils utilisés dans les projets open-source (et comment sont-ils utilisés) ?]({{ site.url }}/chapters/2024/Structured%20Commits%20-%20Team%20A/content.md)
 ### [Comparison study of structured commits]({{ site.url }}/chapters/2024/Comparison study of structured commits/content)
-### [Abstraction de l’utilisation de LangChain]({{ site.url }}/chapters/2024/Abstraction de l'utilisation de LangChain/content)
-
 ### [Evolution des Commits Structurés dans l'open source]({{ site.url }}/chapters/2024/Evolution des commits structures dans l'open-source/content)
 
-### [Variabilité de LangChain dans l'implémentation de chatbots] ({{ site.url }}/chapters/2024/Variabilité de LangChain dans l'implémentation de chatbots/content)
-
+### [Are Data scientists embracing DevOps principles for Model versioning ?]({{ site.url }}/chapters/2024/Are Data scientists embracing DevOps principles for Model versioning %3F/content)
 ### [Traçabilité des expériences par MLFlow] ({{ site.url }}/chapters/2024/Traçabilité des expériences par MLFlow/content)
+
+### [Abstraction de l’utilisation de LangChain]({{ site.url }}/chapters/2024/Abstraction de l'utilisation de LangChain/content)
+### [Variabilité de LangChain dans l'implémentation de chatbots]({{ site.url }}/chapters/2024/Variabilité de LangChain dans l'implémentation de chatbots/content)
+
+
 
 ## 2023
 
