@@ -1,7 +1,7 @@
 ---
 layout: default
-title:Comment évaluer en largeur les architectures microservices ?
-date: 2024-02
+title : Comment évaluer en largeur les architectures microservices ?
+date:   2024-02
 ---
 
 # Comment évaluer en largeur les architectures microservices ?
