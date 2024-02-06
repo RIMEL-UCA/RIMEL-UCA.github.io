@@ -13,9 +13,9 @@ date: 2022-11-18 6:00:00 +0100
 ### [Evolution des Commits Structurés dans l'open source]({{site.url}}/chapters/2024/Evolution des commits structures dans l'open-source/content)
 
 
-### [Projets open source microservices bon candidats d'apprentissage]({{site.url}}/chapters/2024/OSTeamC/content.md)
+### [Projets open source microservices bon candidats d'apprentissage]({{site.url}}/chapters/2024/OSTeamC/content)
 
-### [Comment évaluer en largeur les architectures microservices ?]({{site.url}}/chapters/2024/EvaluationDuneArchitectureEnMicroService/content.md)
+### [Comment évaluer en largeur les architectures microservices ?]({{site.url}}/chapters/2024/EvaluationDuneArchitectureEnMicroService/content)
 
 
 ### [Are Data scientists embracing DevOps principles for Model versioning ?]({{site.url}}/chapters/2024/Are Data scientists embracing DevOps principles for Model versioning %3F/content)
