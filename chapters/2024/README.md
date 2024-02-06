@@ -9,3 +9,4 @@
   3. Ajouter votre chapitre dans la liste des chapitres de l'année, en modifiant : [chapters.md](../../chapters.md)
 
 **Pour visualiser le contenu sous la forme d'une page** (attention quelques minutes de décalage entre les modifications et leur prise en compte) [https://rimel-uca.github.io/](https://rimel-uca.github.io/). 
+int
