@@ -6,13 +6,17 @@ date: 2022-11-18 6:00:00 +0100
 ## 2024
 
 
-### [Projets open source microservices bon candidats d'apprentissage]({{site.url}}/chapters/2024/OSTeamC/content.md)
 
-### [Comment évaluer en largeur les architectures microservices ?]({{site.url}}/chapters/2024/EvaluationDuneArchitectureEnMicroService/content.md)
 
 
 ### [Comparison study of structured commits]({{site.url}}/chapters/2024/Comparison study of structured commits/content)
 ### [Evolution des Commits Structurés dans l'open source]({{site.url}}/chapters/2024/Evolution des commits structures dans l'open-source/content)
+
+
+### [Projets open source microservices bon candidats d'apprentissage]({{site.url}}/chapters/2024/OSTeamC/content.md)
+
+### [Comment évaluer en largeur les architectures microservices ?]({{site.url}}/chapters/2024/EvaluationDuneArchitectureEnMicroService/content.md)
+
 
 ### [Are Data scientists embracing DevOps principles for Model versioning ?]({{site.url}}/chapters/2024/Are Data scientists embracing DevOps principles for Model versioning %3F/content)
 ### [Traçabilité des expériences par MLFlow]({{site.url}}/chapters/2024/Traçabilité des expériences par MLFlow/content)
