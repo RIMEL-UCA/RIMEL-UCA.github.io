@@ -1,7 +1,7 @@
 ---
 layout: default
 title : Projets open source bon candidat d'apprentissage
-date:   2024-02-02 23:59:59 +0100
+date:   2024-02
 ---
 
 **_Février 2024_**
