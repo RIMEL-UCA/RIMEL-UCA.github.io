@@ -11,6 +11,7 @@ date: 2022-11-18 6:00:00 +0100
 ### [Comparison study of structured commits]({{ site.url }}/chapters/2024/Comparison study of structured commits/content)
 ### [Abstraction de l’utilisation de LangChain]({{ site.url }}/chapters/2024/Abstraction de l'utilisation de LangChain/content)
 
+### [Evolution des Commits Structurés dans l'open source]({{ site.url }}/chapters/2024/Evolution des commits structures dans l'open-source/content)
 
 ## 2023
 
