@@ -15,6 +15,8 @@ date: 2022-11-18 6:00:00 +0100
 
 ### [Variabilité de LangChain dans l'implémentation de chatbots] ({{ site.url }}/chapters/2024/Variabilité de LangChain dans l'implémentation de chatbots/content)
 
+### [Traçabilité des expériences par MLFlow] ({{ site.url }}/chapters/2024/Traçabilité des expériences par MLFlow/content)
+
 ## 2023
 
 ### [Comment visualiser les dépendances d’une chaîne d’intégration continue, leur origine et leur niveau de confiance ?]({{ site.url }}/chapters/2023/team-a/content)
