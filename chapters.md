@@ -3,6 +3,24 @@ layout: default
 title: "Chapters"
 date: 2022-11-18 6:00:00 +0100
 ---
+
+## 2025
+
+### SLM vs LLM
+#### [projetModel]({{site.url}}/chapters/2025/ChapterModel/content)
+#### [projet1]({{site.url}}/chapters/2025/SLMvsLLMXX/content)
+#### [projet2]({{site.url}}/chapters/2025/SLMvsLLMYY/content)
+
+
+### Modèles de Machine Learning et documentation sur les propriétés FATES 
+#### [projetModel]({{site.url}}/chapters/2025/ChapterModel/content)
+
+### Variabilité des benchmarks pour IA génératives
+#### [projetModel]({{site.url}}/chapters/2025/ChapterModel/content)
+
+### Analyse des Outils CI/CD pour le Machine Learning
+#### [projetModel]({{site.url}}/chapters/2025/ChapterModel/content)
+
 ## 2024
 
 
