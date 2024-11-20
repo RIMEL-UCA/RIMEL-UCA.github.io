@@ -7,8 +7,7 @@ date: 2022-11-18 6:00:00 +0100
 ## 2025
 
 ### SLM vs LLM
-#### [projetModel]({{site.url}}/chapters/2025/ChapterModel/content)
-#### [projet1]({{site.url}}/chapters/2025/SLMvsLLMXX/content)
+#### [Analyse énergétique et financière des LLM vs SLM]({{site.url}}/chapters/2025/SLM_vs_LLM-Team_E/content)
 #### [projet2]({{site.url}}/chapters/2025/SLMvsLLMYY/content)
 
 
