@@ -16,6 +16,7 @@ date: 2022-11-18 6:00:00 +0100
 
 ### Variabilité des benchmarks pour IA génératives
 #### [projetModel]({{site.url}}/chapters/2025/ChapterModel/content)
+#### [Variabilité des benchmarks pour IA génératives]({{site.url}}/chapters/2025/Variabilite_des_benchmarks_pour_IA_generatives_Team_G/content)
 
 ### Analyse des Outils CI/CD pour le Machine Learning
 #### [projetModel]({{site.url}}/chapters/2025/ChapterModel/content)
