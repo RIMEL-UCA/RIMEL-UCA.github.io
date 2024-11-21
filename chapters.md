@@ -6,6 +6,7 @@ date: 2022-11-18 6:00:00 +0100
 
 ## 2025
 
+
 ### SLM vs LLM
 #### [Analyse énergétique et financière des LLM vs SLM]({{site.url}}/chapters/2025/SLM_vs_LLM-Team_E/content)
 #### [projet2]({{site.url}}/chapters/2025/SLMvsLLMYY/content)
@@ -20,6 +21,9 @@ date: 2022-11-18 6:00:00 +0100
 
 ### Analyse des Outils CI/CD pour le Machine Learning
 #### [projetModel]({{site.url}}/chapters/2025/ChapterModel/content)
+#### [Utilité et Testabilité de ML avec un CI/CD Team_B]({{site.url}}/chapters/2025/Utilité_testabilité_CICD_ML_Team_B/content)
+
+
 
 ## 2024
 
