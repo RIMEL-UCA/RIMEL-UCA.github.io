@@ -24,7 +24,10 @@ date:   2024-11
 
 We are four students in M2 or in last year of Polytech' Nice-Sophia specialized in Software Architecture :
 
-* .... &lt;xxx@gmail.com&gt;
+*  &lt;melek.farhat@etu.unice.fr&gt;
+*  &lt;adjo-emmanuelle.adote@etu.unice.fr&gt;
+*  &lt;anna.di-placido@etu.unice.fr&gt;
+*  &lt;yasmine.moussaoui@etu.unice.fr&gt;
 
      :bulb: Les chapitres restant accessibles longtemps, si vous le souhaitez, vous pouvez utiliser ici une adresse pérenne pour être contacté ultérieurement.
 
