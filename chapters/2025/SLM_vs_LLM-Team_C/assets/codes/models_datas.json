@@ -1,0 +1,1788 @@
+[
+    {
+        "_id": "673410e818caf8e87780fd17",
+        "id": "AIDC-AI/Marco-o1",
+        "modelId": "AIDC-AI/Marco-o1",
+        "author": "AIDC-AI",
+        "sha": "5e4deeeb286b7a2e35a6d16989e64df860f7f4e5",
+        "lastModified": "2024-11-23T10:40:27.000Z",
+        "private": false,
+        "disabled": false,
+        "gated": false,
+        "pipeline_tag": "text-generation",
+        "tags": [
+            "transformers",
+            "safetensors",
+            "qwen2",
+            "text-generation",
+            "conversational",
+            "arxiv:2411.14405",
+            "license:apache-2.0",
+            "autotrain_compatible",
+            "text-generation-inference",
+            "region:us"
+        ],
+        "downloads": 2454,
+        "library_name": "transformers",
+        "widgetData": [
+            {
+                "text": "Hey my name is Julien! How are you?"
+            },
+            {
+                "text": "Hey my name is Thomas! How are you?"
+            },
+            {
+                "text": "Hey my name is Mariama! How are you?"
+            },
+            {
+                "text": "Hey my name is Clara! How are you?"
+            },
+            {
+                "text": "Hey my name is Julien! How are you?"
+            },
+            {
+                "text": "Hi."
+            }
+        ],
+        "likes": 331,
+        "model-index": null,
+        "config": {
+            "architectures": [
+                "Qwen2ForCausalLM"
+            ],
+            "model_type": "qwen2",
+            "tokenizer_config": {
+                "bos_token": null,
+                "chat_template": "{% for message in messages %}{% if loop.first and messages[0]['role'] != 'system' %}{{ '<|im_start|>system\n\n你是一个经过良好训练的AI助手，你的名字是Marco-o1.由阿里国际数字商业集团的AI Business创造.\n        \n## 重要！！！！！\n当你回答问题时，你的思考应该在<Thought>内完成，<Output>内输出你的结果。\n<Thought>应该尽可能是英文，但是有2个特例，一个是对原文中的引用，另一个是是数学应该使用markdown格式，<Output>内的输出需要遵循用户输入的语言。\n        <|im_end|>\n' }}{% endif %}{{'<|im_start|>' + message['role'] + '\n' + message['content'] + '<|im_end|>' + '\n'}}{% endfor %}{% if add_generation_prompt %}{{ '<|im_start|>assistant\n' }}{% endif %}",
+                "eos_token": "<|im_end|>",
+                "pad_token": "<|endoftext|>",
+                "unk_token": null
+            }
+        },
+        "cardData": {
+            "license": "apache-2.0",
+            "library_name": "transformers",
+            "inference": false
+        },
+        "transformersInfo": {
+            "auto_model": "AutoModelForCausalLM",
+            "pipeline_tag": "text-generation",
+            "processor": "AutoTokenizer"
+        },
+        "siblings": [
+            {
+                "rfilename": ".gitattributes"
+            },
+            {
+                "rfilename": "LICENSE"
+            },
+            {
+                "rfilename": "NOTICE"
+            },
+            {
+                "rfilename": "README.md"
+            },
+            {
+                "rfilename": "assets/img.png"
+            },
+            {
+                "rfilename": "assets/intro_2.jpg"
+            },
+            {
+                "rfilename": "assets/logo.png"
+            },
+            {
+                "rfilename": "assets/results.jpg"
+            },
+            {
+                "rfilename": "assets/translation.jpg"
+            },
+            {
+                "rfilename": "config.json"
+            },
+            {
+                "rfilename": "generation_config.json"
+            },
+            {
+                "rfilename": "merges.txt"
+            },
+            {
+                "rfilename": "model-00001-of-00004.safetensors"
+            },
+            {
+                "rfilename": "model-00002-of-00004.safetensors"
+            },
+            {
+                "rfilename": "model-00003-of-00004.safetensors"
+            },
+            {
+                "rfilename": "model-00004-of-00004.safetensors"
+            },
+            {
+                "rfilename": "model.safetensors.index.json"
+            },
+            {
+                "rfilename": "tokenizer.json"
+            },
+            {
+                "rfilename": "tokenizer_config.json"
+            },
+            {
+                "rfilename": "vocab.json"
+            }
+        ],
+        "spaces": [
+            "akhaliq/anychat",
+            "pyqjw/AIDC-AI-Marco-o1",
+            "qbitmaze/AIDC-AI-Marco-o1",
+            "dwnmf/AIDC-AI-Marco-o1",
+            "agonic/AIDC-AI-Marco-o1",
+            "Rooni/AIDC-AI-Marco-o1",
+            "loyal1/AIDC-AI-Marco-o1",
+            "fratquintero/AIDC-AI-Marco-o1",
+            "TaxThinker123/AIDC-AI-Marco-o1",
+            "Svngoku/Marco-o1-Q4",
+            "aaditkamat/Marco-o1",
+            "MakiAi/Gradio-LLM-demo",
+            "linjinpeng/o1"
+        ],
+        "createdAt": "2024-11-13T02:37:28.000Z",
+        "safetensors": {
+            "parameters": {
+                "BF16": 7615616512
+            },
+            "total": 7615616512
+        }
+    },
+    {
+        "_id": "6736587e6375fff559d71090",
+        "id": "mistralai/Pixtral-Large-Instruct-2411",
+        "modelId": "mistralai/Pixtral-Large-Instruct-2411",
+        "author": "mistralai",
+        "sha": "6aea62fd4e842bb7981339519accf19c7120ccd3",
+        "lastModified": "2024-11-19T19:06:25.000Z",
+        "private": false,
+        "disabled": false,
+        "gated": "auto",
+        "tags": [
+            "vllm",
+            "en",
+            "fr",
+            "de",
+            "es",
+            "it",
+            "pt",
+            "zh",
+            "ja",
+            "ru",
+            "ko",
+            "license:other",
+            "region:us"
+        ],
+        "downloads": 382,
+        "library_name": "vllm",
+        "likes": 325,
+        "model-index": null,
+        "cardData": {
+            "language": [
+                "en",
+                "fr",
+                "de",
+                "es",
+                "it",
+                "pt",
+                "zh",
+                "ja",
+                "ru",
+                "ko"
+            ],
+            "license": "other",
+            "license_name": "mrl",
+            "inference": false,
+            "license_link": "https://mistral.ai/licenses/MRL-0.1.md",
+            "extra_gated_prompt": "# Mistral AI Research License\nIf You want to use a Mistral Model, a Derivative or an Output for any purpose that is not expressly authorized under this Agreement, You must request a license from Mistral AI, which Mistral AI may grant to You in Mistral AI's sole discretion. To discuss such a license, please contact Mistral AI via the website contact form: https://mistral.ai/contact/\n## 1. Scope and acceptance\n**1.1. Scope of the Agreement.** This Agreement applies to any use, modification, or Distribution of any Mistral Model by You, regardless of the source You obtained a copy of such Mistral Model.\n**1.2. Acceptance.** By accessing, using, modifying, Distributing a Mistral Model, or by creating, using or distributing a Derivative of the Mistral Model, You agree to be bound by this Agreement.\n**1.3. Acceptance on behalf of a third-party.** If You accept this Agreement on behalf of Your employer or another person or entity, You warrant and represent that You have the authority to act and accept this Agreement on their behalf. In such a case, the word \"You\" in this Agreement will refer to Your employer or such other person or entity.\n## 2. License\n**2.1. Grant of rights**.  Subject to Section 3 below, Mistral AI hereby grants You a non-exclusive, royalty-free, worldwide, non-sublicensable, non-transferable, limited license to use, copy, modify, and Distribute under the conditions provided in Section 2.2 below, the Mistral Model and any Derivatives made by or for Mistral AI and to create Derivatives of the Mistral Model.\n**2.2. Distribution of Mistral Model and Derivatives made by or for Mistral AI.** Subject to Section 3 below, You may Distribute copies of the Mistral Model and/or Derivatives made by or for Mistral AI, under the following conditions: You must make available a copy of this Agreement to third-party recipients of the Mistral Models and/or Derivatives made by or for Mistral AI you Distribute, it being specified that any rights to use the Mistral Models and/or Derivatives made by or for Mistral AI shall be directly granted by Mistral AI to said third-party recipients pursuant to the Mistral AI Research License agreement executed between these parties; You must retain in all copies of the Mistral Models the following attribution notice within a \"Notice\" text file distributed as part of such copies: \"Licensed by Mistral AI under the Mistral AI Research License\".\n**2.3. Distribution of Derivatives made by or for You.** Subject to Section 3 below, You may Distribute any Derivatives made by or for You under additional or different terms and conditions, provided that: In any event, the use and modification of Mistral Model and/or Derivatives made by or for Mistral AI shall remain governed by the terms and conditions of this Agreement; You include in any such Derivatives made by or for You prominent notices stating that You modified the concerned Mistral Model; and Any terms and conditions You impose on any third-party recipients relating to Derivatives made by or for You shall neither limit such third-party recipients' use of the Mistral Model or any Derivatives made by or for Mistral AI in accordance with the Mistral AI Research License nor conflict with any of its terms and conditions.\n## 3. Limitations\n**3.1. Misrepresentation.** You must not misrepresent or imply, through any means, that the Derivatives made by or for You and/or any modified version of the Mistral Model You Distribute under your name and responsibility is an official product of Mistral AI or has been endorsed, approved or validated by Mistral AI, unless You are authorized by Us to do so in writing.\n**3.2. Usage Limitation.** You shall only use the Mistral Models, Derivatives (whether or not created by Mistral AI) and Outputs for Research Purposes.\n## 4. Intellectual Property\n**4.1. Trademarks.** No trademark licenses are granted under this Agreement, and in connection with the Mistral Models, You may not use any name or mark owned by or associated with Mistral AI or any of its affiliates, except (i) as required for reasonable and customary use in describing and Distributing the Mistral Models and Derivatives made by or for Mistral AI and (ii) for attribution purposes as required by this Agreement.\n**4.2. Outputs.** We claim no ownership rights in and to the Outputs. You are solely responsible for the Outputs You generate and their subsequent uses in accordance with this Agreement. Any Outputs shall be subject to the restrictions set out in Section 3 of this Agreement.\n**4.3. Derivatives.** By entering into this Agreement, You accept that any Derivatives that You may create or that may be created for You shall be subject to the restrictions set out in Section 3 of this Agreement.\n## 5. Liability\n**5.1. Limitation of liability.** In no event, unless required by applicable law (such as deliberate and grossly negligent acts) or agreed to in writing, shall Mistral AI be liable to You for damages, including any direct, indirect, special, incidental, or consequential damages of any character arising as a result of this Agreement or out of the use or inability to use the Mistral Models and Derivatives (including but not limited to damages for loss of data, loss of goodwill, loss of expected profit or savings, work stoppage, computer failure or malfunction, or any damage caused by malware or security breaches), even if  Mistral AI has been advised of the possibility of such damages.\n**5.2. Indemnification.** You agree to indemnify and hold harmless Mistral AI from and against any claims, damages, or losses arising out of or related to Your use or Distribution of the Mistral Models and Derivatives.\n## 6. Warranty\n**6.1. Disclaimer.** Unless required by applicable law or prior agreed to by Mistral AI in writing, Mistral AI provides the Mistral Models and Derivatives on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. Mistral AI does not represent nor warrant that the Mistral Models and Derivatives will be error-free, meet Your or any third party's requirements, be secure or will allow You or any third party to achieve any kind of result or generate any kind of content. You are solely responsible for determining the appropriateness of using or Distributing the Mistral Models and Derivatives and assume any risks associated with Your exercise of rights under this Agreement.\n## 7. Termination\n**7.1. Term.** This Agreement is effective as of the date of your acceptance of this Agreement or access to the concerned Mistral Models or Derivatives and will continue until terminated in accordance with the following terms.\n**7.2. Termination.** Mistral AI may terminate this Agreement at any time if You are in breach of this Agreement. Upon termination of this Agreement, You must cease to use all Mistral Models and Derivatives and shall permanently delete any copy thereof. The following provisions, in their relevant parts, will survive any termination or expiration of this Agreement, each for the duration necessary to achieve its own intended purpose (e.g. the liability provision will survive until the end of the applicable limitation period):Sections 5 (Liability), 6(Warranty), 7 (Termination) and 8 (General Provisions).\n**7.3. Litigation.** If You initiate any legal action or proceedings against Us or any other entity (including a cross-claim or counterclaim in a lawsuit), alleging that the Model or a Derivative, or any part thereof, infringe upon intellectual property or other rights owned or licensable by You, then any licenses granted to You under this Agreement will immediately terminate as of the date such legal action or claim is filed or initiated.\n## 8. General provisions\n**8.1. Governing laws.** This Agreement will be governed by the laws of France, without regard to choice of law principles, and the UN Convention on Contracts for the International Sale of Goods does not apply to this Agreement.\n**8.2. Competent jurisdiction.** The courts of Paris shall have exclusive jurisdiction of any dispute arising out of this Agreement.\n**8.3. Severability.** If any provision of this Agreement is held to be invalid, illegal or unenforceable, the remaining provisions shall be unaffected thereby and remain valid as if such provision had not been set forth herein.\n## 9. Definitions\n\"Agreement\": means this Mistral AI Research License agreement governing the access, use, and Distribution of the Mistral Models, Derivatives and Outputs.\n\"Derivative\": means any (i) modified version of the Mistral Model (including but not limited to any customized or fine-tuned version thereof), (ii) work based on the Mistral Model, or (iii) any other derivative work thereof.\n\"Distribution\", \"Distributing\", \"Distribute\" or \"Distributed\": means supplying, providing or making available, by any means, a copy of the Mistral Models and/or the Derivatives as the case may be, subject to Section 3 of this Agreement.\n\"Mistral AI\", \"We\" or \"Us\": means Mistral AI, a French société par actions simplifiée registered in the Paris commercial registry under the number 952 418 325, and having its registered seat at 15, rue des Halles, 75001 Paris.\n\"Mistral Model\": means the foundational large language model(s), and its elements which include algorithms, software, instructed checkpoints, parameters, source code (inference code, evaluation code and, if applicable, fine-tuning code) and any other elements associated thereto made available by Mistral AI under this Agreement, including, if any, the technical documentation, manuals and instructions for the use and operation thereof.\n\"Research Purposes\": means any use of a Mistral Model,  Derivative, or Output that is solely for (a) personal, scientific or academic research, and (b) for non-profit and non-commercial purposes, and not directly or indirectly connected to any commercial activities or business operations. For illustration purposes, Research Purposes does not include (1) any usage of the Mistral Model, Derivative or Output by individuals or contractors employed in or engaged by companies in the context of (a) their daily tasks, or (b) any activity (including but not limited to any testing or proof-of-concept) that is intended to generate revenue, nor (2) any Distribution by a commercial entity of the Mistral Model, Derivative or Output whether in return for payment or free of charge, in any medium or form, including but not limited to through a hosted or managed service (e.g. SaaS, cloud instances, etc.), or behind a software layer.\n\"Outputs\": means any content generated by the operation of the Mistral Models or the Derivatives from  a prompt (i.e., text instructions) provided by users. For the avoidance of doubt, Outputs do not include any components of a Mistral Models, such as any fine-tuned versions of the Mistral Models, the weights, or parameters.\n\"You\": means the individual or entity entering into this Agreement with Mistral AI.\n\n*Mistral AI processes your personal data below to provide the model and enforce its license. If you are affiliated with a commercial entity, we may also send you communications about our models. For more information on your rights and data handling, please see our <a href=\"https://mistral.ai/terms/\">privacy policy</a>.*",
+            "extra_gated_fields": {
+                "First Name": "text",
+                "Last Name": "text",
+                "Country": "country",
+                "Affiliation": "text",
+                "Job title": "text",
+                "I understand that I can only use the model, any derivative versions and their outputs for non-commercial research purposes": "checkbox",
+                "I understand that if I am a commercial entity, I am not permitted to use or distribute the model internally or externally, or expose it in my own offerings without a commercial license": "checkbox",
+                "I understand that if I upload the model, or any derivative version, on any platform, I must include the Mistral Research License": "checkbox",
+                "I understand that for commercial use of the model, I can contact Mistral or use the Mistral AI API on la Plateforme or any of our cloud provider partners": "checkbox",
+                "By clicking Submit below I accept the terms of the license and acknowledge that the information I provide will be collected stored processed and shared in accordance with the Mistral Privacy Policy": "checkbox",
+                "geo": "ip_location"
+            },
+            "extra_gated_description": "Mistral AI processes your personal data below to provide the model and enforce its license. If you are affiliated with a commercial entity, we may also send you communications about our models. For more information on your rights and data handling, please see our <a href=\"https://mistral.ai/terms/\">privacy policy</a>.",
+            "extra_gated_button_content": "Submit",
+            "library_name": "vllm"
+        },
+        "siblings": [
+            {
+                "rfilename": ".gitattributes"
+            },
+            {
+                "rfilename": "README.md"
+            },
+            {
+                "rfilename": "SYSTEM_PROMPT.txt"
+            },
+            {
+                "rfilename": "consolidated-00001-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00002-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00003-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00004-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00005-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00006-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00007-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00008-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00009-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00010-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00011-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00012-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00013-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00014-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00015-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00016-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00017-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00018-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00019-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00020-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00021-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00022-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00023-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00024-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00025-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00026-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00027-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00028-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00029-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00030-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00031-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00032-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00033-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00034-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00035-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00036-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00037-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00038-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00039-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00040-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00041-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00042-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00043-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00044-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00045-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00046-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00047-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00048-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00049-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00050-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00051-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00052-of-00052.safetensors"
+            },
+            {
+                "rfilename": "consolidated.safetensors.index.json"
+            },
+            {
+                "rfilename": "params.json"
+            },
+            {
+                "rfilename": "tokenizer.model.v7m1"
+            }
+        ],
+        "spaces": [
+            "llamameta/Pixtral-Large-Instruct-2411",
+            "devel360/pixtral"
+        ],
+        "createdAt": "2024-11-14T20:07:26.000Z"
+    },
+    {
+        "_id": "672b1f9e956e6880fdb8c1e5",
+        "id": "Qwen/Qwen2.5-Coder-32B-Instruct",
+        "modelId": "Qwen/Qwen2.5-Coder-32B-Instruct",
+        "author": "Qwen",
+        "sha": "b47205940b83b5b484577359f71ee7b88472df67",
+        "lastModified": "2024-11-18T12:55:03.000Z",
+        "private": false,
+        "disabled": false,
+        "gated": false,
+        "pipeline_tag": "text-generation",
+        "tags": [
+            "transformers",
+            "safetensors",
+            "qwen2",
+            "text-generation",
+            "code",
+            "codeqwen",
+            "chat",
+            "qwen",
+            "qwen-coder",
+            "conversational",
+            "en",
+            "arxiv:2409.12186",
+            "arxiv:2309.00071",
+            "arxiv:2407.10671",
+            "base_model:Qwen/Qwen2.5-Coder-32B",
+            "base_model:finetune:Qwen/Qwen2.5-Coder-32B",
+            "license:apache-2.0",
+            "autotrain_compatible",
+            "text-generation-inference",
+            "endpoints_compatible",
+            "region:us"
+        ],
+        "downloads": 78203,
+        "library_name": "transformers",
+        "widgetData": [
+            {
+                "text": "Hey my name is Julien! How are you?"
+            },
+            {
+                "text": "Hey my name is Thomas! How are you?"
+            },
+            {
+                "text": "Hey my name is Mariama! How are you?"
+            },
+            {
+                "text": "Hey my name is Clara! How are you?"
+            },
+            {
+                "text": "Hey my name is Julien! How are you?"
+            },
+            {
+                "text": "Hi."
+            }
+        ],
+        "likes": 1007,
+        "model-index": null,
+        "config": {
+            "architectures": [
+                "Qwen2ForCausalLM"
+            ],
+            "model_type": "qwen2",
+            "tokenizer_config": {
+                "bos_token": null,
+                "chat_template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- messages[0]['content'] }}\n    {%- else %}\n        {{- 'You are Qwen, created by Alibaba Cloud. You are a helpful assistant.' }}\n    {%- endif %}\n    {{- \"\\n\\n# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0]['content'] + '<|im_end|>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>system\\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- for message in messages %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) or (message.role == \"assistant\" and not message.tool_calls) %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {{- '<|im_start|>' + message.role }}\n        {%- if message.content %}\n            {{- '\\n' + message.content }}\n        {%- endif %}\n        {%- for tool_call in message.tool_calls %}\n            {%- if tool_call.function is defined %}\n                {%- set tool_call = tool_call.function %}\n            {%- endif %}\n            {{- '\\n<tool_call>\\n{\"name\": \"' }}\n            {{- tool_call.name }}\n            {{- '\", \"arguments\": ' }}\n            {{- tool_call.arguments | tojson }}\n            {{- '}\\n</tool_call>' }}\n        {%- endfor %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if (loop.index0 == 0) or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}\n",
+                "eos_token": "<|im_end|>",
+                "pad_token": "<|endoftext|>",
+                "unk_token": null
+            }
+        },
+        "cardData": {
+            "license": "apache-2.0",
+            "license_link": "https://huggingface.co/Qwen/Qwen2.5-Coder-32B-Instruct/blob/main/LICENSE",
+            "language": [
+                "en"
+            ],
+            "base_model": [
+                "Qwen/Qwen2.5-Coder-32B"
+            ],
+            "pipeline_tag": "text-generation",
+            "library_name": "transformers",
+            "tags": [
+                "code",
+                "codeqwen",
+                "chat",
+                "qwen",
+                "qwen-coder"
+            ]
+        },
+        "transformersInfo": {
+            "auto_model": "AutoModelForCausalLM",
+            "pipeline_tag": "text-generation",
+            "processor": "AutoTokenizer"
+        },
+        "siblings": [
+            {
+                "rfilename": ".gitattributes"
+            },
+            {
+                "rfilename": "LICENSE"
+            },
+            {
+                "rfilename": "README.md"
+            },
+            {
+                "rfilename": "config.json"
+            },
+            {
+                "rfilename": "generation_config.json"
+            },
+            {
+                "rfilename": "merges.txt"
+            },
+            {
+                "rfilename": "model-00001-of-00014.safetensors"
+            },
+            {
+                "rfilename": "model-00002-of-00014.safetensors"
+            },
+            {
+                "rfilename": "model-00003-of-00014.safetensors"
+            },
+            {
+                "rfilename": "model-00004-of-00014.safetensors"
+            },
+            {
+                "rfilename": "model-00005-of-00014.safetensors"
+            },
+            {
+                "rfilename": "model-00006-of-00014.safetensors"
+            },
+            {
+                "rfilename": "model-00007-of-00014.safetensors"
+            },
+            {
+                "rfilename": "model-00008-of-00014.safetensors"
+            },
+            {
+                "rfilename": "model-00009-of-00014.safetensors"
+            },
+            {
+                "rfilename": "model-00010-of-00014.safetensors"
+            },
+            {
+                "rfilename": "model-00011-of-00014.safetensors"
+            },
+            {
+                "rfilename": "model-00012-of-00014.safetensors"
+            },
+            {
+                "rfilename": "model-00013-of-00014.safetensors"
+            },
+            {
+                "rfilename": "model-00014-of-00014.safetensors"
+            },
+            {
+                "rfilename": "model.safetensors.index.json"
+            },
+            {
+                "rfilename": "tokenizer.json"
+            },
+            {
+                "rfilename": "tokenizer_config.json"
+            },
+            {
+                "rfilename": "vocab.json"
+            }
+        ],
+        "spaces": [
+            "bigcode/bigcode-models-leaderboard",
+            "akhaliq/anychat",
+            "huggingface-projects/ai-video-composer",
+            "NeurixYUFI/imggen",
+            "HyperbolicLabs/Hyperbolic-Qwen2.5-Coder-Artifacts",
+            "wifix199/Coding",
+            "yasserrmd/ReadMeForge",
+            "yasserrmd/CodeCompliance",
+            "nonnon6250/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "yasserrmd/InfographicWizard",
+            "Sg-at-srijan-us-kg/Qwen2.5-Coder",
+            "roshikhan301/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "Pulkit-exe/Course_Recommendation_System",
+            "Anonymous1355/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "Manojajj/CodeAssistant-Qwen",
+            "nruto/rxple",
+            "ParthSadaria/lokiai",
+            "Rooni/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "IdenGhost/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "dfd186488/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "sgdlskjbgfvxzhbxkjrbgcezvoybr/Qwen-Qwen2.5-Coder-32B-CCWithAi.COM",
+            "Trappeew1ch/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "huynhQuy/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "mukeshkr5/tts-test",
+            "FNuni/Qwen2.5-Coder-32B-Instruct",
+            "chrt666/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "Sg-at-srijan-us-kg/Qwen2.5-Code-Compliance",
+            "Dmkdok/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "Slardar/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "davidobbs/codigo",
+            "hugg1user/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "varunnishad/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "prof-te/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "drguilhermeapolinario/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "Nerqed/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "vijay0811/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "Nick14/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "emilalvaro/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "pentarosarium/processor",
+            "poerl/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "marcos2912/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "JaeSwift/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "mPritz/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "curran06/MyCrrnSpace",
+            "krishnk/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "Pedronassif/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "serzru96/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "nihar-sarkar/Quen-Coding",
+            "patrickblanks/Qwen2.5-Coder",
+            "saurcode/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "Escorpion1/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "skdjhfvvewhuisol/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "MartsoBodziu1994/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "mwqlkm/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "Heyaski/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "zanabal/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "kadebostany/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "ivan345A/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "Olppara/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "deathault/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "deagar/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "yokeshd/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "ihorkaren/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "yasserrmd/ASICForge",
+            "ishitcyberrr/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "xripunov/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "Sg-at-srijan-us-kg/Qwen2.5-72B",
+            "ggorinot/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "alredi7/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "znxbbd/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "isaax731/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "mrkarol/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "beerhunters/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "artbogat/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "SuryanshOG/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "mxxfoxx/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "cutifly/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "matz1237/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "raveninthegrayhouse/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "Uset182/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "mohsin6510/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "KennyOry/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "Ankyadam/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "savageiwnl/qwen",
+            "x5wow/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "Kwest70/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "ClayeW/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "Sonfire/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "Yuravra/AI_Oracle",
+            "Err0r12/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "Ubandiya/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "mszteam/Qwen-Qwen2.5-Coder-32B-Test",
+            "anatoli72/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "markey123/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "xMBx/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "YaNeVLAD/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "ysl-collab/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "JuicyJu/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "Irridian/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "vieneux/Qwen-Qwen2.5-Coder-32B"
+        ],
+        "createdAt": "2024-11-06T07:49:50.000Z",
+        "safetensors": {
+            "parameters": {
+                "BF16": 32763876352
+            },
+            "total": 32763876352
+        }
+    },
+    {
+        "_id": "672379b045bf745cb0f1a79a",
+        "id": "Lightricks/LTX-Video",
+        "modelId": "Lightricks/LTX-Video",
+        "author": "Lightricks",
+        "sha": "a5ab70cf0b89a0b90dfafe3556c24f1b4767bdc8",
+        "lastModified": "2024-11-23T10:27:40.000Z",
+        "private": false,
+        "disabled": false,
+        "gated": false,
+        "pipeline_tag": "image-to-video",
+        "tags": [
+            "diffusers",
+            "safetensors",
+            "ltx-video",
+            "text-to-video",
+            "image-to-video",
+            "en",
+            "license:other",
+            "region:us"
+        ],
+        "downloads": 12632,
+        "library_name": "diffusers",
+        "likes": 284,
+        "model-index": null,
+        "cardData": {
+            "tags": [
+                "ltx-video",
+                "text-to-video",
+                "image-to-video"
+            ],
+            "pinned": true,
+            "language": [
+                "en"
+            ],
+            "license": "other"
+        },
+        "siblings": [
+            {
+                "rfilename": ".gitattributes"
+            },
+            {
+                "rfilename": "License.txt"
+            },
+            {
+                "rfilename": "README.md"
+            },
+            {
+                "rfilename": "ltx-video-2b-v0.9.safetensors"
+            },
+            {
+                "rfilename": "media/ltx-video_example_00001.gif"
+            },
+            {
+                "rfilename": "media/ltx-video_example_00002.gif"
+            },
+            {
+                "rfilename": "media/ltx-video_example_00003.gif"
+            },
+            {
+                "rfilename": "media/ltx-video_example_00004.gif"
+            },
+            {
+                "rfilename": "media/ltx-video_example_00005.gif"
+            },
+            {
+                "rfilename": "media/ltx-video_example_00006.gif"
+            },
+            {
+                "rfilename": "media/ltx-video_example_00007.gif"
+            },
+            {
+                "rfilename": "media/ltx-video_example_00008.gif"
+            },
+            {
+                "rfilename": "media/ltx-video_example_00009.gif"
+            },
+            {
+                "rfilename": "media/ltx-video_example_00010.gif"
+            },
+            {
+                "rfilename": "media/ltx-video_example_00011.gif"
+            },
+            {
+                "rfilename": "media/ltx-video_example_00012.gif"
+            },
+            {
+                "rfilename": "media/ltx-video_example_00013.gif"
+            },
+            {
+                "rfilename": "media/ltx-video_example_00014.gif"
+            },
+            {
+                "rfilename": "media/ltx-video_example_00015.gif"
+            },
+            {
+                "rfilename": "media/ltx-video_example_00016.gif"
+            },
+            {
+                "rfilename": "media/trailer.gif"
+            },
+            {
+                "rfilename": "scheduler/scheduler_config.json"
+            },
+            {
+                "rfilename": "unet/config.json"
+            },
+            {
+                "rfilename": "unet/unet_diffusion_pytorch_model.safetensors"
+            },
+            {
+                "rfilename": "vae/config.json"
+            },
+            {
+                "rfilename": "vae/vae_diffusion_pytorch_model.safetensors"
+            }
+        ],
+        "spaces": [
+            "Lightricks/LTX-Video-Playground",
+            "cocktailpeanut/LTX-Video-Playground",
+            "svjack/LTX-Video-Playground",
+            "emilalvaro/LTX-Video-Playground",
+            "NativeAngels/LTX-Video-Playground",
+            "Swaqgame99/LTX-Video-Playground"
+        ],
+        "createdAt": "2024-10-31T12:36:00.000Z"
+    },
+    {
+        "_id": "66aaa908fc35e079a941470d",
+        "id": "black-forest-labs/FLUX.1-dev",
+        "modelId": "black-forest-labs/FLUX.1-dev",
+        "author": "black-forest-labs",
+        "sha": "0ef5fff789c832c5c7f4e127f94c8b54bbcced44",
+        "lastModified": "2024-08-16T14:38:19.000Z",
+        "private": false,
+        "disabled": false,
+        "gated": "auto",
+        "pipeline_tag": "text-to-image",
+        "tags": [
+            "diffusers",
+            "safetensors",
+            "text-to-image",
+            "image-generation",
+            "flux",
+            "en",
+            "license:other",
+            "endpoints_compatible",
+            "diffusers:FluxPipeline",
+            "region:us"
+        ],
+        "downloads": 1299631,
+        "library_name": "diffusers",
+        "likes": 6673,
+        "model-index": null,
+        "config": {
+            "diffusers": {
+                "_class_name": "FluxPipeline"
+            }
+        },
+        "cardData": {
+            "language": [
+                "en"
+            ],
+            "license": "other",
+            "license_name": "flux-1-dev-non-commercial-license",
+            "license_link": "LICENSE.md",
+            "extra_gated_prompt": "By clicking \"Agree\", you agree to the [FluxDev Non-Commercial License Agreement](https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/LICENSE.md) and acknowledge the [Acceptable Use Policy](https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/POLICY.md).",
+            "tags": [
+                "text-to-image",
+                "image-generation",
+                "flux"
+            ]
+        },
+        "siblings": [
+            {
+                "rfilename": ".gitattributes"
+            },
+            {
+                "rfilename": "LICENSE.md"
+            },
+            {
+                "rfilename": "README.md"
+            },
+            {
+                "rfilename": "ae.safetensors"
+            },
+            {
+                "rfilename": "dev_grid.jpg"
+            },
+            {
+                "rfilename": "flux1-dev.safetensors"
+            },
+            {
+                "rfilename": "model_index.json"
+            },
+            {
+                "rfilename": "scheduler/scheduler_config.json"
+            },
+            {
+                "rfilename": "text_encoder/config.json"
+            },
+            {
+                "rfilename": "text_encoder/model.safetensors"
+            },
+            {
+                "rfilename": "text_encoder_2/config.json"
+            },
+            {
+                "rfilename": "text_encoder_2/model-00001-of-00002.safetensors"
+            },
+            {
+                "rfilename": "text_encoder_2/model-00002-of-00002.safetensors"
+            },
+            {
+                "rfilename": "text_encoder_2/model.safetensors.index.json"
+            },
+            {
+                "rfilename": "tokenizer/merges.txt"
+            },
+            {
+                "rfilename": "tokenizer/special_tokens_map.json"
+            },
+            {
+                "rfilename": "tokenizer/tokenizer_config.json"
+            },
+            {
+                "rfilename": "tokenizer/vocab.json"
+            },
+            {
+                "rfilename": "tokenizer_2/special_tokens_map.json"
+            },
+            {
+                "rfilename": "tokenizer_2/spiece.model"
+            },
+            {
+                "rfilename": "tokenizer_2/tokenizer.json"
+            },
+            {
+                "rfilename": "tokenizer_2/tokenizer_config.json"
+            },
+            {
+                "rfilename": "transformer/config.json"
+            },
+            {
+                "rfilename": "transformer/diffusion_pytorch_model-00001-of-00003.safetensors"
+            },
+            {
+                "rfilename": "transformer/diffusion_pytorch_model-00002-of-00003.safetensors"
+            },
+            {
+                "rfilename": "transformer/diffusion_pytorch_model-00003-of-00003.safetensors"
+            },
+            {
+                "rfilename": "transformer/diffusion_pytorch_model.safetensors.index.json"
+            },
+            {
+                "rfilename": "vae/config.json"
+            },
+            {
+                "rfilename": "vae/diffusion_pytorch_model.safetensors"
+            }
+        ],
+        "spaces": [
+            "black-forest-labs/FLUX.1-dev",
+            "yanze/PuLID-FLUX",
+            "multimodalart/flux-lora-the-explorer",
+            "DamarJati/FLUX.1-RealismLora",
+            "jasperai/Flux.1-dev-Controlnet-Upscaler",
+            "ByteDance/Hyper-FLUX-8Steps-LoRA",
+            "multimodalart/FLUX.1-merged",
+            "multimodalart/flux-lora-lab",
+            "prithivMLmods/FLUX-LoRA-DLC",
+            "Yntec/ToyWorld",
+            "DamarJati/FLUX.1-DEV-Canny",
+            "autotrain-projects/train-flux-lora-ease",
+            "dn6/FLUX-GIFs",
+            "multimodalart/flux-cfg",
+            "multimodalart/flux-outpainting",
+            "Yntec/HuggingfaceDiffusion",
+            "gokaygokay/FLUX.1-dev-with-Captioner",
+            "prithivMLmods/FLUX-REALISM",
+            "Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro",
+            "Yntec/PrintingPress",
+            "John6666/DiffuseCraftMod",
+            "NeurixYUFI/imggen",
+            "ameerazam08/FLUX.1-dev-Inpainting-Model-Beta-GPU",
+            "r3gm/DiffuseCraft",
+            "Nymbo/Compare-6",
+            "multimodalart/logo-in-context",
+            "InstantX/flux-IP-adapter",
+            "John6666/votepurchase-multiple-model",
+            "Nymbo/FLUX.1-Dev-Serverless",
+            "multimodalart/civitai-to-hf",
+            "nyanko7/flux1-dev-nf4",
+            "Shakker-Labs/FLUX-LoRA-Gallery",
+            "vilarin/flux-labs",
+            "Nick088/FLUX.1-dev",
+            "vilarin/flux-lab-light",
+            "guardiancc/flux-advanced-explorer",
+            "vilarin/lumiere",
+            "FilipeR/FLUX.1-dev-UI",
+            "MohamedRashad/Character-Generator",
+            "ovi054/FLUX.Dev-LORA-Serverless",
+            "rafaaa2105/flux-ghibsky-illustration",
+            "Yntec/blitz_diffusion",
+            "doevent/FLUX.1-merged",
+            "multimodalart/low-step-flux-comparison",
+            "Nymbo/flux-lora-the-explorer",
+            "InstantX/SD35-IP-Adapter",
+            "alsaeth/high-quality-imgs-FLUX",
+            "K00B404/FluxCapacitor",
+            "nroggendorff/flux-lora-tester",
+            "prithivMLmods/Midjourney-Flux",
+            "Nymbo/Flux.1-dev-Controlnet-Upscaler",
+            "openfree/mixgen3",
+            "DazDin/DiffFlu2",
+            "aexyb/Diffusion",
+            "NJU/RAG-Diffusion",
+            "special-access/black-forest-labs-FLUX1.1-dev",
+            "KwabsHug/GameConfigIdea",
+            "Deddy/PuLid-FLX-GPU",
+            "sofianhw/PuLID-FLUX",
+            "ameerazam08/FLUX.1-dev-De-Distill",
+            "JournalistsonHF/text-to-image-bias",
+            "RED-AIGC/FLUX-TDD-BETA",
+            "Zhofang/FLUX.1-Dev-Serverless-darn",
+            "NotASI/FLUX.1-dev",
+            "modelscope/DiffSynth-Painter",
+            "joselobenitezg/obtu-ai",
+            "guardiancc/flux-ip-face-adapter",
+            "alvarobartt/FLUX.1-Studio-Ghibli-LoRA",
+            "guardiancc/flux-gif-animations-2",
+            "MohamedRashad/Flux-Redux",
+            "Muhammadreza/Mann-E_Flux",
+            "thesab/outfit-generator",
+            "CultriX/FLUX.1-dev",
+            "colbyford/flux2",
+            "ovi054/FLUX-GIFs-LoRA",
+            "stazizov/XFluxSpace",
+            "John6666/flux-to-diffusers-test",
+            "K00B404/FLUX.1-Dev-Serverless-darn",
+            "killwithabass/FLUX-1-DEV_LORA-ANDROFLUX",
+            "vincenthugging/flux-lora-myself",
+            "Nymbo/flux-lab-light",
+            "jiuface/flux-controlnet-inpainting",
+            "mantrakp/aai",
+            "fantaxy/flx-pulid",
+            "Deddy/FLUX-Wallpaper-HD-Maker",
+            "t-montes/Flux.1-dev-Controlnet-Upscaler",
+            "Prog420ress/black-forest-labs-FLUX.1-dev",
+            "nroggendorff/flux",
+            "Yntec/Flux-Image-Models-Test-September-2024",
+            "jiuface/flux-dev-multi-lora",
+            "PeepDaSlan9/B2BMGMT_flux-lab-light",
+            "yasserrmd/MagicDoodles",
+            "ameerazam08/FLUX.1-dev-Inpainting-Model-Alpha-GPU",
+            "PeepDaSlan9/HYDRAS_flux2",
+            "qiuzhi2046/PuLID-FLUX",
+            "CultriX/flux-lora-the-explorer",
+            "ysmao/multiview-incontext",
+            "Nymbo/FLUX-LoRA-DLC",
+            "dmxl2124/black-forest-labs-FLUX.1-dev",
+            "Deadmon/FLUX.1-DEV-Canny"
+        ],
+        "createdAt": "2024-07-31T21:13:44.000Z"
+    },
+    {
+        "_id": "673e3c5da3eda9a8c99bda8a",
+        "id": "black-forest-labs/FLUX.1-Fill-dev",
+        "modelId": "black-forest-labs/FLUX.1-Fill-dev",
+        "author": "black-forest-labs",
+        "sha": "23c9248980fa270d900186330e13e0ef6f827174",
+        "lastModified": "2024-11-21T15:06:10.000Z",
+        "private": false,
+        "disabled": false,
+        "gated": "auto",
+        "tags": [
+            "diffusion-single-file",
+            "image-generation",
+            "flux",
+            "en",
+            "license:other",
+            "region:us"
+        ],
+        "downloads": 14742,
+        "library_name": "diffusion-single-file",
+        "likes": 193,
+        "model-index": null,
+        "cardData": {
+            "language": [
+                "en"
+            ],
+            "license": "other",
+            "license_name": "flux-1-dev-non-commercial-license",
+            "license_link": "LICENSE.md",
+            "extra_gated_prompt": "By clicking \"Agree\", you agree to the [FluxDev Non-Commercial License Agreement](https://huggingface.co/black-forest-labs/FLUX.1-Fill-dev/blob/main/LICENSE.md) and acknowledge the [Acceptable Use Policy](https://huggingface.co/black-forest-labs/FLUX.1-Fill-dev/blob/main/POLICY.md).",
+            "tags": [
+                "image-generation",
+                "flux",
+                "diffusion-single-file"
+            ]
+        },
+        "siblings": [
+            {
+                "rfilename": ".gitattributes"
+            },
+            {
+                "rfilename": "LICENSE.md"
+            },
+            {
+                "rfilename": "README.md"
+            },
+            {
+                "rfilename": "ae.safetensors"
+            },
+            {
+                "rfilename": "flux1-fill-dev.safetensors"
+            }
+        ],
+        "spaces": [],
+        "createdAt": "2024-11-20T19:45:33.000Z"
+    },
+    {
+        "_id": "673555852d13ee612bc00910",
+        "id": "NexaAIDev/omnivision-968M",
+        "modelId": "NexaAIDev/omnivision-968M",
+        "author": "NexaAIDev",
+        "sha": "b51f197dfda3619e0785dca99dcf55a86bca4cfd",
+        "lastModified": "2024-11-24T01:05:25.000Z",
+        "private": false,
+        "disabled": false,
+        "gated": false,
+        "tags": [
+            "gguf",
+            "multimodal",
+            "conversational",
+            "GGUF",
+            "Image-Text-to-Text",
+            "license:apache-2.0",
+            "region:us"
+        ],
+        "downloads": 8898,
+        "likes": 403,
+        "model-index": null,
+        "cardData": {
+            "license": "apache-2.0",
+            "tags": [
+                "multimodal",
+                "conversational",
+                "GGUF",
+                "Image-Text-to-Text"
+            ]
+        },
+        "gguf": {
+            "total": 474367936,
+            "architecture": "siglip"
+        },
+        "siblings": [
+            {
+                "rfilename": ".gitattributes"
+            },
+            {
+                "rfilename": "Nano-Vlm-Processor-494M-F16.gguf"
+            },
+            {
+                "rfilename": "Nano-Vlm-Processor-494M-Q8_0.gguf"
+            },
+            {
+                "rfilename": "README.md"
+            },
+            {
+                "rfilename": "benchmark.png"
+            },
+            {
+                "rfilename": "mmproj-omni-vlm-f16.gguf"
+            }
+        ],
+        "spaces": [
+            "NexaAIDev/omnivlm-dpo-demo",
+            "thevatsalsaglani/omnivlm-dpo-demo",
+            "dfhgrfsfdeaadw/omnivlm-dpo-demo"
+        ],
+        "createdAt": "2024-11-14T01:42:29.000Z"
+    },
+    {
+        "_id": "672c546451c2c90f81ddb6f9",
+        "id": "ali-vilab/In-Context-LoRA",
+        "modelId": "ali-vilab/In-Context-LoRA",
+        "author": "ali-vilab",
+        "sha": "bd98182c99bb1f78e37400305802a724626037b9",
+        "lastModified": "2024-11-17T15:39:16.000Z",
+        "private": false,
+        "disabled": false,
+        "gated": false,
+        "pipeline_tag": "text-to-image",
+        "tags": [
+            "diffusers",
+            "text-to-image",
+            "lora",
+            "template:diffusion-lora",
+            "arxiv:2410.23775",
+            "arxiv:2410.15027",
+            "base_model:black-forest-labs/FLUX.1-dev",
+            "base_model:adapter:black-forest-labs/FLUX.1-dev",
+            "license:mit",
+            "region:us"
+        ],
+        "downloads": 90218,
+        "library_name": "diffusers",
+        "likes": 349,
+        "model-index": null,
+        "cardData": {
+            "tags": [
+                "text-to-image",
+                "lora",
+                "diffusers",
+                "template:diffusion-lora"
+            ],
+            "base_model": "black-forest-labs/FLUX.1-dev",
+            "instance_prompt": null,
+            "license": "mit"
+        },
+        "siblings": [
+            {
+                "rfilename": ".gitattributes"
+            },
+            {
+                "rfilename": "README.md"
+            },
+            {
+                "rfilename": "couple-profile.safetensors"
+            },
+            {
+                "rfilename": "film-storyboard.safetensors"
+            },
+            {
+                "rfilename": "font-design.safetensors"
+            },
+            {
+                "rfilename": "home-decoration.safetensors"
+            },
+            {
+                "rfilename": "images/2024-11-10-002611_0.jpeg"
+            },
+            {
+                "rfilename": "images/386534865-9612cf8a-858d-4684-819e-7b97981d993c.png"
+            },
+            {
+                "rfilename": "images/ComfyUI_00026_.jpeg"
+            },
+            {
+                "rfilename": "images/ComfyUI_00098_.jpeg"
+            },
+            {
+                "rfilename": "images/ComfyUI_temp_ditfb_00016_.jpeg"
+            },
+            {
+                "rfilename": "images/ComfyUI_temp_opjou_00016_.jpeg"
+            },
+            {
+                "rfilename": "images/example_1.png"
+            },
+            {
+                "rfilename": "images/film-storyboard-1.jpeg"
+            },
+            {
+                "rfilename": "images/role2story.jpeg"
+            },
+            {
+                "rfilename": "images/teaser1.jpg"
+            },
+            {
+                "rfilename": "images/teaser2.jpg"
+            },
+            {
+                "rfilename": "images/vi-design.jpg"
+            },
+            {
+                "rfilename": "portrait-illustration.safetensors"
+            },
+            {
+                "rfilename": "portrait-photography.safetensors"
+            },
+            {
+                "rfilename": "ppt-templates.safetensors"
+            },
+            {
+                "rfilename": "sandstorm-visual-effect.safetensors"
+            },
+            {
+                "rfilename": "sparklers-visual-effect.safetensors"
+            },
+            {
+                "rfilename": "visual-identity-design.safetensors"
+            }
+        ],
+        "spaces": [
+            "multimodalart/logo-in-context",
+            "yasassadeepa/ali-vilab-In-Context-LoRA",
+            "ysmao/multiview-incontext",
+            "Byhunny/new-space",
+            "Konst2021/ali-vilab-In-Context-LoRA",
+            "yuxichat/ali-vilab-In-Context-LoRA",
+            "lightawave/ali-vilab-In-Context-LoRA",
+            "viviannnnnn/ali-vilab-In-Context-LoRA",
+            "Ricofishing/ali-vilab-In-Context-LoRA",
+            "pokerogue/ali-vilab-In-Context-LoRA",
+            "Nymbo/logo-in-context",
+            "VictoriaAgent/ali-vilab-In-Context-LoRA"
+        ],
+        "createdAt": "2024-11-07T05:47:16.000Z"
+    },
+    {
+        "_id": "673e3ca06045033e62a4c72b",
+        "id": "black-forest-labs/FLUX.1-Redux-dev",
+        "modelId": "black-forest-labs/FLUX.1-Redux-dev",
+        "author": "black-forest-labs",
+        "sha": "cc1882af0e85df6ae8b14f613a4001f505689c33",
+        "lastModified": "2024-11-21T15:06:38.000Z",
+        "private": false,
+        "disabled": false,
+        "gated": "auto",
+        "tags": [
+            "diffusion-single-file",
+            "image-generation",
+            "flux",
+            "en",
+            "license:other",
+            "region:us"
+        ],
+        "downloads": 9437,
+        "library_name": "diffusion-single-file",
+        "likes": 160,
+        "model-index": null,
+        "cardData": {
+            "language": [
+                "en"
+            ],
+            "license": "other",
+            "license_name": "flux-1-dev-non-commercial-license",
+            "license_link": "LICENSE.md",
+            "extra_gated_prompt": "By clicking \"Agree\", you agree to the [FluxDev Non-Commercial License Agreement](https://huggingface.co/black-forest-labs/FLUX.1-Depth-dev/blob/main/LICENSE.md) and acknowledge the [Acceptable Use Policy](https://huggingface.co/black-forest-labs/FLUX.1-Depth-dev/blob/main/POLICY.md).",
+            "tags": [
+                "image-generation",
+                "flux",
+                "diffusion-single-file"
+            ]
+        },
+        "siblings": [
+            {
+                "rfilename": ".gitattributes"
+            },
+            {
+                "rfilename": "LICENSE.md"
+            },
+            {
+                "rfilename": "README.md"
+            },
+            {
+                "rfilename": "flux1-redux-dev.safetensors"
+            },
+            {
+                "rfilename": "redux.png"
+            }
+        ],
+        "spaces": [
+            "MohamedRashad/Flux-Redux"
+        ],
+        "createdAt": "2024-11-20T19:46:40.000Z"
+    },
+    {
+        "_id": "673657a8517b82b436cb7e4c",
+        "id": "mistralai/Mistral-Large-Instruct-2411",
+        "modelId": "mistralai/Mistral-Large-Instruct-2411",
+        "author": "mistralai",
+        "sha": "3a5cb136f6106edf5c1210369068eb5a4f787cab",
+        "lastModified": "2024-11-19T12:27:46.000Z",
+        "private": false,
+        "disabled": false,
+        "gated": "auto",
+        "tags": [
+            "vllm",
+            "safetensors",
+            "mistral",
+            "en",
+            "fr",
+            "de",
+            "es",
+            "it",
+            "pt",
+            "zh",
+            "ja",
+            "ru",
+            "ko",
+            "license:other",
+            "region:us"
+        ],
+        "downloads": 1427,
+        "library_name": "vllm",
+        "likes": 146,
+        "model-index": null,
+        "config": {
+            "architectures": [
+                "MistralForCausalLM"
+            ],
+            "model_type": "mistral",
+            "tokenizer_config": {
+                "bos_token": "<s>",
+                "chat_template": "{{ bos_token }}{% for message in messages %}{% if message['role'] == 'user' %}{{ '[INST] ' + message['content'] + '[/INST]' }}{% elif message['role'] == 'system' %}{{ '[SYSTEM_PROMPT] ' + message['content'] + '[/SYSTEM_PROMPT]' }}{% elif message['role'] == 'assistant' %}{{ ' ' + message['content'] + eos_token }}{% else %}{{ raise_exception('Only user, system and assistant roles are supported!') }}{% endif %}{% endfor %}",
+                "eos_token": "</s>",
+                "pad_token": null,
+                "unk_token": "<unk>",
+                "use_default_system_prompt": false
+            }
+        },
+        "cardData": {
+            "language": [
+                "en",
+                "fr",
+                "de",
+                "es",
+                "it",
+                "pt",
+                "zh",
+                "ja",
+                "ru",
+                "ko"
+            ],
+            "license": "other",
+            "license_name": "mrl",
+            "inference": false,
+            "license_link": "https://mistral.ai/licenses/MRL-0.1.md",
+            "extra_gated_prompt": "# Mistral AI Research License\nIf You want to use a Mistral Model, a Derivative or an Output for any purpose that is not expressly authorized under this Agreement, You must request a license from Mistral AI, which Mistral AI may grant to You in Mistral AI's sole discretion. To discuss such a license, please contact Mistral AI via the website contact form: https://mistral.ai/contact/\n## 1. Scope and acceptance\n**1.1. Scope of the Agreement.** This Agreement applies to any use, modification, or Distribution of any Mistral Model by You, regardless of the source You obtained a copy of such Mistral Model.\n**1.2. Acceptance.** By accessing, using, modifying, Distributing a Mistral Model, or by creating, using or distributing a Derivative of the Mistral Model, You agree to be bound by this Agreement.\n**1.3. Acceptance on behalf of a third-party.** If You accept this Agreement on behalf of Your employer or another person or entity, You warrant and represent that You have the authority to act and accept this Agreement on their behalf. In such a case, the word \"You\" in this Agreement will refer to Your employer or such other person or entity.\n## 2. License\n**2.1. Grant of rights**.  Subject to Section 3 below, Mistral AI hereby grants You a non-exclusive, royalty-free, worldwide, non-sublicensable, non-transferable, limited license to use, copy, modify, and Distribute under the conditions provided in Section 2.2 below, the Mistral Model and any Derivatives made by or for Mistral AI and to create Derivatives of the Mistral Model.\n**2.2. Distribution of Mistral Model and Derivatives made by or for Mistral AI.** Subject to Section 3 below, You may Distribute copies of the Mistral Model and/or Derivatives made by or for Mistral AI, under the following conditions: You must make available a copy of this Agreement to third-party recipients of the Mistral Models and/or Derivatives made by or for Mistral AI you Distribute, it being specified that any rights to use the Mistral Models and/or Derivatives made by or for Mistral AI shall be directly granted by Mistral AI to said third-party recipients pursuant to the Mistral AI Research License agreement executed between these parties; You must retain in all copies of the Mistral Models the following attribution notice within a \"Notice\" text file distributed as part of such copies: \"Licensed by Mistral AI under the Mistral AI Research License\".\n**2.3. Distribution of Derivatives made by or for You.** Subject to Section 3 below, You may Distribute any Derivatives made by or for You under additional or different terms and conditions, provided that: In any event, the use and modification of Mistral Model and/or Derivatives made by or for Mistral AI shall remain governed by the terms and conditions of this Agreement; You include in any such Derivatives made by or for You prominent notices stating that You modified the concerned Mistral Model; and Any terms and conditions You impose on any third-party recipients relating to Derivatives made by or for You shall neither limit such third-party recipients' use of the Mistral Model or any Derivatives made by or for Mistral AI in accordance with the Mistral AI Research License nor conflict with any of its terms and conditions.\n## 3. Limitations\n**3.1. Misrepresentation.** You must not misrepresent or imply, through any means, that the Derivatives made by or for You and/or any modified version of the Mistral Model You Distribute under your name and responsibility is an official product of Mistral AI or has been endorsed, approved or validated by Mistral AI, unless You are authorized by Us to do so in writing.\n**3.2. Usage Limitation.** You shall only use the Mistral Models, Derivatives (whether or not created by Mistral AI) and Outputs for Research Purposes.\n## 4. Intellectual Property\n**4.1. Trademarks.** No trademark licenses are granted under this Agreement, and in connection with the Mistral Models, You may not use any name or mark owned by or associated with Mistral AI or any of its affiliates, except (i) as required for reasonable and customary use in describing and Distributing the Mistral Models and Derivatives made by or for Mistral AI and (ii) for attribution purposes as required by this Agreement.\n**4.2. Outputs.** We claim no ownership rights in and to the Outputs. You are solely responsible for the Outputs You generate and their subsequent uses in accordance with this Agreement. Any Outputs shall be subject to the restrictions set out in Section 3 of this Agreement.\n**4.3. Derivatives.** By entering into this Agreement, You accept that any Derivatives that You may create or that may be created for You shall be subject to the restrictions set out in Section 3 of this Agreement.\n## 5. Liability\n**5.1. Limitation of liability.** In no event, unless required by applicable law (such as deliberate and grossly negligent acts) or agreed to in writing, shall Mistral AI be liable to You for damages, including any direct, indirect, special, incidental, or consequential damages of any character arising as a result of this Agreement or out of the use or inability to use the Mistral Models and Derivatives (including but not limited to damages for loss of data, loss of goodwill, loss of expected profit or savings, work stoppage, computer failure or malfunction, or any damage caused by malware or security breaches), even if  Mistral AI has been advised of the possibility of such damages.\n**5.2. Indemnification.** You agree to indemnify and hold harmless Mistral AI from and against any claims, damages, or losses arising out of or related to Your use or Distribution of the Mistral Models and Derivatives.\n## 6. Warranty\n**6.1. Disclaimer.** Unless required by applicable law or prior agreed to by Mistral AI in writing, Mistral AI provides the Mistral Models and Derivatives on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied, including, without limitation, any warranties or conditions of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A PARTICULAR PURPOSE. Mistral AI does not represent nor warrant that the Mistral Models and Derivatives will be error-free, meet Your or any third party's requirements, be secure or will allow You or any third party to achieve any kind of result or generate any kind of content. You are solely responsible for determining the appropriateness of using or Distributing the Mistral Models and Derivatives and assume any risks associated with Your exercise of rights under this Agreement.\n## 7. Termination\n**7.1. Term.** This Agreement is effective as of the date of your acceptance of this Agreement or access to the concerned Mistral Models or Derivatives and will continue until terminated in accordance with the following terms.\n**7.2. Termination.** Mistral AI may terminate this Agreement at any time if You are in breach of this Agreement. Upon termination of this Agreement, You must cease to use all Mistral Models and Derivatives and shall permanently delete any copy thereof. The following provisions, in their relevant parts, will survive any termination or expiration of this Agreement, each for the duration necessary to achieve its own intended purpose (e.g. the liability provision will survive until the end of the applicable limitation period):Sections 5 (Liability), 6(Warranty), 7 (Termination) and 8 (General Provisions).\n**7.3. Litigation.** If You initiate any legal action or proceedings against Us or any other entity (including a cross-claim or counterclaim in a lawsuit), alleging that the Model or a Derivative, or any part thereof, infringe upon intellectual property or other rights owned or licensable by You, then any licenses granted to You under this Agreement will immediately terminate as of the date such legal action or claim is filed or initiated.\n## 8. General provisions\n**8.1. Governing laws.** This Agreement will be governed by the laws of France, without regard to choice of law principles, and the UN Convention on Contracts for the International Sale of Goods does not apply to this Agreement.\n**8.2. Competent jurisdiction.** The courts of Paris shall have exclusive jurisdiction of any dispute arising out of this Agreement.\n**8.3. Severability.** If any provision of this Agreement is held to be invalid, illegal or unenforceable, the remaining provisions shall be unaffected thereby and remain valid as if such provision had not been set forth herein.\n## 9. Definitions\n\"Agreement\": means this Mistral AI Research License agreement governing the access, use, and Distribution of the Mistral Models, Derivatives and Outputs.\n\"Derivative\": means any (i) modified version of the Mistral Model (including but not limited to any customized or fine-tuned version thereof), (ii) work based on the Mistral Model, or (iii) any other derivative work thereof.\n\"Distribution\", \"Distributing\", \"Distribute\" or \"Distributed\": means supplying, providing or making available, by any means, a copy of the Mistral Models and/or the Derivatives as the case may be, subject to Section 3 of this Agreement.\n\"Mistral AI\", \"We\" or \"Us\": means Mistral AI, a French société par actions simplifiée registered in the Paris commercial registry under the number 952 418 325, and having its registered seat at 15, rue des Halles, 75001 Paris.\n\"Mistral Model\": means the foundational large language model(s), and its elements which include algorithms, software, instructed checkpoints, parameters, source code (inference code, evaluation code and, if applicable, fine-tuning code) and any other elements associated thereto made available by Mistral AI under this Agreement, including, if any, the technical documentation, manuals and instructions for the use and operation thereof.\n\"Research Purposes\": means any use of a Mistral Model,  Derivative, or Output that is solely for (a) personal, scientific or academic research, and (b) for non-profit and non-commercial purposes, and not directly or indirectly connected to any commercial activities or business operations. For illustration purposes, Research Purposes does not include (1) any usage of the Mistral Model, Derivative or Output by individuals or contractors employed in or engaged by companies in the context of (a) their daily tasks, or (b) any activity (including but not limited to any testing or proof-of-concept) that is intended to generate revenue, nor (2) any Distribution by a commercial entity of the Mistral Model, Derivative or Output whether in return for payment or free of charge, in any medium or form, including but not limited to through a hosted or managed service (e.g. SaaS, cloud instances, etc.), or behind a software layer.\n\"Outputs\": means any content generated by the operation of the Mistral Models or the Derivatives from  a prompt (i.e., text instructions) provided by users. For the avoidance of doubt, Outputs do not include any components of a Mistral Models, such as any fine-tuned versions of the Mistral Models, the weights, or parameters.\n\"You\": means the individual or entity entering into this Agreement with Mistral AI.\n\n*Mistral AI processes your personal data below to provide the model and enforce its license. If you are affiliated with a commercial entity, we may also send you communications about our models. For more information on your rights and data handling, please see our <a href=\"https://mistral.ai/terms/\">privacy policy</a>.*",
+            "extra_gated_fields": {
+                "First Name": "text",
+                "Last Name": "text",
+                "Country": "country",
+                "Affiliation": "text",
+                "Job title": "text",
+                "I understand that I can only use the model, any derivative versions and their outputs for non-commercial research purposes": "checkbox",
+                "I understand that if I am a commercial entity, I am not permitted to use or distribute the model internally or externally, or expose it in my own offerings without a commercial license": "checkbox",
+                "I understand that if I upload the model, or any derivative version, on any platform, I must include the Mistral Research License": "checkbox",
+                "I understand that for commercial use of the model, I can contact Mistral or use the Mistral AI API on la Plateforme or any of our cloud provider partners": "checkbox",
+                "By clicking Submit below I accept the terms of the license and acknowledge that the information I provide will be collected stored processed and shared in accordance with the Mistral Privacy Policy": "checkbox",
+                "geo": "ip_location"
+            },
+            "extra_gated_description": "Mistral AI processes your personal data below to provide the model and enforce its license. If you are affiliated with a commercial entity, we may also send you communications about our models. For more information on your rights and data handling, please see our <a href=\"https://mistral.ai/terms/\">privacy policy</a>.",
+            "extra_gated_button_content": "Submit",
+            "library_name": "vllm"
+        },
+        "siblings": [
+            {
+                "rfilename": ".gitattributes"
+            },
+            {
+                "rfilename": "README.md"
+            },
+            {
+                "rfilename": "SYSTEM_PROMPT.txt"
+            },
+            {
+                "rfilename": "config.json"
+            },
+            {
+                "rfilename": "consolidated-00001-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00002-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00003-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00004-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00005-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00006-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00007-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00008-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00009-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00010-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00011-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00012-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00013-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00014-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00015-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00016-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00017-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00018-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00019-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00020-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00021-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00022-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00023-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00024-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00025-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00026-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00027-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00028-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00029-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00030-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00031-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00032-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00033-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00034-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00035-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00036-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00037-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00038-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00039-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00040-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00041-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00042-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00043-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00044-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00045-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00046-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00047-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00048-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00049-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00050-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated-00051-of-00051.safetensors"
+            },
+            {
+                "rfilename": "consolidated.safetensors.index.json"
+            },
+            {
+                "rfilename": "generation_config.json"
+            },
+            {
+                "rfilename": "model-00001-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00002-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00003-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00004-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00005-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00006-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00007-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00008-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00009-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00010-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00011-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00012-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00013-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00014-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00015-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00016-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00017-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00018-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00019-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00020-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00021-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00022-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00023-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00024-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00025-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00026-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00027-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00028-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00029-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00030-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00031-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00032-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00033-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00034-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00035-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00036-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00037-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00038-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00039-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00040-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00041-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00042-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00043-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00044-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00045-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00046-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00047-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00048-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00049-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00050-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model-00051-of-00051.safetensors"
+            },
+            {
+                "rfilename": "model.safetensors.index.json"
+            },
+            {
+                "rfilename": "params.json"
+            },
+            {
+                "rfilename": "special_tokens_map.json"
+            },
+            {
+                "rfilename": "tokenizer.json"
+            },
+            {
+                "rfilename": "tokenizer.model"
+            },
+            {
+                "rfilename": "tokenizer.model.v7"
+            },
+            {
+                "rfilename": "tokenizer_config.json"
+            }
+        ],
+        "spaces": [],
+        "createdAt": "2024-11-14T20:03:52.000Z",
+        "safetensors": {
+            "parameters": {
+                "BF16": 122610069504
+            },
+            "total": 122610069504
+        }
+    }
+]
