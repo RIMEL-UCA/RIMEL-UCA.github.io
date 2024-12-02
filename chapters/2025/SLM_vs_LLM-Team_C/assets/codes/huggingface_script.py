@@ -5,8 +5,8 @@ import os.path
 
 # Variables
 api_url = "https://huggingface.co/api/models"
-headers = {"Authorization": "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"}
-params = {"limit": 10}
+headers = {"Authorization": ""}
+params = {"limit": 50}
 
 output_file = "huggingface_models.json"
 models = None
@@ -29,7 +29,6 @@ else:
     else:
         print(f"Erreur lors de la requête API : {response.status_code}")
 
-
 i = 0
 for model in models:
     i+=1
@@ -38,39 +37,42 @@ print(f"Nombre de modèles : {i}")
 
 models_datas = []
 
-# Extraction des tags principaux
-data = []
-for model in models:
-    data.append({
-        "name": model.get("modelId"),
-        "type": model.get("pipeline_tag"),
-        "downloads": model.get("downloads", 0),
-        "likes": model.get("likes", 0),
-        "tags": ", ".join(model.get("tags", []))
-    })
-    response = requests.get(
-    "https://huggingface.co/api/models/"+model.get("id"),
-    params={"full":"True"},
-    headers={"Authorization":"Bearer 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"}
-    )
-    models_datas.append(response.json())
+if not (os.path.exists("models_datas.json")):
+    print("Data does not exist")
+    for model in models:
+        response = requests.get(
+        "https://huggingface.co/api/models/"+model.get("id"),
+        params={"full":"True"},
+        headers={"Authorization":"Bearer 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"}
+        )
+        models_datas.append(response.json())
+    # Enregistrement des données dans un fichier JSON
+    with open("models_datas.json", "w", encoding="utf-8") as file:
+        json.dump(models_datas, file, ensure_ascii=False, indent=4)
 
-# Enregistrement des données dans un fichier JSON
-with open("models_datas.json", "w", encoding="utf-8") as file:
-    json.dump(models_datas, file, ensure_ascii=False, indent=4)
+else:
+    print("Data already exists")
+    with open("models_datas.json", "r", encoding="utf-8") as file:
+        models_datas = json.load(file)
 
 # Création d'un DataFrame pour analyse
-df = pd.DataFrame(data)
+gd = pd.DataFrame(models)
+dp = pd.DataFrame(models_datas)
+
+print(models_datas[0])
 
 # Statistiques simples
 print("Types de modèles les plus fréquents :")
-print(df['type'].value_counts())
+print(gd['pipeline_tag'].value_counts())
 
-print("\nModèles les plus téléchargés :")
+""" print("\nModèles les plus téléchargés :")
 print(df.sort_values(by='downloads', ascending=False).head(10))
 
 print("\nTags les plus fréquents :")
 print(pd.Series(", ".join(df['tags']).split(", ")).value_counts().head(10))
+
+print("\nModèles les plus agés :")
+print(df.sort_values(by='createdAt', ascending=True)) """
 
 #
 #import matplotlib.pyplot as plt

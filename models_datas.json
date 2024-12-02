@@ -1,0 +1,1992 @@
+[
+    {
+        "_id": "67473fdfe77182ac96417565",
+        "id": "Qwen/QwQ-32B-Preview",
+        "modelId": "Qwen/QwQ-32B-Preview",
+        "author": "Qwen",
+        "sha": "1032e81cb936c486aae1d33da75b2fbcd5deed4a",
+        "lastModified": "2024-11-29T06:57:37.000Z",
+        "private": false,
+        "disabled": false,
+        "gated": false,
+        "pipeline_tag": "text-generation",
+        "tags": [
+            "transformers",
+            "safetensors",
+            "qwen2",
+            "text-generation",
+            "chat",
+            "conversational",
+            "en",
+            "arxiv:2407.10671",
+            "base_model:Qwen/Qwen2.5-32B-Instruct",
+            "base_model:finetune:Qwen/Qwen2.5-32B-Instruct",
+            "license:apache-2.0",
+            "autotrain_compatible",
+            "text-generation-inference",
+            "endpoints_compatible",
+            "region:us"
+        ],
+        "downloads": 26706,
+        "library_name": "transformers",
+        "widgetData": [
+            {
+                "text": "Hey my name is Julien! How are you?"
+            },
+            {
+                "text": "Hey my name is Thomas! How are you?"
+            },
+            {
+                "text": "Hey my name is Mariama! How are you?"
+            },
+            {
+                "text": "Hey my name is Clara! How are you?"
+            },
+            {
+                "text": "Hey my name is Julien! How are you?"
+            },
+            {
+                "text": "Hi."
+            }
+        ],
+        "likes": 896,
+        "model-index": null,
+        "config": {
+            "architectures": [
+                "Qwen2ForCausalLM"
+            ],
+            "model_type": "qwen2",
+            "tokenizer_config": {
+                "bos_token": null,
+                "chat_template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- messages[0]['content'] }}\n    {%- else %}\n        {{- 'You are a helpful and harmless assistant. You are Qwen developed by Alibaba. You should think step-by-step.' }}\n    {%- endif %}\n    {{- \"\\n\\n# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0]['content'] + '<|im_end|>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>system\\nYou are a helpful and harmless assistant. You are Qwen developed by Alibaba. You should think step-by-step.<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- for message in messages %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) or (message.role == \"assistant\" and not message.tool_calls) %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {{- '<|im_start|>' + message.role }}\n        {%- if message.content %}\n            {{- '\\n' + message.content }}\n        {%- endif %}\n        {%- for tool_call in message.tool_calls %}\n            {%- if tool_call.function is defined %}\n                {%- set tool_call = tool_call.function %}\n            {%- endif %}\n            {{- '\\n<tool_call>\\n{\"name\": \"' }}\n            {{- tool_call.name }}\n            {{- '\", \"arguments\": ' }}\n            {{- tool_call.arguments | tojson }}\n            {{- '}\\n</tool_call>' }}\n        {%- endfor %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if (loop.index0 == 0) or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}\n",
+                "eos_token": "<|im_end|>",
+                "pad_token": "<|endoftext|>",
+                "unk_token": null
+            }
+        },
+        "cardData": {
+            "license": "apache-2.0",
+            "license_link": "https://huggingface.co/Qwen/QwQ-32B-Preview/blob/main/LICENSE",
+            "language": [
+                "en"
+            ],
+            "base_model": "Qwen/Qwen2.5-32B-Instruct",
+            "tags": [
+                "chat"
+            ],
+            "library_name": "transformers"
+        },
+        "transformersInfo": {
+            "auto_model": "AutoModelForCausalLM",
+            "pipeline_tag": "text-generation",
+            "processor": "AutoTokenizer"
+        },
+        "siblings": [
+            {
+                "rfilename": ".gitattributes"
+            },
+            {
+                "rfilename": "LICENSE"
+            },
+            {
+                "rfilename": "README.md"
+            },
+            {
+                "rfilename": "config.json"
+            },
+            {
+                "rfilename": "generation_config.json"
+            },
+            {
+                "rfilename": "merges.txt"
+            },
+            {
+                "rfilename": "model-00001-of-00017.safetensors"
+            },
+            {
+                "rfilename": "model-00002-of-00017.safetensors"
+            },
+            {
+                "rfilename": "model-00003-of-00017.safetensors"
+            },
+            {
+                "rfilename": "model-00004-of-00017.safetensors"
+            },
+            {
+                "rfilename": "model-00005-of-00017.safetensors"
+            },
+            {
+                "rfilename": "model-00006-of-00017.safetensors"
+            },
+            {
+                "rfilename": "model-00007-of-00017.safetensors"
+            },
+            {
+                "rfilename": "model-00008-of-00017.safetensors"
+            },
+            {
+                "rfilename": "model-00009-of-00017.safetensors"
+            },
+            {
+                "rfilename": "model-00010-of-00017.safetensors"
+            },
+            {
+                "rfilename": "model-00011-of-00017.safetensors"
+            },
+            {
+                "rfilename": "model-00012-of-00017.safetensors"
+            },
+            {
+                "rfilename": "model-00013-of-00017.safetensors"
+            },
+            {
+                "rfilename": "model-00014-of-00017.safetensors"
+            },
+            {
+                "rfilename": "model-00015-of-00017.safetensors"
+            },
+            {
+                "rfilename": "model-00016-of-00017.safetensors"
+            },
+            {
+                "rfilename": "model-00017-of-00017.safetensors"
+            },
+            {
+                "rfilename": "model.safetensors.index.json"
+            },
+            {
+                "rfilename": "tokenizer.json"
+            },
+            {
+                "rfilename": "tokenizer_config.json"
+            },
+            {
+                "rfilename": "vocab.json"
+            }
+        ],
+        "spaces": [
+            "akhaliq/anychat",
+            "featherless-ai/try-this-model",
+            "Sg-at-srijan-us-kg/QwQ-32B-Preview",
+            "llamameta/Fix-qwen-QwQ-32B-Preview-improvement",
+            "llamameta/google-gemini-web-search",
+            "Yunkady/Qwen-QwQ-32B-Preview",
+            "Lap1official/API",
+            "yasserrmd/SimplifyPro",
+            "sunbath/Qwen-QwQ-32B-Preview",
+            "llamameta/Achieving-AGI-artificial-general-intelligence",
+            "Stivnejejdjdj/Qwen-QwQ-32B-Preview",
+            "ddf123/QwQ_Test",
+            "ddf123/1",
+            "Lyte/QwQ-32-Preview-GGUF-Demo",
+            "marsroverHG/Qwen-QwQ-32B-Preview",
+            "Arikvillamar11/Qwen-QwQ-32B-Preview",
+            "NISCHAYKR/Qwen-QwQ-32B-Preview",
+            "thw023824/Qwen-QwQ-32B-Preview",
+            "dkisb/Qwen-QwQ-32B-Preview",
+            "jersuxs/Qwen-QwQ-32B-Preview",
+            "AliArshad/BreastCare",
+            "Nymbo/QwQ-32B-Preview-Serverless",
+            "Kaiid/Qwen-QwQ-32B-Preview",
+            "lfttfl/Qwen-QwQ-32B-Preview",
+            "Andresbaraka/Qwen-QwQ-32B-Preview",
+            "ryanzhao/Qwen-QwQ-32B-Preview",
+            "Initairu/Qwen-QwQ-32B-Preview",
+            "AliArshad/BreastCare1",
+            "Yesman8000/Qwen-QwQ-32B-Preview",
+            "varunbilluri/Qwen-QwQ-32B-Preview",
+            "affandes/try-zephyr",
+            "NikoWHV/Qwen-QwQ-32B-Preview",
+            "mrmartian96/Qwen-sysadmin",
+            "mksdev/Qwen-QwQ-32B-Preview",
+            "83y/Qwen-QwQ-32B-Preview",
+            "dannymoor/Qwen-QwQ-32B-Preview",
+            "jabolaso/Qwen-QwQ-32B-Preview",
+            "zhackerneh/Qwen-QwQ-32B-Preview",
+            "Egorshteinat/Qwen-QwQ-32B-Preview",
+            "Reality123b/Qwen-QwQ-32B-Preview",
+            "zoro442367/Qwen-QwQ-32B-Preview",
+            "Lap1official/Xylaria_1.4_Senoa",
+            "iSolver-AI/Qwen-QwQ-32B-Preview",
+            "qamarsidd/Exam-Preparation-Assistant",
+            "lowres/Ayanokoji_Kiyokata",
+            "moizj00/Qwen-QwQ-32B-Preview",
+            "Baianjo/Qwen-QwQ-32B-Preview"
+        ],
+        "createdAt": "2024-11-27T15:50:55.000Z",
+        "safetensors": {
+            "parameters": {
+                "BF16": 32763876352
+            },
+            "total": 32763876352
+        }
+    },
+    {
+        "_id": "6743e2f5b689b48aefab5c43",
+        "id": "Djrango/Qwen2vl-Flux",
+        "modelId": "Djrango/Qwen2vl-Flux",
+        "author": "Djrango",
+        "sha": "1b94efc464f84332b0e6e02b62896345aeccfb93",
+        "lastModified": "2024-11-27T16:50:38.000Z",
+        "private": false,
+        "disabled": false,
+        "gated": false,
+        "pipeline_tag": "text-to-image",
+        "tags": [
+            "diffusers",
+            "safetensors",
+            "flux",
+            "qwen2vl",
+            "stable-diffusion",
+            "text-to-image",
+            "image-to-image",
+            "controlnet",
+            "en",
+            "base_model:Qwen/Qwen2-VL-7B-Instruct",
+            "base_model:adapter:Qwen/Qwen2-VL-7B-Instruct",
+            "license:mit",
+            "region:us"
+        ],
+        "downloads": 0,
+        "library_name": "diffusers",
+        "likes": 312,
+        "model-index": null,
+        "cardData": {
+            "license": "mit",
+            "language": [
+                "en"
+            ],
+            "base_model": [
+                "black-forest-labs/FLUX.1-dev",
+                "Qwen/Qwen2-VL-7B-Instruct"
+            ],
+            "library_name": "diffusers",
+            "tags": [
+                "flux",
+                "qwen2vl",
+                "stable-diffusion",
+                "text-to-image",
+                "image-to-image",
+                "controlnet"
+            ],
+            "pipeline_tag": "text-to-image",
+            "inference": false
+        },
+        "siblings": [
+            {
+                "rfilename": ".gitattributes"
+            },
+            {
+                "rfilename": "README.md"
+            },
+            {
+                "rfilename": "blend_1.png"
+            },
+            {
+                "rfilename": "blend_2.png"
+            },
+            {
+                "rfilename": "blend_3.png"
+            },
+            {
+                "rfilename": "blend_4.png"
+            },
+            {
+                "rfilename": "blend_5.png"
+            },
+            {
+                "rfilename": "blend_6.png"
+            },
+            {
+                "rfilename": "blend_7.png"
+            },
+            {
+                "rfilename": "controlnet/config.json"
+            },
+            {
+                "rfilename": "controlnet/diffusion_pytorch_model.safetensors"
+            },
+            {
+                "rfilename": "flux-architecture.svg"
+            },
+            {
+                "rfilename": "flux/scheduler/scheduler_config.json"
+            },
+            {
+                "rfilename": "flux/text_encoder/config.json"
+            },
+            {
+                "rfilename": "flux/text_encoder/model.safetensors"
+            },
+            {
+                "rfilename": "flux/text_encoder_2/config.json"
+            },
+            {
+                "rfilename": "flux/text_encoder_2/model-00001-of-00002.safetensors"
+            },
+            {
+                "rfilename": "flux/text_encoder_2/model-00002-of-00002.safetensors"
+            },
+            {
+                "rfilename": "flux/text_encoder_2/model.safetensors.index.json"
+            },
+            {
+                "rfilename": "flux/tokenizer/merges.txt"
+            },
+            {
+                "rfilename": "flux/tokenizer/special_tokens_map.json"
+            },
+            {
+                "rfilename": "flux/tokenizer/tokenizer_config.json"
+            },
+            {
+                "rfilename": "flux/tokenizer/vocab.json"
+            },
+            {
+                "rfilename": "flux/tokenizer_2/special_tokens_map.json"
+            },
+            {
+                "rfilename": "flux/tokenizer_2/spiece.model"
+            },
+            {
+                "rfilename": "flux/tokenizer_2/tokenizer.json"
+            },
+            {
+                "rfilename": "flux/tokenizer_2/tokenizer_config.json"
+            },
+            {
+                "rfilename": "flux/transformer/config.json"
+            },
+            {
+                "rfilename": "flux/transformer/diffusion_pytorch_model-00001-of-00003.safetensors"
+            },
+            {
+                "rfilename": "flux/transformer/diffusion_pytorch_model-00002-of-00003.safetensors"
+            },
+            {
+                "rfilename": "flux/transformer/diffusion_pytorch_model-00003-of-00003.safetensors"
+            },
+            {
+                "rfilename": "flux/transformer/diffusion_pytorch_model.safetensors.index.json"
+            },
+            {
+                "rfilename": "flux/vae/config.json"
+            },
+            {
+                "rfilename": "flux/vae/diffusion_pytorch_model.safetensors"
+            },
+            {
+                "rfilename": "griddot_1.png"
+            },
+            {
+                "rfilename": "griddot_2.png"
+            },
+            {
+                "rfilename": "griddot_3.png"
+            },
+            {
+                "rfilename": "griddot_4.png"
+            },
+            {
+                "rfilename": "griddot_5.png"
+            },
+            {
+                "rfilename": "griddot_6.png"
+            },
+            {
+                "rfilename": "griddot_7.png"
+            },
+            {
+                "rfilename": "griddot_8.png"
+            },
+            {
+                "rfilename": "griddot_9.png"
+            },
+            {
+                "rfilename": "landing-1.png"
+            },
+            {
+                "rfilename": "qwen2-vl/chat_template.json"
+            },
+            {
+                "rfilename": "qwen2-vl/config.json"
+            },
+            {
+                "rfilename": "qwen2-vl/connector.pt"
+            },
+            {
+                "rfilename": "qwen2-vl/generation_config.json"
+            },
+            {
+                "rfilename": "qwen2-vl/merges.txt"
+            },
+            {
+                "rfilename": "qwen2-vl/model-00001-of-00004.safetensors"
+            },
+            {
+                "rfilename": "qwen2-vl/model-00002-of-00004.safetensors"
+            },
+            {
+                "rfilename": "qwen2-vl/model-00003-of-00004.safetensors"
+            },
+            {
+                "rfilename": "qwen2-vl/model-00004-of-00004.safetensors"
+            },
+            {
+                "rfilename": "qwen2-vl/model.safetensors.index.json"
+            },
+            {
+                "rfilename": "qwen2-vl/preprocessor_config.json"
+            },
+            {
+                "rfilename": "qwen2-vl/t5_embedder.pt"
+            },
+            {
+                "rfilename": "qwen2-vl/tokenizer.json"
+            },
+            {
+                "rfilename": "qwen2-vl/tokenizer_config.json"
+            },
+            {
+                "rfilename": "qwen2-vl/vocab.json"
+            },
+            {
+                "rfilename": "textblend_1.png"
+            },
+            {
+                "rfilename": "textblend_2.png"
+            },
+            {
+                "rfilename": "textblend_3.png"
+            },
+            {
+                "rfilename": "textblend_4.png"
+            },
+            {
+                "rfilename": "textblend_5.png"
+            },
+            {
+                "rfilename": "textblend_6.png"
+            },
+            {
+                "rfilename": "textblend_7.png"
+            },
+            {
+                "rfilename": "textblend_8.png"
+            },
+            {
+                "rfilename": "textblend_9.png"
+            },
+            {
+                "rfilename": "variation_1.png"
+            },
+            {
+                "rfilename": "variation_2.png"
+            },
+            {
+                "rfilename": "variation_3.png"
+            },
+            {
+                "rfilename": "variation_4.png"
+            },
+            {
+                "rfilename": "variation_5.png"
+            }
+        ],
+        "spaces": [
+            "Djrango/qwen2vl-flux-mini-demo",
+            "jkyleowens/Djrango-Qwen2vl-Flux",
+            "Sonfire/Djranzzgo-Qwenss2vl-Flux",
+            "LI302573596/Djrango-Qwen2vl-Flux",
+            "hihmhee/Djrango-Qwen2vl-Flux",
+            "Adamhyx/Djrango-Qwen2vl-Flux",
+            "suzuki002/Djrango-Qwen2vl-Flux",
+            "John6666/qwen2vl-flux-zero",
+            "nknkZ/Djrango-Qwen2vl-Flux",
+            "Sonfire/Djrango-Qwen2vl-Flux",
+            "Sonfire/Djrango-Qwenss2vl-Flux",
+            "cocktailpeanut/qwen2vl-flux-mini-demo",
+            "svjack/qwen2vl-flux-mini-demo",
+            "JonusNattapong/ChatBot_Office"
+        ],
+        "createdAt": "2024-11-25T02:37:41.000Z"
+    },
+    {
+        "_id": "673410e818caf8e87780fd17",
+        "id": "AIDC-AI/Marco-o1",
+        "modelId": "AIDC-AI/Marco-o1",
+        "author": "AIDC-AI",
+        "sha": "5e4deeeb286b7a2e35a6d16989e64df860f7f4e5",
+        "lastModified": "2024-11-23T10:40:27.000Z",
+        "private": false,
+        "disabled": false,
+        "gated": false,
+        "pipeline_tag": "text-generation",
+        "tags": [
+            "transformers",
+            "safetensors",
+            "qwen2",
+            "text-generation",
+            "conversational",
+            "arxiv:2411.14405",
+            "license:apache-2.0",
+            "autotrain_compatible",
+            "text-generation-inference",
+            "region:us"
+        ],
+        "downloads": 8327,
+        "library_name": "transformers",
+        "widgetData": [
+            {
+                "text": "Hey my name is Julien! How are you?"
+            },
+            {
+                "text": "Hey my name is Thomas! How are you?"
+            },
+            {
+                "text": "Hey my name is Mariama! How are you?"
+            },
+            {
+                "text": "Hey my name is Clara! How are you?"
+            },
+            {
+                "text": "Hey my name is Julien! How are you?"
+            },
+            {
+                "text": "Hi."
+            }
+        ],
+        "likes": 586,
+        "model-index": null,
+        "config": {
+            "architectures": [
+                "Qwen2ForCausalLM"
+            ],
+            "model_type": "qwen2",
+            "tokenizer_config": {
+                "bos_token": null,
+                "chat_template": "{% for message in messages %}{% if loop.first and messages[0]['role'] != 'system' %}{{ '<|im_start|>system\n\n你是一个经过良好训练的AI助手，你的名字是Marco-o1.由阿里国际数字商业集团的AI Business创造.\n        \n## 重要！！！！！\n当你回答问题时，你的思考应该在<Thought>内完成，<Output>内输出你的结果。\n<Thought>应该尽可能是英文，但是有2个特例，一个是对原文中的引用，另一个是是数学应该使用markdown格式，<Output>内的输出需要遵循用户输入的语言。\n        <|im_end|>\n' }}{% endif %}{{'<|im_start|>' + message['role'] + '\n' + message['content'] + '<|im_end|>' + '\n'}}{% endfor %}{% if add_generation_prompt %}{{ '<|im_start|>assistant\n' }}{% endif %}",
+                "eos_token": "<|im_end|>",
+                "pad_token": "<|endoftext|>",
+                "unk_token": null
+            }
+        },
+        "cardData": {
+            "license": "apache-2.0",
+            "library_name": "transformers",
+            "inference": false
+        },
+        "transformersInfo": {
+            "auto_model": "AutoModelForCausalLM",
+            "pipeline_tag": "text-generation",
+            "processor": "AutoTokenizer"
+        },
+        "siblings": [
+            {
+                "rfilename": ".gitattributes"
+            },
+            {
+                "rfilename": "LICENSE"
+            },
+            {
+                "rfilename": "NOTICE"
+            },
+            {
+                "rfilename": "README.md"
+            },
+            {
+                "rfilename": "assets/img.png"
+            },
+            {
+                "rfilename": "assets/intro_2.jpg"
+            },
+            {
+                "rfilename": "assets/logo.png"
+            },
+            {
+                "rfilename": "assets/results.jpg"
+            },
+            {
+                "rfilename": "assets/translation.jpg"
+            },
+            {
+                "rfilename": "config.json"
+            },
+            {
+                "rfilename": "generation_config.json"
+            },
+            {
+                "rfilename": "merges.txt"
+            },
+            {
+                "rfilename": "model-00001-of-00004.safetensors"
+            },
+            {
+                "rfilename": "model-00002-of-00004.safetensors"
+            },
+            {
+                "rfilename": "model-00003-of-00004.safetensors"
+            },
+            {
+                "rfilename": "model-00004-of-00004.safetensors"
+            },
+            {
+                "rfilename": "model.safetensors.index.json"
+            },
+            {
+                "rfilename": "tokenizer.json"
+            },
+            {
+                "rfilename": "tokenizer_config.json"
+            },
+            {
+                "rfilename": "vocab.json"
+            }
+        ],
+        "spaces": [
+            "akhaliq/anychat",
+            "pyqjw/AIDC-AI-Marco-o1",
+            "llamameta/google-gemini-web-search",
+            "qbitmaze/AIDC-AI-Marco-o1",
+            "MakiAi/Gradio-LLM-demo",
+            "dwnmf/AIDC-AI-Marco-o1",
+            "Svngoku/Marco-o1-Q4",
+            "Locon213/Marco-O1",
+            "agonic/AIDC-AI-Marco-o1",
+            "Rooni/AIDC-AI-Marco-o1",
+            "loyal1/AIDC-AI-Marco-o1",
+            "fratquintero/AIDC-AI-Marco-o1",
+            "TaxThinker123/AIDC-AI-Marco-o1",
+            "aaditkamat/Marco-o1",
+            "nileshhanotia/Smol"
+        ],
+        "createdAt": "2024-11-13T02:37:28.000Z",
+        "safetensors": {
+            "parameters": {
+                "BF16": 7615616512
+            },
+            "total": 7615616512
+        }
+    },
+    {
+        "_id": "672379b045bf745cb0f1a79a",
+        "id": "Lightricks/LTX-Video",
+        "modelId": "Lightricks/LTX-Video",
+        "author": "Lightricks",
+        "sha": "a5ab70cf0b89a0b90dfafe3556c24f1b4767bdc8",
+        "lastModified": "2024-11-23T10:27:40.000Z",
+        "private": false,
+        "disabled": false,
+        "gated": false,
+        "pipeline_tag": "image-to-video",
+        "tags": [
+            "diffusers",
+            "safetensors",
+            "ltx-video",
+            "text-to-video",
+            "image-to-video",
+            "en",
+            "license:other",
+            "region:us"
+        ],
+        "downloads": 30472,
+        "library_name": "diffusers",
+        "likes": 536,
+        "model-index": null,
+        "cardData": {
+            "tags": [
+                "ltx-video",
+                "text-to-video",
+                "image-to-video"
+            ],
+            "pinned": true,
+            "language": [
+                "en"
+            ],
+            "license": "other"
+        },
+        "siblings": [
+            {
+                "rfilename": ".gitattributes"
+            },
+            {
+                "rfilename": "License.txt"
+            },
+            {
+                "rfilename": "README.md"
+            },
+            {
+                "rfilename": "ltx-video-2b-v0.9.safetensors"
+            },
+            {
+                "rfilename": "media/ltx-video_example_00001.gif"
+            },
+            {
+                "rfilename": "media/ltx-video_example_00002.gif"
+            },
+            {
+                "rfilename": "media/ltx-video_example_00003.gif"
+            },
+            {
+                "rfilename": "media/ltx-video_example_00004.gif"
+            },
+            {
+                "rfilename": "media/ltx-video_example_00005.gif"
+            },
+            {
+                "rfilename": "media/ltx-video_example_00006.gif"
+            },
+            {
+                "rfilename": "media/ltx-video_example_00007.gif"
+            },
+            {
+                "rfilename": "media/ltx-video_example_00008.gif"
+            },
+            {
+                "rfilename": "media/ltx-video_example_00009.gif"
+            },
+            {
+                "rfilename": "media/ltx-video_example_00010.gif"
+            },
+            {
+                "rfilename": "media/ltx-video_example_00011.gif"
+            },
+            {
+                "rfilename": "media/ltx-video_example_00012.gif"
+            },
+            {
+                "rfilename": "media/ltx-video_example_00013.gif"
+            },
+            {
+                "rfilename": "media/ltx-video_example_00014.gif"
+            },
+            {
+                "rfilename": "media/ltx-video_example_00015.gif"
+            },
+            {
+                "rfilename": "media/ltx-video_example_00016.gif"
+            },
+            {
+                "rfilename": "media/trailer.gif"
+            },
+            {
+                "rfilename": "scheduler/scheduler_config.json"
+            },
+            {
+                "rfilename": "unet/config.json"
+            },
+            {
+                "rfilename": "unet/unet_diffusion_pytorch_model.safetensors"
+            },
+            {
+                "rfilename": "vae/config.json"
+            },
+            {
+                "rfilename": "vae/vae_diffusion_pytorch_model.safetensors"
+            }
+        ],
+        "spaces": [
+            "PR-Puppets/PR-Puppet-Sora",
+            "Lightricks/LTX-Video-Playground",
+            "TIGER-Lab/GenAI-Arena",
+            "ninjawick/PR-Puppet-Sora-2",
+            "cocktailpeanut/LTX-Video-Playground",
+            "svjack/LTX-Video-Playground",
+            "ford442/LTX-Video",
+            "emilalvaro/LTX-Video-Playground",
+            "jbilcke-hf/ai-tube-model-ltxv-1",
+            "NativeAngels/LTX-Video-Playground",
+            "Swaqgame99/LTX-Video-Playground",
+            "jbilcke-hf/ai-tube-model-ltxv-2",
+            "ylues/PR-Puppet-Sora",
+            "jbilcke-hf/ai-tube-model-ltxv-3",
+            "lilcheaty/sora_test",
+            "Konst2021/PR-Puppet-Sora",
+            "alexlevy0/PR-Puppet-Sora",
+            "k11112/LTX-Video-Playground",
+            "jbilcke-hf/ai-tube-model-ltxv-4",
+            "Masterdqqq/PR-Puppet-Sora",
+            "AashishNKumar/proj11",
+            "M4xjunior/LTX-Video-Playground"
+        ],
+        "createdAt": "2024-10-31T12:36:00.000Z"
+    },
+    {
+        "_id": "6742de849be44d083eb8533b",
+        "id": "OuteAI/OuteTTS-0.2-500M",
+        "modelId": "OuteAI/OuteTTS-0.2-500M",
+        "author": "OuteAI",
+        "sha": "b32623a273d82e4f256f9c318a95077433f6e093",
+        "lastModified": "2024-12-02T13:23:21.000Z",
+        "private": false,
+        "disabled": false,
+        "gated": false,
+        "pipeline_tag": "text-to-speech",
+        "tags": [
+            "safetensors",
+            "qwen2",
+            "text-to-speech",
+            "en",
+            "zh",
+            "ja",
+            "ko",
+            "dataset:facebook/multilingual_librispeech",
+            "dataset:parler-tts/libritts_r_filtered",
+            "dataset:amphion/Emilia-Dataset",
+            "dataset:parler-tts/mls_eng",
+            "license:cc-by-nc-4.0",
+            "region:us"
+        ],
+        "downloads": 9580,
+        "likes": 210,
+        "model-index": null,
+        "config": {
+            "architectures": [
+                "Qwen2ForCausalLM"
+            ],
+            "model_type": "qwen2",
+            "tokenizer_config": {
+                "bos_token": null,
+                "eos_token": "<|im_end|>",
+                "pad_token": "<|endoftext|>",
+                "unk_token": null
+            }
+        },
+        "cardData": {
+            "license": "cc-by-nc-4.0",
+            "datasets": [
+                "facebook/multilingual_librispeech",
+                "parler-tts/libritts_r_filtered",
+                "amphion/Emilia-Dataset",
+                "parler-tts/mls_eng"
+            ],
+            "language": [
+                "en",
+                "zh",
+                "ja",
+                "ko"
+            ],
+            "pipeline_tag": "text-to-speech"
+        },
+        "siblings": [
+            {
+                "rfilename": ".gitattributes"
+            },
+            {
+                "rfilename": "README.md"
+            },
+            {
+                "rfilename": "added_tokens.json"
+            },
+            {
+                "rfilename": "config.json"
+            },
+            {
+                "rfilename": "generation_config.json"
+            },
+            {
+                "rfilename": "merges.txt"
+            },
+            {
+                "rfilename": "model.safetensors"
+            },
+            {
+                "rfilename": "special_tokens_map.json"
+            },
+            {
+                "rfilename": "tokenizer.json"
+            },
+            {
+                "rfilename": "tokenizer_config.json"
+            },
+            {
+                "rfilename": "vocab.json"
+            }
+        ],
+        "spaces": [
+            "OuteAI/OuteTTS-0.2-500M-Demo",
+            "dibend/OuteTTS-0.2-500M-Demo",
+            "fullstuckdev/OuteTTS-0.2-500M-Demo",
+            "ameerazam08/OuteTTS-0.2-500M-Demo",
+            "duggal1/OuteAI-OuteTTS-0.2-500M",
+            "Nymbo/OuteTTS-0.2-500M-Demo",
+            "tav2tav/OuteTTS-demo2",
+            "Ros102/OuteAI-OuteTTS-0.2-500M",
+            "byoung66609/OuteAI-OuteTTS-0.2-500M"
+        ],
+        "createdAt": "2024-11-24T08:06:28.000Z",
+        "safetensors": {
+            "parameters": {
+                "BF16": 499193728
+            },
+            "total": 499193728
+        }
+    },
+    {
+        "_id": "673b6ff9e17a2c7a97acf9a2",
+        "id": "HuggingFaceTB/SmolVLM-Instruct",
+        "modelId": "HuggingFaceTB/SmolVLM-Instruct",
+        "author": "HuggingFaceTB",
+        "sha": "68141df531cc7855e345497f18ce1bb9b52a5d55",
+        "lastModified": "2024-12-01T23:19:43.000Z",
+        "private": false,
+        "disabled": false,
+        "gated": false,
+        "pipeline_tag": "image-text-to-text",
+        "tags": [
+            "transformers",
+            "onnx",
+            "safetensors",
+            "idefics3",
+            "image-text-to-text",
+            "conversational",
+            "en",
+            "dataset:HuggingFaceM4/the_cauldron",
+            "dataset:HuggingFaceM4/Docmatix",
+            "base_model:HuggingFaceTB/SmolLM2-1.7B-Instruct",
+            "base_model:quantized:HuggingFaceTB/SmolLM2-1.7B-Instruct",
+            "license:apache-2.0",
+            "endpoints_compatible",
+            "region:us"
+        ],
+        "downloads": 18931,
+        "library_name": "transformers",
+        "widgetData": [
+            {
+                "text": "Hey my name is Julien! How are you?"
+            },
+            {
+                "text": "Hey my name is Thomas! How are you?"
+            },
+            {
+                "text": "Hey my name is Mariama! How are you?"
+            },
+            {
+                "text": "Hey my name is Clara! How are you?"
+            },
+            {
+                "text": "Hey my name is Julien! How are you?"
+            },
+            {
+                "text": "Hi."
+            }
+        ],
+        "likes": 193,
+        "model-index": null,
+        "config": {
+            "architectures": [
+                "Idefics3ForConditionalGeneration"
+            ],
+            "model_type": "idefics3",
+            "processor_config": {
+                "chat_template": "<|im_start|>{% for message in messages %}{{message['role'] | capitalize}}{% if message['content'][0]['type'] == 'image' %}{{':'}}{% else %}{{': '}}{% endif %}{% for line in message['content'] %}{% if line['type'] == 'text' %}{{line['text']}}{% elif line['type'] == 'image' %}{{ '<image>' }}{% endif %}{% endfor %}<end_of_utterance>\n{% endfor %}{% if add_generation_prompt %}{{ 'Assistant:' }}{% endif %}"
+            },
+            "tokenizer_config": {
+                "bos_token": "<|im_start|>",
+                "eos_token": "<end_of_utterance>",
+                "pad_token": "<|im_end|>",
+                "chat_template": "<|im_start|>{% for message in messages %}{{message['role'] | capitalize}}{% if message['content'][0]['type'] == 'image' %}{{':'}}{% else %}{{': '}}{% endif %}{% for line in message['content'] %}{% if line['type'] == 'text' %}{{line['text']}}{% elif line['type'] == 'image' %}{{ '<image>' }}{% endif %}{% endfor %}<end_of_utterance>\n{% endfor %}{% if add_generation_prompt %}{{ 'Assistant:' }}{% endif %}",
+                "unk_token": "<|endoftext|>"
+            }
+        },
+        "cardData": {
+            "library_name": "transformers",
+            "license": "apache-2.0",
+            "datasets": [
+                "HuggingFaceM4/the_cauldron",
+                "HuggingFaceM4/Docmatix"
+            ],
+            "pipeline_tag": "image-text-to-text",
+            "language": [
+                "en"
+            ],
+            "base_model": [
+                "HuggingFaceTB/SmolLM2-1.7B-Instruct",
+                "google/siglip-so400m-patch14-384"
+            ]
+        },
+        "transformersInfo": {
+            "auto_model": "AutoModelForImageTextToText",
+            "pipeline_tag": "image-text-to-text",
+            "processor": "AutoProcessor"
+        },
+        "siblings": [
+            {
+                "rfilename": ".gitattributes"
+            },
+            {
+                "rfilename": "README.md"
+            },
+            {
+                "rfilename": "SmolVLM.png"
+            },
+            {
+                "rfilename": "added_tokens.json"
+            },
+            {
+                "rfilename": "chat_template.json"
+            },
+            {
+                "rfilename": "config.json"
+            },
+            {
+                "rfilename": "generation_config.json"
+            },
+            {
+                "rfilename": "merges.txt"
+            },
+            {
+                "rfilename": "mixture_the_cauldron.png"
+            },
+            {
+                "rfilename": "model.safetensors"
+            },
+            {
+                "rfilename": "onnx/decoder_model_merged.onnx"
+            },
+            {
+                "rfilename": "onnx/decoder_model_merged.onnx_data"
+            },
+            {
+                "rfilename": "onnx/decoder_model_merged_bnb4.onnx"
+            },
+            {
+                "rfilename": "onnx/decoder_model_merged_fp16.onnx"
+            },
+            {
+                "rfilename": "onnx/decoder_model_merged_fp16.onnx_data"
+            },
+            {
+                "rfilename": "onnx/decoder_model_merged_int8.onnx"
+            },
+            {
+                "rfilename": "onnx/decoder_model_merged_q4.onnx"
+            },
+            {
+                "rfilename": "onnx/decoder_model_merged_quantized.onnx"
+            },
+            {
+                "rfilename": "onnx/decoder_model_merged_uint8.onnx"
+            },
+            {
+                "rfilename": "onnx/embed_tokens.onnx"
+            },
+            {
+                "rfilename": "onnx/embed_tokens_bnb4.onnx"
+            },
+            {
+                "rfilename": "onnx/embed_tokens_fp16.onnx"
+            },
+            {
+                "rfilename": "onnx/embed_tokens_int8.onnx"
+            },
+            {
+                "rfilename": "onnx/embed_tokens_q4.onnx"
+            },
+            {
+                "rfilename": "onnx/embed_tokens_q4f16.onnx"
+            },
+            {
+                "rfilename": "onnx/embed_tokens_quantized.onnx"
+            },
+            {
+                "rfilename": "onnx/embed_tokens_uint8.onnx"
+            },
+            {
+                "rfilename": "onnx/vision_encoder.onnx"
+            },
+            {
+                "rfilename": "onnx/vision_encoder_bnb4.onnx"
+            },
+            {
+                "rfilename": "onnx/vision_encoder_fp16.onnx"
+            },
+            {
+                "rfilename": "onnx/vision_encoder_int8.onnx"
+            },
+            {
+                "rfilename": "onnx/vision_encoder_q4.onnx"
+            },
+            {
+                "rfilename": "onnx/vision_encoder_q4f16.onnx"
+            },
+            {
+                "rfilename": "onnx/vision_encoder_quantized.onnx"
+            },
+            {
+                "rfilename": "onnx/vision_encoder_uint8.onnx"
+            },
+            {
+                "rfilename": "preprocessor_config.json"
+            },
+            {
+                "rfilename": "processor_config.json"
+            },
+            {
+                "rfilename": "smolvlm-data.pdf"
+            },
+            {
+                "rfilename": "special_tokens_map.json"
+            },
+            {
+                "rfilename": "tokenizer.json"
+            },
+            {
+                "rfilename": "tokenizer_config.json"
+            },
+            {
+                "rfilename": "vocab.json"
+            }
+        ],
+        "spaces": [
+            "HuggingFaceTB/SmolVLM",
+            "akhaliq/SmolVLM-Instruct",
+            "cbensimon/SmolVLM",
+            "Nymbo/SmolVLM",
+            "Akbartus/SmolVLM_CPU",
+            "md-vasim/SmolVLM",
+            "NeuralLobes/Thinsection_AI_Interpreter",
+            "gizemsarsinlar/SmolVLM-Artwork-Analysis"
+        ],
+        "createdAt": "2024-11-18T16:48:57.000Z",
+        "safetensors": {
+            "parameters": {
+                "BF16": 2246272880
+            },
+            "total": 2246272880
+        }
+    },
+    {
+        "_id": "66aaa908fc35e079a941470d",
+        "id": "black-forest-labs/FLUX.1-dev",
+        "modelId": "black-forest-labs/FLUX.1-dev",
+        "author": "black-forest-labs",
+        "sha": "0ef5fff789c832c5c7f4e127f94c8b54bbcced44",
+        "lastModified": "2024-08-16T14:38:19.000Z",
+        "private": false,
+        "disabled": false,
+        "gated": "auto",
+        "pipeline_tag": "text-to-image",
+        "tags": [
+            "diffusers",
+            "safetensors",
+            "text-to-image",
+            "image-generation",
+            "flux",
+            "en",
+            "license:other",
+            "endpoints_compatible",
+            "diffusers:FluxPipeline",
+            "region:us"
+        ],
+        "downloads": 1365765,
+        "library_name": "diffusers",
+        "likes": 6855,
+        "model-index": null,
+        "config": {
+            "diffusers": {
+                "_class_name": "FluxPipeline"
+            }
+        },
+        "cardData": {
+            "language": [
+                "en"
+            ],
+            "license": "other",
+            "license_name": "flux-1-dev-non-commercial-license",
+            "license_link": "LICENSE.md",
+            "extra_gated_prompt": "By clicking \"Agree\", you agree to the [FluxDev Non-Commercial License Agreement](https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/LICENSE.md) and acknowledge the [Acceptable Use Policy](https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/POLICY.md).",
+            "tags": [
+                "text-to-image",
+                "image-generation",
+                "flux"
+            ]
+        },
+        "siblings": [
+            {
+                "rfilename": ".gitattributes"
+            },
+            {
+                "rfilename": "LICENSE.md"
+            },
+            {
+                "rfilename": "README.md"
+            },
+            {
+                "rfilename": "ae.safetensors"
+            },
+            {
+                "rfilename": "dev_grid.jpg"
+            },
+            {
+                "rfilename": "flux1-dev.safetensors"
+            },
+            {
+                "rfilename": "model_index.json"
+            },
+            {
+                "rfilename": "scheduler/scheduler_config.json"
+            },
+            {
+                "rfilename": "text_encoder/config.json"
+            },
+            {
+                "rfilename": "text_encoder/model.safetensors"
+            },
+            {
+                "rfilename": "text_encoder_2/config.json"
+            },
+            {
+                "rfilename": "text_encoder_2/model-00001-of-00002.safetensors"
+            },
+            {
+                "rfilename": "text_encoder_2/model-00002-of-00002.safetensors"
+            },
+            {
+                "rfilename": "text_encoder_2/model.safetensors.index.json"
+            },
+            {
+                "rfilename": "tokenizer/merges.txt"
+            },
+            {
+                "rfilename": "tokenizer/special_tokens_map.json"
+            },
+            {
+                "rfilename": "tokenizer/tokenizer_config.json"
+            },
+            {
+                "rfilename": "tokenizer/vocab.json"
+            },
+            {
+                "rfilename": "tokenizer_2/special_tokens_map.json"
+            },
+            {
+                "rfilename": "tokenizer_2/spiece.model"
+            },
+            {
+                "rfilename": "tokenizer_2/tokenizer.json"
+            },
+            {
+                "rfilename": "tokenizer_2/tokenizer_config.json"
+            },
+            {
+                "rfilename": "transformer/config.json"
+            },
+            {
+                "rfilename": "transformer/diffusion_pytorch_model-00001-of-00003.safetensors"
+            },
+            {
+                "rfilename": "transformer/diffusion_pytorch_model-00002-of-00003.safetensors"
+            },
+            {
+                "rfilename": "transformer/diffusion_pytorch_model-00003-of-00003.safetensors"
+            },
+            {
+                "rfilename": "transformer/diffusion_pytorch_model.safetensors.index.json"
+            },
+            {
+                "rfilename": "vae/config.json"
+            },
+            {
+                "rfilename": "vae/diffusion_pytorch_model.safetensors"
+            }
+        ],
+        "spaces": [
+            "black-forest-labs/FLUX.1-dev",
+            "yanze/PuLID-FLUX",
+            "multimodalart/flux-lora-the-explorer",
+            "DamarJati/FLUX.1-RealismLora",
+            "jasperai/Flux.1-dev-Controlnet-Upscaler",
+            "ByteDance/Hyper-FLUX-8Steps-LoRA",
+            "multimodalart/FLUX.1-merged",
+            "multimodalart/flux-lora-lab",
+            "prithivMLmods/FLUX-LoRA-DLC",
+            "multimodalart/logo-in-context",
+            "DamarJati/FLUX.1-DEV-Canny",
+            "autotrain-projects/train-flux-lora-ease",
+            "dn6/FLUX-GIFs",
+            "openfree/mixgen3",
+            "ginipick/ofai-flxnf4",
+            "multimodalart/flux-outpainting",
+            "multimodalart/flux-cfg",
+            "prithivMLmods/FLUX-REALISM",
+            "gokaygokay/FLUX.1-dev-with-Captioner",
+            "Shakker-Labs/FLUX.1-dev-ControlNet-Union-Pro",
+            "InstantX/flux-IP-adapter",
+            "ameerazam08/FLUX.1-dev-Inpainting-Model-Beta-GPU",
+            "John6666/DiffuseCraftMod",
+            "NeurixYUFI/imggen",
+            "r3gm/DiffuseCraft",
+            "Nymbo/Compare-6",
+            "openfree/ginigen-gallery",
+            "John6666/votepurchase-multiple-model",
+            "Nymbo/FLUX.1-Dev-Serverless",
+            "multimodalart/civitai-to-hf",
+            "nyanko7/flux1-dev-nf4",
+            "vilarin/flux-labs",
+            "Nick088/FLUX.1-dev",
+            "Shakker-Labs/FLUX-LoRA-Gallery",
+            "InstantX/SD35-IP-Adapter",
+            "vilarin/flux-lab-light",
+            "guardiancc/flux-advanced-explorer",
+            "vilarin/lumiere",
+            "MohamedRashad/Character-Generator",
+            "black-forest-labs/FLUX.1-Redux-dev",
+            "black-forest-labs/FLUX.1-Fill-dev",
+            "FilipeR/FLUX.1-dev-UI",
+            "ovi054/FLUX.Dev-LORA-Serverless",
+            "rafaaa2105/flux-ghibsky-illustration",
+            "doevent/FLUX.1-merged",
+            "multimodalart/low-step-flux-comparison",
+            "black-forest-labs/FLUX.1-Depth-dev",
+            "Nymbo/flux-lora-the-explorer",
+            "prithivMLmods/Midjourney-Flux",
+            "multimodalart/flux-fill-outpaint",
+            "xiaozaa/catvton-flux-try-on",
+            "Nymbo/Flux.1-dev-Controlnet-Upscaler",
+            "alsaeth/high-quality-imgs-FLUX",
+            "K00B404/FluxCapacitor",
+            "NJU/RAG-Diffusion",
+            "black-forest-labs/FLUX.1-canny-dev",
+            "nroggendorff/flux-lora-tester",
+            "wjs0725/RF-Solver-Edit",
+            "DazDin/DiffFlu2",
+            "MohamedRashad/Flux-Redux",
+            "aexyb/Diffusion",
+            "special-access/black-forest-labs-FLUX1.1-dev",
+            "KwabsHug/GameConfigIdea",
+            "Deddy/PuLid-FLX-GPU",
+            "sofianhw/PuLID-FLUX",
+            "ameerazam08/FLUX.1-dev-De-Distill",
+            "JournalistsonHF/text-to-image-bias",
+            "killwithabass/FLUX-1-DEV_LORA-ANDROFLUX",
+            "RED-AIGC/FLUX-TDD-BETA",
+            "Zhofang/FLUX.1-Dev-Serverless-darn",
+            "Nymbo/Serverless-ImgGen-Hub",
+            "NotASI/FLUX.1-dev",
+            "modelscope/DiffSynth-Painter",
+            "joselobenitezg/obtu-ai",
+            "guardiancc/flux-ip-face-adapter",
+            "alvarobartt/FLUX.1-Studio-Ghibli-LoRA",
+            "guardiancc/flux-gif-animations-2",
+            "CultriX/FLUX.1-dev",
+            "Muhammadreza/Mann-E_Flux",
+            "thesab/outfit-generator",
+            "stazizov/XFluxSpace",
+            "CultriX/flux-lora-the-explorer",
+            "TencentARC/Flux-Mini",
+            "Nymbo/flux-lab-light",
+            "colbyford/flux2",
+            "ovi054/FLUX-GIFs-LoRA",
+            "Deddy/FLUX-Wallpaper-HD-Maker",
+            "t-montes/Flux.1-dev-Controlnet-Upscaler",
+            "Prog420ress/black-forest-labs-FLUX.1-dev",
+            "John6666/flux-to-diffusers-test",
+            "K00B404/FLUX.1-Dev-Serverless-darn",
+            "vincenthugging/flux-lora-myself",
+            "jiuface/flux-controlnet-inpainting",
+            "mantrakp/aai",
+            "fantaxy/flx-pulid",
+            "Nymbo/FLUX-LoRA-DLC",
+            "nroggendorff/flux",
+            "jiuface/flux-dev-multi-lora",
+            "PeepDaSlan9/B2BMGMT_flux-lab-light",
+            "yasserrmd/MagicDoodles"
+        ],
+        "createdAt": "2024-07-31T21:13:44.000Z"
+    },
+    {
+        "_id": "66d9d736d04c920ebfcb6202",
+        "id": "ginipick/flux-lora-eric-cat",
+        "modelId": "ginipick/flux-lora-eric-cat",
+        "author": "ginipick",
+        "sha": "c82cfae7839396f698cbb6c9937af3c447b90f62",
+        "lastModified": "2024-12-02T03:16:25.000Z",
+        "private": false,
+        "disabled": false,
+        "gated": false,
+        "pipeline_tag": "text-to-image",
+        "tags": [
+            "diffusers",
+            "autotrain",
+            "spacerunner",
+            "text-to-image",
+            "flux",
+            "lora",
+            "template:sd-lora",
+            "base_model:black-forest-labs/FLUX.1-dev",
+            "base_model:adapter:black-forest-labs/FLUX.1-dev",
+            "license:other",
+            "region:us"
+        ],
+        "downloads": 2688,
+        "library_name": "diffusers",
+        "widgetData": [
+            {
+                "text": "eric cat style, sunglassed with cat",
+                "output": {
+                    "url": "https://huggingface.co/ginipick/flux-lora-eric-cat/resolve/main/samples/b6a0866c-24e8-4fe3-a830-be14f26915f6.jpg"
+                }
+            },
+            {
+                "text": "eric cat style, cooking cat",
+                "output": {
+                    "url": "https://huggingface.co/ginipick/flux-lora-eric-cat/resolve/main/samples/c3.png"
+                }
+            },
+            {
+                "text": "eric cat style, cute cat",
+                "output": {
+                    "url": "https://huggingface.co/ginipick/flux-lora-eric-cat/resolve/main/samples/c4.png"
+                }
+            },
+            {
+                "text": "eric cat style, cute cat",
+                "output": {
+                    "url": "https://huggingface.co/ginipick/flux-lora-eric-cat/resolve/main/samples/c5.png"
+                }
+            },
+            {
+                "text": "eric cat style, cute cat",
+                "output": {
+                    "url": "https://huggingface.co/ginipick/flux-lora-eric-cat/resolve/main/samples/c6.png"
+                }
+            },
+            {
+                "text": "eric cat style, cute cat",
+                "output": {
+                    "url": "https://huggingface.co/ginipick/flux-lora-eric-cat/resolve/main/samples/c7.png"
+                }
+            }
+        ],
+        "likes": 162,
+        "model-index": null,
+        "cardData": {
+            "base_model": "black-forest-labs/FLUX.1-dev",
+            "license": "other",
+            "license_name": "flux-1-dev-non-commercial-license",
+            "tags": [
+                "autotrain",
+                "spacerunner",
+                "text-to-image",
+                "flux",
+                "lora",
+                "diffusers",
+                "template:sd-lora"
+            ],
+            "widget": [
+                {
+                    "text": "eric cat style, sunglassed with cat",
+                    "output": {
+                        "url": "https://huggingface.co/ginipick/flux-lora-eric-cat/resolve/main/samples/b6a0866c-24e8-4fe3-a830-be14f26915f6.jpg"
+                    }
+                },
+                {
+                    "text": "eric cat style, cooking cat",
+                    "output": {
+                        "url": "https://huggingface.co/ginipick/flux-lora-eric-cat/resolve/main/samples/c3.png"
+                    }
+                },
+                {
+                    "text": "eric cat style, cute cat",
+                    "output": {
+                        "url": "https://huggingface.co/ginipick/flux-lora-eric-cat/resolve/main/samples/c4.png"
+                    }
+                },
+                {
+                    "text": "eric cat style, cute cat",
+                    "output": {
+                        "url": "https://huggingface.co/ginipick/flux-lora-eric-cat/resolve/main/samples/c5.png"
+                    }
+                },
+                {
+                    "text": "eric cat style, cute cat",
+                    "output": {
+                        "url": "https://huggingface.co/ginipick/flux-lora-eric-cat/resolve/main/samples/c6.png"
+                    }
+                },
+                {
+                    "text": "eric cat style, cute cat",
+                    "output": {
+                        "url": "https://huggingface.co/ginipick/flux-lora-eric-cat/resolve/main/samples/c7.png"
+                    }
+                }
+            ],
+            "instance_prompt": "eric cat style"
+        },
+        "siblings": [
+            {
+                "rfilename": ".gitattributes"
+            },
+            {
+                "rfilename": "README.md"
+            },
+            {
+                "rfilename": "flux-lora-eric-cat.safetensors"
+            },
+            {
+                "rfilename": "samples/1725552431958__000001000_0.jpg"
+            },
+            {
+                "rfilename": "samples/b6a0866c-24e8-4fe3-a830-be14f26915f6.jpg"
+            },
+            {
+                "rfilename": "samples/c10.png"
+            },
+            {
+                "rfilename": "samples/c11.png"
+            },
+            {
+                "rfilename": "samples/c12.png"
+            },
+            {
+                "rfilename": "samples/c3.png"
+            },
+            {
+                "rfilename": "samples/c4.png"
+            },
+            {
+                "rfilename": "samples/c5.png"
+            },
+            {
+                "rfilename": "samples/c6.png"
+            },
+            {
+                "rfilename": "samples/c7.png"
+            },
+            {
+                "rfilename": "samples/c8.png"
+            },
+            {
+                "rfilename": "samples/c9.png"
+            }
+        ],
+        "spaces": [
+            "openfree/mixgen3",
+            "openfree/ginigen-gallery",
+            "FradigmaDangerYT/ginipick-flux-lora-eric-cat",
+            "openfree/ginigen-gallery-backup",
+            "Amal360/ginipick-flux-lora-eric-cat"
+        ],
+        "createdAt": "2024-09-05T16:07:18.000Z"
+    },
+    {
+        "_id": "672b1f9e956e6880fdb8c1e5",
+        "id": "Qwen/Qwen2.5-Coder-32B-Instruct",
+        "modelId": "Qwen/Qwen2.5-Coder-32B-Instruct",
+        "author": "Qwen",
+        "sha": "b47205940b83b5b484577359f71ee7b88472df67",
+        "lastModified": "2024-11-18T12:55:03.000Z",
+        "private": false,
+        "disabled": false,
+        "gated": false,
+        "pipeline_tag": "text-generation",
+        "tags": [
+            "transformers",
+            "safetensors",
+            "qwen2",
+            "text-generation",
+            "code",
+            "codeqwen",
+            "chat",
+            "qwen",
+            "qwen-coder",
+            "conversational",
+            "en",
+            "arxiv:2409.12186",
+            "arxiv:2309.00071",
+            "arxiv:2407.10671",
+            "base_model:Qwen/Qwen2.5-Coder-32B",
+            "base_model:finetune:Qwen/Qwen2.5-Coder-32B",
+            "license:apache-2.0",
+            "autotrain_compatible",
+            "text-generation-inference",
+            "endpoints_compatible",
+            "region:us"
+        ],
+        "downloads": 156731,
+        "library_name": "transformers",
+        "widgetData": [
+            {
+                "text": "Hey my name is Julien! How are you?"
+            },
+            {
+                "text": "Hey my name is Thomas! How are you?"
+            },
+            {
+                "text": "Hey my name is Mariama! How are you?"
+            },
+            {
+                "text": "Hey my name is Clara! How are you?"
+            },
+            {
+                "text": "Hey my name is Julien! How are you?"
+            },
+            {
+                "text": "Hi."
+            }
+        ],
+        "likes": 1126,
+        "model-index": null,
+        "config": {
+            "architectures": [
+                "Qwen2ForCausalLM"
+            ],
+            "model_type": "qwen2",
+            "tokenizer_config": {
+                "bos_token": null,
+                "chat_template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- messages[0]['content'] }}\n    {%- else %}\n        {{- 'You are Qwen, created by Alibaba Cloud. You are a helpful assistant.' }}\n    {%- endif %}\n    {{- \"\\n\\n# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0]['content'] + '<|im_end|>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>system\\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- for message in messages %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) or (message.role == \"assistant\" and not message.tool_calls) %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {{- '<|im_start|>' + message.role }}\n        {%- if message.content %}\n            {{- '\\n' + message.content }}\n        {%- endif %}\n        {%- for tool_call in message.tool_calls %}\n            {%- if tool_call.function is defined %}\n                {%- set tool_call = tool_call.function %}\n            {%- endif %}\n            {{- '\\n<tool_call>\\n{\"name\": \"' }}\n            {{- tool_call.name }}\n            {{- '\", \"arguments\": ' }}\n            {{- tool_call.arguments | tojson }}\n            {{- '}\\n</tool_call>' }}\n        {%- endfor %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if (loop.index0 == 0) or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}\n",
+                "eos_token": "<|im_end|>",
+                "pad_token": "<|endoftext|>",
+                "unk_token": null
+            }
+        },
+        "cardData": {
+            "license": "apache-2.0",
+            "license_link": "https://huggingface.co/Qwen/Qwen2.5-Coder-32B-Instruct/blob/main/LICENSE",
+            "language": [
+                "en"
+            ],
+            "base_model": [
+                "Qwen/Qwen2.5-Coder-32B"
+            ],
+            "pipeline_tag": "text-generation",
+            "library_name": "transformers",
+            "tags": [
+                "code",
+                "codeqwen",
+                "chat",
+                "qwen",
+                "qwen-coder"
+            ]
+        },
+        "transformersInfo": {
+            "auto_model": "AutoModelForCausalLM",
+            "pipeline_tag": "text-generation",
+            "processor": "AutoTokenizer"
+        },
+        "siblings": [
+            {
+                "rfilename": ".gitattributes"
+            },
+            {
+                "rfilename": "LICENSE"
+            },
+            {
+                "rfilename": "README.md"
+            },
+            {
+                "rfilename": "config.json"
+            },
+            {
+                "rfilename": "generation_config.json"
+            },
+            {
+                "rfilename": "merges.txt"
+            },
+            {
+                "rfilename": "model-00001-of-00014.safetensors"
+            },
+            {
+                "rfilename": "model-00002-of-00014.safetensors"
+            },
+            {
+                "rfilename": "model-00003-of-00014.safetensors"
+            },
+            {
+                "rfilename": "model-00004-of-00014.safetensors"
+            },
+            {
+                "rfilename": "model-00005-of-00014.safetensors"
+            },
+            {
+                "rfilename": "model-00006-of-00014.safetensors"
+            },
+            {
+                "rfilename": "model-00007-of-00014.safetensors"
+            },
+            {
+                "rfilename": "model-00008-of-00014.safetensors"
+            },
+            {
+                "rfilename": "model-00009-of-00014.safetensors"
+            },
+            {
+                "rfilename": "model-00010-of-00014.safetensors"
+            },
+            {
+                "rfilename": "model-00011-of-00014.safetensors"
+            },
+            {
+                "rfilename": "model-00012-of-00014.safetensors"
+            },
+            {
+                "rfilename": "model-00013-of-00014.safetensors"
+            },
+            {
+                "rfilename": "model-00014-of-00014.safetensors"
+            },
+            {
+                "rfilename": "model.safetensors.index.json"
+            },
+            {
+                "rfilename": "tokenizer.json"
+            },
+            {
+                "rfilename": "tokenizer_config.json"
+            },
+            {
+                "rfilename": "vocab.json"
+            }
+        ],
+        "spaces": [
+            "bigcode/bigcode-models-leaderboard",
+            "akhaliq/anychat",
+            "huggingface-projects/ai-video-composer",
+            "NeurixYUFI/imggen",
+            "HyperbolicLabs/Hyperbolic-Qwen2.5-Coder-Artifacts",
+            "wifix199/Coding",
+            "yasserrmd/ReadMeForge",
+            "yasserrmd/CodeCompliance",
+            "nonnon6250/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "Sg-at-srijan-us-kg/Qwen2.5-Coder",
+            "yasserrmd/InfographicWizard",
+            "Nymbo/Qwen2.5-Coder-32B-Instruct-Serverless",
+            "ParthSadaria/lokiai",
+            "nruto/rxple",
+            "Rooni/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "dfd186488/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "IdenGhost/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "roshikhan301/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "Pulkit-exe/Course_Recommendation_System",
+            "Manojajj/CodeAssistant-Qwen",
+            "Anonymous1355/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "akhaliq/Qwen-Qwen2.5-Coder-32B-Instruct-test",
+            "usermew12/marco",
+            "faelfernandes/GPT4o",
+            "cocktailpeanut/ai-video-composer",
+            "Gyatolazo/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "NeurixYUFI/StoryMaster",
+            "NeurixYUFI/ImgGenChat",
+            "I-love-potatoes-and-ai/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "pentarosarium/processor",
+            "ClayeW/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "serzru96/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "anatoli72/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "mwqlkm/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "kadebostany/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "ihorkaren/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "beerhunters/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "KennyOry/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "YaNeVLAD/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "Irridian/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "deathault/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "Slardar/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "xripunov/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "Trappeew1ch/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "ggorinot/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "prof-te/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "isaax731/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "chrt666/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "mxxfoxx/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "Nerqed/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "raveninthegrayhouse/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "poerl/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "x5wow/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "mPritz/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "Yuravra/AI_Oracle",
+            "nihar-sarkar/Quen-Coding",
+            "Ubandiya/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "Escorpion1/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "markey123/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "Heyaski/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "zanabal/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "ivan345A/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "yokeshd/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "yasserrmd/ASICForge",
+            "mrkarol/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "artbogat/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "mohsin6510/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "Ankyadam/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "xMBx/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "ysl-collab/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "JuicyJu/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "vieneux/Qwen-Qwen2.5-Coder-32B",
+            "Olppara/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "Dmkdok/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "deagar/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "sgdlskjbgfvxzhbxkjrbgcezvoybr/Qwen-Qwen2.5-Coder-32B-CCWithAi.COM",
+            "ishitcyberrr/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "davidobbs/codigo",
+            "hugg1user/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "huynhQuy/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "Sg-at-srijan-us-kg/Qwen2.5-72B",
+            "varunnishad/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "alredi7/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "mukeshkr5/tts-test",
+            "znxbbd/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "drguilhermeapolinario/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "FNuni/Qwen2.5-Coder-32B-Instruct",
+            "Sg-at-srijan-us-kg/Qwen2.5-Code-Compliance",
+            "SuryanshOG/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "vijay0811/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "cutifly/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "Nick14/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "matz1237/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "emilalvaro/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "Uset182/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "marcos2912/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "savageiwnl/qwen",
+            "JaeSwift/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "Kwest70/Qwen-Qwen2.5-Coder-32B-Instruct",
+            "curran06/MyCrrnSpace"
+        ],
+        "createdAt": "2024-11-06T07:49:50.000Z",
+        "safetensors": {
+            "parameters": {
+                "BF16": 32763876352
+            },
+            "total": 32763876352
+        }
+    },
+    {
+        "_id": "673e3c5da3eda9a8c99bda8a",
+        "id": "black-forest-labs/FLUX.1-Fill-dev",
+        "modelId": "black-forest-labs/FLUX.1-Fill-dev",
+        "author": "black-forest-labs",
+        "sha": "6d92c296315be5f54318a6d2659f11465339f934",
+        "lastModified": "2024-11-25T22:50:08.000Z",
+        "private": false,
+        "disabled": false,
+        "gated": "auto",
+        "tags": [
+            "diffusers",
+            "safetensors",
+            "image-generation",
+            "flux",
+            "diffusion-single-file",
+            "en",
+            "license:other",
+            "diffusers:FluxFillPipeline",
+            "region:us"
+        ],
+        "downloads": 34539,
+        "library_name": "diffusers",
+        "likes": 294,
+        "model-index": null,
+        "config": {
+            "diffusers": {
+                "_class_name": "FluxFillPipeline"
+            }
+        },
+        "cardData": {
+            "language": [
+                "en"
+            ],
+            "license": "other",
+            "license_name": "flux-1-dev-non-commercial-license",
+            "license_link": "LICENSE.md",
+            "extra_gated_prompt": "By clicking \"Agree\", you agree to the [FluxDev Non-Commercial License Agreement](https://huggingface.co/black-forest-labs/FLUX.1-Fill-dev/blob/main/LICENSE.md) and acknowledge the [Acceptable Use Policy](https://huggingface.co/black-forest-labs/FLUX.1-Fill-dev/blob/main/POLICY.md).",
+            "tags": [
+                "image-generation",
+                "flux",
+                "diffusion-single-file"
+            ]
+        },
+        "siblings": [
+            {
+                "rfilename": ".gitattributes"
+            },
+            {
+                "rfilename": "LICENSE.md"
+            },
+            {
+                "rfilename": "README.md"
+            },
+            {
+                "rfilename": "ae.safetensors"
+            },
+            {
+                "rfilename": "flux1-fill-dev.safetensors"
+            },
+            {
+                "rfilename": "model_index.json"
+            },
+            {
+                "rfilename": "scheduler/scheduler_config.json"
+            },
+            {
+                "rfilename": "text_encoder/config.json"
+            },
+            {
+                "rfilename": "text_encoder/model.safetensors"
+            },
+            {
+                "rfilename": "text_encoder_2/config.json"
+            },
+            {
+                "rfilename": "text_encoder_2/model-00001-of-00002.safetensors"
+            },
+            {
+                "rfilename": "text_encoder_2/model-00002-of-00002.safetensors"
+            },
+            {
+                "rfilename": "text_encoder_2/model.safetensors.index.json"
+            },
+            {
+                "rfilename": "tokenizer/merges.txt"
+            },
+            {
+                "rfilename": "tokenizer/special_tokens_map.json"
+            },
+            {
+                "rfilename": "tokenizer/tokenizer_config.json"
+            },
+            {
+                "rfilename": "tokenizer/vocab.json"
+            },
+            {
+                "rfilename": "tokenizer_2/special_tokens_map.json"
+            },
+            {
+                "rfilename": "tokenizer_2/spiece.model"
+            },
+            {
+                "rfilename": "tokenizer_2/tokenizer.json"
+            },
+            {
+                "rfilename": "tokenizer_2/tokenizer_config.json"
+            },
+            {
+                "rfilename": "transformer/config.json"
+            },
+            {
+                "rfilename": "transformer/diffusion_pytorch_model-00001-of-00003.safetensors"
+            },
+            {
+                "rfilename": "transformer/diffusion_pytorch_model-00002-of-00003.safetensors"
+            },
+            {
+                "rfilename": "transformer/diffusion_pytorch_model-00003-of-00003.safetensors"
+            },
+            {
+                "rfilename": "transformer/diffusion_pytorch_model.safetensors.index.json"
+            },
+            {
+                "rfilename": "vae/config.json"
+            },
+            {
+                "rfilename": "vae/diffusion_pytorch_model.safetensors"
+            }
+        ],
+        "spaces": [
+            "black-forest-labs/FLUX.1-Fill-dev",
+            "vilarin/Flux.1-Fill-dev",
+            "multimodalart/flux-fill-outpaint",
+            "xiaozaa/catvton-flux-try-on",
+            "Nymbo/Flux.1-Fill-dev",
+            "maccmaccmaccc/5428-p-llamaindexRAG"
+        ],
+        "createdAt": "2024-11-20T19:45:33.000Z"
+    }
+]
