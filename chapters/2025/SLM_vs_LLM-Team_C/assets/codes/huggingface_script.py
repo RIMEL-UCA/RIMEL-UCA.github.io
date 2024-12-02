@@ -5,7 +5,7 @@ import os.path
 
 # Variables
 api_url = "https://huggingface.co/api/models"
-headers = {"Authorization": ""}
+headers = {"Authorization": "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"}
 params = {"limit": 50}
 
 output_file = "huggingface_models.json"
@@ -59,20 +59,18 @@ else:
 gd = pd.DataFrame(models)
 dp = pd.DataFrame(models_datas)
 
-print(models_datas[0])
-
 # Statistiques simples
 print("Types de modèles les plus fréquents :")
 print(gd['pipeline_tag'].value_counts())
 
-""" print("\nModèles les plus téléchargés :")
-print(df.sort_values(by='downloads', ascending=False).head(10))
+print("\nModèles les plus téléchargés :")
+print(gd.sort_values(by='downloads', ascending=False)[['id', 'downloads']].head(10))
 
 print("\nTags les plus fréquents :")
-print(pd.Series(", ".join(df['tags']).split(", ")).value_counts().head(10))
+print(gd['tags'].apply(pd.Series).stack().value_counts())
 
 print("\nModèles les plus agés :")
-print(df.sort_values(by='createdAt', ascending=True)) """
+print(gd.sort_values(by='createdAt', ascending=True))
 
 #
 #import matplotlib.pyplot as plt
