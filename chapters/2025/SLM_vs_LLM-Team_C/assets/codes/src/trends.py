@@ -22,7 +22,6 @@ def analyze_models(models, models_datas):
 
     return gd, dp
 
-
 def plot_model_types(df):
     """
     Génère un graphique de distribution des types de modèles.
