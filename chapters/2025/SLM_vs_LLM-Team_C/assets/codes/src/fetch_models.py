@@ -32,10 +32,16 @@ def fetch_models():
                     response = requests.get(API_URL, headers=HEADERS, params=PARAMS)
                     if response.status_code == 200:
                         new_models = response.json()
+                        for model in models:
+                            #on retire les modèles déjà présents (si jamais on pull plusieurs fois les mêmes modèles)
+                            if any(model.get("id") == m.get("id") for m in new_models):
+                                new_models.remove(model)
                         models.extend(new_models)
                         with open(OUTPUT_FILE, "w", encoding="utf-8") as file:
                             json.dump(models, file, ensure_ascii=False, indent=4)
                         print(f"{len(new_models)} nouveaux modèles ajoutés.")
+            else:
+                print("Données chargées depuis le fichier local. Sans ajout de modèles.")
     else:
         PARAMS = {"limit": 100, "skip": 0}
         response = requests.get(API_URL, headers=HEADERS, params=PARAMS)
@@ -58,15 +64,29 @@ def fetch_model_details(models):
     if os.path.exists(MODELS_DATAS_FILE):
         with open(MODELS_DATAS_FILE, "r", encoding="utf-8") as file:
             print("Chargement des détails des modèles depuis le fichier local.")
-            models_details =  json.load(file)
-            if len(models_details) == len(models):
-                return models_details
+            models_datas =  json.load(file)
+            if len(models_datas) >= len(models):
+                return models_datas
             else:
-                print(f"Le nombre de modèles dans le fichier ({len(models_details)}) ne correspond pas au nombre de modèles récupérés ({len(models)}).")
+                print(f"Le nombre de modèles dans le fichier ({len(models_datas)}) ne correspond pas au nombre de modèles récupérés ({len(models)}).")
                 for model in models:
-                    if not any(model.get("id") == m.get("model_id") for m in models_details):
+                    print(f"{model.get('_id')} : {model.get('_id')}")
+                    if not any(model.get("_id") == m.get("_id") for m in models_datas):
                         print(f"Le modèle {model.get('id')} n'est pas présent dans le fichier.")
+                        response = requests.get(
+                            f"https://huggingface.co/api/models/{model.get('id')}",
+                            params={"full": "True"},
+                            headers=HEADERS,
+                        )
+                        if response.status_code == 200:
+                            models_datas.append(response.json())
+                        else:
+                            print(f"Erreur pour le modèle {model.get('id')}: {response.status_code}")
+                with open(MODELS_DATAS_FILE, "w", encoding="utf-8") as file:
+                    json.dump(models_datas, file, ensure_ascii=False, indent=4)
+                print(f"Données détaillées sauvegardées dans le fichier '{MODELS_DATAS_FILE}'.")
     else:
+        print("Aucun fichier, \nChargement des détails des modèles depuis l'API.")
         models_datas = []
         for model in models:
             response = requests.get(
@@ -78,7 +98,9 @@ def fetch_model_details(models):
                 models_datas.append(response.json())
             else:
                 print(f"Erreur pour le modèle {model.get('id')}: {response.status_code}")
+            print(f"{model['id']} modèles détaillés récupérés.")
         with open(MODELS_DATAS_FILE, "w", encoding="utf-8") as file:
             json.dump(models_datas, file, ensure_ascii=False, indent=4)
         print(f"Données détaillées sauvegardées dans le fichier '{MODELS_DATAS_FILE}'.")
-        return models_datas
+    
+    return models_datas
