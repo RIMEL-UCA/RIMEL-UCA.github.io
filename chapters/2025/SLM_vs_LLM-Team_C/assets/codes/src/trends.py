@@ -1,5 +1,6 @@
 import pandas
 import matplotlib.pyplot as plt
+import json
 
 def analyze_models(models, models_datas):
     """
@@ -20,9 +21,6 @@ def analyze_models(models, models_datas):
     print("\nModèles les plus anciens :")
     print(general_data.sort_values(by='createdAt', ascending=True))
 
-    print("\n Proportion SLM/LLM :")
-    plot_slm_vs_llm(precise_data)
-
     return general_data, precise_data
 
 def plot_model_types(df):
@@ -39,14 +37,19 @@ def plot_model_types(df):
         print("La colonne 'pipeline_tag' est absente du DataFrame.")
 
 
-def plot_slm_vs_llm(df):
+def plot_slm_vs_llm(pd):
     """
     Génère un graphique de comparaison entre les modèles SLM et LLM.
     """
-    if 'pipeline_tag' in df.columns:
-        slm_vs_llm = df['safetensors']['total'].apply(lambda x: 'SLM' if x == 'text-generation' else 'LLM')
-        slm_vs_llm.value_counts().plot(kind='pie', autopct='%1.1f%%', title="Répartition SLM vs LLM")
-        plt.axis('equal')
-        plt.show()
+
+    pd['safetensors'].values.tolist()[1]['total']
+
+    llm_count = 0
+    slm_count = 0
+    if 'safetensors' in pd.columns:
+        for obj in pd['safetensors'].values:
+            #//TODO: Check if the key 'total' exists in the object
+            print()
     else:
-        print("La colonne 'pipeline_tag' est absente du DataFrame.")
+        print("La colonne 'safetensors' est absente du DataFrame.")
+    print(slm_count, llm_count)
