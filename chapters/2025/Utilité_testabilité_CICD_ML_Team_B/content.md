@@ -22,11 +22,10 @@ date:   2024-11
 
 ## Authors
 
-We are four students in M2 or in last year of Polytech' Nice-Sophia specialized in Software Architecture :
-
-*  &lt;melek.farhat@etu.unice.fr&gt;
-*  &lt;adjo-emmanuelle.adote@etu.unice.fr&gt;
-*  &lt;anna.di-placido@etu.unice.fr&gt;
+We are three students in M2 or in last year of Polytech' Nice-Sophia specialized in Software Architecture  
+* [Melek Farhat](https://github.com/farhatmelek) &lt;melek.farhat@etu.unice.fr&gt;
+* [Adjo Emmanuelle Adote](https://github.com/EmmanuelleAD) &lt;adjo-emmanuelle.adote@etu.unice.fr&gt;
+* [Anna Di Placido](https://github.com/Annadip5) &lt;anna.di-placido@etu.unice.fr&gt;
 
      :bulb: Les chapitres restant accessibles longtemps, si vous le souhaitez, vous pouvez utiliser ici une adresse pérenne pour être contacté ultérieurement.
 
