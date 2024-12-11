@@ -1,5 +1,5 @@
 from fetch_models import fetch_models, fetch_model_details
-from trends import analyze_models, plot_model_types, plot_slm_vs_llm
+from trends import analyze_models, plot_model_types, plot_slm_vs_llm, plot_slm_vs_llm_in_time
 import json
 
 # Fichiers de données
@@ -14,8 +14,9 @@ def main():
         gd, pd = analyze_models(models, models_datas)
 
         # Génération des graphiques
-        plot_model_types(gd)
-        plot_slm_vs_llm(pd)
+        #plot_model_types(gd)
+        #plot_slm_vs_llm(pd)
+        plot_slm_vs_llm_in_time(pd)
     except Exception as e:
         print(f"Erreur : {e}")
 
