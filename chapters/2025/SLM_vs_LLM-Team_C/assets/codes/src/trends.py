@@ -74,6 +74,7 @@ def plot_slm_vs_llm_in_time(pd):
     print("PLOT SLM VS LLM IN TIME")
 
     slm_llm_between_months = {}
+    total_models_with_safetensors = 0
     for i in range(pd['_id'].count()):
         # Récupère l'élément
         safetensor = pd['safetensors'].values.tolist()[i]
@@ -86,8 +87,6 @@ def plot_slm_vs_llm_in_time(pd):
                 date_obj = datetime.datetime.fromisoformat(pd['createdAt'][i])
                 # Extraire mois et année
                 month_year_key = date_obj.strftime("%Y-%m")
-                # Vérifie si la clé existe déjà
-                print(month_year_key)
                 if safetensor['total'] >= 7000000000:
                     if month_year_key in slm_llm_between_months:
                         slm_llm_between_months[month_year_key]["llm"] += 1
@@ -98,9 +97,11 @@ def plot_slm_vs_llm_in_time(pd):
                        slm_llm_between_months[month_year_key]["slm"] += 1
                     else:
                         slm_llm_between_months[month_year_key] = {"llm": 0, "slm": 1}
-    
+                total_models_with_safetensors += 1
+    print(f"Nombre total de modèles avec des safetensors : {total_models_with_safetensors}")
+    # Trier le dictionnaire par ordre croissant de date
     slm_llm_between_months = {k: v for k, v in sorted(slm_llm_between_months.items(), key=lambda item: item[0])}
-    plt.figure(figsize=(12, 6))
+    plt.figure(figsize=(24, 12))
     plt.plot(slm_llm_between_months.keys(), [x["slm"] for x in slm_llm_between_months.values()], label='SLM')
     plt.plot(slm_llm_between_months.keys(), [x["llm"] for x in slm_llm_between_months.values()], label='LLM')
     plt.xticks(rotation=45)
