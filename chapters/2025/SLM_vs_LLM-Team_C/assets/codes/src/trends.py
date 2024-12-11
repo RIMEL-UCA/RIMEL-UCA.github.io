@@ -41,15 +41,35 @@ def plot_slm_vs_llm(pd):
     """
     Génère un graphique de comparaison entre les modèles SLM et LLM.
     """
+    print("PLOT SLM VS LLM")
 
-    pd['safetensors'].values.tolist()[1]['total']
+    print(pd['safetensors'].values.tolist()[2]['total'])
 
     llm_count = 0
     slm_count = 0
-    if 'safetensors' in pd.columns:
-        for obj in pd['safetensors'].values:
-            #//TODO: Check if the key 'total' exists in the object
-            print()
-    else:
-        print("La colonne 'safetensors' est absente du DataFrame.")
-    print(slm_count, llm_count)
+
+    print(pd['_id'].count())
+
+    for i in range(pd['_id'].count()):
+        print(f"Index: {i}")
+        # Récupère l'élément
+        safetensor = pd['safetensors'].values.tolist()[i]
+        
+        # Vérifie que l'élément est un dictionnaire
+        if isinstance(safetensor, dict):
+            # Vérifie que la clé 'total' existe
+            if 'total' in safetensor:
+                if safetensor['total'] >= 7000000000:
+                    llm_count += 1
+                else:
+                    slm_count += 1
+            else:
+                print(f"L'élément à l'index {i} n'a pas de clé 'total': {safetensor}")
+        else:
+            print(f"L'élément à l'index {i} n'est pas un dictionnaire : {safetensor}")
+    
+    print(f"Nombre de modèles SLM : {slm_count}")
+    print(f"Nombre de modèles LLM : {llm_count}")
+    plt.pie([slm_count, llm_count], labels=['SLM', 'LLM'], autopct='%1.1f%%')
+    plt.title("Répartition des modèles SLM et LLM")
+    plt.show()
