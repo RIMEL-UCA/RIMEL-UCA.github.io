@@ -33,9 +33,11 @@ def fetch_models():
                     if response.status_code == 200:
                         new_models = response.json()
                         for model in models:
+                            for m in new_models:
                             #on retire les modèles déjà présents (si jamais on pull plusieurs fois les mêmes modèles)
-                            if any(model.get("id") == m.get("id") for m in new_models):
-                                new_models.remove(model)
+                                if model.get("_id") == m.get("_id"):
+                                    print(f"Le modèle {model.get('_id')} est déjà présent.")
+                                    new_models.remove(m)
                         models.extend(new_models)
                         with open(OUTPUT_FILE, "w", encoding="utf-8") as file:
                             json.dump(models, file, ensure_ascii=False, indent=4)

@@ -13,6 +13,8 @@ def main():
         models, models_datas = fetch_models()
         gd, pd = analyze_models(models, models_datas)
 
+        # Génération des graphiques
+        plot_model_types(gd)
         plot_slm_vs_llm(pd)
     except Exception as e:
         print(f"Erreur : {e}")

@@ -63,13 +63,7 @@ def plot_slm_vs_llm(pd):
                     llm_count += 1
                 else:
                     slm_count += 1
-            else:
-                print(f"L'élément à l'index {i} n'a pas de clé 'total': {safetensor}")
-        else:
-            print(f"L'élément à l'index {i} n'est pas un dictionnaire : {safetensor}")
     
-    print(f"Nombre de modèles SLM : {slm_count}")
-    print(f"Nombre de modèles LLM : {llm_count}")
     plt.pie([slm_count, llm_count], labels=['SLM', 'LLM'], autopct='%1.1f%%')
     plt.title("Répartition des modèles SLM et LLM")
     plt.show()
