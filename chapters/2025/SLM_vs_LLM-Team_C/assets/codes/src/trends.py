@@ -1,11 +1,31 @@
+
 import pandas
 import matplotlib.pyplot as plt
 import datetime
+
 
 SLM_LLM_THRESHOLD = 7000000000
 NOT_RELEVENT_TAGS = ["en", "fr", "it", "pt", "hi", "es", "th", "de", "ko", "zh", "ja", "pytorch", "llama", "conversational", "autotrain_compatible", "safetensors", "endpoints_compatible","region:us"]
 # Words that tags should not contain
 NOT_RELEVENT_TAGS_WORDS = ["license", "region", "qwen"]
+
+RELEVANT_TAGS = {
+    "multimodal", "audio-text-to-text", "image-text-to-text", "visual-question-answering",
+    "document-question-answering", "video-text-to-text", "any-to-any", "computer-vision",
+    "depth-estimation", "image-classification", "object-detection", "image-segmentation",
+    "text-to-image", "image-to-text", "image-to-image", "image-to-video",
+    "unconditional-image-generation", "video-classification", "text-to-video",
+    "zero-shot-image-classification", "mask-generation", "zero-shot-object-detection",
+    "text-to-3d", "image-to-3d", "image-feature-extraction", "keypoint-detection",
+    "natural-language-processing", "text-classification", "token-classification",
+    "table-question-answering", "question-answering", "zero-shot-classification",
+    "translation", "summarization", "feature-extraction", "text-generation",
+    "text2text-generation", "fill-mask", "sentence-similarity", "audio",
+    "text-to-speech", "text-to-audio", "automatic-speech-recognition", "audio-to-audio",
+    "audio-classification", "voice-activity-detection", "tabular",
+    "tabular-classification", "tabular-regression", "time-series-forecasting",
+    "reinforcement-learning", "robotics", "other", "graph-machine-learning"
+}
 
 def convertJsonToDataFrame(json_data):
     return pandas.DataFrame(json_data)
@@ -25,12 +45,14 @@ def analyze_models(models, models_datas):
     print(general_data.sort_values(by='downloads', ascending=False)[['id', 'downloads']].head(10))
 
     print("\nTags les plus fréquents :")
-    print(general_data['tags'].apply(pandas.Series).stack().value_counts())
+    all_tags = general_data['tags'].apply(sanitize_tags).explode()
+    print(all_tags.value_counts())
 
     print("\nModèles les plus anciens :")
     print(general_data.sort_values(by='createdAt', ascending=True))
 
     return general_data, advanced_data
+
 
 def get_parameters_known(pd):
     """
@@ -46,6 +68,7 @@ def get_parameters_known(pd):
                 toret += 1
     return toret
 
+
 def plot_model_types(df):
     """
     Génère un graphique de distribution des types de modèles.
@@ -58,6 +81,7 @@ def plot_model_types(df):
         plt.show()
     else:
         print("La colonne 'pipeline_tag' est absente du DataFrame.")
+
 
 def plot_slm_vs_llm(pd):
     """
@@ -73,7 +97,7 @@ def plot_slm_vs_llm(pd):
     for i in range(pd['_id'].count()):
         # Récupère l'élément
         safetensor = pd['safetensors'].values.tolist()[i]
-        
+
         # Vérifie que l'élément est un dictionnaire
         if isinstance(safetensor, dict):
             # Vérifie que la clé 'total' existe
@@ -82,10 +106,11 @@ def plot_slm_vs_llm(pd):
                     llm_count += 1
                 else:
                     slm_count += 1
-    
+
     plt.pie([slm_count, llm_count], labels=['SLM', 'LLM'], autopct='%1.1f%%')
     plt.title("Répartition des modèles SLM et LLM")
     plt.show()
+
 
 def plot_slm_vs_llm_in_time(pd):
     """
@@ -98,7 +123,7 @@ def plot_slm_vs_llm_in_time(pd):
     for i in range(pd['_id'].count()):
         # Récupère l'élément
         safetensor = pd['safetensors'].values.tolist()[i]
-        
+
         # Vérifie que l'élément est un dictionnaire
         if isinstance(safetensor, dict):
             # Vérifie que la clé 'total' existe
@@ -114,7 +139,7 @@ def plot_slm_vs_llm_in_time(pd):
                         slm_llm_between_months[month_year_key] = {"llm": 1, "slm": 0}
                 else:
                     if month_year_key in slm_llm_between_months:
-                       slm_llm_between_months[month_year_key]["slm"] += 1
+                        slm_llm_between_months[month_year_key]["slm"] += 1
                     else:
                         slm_llm_between_months[month_year_key] = {"llm": 0, "slm": 1}
                 total_models_with_safetensors += 1
@@ -173,7 +198,8 @@ def when_type_is_most_used(type,pd):
                                         else:
                                             type_most_used[tag] = 1
     return type_most_used
-    
+
+
 def is_slm(model):
     """
     Détermine si un modèle est un modèle SLM.
@@ -183,6 +209,7 @@ def is_slm(model):
         return safetensors.get('total') <= SLM_LLM_THRESHOLD
     return False
 
+
 def get_creation_date(model):
     """
     Récupère la date de création d'un modèle au format datetime.
@@ -191,6 +218,7 @@ def get_creation_date(model):
         return datetime.datetime.fromisoformat(model['createdAt'])
     return None
 
+
 def get_creation_date_from_model(model):
     """
     Récupère la date de création du modèle sous forme de datetime.
@@ -198,18 +226,19 @@ def get_creation_date_from_model(model):
     """
     return get_creation_date(model) if 'createdAt' in model else None
 
+
 def sanitize_tags(tags):
     """
-    Filtre et supprime les tags non pertinents des données.
+    Filtre les tags pour conserver uniquement ceux correspondant aux catégories spécifiées.
     """
     if not isinstance(tags, list):
-        return [];
+        return []
 
-    return [
-        tag for tag in tags
-        if tag.lower() not in NOT_RELEVENT_TAGS  # Tags spécifiques à exclure
-           and not any(word in tag.lower() for word in NOT_RELEVENT_TAGS_WORDS)  # Mots-clés exclus
-    ]
+    # Keep only tags that match the relevant categories
+    return [tag for tag in tags if tag in RELEVANT_TAGS]
+
+
+
 
 def update_slm_percentage(slm_percentages, tag, month_year, is_slm_model):
     """
@@ -222,13 +251,14 @@ def update_slm_percentage(slm_percentages, tag, month_year, is_slm_model):
     if is_slm_model:
         slm_percentages[tag][month_year]["slm"] += 1
 
+
 def plot_tags_by_time(models):
     """
     Génère des graphiques pour les n tags les plus populaires avec l'évolution
     du pourcentage de SLM au fil du temps.
 
     """
-    n = 10
+    n = 5
     # Vérifier les colonnes nécessaires
     required_columns = {'tags', 'createdAt', 'safetensors'}
     if not required_columns.issubset(models.columns):
@@ -236,10 +266,14 @@ def plot_tags_by_time(models):
         return
 
     # Récupérer tous les tags et les nettoyer
+
     all_tags = models['tags'].apply(sanitize_tags).explode()
     if all_tags.empty:
         print("Aucun tag valide trouvé après nettoyage.")
         return
+
+    print("Tags valides :")
+    print(all_tags.value_counts())
 
     # Identifier les n tags les plus populaires
     top_tags = all_tags.value_counts().head(n).index.tolist()
