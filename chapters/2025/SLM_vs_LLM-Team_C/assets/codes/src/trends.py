@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import datetime
 
 SLM_LLM_THRESHOLD = 7000000000
-NOT_RELEVENT_TAGS = ["en", "fr", "it", "pt", "hi", "es", "th", "de", "ko", "zh", "ja", "pytorch", "llama", "conversational", "autotrain_compatible", "safetensors", "endpoints_compatible"]
+NOT_RELEVENT_TAGS = ["en", "fr", "it", "pt", "hi", "es", "th", "de", "ko", "zh", "ja", "pytorch", "llama", "conversational", "autotrain_compatible", "safetensors", "endpoints_compatible","region:us"]
 # Words that tags should not contain
 NOT_RELEVENT_TAGS_WORDS = ["license", "region", "qwen"]
 
@@ -157,7 +157,7 @@ def when_type_is_most_used(type,pd):
                             tags = pd['tags'][i]
                             for tag in tags:
                                 # Vérifie que le tag a une longueur minimale, evite les tag pour les langues (FR, EN, ...)
-                                if len(tag) > 2:
+                                if len(tag) > 2 and tag not in NOT_RELEVENT_TAGS:
                                     if tag in type_most_used:
                                         type_most_used[tag] += 1
                                     else:
@@ -167,7 +167,7 @@ def when_type_is_most_used(type,pd):
                             if safetensor['total'] < 7000000000:
                                 tags = pd['tags'][i]
                                 for tag in tags:
-                                    if len(tag) > 2:
+                                    if len(tag) > 2 and tag not in NOT_RELEVENT_TAGS:
                                         if tag in type_most_used:
                                             type_most_used[tag] += 1
                                         else:
