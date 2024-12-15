@@ -2,12 +2,16 @@ import pandas
 import matplotlib.pyplot as plt
 import datetime
 
+def convertJsonToDataFrame(json_data):
+    return pandas.DataFrame(json_data)
+
 def analyze_models(models, models_datas):
     """
     Analyse les données des modèles et affiche des statistiques simples.
     """
-    general_data = pandas.DataFrame(models)
-    precise_data = pandas.DataFrame(models_datas)
+
+    general_data = convertJsonToDataFrame(models)
+    advanced_data = convertJsonToDataFrame(models_datas)
 
     print("Types de modèles les plus fréquents :")
     print(general_data['pipeline_tag'].value_counts())
@@ -21,7 +25,21 @@ def analyze_models(models, models_datas):
     print("\nModèles les plus anciens :")
     print(general_data.sort_values(by='createdAt', ascending=True))
 
-    return general_data, precise_data
+    return general_data, advanced_data
+
+def get_parameters_known(pd):
+    """
+    Récupère les paramètres connus.
+    """
+    toret = 0
+    for i in range(pd['_id'].count()):
+        # Récupère l'élément
+        safetensor = pd['safetensors'].values.tolist()[i]
+        # Vérifie que l'élément est un dictionnaire
+        if isinstance(safetensor, dict):
+            if 'total' in safetensor:
+                toret += 1
+    return toret
 
 def plot_model_types(df):
     """
@@ -47,10 +65,7 @@ def plot_slm_vs_llm(pd):
     llm_count = 0
     slm_count = 0
 
-    print(pd['_id'].count())
-
     for i in range(pd['_id'].count()):
-        print(f"Index: {i}")
         # Récupère l'élément
         safetensor = pd['safetensors'].values.tolist()[i]
         
@@ -108,3 +123,49 @@ def plot_slm_vs_llm_in_time(pd):
     plt.legend()
     plt.title("Répartition des modèles SLM et LLM dans le temps")
     plt.show()
+
+def plot_most_tags_used(model_type, tags_most_used):
+    """
+    Génère un graphique des tags les plus utilisés pour un type de modèle donné.
+    """
+    print(f"Tags les plus utilisés pour les modèles {model_type} :")
+    print(tags_most_used)
+    plt.figure(figsize=(10, 6))
+    plt.barh(tags_most_used.keys(), tags_most_used.values())
+    plt.xlabel("Tag")
+    plt.ylabel("Nombre de modèles")
+    plt.title(f"Tags les plus utilisés pour les modèles {model_type}")
+    plt.show()
+
+def when_type_is_most_used(type,pd):
+    type_most_used = {}
+    for i in range(pd['_id'].count()):
+            # Récupère l'élément
+            safetensor = pd['safetensors'].values.tolist()[i]
+            # Vérifie que l'élément est un dictionnaire
+            if isinstance(safetensor, dict):
+                # Vérifie que la clé 'total' existe
+                if 'total' in safetensor:
+                    # Extraire mois et année
+                    if type == "llm":
+                        if safetensor['total'] >= 7000000000:
+                            tags = pd['tags'][i]
+                            for tag in tags:
+                                # Vérifie que le tag a une longueur minimale, evite les tag pour les langues (FR, EN, ...)
+                                if len(tag) > 2:
+                                    if tag in type_most_used:
+                                        type_most_used[tag] += 1
+                                    else:
+                                        type_most_used[tag] = 1
+                    else:
+                        if type == "slm":
+                            if safetensor['total'] < 7000000000:
+                                tags = pd['tags'][i]
+                                for tag in tags:
+                                    if len(tag) > 2:
+                                        if tag in type_most_used:
+                                            type_most_used[tag] += 1
+                                        else:
+                                            type_most_used[tag] = 1
+    return type_most_used
+    
