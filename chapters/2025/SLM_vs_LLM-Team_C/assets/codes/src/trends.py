@@ -2,6 +2,11 @@ import pandas
 import matplotlib.pyplot as plt
 import datetime
 
+SLM_LLM_THRESHOLD = 7000000000
+NOT_RELEVENT_TAGS = ["en", "fr", "it", "pt", "hi", "es", "th", "de", "ko", "zh", "ja", "pytorch", "llama", "conversational", "autotrain_compatible", "safetensors", "endpoints_compatible"]
+# Words that tags should not contain
+NOT_RELEVENT_TAGS_WORDS = ["license", "region", "qwen"]
+
 def convertJsonToDataFrame(json_data):
     return pandas.DataFrame(json_data)
 
@@ -169,3 +174,152 @@ def when_type_is_most_used(type,pd):
                                             type_most_used[tag] = 1
     return type_most_used
     
+def is_slm(model):
+    """
+    Détermine si un modèle est un modèle SLM.
+    """
+    safetensors = model.get('safetensors')
+    if isinstance(safetensors, dict) and 'total' in safetensors:
+        return safetensors.get('total') <= SLM_LLM_THRESHOLD
+    return False
+
+def get_creation_date(model):
+    """
+    Récupère la date de création d'un modèle au format datetime.
+    """
+    if 'createdAt' in model:
+        return datetime.datetime.fromisoformat(model['createdAt'])
+    return None
+
+def get_creation_date_from_model(model):
+    """
+    Récupère la date de création du modèle sous forme de datetime.
+
+    """
+    return get_creation_date(model) if 'createdAt' in model else None
+
+def sanitize_tags(tags):
+    """
+    Filtre et supprime les tags non pertinents des données.
+    """
+    if not isinstance(tags, list):
+        return [];
+
+    return [
+        tag for tag in tags
+        if tag.lower() not in NOT_RELEVENT_TAGS  # Tags spécifiques à exclure
+           and not any(word in tag.lower() for word in NOT_RELEVENT_TAGS_WORDS)  # Mots-clés exclus
+    ]
+
+def update_slm_percentage(slm_percentages, tag, month_year, is_slm_model):
+    """
+    Met à jour le pourcentage de SLM pour un tag donné dans un mois donné.
+    """
+    if month_year not in slm_percentages[tag]:
+        slm_percentages[tag][month_year] = {"slm": 0, "total": 0}
+
+    slm_percentages[tag][month_year]["total"] += 1
+    if is_slm_model:
+        slm_percentages[tag][month_year]["slm"] += 1
+
+def plot_tags_by_time(models):
+    """
+    Génère des graphiques pour les n tags les plus populaires avec l'évolution
+    du pourcentage de SLM au fil du temps.
+
+    """
+    n = 10
+    # Vérifier les colonnes nécessaires
+    required_columns = {'tags', 'createdAt', 'safetensors'}
+    if not required_columns.issubset(models.columns):
+        print(f"Erreur : Colonnes nécessaires manquantes. Requis : {required_columns}")
+        return
+
+    # Récupérer tous les tags et les nettoyer
+    all_tags = models['tags'].apply(sanitize_tags).explode()
+    if all_tags.empty:
+        print("Aucun tag valide trouvé après nettoyage.")
+        return
+
+    # Identifier les n tags les plus populaires
+    top_tags = all_tags.value_counts().head(n).index.tolist()
+    if not top_tags:
+        print("Aucun tag populaire trouvé.")
+        return
+
+    # Initialiser un dictionnaire pour stocker les données SLM et totales par mois pour chaque tag
+    slm_data = {tag: {} for tag in top_tags}
+
+    # Boucler sur les modèles et collecter les données
+    for _, model in models.iterrows():
+        tags = model.get('tags')
+        if not tags:
+            continue
+
+        # Récupérer la date de création et le mois/année
+        creation_date = get_creation_date_from_model(model)
+        if not creation_date:
+            continue
+        month_year = creation_date.strftime("%Y-%m")
+
+        # Vérifier si le modèle est SLM
+        is_slm_model =  is_slm(model)
+
+        # Mettre à jour les données pour chaque tag
+        for tag in tags:
+            if tag not in top_tags:
+                continue
+            slm_data[tag].setdefault(month_year, {"slm": 0, "total": 0})
+            slm_data[tag][month_year]["total"] += 1
+            if is_slm_model:
+                slm_data[tag][month_year]["slm"] += 1
+
+    # Créer des graphiques pour chaque tag
+    for tag, data in slm_data.items():
+        # Calculer les pourcentages SLM par mois
+        percentages = {
+            month: (counts["slm"] / counts["total"]) * 100
+            for month, counts in data.items()
+        }
+        slms = {
+            month: counts["slm"]
+            for month, counts in data.items()
+        }
+
+        # Trier les données par mois
+        sorted_months = sorted(percentages.keys())
+        sorted_percentages = [percentages[month] for month in sorted_months]
+        sorted_slms = [slms[month] for month in sorted_months]
+
+
+        # Générer le graphique
+        fig, ax1 = plt.subplots(figsize=(10, 6))
+
+        # Axe principal : Pourcentage de SLM
+        ax1.plot(sorted_months, sorted_percentages, marker='o', color='b', label="Pourcentage SLM")
+        ax1.set_title(f"Tag : {tag} - Pourcentage de SLM et Total par mois", fontsize=14)
+        ax1.set_xlabel("Temps (mois/année)", fontsize=12)
+        ax1.set_ylabel("Pourcentage de SLM (%)", color='b', fontsize=12)
+        ax1.tick_params(axis='y', labelcolor='b')
+        ax1.grid(True)
+
+        # Ajuster les étiquettes pour éviter le chevauchement
+        ax1.set_xticks(range(len(sorted_months)))  # Positionner les étiquettes
+        ax1.set_xticklabels(
+            [month if i % 2 == 0 else "" for i, month in enumerate(sorted_months)],  # Un mois sur deux
+            rotation=45,
+            fontsize=10
+        )
+
+        # Axe secondaire : Nombre total d'occurrences
+        ax2 = ax1.twinx()
+        ax2.bar(sorted_months, sorted_slms, alpha=0.3, color='gray', label="Total", width=0.4)
+        ax2.set_ylabel("Nombre de SLM", color='gray', fontsize=12)
+        ax2.tick_params(axis='y', labelcolor='gray')
+
+        # Ajuster l'affichage
+        fig.tight_layout()
+        plt.xticks(rotation=45)
+        ax1.legend(loc='upper left')
+        ax2.legend(loc='upper right')
+        plt.show()

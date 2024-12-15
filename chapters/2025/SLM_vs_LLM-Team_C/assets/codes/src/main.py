@@ -1,5 +1,5 @@
 from fetch_models import fetch_models, fetch_model_details
-from trends import analyze_models, plot_model_types, plot_slm_vs_llm, plot_slm_vs_llm_in_time, when_type_is_most_used, convertJsonToDataFrame, get_parameters_known, plot_most_tags_used
+from trends import analyze_models, plot_model_types, plot_slm_vs_llm, plot_slm_vs_llm_in_time, when_type_is_most_used, convertJsonToDataFrame, get_parameters_known, plot_most_tags_used, plot_tags_by_time
 import json
 
 # Fichiers de données
@@ -21,6 +21,7 @@ def main():
         #plot_model_types(gd)
         #plot_slm_vs_llm(pd)
         #plot_slm_vs_llm_in_time(pd)
+        #plot_tags_by_time(pd)
         #For LLM , what are the most tags used
         llm_most_tags = when_type_is_most_used("llm",pd)
         # v > X to filter tags used less than X times
