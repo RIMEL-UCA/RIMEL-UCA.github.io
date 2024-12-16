@@ -26,7 +26,7 @@ Nous sommes trois étudiants SI à Polytech Nice Sophia, spécialisés en Sustai
 
 - Benjamin NEUVILLE BURGUIÈRE (benjamin.neuville-burguiere@etu.unice.fr)
 - Clément REMY (clement.remy@etu.unice.fr)
-- Carla Wagschal (clara.wagschal@etu.unice.fr)
+- Carla Wagschal (carla.wagschal@etu.unice.fr)
 
 
 ## I. Research context /Project
