@@ -72,7 +72,6 @@ def fetch_model_details(models):
             else:
                 print(f"Le nombre de modèles dans le fichier ({len(models_datas)}) ne correspond pas au nombre de modèles récupérés ({len(models)}).")
                 for model in models:
-                    print(f"{model.get('_id')} : {model.get('_id')}")
                     if not any(model.get("_id") == m.get("_id") for m in models_datas):
                         print(f"Le modèle {model.get('id')} n'est pas présent dans le fichier.")
                         response = requests.get(
