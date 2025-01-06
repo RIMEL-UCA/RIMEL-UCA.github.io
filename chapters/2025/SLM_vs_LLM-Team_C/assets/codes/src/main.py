@@ -16,12 +16,14 @@ def main():
 
         pd = convertJsonToDataFrame(models_datas)
         print("parameters known : ", get_parameters_known(pd))
+        print(f"models: {len(models)}")
+        print(f"models_data: {len(models_datas)}")
 
         # Génération des graphiques
         #plot_model_types(gd)
-        #plot_slm_vs_llm(pd)
-        #plot_slm_vs_llm_in_time(pd)
-        #plot_tags_by_time(pd)
+        # plot_slm_vs_llm(pd)
+        # plot_slm_vs_llm_in_time(pd)
+        # plot_tags_by_time(pd)
         #For LLM , what are the most tags used
         llm_most_tags = when_type_is_most_used("llm",pd)
         # v > X to filter tags used less than X times

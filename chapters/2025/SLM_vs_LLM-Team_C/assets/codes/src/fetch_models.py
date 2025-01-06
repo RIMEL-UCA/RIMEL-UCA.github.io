@@ -28,7 +28,7 @@ def fetch_models():
             if input_user.lower() == "o":
                 input_user = input("On skip combien de modèles (plus tu en enlèves, plus on va aller chercher loin dans les modeles en ligne) ? : ")
                 if input_user.isdigit():
-                    PARAMS = {"limit": 100, "skip": int(input_user)}
+                    PARAMS = {"limit": 100, "skip": int(input_user), "sort": "downloads"}
                     response = requests.get(API_URL, headers=HEADERS, params=PARAMS)
                     if response.status_code == 200:
                         new_models = response.json()
