@@ -3,7 +3,7 @@ from trends import analyze_models, plot_model_types, plot_slm_vs_llm, plot_slm_v
 import json
 
 # Fichiers de données
-# LAST SKIP : 1400
+# LAST SKIP : 1900
 def main():
     """
     Point d'entrée principal du script.
