@@ -60,6 +60,27 @@ Voici quelques pistes :
 
    :bulb: Cette étape est fortement liée à la suivante. Vous ne pouvez émettre d'hypothèses à vérifier que si vous avez les informations. inversement, vous cherchez à recueillir des informations en fonction de vos hypothèses.
 
+### Articles
+Pour la recherche d'information concernant les SLM, ainsi que les résultats de l'évaluation de leur performance faite par des benchmarks.  Nous avons consulté plusieurs articles scientifiques.  
+* [A Comprehensive Survey of Small Language Models in the Era of Large Language Models: Techniques, Enhancements, Applications, Collaboration with LLMs, and Trustworthiness](https://arxiv.org/abs/2411.03350)  
+* [Qwen2.5-Coder Technical Report](https://arxiv.org/abs/2409.12186)  
+* [Gemma 2: Improving Open Language Models at a Practical Size](https://arxiv.org/abs/2408.00118)  
+
+// TODO : Ajouter les articles consultés pour les autres parties
+
+### Ressources
+Nous avons utilisé les ressources suivantes pour nos expériences :
+* [Hugging Face](https://huggingface.co/)  
+* [Repository GitHub référençant les SLM et leur Technical Report](https://github.com/FairyFali/SLMs-Survey)  
+
+### Codes
+Nous avons développé des codes permettant de récupérer, traiter et afficher les données provenant de l'API Hugging Face. 
+Cela afin de mener à bien nos expériences.
+Les codes utilisés se trouvent dans le répertoire `chapters/2025/SLM_vs_LLM-Team_C/assets/codes` du répository github.
+
+### Datasets
+Les données utilisées pour nos expériences proviennent de l'API Hugging Face.
+
 ## IV. Hypothesis & Experiences
 
 1. Il s'agit ici d'**énoncer sous forme d'hypothèses** ce que vous allez chercher à démontrer. Vous devez définir vos hypothèses de façon à pouvoir les _mesurer/vérifier facilement._ Bien sûr, votre hypothèse devrait être construite de manière à _vous aider à répondre à votre question initiale_. Explicitez ces différents points.
