@@ -30,8 +30,11 @@ We are four students in last year of Polytech' Nice-Sophia specialized in Softwa
 
 ## I. Research context /Project
 
-Préciser ici votre contexte et Pourquoi il est intéressant. **
+(Préciser ici votre contexte et Pourquoi il est intéressant.)
 
+Nous avons trouvé ce sujet particulièrement captivant, car il est au cœur de nombreuses discussions actuelles. Les avis divergent largement, avec des retours positifs et négatifs sur ces systèmes, ce qui nous a semblé justifier une exploration approfondie pour mieux comprendre l'évolution des modèles de langage.
+
+En effet, il existe différents types de modèles de langage, et nous souhaitons examiner dans quels cas d'utilisation un SLM pourrait être pertinent, tout comme un LLM. Actuellement, cette technologie étant encore relativement récente, nous l'explorons de manière assez spontanée, car nous sommes en phase de découverte. Poser des questions pour approfondir notre compréhension de leur fonctionnement, de leurs atouts et de leurs limites nous permettra de clarifier le sujet et d'élaborer un guide initial sur les bonnes pratiques d'utilisation.
 
 ## II. Observations/General question
 
@@ -40,8 +43,10 @@ Préciser ici votre contexte et Pourquoi il est intéressant. **
 2. Préciser pourquoi cette question est intéressante de votre point de vue.
 
 Attention pour répondre à cette question, vous devrez être capable d'émettre des hypothèses vérifiables, de quantifier vos réponses, ...
-
+d
      :bulb: Cette première étape nécessite beaucoup de réflexion pour définir la bonne question qui permet de diriger la suite de vos travaux.
+
+### Question générale : Quels sont les enjeux, et les cas d’usage entre les SLM et LLM ?
 
 ## III. Information gathering
 
@@ -66,8 +71,43 @@ Voici quelques pistes :
    Nous ferons les Expériences suivantes pour la démontrer
    Pour Hypothèse 2 => Expériences
 
+
         ou Vous présentez l'ensemble des hypothèses puis vous expliquer comment les expériences prévues permettront de démontrer vos hypothèses.
 
+### Hypothèses :
+
+#### Hypothèse 0 :  
+**Question** : Existe-t-il un seuil de paramètres pour un SLM ?  
+**Expériences** :  
+Nous allons mener des expériences afin de déterminer si un seuil plus ou moins nette de nombre de paramètres existe pour un SLM. 
+1. Analyse de la taille des modèles de langage et de leur présentation faite par les grands acteurs de l’IA (OpenAI, Microsoft, Google, etc.).
+2. Analyse similaire auprès des laboratoires scientifiques et des chercheurs indépendants.
+
+**Limites** :  
+La cohérence des résultats de ces expériences est dépendante de l’évolutivité des seuils des paramètres de LLM dans le temps (ex : 2019 LLM : GPT-2 1.5B).
+
+#### Hypothèse 1 :  
+**Question** : Un SLM peut être aussi performant, voire plus performant, qu’un LLM lorsqu’il est appliqué à une tâche spécifique.  
+**Expériences** :
+Nous allons mener des experiences afin de comparer les performances entre SLM et LLM sur différents benchmarks spécialisés dans des domaines plus ou moins vastes. 
+Cela nous permettra de déterminer si un SLM peut atteindre une performance similaire à celle d'un LLM dans des cas d’utilisation spécifiques.
+1. Comparaison des performances d’un SLM et d’un LLM sur un benchmark de génération de code.
+2. Comparaison des performances d’un SLM et d’un LLM sur un benchmark de complétion de code.
+3. Comparaison des performances d’un SLM et d’un LLM sur un benchmark de génération de texte.
+4. Comparaison des performances d’un SLM et d’un LLM sur un benchmark de text-to-speech.
+
+#### Hypothèse 2 :  
+**Question** : Quels sont les cas d’usages spécifiques aux SLM ?  
+**Expériences** :  
+Nous allons mener des expériences afin de déterminer les cas d’usages spécifiques aux SLM. 
+Cela nous permettra d’identifier les domaines pour lesquels les SLM sont conçus. Sur la base de la façon dont ils sont présentés par leur éditeur.
+1. Analyse des tendances des cas d’utilisation des modèles (SLM/LLM) disponibles sur Hugging Face.
+
+#### Hypothèse 3 :  
+**Question** : Quelles sont les tendances d’utilisation SLM/LLM ?
+**Expériences** :  
+Nous allons mener des expériences afin de déterminer s'il y a des tendances d'utilisation des SLM et LLM. Et connaitre la part d'utilisation des SLM par rapport aux LLM.
+1. Analyse des tendances d’utilisation des modèles (SLM/LLM) disponibles sur Hugging Face.
 
 ## V. Result Analysis and Conclusion
 
