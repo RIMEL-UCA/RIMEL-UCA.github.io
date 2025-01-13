@@ -20,24 +20,30 @@ date:   2024-11
 
 **_février 2025_**
 
-## Authors
+## Auteurs
 
-We are four students in last year of Polytech' Nice-Sophia specialized in Software Architecture :
+Nous sommes quatres étudiants de Polytech Nice-Sophia en spécialité Sustainable Software Engineering :
 * [Dorian Bouchard](https://github.com/dirianDB) dorian.bouchard@etu.unice.fr
 * [Julien Didier](https://github.com/JulienDidier-PNS) julien.didier@etu.unice.fr
 * [Yasmine Moussaoui](https://github.com/yas-mous) yasmine.moussaoui@etu.unice.fr
 * [Ivan van der Tuijn](https://github.com/Ivan-vanderTuijn) ivan.van-der-tuijn@etu.unice.fr
 
-## I. Research context /Project
+## I. Projet et context de recherche
 
+```
 (Préciser ici votre contexte et Pourquoi il est intéressant.)
+```
+Ce chapitre du livre traite le sujet des SLMs vs LLMs. 
+Plus spécifiquement, cette étude a pour objectif d'analyser les tendances d'utilisation des SLMs et d’identifier l’intérêt et les limitations des SLMs par rapport aux LLMs actuellement utilisés.
 
-Nous avons trouvé ce sujet particulièrement captivant, car il est au cœur de nombreuses discussions actuelles. Les avis divergent largement, avec des retours positifs et négatifs sur ces systèmes, ce qui nous a semblé justifier une exploration approfondie pour mieux comprendre l'évolution des modèles de langage.
+Nous avons trouvé ce sujet particulièrement captivant, car il est au cœur de nombreuses discussions actuelles. 
+Les avis divergent largement, avec des retours positifs et négatifs sur ces systèmes, ce qui nous a semblé justifier une exploration approfondie pour mieux comprendre cette évolution des modèles de langage.
 
-En effet, il existe différents types de modèles de langage, et nous souhaitons examiner dans quels cas d'utilisation un SLM pourrait être pertinent, tout comme un LLM. Actuellement, cette technologie étant encore relativement récente, nous l'explorons de manière assez spontanée, car nous sommes en phase de découverte. Poser des questions pour approfondir notre compréhension de leur fonctionnement, de leurs atouts et de leurs limites nous permettra de clarifier le sujet et d'élaborer un guide initial sur les bonnes pratiques d'utilisation.
+Une des finalités qui nous motive serait de determiner dans quels cas d'utilisation un SLM pourrait être pertinent, tout comme un LLM. 
+Actuellement, cette technologie étant encore relativement récente, nous l'explorons de manière assez spontanée.
 
-## II. Observations/General question
-
+## II. Observations et question générale
+```
 1. Commencez par formuler une question sur quelque chose que vous observez ou constatez ou encore une idée émergente.
 
 2. Préciser pourquoi cette question est intéressante de votre point de vue.
@@ -46,10 +52,26 @@ Attention pour répondre à cette question, vous devrez être capable d'émettre
 d
      :bulb: Cette première étape nécessite beaucoup de réflexion pour définir la bonne question qui permet de diriger la suite de vos travaux.
 
-### Question générale : Quels sont les enjeux, et les cas d’usage entre les SLM et LLM ?
+Observations/Question générale : formulation, intérêt, limites éventuelles.
+
+```
+
+À partir de nos premières observations et de nos connaissances initiales sur les modèles de langages, nous avons remarqué que la distinction entre l’usage d’un SLM et d’un LLM n’est pas clairement définie ni implicite.
+Cette absence de clarté peut poser des défis pour comprendre leurs avantages respectifs, leurs limites, et leur pertinence dans divers contextes d’utilisation.
+
+C'est pour cela que nous avons formulé la question générale suivante, afin de mieux cerner ces aspects :  
+**Quels sont les enjeux et les cas d’usage des SLM et des LLM ?**
+
+Cette question nous a semblé intéressante, car elle englobe different aspects :
+* Analyse des bénéfices et contraintes des deux types de modèles.
+* Identification de scénarios où un modèle est préférable à l’autre.
+* Guide sur les critères à prendre en compte dans des projets nécessitant l’utilisation de modèles de langages.
+
+Afin de répondre convenablement à cette question, nous ferons face à des limitations éventuelles.
+* L'évolution rapide du domaine de l’intelligence artificielle.
 
 ## III. Information gathering
-
+```
 Préciser vos zones de recherches en fonction de votre projet, les informations dont vous disposez, ...
 
 Voici quelques pistes :
@@ -59,7 +81,7 @@ Voici quelques pistes :
 3. les jeux de données/codes que vous allez utiliser, pourquoi ceux-ci, ...
 
    :bulb: Cette étape est fortement liée à la suivante. Vous ne pouvez émettre d'hypothèses à vérifier que si vous avez les informations. inversement, vous cherchez à recueillir des informations en fonction de vos hypothèses.
-
+```
 ### Articles
 Pour la recherche d'information concernant les SLM, ainsi que les résultats de l'évaluation de leur performance faite par des benchmarks.  Nous avons consulté plusieurs articles scientifiques.  
 * [A Comprehensive Survey of Small Language Models in the Era of Large Language Models: Techniques, Enhancements, Applications, Collaboration with LLMs, and Trustworthiness](https://arxiv.org/abs/2411.03350)  
@@ -82,7 +104,7 @@ Les codes utilisés se trouvent dans le répertoire `chapters/2025/SLM_vs_LLM-Te
 Les données utilisées pour nos expériences proviennent de l'API Hugging Face.
 
 ## IV. Hypothesis & Experiences
-
+```
 1. Il s'agit ici d'**énoncer sous forme d'hypothèses** ce que vous allez chercher à démontrer. Vous devez définir vos hypothèses de façon à pouvoir les _mesurer/vérifier facilement._ Bien sûr, votre hypothèse devrait être construite de manière à _vous aider à répondre à votre question initiale_. Explicitez ces différents points.
 2. Vous **explicitez les expérimentations que vous allez mener** pour vérifier si vos hypothèses sont vraies ou fausses. Il y a forcément des choix, des limites, explicitez-les.
 
@@ -94,7 +116,7 @@ Les données utilisées pour nos expériences proviennent de l'API Hugging Face.
 
 
         ou Vous présentez l'ensemble des hypothèses puis vous expliquer comment les expériences prévues permettront de démontrer vos hypothèses.
-
+```
 ### Hypothèses :
 
 #### Hypothèse 0 :  
@@ -131,17 +153,17 @@ Nous allons mener des expériences afin de déterminer s'il y a des tendances d'
 1. Analyse des tendances d’utilisation des modèles (SLM/LLM) disponibles sur Hugging Face.
 
 ## V. Result Analysis and Conclusion
-
+```
 1. Présentation des résultats
 2. Interprétation/Analyse des résultats en fonction de vos hypothèses
 3. Construction d’une conclusion
 
    :bulb:  Vos résultats et donc votre analyse sont nécessairement limités. Préciser bien ces limites : par exemple, jeux de données insuffisants, analyse réduite à quelques critères, dépendance aux projets analysés, ...
-
+```
 ## VI. Tools \(facultatif\)
-
+```
 Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à \(1\) pouvoir reproduire vos expérimentations, \(2\) partager/expliquer à d'autres l'usage des outils.
-
+```
 ![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](assets/images/logo_uca.png)
 
 
