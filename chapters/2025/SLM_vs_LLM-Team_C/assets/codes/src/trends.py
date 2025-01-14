@@ -107,7 +107,7 @@ def plot_slm_vs_llm(pd):
                 else:
                     slm_count += 1
 
-    plt.pie([slm_count, llm_count], labels=['SLM', 'LLM'], autopct='%1.1f%%')
+    plt.pie([slm_count, llm_count], labels=['SLM ('+str(slm_count)+')', 'LLM('+str(llm_count)+')'], autopct='%1.1f%%')
     plt.title("Répartition des modèles SLM et LLM")
     plt.show()
 
@@ -160,7 +160,7 @@ def plot_most_tags_used(model_type, tags_most_used):
     """
     print(f"Tags les plus utilisés pour les modèles {model_type} :")
     print(tags_most_used)
-    plt.figure(figsize=(10, 6))
+    plt.figure(figsize=(15, 6))
     plt.barh(tags_most_used.keys(), tags_most_used.values())
     plt.xlabel("Tag")
     plt.ylabel("Nombre de modèles")
@@ -176,13 +176,11 @@ def when_type_is_most_used(type,pd):
             if isinstance(safetensor, dict):
                 # Vérifie que la clé 'total' existe
                 if 'total' in safetensor:
-                    # Extraire mois et année
                     if type == "llm":
                         if safetensor['total'] >= 7000000000:
                             tags = pd['tags'][i]
                             for tag in tags:
-                                # Vérifie que le tag a une longueur minimale, evite les tag pour les langues (FR, EN, ...)
-                                if len(tag) > 2 and tag not in NOT_RELEVENT_TAGS:
+                                if tag in RELEVANT_TAGS:
                                     if tag in type_most_used:
                                         type_most_used[tag] += 1
                                     else:
@@ -192,7 +190,7 @@ def when_type_is_most_used(type,pd):
                             if safetensor['total'] < 7000000000:
                                 tags = pd['tags'][i]
                                 for tag in tags:
-                                    if len(tag) > 2 and tag not in NOT_RELEVENT_TAGS:
+                                    if tag in RELEVANT_TAGS:
                                         if tag in type_most_used:
                                             type_most_used[tag] += 1
                                         else:

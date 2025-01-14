@@ -1,16 +1,31 @@
 import os
 import json
 import requests
-from dotenv import load_dotenv
+import pandas
 
-load_dotenv()
 # Constantes
 API_URL = "https://huggingface.co/api/models"
 HUGGINFACE_KEY = os.getenv("HUGGINFACE_KEY")  # Charger la clé depuis .env
 HEADERS = {"Authorization": f"Bearer {HUGGINFACE_KEY}"}
 
-OUTPUT_FILE = "../data/huggingface_models.json"
-MODELS_DATAS_FILE = "../data/models_datas.json"
+OUTPUT_FILE = "../data/huggingface_models_2.json"
+MODELS_DATAS_FILE = "../data/models_datas_2.json"
+
+def sanitizeJSON():
+    with open(MODELS_DATAS_FILE, "r", encoding="utf-8") as file:
+        models_datas = json.load(file)
+        pd = pandas.DataFrame(models_datas)
+        dataFrameToKeep = []
+        for i in range(pd['_id'].count()):
+            # Récupère l'élément
+            safetensor = pd['safetensors'].values.tolist()[i]
+            # Vérifie que l'élément est un dictionnaire
+            if isinstance(safetensor, dict):
+                if 'total' in safetensor:
+                    dataFrameToKeep.append(pd.loc[i])
+        dataFrameToKeep = pandas.DataFrame(dataFrameToKeep)
+        dataFrameToKeep.to_json("../data/sanitized_models_datas.json")
+
 
 def fetch_models():
     """
@@ -28,7 +43,7 @@ def fetch_models():
             if input_user.lower() == "o":
                 input_user = input("On skip combien de modèles (plus tu en enlèves, plus on va aller chercher loin dans les modeles en ligne) ? : ")
                 if input_user.isdigit():
-                    PARAMS = {"limit": 100, "skip": int(input_user), "sort": "downloads"}
+                    PARAMS = {"limit": 3000, "skip": int(input_user), "sort": "downloads"}
                     response = requests.get(API_URL, headers=HEADERS, params=PARAMS)
                     if response.status_code == 200:
                         new_models = response.json()
@@ -45,7 +60,7 @@ def fetch_models():
             else:
                 print("Données chargées depuis le fichier local. Sans ajout de modèles.")
     else:
-        PARAMS = {"limit": 100, "skip": 0}
+        PARAMS = {"limit": 3000, "skip": 0}
         response = requests.get(API_URL, headers=HEADERS, params=PARAMS)
         if response.status_code == 200:
             models = response.json()
@@ -57,7 +72,6 @@ def fetch_models():
 
     models_details = fetch_model_details(models)
     return models, models_details
-
 
 def fetch_model_details(models):
     """
