@@ -31,28 +31,27 @@ RELEVANT_TAGS = {
 def convertJsonToDataFrame(json_data):
     return pandas.DataFrame(json_data)
 
-def analyze_models(models, models_datas):
+def analyze_models(models):
     """
     Analyse les données des modèles et affiche des statistiques simples.
     """
 
     general_data = convertJsonToDataFrame(models)
-    advanced_data = convertJsonToDataFrame(models_datas)
+    advanced_data = convertJsonToDataFrame(models)
 
     print("Types de modèles les plus fréquents :")
-    print(general_data['pipeline_tag'].value_counts())
+    print(advanced_data['pipeline_tag'].value_counts())
 
     print("\nModèles les plus téléchargés :")
-    print(general_data.sort_values(by='downloads', ascending=False)[['id', 'downloads']].head(10))
+    print(advanced_data.sort_values(by='downloads', ascending=False)[['id', 'downloads']].head(10))
 
     print("\nTags les plus fréquents :")
-    all_tags = general_data['tags'].apply(sanitize_tags).explode()
+    all_tags = advanced_data['tags'].apply(sanitize_tags).explode()
     print(all_tags.value_counts())
 
     print("\nModèles les plus anciens :")
-    print(general_data.sort_values(by='createdAt', ascending=True))
+    print(advanced_data.sort_values(by='createdAt', ascending=True))
 
-    return general_data, advanced_data
 
 
 def get_parameters_known(pd):
@@ -257,7 +256,7 @@ def plot_tags_by_time(models):
     du pourcentage de SLM au fil du temps.
 
     """
-    n = 20
+    n = 6
     # Vérifier les colonnes nécessaires
     required_columns = {'tags', 'createdAt', 'safetensors'}
     if not required_columns.issubset(models.columns):

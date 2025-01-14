@@ -181,8 +181,32 @@ Cela nous permettra d’identifier les domaines pour lesquels les SLM sont conç
 Nous allons mener des expériences afin de déterminer s'il y a des tendances d'utilisation des SLM et LLM. Et connaitre la part d'utilisation des SLM par rapport aux LLM.
 1. Analyse des tendances d’utilisation des modèles (SLM/LLM) disponibles sur Hugging Face.
 
-## V. Resultats de l'étude et conclusion
-```
+## V. Result Analysis and Conclusion
+2. Quelles sont les tendances d’utilisation SLM/LLM ? (Hypothèse 3)
+Nous nous sommes posés deux sous questions pour répondre à notre hypothèse :
+   - Est-ce que l'utilisation des SLM/LLM dure dans le temps  ?
+   - Est-ce que l'utilisation des SLM est en croissance dans certains domaines ?
+
+Est-ce que l'utilisation des SLM/LLM dure dans le temps ?
+L'api de ugginface nous permet d'obtenir pour les le nombre de téléchargement les 30 derniers jours ainsi que les tags ( les cas d'usages ) et la date de de cree
+
+Nous avons donc décidé de regarder quelle etaie la part qu'occupaient les modèles crées pour quaque moi des télacdes 30 derniers jours. Nous avons donc pu réliser le graphique suivant :
+ lien
+Le graphique affiche donc la répartition des téléchargemebts en fonction de te de pour les slm et llm.
+Nous nous attendions à une forte crsoissant de la courbe sur les derniers mois (ce qui signifie que les nouveaux modèles profitent d'un gain de popularité avec leur récent)
+Ce n'est pourtant pas le cas, en effet mememe si on observe un forte croissance sur la fin, la pente de la courbe est pluto^t linéaire ce qui signigie que les modèles perdurent dans le temps.
+Nous ne notons pas de différence majeure entre les slm et llm si ce n'est que les slm crée long occupent une partie très importante
+
+Est-ce que l'utilisation des SLM est en croissance dans certains domaines ?
+nous avons regardé pour tous les tags le pourcentage de slm/llm cré par mois
+ensemble les
+ee
+Nous avons fait face à certains soucis, en effet certains tags sont sous représentés et ne permettent donc pas de confirmer nos hypothèses.
+e
+
+
+
+
 1. Présentation des résultats
 2. Interprétation/Analyse des résultats en fonction de vos hypothèses
 3. Construction d’une conclusion
