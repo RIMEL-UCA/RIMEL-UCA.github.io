@@ -1,11 +1,9 @@
-from fetch_models import fetch_models, fetch_model_details, sanitizeJSON
-from trends import analyze_models, plot_model_types, plot_slm_vs_llm, plot_slm_vs_llm_in_time, when_type_is_most_used, convertJsonToDataFrame, get_parameters_known, plot_most_tags_used, plot_tags_by_time
+from fetch_models import fetch_models, fetch_model_details
+from trends import analyze_models, plot_model_types, plot_slm_vs_llm, plot_slm_vs_llm_in_time, when_type_is_most_used, convertJsonToDataFrame, get_parameters_known, plot_most_tags_used, plot_tags_by_time,  plot_monthly_distribution
 import json
 
 # Fichiers de données
-# 900
 # LAST SKIP : 1900
-
 def main():
     """
     Point d'entrée principal du script.
@@ -16,24 +14,24 @@ def main():
 
         gd, pd = analyze_models(models, models_datas)
 
-        #pd = convertJsonToDataFrame(models_datas)
-        print("Modeles Exploitables : ", get_parameters_known(pd))
+        pd = convertJsonToDataFrame(models_datas)
+        print("parameters known : ", get_parameters_known(pd))
+        print(f"models: {len(models)}")
+        print(f"models_data: {len(models_datas)}")
 
         # Génération des graphiques
         #plot_model_types(gd)
-        plot_slm_vs_llm(pd)
-        #plot_slm_vs_llm_in_time(pd)
-        #plot_tags_by_time(pd)
+        # plot_slm_vs_llm(pd)
+        # plot_slm_vs_llm_in_time(pd)
+        # plot_tags_by_time(pd)
         #For LLM , what are the most tags used
-        llm_most_tags = when_type_is_most_used("llm",pd)
-        slm_most_tags = when_type_is_most_used("slm",pd)
+        # llm_most_tags = when_type_is_most_used("llm",pd)
         # v > X to filter tags used less than X times
-        filtered_llm_tags = {k: v for k, v in llm_most_tags.items() if v > 10}
-        plot_most_tags_used("llm", filtered_llm_tags)
-        filtered_slm_tags = {k: v for k, v in slm_most_tags.items() if v > 10}
-        plot_most_tags_used("slm", filtered_slm_tags)
+        # filtered_tags = {k: v for k, v in llm_most_tags.items() if v > 10}
+        # plot_most_tags_used("llm", filtered_tags)
+        #  plot_monthly_distribution(pd)
+        #For SLM , what are the most tags used
         #print(sorted(when_type_is_most_used("slm",pd).items(), key=lambda x: x[1], reverse=True))
-
     except Exception as e:
         print(f"Erreur : {e}")
 
