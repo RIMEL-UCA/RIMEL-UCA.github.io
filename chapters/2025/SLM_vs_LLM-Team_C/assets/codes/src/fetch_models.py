@@ -65,7 +65,7 @@ def fetch_models():
     if tag_choice.lower() == "o":
         tag = input("Entrez le tag spécifique pour lequel vous souhaitez les données : ")
     number_models = int(input("Entrez le nombre de modèles à récupérer : "))
-    limit = 1000
+    limit = 100
     for i in range(number_models // limit):
         print(f"Récupération des modèles {i * limit} à {i * limit + limit}.")
         models = get_models(tag)

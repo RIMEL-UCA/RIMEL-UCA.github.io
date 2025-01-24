@@ -32,11 +32,10 @@ def convertJsonToDataFrame(json_data):
     return pandas.DataFrame(json_data)
 
 def analyze_models(models):
+    print(models)
     """
     Analyse les données des modèles et affiche des statistiques simples.
     """
-
-    general_data = convertJsonToDataFrame(models)
     advanced_data = convertJsonToDataFrame(models)
 
     print("Types de modèles les plus fréquents :")

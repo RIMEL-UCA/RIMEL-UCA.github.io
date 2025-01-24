@@ -19,18 +19,18 @@ def main():
         print(f"models: {len(models)}")
 
         # Génération des graphiques
-        #plot_model_types(gd)
-        # plot_slm_vs_llm(pd)
-        # plot_slm_vs_llm_in_time(pd)
+        plot_model_types(dataframes)
+        plot_slm_vs_llm(dataframes)
+        plot_slm_vs_llm_in_time(dataframes)
         plot_tags_by_time(dataframes)
         #For LLM , what are the most tags used
-        # llm_most_tags = when_type_is_most_used("llm",pd)
+        llm_most_tags = when_type_is_most_used("llm",dataframes)
         # v > X to filter tags used less than X times
-        # filtered_tags = {k: v for k, v in llm_most_tags.items() if v > 10}
-        # plot_most_tags_used("llm", filtered_tags)
-        # plot_monthly_distribution(dataframes)
+        filtered_tags = {k: v for k, v in llm_most_tags.items() if v > 10}
+        plot_most_tags_used("llm", filtered_tags)
+        plot_monthly_distribution(dataframes)
         #For SLM , what are the most tags used
-        #print(sorted(when_type_is_most_used("slm",pd).items(), key=lambda x: x[1], reverse=True))
+        print(sorted(when_type_is_most_used("slm",dataframes).items(), key=lambda x: x[1], reverse=True))
     except Exception as e:
         print(f"Erreur : {e}")
 
