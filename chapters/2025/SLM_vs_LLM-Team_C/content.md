@@ -173,7 +173,9 @@ Cela nous permettra de déterminer si un SLM peut atteindre une performance simi
 **Expériences** :  
 Nous allons mener des expériences afin de déterminer les cas d’usages spécifiques aux SLM.
 Cela nous permettra d’identifier les domaines pour lesquels les SLM sont conçus. Sur la base de la façon dont ils sont présentés par leur éditeur.
-1. Analyse des tendances des cas d’utilisation des modèles (SLM/LLM) disponibles sur Hugging Face.
+1. A quel moment utiliser un LM, pour quel type de tâches ?
+2. Quand est-ce qu’un SLM est plus performant qu’un LLM ?
+3. Analyse de données sur HuggingFace
 
 #### Hypothèse 3 :
 **Question** : Quelles sont les tendances d’utilisation SLM/LLM ?
@@ -182,7 +184,96 @@ Nous allons mener des expériences afin de déterminer s'il y a des tendances d'
 1. Analyse des tendances d’utilisation des modèles (SLM/LLM) disponibles sur Hugging Face.
 
 ## V. Result Analysis and Conclusion
-2. Quelles sont les tendances d’utilisation SLM/LLM ? (Hypothèse 3)
+
+### Hypothèse 2
+#### 1. A quel moment utiliser un LM, pour quel type de tâche ?
+
+```Les modèles de langage (Language Models, ou encore LM) ont connu une évolution fulgurante au cours des dernières décennies, marquant l'histoire dans le domaine de l'intelligence artificielle. À leurs débuts, les LM s’appuyaient sur des méthodes statistiques simples comme les modèles n-grams, reposant sur des entrées très limitées et nécessitant des règles explicites pour capturer pour espérer avoir un semblant de conversation avec une machine. Ces approches, bien que novatrices pour l’époque, étaient limitées par leur capacité à généraliser leur champ d'action et leur dépendance à des données soigneusement préparées.
+
+Avec l'avènement des réseaux de neurones, l'introduction des modèles comme Word2Vec et GloVe a représenté un premier bond dans les LM, en offrant des représentations vectorielles denses du langage. Cependant, ce n'est qu'avec les architectures de type Transformer, introduites par Vaswani et al. en 2017, que les LM ont atteint un nouveau niveau de performance comme ceux que l'on connait aujourd'hui. Des modèles tels que BERT, GPT et leurs évolutions (GPT-3, GPT-4) ont ouvert la voie à une compréhension et une génération de texte d'une précision impressionnante, grâce à leur capacité à capturer des relations complexes à travers de vastes quantités de données.
+
+https://fr.wikipedia.org/wiki/Word2vec
+https://en.wikipedia.org/wiki/GloVe
+https://fr.wikipedia.org/wiki/Transformeur
+
+
+Dans ce contexte, deux catégories de modèles de langage émergent :
+
+Les modèles de langage généralistes (LLM), conçus pour traiter une grande variété de tâches et capables de s'adapter à divers domaines grâce à leur entraînement sur des corpus massifs.
+Les modèles de langage spécialisés (SLM), développés pour répondre à des besoins spécifiques, que ce soit dans des secteurs particuliers (santé, finance, etc.) ou pour des tâches ciblées nécessitant une précision accrue.
+```
+
+Il faut savoir que l'on connait les LM depuis plus longtemps que l'on ne le croit. Un LM n'est pas forcement obliger d'avoir une forme d'intelligence poussée. Les premiers LM qui ont vus le jour on commencer par des tâches très ciblées :
+- Correction orthographique et suggestion de mots
+- Reconnaissance vocale
+- Traduction Automatique
+
+Pour chaques langues, il fallait faire un nouveau LM. Pour chaque nouveau cas d'usage, il fallait en faire un nouveau.
+
+https://www.smalsresearch.be/nlp-modeles-de-langue/
+https://fr.wikipedia.org/wiki/Histoire_des_langages_de_programmation
+https://www.mongodb.com/fr-fr/resources/basics/artificial-intelligence/large-language-models
+
+Désormais, les LM sont pratiquement tous basés sur l'architecture Transformer que nous avons précédemment. Cette architecture à permis aux LM à monter en "intelligence".
+
+Il est désormais possible d'avoir un LM qui puisse répondre à plus de choses en même temps. Cela est possible par, notamment :
+- l'Augmentation des capacités des modèles. Au cours du temps, le nombre de paramètre n'a cesser d'augmenter, rendant la capacité des LM à comprendre mieux les informations qui lui sont données.
+
+- l'Augmentation de la durée / du nombre de données lors de l'entrainement.
+Avec le temps, les puissances de calculs ont permis d'entrainer plus vite les LM. Tout comme avec le temps, le nombre de data n'a cessé d'augmenter, ce qui permet aux LM de pouvoir s'entrainer sur des sources de données de plus en plus grandes.
+
+Les cas d'utilisations de nos jours deviennent de plus en plus variés. Pour trouver un équilibre dans les utilisations, les LM ont été divisés en deux catégories (SLM et LLM).
+
+Au final, on peut dire d'après les résultats précédents que les LM sont généralement utilisés pour de la génération de texte. Entre la traduction, la correction orthographique,... il semble que l'interface première entre les humains et ces LM soit le texte.
+
+https://www.autolex.ai/post/guide-pratique-des-cas-dutilisation-des-grands-modeles-de-langage-llm?utm_source=chatgpt.com
+
+#### 2. Quand est-ce qu’un SLM est plus performant qu’un LLM ?
+
+Maintenant que nous avons vu qu'il existait deux types de LM (SLM / LLM), essayons d'étudier les différences entre eux, ce qui pourrait montrer pourquoi les cas d'usages peuvent autant varier.
+
+Pour cette étude, nous ne testerons pas nous même les SLM/LLM. Nous essaierons de trouver des recherches sur ce sujet pour essayer de trouver justement des différences (ou non) à ce sujet.
+
+Dans pratiquement tous les sujets que nous avons regarder, tous sont d'accord sur le fait que les SLM ont une capacité similaire aux LLM à répondre à un sujet bien spécifique sur un domaine (avec quelques fois, une plus grande précision dans les réponses). On le voit donc, un LLM apport une simplicité d'utilisation qui empiète sur sa qualité de réponse. Tandis qu'un SLM, bien qu'il ne soit pas aussi bon qu'un LLM sur tous les domaines, peut exceller dans un domaine en particulier, ce qui lui permet d'être plus petit (car moins de choses à apprendre, à analyser), ce qui lui permet donc d'être utilisé de manière local sur une machine. Les cas d'utilisations sont donc plus ciblés côté SLM que LLM. Les LLM de nos jours sont utilisés pour à peu près tous les domaines sans exception. Tandis que les SLM, eux, comme dit précédemment, doivent obligatoirement cibler un sujet en particulier. 
+
+https://www.analyticsvidhya.com/blog/2024/11/slms-vs-llms/
+https://ieeexplore.ieee.org/abstract/document/10590016?casa_token=LDxEMDqRddYAAAAA:5TLDKfJEleeNj-Fup-ZEOaq2d9yvUwgyPD3WeWBFhqAnn14-5-LrC2UUfFEfVOAslmSiTkehWZi1
+https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10590016
+
+
+#### 3. Analyse de données sur HuggingFace
+
+Pour vérifier tout ce que nous avons dit dans la partie précédente, nous allons utiliser l'outil HuggingFace qui permet à n'importe qui de déposer des LM mais aussi des données d'entrainement.
+
+Nous avons choisit celui-ci car c'est le leader sur ce marché, c'est donc sur cette plateforme que nous serons les plus aptes à extraire des informations en grande quantitié pour essayer de confirmer ou non, si les LLM / SLM ont bien des cas d'usages différents et si oui, quels sont-ils.
+
+Pour commencer, il faut savoir que sur HuggingFace, il n'y a pas de définition SLM/LLM. Tous les modèles sont des LM. Pour pouvoir donc différencier ces LM, nous avons appliquer la limite vu dans l'hypothèse précédente, qui est la limite des 7 Milliards de paramètres.
+
+Avant d'analyser les résultats, nous tenons quand même ç mentionner que ces résultats ne représentent pas la réalité, nous avons essayer de faire au mieux mais plusieurs freins nous ont limités dans ces analyses :
+- La période dans le temps est très courte. En effet, l'API de HuggingFace nous permet de récolter uniquement des données à l'instant ou nous les prenons. Par exemple, les statistiques sur les téléchargements sont valables uniquement sur les 30 derniers jours. Nous ne pouvons accéder a ces informations antérieures.
+
+- Le manque d'informations dans les modèles. Bien que HuggingFace soit la plateforme de référence dans ce domaine, certains modèles manquent de données. Lors de l'execution de nos scripts, nous filtrons les modèles qui ont l'information sur leurs nombre de parmaètres ou non. Une grande partie des modèles présents sur la plateforme n'ont pas ce paramètre, ce qui entraine une inutilité du modèle pour nous.
+
+Pour commencer notre analyse, nous nous baserons sur un jeu de donnée de 5000 modèles. Ces modèles ont été téléchargés par ordre décroissant de téléchargement.
+Pour commencer, commencons par regarder quel est le ratio de SLM/LLM présent dans nos données.
+
+![](./assets/results/models_repartition_5000.PNG)
+
+On voit que les SLM sont plus présents de manière générale. Ce qui peut sembler logique car si les SLM sont aussi, voir plus puissant que les LLM mais pour des domaines bien spécifiques, pour un LLM bon sur tous les sujets, il faut créer un SLM pour chaques sujets.
+
+Cherchons maintenant à voir quels types d’usages ont les utilisateurs avec les LM. Pour cela, les contributeurs aux LM peuvent attribuer à leur modèle un ou plusieurs “tag” qui permettent de mieux cibler le type de tâche du modèle. Nous pouvons nous baser là-dessus pour avoir une idée en fonction du type de modèle.
+
+![](./assets/results/llm_most_tags_5000.PNG)
+
+![](./assets/results/slms_most_tags.png)
+
+On remarque que les SLM ont des tags bien plus précis que les LLM. Les LLM sont clairement axés sur la génération de texte, avec une application dominante dans le traitement de texte complexe ou créatif. Les SLM sont beaucoup plus polyvalents, couvrant des domaines tels que la vision par ordinateur, la reconnaissance audio, et les analyses spécialisées. Ils répondent à des besoins variés, avec une utilisation répartie sur des tâches plus techniques ou spécifiques. Ce qui confirme notre hyptothèse précédente via les benchmarkings.
+
+Nous aurions apprécier trouver quelques informations supplémentaires comme les langages utilés pour développer le LM ou encore le type de dataset qui a été utilisé pour entrainer le modèle. Cela aurait pu permettre de savoir si un langage à permis de développer le dévoppement des LM par exemple, ou encore si un certain type de dataset est plus utilsé sur les SLM. Ce qui peut indiquer quels types de besoins les modèles doivent cerner le plus. Et voir, si en fonction des types de modèles, les SLM ou les LLM s’appuient sur des dataset communs ou pas dutout.
+
+
+### Hypothèse 3
+2. Quelles sont les tendances d’utilisation SLM/LLM ?
 Nous nous sommes posés deux sous questions pour répondre à notre hypothèse :
    - Est-ce que l'utilisation des SLM/LLM dure dans le temps  ?
    - Est-ce que l'utilisation des SLM est en croissance dans certains domaines ?
@@ -212,7 +303,7 @@ e
 3. Construction d’une conclusion
 
    :bulb:  Vos résultats et donc votre analyse sont nécessairement limités. Préciser bien ces limites : par exemple, jeux de données insuffisants, analyse réduite à quelques critères, dépendance aux projets analysés, ...
-```
+
 ## VI. Outils \(facultatif\)
 ```
 Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à \(1\) pouvoir reproduire vos expérimentations, \(2\) partager/expliquer à d'autres l'usage des outils.
@@ -223,3 +314,6 @@ Précisez votre utilisation des outils ou les développements \(e.g. scripts\) r
 ## VI. References
 
 [Debret 2020] Debret, J. (2020) La démarche scientifique : tout ce que vous devez savoir ! Available at: https://www.scribbr.fr/article-scientifique/demarche-scientifique/ (Accessed: 18 November 2022).
+
+
+[LM History](https://en.wikipedia.org/wiki/Language_model)
