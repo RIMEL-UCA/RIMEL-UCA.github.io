@@ -103,20 +103,24 @@ Voici quelques pistes :
    :bulb: Cette étape est fortement liée à la suivante. Vous ne pouvez émettre d'hypothèses à vérifier que si vous avez les informations. inversement, vous cherchez à recueillir des informations en fonction de vos hypothèses.
 ```
 ### Articles
-Pour la recherche d'information concernant les SLM, ainsi que les résultats de l'évaluation de leur performance faite par des benchmarks.  Nous avons consulté plusieurs articles scientifiques.
-* [A Comprehensive Survey of Small Language Models in the Era of Large Language Models: Techniques, Enhancements, Applications, Collaboration with LLMs, and Trustworthiness](https://arxiv.org/abs/2411.03350)
-* [Qwen2.5-Coder Technical Report](https://arxiv.org/abs/2409.12186)
-* [Gemma 2: Improving Open Language Models at a Practical Size](https://arxiv.org/abs/2408.00118)
+Pour la recherche d'information concernant les SLM, ainsi que les résultats de l'évaluation de leur performance faite par des benchmarks.  Nous avons consulté plusieurs articles scientifiques.  
+* [A Comprehensive Survey of Small Language Models in the Era of Large Language Models: Techniques, Enhancements, Applications, Collaboration with LLMs, and Trustworthiness](https://arxiv.org/abs/2411.03350)  
+* [Qwen2.5-Coder Technical Report](https://arxiv.org/abs/2409.12186)  
+* [Gemma 2: Improving Open Language Models at a Practical Size](https://arxiv.org/abs/2408.00118)  
+* [MedMobile: A mobile-sized language model with expert-level
+clinical capabilities](https://arxiv.org/pdf/2410.09019v1)  
+* [BigCodeBench: Benchmarking Code Generation with Diverse Function Calls and Complex Instructions](https://arxiv.org/abs/2406.15877)  
 
 // TODO : Ajouter les articles consultés pour les autres parties
 
 ### Ressources
 Nous avons utilisé les ressources suivantes pour nos expériences :
-* [Hugging Face](https://huggingface.co/)
-* [Repository GitHub référençant les SLM et leur Technical Report](https://github.com/FairyFali/SLMs-Survey)
+* [Hugging Face](https://huggingface.co/)  
+* [Repository GitHub référençant les SLM et leur Technical Report](https://github.com/FairyFali/SLMs-Survey)  
+* [BigCodeBench Leaderboard](https://bigcode-bench.github.io/)  
 
 ### Codes
-Nous avons développé des codes permettant de récupérer, traiter et afficher les données provenant de l'API Hugging Face.
+Nous avons développé des codes permettant de récupérer, traiter et afficher les données provenant de l'API Hugging Face. 
 Cela afin de mener à bien nos expériences.
 Les codes utilisés se trouvent dans le répertoire `chapters/2025/SLM_vs_LLM-Team_C/assets/codes` du répository github.
 
@@ -137,9 +141,8 @@ Les données utilisées pour nos expériences proviennent de l'API Hugging Face.
 
         ou Vous présentez l'ensemble des hypothèses puis vous expliquer comment les expériences prévues permettront de démontrer vos hypothèses.
 ```
-### Hypothèses :
 
-#### Hypothèse 0 :
+### Hypothèse 1 :  
 Pour répondre à la sous-question "Existe-t-il un seuil de paramètres permettant de différencier SLM et LLM ?", nous avons initialement formulé l'hypothèse qu’il existe un seuil universel, reconnu et plus ou moins standardisé, pour différencier les SLM et les LLM. Cependant, nos recherches préliminaires ont montré que ce seuil n’est pas clairement défini. Nous postulons donc que ce seuil pourrait varier selon l’éditeur et son référentiel de modèles.
 
 **Expérience** :  
@@ -153,22 +156,26 @@ Notre démarche s’est appuyée sur la compilation des informations publiques d
 **Points à expliciter :**
 Les limites potentielles de cette analyse incluent l’incomplétude ou l’absence d’informations concernant certains modèles propriétaires, ce qui pourrait biaiser les conclusions. En termes de choix méthodologiques, nous avons décidé de concentrer initialement nos efforts sur les acteurs majeurs de l’IA, car ils façonnent largement les tendances actuelles du domaine. Nous avons également inclus des études académiques afin d’obtenir une perspective plus neutre et complète.
 
----
-
 **Limites** :  
 La cohérence des résultats de ces expériences est dépendante de l’évolutivité des seuils des paramètres de LLM dans le temps (ex : 2019 LLM : GPT-2 1.5B).
 
-#### Hypothèse 1 :
-**Question** : Un SLM peut être aussi performant, voire plus performant, qu’un LLM lorsqu’il est appliqué à une tâche spécifique?  
-**Expériences** :
-Nous allons mener des experiences afin de comparer les performances entre SLM et LLM sur différents benchmarks spécialisés dans des domaines plus ou moins vastes.
-Cela nous permettra de déterminer si un SLM peut atteindre une performance similaire à celle d'un LLM dans des cas d’utilisation spécifiques.
-1. Comparaison des performances d’un SLM et d’un LLM sur un benchmark de génération de code.
-2. Comparaison des performances d’un SLM et d’un LLM sur un benchmark de complétion de code.
-3. Comparaison des performances d’un SLM et d’un LLM sur un benchmark de génération de texte.
-4. Comparaison des performances d’un SLM et d’un LLM sur un benchmark de text-to-speech.
+### Hypothèse 2 :  
 
-#### Hypothèse 2 :
+Afin de répondre à la sous question "Un SLM peut-il être aussi performant, voire plus performant, qu’un LLM lorsqu’il est appliqué à une tâche spécifique ?", nous postulons l'hypothese qu’un SLM peut atteindre des performances comparables, voire supérieures, à celles d’un LLM lorsqu’il est appliqué à des tâches spécifiques et bien définies. Cette hypothèse repose sur l’idée qu’un modèle plus petit, mais optimisé et spécifiquement entrainé pour une tâche particulière, peut surpasser un modèle généraliste plus grand, en termes de précision dans les résultats, tout en utilisant moins de ressources. 
+
+**Expériences** :  
+Pour tester cette hypothèse, nous avons conçu une série d’expériences visant à comparer les performances entre SLM (comme nous l'avons définit lors de la sous question précédente) et LLM sur plusieurs benchmarks spécialisés. Par exemple, nous avons étudié leurs capacités en génération de code en utilisant des benchmarks comme BigCodeBench, en mesurant la précision des solutions générées. De même, une comparaison a été réalisée dans le domaine médical avec des modèles spécialisés ou généralistes sur la qualité des réponse aux questions, en se basant sur des benchmarks comme MedQA. Nous avons également évalué les modèles sur la génération de texte via des benchmarks généralistes comme [TODO COMPLETE]. 
+
+**Démarche** :  
+Notre démarche a consisté à sélectionner des modèles SLM et LLM représentatifs, disponibles publiquement et bien documentés, ayant des tailles connue et variables. Les benchmarks ont été choisis pour couvrir un éventail de tâches représentatives, et les métriques spécifiques à chaque domaine ont été utilisées pour analyser les performances. Une synthèse des résultats a ensuite été réalisée pour identifier les cas où un SLM surpasse ou égale un LLM.
+
+**Points à expliciter** :  
+Les limites de cette analyse incluent la difficulté de généraliser les résultats obtenus au-delà des tâches et des benchmarks spécifiques étudiés, ainsi que les biais potentiels des benchmarks eux-mêmes, qui pourraient avantager un type de modèle par rapport à un autre. Nous notons également que des facteurs tels que les méthodologies de fine-tuning et les données d’entraînement jouent un rôle clé dans les performances observées, au-delà de la taille des modèles.
+
+**Limites** :  
+Les résultats de cette analyse dépendent fortement de la diversité des tâches sélectionnées. Par ailleurs, bien que la taille des modèles soit un facteur important, elle n’est pas le seul élément déterminant : les choix d’architecture ainsi que les données d’entraînement peuvent également influencer de manière significative les performances observées.
+
+### Hypothèse 3 :
 **Question** : Quels sont les cas d’usages spécifiques aux SLM ?  
 **Expériences** :  
 Nous allons mener des expériences afin de déterminer les cas d’usages spécifiques aux SLM.
@@ -177,14 +184,106 @@ Cela nous permettra d’identifier les domaines pour lesquels les SLM sont conç
 2. Quand est-ce qu’un SLM est plus performant qu’un LLM ?
 3. Analyse de données sur HuggingFace
 
-#### Hypothèse 3 :
-**Question** : Quelles sont les tendances d’utilisation SLM/LLM ?
+### Hypothèse 4 :  
+**Question** : Quelles sont les tendances d’utilisation des SLM/LLM ?
+Pour répondre à cette sous question nous avons formulé l'hypothèse qu'avec la démocratistion du concept de SLM, les SLM gagneraient des parts de marché sur les LLM.
+
 **Expériences** :  
-Nous allons mener des expériences afin de déterminer s'il y a des tendances d'utilisation des SLM et LLM. Et connaitre la part d'utilisation des SLM par rapport aux LLM.
-1. Analyse des tendances d’utilisation des modèles (SLM/LLM) disponibles sur Hugging Face.
+Nous avons donc mené une série d'analyses afin de vérifier l'hypothèse suivante **"Les SLM gagnent des parts de marchés sur les LLM"**. Ces analyses ont été réalisées à l'aide des données fournies par l'API de Huggin Face.
 
-## V. Result Analysis and Conclusion
+**Démarche :**
+Nous souhaitions obtenir le nombre de téléchargements par modèle et par mois, ce qui nous aurait permis d'en déduire les tendances d'utilisations en compilant un grand nombre de données.
+Cependant, l'API de Hugging Face ne fournit que le nombre de téléchargements par modèle sur les 30 derniers jours. Nous avons donc contourné ce problème en utilisant un autre paramètre donné par Huggin Face : la date de création des modèles.
+En effet, si il ne nous est pas possible d'obtenir des données sur les tendances des téléchargements nous pouvons en revanche en obtenir sur les tendances de créations des modèles.
 
+Nous avons donc pour cela :
+**1.** Réuni un dataset des 10000 modèles les plus téléchargés sur les 30 derniers jours (à défaut de pouvoir les récupérer   directement par date de création).
+**2.** Défini si ils étaient des SLM/LLM.
+**3.** Calculé l'évolution du ratio de création de LLM/LLM dans le temps.
+
+Nous nous sommes ensuite demandés si l'évolution de ce ratio serait la même pour tous les types de modèles. En effet comme expliqué précédement, Huggin Face founit des tags associés au modèle, qui permettent de définir les cas d'utilisation (classification, text-to-text, etc).
+Nous avons donc réalisé l'expérience mentionnée ci dessus pour chaque tag spécifique afin de déterminer si les résultats seraient homogènes entre les différents tags.
+
+Nous avons donc : 
+**1.** Défini les 20 types de modèles les plus téléchargés.
+**2.** Réuni un dataset de 2000 modèles pour chaque type.
+**3.** Calculé l'évolution du ratio de création de LLM/LLM dans le temps.
+
+
+**Limites** : 
+compliqué de savoir que tags correspondent à quels sous tag pour comparer SLM/LLM
+Impossibilité de récupérer des modèes créés à une date précise.
+Certains LLM ne renseignent pas les sous tags qui sont englobés par leur tag principal ce qui fausse le calcul de la répartition SLM/LLM pour un tag précis.
+
+## V. Resultats de l'étude et conclusion
+
+### Résultats de la première sous question :
+
+Afin de répondre à la première sous-question, "Existe-t-il un seuil de paramètres permettant de différencier SLM et LLM ?", nous avons compilé des données représentées dans ce graphique. Celui-ci repose sur des informations issues de plusieurs sources fiables, notamment la plateforme Hugging Face, des recherches académiques, en particulier l’article intitulé "A Comprehensive Survey of Small Language Models in the Era of Large Language Models: Techniques, Enhancements, Applications, Collaboration with LLMs, and Trustworthiness" et les communications officielles faites par les editeurs.
+
+Le graphique offre une synthèse des tailles des modèles de langage, exprimées en milliards de paramètres, ainsi que de leurs classifications respectives en tant que Small Language Models (SLM) ou Large Language Models (LLM). Ces données permettent de mettre en évidence des tendances et des marges définies par les éditeurs et chercheurs.
+
+![](./assets/results/SLMvsLLM_size.png)
+
+L’analyse des données issues de la compilation des données collectés, représentées sous forme de graphique, révèle qu’il n’existe pas de seuil universel pour distinguer les Small Language Models (SLM) des Large Language Models (LLM). Toutefois, des tendances émergent des classifications proposées par les éditeurs, permettant d’identifier des critères communs.
+
+Tout d’abord, les marges de taille entre SLM et LLM semblent s’organiser autour de certains seuils. Les modèles ayant une taille inférieure à 7B sont principalement considérés comme SLM. Par exemple, des modèles comme Gemma 2B, Mistral 7B, et Phi3-small (7B) sont qualifiés de "small" ou "lightweight" par leurs éditeurs respectifs. En revanche, au-delà de 15B, les modèles tendent à être classés comme LLM. Cela est illustré par des exemples tels que Qwen2.5-14B ou Gemma2 27B classifié par Google comme medium, qui appartiennent clairement à la catégorie des LLM selon leurs concepteurs.
+
+Sur la base de ces observations, et en accord avec les seuils définis par différents éditeurs, une limite claire se dessine : les modèles inférieurs à 7B sont considérés comme SLM, tandis qu’une marge d’interprétation persiste jusqu’à 14B voir 20B pour certains usages spécifiques. Cela reflète une certaine flexibilité dans la manière de qualifier un modèle comme SLM.
+
+Un autre aspect mis en évidence par le graphique concerne l’adaptation des tailles aux domaines spécifiques. Certains éditeurs définissent des seuils différents en fonction de l’application ciblée. Par exemple, dans le domaine de l’audio, le modèle Qwen-Audio (8.4B) est classé comme "large", tandis qu’un modèle généraliste de taille similaire, tel que Gemma 7B, reste dans la catégorie des SLM. D'autre par des modèles comme Prompt-Guard-86M (Meta), avec une taille bien inférieure à 1B, est destiné à un usage trés spécifique, comme la lutte contre les attaques de prompt. Par ailleurs ce modèle illustre bien la flexibilité qu'offrent les modèles légers.
+
+Les ressources matérielles jouent également un rôle important dans cette distinction. Les SLM, souvent open source, sont conçus pour fonctionner sur des infrastructures limitées, comme un ou plusieurs GPU grand public. 
+
+Le graphique montre également une forte concentration autour de tailles spécifiques, telles que 2B, 7B, 14B et 32B, qui apparaissent fréquemment parmi les modèles développés par Google, Meta, Microsoft, et Qwen. Cette convergence suggère que ces tailles servent de points de référence pour établir la distinction entre SLM et LLM. Cependant, une zone d’interprétation flexible subsiste entre 7B et 15B, où certains éditeurs qualifient leurs modèles de "small", tandis que d’autres les considèrent déjà comme "medium" ou "large". Par exemple, Phi3-medium (14B), selon Microsoft, est toujours considéré comme "lightweight", alors que Qwen2.5-14B est classé comme LLM par Qwen.
+
+Enfin, ce que ne montre pas les résultats de l'étude, est l’évolutivité des critères. Les tailles de modèles qui auraient été qualifiées de LLM dans le passé, comme GPT-2 (1.5B) en 2019, sont désormais considérées comme des SLM. Cela reflète une dynamique où la croissance des modèles, tant en complexité qu’en taille, redéfinit constamment les catégories. Des modèles comme Phi1-5 (1.5B) ou Qwen2.5-1.5B (2024) en sont des exemples modernes.
+
+En conclusion, les données du collectés et leur représentation graphique soulignent qu’il n’existe pas de seuil universel pour distinguer les SLM des LLM. Cette distinction repose sur une combinaison de facteurs, notamment la taille des modèles, leur domaine d’application, et les choix des éditeurs. Cette tendance montre une frontière en constante évolution, rendant assez difficile l’établissement d’un seuil fixe.
+
+### Résultats de la seconde sous question :
+
+Les résultats obtenus dans le cadre de la sous question "Un SLM peut-il être aussi performant, voire plus performant, qu’un LLM lorsqu’il est appliqué à une tâche spécifique ?" et visent à valider l’hypothèse selon laquelle un modèle de langage spécialisé (SLM) peut atteindre des performances comparables, voire supérieures, à celles d’un modèle de langage généraliste lorsqu’il est appliqué à des tâches spécifiques. Pour cela, une série d’expériences a été menée, centrée sur differents domaine
+
+#### Domaine question / réponses médicales
+La première étude a porté sur le domaine médical, en utilisant des benchmarks comme MedQA (benchmark évaluant des questions réponses médicales.
+
+![](./assets/results/medical_domain.png)
+
+Les résultats montrent que plusieurs SLM surpassent les LLM dans des scénarios précis, tout en utilisant un nombre de paramètres considérablement réduit. Par exemple, UltraMedical (8B) et MedMobile (3.8B) se sont distingués en dépassant des LLM tels que Clinical Camel (70B), GPT-3.5 (175B) et même Flan-PaLM (540B) sur le benchmark MedQA. En particulier, MedMobile (3.8B) a montré des performances impressionnantes en surpassant de nombreux plus larges modèles. Cela démontre qu’un modèle spécialisé peut effectivement surpasser des LLM généralistes, même ceux dotés de centaines de milliards de paramètres. Un autre exemple marquant est celui de VOD (220M), un modèle compact qui a surpassé Med-PaLM en utilisant 2 500 fois moins de paramètres, illustrant ainsi l'efficacité des SLM optimisés pour des tâches précises.
+
+Cependant, certains LLM spécialisés comme Flan-PaLM (540B) et GPT-4 maintiennent des performances supérieures dans des tâches plus complexes nécessitant une compréhension générale approfondie. Leur avantage est particulièrement notable pour des tâches générales ou multi-domaines, où la capacité de généralisation est essentielle. Clinical Camel (70B), bien que conçu spécifiquement pour le domaine médical, se situe entre les SLM et les LLM de très grande échelle, mais il est parfois dépassé par des modèles plus petits comme UltraMedical dans des benchmarks spécifiques.
+
+Il est à noté que le ratio taille/performance est également un avantage notable des SLM. Des modèles comme VOD (220M) et MedMobile (3.8B) montrent qu’une réduction drastique du nombre de paramètres n’entraîne pas nécessairement une baisse des performances, et bénéficient en rapidité d'inférence et reduction de ressoucess.
+
+Cependant, ces résultats doivent être nuancés par certaines limites. D’une part, les benchmarks utilisés, comme MedQA-USMLE, étant spécifiquement orientés vers le domaine médical, il est difficile de généraliser les performances observées à d’autres domaines ou tâches. D’autre part, les performances des SLM sont étroitement liées à la qualité des données d’entraînement et des méthodologies de fine-tuning, des facteurs qui peuvent introduire des biais dans les résultats.
+
+Les résulats trouvé dans le domaine de la médecine, confirment l'hypothèse initiale pour le domaine de la medecine.
+
+#### Domaine de la génération de code
+
+![](./assets/results/codegen_domain.png)
+
+Les résultats du benchmark BigCodeBench montrent que les Small Language Models (SLM), bien que nettement plus petits en taille, peuvent rivaliser avec ou surpasser les Large Language Models (LLM) dans la tâche spécifique de la génération de code. Par exemple, Phi-3.1-Mini-128k-Instruct (4B) surpasse des modèles bien plus grands comme Qwen-1.5-110B-Chat (110B) ou DeepSeek-Coder-33B-Instruct (33B), malgré un écart important en nombre de paramètres. 
+
+De même, Phi-4 (14B) montre des performances similaires à celles de Llama-3.1-405B-Instruct (405B), qui dispose de 29 fois plus de paramètres. Ces résultats soulignent que l’optimisation et la spécialisation permettent aux SLM d’atteindre des performances exceptionnelles, même face à des LLM généralistes de grande envergure.
+
+Ces observations mettent en lumière l’importance de la spécialisation dans l’efficacité des modèles. Les SLM conçus pour des tâches précises, comme la génération de code, peuvent exploiter au mieux leurs ressources, rendant la taille moins critique. Bien que certains LLM dominent encore certains benchmarks, l’écart de performance avec les SLM n’est souvent pas proportionnel à la différence de taille. Ainsi, un SLM bien ajusté peut non seulement offrir des performances comparables, mais aussi être plus économique et efficace pour le besoin auquel il est spécialisé. 
+
+En conclusion, oui, dans le domaine de la génération de code, un SLM peut être aussi performant, voire plus performant. L'hypothèse initiale se valide donc pour le domaine de ma génération de code.
+
+#### Domaine YYYYY
+
+#### Domaine ZZZZZ
+
+En conclusion, ces résultats soutiennent l’idée qu’un SLM bien conçu et optimisé peut surpasser un LLM dans des tâches spécifiques, tant en termes de précision que d’efficience. Cela ouvre de nouvelles perspectives pour des applications nécessitant des modèles performants mais économes en ressources, notamment dans des domaines très spécialisés. Toutefois, l’avantage des LLM reste certain pour les tâches plus généralistes ou nécessitant une large capacité de généralisation.
+
+### Résultats de la troisième sous question :
+
+
+### Résultats de la quatrième sous question :  
+
+//TODO : A retructurer
 ### Hypothèse 2
 #### 1. A quel moment utiliser un LM, pour quel type de tâche ?
 
@@ -277,6 +376,9 @@ e
 3. Construction d’une conclusion
 
    :bulb:  Vos résultats et donc votre analyse sont nécessairement limités. Préciser bien ces limites : par exemple, jeux de données insuffisants, analyse réduite à quelques critères, dépendance aux projets analysés, ...
+
+### Conclusion (réponse à la question principale)
+Ici, reprendre les 4 conclusions des sous question pour repondre a la question principale
 
 ## VI. Outils \(facultatif\)
 ```
