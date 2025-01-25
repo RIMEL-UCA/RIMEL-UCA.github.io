@@ -188,31 +188,12 @@ Nous allons mener des expériences afin de déterminer s'il y a des tendances d'
 ### Hypothèse 2
 #### 1. A quel moment utiliser un LM, pour quel type de tâche ?
 
-```Les modèles de langage (Language Models, ou encore LM) ont connu une évolution fulgurante au cours des dernières décennies, marquant l'histoire dans le domaine de l'intelligence artificielle. À leurs débuts, les LM s’appuyaient sur des méthodes statistiques simples comme les modèles n-grams, reposant sur des entrées très limitées et nécessitant des règles explicites pour capturer pour espérer avoir un semblant de conversation avec une machine. Ces approches, bien que novatrices pour l’époque, étaient limitées par leur capacité à généraliser leur champ d'action et leur dépendance à des données soigneusement préparées.
-
-Avec l'avènement des réseaux de neurones, l'introduction des modèles comme Word2Vec et GloVe a représenté un premier bond dans les LM, en offrant des représentations vectorielles denses du langage. Cependant, ce n'est qu'avec les architectures de type Transformer, introduites par Vaswani et al. en 2017, que les LM ont atteint un nouveau niveau de performance comme ceux que l'on connait aujourd'hui. Des modèles tels que BERT, GPT et leurs évolutions (GPT-3, GPT-4) ont ouvert la voie à une compréhension et une génération de texte d'une précision impressionnante, grâce à leur capacité à capturer des relations complexes à travers de vastes quantités de données.
-
-https://fr.wikipedia.org/wiki/Word2vec
-https://en.wikipedia.org/wiki/GloVe
-https://fr.wikipedia.org/wiki/Transformeur
-
-
-Dans ce contexte, deux catégories de modèles de langage émergent :
-
-Les modèles de langage généralistes (LLM), conçus pour traiter une grande variété de tâches et capables de s'adapter à divers domaines grâce à leur entraînement sur des corpus massifs.
-Les modèles de langage spécialisés (SLM), développés pour répondre à des besoins spécifiques, que ce soit dans des secteurs particuliers (santé, finance, etc.) ou pour des tâches ciblées nécessitant une précision accrue.
-```
-
 Il faut savoir que l'on connait les LM depuis plus longtemps que l'on ne le croit. Un LM n'est pas forcement obliger d'avoir une forme d'intelligence poussée. Les premiers LM qui ont vus le jour on commencer par des tâches très ciblées :
 - Correction orthographique et suggestion de mots
 - Reconnaissance vocale
 - Traduction Automatique
 
 Pour chaques langues, il fallait faire un nouveau LM. Pour chaque nouveau cas d'usage, il fallait en faire un nouveau.
-
-https://www.smalsresearch.be/nlp-modeles-de-langue/
-https://fr.wikipedia.org/wiki/Histoire_des_langages_de_programmation
-https://www.mongodb.com/fr-fr/resources/basics/artificial-intelligence/large-language-models
 
 Désormais, les LM sont pratiquement tous basés sur l'architecture Transformer que nous avons précédemment. Cette architecture à permis aux LM à monter en "intelligence".
 
@@ -226,8 +207,6 @@ Les cas d'utilisations de nos jours deviennent de plus en plus variés. Pour tro
 
 Au final, on peut dire d'après les résultats précédents que les LM sont généralement utilisés pour de la génération de texte. Entre la traduction, la correction orthographique,... il semble que l'interface première entre les humains et ces LM soit le texte.
 
-https://www.autolex.ai/post/guide-pratique-des-cas-dutilisation-des-grands-modeles-de-langage-llm?utm_source=chatgpt.com
-
 #### 2. Quand est-ce qu’un SLM est plus performant qu’un LLM ?
 
 Maintenant que nous avons vu qu'il existait deux types de LM (SLM / LLM), essayons d'étudier les différences entre eux, ce qui pourrait montrer pourquoi les cas d'usages peuvent autant varier.
@@ -235,11 +214,6 @@ Maintenant que nous avons vu qu'il existait deux types de LM (SLM / LLM), essayo
 Pour cette étude, nous ne testerons pas nous même les SLM/LLM. Nous essaierons de trouver des recherches sur ce sujet pour essayer de trouver justement des différences (ou non) à ce sujet.
 
 Dans pratiquement tous les sujets que nous avons regarder, tous sont d'accord sur le fait que les SLM ont une capacité similaire aux LLM à répondre à un sujet bien spécifique sur un domaine (avec quelques fois, une plus grande précision dans les réponses). On le voit donc, un LLM apport une simplicité d'utilisation qui empiète sur sa qualité de réponse. Tandis qu'un SLM, bien qu'il ne soit pas aussi bon qu'un LLM sur tous les domaines, peut exceller dans un domaine en particulier, ce qui lui permet d'être plus petit (car moins de choses à apprendre, à analyser), ce qui lui permet donc d'être utilisé de manière local sur une machine. Les cas d'utilisations sont donc plus ciblés côté SLM que LLM. Les LLM de nos jours sont utilisés pour à peu près tous les domaines sans exception. Tandis que les SLM, eux, comme dit précédemment, doivent obligatoirement cibler un sujet en particulier. 
-
-https://www.analyticsvidhya.com/blog/2024/11/slms-vs-llms/
-https://ieeexplore.ieee.org/abstract/document/10590016?casa_token=LDxEMDqRddYAAAAA:5TLDKfJEleeNj-Fup-ZEOaq2d9yvUwgyPD3WeWBFhqAnn14-5-LrC2UUfFEfVOAslmSiTkehWZi1
-https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10590016
-
 
 #### 3. Analyse de données sur HuggingFace
 
@@ -315,5 +289,11 @@ Précisez votre utilisation des outils ou les développements \(e.g. scripts\) r
 
 [Debret 2020] Debret, J. (2020) La démarche scientifique : tout ce que vous devez savoir ! Available at: https://www.scribbr.fr/article-scientifique/demarche-scientifique/ (Accessed: 18 November 2022).
 
-
-[LM History](https://en.wikipedia.org/wiki/Language_model)
+### Hypothèse 2
+[LM History](https://en.wikipedia.org/wiki/Language_model)  
+[Word2vec](https://fr.wikipedia.org/wiki/Word2vec)  
+[GloVe](https://en.wikipedia.org/wiki/GloVe)  
+[Transformeur](https://fr.wikipedia.org/wiki/Transformeur)  
+[Analyse des cas pratiques](https://www.autolex.ai/post/guide-pratique-des-cas-dutilisation-des-grands-modeles-de-langage-llm)  
+[SLM / LLM Comparaison guide](https://www.analyticsvidhya.com/blog/2024/11/slms-vs-llms/)  
+[Proposition d'evaluation des performances](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10590016)  
