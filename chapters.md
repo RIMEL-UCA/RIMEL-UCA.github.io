@@ -23,7 +23,7 @@ date: 2022-11-18 6:00:00 +0100
 #### [projetModel]({{site.url}}/chapters/2025/ChapterModel/content)
 #### [Utilité et Testabilité de ML avec un CI/CD Team_B]({{site.url}}/chapters/2025/Utilité_testabilité_CICD_ML_Team_B/content)
 
-
+### [Intégration du développement ML dans un pipeline CI / CD]({{site.url}}/chapters/2025/Integration_du_developpement_ML_dans_un_pipeline_CICD_Team_D/content)
 
 ## 2024
 

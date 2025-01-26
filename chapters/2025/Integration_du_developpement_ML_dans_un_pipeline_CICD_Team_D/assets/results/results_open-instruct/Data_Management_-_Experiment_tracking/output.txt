@@ -1,0 +1,105 @@
+Mot-clé: 'comet'
+  Nombre d'occurrences: 3
+  Apparaît dans les fichiers:
+    - open-instruct/open_instruct/dpo_tune.py
+      Lignes: 326
+    - open-instruct/open_instruct/dpo_tune_cache.py
+      Lignes: 328
+    - open-instruct/open_instruct/finetune.py
+      Lignes: 292
+Mot-clé: 'ludwig'
+  Nombre d'occurrences: 1
+  Apparaît dans les fichiers:
+    - open-instruct/eval/truthfulqa/presets.py
+      Lignes: 236
+Mot-clé: 'neptune'
+  Nombre d'occurrences: 13
+  Apparaît dans les fichiers:
+    - open-instruct/mason.py
+      Lignes: 33
+    - open-instruct/docs/ai2_internal.md
+      Lignes: 11
+    - open-instruct/scripts/cache_hf.py
+      Lignes: 19
+    - open-instruct/scripts/submit_eval_jobs.py
+      Lignes: 71, 95
+    - open-instruct/scripts/eval/faster_oe_eval_mmlu.sh
+      Lignes: 235
+    - open-instruct/scripts/eval/oe-eval.sh
+      Lignes: 185
+    - open-instruct/open_instruct/dpo_tune.py
+      Lignes: 1168
+    - open-instruct/open_instruct/ppo_vllm_thread_ray_gtrl.py
+      Lignes: 1498
+    - open-instruct/open_instruct/dpo_tune_cache.py
+      Lignes: 1188
+    - open-instruct/open_instruct/ppo_vllm_thread_ray.py
+      Lignes: 1407
+    - open-instruct/open_instruct/grpo_vllm_thread_ray_gtrl.py
+      Lignes: 1391
+    - open-instruct/open_instruct/finetune.py
+      Lignes: 1082
+Mot-clé: 'spell'
+  Nombre d'occurrences: 1
+  Apparaît dans les fichiers:
+    - open-instruct/eval/ifeval/instructions_util.py
+      Lignes: 26
+Mot-clé: 'wandb'
+  Nombre d'occurrences: 273
+  Apparaît dans les fichiers:
+    - open-instruct/requirements.txt
+      Lignes: 184
+    - open-instruct/mason.py
+      Lignes: 124, 154, 200, 231, 370, 371, 374
+    - open-instruct/weka_setup_helper.sh
+      Lignes: 8, 28
+    - open-instruct/docs/ai2_internal.md
+      Lignes: 53, 56, 57, 59
+    - open-instruct/docs/tulu3.md
+      Lignes: 47, 112, 156, 211
+    - open-instruct/docs/algorithms/online_dpo.md
+      Lignes: 137, 189, 241, 297, 302, 305
+    - open-instruct/docs/algorithms/synthetic_preference_dataset.md
+      Lignes: 61, 63
+    - open-instruct/docs/algorithms/rejection_sampling.md
+      Lignes: 92, 94
+    - open-instruct/docs/algorithms/ppo.md
+      Lignes: 253, 258, 261, 356, 361, 468, 475, 480, 483
+    - open-instruct/docs/algorithms/reward_modeling.md
+      Lignes: 80, 113, 144, 175, 209, 217, 222, 225
+    - open-instruct/scripts/submit_dpo_job.py
+      Lignes: 230, 231, 232, 234, 329, 331, 333, 334, 337, 340, 349
+    - open-instruct/scripts/add_metadata.py
+      Lignes: 11, 30, 40
+    - open-instruct/scripts/finetune_with_accelerate_config.sh
+      Lignes: 35
+    - open-instruct/scripts/finetune_lora_with_accelerate_config.sh
+      Lignes: 35
+    - open-instruct/scripts/submit_finetune_job.py
+      Lignes: 77, 78, 79, 81, 326, 328, 330, 331, 334, 337, 346
+    - open-instruct/scripts/finetune_qlora_with_accelerate_config.sh
+      Lignes: 32
+    - open-instruct/scripts/README.md
+      Lignes: 49, 56
+    - open-instruct/scripts/add_metadata_from_wandb.py
+      Lignes: 4, 8, 11, 12, 14, 16, 17, 21, 27, 28, 34, 36, 49, 55
+    - open-instruct/open_instruct/online_dpo_vllm_thread.py
+      Lignes: 64, 68, 193, 196, 197, 198, 199, 276, 277, 358, 360, 361, 362, 367, 435, 528, 529, 637, 959, 965
+    - open-instruct/open_instruct/dpo_tune.py
+      Lignes: 74, 78, 309, 311, 326, 327, 890, 891, 898, 900, 901, 905, 1142, 1148, 1179
+    - open-instruct/open_instruct/ppo_vllm_thread_ray_gtrl.py
+      Lignes: 104, 108, 266, 269, 270, 271, 272, 354, 355, 571, 576, 1467, 1477, 1483, 1509, 1608, 1610, 1611, 1612, 1617, 1694, 1708, 1710, 1766, 1780, 1786
+    - open-instruct/open_instruct/dpo_tune_cache.py
+      Lignes: 76, 80, 311, 313, 328, 329, 892, 893, 900, 902, 903, 907, 1162, 1168, 1199
+    - open-instruct/open_instruct/reward_modeling.py
+      Lignes: 51, 55, 123, 126, 127, 128, 129, 187, 188, 216, 218, 219, 220, 225, 298, 410
+    - open-instruct/open_instruct/ppo_vllm_thread_ray.py
+      Lignes: 101, 105, 251, 254, 255, 256, 257, 337, 338, 554, 559, 1376, 1386, 1392, 1418, 1517, 1519, 1520, 1521, 1526, 1593, 1607, 1609, 1664, 1678, 1684
+    - open-instruct/open_instruct/utils.py
+      Lignes: 643, 645, 648, 852, 854, 856, 857
+    - open-instruct/open_instruct/ppo_vllm_thread.py
+      Lignes: 66, 70, 216, 219, 220, 221, 222, 299, 300, 439, 441, 442, 443, 448, 528, 733, 1101, 1107
+    - open-instruct/open_instruct/grpo_vllm_thread_ray_gtrl.py
+      Lignes: 104, 108, 258, 261, 262, 263, 264, 345, 346, 562, 567, 1360, 1370, 1376, 1402, 1501, 1503, 1504, 1505, 1510, 1587, 1601, 1603, 1659, 1673, 1679
+    - open-instruct/open_instruct/finetune.py
+      Lignes: 63, 67, 275, 277, 292, 293, 836, 837, 844, 846, 847, 851, 1056, 1062, 1093

@@ -1,0 +1,82 @@
+Mot-clé: 'arize'
+  Nombre d'occurrences: 78
+  Apparaît dans les fichiers:
+    - open-instruct/README.md
+      Lignes: 249
+    - open-instruct/human_eval/app.py
+      Lignes: 121, 265
+    - open-instruct/docs/tulu3.md
+      Lignes: 239
+    - open-instruct/docs/algorithms/online_dpo.md
+      Lignes: 208, 211, 262, 265
+    - open-instruct/docs/algorithms/ppo.md
+      Lignes: 381, 384
+    - open-instruct/docs/algorithms/reward_modeling.md
+      Lignes: 95, 190, 192, 316
+    - open-instruct/docs/data/preference-data.md
+      Lignes: 18, 35, 36, 37, 39, 47, 48, 49, 52, 53, 57
+    - open-instruct/scripts/dpo_train_with_qlora.sh
+      Lignes: 23
+    - open-instruct/scripts/dpo_train_with_accelerate.sh
+      Lignes: 22
+    - open-instruct/scripts/synth_pref/parse_preferences.py
+      Lignes: 130, 131, 132, 202
+    - open-instruct/scripts/eval/faster_oe_eval_mmlu.sh
+      Lignes: 182
+    - open-instruct/scripts/eval/oe-eval.sh
+      Lignes: 128
+    - open-instruct/scripts/data/get_token_distribution.py
+      Lignes: 87
+    - open-instruct/scripts/data/get_statistics_tulu_v3.sh
+      Lignes: 41
+    - open-instruct/scripts/data/preferences/helpsteer2.py
+      Lignes: 14, 21, 45, 51, 53, 66, 67, 69, 78, 80, 82, 92, 96, 101
+    - open-instruct/scripts/data/preferences/nectar.py
+      Lignes: 46, 70, 79, 83, 86, 91, 102, 105, 122, 126, 129
+    - open-instruct/scripts/data/preferences/webgpt.py
+      Lignes: 97, 99
+    - open-instruct/scripts/data/preferences/helpsteer2_nvidia.py
+      Lignes: 22, 28, 51, 57, 59, 66, 67, 69, 73, 75, 77, 87, 91, 96
+    - open-instruct/open_instruct/test_utils.py
+      Lignes: 75
+    - open-instruct/open_instruct/rejection_sampling/prompt_templates.py
+      Lignes: 18
+Mot-clé: 'tensorboard'
+  Nombre d'occurrences: 31
+  Apparaît dans les fichiers:
+    - open-instruct/requirements.txt
+      Lignes: 165, 166
+    - open-instruct/scripts/finetune_with_accelerate.sh
+      Lignes: 35
+    - open-instruct/scripts/finetune_with_accelerate_config.sh
+      Lignes: 35
+    - open-instruct/scripts/finetune_lora_with_accelerate_config.sh
+      Lignes: 35
+    - open-instruct/scripts/finetune_qlora_with_accelerate_config.sh
+      Lignes: 32
+    - open-instruct/scripts/finetune_lora_with_accelerate.sh
+      Lignes: 39
+    - open-instruct/scripts/finetune_qlora_with_accelerate.sh
+      Lignes: 37
+    - open-instruct/scripts/dpo_train_with_qlora.sh
+      Lignes: 35
+    - open-instruct/scripts/dpo_train_with_accelerate.sh
+      Lignes: 34
+    - open-instruct/open_instruct/online_dpo_vllm_thread.py
+      Lignes: 27, 363
+    - open-instruct/open_instruct/dpo_tune.py
+      Lignes: 326, 327, 886
+    - open-instruct/open_instruct/ppo_vllm_thread_ray_gtrl.py
+      Lignes: 64, 1613
+    - open-instruct/open_instruct/dpo_tune_cache.py
+      Lignes: 328, 329, 888
+    - open-instruct/open_instruct/reward_modeling.py
+      Lignes: 20, 221
+    - open-instruct/open_instruct/ppo_vllm_thread_ray.py
+      Lignes: 64, 1522
+    - open-instruct/open_instruct/ppo_vllm_thread.py
+      Lignes: 26, 444
+    - open-instruct/open_instruct/grpo_vllm_thread_ray_gtrl.py
+      Lignes: 64, 1506
+    - open-instruct/open_instruct/finetune.py
+      Lignes: 292, 293, 832

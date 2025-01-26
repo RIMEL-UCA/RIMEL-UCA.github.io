@@ -1,0 +1,224 @@
+Mot-clé: 'appen'
+  Nombre d'occurrences: 402
+  Apparaît dans les fichiers:
+    - open-instruct/mason.py
+      Lignes: 141, 144, 146, 160, 167, 406, 410
+    - open-instruct/quantize/quantize_autogptq_wikitext.py
+      Lignes: 41
+    - open-instruct/human_eval/compute_metrics.py
+      Lignes: 15, 19, 62, 64, 66, 68, 70, 102, 104, 106, 132, 139, 151, 158, 185
+    - open-instruct/human_eval/app.py
+      Lignes: 142, 159, 163, 204, 206, 208, 210, 212, 244, 246, 248, 298, 301
+    - open-instruct/human_eval/static/app.js
+      Lignes: 44
+    - open-instruct/decontamination/index.py
+      Lignes: 58, 82, 142, 143, 151
+    - open-instruct/decontamination/search.py
+      Lignes: 66, 70, 78, 130, 132, 140, 148, 150, 151, 159, 174, 186, 189, 198, 199, 324, 325, 348
+    - open-instruct/scripts/submit_dpo_job.py
+      Lignes: 280, 282, 284, 289, 293, 295, 336, 339, 342, 345, 348, 358, 404, 405
+    - open-instruct/scripts/collect_eval_results.py
+      Lignes: 140
+    - open-instruct/scripts/submit_finetune_job.py
+      Lignes: 127, 129, 131, 136, 140, 142, 333, 336, 339, 342, 345, 355, 401, 402
+    - open-instruct/scripts/submit_eval_jobs.py
+      Lignes: 143, 579
+    - open-instruct/scripts/create_ground_truth_data.py
+      Lignes: 95, 106, 123, 151, 202, 224
+    - open-instruct/scripts/synth_pref/parse_preferences.py
+      Lignes: 47, 120, 122, 157, 159, 161, 180, 198
+    - open-instruct/scripts/synth_pref/generate_responses.py
+      Lignes: 69
+    - open-instruct/scripts/synth_pref/utils/ultrafeedback_template.py
+      Lignes: 261, 268, 276, 289
+    - open-instruct/scripts/synth_pref/utils/openai_api.py
+      Lignes: 26, 27, 64
+    - open-instruct/scripts/data/get_token_distribution.py
+      Lignes: 110, 203, 304
+    - open-instruct/scripts/data/read_statistics.py
+      Lignes: 34, 55, 82
+    - open-instruct/scripts/data/get_statistics.py
+      Lignes: 57, 62, 66
+    - open-instruct/scripts/data/preferences/helpsteer2.py
+      Lignes: 19, 51
+    - open-instruct/scripts/data/preferences/nectar.py
+      Lignes: 79
+    - open-instruct/scripts/data/preferences/hh-harmless.py
+      Lignes: 13, 25, 26, 27, 33
+    - open-instruct/scripts/data/preferences/helpsteer2_nvidia.py
+      Lignes: 26, 57
+    - open-instruct/scripts/data/preferences/hh-helpful.py
+      Lignes: 13, 25, 26, 27, 33
+    - open-instruct/scripts/data/preferences/utils.py
+      Lignes: 9, 20
+    - open-instruct/scripts/data/sft_v1_v2/split_sharegpt_conversations.py
+      Lignes: 29, 41, 48, 87
+    - open-instruct/scripts/data/sft_v1_v2/prepare_science_data.py
+      Lignes: 42
+    - open-instruct/scripts/data/sft_v1_v2/reformat_datasets.py
+      Lignes: 134, 236, 264, 297, 344, 482, 484, 521, 522, 540, 549, 551, 571, 607, 619, 620, 655, 656, 730, 789
+    - open-instruct/scripts/data/sft/lima.py
+      Lignes: 56, 58
+    - open-instruct/scripts/data/sft/open_assistant.py
+      Lignes: 30, 49, 51, 62, 153, 198
+    - open-instruct/scripts/data/sft/flan.py
+      Lignes: 92
+    - open-instruct/scripts/data/sft/daring_anteater.py
+      Lignes: 61, 64, 66
+    - open-instruct/open_instruct/model_utils.py
+      Lignes: 245, 256, 258, 370, 371, 593, 602
+    - open-instruct/open_instruct/online_dpo_vllm_thread.py
+      Lignes: 719, 720, 721, 722, 723, 845, 852
+    - open-instruct/open_instruct/math_utils.py
+      Lignes: 134
+    - open-instruct/open_instruct/ground_truth_utils.py
+      Lignes: 41, 45, 52, 55, 77, 80
+    - open-instruct/open_instruct/vllm_utils2.py
+      Lignes: 225
+    - open-instruct/open_instruct/dataset_processor.py
+      Lignes: 499, 500, 501, 502, 513, 547, 548, 584, 618
+    - open-instruct/open_instruct/ppo_vllm_thread_ray_gtrl.py
+      Lignes: 476, 1138, 1139, 1140, 1141, 1142, 1143, 1144, 1145, 1219, 1563, 1593, 1740, 1752
+    - open-instruct/open_instruct/dpo_tune_cache.py
+      Lignes: 480, 481, 482, 483
+    - open-instruct/open_instruct/vllm_utils.py
+      Lignes: 112, 126
+    - open-instruct/open_instruct/ppo_vllm_thread_ray.py
+      Lignes: 459, 1061, 1062, 1063, 1064, 1065, 1066, 1067, 1139, 1472, 1502, 1638, 1650
+    - open-instruct/open_instruct/utils.py
+      Lignes: 244, 330, 332, 368, 495, 567
+    - open-instruct/open_instruct/ppo_vllm_thread.py
+      Lignes: 404, 853, 854, 855, 856, 857, 858, 859, 860, 927
+    - open-instruct/open_instruct/grpo_vllm_thread_ray_gtrl.py
+      Lignes: 467, 1083, 1084, 1085, 1086, 1087, 1088, 1089, 1456, 1486, 1633, 1645
+    - open-instruct/open_instruct/rejection_sampling/generation.py
+      Lignes: 140, 192, 193, 194, 195
+    - open-instruct/open_instruct/rejection_sampling/rejection_sampling.py
+      Lignes: 254, 255, 273, 276, 280, 284, 332, 333, 334, 335, 339, 340, 347
+    - open-instruct/open_instruct/rejection_sampling/synthetic_preference_dataset.py
+      Lignes: 129, 160, 174, 183, 184, 185, 186
+    - open-instruct/open_instruct/rejection_sampling/api_generate.py
+      Lignes: 80
+    - open-instruct/eval/predict.py
+      Lignes: 152
+    - open-instruct/eval/utils.py
+      Lignes: 65, 190, 236, 411, 435, 478, 502
+    - open-instruct/eval/codex_humaneval/run_eval.py
+      Lignes: 45, 50, 62, 64, 137, 142, 160
+    - open-instruct/eval/codex_humaneval/execution.py
+      Lignes: 59, 61, 63, 80
+    - open-instruct/eval/codex_humaneval/evaluation.py
+      Lignes: 69, 78, 85, 86
+    - open-instruct/eval/codex_humaneval/data.py
+      Lignes: 32, 36
+    - open-instruct/eval/ifeval/run_eval.py
+      Lignes: 52, 97, 99, 152, 262, 297, 321
+    - open-instruct/eval/ifeval/instructions.py
+      Lignes: 1206
+    - open-instruct/eval/truthfulqa/run_eval.py
+      Lignes: 121, 126, 243, 266
+    - open-instruct/eval/truthfulqa/metrics.py
+      Lignes: 140
+    - open-instruct/eval/truthfulqa/presets.py
+      Lignes: 84, 90, 181, 271, 295, 296
+    - open-instruct/eval/truthfulqa/utilities.py
+      Lignes: 113, 115, 117
+    - open-instruct/eval/tydiqa/run_eval.py
+      Lignes: 63, 92, 170, 174, 190, 198, 216, 258
+    - open-instruct/eval/xstest/run_eval.py
+      Lignes: 73
+    - open-instruct/eval/xstest/classify_refusal.py
+      Lignes: 45
+    - open-instruct/eval/MATH/run_eval.py
+      Lignes: 35, 54, 58, 70, 71, 162, 175
+    - open-instruct/eval/MATH/minerva_utils.py
+      Lignes: 67
+    - open-instruct/eval/alpaca_farm/run_eval.py
+      Lignes: 23, 55, 80, 113
+    - open-instruct/eval/gsm/run_eval.py
+      Lignes: 33, 57, 61, 164, 166
+    - open-instruct/eval/mbpp/run_eval.py
+      Lignes: 55, 59, 133, 138, 156
+    - open-instruct/eval/mbpp/execution.py
+      Lignes: 46, 77, 79, 81
+    - open-instruct/eval/mbpp/evaluation.py
+      Lignes: 53, 59, 64, 65
+    - open-instruct/eval/mmlu/run_eval.py
+      Lignes: 79, 95, 117, 135, 206, 209, 210
+    - open-instruct/eval/toxigen/run_eval.py
+      Lignes: 58, 81, 97, 124, 166
+    - open-instruct/eval/bbh/run_eval.py
+      Lignes: 52, 54, 110, 146, 170
+    - open-instruct/assets/model_licenses/pythia_license.txt
+      Lignes: 38, 178
+    - open-instruct/assets/model_licenses/tulu_license.txt
+      Lignes: 43, 118
+Mot-clé: 'scale'
+  Nombre d'occurrences: 127
+  Apparaît dans les fichiers:
+    - open-instruct/README.md
+      Lignes: 250
+    - open-instruct/mason.py
+      Lignes: 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 31, 32, 33, 34, 35, 36, 188, 192, 196, 200, 203, 389, 390
+    - open-instruct/quantize/quantize_autogptq_wikitext.py
+      Lignes: 7, 8
+    - open-instruct/quantize/experiments/gptq_compress_llama_7b.py
+      Lignes: 13, 14, 29, 30, 35, 39, 43
+    - open-instruct/quantize/scripts/eval_on_mmlu.sh
+      Lignes: 7, 8
+    - open-instruct/docs/ai2_internal.md
+      Lignes: 11, 70
+    - open-instruct/docs/algorithms/online_dpo.md
+      Lignes: 17, 103, 145, 147, 197, 199, 251
+    - open-instruct/docs/algorithms/rejection_sampling.md
+      Lignes: 126, 132, 135
+    - open-instruct/docs/algorithms/ppo.md
+      Lignes: 17, 141, 177, 267, 269, 310, 312, 370, 372, 420
+    - open-instruct/docs/algorithms/reward_modeling.md
+      Lignes: 17, 58, 90, 120, 151, 184
+    - open-instruct/docs/safety-eval/safety.md
+      Lignes: 64
+    - open-instruct/scripts/submit_dpo_job.py
+      Lignes: 22, 78, 105
+    - open-instruct/scripts/collect_eval_results.py
+      Lignes: 108, 109, 126, 127
+    - open-instruct/scripts/submit_finetune_job.py
+      Lignes: 21, 176, 203
+    - open-instruct/scripts/cache_hf.py
+      Lignes: 19
+    - open-instruct/scripts/submit_eval_jobs.py
+      Lignes: 69, 70, 71, 72, 73, 90, 91, 92, 93, 94, 95, 96, 97
+    - open-instruct/scripts/README.md
+      Lignes: 96, 113, 129
+    - open-instruct/scripts/persona_driven_data_gen/prompt_templates.py
+      Lignes: 103
+    - open-instruct/scripts/weights/convert_llama_weights_to_hf.sh
+      Lignes: 1, 8
+    - open-instruct/scripts/eval/dummy_length_scorer.py
+      Lignes: 12
+    - open-instruct/scripts/eval/faster_oe_eval_mmlu.sh
+      Lignes: 77, 235
+    - open-instruct/scripts/eval/oe-eval.sh
+      Lignes: 17, 185
+    - open-instruct/scripts/data/get_token_distribution.py
+      Lignes: 256, 275, 280, 296, 297, 310, 358, 359
+    - open-instruct/open_instruct/model_utils.py
+      Lignes: 536
+    - open-instruct/open_instruct/online_dpo_vllm_thread.py
+      Lignes: 979
+    - open-instruct/open_instruct/dpo_tune.py
+      Lignes: 1168
+    - open-instruct/open_instruct/ppo_vllm_thread_ray_gtrl.py
+      Lignes: 399, 424, 1498, 1800
+    - open-instruct/open_instruct/dpo_tune_cache.py
+      Lignes: 1188
+    - open-instruct/open_instruct/ppo_vllm_thread_ray.py
+      Lignes: 382, 407, 1407, 1698
+    - open-instruct/open_instruct/ppo_vllm_thread.py
+      Lignes: 1121
+    - open-instruct/open_instruct/grpo_vllm_thread_ray_gtrl.py
+      Lignes: 390, 415, 1391, 1693
+    - open-instruct/open_instruct/finetune.py
+      Lignes: 1082
+    - open-instruct/eval/ifeval/instructions_util.py
+      Lignes: 26

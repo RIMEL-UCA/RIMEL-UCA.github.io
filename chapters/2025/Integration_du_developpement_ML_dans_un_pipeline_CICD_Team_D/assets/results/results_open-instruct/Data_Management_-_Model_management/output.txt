@@ -1,0 +1,216 @@
+Mot-clé: 'databricks'
+  Nombre d'occurrences: 2
+  Apparaît dans les fichiers:
+    - open-instruct/scripts/data/sft_v1_v2/reformat_datasets.py
+      Lignes: 262
+    - open-instruct/scripts/data/sft_v1_v2/prepare_tulu_v1_v2.sh
+      Lignes: 42
+Mot-clé: 'determined'
+  Nombre d'occurrences: 2
+  Apparaît dans les fichiers:
+    - open-instruct/eval/codex_humaneval/run_eval.py
+      Lignes: 105
+    - open-instruct/eval/mbpp/run_eval.py
+      Lignes: 104
+Mot-clé: 'huggingface'
+  Nombre d'occurrences: 346
+  Apparaît dans les fichiers:
+    - open-instruct/requirements.txt
+      Lignes: 59
+    - open-instruct/README.md
+      Lignes: 21, 25, 26, 27, 28, 29, 35, 40, 43, 128, 138, 139, 238, 247, 248
+    - open-instruct/mason.py
+      Lignes: 188, 219, 223
+    - open-instruct/weka_setup_helper.sh
+      Lignes: 35
+    - open-instruct/quantize/experiments/gptq_compress_llama_7b.py
+      Lignes: 43
+    - open-instruct/decontamination/index.py
+      Lignes: 107
+    - open-instruct/decontamination/README.md
+      Lignes: 15, 54
+    - open-instruct/docs/tulu1_tulu2.md
+      Lignes: 11, 12, 13, 34, 81, 85, 97
+    - open-instruct/docs/ai2_internal.md
+      Lignes: 23, 24, 116
+    - open-instruct/docs/tulu3.md
+      Lignes: 10, 74, 132, 174, 231, 259, 306
+    - open-instruct/docs/algorithms/online_dpo.md
+      Lignes: 138, 141, 156, 158, 190, 242
+    - open-instruct/docs/algorithms/synthetic_preference_dataset.md
+      Lignes: 11, 13, 26
+    - open-instruct/docs/algorithms/rejection_sampling.md
+      Lignes: 14, 31, 32, 43, 44, 58, 59, 70, 71
+    - open-instruct/docs/algorithms/ppo.md
+      Lignes: 254, 259, 263, 278, 280, 318, 320, 357, 362, 429, 431, 469
+    - open-instruct/docs/algorithms/reward_modeling.md
+      Lignes: 81, 114, 145, 176, 210, 270, 294, 312, 313, 314, 315, 316
+    - open-instruct/docs/data/preference-data.md
+      Lignes: 18, 19, 20, 35, 36, 37, 47, 48, 49, 52, 53, 54, 55, 56, 57, 58, 69, 79, 80, 81, 82, 83, 84, 85, 93, 95, 96, 97, 98, 99, 100, 101, 102, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138
+    - open-instruct/docs/safety-eval/safety.md
+      Lignes: 110
+    - open-instruct/scripts/submit_dpo_job.py
+      Lignes: 94, 98
+    - open-instruct/scripts/add_metadata.py
+      Lignes: 1, 11
+    - open-instruct/scripts/submit_finetune_job.py
+      Lignes: 192, 196
+    - open-instruct/scripts/cache_hf.py
+      Lignes: 11, 16
+    - open-instruct/scripts/submit_eval_jobs.py
+      Lignes: 483, 520, 525, 661
+    - open-instruct/scripts/dpo_train_with_qlora.sh
+      Lignes: 23
+    - open-instruct/scripts/README.md
+      Lignes: 50, 66, 160, 166, 172
+    - open-instruct/scripts/convert_olmo_1124_weights_to_hf.py
+      Lignes: 1, 40
+    - open-instruct/scripts/dpo_train_with_accelerate.sh
+      Lignes: 22
+    - open-instruct/scripts/synth_pref/requirements.txt
+      Lignes: 5
+    - open-instruct/scripts/persona_driven_data_gen/README.md
+      Lignes: 51
+    - open-instruct/scripts/weights/weight_diff.py
+      Lignes: 103, 104, 106
+    - open-instruct/scripts/weights/convert_llama_weights_to_hf.sh
+      Lignes: 4
+    - open-instruct/scripts/eval/alpaca_farm.sh
+      Lignes: 17
+    - open-instruct/scripts/eval/faster_oe_eval_mmlu.sh
+      Lignes: 74, 78
+    - open-instruct/scripts/eval/oe-eval.sh
+      Lignes: 14, 18
+    - open-instruct/scripts/eval/fetch_mmlu_jobs.py
+      Lignes: 123
+    - open-instruct/scripts/data/prepare_eval_data.sh
+      Lignes: 33, 39
+    - open-instruct/scripts/data/gsm8k.py
+      Lignes: 16
+    - open-instruct/scripts/data/get_statistics.py
+      Lignes: 23
+    - open-instruct/scripts/data/preferences/webgpt.py
+      Lignes: 5
+    - open-instruct/scripts/data/preferences/dataset_info.py
+      Lignes: 1, 7, 10
+    - open-instruct/scripts/data/preferences/hh-harmless.py
+      Lignes: 5
+    - open-instruct/scripts/data/preferences/hh-helpful.py
+      Lignes: 5
+    - open-instruct/scripts/data/preferences/ultrafeedback_replications.py
+      Lignes: 9
+    - open-instruct/scripts/data/sft_v1_v2/prepare_tulu_v1_v2.sh
+      Lignes: 1, 2, 3, 6, 7, 18, 19, 24, 25, 42, 46, 67, 68, 83, 84, 86, 90, 91, 95, 96, 100, 104
+    - open-instruct/scripts/data/sft/open_math_instruct.py
+      Lignes: 76, 105
+    - open-instruct/scripts/data/sft/metamath.py
+      Lignes: 69
+    - open-instruct/scripts/data/sft/no_robots.py
+      Lignes: 62, 68
+    - open-instruct/scripts/data/sft/sharegpt.py
+      Lignes: 66, 75, 79
+    - open-instruct/scripts/data/sft/wizardlm.py
+      Lignes: 73
+    - open-instruct/scripts/data/sft/lmsys_chat.py
+      Lignes: 71
+    - open-instruct/scripts/data/sft/lima.py
+      Lignes: 75
+    - open-instruct/scripts/data/sft/coconot.py
+      Lignes: 70
+    - open-instruct/scripts/data/sft/open_assistant.py
+      Lignes: 142, 187
+    - open-instruct/scripts/data/sft/wildchat.py
+      Lignes: 73, 88
+    - open-instruct/scripts/data/sft/utils.py
+      Lignes: 8
+    - open-instruct/scripts/data/sft/flan.py
+      Lignes: 67, 71, 72
+    - open-instruct/scripts/data/sft/numinamath.py
+      Lignes: 67
+    - open-instruct/scripts/data/sft/web_instruct.py
+      Lignes: 78, 95
+    - open-instruct/scripts/data/sft/table_gpt.py
+      Lignes: 69
+    - open-instruct/scripts/data/sft/slim_orca.py
+      Lignes: 78
+    - open-instruct/scripts/data/sft/aya.py
+      Lignes: 69
+    - open-instruct/scripts/data/sft/codefeedback_mix.py
+      Lignes: 69
+    - open-instruct/scripts/data/sft/sciriff.py
+      Lignes: 68
+    - open-instruct/scripts/data/sft/daring_anteater.py
+      Lignes: 83
+    - open-instruct/scripts/data/sft/evol_codealpaca.py
+      Lignes: 69, 71
+    - open-instruct/open_instruct/model_utils.py
+      Lignes: 1, 2, 33, 95, 197, 343, 440
+    - open-instruct/open_instruct/test_utils.py
+      Lignes: 15, 29, 30, 31, 39, 40, 41, 49, 50, 58, 59, 66, 98, 100
+    - open-instruct/open_instruct/online_dpo_vllm_thread.py
+      Lignes: 24, 201, 273
+    - open-instruct/open_instruct/ground_truth_utils.py
+      Lignes: 120
+    - open-instruct/open_instruct/dpo_tune.py
+      Lignes: 42, 372, 489
+    - open-instruct/open_instruct/vllm_utils2.py
+      Lignes: 1
+    - open-instruct/open_instruct/ppo_vllm_thread_ray_gtrl.py
+      Lignes: 59, 274, 351, 589, 684
+    - open-instruct/open_instruct/dpo_tune_cache.py
+      Lignes: 43, 382, 503
+    - open-instruct/open_instruct/reward_modeling.py
+      Lignes: 17, 131, 184
+    - open-instruct/open_instruct/vllm_utils.py
+      Lignes: 1
+    - open-instruct/open_instruct/ppo_vllm_thread_ray.py
+      Lignes: 59, 259, 334, 572, 660
+    - open-instruct/open_instruct/utils.py
+      Lignes: 32, 46, 47, 121, 535, 819
+    - open-instruct/open_instruct/merge_lora.py
+      Lignes: 28, 73
+    - open-instruct/open_instruct/dpo_utils.py
+      Lignes: 339
+    - open-instruct/open_instruct/reward_modeling_eval.py
+      Lignes: 8
+    - open-instruct/open_instruct/ppo_vllm_thread.py
+      Lignes: 23, 224, 296
+    - open-instruct/open_instruct/grpo_vllm_thread_ray_gtrl.py
+      Lignes: 59, 266, 342, 580, 636
+    - open-instruct/open_instruct/finetune.py
+      Lignes: 38, 344, 473, 921
+    - open-instruct/open_instruct/rejection_sampling/generation.py
+      Lignes: 27, 28, 215
+    - open-instruct/open_instruct/rejection_sampling/rejection_sampling.py
+      Lignes: 30, 31, 181, 182, 365, 402
+    - open-instruct/open_instruct/rejection_sampling/synthetic_preference_dataset.py
+      Lignes: 28, 29, 204
+    - open-instruct/eval/predict.py
+      Lignes: 15, 36, 40, 73
+    - open-instruct/eval/templates.py
+      Lignes: 46, 72, 88, 111, 112
+    - open-instruct/eval/utils.py
+      Lignes: 10, 20, 566
+    - open-instruct/eval/ifeval/run_eval.py
+      Lignes: 242
+    - open-instruct/eval/truthfulqa/run_eval.py
+      Lignes: 215, 425, 523, 529
+    - open-instruct/eval/truthfulqa/metrics.py
+      Lignes: 120
+    - open-instruct/eval/xstest/run_eval.py
+      Lignes: 53
+    - open-instruct/eval/alpaca_farm/run_eval.py
+      Lignes: 178
+    - open-instruct/eval/mbpp/mbpp.py
+      Lignes: 14
+    - open-instruct/eval/mbpp/execution.py
+      Lignes: 1
+    - open-instruct/eval/bbh/run_eval.py
+      Lignes: 82
+Mot-clé: 'sas'
+  Nombre d'occurrences: 2
+  Apparaît dans les fichiers:
+    - open-instruct/scripts/eval/fetch_mmlu_jobs.py
+      Lignes: 125
+    - open-instruct/eval/ifeval/instructions_util.py
+      Lignes: 26

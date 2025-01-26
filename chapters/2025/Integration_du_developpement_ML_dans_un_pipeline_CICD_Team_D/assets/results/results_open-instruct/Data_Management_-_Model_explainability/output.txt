@@ -1,0 +1,84 @@
+Mot-clé: 'shap'
+  Nombre d'occurrences: 167
+  Apparaît dans les fichiers:
+    - open-instruct/quantize/quantize_autogptq_wikitext.py
+      Lignes: 37
+    - open-instruct/scripts/persona_driven_data_gen/prompt_templates.py
+      Lignes: 61, 97, 118
+    - open-instruct/open_instruct/model_utils.py
+      Lignes: 114, 119, 132, 133, 140, 153, 160, 162, 164, 168, 172, 179, 192, 195, 201, 203, 209, 309, 310, 336, 362
+    - open-instruct/open_instruct/online_dpo_vllm_thread.py
+      Lignes: 490, 599, 600, 601, 602, 603, 604, 665, 688, 689, 692, 747, 795
+    - open-instruct/open_instruct/dpo_tune.py
+      Lignes: 705, 710
+    - open-instruct/open_instruct/vllm_utils2.py
+      Lignes: 112, 114, 116, 119, 185, 189, 191
+    - open-instruct/open_instruct/ppo_vllm_thread_ray_gtrl.py
+      Lignes: 817, 820, 831, 834, 946, 951, 952, 953, 954, 955, 956, 957, 1058, 1078, 1080, 1082, 1111, 1155, 1175, 1214
+    - open-instruct/open_instruct/dpo_tune_cache.py
+      Lignes: 712
+    - open-instruct/open_instruct/reward_modeling.py
+      Lignes: 360, 361
+    - open-instruct/open_instruct/ppo_vllm_thread_ray.py
+      Lignes: 786, 789, 800, 803, 912, 913, 914, 915, 916, 917, 918, 919, 1001, 1020, 1022, 1024, 1095, 1134
+    - open-instruct/open_instruct/merge_lora.py
+      Lignes: 157
+    - open-instruct/open_instruct/dpo_utils.py
+      Lignes: 44, 46, 48, 50, 119, 120, 146, 148, 153, 156, 199, 204, 251, 252, 328
+    - open-instruct/open_instruct/reward_modeling_eval.py
+      Lignes: 57, 58
+    - open-instruct/open_instruct/ppo_vllm_thread.py
+      Lignes: 593, 680, 685, 686, 687, 688, 689, 690, 691, 772, 792, 795, 868, 887, 922
+    - open-instruct/open_instruct/grpo_vllm_thread_ray_gtrl.py
+      Lignes: 767, 770, 781, 784, 896, 901, 902, 903, 904, 905, 906, 907, 1008, 1027, 1029, 1031, 1060, 1099, 1118
+    - open-instruct/open_instruct/finetune.py
+      Lignes: 419, 433, 445, 676, 684
+    - open-instruct/open_instruct/olmo_adapter/__init__.py
+      Lignes: 41, 63, 65, 75, 150, 174, 176, 186
+    - open-instruct/open_instruct/rejection_sampling/rejection_sampling.py
+      Lignes: 100, 143, 216, 288
+    - open-instruct/eval/utils.py
+      Lignes: 59, 98, 99
+    - open-instruct/eval/ifeval/instructions_util.py
+      Lignes: 26
+    - open-instruct/eval/mmlu/run_eval.py
+      Lignes: 25, 39, 49, 112, 196, 213
+Mot-clé: 'tensorboard'
+  Nombre d'occurrences: 31
+  Apparaît dans les fichiers:
+    - open-instruct/requirements.txt
+      Lignes: 165, 166
+    - open-instruct/scripts/finetune_with_accelerate.sh
+      Lignes: 35
+    - open-instruct/scripts/finetune_with_accelerate_config.sh
+      Lignes: 35
+    - open-instruct/scripts/finetune_lora_with_accelerate_config.sh
+      Lignes: 35
+    - open-instruct/scripts/finetune_qlora_with_accelerate_config.sh
+      Lignes: 32
+    - open-instruct/scripts/finetune_lora_with_accelerate.sh
+      Lignes: 39
+    - open-instruct/scripts/finetune_qlora_with_accelerate.sh
+      Lignes: 37
+    - open-instruct/scripts/dpo_train_with_qlora.sh
+      Lignes: 35
+    - open-instruct/scripts/dpo_train_with_accelerate.sh
+      Lignes: 34
+    - open-instruct/open_instruct/online_dpo_vllm_thread.py
+      Lignes: 27, 363
+    - open-instruct/open_instruct/dpo_tune.py
+      Lignes: 326, 327, 886
+    - open-instruct/open_instruct/ppo_vllm_thread_ray_gtrl.py
+      Lignes: 64, 1613
+    - open-instruct/open_instruct/dpo_tune_cache.py
+      Lignes: 328, 329, 888
+    - open-instruct/open_instruct/reward_modeling.py
+      Lignes: 20, 221
+    - open-instruct/open_instruct/ppo_vllm_thread_ray.py
+      Lignes: 64, 1522
+    - open-instruct/open_instruct/ppo_vllm_thread.py
+      Lignes: 26, 444
+    - open-instruct/open_instruct/grpo_vllm_thread_ray_gtrl.py
+      Lignes: 64, 1506
+    - open-instruct/open_instruct/finetune.py
+      Lignes: 292, 293, 832

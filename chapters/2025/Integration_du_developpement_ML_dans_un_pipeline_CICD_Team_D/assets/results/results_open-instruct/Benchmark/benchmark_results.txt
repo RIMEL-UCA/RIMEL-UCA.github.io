@@ -1,0 +1,626 @@
+Mot-clé: 'math'
+  Nombre d'occurrences: 272
+  Apparaît dans les fichiers:
+    - open-instruct/requirements.txt
+      Lignes: 83
+    - open-instruct/README.md
+      Lignes: 131, 133, 169, 171
+    - open-instruct/decontamination/index.py
+      Lignes: 17, 18
+    - open-instruct/decontamination/search.py
+      Lignes: 239, 255
+    - open-instruct/docs/tulu1_tulu2.md
+      Lignes: 37, 38
+    - open-instruct/docs/ai2_internal.md
+      Lignes: 19, 27
+    - open-instruct/docs/tulu3.md
+      Lignes: 265, 267, 315, 317
+    - open-instruct/docs/data/preference-data.md
+      Lignes: 97, 98, 99, 100
+    - open-instruct/scripts/cache_hf.py
+      Lignes: 27
+    - open-instruct/scripts/submit_eval_jobs.py
+      Lignes: 162, 285, 287, 288
+    - open-instruct/scripts/create_ground_truth_data.py
+      Lignes: 11, 58, 65, 66, 80, 81, 84, 112, 113, 114, 115, 116, 117, 124, 126, 134, 136, 137, 138, 145, 152, 154, 160, 163, 164, 195, 203, 205, 211, 214, 215, 217, 225, 227, 233
+    - open-instruct/scripts/add_metadata_from_wandb.py
+      Lignes: 17
+    - open-instruct/scripts/convert_olmo_1124_weights_to_hf.py
+      Lignes: 37
+    - open-instruct/scripts/persona_driven_data_gen/prompt_templates.py
+      Lignes: 1, 7, 8, 9, 10, 13, 19, 21, 246, 253, 316, 322, 323, 324, 325
+    - open-instruct/scripts/persona_driven_data_gen/README.md
+      Lignes: 27, 29, 30, 32, 33, 35, 43, 46, 51
+    - open-instruct/scripts/persona_driven_data_gen/persona_driven_generate_ifdata.py
+      Lignes: 15, 35, 57, 67, 68, 69, 70, 78, 143, 145
+    - open-instruct/scripts/persona_driven_data_gen/persona_driven_generate_math_code.py
+      Lignes: 5, 6, 8, 10, 16, 36, 73, 83, 84, 85, 86, 87, 88, 89, 90, 95, 96, 104, 120, 125, 136, 156, 158
+    - open-instruct/scripts/persona_driven_data_gen/data/if_constraint_fewshots_handwritten.json
+      Lignes: 48
+    - open-instruct/scripts/eval/faster_oe_eval_mmlu.sh
+      Lignes: 10, 17, 27, 88, 101, 176, 190
+    - open-instruct/scripts/eval/MATH.sh
+      Lignes: 6, 7, 9, 17, 18, 29, 30, 32, 42, 43, 45, 55, 56, 58, 65, 66, 68, 76, 77, 79, 86, 87, 89
+    - open-instruct/scripts/eval/oe-eval.sh
+      Lignes: 28, 41, 122, 136
+    - open-instruct/scripts/eval/fetch_mmlu_jobs.py
+      Lignes: 29, 36, 46
+    - open-instruct/scripts/data/prepare_eval_data.sh
+      Lignes: 25, 27, 28, 29
+    - open-instruct/scripts/data/get_token_distribution.py
+      Lignes: 32, 35, 42, 43, 56, 57, 58, 67, 68, 69
+    - open-instruct/scripts/data/get_statistics_tulu_v3.sh
+      Lignes: 11, 12, 13, 14, 15
+    - open-instruct/scripts/data/preferences/ultrainteract.py
+      Lignes: 96
+    - open-instruct/scripts/data/sft/open_math_instruct.py
+      Lignes: 12, 59, 62, 65, 67, 76, 87, 93, 94, 96, 104, 105, 109, 116, 117, 119
+    - open-instruct/scripts/data/sft/metamath.py
+      Lignes: 11, 27, 59, 61, 69, 75
+    - open-instruct/scripts/data/sft/numinamath.py
+      Lignes: 11, 57, 59, 67, 73, 79, 89, 95
+    - open-instruct/scripts/data/sft/web_instruct.py
+      Lignes: 53
+    - open-instruct/scripts/data/sft/prepare_all.sh
+      Lignes: 67, 68, 73, 81, 82, 87, 98, 99, 104
+    - open-instruct/open_instruct/model_utils.py
+      Lignes: 44, 249, 250
+    - open-instruct/open_instruct/math_utils.py
+      Lignes: 10, 13, 119, 143
+    - open-instruct/open_instruct/ground_truth_utils.py
+      Lignes: 8, 27, 30, 69
+    - open-instruct/open_instruct/dpo_tune.py
+      Lignes: 22, 834, 836, 871, 875
+    - open-instruct/open_instruct/dataset_processor.py
+      Lignes: 28, 271
+    - open-instruct/open_instruct/dpo_tune_cache.py
+      Lignes: 22, 837, 839, 873, 877
+    - open-instruct/open_instruct/utils.py
+      Lignes: 106, 109, 299
+    - open-instruct/open_instruct/finetune.py
+      Lignes: 19, 783, 785, 817, 821
+    - open-instruct/eval/ifeval/instructions_util.py
+      Lignes: 26
+    - open-instruct/eval/truthfulqa/presets.py
+      Lignes: 10
+    - open-instruct/eval/MATH/run_eval.py
+      Lignes: 17, 18, 19, 47, 49, 50, 52, 208
+    - open-instruct/eval/MATH/minerva_utils.py
+      Lignes: 2, 53, 76, 113
+    - open-instruct/eval/MATH/examplars.py
+      Lignes: 1, 9, 10
+    - open-instruct/eval/mmlu/categories.py
+      Lignes: 2, 10, 17, 27, 31, 62
+Mot-clé: 'bbh'
+  Nombre d'occurrences: 52
+  Apparaît dans les fichiers:
+    - open-instruct/decontamination/search.py
+      Lignes: 243
+    - open-instruct/docs/tulu1_tulu2.md
+      Lignes: 39
+    - open-instruct/scripts/collect_eval_results.py
+      Lignes: 23, 24, 95, 96
+    - open-instruct/scripts/submit_eval_jobs.py
+      Lignes: 163, 164, 227, 229, 230, 240, 242, 243
+    - open-instruct/scripts/eval/faster_oe_eval_mmlu.sh
+      Lignes: 86, 111, 174
+    - open-instruct/scripts/eval/oe-eval.sh
+      Lignes: 26, 51, 120
+    - open-instruct/scripts/eval/bbh.sh
+      Lignes: 6, 7, 8, 16, 17, 18, 27, 28, 29, 39, 40, 41, 51, 52, 53, 60, 61, 62, 70, 71, 72, 79, 80, 81
+    - open-instruct/scripts/data/prepare_eval_data.sh
+      Lignes: 12, 13, 14, 15
+    - open-instruct/eval/bbh/run_eval.py
+      Lignes: 29, 190, 210, 215
+Mot-clé: 'codex'
+  Nombre d'occurrences: 95
+  Apparaît dans les fichiers:
+    - open-instruct/docs/tulu1_tulu2.md
+      Lignes: 41
+    - open-instruct/scripts/collect_eval_results.py
+      Lignes: 25, 26, 97, 98
+    - open-instruct/scripts/submit_eval_jobs.py
+      Lignes: 45, 48, 50, 53, 54, 57, 58, 167, 168, 169, 170, 327, 329, 330, 339, 341, 342, 351, 353, 354, 365, 367, 368, 369
+    - open-instruct/scripts/eval/faster_oe_eval_mmlu.sh
+      Lignes: 89, 90, 177, 178
+    - open-instruct/scripts/eval/oe-eval.sh
+      Lignes: 29, 30, 123, 124
+    - open-instruct/scripts/eval/codex_humaneval.sh
+      Lignes: 5, 6, 10, 17, 18, 22, 30, 31, 32, 38, 45, 46, 47, 53, 59, 60, 64, 70, 71, 75, 82, 83, 87, 93, 94, 99, 104, 105, 110, 115, 116, 121, 126, 127, 132
+    - open-instruct/scripts/data/prepare_eval_data.sh
+      Lignes: 31, 32, 33, 36
+    - open-instruct/eval/codex_humaneval/run_eval.py
+      Lignes: 16, 17, 31, 96, 117, 168, 189, 209, 215, 256, 276
+    - open-instruct/eval/codex_humaneval/execution.py
+      Lignes: 167
+    - open-instruct/eval/codex_humaneval/evaluation.py
+      Lignes: 9, 10
+    - open-instruct/eval/mbpp/run_eval.py
+      Lignes: 17, 95, 250, 274
+    - open-instruct/eval/mbpp/execution.py
+      Lignes: 167
+Mot-clé: 'gsm'
+  Nombre d'occurrences: 111
+  Apparaît dans les fichiers:
+    - open-instruct/README.md
+      Lignes: 131, 133, 169, 171
+    - open-instruct/decontamination/search.py
+      Lignes: 237
+    - open-instruct/docs/tulu1_tulu2.md
+      Lignes: 37
+    - open-instruct/docs/ai2_internal.md
+      Lignes: 19, 27
+    - open-instruct/docs/tulu3.md
+      Lignes: 265, 267, 315, 317
+    - open-instruct/scripts/collect_eval_results.py
+      Lignes: 7, 27, 28, 47, 93, 94
+    - open-instruct/scripts/cache_hf.py
+      Lignes: 27
+    - open-instruct/scripts/submit_eval_jobs.py
+      Lignes: 104, 107, 160, 161, 252, 254, 255, 266, 270, 272, 273, 283
+    - open-instruct/scripts/README.md
+      Lignes: 144
+    - open-instruct/scripts/create_ground_truth_data.py
+      Lignes: 14, 86, 87, 88, 89, 91, 93, 96, 98, 102, 104, 107, 109, 134
+    - open-instruct/scripts/eval/faster_oe_eval_mmlu.sh
+      Lignes: 85, 111, 173
+    - open-instruct/scripts/eval/gsm.sh
+      Lignes: 6, 7, 9, 17, 18, 20, 29, 30, 32, 42, 43, 45, 55, 56, 58, 65, 66, 68, 76, 77, 79, 86, 87, 89
+    - open-instruct/scripts/eval/MATH.sh
+      Lignes: 20
+    - open-instruct/scripts/eval/oe-eval.sh
+      Lignes: 25, 51, 119
+    - open-instruct/scripts/data/prepare_eval_data.sh
+      Lignes: 24, 25
+    - open-instruct/scripts/data/gsm8k.py
+      Lignes: 2, 8, 9, 25, 44
+    - open-instruct/scripts/data/get_token_distribution.py
+      Lignes: 35, 69
+    - open-instruct/scripts/data/get_statistics_tulu_v3.sh
+      Lignes: 13
+    - open-instruct/scripts/data/sft/open_math_instruct.py
+      Lignes: 61, 64, 65, 75, 80, 87, 88, 90
+    - open-instruct/open_instruct/model_utils.py
+      Lignes: 42, 240, 247, 248
+    - open-instruct/open_instruct/ground_truth_utils.py
+      Lignes: 12, 14
+    - open-instruct/eval/MATH/run_eval.py
+      Lignes: 229, 240
+    - open-instruct/eval/gsm/run_eval.py
+      Lignes: 19, 50, 52, 53, 55, 193, 213, 224
+Mot-clé: 'ifeval'
+  Nombre d'occurrences: 44
+  Apparaît dans les fichiers:
+    - open-instruct/README.md
+      Lignes: 131, 169
+    - open-instruct/decontamination/search.py
+      Lignes: 240
+    - open-instruct/docs/tulu1_tulu2.md
+      Lignes: 43
+    - open-instruct/scripts/collect_eval_results.py
+      Lignes: 29, 105
+    - open-instruct/scripts/submit_eval_jobs.py
+      Lignes: 173, 406, 408, 409
+    - open-instruct/scripts/persona_driven_data_gen/persona_driven_generate_ifdata.py
+      Lignes: 103
+    - open-instruct/scripts/eval_constraints/if_functions.py
+      Lignes: 8
+    - open-instruct/scripts/eval/faster_oe_eval_mmlu.sh
+      Lignes: 91, 179
+    - open-instruct/scripts/eval/ifeval.sh
+      Lignes: 6, 7, 8, 17, 18, 19, 27, 28, 29, 35, 36, 37
+    - open-instruct/scripts/eval/oe-eval.sh
+      Lignes: 31, 125
+    - open-instruct/scripts/data/prepare_eval_data.sh
+      Lignes: 54, 55
+    - open-instruct/scripts/data/get_token_distribution.py
+      Lignes: 93
+    - open-instruct/open_instruct/model_utils.py
+      Lignes: 43, 251, 252
+    - open-instruct/open_instruct/ground_truth_utils.py
+      Lignes: 94, 152
+    - open-instruct/open_instruct/if_functions.py
+      Lignes: 7
+    - open-instruct/eval/ifeval/run_eval.py
+      Lignes: 2, 26, 345, 365, 370
+    - open-instruct/eval/ifeval/instructions.py
+      Lignes: 27
+    - open-instruct/eval/ifeval/instructions_registry.py
+      Lignes: 17
+Mot-clé: 'mbpp'
+  Nombre d'occurrences: 37
+  Apparaît dans les fichiers:
+    - open-instruct/docs/tulu1_tulu2.md
+      Lignes: 42
+    - open-instruct/scripts/submit_eval_jobs.py
+      Lignes: 171, 172, 380, 382, 393, 395
+    - open-instruct/scripts/eval/mbpp.sh
+      Lignes: 7, 13, 20, 26, 32, 37, 42, 47, 52, 57, 62, 67
+    - open-instruct/eval/mbpp/mbpp.py
+      Lignes: 100, 105, 116, 119, 124, 163, 168, 172, 180, 185, 186, 195
+    - open-instruct/eval/mbpp/run_eval.py
+      Lignes: 18, 27, 177, 179, 201
+    - open-instruct/eval/mbpp/evaluation.py
+      Lignes: 7
+Mot-clé: 'mmlu'
+  Nombre d'occurrences: 207
+  Apparaît dans les fichiers:
+    - open-instruct/quantize/scripts/eval_on_mmlu.sh
+      Lignes: 3, 5, 6
+    - open-instruct/decontamination/search.py
+      Lignes: 235, 251
+    - open-instruct/docs/tulu1_tulu2.md
+      Lignes: 36, 57, 60
+    - open-instruct/scripts/collect_eval_results.py
+      Lignes: 30, 31, 91, 92
+    - open-instruct/scripts/submit_eval_jobs.py
+      Lignes: 104, 158, 159, 203, 205, 207, 215, 217, 219, 560
+    - open-instruct/scripts/eval/faster_oe_eval_mmlu.sh
+      Lignes: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 93, 100, 104, 181, 182, 189, 193, 214, 216
+    - open-instruct/scripts/eval/mmlu.sh
+      Lignes: 6, 8, 9, 17, 19, 20, 28, 30, 31, 41, 43, 44, 54, 56, 57, 67, 69, 70, 80, 82, 83, 89, 91, 92, 98, 100, 101, 108, 110, 111
+    - open-instruct/scripts/eval/oe-eval.sh
+      Lignes: 33, 40, 44, 127, 128, 135, 139, 161, 162
+    - open-instruct/scripts/eval/fetch_mmlu_jobs.py
+      Lignes: 3, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 87, 104, 107, 108, 109, 110, 111, 113, 117, 120
+    - open-instruct/scripts/data/prepare_eval_data.sh
+      Lignes: 4, 5, 6, 7, 8
+    - open-instruct/scripts/data/sft_v1_v2/reformat_datasets.py
+      Lignes: 133
+    - open-instruct/eval/mmlu/run_eval.py
+      Lignes: 8, 263, 288, 293
+Mot-clé: 'toxigen'
+  Nombre d'occurrences: 37
+  Apparaît dans les fichiers:
+    - open-instruct/README.md
+      Lignes: 39
+    - open-instruct/docs/tulu1_tulu2.md
+      Lignes: 44
+    - open-instruct/docs/safety.md
+      Lignes: 35
+    - open-instruct/docs/safety-eval/safety.md
+      Lignes: 35
+    - open-instruct/scripts/collect_eval_results.py
+      Lignes: 7, 32, 47, 101
+    - open-instruct/scripts/submit_eval_jobs.py
+      Lignes: 175, 432, 434, 435
+    - open-instruct/scripts/README.md
+      Lignes: 144
+    - open-instruct/scripts/eval/toxigen.sh
+      Lignes: 1, 4, 5, 14, 15, 22, 23, 24, 31, 32, 33
+    - open-instruct/scripts/data/prepare_eval_data.sh
+      Lignes: 46, 47, 50
+    - open-instruct/eval/toxigen/run_eval.py
+      Lignes: 79, 148, 149, 150, 153, 156, 157, 191, 212, 217
+Mot-clé: 'agi_eval'
+  Nombre d'occurrences: 5
+  Apparaît dans les fichiers:
+    - open-instruct/decontamination/search.py
+      Lignes: 253
+    - open-instruct/scripts/eval/faster_oe_eval_mmlu.sh
+      Lignes: 98, 187
+    - open-instruct/scripts/eval/oe-eval.sh
+      Lignes: 38, 133
+Mot-clé: 'alpaca_eval'
+  Nombre d'occurrences: 32
+  Apparaît dans les fichiers:
+    - open-instruct/README.md
+      Lignes: 36
+    - open-instruct/decontamination/README.md
+      Lignes: 67
+    - open-instruct/decontamination/search.py
+      Lignes: 242
+    - open-instruct/docs/tulu1_tulu2.md
+      Lignes: 47
+    - open-instruct/scripts/collect_eval_results.py
+      Lignes: 7, 22, 47, 104, 112
+    - open-instruct/scripts/submit_eval_jobs.py
+      Lignes: 177, 178, 456, 458, 466, 468
+    - open-instruct/scripts/README.md
+      Lignes: 144
+    - open-instruct/scripts/eval/alpaca_farm.sh
+      Lignes: 4
+    - open-instruct/scripts/eval/faster_oe_eval_mmlu.sh
+      Lignes: 94, 183
+    - open-instruct/scripts/eval/oe-eval.sh
+      Lignes: 34, 129
+    - open-instruct/eval/alpaca_farm/run_eval.py
+      Lignes: 10, 18, 21, 109, 121, 130, 146, 147, 148, 152, 174
+Mot-clé: 'arc'
+  Nombre d'occurrences: 120
+  Apparaît dans les fichiers:
+    - open-instruct/README.md
+      Lignes: 48, 263, 275, 287
+    - open-instruct/human_eval/README.md
+      Lignes: 77
+    - open-instruct/human_eval/templates/index.html
+      Lignes: 122
+    - open-instruct/decontamination/index.py
+      Lignes: 7, 191
+    - open-instruct/decontamination/README.md
+      Lignes: 3, 5, 7, 30, 62, 64, 67, 85, 96, 102, 104
+    - open-instruct/decontamination/search.py
+      Lignes: 11, 38, 46, 48, 50, 64, 67, 82, 106, 108, 110, 123, 164, 181, 183, 185, 223, 263, 301, 304, 311
+    - open-instruct/docs/tulu1_tulu2.md
+      Lignes: 40, 43
+    - open-instruct/docs/algorithms/online_dpo.md
+      Lignes: 350
+    - open-instruct/docs/algorithms/ppo.md
+      Lignes: 528
+    - open-instruct/scripts/submit_eval_jobs.py
+      Lignes: 30, 496
+    - open-instruct/scripts/README.md
+      Lignes: 78, 79, 80, 81
+    - open-instruct/scripts/synth_pref/utils/ultrafeedback_template.py
+      Lignes: 257, 259, 260, 272, 274, 275
+    - open-instruct/scripts/persona_driven_data_gen/prompt_templates.py
+      Lignes: 43, 67, 109, 121, 131, 141, 176, 232
+    - open-instruct/scripts/eval_constraints/if_functions.py
+      Lignes: 46
+    - open-instruct/scripts/eval/tulu3_baselines_unseen.sh
+      Lignes: 1, 2, 18
+    - open-instruct/scripts/eval/tulu3_baselines.sh
+      Lignes: 1, 2, 5, 14, 15, 18, 27, 28, 31
+    - open-instruct/scripts/eval/fetch_mmlu_jobs.py
+      Lignes: 15
+    - open-instruct/scripts/data/prepare_eval_data.sh
+      Lignes: 12, 55
+    - open-instruct/scripts/data/sft_v1_v2/resample_flan_v2.py
+      Lignes: 22
+    - open-instruct/scripts/data/sft_v1_v2/prepare_tulu_v1_v2.sh
+      Lignes: 12
+    - open-instruct/scripts/data/sft/lmsys_chat.py
+      Lignes: 77
+    - open-instruct/scripts/data/sft/utils.py
+      Lignes: 50, 51, 58
+    - open-instruct/scripts/data/sft/flan.py
+      Lignes: 73
+    - open-instruct/open_instruct/online_dpo_vllm_thread.py
+      Lignes: 385
+    - open-instruct/open_instruct/math_utils.py
+      Lignes: 62
+    - open-instruct/open_instruct/if_functions.py
+      Lignes: 43
+    - open-instruct/open_instruct/ppo_vllm_thread_ray_gtrl.py
+      Lignes: 1630
+    - open-instruct/open_instruct/reward_modeling.py
+      Lignes: 243
+    - open-instruct/open_instruct/ppo_vllm_thread_ray.py
+      Lignes: 1539
+    - open-instruct/open_instruct/utils.py
+      Lignes: 630
+    - open-instruct/open_instruct/ppo_vllm_thread.py
+      Lignes: 466
+    - open-instruct/open_instruct/grpo_vllm_thread_ray_gtrl.py
+      Lignes: 1523
+    - open-instruct/open_instruct/rejection_sampling/api_generate.py
+      Lignes: 75
+    - open-instruct/eval/templates.py
+      Lignes: 41, 47
+    - open-instruct/eval/ifeval/run_eval.py
+      Lignes: 3
+    - open-instruct/eval/ifeval/instructions.py
+      Lignes: 2, 406, 696, 740, 1110, 1476
+    - open-instruct/eval/ifeval/instructions_util.py
+      Lignes: 2, 26
+    - open-instruct/eval/ifeval/instructions_registry.py
+      Lignes: 2
+    - open-instruct/eval/truthfulqa/presets.py
+      Lignes: 48, 50, 68
+    - open-instruct/eval/MATH/minerva_utils.py
+      Lignes: 104
+    - open-instruct/eval/bbh/run_eval.py
+      Lignes: 165
+    - open-instruct/assets/model_licenses/pythia_license.txt
+      Lignes: 187
+    - open-instruct/assets/model_licenses/opt_license.txt
+      Lignes: 9, 19
+    - open-instruct/assets/model_licenses/llama_license.txt
+      Lignes: 534
+    - open-instruct/assets/model_licenses/tulu_license.txt
+      Lignes: 13, 31
+Mot-clé: 'bigcodebench'
+  Nombre d'occurrences: 9
+  Apparaît dans les fichiers:
+    - open-instruct/decontamination/search.py
+      Lignes: 254
+    - open-instruct/scripts/eval/faster_oe_eval_mmlu.sh
+      Lignes: 102, 105, 191, 194
+    - open-instruct/scripts/eval/oe-eval.sh
+      Lignes: 42, 45, 137, 140
+Mot-clé: 'humaneval'
+  Nombre d'occurrences: 81
+  Apparaît dans les fichiers:
+    - open-instruct/decontamination/search.py
+      Lignes: 236
+    - open-instruct/docs/tulu1_tulu2.md
+      Lignes: 41, 42
+    - open-instruct/scripts/submit_eval_jobs.py
+      Lignes: 329, 330, 341, 342, 353, 354, 367, 368, 369
+    - open-instruct/scripts/eval/faster_oe_eval_mmlu.sh
+      Lignes: 89, 90, 177, 178
+    - open-instruct/scripts/eval/oe-eval.sh
+      Lignes: 29, 30, 123, 124
+    - open-instruct/scripts/eval/codex_humaneval.sh
+      Lignes: 5, 6, 10, 17, 18, 22, 28, 30, 31, 32, 38, 43, 44, 45, 46, 47, 53, 58, 59, 60, 64, 70, 71, 75, 82, 83, 87, 93, 94, 99, 104, 105, 110, 115, 116, 121, 126, 127, 132
+    - open-instruct/scripts/data/prepare_eval_data.sh
+      Lignes: 31, 32, 33, 35, 36
+    - open-instruct/eval/codex_humaneval/run_eval.py
+      Lignes: 16, 17, 37, 42, 47, 189, 209, 210, 215, 216, 276
+    - open-instruct/eval/codex_humaneval/evaluation.py
+      Lignes: 9, 10
+    - open-instruct/eval/codex_humaneval/data.py
+      Lignes: 8
+    - open-instruct/eval/mbpp/mbpp.py
+      Lignes: 182
+    - open-instruct/eval/mbpp/run_eval.py
+      Lignes: 17, 274
+Mot-clé: 'deepmind_math'
+  Nombre d'occurrences: 4
+  Apparaît dans les fichiers:
+    - open-instruct/scripts/eval/faster_oe_eval_mmlu.sh
+      Lignes: 101, 190
+    - open-instruct/scripts/eval/oe-eval.sh
+      Lignes: 41, 136
+Mot-clé: 'drop'
+  Nombre d'occurrences: 62
+  Apparaît dans les fichiers:
+    - open-instruct/decontamination/search.py
+      Lignes: 238
+    - open-instruct/docs/algorithms/online_dpo.md
+      Lignes: 344
+    - open-instruct/docs/algorithms/ppo.md
+      Lignes: 522
+    - open-instruct/docs/algorithms/reward_modeling.md
+      Lignes: 255
+    - open-instruct/scripts/finetune_lora_with_accelerate.sh
+      Lignes: 23
+    - open-instruct/scripts/finetune_qlora_with_accelerate.sh
+      Lignes: 22
+    - open-instruct/scripts/dpo_train_with_qlora.sh
+      Lignes: 20
+    - open-instruct/scripts/synth_pref/parse_preferences.py
+      Lignes: 48, 131, 164
+    - open-instruct/scripts/synth_pref/create_annotation_mix.py
+      Lignes: 121, 129, 130, 131, 147, 160, 176
+    - open-instruct/scripts/synth_pref/utils/openai_api.py
+      Lignes: 59
+    - open-instruct/scripts/persona_driven_data_gen/data/if_constraint_fewshots_handwritten.json
+      Lignes: 48
+    - open-instruct/scripts/eval/faster_oe_eval_mmlu.sh
+      Lignes: 87, 175
+    - open-instruct/scripts/eval/oe-eval.sh
+      Lignes: 27, 121
+    - open-instruct/scripts/data/get_token_distribution.py
+      Lignes: 329
+    - open-instruct/scripts/data/preferences/ultrainteract.py
+      Lignes: 46
+    - open-instruct/open_instruct/model_utils.py
+      Lignes: 74, 75, 102, 104
+    - open-instruct/open_instruct/online_dpo_vllm_thread.py
+      Lignes: 48, 471, 490
+    - open-instruct/open_instruct/dpo_tune.py
+      Lignes: 252, 254, 744
+    - open-instruct/open_instruct/ppo_vllm_thread_ray_gtrl.py
+      Lignes: 90, 608, 650, 700, 714
+    - open-instruct/open_instruct/dpo_tune_cache.py
+      Lignes: 254, 256, 746
+    - open-instruct/open_instruct/reward_modeling.py
+      Lignes: 40, 308
+    - open-instruct/open_instruct/ppo_vllm_thread_ray.py
+      Lignes: 87, 591, 628, 676, 689
+    - open-instruct/open_instruct/ppo_vllm_thread.py
+      Lignes: 50, 574, 593
+    - open-instruct/open_instruct/grpo_vllm_thread_ray_gtrl.py
+      Lignes: 90, 599, 652, 666
+    - open-instruct/open_instruct/finetune.py
+      Lignes: 218, 220, 717
+    - open-instruct/eval/ifeval/instructions_util.py
+      Lignes: 26
+    - open-instruct/eval/truthfulqa/utilities.py
+      Lignes: 11
+Mot-clé: 'gpqa'
+  Nombre d'occurrences: 9
+  Apparaît dans les fichiers:
+    - open-instruct/decontamination/search.py
+      Lignes: 252
+    - open-instruct/scripts/eval/faster_oe_eval_mmlu.sh
+      Lignes: 99, 103, 188, 192
+    - open-instruct/scripts/eval/oe-eval.sh
+      Lignes: 39, 43, 134, 138
+Mot-clé: 'gsm8k'
+  Nombre d'occurrences: 44
+  Apparaît dans les fichiers:
+    - open-instruct/README.md
+      Lignes: 131, 133, 169, 171
+    - open-instruct/decontamination/search.py
+      Lignes: 237
+    - open-instruct/scripts/create_ground_truth_data.py
+      Lignes: 14, 86, 87, 88, 89, 91, 93, 96, 98, 102, 104, 107, 109, 134
+    - open-instruct/scripts/eval/faster_oe_eval_mmlu.sh
+      Lignes: 85, 111, 173
+    - open-instruct/scripts/eval/oe-eval.sh
+      Lignes: 25, 51, 119
+    - open-instruct/scripts/data/gsm8k.py
+      Lignes: 2, 8, 9, 25, 44
+    - open-instruct/scripts/data/get_token_distribution.py
+      Lignes: 35, 69
+    - open-instruct/scripts/data/get_statistics_tulu_v3.sh
+      Lignes: 13
+    - open-instruct/scripts/data/sft/open_math_instruct.py
+      Lignes: 61, 65, 75, 87, 88
+    - open-instruct/open_instruct/model_utils.py
+      Lignes: 42, 240, 247, 248
+    - open-instruct/open_instruct/ground_truth_utils.py
+      Lignes: 12
+    - open-instruct/eval/gsm/run_eval.py
+      Lignes: 193
+Mot-clé: 'minerva_math'
+  Nombre d'occurrences: 6
+  Apparaît dans les fichiers:
+    - open-instruct/scripts/eval/faster_oe_eval_mmlu.sh
+      Lignes: 88, 176
+    - open-instruct/scripts/eval/oe-eval.sh
+      Lignes: 28, 122
+    - open-instruct/open_instruct/math_utils.py
+      Lignes: 13
+    - open-instruct/eval/MATH/minerva_utils.py
+      Lignes: 2
+Mot-clé: 'popqa'
+  Nombre d'occurrences: 5
+  Apparaît dans les fichiers:
+    - open-instruct/decontamination/search.py
+      Lignes: 241
+    - open-instruct/scripts/eval/faster_oe_eval_mmlu.sh
+      Lignes: 92, 180
+    - open-instruct/scripts/eval/oe-eval.sh
+      Lignes: 32, 126
+Mot-clé: 'squad'
+  Nombre d'occurrences: 2
+  Apparaît dans les fichiers:
+    - open-instruct/open_instruct/ground_truth_utils.py
+      Lignes: 120
+    - open-instruct/eval/tydiqa/run_eval.py
+      Lignes: 243
+Mot-clé: 'truthfulqa'
+  Nombre d'occurrences: 59
+  Apparaît dans les fichiers:
+    - open-instruct/README.md
+      Lignes: 39
+    - open-instruct/decontamination/search.py
+      Lignes: 244
+    - open-instruct/docs/tulu1_tulu2.md
+      Lignes: 46
+    - open-instruct/scripts/collect_eval_results.py
+      Lignes: 33, 102
+    - open-instruct/scripts/submit_eval_jobs.py
+      Lignes: 174, 417, 419, 420, 426, 427, 560
+    - open-instruct/scripts/eval/truthfulqa.sh
+      Lignes: 7, 9, 12, 14, 15, 16, 21, 22, 28, 29, 30, 35, 36, 44, 45, 46, 51, 52, 61, 62, 63, 67, 68, 73, 74, 75, 79, 80
+    - open-instruct/scripts/eval/faster_oe_eval_mmlu.sh
+      Lignes: 95, 184, 216
+    - open-instruct/scripts/eval/oe-eval.sh
+      Lignes: 35, 130, 161, 162
+    - open-instruct/scripts/data/prepare_eval_data.sh
+      Lignes: 42, 43
+    - open-instruct/eval/truthfulqa/run_eval.py
+      Lignes: 20, 26, 27, 273, 405, 453, 454, 459
+    - open-instruct/eval/truthfulqa/metrics.py
+      Lignes: 6
+    - open-instruct/eval/truthfulqa/utilities.py
+      Lignes: 3
+Mot-clé: 'tydiqa'
+  Nombre d'occurrences: 53
+  Apparaît dans les fichiers:
+    - open-instruct/docs/tulu1_tulu2.md
+      Lignes: 40
+    - open-instruct/scripts/collect_eval_results.py
+      Lignes: 34, 35, 99, 100, 110, 111
+    - open-instruct/scripts/submit_eval_jobs.py
+      Lignes: 165, 166, 298, 300, 301, 312, 314, 315
+    - open-instruct/scripts/eval/tydiqa.sh
+      Lignes: 7, 8, 12, 21, 22, 26, 35, 36, 40, 51, 52, 56, 68, 69, 73, 84, 85, 89, 100, 101, 105, 111, 112, 116, 123, 124, 128, 134, 135, 139
+    - open-instruct/scripts/data/prepare_eval_data.sh
+      Lignes: 18, 19, 20, 21
+    - open-instruct/eval/tydiqa/run_eval.py
+      Lignes: 51, 78, 272, 320
