@@ -1,5 +1,4 @@
 # LLM vs SLM (NL)
----
 
 **_février 2025_**
 
@@ -29,8 +28,7 @@ Une des finalités qui nous motive est de determiner dans quels cas d'utilisatio
 À partir de nos premières observations et de nos connaissances initiales sur les modèles de langages, nous avons remarqué que la distinction entre l’usage d’un SLM et d’un LLM n’est pas clairement définie ni implicite.
 Cette absence de clarté peut poser des défis pour comprendre leurs avantages respectifs, leurs limites, et leur pertinence dans divers contextes d’utilisation.
 
-Pour mieux cerner ces aspects, nous avons formulé la question générale suivante :  
-**Quels sont les enjeux et les cas d’usage des SLM et des LLM ?**
+Pour mieux cerner ces aspects, nous avons formulé la question générale suivante : **Quels sont les enjeux et les cas d’usage des SLM et des LLM ?**
 
 Cette question nous a semblé intéressante, car elle englobe different aspects :
 * Analyse des bénéfices et contraintes des deux types de modèles.
@@ -53,7 +51,6 @@ Pour préciser et structurer notre réflexion, nous avons décliné la question 
 
 Répondre à ces questions implique de surmonter certaines limitations, notamment :
 * L’évolution rapide du domaine de l’intelligence artificielle, qui peut rendre certaines observations rapidement obsolètes.
-* // TODO Autres ?
 
 ## III. Collecte d'informations
 
@@ -114,7 +111,7 @@ La cohérence des résultats de ces expériences est dépendante de l’évoluti
 Afin de répondre à la sous question "Un SLM peut-il être aussi performant, voire plus performant, qu’un LLM lorsqu’il est appliqué à une tâche spécifique ?", nous éméttons l'hypothese qu’un SLM peut atteindre des performances comparables, voire supérieures, à celles d’un LLM lorsqu’il est appliqué à des tâches spécifiques et bien définies. Cette hypothèse repose sur l’idée qu’un modèle plus petit, mais optimisé et spécifiquement entrainé pour une tâche particulière, peut surpasser un modèle généraliste plus grand, en termes de précision dans les résultats, tout en utilisant moins de ressources. 
 
 **Expériences** :  
-Pour tester cette hypothèse, nous avons conçu une série d’expériences visant à comparer les performances entre SLM (comme nous l'avons définit lors de la sous question précédente) et LLM sur plusieurs benchmarks spécialisés. Par exemple, nous avons étudié leurs capacités en génération de code en utilisant des benchmarks comme BigCodeBench, en mesurant la précision des solutions générées. De même, une comparaison a été réalisée dans le domaine médical avec des modèles spécialisés ou généralistes sur la qualité des réponse aux questions, en se basant sur des benchmarks comme MedQA. Nous avons également évalué les modèles sur la génération de texte via des benchmarks généralistes comme [TODO COMPLETE]. 
+Pour tester cette hypothèse, nous avons conçu une série d’expériences visant à comparer les performances entre SLM (comme nous l'avons définit lors de la sous question précédente) et LLM sur plusieurs benchmarks spécialisés. Par exemple, nous avons étudié leurs capacités en génération de code en utilisant des benchmarks comme BigCodeBench, en mesurant la précision des solutions générées. De même, une comparaison a été réalisée dans le domaine médical avec des modèles spécialisés ou généralistes sur la qualité des réponse aux questions, en se basant sur des benchmarks comme MedQA. Nous avons également évalué les modèles sur l'inference du langage naturel via des benchmarks comme RTE. 
 
 **Démarche** :  
 Notre démarche a consisté à sélectionner des modèles SLM et LLM représentatifs, disponibles publiquement et bien documentés, ayant des tailles connue et variables. Les benchmarks ont été choisis pour couvrir un éventail de tâches représentatives, et les métriques spécifiques à chaque domaine ont été utilisées pour analyser les performances. Une synthèse des résultats a ensuite été réalisée pour identifier les cas où un SLM surpasse ou égale un LLM.
@@ -267,7 +264,7 @@ D'autres exemples montrent que certains SLM, bien spécialisés, peuvent dépass
 En conclusion, ces résultats soutiennent l’idée qu’un SLM bien conçu et optimisé peut surpasser un LLM dans des tâches spécifiques, tant en termes de précision que d’efficience. Cela ouvre de nouvelles perspectives pour des applications nécessitant des modèles performants mais économes en ressources, notamment dans des domaines très spécialisés. Toutefois, l’avantage des LLM reste certain pour les tâches plus généralistes ou nécessitant une large capacité de généralisation.
 
 ### Résultats de la troisième sous question :
-#### Hypothèse 3
+#### Hypothèse 3 "Quels sont les cas d’usages spécifiques aux SLM ?"
 #### 1. A quel moment utiliser un LM, pour quel type de tâche ?
 
 Il faut savoir que l'on connait les LM depuis plus longtemps que l'on ne le croit. Un LM n'est pas forcement obliger d'avoir une forme d'intelligence poussée. Les premiers LM qui ont vus le jour on commencer par des tâches très ciblées :
@@ -367,7 +364,6 @@ Ces graphiques montrent donc que les SLM créés il y a plus d'un an représent 
 Nous pouvons donc en conclure que les SLM perdurent bien mieux dans le temps que les LLM. Ce qui est contraire à l'hypothèse de départ qui était que les SLM seraient plus volatiles que les LLM car bien plus simples à entrainer.
 
 ### Conclusion (réponse à la question principale)
-Ici, reprendre les 4 conclusions des sous question pour repondre a la question principale
 
 Les Small Language Models (SLM) et les Large Language Models (LLM) répondent à des enjeux et cas d’usage distincts, reflétant leurs spécificités respectives et leurs avantages. L’un des principaux enjeux réside dans la différenciation entre ces deux types de modèles. Aucun seuil universel ne permet de les distinguer de manière définitive, cette frontière dépendant de la taille, des applications visées, et des choix fait par les éditeurs. Cette flexibilité d’interprétation met également en évidence la rapidité avec laquelle le domaine du NLP évolue.
 
