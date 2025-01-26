@@ -1,25 +1,7 @@
----
-layout: default
-title : SLM vs LLM - Team C
-date:   2024-11
----
-
-```
----
-**Date de rendu finale : fin février**
-- Respecter la structure pour que les chapitres soient bien indépendants
-- Remarques :
-    - La structure proposée est là pour vous aider, mais peut-être adaptée à votre projet
-    - Les titres peuvent être modifiés pour être en adéquation avec votre étude.
-    - Utiliser des références pour justifier votre argumentaire, vos choix, etc.
-    - Vous avez le choix d'utiliser le français ou l'anglais.
-
-    Dans l'article de Blog [Debret 2020], l'auteure donne les éléments principaux de la démarche d'une manière simple et très facile à lire, dans la partie [Quelles sont les étapes d’une bonne démarche scientifique ?](https://www.scribbr.fr/article-scientifique/demarche-scientifique/#:~:text=La%20d%C3%A9marche%20scientifique%20permet%20d,de%20nouvelles%20hypoth%C3%A8ses%20%C3%A0%20tester.)
-
+# LLM vs SLM (NL)
 ---
 
 **_février 2025_**
-```
 
 ## Auteurs
 
@@ -30,11 +12,6 @@ Nous sommes quatres étudiants de Polytech Nice-Sophia en spécialité Sustainab
 * [Ivan van der Tuijn](https://github.com/Ivan-vanderTuijn) ivan.van-der-tuijn@etu.unice.fr
 
 ## I. Projet et context de recherche
-
-```
-(Préciser ici votre contexte et Pourquoi il est intéressant.)
-```
-
 
 Les Large Language Models (LLMs) sont de plus en plus présents dans notre société, où ils se distinguent notamment par leur capacité à générer et synthétiser des textes. Ces modèles présentent toutefois certaines limites, à la fois en termes de résultats et d’accessibilité. En effet, la croissance exponentielle du nombre de paramètres qui composent ces modèles a entraîné une augmentation significative de leur taille et des ressources nécessaires pour leur entraînement et leur utilisation. Par ailleurs, leur tendance à “halluciner” des informations erronées rend leur usage problématique pour des utilisateurs non avertis.
 
@@ -48,18 +25,6 @@ Une des finalités qui nous motive est de determiner dans quels cas d'utilisatio
 
 
 ## II. Observations et question générale
-```
-1. Commencez par formuler une question sur quelque chose que vous observez ou constatez ou encore une idée émergente.
-
-2. Préciser pourquoi cette question est intéressante de votre point de vue.
-
-Attention pour répondre à cette question, vous devrez être capable d'émettre des hypothèses vérifiables, de quantifier vos réponses, ...
-d
-     :bulb: Cette première étape nécessite beaucoup de réflexion pour définir la bonne question qui permet de diriger la suite de vos travaux.
-
-Observations/Question générale : formulation, intérêt, limites éventuelles.
-
-```
 
 À partir de nos premières observations et de nos connaissances initiales sur les modèles de langages, nous avons remarqué que la distinction entre l’usage d’un SLM et d’un LLM n’est pas clairement définie ni implicite.
 Cette absence de clarté peut poser des défis pour comprendre leurs avantages respectifs, leurs limites, et leur pertinence dans divers contextes d’utilisation.
@@ -91,24 +56,13 @@ Répondre à ces questions implique de surmonter certaines limitations, notammen
 * // TODO Autres ?
 
 ## III. Collecte d'informations
-```
-Préciser vos zones de recherches en fonction de votre projet, les informations dont vous disposez, ...
 
-Voici quelques pistes :
-
-1. les articles ou documents utiles à votre projet
-2. les outils que vous souhaitez utiliser
-3. les jeux de données/codes que vous allez utiliser, pourquoi ceux-ci, ...
-
-   :bulb: Cette étape est fortement liée à la suivante. Vous ne pouvez émettre d'hypothèses à vérifier que si vous avez les informations. inversement, vous cherchez à recueillir des informations en fonction de vos hypothèses.
-```
 ### Articles
 Pour la recherche d'information concernant les SLM, ainsi que les résultats de l'évaluation de leur performance faite par des benchmarks.  Nous avons consulté plusieurs articles scientifiques.  
 * [A Comprehensive Survey of Small Language Models in the Era of Large Language Models: Techniques, Enhancements, Applications, Collaboration with LLMs, and Trustworthiness](https://arxiv.org/abs/2411.03350)  
 * [Qwen2.5-Coder Technical Report](https://arxiv.org/abs/2409.12186)  
 * [Gemma 2: Improving Open Language Models at a Practical Size](https://arxiv.org/abs/2408.00118)  
-* [MedMobile: A mobile-sized language model with expert-level
-clinical capabilities](https://arxiv.org/pdf/2410.09019v1)  
+* [MedMobile: A mobile-sized language model with expert-level clinical capabilities](https://arxiv.org/pdf/2410.09019v1)  
 * [BigCodeBench: Benchmarking Code Generation with Diverse Function Calls and Complex Instructions](https://arxiv.org/abs/2406.15877)  
 
 Pour les recherches concernant les cas d'utilisations. Voici les sources que nous avons utilisés :
@@ -121,8 +75,6 @@ Pour les recherches concernant les cas d'utilisations. Voici les sources que nou
 * [Papier Microsoft - SLM/LLM](https://www.microsoft.com/en-us/microsoft-cloud/blog/2024/11/11/explore-ai-models-key-differences-between-small-language-models-and-large-language-models/)
 * [Proposition d'evaluation des performances](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10590016)  
 * [SLM/LLM Diffrences in Langage Modeling](https://www.200ok.ai/blog/slm-vs-llm-understanding-the-differences-in-language-modeling/)
-
-// TODO : Ajouter les articles consultés pour les autres parties
 
 ### Ressources
 Nous avons utilisé les ressources suivantes pour nos expériences :
@@ -139,19 +91,6 @@ Les codes utilisés se trouvent dans le répertoire `chapters/2025/SLM_vs_LLM-Te
 Les données utilisées pour nos expériences proviennent de l'API Hugging Face.
 
 ## IV. Hypothèses et expériences
-```
-1. Il s'agit ici d'**énoncer sous forme d'hypothèses** ce que vous allez chercher à démontrer. Vous devez définir vos hypothèses de façon à pouvoir les _mesurer/vérifier facilement._ Bien sûr, votre hypothèse devrait être construite de manière à _vous aider à répondre à votre question initiale_. Explicitez ces différents points.
-2. Vous **explicitez les expérimentations que vous allez mener** pour vérifier si vos hypothèses sont vraies ou fausses. Il y a forcément des choix, des limites, explicitez-les.
-
-   :bulb: Structurez cette partie à votre convenance :
-   Par exemples :
-   Pour Hypothèse 1 =>
-   Nous ferons les Expériences suivantes pour la démontrer
-   Pour Hypothèse 2 => Expériences
-
-
-        ou Vous présentez l'ensemble des hypothèses puis vous expliquer comment les expériences prévues permettront de démontrer vos hypothèses.
-```
 
 ### Hypothèse 1 :  
 Pour répondre à la sous-question "Existe-t-il un seuil de paramètres permettant de différencier SLM et LLM ?", nous avons initialement formulé l'hypothèse qu’il existe un seuil universel, reconnu et plus ou moins standardisé, pour différencier les SLM et les LLM. Cependant, nos recherches préliminaires ont montré que ce seuil n’est pas clairement défini. Nous postulons donc que ce seuil pourrait varier selon l’éditeur et son référentiel de modèles.
@@ -188,7 +127,7 @@ Les résultats de cette analyse dépendent fortement de la diversité des tâche
 
 ### Hypothèse 3 :
 
-Afin de répondre à la sous question "Quels sont les cas d’usages spécifiques aux SLM ?  ", nous partons du même principe que l'hypothèse précédente. En effet, les SLM étant des modèles plus petits et entrainés de manière plus spécifiques, nous pouvons en déduire que ceux-ci seraient utilisés dans des cas assez précis et de manière répétées. Par exemple, un SLM spécialisé dans le code qui serait disponible pour les développeurs par exemple. Contrairement à un LLM, qui lui, serait utiliser dans un context plus global. Comme l'utilisation de GPT-4 de nos jours, ou les gens le sorte pour générer des exercices pour le sport, tester de nouvelles recettes de cuisines, etc...
+Afin de répondre à la sous question "Quels sont les cas d’usages spécifiques aux SLM ?", nous partons du même principe que l'hypothèse précédente. En effet, les SLM étant des modèles plus petits et entrainés de manière plus spécifiques, nous pouvons en déduire que ceux-ci seraient utilisés dans des cas assez précis et de manière répétées. Par exemple, un SLM spécialisé dans le code qui serait disponible pour les développeurs par exemple. Contrairement à un LLM, qui lui, serait utiliser dans un context plus global. Comme l'utilisation de GPT-4 de nos jours, ou les gens le sorte pour générer des exercices pour le sport, tester de nouvelles recettes de cuisines, etc...
 
 Voici les sous-questions auquels nous allons tenter de répondre :
 - A quel moment utiliser un LM, pour quel type de tâches ?
@@ -325,14 +264,10 @@ Les LLM , avec une centaine de milliards de paramètres, donnent généralement 
 
 D'autres exemples montrent que certains SLM, bien spécialisés, peuvent dépasser la performance de certains LLM. C'est le cas du modèle DeBERTa avec 1,5 milliard de paramètres, qui s'avère plus performant que le GPT-3.
 
-
-
-
 En conclusion, ces résultats soutiennent l’idée qu’un SLM bien conçu et optimisé peut surpasser un LLM dans des tâches spécifiques, tant en termes de précision que d’efficience. Cela ouvre de nouvelles perspectives pour des applications nécessitant des modèles performants mais économes en ressources, notamment dans des domaines très spécialisés. Toutefois, l’avantage des LLM reste certain pour les tâches plus généralistes ou nécessitant une large capacité de généralisation.
 
 ### Résultats de la troisième sous question :
-//TODO : A retructurer
-### Hypothèse 3
+#### Hypothèse 3
 #### 1. A quel moment utiliser un LM, pour quel type de tâche ?
 
 Il faut savoir que l'on connait les LM depuis plus longtemps que l'on ne le croit. Un LM n'est pas forcement obliger d'avoir une forme d'intelligence poussée. Les premiers LM qui ont vus le jour on commencer par des tâches très ciblées :
@@ -392,7 +327,6 @@ Une augmentation de ce pourcentage au cours du temps signifierait donc que les S
 
 **Nota bene :** Nous n'utilisons que des modèles datant d'après 2023 car notre jeu de données n'est pas assez conséquent pour les modèles créés avant 2023.
 
-
 Nous pouvons voir que le pourcentage de SLM créés par mois ((SLM/ (SLM + LLM)) * 100) décroit, ce qui pourrait signifier que l'hypothèse est fausse.
 En revanche, cette décroissance peut être expliquée par le fait que nous ne pouvons pas récupérer les modèles par date de création. Nous les récupérons donc en fonction du nombre de téléchargements des 30 derniers jours (les modèles les plus populaires en premier).  
 
@@ -413,7 +347,6 @@ Les LLM ne renseignent généralement pas que leur modèle est capable de text-c
 
 Les résultats pour tous les tags sont disponibles dans le dossier results/slm-percentage-by-tags.
 
-
 Les résultats obtenus ne permettent donc pas de fermement valider l'hypothèse. En revanche nous observons une croissance du pourcentage de SLM créés ces 4 derniers mois.
 
 #### Hypothèse 5 :  **"L'utilisation d'un SLM perdure moins dans le temps que celle d'un LLM"**
@@ -421,11 +354,9 @@ Les résultats obtenus ne permettent donc pas de fermement valider l'hypothèse.
 Notre expérience nous a permis de définir pour chaque mois de création , quelle portion des téléchargements totaux des 30 derniers jours représentaient les modèles créés ce mois ci.
 Ce qui nous a donc permis d'obtenir les graphiques suivants respectivement pour les SLM et LLM.
 
-
 ![slm-downloads.png](assets/results/slm-downloads.png)
 
 **Exemple :** Les SLM créés en  04/2023 représentent 11% des téléchargements de SLM des 30 derniers jours.
-
 
 ![llm-downloads.png](assets/results/llm-downloads.png)
 
@@ -435,16 +366,21 @@ Ces graphiques montrent donc que les SLM créés il y a plus d'un an représent 
 
 Nous pouvons donc en conclure que les SLM perdurent bien mieux dans le temps que les LLM. Ce qui est contraire à l'hypothèse de départ qui était que les SLM seraient plus volatiles que les LLM car bien plus simples à entrainer.
 
-
-  
-
 ### Conclusion (réponse à la question principale)
 Ici, reprendre les 4 conclusions des sous question pour repondre a la question principale
 
+Les Small Language Models (SLM) et les Large Language Models (LLM) répondent à des enjeux et cas d’usage distincts, reflétant leurs spécificités respectives et leurs avantages. L’un des principaux enjeux réside dans la différenciation entre ces deux types de modèles. Aucun seuil universel ne permet de les distinguer de manière définitive, cette frontière dépendant de la taille, des applications visées, et des choix fait par les éditeurs. Cette flexibilité d’interprétation met également en évidence la rapidité avec laquelle le domaine du NLP évolue.
+
+Un autre enjeu majeur est l’optimisation des performances en fonction des besoins spécifiques. Les SLM, grâce à leur conception ciblée, peuvent surpasser les LLM dans des tâches spécialisées, comme la médecine, la génération de code ou même l'inférence de langage naturel d'aprés nos résultats, tout en consommant moins de ressources. Cela leur confère un avantage stratégique dans des contextes où la précision et l’efficacité priment sur la généralisation. En revanche, les LLM restent incontournables pour des applications nécessitant une compréhension large et polyvalente, comme la génération de texte complexe ou créatif.
+
+Les cas d’usage reflètent cette complémentarité. Les SLM sont particulièrement adaptés à des domaines techniques et spécialisés, tels que la vision par ordinateur, la reconnaissance audio ou des analyses ciblées. Les LLM, de leur côté, brillent dans des contextes généralistes, notamment dans le traitement de données textuelles riches et variées. Cette répartition des rôles montre que le choix d’un modèle dépend avant tout des besoins spécifiques de chaque projet.
+
+Enfin, les dynamiques d’adoption et de pérennité des SLM et LLM révèlent des tendances intéressantes. Bien que les SLM gagnent en popularité, les LLM dominent encore les parts de marchés. Cependant, les SLM présentent une stabilité d’usage surprenante dans le temps, ce qui en fait des solutions fiables pour des applications spécialisées.
+
+En conclusion, les enjeux des SLM et des LLM se situent dans l’optimisation de leur utilisation selon les besoins, avec une réflexion stratégique sur leur adaptation aux évolutions technologiques et aux cas d’usage variés. Ces modèles ne s’opposent pas, mais se complètent, permettant d’adresser des problématiques allant de l’hyper-spécialisation à la généralisation.
+
 ## VI. Outils \(facultatif\)
-```
-Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à \(1\) pouvoir reproduire vos expérimentations, \(2\) partager/expliquer à d'autres l'usage des outils.
-```
+
 L'intégralité du code utilisé pour réaliser cette étude est disponible dans le dossier codes. Pour récupérer les données de l'api de huggin face il vous sera nécessaire de créer un fichier .env à la racine du dossier codes contenant votre token d'api huggingface.
 ex : HUGGINFACE_KEY= <votre_token>
 
@@ -453,7 +389,6 @@ Le fichier main.py contient un script python qui permet de récupérer les donn�
 Les fonctions permettant de tracer les graphiques sont commentées pour éviter de tous les tracer d'un coup.
 
 Pour plus de détails vous pouvez trouver les définitions des fonctions de tracés de graphiques dans le fichier trends.py et les fonctions de récupération des infos des modèles dans le fichier fetch_models.py.
-
 
 ![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](assets/images/logo_uca.png)
 
