@@ -8,9 +8,8 @@ date: 2022-11-18 6:00:00 +0100
 
 
 ### SLM vs LLM
+#### [Enjeux et cas d’usage des SLM et des LLM  ]({{site.url}}/chapters/2025/SLM_vs_LLM-Team_C/content)
 #### [Analyse énergétique et financière des LLM vs SLM]({{site.url}}/chapters/2025/SLM_vs_LLM-Team_E/content)
-#### [projet2]({{site.url}}/chapters/2025/SLMvsLLMYY/content)
-
 
 ### Modèles de Machine Learning et documentation sur les propriétés FATES 
 #### [projetModel]({{site.url}}/chapters/2025/ChapterModel/content)
