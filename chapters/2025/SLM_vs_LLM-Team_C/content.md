@@ -208,36 +208,47 @@ Nous aurions apprécier trouver quelques informations supplémentaires comme les
 Les limites de cette analyse incluent reposent notamment sur un manque de données dans le temps via l'API HuggingFace. En effet, pour répondre à ce genre de question, il aurait été intéréssant de savoir si, par exemple, ces cas d'utilisations ont changés au cours du temps. Cependant, l'API ne nous permet que de tirer les dernières données sur les 30 derniers jours. La limitation dans le temps pour la rédaction de cet article ne nous a pas permis de pousser les recherches plus loin et de manière plus larges.
 
 ### Hypothèse 4 :  
-**Question** : Quelles sont les tendances d’utilisation des SLM/LLM ?
-Pour répondre à cette sous question nous avons formulé l'hypothèse qu'avec la démocratistion du concept de SLM, les SLM gagneraient des parts de marché sur les LLM.
+Afin de répondre à la sous question **"Quelles sont les tendances d’utilisation des SLM/LLM ?"**  nous avons formulé l'hypothèse qu'avec la démocratisation du concept de SLM, les SLM gagneraient des parts de marché sur les LLM.
 
 **Expériences** :  
 Nous avons donc mené une série d'analyses afin de vérifier l'hypothèse suivante **"Les SLM gagnent des parts de marchés sur les LLM"**. Ces analyses ont été réalisées à l'aide des données fournies par l'API de Huggin Face.
 
-**Démarche :**
+**Démarche** :  
 Nous souhaitions obtenir le nombre de téléchargements par modèle et par mois, ce qui nous aurait permis d'en déduire les tendances d'utilisations en compilant un grand nombre de données.
 Cependant, l'API de Hugging Face ne fournit que le nombre de téléchargements par modèle sur les 30 derniers jours. Nous avons donc contourné ce problème en utilisant un autre paramètre donné par Huggin Face : la date de création des modèles.
-En effet, si il ne nous est pas possible d'obtenir des données sur les tendances des téléchargements nous pouvons en revanche en obtenir sur les tendances de créations des modèles.
+En effet, s'il ne nous est pas possible d'obtenir des données sur les tendances des téléchargements nous pouvons en revanche en obtenir sur les tendances de créations des modèles.
 
-Nous avons donc pour cela :
-**1.** Réuni un dataset des 10000 modèles les plus téléchargés sur les 30 derniers jours (à défaut de pouvoir les récupérer   directement par date de création).
-**2.** Défini si ils étaient des SLM/LLM.
+Nous avons donc pour cela :  
+**1.** Réuni un dataset des 10000 modèles les plus téléchargés sur les 30 derniers jours (à défaut de pouvoir les récupérer   directement par date de création).  
+**2.** Défini s'ils étaient des SLM/LLM.  
 **3.** Calculé l'évolution du ratio de création de LLM/LLM dans le temps.
 
-Nous nous sommes ensuite demandés si l'évolution de ce ratio serait la même pour tous les types de modèles. En effet comme expliqué précédement, Huggin Face founit des tags associés au modèle, qui permettent de définir les cas d'utilisation (classification, text-to-text, etc).
-Nous avons donc réalisé l'expérience mentionnée ci dessus pour chaque tag spécifique afin de déterminer si les résultats seraient homogènes entre les différents tags.
+Nous nous sommes ensuite demandés si l'évolution de ce ratio serait la même pour tous les types de modèles. En effet, comme expliqué précédemment, Huggin Face fournit des tags associés au modèle, qui permettent de définir les cas d'utilisation (classification, text-to-text, etc).
+Nous avons donc réalisé l'expérience mentionnée ci-dessus pour chaque tag spécifique afin de déterminer si les résultats seraient homogènes entre les différents tags.
 
-Nous avons donc : 
-**1.** Défini les 20 types de modèles les plus téléchargés.
-**2.** Réuni un dataset de 2000 modèles pour chaque type.
+Nous avons donc :   
+**1.** Défini les 20 types de modèles les plus téléchargés.  
+**2.** Réuni un dataset de 2000 modèles pour chaque type.  
 **3.** Calculé l'évolution du ratio de création de LLM/LLM dans le temps.
 
 
-**Limites** : 
-compliqué de savoir que tags correspondent à quels sous tag pour comparer SLM/LLM
-Impossibilité de récupérer des modèes créés à une date précise.
+**Limites** :   
+Impossibilité de récupérer des modèles créés à une date précise.
 Certains LLM ne renseignent pas les sous tags qui sont englobés par leur tag principal ce qui fausse le calcul de la répartition SLM/LLM pour un tag précis.
 
+### Hypothèse 5 :
+Afin de répondre à la sous question **"Quelles sont les tendances d’utilisation des SLM/LLM ?"**  formulé une deuxième hypothèse qui est que les SLM étant bien plus faciles à entrainer que les LLM, les SLM populaires seraient rapidements remplacés par de nouveaux SLM plus performants. L'utilisation d'un SLM perdurerait donc moins dans le temps que celle d'un LLM.
+
+**Expériences** :  
+Nous avons donc mené une série d'analyses afin de vérifier l'hypothèse suivante **"L'utilisation d'un SLM perdure moins dans le temps que celle d'un LLM"**. Ces analyses ont été réalisées à l'aide des donnes fournies par l'API de Huggin Face.
+
+**Démarche** :  
+Pour chaque modèle, Huggin Face fournit des informations sur le nombre de téléchargements générés sur les 30 derniers jours ainsi que sa date de création. Ces deux informations nous permettent donc de déterminer quand ont été créés les modèles qui sont populaire aujourd'hui et ainsi en déduire la durée de vie des SLM/LLM.
+
+Nous avons donc :   
+**1.** Réuni un dataset des 10000 modèles les plus téléchargés sur les 30 derniers jours.  
+**2.** Défini si ils étaient des SLM/LLM.  
+**3**. Analysé pour chaque mois de création , quelle portion des téléchargements totaux des 30 derniers jours représentaient les modèles créés ce mois ci.
 ## V. Resultats de l'étude et conclusion
 
 ### Résultats de la première sous question :
@@ -323,6 +334,56 @@ En conclusion, ces résultats soutiennent l’idée qu’un SLM bien conçu et o
 
 
 ### Résultats de la quatrième sous question :  
+#### Hypothèse 4 :   "Les SLM gagnent des parts de marchés sur les LLM"
+
+Notre première expérience nous a permis de définir le pourcentage de SLM créés chaque mois par rapport au nombre total de modèles créés ce mois ci (SLM + LLM).
+Une augmentation de ce pourcentage au cours du temps signifierait donc que les SLM gagnent des parts de marchés sur les LLM.
+![slm-by-time.png](assets/results/slm-by-time.png)
+
+**Nota bene :** Nous n'utilisons que des modèles datant d'après 2023 car notre jeu de données n'est pas assez conséquent pour les modèles créés avant 2023.
+
+
+Nous pouvons voir que le pourcentage de SLM créés par mois ((SLM/ (SLM + LLM)) * 100) décroit, ce qui pourrait signifier que l'hypothèse est fausse.
+En revanche, cette décroissance peut être expliquée par le fait que nous ne pouvons pas récupérer les modèles par date de création. Nous les récupérons donc en fonction du nombre de téléchargements des 30 derniers jours (les modèles les plus populaires en premier).  
+
+Notre seconde expérience visait à réaliser l'expérience précédente pour chaque tag spécifique afin de définir si les tendances de créations des SLM/LLM étaient homogènes en fonction des tags.
+
+Voici les résultats pour les tages les plus populaires chez les LLM :
+![text-generation.png](assets/results/slm-percentage-by-tags/text-generation.png)
+
+Le pourcentage de création de SLM augmente sur les 4  derniers mois. En revanche les résultats ne sont pas significatifs pour valider l'hypothèse, en effet nous observons une forte décroissance de début 2023 à début 2024.
+
+![multimodal.png](assets/results/slm-percentage-by-tags/multimodal.png)
+
+Nous observons des résultats similaires à l'expérience précédente pour les tags qui sont les plus populaires chez les LLM. En revanche, comme mentionné dans les limites de l'expérience, les LLM ne renseignent généralement pas les tags qui découlent de leur tag principal ce qui donne les résultats suivants pour certains tags sous représentés chez les LLM : 
+
+![text-classification.png](assets/results/slm-percentage-by-tags/text-classification.png)
+
+Les LLM ne renseignent généralement pas que leur modèle est capable de text-classification car ils se contentent de mettre un tag de plus haut niveau  d'abstraction (très souvent text-generation) ce qui biaise nos graphiques.
+
+Les résultats pour tous les tags sont disponibles dans le dossier results/slm-percentage-by-tags.
+
+
+Les résultats obtenus ne permettent donc pas de fermement valider l'hypothèse. En revanche nous observons une croissance du pourcentage de SLM créés ces 4 derniers mois.
+
+#### Hypothèse 5 :  **"L'utilisation d'un SLM perdure moins dans le temps que celle d'un LLM"**
+
+Notre expérience nous a permis de définir pour chaque mois de création , quelle portion des téléchargements totaux des 30 derniers jours représentaient les modèles créés ce mois ci.
+Ce qui nous a donc permis d'obtenir les graphiques suivants respectivement pour les SLM et LLM.
+
+
+![slm-downloads.png](assets/results/slm-downloads.png)
+
+**Exemple :** Les SLM créés en  04/2023 représentent 11% des téléchargements de SLM des 30 derniers jours.
+
+
+![llm-downloads.png](assets/results/llm-downloads.png)
+
+**Exemple :** Les LLM créés en  05/2024 représentent 11% des téléchargements de LLM des 30 derniers jours.
+
+Ces graphiques montrent donc que les SLM créés il y a plus d'un an représent 40% des téléchargements actuels de SLM, tandis que les LLM créés il y a plus d'un an représentent seulement 20% des téléchargements actuels de LLM.
+
+Nous pouvons donc en conclure que les SLM perdurent bien mieux dans le temps que les LLM. Ce qui est contraire à l'hypothèse de départ qui était que les SLM seraient plus volatiles que les LLM car bien plus simples à entrainer.
 
 //TODO : A retructurer
 ### Hypothèse 3
@@ -416,6 +477,16 @@ Ici, reprendre les 4 conclusions des sous question pour repondre a la question p
 ```
 Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à \(1\) pouvoir reproduire vos expérimentations, \(2\) partager/expliquer à d'autres l'usage des outils.
 ```
+L'intégralité du code utilisé pour réaliser cette étude est disponible dans le dossier codes. Pour récupérer les données de l'api de huggin face il vous sera nécessaire de créer un fichier .env à la racine du dossier codes contenant votre token d'api huggingface.
+ex : HUGGINFACE_KEY= <votre_token>
+
+Les scripts sont localisés dans le dossier src.
+Le fichier main.py contient un script python qui permet de récupérer les données de HuggingFace et de les traiter pour obtenir les graphiques présentés dans ce rapport.
+Les fonctions permettant de tracer les graphiques sont commentées pour éviter de tous les tracer d'un coup.
+
+Pour plus de détails vous pouvez trouver les définitions des fonctions de tracés de graphiques dans le fichier trends.py et les fonctions de récupération des infos des modèles dans le fichier fetch_models.py.
+
+
 ![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](assets/images/logo_uca.png)
 
 

@@ -19,14 +19,14 @@ def main():
         print(f"models: {len(models)}")
 
         # Génération des graphiques
-        plot_tags_by_time("multimodal")
+        plot_tags_by_time("sentence-similarity")
         slm_by_time()
-        plot_model_types(dataframes)
-        plot_slm_vs_llm(dataframes)
-        plot_slm_vs_llm_in_time(dataframes)
-        plot_tags_by_time(dataframes)
+        # plot_model_types(dataframes)
+        # plot_slm_vs_llm(dataframes)
+        # plot_slm_vs_llm_in_time(dataframes)
+        # plot_tags_by_time(dataframes)
         #For LLM , what are the most tags used
-        llm_most_tags = when_type_is_most_used("llm",dataframes)
+        # llm_most_tags = when_type_is_most_used("llm",dataframes)
         # v > X to filter tags used less than X times
         # filtered_tags = {k: v for k, v in llm_most_tags.items() if v > 10}
         # plot_most_tags_used("llm", filtered_tags)
