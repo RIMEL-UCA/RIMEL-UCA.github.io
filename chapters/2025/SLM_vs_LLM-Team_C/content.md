@@ -377,7 +377,7 @@ En conclusion, les enjeux des SLM et des LLM se situent dans l’optimisation de
 
 ## VI. Outils 
 
-L'intégralité du code utilisé pour réaliser cette étude est disponible dans le dossier codes. Pour récupérer les données de l'api de huggin face il vous sera nécessaire de créer un fichier .env à la racine du dossier codes contenant votre token d'api huggingface.
+L'intégralité du code utilisé pour réaliser cette étude est disponible dans le dossier codes. Pour récupérer les données de l'api de huggin face il vous sera nécessaire de créer un fichier .env à la racine du dossier codes contenant votre token d'api huggingface.  
 ex : `HUGGINFACE_KEY= <votre_token>`
 
 Les scripts sont localisés dans le dossier src.
