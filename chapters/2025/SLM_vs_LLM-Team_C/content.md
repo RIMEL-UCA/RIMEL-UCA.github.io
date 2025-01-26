@@ -331,7 +331,57 @@ D'autres exemples montrent que certains SLM, bien spécialisés, peuvent dépass
 En conclusion, ces résultats soutiennent l’idée qu’un SLM bien conçu et optimisé peut surpasser un LLM dans des tâches spécifiques, tant en termes de précision que d’efficience. Cela ouvre de nouvelles perspectives pour des applications nécessitant des modèles performants mais économes en ressources, notamment dans des domaines très spécialisés. Toutefois, l’avantage des LLM reste certain pour les tâches plus généralistes ou nécessitant une large capacité de généralisation.
 
 ### Résultats de la troisième sous question :
+//TODO : A retructurer
+### Hypothèse 3
+#### 1. A quel moment utiliser un LM, pour quel type de tâche ?
 
+Il faut savoir que l'on connait les LM depuis plus longtemps que l'on ne le croit. Un LM n'est pas forcement obliger d'avoir une forme d'intelligence poussée. Les premiers LM qui ont vus le jour on commencer par des tâches très ciblées :
+- Correction orthographique et suggestion de mots
+- Reconnaissance vocale
+- Traduction Automatique
+
+Pour chaques langues, il fallait faire un nouveau LM. Pour chaque nouveau cas d'usage, il fallait en faire un nouveau.
+
+Désormais, les LM sont pratiquement tous basés sur l'architecture Transformer que nous avons précédemment. Cette architecture à permis aux LM à monter en "intelligence".
+
+Il est désormais possible d'avoir un LM qui puisse répondre à plus de choses en même temps. Cela est possible par, notamment :
+- l'Augmentation des capacités des modèles. Au cours du temps, le nombre de paramètre n'a cesser d'augmenter, rendant la capacité des LM à comprendre mieux les informations qui lui sont données.
+
+- l'Augmentation de la durée / du nombre de données lors de l'entrainement.
+Avec le temps, les puissances de calculs ont permis d'entrainer plus vite les LM. Tout comme avec le temps, le nombre de data n'a cessé d'augmenter, ce qui permet aux LM de pouvoir s'entrainer sur des sources de données de plus en plus grandes.
+
+Les cas d'utilisations de nos jours deviennent de plus en plus variés. Pour trouver un équilibre dans les utilisations, les LM ont été divisés en deux catégories (SLM et LLM).
+
+Au final, on peut dire d'après les résultats précédents que les LM sont généralement utilisés pour de la génération de texte. Entre la traduction, la correction orthographique,... il semble que l'interface première entre les humains et ces LM soit le texte.
+Nous pouvons donc supposer que, de nos jours, l'utilisation des LM ne se restreint pas à un seul cas d'usage mais à une multitudes de cas. Le choix entre un SLM ou un LLM dépend du contexte dans lequel nous souhaitons utiliser un LM. Comme vu par l'hypothèse précédente, nous pouvons partir du principe que les SLM soient utilisés pour des tâches bien précises ou la qualité des réponses est bien plus importante que le spectre d'action posssible du LM.
+
+#### 2. Analyse de données sur HuggingFace
+
+Pour vérifier tout ce que nous avons dit dans la partie précédente, nous allons utiliser l'outil HuggingFace qui permet à n'importe qui de déposer des LM mais aussi des données d'entrainement.
+
+Nous avons choisit celui-ci car c'est le leader sur ce marché, c'est donc sur cette plateforme que nous serons les plus aptes à extraire des informations en grande quantitié pour essayer de confirmer ou non, si les LLM / SLM ont bien des cas d'usages différents et si oui, quels sont-ils.
+
+Pour commencer, il faut savoir que sur HuggingFace, il n'y a pas de définition SLM/LLM. Tous les modèles sont des LM. Pour pouvoir donc différencier ces LM, nous avons appliquer la limite vu dans l'hypothèse précédente, qui est la limite des 7 Milliards de paramètres.
+
+Avant d'analyser les résultats, nous tenons quand même ç mentionner que ces résultats ne représentent pas la réalité, nous avons essayer de faire au mieux mais plusieurs freins nous ont limités dans ces analyses :
+- La période dans le temps est très courte. En effet, l'API de HuggingFace nous permet de récolter uniquement des données à l'instant ou nous les prenons. Par exemple, les statistiques sur les téléchargements sont valables uniquement sur les 30 derniers jours. Nous ne pouvons accéder a ces informations antérieures.
+
+- Le manque d'informations dans les modèles. Bien que HuggingFace soit la plateforme de référence dans ce domaine, certains modèles manquent de données. Lors de l'execution de nos scripts, nous filtrons les modèles qui ont l'information sur leurs nombre de parmaètres ou non. Une grande partie des modèles présents sur la plateforme n'ont pas ce paramètre, ce qui entraine une inutilité du modèle pour nous.
+
+Pour commencer notre analyse, nous nous baserons sur un jeu de donnée de 5000 modèles. Ces modèles ont été téléchargés par ordre décroissant de téléchargement.
+Pour commencer, commencons par regarder quel est le ratio de SLM/LLM présent dans nos données.
+
+![](./assets/results/models_repartition_5000.PNG)
+
+On voit que les SLM sont plus présents de manière générale. Ce qui peut sembler logique car si les SLM sont aussi, voir plus puissant que les LLM mais pour des domaines bien spécifiques, pour un LLM bon sur tous les sujets, il faut créer un SLM pour chaques sujets.
+
+Cherchons maintenant à voir quels types d’usages ont les utilisateurs avec les LM. Pour cela, les contributeurs aux LM peuvent attribuer à leur modèle un ou plusieurs “tag” qui permettent de mieux cibler le type de tâche du modèle. Nous pouvons nous baser là-dessus pour avoir une idée en fonction du type de modèle.
+
+![](./assets/results/llm_most_tags_5000.PNG)
+
+![](./assets/results/slms_most_tags.png)
+
+On remarque que les SLM ont des tags bien plus précis que les LLM. Les LLM sont clairement axés sur la génération de texte, avec une application dominante dans le traitement de texte complexe ou créatif. Les SLM sont beaucoup plus polyvalents, couvrant des domaines tels que la vision par ordinateur, la reconnaissance audio, et les analyses spécialisées. Ils répondent à des besoins variés, avec une utilisation répartie sur des tâches plus techniques ou spécifiques. Ce qui confirme notre hyptothèse précédente via les benchmarkings.
 
 ### Résultats de la quatrième sous question :  
 #### Hypothèse 4 :   "Les SLM gagnent des parts de marchés sur les LLM"
@@ -385,90 +435,8 @@ Ces graphiques montrent donc que les SLM créés il y a plus d'un an représent 
 
 Nous pouvons donc en conclure que les SLM perdurent bien mieux dans le temps que les LLM. Ce qui est contraire à l'hypothèse de départ qui était que les SLM seraient plus volatiles que les LLM car bien plus simples à entrainer.
 
-//TODO : A retructurer
-### Hypothèse 3
-#### 1. A quel moment utiliser un LM, pour quel type de tâche ?
 
-Il faut savoir que l'on connait les LM depuis plus longtemps que l'on ne le croit. Un LM n'est pas forcement obliger d'avoir une forme d'intelligence poussée. Les premiers LM qui ont vus le jour on commencer par des tâches très ciblées :
-- Correction orthographique et suggestion de mots
-- Reconnaissance vocale
-- Traduction Automatique
-
-Pour chaques langues, il fallait faire un nouveau LM. Pour chaque nouveau cas d'usage, il fallait en faire un nouveau.
-
-Désormais, les LM sont pratiquement tous basés sur l'architecture Transformer que nous avons précédemment. Cette architecture à permis aux LM à monter en "intelligence".
-
-Il est désormais possible d'avoir un LM qui puisse répondre à plus de choses en même temps. Cela est possible par, notamment :
-- l'Augmentation des capacités des modèles. Au cours du temps, le nombre de paramètre n'a cesser d'augmenter, rendant la capacité des LM à comprendre mieux les informations qui lui sont données.
-
-- l'Augmentation de la durée / du nombre de données lors de l'entrainement.
-Avec le temps, les puissances de calculs ont permis d'entrainer plus vite les LM. Tout comme avec le temps, le nombre de data n'a cessé d'augmenter, ce qui permet aux LM de pouvoir s'entrainer sur des sources de données de plus en plus grandes.
-
-Les cas d'utilisations de nos jours deviennent de plus en plus variés. Pour trouver un équilibre dans les utilisations, les LM ont été divisés en deux catégories (SLM et LLM).
-
-Au final, on peut dire d'après les résultats précédents que les LM sont généralement utilisés pour de la génération de texte. Entre la traduction, la correction orthographique,... il semble que l'interface première entre les humains et ces LM soit le texte.
-Nous pouvons donc supposer que, de nos jours, l'utilisation des LM ne se restreint pas à un seul cas d'usage mais à une multitudes de cas. Le choix entre un SLM ou un LLM dépend du contexte dans lequel nous souhaitons utiliser un LM. Comme vu par l'hypothèse précédente, nous pouvons partir du principe que les SLM soient utilisés pour des tâches bien précises ou la qualité des réponses est bien plus importante que le spectre d'action posssible du LM.
-
-#### 2. Analyse de données sur HuggingFace
-
-Pour vérifier tout ce que nous avons dit dans la partie précédente, nous allons utiliser l'outil HuggingFace qui permet à n'importe qui de déposer des LM mais aussi des données d'entrainement.
-
-Nous avons choisit celui-ci car c'est le leader sur ce marché, c'est donc sur cette plateforme que nous serons les plus aptes à extraire des informations en grande quantitié pour essayer de confirmer ou non, si les LLM / SLM ont bien des cas d'usages différents et si oui, quels sont-ils.
-
-Pour commencer, il faut savoir que sur HuggingFace, il n'y a pas de définition SLM/LLM. Tous les modèles sont des LM. Pour pouvoir donc différencier ces LM, nous avons appliquer la limite vu dans l'hypothèse précédente, qui est la limite des 7 Milliards de paramètres.
-
-Avant d'analyser les résultats, nous tenons quand même ç mentionner que ces résultats ne représentent pas la réalité, nous avons essayer de faire au mieux mais plusieurs freins nous ont limités dans ces analyses :
-- La période dans le temps est très courte. En effet, l'API de HuggingFace nous permet de récolter uniquement des données à l'instant ou nous les prenons. Par exemple, les statistiques sur les téléchargements sont valables uniquement sur les 30 derniers jours. Nous ne pouvons accéder a ces informations antérieures.
-
-- Le manque d'informations dans les modèles. Bien que HuggingFace soit la plateforme de référence dans ce domaine, certains modèles manquent de données. Lors de l'execution de nos scripts, nous filtrons les modèles qui ont l'information sur leurs nombre de parmaètres ou non. Une grande partie des modèles présents sur la plateforme n'ont pas ce paramètre, ce qui entraine une inutilité du modèle pour nous.
-
-Pour commencer notre analyse, nous nous baserons sur un jeu de donnée de 5000 modèles. Ces modèles ont été téléchargés par ordre décroissant de téléchargement.
-Pour commencer, commencons par regarder quel est le ratio de SLM/LLM présent dans nos données.
-
-![](./assets/results/models_repartition_5000.PNG)
-
-On voit que les SLM sont plus présents de manière générale. Ce qui peut sembler logique car si les SLM sont aussi, voir plus puissant que les LLM mais pour des domaines bien spécifiques, pour un LLM bon sur tous les sujets, il faut créer un SLM pour chaques sujets.
-
-Cherchons maintenant à voir quels types d’usages ont les utilisateurs avec les LM. Pour cela, les contributeurs aux LM peuvent attribuer à leur modèle un ou plusieurs “tag” qui permettent de mieux cibler le type de tâche du modèle. Nous pouvons nous baser là-dessus pour avoir une idée en fonction du type de modèle.
-
-![](./assets/results/llm_most_tags_5000.PNG)
-
-![](./assets/results/slms_most_tags.png)
-
-On remarque que les SLM ont des tags bien plus précis que les LLM. Les LLM sont clairement axés sur la génération de texte, avec une application dominante dans le traitement de texte complexe ou créatif. Les SLM sont beaucoup plus polyvalents, couvrant des domaines tels que la vision par ordinateur, la reconnaissance audio, et les analyses spécialisées. Ils répondent à des besoins variés, avec une utilisation répartie sur des tâches plus techniques ou spécifiques. Ce qui confirme notre hyptothèse précédente via les benchmarkings.
-
-
-### Hypothèse 3
-2. Quelles sont les tendances d’utilisation SLM/LLM ?
-Nous nous sommes posés deux sous questions pour répondre à notre hypothèse :
-   - Est-ce que l'utilisation des SLM/LLM dure dans le temps  ?
-   - Est-ce que l'utilisation des SLM est en croissance dans certains domaines ?
-
-Est-ce que l'utilisation des SLM/LLM dure dans le temps ?
-L'api de ugginface nous permet d'obtenir pour les le nombre de téléchargement les 30 derniers jours ainsi que les tags ( les cas d'usages ) et la date de de cree
-
-Nous avons donc décidé de regarder quelle etaie la part qu'occupaient les modèles crées pour quaque moi des télacdes 30 derniers jours. Nous avons donc pu réliser le graphique suivant :
- lien
-Le graphique affiche donc la répartition des téléchargemebts en fonction de te de pour les slm et llm.
-Nous nous attendions à une forte crsoissant de la courbe sur les derniers mois (ce qui signifie que les nouveaux modèles profitent d'un gain de popularité avec leur récent)
-Ce n'est pourtant pas le cas, en effet mememe si on observe un forte croissance sur la fin, la pente de la courbe est pluto^t linéaire ce qui signigie que les modèles perdurent dans le temps.
-Nous ne notons pas de différence majeure entre les slm et llm si ce n'est que les slm crée long occupent une partie très importante
-
-Est-ce que l'utilisation des SLM est en croissance dans certains domaines ?
-nous avons regardé pour tous les tags le pourcentage de slm/llm cré par mois
-ensemble les
-ee
-Nous avons fait face à certains soucis, en effet certains tags sont sous représentés et ne permettent donc pas de confirmer nos hypothèses.
-e
-
-
-
-
-1. Présentation des résultats
-2. Interprétation/Analyse des résultats en fonction de vos hypothèses
-3. Construction d’une conclusion
-
-   :bulb:  Vos résultats et donc votre analyse sont nécessairement limités. Préciser bien ces limites : par exemple, jeux de données insuffisants, analyse réduite à quelques critères, dépendance aux projets analysés, ...
+  
 
 ### Conclusion (réponse à la question principale)
 Ici, reprendre les 4 conclusions des sous question pour repondre a la question principale
