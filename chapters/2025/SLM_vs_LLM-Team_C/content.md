@@ -295,9 +295,27 @@ Ces observations mettent en lumière l’importance de la spécialisation dans l
 
 En conclusion, oui, dans le domaine de la génération de code, un SLM peut être aussi performant, voire plus performant. L'hypothèse initiale se valide donc pour le domaine de ma génération de code.
 
-#### Domaine YYYYY
+#### Domaine de l'inférence en langage naturel
+![](./assets/results/NLI.png)
 
-#### Domaine ZZZZZ
+Dans cette section, nous avons comparé les SLM et LLM sur une tâche spécifique : l'inférence en langage naturel, en utilisant le benchmark RTE. Nous avons classé les modèles en quatre catégories principales :
+
+**Very-small**: pour les modèles d'une centaine de millions de paramètres
+
+**Sub-5B** : pour les modèles avec moins de 5 milliards de paramètres
+
+**Sub-10B** : pour les modèles avec moins de 10 milliards de paramètres
+
+**Very-large** : pour les modèles d'une dizaine à une centaine de milliards de paramètres
+
+La première information pertinente tirée de ces résultats est que le modèle avec la meilleure précision appartient à la catégorie Sub-10B, avec 6 milliards de paramètres. Ce modèle est donc considéré comme un SLM et atteint une précision de 96%.
+
+Les LLM , avec une centaine de milliards de paramètres, donnent généralement de bons résultats en termes de précision par rapport aux SLM. Cependant, il existe certains cas où la différence de précision n'est pas proportionnelle à la différence du nombre de paramètres. Par exemple, le GPT-3 avec 175 milliards de paramètres atteint une précision de 69%, tandis que le modèle senseBERT-base, avec seulement 110 millions de paramètres, donne une précision presque similaire de 67,5%.
+
+D'autres exemples montrent que certains SLM, bien spécialisés, peuvent dépasser la performance de certains LLM. C'est le cas du modèle DeBERTa avec 1,5 milliard de paramètres, qui s'avère plus performant que le GPT-3.
+
+
+
 
 En conclusion, ces résultats soutiennent l’idée qu’un SLM bien conçu et optimisé peut surpasser un LLM dans des tâches spécifiques, tant en termes de précision que d’efficience. Cela ouvre de nouvelles perspectives pour des applications nécessitant des modèles performants mais économes en ressources, notamment dans des domaines très spécialisés. Toutefois, l’avantage des LLM reste certain pour les tâches plus généralistes ou nécessitant une large capacité de généralisation.
 
