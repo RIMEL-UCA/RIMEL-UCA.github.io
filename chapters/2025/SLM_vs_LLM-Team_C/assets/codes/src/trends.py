@@ -2,8 +2,7 @@
 import pandas
 import matplotlib.pyplot as plt
 import datetime
-
-from fontTools.varLib.mutator import percents
+from fetch_models  import get_models
 
 SLM_LLM_THRESHOLD = 7000000000
 NOT_RELEVENT_TAGS = ["en", "fr", "it", "pt", "hi", "es", "th", "de", "ko", "zh", "ja", "pytorch", "llama", "conversational", "autotrain_compatible", "safetensors", "endpoints_compatible","region:us"]
@@ -47,6 +46,7 @@ def analyze_models(models):
     print("\nTags les plus fréquents :")
     all_tags = advanced_data['tags'].apply(sanitize_tags).explode()
     print(all_tags.value_counts())
+
 
     print("\nModèles les plus anciens :")
     print(advanced_data.sort_values(by='createdAt', ascending=True))
@@ -237,57 +237,32 @@ def sanitize_tags(tags):
 
 
 
-def update_slm_percentage(slm_percentages, tag, perio, is_slm_model):
+def update_slm_percentage(slm_percentages, perio, is_slm_model):
     """
     Met à jour le pourcentage de SLM pour un tag donné dans un mois donné.
     """
-    if perio not in slm_percentages[tag]:
-        slm_percentages[tag][perio] = {"slm": 0, "total": 0}
+    if perio not in slm_percentages:
+        slm_percentages[perio] = {"slm": 0, "total": 0}
 
-    slm_percentages[tag][perio]["total"] += 1
+    slm_percentages[perio]["total"] += 1
     if is_slm_model:
-        slm_percentages[tag][perio]["slm"] += 1
+        slm_percentages[perio]["slm"] += 1
 
 
-def plot_tags_by_time(models):
+
+def slm_by_time():
     """
     Génère des graphiques pour les n tags les plus populaires avec l'évolution
     du pourcentage de SLM au fil du temps.
 
     """
-    n = 6
-    # Vérifier les colonnes nécessaires
-    required_columns = {'tags', 'createdAt', 'safetensors'}
-    if not required_columns.issubset(models.columns):
-        print(f"Erreur : Colonnes nécessaires manquantes. Requis : {required_columns}")
-        return
+    models = get_models()
+    dataframes = convertJsonToDataFrame(models)
 
-    # Récupérer tous les tags et les nettoyer
-
-    all_tags = models['tags'].apply(sanitize_tags).explode()
-    if all_tags.empty:
-        print("Aucun tag valide trouvé après nettoyage.")
-        return
-
-    print("Tags valides :")
-    print(all_tags.value_counts())
-
-    # Identifier les n tags les plus populaires
-    top_tags = all_tags.value_counts().head(n).index.tolist()
-    if not top_tags:
-        print("Aucun tag populaire trouvé.")
-        return
-
-    # Initialiser un dictionnaire pour stocker les données SLM et totales par mois pour chaque tag
-    slm_data = {tag: {} for tag in top_tags}
+    slm_data = {}
 
     # Boucler sur les modèles et collecter les données
-    for _, model in models.iterrows():
-        tags = model.get('tags')
-
-
-        if not tags:
-            continue
+    for _, model in dataframes.iterrows():
 
         # Récupérer la date de création et le mois/année
         creation_date = get_creation_date_from_model(model)
@@ -301,40 +276,81 @@ def plot_tags_by_time(models):
         if month_year == datetime.datetime.now().strftime("%Y-%m"):
             continue
 
-        # Calculer la période (groupe de 4 mois)
-        month = creation_date.month
-        start_month = (month - 1) // 4 * 4 + 1
-        period_start = datetime.date(creation_date.year, start_month, 1)
-        period_end = datetime.date(creation_date.year, start_month + 3, 1)
-        period = f"{period_start.strftime('%Y-%m')} à {period_end.strftime('%Y-%m')}"
 
         # Vérifier si le modèle est SLM
         is_slm_model =  is_slm(model)
 
-        # Mettre à jour les données pour chaque tag
-        for tag in tags:
-            if tag in top_tags:
-                update_slm_percentage(slm_data, tag, period, is_slm_model)
+        update_slm_percentage(slm_data, month_year, is_slm_model)
 
-    for tag in top_tags:
-        periods = sorted(slm_data[tag].keys())
-        percentages = [
-            (slm_data[tag][period]["slm"] / slm_data[tag][period]["total"] * 100) if slm_data[tag][period][
-                                                                                         "total"] > 0 else 0
-            for period in periods
-        ]
+    periods = sorted(slm_data.keys())
+    percentages = [
+        ((slm_data[period]["slm"] / slm_data[period]["total"]) * 100) if slm_data[period][
+                                                                                     "total"] > 0 else 0
+        for period in periods
+    ]
 
-        # Diagramme en bâtons
-        plt.figure(figsize=(10, 5))
-        plt.bar(periods, percentages, color='skyblue')
-        plt.title(f"Évolution du pourcentage de SLM pour le tag '{tag}' (par période de 4 mois)", fontsize=14)
-        plt.xlabel("Période", fontsize=12)
-        plt.ylabel("Pourcentage de SLM (%)", fontsize=12)
-        plt.xticks(rotation=45)
-        plt.grid(axis='y', linestyle='--', alpha=0.7)
-        plt.tight_layout()
+    # Diagramme en bâtons
+    plt.figure(figsize=(10, 5))
+    plt.bar(periods, percentages, color='skyblue')
+    plt.title(f"Pourcentage de SLM créés par mois", fontsize=14)
+    plt.xlabel("Mois", fontsize=12)
+    plt.ylabel("Pourcentage de SLM (%)", fontsize=12)
+    plt.xticks(rotation=45)
+    plt.grid(axis='y', linestyle='--', alpha=0.7)
+    plt.tight_layout()
 
-        plt.show()
+    plt.show()
+
+def plot_tags_by_time(tag):
+    """
+    Génère des graphiques pour les n tags les plus populaires avec l'évolution
+    du pourcentage de SLM au fil du temps.
+
+    """
+    models = get_models(tag)
+    dataframes = convertJsonToDataFrame(models)
+
+    slm_data = {}
+
+    # Boucler sur les modèles et collecter les données
+    for _, model in dataframes.iterrows():
+
+        # Récupérer la date de création et le mois/année
+        creation_date = get_creation_date_from_model(model)
+        if not creation_date:
+            continue
+
+        if creation_date.year < 2023:
+            continue
+
+        month_year = creation_date.strftime("%Y-%m")
+        if month_year == datetime.datetime.now().strftime("%Y-%m"):
+            continue
+
+
+        # Vérifier si le modèle est SLM
+        is_slm_model =  is_slm(model)
+
+        update_slm_percentage(slm_data, month_year, is_slm_model)
+
+    periods = sorted(slm_data.keys())
+    percentages = [
+        ((slm_data[period]["slm"] / slm_data[period]["total"]) * 100) if slm_data[period][
+                                                                                     "total"] > 0 else 0
+        for period in periods
+    ]
+
+    # Diagramme en bâtons
+    plt.figure(figsize=(10, 5))
+    plt.bar(periods, percentages, color='skyblue')
+    plt.title(f"Pourcentage de SLM créés par mois pour le tag '{tag}'", fontsize=14)
+    plt.xlabel("Année/Mois de création", fontsize=12)
+    plt.ylabel("Pourcentage de SLM (%)", fontsize=12)
+    plt.xticks(rotation=45)
+    plt.grid(axis='y', linestyle='--', alpha=0.7)
+    plt.tight_layout()
+
+    plt.show()
 
 
 
@@ -363,9 +379,6 @@ def plot_monthly_distribution(models):
 
     # Boucler sur les modèles et collecter les données
     for _, model in models.iterrows():
-        # Si le modèle n'a pas de nombre de safe tensors, passer au suivant
-        if not model.get('safetensors'):
-            continue
 
 
         # Récupérer la date de création et le mois/année
@@ -396,39 +409,38 @@ def plot_monthly_distribution(models):
             llm_total += num_downloads
 
     all_months = sorted(set(list(slm_data.keys()) + list(llm_data.keys())))
-    cumulated_slm_data = {month: sum(slm_data.get(m, 0) for m in all_months[:i+1]) for i, month in enumerate(all_months)}
-    cumulated_llm_data = {month: sum(llm_data.get(m, 0) for m in all_months[:i+1]) for i, month in enumerate(all_months)}
 
 
 
     # Calculer les pourcentages pour chaque mois
-    slm_percentages = [
-        (cumulated_slm_data.get(month, 0) / slm_total) * 100 if slm_total > 0 else 0
+    slm_percentages =  [
+        (slm_data.get(month, 0) / slm_total) * 100 if slm_total > 0 else 0
         for month in all_months
     ]
     llm_percentages = [
-        (cumulated_llm_data.get(month, 0) / llm_total) * 100 if llm_total > 0 else 0
+        (llm_data.get(month, 0) / llm_total) * 100 if llm_total > 0 else 0
         for month in all_months
     ]
 
-    # Création du graphique
-    fig, ax = plt.subplots(figsize=(12, 6))
+    # Plot 1: SLM
+    plt.figure(figsize=(10, 6))
+    plt.bar(range(len(all_months)), slm_percentages, color="skyblue", width=0.5)
+    plt.title("SLM - Part des téléchargements des 30 derniers jours en fonction de la date de création", fontsize=14)
+    plt.xlabel("Mois/Année de création", fontsize=12)
+    plt.ylabel("Part des téléchargements (%)", fontsize=12)
+    plt.xticks(range(len(all_months)), all_months, rotation=45)
+    plt.grid(axis="y", linestyle="--", alpha=0.7)
+    plt.tight_layout()
+    plt.show()
 
-    # Tracer les barres pour SLM et LLM
-    bar_width = 0.35
-    x = range(len(all_months))
-    ax.bar(x, slm_percentages, width=bar_width, label="SLM", color="skyblue")
-    ax.bar([i + bar_width for i in x], llm_percentages, width=bar_width, label="LLM", color="orange")
-
-    # Ajouter des annotations et une légende
-    ax.set_title("Distribution des téléchargments du mois dernier en fonction de la date de cré", fontsize=14)
-    ax.set_xlabel("Mois/Année de Création", fontsize=12)
-    ax.set_ylabel("Part des téléchargements du mois dernier", fontsize=12)
-    ax.set_xticks([i + bar_width / 2 for i in x])
-    ax.set_xticklabels(all_months, rotation=45)
-    ax.legend()
-    ax.grid(axis="y", linestyle="--", alpha=0.7)
-
+    # Plot 2: LLM
+    plt.figure(figsize=(10, 6))
+    plt.bar(range(len(all_months)), llm_percentages, color="orange", width=0.5)
+    plt.title("LLM - Part des téléchargements des 30 derniers jours en fonction de la date de création", fontsize=14)
+    plt.xlabel("Mois/Année de création", fontsize=12)
+    plt.ylabel("Part des téléchargements (%)", fontsize=12)
+    plt.xticks(range(len(all_months)), all_months, rotation=45)
+    plt.grid(axis="y", linestyle="--", alpha=0.7)
     plt.tight_layout()
     plt.show()
 
