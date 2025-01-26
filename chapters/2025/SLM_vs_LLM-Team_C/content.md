@@ -111,6 +111,17 @@ Pour la recherche d'information concernant les SLM, ainsi que les résultats de 
 clinical capabilities](https://arxiv.org/pdf/2410.09019v1)  
 * [BigCodeBench: Benchmarking Code Generation with Diverse Function Calls and Complex Instructions](https://arxiv.org/abs/2406.15877)  
 
+Pour les recherches concernant les cas d'utilisations. Voici les sources que nous avons utilisés :
+* [LM History](https://en.wikipedia.org/wiki/Language_model)  
+* [Word2vec](https://fr.wikipedia.org/wiki/Word2vec)  
+* [GloVe](https://en.wikipedia.org/wiki/GloVe)  
+* [Transformeur](https://fr.wikipedia.org/wiki/Transformeur)  
+* [Analyse des cas pratiques](https://www.autolex.ai/post/guide-pratique-des-cas-dutilisation-des-grands-modeles-de-langage-llm)  
+* [SLM / LLM Comparaison guide](https://www.analyticsvidhya.com/blog/2024/11/slms-vs-llms/)  
+* [Papier Microsoft - SLM/LLM](https://www.microsoft.com/en-us/microsoft-cloud/blog/2024/11/11/explore-ai-models-key-differences-between-small-language-models-and-large-language-models/)
+* [Proposition d'evaluation des performances](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10590016)  
+* [SLM/LLM Diffrences in Langage Modeling](https://www.200ok.ai/blog/slm-vs-llm-understanding-the-differences-in-language-modeling/)
+
 // TODO : Ajouter les articles consultés pour les autres parties
 
 ### Ressources
@@ -161,7 +172,7 @@ La cohérence des résultats de ces expériences est dépendante de l’évoluti
 
 ### Hypothèse 2 :  
 
-Afin de répondre à la sous question "Un SLM peut-il être aussi performant, voire plus performant, qu’un LLM lorsqu’il est appliqué à une tâche spécifique ?", nous postulons l'hypothese qu’un SLM peut atteindre des performances comparables, voire supérieures, à celles d’un LLM lorsqu’il est appliqué à des tâches spécifiques et bien définies. Cette hypothèse repose sur l’idée qu’un modèle plus petit, mais optimisé et spécifiquement entrainé pour une tâche particulière, peut surpasser un modèle généraliste plus grand, en termes de précision dans les résultats, tout en utilisant moins de ressources. 
+Afin de répondre à la sous question "Un SLM peut-il être aussi performant, voire plus performant, qu’un LLM lorsqu’il est appliqué à une tâche spécifique ?", nous éméttons l'hypothese qu’un SLM peut atteindre des performances comparables, voire supérieures, à celles d’un LLM lorsqu’il est appliqué à des tâches spécifiques et bien définies. Cette hypothèse repose sur l’idée qu’un modèle plus petit, mais optimisé et spécifiquement entrainé pour une tâche particulière, peut surpasser un modèle généraliste plus grand, en termes de précision dans les résultats, tout en utilisant moins de ressources. 
 
 **Expériences** :  
 Pour tester cette hypothèse, nous avons conçu une série d’expériences visant à comparer les performances entre SLM (comme nous l'avons définit lors de la sous question précédente) et LLM sur plusieurs benchmarks spécialisés. Par exemple, nous avons étudié leurs capacités en génération de code en utilisant des benchmarks comme BigCodeBench, en mesurant la précision des solutions générées. De même, une comparaison a été réalisée dans le domaine médical avec des modèles spécialisés ou généralistes sur la qualité des réponse aux questions, en se basant sur des benchmarks comme MedQA. Nous avons également évalué les modèles sur la génération de texte via des benchmarks généralistes comme [TODO COMPLETE]. 
@@ -176,13 +187,25 @@ Les limites de cette analyse incluent la difficulté de généraliser les résul
 Les résultats de cette analyse dépendent fortement de la diversité des tâches sélectionnées. Par ailleurs, bien que la taille des modèles soit un facteur important, elle n’est pas le seul élément déterminant : les choix d’architecture ainsi que les données d’entraînement peuvent également influencer de manière significative les performances observées.
 
 ### Hypothèse 3 :
-**Question** : Quels sont les cas d’usages spécifiques aux SLM ?  
+
+Afin de répondre à la sous question "Quels sont les cas d’usages spécifiques aux SLM ?  ", nous partons du même principe que l'hypothèse précédente. En effet, les SLM étant des modèles plus petits et entrainés de manière plus spécifiques, nous pouvons en déduire que ceux-ci seraient utilisés dans des cas assez précis et de manière répétées. Par exemple, un SLM spécialisé dans le code qui serait disponible pour les développeurs par exemple. Contrairement à un LLM, qui lui, serait utiliser dans un context plus global. Comme l'utilisation de GPT-4 de nos jours, ou les gens le sorte pour générer des exercices pour le sport, tester de nouvelles recettes de cuisines, etc...
+
+Voici les sous-questions auquels nous allons tenter de répondre :
+- A quel moment utiliser un LM, pour quel type de tâches ?
+- Analyse de données sur HuggingFace
+
 **Expériences** :  
-Nous allons mener des expériences afin de déterminer les cas d’usages spécifiques aux SLM.
-Cela nous permettra d’identifier les domaines pour lesquels les SLM sont conçus. Sur la base de la façon dont ils sont présentés par leur éditeur.
-1. A quel moment utiliser un LM, pour quel type de tâches ?
-2. Quand est-ce qu’un SLM est plus performant qu’un LLM ?
-3. Analyse de données sur HuggingFace
+Pour tester cette hypothèse, nous avons utiliser un outil HuggingFace qui nous a permis de récolter certaines métriques. Comme par exemple : Le type d'utilisation pour les modèles (via la notion de tags), mais aussi leur nombres de paramètres par exemple.
+Cela nous permettra d’identifier les domaines pour lesquels les LM sont conçus. Sur la base de la façon dont ils sont présentés par leur éditeur.
+
+**Démarche** :  
+Notre démarche a consisté à nous baser, dans un premier temps, sur certaines analyses sur les cas d'usages des SLM/LLM. Par la suite, nous avons générer nos propres statistiques afin de confirmer notre hypothèse ou non ainsi que ces propos. Ces analyses proviennent de revues
+
+**Points à expliciter** :  
+Nous aurions apprécier trouver quelques informations supplémentaires comme les langages utilés pour développer le LM ou encore le type de dataset qui a été utilisé pour entrainer le modèle. Cela aurait pu permettre de savoir si un langage à permis de développer le dévoppement des LM par exemple, ou encore si un certain type de dataset est plus utilsé sur les SLM. Ce qui peut indiquer quels types de besoins les modèles doivent cerner le plus. Et voir, si en fonction des types de modèles, les SLM ou les LLM s’appuient sur des dataset communs ou pas dutout.
+
+**Limites** :  
+Les limites de cette analyse incluent reposent notamment sur un manque de données dans le temps via l'API HuggingFace. En effet, pour répondre à ce genre de question, il aurait été intéréssant de savoir si, par exemple, ces cas d'utilisations ont changés au cours du temps. Cependant, l'API ne nous permet que de tirer les dernières données sur les 30 derniers jours. La limitation dans le temps pour la rédaction de cet article ne nous a pas permis de pousser les recherches plus loin et de manière plus larges.
 
 ### Hypothèse 4 :  
 **Question** : Quelles sont les tendances d’utilisation des SLM/LLM ?
@@ -284,7 +307,7 @@ En conclusion, ces résultats soutiennent l’idée qu’un SLM bien conçu et o
 ### Résultats de la quatrième sous question :  
 
 //TODO : A retructurer
-### Hypothèse 2
+### Hypothèse 3
 #### 1. A quel moment utiliser un LM, pour quel type de tâche ?
 
 Il faut savoir que l'on connait les LM depuis plus longtemps que l'on ne le croit. Un LM n'est pas forcement obliger d'avoir une forme d'intelligence poussée. Les premiers LM qui ont vus le jour on commencer par des tâches très ciblées :
@@ -305,16 +328,9 @@ Avec le temps, les puissances de calculs ont permis d'entrainer plus vite les LM
 Les cas d'utilisations de nos jours deviennent de plus en plus variés. Pour trouver un équilibre dans les utilisations, les LM ont été divisés en deux catégories (SLM et LLM).
 
 Au final, on peut dire d'après les résultats précédents que les LM sont généralement utilisés pour de la génération de texte. Entre la traduction, la correction orthographique,... il semble que l'interface première entre les humains et ces LM soit le texte.
+Nous pouvons donc supposer que, de nos jours, l'utilisation des LM ne se restreint pas à un seul cas d'usage mais à une multitudes de cas. Le choix entre un SLM ou un LLM dépend du contexte dans lequel nous souhaitons utiliser un LM. Comme vu par l'hypothèse précédente, nous pouvons partir du principe que les SLM soient utilisés pour des tâches bien précises ou la qualité des réponses est bien plus importante que le spectre d'action posssible du LM.
 
-#### 2. Quand est-ce qu’un SLM est plus performant qu’un LLM ?
-
-Maintenant que nous avons vu qu'il existait deux types de LM (SLM / LLM), essayons d'étudier les différences entre eux, ce qui pourrait montrer pourquoi les cas d'usages peuvent autant varier.
-
-Pour cette étude, nous ne testerons pas nous même les SLM/LLM. Nous essaierons de trouver des recherches sur ce sujet pour essayer de trouver justement des différences (ou non) à ce sujet.
-
-Dans pratiquement tous les sujets que nous avons regarder, tous sont d'accord sur le fait que les SLM ont une capacité similaire aux LLM à répondre à un sujet bien spécifique sur un domaine (avec quelques fois, une plus grande précision dans les réponses). On le voit donc, un LLM apport une simplicité d'utilisation qui empiète sur sa qualité de réponse. Tandis qu'un SLM, bien qu'il ne soit pas aussi bon qu'un LLM sur tous les domaines, peut exceller dans un domaine en particulier, ce qui lui permet d'être plus petit (car moins de choses à apprendre, à analyser), ce qui lui permet donc d'être utilisé de manière local sur une machine. Les cas d'utilisations sont donc plus ciblés côté SLM que LLM. Les LLM de nos jours sont utilisés pour à peu près tous les domaines sans exception. Tandis que les SLM, eux, comme dit précédemment, doivent obligatoirement cibler un sujet en particulier. 
-
-#### 3. Analyse de données sur HuggingFace
+#### 2. Analyse de données sur HuggingFace
 
 Pour vérifier tout ce que nous avons dit dans la partie précédente, nous allons utiliser l'outil HuggingFace qui permet à n'importe qui de déposer des LM mais aussi des données d'entrainement.
 
@@ -341,8 +357,6 @@ Cherchons maintenant à voir quels types d’usages ont les utilisateurs avec le
 ![](./assets/results/slms_most_tags.png)
 
 On remarque que les SLM ont des tags bien plus précis que les LLM. Les LLM sont clairement axés sur la génération de texte, avec une application dominante dans le traitement de texte complexe ou créatif. Les SLM sont beaucoup plus polyvalents, couvrant des domaines tels que la vision par ordinateur, la reconnaissance audio, et les analyses spécialisées. Ils répondent à des besoins variés, avec une utilisation répartie sur des tâches plus techniques ou spécifiques. Ce qui confirme notre hyptothèse précédente via les benchmarkings.
-
-Nous aurions apprécier trouver quelques informations supplémentaires comme les langages utilés pour développer le LM ou encore le type de dataset qui a été utilisé pour entrainer le modèle. Cela aurait pu permettre de savoir si un langage à permis de développer le dévoppement des LM par exemple, ou encore si un certain type de dataset est plus utilsé sur les SLM. Ce qui peut indiquer quels types de besoins les modèles doivent cerner le plus. Et voir, si en fonction des types de modèles, les SLM ou les LLM s’appuient sur des dataset communs ou pas dutout.
 
 
 ### Hypothèse 3
@@ -390,12 +404,3 @@ Précisez votre utilisation des outils ou les développements \(e.g. scripts\) r
 ## VI. References
 
 [Debret 2020] Debret, J. (2020) La démarche scientifique : tout ce que vous devez savoir ! Available at: https://www.scribbr.fr/article-scientifique/demarche-scientifique/ (Accessed: 18 November 2022).
-
-### Hypothèse 2
-[LM History](https://en.wikipedia.org/wiki/Language_model)  
-[Word2vec](https://fr.wikipedia.org/wiki/Word2vec)  
-[GloVe](https://en.wikipedia.org/wiki/GloVe)  
-[Transformeur](https://fr.wikipedia.org/wiki/Transformeur)  
-[Analyse des cas pratiques](https://www.autolex.ai/post/guide-pratique-des-cas-dutilisation-des-grands-modeles-de-langage-llm)  
-[SLM / LLM Comparaison guide](https://www.analyticsvidhya.com/blog/2024/11/slms-vs-llms/)  
-[Proposition d'evaluation des performances](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10590016)  
