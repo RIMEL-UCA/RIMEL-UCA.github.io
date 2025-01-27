@@ -176,7 +176,7 @@ Le MLOps est un ensemble de pratiques visant à maintenir et déployer le code e
 
 .
 
-![image](./assets/images/9121009a-52a6-4db7-bb9a-5439512e2ff1)
+![image](./assets/images/9121009a-52a6-4db7-bb9a-5439512e2ff1.png)
 <div style="text-align: center;">
   <p><em>Figure  : Workflow d'une application DevOps [2] </em></p>
 </div>
