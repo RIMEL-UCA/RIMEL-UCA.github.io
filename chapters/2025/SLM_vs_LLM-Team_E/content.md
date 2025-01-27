@@ -239,26 +239,31 @@ Voici une liste de graphique qui mettent en forme les résultats de nos études.
 La quasi-totalité des graphiques ci-dessous ont été réalisé par nos soins. Ceux ne l'ayant pas été sont précisés.
 
 ![Consommation d'énergie & émissions de CO² en fonction du nombre de paramètres](https://raw.githubusercontent.com/RIMEL-UCA/RIMEL-UCA.github.io/refs/heads/master/chapters/2025/SLM_vs_LLM-Team_E/assets/results/graph_generated/consommation-energie-emissions-co2-fonction-nombre-parametre.png)
+
 *Figure 1 - Consommation d'énergie & émissions de CO² en fonction du nombre de paramètres*
 L'intérêt ici est de voir les différences entre les consommations d'énergies, les émissions CO2 de très grosses LLMs (environ 175B de paramètres). La grille énergétique utilisée est aussi très importante et on voit pour deux modèles plus ou moins équivalent en performances comme GPT-3 et BLOOM une réduction de 3x pour l'énergie et 10x pour les émissions CO². On voit donc la différence d'utiliser du nucléaire ou des énergies fossiles pour alimenter les GPUs utiles aux entraînements des modèles.
 
 ![Energy used and CO²emissions by SLM_LLM (BLOOM)](https://raw.githubusercontent.com/RIMEL-UCA/RIMEL-UCA.github.io/refs/heads/master/chapters/2025/SLM_vs_LLM-Team_E/assets/results/graph_generated/energy-used-co2-emissions-per-slm-llm.png)
+
 *Figure 2 - Energy used and CO²emissions by SLM_LLM (BLOOM)*
 L'énergie utilisée par les différents modèles n'est pas proportionnelle au nombre de paramètres. Mais cela montre, en regardant aussi les résultats de performances des différents modèles, que de créer de nouveaux modèles toujours plus gros et en masse n'est pas forcément utile. Créer de petits modèles plus performants sur des sujets spécifiques peut être un objectif pour les entreprises, améliorant leur consommation énergétique tout en faisant baisser les coûts globaux.
 
 ![Parameters, memory footprint and training tokens by SLM_LLM](https://raw.githubusercontent.com/RIMEL-UCA/RIMEL-UCA.github.io/refs/heads/master/chapters/2025/SLM_vs_LLM-Team_E/assets/results/graph_generated/parameters-memory-footprint-training-tokens-slm-llm.png)
+
 *Figure 3 - Parameters, memory footprint and training tokens by SLM/LLM*
 SmolLM-135M et SmolLM2-135M ont une empreinte mémoire et un nombre de paramètres très faibles, ce qui les rend légers.
 Starcoder2-15b est le modèle le plus volumineux avec une empreinte mémoire importante et un grand nombre de tokens pour l'entraînement.
 On remarque une corrélation générale : plus un modèle a de paramètres, plus son empreinte mémoire et ses besoins en tokens augmentent.
 
 ![Memory ratio by SLM_LLM size](https://raw.githubusercontent.com/RIMEL-UCA/RIMEL-UCA.github.io/refs/heads/master/chapters/2025/SLM_vs_LLM-Team_E/assets/results/graph_generated/memory-ratio-slm-llm-size.png)
+
 *Figure 4 - Memory ratio by SLM_LLM size*
 SmolLM2-135M affiche le ratio mémoire/paramètres le plus élevé, ce qui signifie qu'il utilise davantage de mémoire par paramètre comparé aux autres modèles.
 Starcoder2-15b a un ratio mémoire/tokens beaucoup plus important, ce qui reflète une plus grande consommation mémoire par token.
 Cela indique que les petits modèles comme SmolLM sont très efficaces en termes de mémoire, tandis que des modèles volumineux comme Starcoder2-15b deviennent coûteux en ressources mémoire par token.
 
 ![Relation entre le nombre de paramètres et le coût pour 1000 tokens](https://raw.githubusercontent.com/RIMEL-UCA/RIMEL-UCA.github.io/refs/heads/master/chapters/2025/SLM_vs_LLM-Team_E/assets/results/graph_generated/relation-nombre-parametre-cout-1k-token.png)
+
 *Figure 5 - Coût ($) pour 1K token vs. Nombre de paramètres (B)*
 Le coût par token augmente de manière quasi linéaire avec le nombre de paramètres.
 Les modèles plus petits (SmolLM) ont un coût négligeable ou très faible, tandis que les modèles plus grands comme Starcoder2 deviennent nettement plus coûteux.
@@ -266,21 +271,25 @@ Ce graphique souligne l'importance d'optimiser la taille du modèle pour les pro
 Il faut prendre en compte le manque de données pour des LLMs plus importantes ce qui peut théoriquement légèrement fausser le résultat et/ou résulter en imprécisions.
 
 ![Énergie consommée en fonction du nombre de paramètres du modèle (pour 1m de tokens)](https://raw.githubusercontent.com/RIMEL-UCA/RIMEL-UCA.github.io/refs/heads/master/chapters/2025/SLM_vs_LLM-Team_E/assets/results/graph_generated/energie-consomme-fonction-nombre-parametre-modele.png)
+
 *Figure 6 - Énergie consommée en fonction du nombre de paramètres du modèle (pour 1m de tokens)*
 Ce shéma nous permet de mettre en avant la relation entre le nombre de parametres d'un model et l'energie qu'il consomme. Aussi, nous pouvons voir l'influence qu'a le type d'unité de calcul utilisée sur l'energie consommée. Ainsi, nous pouvons voir que pour deux modèles de la même taille, l'unité de calcul aura une incidence plus ou moins importante. En revanche, tous les processeurs ne pourront pas entraîner tous les modèles. Par exemple, il n'existe pas de modèles a plus de 11 milliards de paramètre.
 
 ![Ratio des coûts de location et d'achat pour l'entrainement de différents modèles](https://raw.githubusercontent.com/RIMEL-UCA/RIMEL-UCA.github.io/refs/heads/master/chapters/2025/SLM_vs_LLM-Team_E/assets/results/graph_generated/cout-location-achat-modele.png)
+
 *Figure 7 - Ratio des coûts de location et d'achat pour l'entrainement de différents modèles*
 Sur HuggingFace, une quantité de hardware nécessaire pour l'entrainement est précisé pour que cela soit optimal. On parle par exemple de GPU comme les A100 ou les H100.
 Les prix de locations sont donc calculés à l'heure (sans que l'on ai le nombre d'heures nécessaires pour avoir un entrainement complet du modèle).
 On voit donc un ratio d'au moins 15 pour le prix de location ou d'achat entre le plus petit modèle de 135M de paramètres et celui de 15B.
 
 ![Relation entre le nombre de paramètres et le coût en CO²](https://raw.githubusercontent.com/RIMEL-UCA/RIMEL-UCA.github.io/refs/heads/master/chapters/2025/SLM_vs_LLM-Team_E/assets/results/graph_generated/relation-nombre-parametre-cout-co2.png)
+
 *Figure 8 - Relation entre le nombre de paramètres et le coût en CO²*
 On voit la séparation entre SLM et LLM à 7B de paramètres, limite définie précédemment.
 Les coûts en C0² augmentent de façon exponentielle à partir de cette limite, tandis que pour la plupart des SLM, nous avons des coûts presque négligeable.
 
 ![Gas emissions by LLM](https://raw.githubusercontent.com/RIMEL-UCA/RIMEL-UCA.github.io/refs/heads/master/chapters/2025/SLM_vs_LLM-Team_E/assets/results/graph_generated/gas-emissions-co2-per-llm.png)
+
 *Figure 9 - Gas emissions by LLM*
 On retrouve ici un rapport de 15 entre le plus gros modèle et le plus petit. Il faut se demander si utiliser toujours le plus gros modèle même pour des questions simples comme des recettes de cuisine demeure pertinent. Il faut adapter le LLM/SLM que l'on choisit au niveau de difficulté des requêtes, et du degré de précision que l'on souhaite recevoir.
 
@@ -292,10 +301,12 @@ L'étude utilise des modèles de Llama 1, nous utilisolns des modèles de Llama 
 Nous pouvons d'abord commencé par analysé le taux de réponse des SLM vs LLM.
 
 ![LLM From Study - Data per second](https://raw.githubusercontent.com/RIMEL-UCA/RIMEL-UCA.github.io/refs/heads/master/chapters/2025/SLM_vs_LLM-Team_E/assets/images/graph_etude/llama-7-13-65-data-per-second.png)
+
 *Figure 10 - Data per second from study [1]*
 Dans l'étude, l'inférence des LLM dans le Cloud permet d'avoir respectivement 1100, 800 et 300 tokens par seconde pour les modèles 7B, 13B et 65B sur un carte A100.
 
 ![SLM Expérimentation Locale - Tokens par seconde](https://raw.githubusercontent.com/RIMEL-UCA/RIMEL-UCA.github.io/refs/heads/master/chapters/2025/SLM_vs_LLM-Team_E/assets/experimentation/graph/results/tokens_per_sec.png)
+
 *Figure 11 - Moyenne de tokens par seconde par SLM en local*
 Pendant notre expérimentation avec des SLM en local, nous pu observer une sortie de 100, 55 et 30 tokens par seconde pour les modèles 1B, 3B et 8B.
 
@@ -304,10 +315,12 @@ La différence est considérable entre des LLM dans le Cloud et des SLM en local
 Un LLM exécuté dans le Cloud est donc beaucoup plus rapide qu'une SLM exécuté en local sur un Macbook M1 Pro. Mais cela n'est pas le seule critère, nous pouvons aussi nous intéresser à l'énergie utilisée.
 
 ![LLM From Study - Inference energy per second (Alpaca)](https://raw.githubusercontent.com/RIMEL-UCA/RIMEL-UCA.github.io/refs/heads/master/chapters/2025/SLM_vs_LLM-Team_E/assets/images/graph_etude/llama-7-13-65-inference-energy-per-second.png)
+
 *Figure 12 - Inference energy per second from study [1]*
 Dans le Cloud, si nous prenons seulement le modèle 7B sur le GPU le plus puissant (A100), nous avons une consommation d'environ 280 joules.
 
 ![SLM Expérimentation Locale - Énergie Moyenne](https://raw.githubusercontent.com/RIMEL-UCA/RIMEL-UCA.github.io/refs/heads/master/chapters/2025/SLM_vs_LLM-Team_E/assets/experimentation/graph/results/average_energy.png)
+
 *Figure 13 - Moyenne d'énergie consommée par le GPU par inférence*
 En local, l'énergie moyenne consommé par inférence sur le modèle 8B est de 360 Joules.
 
@@ -318,10 +331,12 @@ L'inférence en utilisant des modèles plus petits en local permet bien sûr d'a
 Pour finir, nous avons 2 autres types de données sur l'utilisation de SLM en local.
 
 ![SLM Expérimentation Locale - Puissance Moyenne](https://raw.githubusercontent.com/RIMEL-UCA/RIMEL-UCA.github.io/refs/heads/master/chapters/2025/SLM_vs_LLM-Team_E/assets/experimentation/graph/results/average_power.png)
+
 *Figure 14 - Puissance moyenne du GPU par modèle*
 Ici nous pouvons observer la puissance moyenne du GPU lors d'inférences pour chaque modèle. Plus le modèle est conséquent, plus la puissance est élevée. Pour le modèle 8B, nous approchons de la limite du Macbook M1 Pro en terme de puissance GPU.
 
 ![SLM Expérimentation Locale - Temps d'inférence](https://raw.githubusercontent.com/RIMEL-UCA/RIMEL-UCA.github.io/refs/heads/master/chapters/2025/SLM_vs_LLM-Team_E/assets/experimentation/graph/results/inference_time.png)
+
 *Figure 15 - Temps moyen d'inférence en local par SLM*
 En local, la taille du modèle impacte fortement le temps d'inférence. Pour le modèle 1B, cela est très convenable en environ 4 secondes. Par contre pour le modèle 8B, un temps de réponse de 20 secondes commence à être dérangeant pour un utilisateur.
 
@@ -446,4 +461,5 @@ https://www.cell.com/joule/fulltext/S2542-4351(23)00365-3
 > Info énergie https://selectra.info/energie/electricite/prix#:~:text=La%20m%C3%AAme%20%C3%A9lectricit%C3%A9%2C%20moins%20ch%C3%A8re%20!&text=%2D27%25%20sur%20le%20prix%20du,pendant%201%20%C3%A0%203%20ans%20!&text=En%20janvier%202025%2C%20en%20France,Eurostat%2C%201%E1%B5%89%CA%B3%20semestre%202023).
 
 ![Logo Université Côte d'Azur](https://raw.githubusercontent.com/RIMEL-UCA/RIMEL-UCA.github.io/refs/heads/master/chapters/2025/SLM_vs_LLM-Team_E/assets/images/logo_uca.png)
+
 ![Logo Polytech Nice Sophia](https://raw.githubusercontent.com/RIMEL-UCA/RIMEL-UCA.github.io/refs/heads/master/chapters/2025/SLM_vs_LLM-Team_E/assets/images/logoPolytechUCA.png)
