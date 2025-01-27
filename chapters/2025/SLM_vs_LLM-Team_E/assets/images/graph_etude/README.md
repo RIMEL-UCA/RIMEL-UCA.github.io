@@ -1,0 +1,1 @@
+Les graphes présents dans ce dossier proviennent de l'étude [From Words to Watts: Benchmarking the Energy Costs of Large Language Model Inference](https://arxiv.org/abs/2310.03003).
