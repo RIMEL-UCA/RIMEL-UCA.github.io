@@ -5,3 +5,4 @@ Vous trouverez dans ce répertoire les codes sources et les résultats des analy
 
 ### Sommaire
 1. [Expérimentation](./experimentation) - Répertoire contenant les codes sources et les résultats de l'expérimentation permettant de réaliser des mesures sur l'exécution d'un SLM en local.
+2. [Analyse des données](./data_analyze) - Répertoire contenant les codes sources et les résultats de l'analyse de données provenant de plusieurs sources sur les modèles LLM et SLM.
