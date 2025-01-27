@@ -172,13 +172,13 @@ Le DevOps est un ensemble de pratiques visant à réduire le temps de mise en pr
 
 .
 
-Le MLOps est un ensemble de pratiques visant à maintenir et déployer le code et les modèles d'apprentissage automatique avec une grande fiabilité et efficacité [2]. Le MLOps est né du désir d'appliquer les principes du DevOps au Machine Learning afin de bénéficier de caractéristiques telles qu'un développement et un déploiement plus rapides.
+Le MLOps est un ensemble de pratiques visant à maintenir et déployer le code et les modèles d'apprentissage automatique avec une grande fiabilité et efficacité. Le MLOps est né du désir d'appliquer les principes du DevOps au Machine Learning afin de bénéficier de caractéristiques telles qu'un développement et un déploiement plus rapides.
 
 .
 
 ![image](./assets/images/407101022-9121009a-52a6-4db7-bb9a-5439512e2ff1.png)
 <div style="text-align: center;">
-  <p><em>Figure  : Workflow d'une application DevOps [2] </em></p>
+  <p><em>Figure  : Workflow d'une application MLOPS </em></p>
 </div>
 
 .
