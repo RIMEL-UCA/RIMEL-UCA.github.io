@@ -713,8 +713,6 @@ MLFlow est un outil très utile et développé pour gérer tout le cycle de vie 
 
 .
 
-### Fonctionnement 
-***
 
 ### Analyses
 ***
@@ -724,7 +722,7 @@ Lors de notre étude de l'outil Metaflow, nous avons observé que ses pipelines 
 
 1. test.yml:
 
-Ce workflow GitHub Actions est structuré pour tester et valider la qualité du code dans plusieurs environnements, incluant Python et R, tout en automatisant des processus comme l'installation de dépendances et l'exécution des tests. Voici une explication détaillée des étapes et des tâches réalisées dans ce pipeline :
+Ce workflow GitHub Actions est structuré pour tester et valider la qualité du code dans plusieurs environnements, incluant Python et R, tout en automatisant des processus comme l'installation de dépendances et l'exécution des tests. Voici une explication détaillée des étapes et des tâches réalisées dans cette pipeline :
 
 - Déclenchement du Workflow : Le workflow est activé lors d'un push ou d'une pull_request sur la branche master.
 
@@ -745,7 +743,7 @@ Ce job inclut trois étapes principales :
 
 .
 
-  Les tests consistent à
+  Les tests consistent en des :
 
 
   - Tests sur le stockage des données (S3)
