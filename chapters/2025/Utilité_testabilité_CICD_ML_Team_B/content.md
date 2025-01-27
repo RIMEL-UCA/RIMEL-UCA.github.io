@@ -712,7 +712,18 @@ MLFlow est un outil très utile et développé pour gérer tout le cycle de vie 
 
 ## 🌀 MetaFlow
 
+.
 
+### Fonctionnement
+
+.
+
+Metaflow est une bibliothèque conviviale conçue pour aider les scientifiques et ingénieurs à construire et gérer des projets de science des données dans des environnements réels. Initialement développée chez Netflix, elle visait à augmenter la productivité des data scientists travaillant sur des projets variés, allant des statistiques classiques à l'apprentissage profond.
+
+
+.
+
+Metaflow propose un **prototypage rapide local**, avec un support pour les notebooks et un suivi des expérimentations avec gestion des versions. Il offre également une **scalabilité horizontale et verticale** vers le cloud, en utilisant aussi bien les CPU que les GPU, et un **accès rapide aux données**. Un autre atout majeur est sa capacité à gérer les **dépendances et à déployer facilement en production** via des orchestrateurs hautement disponibles.
 
 
 ### Analyses
