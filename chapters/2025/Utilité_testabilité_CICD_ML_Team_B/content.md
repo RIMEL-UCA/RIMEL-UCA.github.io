@@ -44,7 +44,7 @@ Cette question est intéressante car elle soulève des **enjeux cruciaux** liés
 ### ❓ Sous-questions 
 ***
 
-1. *Qu’est ce qui differencie les mlops & devops  ?*
+1. *Qu’est ce qui differencie les workflows  mlops & devops  ?*
 
 2. *Que font les outils choisis ?*
 
@@ -85,7 +85,7 @@ Voici les hypothèses formulées en lien avec nos questions :
    La fiabilité des outils MLOps dépend de leur robustesse face aux erreurs, de leur gestion des dépendances et de leur testabilité.
 
 #### 🟠 Hypothèse 3 :
-   MLOps se concentre davantage sur la gestion des données, le suivi des modèles et leur déploiement, tandis que DevOps est centré sur la gestion des infrastructures et le déploiement de logiciels traditionnels.
+   Les workflows DevOps sont un sous-ensemble des workflows MLOps. En d'autres termes, les workflows MLOps viennent rajouter des étapes aux workflows DevOps tout en conservant intactes les étapes existantes déjà présentes dans un workflow DevOps.
 
 #### 🔵 Hypothèse 4 :
    Les outils offrent des interfaces unifiées pour gérer la complexité des workflows ML, tout en facilitant leur intégration dans des pipelines CI/CD.
@@ -107,7 +107,7 @@ Voici les hypothèses formulées en lien avec nos questions :
 Pour valider nos hypothèses, nous mènerons les expérimentations suivantes :
 
 #### 🟢 MLOps vs DevOps
-Identification des similitudes et des différences en comparant des points clés (tests, validation, gestion des infrastructures, etc.) à partir d'articles scientifiques et de documentation.
+Analyse des similarités et des différences entre les deux workflows en menant une étude distincte à partir des articles scientifiques et de la documentation disponible.
 
 #### 🟣 Analyse des fonctionnalités des outils MLOps  
 Analyse des principales fonctionnalités fournies par les outils sélectionnés (KitOps, MLFlow, ClearML, MetaFlow) pour évaluer leur adéquation avec les besoins du projet et déterminer dans quelle mesure les tests réalisés couvrent ces fonctionnalités.
@@ -137,6 +137,59 @@ L’analyse des pipelines MLOps pourrait être influencée par une connaissance 
 
 
 ## V. Résultats et Analyses
+### Qu'est-ce qui différencie les workflows MLOps des workflows DevOps ?
+### DevOps : Un ensemble de pratiques
+![image](https://github.com/user-attachments/assets/8a0d448a-dcc7-4e66-8a0e-c471712017b3)
+<div style="text-align: center;">
+  <p><em>Figure  : Workflow d'une application DevOps [2] </em></p>
+</div>
+Le DevOps est un ensemble de pratiques visant à réduire le temps de mise en production d'un logiciel en réduisant l'écart entre le développement logiciel et les opérations [1]. Le DevOps repose sur un workflow bien défini qui inclut les étapes suivantes [3] :
+- Phase de planification : Les équipes identifient les nouvelles fonctionnalités à inclure dans la prochaine version d'une application.
+- Phase de code : Les développeurs écrivent et vérifient les nouvelles fonctionnalités à l’aide de pratiques comme le développement piloté par les tests (TDD).
+- Phase de construction : Le code nouvellement ajouté est fusionné, testé et préparé pour sa publication et son déploiement.
+- Phase de test : L'application est soumise à un ensemble de vérifications pour s'assurer qu'elle respecte les standards et répond aux attentes.
+- Publication : L’application est mise en place dans un environnement d’exécution pour valider sa conformité, sa qualité et sa sécurité. Les défauts sont corrigés avant la mise en production finale.
+- Déploiement : Le projet est transféré dans un environnement de production, permettant aux utilisateurs finaux d’accéder aux nouvelles fonctionnalités.
+- Opération : Les fonctionnalités mises en production sont suivies afin de garantir leur fiabilité, leurs performances et leur disponibilité.
+- Surveillance : L'application est surveillée pour s'assurer qu'elle est suffisamment stable pour garantir le temps de disponibilité promis.
+### MLOps : Un ensemble de pratiques pour le Machine Learning
+Le MLOps est un ensemble de pratiques visant à maintenir et déployer le code et les modèles d'apprentissage automatique avec une grande fiabilité et efficacité [2]. Le MLOps est né du désir d'appliquer les principes du DevOps au Machine Learning afin de bénéficier de caractéristiques telles qu'un développement et un déploiement plus rapides.
+![image](https://github.com/user-attachments/assets/9121009a-52a6-4db7-bb9a-5439512e2ff1)
+<div style="text-align: center;">
+  <p><em>Figure  :  Workflow d'une application MLOps [1]</em></p>
+</div>
+Le workflow d'une application ML vise à automatiser le cycle de vie du Machine Learning. Ce cycle inclut plusieurs étapes importantes :
+- Définition du problème : Le problème à résoudre est clairement défini.
+- Collecte des données d'entraînement : Les données nécessaires à l'entraînement du modèle sont collectées.
+- Préparation des données : Les données collectées sont nettoyées et préparées (normalisation, gestion des valeurs manquantes, etc.).
+- Exploration des données : Une phase d'exploration permet de révéler des tendances et informations cachées dans les données.
+- Sélection des fonctionnalités : Après l'exploration, les fonctionnalités pertinentes sont sélectionnées.
+- Sélection du modèle : Un ou plusieurs modèles sont choisis en fonction du problème à résoudre.
+- Entraînement du modèle : Le modèle est entraîné de manière itérative sur des données historiques.
+- Évaluation du modèle : Le modèle est évalué et si l'évaluation est concluante, il est déployé.
+Le MLOps introduit ainsi deux composants majeurs : les données et les modèles.
+![image](https://github.com/user-attachments/assets/4f1769b0-4480-42d7-a348-e453c8e3fefc)
+<div style="text-align: center;">
+  <p><em>Figure  :  Application d'intégration continue dans le Machine Learning  [4]</em></p>
+</div>
+### Analyses
+Différences majeures entre MLOps et DevOps
+ 
+1. Gestion des données et des modèles
+   
+Contrairement au DevOps, où l'on se concentre uniquement sur le code, le MLOps intègre les étapes liées aux données et aux modèles dans son workflow. Ces étapes supplémentaires permettent de gérer l'ensemble du cycle de vie d'un modèle d'apprentissage automatique.
+Données : Les étapes de collecte à l'exploration des données sont réalisées pour préparer le modèle.
+Modèle : Un ou plusieurs modèles sont sélectionnés, entraînés, évalués et validés.
+2. Testing
+Les tests en MLOps se concentrent principalement sur des vérifications spécifiques au modèle, telles que la convergence du modèle (s'assurer que le modèle atteint un état de perte acceptable) et la forme des tenseurs. En plus des tests unitaires et d'intégration classiques utilisés pour les modifications de code (notamment celles liées à l'ingénierie des caractéristiques et aux métadonnées des modèles), le MLOps met l'accent sur la validation des formats d'entrée et de sortie du modèle.
+3. Deployment
+   
+Le déploiement des modèles ML est plus complexe que celui des applications DevOps traditionnelles en raison de la nature dynamique des modèles ML. De nouvelles données peuvent déclencher un réentraînement et un redéploiement du modèle. Ainsi, un pipeline automatisé et continu est essentiel pour réentraîner les modèles dès que de nouvelles données arrivent.
+5. Monitoring
+   
+Le monitoring en MLOps va au-delà du suivi classique des applications. Il inclut également le suivi des paramètres spécifiques au modèle tels que la dérive des données (data drift) et la performance du modèle. La dérive des données indique que les nouvelles données ne correspondent plus à la distribution de données sur laquelle le modèle a été formé, ce qui peut nécessiter un réentraînement du modèle.
+Conclusion
+Le MLOps vient compléter et enrichir le workflow DevOps classique en y ajoutant des étapes spécifiques liées aux données et aux modèles. Ainsi, le MLOps peut être vu comme une extension du DevOps, où l'objectif est de gérer non seulement le code, mais aussi les données et les modèles dans un cycle de vie automatisé, continu et efficace. Les différences notables résident dans la gestion des données, des modèles, ainsi que dans des aspects spécifiques tels que les tests, le déploiement et la surveillance des modèles ML.
 
 .
 
