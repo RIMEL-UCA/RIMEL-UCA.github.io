@@ -233,47 +233,47 @@ Cette étude a utilisé :
 ## VII. Références
 
 #### Compréhension générale des Benchmarks : 
-* Article de lemagit https://www.lemagit.fr/conseil/IA-generative-comprendre-les-benchmarks-generiques
-* Papier de recherche sur le sujet : https://arxiv.org/pdf/2107.03374
+* Article de lemagit [https://www.lemagit.fr/conseil/IA-generative-comprendre-les-benchmarks-generiques](https://www.lemagit.fr/conseil/IA-generative-comprendre-les-benchmarks-generiques)
+* Papier de recherche sur le sujet : [https://arxiv.org/pdf/2107.03374](https://arxiv.org/pdf/2107.03374)
 
 #### HumanEval : 
-* Papier de recherche : https://arxiv.org/abs/2107.03374 
-* Github : https://github.com/openai/human-eval 
-* Hugging Face : https://huggingface.co/datasets/openai/openai_humaneval 
-* Leaderboard : https://paperswithcode.com/sota/code-generation-on-humaneval 
+* Papier de recherche : [https://arxiv.org/abs/2107.03374](https://arxiv.org/abs/2107.03374) 
+* Github : [https://github.com/openai/human-eval](https://github.com/openai/human-eval) 
+* Hugging Face : [https://huggingface.co/datasets/openai/openai_humaneval](https://huggingface.co/datasets/openai/openai_humaneval) 
+* Leaderboard : [https://paperswithcode.com/sota/code-generation-on-humaneval](https://paperswithcode.com/sota/code-generation-on-humaneval) 
 #### EvalPlus : 
-* Site : https://evalplus.github.io/ 
-* Papier de recherche : https://openreview.net/forum?id=1qvx610Cu7
-* Github : https://github.com/evalplus/evalplus?tab=readme-ov-file#-documents
-* Hugging Face : https://huggingface.co/evalplus 
+* Site : [https://evalplus.github.io/](https://evalplus.github.io/) 
+* Papier de recherche : [https://openreview.net/forum?id=1qvx610Cu7](https://openreview.net/forum?id=1qvx610Cu7)
+* Github : [https://github.com/evalplus/evalplus?tab=readme-ov-file#-documents](https://github.com/evalplus/evalplus?tab=readme-ov-file#-documents)
+* Hugging Face : [https://huggingface.co/evalplus](https://huggingface.co/evalplus) 
 #### BigCodeBench : 
-* Site : https://www.bigcode-project.org/
-* Papier de recherche : https://arxiv.org/pdf/2406.15877
-* Github : https://github.com/bigcode-project/bigcodebench
-* Hugging Face : https://huggingface.co/bigcode
+* Site : [https://www.bigcode-project.org/](https://www.bigcode-project.org/)
+* Papier de recherche : [https://arxiv.org/pdf/2406.15877](https://arxiv.org/pdf/2406.15877)
+* Github : [https://github.com/bigcode-project/bigcodebench](https://github.com/bigcode-project/bigcodebench)
+* Hugging Face : [https://huggingface.co/bigcode](https://huggingface.co/bigcode)
 #### HumanEval V : 
-* Papier de recherche : https://arxiv.org/pdf/2410.12381
-* Github : https://github.com/HumanEval-V/HumanEval-V-Benchmark
-* Hugging Face : https://huggingface.co/papers/2410.12381
+* Papier de recherche : [https://arxiv.org/pdf/2410.12381](https://arxiv.org/pdf/2410.12381)
+* Github : [https://github.com/HumanEval-V/HumanEval-V-Benchmark](https://github.com/HumanEval-V/HumanEval-V-Benchmark)
+* Hugging Face : [https://huggingface.co/papers/2410.12381](https://huggingface.co/papers/2410.12381)
 #### HumanEval Bia : 
-* Papier de recherche : https://www.biorxiv.org/content/10.1101/2024.04.19.590278v3.full
-* Github : https://github.com/haesleinhuepf/human-eval-bia
+* Papier de recherche : [https://www.biorxiv.org/content/10.1101/2024.04.19.590278v3.full](https://www.biorxiv.org/content/10.1101/2024.04.19.590278v3.full)
+* Github : [https://github.com/haesleinhuepf/human-eval-bia](https://github.com/haesleinhuepf/human-eval-bia)
 #### HumanEval T : 
-* Papier de recherche : https://arxiv.org/pdf/2412.01526
+* Papier de recherche : [https://arxiv.org/pdf/2412.01526](https://arxiv.org/pdf/2412.01526)
 #### HumanEval JL : 
-* Github : https://github.com/01-ai/HumanEval.jl?tab=readme-ov-file
+* Github : [https://github.com/01-ai/HumanEval.jl?tab=readme-ov-file](https://github.com/01-ai/HumanEval.jl?tab=readme-ov-file)
 #### EvoEval : 
-* Site : https://evo-eval.github.io/
-* Papier de recherche : https://arxiv.org/pdf/2403.19114
-* Github : https://github.com/evo-eval/evoeval
+* Site : [https://evo-eval.github.io/](https://evo-eval.github.io/)
+* Papier de recherche : [https://arxiv.org/pdf/2403.19114](https://arxiv.org/pdf/2403.19114)
+* Github : [https://github.com/evo-eval/evoeval(https://github.com/evo-eval/evoeval)]
 #### Octopack : 
-* Papier de recherche : https://arxiv.org/abs/2308.07124
-* Github : https://github.com/bigcode-project/octopack
+* Papier de recherche : [https://arxiv.org/abs/2308.07124](https://arxiv.org/abs/2308.07124)
+* Github : [https://github.com/bigcode-project/octopack](https://github.com/bigcode-project/octopack)
 #### HumanEval XL : 
-* Papier de recherche : https://arxiv.org/html/2402.16694v1
-* Github : https://github.com/FloatAI/humaneval-xl
-* Hugging Face : https://huggingface.co/datasets/FloatAI/humaneval-xl
+* Papier de recherche : [https://arxiv.org/html/2402.16694v1](https://arxiv.org/html/2402.16694v1)
+* Github : [https://github.com/FloatAI/humaneval-xl](https://github.com/FloatAI/humaneval-xl)
+* Hugging Face : [https://huggingface.co/datasets/FloatAI/humaneval-xl](https://huggingface.co/datasets/FloatAI/humaneval-xl)
 #### MXEval : 
-* Papier de recherche : https://arxiv.org/pdf/2210.14868
-* Github : https://github.com/amazon-science/mxeval
-* Hugging Face : https://huggingface.co/datasets/mxeval/mxeval
+* Papier de recherche : [https://arxiv.org/pdf/2210.14868](https://arxiv.org/pdf/2210.14868)
+* Github : [https://github.com/amazon-science/mxeval](https://github.com/amazon-science/mxeval)
+* Hugging Face : [https://huggingface.co/datasets/mxeval/mxeval](https://huggingface.co/datasets/mxeval/mxeval)
