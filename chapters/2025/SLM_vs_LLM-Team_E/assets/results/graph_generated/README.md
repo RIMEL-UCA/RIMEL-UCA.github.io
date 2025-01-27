@@ -1,0 +1,1 @@
+Ce dossier contient les graphiques que nous avons pu généré au cours de notre étude avec les informations que nous avons pu collecter. Leur explication est disponible dans notre [chapitre](https://rimel-uca.github.io/chapters/2025/SLM_vs_LLM-Team_E/content).

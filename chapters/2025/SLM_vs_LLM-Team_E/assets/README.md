@@ -6,3 +6,5 @@ Vous trouverez dans ce répertoire les codes sources et les résultats des analy
 ### Sommaire
 1. [Expérimentation](./experimentation) - Répertoire contenant les codes sources et les résultats de l'expérimentation permettant de réaliser des mesures sur l'exécution d'un SLM en local.
 2. [Analyse des données](./data_analyze) - Répertoire contenant les codes sources et les résultats de l'analyse de données provenant de plusieurs sources sur les modèles LLM et SLM.
+3. [Graphiques récupérés](./images/graph_etude) - Répertoire contenant les graphiques récupérés de l'étude [From Words to Watts: Benchmarking the Energy Costs of Large Language Model Inference](https://arxiv.org/abs/2310.03003).
+4. [Graphiques générés](./results/graph_generated) - Répertoire contenant les graphiques générés au cours de notre étude pour illustrer nos résultats.
