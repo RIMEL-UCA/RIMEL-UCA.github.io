@@ -11,7 +11,11 @@ Nous sommes trois étudiants en M2 Informatique ou en dernière année à Polyte
 * [Adjo Emmanuelle Adote](https://github.com/EmmanuelleAD) &lt;adjo-emmanuelle.adote@etu.unice.fr&gt;
 * [Anna Di Placido](https://github.com/Annadip5) &lt;anna.di-placido@etu.unice.fr&gt;
 
+.
+
 ## I. Contexte de la recherche
+
+.
 
 L’émergence croissante du MLOps et de ses outils, tels que KitOps, MLFlow et ClearML, répond à un besoin grandissant d’automatisation et de fiabilité dans la gestion des modèles de Machine Learning. Dans nos contextes professionnels actuels, où l’IA joue un rôle de plus en plus central dans les applications quotidiennes, il devient crucial de garantir que les modèles sont non seulement performants, mais aussi déployés dans les meilleures conditions possibles. En effet, l’intégration de l’IA dans les systèmes et services touche de plus en plus d’aspects de notre vie quotidienne, ce qui en fait une tendance incontournable. Pour cette raison, assurer la qualité, la fiabilité et la performance des modèles à travers des pipelines robustes et bien structurés devient essentiel.
 
@@ -19,6 +23,7 @@ Cependant, le développement et l’intégration des modèles de Machine Learnin
 
 Ce sujet correspond parfaitement à nos objectifs d’apprentissage, notamment grâce à sa focalisation sur les aspects CI/CD des pipelines d’intégration et de déploiement. En nous familiarisant avec des outils et processus d’automatisation du cycle de vie des modèles, nous serons mieux préparés à gérer les défis techniques liés au déploiement d’applications intelligentes et fiables. De plus, cette thématique nous permet d'approfondir nos compétences opérationnelles, un domaine clé dans la gestion des applications en production. La maîtrise de l'automatisation des tests, des déploiements et de la gestion des flux de travail dans un environnement ML est de plus en plus demandée dans l’industrie, car elle garantit une meilleure qualité et une plus grande efficacité dans la mise en production des solutions d’IA. Ainsi, ce sujet nous offre une opportunité unique de nous préparer à un rôle clé dans la transformation numérique des entreprises, en nous équipant des compétences nécessaires pour déployer des modèles de Machine Learning dans des conditions optimales.
 
+.
 
 ## II. Questions
 
@@ -45,6 +50,7 @@ Cette question est intéressante car elle soulève des **enjeux cruciaux** liés
 
 4. *En quoi consiste le testing de ces outils via github actions ?*
 
+.
 
 ## III. Collecte d'informations
 
@@ -60,6 +66,7 @@ Outils MLOps ciblés : [KitOps](https://github.com/jozu-ai/kitops), [MLFlow](htt
 
 Ces outils ont été sélectionnés en raison de leur popularité et de leurs fonctionnalités avancées dans la gestion des pipelines de Machine Learning.
 
+.
 
 ## IV. Hypothèses et Expériences
 
@@ -68,33 +75,24 @@ Ces outils ont été sélectionnés en raison de leur popularité et de leurs fo
 ## 🔍 Hypothèses
 Voici les hypothèses formulées en lien avec nos questions :
 
-#### 🟢 Hypothèse 1 
+#### 🟢 Hypothèse 1 : 
    L'efficacité des outils MLOps est liée à leur capacité à automatiser les étapes des pipelines. Cela inclut l'intégration, le déploiement, la surveillance et la gestion des modèles.
 
-#### 🟣 Hypothèse 2
-   La fiabilité des outils MLOps dépend de leur robustesse face aux erreurs, de leur gestion des dépendances et de leur testabilité. Les outils peuvent offrir des fonctionnalités spécifiques (versionnement, suivi) qui renforcent cette fiabilité.
+#### 🟣 Hypothèse 2 : 
+   La fiabilité des outils MLOps dépend de leur robustesse face aux erreurs, de leur gestion des dépendances et de leur testabilité.
 
-#### 🔴 Hypothèse 3  
-   Les pipelines bien conçus permettent une meilleure collaboration entre les équipes, réduisant ainsi les risques d'erreurs manuelles.
-
----
-
-#### 🟠 Hypothèse 4  
+#### 🟠 Hypothèse 3 :
    MLOps se concentre davantage sur la gestion des données, le suivi des modèles et leur déploiement, tandis que DevOps est centré sur la gestion des infrastructures et le déploiement de logiciels traditionnels.
 
-#### 🟡 Hypothèse 5 
-   Les pipelines MLOps nécessitent des étapes supplémentaires comme la préparation des données, l'entrainement des modèles et la surveillance des performances après le déploiement.
-
----
-
-#### 🟣 Hypothèse 6 
+#### 🔵 Hypothèse 4 :
    Les outils offrent des interfaces unifiées pour gérer la complexité des workflows ML, tout en facilitant leur intégration dans des pipelines CI/CD.
 
-#### 🟢 Hypothèse 7   
-   Les workflows permettent de détecter rapidement les erreurs grâce à des tests automatisés, en réduisant le temps de mise en production.
+#### 🔴 Hypothèse 5 : 
+   Les pipelines bien conçus permettent réduire les risques d'erreurs manuelles.
 
-#### 🟣 Hypothèse 8 
+#### 🟣 Hypothèse 6 
    Les workflows CI/CD via GitHub Actions incluent des tests spécifiques au machine learning, tels que des simulations d’entraînement de modèles, la validation des logs générés et des tests de montée en charge pour garantir la robustesse des modèles avant leur déploiement.
+   
    
 
 
