@@ -6,11 +6,10 @@ date:   2025-01
 
 ### Authors
 
-| **Axel Delille** | **Apoorva Appadoo** | **Fabien Airaud**     | **Yvann Ponce**    |
-|-----------------------|------------------------|------------------------|------------------------|
-| Software engineer                 | Ops Researcher                | Software engineer                  | DevOps engineer                  |
-|   Axel.delille31+rimel@gmail.com   | apoorva.appadoo+rimel@gmail.com     | airaudfabien+rimel@gmail.com          | yvann@ponce-group.com        |
-
+- Axel Delille : Axel.delille31+rimel@gmail.com
+- Apoorva Srinivas Appadoo : apoorva.appadoo+rimel@gmail.com
+- Fabien Airaud : airaudfabien+rimel@gmail.com
+- Yvann Ponce : yvann@ponce-group.com
 
 ## Research context
 
@@ -74,11 +73,7 @@ To analyze the repositories of the consumers using these tools, we needed to que
 Our initial experiment involved conducting a study of these three platforms to explore the capabilities each one offers.
 
 We arrived to this conclusion :
-
-|                      | Github | Gitlab | Hugging face |
-|----------------------|--------|--------------------------------|--------------------------------------------|
-| Research on website  | Yes    | Yes, but behind a subscription | Yes, but advanced queries are not possible |
-| API call             | Yes, but limited to 1000 results in free version     | Yes, but behind a subscription even for simple call     | No API are available for this purpose |
+![Platform Analysis](./assets/images/platform-analysis.png)
 
 Our conclusion for this part is that we'll need to use advanced query directly from Github search page due to API restrictions, and the other don't provide any solution on free tier.
 
@@ -190,16 +185,7 @@ Following these unexpected results, further research was conducted. The goal was
 
 It turned out that these large companies all use dedicated software to manage their machine learning experiments. We found the following software:
 
-| Company | Software | Type |
-|------------|----------|------|
-| Netflix    | Metaflow | Custom |
-| Uber    | Michelangelo | Custom |
-| OpenAI    | Weights & Biases | Public |
-| Microsoft    | Azure Machine Learning | Custom | 
-| Facebook    | FBLearner Flow | Custom | 
-| AWS    | Amazon SageMaker | Custom |
-| IBM    | IBM Watson Studio | Custom |
-| Alibaba cloud    | AIACC | Custom | 
+![Company Tools Analysis](./assets/images/company-tools-analysis.png)
 
 We have thus added the proprietary tool to our research set in order to verify this hypothesis. Large companies use proprietary tools.
 
@@ -233,19 +219,7 @@ Machine learning training is expensive, so it is crucial to detect the performan
 
 Big companies started their AI programs before the emergence of MLFlow and similar tools. At the time, no tools on the market met their needs, so they had to create their own.
  
-| Tool | Creation date |
-|------|---------------|
-| Metaflow | 2018 |
-| Michelangelo | 2015 |
-| Azure Machine Learning | 2016 | 
-| FBLearner Flow | 2014 | 
-| Amazon SageMaker | 2016 |
-| IBM Watson Studio | 2011 |
-| MLFlow | 2018 |
-| WanDB | 2018 |
-| KubeFlow | 2017 |
-| CML | 2020 |
-| Clear ML | 2020 |
+![Company tools adoption date](./assets/images/company-tools-adoption-date.png)
 
 Source: Github repositories | Official Websites
 
