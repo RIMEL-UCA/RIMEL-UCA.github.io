@@ -137,12 +137,24 @@ L’analyse des pipelines MLOps pourrait être influencée par une connaissance 
 
 
 ## V. Résultats et Analyses
+
+.
+
 ### Qu'est-ce qui différencie les workflows MLOps des workflows DevOps ?
+
+.
+
 ### DevOps : Un ensemble de pratiques
+
+.
+
 ![image](https://github.com/user-attachments/assets/8a0d448a-dcc7-4e66-8a0e-c471712017b3)
 <div style="text-align: center;">
   <p><em>Figure  : Workflow d'une application DevOps [2] </em></p>
 </div>
+
+.
+
 Le DevOps est un ensemble de pratiques visant à réduire le temps de mise en production d'un logiciel en réduisant l'écart entre le développement logiciel et les opérations [1]. Le DevOps repose sur un workflow bien défini qui inclut les étapes suivantes [3] :
 - Phase de planification : Les équipes identifient les nouvelles fonctionnalités à inclure dans la prochaine version d'une application.
 - Phase de code : Les développeurs écrivent et vérifient les nouvelles fonctionnalités à l’aide de pratiques comme le développement piloté par les tests (TDD).
@@ -152,12 +164,17 @@ Le DevOps est un ensemble de pratiques visant à réduire le temps de mise en pr
 - Déploiement : Le projet est transféré dans un environnement de production, permettant aux utilisateurs finaux d’accéder aux nouvelles fonctionnalités.
 - Opération : Les fonctionnalités mises en production sont suivies afin de garantir leur fiabilité, leurs performances et leur disponibilité.
 - Surveillance : L'application est surveillée pour s'assurer qu'elle est suffisamment stable pour garantir le temps de disponibilité promis.
+
 ### MLOps : Un ensemble de pratiques pour le Machine Learning
+
 Le MLOps est un ensemble de pratiques visant à maintenir et déployer le code et les modèles d'apprentissage automatique avec une grande fiabilité et efficacité [2]. Le MLOps est né du désir d'appliquer les principes du DevOps au Machine Learning afin de bénéficier de caractéristiques telles qu'un développement et un déploiement plus rapides.
 ![image](https://github.com/user-attachments/assets/9121009a-52a6-4db7-bb9a-5439512e2ff1)
 <div style="text-align: center;">
   <p><em>Figure  :  Workflow d'une application MLOps [1]</em></p>
 </div>
+
+.
+
 Le workflow d'une application ML vise à automatiser le cycle de vie du Machine Learning. Ce cycle inclut plusieurs étapes importantes :
 - Définition du problème : Le problème à résoudre est clairement défini.
 - Collecte des données d'entraînement : Les données nécessaires à l'entraînement du modèle sont collectées.
@@ -168,12 +185,20 @@ Le workflow d'une application ML vise à automatiser le cycle de vie du Machine 
 - Entraînement du modèle : Le modèle est entraîné de manière itérative sur des données historiques.
 - Évaluation du modèle : Le modèle est évalué et si l'évaluation est concluante, il est déployé.
 Le MLOps introduit ainsi deux composants majeurs : les données et les modèles.
+
+.
+
 ![image](https://github.com/user-attachments/assets/4f1769b0-4480-42d7-a348-e453c8e3fefc)
 <div style="text-align: center;">
   <p><em>Figure  :  Application d'intégration continue dans le Machine Learning  [4]</em></p>
 </div>
+
+.
+
 ### Analyses
 Différences majeures entre MLOps et DevOps
+
+.
  
 1. Gestion des données et des modèles
    
@@ -473,7 +498,7 @@ Utilisé pour sa puissance et sa flexibilité dans l'exécution des pipelines CI
 <table style="width: 100%;">
   <tr>
     <td style="width: 50%; text-align: center;">
-      <img src="./assets/images/mlflow/circleci/jobs.png" style="width: 100%; max-width: 100px;">
+      <img src="./assets/images/mlflow/circleci/jobs.png" style="width: 100%; max-width: 300px;">
       <p><em>Figure XX.</em> circleCI jobs</p>
     </td>
     <td style="width: 50%; font-size: 0.85em;">
