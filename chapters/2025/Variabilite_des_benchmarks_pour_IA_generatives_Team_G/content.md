@@ -226,6 +226,7 @@ Cette étude a utilisé :
 * Des datasets sur Hugging Face : https://huggingface.co/ 
 * Des codes python : voir le dossier assets
 
+![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](assets/images/logo_uca.png){:height="12px"}
 
 ## VII. Références
 
