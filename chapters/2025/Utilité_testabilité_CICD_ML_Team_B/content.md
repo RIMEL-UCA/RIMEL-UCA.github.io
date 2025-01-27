@@ -181,17 +181,17 @@ Le workflow de ClearML, tel qu'il est configuré, est planifié pour s'exécuter
 Un autre point préoccupant concerne le manque de progression du workflow après son premier lancement. En effet, aucune évolution n’a été observée depuis le premier push, comme illustré sur la figure 1 On observe seulement deux commits liés au workflow : le premier concerne la configuration initiale des pipelines GitHub Actions, et le second met à jour la version de CodeQL. Ce comportement soulève des questions sur l'efficacité opérationnelle du workflow et sur sa capacité à s'adapter à un processus de développement dynamique. Malgré la maturité du projet, comme le montre la figure 2 avec la date du premier push, La fréquence d'exécution du workflow est également un point faible. En étant défini de manière périodique, à un horaire fixe chaque semaine, comme le montre la figure 3, il ne permet pas de réagir en temps réel aux modifications du code. 
 
 
-![Alt text](./assests/images/Clearml/clearmlcommits.png)
+![Alt text](./assets/images/Clearml/clearmlcommits.png)
 <div style="text-align: center;">  
   <p><em>Figure 1 : Commits liés au workflow depuis le premier push</em></p>
 </div>
 
-![Alt text](./assests/images/Clearml/fistcommitdate.png)
+![Alt text](./assets/images/Clearml/fistcommitdate.png)
 <div style="text-align: center;">  
   <p><em>Figure 2 : Date du premier push du projet et indicateurs de maturité</em></p>
 </div>
 
-![Alt](./assests/images/Clearml/start.png)
+![Alt](./assets/images/Clearml/start.png)
 <div style="text-align: center;">
   <p><em>Figure 3 : Planification périodique du workflow GitHub Actions</em></p>
 </div>
@@ -322,24 +322,24 @@ Ces tests jouent un rôle central dans la validation et l’assurance qualité d
 L'analyse des contributions des développeurs met en évidence une forte activité au sein de l'équipe de développement. Cette observation est montrée par les résultats obtenus via un script automatisé, une méthode essentielle pour surmonter la complexité d'un comptage manuel des contributions. On note une implication significative de plusieurs développeurs, notamment dans le dossier des workflows (WF) illustrée par la Figure XX, et dans les tests comme le montre également le Figure XX et XX. Ces dernières reflétent une évolution constante des efforts dédiés à l'assurance qualité. Ce constat est particulièrement rassurant pour une application ayant moins d'un an d'existence, comme en témoigne la Figure XX indiquant la date du premier commit. Ces contributions actives et régulières peuvent garantir une qualité accrue de l'application livrée.
 
 
-![Alt](./assests/images/kitops/nombreDeCommit.png)
+![Alt](./assets/images/kitops/nombreDeCommit.png)
 <div style="text-align: center;">
   <p><em>Figure XX : Contributions des développeurs dans le dossier des workflows.</em></p>
 </div>
 
 
-![Alt](./assests/images/kitops/dateLastCommit.png)
+![Alt](./assets/images/kitops/dateLastCommit.png)
 <div style="text-align: center;">
   <p><em>Figure XX : Date du dernier push dans le dossier des tests.</em></p>
 </div>
 
 
-![Alt](./assests/images/kitops/nombreDeCommitTests.png)
+![Alt](./assets/images/kitops/nombreDeCommitTests.png)
 <div style="text-align: center;">
   <p><em>Figure XX : Contributions des développeurs dans le dossier des tests.</em></p>
 </div>
 
-![Alt](./assests/images/kitops/dateFirstCommit.png)
+![Alt](./assets/images/kitops/dateFirstCommit.png)
 <div style="text-align: center;">
   <p><em>Figure XX : Date du premier push du projet.</em></p>
 </div>
@@ -371,7 +371,7 @@ Ces fonctionnalités sont rendues possibles grâce à quatre composants principa
 - **MLFlow Projects :** grâce à un format YAML, il permet de structurer les projets de manière reproductible. Chaque projet définit ses dépendances, les scripts à exécuter, et les paramètres nécessaires, facilitant ainsi le partage et l'exécution automatisée.
 - **MLFlow Model Registry :** agit comme un hub collaboratif pour gérer les modèles. Il prend en charge leur versionnement, la gestion des états (testé, validé, déployé), et le suivi des transitions entre ces états.
 
-![Alt text](./assests/images/mlflow/structure/mlflowdeployhelp.png)
+![Alt text](./assets/images/mlflow/structure/mlflowdeployhelp.png)
 <div style="text-align: center;">  
   <p><em>Figure XX.</em> Utilisation de MLFlow</p>
 </div>
@@ -391,7 +391,7 @@ Utilisé pour sa puissance et sa flexibilité dans l'exécution des pipelines CI
 <table style="width: 100%;">
   <tr>
     <td style="width: 50%; text-align: center;">
-      <img src="./assests/images/mlflow/circleci/jobs.png" style="width: 100%; max-width: 600px;">
+      <img src="./assets/images/mlflow/circleci/jobs.png" style="width: 100%; max-width: 600px;">
       <p><em>Figure XX.</em> circleCI jobs</p>
     </td>
     <td style="width: 50%; font-size: 0.85em;">
@@ -413,7 +413,7 @@ Utilisé pour sa puissance et sa flexibilité dans l'exécution des pipelines CI
 **mlflow-recipes :** Ce job exécute des **recettes MLflow** pour tester une **régression réelle** en utilisant des **notebooks Jupyter**. Il met à jour les **sous-modules Git** et **installe les dépendances** nécessaires. Ensuite, il **exécute les recettes** et les notebooks, convertissant les résultats en différents formats. Ce processus permet de **tester et valider les performances du modèle** sur des **données concrètes**, en sauvegardant les **artefacts générés** pour assurer la reproductibilité et la traçabilité des résultats.
 
 *Voici un diagramme qui décrit le fonctionnement du workflow circleCI :* 
-![Alt text](./assests/images/mlflow/circleci/workflow_diagram.svg)
+![Alt text](./assets/images/mlflow/circleci/workflow_diagram.svg)
 <div style="text-align: center;">  
   <p><em>Figure XX.</em> Workflow CircleCI : Construction de Documentation et Exécution MLFlow</p>
 </div>
@@ -459,7 +459,7 @@ Garantit un environnement de développement cohérent et portable, permettant à
 *Voici un diagramme qui décrit le fonctionnement de DevContainer :*
 
 <p style="text-align: center;">
-  <img src="assests/images/mlflow/devcontainer/devcontainer.svg" alt="Devcontainer Workflow" width="800">
+  <img src="assets/images/mlflow/devcontainer/devcontainer.svg" alt="Devcontainer Workflow" width="800">
 </p>
 <p style="text-align: center;"><em>Figure XX.</em> DevContainer : Étapes et fonctionnement</p>
 <br></br>
@@ -598,7 +598,7 @@ Exécution des tests R : Les tests sont exécutés à l'aide de Rscript, garanti
 
 
 ## Comparaison des outils
-Pour cette comparaison généré à l'aide du script python `assests\codes\datefisrtcommit.py`, nous pouvons observer plusieurs points intéressants :
+Pour cette comparaison généré à l'aide du script python `assets\codes\datefisrtcommit.py`, nous pouvons observer plusieurs points intéressants :
 
 **MLflow :** Ce projet, qui est le plus récent parmi ceux analysés, dispose également du plus grand nombre de contributeurs. Cette forte implication de contributeurs pourrait expliquer pourquoi il est aussi développé, avec une progression rapide et continue.
 
@@ -606,17 +606,17 @@ Pour cette comparaison généré à l'aide du script python `assests\codes\datef
 
 **Metaflow :** Ce projet, plus ancien que les autres, présente un nombre de contributeurs similaire à celui de ClearML. Cela pourrait refléter une certaine stabilité dans sa communauté, même si son ancienneté pourrait également expliquer une diminution relative de l'activité récente comparée aux projets plus jeunes comme MLflow.
 <br></br>
-<img src="./assests/images/datesetnbcontributorTableau.png" alt="Alt text" style="width: '30%;"/>
+<img src="./assets/images/datesetnbcontributorTableau.png" alt="Alt text" style="width: '30%;"/>
 <div style="text-align: center;">  
   <p><em>Figure XX : Date 1er commit et nombre de contributeur</em></p>
 </div>
 <br></br>
 
-Cette étude se concentre sur l'**activité de développement** liée aux **tests** et aux **workflows** dans les quatre outils **MLOps : kitops, clearml, mlflow et metaflow**. En utilisant l'**API GitHub** et **Plotly** (`assests\codes\gitnbcommits.py`) pour la visualisation, nous avons spécifiquement analysé les **commits** dans les répertoires de tests et les workflows. Les données montrent que **MLflow** présente une activité particulièrement intensive dans ces domaines, notamment dans ses dossiers de tests, tandis que **Metaflow** et **kitops** affichent une activité plus modérée. **ClearML** n'a pas de tests mais a seulement **2 commit** pour son worflow. Cette analyse ciblée nous donne un aperçu de l'importance accordée aux **tests automatisés** et à l'**intégration continue** dans ces projets, bien qu'elle ne représente qu'une partie de leur activité de développement globale.
+Cette étude se concentre sur l'**activité de développement** liée aux **tests** et aux **workflows** dans les quatre outils **MLOps : kitops, clearml, mlflow et metaflow**. En utilisant l'**API GitHub** et **Plotly** (`assets\codes\gitnbcommits.py`) pour la visualisation, nous avons spécifiquement analysé les **commits** dans les répertoires de tests et les workflows. Les données montrent que **MLflow** présente une activité particulièrement intensive dans ces domaines, notamment dans ses dossiers de tests, tandis que **Metaflow** et **kitops** affichent une activité plus modérée. **ClearML** n'a pas de tests mais a seulement **2 commit** pour son worflow. Cette analyse ciblée nous donne un aperçu de l'importance accordée aux **tests automatisés** et à l'**intégration continue** dans ces projets, bien qu'elle ne représente qu'une partie de leur activité de développement globale.
 
-*L'image en html pour l'interactivité est disponible dans `assests/images/commit_graph.html`* 
+*L'image en html pour l'interactivité est disponible dans `assets/images/commit_graph.html`* 
 <br></br>
-<img src="./assests/images/nbCommitParCheminCibleparDepot.png" alt="Alt text" style="width: '10%;"/>
+<img src="./assets/images/nbCommitParCheminCibleparDepot.png" alt="Alt text" style="width: '10%;"/>
 <div style="text-align: center;">  
   <p><em>Figure XX : Nombre de commits par chemin cible pour chaque outil</em></p>
 </div>
@@ -625,7 +625,7 @@ Cette étude se concentre sur l'**activité de développement** liée aux **test
 Parmi les analyses que nous avons réalisées pour comparer les outils, nous avons pris en compte leur popularité, en nous basant sur le nombre d'étoiles sur GitHub, comme illustré dans la Figure XX. Nous avons constaté que MetaFlow est l'outil le plus apprécié, en grande partie grâce à l'intégration avec l'outil de Netflix. Cependant, un point surprenant est que ClearML dispose de plus d'étoiles que KitOps, bien qu'il semble que KitOps soit plus testé que ClearML. Nous supposons que cette différence peut s'expliquer par le fait que ClearML est un outil plus ancien que KitOps.
 
 
-![Alt text](./assests/images/la%20popularité%20des%20outils.png)
+![Alt text](./assets/images/la%20popularité%20des%20outils.png)
 <div style="text-align: center;">  
   <p><em>Figure XX : Comparaison de la popularité des outils basée sur le nombre d'étoiles GitHub.</em></p>
 </div>
@@ -633,7 +633,7 @@ Parmi les analyses que nous avons réalisées pour comparer les outils, nous avo
 Nous avons également analysé le pourcentage de bugs parmi les issues GitHub pour chaque outil, comme le montre la Figure XX. Là encore, un résultat inattendu ressort : bien que MLFlow teste plusieurs phases des tâches de machine learning, il semble avoir plus de bugs que ClearML, qui, paradoxalement, ne semble pas avoir de tests aussi poussés.
 
 
-![Alt text](./assests/images/le%20pourcentage%20de%20bogues%20dans%20les%20issues%20.png)
+![Alt text](./assets/images/le%20pourcentage%20de%20bogues%20dans%20les%20issues%20.png)
 <div style="text-align: center;">  
   <p><em>Figure XX : Pourcentage de bugs parmi les issues GitHub pour chaque outil.</em></p>
 </div>  
@@ -643,7 +643,7 @@ Nous avons également analysé le pourcentage de bugs parmi les issues GitHub po
 En conclusion, cette étude montre que les outils MLOps ne suivent pas tous les mêmes pratiques en matière de tests. Certains outils ne disposent pas de tests du tout, tandis que d'autres, comme MLFlow et MetaFlow, proposent des tests plus approfondis. En revanche, des outils comme kitops semblent se concentrer davantage sur des tests de base (les tests sur les pack et unack des models et des fichiers). Globalement, les tests présents dans ces outils peuvent être assimilés à des tests classiques utilisés dans les applications traditionnelles, tels que les tests d'intégration et les tests unitaires, bien qu'ils présentent des spécificités liées au domaine du machine learning.
 
 ## V. Outils
-Les différents scripts développé pour générer certains résultats sont dans le répertoire `assests/codes`.
+Les différents scripts développé pour générer certains résultats sont dans le répertoire `assets/codes`.
 
 Un `readme.md` détaille l'exécution de ces scripts.
 
