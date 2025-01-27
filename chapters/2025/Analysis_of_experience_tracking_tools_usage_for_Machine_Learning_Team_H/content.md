@@ -48,15 +48,6 @@ For the open source solution, we talk about usage for tools that are documented 
 
 ### Methodology
 
-- **What tools exist to respond to this?**
-
-For this part of our study, we will choose the analyzed solutions based on their popularity as well as their existing features. To do this, a simple metric that we could exploit is the number of stars and forks on GitHub. 
-
-Our research has allowed us to find 11 MLFlow tools. The following figure represents the tools found based on their number of stars on GitHub.
-![MLOps tools popularity](./assets/images/tools-by-github-stars.png)
-
-- **Are these tools actually used? If not, what is the justification for it?**
-
 For open-source solutions, we started by identifying the tools of interest and selected the following : 
 - CML
 - ClearML
