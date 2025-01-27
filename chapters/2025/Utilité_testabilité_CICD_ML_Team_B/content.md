@@ -38,6 +38,8 @@ Ce sujet correspond parfaitement à nos objectifs d’apprentissage, notamment g
 
 Cette question est intéressante car elle soulève des **enjeux cruciaux** liés à l'**automatisation** et à la **gestion des modèles de Machine Learning**, qui sont des domaines en pleine **évolution**. En particulier, comprendre comment **assurer une mise en production fiable et efficace** des **modèles ML** est essentiel pour les **entreprises** qui cherchent à tirer parti des **capacités de l'IA** tout en maintenant des **standards de qualité élevés**.
 
+.
+
 
 ### ❓ Sous-questions 
 ***
@@ -60,6 +62,7 @@ Pour répondre aux questions de recherche, nous avons défini des zones spécifi
 - **Documentation** des outils sélectionnés sera au cœur de notre analyse pour détailler les fonctionnalités, les cas d'utilisation et les limitations spécifiques de ces outils. Elle constitue une source fiable pour comprendre leur rôle dans le cycle de vie des modèles de Machine Learning.
 - **Workflows CI/CD GitHub et pipelines** existants pour des outils de MLOps seront analysés. Ces workflows offriront un aperçu pratique des stratégies de test et d'intégration continues mises en œuvre pour garantir la fiabilité des pipelines orchestrés par les outils MLOps.
 
+.
 
 ### Outils et méthodologie
 Outils MLOps ciblés : [KitOps](https://github.com/jozu-ai/kitops), [MLFlow](https://github.com/mlflow/mlflow), [ClearML](https://github.com/clearml/clearml), [Metaflow](https://github.com/Netflix/metaflow). 
@@ -139,6 +142,8 @@ L’analyse des pipelines MLOps pourrait être influencée par une connaissance 
 
 ## 📊 ClearML
 
+.
+
 ### Fonctionnement 
 ***
 ClearML est une plateforme open source conçue pour gérer les workflows de machine learning (ML) de bout en bout. Elle permet de suivre les expériences, d’orchestrer les pipelines, de gérer les données et de faciliter la collaboration entre les équipes. Voici une description détaillée de son fonctionnement :
@@ -159,6 +164,7 @@ La gestion des données est une fonctionnalité clé de ClearML. L’outil suit 
 
 ClearML facilite également la collaboration et le déploiement des modèles. Les équipes peuvent partager facilement leurs expériences, configurations de pipelines et datasets grâce à un tableau de bord collaboratif. Les projets peuvent être suivis en temps réel, avec des notifications en cas de succès ou d’échec des tâches. Pour le déploiement, ClearML propose des outils pour exporter les modèles et les intégrer dans des environnements de production. Il permet également de surveiller les modèles déployés et de les réentraîner en fonction des besoins opérationnels.
 
+.
 
 ### Analyses
 ***
@@ -202,6 +208,9 @@ Le manque d'évolution du workflow depuis son premier lancement souligne égalem
 
 
 ## ⚙️ KitOps
+
+.
+
 ### Fonctionnement 
 ***
 KitOps est une solution de packaging, versioning et partage spécifiquement conçue pour les projets d'intelligence artificielle (IA) et de machine learning (ML). Il s'intègre facilement avec les outils déjà utilisés dans les environnements de développement et DevOps. En tant qu'outil de gestion d'actifs, KitOps permet aux équipes d'IA/ML d'optimiser le stockage, la gestion des versions, et la distribution de leurs projets tout au long de leur cycle de vie.
@@ -223,6 +232,8 @@ Une autre fonctionnalité importante de KitOps est le unpacking sélectif des Mo
 4. Automatisation et Intégration dans les Pipelines CI/CD
 
 KitOps est conçu pour s'intégrer facilement dans des workflows CI/CD, permettant aux équipes d'automatiser la gestion des ModelKits dans des environnements de développement et de production. Des outils comme GitHub Actions peuvent être utilisés pour automatiser le packaging ou le déploiement des ModelKits. Cela permet de réduire les erreurs humaines, d’accélérer les cycles de développement et de tester les modèles de manière plus efficace.
+
+.
 
 ### Analyses
 ***
@@ -271,6 +282,8 @@ Ce pipeline est dédié à la construction et à la publication d'images Docker 
 
 Ce workflow GitHub Actions est conçu pour assurer sur la qualité et la conformité du code. Il commence par l'installation des dépendances nécessaires pour Go, Node.js et pnpm, suivie d'une vérification des dépendances avec go mod tidy pour garantir leur cohérence. Ensuite, des étapes de linting et de formatage sont effectuées pour s'assurer que le code respecte les normes de style et inclut les en-têtes de licence requis. Le workflow compile également le projet pour vérifier qu'il peut être construit avec succès, exécute les tests unitaires définis dans les fichiers *_test.go pour garantir la fiabilité du code, et effectuer des vérifications supplémentaires, telles que la validation des inclusions dans la documentation et la détection des espaces inutiles dans les fichiers. Ces étapes permettent d’assurer une intégration fluide et de maintenir un haut niveau de qualité avant la fusion des modifications dans la branche principale.
 
+.
+
 #### Les tests
 ***
 Ces tests jouent un rôle central dans la validation et l’assurance qualité d’un outil MLOps, dédié à la gestion et au packaging d’artefacts de machine learning. Ces artefacts, appelés ModelKits, regroupent des modèles, fichiers, et configurations nécessaires pour exécuter ou déployer des workflows ML. L’objectif principal de ces tests est de garantir la portabilité, la reproductibilité et la robustesse de l’outil à travers des scénarios variés.
@@ -317,6 +330,7 @@ Ces tests jouent un rôle central dans la validation et l’assurance qualité d
 
 L'analyse des contributions des développeurs met en évidence une forte activité au sein de l'équipe de développement. Cette observation est montrée par les résultats obtenus via un script automatisé, une méthode essentielle pour surmonter la complexité d'un comptage manuel des contributions. On note une implication significative de plusieurs développeurs, notamment dans le dossier des workflows (WF) illustrée par la Figure XX, et dans les tests comme le montre également le Figure XX et XX. Ces dernières reflétent une évolution constante des efforts dédiés à l'assurance qualité. Ce constat est particulièrement rassurant pour une application ayant moins d'un an d'existence, comme en témoigne la Figure XX indiquant la date du premier commit. Ces contributions actives et régulières peuvent garantir une qualité accrue de l'application livrée.
 
+.
 
 ![Alt](./assets/images/kitops/nombreDeCommit.png)
 <div style="text-align: center;">
@@ -351,6 +365,8 @@ L'accent est mis sur des aspects essentiels comme la gestion des fichiers, le pa
 .
 
 ## 🧪 MLFlow
+
+.
 
 ### Fonctionnement
 ***
@@ -404,7 +420,7 @@ Utilisé pour sa puissance et sa flexibilité dans l'exécution des pipelines CI
 <table style="width: 100%;">
   <tr>
     <td style="width: 50%; text-align: center;">
-      <img src="./assets/images/mlflow/circleci/jobs.png" style="width: 100%; max-width: 300px;">
+      <img src="./assets/images/mlflow/circleci/jobs.png" style="width: 100%; max-width: 100px;">
       <p><em>Figure XX.</em> circleCI jobs</p>
     </td>
     <td style="width: 50%; font-size: 0.85em;">
@@ -455,9 +471,13 @@ Mis à jour pour garantir la compatibilité avec les dernières versions de Pyth
 En analysant le circleCI du projet, plusieurs artefacts ont été analysés.
 [Un lien vers les artefacts dans circleCI pour un build récent](https://app.circleci.com/pipelines/github/mlflow/mlflow/45551/workflows/e0615a39-6644-425a-8f3f-4a2c768776ad/jobs/141272/artifacts)
 
+.
+
 #### Exemple d'**artifact** généré par le job **mlflow-recipes** qui regroupe toute les étapes courantes du procédé de machine learning  : [Notebook MLflow - Régression sur Databricks](https://output.circle-artifacts.com/output/job/17301095-7996-4847-8f33-f075f56c2c95/artifacts/0/examples/recipes/regression/notebooks/dark-jupyter.html)
 
 Dans le cadre de l'expérimentation avec des **modèles de régression**, ce notebook permet d'**automatiser l'exécution des étapes** du pipeline de **données et de modélisation** sur **Databricks** (plateforme cloud pour le **big data et l'IA**), tout en générant des **résultats pour évaluer la performance du modèle**. Voici les étapes principales du processus :
+
+.
 
 
 | **Étape**                       | **Description**                                                                                                                                           | **Résultats Clés**                                               |
@@ -473,6 +493,8 @@ Dans le cadre de l'expérimentation avec des **modèles de régression**, ce not
 
 .
 
+.
+
 *Les points clés de ces résultats sont :*
 
 - **Automatisation & Traçabilité :** Chaque étape du pipeline est automatisée et trace les résultats pour une gestion complète du cycle de vie du modèle.
@@ -485,10 +507,10 @@ Dans le cadre de l'expérimentation avec des **modèles de régression**, ce not
 
 
 #### DevContainer
+***
 
 .
 
-***
 Garantit un environnement de développement cohérent et portable, permettant à chaque membre de l'équipe de travailler dans des conditions identiques, quel que soit le système local.
 
 *Voici un diagramme qui décrit le fonctionnement de DevContainer :*
@@ -604,6 +626,7 @@ MLFlow est un outil très utile et développé pour gérer tout le cycle de vie 
 
 ## 🌀 MetaFlow
 
+.
 
 ### Fonctionnement 
 ***
@@ -631,7 +654,11 @@ Ce job inclut trois étapes principales :
 - Installation des dépendances
 - Exécution des tests : La commande tox est utilisée pour exécuter les tests définis pour chaque version de Python, garantissant la compatibilité et la fiabilité du code sur plusieurs versions de Python.
 
+.
+
 #### Tests
+
+.
 
   les tests concistent à
 
@@ -658,6 +685,7 @@ Ce job inclut trois étapes principales :
 Installation des dépendances système.
 Exécution des tests R : Les tests sont exécutés à l'aide de Rscript, garantissant que le code R fonctionne correctement. Metaflow, qui prend en charge à la fois Python et R, permet de tirer parti des outils spécifiques à chaque langage. Cette approche offre plus de flexibilité, permettant d'effectuer des tests et validations dans les deux environnements de manière cohérente. Les mêmes tests qui sont réalisés en Python sont également lancés en R, assurant une couverture complète des validations.
 
+.
 
 ## Comparaison des outils
 Pour cette comparaison généré à l'aide du script python `assets\codes\datefisrtcommit.py`, nous pouvons observer plusieurs points intéressants :
