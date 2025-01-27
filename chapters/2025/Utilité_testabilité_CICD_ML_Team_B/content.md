@@ -745,7 +745,7 @@ Ce job inclut trois étapes principales :
 
 .
 
-  les tests concistent à
+  Les tests consistent à
 
 
   - Tests sur le stockage des données (S3)
