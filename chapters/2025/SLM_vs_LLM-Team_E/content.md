@@ -360,8 +360,11 @@ En local, la taille du modèle impacte fortement le temps d'inférence. Pour le 
 #### Énergie
 
 Dans l'ensemble des graphiques présentés ci-dessus, nous voyons que les consommations énergétiques à l'entraînement de petits modèles comme les SLM sont drastiquement réduits. On obtient une énergie consommée qui est 10x inférieure entre le modèle 175B et celui 7B (cf graphique 1). Les émissions CO² sont aussi réduites considérablement : réduite par 15 entre le modèle Llama 405B et sa version à la limite du SLM, la 8B (cf dernier graphique).
+
 Le graphique 5 montre aussi une augmentation exponentielle des émissions au moment où les paramètres dépassent les 7B.
+
 Attention, certains graphiques (rouge & bleu) nous montrent que le ratio Mémoire/Token est plus importante pour les SLM que pour les LLM. De ce point de vue il est plus intéressant d'avoir un nombre de paramètre plus élevé.
+
 Il est toujours important de remarquer que l'empreinte mémoire est toujours bien plus faible pour les SLM que pour les LLM, car cela dépend fortement du nombre de paramètre, bien que ce ne soit pas proportionnel.
 
 #### Financier 
@@ -376,7 +379,9 @@ Cela revient environ à 64 500€ pour le plus gros modèle, contre seulement 75
 #### Cloud vs. Local
 
 Suite à l'expérimentation que nous avons faites et les résultats que nous avons pu observer, surtout en comparaison avec les LLM dans le Cloud, il est difficile de tirer une conclusion unanime.
+
 Pour un modèle d'une même taille, il est préférable de l'utiliser dans le Cloud étant donné l'optimisation qui sera proposée. Cependant, si la taille n'est pas un facteur clé dans le choix et que l'on peut choisir un modèle assez petit en nombre de paramètre, alors l'utilisation en local peut s'avérer pertinente. Elle serait largement moins consommatrice d'énergie.
+
 D'un point de vue financier, si l'utilisation d'un SLM en local remplace un LLM dans le Cloud qui possède un vrai coût (abonnement etc.), alors le SLM en local devrait être largement gagnant, étant donné que nous paierons ici simplement le coût de l'énergie en plus consommé alors qu'un LLM dans le Cloud doit aussi prendre en compte les coûts d'infrastructure etc.
 
 ## VI. Conclusion par rapport à nos hypothèses initiales
@@ -399,7 +404,9 @@ Il est important de note qu'il est difficile de généraliser nos résultats ou 
 #### Ouverture
 
 L'émergence récente des modèles de langage bouleverse notre rapport aux technologies numériques et soulève des questionnements fondamentaux. 
+
 Ces systèmes intelligents, capables de générer du texte, de comprendre et de traduire des informations complexes, nous invitent à réfléchir sur leurs implications concrètes. Comment intégrer ces outils de manière responsable, en tenant compte de leurs coûts énergétiques et environnementaux ? Quels sont les véritables impacts de ces technologies sur nos métiers, nos processus de création et nos interactions sociales ? Au-delà de leurs performances techniques, ces modèles interrogent notre capacité à maîtriser des outils dont la puissance est en augmentation constante.
+
 Entre risque et innovation, les LM représentent une nouvelle ère numérique où l'intelligence artificielle est devenu un membre à part dans notre quotidien.
 
 ## VII. Outils
@@ -416,64 +423,104 @@ Nos codes, résultats bruts et expérimentations sont disponibles ici : [Team E 
 #### SLM
 
 > SmolLM - blazingly fast and remarkably powerful https://huggingface.co/blog/smollm 
+> 
 > Phi-3 Technical Report: A Highly Capable Language Model Locally on Your Phone https://arxiv.org/abs/2404.14219
+> 
 > Llama 2: Open Foundation and Fine-Tuned Chat Models https://ai.meta.com/research/publications/llama-2-open-foundation-and-fine-tuned-chat-models/
+> 
 > Tutorial - Small Language Models (SLM)
  https://www.jetson-ai-lab.com/tutorial_slm.html 
+> 
 > SmolLM2-135M https://huggingface.co/HuggingFaceTB/SmolLM-135M 
+> 
 > Petits modèles https://www.lemagit.fr/conseil/IA-generative-petit-modele-petit-bilan-carbone?utm_source=chatgpt.com
+> 
 > Distillation https://research.google/blog/distilling-step-by-step-outperforming-larger-language-models-with-less-training-data-and-smaller-model-sizes/
+> 
 > Distillation de connaissance https://techtalkwithsriks.medium.com/building-small-language-models-using-knowledge-distillation-kd-6825ce2f6d24
+> 
 
 #### LLM
 
 > https://en.wikipedia.org/wiki/GPT-2 
+> 
 > https://en.wikipedia.org/wiki/GPT-3 
+> 
 > https://en.wikipedia.org/wiki/GPT-4
+> 
 > The Memo - Special edition: Claude 3 Opus https://lifearchitect.substack.com/p/the-memo-special-edition-claude-3
+> 
 > From Words to Watts: Benchmarking the Energy Costs of Large Language Model Inference https://ar5iv.org/html/2310.03003
+> 
 > Energy Footprint Of LLMs https://cacm.acm.org/blogcacm/the-energy-footprint-of-humans-and-large-language-models/ 
+> 
 > Measuring and Improving the Energy Efficiency of Large Language Models Inference https://ieeexplore.ieee.org/document/10549890 
+> 
 > The Costs and Complexities of Training Large Language Models
 https://deeperinsights.com/ai-blog/the-costs-and-complexities-of-training-large-language-models 
+> 
 > Starcoder2 https://huggingface.co/docs/transformers/main/model_doc/starcoder2
+> 
 > BLOOM's energy consumption https://www.jmlr.org/papers/volume24/23-0069/23-0069.pdf 
+> 
 > The growing energy footprint of artificial intelligence
 https://www.cell.com/joule/fulltext/S2542-4351(23)00365-3
+> 
 > GPT 4 infos https://ai-side.com/fr/news/nouveau-leak-gpt-4-decryptage
+> 
 
 #### Comparison
 
 > Large Language Models (LLMs) vs. Small Language Models (SLMs)
  https://www.rackspace.com/blog/large-language-models-llms-vs-small-language-models-slms 
+> 
 > https://portal.azure.com/#view/Microsoft_Azure_Compute/SpecPickerV2Blade
+> 
 > SLM vs LLM https://www.redhat.com/en/topics/ai/llm-vs-slm 
+> 
 > Protein SLM vs LLM https://arxiv.org/html/2411.05966v1 
+> 
 
 #### Leaderboards
 
 > Open LLM HuggingFace Leaderboard https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard#/
+> 
 > Open LLM HuggingFace Performance Leaderboard https://huggingface.co/spaces/optimum/llm-perf-leaderboard
+> 
 
 #### GPU purchase and rental costs 
 
 > https://www.tensordock.com/gpu-a100 
+> 
 > https://getdeploying.com/buildai 
+> 
 > https://getdeploying.com/runpod
+> 
 > https://www.hyperstack.cloud/a100
+> 
 > https://www.amazon.com/PNY-A100-80GB-Graphics-Card/dp/B0CDMFRGWZ
+> 
 > https://www.senetic.fr/product/4X67A76715?srsltid=AfmBOop7MmoXG1xHlq-iYYTsDcxJmYq-wNc4VuxjoTTWoyv7JF5FMZU2 
+> 
 > https://viperatech.com/shop/nvidia-a100/?srsltid=AfmBOopcLeK3VklnPCrusxmnGGw687Yg_pF4AJcO4BFx39VpPqzl_lLl
+> 
 > https://www.runpod.io/gpu/h100-pcie
+> 
 > https://www.hyperstack.cloud/h100-pcie
+> 
 > https://www.amazon.com/H100-Graphics-Accelerator-900-21010-0000-000-Warranty/dp/B0CGL976H5
+> 
 > https://www.boston-it.fr/gb/cartes-gpu/17787-nvidia-h100-80gb-pcie-50-x16-double-width-passive-cooling.html
+> 
 
 #### Energy
 
 > US Energy Cost https://www.eia.gov/electricity/monthly/update/wholesale-markets.php
+> 
 > Coût de l'électricité en France https://www.totalenergies.fr/particuliers/electricite/prix-de-l-electricite/prix-du-kwh-d-electricite/consommation-d-energie-prix-du-kwh-d-electricite?utm_source=chatgpt.com
-> Info énergie https://selectra.info/energie/electricite/prix#:~:text=La%20m%C3%AAme%20%C3%A9lectricit%C3%A9%2C%20moins%20ch%C3%A8re%20!&text=%2D27%25%20sur%20le%20prix%20du,pendant%201%20%C3%A0%203%20ans%20!&text=En%20janvier%202025%2C%20en%20France,Eurostat%2C%201%E1%B5%89%CA%B3%20semestre%202023).
+> 
+> Info énergie https://selectra.info/energie/electricite/prix.
+> 
 
 ![Logo Université Côte d'Azur](https://raw.githubusercontent.com/RIMEL-UCA/RIMEL-UCA.github.io/refs/heads/master/chapters/2025/SLM_vs_LLM-Team_E/assets/images/logo_uca.png)
 
