@@ -1,0 +1,1 @@
+Ce dossier contient les tableaux Excel que nous avons créés et utilisés au cours de notre étude avec les informations que nous avons pu collecter.
