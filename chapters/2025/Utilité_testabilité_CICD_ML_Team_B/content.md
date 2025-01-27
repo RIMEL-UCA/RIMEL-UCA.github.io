@@ -196,7 +196,7 @@ Le MLOps introduit ainsi deux composants majeurs : les données et les modèles.
 
 .
 
-![image](https://github.com/user-attachments/assets/4f1769b0-4480-42d7-a348-e453c8e3fefc)
+![image](./assets/images/407101022-9121009a-52a6-4db7-bb9a-5439512e2ff1.png)
 <div style="text-align: center;">
   <p><em>Figure  :  Application d'intégration continue dans le Machine Learning  [4]</em></p>
 </div>
