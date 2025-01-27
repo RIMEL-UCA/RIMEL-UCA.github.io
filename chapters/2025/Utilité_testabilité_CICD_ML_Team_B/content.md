@@ -165,9 +165,16 @@ Le DevOps est un ensemble de pratiques visant à réduire le temps de mise en pr
 - Opération : Les fonctionnalités mises en production sont suivies afin de garantir leur fiabilité, leurs performances et leur disponibilité.
 - Surveillance : L'application est surveillée pour s'assurer qu'elle est suffisamment stable pour garantir le temps de disponibilité promis.
 
+.
+
 ### MLOps : Un ensemble de pratiques pour le Machine Learning
 
+.
+
 Le MLOps est un ensemble de pratiques visant à maintenir et déployer le code et les modèles d'apprentissage automatique avec une grande fiabilité et efficacité [2]. Le MLOps est né du désir d'appliquer les principes du DevOps au Machine Learning afin de bénéficier de caractéristiques telles qu'un développement et un déploiement plus rapides.
+
+.
+
 ![image](https://github.com/user-attachments/assets/9121009a-52a6-4db7-bb9a-5439512e2ff1)
 <div style="text-align: center;">
   <p><em>Figure  :  Workflow d'une application MLOps [1]</em></p>
