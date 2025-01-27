@@ -223,9 +223,9 @@ L’étude permet de connaître la tendance de l’évolution des benchmarks iss
 
 ## VI. Outils
 Cette étude a utilisé : 
-* Des sites de référencements de papiers de recherches : https://scholar.google.com/, https://arxiv.org/,  https://ieeexplore.ieee.org/Xplore/home.jsp
-* Des répertoires Github : https://github.com/
-* Des datasets sur Hugging Face : https://huggingface.co/ 
+* Des sites de référencements de papiers de recherches : [https://scholar.google.com/](https://scholar.google.com/), [https://arxiv.org/](https://arxiv.org/), [https://ieeexplore.ieee.org/Xplore/home.jsp](https://ieeexplore.ieee.org/Xplore/home.jsp)
+* Des répertoires Github : [https://github.com/](https://github.com/)
+* Des datasets sur Hugging Face : [https://huggingface.co/](https://huggingface.co/)
 * Des codes python : voir le dossier assets
 
 ![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](assets/images/logo_uca.png){:height="12px"}
@@ -265,7 +265,7 @@ Cette étude a utilisé :
 #### EvoEval : 
 * Site : [https://evo-eval.github.io/](https://evo-eval.github.io/)
 * Papier de recherche : [https://arxiv.org/pdf/2403.19114](https://arxiv.org/pdf/2403.19114)
-* Github : [https://github.com/evo-eval/evoeval(https://github.com/evo-eval/evoeval)]
+* Github : [https://github.com/evo-eval/evoeval](https://github.com/evo-eval/evoeval)
 #### Octopack : 
 * Papier de recherche : [https://arxiv.org/abs/2308.07124](https://arxiv.org/abs/2308.07124)
 * Github : [https://github.com/bigcode-project/octopack](https://github.com/bigcode-project/octopack)
