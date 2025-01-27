@@ -73,7 +73,7 @@ Aussi, nous pouvons noter que nous abordons un sujet en perpetuelle évolution. 
 Tout d'abord, afin de bien centrer le sujet, commençons par définir la notion relativement floue de SLM par rapport aux LLM que l'on connait mieux.
 
 Voici un tableau récapitulatif : 
-![Comparaison LLM vs SLM](https://hackmd.io/_uploads/SkOke7hLJg.png)
+![Comparaison LLM vs SLM](https://raw.githubusercontent.com/RIMEL-UCA/RIMEL-UCA.github.io/refs/heads/master/chapters/2025/SLM_vs_LLM-Team_E/assets/images/graphique-slm-llm.png)
 
 Selon différentes sources comme OpenAI, Microsoft ou Meta, les SLM ont un nombre de paramètres inférieurs ou égal à 7B, tandis que les LLM dépassent cette limite.
 
@@ -180,7 +180,7 @@ Le second est qu'il faut prendre en compte qu'un modèle puissant peut être co�
 Le troisième est que cette technique réclame de grandes quantités de données pour obtenir des performances équivalentes à des modèles de très grandes tailles, comme LLama 3 70B. D’ailleurs, comme les chercheurs se sont aperçus que l’usage d’un plus gros volume de données de meilleure qualité est bénéfique en matière de performances, les entraînements sont plus longs, et donc plus consommateurs.
 
 Graphique des moyennes des expériences réalisées par Google Research
-![image3](https://hackmd.io/_uploads/HJyk0bHdJl.png)
+![Graphique moyenne résultat](https://raw.githubusercontent.com/RIMEL-UCA/RIMEL-UCA.github.io/refs/heads/master/chapters/2025/SLM_vs_LLM-Team_E/assets/images/graphique-moyenne-resultat.png)
 
 #### Fine-tuning
 
