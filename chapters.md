@@ -21,7 +21,7 @@ date: 2022-11-18 6:00:00 +0100
 ### Analyse des Outils CI/CD pour le Machine Learning
 #### [projetModel]({{site.url}}/chapters/2025/ChapterModel/content)
 
-### [Utilité et testabilité des pipelines CI/CD dans le Machine Learning]({{site.url}}/chapters/2025/Utilité_testabilité_CICD_ML_Team_B/content)
+### [Utilité et testabilité des pipelines CI/CD ML]({{site.url}}/chapters/2025/Utilité_testabilité_CICD_ML_Team_B/content)
 
 ### [Intégration du développement ML dans un pipeline CI / CD]({{site.url}}/chapters/2025/Integration_du_developpement_ML_dans_un_pipeline_CICD_Team_D/content)
 
