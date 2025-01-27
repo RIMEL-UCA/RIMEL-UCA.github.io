@@ -26,7 +26,10 @@ Ce sujet correspond parfaitement à nos objectifs d’apprentissage, notamment g
 ***
 #### *Comment l’efficacité et la fiabilité des outils MLOps sont-elles assurées à travers les pipelines ?*
 (Cas de **KitOps**, **MLFlow**, **ClearML**, **MetaFlow**)
+
 <br></br>
+
+
 
 Cette question est intéressante car elle soulève des **enjeux cruciaux** liés à l'**automatisation** et à la **gestion des modèles de Machine Learning**, qui sont des domaines en pleine **évolution**. En particulier, comprendre comment **assurer une mise en production fiable et efficace** des **modèles ML** est essentiel pour les **entreprises** qui cherchent à tirer parti des **capacités de l'IA** tout en maintenant des **standards de qualité élevés**.
 
@@ -78,7 +81,10 @@ Ces outils ont été sélectionnés en raison de leur popularité et de leurs fo
      :bulb:  Vos résultats et donc votre analyse sont nécessairement limités. Préciser bien ces limites : par exemple, jeux de données insuffisants, analyse réduite à quelques critères, dépendance aux projets analysés, ...
 
 --- 
+
 <br></br>
+
+
 
 ## 🔍 Hypothèses
 Voici les hypothèses formulées en lien avec nos questions :
@@ -114,6 +120,8 @@ Voici les hypothèses formulées en lien avec nos questions :
 
 
 <br></br>
+
+
 
 ## 🔬 Expériences
 Pour valider nos hypothèses, nous mènerons les expérimentations suivantes :
@@ -203,7 +211,11 @@ Le workflow actuellement configuré présente des limitations significatives, no
 En outre, la planification périodique du workflow, bien qu’automatisée, est peu flexible et inadaptée à des processus dynamiques. Contrairement aux workflows modernes qui s’appuient sur des déclencheurs en temps réel (comme un push ou une pull request), ce workflow limite la détection et la résolution rapide des erreurs ou vulnérabilités introduites dans le code.
 
 Le manque d'évolution du workflow depuis son premier lancement souligne également une incapacité à s’adapter aux besoins changeants du projet, reflétant un déficit par rapport aux standards actuels. Ces limitations le placent non seulement en retrait par rapport aux bonnes pratiques modernes, mais aussi derrière les workflows classiques qui incluent généralement une couverture plus large des tâches critiques.
+
+
 <br></br>
+
+
 
 ## ⚙️ KitOps
 ### Fonctionnement 
@@ -362,6 +374,8 @@ MLFlow est une plateforme MLOps qui répond aux principaux besoins des workflows
 - **Déploiement des modèles :** facilite le packaging et le développement des modèles ML, permettant de les servir comme des API REST. Il prend en charge divers environnements de déploiement, notamment les services cloud et les clusters Kubernetes [(MLflow Overview)](https://mlflow.org/docs/latest/introduction/index.html).
 - **Gestion de cycle de vie des modèles :** la plateforme propose des outils pour versionner, valider et gérer les modèles tout au long de leur cycle de vie, de la phase de test à celle de production.
 - **Intégration avec des frameworks populaires :** MLFlow s'intègre avec TensorFlow, PyTorch, Keras et d'autres frameworks de deep learning, offrant des options de journalisation automatique et manuelle. Cette intégration facilite l'enregistrement des métriques, des artefacts, et des modèles produits par ces frameworks.
+
+
 <br></br>
 
 
@@ -375,7 +389,11 @@ Ces fonctionnalités sont rendues possibles grâce à quatre composants principa
 <div style="text-align: center;">  
   <p><em>Figure XX.</em> Utilisation de MLFlow</p>
 </div>
+
+
 <br></br>
+
+
 
 En complément, MLFlow propose des **recettes** pour accélérer les développements avec des **modèles préconfigurés** , des outils d'**évaluation** pour générer automatiquement des **métriques** et des **visualisations**, ainsi que des fonctionnalités de **déploiement** cohérentes et évolutives, avec prise en charge des **environnements Docker**.
 
@@ -386,7 +404,11 @@ L'approche CI/CD du repository github de MLFlow combine [CircleCI](https://githu
 #### CircleCI
 ***
 Utilisé pour sa puissance et sa flexibilité dans l'exécution des pipelines CI/CD, il permet de gérer des tests complexes et des déploiements scalables.
+
+
 <br></br>
+
+
 *Ci-dessous les jobs lancés dans circleCI :*
 <table style="width: 100%;">
   <tr>
@@ -417,11 +439,19 @@ Utilisé pour sa puissance et sa flexibilité dans l'exécution des pipelines CI
 <div style="text-align: center;">  
   <p><em>Figure XX.</em> Workflow CircleCI : Construction de Documentation et Exécution MLFlow</p>
 </div>
+
+
 <br></br>
+
+
 
 
 Le sous-module `examples/recipes` dans le dépôt GitHub de MLflow est principalement utilisé pour fournir des exemples pratiques de l'utilisation de MLflow Recipes. Selon la [pull request #13565](https://github.com/mlflow/mlflow/pull/13565), ces exemples aident à tester et valider les fonctionnalités MLOps en permettant aux utilisateurs d'automatiser des tâches courantes comme l'ingestion de données, l'entraînement de modèles et l'évaluation des performances.
+
+
 <br></br>
+
+
 Mis à jour pour garantir la compatibilité avec les dernières versions de Python (notamment Python 3.9), ce sous-module permet également de tester l'intégration des nouvelles fonctionnalités de MLflow et d'assurer leur bon fonctionnement avec les dépendances existantes. Ces recettes servent de base pour automatiser les workflows, tout en assurant une gestion cohérente des mises à jour et des tests des composants MLflow.
 
 
@@ -448,6 +478,8 @@ Dans le cadre de l'expérimentation avec des **modèles de régression**, ce not
 - **Automatisation & Traçabilité :** Chaque étape du pipeline est automatisée et trace les résultats pour une gestion complète du cycle de vie du modèle.
 - **MLOps :** L'intégration avec MLflow permet de gérer le modèle et les données tout au long de son cycle de vie.
 - **Évaluation Continue :** Les métriques à chaque étape garantissent une évaluation précise de la performance du modèle.
+
+
 <br></br>
 
 
@@ -462,7 +494,11 @@ Garantit un environnement de développement cohérent et portable, permettant à
   <img src="assets/images/mlflow/devcontainer/devcontainer.svg" alt="Devcontainer Workflow" width="800">
 </p>
 <p style="text-align: center;"><em>Figure XX.</em> DevContainer : Étapes et fonctionnement</p>
+
+
 <br></br>
+
+
 
 Le diagramme présenté illustre les différentes étapes du fonctionnement d'un environnement DevContainer :
 
@@ -472,11 +508,19 @@ Le diagramme présenté illustre les différentes étapes du fonctionnement d'un
 4. Les changements sont poussés vers le dépôt GitHub, déclenchant des workflows **CI/CD** automatisés.
 5. Les artefacts sont générés et déployés, garantissant des résultats reproductibles.
 
+
+
 <br></br>
+
+
 
 Le **DevContainer** est un outil fondamental pour optimiser le développement logiciel en assurant un **environnement de travail uniforme** et facilement reproductible. En configurant à l'avance des outils clés comme **Python**, **MLflow**, et **Node.js**, il élimine les problèmes liés aux différences de configurations locales entre les développeurs. Cela permet non seulement d’économiser du temps en évitant les étapes de **configuration manuelle**, mais aussi de faciliter l’**intégration continue**, grâce à l’utilisation de **tests automatisés**, de **hooks de pre-commit**, et de **pipelines CI/CD** bien structurés. De plus, la gestion des versions de Python via **pyenv** assure une flexibilité qui garantit la compatibilité des environnements de développement. Globalement, le DevContainer améliore la **collaboration** au sein des équipes, réduit les erreurs dues à des **configurations incompatibles** et permet aux développeurs de se concentrer sur l’essentiel : le **développement du code**.
 
+
+
 <br></br>
+
+
 
 #### GitHub Actions
 ***
@@ -501,7 +545,11 @@ GitHub Actions offre aussi la possibilité de configurer des environnements spé
 
 Ces actions facilitent l'automatisation des configurations de développement et permettent de garantir la cohérence des environnements de travail, tout en réduisant le temps de configuration et de déploiement.
 
+
+
 <br></br>
+
+
 
 *Voici quelque workflows et actions présents dans le projet MLFlow:*
 
@@ -518,7 +566,11 @@ Ces actions facilitent l'automatisation des configurations de développement et 
 | **Tests sur nouvelles fonctionnalités** | PR ou push sur des branches spécifiques | Tests fonctionnels et de régression des nouvelles fonctionnalités | Python avec dependencies spécifiques | Validation du bon fonctionnement des nouvelles fonctionnalités |
 | **Vérification de la conformité du code** | PR sur la branche principale  | Analyse statique du code, tests de conformité, mise à jour des dépendances | Ubuntu-latest, outils de linting | Validation de la qualité du code et conformité aux standards |
 
+
+
 <br></br>
+
+
 
 | Action                         | Déclencheur(s)                      | Actions principales                                     | Environnement                  | Résultat attendu                        |
 |-----------------------------------|-------------------------------------|---------------------------------------------------------|---------------------------------|------------------------------------------|
@@ -537,7 +589,11 @@ En analysant ces workflows et actions, plusieurs aspects importants permettent d
 ### Conclusion
 ***
 MLFlow est un outil très utile et développé pour gérer tout le cycle de vie des modèles d'apprentissage automatique. Il permet de suivre les expériences, de gérer les versions des modèles, et de les déployer facilement en production. Il automatise les tests et le déploiement des modèles, offrant ainsi une solution efficace pour les équipes MLOps tout en assurant la traçabilité et la reproductibilité des modèles et la sécurité. Il permet également de tester la fiabilité des modèles avec des métriques et des seuils de validations avec des alertes de résultat anormales. Finalement MLFlow a plusieurs fonctionnalités pour le MLOps mais également le DevOps.
+
+
 <br></br>
+
+
 
 
 ## 🌀 MetaFlow
@@ -615,12 +671,20 @@ Pour cette comparaison généré à l'aide du script python `assets\codes\datefi
 Cette étude se concentre sur l'**activité de développement** liée aux **tests** et aux **workflows** dans les quatre outils **MLOps : kitops, clearml, mlflow et metaflow**. En utilisant l'**API GitHub** et **Plotly** (`assets\codes\gitnbcommits.py`) pour la visualisation, nous avons spécifiquement analysé les **commits** dans les répertoires de tests et les workflows. Les données montrent que **MLflow** présente une activité particulièrement intensive dans ces domaines, notamment dans ses dossiers de tests, tandis que **Metaflow** et **kitops** affichent une activité plus modérée. **ClearML** n'a pas de tests mais a seulement **2 commit** pour son worflow. Cette analyse ciblée nous donne un aperçu de l'importance accordée aux **tests automatisés** et à l'**intégration continue** dans ces projets, bien qu'elle ne représente qu'une partie de leur activité de développement globale.
 
 *L'image en html pour l'interactivité est disponible dans `assets/images/commit_graph.html`* 
+
+
 <br></br>
+
+
 <img src="./assets/images/nbCommitParCheminCibleparDepot.png" alt="Alt text" style="width: '10%;"/>
 <div style="text-align: center;">  
   <p><em>Figure XX : Nombre de commits par chemin cible pour chaque outil</em></p>
 </div>
+
+
 <br></br>
+
+
 
 Parmi les analyses que nous avons réalisées pour comparer les outils, nous avons pris en compte leur popularité, en nous basant sur le nombre d'étoiles sur GitHub, comme illustré dans la Figure XX. Nous avons constaté que MetaFlow est l'outil le plus apprécié, en grande partie grâce à l'intégration avec l'outil de Netflix. Cependant, un point surprenant est que ClearML dispose de plus d'étoiles que KitOps, bien qu'il semble que KitOps soit plus testé que ClearML. Nous supposons que cette différence peut s'expliquer par le fait que ClearML est un outil plus ancien que KitOps.
 
