@@ -61,30 +61,9 @@ Outils MLOps ciblés : [KitOps](https://github.com/jozu-ai/kitops), [MLFlow](htt
 Ces outils ont été sélectionnés en raison de leur popularité et de leurs fonctionnalités avancées dans la gestion des pipelines de Machine Learning.
 
 
-## IV. Hypothèses, Expériences, Result Analysis and Conclusion
---- 
-1. Il s'agit ici d'**énoncer sous forme d'hypothèses** ce que vous allez chercher à démontrer. Vous devez définir vos hypothèses de façon à pouvoir les _mesurer/vérifier facilement._ Bien sûr, votre hypothèse devrait être construite de manière à _vous aider à répondre à votre question initiale_. Explicitez ces différents points.
-2. Vous **explicitez les expérimentations que vous allez mener** pour vérifier si vos hypothèses sont vraies ou fausses. Il y a forcément des choix, des limites, explicitez-les.
-
-     :bulb: Structurez cette partie à votre convenance : 
-     Par exemples : 
-        Pour Hypothèse 1 => 
-            Nous ferons les Expériences suivantes pour la démontrer
-        Pour Hypothèse 2 => Expériences 
-        
-        ou Vous présentez l'ensemble des hypothèses puis vous expliquer comment les expériences prévues permettront de démontrer vos hypothèses.
-
-1. Présentation des résultats
-2. Interprétation/Analyses des résultats en fonction de vos hypothèses
-3. Construction d’une conclusion 
-
-     :bulb:  Vos résultats et donc votre analyse sont nécessairement limités. Préciser bien ces limites : par exemple, jeux de données insuffisants, analyse réduite à quelques critères, dépendance aux projets analysés, ...
-
---- 
+## IV. Hypothèses et Expériences
 
 .
-
-
 
 ## 🔍 Hypothèses
 Voici les hypothèses formulées en lien avec nos questions :
@@ -136,7 +115,7 @@ Analyse des principales fonctionnalités fournies par les outils sélectionnés 
 Analyses des types de tests utilisés dans les workflows CI/CD, leur utilité, leur fréquence, et leur répartition par phase.  
 Identification des méthodes de gestion des modèles et des données dans ces tests.
 
-
+.
 
 ## ⚠️ Limites
 Cependant, il est important de prendre en compte certaines limitations qui peuvent influencer les résultats et les conclusions de nos expérimentations, telles que :
@@ -156,7 +135,7 @@ L’analyse des pipelines MLOps pourrait être influencée par une connaissance 
 .
 
 
-## IV. Résultats et Analyses
+## V. Résultats et Analyses
 
 .
 
@@ -192,6 +171,7 @@ Le workflow de ClearML, tel qu'il est configuré, est planifié pour s'exécuter
 
 Un autre point préoccupant concerne le manque de progression du workflow après son premier lancement. En effet, aucune évolution n’a été observée depuis le premier push, comme illustré sur la figure 1 On observe seulement deux commits liés au workflow : le premier concerne la configuration initiale des pipelines GitHub Actions, et le second met à jour la version de CodeQL. Ce comportement soulève des questions sur l'efficacité opérationnelle du workflow et sur sa capacité à s'adapter à un processus de développement dynamique. Malgré la maturité du projet, comme le montre la figure 2 avec la date du premier push, La fréquence d'exécution du workflow est également un point faible. En étant défini de manière périodique, à un horaire fixe chaque semaine, comme le montre la figure 3, il ne permet pas de réagir en temps réel aux modifications du code. 
 
+.
 
 ![Alt text](./assets/images/Clearml/clearmlcommits.png)
 <div style="text-align: center;">  
@@ -734,12 +714,12 @@ Nous avons également analysé le pourcentage de bugs parmi les issues GitHub po
 
 En conclusion, cette étude montre que les outils MLOps ne suivent pas tous les mêmes pratiques en matière de tests. Certains outils ne disposent pas de tests du tout, tandis que d'autres, comme MLFlow et MetaFlow, proposent des tests plus approfondis. En revanche, des outils comme kitops semblent se concentrer davantage sur des tests de base (les tests sur les pack et unack des models et des fichiers). Globalement, les tests présents dans ces outils peuvent être assimilés à des tests classiques utilisés dans les applications traditionnelles, tels que les tests d'intégration et les tests unitaires, bien qu'ils présentent des spécificités liées au domaine du machine learning.
 
-## V. Outils
+## VI. Outils
 Les différents scripts développé pour générer certains résultats sont dans le répertoire `assets/codes`.
 
 Un `readme.md` détaille l'exécution de ces scripts.
 
-## VI. References
+## VII. References
 
 ### Github Repository des outils
 ***
