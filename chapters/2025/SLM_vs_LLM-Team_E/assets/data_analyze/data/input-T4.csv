@@ -1,0 +1,930 @@
+Experiment 🧪,Model 🤗,Prefill (s),Per Token (s),Decode (tokens/s),Energy (tokens/kWh),Memory (MB),Backend 🏭,Precision 📥,Quantization 🗜️,Attention 👁️,Kernel ⚛️,Architecture 🏛️,End-to-End (s),Open LLM Score (%),Params (B)
+8bit-bnb-eager,microsoft/Phi-3-mini-4k-instruct,0.094,0.0918056945800781,10.872,242054.673,4344.502,pytorch,float16,BnB.8bit,Eager,No Kernel,Phi3ForCausalLM,5.889,27.2,3
+4bit-bnb-eager,microsoft/Phi-3-mini-4k-instruct,0.519,0.0535243034362793,18.653,380579.469,2984.872,pytorch,float16,BnB.4bit,Eager,No Kernel,Phi3ForCausalLM,3.899,27.2,3
+4bit-awq-gemm-eager,microsoft/Phi-3-mini-4k-instruct,0.223,0.0408124332427978,24.443,530788.272,2589.101,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,Phi3ForCausalLM,2.801,27.2,3
+float16-eager,microsoft/Phi-3-mini-4k-instruct,0.112,0.0368136005401611,27.025,525313.012,7924.275,pytorch,float16,Unquantized,Eager,No Kernel,Phi3ForCausalLM,2.442,27.2,3
+bfloat16-eager,microsoft/Phi-3-mini-4k-instruct,0.703,0.0367206382751464,27.159,523070.356,7924.275,pytorch,bfloat16,Unquantized,Eager,No Kernel,Phi3ForCausalLM,3.023,27.2,3
+4bit-gptq-exllama-v2-eager,microsoft/Phi-3-mini-4k-instruct,0.12,0.0349764804840087,28.539,614602.889,2674.711,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,Phi3ForCausalLM,2.328,27.2,3
+4bit-awq-gemv-eager,microsoft/Phi-3-mini-4k-instruct,0.218,0.0347830562591552,28.565,583495.271,2589.101,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,Phi3ForCausalLM,2.424,27.2,3
+4bit-awq-exllama-v1-eager,microsoft/Phi-3-mini-4k-instruct,1.719,0.0343621444702148,29.0,597058.673,2569.852,pytorch,float16,AWQ.4bit,Eager,No Kernel,Phi3ForCausalLM,3.891,27.2,3
+4bit-gptq-exllama-v1-eager,microsoft/Phi-3-mini-4k-instruct,0.12,0.0336409111022949,29.673,616350.878,2674.711,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,Phi3ForCausalLM,2.243,27.2,3
+8bit-bnb-eager,microsoft/Phi-3-mini-4k-instruct,0.094,0.0918056945800781,10.872,242054.673,4344.502,pytorch,float16,BnB.8bit,Eager,No Kernel,Phi3ForCausalLM,5.889,25.97,3
+4bit-bnb-eager,microsoft/Phi-3-mini-4k-instruct,0.519,0.0535243034362793,18.653,380579.469,2984.872,pytorch,float16,BnB.4bit,Eager,No Kernel,Phi3ForCausalLM,3.899,25.97,3
+4bit-awq-gemm-eager,microsoft/Phi-3-mini-4k-instruct,0.223,0.0408124332427978,24.443,530788.272,2589.101,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,Phi3ForCausalLM,2.801,25.97,3
+float16-eager,microsoft/Phi-3-mini-4k-instruct,0.112,0.0368136005401611,27.025,525313.012,7924.275,pytorch,float16,Unquantized,Eager,No Kernel,Phi3ForCausalLM,2.442,25.97,3
+bfloat16-eager,microsoft/Phi-3-mini-4k-instruct,0.703,0.0367206382751464,27.159,523070.356,7924.275,pytorch,bfloat16,Unquantized,Eager,No Kernel,Phi3ForCausalLM,3.023,25.97,3
+4bit-gptq-exllama-v2-eager,microsoft/Phi-3-mini-4k-instruct,0.12,0.0349764804840087,28.539,614602.889,2674.711,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,Phi3ForCausalLM,2.328,25.97,3
+4bit-awq-gemv-eager,microsoft/Phi-3-mini-4k-instruct,0.218,0.0347830562591552,28.565,583495.271,2589.101,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,Phi3ForCausalLM,2.424,25.97,3
+4bit-awq-exllama-v1-eager,microsoft/Phi-3-mini-4k-instruct,1.719,0.0343621444702148,29.0,597058.673,2569.852,pytorch,float16,AWQ.4bit,Eager,No Kernel,Phi3ForCausalLM,3.891,25.97,3
+4bit-gptq-exllama-v1-eager,microsoft/Phi-3-mini-4k-instruct,0.12,0.0336409111022949,29.673,616350.878,2674.711,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,Phi3ForCausalLM,2.243,25.97,3
+8bit-bnb-eager,meta-llama/Meta-Llama-3-8B-Instruct,0.13,0.1286847839355469,7.758,168564.292,9177.326,pytorch,float16,BnB.8bit,Eager,No Kernel,LlamaForCausalLM,8.243,23.91,8
+8bit-bnb-sdpa,meta-llama/Meta-Llama-3-8B-Instruct,0.126,0.1241357917785644,8.053,175620.072,9177.194,pytorch,float16,BnB.8bit,SDPA,No Kernel,LlamaForCausalLM,7.965,23.91,8
+4bit-bnb-eager,meta-llama/Meta-Llama-3-8B-Instruct,1.039,0.0797622566223144,12.519,241584.467,6470.131,pytorch,float16,BnB.4bit,Eager,No Kernel,LlamaForCausalLM,6.075,23.91,8
+4bit-bnb-sdpa,meta-llama/Meta-Llama-3-8B-Instruct,1.037,0.0789531211853027,12.625,243063.509,6470.0,pytorch,float16,BnB.4bit,SDPA,No Kernel,LlamaForCausalLM,6.017,23.91,8
+4bit-awq-gemm-eager,meta-llama/Meta-Llama-3-8B-Instruct,0.405,0.0448032798767089,22.275,429300.971,5852.012,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,LlamaForCausalLM,3.235,23.91,8
+4bit-awq-gemm-sdpa,meta-llama/Meta-Llama-3-8B-Instruct,0.417,0.0422138080596923,23.622,468978.761,5851.88,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMM,LlamaForCausalLM,3.087,23.91,8
+4bit-awq-gemv-eager,meta-llama/Meta-Llama-3-8B-Instruct,0.375,0.0364229125976562,27.371,524387.231,5852.012,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,LlamaForCausalLM,2.676,23.91,8
+4bit-awq-exllama-v2-eager,meta-llama/Meta-Llama-3-8B-Instruct,0.22,0.034959903717041,28.549,559004.763,5922.266,pytorch,float16,AWQ.4bit,Eager,No Kernel,LlamaForCausalLM,2.427,23.91,8
+4bit-awq-exllama-v1-eager,meta-llama/Meta-Llama-3-8B-Instruct,3.252,0.0348345928192138,28.633,549145.514,5800.631,pytorch,float16,AWQ.4bit,Eager,No Kernel,LlamaForCausalLM,5.452,23.91,8
+4bit-gptq-exllama-v2-eager,meta-llama/Meta-Llama-3-8B-Instruct,0.208,0.0342131843566894,29.144,556185.381,5923.053,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,LlamaForCausalLM,2.367,23.91,8
+4bit-gptq-exllama-v1-eager,meta-llama/Meta-Llama-3-8B-Instruct,0.207,0.0337601928710937,29.535,571080.294,5923.053,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,LlamaForCausalLM,2.341,23.91,8
+4bit-awq-gemv-sdpa,meta-llama/Meta-Llama-3-8B-Instruct,0.369,0.0314203033447265,31.672,600754.902,5851.88,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMV,LlamaForCausalLM,2.358,23.91,8
+4bit-gptq-exllama-v1-sdpa,meta-llama/Meta-Llama-3-8B-Instruct,0.2,0.0304142560958862,32.776,640613.195,5922.922,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,LlamaForCausalLM,2.124,23.91,8
+4bit-awq-exllama-v1-sdpa,meta-llama/Meta-Llama-3-8B-Instruct,3.237,0.0299312486648559,33.247,633503.77,5800.5,pytorch,float16,AWQ.4bit,SDPA,No Kernel,LlamaForCausalLM,5.132,23.91,8
+4bit-gptq-exllama-v2-sdpa,meta-llama/Meta-Llama-3-8B-Instruct,0.201,0.02990718460083,33.322,644133.891,5922.922,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,LlamaForCausalLM,2.091,23.91,8
+4bit-awq-exllama-v2-sdpa,meta-llama/Meta-Llama-3-8B-Instruct,0.213,0.0298076162338256,33.461,645543.784,5922.135,pytorch,float16,AWQ.4bit,SDPA,No Kernel,LlamaForCausalLM,2.099,23.91,8
+8bit-bnb-eager,meta-llama/Meta-Llama-3-8B-Instruct,0.13,0.1286847839355469,7.758,168564.292,9177.326,pytorch,float16,BnB.8bit,Eager,No Kernel,LlamaForCausalLM,8.243,20.48,8
+8bit-bnb-sdpa,meta-llama/Meta-Llama-3-8B-Instruct,0.126,0.1241357917785644,8.053,175620.072,9177.194,pytorch,float16,BnB.8bit,SDPA,No Kernel,LlamaForCausalLM,7.965,20.48,8
+4bit-bnb-eager,meta-llama/Meta-Llama-3-8B-Instruct,1.039,0.0797622566223144,12.519,241584.467,6470.131,pytorch,float16,BnB.4bit,Eager,No Kernel,LlamaForCausalLM,6.075,20.48,8
+4bit-bnb-sdpa,meta-llama/Meta-Llama-3-8B-Instruct,1.037,0.0789531211853027,12.625,243063.509,6470.0,pytorch,float16,BnB.4bit,SDPA,No Kernel,LlamaForCausalLM,6.017,20.48,8
+4bit-awq-gemm-eager,meta-llama/Meta-Llama-3-8B-Instruct,0.405,0.0448032798767089,22.275,429300.971,5852.012,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,LlamaForCausalLM,3.235,20.48,8
+4bit-awq-gemm-sdpa,meta-llama/Meta-Llama-3-8B-Instruct,0.417,0.0422138080596923,23.622,468978.761,5851.88,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMM,LlamaForCausalLM,3.087,20.48,8
+4bit-awq-gemv-eager,meta-llama/Meta-Llama-3-8B-Instruct,0.375,0.0364229125976562,27.371,524387.231,5852.012,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,LlamaForCausalLM,2.676,20.48,8
+4bit-awq-exllama-v2-eager,meta-llama/Meta-Llama-3-8B-Instruct,0.22,0.034959903717041,28.549,559004.763,5922.266,pytorch,float16,AWQ.4bit,Eager,No Kernel,LlamaForCausalLM,2.427,20.48,8
+4bit-awq-exllama-v1-eager,meta-llama/Meta-Llama-3-8B-Instruct,3.252,0.0348345928192138,28.633,549145.514,5800.631,pytorch,float16,AWQ.4bit,Eager,No Kernel,LlamaForCausalLM,5.452,20.48,8
+4bit-gptq-exllama-v2-eager,meta-llama/Meta-Llama-3-8B-Instruct,0.208,0.0342131843566894,29.144,556185.381,5923.053,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,LlamaForCausalLM,2.367,20.48,8
+4bit-gptq-exllama-v1-eager,meta-llama/Meta-Llama-3-8B-Instruct,0.207,0.0337601928710937,29.535,571080.294,5923.053,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,LlamaForCausalLM,2.341,20.48,8
+4bit-awq-gemv-sdpa,meta-llama/Meta-Llama-3-8B-Instruct,0.369,0.0314203033447265,31.672,600754.902,5851.88,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMV,LlamaForCausalLM,2.358,20.48,8
+4bit-gptq-exllama-v1-sdpa,meta-llama/Meta-Llama-3-8B-Instruct,0.2,0.0304142560958862,32.776,640613.195,5922.922,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,LlamaForCausalLM,2.124,20.48,8
+4bit-awq-exllama-v1-sdpa,meta-llama/Meta-Llama-3-8B-Instruct,3.237,0.0299312486648559,33.247,633503.77,5800.5,pytorch,float16,AWQ.4bit,SDPA,No Kernel,LlamaForCausalLM,5.132,20.48,8
+4bit-gptq-exllama-v2-sdpa,meta-llama/Meta-Llama-3-8B-Instruct,0.201,0.02990718460083,33.322,644133.891,5922.922,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,LlamaForCausalLM,2.091,20.48,8
+4bit-awq-exllama-v2-sdpa,meta-llama/Meta-Llama-3-8B-Instruct,0.213,0.0298076162338256,33.461,645543.784,5922.135,pytorch,float16,AWQ.4bit,SDPA,No Kernel,LlamaForCausalLM,2.099,20.48,8
+4bit-bnb-eager,Qwen/Qwen1.5-14B,1.913,0.1495091476440429,6.687,128624.589,11624.262,pytorch,float16,BnB.4bit,Eager,No Kernel,Qwen2ForCausalLM,11.342,20.22,14
+4bit-bnb-sdpa,Qwen/Qwen1.5-14B,1.901,0.1485762557983398,6.722,129486.754,11624.131,pytorch,float16,BnB.4bit,SDPA,No Kernel,Qwen2ForCausalLM,11.284,20.22,14
+4bit-bnb-eager,Qwen/Qwen1.5-14B,1.79,0.1397937469482421,7.14,137463.986,11624.264,pytorch,float16,BnB.4bit,Eager,No Kernel,Qwen2ForCausalLM,10.617,20.22,14
+4bit-bnb-sdpa,Qwen/Qwen1.5-14B,1.778,0.1389737396240234,7.182,138360.137,11624.133,pytorch,float16,BnB.4bit,SDPA,No Kernel,Qwen2ForCausalLM,10.555,20.22,14
+4bit-awq-gemm-eager,Qwen/Qwen1.5-14B,0.807,0.0588963527679443,16.929,328440.746,10922.855,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,Qwen2ForCausalLM,4.529,20.22,14
+4bit-awq-gemm-sdpa,Qwen/Qwen1.5-14B,0.794,0.0566949272155761,17.608,339241.438,10923.772,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMM,Qwen2ForCausalLM,4.374,20.22,14
+4bit-awq-gemv-eager,Qwen/Qwen1.5-14B,0.731,0.0540986080169677,18.449,354352.686,10923.367,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,Qwen2ForCausalLM,4.148,20.22,14
+4bit-awq-gemv-sdpa,Qwen/Qwen1.5-14B,0.719,0.0535106868743896,18.648,358948.012,10924.284,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMV,Qwen2ForCausalLM,4.096,20.22,14
+4bit-awq-exllama-v1-eager,Qwen/Qwen1.5-14B,5.821,0.0467855358123779,21.361,410489.364,10924.362,pytorch,float16,AWQ.4bit,Eager,No Kernel,Qwen2ForCausalLM,8.769,20.22,14
+4bit-gptq-exllama-v2-eager,Qwen/Qwen1.5-14B,0.388,0.0466583194732666,21.419,412483.745,11070.473,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,Qwen2ForCausalLM,3.33,20.22,14
+4bit-gptq-exllama-v1-eager,Qwen/Qwen1.5-14B,0.387,0.0465852642059326,21.432,412408.209,11070.473,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,Qwen2ForCausalLM,3.325,20.22,14
+4bit-gptq-exllama-v2-eager,Qwen/Qwen1.5-14B,0.383,0.0463137741088867,21.566,415573.505,11070.473,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,Qwen2ForCausalLM,3.305,20.22,14
+4bit-gptq-exllama-v1-eager,Qwen/Qwen1.5-14B,0.383,0.0460817756652832,21.663,416112.985,11070.473,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,Qwen2ForCausalLM,3.289,20.22,14
+4bit-awq-exllama-v1-sdpa,Qwen/Qwen1.5-14B,5.804,0.0461345443725585,21.67,417424.477,10924.362,pytorch,float16,AWQ.4bit,SDPA,No Kernel,Qwen2ForCausalLM,8.712,20.22,14
+4bit-gptq-exllama-v1-sdpa,Qwen/Qwen1.5-14B,0.378,0.0459714241027832,21.734,388122.951,11070.473,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,Qwen2ForCausalLM,3.279,20.22,14
+4bit-gptq-exllama-v2-sdpa,Qwen/Qwen1.5-14B,0.377,0.0459193439483642,21.759,390194.721,11070.473,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,Qwen2ForCausalLM,3.273,20.22,14
+4bit-gptq-exllama-v1-sdpa,Qwen/Qwen1.5-14B,0.373,0.0456684303283691,21.892,420772.172,11070.473,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,Qwen2ForCausalLM,3.252,20.22,14
+4bit-gptq-exllama-v2-sdpa,Qwen/Qwen1.5-14B,0.373,0.0456529598236084,21.904,420808.288,11070.473,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,Qwen2ForCausalLM,3.249,20.22,14
+4bit-awq-exllama-v2-eager,Qwen/Qwen1.5-14B,0.411,0.0425453910827636,23.484,453162.497,11070.311,pytorch,float16,AWQ.4bit,Eager,No Kernel,Qwen2ForCausalLM,3.096,20.22,14
+4bit-awq-exllama-v2-sdpa,Qwen/Qwen1.5-14B,0.398,0.0411521587371826,24.28,467506.149,11070.311,pytorch,float16,AWQ.4bit,SDPA,No Kernel,Qwen2ForCausalLM,2.994,20.22,14
+8bit-bnb-eager,google/gemma-7b,0.145,0.1123849906921386,8.869,187639.917,9856.31,pytorch,float16,BnB.8bit,Eager,No Kernel,GemmaForCausalLM,7.243,15.28,8
+8bit-bnb-sdpa,google/gemma-7b,0.142,0.1089374732971191,9.162,192614.93,9856.31,pytorch,float16,BnB.8bit,SDPA,No Kernel,GemmaForCausalLM,7.02,15.28,8
+4bit-bnb-eager,google/gemma-7b,1.148,0.0912372665405273,10.928,209237.498,6575.186,pytorch,float16,BnB.4bit,Eager,No Kernel,GemmaForCausalLM,6.913,15.28,8
+4bit-bnb-sdpa,google/gemma-7b,1.146,0.0912282905578613,10.931,209958.188,6575.055,pytorch,float16,BnB.4bit,SDPA,No Kernel,GemmaForCausalLM,6.907,15.28,8
+4bit-awq-gemm-eager,google/gemma-7b,0.517,0.0485737285614013,20.514,330407.676,5890.1,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,GemmaForCausalLM,3.581,15.28,8
+4bit-awq-exllama-v1-eager,google/gemma-7b,3.633,0.0477713451385498,20.87,505116.555,5803.199,pytorch,float16,AWQ.4bit,Eager,No Kernel,GemmaForCausalLM,6.648,15.28,8
+4bit-awq-gemv-sdpa,google/gemma-7b,0.453,0.045474401473999,21.938,527658.248,5889.969,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMV,GemmaForCausalLM,3.326,15.28,8
+4bit-awq-gemm-sdpa,google/gemma-7b,0.525,0.045067232131958,22.148,430314.1,5889.969,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMM,GemmaForCausalLM,3.365,15.28,8
+4bit-awq-exllama-v1-sdpa,google/gemma-7b,3.618,0.0437689590454101,24.719,548487.417,5803.068,pytorch,float16,AWQ.4bit,SDPA,No Kernel,GemmaForCausalLM,6.383,15.28,8
+4bit-gptq-exllama-v2-eager,google/gemma-7b,0.23,0.0389849777221679,25.565,498065.831,5959.126,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,GemmaForCausalLM,2.69,15.28,8
+4bit-awq-exllama-v2-eager,google/gemma-7b,0.243,0.0389342403411865,25.609,497482.597,5960.485,pytorch,float16,AWQ.4bit,Eager,No Kernel,GemmaForCausalLM,2.702,15.28,8
+4bit-gptq-exllama-v1-eager,google/gemma-7b,0.23,0.0386348972320556,25.8,498224.155,5959.126,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,GemmaForCausalLM,2.67,15.28,8
+4bit-awq-gemv-eager,google/gemma-7b,0.45,0.038428991317749,25.868,502720.523,5890.1,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,GemmaForCausalLM,2.876,15.28,8
+4bit-awq-exllama-v2-sdpa,google/gemma-7b,0.242,0.0354269752502441,27.725,548694.333,5960.354,pytorch,float16,AWQ.4bit,SDPA,No Kernel,GemmaForCausalLM,2.482,15.28,8
+4bit-gptq-exllama-v2-sdpa,google/gemma-7b,0.228,0.0348696479797363,28.605,558149.103,5958.34,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,GemmaForCausalLM,2.43,15.28,8
+4bit-gptq-exllama-v1-sdpa,google/gemma-7b,0.228,0.0343046550750732,29.035,558595.377,5958.34,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,GemmaForCausalLM,2.394,15.28,8
+8bit-bnb-eager,Qwen/Qwen1.5-7B,0.133,0.1268396797180175,7.87,164592.784,9989.956,pytorch,float16,BnB.8bit,Eager,No Kernel,Qwen2ForCausalLM,8.135,15.22,7
+8bit-bnb-eager,Qwen/Qwen1.5-7B,0.131,0.1243857765197753,8.041,173886.738,9989.958,pytorch,float16,BnB.8bit,Eager,No Kernel,Qwen2ForCausalLM,7.977,15.22,7
+8bit-bnb-sdpa,Qwen/Qwen1.5-7B,0.126,0.1204822082519531,8.284,173815.121,9989.956,pytorch,float16,BnB.8bit,SDPA,No Kernel,Qwen2ForCausalLM,7.728,15.22,7
+8bit-bnb-sdpa,Qwen/Qwen1.5-7B,0.124,0.1193461456298828,8.366,182133.402,9989.958,pytorch,float16,BnB.8bit,SDPA,No Kernel,Qwen2ForCausalLM,7.665,15.22,7
+4bit-bnb-eager,Qwen/Qwen1.5-7B,1.067,0.0811601943969726,12.278,234750.525,7161.537,pytorch,float16,BnB.4bit,Eager,No Kernel,Qwen2ForCausalLM,6.201,15.22,7
+4bit-bnb-sdpa,Qwen/Qwen1.5-7B,1.065,0.0809465751647949,12.302,236063.197,7161.406,pytorch,float16,BnB.4bit,SDPA,No Kernel,Qwen2ForCausalLM,6.188,15.22,7
+4bit-bnb-eager,Qwen/Qwen1.5-7B,1.0,0.076786334991455,12.987,249304.756,7161.539,pytorch,float16,BnB.4bit,Eager,No Kernel,Qwen2ForCausalLM,5.856,15.22,7
+4bit-bnb-sdpa,Qwen/Qwen1.5-7B,0.994,0.0763554077148437,13.068,251414.841,7161.408,pytorch,float16,BnB.4bit,SDPA,No Kernel,Qwen2ForCausalLM,5.817,15.22,7
+bfloat16-sdpa,Qwen/Qwen1.5-7B,1.228,0.0636774559020996,15.697,303062.935,15627.385,pytorch,bfloat16,Unquantized,SDPA,No Kernel,Qwen2ForCausalLM,5.242,15.22,7
+bfloat16-eager,Qwen/Qwen1.5-7B,1.232,0.0635617275238037,15.725,303250.549,15627.418,pytorch,bfloat16,Unquantized,Eager,No Kernel,Qwen2ForCausalLM,5.239,15.22,7
+float16-sdpa,Qwen/Qwen1.5-7B,0.196,0.0628325119018554,15.887,306249.792,15627.385,pytorch,float16,Unquantized,SDPA,No Kernel,Qwen2ForCausalLM,4.163,15.22,7
+float16-eager,Qwen/Qwen1.5-7B,0.202,0.0628092803955078,15.91,306481.08,15627.418,pytorch,float16,Unquantized,Eager,No Kernel,Qwen2ForCausalLM,4.162,15.22,7
+4bit-awq-gemm-eager,Qwen/Qwen1.5-7B,0.426,0.046964672088623,21.243,409229.28,6822.669,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,Qwen2ForCausalLM,3.392,15.22,7
+4bit-awq-gemm-eager,Qwen/Qwen1.5-7B,0.385,0.0462135829925537,21.623,421314.851,6822.667,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,Qwen2ForCausalLM,3.302,15.22,7
+4bit-awq-gemm-sdpa,Qwen/Qwen1.5-7B,0.417,0.0424932804107666,23.466,449744.063,6822.669,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMM,Qwen2ForCausalLM,3.101,15.22,7
+4bit-awq-gemm-sdpa,Qwen/Qwen1.5-7B,0.403,0.0420976486206054,23.726,453288.011,6822.667,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMM,Qwen2ForCausalLM,3.053,15.22,7
+4bit-awq-gemv-eager,Qwen/Qwen1.5-7B,0.375,0.0371220645904541,26.856,520763.041,6823.324,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,Qwen2ForCausalLM,2.72,15.22,7
+4bit-awq-gemv-eager,Qwen/Qwen1.5-7B,0.366,0.0360599365234375,27.708,535543.401,6823.322,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,Qwen2ForCausalLM,2.643,15.22,7
+4bit-awq-exllama-v2-eager,Qwen/Qwen1.5-7B,0.228,0.0352389125823974,28.286,548068.888,6915.141,pytorch,float16,AWQ.4bit,Eager,No Kernel,Qwen2ForCausalLM,2.456,15.22,7
+4bit-awq-exllama-v1-eager,Qwen/Qwen1.5-7B,3.148,0.0348437747955322,28.604,550213.363,6822.145,pytorch,float16,AWQ.4bit,Eager,No Kernel,Qwen2ForCausalLM,5.35,15.22,7
+4bit-gptq-exllama-v2-eager,Qwen/Qwen1.5-7B,0.207,0.0348294715881347,28.639,561294.62,6917.402,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,Qwen2ForCausalLM,2.407,15.22,7
+4bit-gptq-exllama-v1-eager,Qwen/Qwen1.5-7B,0.208,0.0346819686889648,28.758,555160.574,6917.402,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,Qwen2ForCausalLM,2.396,15.22,7
+4bit-gptq-exllama-v1-eager,Qwen/Qwen1.5-7B,0.207,0.0345583343505859,28.81,553467.703,6917.402,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,Qwen2ForCausalLM,2.39,15.22,7
+4bit-gptq-exllama-v2-eager,Qwen/Qwen1.5-7B,0.209,0.0345040473937988,28.895,558616.028,6917.402,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,Qwen2ForCausalLM,2.388,15.22,7
+4bit-awq-exllama-v2-eager,Qwen/Qwen1.5-7B,0.224,0.0340998229980468,29.26,570252.901,6915.139,pytorch,float16,AWQ.4bit,Eager,No Kernel,Qwen2ForCausalLM,2.377,15.22,7
+4bit-awq-exllama-v1-eager,Qwen/Qwen1.5-7B,2.905,0.0340130882263183,29.432,565955.851,6822.142,pytorch,float16,AWQ.4bit,Eager,No Kernel,Qwen2ForCausalLM,5.048,15.22,7
+4bit-awq-gemv-sdpa,Qwen/Qwen1.5-7B,0.36,0.0323354892730712,30.832,604412.032,6823.322,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMV,Qwen2ForCausalLM,2.402,15.22,7
+4bit-awq-gemv-sdpa,Qwen/Qwen1.5-7B,0.371,0.0322222080230712,30.842,595352.713,6823.324,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMV,Qwen2ForCausalLM,2.414,15.22,7
+4bit-gptq-exllama-v2-sdpa,Qwen/Qwen1.5-7B,0.201,0.0310246400833129,32.171,632627.688,6917.402,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,Qwen2ForCausalLM,2.157,15.22,7
+4bit-awq-exllama-v2-sdpa,Qwen/Qwen1.5-7B,0.221,0.0302257595062255,32.925,639484.611,6915.139,pytorch,float16,AWQ.4bit,SDPA,No Kernel,Qwen2ForCausalLM,2.13,15.22,7
+4bit-gptq-exllama-v2-sdpa,Qwen/Qwen1.5-7B,0.2,0.0301387672424316,33.053,638968.385,6917.402,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,Qwen2ForCausalLM,2.104,15.22,7
+4bit-gptq-exllama-v1-sdpa,Qwen/Qwen1.5-7B,0.201,0.0299312963485717,33.28,645370.139,6917.402,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,Qwen2ForCausalLM,2.09,15.22,7
+4bit-gptq-exllama-v1-sdpa,Qwen/Qwen1.5-7B,0.2,0.029800064086914,33.367,643943.444,6917.402,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,Qwen2ForCausalLM,2.086,15.22,7
+4bit-awq-exllama-v1-sdpa,Qwen/Qwen1.5-7B,2.934,0.0294648485183715,33.786,639557.071,6822.142,pytorch,float16,AWQ.4bit,SDPA,No Kernel,Qwen2ForCausalLM,4.793,15.22,7
+4bit-gptq-exllama-v1-eager,Deci/DeciLM-7B,0.785,0.7426236572265625,1.347,25988.179,4514.272,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,DeciLMForCausalLM,47.578,14.95,7
+4bit-gptq-exllama-v2-eager,Deci/DeciLM-7B,0.785,0.7411553955078125,1.349,26056.311,4514.272,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,DeciLMForCausalLM,47.48,14.95,7
+4bit-gptq-exllama-v2-fa2,Deci/DeciLM-7B,0.788,0.7406415100097656,1.35,26064.4,4514.272,pytorch,float16,GPTQ.4bit,FAv2,GPTQ.ExllamaV2,DeciLMForCausalLM,47.45,14.95,7
+4bit-gptq-exllama-v1-fa2,Deci/DeciLM-7B,0.784,0.7410007019042969,1.35,26059.466,4514.272,pytorch,float16,GPTQ.4bit,FAv2,GPTQ.ExllamaV1,DeciLMForCausalLM,47.47,14.95,7
+8bit-bnb-fa2,Deci/DeciLM-7B,0.128,0.1201863861083984,8.314,182153.099,7514.468,pytorch,float16,BnB.8bit,FAv2,No Kernel,DeciLMForCausalLM,7.708,14.95,7
+8bit-bnb-eager,Deci/DeciLM-7B,0.125,0.1184933929443359,8.418,186564.949,7514.468,pytorch,float16,BnB.8bit,Eager,No Kernel,DeciLMForCausalLM,7.601,14.95,7
+8bit-bnb-eager,Deci/DeciLM-7B,0.124,0.116764175415039,8.561,180274.661,7514.468,pytorch,float16,BnB.8bit,Eager,No Kernel,DeciLMForCausalLM,7.513,14.95,7
+8bit-bnb-fa2,Deci/DeciLM-7B,0.124,0.1157041091918945,8.629,181059.178,7514.468,pytorch,float16,BnB.8bit,FAv2,No Kernel,DeciLMForCausalLM,7.424,14.95,7
+4bit-bnb-fa2,Deci/DeciLM-7B,1.103,0.0778526229858398,12.778,245016.159,4884.62,pytorch,float16,BnB.4bit,FAv2,No Kernel,DeciLMForCausalLM,6.037,14.95,7
+4bit-bnb-eager,Deci/DeciLM-7B,1.098,0.077623664855957,12.825,245243.747,4884.62,pytorch,float16,BnB.4bit,Eager,No Kernel,DeciLMForCausalLM,6.018,14.95,7
+4bit-bnb-fa2,Deci/DeciLM-7B,1.03,0.0734085121154785,13.589,261126.299,4884.62,pytorch,float16,BnB.4bit,FAv2,No Kernel,DeciLMForCausalLM,5.667,14.95,7
+4bit-bnb-eager,Deci/DeciLM-7B,1.029,0.0732021751403808,13.599,261233.584,4884.62,pytorch,float16,BnB.4bit,Eager,No Kernel,DeciLMForCausalLM,5.664,14.95,7
+bfloat16-fa2,Deci/DeciLM-7B,1.405,0.0625382709503173,15.985,307510.656,14290.691,pytorch,bfloat16,Unquantized,FAv2,No Kernel,DeciLMForCausalLM,5.347,14.95,7
+bfloat16-eager,Deci/DeciLM-7B,1.403,0.0625054893493652,15.997,308353.443,14290.691,pytorch,bfloat16,Unquantized,Eager,No Kernel,DeciLMForCausalLM,5.341,14.95,7
+bfloat16-eager,Deci/DeciLM-7B,1.311,0.0615694236755371,16.239,312784.629,14290.691,pytorch,bfloat16,Unquantized,Eager,No Kernel,DeciLMForCausalLM,5.191,14.95,7
+float16-fa2,Deci/DeciLM-7B,0.217,0.0614731349945068,16.243,312514.285,14290.691,pytorch,float16,Unquantized,FAv2,No Kernel,DeciLMForCausalLM,4.096,14.95,7
+bfloat16-fa2,Deci/DeciLM-7B,1.311,0.0615354881286621,16.247,313547.621,14290.691,pytorch,bfloat16,Unquantized,FAv2,No Kernel,DeciLMForCausalLM,5.189,14.95,7
+float16-eager,Deci/DeciLM-7B,0.214,0.0613439502716064,16.274,312511.326,14290.691,pytorch,float16,Unquantized,Eager,No Kernel,DeciLMForCausalLM,4.086,14.95,7
+float16-fa2,Deci/DeciLM-7B,0.199,0.0605189914703369,16.493,318190.942,14290.691,pytorch,float16,Unquantized,FAv2,No Kernel,DeciLMForCausalLM,4.02,14.95,7
+float16-eager,Deci/DeciLM-7B,0.198,0.0605130558013916,16.495,317929.692,14290.691,pytorch,float16,Unquantized,Eager,No Kernel,DeciLMForCausalLM,4.016,14.95,7
+4bit-awq-gemm-fa2,Deci/DeciLM-7B,0.424,0.0406513919830322,24.548,473581.503,4281.177,pytorch,float16,AWQ.4bit,FAv2,AWQ.GEMM,DeciLMForCausalLM,2.994,14.95,7
+4bit-awq-gemm-eager,Deci/DeciLM-7B,0.433,0.0404800643920898,24.625,474024.167,4281.177,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,DeciLMForCausalLM,2.99,14.95,7
+4bit-awq-gemm-eager,Deci/DeciLM-7B,0.418,0.0404937934875488,24.689,477470.743,4281.177,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,DeciLMForCausalLM,2.979,14.95,7
+4bit-awq-gemm-fa2,Deci/DeciLM-7B,0.418,0.0399370727539062,24.967,484744.945,4281.177,pytorch,float16,AWQ.4bit,FAv2,AWQ.GEMM,DeciLMForCausalLM,2.941,14.95,7
+4bit-gptq-exllama-v1-eager,Deci/DeciLM-7B,0.196,0.0375622234344482,26.535,680627.521,4373.845,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,DeciLMForCausalLM,2.566,14.95,7
+4bit-gptq-exllama-v1-fa2,Deci/DeciLM-7B,0.196,0.03701318359375,30.249,593325.281,4373.845,pytorch,float16,GPTQ.4bit,FAv2,GPTQ.ExllamaV1,DeciLMForCausalLM,2.286,14.95,7
+4bit-awq-gemv-fa2,Deci/DeciLM-7B,0.373,0.0305599203109741,32.616,629143.098,4281.177,pytorch,float16,AWQ.4bit,FAv2,AWQ.GEMV,DeciLMForCausalLM,2.302,14.95,7
+4bit-awq-gemv-eager,Deci/DeciLM-7B,0.373,0.0305158720016479,32.667,629166.874,4281.177,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,DeciLMForCausalLM,2.297,14.95,7
+4bit-awq-gemv-fa2,Deci/DeciLM-7B,0.374,0.0305713920593261,32.669,633348.402,4281.177,pytorch,float16,AWQ.4bit,FAv2,AWQ.GEMV,DeciLMForCausalLM,2.299,14.95,7
+4bit-awq-gemv-eager,Deci/DeciLM-7B,0.372,0.0293988161087036,33.831,653636.319,4281.177,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,DeciLMForCausalLM,2.234,14.95,7
+4bit-awq-exllama-v1-eager,Deci/DeciLM-7B,3.243,0.0290613594055175,34.313,660890.8,4251.03,pytorch,float16,AWQ.4bit,Eager,No Kernel,DeciLMForCausalLM,5.079,14.95,7
+4bit-gptq-exllama-v2-eager,Deci/DeciLM-7B,0.197,0.0287876634597778,34.53,676392.858,4373.845,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,DeciLMForCausalLM,2.007,14.95,7
+4bit-awq-exllama-v1-fa2,Deci/DeciLM-7B,3.244,0.0287908000946044,34.55,668312.45,4251.03,pytorch,float16,AWQ.4bit,FAv2,No Kernel,DeciLMForCausalLM,5.068,14.95,7
+4bit-gptq-exllama-v2-fa2,Deci/DeciLM-7B,0.197,0.0286717281341552,34.816,676347.671,4373.845,pytorch,float16,GPTQ.4bit,FAv2,GPTQ.ExllamaV2,DeciLMForCausalLM,2.003,14.95,7
+4bit-awq-exllama-v1-eager,Deci/DeciLM-7B,3.063,0.0281071519851684,35.495,674235.626,4251.03,pytorch,float16,AWQ.4bit,Eager,No Kernel,DeciLMForCausalLM,4.836,14.95,7
+4bit-awq-exllama-v1-fa2,Deci/DeciLM-7B,3.064,0.0280120639801025,35.592,688638.0,4251.03,pytorch,float16,AWQ.4bit,FAv2,No Kernel,DeciLMForCausalLM,4.832,14.95,7
+8bit-bnb-eager,mistralai/Mistral-7B-v0.1,0.126,0.1245907669067382,8.013,175667.181,7600.134,pytorch,float16,BnB.8bit,Eager,No Kernel,MistralForCausalLM,7.983,14.52,7
+8bit-bnb-sdpa,mistralai/Mistral-7B-v0.1,0.119,0.1191289596557617,8.374,184107.155,7600.003,pytorch,float16,BnB.8bit,SDPA,No Kernel,MistralForCausalLM,7.64,14.52,7
+4bit-bnb-eager,mistralai/Mistral-7B-v0.1,1.031,0.0760893402099609,13.101,252045.96,4892.021,pytorch,float16,BnB.4bit,Eager,No Kernel,MistralForCausalLM,5.839,14.52,7
+4bit-bnb-sdpa,mistralai/Mistral-7B-v0.1,1.026,0.075542911529541,13.187,253820.787,4891.89,pytorch,float16,BnB.4bit,SDPA,No Kernel,MistralForCausalLM,5.802,14.52,7
+bfloat16-sdpa,mistralai/Mistral-7B-v0.1,1.319,0.0646855354309082,15.459,298328.761,14577.607,pytorch,bfloat16,Unquantized,SDPA,No Kernel,MistralForCausalLM,5.394,14.52,7
+bfloat16-eager,mistralai/Mistral-7B-v0.1,1.315,0.0646045112609863,15.474,298348.864,14577.607,pytorch,bfloat16,Unquantized,Eager,No Kernel,MistralForCausalLM,5.386,14.52,7
+float16-sdpa,mistralai/Mistral-7B-v0.1,0.203,0.0638350410461425,15.645,301530.535,14577.607,pytorch,float16,Unquantized,SDPA,No Kernel,MistralForCausalLM,4.231,14.52,7
+float16-eager,mistralai/Mistral-7B-v0.1,0.207,0.063698766708374,15.682,302136.61,14577.607,pytorch,float16,Unquantized,Eager,No Kernel,MistralForCausalLM,4.224,14.52,7
+4bit-gptq-exllama-v1-eager,mistralai/Mistral-7B-v0.1,0.202,0.0388831520080566,25.667,510223.456,4345.861,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,MistralForCausalLM,2.658,14.52,7
+4bit-gptq-exllama-v2-eager,mistralai/Mistral-7B-v0.1,0.203,0.0383032321929931,26.017,510351.842,4345.861,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,MistralForCausalLM,2.625,14.52,7
+4bit-gptq-exllama-v2-sdpa,mistralai/Mistral-7B-v0.1,0.196,0.0353102874755859,28.291,548374.187,4345.73,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,MistralForCausalLM,2.424,14.52,7
+4bit-gptq-exllama-v1-sdpa,mistralai/Mistral-7B-v0.1,0.196,0.0340239200592041,29.285,565541.535,4345.73,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,MistralForCausalLM,2.348,14.52,7
+8bit-bnb-eager,TencentARC/Mistral_Pro_8B_v0.1,0.166,0.1630153274536132,6.123,134365.893,9358.128,pytorch,float16,BnB.8bit,Eager,No Kernel,MistralForCausalLM,10.449,14.2,8
+8bit-bnb-sdpa,TencentARC/Mistral_Pro_8B_v0.1,0.157,0.1547769317626953,6.445,141420.987,9358.128,pytorch,float16,BnB.8bit,SDPA,No Kernel,MistralForCausalLM,9.927,14.2,8
+4bit-bnb-eager,TencentARC/Mistral_Pro_8B_v0.1,1.328,0.0969746551513671,10.282,197139.485,5886.764,pytorch,float16,BnB.4bit,Eager,No Kernel,MistralForCausalLM,7.461,14.2,8
+4bit-bnb-sdpa,TencentARC/Mistral_Pro_8B_v0.1,1.321,0.0962927360534668,10.355,198883.474,5886.632,pytorch,float16,BnB.4bit,SDPA,No Kernel,MistralForCausalLM,7.41,14.2,8
+4bit-bnb-eager,TencentARC/Mistral_Pro_8B_v0.1,1.332,0.0961569595336914,10.38,199382.475,5886.764,pytorch,float16,BnB.4bit,Eager,No Kernel,MistralForCausalLM,7.406,14.2,8
+4bit-awq-gemm-sdpa,TencentARC/Mistral_Pro_8B_v0.1,0.495,0.0702909469604492,14.213,288615.972,5189.706,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMM,MistralForCausalLM,4.934,14.2,8
+4bit-awq-gemm-eager,TencentARC/Mistral_Pro_8B_v0.1,0.501,0.0582541446685791,17.124,340154.994,5189.837,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,MistralForCausalLM,4.18,14.2,8
+4bit-awq-exllama-v2-sdpa,TencentARC/Mistral_Pro_8B_v0.1,0.26,0.0558866882324218,19.207,471207.419,5259.961,pytorch,float16,AWQ.4bit,SDPA,No Kernel,MistralForCausalLM,3.777,14.2,8
+4bit-awq-exllama-v2-eager,TencentARC/Mistral_Pro_8B_v0.1,0.27,0.0461544151306152,21.618,439252.043,5260.092,pytorch,float16,AWQ.4bit,Eager,No Kernel,MistralForCausalLM,3.183,14.2,8
+4bit-awq-gemv-eager,TencentARC/Mistral_Pro_8B_v0.1,0.479,0.0455260963439941,21.908,401702.917,5189.837,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,MistralForCausalLM,3.354,14.2,8
+4bit-awq-exllama-v1-eager,TencentARC/Mistral_Pro_8B_v0.1,4.042,0.0450648479461669,22.122,418622.084,5138.457,pytorch,float16,AWQ.4bit,Eager,No Kernel,MistralForCausalLM,6.892,14.2,8
+4bit-gptq-exllama-v2-eager,TencentARC/Mistral_Pro_8B_v0.1,0.252,0.045010944366455,22.156,438243.299,5283.624,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,MistralForCausalLM,3.095,14.2,8
+4bit-gptq-exllama-v1-eager,TencentARC/Mistral_Pro_8B_v0.1,0.251,0.0449694080352783,22.213,438911.456,5283.624,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,MistralForCausalLM,3.089,14.2,8
+4bit-awq-gemv-sdpa,TencentARC/Mistral_Pro_8B_v0.1,0.463,0.04226753616333,23.597,450791.545,5189.706,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMV,MistralForCausalLM,3.132,14.2,8
+4bit-awq-exllama-v1-sdpa,TencentARC/Mistral_Pro_8B_v0.1,4.03,0.0418918418884277,23.806,357472.277,5138.326,pytorch,float16,AWQ.4bit,SDPA,No Kernel,MistralForCausalLM,6.679,14.2,8
+4bit-gptq-exllama-v2-sdpa,TencentARC/Mistral_Pro_8B_v0.1,0.243,0.0400882873535156,24.907,480702.79,5283.624,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,MistralForCausalLM,2.77,14.2,8
+4bit-gptq-exllama-v1-sdpa,TencentARC/Mistral_Pro_8B_v0.1,0.244,0.0392157592773437,25.446,489065.847,5283.624,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,MistralForCausalLM,2.72,14.2,8
+8bit-bnb-eager,stabilityai/stablelm-2-12b,0.224,0.2027176437377929,4.921,106765.701,13438.292,pytorch,float16,BnB.8bit,Eager,No Kernel,StableLmForCausalLM,12.991,13.86,12
+8bit-bnb-sdpa,stabilityai/stablelm-2-12b,0.218,0.1970931167602539,5.064,111843.839,13437.112,pytorch,float16,BnB.8bit,SDPA,No Kernel,StableLmForCausalLM,12.647,13.86,12
+4bit-bnb-eager,stabilityai/stablelm-2-12b,1.542,0.1298422546386718,7.685,150653.906,8872.308,pytorch,float16,BnB.4bit,Eager,No Kernel,StableLmForCausalLM,9.73,13.86,12
+4bit-bnb-sdpa,stabilityai/stablelm-2-12b,1.539,0.1249733924865722,7.966,153727.918,8872.177,pytorch,float16,BnB.4bit,SDPA,No Kernel,StableLmForCausalLM,9.447,13.86,12
+4bit-gptq-exllama-v2-eager,stabilityai/stablelm-2-12b,0.314,0.0757988471984863,13.179,265941.677,8140.423,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,StableLmForCausalLM,5.098,13.86,12
+4bit-gptq-exllama-v1-eager,stabilityai/stablelm-2-12b,0.314,0.0754859542846679,13.221,265467.521,8140.423,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,StableLmForCausalLM,5.074,13.86,12
+4bit-gptq-exllama-v1-sdpa,stabilityai/stablelm-2-12b,0.306,0.0708064155578613,14.146,283707.365,8135.409,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,StableLmForCausalLM,4.761,13.86,12
+4bit-gptq-exllama-v2-sdpa,stabilityai/stablelm-2-12b,0.306,0.0685148162841796,14.582,289860.878,8135.409,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,StableLmForCausalLM,4.625,13.86,12
+4bit-gptq-exllama-v2-eager,01-ai/Yi-6B,0.662,0.6120278625488281,1.634,31556.864,4245.898,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,LlamaForCausalLM,39.223,13.6,6
+4bit-gptq-exllama-v1-eager,01-ai/Yi-6B,0.66,0.6116809997558594,1.635,31582.094,4245.898,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,LlamaForCausalLM,39.208,13.6,6
+4bit-gptq-exllama-v2-sdpa,01-ai/Yi-6B,0.654,0.6113420104980469,1.636,31585.734,4245.767,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,LlamaForCausalLM,39.172,13.6,6
+4bit-gptq-exllama-v1-sdpa,01-ai/Yi-6B,0.652,0.6103543701171874,1.639,31630.641,4245.767,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,LlamaForCausalLM,39.112,13.6,6
+8bit-bnb-eager,01-ai/Yi-6B,0.123,0.1205838394165039,8.278,181737.295,6816.509,pytorch,float16,BnB.8bit,Eager,No Kernel,LlamaForCausalLM,7.738,13.6,6
+8bit-bnb-eager,01-ai/Yi-6B,0.123,0.1195309791564941,8.352,182487.519,6816.507,pytorch,float16,BnB.8bit,Eager,No Kernel,LlamaForCausalLM,7.67,13.6,6
+8bit-bnb-sdpa,01-ai/Yi-6B,0.119,0.1166991500854492,8.551,187773.852,6816.509,pytorch,float16,BnB.8bit,SDPA,No Kernel,LlamaForCausalLM,7.49,13.6,6
+8bit-bnb-sdpa,01-ai/Yi-6B,0.118,0.115090576171875,8.673,190612.442,6816.507,pytorch,float16,BnB.8bit,SDPA,No Kernel,LlamaForCausalLM,7.385,13.6,6
+4bit-bnb-eager,01-ai/Yi-6B,0.864,0.0640867042541503,15.557,298902.749,4535.248,pytorch,float16,BnB.4bit,Eager,No Kernel,LlamaForCausalLM,4.916,13.6,6
+4bit-bnb-eager,01-ai/Yi-6B,0.854,0.0635015506744384,15.657,300393.962,4535.25,pytorch,float16,BnB.4bit,Eager,No Kernel,LlamaForCausalLM,4.88,13.6,6
+4bit-bnb-sdpa,01-ai/Yi-6B,0.857,0.0636952629089355,15.658,300516.285,4535.117,pytorch,float16,BnB.4bit,SDPA,No Kernel,LlamaForCausalLM,4.883,13.6,6
+4bit-bnb-sdpa,01-ai/Yi-6B,0.853,0.0631367359161376,15.776,303001.199,4535.119,pytorch,float16,BnB.4bit,SDPA,No Kernel,LlamaForCausalLM,4.844,13.6,6
+bfloat16-sdpa,01-ai/Yi-6B,1.14,0.053686574935913,18.622,358804.217,12248.589,pytorch,bfloat16,Unquantized,SDPA,No Kernel,LlamaForCausalLM,4.523,13.6,6
+bfloat16-eager,01-ai/Yi-6B,1.144,0.0536770401000976,18.628,359326.285,12248.589,pytorch,bfloat16,Unquantized,Eager,No Kernel,LlamaForCausalLM,4.526,13.6,6
+bfloat16-eager,01-ai/Yi-6B,1.107,0.0534368476867675,18.709,361213.168,12248.591,pytorch,bfloat16,Unquantized,Eager,No Kernel,LlamaForCausalLM,4.474,13.6,6
+bfloat16-sdpa,01-ai/Yi-6B,1.102,0.0534405136108398,18.711,360914.587,12248.591,pytorch,bfloat16,Unquantized,SDPA,No Kernel,LlamaForCausalLM,4.469,13.6,6
+float16-sdpa,01-ai/Yi-6B,0.183,0.0530358715057373,18.825,363191.637,12248.589,pytorch,float16,Unquantized,SDPA,No Kernel,LlamaForCausalLM,3.53,13.6,6
+float16-eager,01-ai/Yi-6B,0.185,0.0528331050872802,18.906,364245.669,12248.589,pytorch,float16,Unquantized,Eager,No Kernel,LlamaForCausalLM,3.518,13.6,6
+float16-sdpa,01-ai/Yi-6B,0.171,0.0527687511444091,18.922,365378.008,12248.591,pytorch,float16,Unquantized,SDPA,No Kernel,LlamaForCausalLM,3.501,13.6,6
+float16-eager,01-ai/Yi-6B,0.178,0.052569200515747,18.993,366239.289,12248.591,pytorch,float16,Unquantized,Eager,No Kernel,LlamaForCausalLM,3.495,13.6,6
+4bit-awq-gemm-eager,01-ai/Yi-6B,0.322,0.0428230876922607,23.306,462963.964,4101.549,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,LlamaForCausalLM,3.025,13.6,6
+4bit-awq-gemm-eager,01-ai/Yi-6B,0.315,0.0420089111328125,23.743,474858.586,4101.547,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,LlamaForCausalLM,2.972,13.6,6
+4bit-awq-gemm-sdpa,01-ai/Yi-6B,0.323,0.0379851036071777,26.237,508403.361,4101.549,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMM,LlamaForCausalLM,2.725,13.6,6
+4bit-awq-gemm-sdpa,01-ai/Yi-6B,0.316,0.0377842082977294,26.396,517476.638,4101.547,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMM,LlamaForCausalLM,2.705,13.6,6
+4bit-awq-exllama-v1-eager,01-ai/Yi-6B,2.48,0.0338317432403564,29.486,575109.482,4030.242,pytorch,float16,AWQ.4bit,Eager,No Kernel,LlamaForCausalLM,4.614,13.6,6
+4bit-awq-gemv-eager,01-ai/Yi-6B,0.312,0.0331344947814941,30.1,578848.154,4102.204,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,LlamaForCausalLM,2.404,13.6,6
+4bit-awq-gemv-eager,01-ai/Yi-6B,0.312,0.0321347198486328,31.028,596177.285,4102.202,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,LlamaForCausalLM,2.34,13.6,6
+4bit-awq-exllama-v2-eager,01-ai/Yi-6B,0.188,0.032050271987915,31.098,626331.226,4194.021,pytorch,float16,AWQ.4bit,Eager,No Kernel,LlamaForCausalLM,2.212,13.6,6
+4bit-gptq-exllama-v1-eager,01-ai/Yi-6B,0.175,0.0320036792755126,31.148,615096.388,4197.068,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,LlamaForCausalLM,2.197,13.6,6
+4bit-awq-exllama-v1-eager,01-ai/Yi-6B,2.648,0.0319303522109985,31.23,601100.281,4101.025,pytorch,float16,AWQ.4bit,Eager,No Kernel,LlamaForCausalLM,4.665,13.6,6
+4bit-gptq-exllama-v2-eager,01-ai/Yi-6B,0.176,0.0311867036819458,31.936,623479.735,4197.068,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,LlamaForCausalLM,2.15,13.6,6
+4bit-awq-exllama-v2-eager,01-ai/Yi-6B,0.185,0.0303849277496337,32.777,654812.844,4194.019,pytorch,float16,AWQ.4bit,Eager,No Kernel,LlamaForCausalLM,2.104,13.6,6
+4bit-awq-gemv-sdpa,01-ai/Yi-6B,0.3,0.0286596326828002,34.767,673529.171,4102.204,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMV,LlamaForCausalLM,2.112,13.6,6
+4bit-awq-gemv-sdpa,01-ai/Yi-6B,0.3,0.0280452804565429,35.517,684339.315,4102.202,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMV,LlamaForCausalLM,2.076,13.6,6
+4bit-gptq-exllama-v2-sdpa,01-ai/Yi-6B,0.169,0.0269891681671142,36.822,718461.517,4197.068,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,LlamaForCausalLM,1.875,13.6,6
+4bit-awq-exllama-v2-sdpa,01-ai/Yi-6B,0.18,0.027033616065979,36.882,717751.647,4194.021,pytorch,float16,AWQ.4bit,SDPA,No Kernel,LlamaForCausalLM,1.891,13.6,6
+4bit-awq-exllama-v1-sdpa,01-ai/Yi-6B,2.636,0.0267612476348876,37.224,707773.624,4101.025,pytorch,float16,AWQ.4bit,SDPA,No Kernel,LlamaForCausalLM,4.328,13.6,6
+4bit-awq-exllama-v2-sdpa,01-ai/Yi-6B,0.177,0.02661803150177,37.393,739940.326,4194.019,pytorch,float16,AWQ.4bit,SDPA,No Kernel,LlamaForCausalLM,1.859,13.6,6
+4bit-gptq-exllama-v1-sdpa,01-ai/Yi-6B,0.169,0.0264583520889282,37.662,559463.409,4197.068,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,LlamaForCausalLM,1.84,13.6,6
+4bit-awq-exllama-v1-sdpa,01-ai/Yi-6B,2.485,0.0262752323150634,37.93,729091.186,4101.023,pytorch,float16,AWQ.4bit,SDPA,No Kernel,LlamaForCausalLM,4.145,13.6,6
+8bit-bnb-eager,google/recurrentgemma-9b,0.661,0.1593278732299804,6.27,138534.7,10341.048,pytorch,float16,BnB.8bit,Eager,No Kernel,RecurrentGemmaForCausalLM,10.694,13.5,9
+4bit-bnb-eager,google/recurrentgemma-9b,1.269,0.0983475685119628,10.14,194439.605,6954.984,pytorch,float16,BnB.4bit,Eager,No Kernel,RecurrentGemmaForCausalLM,7.487,13.5,9
+4bit-awq-gemv-eager,google/recurrentgemma-9b,0.811,0.0745258712768554,13.389,331582.712,6740.836,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,RecurrentGemmaForCausalLM,5.512,13.5,9
+4bit-awq-gemm-eager,google/recurrentgemma-9b,0.628,0.0698565902709961,14.296,234693.084,6740.836,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,RecurrentGemmaForCausalLM,5.024,13.5,9
+4bit-gptq-exllama-v2-eager,google/recurrentgemma-9b,0.567,0.0569548149108886,17.506,340702.122,6846.677,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,RecurrentGemmaForCausalLM,4.163,13.5,9
+4bit-gptq-exllama-v1-eager,google/recurrentgemma-9b,0.556,0.0558865604400634,17.821,347634.012,6846.677,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,RecurrentGemmaForCausalLM,4.088,13.5,9
+8bit-bnb-eager,meta-llama/Meta-Llama-3-8B,0.131,0.1298194274902343,7.701,169366.608,9177.326,pytorch,float16,BnB.8bit,Eager,No Kernel,LlamaForCausalLM,8.321,13.41,8
+8bit-bnb-sdpa,meta-llama/Meta-Llama-3-8B,0.126,0.1241169471740722,7.948,176683.932,9177.194,pytorch,float16,BnB.8bit,SDPA,No Kernel,LlamaForCausalLM,7.957,13.41,8
+8bit-bnb-eager,meta-llama/Meta-Llama-3-8B,0.126,0.1253232803344726,7.964,177693.428,9177.326,pytorch,float16,BnB.8bit,Eager,No Kernel,LlamaForCausalLM,8.04,13.41,8
+8bit-bnb-sdpa,meta-llama/Meta-Llama-3-8B,0.118,0.118016128540039,8.459,185438.027,9177.194,pytorch,float16,BnB.8bit,SDPA,No Kernel,LlamaForCausalLM,7.569,13.41,8
+4bit-bnb-eager,meta-llama/Meta-Llama-3-8B,1.038,0.0796886367797851,12.51,241438.136,6470.131,pytorch,float16,BnB.4bit,Eager,No Kernel,LlamaForCausalLM,6.072,13.41,8
+4bit-bnb-eager,meta-llama/Meta-Llama-3-8B,1.032,0.0791368293762207,12.583,242600.326,6470.131,pytorch,float16,BnB.4bit,Eager,No Kernel,LlamaForCausalLM,6.041,13.41,8
+4bit-bnb-sdpa,meta-llama/Meta-Llama-3-8B,1.035,0.0788691520690918,12.617,243530.309,6470.0,pytorch,float16,BnB.4bit,SDPA,No Kernel,LlamaForCausalLM,6.03,13.41,8
+4bit-bnb-sdpa,meta-llama/Meta-Llama-3-8B,1.031,0.0783370399475097,12.691,244331.362,6470.0,pytorch,float16,BnB.4bit,SDPA,No Kernel,LlamaForCausalLM,5.994,13.41,8
+4bit-awq-gemm-eager,meta-llama/Meta-Llama-3-8B,0.407,0.0444620475769042,22.442,438158.061,5852.012,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,LlamaForCausalLM,3.214,13.41,8
+4bit-awq-gemm-sdpa,meta-llama/Meta-Llama-3-8B,0.417,0.0416523513793945,23.938,464116.105,5851.88,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMM,LlamaForCausalLM,3.047,13.41,8
+4bit-gptq-exllama-v2-eager,meta-llama/Meta-Llama-3-8B,0.207,0.0362048950195312,27.542,534861.811,5923.053,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,LlamaForCausalLM,2.494,13.41,8
+4bit-gptq-exllama-v1-eager,meta-llama/Meta-Llama-3-8B,0.207,0.0357714881896972,27.873,537461.044,5923.053,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,LlamaForCausalLM,2.468,13.41,8
+4bit-awq-gemv-eager,meta-llama/Meta-Llama-3-8B,0.375,0.0354059677124023,28.141,529913.546,5852.012,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,LlamaForCausalLM,2.611,13.41,8
+4bit-awq-exllama-v1-eager,meta-llama/Meta-Llama-3-8B,3.246,0.0352710227966308,28.277,538669.899,5800.631,pytorch,float16,AWQ.4bit,Eager,No Kernel,LlamaForCausalLM,5.474,13.41,8
+4bit-awq-exllama-v2-eager,meta-llama/Meta-Llama-3-8B,0.22,0.0350522403717041,28.465,559506.302,5922.266,pytorch,float16,AWQ.4bit,Eager,No Kernel,LlamaForCausalLM,2.432,13.41,8
+4bit-gptq-exllama-v2-eager,meta-llama/Meta-Llama-3-8B,0.208,0.0346819038391113,28.752,549839.946,5923.053,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,LlamaForCausalLM,2.398,13.41,8
+4bit-gptq-exllama-v1-eager,meta-llama/Meta-Llama-3-8B,0.207,0.0341001930236816,29.229,564410.202,5923.053,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,LlamaForCausalLM,2.36,13.41,8
+4bit-awq-gemv-sdpa,meta-llama/Meta-Llama-3-8B,0.368,0.0317619199752807,31.411,609259.112,5851.88,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMV,LlamaForCausalLM,2.373,13.41,8
+4bit-gptq-exllama-v1-sdpa,meta-llama/Meta-Llama-3-8B,0.199,0.0315527353286743,31.639,611664.082,5922.922,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,LlamaForCausalLM,2.189,13.41,8
+4bit-gptq-exllama-v2-sdpa,meta-llama/Meta-Llama-3-8B,0.199,0.0311224794387817,31.973,617485.13,5922.922,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,LlamaForCausalLM,2.167,13.41,8
+4bit-awq-exllama-v2-sdpa,meta-llama/Meta-Llama-3-8B,0.212,0.0303066883087158,32.919,640108.365,5922.135,pytorch,float16,AWQ.4bit,SDPA,No Kernel,LlamaForCausalLM,2.126,13.41,8
+4bit-gptq-exllama-v1-sdpa,meta-llama/Meta-Llama-3-8B,0.2,0.030004991531372,33.262,640596.548,5922.922,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,LlamaForCausalLM,2.096,13.41,8
+4bit-awq-exllama-v1-sdpa,meta-llama/Meta-Llama-3-8B,3.237,0.029902847290039,33.289,632076.354,5800.5,pytorch,float16,AWQ.4bit,SDPA,No Kernel,LlamaForCausalLM,5.128,13.41,8
+4bit-gptq-exllama-v2-sdpa,meta-llama/Meta-Llama-3-8B,0.2,0.0297962074279785,33.483,651295.635,5922.922,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,LlamaForCausalLM,2.081,13.41,8
+4bit-bnb-eager,Qwen/Qwen1.5-MoE-A2.7B,0.802,0.5970689392089843,1.675,38258.734,9597.899,pytorch,float16,BnB.4bit,Eager,No Kernel,Qwen2MoeForCausalLM,38.441,12.42,14
+4bit-bnb-sdpa,Qwen/Qwen1.5-MoE-A2.7B,0.803,0.5958622131347656,1.676,38503.69,9597.899,pytorch,float16,BnB.4bit,SDPA,No Kernel,Qwen2MoeForCausalLM,38.406,12.42,14
+4bit-bnb-eager,Qwen/Qwen1.5-MoE-A2.7B,0.792,0.5825333557128907,1.715,40395.581,9597.901,pytorch,float16,BnB.4bit,Eager,No Kernel,Qwen2MoeForCausalLM,37.51,12.42,14
+4bit-bnb-sdpa,Qwen/Qwen1.5-MoE-A2.7B,0.785,0.5778168029785156,1.729,40081.627,9597.901,pytorch,float16,BnB.4bit,SDPA,No Kernel,Qwen2MoeForCausalLM,37.244,12.42,14
+8bit-bnb-eager,Qwen/Qwen1.5-4B,0.158,0.1523783416748046,6.551,149705.437,5755.129,pytorch,float16,BnB.8bit,Eager,No Kernel,Qwen2ForCausalLM,9.775,11.29,3
+8bit-bnb-eager,Qwen/Qwen1.5-4B,0.154,0.1488216857910156,6.704,148400.596,5755.127,pytorch,float16,BnB.8bit,Eager,No Kernel,Qwen2ForCausalLM,9.558,11.29,3
+8bit-bnb-sdpa,Qwen/Qwen1.5-4B,0.152,0.1477868194580078,6.756,153946.823,5755.129,pytorch,float16,BnB.8bit,SDPA,No Kernel,Qwen2ForCausalLM,9.48,11.29,3
+8bit-bnb-sdpa,Qwen/Qwen1.5-4B,0.147,0.1422651824951172,7.017,155535.368,5755.127,pytorch,float16,BnB.8bit,SDPA,No Kernel,Qwen2ForCausalLM,9.126,11.29,3
+4bit-bnb-eager,Qwen/Qwen1.5-4B,0.459,0.0743100662231445,13.424,278689.223,4385.218,pytorch,float16,BnB.4bit,Eager,No Kernel,Qwen2ForCausalLM,5.145,11.29,3
+4bit-bnb-eager,Qwen/Qwen1.5-4B,0.484,0.0706961288452148,14.111,280519.712,4385.216,pytorch,float16,BnB.4bit,Eager,No Kernel,Qwen2ForCausalLM,4.947,11.29,3
+4bit-bnb-sdpa,Qwen/Qwen1.5-4B,0.455,0.0681517448425293,14.647,302772.261,4385.218,pytorch,float16,BnB.4bit,SDPA,No Kernel,Qwen2ForCausalLM,4.757,11.29,3
+4bit-bnb-sdpa,Qwen/Qwen1.5-4B,0.479,0.0665532646179199,14.993,295153.004,4385.216,pytorch,float16,BnB.4bit,SDPA,No Kernel,Qwen2ForCausalLM,4.677,11.29,3
+4bit-awq-gemm-eager,Qwen/Qwen1.5-4B,0.224,0.0556786403656005,17.912,381185.911,4275.216,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,Qwen2ForCausalLM,3.742,11.29,3
+4bit-awq-gemm-eager,Qwen/Qwen1.5-4B,0.22,0.05361448097229,18.638,391154.055,4275.214,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,Qwen2ForCausalLM,3.602,11.29,3
+4bit-awq-gemm-sdpa,Qwen/Qwen1.5-4B,0.22,0.049646800994873,20.098,421540.454,4274.561,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMM,Qwen2ForCausalLM,3.355,11.29,3
+4bit-awq-gemm-sdpa,Qwen/Qwen1.5-4B,0.215,0.0493242073059082,20.249,426171.879,4274.558,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMM,Qwen2ForCausalLM,3.329,11.29,3
+float16-eager,Qwen/Qwen1.5-4B,0.106,0.0420947513580322,23.667,456348.579,8972.095,pytorch,float16,Unquantized,Eager,No Kernel,Qwen2ForCausalLM,2.771,11.29,3
+4bit-gptq-exllama-v1-eager,Qwen/Qwen1.5-4B,0.116,0.0414198551177978,24.1,507791.346,4305.06,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,Qwen2ForCausalLM,2.726,11.29,3
+4bit-awq-exllama-v2-eager,Qwen/Qwen1.5-4B,0.122,0.0411493606567382,24.218,514294.687,4310.802,pytorch,float16,AWQ.4bit,Eager,No Kernel,Qwen2ForCausalLM,2.722,11.29,3
+4bit-awq-exllama-v1-eager,Qwen/Qwen1.5-4B,1.577,0.0406623191833496,24.529,502770.417,4273.053,pytorch,float16,AWQ.4bit,Eager,No Kernel,Qwen2ForCausalLM,4.145,11.29,3
+bfloat16-eager,Qwen/Qwen1.5-4B,0.658,0.0403701763153076,24.674,476846.175,8972.095,pytorch,bfloat16,Unquantized,Eager,No Kernel,Qwen2ForCausalLM,3.211,11.29,3
+4bit-gptq-exllama-v2-eager,Qwen/Qwen1.5-4B,0.115,0.0403544006347656,24.752,520268.213,4305.06,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,Qwen2ForCausalLM,2.662,11.29,3
+4bit-gptq-exllama-v2-eager,Qwen/Qwen1.5-4B,0.115,0.040313455581665,24.76,531688.533,4305.06,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,Qwen2ForCausalLM,2.659,11.29,3
+4bit-gptq-exllama-v1-eager,Qwen/Qwen1.5-4B,0.114,0.0402235202789306,24.783,519742.09,4305.06,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,Qwen2ForCausalLM,2.655,11.29,3
+bfloat16-eager,Qwen/Qwen1.5-4B,0.704,0.0399900169372558,24.938,484487.454,8972.093,pytorch,bfloat16,Unquantized,Eager,No Kernel,Qwen2ForCausalLM,3.233,11.29,3
+float16-eager,Qwen/Qwen1.5-4B,0.113,0.0397492485046386,25.075,488548.334,8972.093,pytorch,float16,Unquantized,Eager,No Kernel,Qwen2ForCausalLM,2.621,11.29,3
+bfloat16-sdpa,Qwen/Qwen1.5-4B,0.654,0.039704080581665,25.165,486979.425,8972.095,pytorch,bfloat16,Unquantized,SDPA,No Kernel,Qwen2ForCausalLM,3.161,11.29,3
+4bit-awq-exllama-v2-eager,Qwen/Qwen1.5-4B,0.12,0.0392078552246093,25.462,541298.606,4310.8,pytorch,float16,AWQ.4bit,Eager,No Kernel,Qwen2ForCausalLM,2.594,11.29,3
+4bit-awq-exllama-v1-eager,Qwen/Qwen1.5-4B,1.461,0.0389631996154785,25.611,528238.175,4273.051,pytorch,float16,AWQ.4bit,Eager,No Kernel,Qwen2ForCausalLM,3.919,11.29,3
+bfloat16-sdpa,Qwen/Qwen1.5-4B,0.699,0.0388241596221923,25.707,494203.849,8972.093,pytorch,bfloat16,Unquantized,SDPA,No Kernel,Qwen2ForCausalLM,3.151,11.29,3
+float16-sdpa,Qwen/Qwen1.5-4B,0.111,0.0381061115264892,26.126,504061.738,8972.093,pytorch,float16,Unquantized,SDPA,No Kernel,Qwen2ForCausalLM,2.522,11.29,3
+float16-sdpa,Qwen/Qwen1.5-4B,0.1,0.0380153446197509,26.169,503273.253,8972.095,pytorch,float16,Unquantized,SDPA,No Kernel,Qwen2ForCausalLM,2.5,11.29,3
+4bit-awq-exllama-v2-sdpa,Qwen/Qwen1.5-4B,0.114,0.0354427680969238,28.116,600784.483,4310.8,pytorch,float16,AWQ.4bit,SDPA,No Kernel,Qwen2ForCausalLM,2.354,11.29,3
+4bit-awq-exllama-v2-sdpa,Qwen/Qwen1.5-4B,0.116,0.0349182548522949,28.55,596942.656,4310.802,pytorch,float16,AWQ.4bit,SDPA,No Kernel,Qwen2ForCausalLM,2.325,11.29,3
+4bit-gptq-exllama-v2-sdpa,Qwen/Qwen1.5-4B,0.11,0.034897647857666,28.553,587108.808,4305.06,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,Qwen2ForCausalLM,2.312,11.29,3
+4bit-gptq-exllama-v1-sdpa,Qwen/Qwen1.5-4B,0.109,0.0345096645355224,28.881,603088.084,4305.06,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,Qwen2ForCausalLM,2.291,11.29,3
+4bit-gptq-exllama-v2-sdpa,Qwen/Qwen1.5-4B,0.109,0.0345525913238525,28.892,608826.219,4305.06,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,Qwen2ForCausalLM,2.289,11.29,3
+4bit-awq-exllama-v1-sdpa,Qwen/Qwen1.5-4B,1.582,0.0342273120880127,29.1,579042.357,4274.364,pytorch,float16,AWQ.4bit,SDPA,No Kernel,Qwen2ForCausalLM,3.747,11.29,3
+4bit-gptq-exllama-v1-sdpa,Qwen/Qwen1.5-4B,0.11,0.0340935363769531,29.223,599406.234,4305.06,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,Qwen2ForCausalLM,2.263,11.29,3
+4bit-awq-exllama-v1-sdpa,Qwen/Qwen1.5-4B,1.454,0.0336178894042968,29.557,590456.778,4274.362,pytorch,float16,AWQ.4bit,SDPA,No Kernel,Qwen2ForCausalLM,3.588,11.29,3
+8bit-bnb-eager,meta-llama/Llama-2-13b-hf,0.191,0.1482891387939453,6.733,143874.925,13852.183,pytorch,float16,BnB.8bit,Eager,No Kernel,LlamaForCausalLM,9.544,10.99,13
+8bit-bnb-sdpa,meta-llama/Llama-2-13b-hf,0.179,0.1397464599609374,7.144,149344.85,13856.653,pytorch,float16,BnB.8bit,SDPA,No Kernel,LlamaForCausalLM,8.998,10.99,13
+4bit-bnb-eager,meta-llama/Llama-2-13b-hf,1.776,0.132398681640625,7.557,145561.199,8500.635,pytorch,float16,BnB.4bit,Eager,No Kernel,LlamaForCausalLM,10.117,10.99,13
+4bit-bnb-sdpa,meta-llama/Llama-2-13b-hf,1.766,0.1318306045532226,7.583,146085.194,8500.504,pytorch,float16,BnB.4bit,SDPA,No Kernel,LlamaForCausalLM,10.076,10.99,13
+4bit-gptq-exllama-v2-eager,meta-llama/Llama-2-13b-hf,0.357,0.0413520317077636,24.184,465225.739,7759.281,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,LlamaForCausalLM,2.963,10.99,13
+4bit-gptq-exllama-v1-eager,meta-llama/Llama-2-13b-hf,0.356,0.041191535949707,24.261,466130.896,7759.281,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,LlamaForCausalLM,2.954,10.99,13
+4bit-gptq-exllama-v1-sdpa,meta-llama/Llama-2-13b-hf,0.345,0.0406922397613525,24.545,472895.157,7758.594,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,LlamaForCausalLM,2.912,10.99,13
+4bit-gptq-exllama-v2-sdpa,meta-llama/Llama-2-13b-hf,0.345,0.0406973609924316,24.549,472933.869,7758.594,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,LlamaForCausalLM,2.91,10.99,13
+8bit-bnb-eager,google/gemma-2-2b,0.131,0.1263576507568359,7.9,183475.316,3284.028,pytorch,float16,BnB.8bit,Eager,No Kernel,Gemma2ForCausalLM,8.104,10.26,2
+8bit-bnb-sdpa,google/gemma-2-2b,0.124,0.1215631828308105,8.217,189345.003,3284.028,pytorch,float16,BnB.8bit,SDPA,No Kernel,Gemma2ForCausalLM,7.816,10.26,2
+4bit-bnb-eager,google/gemma-2-2b,0.308,0.0711557922363281,14.01,304107.729,2559.606,pytorch,float16,BnB.4bit,Eager,No Kernel,Gemma2ForCausalLM,4.797,10.26,2
+4bit-bnb-sdpa,google/gemma-2-2b,0.308,0.0690503997802734,14.444,312854.463,2559.606,pytorch,float16,BnB.4bit,SDPA,No Kernel,Gemma2ForCausalLM,4.669,10.26,2
+4bit-awq-gemm-eager,google/gemma-2-2b,0.138,0.055671968460083,17.929,395093.792,2382.191,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,Gemma2ForCausalLM,3.65,10.26,2
+4bit-awq-gemm-sdpa,google/gemma-2-2b,0.138,0.0531090717315673,18.786,410065.405,2382.191,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMM,Gemma2ForCausalLM,3.49,10.26,2
+float32-sdpa,google/gemma-2-2b,0.33,0.0513764476776123,19.432,374155.185,10674.796,pytorch,float32,Unquantized,SDPA,No Kernel,Gemma2ForCausalLM,3.572,10.26,2
+float32-eager,google/gemma-2-2b,0.325,0.050860143661499,19.627,377090.754,10674.796,pytorch,float32,Unquantized,Eager,No Kernel,Gemma2ForCausalLM,3.535,10.26,2
+float16-eager,google/gemma-2-2b,0.066,0.0503578090667724,19.791,399600.662,5293.216,pytorch,float16,Unquantized,Eager,No Kernel,Gemma2ForCausalLM,3.245,10.26,2
+bfloat16-eager,google/gemma-2-2b,0.384,0.0489883346557617,20.337,410415.788,5293.216,pytorch,bfloat16,Unquantized,Eager,No Kernel,Gemma2ForCausalLM,3.481,10.26,2
+4bit-awq-exllama-v2-eager,google/gemma-2-2b,0.081,0.0486001930236816,20.519,459214.842,2395.823,pytorch,float16,AWQ.4bit,Eager,No Kernel,Gemma2ForCausalLM,3.151,10.26,2
+4bit-awq-gemv-eager,google/gemma-2-2b,0.136,0.0485226383209228,20.536,441435.599,2390.977,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,Gemma2ForCausalLM,3.203,10.26,2
+4bit-awq-exllama-v1-eager,google/gemma-2-2b,0.968,0.0476922245025634,20.906,452468.524,2351.651,pytorch,float16,AWQ.4bit,Eager,No Kernel,Gemma2ForCausalLM,3.981,10.26,2
+bfloat16-sdpa,google/gemma-2-2b,0.384,0.0475629749298095,20.963,421050.155,5293.216,pytorch,bfloat16,Unquantized,SDPA,No Kernel,Gemma2ForCausalLM,3.39,10.26,2
+4bit-gptq-exllama-v2-eager,google/gemma-2-2b,0.076,0.0476095523834228,20.965,466142.999,2393.605,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,Gemma2ForCausalLM,3.078,10.26,2
+float16-sdpa,google/gemma-2-2b,0.066,0.0472596950531005,21.109,419124.755,5293.216,pytorch,float16,Unquantized,SDPA,No Kernel,Gemma2ForCausalLM,3.05,10.26,2
+4bit-gptq-exllama-v1-eager,google/gemma-2-2b,0.076,0.0455088634490966,21.924,483849.178,2393.605,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,Gemma2ForCausalLM,2.947,10.26,2
+4bit-awq-gemv-sdpa,google/gemma-2-2b,0.136,0.0447582397460937,22.267,478668.756,2390.977,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMV,Gemma2ForCausalLM,2.964,10.26,2
+4bit-awq-exllama-v1-sdpa,google/gemma-2-2b,0.965,0.04378169631958,22.771,493442.341,2351.651,pytorch,float16,AWQ.4bit,SDPA,No Kernel,Gemma2ForCausalLM,3.733,10.26,2
+4bit-awq-exllama-v2-sdpa,google/gemma-2-2b,0.081,0.0435447673797607,22.882,496494.78,2395.823,pytorch,float16,AWQ.4bit,SDPA,No Kernel,Gemma2ForCausalLM,2.827,10.26,2
+4bit-gptq-exllama-v2-sdpa,google/gemma-2-2b,0.076,0.0429438877105712,23.247,511562.353,2393.605,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,Gemma2ForCausalLM,2.785,10.26,2
+4bit-gptq-exllama-v1-sdpa,google/gemma-2-2b,0.076,0.0428142395019531,23.306,512754.696,2393.605,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,Gemma2ForCausalLM,2.776,10.26,2
+8bit-bnb-eager,google/gemma-2-2b,0.131,0.1263576507568359,7.9,183475.316,3284.028,pytorch,float16,BnB.8bit,Eager,No Kernel,InternLM2ForCausalLM,8.104,10.13,2
+8bit-bnb-sdpa,google/gemma-2-2b,0.124,0.1215631828308105,8.217,189345.003,3284.028,pytorch,float16,BnB.8bit,SDPA,No Kernel,InternLM2ForCausalLM,7.816,10.13,2
+4bit-bnb-eager,google/gemma-2-2b,0.308,0.0711557922363281,14.01,304107.729,2559.606,pytorch,float16,BnB.4bit,Eager,No Kernel,InternLM2ForCausalLM,4.797,10.13,2
+4bit-bnb-sdpa,google/gemma-2-2b,0.308,0.0690503997802734,14.444,312854.463,2559.606,pytorch,float16,BnB.4bit,SDPA,No Kernel,InternLM2ForCausalLM,4.669,10.13,2
+4bit-awq-gemm-eager,google/gemma-2-2b,0.138,0.055671968460083,17.929,395093.792,2382.191,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,InternLM2ForCausalLM,3.65,10.13,2
+4bit-awq-gemm-sdpa,google/gemma-2-2b,0.138,0.0531090717315673,18.786,410065.405,2382.191,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMM,InternLM2ForCausalLM,3.49,10.13,2
+float32-sdpa,google/gemma-2-2b,0.33,0.0513764476776123,19.432,374155.185,10674.796,pytorch,float32,Unquantized,SDPA,No Kernel,InternLM2ForCausalLM,3.572,10.13,2
+float32-eager,google/gemma-2-2b,0.325,0.050860143661499,19.627,377090.754,10674.796,pytorch,float32,Unquantized,Eager,No Kernel,InternLM2ForCausalLM,3.535,10.13,2
+float16-eager,google/gemma-2-2b,0.066,0.0503578090667724,19.791,399600.662,5293.216,pytorch,float16,Unquantized,Eager,No Kernel,InternLM2ForCausalLM,3.245,10.13,2
+bfloat16-eager,google/gemma-2-2b,0.384,0.0489883346557617,20.337,410415.788,5293.216,pytorch,bfloat16,Unquantized,Eager,No Kernel,InternLM2ForCausalLM,3.481,10.13,2
+4bit-awq-exllama-v2-eager,google/gemma-2-2b,0.081,0.0486001930236816,20.519,459214.842,2395.823,pytorch,float16,AWQ.4bit,Eager,No Kernel,InternLM2ForCausalLM,3.151,10.13,2
+4bit-awq-gemv-eager,google/gemma-2-2b,0.136,0.0485226383209228,20.536,441435.599,2390.977,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,InternLM2ForCausalLM,3.203,10.13,2
+4bit-awq-exllama-v1-eager,google/gemma-2-2b,0.968,0.0476922245025634,20.906,452468.524,2351.651,pytorch,float16,AWQ.4bit,Eager,No Kernel,InternLM2ForCausalLM,3.981,10.13,2
+bfloat16-sdpa,google/gemma-2-2b,0.384,0.0475629749298095,20.963,421050.155,5293.216,pytorch,bfloat16,Unquantized,SDPA,No Kernel,InternLM2ForCausalLM,3.39,10.13,2
+4bit-gptq-exllama-v2-eager,google/gemma-2-2b,0.076,0.0476095523834228,20.965,466142.999,2393.605,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,InternLM2ForCausalLM,3.078,10.13,2
+float16-sdpa,google/gemma-2-2b,0.066,0.0472596950531005,21.109,419124.755,5293.216,pytorch,float16,Unquantized,SDPA,No Kernel,InternLM2ForCausalLM,3.05,10.13,2
+4bit-gptq-exllama-v1-eager,google/gemma-2-2b,0.076,0.0455088634490966,21.924,483849.178,2393.605,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,InternLM2ForCausalLM,2.947,10.13,2
+4bit-awq-gemv-sdpa,google/gemma-2-2b,0.136,0.0447582397460937,22.267,478668.756,2390.977,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMV,InternLM2ForCausalLM,2.964,10.13,2
+4bit-awq-exllama-v1-sdpa,google/gemma-2-2b,0.965,0.04378169631958,22.771,493442.341,2351.651,pytorch,float16,AWQ.4bit,SDPA,No Kernel,InternLM2ForCausalLM,3.733,10.13,2
+4bit-awq-exllama-v2-sdpa,google/gemma-2-2b,0.081,0.0435447673797607,22.882,496494.78,2395.823,pytorch,float16,AWQ.4bit,SDPA,No Kernel,InternLM2ForCausalLM,2.827,10.13,2
+4bit-gptq-exllama-v2-sdpa,google/gemma-2-2b,0.076,0.0429438877105712,23.247,511562.353,2393.605,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,InternLM2ForCausalLM,2.785,10.13,2
+4bit-gptq-exllama-v1-sdpa,google/gemma-2-2b,0.076,0.0428142395019531,23.306,512754.696,2393.605,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,InternLM2ForCausalLM,2.776,10.13,2
+8bit-bnb-eager,huggyllama/llama-13b,0.191,0.1491815032958984,6.68,139950.349,13852.183,pytorch,float16,BnB.8bit,Eager,No Kernel,LlamaForCausalLM,9.613,9.25,13
+8bit-bnb-sdpa,huggyllama/llama-13b,0.179,0.1451786270141601,6.876,144871.347,13856.653,pytorch,float16,BnB.8bit,SDPA,No Kernel,LlamaForCausalLM,9.34,9.25,13
+4bit-bnb-eager,huggyllama/llama-13b,1.777,0.1327750244140625,7.529,144860.128,8500.635,pytorch,float16,BnB.4bit,Eager,No Kernel,LlamaForCausalLM,10.145,9.25,13
+4bit-bnb-sdpa,huggyllama/llama-13b,1.767,0.1320175476074218,7.574,145951.5,8500.504,pytorch,float16,BnB.4bit,SDPA,No Kernel,LlamaForCausalLM,10.088,9.25,13
+4bit-gptq-exllama-v2-eager,huggyllama/llama-13b,0.36,0.0417926559448242,23.926,460444.003,7759.281,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,LlamaForCausalLM,2.993,9.25,13
+4bit-gptq-exllama-v1-eager,huggyllama/llama-13b,0.359,0.0416208324432373,24.011,460852.54,7759.281,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,LlamaForCausalLM,2.983,9.25,13
+4bit-gptq-exllama-v2-sdpa,huggyllama/llama-13b,0.348,0.0411740646362304,24.279,466429.567,7758.594,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,LlamaForCausalLM,2.942,9.25,13
+4bit-gptq-exllama-v1-sdpa,huggyllama/llama-13b,0.348,0.0411330070495605,24.304,467182.872,7758.594,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,LlamaForCausalLM,2.94,9.25,13
+8bit-bnb-eager,Qwen/Qwen1.5-1.8B,0.097,0.0931738243103027,10.718,246671.572,3158.453,pytorch,float16,BnB.8bit,Eager,No Kernel,Qwen2ForCausalLM,5.977,9.12,1
+8bit-bnb-eager,Qwen/Qwen1.5-1.8B,0.094,0.0902400779724121,11.055,248365.167,3158.451,pytorch,float16,BnB.8bit,Eager,No Kernel,Qwen2ForCausalLM,5.79,9.12,1
+8bit-bnb-sdpa,Qwen/Qwen1.5-1.8B,0.092,0.0884138870239257,11.301,259289.658,3158.453,pytorch,float16,BnB.8bit,SDPA,No Kernel,Qwen2ForCausalLM,5.676,9.12,1
+8bit-bnb-sdpa,Qwen/Qwen1.5-1.8B,0.091,0.0876114234924316,11.395,253601.932,3158.451,pytorch,float16,BnB.8bit,SDPA,No Kernel,Qwen2ForCausalLM,5.625,9.12,1
+4bit-bnb-eager,Qwen/Qwen1.5-1.8B,0.197,0.0455329608917236,21.899,470200.211,2642.303,pytorch,float16,BnB.4bit,Eager,No Kernel,Qwen2ForCausalLM,3.071,9.12,1
+4bit-bnb-eager,Qwen/Qwen1.5-1.8B,0.207,0.0439946231842041,22.663,471646.961,2642.301,pytorch,float16,BnB.4bit,Eager,No Kernel,Qwen2ForCausalLM,2.986,9.12,1
+4bit-bnb-sdpa,Qwen/Qwen1.5-1.8B,0.194,0.0422557296752929,23.581,506603.904,2642.303,pytorch,float16,BnB.4bit,SDPA,No Kernel,Qwen2ForCausalLM,2.863,9.12,1
+4bit-bnb-sdpa,Qwen/Qwen1.5-1.8B,0.205,0.04123801612854,24.084,504496.673,2642.301,pytorch,float16,BnB.4bit,SDPA,No Kernel,Qwen2ForCausalLM,2.805,9.12,1
+4bit-awq-gemm-eager,Qwen/Qwen1.5-1.8B,0.09,0.03357417678833,29.686,646156.367,2578.246,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,Qwen2ForCausalLM,2.213,9.12,1
+4bit-awq-gemm-eager,Qwen/Qwen1.5-1.8B,0.089,0.0327415676116943,30.393,650306.126,2578.244,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,Qwen2ForCausalLM,2.16,9.12,1
+4bit-awq-gemm-sdpa,Qwen/Qwen1.5-1.8B,0.086,0.0305867042541503,32.674,704290.651,2578.244,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMM,Qwen2ForCausalLM,2.018,9.12,1
+4bit-awq-gemm-sdpa,Qwen/Qwen1.5-1.8B,0.087,0.0302559204101562,32.904,712614.501,2578.246,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMM,Qwen2ForCausalLM,2.0,9.12,1
+float32-eager,Qwen/Qwen1.5-1.8B,0.27,0.0300363998413085,33.216,634828.178,8499.298,pytorch,float32,Unquantized,Eager,No Kernel,Qwen2ForCausalLM,2.167,9.12,1
+float32-sdpa,Qwen/Qwen1.5-1.8B,0.271,0.0299860000610351,33.268,636378.81,8499.298,pytorch,float32,Unquantized,SDPA,No Kernel,Qwen2ForCausalLM,2.167,9.12,1
+float32-eager,Qwen/Qwen1.5-1.8B,0.249,0.0297067203521728,33.602,638562.03,8499.3,pytorch,float32,Unquantized,Eager,No Kernel,Qwen2ForCausalLM,2.123,9.12,1
+float32-sdpa,Qwen/Qwen1.5-1.8B,0.248,0.0295624475479125,33.769,645046.502,8499.3,pytorch,float32,Unquantized,SDPA,No Kernel,Qwen2ForCausalLM,2.114,9.12,1
+4bit-gptq-exllama-v1-eager,Qwen/Qwen1.5-1.8B,0.051,0.0250070400238037,36.642,863310.211,2607.611,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,Qwen2ForCausalLM,1.632,9.12,1
+float16-eager,Qwen/Qwen1.5-1.8B,0.04,0.0266900634765625,37.603,755777.34,4408.413,pytorch,float16,Unquantized,Eager,No Kernel,Qwen2ForCausalLM,1.727,9.12,1
+4bit-awq-gemv-eager,Qwen/Qwen1.5-1.8B,0.085,0.0261857919692993,38.049,804410.136,2578.861,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,Qwen2ForCausalLM,1.74,9.12,1
+bfloat16-eager,Qwen/Qwen1.5-1.8B,0.279,0.02594003200531,38.689,772049.242,4408.413,pytorch,bfloat16,Unquantized,Eager,No Kernel,Qwen2ForCausalLM,1.918,9.12,1
+4bit-awq-gemv-eager,Qwen/Qwen1.5-1.8B,0.084,0.0258165121078491,38.719,830015.424,2578.858,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,Qwen2ForCausalLM,1.715,9.12,1
+4bit-gptq-exllama-v2-eager,Qwen/Qwen1.5-1.8B,0.051,0.0255394554138183,38.995,833124.7,2607.611,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,Qwen2ForCausalLM,1.668,9.12,1
+4bit-awq-exllama-v2-eager,Qwen/Qwen1.5-1.8B,0.053,0.0252885274887084,39.346,859225.145,2606.132,pytorch,float16,AWQ.4bit,Eager,No Kernel,Qwen2ForCausalLM,1.653,9.12,1
+4bit-gptq-exllama-v1-eager,Qwen/Qwen1.5-1.8B,0.051,0.0251966400146484,39.571,865387.489,2607.611,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,Qwen2ForCausalLM,1.642,9.12,1
+4bit-awq-exllama-v1-eager,Qwen/Qwen1.5-1.8B,0.597,0.025012351989746,39.802,842630.619,2582.178,pytorch,float16,AWQ.4bit,Eager,No Kernel,Qwen2ForCausalLM,2.18,9.12,1
+bfloat16-eager,Qwen/Qwen1.5-1.8B,0.307,0.0248742713928222,40.118,787196.924,4408.411,pytorch,bfloat16,Unquantized,Eager,No Kernel,Qwen2ForCausalLM,1.878,9.12,1
+float16-eager,Qwen/Qwen1.5-1.8B,0.042,0.0247020320892333,40.379,790665.543,4408.411,pytorch,float16,Unquantized,Eager,No Kernel,Qwen2ForCausalLM,1.603,9.12,1
+4bit-gptq-exllama-v2-eager,Qwen/Qwen1.5-1.8B,0.051,0.0245062246322631,40.651,879031.792,2607.611,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,Qwen2ForCausalLM,1.6,9.12,1
+4bit-awq-exllama-v2-eager,Qwen/Qwen1.5-1.8B,0.052,0.0242701435089111,41.029,880780.436,2606.13,pytorch,float16,AWQ.4bit,Eager,No Kernel,Qwen2ForCausalLM,1.587,9.12,1
+4bit-awq-exllama-v1-eager,Qwen/Qwen1.5-1.8B,0.546,0.024015567779541,41.441,879871.771,2582.176,pytorch,float16,AWQ.4bit,Eager,No Kernel,Qwen2ForCausalLM,2.063,9.12,1
+bfloat16-sdpa,Qwen/Qwen1.5-1.8B,0.278,0.0236584167480468,42.096,827886.49,4408.413,pytorch,bfloat16,Unquantized,SDPA,No Kernel,Qwen2ForCausalLM,1.771,9.12,1
+bfloat16-sdpa,Qwen/Qwen1.5-1.8B,0.303,0.0235288324356079,42.533,826816.489,4408.411,pytorch,bfloat16,Unquantized,SDPA,No Kernel,Qwen2ForCausalLM,1.785,9.12,1
+float16-sdpa,Qwen/Qwen1.5-1.8B,0.038,0.023100848197937,43.179,845385.477,4408.413,pytorch,float16,Unquantized,SDPA,No Kernel,Qwen2ForCausalLM,1.498,9.12,1
+4bit-awq-gemv-sdpa,Qwen/Qwen1.5-1.8B,0.082,0.0227646074295043,43.754,907163.55,2578.861,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMV,Qwen2ForCausalLM,1.521,9.12,1
+4bit-awq-gemv-sdpa,Qwen/Qwen1.5-1.8B,0.081,0.022144959449768,44.884,926813.318,2578.858,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMV,Qwen2ForCausalLM,1.48,9.12,1
+float16-sdpa,Qwen/Qwen1.5-1.8B,0.04,0.0221042881011962,45.143,884777.549,4408.411,pytorch,float16,Unquantized,SDPA,No Kernel,Qwen2ForCausalLM,1.439,9.12,1
+4bit-awq-exllama-v2-sdpa,Qwen/Qwen1.5-1.8B,0.05,0.0218620958328247,45.579,977283.294,2606.132,pytorch,float16,AWQ.4bit,SDPA,No Kernel,Qwen2ForCausalLM,1.431,9.12,1
+4bit-gptq-exllama-v2-sdpa,Qwen/Qwen1.5-1.8B,0.048,0.0217524166107177,45.703,984760.15,2607.611,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,Qwen2ForCausalLM,1.421,9.12,1
+4bit-gptq-exllama-v1-sdpa,Qwen/Qwen1.5-1.8B,0.048,0.0217359523773193,45.965,990816.55,2607.611,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,Qwen2ForCausalLM,1.421,9.12,1
+4bit-awq-exllama-v2-sdpa,Qwen/Qwen1.5-1.8B,0.05,0.0214396638870239,46.449,973791.16,2606.13,pytorch,float16,AWQ.4bit,SDPA,No Kernel,Qwen2ForCausalLM,1.408,9.12,1
+4bit-gptq-exllama-v1-sdpa,Qwen/Qwen1.5-1.8B,0.048,0.0211155996322631,47.143,1009135.618,2607.611,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,Qwen2ForCausalLM,1.384,9.12,1
+4bit-awq-exllama-v1-sdpa,Qwen/Qwen1.5-1.8B,0.602,0.0211101121902465,47.148,980460.349,2582.178,pytorch,float16,AWQ.4bit,SDPA,No Kernel,Qwen2ForCausalLM,1.939,9.12,1
+4bit-gptq-exllama-v2-sdpa,Qwen/Qwen1.5-1.8B,0.048,0.0210490398406982,47.272,1004971.719,2607.611,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,Qwen2ForCausalLM,1.379,9.12,1
+4bit-awq-exllama-v1-sdpa,Qwen/Qwen1.5-1.8B,0.542,0.0206220474243164,48.276,993363.492,2582.176,pytorch,float16,AWQ.4bit,SDPA,No Kernel,Qwen2ForCausalLM,1.846,9.12,1
+8bit-bnb-eager,meta-llama/Llama-2-7b-hf,0.118,0.1165189628601074,8.548,188225.031,7289.692,pytorch,float16,BnB.8bit,Eager,No Kernel,LlamaForCausalLM,7.47,8.72,6
+8bit-bnb-sdpa,meta-llama/Llama-2-7b-hf,0.112,0.1117541427612304,8.925,195969.476,7289.561,pytorch,float16,BnB.8bit,SDPA,No Kernel,LlamaForCausalLM,7.186,8.72,6
+4bit-bnb-eager,meta-llama/Llama-2-7b-hf,0.961,0.0712006568908691,14.005,269639.333,4656.881,pytorch,float16,BnB.4bit,Eager,No Kernel,LlamaForCausalLM,5.457,8.72,6
+4bit-bnb-sdpa,meta-llama/Llama-2-7b-hf,0.956,0.0706494407653808,14.108,272165.968,4656.75,pytorch,float16,BnB.4bit,SDPA,No Kernel,LlamaForCausalLM,5.422,8.72,6
+bfloat16-eager,meta-llama/Llama-2-7b-hf,1.251,0.0599222888946533,16.683,321737.373,13671.64,pytorch,bfloat16,Unquantized,Eager,No Kernel,LlamaForCausalLM,5.028,8.72,6
+bfloat16-sdpa,meta-llama/Llama-2-7b-hf,1.226,0.0598987522125244,16.688,321678.598,13671.64,pytorch,bfloat16,Unquantized,SDPA,No Kernel,LlamaForCausalLM,5.001,8.72,6
+bfloat16-sdpa,meta-llama/Llama-2-7b-hf,1.248,0.0598948001861572,16.692,322012.633,13671.64,pytorch,bfloat16,Unquantized,SDPA,No Kernel,LlamaForCausalLM,5.022,8.72,6
+bfloat16-eager,meta-llama/Llama-2-7b-hf,1.222,0.0598174247741699,16.713,321163.461,13671.64,pytorch,bfloat16,Unquantized,Eager,No Kernel,LlamaForCausalLM,4.991,8.72,6
+float16-sdpa,meta-llama/Llama-2-7b-hf,0.201,0.0590377922058105,16.902,326006.462,13671.64,pytorch,float16,Unquantized,SDPA,No Kernel,LlamaForCausalLM,3.929,8.72,6
+float16-sdpa,meta-llama/Llama-2-7b-hf,0.203,0.059053424835205,16.91,326054.1,13671.64,pytorch,float16,Unquantized,SDPA,No Kernel,LlamaForCausalLM,3.928,8.72,6
+float16-eager,meta-llama/Llama-2-7b-hf,0.215,0.059006175994873,16.925,324903.219,13671.64,pytorch,float16,Unquantized,Eager,No Kernel,LlamaForCausalLM,3.939,8.72,6
+float16-eager,meta-llama/Llama-2-7b-hf,0.21,0.0589990711212158,16.931,325712.466,13671.64,pytorch,float16,Unquantized,Eager,No Kernel,LlamaForCausalLM,3.931,8.72,6
+4bit-gptq-exllama-v2-eager,meta-llama/Llama-2-7b-hf,0.198,0.0314195203781128,31.741,612096.436,4213.085,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,LlamaForCausalLM,2.183,8.72,6
+4bit-gptq-exllama-v1-eager,meta-llama/Llama-2-7b-hf,0.198,0.0308530721664428,32.289,631739.129,4213.085,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,LlamaForCausalLM,2.151,8.72,6
+4bit-gptq-exllama-v1-sdpa,meta-llama/Llama-2-7b-hf,0.191,0.0259661283493042,38.433,748565.347,4213.084,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,LlamaForCausalLM,1.835,8.72,6
+4bit-gptq-exllama-v2-sdpa,meta-llama/Llama-2-7b-hf,0.191,0.0252558717727661,39.429,764710.031,4213.084,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,LlamaForCausalLM,1.786,8.72,6
+8bit-bnb-eager,google/gemma-2b,0.078,0.0726072959899902,13.722,305450.19,3441.954,pytorch,float16,BnB.8bit,Eager,No Kernel,GemmaForCausalLM,4.664,7.31,2
+8bit-bnb-sdpa,google/gemma-2b,0.076,0.070542064666748,14.146,316333.904,3441.954,pytorch,float16,BnB.8bit,SDPA,No Kernel,GemmaForCausalLM,4.532,7.31,2
+float32-sdpa,google/gemma-2b,0.36,0.0442361278533935,22.579,432704.992,10311.219,pytorch,float32,Unquantized,SDPA,No Kernel,GemmaForCausalLM,3.15,7.31,2
+float32-sdpa,google/gemma-2b,0.35,0.0441380157470703,22.625,434197.024,10311.219,pytorch,float32,Unquantized,SDPA,No Kernel,GemmaForCausalLM,3.135,7.31,2
+float32-eager,google/gemma-2b,0.354,0.0428395843505859,23.315,448744.133,10311.219,pytorch,float32,Unquantized,Eager,No Kernel,GemmaForCausalLM,3.057,7.31,2
+float32-eager,google/gemma-2b,0.348,0.0428111839294433,23.326,448185.429,10311.219,pytorch,float32,Unquantized,Eager,No Kernel,GemmaForCausalLM,3.047,7.31,2
+4bit-bnb-eager,google/gemma-2b,0.292,0.0378747692108154,26.338,529801.678,2571.09,pytorch,float16,BnB.4bit,Eager,No Kernel,GemmaForCausalLM,2.685,7.31,2
+4bit-bnb-sdpa,google/gemma-2b,0.291,0.0352123832702636,28.305,562392.898,2571.09,pytorch,float16,BnB.4bit,SDPA,No Kernel,GemmaForCausalLM,2.515,7.31,2
+4bit-awq-gemm-eager,google/gemma-2b,0.124,0.0318354396820068,31.284,660592.924,2179.813,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,GemmaForCausalLM,2.139,7.31,2
+4bit-awq-exllama-v1-eager,google/gemma-2b,0.946,0.0316468963623046,31.538,654664.726,2121.093,pytorch,float16,AWQ.4bit,Eager,No Kernel,GemmaForCausalLM,2.94,7.31,2
+4bit-awq-gemm-sdpa,google/gemma-2b,0.124,0.0291908321380615,34.124,711887.814,2179.682,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMM,GemmaForCausalLM,1.966,7.31,2
+float16-eager,google/gemma-2b,0.058,0.0268127355575561,37.164,723008.985,5419.876,pytorch,float16,Unquantized,Eager,No Kernel,GemmaForCausalLM,1.75,7.31,2
+4bit-awq-exllama-v2-eager,google/gemma-2b,0.07,0.0258109912872314,37.894,813472.07,2192.396,pytorch,float16,AWQ.4bit,Eager,No Kernel,GemmaForCausalLM,1.697,7.31,2
+4bit-gptq-exllama-v2-eager,google/gemma-2b,0.066,0.0260018081665039,38.349,794851.036,2190.266,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,GemmaForCausalLM,1.708,7.31,2
+4bit-awq-gemv-eager,google/gemma-2b,0.122,0.0258126239776611,38.525,782214.934,2179.813,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,GemmaForCausalLM,1.756,7.31,2
+float16-eager,google/gemma-2b,0.06,0.0257738075256347,38.626,747010.133,5419.876,pytorch,float16,Unquantized,Eager,No Kernel,GemmaForCausalLM,1.691,7.31,2
+bfloat16-eager,google/gemma-2b,0.461,0.0257746076583862,38.665,752416.134,5419.876,pytorch,bfloat16,Unquantized,Eager,No Kernel,GemmaForCausalLM,2.09,7.31,2
+4bit-gptq-exllama-v1-eager,google/gemma-2b,0.066,0.0256962566375732,38.804,797819.65,2190.266,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,GemmaForCausalLM,1.693,7.31,2
+bfloat16-eager,google/gemma-2b,0.474,0.0252101116180419,39.516,767294.265,5419.876,pytorch,bfloat16,Unquantized,Eager,No Kernel,GemmaForCausalLM,2.068,7.31,2
+bfloat16-sdpa,google/gemma-2b,0.472,0.0248300323486328,40.067,774511.345,5419.876,pytorch,bfloat16,Unquantized,SDPA,No Kernel,GemmaForCausalLM,2.042,7.31,2
+float16-sdpa,google/gemma-2b,0.06,0.0247343683242797,40.234,779972.613,5419.876,pytorch,float16,Unquantized,SDPA,No Kernel,GemmaForCausalLM,1.625,7.31,2
+bfloat16-sdpa,google/gemma-2b,0.464,0.0246513757705688,40.413,781956.661,5419.876,pytorch,bfloat16,Unquantized,SDPA,No Kernel,GemmaForCausalLM,2.022,7.31,2
+float16-sdpa,google/gemma-2b,0.058,0.0245484962463378,40.511,780552.103,5419.876,pytorch,float16,Unquantized,SDPA,No Kernel,GemmaForCausalLM,1.612,7.31,2
+4bit-awq-gemv-sdpa,google/gemma-2b,0.121,0.0239023036956787,41.588,677568.973,2179.682,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMV,GemmaForCausalLM,1.629,7.31,2
+4bit-awq-exllama-v1-sdpa,google/gemma-2b,0.947,0.0237916164398193,41.916,846264.755,2120.962,pytorch,float16,AWQ.4bit,SDPA,No Kernel,GemmaForCausalLM,2.45,7.31,2
+4bit-gptq-exllama-v1-sdpa,google/gemma-2b,0.065,0.0234336643218994,42.485,871295.302,2190.135,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,GemmaForCausalLM,1.541,7.31,2
+4bit-awq-exllama-v2-sdpa,google/gemma-2b,0.069,0.0232107362747192,42.924,913459.595,2192.265,pytorch,float16,AWQ.4bit,SDPA,No Kernel,GemmaForCausalLM,1.538,7.31,2
+4bit-gptq-exllama-v2-sdpa,google/gemma-2b,0.065,0.0228967847824096,43.551,884657.564,2190.135,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,GemmaForCausalLM,1.511,7.31,2
+8bit-bnb-eager,stabilityai/stablelm-3b-4e1t,0.114,0.1143236007690429,8.727,201264.495,3181.191,pytorch,float16,BnB.8bit,Eager,No Kernel,StableLmForCausalLM,7.33,7.26,2
+8bit-bnb-sdpa,stabilityai/stablelm-3b-4e1t,0.11,0.1101321449279785,9.064,209683.923,3180.012,pytorch,float16,BnB.8bit,SDPA,No Kernel,StableLmForCausalLM,7.061,7.26,2
+4bit-bnb-eager,stabilityai/stablelm-3b-4e1t,0.351,0.0549170398712158,18.126,380149.316,2178.25,pytorch,float16,BnB.4bit,Eager,No Kernel,StableLmForCausalLM,3.817,7.26,2
+float32-eager,stabilityai/stablelm-3b-4e1t,0.355,0.0505401916503906,19.788,381173.771,11620.244,pytorch,float32,Unquantized,Eager,No Kernel,StableLmForCausalLM,3.539,7.26,2
+4bit-bnb-sdpa,stabilityai/stablelm-3b-4e1t,0.345,0.0495904483795166,20.089,419950.71,2177.463,pytorch,float16,BnB.4bit,SDPA,No Kernel,StableLmForCausalLM,3.481,7.26,2
+float32-sdpa,stabilityai/stablelm-3b-4e1t,0.35,0.0488247203826904,20.46,393623.816,11620.244,pytorch,float32,Unquantized,SDPA,No Kernel,StableLmForCausalLM,3.429,7.26,2
+float16-eager,stabilityai/stablelm-3b-4e1t,0.078,0.0298089113235473,33.38,639460.63,5763.871,pytorch,float16,Unquantized,Eager,No Kernel,StableLmForCausalLM,1.964,7.26,2
+bfloat16-eager,stabilityai/stablelm-3b-4e1t,0.484,0.0284956483840942,34.978,665020.505,5767.738,pytorch,bfloat16,Unquantized,Eager,No Kernel,StableLmForCausalLM,2.284,7.26,2
+bfloat16-sdpa,stabilityai/stablelm-3b-4e1t,0.478,0.0282329921722412,35.416,682005.675,5763.871,pytorch,bfloat16,Unquantized,SDPA,No Kernel,StableLmForCausalLM,2.257,7.26,2
+float16-sdpa,stabilityai/stablelm-3b-4e1t,0.069,0.0278140325546264,35.721,691020.09,5763.871,pytorch,float16,Unquantized,SDPA,No Kernel,StableLmForCausalLM,1.833,7.26,2
+4bit-gptq-exllama-v1-eager,stabilityai/stablelm-3b-4e1t,0.084,0.0271462392807006,36.884,781164.441,2023.143,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,StableLmForCausalLM,1.788,7.26,2
+4bit-gptq-exllama-v2-eager,stabilityai/stablelm-3b-4e1t,0.084,0.0264153594970703,37.879,817592.505,2023.143,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,StableLmForCausalLM,1.749,7.26,2
+4bit-gptq-exllama-v2-sdpa,stabilityai/stablelm-3b-4e1t,0.076,0.0216735038757324,46.099,956858.344,2015.148,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,StableLmForCausalLM,1.444,7.26,2
+4bit-gptq-exllama-v1-sdpa,stabilityai/stablelm-3b-4e1t,0.076,0.0211671838760375,47.025,966628.024,2015.148,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,StableLmForCausalLM,1.412,7.26,2
+8bit-bnb-eager,microsoft/phi-1_5,0.077,0.077292064666748,12.908,300962.782,1717.705,pytorch,float16,BnB.8bit,Eager,No Kernel,PhiForCausalLM,4.955,7.06,1
+8bit-bnb-sdpa,microsoft/phi-1_5,0.073,0.0733603820800781,13.593,312748.115,1714.824,pytorch,float16,BnB.8bit,SDPA,No Kernel,PhiForCausalLM,4.706,7.06,1
+4bit-bnb-eager,microsoft/phi-1_5,0.193,0.0429195518493652,23.305,509406.473,1276.664,pytorch,float16,BnB.4bit,Eager,No Kernel,PhiForCausalLM,2.903,7.06,1
+4bit-bnb-sdpa,microsoft/phi-1_5,0.184,0.0385493278503418,25.859,559486.462,1276.533,pytorch,float16,BnB.4bit,SDPA,No Kernel,PhiForCausalLM,2.619,7.06,1
+float32-sdpa,microsoft/phi-1_5,0.207,0.0261468000411987,38.117,733589.097,5850.454,pytorch,float32,Unquantized,SDPA,No Kernel,PhiForCausalLM,1.86,7.06,1
+float32-sdpa,microsoft/phi-1_5,0.208,0.0259816646575927,38.357,737081.589,5850.454,pytorch,float32,Unquantized,SDPA,No Kernel,PhiForCausalLM,1.851,7.06,1
+float32-eager,microsoft/phi-1_5,0.211,0.0250162239074707,39.908,766825.884,5850.454,pytorch,float32,Unquantized,Eager,No Kernel,PhiForCausalLM,1.79,7.06,1
+float32-eager,microsoft/phi-1_5,0.212,0.0248962240219116,40.08,771876.516,5850.454,pytorch,float32,Unquantized,Eager,No Kernel,PhiForCausalLM,1.784,7.06,1
+float16-eager,microsoft/phi-1_5,0.043,0.0242983198165893,41.003,826889.841,2982.455,pytorch,float16,Unquantized,Eager,No Kernel,PhiForCausalLM,1.58,7.06,1
+4bit-gptq-exllama-v2-eager,microsoft/phi-1_5,0.056,0.0234496965408325,42.485,930130.23,1170.873,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,PhiForCausalLM,1.542,7.06,1
+float16-eager,microsoft/phi-1_5,0.043,0.023234016418457,42.822,851258.168,2982.455,pytorch,float16,Unquantized,Eager,No Kernel,PhiForCausalLM,1.517,7.06,1
+bfloat16-eager,microsoft/phi-1_5,0.245,0.0231124477386474,43.131,864855.879,2982.455,pytorch,bfloat16,Unquantized,Eager,No Kernel,PhiForCausalLM,1.706,7.06,1
+4bit-gptq-exllama-v1-eager,microsoft/phi-1_5,0.056,0.0230644006729126,43.159,958092.714,1170.873,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,PhiForCausalLM,1.513,7.06,1
+bfloat16-eager,microsoft/phi-1_5,0.248,0.0218306560516357,45.637,900139.715,2982.455,pytorch,bfloat16,Unquantized,Eager,No Kernel,PhiForCausalLM,1.629,7.06,1
+bfloat16-sdpa,microsoft/phi-1_5,0.241,0.0209903354644775,47.494,948288.024,2982.455,pytorch,bfloat16,Unquantized,SDPA,No Kernel,PhiForCausalLM,1.568,7.06,1
+bfloat16-sdpa,microsoft/phi-1_5,0.244,0.0202034873962402,49.27,967170.05,2982.455,pytorch,bfloat16,Unquantized,SDPA,No Kernel,PhiForCausalLM,1.521,7.06,1
+float16-sdpa,microsoft/phi-1_5,0.033,0.0201911363601684,49.348,963391.089,2982.455,pytorch,float16,Unquantized,SDPA,No Kernel,PhiForCausalLM,1.31,7.06,1
+4bit-gptq-exllama-v2-sdpa,microsoft/phi-1_5,0.046,0.0190466718673706,52.051,1150190.481,1163.402,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,PhiForCausalLM,1.251,7.06,1
+4bit-gptq-exllama-v1-sdpa,microsoft/phi-1_5,0.046,0.0191222076416015,52.353,1136112.637,1163.402,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,PhiForCausalLM,1.25,7.06,1
+float16-sdpa,microsoft/phi-1_5,0.034,0.0190019674301147,52.395,1016323.567,2982.455,pytorch,float16,Unquantized,SDPA,No Kernel,PhiForCausalLM,1.236,7.06,1
+8bit-bnb-eager,google/recurrentgemma-2b,0.43,0.1032290077209472,9.67,217267.939,3823.073,pytorch,float16,BnB.8bit,Eager,No Kernel,RecurrentGemmaForCausalLM,6.954,6.94,2
+4bit-bnb-eager,google/recurrentgemma-2b,0.439,0.0590927696228027,16.89,357252.636,2965.807,pytorch,float16,BnB.4bit,Eager,No Kernel,RecurrentGemmaForCausalLM,4.173,6.94,2
+4bit-awq-gemm-eager,google/recurrentgemma-2b,0.552,0.0580358715057373,17.171,460153.35,2993.468,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,RecurrentGemmaForCausalLM,4.217,6.94,2
+float32-eager,google/recurrentgemma-2b,0.412,0.0551470069885253,18.097,348248.24,11790.353,pytorch,float32,Unquantized,Eager,No Kernel,RecurrentGemmaForCausalLM,3.894,6.94,2
+float32-eager,google/recurrentgemma-2b,0.394,0.0547846088409423,18.217,350911.586,11790.353,pytorch,float32,Unquantized,Eager,No Kernel,RecurrentGemmaForCausalLM,3.853,6.94,2
+4bit-awq-gemv-eager,google/recurrentgemma-2b,0.551,0.0495493125915527,20.924,420300.938,2999.96,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,RecurrentGemmaForCausalLM,3.687,6.94,2
+float16-eager,google/recurrentgemma-2b,0.388,0.0400834255218505,24.902,489714.425,5879.093,pytorch,float16,Unquantized,Eager,No Kernel,RecurrentGemmaForCausalLM,2.913,6.94,2
+4bit-awq-exllama-v2-eager,google/recurrentgemma-2b,0.387,0.0388099842071533,25.716,529468.402,3035.411,pytorch,float16,AWQ.4bit,Eager,No Kernel,RecurrentGemmaForCausalLM,2.836,6.94,2
+4bit-awq-exllama-v1-eager,google/recurrentgemma-2b,1.043,0.0379924163818359,26.245,494972.149,2993.468,pytorch,float16,AWQ.4bit,Eager,No Kernel,RecurrentGemmaForCausalLM,3.446,6.94,2
+4bit-gptq-exllama-v2-eager,google/recurrentgemma-2b,0.383,0.0379085102081298,26.283,550441.934,3034.871,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,RecurrentGemmaForCausalLM,2.775,6.94,2
+4bit-gptq-exllama-v1-eager,google/recurrentgemma-2b,0.377,0.0379033603668212,26.302,558406.319,3034.871,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,RecurrentGemmaForCausalLM,2.77,6.94,2
+float16-eager,google/recurrentgemma-2b,0.366,0.0378362731933593,26.369,506675.084,5879.093,pytorch,float16,Unquantized,Eager,No Kernel,RecurrentGemmaForCausalLM,2.755,6.94,2
+bfloat16-eager,google/recurrentgemma-2b,0.588,0.0376110725402832,26.532,512594.782,5879.093,pytorch,bfloat16,Unquantized,Eager,No Kernel,RecurrentGemmaForCausalLM,2.964,6.94,2
+bfloat16-eager,google/recurrentgemma-2b,0.611,0.0364584159851074,27.323,519152.642,5879.093,pytorch,bfloat16,Unquantized,Eager,No Kernel,RecurrentGemmaForCausalLM,2.916,6.94,2
+4bit-gptq-exllama-v2-eager,EleutherAI/gpt-j-6b,0.667,0.6221973571777344,1.606,31066.343,4530.329,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,GPTJForCausalLM,39.859,6.55,6
+4bit-gptq-exllama-v1-eager,EleutherAI/gpt-j-6b,0.667,0.6223991088867188,1.606,31070.868,4530.329,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,GPTJForCausalLM,39.879,6.55,6
+8bit-bnb-eager,EleutherAI/gpt-j-6b,0.117,0.1020364303588867,9.781,212392.894,6910.273,pytorch,float16,BnB.8bit,Eager,No Kernel,GPTJForCausalLM,6.552,6.55,6
+8bit-bnb-eager,EleutherAI/gpt-j-6b,0.118,0.0975572967529296,10.149,214393.661,6910.273,pytorch,float16,BnB.8bit,Eager,No Kernel,GPTJForCausalLM,6.277,6.55,6
+4bit-bnb-eager,EleutherAI/gpt-j-6b,0.929,0.0739363861083984,13.486,258456.394,4693.317,pytorch,float16,BnB.4bit,Eager,No Kernel,GPTJForCausalLM,5.606,6.55,6
+4bit-bnb-eager,EleutherAI/gpt-j-6b,0.857,0.0716040649414062,13.92,272304.343,4693.319,pytorch,float16,BnB.4bit,Eager,No Kernel,GPTJForCausalLM,5.382,6.55,6
+bfloat16-eager,EleutherAI/gpt-j-6b,1.176,0.0589626884460449,16.958,326395.181,12543.681,pytorch,bfloat16,Unquantized,Eager,No Kernel,GPTJForCausalLM,4.892,6.55,6
+bfloat16-eager,EleutherAI/gpt-j-6b,1.097,0.0583639507293701,17.13,330554.453,12543.682,pytorch,bfloat16,Unquantized,Eager,No Kernel,GPTJForCausalLM,4.776,6.55,6
+float16-eager,EleutherAI/gpt-j-6b,0.189,0.0581303672790527,17.179,331064.238,12543.681,pytorch,float16,Unquantized,Eager,No Kernel,GPTJForCausalLM,3.856,6.55,6
+float16-eager,EleutherAI/gpt-j-6b,0.176,0.0581201591491699,17.183,331468.258,12543.682,pytorch,float16,Unquantized,Eager,No Kernel,GPTJForCausalLM,3.841,6.55,6
+4bit-gptq-exllama-v2-eager,EleutherAI/gpt-j-6b,0.179,0.04490500831604,22.201,451403.716,4335.693,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,GPTJForCausalLM,3.014,6.55,6
+4bit-awq-gemm-eager,EleutherAI/gpt-j-6b,0.337,0.0439348640441894,22.704,451577.828,4198.618,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,GPTJForCausalLM,3.11,6.55,6
+4bit-awq-gemm-eager,EleutherAI/gpt-j-6b,0.331,0.0435399837493896,22.918,447901.196,4197.814,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,GPTJForCausalLM,3.075,6.55,6
+4bit-awq-gemv-eager,EleutherAI/gpt-j-6b,0.311,0.0363164958953857,27.463,529852.238,4197.764,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,GPTJForCausalLM,2.605,6.55,6
+4bit-gptq-exllama-v1-eager,EleutherAI/gpt-j-6b,0.179,0.0339762706756591,28.017,574983.588,4335.693,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,GPTJForCausalLM,2.323,6.55,6
+4bit-awq-gemv-eager,EleutherAI/gpt-j-6b,0.305,0.0352373924255371,28.327,546333.298,4197.764,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,GPTJForCausalLM,2.527,6.55,6
+4bit-awq-exllama-v2-eager,EleutherAI/gpt-j-6b,0.194,0.0351993770599365,28.327,571066.44,4337.119,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPTJForCausalLM,2.419,6.55,6
+4bit-awq-exllama-v1-eager,EleutherAI/gpt-j-6b,2.671,0.0350128154754638,28.514,552538.26,4197.764,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPTJForCausalLM,4.882,6.55,6
+4bit-awq-exllama-v2-eager,EleutherAI/gpt-j-6b,0.192,0.0347092304229736,28.88,574517.691,4336.176,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPTJForCausalLM,2.38,6.55,6
+4bit-awq-exllama-v1-eager,EleutherAI/gpt-j-6b,2.528,0.0334587364196777,29.787,568019.377,4197.764,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPTJForCausalLM,4.642,6.55,6
+8bit-bnb-eager,openai-community/gpt2,0.032,0.0303747520446777,32.845,790253.708,257.385,pytorch,float16,BnB.8bit,Eager,No Kernel,GPT2LMHeadModel,1.945,6.51,0
+8bit-bnb-eager,openai-community/gpt2,0.031,0.0289664793014526,34.361,829090.97,258.172,pytorch,float16,BnB.8bit,Eager,No Kernel,GPT2LMHeadModel,1.862,6.51,0
+8bit-bnb-sdpa,openai-community/gpt2,0.029,0.027083888053894,36.861,864667.945,257.582,pytorch,float16,BnB.8bit,SDPA,No Kernel,GPT2LMHeadModel,1.739,6.51,0
+8bit-bnb-sdpa,openai-community/gpt2,0.028,0.0260837440490722,38.231,890151.885,257.582,pytorch,float16,BnB.8bit,SDPA,No Kernel,GPT2LMHeadModel,1.677,6.51,0
+4bit-bnb-eager,openai-community/gpt2,0.023,0.0173355998992919,57.473,1369464.853,216.249,pytorch,float16,BnB.4bit,Eager,No Kernel,GPT2LMHeadModel,1.117,6.51,0
+4bit-bnb-eager,openai-community/gpt2,0.023,0.0167402553558349,59.363,1403623.358,216.249,pytorch,float16,BnB.4bit,Eager,No Kernel,GPT2LMHeadModel,1.083,6.51,0
+4bit-bnb-sdpa,openai-community/gpt2,0.021,0.0149256324768066,66.784,1573853.511,216.249,pytorch,float16,BnB.4bit,SDPA,No Kernel,GPT2LMHeadModel,0.968,6.51,0
+4bit-bnb-sdpa,openai-community/gpt2,0.02,0.0140594244003295,70.728,1659621.229,216.249,pytorch,float16,BnB.4bit,SDPA,No Kernel,GPT2LMHeadModel,0.911,6.51,0
+float16-eager,openai-community/gpt2,0.011,0.0099654235839843,99.838,2361271.533,319.014,pytorch,float16,Unquantized,Eager,No Kernel,GPT2LMHeadModel,0.643,6.51,0
+float16-eager,openai-community/gpt2,0.012,0.009846960067749,101.116,2330283.576,344.086,pytorch,float16,Unquantized,Eager,No Kernel,GPT2LMHeadModel,0.635,6.51,0
+4bit-awq-exllama-v2-eager,openai-community/gpt2,0.012,0.0097653760910034,102.008,2363344.147,344.086,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPT2LMHeadModel,0.627,6.51,0
+4bit-awq-gemv-eager,openai-community/gpt2,0.012,0.0097323198318481,102.224,2382178.093,344.086,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,GPT2LMHeadModel,0.628,6.51,0
+4bit-awq-exllama-v1-eager,openai-community/gpt2,0.012,0.0096778879165649,102.822,2366939.001,344.086,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPT2LMHeadModel,0.623,6.51,0
+4bit-awq-gemm-eager,openai-community/gpt2,0.012,0.0095464000701904,104.121,2433834.269,344.086,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,GPT2LMHeadModel,0.617,6.51,0
+bfloat16-eager,openai-community/gpt2,0.024,0.0093988800048828,105.879,2405205.356,344.086,pytorch,bfloat16,Unquantized,Eager,No Kernel,GPT2LMHeadModel,0.618,6.51,0
+4bit-gptq-exllama-v2-eager,openai-community/gpt2,0.013,0.0093684797286987,106.374,2536004.286,216.903,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,GPT2LMHeadModel,0.604,6.51,0
+bfloat16-eager,openai-community/gpt2,0.023,0.0092949123382568,107.681,2515105.055,319.014,pytorch,bfloat16,Unquantized,Eager,No Kernel,GPT2LMHeadModel,0.613,6.51,0
+4bit-gptq-exllama-v2-eager,openai-community/gpt2,0.012,0.0091708803176879,108.297,2566279.153,216.903,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,GPT2LMHeadModel,0.593,6.51,0
+4bit-gptq-exllama-v1-eager,openai-community/gpt2,0.012,0.0090918722152709,109.355,2615568.761,216.903,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,GPT2LMHeadModel,0.588,6.51,0
+float32-eager,openai-community/gpt2,0.017,0.0091305284500122,109.705,2543122.979,601.373,pytorch,float32,Unquantized,Eager,No Kernel,GPT2LMHeadModel,0.592,6.51,0
+4bit-gptq-exllama-v1-eager,openai-community/gpt2,0.012,0.0089808797836303,110.469,2628588.577,216.903,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,GPT2LMHeadModel,0.58,6.51,0
+float32-eager,openai-community/gpt2,0.017,0.0089453282356262,111.204,2511699.986,652.631,pytorch,float32,Unquantized,Eager,No Kernel,GPT2LMHeadModel,0.585,6.51,0
+bfloat16-sdpa,openai-community/gpt2,0.023,0.0081129922866821,123.194,2880774.431,319.014,pytorch,bfloat16,Unquantized,SDPA,No Kernel,GPT2LMHeadModel,0.534,6.51,0
+bfloat16-sdpa,openai-community/gpt2,0.024,0.0080486402511596,123.636,2835531.802,344.086,pytorch,bfloat16,Unquantized,SDPA,No Kernel,GPT2LMHeadModel,0.532,6.51,0
+float16-sdpa,openai-community/gpt2,0.009,0.0076663360595703,130.074,2949045.33,319.014,pytorch,float16,Unquantized,SDPA,No Kernel,GPT2LMHeadModel,0.492,6.51,0
+float16-sdpa,openai-community/gpt2,0.009,0.0075507841110229,131.712,2994714.114,344.086,pytorch,float16,Unquantized,SDPA,No Kernel,GPT2LMHeadModel,0.486,6.51,0
+4bit-awq-gemv-sdpa,openai-community/gpt2,0.009,0.0074664001464843,132.803,3045365.877,344.086,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMV,GPT2LMHeadModel,0.483,6.51,0
+4bit-awq-exllama-v2-sdpa,openai-community/gpt2,0.009,0.0074763841629028,132.869,3007673.62,344.086,pytorch,float16,AWQ.4bit,SDPA,No Kernel,GPT2LMHeadModel,0.484,6.51,0
+4bit-awq-gemm-sdpa,openai-community/gpt2,0.009,0.0073076159954071,135.742,3086733.289,344.086,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMM,GPT2LMHeadModel,0.473,6.51,0
+4bit-awq-exllama-v1-sdpa,openai-community/gpt2,0.009,0.0073071520328521,135.876,3059770.527,344.086,pytorch,float16,AWQ.4bit,SDPA,No Kernel,GPT2LMHeadModel,0.471,6.51,0
+float32-sdpa,openai-community/gpt2,0.016,0.0071087517738342,139.569,3087905.836,652.631,pytorch,float32,Unquantized,SDPA,No Kernel,GPT2LMHeadModel,0.466,6.51,0
+float32-sdpa,openai-community/gpt2,0.015,0.0069806718826293,142.971,3212297.508,601.373,pytorch,float32,Unquantized,SDPA,No Kernel,GPT2LMHeadModel,0.455,6.51,0
+4bit-gptq-exllama-v1-sdpa,openai-community/gpt2,0.01,0.0067303681373596,147.725,3477622.108,216.903,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,GPT2LMHeadModel,0.436,6.51,0
+4bit-gptq-exllama-v2-sdpa,openai-community/gpt2,0.01,0.00669496011734,148.61,3508136.127,216.903,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,GPT2LMHeadModel,0.434,6.51,0
+4bit-gptq-exllama-v1-sdpa,openai-community/gpt2,0.01,0.0065746879577636,151.372,3528443.806,216.903,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,GPT2LMHeadModel,0.425,6.51,0
+4bit-gptq-exllama-v2-sdpa,openai-community/gpt2,0.009,0.0065442719459533,151.813,3596003.453,216.903,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,GPT2LMHeadModel,0.423,6.51,0
+8bit-bnb-eager,huggyllama/llama-7b,0.121,0.1204290428161621,8.284,181181.46,7289.692,pytorch,float16,BnB.8bit,Eager,No Kernel,LlamaForCausalLM,7.719,6.39,6
+8bit-bnb-sdpa,huggyllama/llama-7b,0.115,0.114698673248291,8.699,191981.109,7289.561,pytorch,float16,BnB.8bit,SDPA,No Kernel,LlamaForCausalLM,7.354,6.39,6
+4bit-bnb-eager,huggyllama/llama-7b,0.96,0.0716275672912597,13.919,268604.328,4656.881,pytorch,float16,BnB.4bit,Eager,No Kernel,LlamaForCausalLM,5.486,6.39,6
+4bit-bnb-sdpa,huggyllama/llama-7b,0.956,0.0711269569396972,14.017,270461.918,4656.75,pytorch,float16,BnB.4bit,SDPA,No Kernel,LlamaForCausalLM,5.452,6.39,6
+bfloat16-sdpa,huggyllama/llama-7b,1.248,0.0599223842620849,16.692,321699.925,13671.64,pytorch,bfloat16,Unquantized,SDPA,No Kernel,LlamaForCausalLM,5.023,6.39,6
+bfloat16-sdpa,huggyllama/llama-7b,1.246,0.0598178081512451,16.715,321985.217,13671.64,pytorch,bfloat16,Unquantized,SDPA,No Kernel,LlamaForCausalLM,5.014,6.39,6
+bfloat16-eager,huggyllama/llama-7b,1.253,0.0597994079589843,16.716,322464.126,13671.64,pytorch,bfloat16,Unquantized,Eager,No Kernel,LlamaForCausalLM,5.021,6.39,6
+bfloat16-eager,huggyllama/llama-7b,1.249,0.0597430229187011,16.733,322324.166,13671.64,pytorch,bfloat16,Unquantized,Eager,No Kernel,LlamaForCausalLM,5.015,6.39,6
+float16-eager,huggyllama/llama-7b,0.215,0.0593665599822998,16.827,326296.925,13671.64,pytorch,float16,Unquantized,Eager,No Kernel,LlamaForCausalLM,3.958,6.39,6
+float16-sdpa,huggyllama/llama-7b,0.202,0.0590575523376464,16.905,325646.364,13671.64,pytorch,float16,Unquantized,SDPA,No Kernel,LlamaForCausalLM,3.928,6.39,6
+float16-eager,huggyllama/llama-7b,0.207,0.0590385456085205,16.923,325896.312,13671.64,pytorch,float16,Unquantized,Eager,No Kernel,LlamaForCausalLM,3.93,6.39,6
+float16-sdpa,huggyllama/llama-7b,0.21,0.0589174709320068,16.932,326253.892,13671.64,pytorch,float16,Unquantized,SDPA,No Kernel,LlamaForCausalLM,3.93,6.39,6
+4bit-gptq-exllama-v1-eager,huggyllama/llama-7b,0.201,0.0308430881500244,32.33,624560.61,4213.085,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,LlamaForCausalLM,2.149,6.39,6
+4bit-gptq-exllama-v2-eager,huggyllama/llama-7b,0.202,0.0306734399795532,32.476,629569.299,4213.085,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,LlamaForCausalLM,2.138,6.39,6
+4bit-gptq-exllama-v2-sdpa,huggyllama/llama-7b,0.193,0.0256387205123901,38.861,756045.936,4213.084,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,LlamaForCausalLM,1.808,6.39,6
+4bit-gptq-exllama-v1-sdpa,huggyllama/llama-7b,0.192,0.0255046234130859,39.014,749934.643,4213.084,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,LlamaForCausalLM,1.805,6.39,6
+4bit-gptq-exllama-v2-eager,EleutherAI/gpt-neo-2.7B,0.322,0.2823446197509766,3.542,68363.767,2078.022,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,GPTNeoForCausalLM,18.112,6.34,2
+4bit-gptq-exllama-v1-eager,EleutherAI/gpt-neo-2.7B,0.321,0.2817473449707031,3.551,68417.376,2078.022,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,GPTNeoForCausalLM,18.08,6.34,2
+8bit-bnb-eager,EleutherAI/gpt-neo-2.7B,0.106,0.1012408332824707,9.847,225901.655,3216.659,pytorch,float16,BnB.8bit,Eager,No Kernel,GPTNeoForCausalLM,6.509,6.34,2
+8bit-bnb-eager,EleutherAI/gpt-neo-2.7B,0.103,0.0982900161743164,10.159,222761.36,3216.658,pytorch,float16,BnB.8bit,Eager,No Kernel,GPTNeoForCausalLM,6.308,6.34,2
+float32-eager,EleutherAI/gpt-neo-2.7B,0.409,0.0527555198669433,18.945,365426.623,11305.031,pytorch,float32,Unquantized,Eager,No Kernel,GPTNeoForCausalLM,3.734,6.34,2
+float32-eager,EleutherAI/gpt-neo-2.7B,0.371,0.0526534709930419,18.982,366465.325,11305.032,pytorch,float32,Unquantized,Eager,No Kernel,GPTNeoForCausalLM,3.69,6.34,2
+4bit-bnb-eager,EleutherAI/gpt-neo-2.7B,0.373,0.0480407028198242,20.771,427642.309,2099.207,pytorch,float16,BnB.4bit,Eager,No Kernel,GPTNeoForCausalLM,3.407,6.34,2
+4bit-bnb-eager,EleutherAI/gpt-neo-2.7B,0.393,0.0469647369384765,21.221,422222.545,2099.205,pytorch,float16,BnB.4bit,Eager,No Kernel,GPTNeoForCausalLM,3.36,6.34,2
+4bit-awq-gemm-eager,EleutherAI/gpt-neo-2.7B,0.173,0.0344282073974609,28.947,619178.86,1946.881,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,GPTNeoForCausalLM,2.35,6.34,2
+4bit-awq-gemm-eager,EleutherAI/gpt-neo-2.7B,0.169,0.0333046398162841,29.952,630235.577,1946.88,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,GPTNeoForCausalLM,2.269,6.34,2
+float16-eager,EleutherAI/gpt-neo-2.7B,0.088,0.0330701446533203,30.146,583324.538,5663.964,pytorch,float16,Unquantized,Eager,No Kernel,GPTNeoForCausalLM,2.177,6.34,2
+float16-eager,EleutherAI/gpt-neo-2.7B,0.095,0.0325967693328857,30.596,592215.274,5663.963,pytorch,float16,Unquantized,Eager,No Kernel,GPTNeoForCausalLM,2.151,6.34,2
+bfloat16-eager,EleutherAI/gpt-neo-2.7B,0.52,0.0318194246292114,31.384,608780.389,5663.963,pytorch,bfloat16,Unquantized,Eager,No Kernel,GPTNeoForCausalLM,2.53,6.34,2
+bfloat16-eager,EleutherAI/gpt-neo-2.7B,0.487,0.0317072963714599,31.482,609168.432,5663.964,pytorch,bfloat16,Unquantized,Eager,No Kernel,GPTNeoForCausalLM,2.488,6.34,2
+4bit-gptq-exllama-v2-eager,EleutherAI/gpt-neo-2.7B,0.096,0.0312444162368774,31.836,859295.887,2001.573,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,GPTNeoForCausalLM,2.072,6.34,2
+4bit-gptq-exllama-v1-eager,EleutherAI/gpt-neo-2.7B,0.096,0.0309874725341796,34.59,857231.663,2001.573,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,GPTNeoForCausalLM,2.055,6.34,2
+4bit-awq-gemv-eager,EleutherAI/gpt-neo-2.7B,0.168,0.0256711845397949,38.796,772881.284,1953.434,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,GPTNeoForCausalLM,1.792,6.34,2
+4bit-awq-gemv-eager,EleutherAI/gpt-neo-2.7B,0.166,0.025137167930603,39.726,800280.528,1953.434,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,GPTNeoForCausalLM,1.754,6.34,2
+4bit-awq-exllama-v1-eager,EleutherAI/gpt-neo-2.7B,1.214,0.024371295928955,40.887,814899.623,1946.953,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPTNeoForCausalLM,2.755,6.34,2
+4bit-awq-exllama-v2-eager,EleutherAI/gpt-neo-2.7B,0.101,0.0243399839401245,40.903,857833.58,2001.552,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPTNeoForCausalLM,1.642,6.34,2
+4bit-awq-exllama-v1-eager,EleutherAI/gpt-neo-2.7B,1.127,0.0234594240188598,42.387,852801.56,1946.953,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPTNeoForCausalLM,2.607,6.34,2
+4bit-awq-exllama-v2-eager,EleutherAI/gpt-neo-2.7B,0.099,0.0229847192764282,43.286,904377.7,2001.552,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPTNeoForCausalLM,1.554,6.34,2
+8bit-bnb-eager,openai-community/gpt2,0.032,0.0303747520446777,32.845,790253.708,257.385,pytorch,float16,BnB.8bit,Eager,No Kernel,GPT2LMHeadModel,1.945,6.3,0
+8bit-bnb-eager,openai-community/gpt2,0.031,0.0289664793014526,34.361,829090.97,258.172,pytorch,float16,BnB.8bit,Eager,No Kernel,GPT2LMHeadModel,1.862,6.3,0
+8bit-bnb-sdpa,openai-community/gpt2,0.029,0.027083888053894,36.861,864667.945,257.582,pytorch,float16,BnB.8bit,SDPA,No Kernel,GPT2LMHeadModel,1.739,6.3,0
+8bit-bnb-sdpa,openai-community/gpt2,0.028,0.0260837440490722,38.231,890151.885,257.582,pytorch,float16,BnB.8bit,SDPA,No Kernel,GPT2LMHeadModel,1.677,6.3,0
+4bit-bnb-eager,openai-community/gpt2,0.023,0.0173355998992919,57.473,1369464.853,216.249,pytorch,float16,BnB.4bit,Eager,No Kernel,GPT2LMHeadModel,1.117,6.3,0
+4bit-bnb-eager,openai-community/gpt2,0.023,0.0167402553558349,59.363,1403623.358,216.249,pytorch,float16,BnB.4bit,Eager,No Kernel,GPT2LMHeadModel,1.083,6.3,0
+4bit-bnb-sdpa,openai-community/gpt2,0.021,0.0149256324768066,66.784,1573853.511,216.249,pytorch,float16,BnB.4bit,SDPA,No Kernel,GPT2LMHeadModel,0.968,6.3,0
+4bit-bnb-sdpa,openai-community/gpt2,0.02,0.0140594244003295,70.728,1659621.229,216.249,pytorch,float16,BnB.4bit,SDPA,No Kernel,GPT2LMHeadModel,0.911,6.3,0
+float16-eager,openai-community/gpt2,0.011,0.0099654235839843,99.838,2361271.533,319.014,pytorch,float16,Unquantized,Eager,No Kernel,GPT2LMHeadModel,0.643,6.3,0
+float16-eager,openai-community/gpt2,0.012,0.009846960067749,101.116,2330283.576,344.086,pytorch,float16,Unquantized,Eager,No Kernel,GPT2LMHeadModel,0.635,6.3,0
+4bit-awq-exllama-v2-eager,openai-community/gpt2,0.012,0.0097653760910034,102.008,2363344.147,344.086,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPT2LMHeadModel,0.627,6.3,0
+4bit-awq-gemv-eager,openai-community/gpt2,0.012,0.0097323198318481,102.224,2382178.093,344.086,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,GPT2LMHeadModel,0.628,6.3,0
+4bit-awq-exllama-v1-eager,openai-community/gpt2,0.012,0.0096778879165649,102.822,2366939.001,344.086,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPT2LMHeadModel,0.623,6.3,0
+4bit-awq-gemm-eager,openai-community/gpt2,0.012,0.0095464000701904,104.121,2433834.269,344.086,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,GPT2LMHeadModel,0.617,6.3,0
+bfloat16-eager,openai-community/gpt2,0.024,0.0093988800048828,105.879,2405205.356,344.086,pytorch,bfloat16,Unquantized,Eager,No Kernel,GPT2LMHeadModel,0.618,6.3,0
+4bit-gptq-exllama-v2-eager,openai-community/gpt2,0.013,0.0093684797286987,106.374,2536004.286,216.903,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,GPT2LMHeadModel,0.604,6.3,0
+bfloat16-eager,openai-community/gpt2,0.023,0.0092949123382568,107.681,2515105.055,319.014,pytorch,bfloat16,Unquantized,Eager,No Kernel,GPT2LMHeadModel,0.613,6.3,0
+4bit-gptq-exllama-v2-eager,openai-community/gpt2,0.012,0.0091708803176879,108.297,2566279.153,216.903,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,GPT2LMHeadModel,0.593,6.3,0
+4bit-gptq-exllama-v1-eager,openai-community/gpt2,0.012,0.0090918722152709,109.355,2615568.761,216.903,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,GPT2LMHeadModel,0.588,6.3,0
+float32-eager,openai-community/gpt2,0.017,0.0091305284500122,109.705,2543122.979,601.373,pytorch,float32,Unquantized,Eager,No Kernel,GPT2LMHeadModel,0.592,6.3,0
+4bit-gptq-exllama-v1-eager,openai-community/gpt2,0.012,0.0089808797836303,110.469,2628588.577,216.903,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,GPT2LMHeadModel,0.58,6.3,0
+float32-eager,openai-community/gpt2,0.017,0.0089453282356262,111.204,2511699.986,652.631,pytorch,float32,Unquantized,Eager,No Kernel,GPT2LMHeadModel,0.585,6.3,0
+bfloat16-sdpa,openai-community/gpt2,0.023,0.0081129922866821,123.194,2880774.431,319.014,pytorch,bfloat16,Unquantized,SDPA,No Kernel,GPT2LMHeadModel,0.534,6.3,0
+bfloat16-sdpa,openai-community/gpt2,0.024,0.0080486402511596,123.636,2835531.802,344.086,pytorch,bfloat16,Unquantized,SDPA,No Kernel,GPT2LMHeadModel,0.532,6.3,0
+float16-sdpa,openai-community/gpt2,0.009,0.0076663360595703,130.074,2949045.33,319.014,pytorch,float16,Unquantized,SDPA,No Kernel,GPT2LMHeadModel,0.492,6.3,0
+float16-sdpa,openai-community/gpt2,0.009,0.0075507841110229,131.712,2994714.114,344.086,pytorch,float16,Unquantized,SDPA,No Kernel,GPT2LMHeadModel,0.486,6.3,0
+4bit-awq-gemv-sdpa,openai-community/gpt2,0.009,0.0074664001464843,132.803,3045365.877,344.086,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMV,GPT2LMHeadModel,0.483,6.3,0
+4bit-awq-exllama-v2-sdpa,openai-community/gpt2,0.009,0.0074763841629028,132.869,3007673.62,344.086,pytorch,float16,AWQ.4bit,SDPA,No Kernel,GPT2LMHeadModel,0.484,6.3,0
+4bit-awq-gemm-sdpa,openai-community/gpt2,0.009,0.0073076159954071,135.742,3086733.289,344.086,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMM,GPT2LMHeadModel,0.473,6.3,0
+4bit-awq-exllama-v1-sdpa,openai-community/gpt2,0.009,0.0073071520328521,135.876,3059770.527,344.086,pytorch,float16,AWQ.4bit,SDPA,No Kernel,GPT2LMHeadModel,0.471,6.3,0
+float32-sdpa,openai-community/gpt2,0.016,0.0071087517738342,139.569,3087905.836,652.631,pytorch,float32,Unquantized,SDPA,No Kernel,GPT2LMHeadModel,0.466,6.3,0
+float32-sdpa,openai-community/gpt2,0.015,0.0069806718826293,142.971,3212297.508,601.373,pytorch,float32,Unquantized,SDPA,No Kernel,GPT2LMHeadModel,0.455,6.3,0
+4bit-gptq-exllama-v1-sdpa,openai-community/gpt2,0.01,0.0067303681373596,147.725,3477622.108,216.903,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,GPT2LMHeadModel,0.436,6.3,0
+4bit-gptq-exllama-v2-sdpa,openai-community/gpt2,0.01,0.00669496011734,148.61,3508136.127,216.903,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,GPT2LMHeadModel,0.434,6.3,0
+4bit-gptq-exllama-v1-sdpa,openai-community/gpt2,0.01,0.0065746879577636,151.372,3528443.806,216.903,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,GPT2LMHeadModel,0.425,6.3,0
+4bit-gptq-exllama-v2-sdpa,openai-community/gpt2,0.009,0.0065442719459533,151.813,3596003.453,216.903,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,GPT2LMHeadModel,0.423,6.3,0
+4bit-gptq-exllama-v1-eager,EleutherAI/gpt-neox-20b,2.338,2.168363525390625,0.461,8928.51,13689.86,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,GPTNeoXForCausalLM,138.976,5.99,20
+4bit-gptq-exllama-v2-eager,EleutherAI/gpt-neox-20b,2.333,2.1668848876953124,0.461,8909.056,13689.86,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,GPTNeoXForCausalLM,138.842,5.99,20
+4bit-gptq-exllama-v1-sdpa,EleutherAI/gpt-neox-20b,2.295,2.154985595703125,0.464,8960.754,13689.871,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,GPTNeoXForCausalLM,138.049,5.99,20
+4bit-gptq-exllama-v2-sdpa,EleutherAI/gpt-neox-20b,2.291,2.1514691162109374,0.465,8979.453,13689.871,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,GPTNeoXForCausalLM,137.816,5.99,20
+4bit-bnb-eager,EleutherAI/gpt-neox-20b,3.045,0.2311372833251953,4.327,83376.336,14320.03,pytorch,float16,BnB.4bit,Eager,No Kernel,GPTNeoXForCausalLM,17.615,5.99,20
+4bit-bnb-sdpa,EleutherAI/gpt-neox-20b,3.003,0.2246788330078125,4.453,85829.36,14319.899,pytorch,float16,BnB.4bit,SDPA,No Kernel,GPTNeoXForCausalLM,17.16,5.99,20
+4bit-bnb-eager,EleutherAI/gpt-neox-20b,2.84,0.2171746292114257,4.603,88703.888,14320.03,pytorch,float16,BnB.4bit,Eager,No Kernel,GPTNeoXForCausalLM,16.531,5.99,20
+4bit-bnb-sdpa,EleutherAI/gpt-neox-20b,2.79,0.2096267547607422,4.771,91814.974,14319.899,pytorch,float16,BnB.4bit,SDPA,No Kernel,GPTNeoXForCausalLM,16.0,5.99,20
+4bit-awq-gemm-eager,EleutherAI/gpt-neox-20b,1.35,0.0829601898193359,12.051,231929.405,12933.698,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,GPTNeoXForCausalLM,6.577,5.99,20
+4bit-awq-gemm-eager,EleutherAI/gpt-neox-20b,1.328,0.082182689666748,12.164,233918.173,12933.698,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,GPTNeoXForCausalLM,6.507,5.99,20
+4bit-awq-gemv-eager,EleutherAI/gpt-neox-20b,1.178,0.0809897270202636,12.334,238661.586,12933.698,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,GPTNeoXForCausalLM,6.287,5.99,20
+4bit-awq-gemv-eager,EleutherAI/gpt-neox-20b,1.17,0.0800311851501464,12.493,240803.941,12933.698,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,GPTNeoXForCausalLM,6.216,5.99,20
+4bit-awq-gemm-sdpa,EleutherAI/gpt-neox-20b,1.32,0.0779955863952636,12.826,246583.313,12936.694,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMM,GPTNeoXForCausalLM,6.234,5.99,20
+4bit-awq-gemv-sdpa,EleutherAI/gpt-neox-20b,1.135,0.0776789093017578,12.863,247121.023,12936.608,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMV,GPTNeoXForCausalLM,6.035,5.99,20
+4bit-awq-gemm-sdpa,EleutherAI/gpt-neox-20b,1.304,0.0774658584594726,12.91,249019.968,12936.694,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMM,GPTNeoXForCausalLM,6.185,5.99,20
+4bit-awq-gemv-sdpa,EleutherAI/gpt-neox-20b,1.127,0.0770781745910644,13.003,250251.003,12936.608,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMV,GPTNeoXForCausalLM,5.973,5.99,20
+4bit-awq-exllama-v1-eager,EleutherAI/gpt-neox-20b,9.602,0.070407600402832,14.186,276377.59,12934.198,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPTNeoXForCausalLM,14.042,5.99,20
+4bit-awq-exllama-v1-eager,EleutherAI/gpt-neox-20b,9.364,0.0689821739196777,14.497,279421.541,12934.198,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPTNeoXForCausalLM,13.709,5.99,20
+4bit-gptq-exllama-v1-eager,EleutherAI/gpt-neox-20b,0.635,0.0687756462097168,14.523,275512.551,13237.237,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,GPTNeoXForCausalLM,4.973,5.99,20
+4bit-gptq-exllama-v2-eager,EleutherAI/gpt-neox-20b,0.636,0.0687289924621582,14.537,280287.54,13237.237,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,GPTNeoXForCausalLM,4.971,5.99,20
+4bit-awq-exllama-v1-sdpa,EleutherAI/gpt-neox-20b,9.607,0.0672380943298339,14.866,285938.549,12935.916,pytorch,float16,AWQ.4bit,SDPA,No Kernel,GPTNeoXForCausalLM,13.845,5.99,20
+4bit-awq-exllama-v1-sdpa,EleutherAI/gpt-neox-20b,9.331,0.0658909301757812,15.177,292041.16,12935.916,pytorch,float16,AWQ.4bit,SDPA,No Kernel,GPTNeoXForCausalLM,13.482,5.99,20
+4bit-gptq-exllama-v1-sdpa,EleutherAI/gpt-neox-20b,0.596,0.0648102722167968,15.432,297461.642,13237.636,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,GPTNeoXForCausalLM,4.68,5.99,20
+4bit-gptq-exllama-v2-sdpa,EleutherAI/gpt-neox-20b,0.596,0.0647346572875976,15.447,297418.671,13237.636,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,GPTNeoXForCausalLM,4.676,5.99,20
+4bit-awq-exllama-v2-eager,EleutherAI/gpt-neox-20b,0.689,0.062596975326538,15.966,308522.486,13241.259,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPTNeoXForCausalLM,4.636,5.99,20
+4bit-awq-exllama-v2-eager,EleutherAI/gpt-neox-20b,0.681,0.0619604015350341,16.14,310497.959,13241.259,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPTNeoXForCausalLM,4.585,5.99,20
+4bit-awq-exllama-v2-sdpa,EleutherAI/gpt-neox-20b,0.649,0.0575110397338867,17.378,335649.025,13243.633,pytorch,float16,AWQ.4bit,SDPA,No Kernel,GPTNeoXForCausalLM,4.275,5.99,20
+4bit-awq-exllama-v2-sdpa,EleutherAI/gpt-neox-20b,0.64,0.0574996643066406,17.381,335084.122,13243.633,pytorch,float16,AWQ.4bit,SDPA,No Kernel,GPTNeoXForCausalLM,4.265,5.99,20
+4bit-bnb-eager,EleutherAI/pythia-12b,1.679,0.135350975036621,7.379,141546.897,8756.638,pytorch,float16,BnB.4bit,Eager,No Kernel,GPTNeoXForCausalLM,10.216,5.93,12
+4bit-bnb-sdpa,EleutherAI/pythia-12b,1.659,0.1305798416137695,7.651,147328.39,8756.507,pytorch,float16,BnB.4bit,SDPA,No Kernel,GPTNeoXForCausalLM,9.901,5.93,12
+4bit-bnb-eager,EleutherAI/pythia-12b,1.577,0.1280681076049804,7.798,149967.301,8756.638,pytorch,float16,BnB.4bit,Eager,No Kernel,GPTNeoXForCausalLM,9.661,5.93,12
+4bit-bnb-sdpa,EleutherAI/pythia-12b,1.562,0.1219380645751953,8.189,157772.048,8756.507,pytorch,float16,BnB.4bit,SDPA,No Kernel,GPTNeoXForCausalLM,9.259,5.93,12
+8bit-bnb-eager,EleutherAI/pythia-12b,0.162,0.0921861114501953,10.817,216337.469,13389.08,pytorch,float16,BnB.8bit,Eager,No Kernel,GPTNeoXForCausalLM,5.979,5.93,12
+8bit-bnb-eager,EleutherAI/pythia-12b,0.168,0.0905208778381347,11.032,213788.122,13389.08,pytorch,float16,BnB.8bit,Eager,No Kernel,GPTNeoXForCausalLM,5.879,5.93,12
+8bit-bnb-sdpa,EleutherAI/pythia-12b,0.138,0.0860069122314453,11.604,230178.326,13391.347,pytorch,float16,BnB.8bit,SDPA,No Kernel,GPTNeoXForCausalLM,5.567,5.93,12
+8bit-bnb-sdpa,EleutherAI/pythia-12b,0.148,0.084654239654541,11.788,227783.81,13391.347,pytorch,float16,BnB.8bit,SDPA,No Kernel,GPTNeoXForCausalLM,5.49,5.93,12
+4bit-awq-gemm-eager,EleutherAI/pythia-12b,0.757,0.0543049125671386,18.403,353405.123,7904.606,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,GPTNeoXForCausalLM,4.18,5.93,12
+4bit-awq-gemm-eager,EleutherAI/pythia-12b,0.733,0.0538137912750244,18.579,357763.078,7904.606,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,GPTNeoXForCausalLM,4.124,5.93,12
+4bit-awq-gemv-eager,EleutherAI/pythia-12b,0.66,0.0495194244384765,20.17,389300.848,7904.606,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,GPTNeoXForCausalLM,3.784,5.93,12
+4bit-awq-gemv-eager,EleutherAI/pythia-12b,0.655,0.0489345607757568,20.407,394659.298,7904.606,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,GPTNeoXForCausalLM,3.741,5.93,12
+4bit-awq-gemm-sdpa,EleutherAI/pythia-12b,0.724,0.0486666240692138,20.54,396940.143,7906.519,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMM,GPTNeoXForCausalLM,3.791,5.93,12
+4bit-awq-gemm-sdpa,EleutherAI/pythia-12b,0.73,0.0485461597442627,20.576,397074.309,7906.519,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMM,GPTNeoXForCausalLM,3.792,5.93,12
+4bit-awq-gemv-sdpa,EleutherAI/pythia-12b,0.643,0.0467732486724853,21.386,411998.183,7906.447,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMV,GPTNeoXForCausalLM,3.588,5.93,12
+4bit-awq-gemv-sdpa,EleutherAI/pythia-12b,0.633,0.0459041423797607,21.764,419212.114,7906.447,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMV,GPTNeoXForCausalLM,3.527,5.93,12
+4bit-awq-exllama-v1-eager,EleutherAI/pythia-12b,5.431,0.0442351989746093,22.597,435858.534,7906.289,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPTNeoXForCausalLM,8.219,5.93,12
+4bit-gptq-exllama-v2-eager,EleutherAI/pythia-12b,0.324,0.0431947994232177,23.147,446528.434,8118.577,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,GPTNeoXForCausalLM,3.046,5.93,12
+4bit-awq-exllama-v1-eager,EleutherAI/pythia-12b,5.203,0.0431195201873779,23.158,446722.276,7906.289,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPTNeoXForCausalLM,7.923,5.93,12
+4bit-gptq-exllama-v1-eager,EleutherAI/pythia-12b,0.321,0.0431072330474853,23.159,424599.761,8118.577,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,GPTNeoXForCausalLM,3.036,5.93,12
+4bit-gptq-exllama-v2-eager,EleutherAI/pythia-12b,0.322,0.0429866561889648,23.245,448695.756,8118.577,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,GPTNeoXForCausalLM,3.032,5.93,12
+4bit-gptq-exllama-v1-eager,EleutherAI/pythia-12b,0.321,0.0429989585876464,23.256,447216.874,8118.577,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,GPTNeoXForCausalLM,3.03,5.93,12
+4bit-awq-exllama-v1-sdpa,EleutherAI/pythia-12b,5.399,0.0406499671936035,24.58,475454.141,7908.775,pytorch,float16,AWQ.4bit,SDPA,No Kernel,GPTNeoXForCausalLM,7.962,5.93,12
+4bit-awq-exllama-v2-eager,EleutherAI/pythia-12b,0.353,0.0403893280029296,24.723,476811.749,8123.607,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPTNeoXForCausalLM,2.901,5.93,12
+4bit-awq-exllama-v1-sdpa,EleutherAI/pythia-12b,5.167,0.0398518085479736,25.111,482813.556,7908.775,pytorch,float16,AWQ.4bit,SDPA,No Kernel,GPTNeoXForCausalLM,7.676,5.93,12
+4bit-awq-exllama-v2-eager,EleutherAI/pythia-12b,0.345,0.0396792316436767,25.182,487338.038,8123.607,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPTNeoXForCausalLM,2.847,5.93,12
+4bit-gptq-exllama-v1-sdpa,EleutherAI/pythia-12b,0.303,0.0392706718444824,25.453,489744.559,8120.408,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,GPTNeoXForCausalLM,2.779,5.93,12
+4bit-gptq-exllama-v2-sdpa,EleutherAI/pythia-12b,0.301,0.0392081756591796,25.493,488670.58,8120.408,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,GPTNeoXForCausalLM,2.772,5.93,12
+4bit-gptq-exllama-v1-sdpa,EleutherAI/pythia-12b,0.3,0.0391464958190918,25.547,491194.281,8120.408,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,GPTNeoXForCausalLM,2.766,5.93,12
+4bit-gptq-exllama-v2-sdpa,EleutherAI/pythia-12b,0.298,0.0389878387451171,25.626,492921.567,8120.408,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,GPTNeoXForCausalLM,2.758,5.93,12
+4bit-awq-exllama-v2-sdpa,EleutherAI/pythia-12b,0.325,0.0356027355194091,28.103,543890.844,8125.437,pytorch,float16,AWQ.4bit,SDPA,No Kernel,GPTNeoXForCausalLM,2.567,5.93,12
+4bit-awq-exllama-v2-sdpa,EleutherAI/pythia-12b,0.33,0.0354623832702636,28.187,544401.691,8125.437,pytorch,float16,AWQ.4bit,SDPA,No Kernel,GPTNeoXForCausalLM,2.565,5.93,12
+8bit-bnb-eager,EleutherAI/pythia-160m,0.032,0.0306253757476806,32.581,752377.657,360.532,pytorch,float16,BnB.8bit,Eager,No Kernel,GPTNeoXForCausalLM,1.96,5.62,0
+8bit-bnb-eager,EleutherAI/pythia-160m,0.031,0.0303573598861694,32.766,769906.695,360.532,pytorch,float16,BnB.8bit,Eager,No Kernel,GPTNeoXForCausalLM,1.95,5.62,0
+8bit-bnb-sdpa,EleutherAI/pythia-160m,0.029,0.0285619525909423,34.905,818938.716,361.45,pytorch,float16,BnB.8bit,SDPA,No Kernel,GPTNeoXForCausalLM,1.834,5.62,0
+8bit-bnb-sdpa,EleutherAI/pythia-160m,0.029,0.0284204320907592,35.117,806401.876,361.45,pytorch,float16,BnB.8bit,SDPA,No Kernel,GPTNeoXForCausalLM,1.822,5.62,0
+4bit-bnb-eager,EleutherAI/pythia-160m,0.023,0.0182669925689697,54.51,1266207.684,317.823,pytorch,float16,BnB.4bit,Eager,No Kernel,GPTNeoXForCausalLM,1.176,5.62,0
+4bit-bnb-eager,EleutherAI/pythia-160m,0.024,0.0181625919342041,54.965,1242283.378,317.823,pytorch,float16,BnB.4bit,Eager,No Kernel,GPTNeoXForCausalLM,1.171,5.62,0
+4bit-bnb-sdpa,EleutherAI/pythia-160m,0.021,0.0158292479515075,62.871,1411170.866,317.823,pytorch,float16,BnB.4bit,SDPA,No Kernel,GPTNeoXForCausalLM,1.024,5.62,0
+4bit-bnb-sdpa,EleutherAI/pythia-160m,0.021,0.0156132960319519,63.612,1471948.561,317.823,pytorch,float16,BnB.4bit,SDPA,No Kernel,GPTNeoXForCausalLM,1.011,5.62,0
+4bit-awq-gemm-eager,EleutherAI/pythia-160m,0.016,0.0146065921783447,68.021,1596304.514,313.443,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,GPTNeoXForCausalLM,0.941,5.62,0
+4bit-awq-gemm-eager,EleutherAI/pythia-160m,0.016,0.0144258880615234,68.973,1586910.165,313.443,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,GPTNeoXForCausalLM,0.928,5.62,0
+4bit-awq-gemv-eager,EleutherAI/pythia-160m,0.015,0.0124269123077392,80.325,1890486.701,313.805,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,GPTNeoXForCausalLM,0.799,5.62,0
+4bit-awq-gemv-eager,EleutherAI/pythia-160m,0.015,0.012261568069458,81.197,1878618.154,313.805,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,GPTNeoXForCausalLM,0.79,5.62,0
+4bit-awq-gemm-sdpa,EleutherAI/pythia-160m,0.013,0.0119618244171142,82.982,1915787.306,313.05,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMM,GPTNeoXForCausalLM,0.772,5.62,0
+4bit-awq-gemm-sdpa,EleutherAI/pythia-160m,0.013,0.0119746561050415,83.213,1930582.339,313.05,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMM,GPTNeoXForCausalLM,0.77,5.62,0
+4bit-awq-exllama-v2-eager,EleutherAI/pythia-160m,0.014,0.0118976960182189,83.64,1945754.16,318.948,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPTNeoXForCausalLM,0.767,5.62,0
+4bit-awq-exllama-v1-eager,EleutherAI/pythia-160m,0.043,0.0117799358367919,84.429,1943052.269,313.836,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPTNeoXForCausalLM,0.788,5.62,0
+float16-eager,EleutherAI/pythia-160m,0.013,0.0116124000549316,85.389,2017848.661,454.835,pytorch,float16,Unquantized,Eager,No Kernel,GPTNeoXForCausalLM,0.749,5.62,0
+4bit-awq-exllama-v2-eager,EleutherAI/pythia-160m,0.014,0.0115954718589782,85.54,1977816.679,318.948,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPTNeoXForCausalLM,0.747,5.62,0
+4bit-gptq-exllama-v2-eager,EleutherAI/pythia-160m,0.014,0.0114759521484375,86.393,2028163.932,317.953,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,GPTNeoXForCausalLM,0.739,5.62,0
+4bit-awq-exllama-v1-eager,EleutherAI/pythia-160m,0.035,0.0114316959381103,87.146,2016156.275,313.836,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPTNeoXForCausalLM,0.757,5.62,0
+4bit-gptq-exllama-v1-eager,EleutherAI/pythia-160m,0.014,0.0114031839370727,87.328,2035109.961,317.953,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,GPTNeoXForCausalLM,0.734,5.62,0
+bfloat16-eager,EleutherAI/pythia-160m,0.025,0.0114259519577026,87.43,1995059.42,454.835,pytorch,bfloat16,Unquantized,Eager,No Kernel,GPTNeoXForCausalLM,0.745,5.62,0
+4bit-gptq-exllama-v2-eager,EleutherAI/pythia-160m,0.014,0.011176800251007,89.079,2068011.954,317.953,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,GPTNeoXForCausalLM,0.722,5.62,0
+4bit-gptq-exllama-v1-eager,EleutherAI/pythia-160m,0.013,0.0111309919357299,89.548,2103072.577,317.953,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,GPTNeoXForCausalLM,0.716,5.62,0
+float16-eager,EleutherAI/pythia-160m,0.012,0.0110966720581054,90.054,1993691.83,454.835,pytorch,float16,Unquantized,Eager,No Kernel,GPTNeoXForCausalLM,0.717,5.62,0
+bfloat16-eager,EleutherAI/pythia-160m,0.025,0.0110008959770202,90.103,2066355.408,454.835,pytorch,bfloat16,Unquantized,Eager,No Kernel,GPTNeoXForCausalLM,0.721,5.62,0
+float32-eager,EleutherAI/pythia-160m,0.017,0.0104554557800292,95.406,2094589.483,809.963,pytorch,float32,Unquantized,Eager,No Kernel,GPTNeoXForCausalLM,0.678,5.62,0
+float32-eager,EleutherAI/pythia-160m,0.017,0.0103992319107055,95.721,2124716.49,809.963,pytorch,float32,Unquantized,Eager,No Kernel,GPTNeoXForCausalLM,0.674,5.62,0
+4bit-awq-gemv-sdpa,EleutherAI/pythia-160m,0.012,0.0101672959327697,98.46,2309694.951,313.412,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMV,GPTNeoXForCausalLM,0.652,5.62,0
+bfloat16-sdpa,EleutherAI/pythia-160m,0.023,0.0101282081604003,98.864,2274171.314,454.835,pytorch,bfloat16,Unquantized,SDPA,No Kernel,GPTNeoXForCausalLM,0.661,5.62,0
+4bit-awq-gemv-sdpa,EleutherAI/pythia-160m,0.011,0.0097751517295837,101.909,2312630.567,313.412,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMV,GPTNeoXForCausalLM,0.629,5.62,0
+float16-sdpa,EleutherAI/pythia-160m,0.01,0.00961900806427,103.751,2503194.848,454.835,pytorch,float16,Unquantized,SDPA,No Kernel,GPTNeoXForCausalLM,0.618,5.62,0
+bfloat16-sdpa,EleutherAI/pythia-160m,0.023,0.0096352000236511,103.804,2328619.011,454.835,pytorch,bfloat16,Unquantized,SDPA,No Kernel,GPTNeoXForCausalLM,0.635,5.62,0
+4bit-awq-exllama-v2-sdpa,EleutherAI/pythia-160m,0.011,0.0093760957717895,106.145,2442440.461,318.948,pytorch,float16,AWQ.4bit,SDPA,No Kernel,GPTNeoXForCausalLM,0.604,5.62,0
+4bit-awq-exllama-v2-sdpa,EleutherAI/pythia-160m,0.011,0.0092918395996093,106.757,2517033.562,318.948,pytorch,float16,AWQ.4bit,SDPA,No Kernel,GPTNeoXForCausalLM,0.597,5.62,0
+4bit-awq-exllama-v1-sdpa,EleutherAI/pythia-160m,0.032,0.0092300157546997,107.592,2492237.381,312.394,pytorch,float16,AWQ.4bit,SDPA,No Kernel,GPTNeoXForCausalLM,0.616,5.62,0
+4bit-awq-exllama-v1-sdpa,EleutherAI/pythia-160m,0.04,0.0092508163452148,107.724,2479248.573,312.394,pytorch,float16,AWQ.4bit,SDPA,No Kernel,GPTNeoXForCausalLM,0.625,5.62,0
+4bit-gptq-exllama-v1-sdpa,EleutherAI/pythia-160m,0.011,0.0089897279739379,110.458,1933047.224,317.953,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,GPTNeoXForCausalLM,0.582,5.62,0
+float16-sdpa,EleutherAI/pythia-160m,0.01,0.0090073599815368,111.127,2490536.668,454.835,pytorch,float16,Unquantized,SDPA,No Kernel,GPTNeoXForCausalLM,0.577,5.62,0
+4bit-gptq-exllama-v2-sdpa,EleutherAI/pythia-160m,0.011,0.0088576159477233,112.379,1949391.124,317.953,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,GPTNeoXForCausalLM,0.572,5.62,0
+4bit-gptq-exllama-v1-sdpa,EleutherAI/pythia-160m,0.011,0.0088393597602844,112.688,2631617.755,317.953,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,GPTNeoXForCausalLM,0.569,5.62,0
+4bit-gptq-exllama-v2-sdpa,EleutherAI/pythia-160m,0.011,0.008687439918518,114.164,2674453.166,317.953,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,GPTNeoXForCausalLM,0.562,5.62,0
+float32-sdpa,EleutherAI/pythia-160m,0.015,0.0086321282386779,115.821,2615243.391,809.963,pytorch,float32,Unquantized,SDPA,No Kernel,GPTNeoXForCausalLM,0.56,5.62,0
+float32-sdpa,EleutherAI/pythia-160m,0.015,0.0082310724258422,121.109,2681478.166,809.963,pytorch,float32,Unquantized,SDPA,No Kernel,GPTNeoXForCausalLM,0.535,5.62,0
+8bit-bnb-eager,openai-community/gpt2-large,0.086,0.0836199188232421,11.93,279642.926,1018.21,pytorch,float16,BnB.8bit,Eager,No Kernel,GPT2LMHeadModel,5.366,5.48,0
+8bit-bnb-sdpa,openai-community/gpt2-large,0.077,0.0756206893920898,13.181,308193.486,1014.605,pytorch,float16,BnB.8bit,SDPA,No Kernel,GPT2LMHeadModel,4.855,5.48,0
+4bit-bnb-eager,openai-community/gpt2-large,0.115,0.0479812965393066,20.778,473162.048,716.978,pytorch,float16,BnB.4bit,Eager,No Kernel,GPT2LMHeadModel,3.145,5.48,0
+4bit-bnb-sdpa,openai-community/gpt2-large,0.111,0.0403603839874267,24.655,563663.994,716.977,pytorch,float16,BnB.4bit,SDPA,No Kernel,GPT2LMHeadModel,2.66,5.48,0
+float16-eager,openai-community/gpt2-large,0.029,0.0262909927368164,37.94,801181.242,1714.459,pytorch,float16,Unquantized,Eager,No Kernel,GPT2LMHeadModel,1.689,5.48,0
+bfloat16-eager,openai-community/gpt2-large,0.158,0.024994815826416,39.829,855823.552,1714.459,pytorch,bfloat16,Unquantized,Eager,No Kernel,GPT2LMHeadModel,1.742,5.48,0
+float32-eager,openai-community/gpt2-large,0.101,0.0245972480773925,40.371,820338.485,3457.676,pytorch,float32,Unquantized,Eager,No Kernel,GPT2LMHeadModel,1.662,5.48,0
+4bit-gptq-exllama-v2-eager,openai-community/gpt2-large,0.035,0.0242156476974487,41.001,919361.419,689.095,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,GPT2LMHeadModel,1.571,5.48,0
+4bit-gptq-exllama-v1-eager,openai-community/gpt2-large,0.035,0.0239909114837646,41.365,963965.122,689.095,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,GPT2LMHeadModel,1.551,5.48,0
+bfloat16-sdpa,openai-community/gpt2-large,0.155,0.0212953596115112,46.713,988176.938,1714.452,pytorch,bfloat16,Unquantized,SDPA,No Kernel,GPT2LMHeadModel,1.503,5.48,0
+float16-sdpa,openai-community/gpt2-large,0.022,0.0194990720748901,51.103,1060056.795,1714.452,pytorch,float16,Unquantized,SDPA,No Kernel,GPT2LMHeadModel,1.252,5.48,0
+float32-sdpa,openai-community/gpt2-large,0.107,0.0185841121673583,53.413,1035148.375,3457.676,pytorch,float32,Unquantized,SDPA,No Kernel,GPT2LMHeadModel,1.286,5.48,0
+4bit-gptq-exllama-v1-sdpa,openai-community/gpt2-large,0.031,0.0178175201416015,56.288,1287099.366,689.095,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,GPT2LMHeadModel,1.156,5.48,0
+4bit-gptq-exllama-v2-sdpa,openai-community/gpt2-large,0.031,0.0171953115463256,58.068,1308556.668,689.095,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,GPT2LMHeadModel,1.11,5.48,0
+8bit-bnb-eager,togethercomputer/RedPajama-INCITE-Base-3B-v1,0.083,0.0812158584594726,12.301,273677.399,3472.456,pytorch,float16,BnB.8bit,Eager,No Kernel,GPTNeoXForCausalLM,5.202,5.43,3
+8bit-bnb-sdpa,togethercomputer/RedPajama-INCITE-Base-3B-v1,0.073,0.0732187843322753,13.629,298748.633,3469.31,pytorch,float16,BnB.8bit,SDPA,No Kernel,GPTNeoXForCausalLM,4.686,5.43,3
+float32-eager,togethercomputer/RedPajama-INCITE-Base-3B-v1,0.374,0.0523701114654541,19.085,368308.347,11861.463,pytorch,float32,Unquantized,Eager,No Kernel,GPTNeoXForCausalLM,3.675,5.43,3
+4bit-bnb-eager,togethercomputer/RedPajama-INCITE-Base-3B-v1,0.37,0.0510092964172363,19.564,408982.706,2438.581,pytorch,float16,BnB.4bit,Eager,No Kernel,GPTNeoXForCausalLM,3.588,5.43,3
+float32-sdpa,togethercomputer/RedPajama-INCITE-Base-3B-v1,0.374,0.0474233131408691,21.066,405472.023,11861.463,pytorch,float32,Unquantized,SDPA,No Kernel,GPTNeoXForCausalLM,3.364,5.43,3
+4bit-bnb-sdpa,togethercomputer/RedPajama-INCITE-Base-3B-v1,0.357,0.0415606575012207,23.998,478024.451,2438.45,pytorch,float16,BnB.4bit,SDPA,No Kernel,GPTNeoXForCausalLM,2.98,5.43,3
+float16-eager,togethercomputer/RedPajama-INCITE-Base-3B-v1,0.081,0.0334329280853271,29.821,578534.265,6123.871,pytorch,float16,Unquantized,Eager,No Kernel,GPTNeoXForCausalLM,2.193,5.43,3
+bfloat16-eager,togethercomputer/RedPajama-INCITE-Base-3B-v1,0.492,0.0325386390686035,30.7,584926.645,6123.871,pytorch,bfloat16,Unquantized,Eager,No Kernel,GPTNeoXForCausalLM,2.543,5.43,3
+bfloat16-sdpa,togethercomputer/RedPajama-INCITE-Base-3B-v1,0.485,0.0286238079071044,34.887,673578.092,6125.443,pytorch,bfloat16,Unquantized,SDPA,No Kernel,GPTNeoXForCausalLM,2.29,5.43,3
+float16-sdpa,togethercomputer/RedPajama-INCITE-Base-3B-v1,0.066,0.0284860954284667,35.023,678522.169,6125.164,pytorch,float16,Unquantized,SDPA,No Kernel,GPTNeoXForCausalLM,1.865,5.43,3
+4bit-gptq-exllama-v2-eager,EleutherAI/gpt-neo-1.3B,0.161,0.141317153930664,7.076,136388.246,1164.242,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,GPTNeoForCausalLM,9.064,5.33,1
+4bit-gptq-exllama-v1-eager,EleutherAI/gpt-neo-1.3B,0.161,0.1411591262817382,7.085,136493.368,1164.242,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,GPTNeoForCausalLM,9.055,5.33,1
+8bit-bnb-eager,EleutherAI/gpt-neo-1.3B,0.081,0.077283935546875,12.917,296544.313,1664.865,pytorch,float16,BnB.8bit,Eager,No Kernel,GPTNeoForCausalLM,4.964,5.33,1
+8bit-bnb-eager,EleutherAI/gpt-neo-1.3B,0.077,0.07348726272583,13.591,302785.611,1664.864,pytorch,float16,BnB.8bit,Eager,No Kernel,GPTNeoForCausalLM,4.715,5.33,1
+4bit-bnb-eager,EleutherAI/gpt-neo-1.3B,0.196,0.0364644336700439,27.324,590015.602,1174.006,pytorch,float16,BnB.4bit,Eager,No Kernel,GPTNeoForCausalLM,2.499,5.33,1
+4bit-bnb-eager,EleutherAI/gpt-neo-1.3B,0.207,0.0360867824554443,27.673,583950.091,1174.004,pytorch,float16,BnB.4bit,Eager,No Kernel,GPTNeoForCausalLM,2.487,5.33,1
+float32-eager,EleutherAI/gpt-neo-1.3B,0.241,0.0279490566253662,35.713,682946.839,5623.66,pytorch,float32,Unquantized,Eager,No Kernel,GPTNeoForCausalLM,2.005,5.33,1
+float32-eager,EleutherAI/gpt-neo-1.3B,0.219,0.0278856801986694,35.8,684664.458,5623.661,pytorch,float32,Unquantized,Eager,No Kernel,GPTNeoForCausalLM,1.978,5.33,1
+4bit-awq-gemm-eager,EleutherAI/gpt-neo-1.3B,0.09,0.0259107360839843,38.482,838734.925,1082.823,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,GPTNeoForCausalLM,1.728,5.33,1
+4bit-awq-gemm-eager,EleutherAI/gpt-neo-1.3B,0.087,0.0251184473037719,39.585,858479.289,1082.823,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,GPTNeoForCausalLM,1.673,5.33,1
+4bit-gptq-exllama-v1-eager,EleutherAI/gpt-neo-1.3B,0.055,0.0234182720184326,42.489,1185499.251,1117.181,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,GPTNeoForCausalLM,1.535,5.33,1
+4bit-awq-gemv-eager,EleutherAI/gpt-neo-1.3B,0.084,0.0193252325057983,51.565,1083262.449,1082.823,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,GPTNeoForCausalLM,1.305,5.33,1
+float16-eager,EleutherAI/gpt-neo-1.3B,0.043,0.0191880159378051,51.922,1004584.983,2877.809,pytorch,float16,Unquantized,Eager,No Kernel,GPTNeoForCausalLM,1.254,5.33,1
+4bit-awq-exllama-v2-eager,EleutherAI/gpt-neo-1.3B,0.056,0.0187702236175537,53.02,1152852.838,1119.937,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPTNeoForCausalLM,1.243,5.33,1
+4bit-awq-exllama-v1-eager,EleutherAI/gpt-neo-1.3B,0.586,0.0186752319335937,53.331,1130416.094,1083.495,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPTNeoForCausalLM,1.767,5.33,1
+4bit-gptq-exllama-v2-eager,EleutherAI/gpt-neo-1.3B,0.053,0.0184407682418823,53.947,1166073.447,1117.181,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,GPTNeoForCausalLM,1.221,5.33,1
+bfloat16-eager,EleutherAI/gpt-neo-1.3B,0.248,0.018454511642456,54.042,1047720.803,2877.809,pytorch,bfloat16,Unquantized,Eager,No Kernel,GPTNeoForCausalLM,1.413,5.33,1
+bfloat16-eager,EleutherAI/gpt-neo-1.3B,0.262,0.0182896165847778,54.456,1055151.121,2877.809,pytorch,bfloat16,Unquantized,Eager,No Kernel,GPTNeoForCausalLM,1.419,5.33,1
+float16-eager,EleutherAI/gpt-neo-1.3B,0.045,0.0182531194686889,54.553,1061028.734,2877.809,pytorch,float16,Unquantized,Eager,No Kernel,GPTNeoForCausalLM,1.202,5.33,1
+4bit-awq-gemv-eager,EleutherAI/gpt-neo-1.3B,0.083,0.0182045593261718,54.643,1139012.163,1082.823,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,GPTNeoForCausalLM,1.235,5.33,1
+4bit-awq-exllama-v2-eager,EleutherAI/gpt-neo-1.3B,0.054,0.0183211364746093,54.703,1216471.852,1119.937,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPTNeoForCausalLM,1.211,5.33,1
+4bit-awq-exllama-v1-eager,EleutherAI/gpt-neo-1.3B,0.537,0.0173189601898193,57.454,1143304.883,1083.494,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPTNeoForCausalLM,1.633,5.33,1
+8bit-bnb-eager,stabilityai/stablelm-2-1_6b,0.088,0.0872806396484375,11.434,265423.187,2216.087,pytorch,float16,BnB.8bit,Eager,No Kernel,StableLmForCausalLM,5.603,5.22,1
+8bit-bnb-sdpa,stabilityai/stablelm-2-1_6b,0.083,0.0828913917541503,12.037,280640.444,2219.49,pytorch,float16,BnB.8bit,SDPA,No Kernel,StableLmForCausalLM,5.316,5.22,1
+4bit-bnb-eager,stabilityai/stablelm-2-1_6b,0.189,0.0432543678283691,23.022,505278.791,1681.563,pytorch,float16,BnB.4bit,Eager,No Kernel,StableLmForCausalLM,2.923,5.22,1
+4bit-bnb-sdpa,stabilityai/stablelm-2-1_6b,0.184,0.040119327545166,24.802,548183.986,1681.432,pytorch,float16,BnB.4bit,SDPA,No Kernel,StableLmForCausalLM,2.721,5.22,1
+float32-sdpa,stabilityai/stablelm-2-1_6b,0.229,0.0282199039459228,35.334,676768.384,6805.128,pytorch,float32,Unquantized,SDPA,No Kernel,StableLmForCausalLM,2.012,5.22,1
+float32-eager,stabilityai/stablelm-2-1_6b,0.224,0.0272012958526611,36.691,703294.311,6805.128,pytorch,float32,Unquantized,Eager,No Kernel,StableLmForCausalLM,1.943,5.22,1
+float16-eager,stabilityai/stablelm-2-1_6b,0.038,0.0234534082412719,42.505,828002.342,3408.34,pytorch,float16,Unquantized,Eager,No Kernel,StableLmForCausalLM,1.52,5.22,1
+bfloat16-eager,stabilityai/stablelm-2-1_6b,0.26,0.0229268312454223,43.464,865134.555,3408.34,pytorch,bfloat16,Unquantized,Eager,No Kernel,StableLmForCausalLM,1.709,5.22,1
+4bit-gptq-exllama-v1-eager,stabilityai/stablelm-2-1_6b,0.048,0.0222150239944458,45.002,997154.528,1592.856,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,StableLmForCausalLM,1.451,5.22,1
+4bit-gptq-exllama-v2-eager,stabilityai/stablelm-2-1_6b,0.048,0.0216378564834594,46.079,1004434.291,1592.856,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,StableLmForCausalLM,1.416,5.22,1
+bfloat16-sdpa,stabilityai/stablelm-2-1_6b,0.261,0.0208205432891845,47.94,936459.106,3408.34,pytorch,bfloat16,Unquantized,SDPA,No Kernel,StableLmForCausalLM,1.575,5.22,1
+float16-sdpa,stabilityai/stablelm-2-1_6b,0.033,0.020317135810852,48.982,950386.78,3408.34,pytorch,float16,Unquantized,SDPA,No Kernel,StableLmForCausalLM,1.319,5.22,1
+4bit-gptq-exllama-v1-sdpa,stabilityai/stablelm-2-1_6b,0.042,0.018102463722229,55.025,1178178.87,1589.166,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,StableLmForCausalLM,1.189,5.22,1
+4bit-gptq-exllama-v2-sdpa,stabilityai/stablelm-2-1_6b,0.042,0.0175484800338745,56.521,1215155.958,1589.166,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,StableLmForCausalLM,1.156,5.22,1
+8bit-bnb-eager,Qwen/Qwen1.5-0.5B,0.095,0.0914664649963379,10.909,254181.247,1096.745,pytorch,float16,BnB.8bit,Eager,No Kernel,Qwen2ForCausalLM,5.869,5.14,0
+8bit-bnb-eager,Qwen/Qwen1.5-0.5B,0.093,0.0900450859069824,11.075,256183.444,1096.743,pytorch,float16,BnB.8bit,Eager,No Kernel,Qwen2ForCausalLM,5.783,5.14,0
+8bit-bnb-sdpa,Qwen/Qwen1.5-0.5B,0.091,0.0883030242919921,11.296,264373.739,1096.745,pytorch,float16,BnB.8bit,SDPA,No Kernel,Qwen2ForCausalLM,5.666,5.14,0
+8bit-bnb-sdpa,Qwen/Qwen1.5-0.5B,0.089,0.086175666809082,11.572,265084.606,1096.743,pytorch,float16,BnB.8bit,SDPA,No Kernel,Qwen2ForCausalLM,5.533,5.14,0
+4bit-bnb-eager,Qwen/Qwen1.5-0.5B,0.063,0.0440995826721191,22.584,521160.664,957.78,pytorch,float16,BnB.4bit,Eager,No Kernel,Qwen2ForCausalLM,2.844,5.14,0
+4bit-bnb-eager,Qwen/Qwen1.5-0.5B,0.062,0.043079137802124,23.141,515509.505,957.778,pytorch,float16,BnB.4bit,Eager,No Kernel,Qwen2ForCausalLM,2.782,5.14,0
+4bit-bnb-sdpa,Qwen/Qwen1.5-0.5B,0.059,0.0407999687194824,24.427,559434.113,957.78,pytorch,float16,BnB.4bit,SDPA,No Kernel,Qwen2ForCausalLM,2.637,5.14,0
+4bit-bnb-sdpa,Qwen/Qwen1.5-0.5B,0.059,0.0397188472747802,25.076,561774.128,957.778,pytorch,float16,BnB.4bit,SDPA,No Kernel,Qwen2ForCausalLM,2.568,5.14,0
+4bit-awq-gemm-eager,Qwen/Qwen1.5-0.5B,0.036,0.0325723209381103,30.616,699166.769,942.613,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,Qwen2ForCausalLM,2.092,5.14,0
+4bit-awq-gemm-eager,Qwen/Qwen1.5-0.5B,0.036,0.0323503837585449,30.892,702315.865,942.611,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,Qwen2ForCausalLM,2.075,5.14,0
+4bit-awq-gemm-sdpa,Qwen/Qwen1.5-0.5B,0.033,0.0296468162536621,33.579,762322.768,942.613,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMM,Qwen2ForCausalLM,1.908,5.14,0
+4bit-awq-gemm-sdpa,Qwen/Qwen1.5-0.5B,0.033,0.0293687191009521,34.03,784949.025,942.611,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMM,Qwen2ForCausalLM,1.883,5.14,0
+4bit-gptq-exllama-v2-eager,Qwen/Qwen1.5-0.5B,0.039,0.031614912033081,34.641,947599.339,949.241,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,Qwen2ForCausalLM,2.043,5.14,0
+4bit-gptq-exllama-v1-sdpa,Qwen/Qwen1.5-0.5B,0.035,0.0278646717071533,35.82,1113092.97,949.241,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,Qwen2ForCausalLM,1.788,5.14,0
+4bit-awq-gemv-eager,Qwen/Qwen1.5-0.5B,0.034,0.0253793277740478,39.25,883137.934,942.736,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,Qwen2ForCausalLM,1.637,5.14,0
+float16-eager,Qwen/Qwen1.5-0.5B,0.029,0.0250126237869262,39.831,873777.994,1426.277,pytorch,float16,Unquantized,Eager,No Kernel,Qwen2ForCausalLM,1.606,5.14,0
+4bit-awq-gemv-eager,Qwen/Qwen1.5-0.5B,0.035,0.0243290719985961,40.892,922254.57,942.734,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,Qwen2ForCausalLM,1.574,5.14,0
+bfloat16-eager,Qwen/Qwen1.5-0.5B,0.086,0.0243095836639404,40.951,904291.026,1426.277,pytorch,bfloat16,Unquantized,Eager,No Kernel,Qwen2ForCausalLM,1.622,5.14,0
+4bit-gptq-exllama-v1-eager,Qwen/Qwen1.5-0.5B,0.031,0.0239252319335937,40.96,866934.542,949.241,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,Qwen2ForCausalLM,1.546,5.14,0
+4bit-awq-exllama-v1-eager,Qwen/Qwen1.5-0.5B,0.165,0.024207215309143,41.139,927732.435,942.613,pytorch,float16,AWQ.4bit,Eager,No Kernel,Qwen2ForCausalLM,1.696,5.14,0
+4bit-awq-exllama-v2-eager,Qwen/Qwen1.5-0.5B,0.031,0.0241074237823486,41.27,928168.766,949.102,pytorch,float16,AWQ.4bit,Eager,No Kernel,Qwen2ForCausalLM,1.557,5.14,0
+bfloat16-eager,Qwen/Qwen1.5-0.5B,0.09,0.0238010396957397,41.937,915376.864,1426.275,pytorch,bfloat16,Unquantized,Eager,No Kernel,Qwen2ForCausalLM,1.594,5.14,0
+4bit-gptq-exllama-v2-eager,Qwen/Qwen1.5-0.5B,0.031,0.0237344636917114,41.967,957551.638,949.241,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,Qwen2ForCausalLM,1.53,5.14,0
+4bit-gptq-exllama-v1-eager,Qwen/Qwen1.5-0.5B,0.03,0.0236465282440185,42.112,955226.497,949.241,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,Qwen2ForCausalLM,1.525,5.14,0
+float16-eager,Qwen/Qwen1.5-0.5B,0.027,0.0236368799209594,42.379,921393.919,1426.275,pytorch,float16,Unquantized,Eager,No Kernel,Qwen2ForCausalLM,1.525,5.14,0
+4bit-awq-exllama-v2-eager,Qwen/Qwen1.5-0.5B,0.029,0.0234062719345092,42.63,956596.77,949.1,pytorch,float16,AWQ.4bit,Eager,No Kernel,Qwen2ForCausalLM,1.504,5.14,0
+float32-eager,Qwen/Qwen1.5-0.5B,0.058,0.0231176805496215,43.051,913669.557,2552.89,pytorch,float32,Unquantized,Eager,No Kernel,Qwen2ForCausalLM,1.521,5.14,0
+4bit-awq-exllama-v1-eager,Qwen/Qwen1.5-0.5B,0.139,0.0230548152923584,43.099,973182.408,942.611,pytorch,float16,AWQ.4bit,Eager,No Kernel,Qwen2ForCausalLM,1.599,5.14,0
+bfloat16-sdpa,Qwen/Qwen1.5-0.5B,0.084,0.0229567995071411,43.61,983741.676,1426.277,pytorch,bfloat16,Unquantized,SDPA,No Kernel,Qwen2ForCausalLM,1.531,5.14,0
+float32-eager,Qwen/Qwen1.5-0.5B,0.061,0.0226065282821655,44.191,923266.525,2552.888,pytorch,float32,Unquantized,Eager,No Kernel,Qwen2ForCausalLM,1.492,5.14,0
+float16-sdpa,Qwen/Qwen1.5-0.5B,0.025,0.0224308319091796,44.661,1000792.727,1426.277,pytorch,float16,Unquantized,SDPA,No Kernel,Qwen2ForCausalLM,1.436,5.14,0
+bfloat16-sdpa,Qwen/Qwen1.5-0.5B,0.088,0.0222942237854003,44.861,968922.978,1426.275,pytorch,bfloat16,Unquantized,SDPA,No Kernel,Qwen2ForCausalLM,1.496,5.14,0
+4bit-awq-gemv-sdpa,Qwen/Qwen1.5-0.5B,0.032,0.0219119043350219,45.403,1017775.308,942.736,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMV,Qwen2ForCausalLM,1.418,5.14,0
+float16-sdpa,Qwen/Qwen1.5-0.5B,0.024,0.0210516633987426,47.472,1001088.832,1426.275,pytorch,float16,Unquantized,SDPA,No Kernel,Qwen2ForCausalLM,1.351,5.14,0
+float32-sdpa,Qwen/Qwen1.5-0.5B,0.055,0.0209839038848876,47.593,1027683.607,2552.89,pytorch,float32,Unquantized,SDPA,No Kernel,Qwen2ForCausalLM,1.379,5.14,0
+4bit-awq-exllama-v2-sdpa,Qwen/Qwen1.5-0.5B,0.027,0.0208773441314697,47.701,1082080.858,949.102,pytorch,float16,AWQ.4bit,SDPA,No Kernel,Qwen2ForCausalLM,1.349,5.14,0
+4bit-awq-exllama-v2-sdpa,Qwen/Qwen1.5-0.5B,0.026,0.0209115676879882,47.835,1081606.035,949.1,pytorch,float16,AWQ.4bit,SDPA,No Kernel,Qwen2ForCausalLM,1.345,5.14,0
+4bit-awq-gemv-sdpa,Qwen/Qwen1.5-0.5B,0.032,0.0207668161392211,47.901,1062522.886,942.734,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMV,Qwen2ForCausalLM,1.343,5.14,0
+4bit-gptq-exllama-v2-sdpa,Qwen/Qwen1.5-0.5B,0.027,0.020205807685852,48.305,1112379.609,949.241,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,Qwen2ForCausalLM,1.306,5.14,0
+4bit-awq-exllama-v1-sdpa,Qwen/Qwen1.5-0.5B,0.163,0.0203280639648437,48.962,1085417.825,942.613,pytorch,float16,AWQ.4bit,SDPA,No Kernel,Qwen2ForCausalLM,1.45,5.14,0
+float32-sdpa,Qwen/Qwen1.5-0.5B,0.058,0.0204032154083251,49.018,1001478.596,2552.888,pytorch,float32,Unquantized,SDPA,No Kernel,Qwen2ForCausalLM,1.348,5.14,0
+4bit-gptq-exllama-v2-sdpa,Qwen/Qwen1.5-0.5B,0.027,0.0202194881439208,49.26,1110696.923,949.241,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,Qwen2ForCausalLM,1.305,5.14,0
+4bit-awq-exllama-v1-sdpa,Qwen/Qwen1.5-0.5B,0.136,0.0200497112274169,49.63,1103946.18,942.611,pytorch,float16,AWQ.4bit,SDPA,No Kernel,Qwen2ForCausalLM,1.404,5.14,0
+4bit-gptq-exllama-v1-sdpa,Qwen/Qwen1.5-0.5B,0.026,0.0199108638763427,50.017,1116120.165,949.241,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,Qwen2ForCausalLM,1.284,5.14,0
+8bit-bnb-eager,EleutherAI/pythia-410m,0.062,0.0605182075500488,16.488,382291.281,748.24,pytorch,float16,BnB.8bit,Eager,No Kernel,GPTNeoXForCausalLM,3.885,5.11,0
+8bit-bnb-eager,EleutherAI/pythia-410m,0.062,0.0598653583526611,16.683,379879.498,748.24,pytorch,float16,BnB.8bit,Eager,No Kernel,GPTNeoXForCausalLM,3.837,5.11,0
+8bit-bnb-sdpa,EleutherAI/pythia-410m,0.057,0.0562174072265625,17.759,408364.681,751.398,pytorch,float16,BnB.8bit,SDPA,No Kernel,GPTNeoXForCausalLM,3.602,5.11,0
+8bit-bnb-sdpa,EleutherAI/pythia-410m,0.056,0.05600239944458,17.815,417227.923,751.398,pytorch,float16,BnB.8bit,SDPA,No Kernel,GPTNeoXForCausalLM,3.591,5.11,0
+4bit-bnb-eager,EleutherAI/pythia-410m,0.061,0.0355351829528808,28.057,653353.684,611.074,pytorch,float16,BnB.4bit,Eager,No Kernel,GPTNeoXForCausalLM,2.306,5.11,0
+4bit-bnb-eager,EleutherAI/pythia-410m,0.062,0.035071455001831,28.481,632225.365,611.074,pytorch,float16,BnB.4bit,Eager,No Kernel,GPTNeoXForCausalLM,2.274,5.11,0
+4bit-bnb-sdpa,EleutherAI/pythia-410m,0.05,0.030900239944458,32.316,721558.756,611.074,pytorch,float16,BnB.4bit,SDPA,No Kernel,GPTNeoXForCausalLM,2.0,5.11,0
+4bit-bnb-sdpa,EleutherAI/pythia-410m,0.049,0.0302246408462524,32.99,754127.956,611.074,pytorch,float16,BnB.4bit,SDPA,No Kernel,GPTNeoXForCausalLM,1.96,5.11,0
+4bit-gptq-exllama-v2-eager,EleutherAI/pythia-410m,0.033,0.0285979681015014,34.799,810403.917,605.086,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,GPTNeoXForCausalLM,1.842,5.11,0
+4bit-awq-gemm-eager,EleutherAI/pythia-410m,0.036,0.0276139192581176,36.077,829373.555,597.192,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,GPTNeoXForCausalLM,1.785,5.11,0
+4bit-awq-gemm-eager,EleutherAI/pythia-410m,0.036,0.0270994081497192,36.699,842316.856,597.192,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,GPTNeoXForCausalLM,1.752,5.11,0
+4bit-awq-gemv-eager,EleutherAI/pythia-410m,0.034,0.0235084953308105,42.412,977574.123,597.192,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,GPTNeoXForCausalLM,1.522,5.11,0
+4bit-awq-gemm-sdpa,EleutherAI/pythia-410m,0.028,0.0229916791915893,43.143,1003010.016,597.192,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMM,GPTNeoXForCausalLM,1.488,5.11,0
+4bit-awq-exllama-v1-eager,EleutherAI/pythia-410m,0.16,0.0228908157348632,43.505,1005162.371,597.29,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPTNeoXForCausalLM,1.609,5.11,0
+4bit-awq-exllama-v2-eager,EleutherAI/pythia-410m,0.027,0.0228796319961547,43.518,991911.727,607.711,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPTNeoXForCausalLM,1.474,5.11,0
+4bit-awq-gemv-eager,EleutherAI/pythia-410m,0.034,0.0226974878311157,43.814,1004029.714,597.192,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,GPTNeoXForCausalLM,1.47,5.11,0
+4bit-awq-gemm-sdpa,EleutherAI/pythia-410m,0.027,0.0226585607528686,43.921,995225.289,597.192,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMM,GPTNeoXForCausalLM,1.462,5.11,0
+4bit-awq-exllama-v2-eager,EleutherAI/pythia-410m,0.026,0.0224817123413085,44.507,1023179.132,607.711,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPTNeoXForCausalLM,1.449,5.11,0
+float16-eager,EleutherAI/pythia-410m,0.024,0.022151216506958,45.095,1005144.966,1032.767,pytorch,float16,Unquantized,Eager,No Kernel,GPTNeoXForCausalLM,1.424,5.11,0
+4bit-awq-exllama-v1-eager,EleutherAI/pythia-410m,0.134,0.0216650400161743,45.869,1057280.893,597.29,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPTNeoXForCausalLM,1.504,5.11,0
+4bit-gptq-exllama-v1-eager,EleutherAI/pythia-410m,0.026,0.0216315517425537,46.056,823438.812,605.086,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,GPTNeoXForCausalLM,1.394,5.11,0
+4bit-gptq-exllama-v2-eager,EleutherAI/pythia-410m,0.026,0.021511360168457,46.265,1086555.728,605.086,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,GPTNeoXForCausalLM,1.389,5.11,0
+4bit-gptq-exllama-v1-eager,EleutherAI/pythia-410m,0.026,0.0213770236968994,46.48,1102363.869,605.086,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,GPTNeoXForCausalLM,1.38,5.11,0
+float16-eager,EleutherAI/pythia-410m,0.024,0.0213808641433715,46.813,1052198.519,1032.767,pytorch,float16,Unquantized,Eager,No Kernel,GPTNeoXForCausalLM,1.374,5.11,0
+bfloat16-eager,EleutherAI/pythia-410m,0.07,0.0209970083236694,47.359,1050161.733,1032.767,pytorch,bfloat16,Unquantized,Eager,No Kernel,GPTNeoXForCausalLM,1.386,5.11,0
+bfloat16-eager,EleutherAI/pythia-410m,0.067,0.0207482719421386,48.053,1076781.426,1032.767,pytorch,bfloat16,Unquantized,Eager,No Kernel,GPTNeoXForCausalLM,1.378,5.11,0
+float32-eager,EleutherAI/pythia-410m,0.047,0.0204128484725952,49.022,1059893.278,1895.8,pytorch,float32,Unquantized,Eager,No Kernel,GPTNeoXForCausalLM,1.339,5.11,0
+float32-eager,EleutherAI/pythia-410m,0.048,0.0195303039550781,51.043,1069131.958,1895.8,pytorch,float32,Unquantized,Eager,No Kernel,GPTNeoXForCausalLM,1.281,5.11,0
+bfloat16-sdpa,EleutherAI/pythia-410m,0.064,0.0190678396224975,52.775,1225475.89,1033.282,pytorch,bfloat16,Unquantized,SDPA,No Kernel,GPTNeoXForCausalLM,1.26,5.11,0
+4bit-awq-gemv-sdpa,EleutherAI/pythia-410m,0.027,0.018392671585083,54.089,1231103.069,597.192,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMV,GPTNeoXForCausalLM,1.191,5.11,0
+4bit-awq-exllama-v2-sdpa,EleutherAI/pythia-410m,0.021,0.0184550561904907,54.207,1279586.975,607.711,pytorch,float16,AWQ.4bit,SDPA,No Kernel,GPTNeoXForCausalLM,1.185,5.11,0
+4bit-awq-gemv-sdpa,EleutherAI/pythia-410m,0.027,0.018167872428894,54.645,1252413.87,597.192,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMV,GPTNeoXForCausalLM,1.18,5.11,0
+bfloat16-sdpa,EleutherAI/pythia-410m,0.066,0.0180879354476928,55.391,1220021.048,1033.282,pytorch,bfloat16,Unquantized,SDPA,No Kernel,GPTNeoXForCausalLM,1.209,5.11,0
+4bit-awq-exllama-v2-sdpa,EleutherAI/pythia-410m,0.021,0.0177951364517211,55.949,1285577.559,607.711,pytorch,float16,AWQ.4bit,SDPA,No Kernel,GPTNeoXForCausalLM,1.147,5.11,0
+4bit-awq-exllama-v1-sdpa,EleutherAI/pythia-410m,0.156,0.0177704639434814,55.983,1272619.173,597.29,pytorch,float16,AWQ.4bit,SDPA,No Kernel,GPTNeoXForCausalLM,1.281,5.11,0
+4bit-awq-exllama-v1-sdpa,EleutherAI/pythia-410m,0.128,0.017292176246643,57.552,1286215.338,597.29,pytorch,float16,AWQ.4bit,SDPA,No Kernel,GPTNeoXForCausalLM,1.216,5.11,0
+float16-sdpa,EleutherAI/pythia-410m,0.018,0.0172482566833496,57.737,1284613.406,1033.282,pytorch,float16,Unquantized,SDPA,No Kernel,GPTNeoXForCausalLM,1.108,5.11,0
+float16-sdpa,EleutherAI/pythia-410m,0.018,0.0168390560150146,59.688,1322654.729,1033.282,pytorch,float16,Unquantized,SDPA,No Kernel,GPTNeoXForCausalLM,1.079,5.11,0
+4bit-gptq-exllama-v2-sdpa,EleutherAI/pythia-410m,0.02,0.0166222562789917,59.88,1355644.542,605.086,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,GPTNeoXForCausalLM,1.073,5.11,0
+4bit-gptq-exllama-v1-sdpa,EleutherAI/pythia-410m,0.02,0.0166074075698852,59.936,1374487.524,605.086,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,GPTNeoXForCausalLM,1.069,5.11,0
+4bit-gptq-exllama-v1-sdpa,EleutherAI/pythia-410m,0.02,0.0163043041229248,60.822,1388338.217,605.086,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,GPTNeoXForCausalLM,1.053,5.11,0
+4bit-gptq-exllama-v2-sdpa,EleutherAI/pythia-410m,0.02,0.016319727897644,61.034,1420167.748,605.086,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,GPTNeoXForCausalLM,1.051,5.11,0
+float32-sdpa,EleutherAI/pythia-410m,0.041,0.0150576963424682,66.023,1379138.813,1895.8,pytorch,float32,Unquantized,SDPA,No Kernel,GPTNeoXForCausalLM,0.993,5.11,0
+float32-sdpa,EleutherAI/pythia-410m,0.041,0.0147310400009155,67.457,1372814.361,1895.8,pytorch,float32,Unquantized,SDPA,No Kernel,GPTNeoXForCausalLM,0.974,5.11,0
+4bit-bnb-eager,tiiuae/falcon-7b,0.989,0.0881601905822754,11.298,222190.037,4927.108,pytorch,float16,BnB.4bit,Eager,No Kernel,FalconForCausalLM,6.56,5.1,7
+8bit-bnb-eager,tiiuae/falcon-7b,0.11,0.0792101783752441,12.583,266045.466,7312.01,pytorch,float16,BnB.8bit,Eager,No Kernel,FalconForCausalLM,5.096,5.1,7
+bfloat16-eager,tiiuae/falcon-7b,1.293,0.0713974876403808,13.992,269797.772,13944.439,pytorch,bfloat16,Unquantized,Eager,No Kernel,FalconForCausalLM,5.797,5.1,7
+float16-eager,tiiuae/falcon-7b,0.178,0.0713510589599609,14.001,269885.067,13944.439,pytorch,float16,Unquantized,Eager,No Kernel,FalconForCausalLM,4.677,5.1,7
+8bit-bnb-eager,EleutherAI/gpt-neo-125m,0.04,0.0385128002166748,25.859,610610.009,261.883,pytorch,float16,BnB.8bit,Eager,No Kernel,GPTNeoForCausalLM,2.473,4.38,0
+8bit-bnb-eager,EleutherAI/gpt-neo-125m,0.039,0.0378087520599365,26.416,603144.732,261.881,pytorch,float16,BnB.8bit,Eager,No Kernel,GPTNeoForCausalLM,2.424,4.38,0
+4bit-gptq-exllama-v2-eager,EleutherAI/gpt-neo-125m,0.024,0.0215066556930542,46.249,979108.633,221.272,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,GPTNeoForCausalLM,1.385,4.38,0
+4bit-gptq-exllama-v1-eager,EleutherAI/gpt-neo-125m,0.024,0.0215082721710205,46.268,978901.092,221.272,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,GPTNeoForCausalLM,1.386,4.38,0
+4bit-bnb-eager,EleutherAI/gpt-neo-125m,0.027,0.0187031364440917,53.161,1240346.82,224.298,pytorch,float16,BnB.4bit,Eager,No Kernel,GPTNeoForCausalLM,1.211,4.38,0
+4bit-bnb-eager,EleutherAI/gpt-neo-125m,0.026,0.0181715202331542,54.829,1243905.748,224.296,pytorch,float16,BnB.4bit,Eager,No Kernel,GPTNeoForCausalLM,1.176,4.38,0
+4bit-awq-gemm-eager,EleutherAI/gpt-neo-125m,0.015,0.0133409757614135,74.71,1723438.561,220.755,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,GPTNeoForCausalLM,0.858,4.38,0
+4bit-awq-gemm-eager,EleutherAI/gpt-neo-125m,0.015,0.0132474083900451,75.205,1731213.515,220.753,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,GPTNeoForCausalLM,0.855,4.38,0
+4bit-gptq-exllama-v2-eager,EleutherAI/gpt-neo-125m,0.016,0.0124355516433715,79.919,2424832.627,225.806,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,GPTNeoForCausalLM,0.804,4.38,0
+4bit-awq-gemv-eager,EleutherAI/gpt-neo-125m,0.014,0.010161808013916,97.927,2251976.311,221.111,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,GPTNeoForCausalLM,0.657,4.38,0
+float16-eager,EleutherAI/gpt-neo-125m,0.012,0.0101171517372131,98.4,2258721.275,354.088,pytorch,float16,Unquantized,Eager,No Kernel,GPTNeoForCausalLM,0.652,4.38,0
+4bit-awq-gemv-eager,EleutherAI/gpt-neo-125m,0.014,0.0100661277770996,98.986,2268114.452,221.109,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,GPTNeoForCausalLM,0.65,4.38,0
+4bit-awq-exllama-v2-eager,EleutherAI/gpt-neo-125m,0.013,0.0099445757865905,100.131,2336509.376,226.392,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPTNeoForCausalLM,0.642,4.38,0
+4bit-awq-exllama-v1-eager,EleutherAI/gpt-neo-125m,0.043,0.0098736639022827,100.793,2318457.089,220.886,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPTNeoForCausalLM,0.668,4.38,0
+4bit-gptq-exllama-v1-eager,EleutherAI/gpt-neo-125m,0.013,0.0096843042373657,102.901,2275600.47,225.806,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,GPTNeoForCausalLM,0.626,4.38,0
+4bit-awq-exllama-v1-eager,EleutherAI/gpt-neo-125m,0.035,0.0096256799697875,103.797,2427799.786,220.884,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPTNeoForCausalLM,0.646,4.38,0
+4bit-awq-exllama-v2-eager,EleutherAI/gpt-neo-125m,0.012,0.0095602560043334,104.082,2416296.222,226.39,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPTNeoForCausalLM,0.617,4.38,0
+bfloat16-eager,EleutherAI/gpt-neo-125m,0.026,0.0095109281539917,104.623,2392459.253,354.088,pytorch,bfloat16,Unquantized,Eager,No Kernel,GPTNeoForCausalLM,0.627,4.38,0
+bfloat16-eager,EleutherAI/gpt-neo-125m,0.026,0.0093148803710937,106.836,2390829.617,354.086,pytorch,bfloat16,Unquantized,Eager,No Kernel,GPTNeoForCausalLM,0.615,4.38,0
+float32-eager,EleutherAI/gpt-neo-125m,0.019,0.0090789442062377,109.648,2463590.166,638.882,pytorch,float32,Unquantized,Eager,No Kernel,GPTNeoForCausalLM,0.593,4.38,0
+float16-eager,EleutherAI/gpt-neo-125m,0.011,0.0089452323913574,111.324,2470887.312,354.086,pytorch,float16,Unquantized,Eager,No Kernel,GPTNeoForCausalLM,0.576,4.38,0
+float32-eager,EleutherAI/gpt-neo-125m,0.018,0.0087002081871032,114.377,2490090.894,638.88,pytorch,float32,Unquantized,Eager,No Kernel,GPTNeoForCausalLM,0.569,4.38,0
+8bit-bnb-eager,distilbert/distilgpt2,0.018,0.0158470883369445,62.902,1502508.936,198.966,pytorch,float16,BnB.8bit,Eager,No Kernel,GPT2LMHeadModel,1.02,3.9,0
+8bit-bnb-sdpa,distilbert/distilgpt2,0.016,0.0144111680984497,69.177,1638435.298,196.673,pytorch,float16,BnB.8bit,SDPA,No Kernel,GPT2LMHeadModel,0.932,3.9,0
+4bit-bnb-eager,distilbert/distilgpt2,0.014,0.0094167041778564,105.748,2523784.807,177.939,pytorch,float16,BnB.4bit,Eager,No Kernel,GPT2LMHeadModel,0.609,3.9,0
+4bit-bnb-sdpa,distilbert/distilgpt2,0.012,0.0082407684326171,120.007,2850627.819,177.939,pytorch,float16,BnB.4bit,SDPA,No Kernel,GPT2LMHeadModel,0.537,3.9,0
+float16-eager,distilbert/distilgpt2,0.008,0.0054757118225097,181.546,4162486.29,241.726,pytorch,float16,Unquantized,Eager,No Kernel,GPT2LMHeadModel,0.354,3.9,0
+4bit-awq-gemv-eager,distilbert/distilgpt2,0.007,0.0053647680282592,185.12,4247087.864,241.726,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMV,GPT2LMHeadModel,0.347,3.9,0
+bfloat16-eager,distilbert/distilgpt2,0.015,0.0053063678741455,186.927,4358127.169,241.726,pytorch,bfloat16,Unquantized,Eager,No Kernel,GPT2LMHeadModel,0.352,3.9,0
+4bit-awq-gemm-eager,distilbert/distilgpt2,0.007,0.0052989919185638,187.221,4372726.437,241.726,pytorch,float16,AWQ.4bit,Eager,AWQ.GEMM,GPT2LMHeadModel,0.344,3.9,0
+4bit-gptq-exllama-v2-eager,distilbert/distilgpt2,0.008,0.0052873117923736,187.981,4467345.137,180.298,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV2,GPT2LMHeadModel,0.343,3.9,0
+4bit-awq-exllama-v2-eager,distilbert/distilgpt2,0.007,0.005266240119934,188.493,4260337.812,241.726,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPT2LMHeadModel,0.341,3.9,0
+4bit-awq-exllama-v1-eager,distilbert/distilgpt2,0.007,0.0052668159008026,188.688,4324000.013,241.726,pytorch,float16,AWQ.4bit,Eager,No Kernel,GPT2LMHeadModel,0.341,3.9,0
+4bit-gptq-exllama-v1-eager,distilbert/distilgpt2,0.008,0.0052080640792846,190.674,4598943.446,180.298,pytorch,float16,GPTQ.4bit,Eager,GPTQ.ExllamaV1,GPT2LMHeadModel,0.337,3.9,0
+float32-eager,distilbert/distilgpt2,0.011,0.0050180158615112,197.546,4412453.898,462.072,pytorch,float32,Unquantized,Eager,No Kernel,GPT2LMHeadModel,0.329,3.9,0
+bfloat16-sdpa,distilbert/distilgpt2,0.015,0.0045976319313049,215.455,4983444.347,241.726,pytorch,bfloat16,Unquantized,SDPA,No Kernel,GPT2LMHeadModel,0.307,3.9,0
+float16-sdpa,distilbert/distilgpt2,0.006,0.0043035039901733,230.179,5266828.324,241.726,pytorch,float16,Unquantized,SDPA,No Kernel,GPT2LMHeadModel,0.279,3.9,0
+4bit-awq-gemm-sdpa,distilbert/distilgpt2,0.006,0.0042535037994384,232.911,5363072.1,241.726,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMM,GPT2LMHeadModel,0.276,3.9,0
+4bit-awq-gemv-sdpa,distilbert/distilgpt2,0.006,0.004214879989624,235.25,5373347.019,241.726,pytorch,float16,AWQ.4bit,SDPA,AWQ.GEMV,GPT2LMHeadModel,0.273,3.9,0
+4bit-awq-exllama-v1-sdpa,distilbert/distilgpt2,0.006,0.0041984958648681,236.365,5427184.463,241.726,pytorch,float16,AWQ.4bit,SDPA,No Kernel,GPT2LMHeadModel,0.272,3.9,0
+4bit-awq-exllama-v2-sdpa,distilbert/distilgpt2,0.006,0.0041438879966735,239.604,5480121.977,241.726,pytorch,float16,AWQ.4bit,SDPA,No Kernel,GPT2LMHeadModel,0.269,3.9,0
+float32-sdpa,distilbert/distilgpt2,0.01,0.0040936322212219,241.969,5292312.756,462.072,pytorch,float32,Unquantized,SDPA,No Kernel,GPT2LMHeadModel,0.27,3.9,0
+4bit-gptq-exllama-v2-sdpa,distilbert/distilgpt2,0.007,0.0040577278137207,244.908,5833169.359,180.298,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV2,GPT2LMHeadModel,0.263,3.9,0
+4bit-gptq-exllama-v1-sdpa,distilbert/distilgpt2,0.007,0.0039872961044311,248.532,5866817.477,180.298,pytorch,float16,GPTQ.4bit,SDPA,GPTQ.ExllamaV1,GPT2LMHeadModel,0.259,3.9,0
