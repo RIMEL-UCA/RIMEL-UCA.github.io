@@ -1,0 +1,26 @@
+{
+  "name": "powermetrics_wrapper",
+  "version": "1.0.0",
+  "description": "macOS powermetrics wrapper enabling to collect data",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "nodemon --watch src -e js,ts,json --exec \"ts-node src/index.ts\"",
+    "build": "tsup src/index.ts --format cjs --clean --minify",
+    "start": "node dist/index.js"
+  },
+  "author": "Alexis Malosse",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "fast-xml-parser": "^4.5.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.10",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3"
+  }
+}
