@@ -866,6 +866,13 @@ https://mlflow.org/docs/latest/index.html
 
 ### Articles
 ***
+[1] Symeonidis et al., ‘MLOps -- Definitions, Tools and Challenges’.
+
+[2] Subramanya, Sierla, and Vyatkin, ‘From DevOps to MLOps’.
+
+[3] ‘Qu’est-ce que le DevOps ?’ https://www.ibm.com/fr-fr/topics/devops
+
+[4] ‘Continuous Delivery for Machine Learning’. https://martinfowler.com/articles/cd4ml.html
 [12 Jul 2020] by dzlab : **Machine Learning Continuous Integration with MLflow:** https://dzlab.github.io/ml/2020/07/12/ml-ci-mlflow/
 
 [18 janv. 2022] by Maxime Jumelle : **MLflow : tout savoir sur l’outil indispensable du MLOps :** https://blent.ai/blog/a/mlflow-tout-savoir-sur-loutil-indispensable-du-mlops
