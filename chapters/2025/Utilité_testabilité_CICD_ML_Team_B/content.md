@@ -413,30 +413,30 @@ Ces tests jouent un rôle central dans la validation et l’assurance qualité d
 
       Les tests de suppression des "model kits" ont pour but de vérifier que le système fonctionne correctement lorsqu'un kit doit être supprimé. Ces tests s'assurent qu'un kit, lorsqu'il est lié à un tag spécifique, est bien supprimé après avoir été ajouté avec ce tag. Ils vérifient également que la suppression d'un kit fonctionne lorsque celui-ci est identifié par son digest unique, en s'assurant que le kit est retiré correctement de la liste. Si un kit n'a pas de tag, ces tests confirment que la suppression se fait correctement en utilisant seulement le digest, sans tenir compte des tags. Les tests évaluent aussi la situation où un kit est associé à plusieurs tags, en garantissant que seule l'association avec le tag spécifié est supprimée, tandis que le kit reste dans le système avec les autres tags. De plus, lorsqu'un kit est supprimé par son digest, cela entraîne la suppression de tous les tags associés à ce kit, assurant ainsi qu'il n'y a plus de références à ce kit dans le système. Un autre test vérifie que, lorsque plusieurs kits sont créés avec des fichiers distincts (et donc des digests uniques), la commande de suppression supprime bien tous les kits marqués pour retrait, sauf celui qui est spécifié. Enfin, ces tests garantissent que la suppression de tous les kits et de leurs tags associés fonctionne correctement, assurant que tout est bien retiré du système, sans exception. Ces tests couvrent donc une large gamme de situations pour s'assurer de la bonne gestion et suppression des "model kits" et de leurs tags.
 
-L'analyse des contributions des développeurs met en évidence une forte activité au sein de l'équipe de développement. Cette observation est montrée par les résultats obtenus via un script automatisé, une méthode essentielle pour surmonter la complexité d'un comptage manuel des contributions. On note une implication significative de plusieurs développeurs, notamment dans le dossier des workflows (WF) illustrée par la Figure XX, et dans les tests comme le montre également le Figure XX et XX. Ces dernières reflétent une évolution constante des efforts dédiés à l'assurance qualité. Ce constat est particulièrement rassurant pour une application ayant moins d'un an d'existence, comme en témoigne la Figure XX indiquant la date du premier commit. Ces contributions actives et régulières peuvent garantir une qualité accrue de l'application livrée.
+L'analyse des contributions des développeurs met en évidence une forte activité au sein de l'équipe de développement. Cette observation est montrée par les résultats obtenus via un script automatisé, une méthode essentielle pour surmonter la complexité d'un comptage manuel des contributions. On note une implication significative de plusieurs développeurs, notamment dans le dossier des workflows (WF) illustrée par la Figure 4, et dans les tests comme le montre également le Figure 5 et 6. Ces dernières reflétent une évolution constante des efforts dédiés à l'assurance qualité. Ce constat est particulièrement rassurant pour une application ayant moins d'un an d'existence, comme en témoigne la Figure 7 indiquant la date du premier commit. Ces contributions actives et régulières peuvent garantir une qualité accrue de l'application livrée.
 
 .
 
 ![Alt](./assets/images/kitops/nombreDeCommit.png)
 <div style="text-align: center;">
-  <p><em>Figure XX : Contributions des développeurs dans le dossier des workflows.</em></p>
+  <p><em>Figure 4 : Contributions des développeurs dans le dossier des workflows.</em></p>
 </div>
 
 
 ![Alt](./assets/images/kitops/dateLastCommit.png)
 <div style="text-align: center;">
-  <p><em>Figure XX : Date du dernier push dans le dossier des tests.</em></p>
+  <p><em>Figure 5 : Date du dernier push dans le dossier des tests.</em></p>
 </div>
 
 
 ![Alt](./assets/images/kitops/nombreDeCommitTests.png)
 <div style="text-align: center;">
-  <p><em>Figure XX : Contributions des développeurs dans le dossier des tests.</em></p>
+  <p><em>Figure 6 : Contributions des développeurs dans le dossier des tests.</em></p>
 </div>
 
 ![Alt](./assets/images/kitops/dateFirstCommit.png)
 <div style="text-align: center;">
-  <p><em>Figure XX : Date du premier push du projet.</em></p>
+  <p><em>Figure 7 : Date du premier push du projet.</em></p>
 </div>
 
 .
@@ -475,7 +475,7 @@ Ces fonctionnalités sont rendues possibles grâce à quatre composants principa
 
 ![Alt text](./assets/images/mlflow/structure/mlflowdeployhelp.png)
 <div style="text-align: center;">  
-  <p><em>Figure XX.</em> Utilisation de MLFlow</p>
+  <p><em>Figure 8.</em> Utilisation de MLFlow</p>
 </div>
 
 
@@ -506,7 +506,7 @@ Utilisé pour sa puissance et sa flexibilité dans l'exécution des pipelines CI
   <tr>
     <td style="width: 50%; text-align: center;">
       <img src="./assets/images/mlflow/circleci/jobs.png" style="width: 100%; max-width: 300px;">
-      <p><em>Figure XX.</em> circleCI jobs</p>
+      <p><em>Figure 9.</em> circleCI jobs</p>
     </td>
     <td style="width: 50%; font-size: 0.85em;">
       <div>
@@ -534,7 +534,7 @@ Utilisé pour sa puissance et sa flexibilité dans l'exécution des pipelines CI
 
 ![Alt text](./assets/images/mlflow/circleci/workflow_diagram.svg)
 <div style="text-align: center;">  
-  <p><em>Figure XX.</em> Workflow CircleCI : Construction de Documentation et Exécution MLFlow</p>
+  <p><em>Figure 10.</em> Workflow CircleCI : Construction de Documentation et Exécution MLFlow</p>
 </div>
 
 
@@ -603,7 +603,7 @@ Garantit un environnement de développement cohérent et portable, permettant à
 <p style="text-align: center;">
   <img src="assets/images/mlflow/devcontainer/devcontainer.svg" alt="Devcontainer Workflow" width="800">
 </p>
-<p style="text-align: center;"><em>Figure XX.</em> DevContainer : Étapes et fonctionnement</p>
+<p style="text-align: center;"><em>Figure 11.</em> DevContainer : Étapes et fonctionnement</p>
 
 
 .
@@ -783,7 +783,7 @@ Pour cette comparaison généré à l'aide du script python `assets\codes\datefi
 .
 <img src="./assets/images/datesetnbcontributorTableau.png" alt="Alt text" style="width: '30%;"/>
 <div style="text-align: center;">  
-  <p><em>Figure XX : Date 1er commit et nombre de contributeur</em></p>
+  <p><em>Figure 12 : Date 1er commit et nombre de contributeur</em></p>
 </div>
 .
 
@@ -797,7 +797,7 @@ Cette étude se concentre sur l'**activité de développement** liée aux **test
 
 <img src="./assets/images/nbCommitParCheminCibleparDepot.png" alt="Alt text" style="width: '10%;"/>
 <div style="text-align: center;">  
-  <p><em>Figure XX : Nombre de commits par chemin cible pour chaque outil</em></p>
+  <p><em>Figure 13 : Nombre de commits par chemin cible pour chaque outil</em></p>
 </div>
 
 
@@ -805,20 +805,20 @@ Cette étude se concentre sur l'**activité de développement** liée aux **test
 
 
 
-Parmi les analyses que nous avons réalisées pour comparer les outils, nous avons pris en compte leur popularité, en nous basant sur le nombre d'étoiles sur GitHub, comme illustré dans la Figure XX. Nous avons constaté que MetaFlow est l'outil le plus apprécié, en grande partie grâce à l'intégration avec l'outil de Netflix. Cependant, un point surprenant est que ClearML dispose de plus d'étoiles que KitOps, bien qu'il semble que KitOps soit plus testé que ClearML. Nous supposons que cette différence peut s'expliquer par le fait que ClearML est un outil plus ancien que KitOps.
+Parmi les analyses que nous avons réalisées pour comparer les outils, nous avons pris en compte leur popularité, en nous basant sur le nombre d'étoiles sur GitHub, comme illustré dans la Figure 14. Nous avons constaté que MetaFlow est l'outil le plus apprécié, en grande partie grâce à l'intégration avec l'outil de Netflix. Cependant, un point surprenant est que ClearML dispose de plus d'étoiles que KitOps, bien qu'il semble que KitOps soit plus testé que ClearML. Nous supposons que cette différence peut s'expliquer par le fait que ClearML est un outil plus ancien que KitOps.
 
 
 ![Alt text](./assets/images/la%20popularité%20des%20outils.png)
 <div style="text-align: center;">  
-  <p><em>Figure XX : Comparaison de la popularité des outils basée sur le nombre d'étoiles GitHub.</em></p>
+  <p><em>Figure 14 : Comparaison de la popularité des outils basée sur le nombre d'étoiles GitHub.</em></p>
 </div>
 
-Nous avons également analysé le pourcentage de bugs parmi les issues GitHub pour chaque outil, comme le montre la Figure XX. Là encore, un résultat inattendu ressort : bien que MLFlow teste plusieurs phases des tâches de machine learning, il semble avoir plus de bugs que ClearML, qui, paradoxalement, ne semble pas avoir de tests aussi poussés.
+Nous avons également analysé le pourcentage de bugs parmi les issues GitHub pour chaque outil, comme le montre la Figure 15. Là encore, un résultat inattendu ressort : bien que MLFlow teste plusieurs phases des tâches de machine learning, il semble avoir plus de bugs que ClearML, qui, paradoxalement, ne semble pas avoir de tests aussi poussés.
 
 
 ![Alt text](./assets/images/le%20pourcentage%20de%20bogues%20dans%20les%20issues%20.png)
 <div style="text-align: center;">  
-  <p><em>Figure XX : Pourcentage de bugs parmi les issues GitHub pour chaque outil.</em></p>
+  <p><em>Figure 15 : Pourcentage de bugs parmi les issues GitHub pour chaque outil.</em></p>
 </div>  
 
 ## Conclusion générale
