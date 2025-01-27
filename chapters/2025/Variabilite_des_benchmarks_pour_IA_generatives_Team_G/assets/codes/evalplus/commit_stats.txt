@@ -1,0 +1,526 @@
+=== Statistiques sur les commits et issues ===
+Nombre total de commits: 810
+Nombre total d'issues liées: 59
+
+Fichiers modifiés:
+  - README.md: 115 fois
+  - codegen/model.py: 77 fois
+  - evalplus/evaluate.py: 40 fois
+  - generation/model.py: 29 fois
+  - evalplus/eval/__init__.py: 27 fois
+  - eval_plus/evaluation/evaluate.py: 26 fois
+  - tools/sanitize.py: 21 fois
+  - requirements.txt: 20 fois
+  - evalplus/data/__init__.py: 20 fois
+  - evalplus/codegen.py: 19 fois
+  - codegen/generate.py: 19 fois
+  - setup.cfg: 18 fois
+  - generation/generate.py: 18 fois
+  - HumanEvalPlus.jsonl: 16 fois
+  - tools/sanitize_human_eval.py: 16 fois
+  - eval_plus/utils.py: 15 fois
+  - evo.sh: 14 fois
+  - eval_plus/input_generation/type_mut.py: 14 fois
+  - .gitignore: 13 fois
+  - evalplus/evalperf.py: 12 fois
+  - generation/code_sanitize.py: 12 fois
+  - evalplus/provider/__init__.py: 10 fois
+  - evalplus/sanitize.py: 10 fois
+  - Dockerfile: 8 fois
+  - tools/humaneval/to_original_fmt.py: 8 fois
+  - tools/viz_passrate.py: 8 fois
+  - groundtruth/017_parse_music.py: 8 fois
+  - groundtruth/019_sort_numbers.py: 8 fois
+  - groundtruth/032_find_zero.py: 8 fois
+  - evalplus/provider/hf.py: 7 fois
+  - groundtruth/000_has_close_elements.py: 7 fois
+  - groundtruth/001_separate_paren_groups.py: 7 fois
+  - groundtruth/002_truncate_number.py: 7 fois
+  - groundtruth/011_string_xor.py: 7 fois
+  - groundtruth/013_greatest_common_divisor.py: 7 fois
+  - groundtruth/015_string_sequence.py: 7 fois
+  - groundtruth/018_how_many_times.py: 7 fois
+  - groundtruth/021_rescale_to_unit.py: 7 fois
+  - groundtruth/024_largest_divisor.py: 7 fois
+  - groundtruth/025_factorize.py: 7 fois
+  - groundtruth/047_median.py: 7 fois
+  - eval_plus/input_generation/mut_gen.py: 7 fois
+  - .github/ISSUE_TEMPLATE/model_eval_request.yml: 6 fois
+  - tools/checker.py: 6 fois
+  - requirements-llm.txt: 6 fois
+  - .pre-commit-config.yaml: 6 fois
+  - groundtruth/003_below_zero.py: 6 fois
+  - groundtruth/004_mean_absolute_deviation.py: 6 fois
+  - groundtruth/005_intersperse.py: 6 fois
+  - groundtruth/006_parse_nested_parens.py: 6 fois
+  - groundtruth/008_sum_product.py: 6 fois
+  - groundtruth/041_car_race_collision.py: 6 fois
+  - groundtruth/043_pairs_sum_to_zero.py: 6 fois
+  - groundtruth/044_change_base.py: 6 fois
+  - groundtruth/045_triangle_area.py: 6 fois
+  - groundtruth/046_fib4.py: 6 fois
+  - groundtruth/048_is_palindrome.py: 6 fois
+  - groundtruth/049_modp.py: 6 fois
+  - groundtruth/050_decode_shift.py: 6 fois
+  - groundtruth/055_fib.py: 6 fois
+  - evalplus/provider/vllm.py: 5 fois
+  - tools/init_ground_truth.py: 5 fois
+  - eval_plus/input_generation/chatgpt_gen.py: 5 fois
+  - groundtruth/007_filter_by_substring.py: 5 fois
+  - groundtruth/009_rolling_max.py: 5 fois
+  - groundtruth/012_longest.py: 5 fois
+  - groundtruth/039_prime_fib.py: 5 fois
+  - groundtruth/042_incr_list.py: 5 fois
+  - groundtruth/058_common.py: 5 fois
+  - groundtruth/063_fibfib.py: 5 fois
+  - groundtruth/067_fruit_distribution.py: 5 fois
+  - groundtruth/094_skjkasdkd.py: 5 fois
+  - groundtruth/099_closest_integer.py: 5 fois
+  - groundtruth/111_histogram.py: 5 fois
+  - groundtruth/115_max_fill.py: 5 fois
+  - groundtruth/129_minPath.py: 5 fois
+  - groundtruth/137_compare_one.py: 5 fois
+  - groundtruth/144_simplify.py: 5 fois
+  - tools/res2tex.py: 5 fois
+  - evalplus/gen/util/openai_request.py: 4 fois
+  - evalplus/perf/profile.py: 4 fois
+  - evalplus/eval/_special_oracle.py: 4 fois
+  - tools/mbpp/to_original_fmt.py: 4 fois
+  - evalplus/data/mbpp.py: 4 fois
+  - evalplus/data/utils.py: 4 fois
+  - evalplus/inputgen.py: 4 fois
+  - tools/stat_plus.py: 4 fois
+  - groundtruth/010_make_palindrome.py: 4 fois
+  - groundtruth/014_all_prefixes.py: 4 fois
+  - groundtruth/016_count_distinct_characters.py: 4 fois
+  - groundtruth/020_find_closest_elements.py: 4 fois
+  - groundtruth/022_filter_integers.py: 4 fois
+  - groundtruth/023_strlen.py: 4 fois
+  - groundtruth/026_remove_duplicates.py: 4 fois
+  - groundtruth/027_flip_case.py: 4 fois
+  - groundtruth/028_concatenate.py: 4 fois
+  - groundtruth/029_filter_by_prefix.py: 4 fois
+  - groundtruth/030_get_positive.py: 4 fois
+  - groundtruth/031_is_prime.py: 4 fois
+  - groundtruth/033_sort_third.py: 4 fois
+  - groundtruth/034_unique.py: 4 fois
+  - groundtruth/035_max_element.py: 4 fois
+  - groundtruth/036_fizz_buzz.py: 4 fois
+  - groundtruth/037_sort_even.py: 4 fois
+  - groundtruth/038_decode_cyclic.py: 4 fois
+  - groundtruth/040_triples_sum_to_zero.py: 4 fois
+  - groundtruth/051_remove_vowels.py: 4 fois
+  - groundtruth/052_below_threshold.py: 4 fois
+  - groundtruth/053_add.py: 4 fois
+  - groundtruth/054_same_chars.py: 4 fois
+  - groundtruth/056_correct_bracketing.py: 4 fois
+  - groundtruth/057_monotonic.py: 4 fois
+  - groundtruth/059_largest_prime_factor.py: 4 fois
+  - groundtruth/060_sum_to_n.py: 4 fois
+  - groundtruth/061_correct_bracketing.py: 4 fois
+  - groundtruth/062_derivative.py: 4 fois
+  - groundtruth/064_vowels_count.py: 4 fois
+  - groundtruth/065_circular_shift.py: 4 fois
+  - groundtruth/066_digitSum.py: 4 fois
+  - groundtruth/068_pluck.py: 4 fois
+  - groundtruth/069_search.py: 4 fois
+  - groundtruth/070_strange_sort_list.py: 4 fois
+  - groundtruth/071_triangle_area.py: 4 fois
+  - groundtruth/072_will_it_fly.py: 4 fois
+  - groundtruth/073_smallest_change.py: 4 fois
+  - groundtruth/074_total_match.py: 4 fois
+  - groundtruth/075_is_multiply_prime.py: 4 fois
+  - groundtruth/076_is_simple_power.py: 4 fois
+  - groundtruth/077_iscube.py: 4 fois
+  - groundtruth/078_hex_key.py: 4 fois
+  - groundtruth/079_decimal_to_binary.py: 4 fois
+  - groundtruth/080_is_happy.py: 4 fois
+  - groundtruth/081_numerical_letter_grade.py: 4 fois
+  - groundtruth/082_prime_length.py: 4 fois
+  - groundtruth/083_starts_one_ends.py: 4 fois
+  - groundtruth/084_solve.py: 4 fois
+  - groundtruth/085_add.py: 4 fois
+  - groundtruth/086_anti_shuffle.py: 4 fois
+  - groundtruth/087_get_row.py: 4 fois
+  - groundtruth/088_sort_array.py: 4 fois
+  - groundtruth/089_encrypt.py: 4 fois
+  - groundtruth/090_next_smallest.py: 4 fois
+  - groundtruth/091_is_bored.py: 4 fois
+  - groundtruth/092_any_int.py: 4 fois
+  - groundtruth/093_encode.py: 4 fois
+  - groundtruth/095_check_dict_case.py: 4 fois
+  - groundtruth/096_count_up_to.py: 4 fois
+  - groundtruth/097_multiply.py: 4 fois
+  - groundtruth/098_count_upper.py: 4 fois
+  - groundtruth/100_make_a_pile.py: 4 fois
+  - groundtruth/101_words_string.py: 4 fois
+  - groundtruth/102_choose_num.py: 4 fois
+  - groundtruth/103_rounded_avg.py: 4 fois
+  - groundtruth/104_unique_digits.py: 4 fois
+  - groundtruth/105_by_length.py: 4 fois
+  - groundtruth/106_f.py: 4 fois
+  - groundtruth/107_even_odd_palindrome.py: 4 fois
+  - groundtruth/108_count_nums.py: 4 fois
+  - groundtruth/109_move_one_ball.py: 4 fois
+  - groundtruth/110_exchange.py: 4 fois
+  - groundtruth/112_reverse_delete.py: 4 fois
+  - groundtruth/113_odd_count.py: 4 fois
+  - groundtruth/114_minSubArraySum.py: 4 fois
+  - groundtruth/116_sort_array.py: 4 fois
+  - groundtruth/117_select_words.py: 4 fois
+  - groundtruth/118_get_closest_vowel.py: 4 fois
+  - groundtruth/119_match_parens.py: 4 fois
+  - groundtruth/120_maximum.py: 4 fois
+  - groundtruth/121_solution.py: 4 fois
+  - groundtruth/122_add_elements.py: 4 fois
+  - groundtruth/123_get_odd_collatz.py: 4 fois
+  - groundtruth/124_valid_date.py: 4 fois
+  - groundtruth/125_split_words.py: 4 fois
+  - groundtruth/126_is_sorted.py: 4 fois
+  - groundtruth/127_intersection.py: 4 fois
+  - groundtruth/128_prod_signs.py: 4 fois
+  - groundtruth/130_tri.py: 4 fois
+  - groundtruth/131_digits.py: 4 fois
+  - groundtruth/132_is_nested.py: 4 fois
+  - groundtruth/133_sum_squares.py: 4 fois
+  - groundtruth/134_check_if_last_char_is_a_letter.py: 4 fois
+  - groundtruth/135_can_arrange.py: 4 fois
+  - groundtruth/136_largest_smallest_integers.py: 4 fois
+  - groundtruth/138_is_equal_to_sum_even.py: 4 fois
+  - groundtruth/139_special_factorial.py: 4 fois
+  - groundtruth/140_fix_spaces.py: 4 fois
+  - groundtruth/141_file_name_check.py: 4 fois
+  - groundtruth/142_sum_squares.py: 4 fois
+  - groundtruth/143_words_in_sentence.py: 4 fois
+  - groundtruth/145_order_by_points.py: 4 fois
+  - groundtruth/146_specialFilter.py: 4 fois
+  - groundtruth/147_get_max_triples.py: 4 fois
+  - groundtruth/148_bf.py: 4 fois
+  - groundtruth/149_sorted_list_sum.py: 4 fois
+  - groundtruth/150_x_or_y.py: 4 fois
+  - groundtruth/151_double_the_difference.py: 4 fois
+  - groundtruth/152_compare.py: 4 fois
+  - groundtruth/153_Strongest_Extension.py: 4 fois
+  - groundtruth/154_cycpattern_check.py: 4 fois
+  - groundtruth/155_even_odd_count.py: 4 fois
+  - groundtruth/156_int_to_mini_roman.py: 4 fois
+  - groundtruth/157_right_angle_triangle.py: 4 fois
+  - groundtruth/158_find_max.py: 4 fois
+  - groundtruth/159_eat.py: 4 fois
+  - groundtruth/160_do_algebra.py: 4 fois
+  - groundtruth/161_solve.py: 4 fois
+  - groundtruth/162_string_to_md5.py: 4 fois
+  - groundtruth/163_generate_integers.py: 4 fois
+  - eval_plus/evaluation/evaluate_runtime.py: 4 fois
+  - eval_plus/evaluation/evaluate_coverage.py: 4 fois
+  - docs/cli.md: 3 fois
+  - .dockerignore: 3 fois
+  - evalplus/provider/openai.py: 3 fois
+  - evalplus/provider/utility.py: 3 fois
+  - evalplus/perf/sampling.py: 3 fois
+  - tools/collect_valid_solutions.py: 3 fois
+  - evalplus/data/humaneval.py: 3 fois
+  - evalplus/gen/chatgpt_gen.py: 3 fois
+  - evalplus/gen/util/api_request.py: 3 fois
+  - LICENSE: 3 fois
+  - tools/filter_inputs.py: 3 fois
+  - tools/check_ground_truth.py: 3 fois
+  - groundtruth_bk/012_longest.py: 3 fois
+  - groundtruth_bk/055_fib.py: 3 fois
+  - groundtruth_bk/125_split_words.py: 3 fois
+  - groundtruth_bk/154_cycpattern_check.py: 3 fois
+  - eval_plus/input_generation/base_gen.py: 3 fois
+  - fuzz_eval/evaluation/evaluate.py: 3 fois
+  - fuzz_eval/utils.py: 3 fois
+  - evalplus/provider/gptqmodel.py: 2 fois
+  - evalplus/provider/bedrock.py: 2 fois
+  - evalplus/provider/google.py: 2 fois
+  - evalplus/perf/select_pe_inputs.py: 2 fois
+  - evalplus/perf/select_pe_tasks.py: 2 fois
+  - evalplus/perf/config.py: 2 fois
+  - evalplus/gen/util/anthropic_request.py: 2 fois
+  - tools/evalperf/hf_upload.py: 2 fois
+  - requirements-evalperf.txt: 2 fois
+  - tools/humaneval/init_ground_truth.py: 2 fois
+  - tests/test_treesitter_sanitizer.py: 2 fois
+  - evalplus/lecacy_sanitize.py: 2 fois
+  - evalplus/gen/util/__init__.py: 2 fois
+  - evalplus/syncheck.py: 2 fois
+  - tools/tsr/README.md: 2 fois
+  - tools/humaneval/init_plus.py: 2 fois
+  - tools/render.py: 2 fois
+  - CITATION.cff: 2 fois
+  - zipper.sh: 2 fois
+  - eval_plus/input_generation/util/api_request.py: 2 fois
+  - tools/baby_checker.py: 2 fois
+  - HumanEvalPlusInputsType_filtered.jsonl: 2 fois
+  - groundtruth_plus/095_check_dict_case.py: 2 fois
+  - groundtruth_plus/100_make_a_pile.py: 2 fois
+  - groundtruth_plus/033_sort_third.py: 2 fois
+  - groundtruth_plus/034_unique.py: 2 fois
+  - groundtruth_plus/035_max_element.py: 2 fois
+  - groundtruth_plus/036_fizz_buzz.py: 2 fois
+  - groundtruth_plus/038_decode_cyclic.py: 2 fois
+  - groundtruth_plus/040_triples_sum_to_zero.py: 2 fois
+  - groundtruth_plus/041_car_race_collision.py: 2 fois
+  - groundtruth_plus/042_incr_list.py: 2 fois
+  - groundtruth_plus/044_change_base.py: 2 fois
+  - groundtruth_plus/045_triangle_area.py: 2 fois
+  - groundtruth_plus/046_fib4.py: 2 fois
+  - tools/set_cover.py: 2 fois
+  - groundtruth_bk/048_is_palindrome.py: 2 fois
+  - groundtruth_bk/031_is_prime.py: 2 fois
+  - groundtruth_bk/025_factorize.py: 2 fois
+  - groundtruth_bk/006_parse_nested_parens.py: 2 fois
+  - groundtruth_bk/000_has_close_elements.py: 2 fois
+  - groundtruth_bk/049_modp.py: 2 fois
+  - tools/topset_distill.py: 2 fois
+  - groundtruth_bk/149_sorted_list_sum.py: 2 fois
+  - groundtruth_bk/116_sort_array.py: 2 fois
+  - groundtruth_bk/075_is_multiply_prime.py: 2 fois
+  - groundtruth_bk/027_flip_case.py: 2 fois
+  - groundtruth_bk/103_rounded_avg.py: 2 fois
+  - groundtruth_bk/109_move_one_ball.py: 2 fois
+  - HumanEvalPlusInputsType.jsonl: 2 fois
+  - groundtruth_bk/140_fix_spaces.py: 2 fois
+  - eval_plus/cov.py: 2 fois
+  - evalplus/config.py: 1 fois
+  - tools/directory_to_jsonl.py: 1 fois
+  - tools/mbpp/fix_v011.py: 1 fois
+  - docs/execution.md: 1 fois
+  - tools/mbpp/fix_v010.py: 1 fois
+  - tools/requirements.txt: 1 fois
+  - release.sh: 1 fois
+  - tools/zip_solutions.py: 1 fois
+  - evalplus/_experimental/evaluate_coverage.py: 1 fois
+  - evalplus/gen/type_mut.py: 1 fois
+  - evalplus/tsr/mutation_init.py: 1 fois
+  - tools/humaneval/fix_v018.py: 1 fois
+  - evalplus/eval/utils.py: 1 fois
+  - .github/ISSUE_TEMPLATE/buggy_test.yml: 1 fois
+  - .github/ISSUE_TEMPLATE/buggy_contract.yml: 1 fois
+  - tools/humaneval/fix_v012.py: 1 fois
+  - tools/humaneval/fix_v015.py: 1 fois
+  - gallary/overview.png: 1 fois
+  - tools/_experimental/set_cover.py: 1 fois
+  - tools/_experimental/topset_distill.py: 1 fois
+  - tools/humaneval/check_ground_truth.py: 1 fois
+  - requirements-tools.txt: 1 fois
+  - gallary/evalplus_overview.jpg: 1 fois
+  - gallary/render.gif: 1 fois
+  - eval_plus/input_generation/generate_input.py: 1 fois
+  - groundtruth_plus/090_next_smallest.py: 1 fois
+  - groundtruth_plus/091_is_bored.py: 1 fois
+  - groundtruth_plus/092_any_int.py: 1 fois
+  - groundtruth_plus/093_encode.py: 1 fois
+  - groundtruth_plus/096_count_up_to.py: 1 fois
+  - groundtruth_plus/097_multiply.py: 1 fois
+  - groundtruth_plus/098_count_upper.py: 1 fois
+  - groundtruth_plus/080_is_happy.py: 1 fois
+  - groundtruth_plus/082_prime_length.py: 1 fois
+  - groundtruth_plus/083_starts_one_ends.py: 1 fois
+  - groundtruth_plus/084_solve.py: 1 fois
+  - groundtruth_plus/085_add.py: 1 fois
+  - groundtruth_plus/086_anti_shuffle.py: 1 fois
+  - groundtruth_plus/087_get_row.py: 1 fois
+  - groundtruth_plus/073_smallest_change.py: 1 fois
+  - groundtruth_plus/074_total_match.py: 1 fois
+  - groundtruth_plus/077_iscube.py: 1 fois
+  - groundtruth_plus/079_decimal_to_binary.py: 1 fois
+  - groundtruth_plus/061_correct_bracketing.py: 1 fois
+  - groundtruth_plus/062_derivative.py: 1 fois
+  - groundtruth_plus/064_vowels_count.py: 1 fois
+  - groundtruth_plus/065_circular_shift.py: 1 fois
+  - groundtruth_plus/066_digitSum.py: 1 fois
+  - groundtruth_plus/067_fruit_distribution.py: 1 fois
+  - groundtruth_plus/068_pluck.py: 1 fois
+  - groundtruth_plus/069_search.py: 1 fois
+  - groundtruth_plus/051_remove_vowels.py: 1 fois
+  - groundtruth_plus/052_below_threshold.py: 1 fois
+  - groundtruth_plus/054_same_chars.py: 1 fois
+  - groundtruth_plus/056_correct_bracketing.py: 1 fois
+  - groundtruth_plus/057_monotonic.py: 1 fois
+  - groundtruth_plus/058_common.py: 1 fois
+  - groundtruth_plus/059_largest_prime_factor.py: 1 fois
+  - groundtruth_plus/101_words_string.py: 1 fois
+  - groundtruth_plus/102_choose_num.py: 1 fois
+  - groundtruth_plus/104_unique_digits.py: 1 fois
+  - groundtruth_plus/105_by_length.py: 1 fois
+  - groundtruth_plus/106_f.py: 1 fois
+  - groundtruth_plus/107_even_odd_palindrome.py: 1 fois
+  - groundtruth_plus/108_count_nums.py: 1 fois
+  - groundtruth_plus/110_exchange.py: 1 fois
+  - groundtruth_plus/111_histogram.py: 1 fois
+  - groundtruth_plus/112_reverse_delete.py: 1 fois
+  - groundtruth_plus/113_odd_count.py: 1 fois
+  - groundtruth_plus/114_minSubArraySum.py: 1 fois
+  - groundtruth_plus/117_select_words.py: 1 fois
+  - groundtruth_plus/118_get_closest_vowel.py: 1 fois
+  - groundtruth_plus/119_match_parens.py: 1 fois
+  - groundtruth_plus/120_maximum.py: 1 fois
+  - groundtruth_plus/121_solution.py: 1 fois
+  - groundtruth_plus/122_add_elements.py: 1 fois
+  - groundtruth_plus/124_valid_date.py: 1 fois
+  - groundtruth_plus/127_intersection.py: 1 fois
+  - groundtruth_plus/129_minPath.py: 1 fois
+  - groundtruth_plus/130_tri.py: 1 fois
+  - groundtruth_plus/131_digits.py: 1 fois
+  - groundtruth_plus/132_is_nested.py: 1 fois
+  - groundtruth_plus/133_sum_squares.py: 1 fois
+  - groundtruth_plus/136_largest_smallest_integers.py: 1 fois
+  - groundtruth_plus/138_is_equal_to_sum_even.py: 1 fois
+  - groundtruth_plus/139_special_factorial.py: 1 fois
+  - groundtruth_plus/140_fix_spaces.py: 1 fois
+  - groundtruth_plus/141_file_name_check.py: 1 fois
+  - groundtruth_plus/142_sum_squares.py: 1 fois
+  - groundtruth_plus/143_words_in_sentence.py: 1 fois
+  - groundtruth_plus/144_simplify.py: 1 fois
+  - groundtruth_plus/146_specialFilter.py: 1 fois
+  - groundtruth_plus/150_x_or_y.py: 1 fois
+  - groundtruth_plus/151_double_the_difference.py: 1 fois
+  - groundtruth_plus/152_compare.py: 1 fois
+  - groundtruth_plus/153_Strongest_Extension.py: 1 fois
+  - groundtruth_plus/154_cycpattern_check.py: 1 fois
+  - groundtruth_plus/156_int_to_mini_roman.py: 1 fois
+  - groundtruth_plus/157_right_angle_triangle.py: 1 fois
+  - groundtruth_plus/158_find_max.py: 1 fois
+  - groundtruth_plus/159_eat.py: 1 fois
+  - groundtruth_plus/160_do_algebra.py: 1 fois
+  - groundtruth_plus/161_solve.py: 1 fois
+  - groundtruth_plus/162_string_to_md5.py: 1 fois
+  - groundtruth_plus/163_generate_integers.py: 1 fois
+  - groundtruth_bk/030_get_positive.py: 1 fois
+  - groundtruth_bk/029_filter_by_prefix.py: 1 fois
+  - groundtruth_bk/028_concatenate.py: 1 fois
+  - groundtruth_bk/024_largest_divisor.py: 1 fois
+  - groundtruth_bk/023_strlen.py: 1 fois
+  - groundtruth_bk/022_filter_integers.py: 1 fois
+  - groundtruth_bk/021_rescale_to_unit.py: 1 fois
+  - groundtruth_bk/020_find_closest_elements.py: 1 fois
+  - groundtruth_bk/019_sort_numbers.py: 1 fois
+  - groundtruth_bk/018_how_many_times.py: 1 fois
+  - groundtruth_bk/017_parse_music.py: 1 fois
+  - groundtruth_bk/016_count_distinct_characters.py: 1 fois
+  - groundtruth_bk/015_string_sequence.py: 1 fois
+  - groundtruth_bk/014_all_prefixes.py: 1 fois
+  - groundtruth_bk/013_greatest_common_divisor.py: 1 fois
+  - groundtruth_bk/011_string_xor.py: 1 fois
+  - groundtruth_bk/007_filter_by_substring.py: 1 fois
+  - groundtruth_bk/004_mean_absolute_deviation.py: 1 fois
+  - groundtruth_bk/001_separate_paren_groups.py: 1 fois
+  - groundtruth_bk/043_pairs_sum_to_zero.py: 1 fois
+  - groundtruth_bk/058_common.py: 1 fois
+  - groundtruth_bk/063_fibfib.py: 1 fois
+  - groundtruth_bk/009_rolling_max.py: 1 fois
+  - groundtruth_bk/008_sum_product.py: 1 fois
+  - groundtruth_bk/005_intersperse.py: 1 fois
+  - groundtruth_bk/003_below_zero.py: 1 fois
+  - groundtruth_bk/002_truncate_number.py: 1 fois
+  - groundtruth_bk/047_median.py: 1 fois
+  - eval_plus/evaluation/evaluate_helpers.py: 1 fois
+  - groundtruth_bk/010_make_palindrome.py: 1 fois
+  - groundtruth_bk/026_remove_duplicates.py: 1 fois
+  - groundtruth_bk/035_max_element.py: 1 fois
+  - groundtruth_bk/037_sort_even.py: 1 fois
+  - groundtruth_bk/039_prime_fib.py: 1 fois
+  - groundtruth_bk/057_monotonic.py: 1 fois
+  - groundtruth_bk/060_sum_to_n.py: 1 fois
+  - groundtruth_bk/070_strange_sort_list.py: 1 fois
+  - groundtruth_bk/072_will_it_fly.py: 1 fois
+  - groundtruth_bk/123_get_odd_collatz.py: 1 fois
+  - groundtruth_bk/128_prod_signs.py: 1 fois
+  - groundtruth_bk/134_check_if_last_char_is_a_letter.py: 1 fois
+  - groundtruth_bk/135_can_arrange.py: 1 fois
+  - groundtruth_bk/147_get_max_triples.py: 1 fois
+  - eval_plus/input_generation/type_mut_for_eff.py: 1 fois
+  - groundtruth_bk/076_is_simple_power.py: 1 fois
+  - groundtruth_bk/126_is_sorted.py: 1 fois
+  - groundtruth_bk/145_order_by_points.py: 1 fois
+  - groundtruth_bk/155_even_odd_count.py: 1 fois
+  - groundtruth_bk/151_double_the_difference.py: 1 fois
+  - groundtruth_bk/040_triples_sum_to_zero.py: 1 fois
+  - groundtruth_bk/077_iscube.py: 1 fois
+  - groundtruth_bk/161_solve.py: 1 fois
+  - groundtruth_bk/105_by_length.py: 1 fois
+  - groundtruth_bk/101_words_string.py: 1 fois
+  - groundtruth_bk/089_encrypt.py: 1 fois
+  - groundtruth_bk/088_sort_array.py: 1 fois
+  - groundtruth_bk/078_hex_key.py: 1 fois
+  - fuzz_eval/evaluation/evaluate_helpers.py: 1 fois
+  - FuzzEval.jsonl: 1 fois
+
+Lignes ajoutées: 46851
+Lignes supprimées: 27092
+
+Types de commits:
+  - fix: 251
+  - feature: 341
+  - documentation: 3
+  - refactor: 167
+  - uncategorized: 3
+  - chore: 12
+  - merge: 28
+  - miscellaneous: 3
+  - revert: 1
+
+Listes des issues:
+  - #204
+  - #189
+  - #93
+  - #134
+  - #27
+  - #126
+  - #111
+  - #85
+  - #88
+  - #44
+  - #96
+  - #143
+  - #202
+  - #199
+  - #6
+  - #47
+  - #133
+  - #52
+  - #16
+  - #146
+  - #7
+  - #140
+  - #132
+  - #190
+  - #117
+  - #194
+  - #51
+  - #161
+  - #162
+  - #211
+  - #186
+  - #196
+  - #3
+  - #142
+  - #150
+  - #98
+  - #131
+  - #239
+  - #256
+  - #45
+  - #120
+  - #195
+  - #83
+  - #148
+  - #12
+  - #165
+  - #258
+  - #201
+  - #255
+  - #53
+  - #240
+  - #238
+  - #241
+  - #212
+  - #252
+  - #8
+  - #259
+  - #118
+  - #110
+=== Fin des statistiques ===

@@ -1,0 +1,689 @@
+Issue: 186
+Title: Fix: v0.1.10
+State: closed
+Body: - Add some new utilities for fixing. 
+- Thorough check of contract consistency (1, 28).
+- Contract fixes (99, 160).
+
+Issue: 255
+Title: Add custom output_file option for result
+State: closed
+Body: No body
+
+Issue: 190
+Title: Fix the dependency analysis in sanitizer
+State: closed
+Body: fix: use identifier dependency graph to decide whether to include a top-level statement
+
+Issue: 259
+Title: Fix gguf loading via Transformers
+State: closed
+Body: No body
+
+Issue: 51
+Title: feat: launching MBPP+
+State: closed
+Body: - [x] Dataset ready
+- [x] Code testing and cleaning
+- [x] Model evaluation and update leaderboard
+- [x] Update README instruction
+- Compile and upload new docker image (after merge)
+
+Issue: 240
+Title: feat(eval): Saving pass@k in result output
+State: closed
+Body: Added `pass_at_k` dicts (base and plus if available) to `result` for reusing calculated pass@k in external tools, etc.
+
+Issue: 204
+Title: fix: Correct iteration logic
+State: closed
+Body: The original code used `enumerate(human_eval)` which returned the index and key, not the index and the value
+
+Issue: 161
+Title: feat(mbpp+): fix v0.1.0 by removing prompt links and remove tasks with broken tests
+State: closed
+Body: Implementation for #159 
+Modified Mbpp+ dataset file, remove links in the "prompt" field
+
+Issue: 83
+Title: feat[port]: port HumanEval+ to the original HumanEval format 
+State: closed
+Body: this pr tries to implement features mentioned in #55 
+
+this pr tried to implement feat mentioned in #55 
+
+HumanEval
+- [x] Conversion
+use WizardCoder samples(https://github.com/evalplus/evalplus/releases/download/v0.1.0/wizardcoder-34b.json) to test
+use evalplus:
+<img width="934" alt="image" src="https://github.com/evalplus/evalplus/assets/79293503/0d811ad7-d180-4afb-acdb-b0086999e23d">
+use humaneval with compatible dataset:
+<img width="949" alt="image" src="https://github.com/evalplus/evalplus/assets/79293503/1e786b8c-67cc-4a6a-936e-6dd3c5678c71">
+
+we can get same results :)
+- [x] Reduce results size, now 308M
+
+
+Issue: 150
+Title: fix(mbpp): oracles and conversion script to original formats
+State: closed
+Body: Fix #147 
+Unexpected oracle's behavior
+
+Issue: 194
+Title: Update README.md
+State: closed
+Body: add description for user who want to using local humaneval+ | mbpp+ dataset.
+
+Issue: 146
+Title: Magicoder direct_completion fix
+State: closed
+Body: `direct_completion` has to be **True** for magicoder for codegen/generate.py script after recent fixes #143 #142 
+
+These changes were made for the issue #141 
+
+Able to reproduce score for **magicoder-s-ds-6.7b** with these changes
+
+> humaneval (base tests)
+> pass@1: 0.756
+> humaneval+ (base + extra tests)
+> pass@1: 0.707
+
+Issue: 196
+Title: fix: showing the only and the last fail test, `is_float`
+State: closed
+Body: Fix the following issues:
+
+```python
+import numpy as np
+
+assert all(isinstance(i, float) for i in []) == True
+
+assert np.allclose([], [1.1], rtol=1e-07, atol=1e-6) == True
+assert np.allclose(1.1, [1.1], rtol=1e-07, atol=1e-6) == True
+```
+
+Issue: 111
+Title: feat(codegen): magicoder, wizardcoder-33b-v1.1, speechless, phind
+State: closed
+Body: - Support Magicoder-S series
+- Support wizardcoder-33b-v1.1
+- Use HFTorchDecoder for speechless
+- Use VLlmDecoder for phind
+
+Issue: 258
+Title: [GPTQModel] Fix torch compat with bad implementation of mps, xpu
+State: closed
+Body: Based on our ci tests, some torch versions contain incomplete,bad implementations of `torch.mps` and `torch.xpu`
+
+On some version of torch, `torch.mps` exists but not `torch.mps.is_available()` which is extremely strange.
+
+Issue: 142
+Title: Fix #141 
+State: closed
+Body: No body
+
+Issue: 44
+Title: HumanEval/114 prompt disagrees with OpenAI's prompt
+State: closed
+Body: For HumanEval/114, the prompt provided in https://github.com/openai/human-eval is
+```
+def minSubArraySum(nums):
+    """
+    Given an array of integers nums, find the minimum sum of any non-empty sub-array
+    of nums.
+    Example
+    minSubArraySum([2, 3, 4, 1, 2, 4]) == 1
+    minSubArraySum([-1, -2, -3]) == -6
+    """
+```
+whereas in EvalPlus, it is
+```
+import math
+
+def minSubArraySum(nums):
+    """
+    Given an array of integers nums, find the minimum sum of any non-empty sub-array
+    of nums.
+    Example
+    minSubArraySum([2, 3, 4, 1, 2, 4]) == 1
+    minSubArraySum([-1, -2, -3]) == -6
+    """
+```
+
+Is there a reason for this? Language models will typically generate different continuations for the respective prompts.
+
+Issue: 148
+Title: Some tests are not deterministic (and incorrectly fail) due to randomness in the tuple(set()) or list(set()) operations
+State: closed
+Body: 5 samples have some of their "plus" tests incorrectly failing due to making the assert on a tuple(set()) or a list(set()): 2, 7, 111, 140, 232.
+
+As an example, take task Mbpp/2:
+- the ground truth solution is 
+```
+def similar_elements(test_tup1, test_tup2):
+     return tuple(set(test_tup1) & set(test_tup2))
+```
+the operation "tuple(set(test_tup1) & set(test_tup2))" is not deterministic as the ordering depends on the PYTHONHASHSEED. 
+- the base tests correctly wrap the function call and target with a set(), hence "reverting" the "tuple" call: `assert set(similar_elements((3, 4, 5, 6),(5, 7, 4, 10))) == set((4, 5))`
+- the plus tests don't do this, whether it's in the evalplus package or in the Huggingface file
+
+The other 4 tasks exhibit similar problems, sometime it's a "list()" instead of a "tuple".
+
+This is problematic because the targets are computed in one python process, and then the function calls on the inputs are done in another process, which means that the 2 do not always match (because different PYTHONHASHSEED). This can be seen when running the GT solution on the "plus" tests for example, some of them will fail.
+
+I think an easy fix would be to also wrap the "plus" tests with a "set()" call, similar to the "base" tests.
+
+Issue: 117
+Title: Adding anthropic model support
+State: closed
+Body: No body
+
+Issue: 165
+Title: fix(eval): use `assert np.allclose` to replace `np.testing.assert_allclose`
+State: closed
+Body: trying to fix #157
+use `np.allclose` instead of `np.testing.assert_allclose` to avoid creating a subprocess
+
+```shell
+Python 3.10.13 (main, Sep 11 2023, 13:44:35) [GCC 11.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import subprocess
+>>> subprocess.Popen = None
+>>> import numpy as np
+>>> assert np.allclose([1, 2], [1, 2])
+>>> assert np.allclose([1, 2], [1, 1])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AssertionError
+>>> np.testing
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/junhao/miniconda3/envs/evalperf/lib/python3.10/site-packages/numpy/__init__.py", line 327, in __getattr__
+    import numpy.testing as testing
+  File "/home/junhao/miniconda3/envs/evalperf/lib/python3.10/site-packages/numpy/testing/__init__.py", line 11, in <module>
+    from ._private.utils import *
+  File "/home/junhao/miniconda3/envs/evalperf/lib/python3.10/site-packages/numpy/testing/_private/utils.py", line 1253, in <module>
+    _SUPPORTS_SVE = check_support_sve()
+  File "/home/junhao/miniconda3/envs/evalperf/lib/python3.10/site-packages/numpy/testing/_private/utils.py", line 1247, in check_support_sve
+    output = subprocess.run(cmd, capture_output=True, text=True)
+  File "/home/junhao/miniconda3/envs/evalperf/lib/python3.10/subprocess.py", line 503, in run
+    with Popen(*popenargs, **kwargs) as process:
+TypeError: 'NoneType' object is not callable
+```
+
+Issue: 239
+Title: fix(vllm): configurable vLLM prefix caching
+State: closed
+Body: fix #237 
+
+Issue: 16
+Title: feat: add CodeT5+ in baseline
+State: closed
+Body: No body
+
+Issue: 88
+Title: fix: skip empty solutions
+State: closed
+Body: When sanitizing samples with an empty solution, 
+<img width="607" alt="image" src="https://github.com/evalplus/evalplus/assets/78358442/6ba07a42-6601-475b-bc59-d3f0571213f1">
+
+It adds the def_code, which is unexpected,
+<img width="578" alt="image" src="https://github.com/evalplus/evalplus/assets/78358442/c00fb345-9e2f-4798-9fda-a339c71277d0">
+We should skip this case.
+
+Issue: 120
+Title: Add support for OpenCodeInterpreter
+State: closed
+Body: Add support for OpenCodeInterpreter
+
+Issue: 27
+Title: Incomplete contracts in problems involving balanced parantheses (1, 6)
+State: closed
+Body: ### HumanEval 1 (`separate_paren_groups`)
+There are two possible interpretations of the docstring.
+1. `paren_string` must be balanced.
+This will imply that every bracket in the input string will appear in one of the groups in the output list. Then, the complete contract is
+```py
+...
+cnt = 0
+for ch in paren_string:
+    assert ch in ["(", ")", " "], "invalid inputs"  # $_CONTRACT_$
+    if ch == "(": cnt += 1
+    if ch == ")": cnt -= 1
+    assert cnt >= 0, "invalid inputs"
+assert cnt == 0 # MISSING STATEMENT
+```
+2. `paren_string` need not be balanced.
+In this case, we don't need this part of the contract at all. This will imply that we only group those brackets which form a balanced group, and leave the rest. However, then this should allow imbalance of both kinds (`cnt > 0` and `cnt < 0`), while only one is allowed by the contract.
+---
+### HumanEval 6 (`parse_nested_parens`)
+Same issue as above.
+
+Issue: 211
+Title: fix(mbpp): reference solutions 102/459/559
+State: closed
+Body: fix #210 
+<img width="449" alt="image" src="https://github.com/evalplus/evalplus/assets/78358442/7085cb51-11d2-4df3-97c9-f365aff9ceef">
+
+
+Issue: 140
+Title: Fix two typos in README.md
+State: closed
+Body: Change 'vairous' to 'various' in [line 34](https://github.com/evalplus/evalplus/blob/master/README.md?plain=1#L34).
+
+Change '2-10 minute' to '2-10 minutes' in [line 216](https://github.com/evalplus/evalplus/blob/master/README.md?plain=1#L216).
+
+Issue: 98
+Title: [Bug] Exporting `eval_results.jsonl`
+State: closed
+Body: Bugs introduced in #96:
+
+1. MBPP output cannot be serialized
+2. `pre-commit` not applied/skipped
+
+The evaluation script is not working for MBPP now and I'm working on it. Also cc: @soryxie 
+
+Issue: 93
+Title: feat(codegen): support speechless coder, mistral ft code, code series
+State: closed
+Body: No body
+
+Issue: 3
+Title: Problem 140 -- wrong solution?
+State: closed
+Body: The canonical solution for problem 140 is given by
+```
+def fix_spaces(text):
+    """
+    Given a string text, replace all spaces in it with underscores, 
+    and if a string has more than 2 consecutive spaces, 
+    then replace all consecutive spaces with - 
+    
+    fix_spaces("Example") == "Example"
+    fix_spaces("Example 1") == "Example_1"
+    fix_spaces(" Example 2") == "_Example_2"
+    fix_spaces(" Example   3") == "_Example-3"
+    """
+    ### Canonical solution below ###
+    ans = text
+    for i in range(len(text)-1, 2, -1):
+        ans = ans.replace(" " * i, "-")
+    return ans.replace(" ", "_")
+```
+Shouldn't it be `len(text)` instead?
+
+Issue: 96
+Title: feat: simplify `eval_results.json`
+State: closed
+Body: Implement #95 
+new format of `eval_results.json` is like:
+<img width="960" alt="image" src="https://github.com/evalplus/evalplus/assets/78358442/b0673e8d-8841-4267-b92d-b4276d2398c9">
+
+(set `--test_details` to fetch all failed test cases)
+
+
+Issue: 126
+Title: fix output file argument in inputgen.py
+State: closed
+Body: fix output file argument in inputgen.py: type str, file assert correction
+
+Issue: 195
+Title: fix: show the first failed case when `--test-details` is not enabled
+State: closed
+Body: Previously, without `--test-details`, the evaluation results do not even show the first failed case, which is inconvenient for debugging.
+
+Issue: 134
+Title: feat(evalperf): evaluating the code performance of LLM generated code
+State: closed
+Body: This PR includes the source code for curating and evaluating on EvalPerf dataset.
+
+Detailed documentation and curated dataset is coming soon.
+
+Thanks @soryxie for co-implementing:
+* `evalplus/perf/select_pe_inputs.py`
+* `evalplus/evalperf.py`
+* `evalplus/perf/profile.py`
+
+
+Issue: 6
+Title: Add flag min_time_limit to evalutor
+State: closed
+Body: cc: @tju01
+
+As a quick workaround, allow users to set a minimal time limit from command-line and increase the minimal timeout to 100 milliseconds.
+
+link: #5
+
+Issue: 201
+Title: fix: correctness check for `find_zero`
+State: closed
+Body: - Should use `abs` to make sure the result is near zero.
+- Should use `continue` to skip the following regular checks for other problems. Otherwise, even a correct one passes this assertion, it may fail when applying other checks which are incompatible to this problem.
+
+Issue: 8
+Title: Problem 53 - Wrong Inputs
+State: closed
+Body: Problem `HumanEval_53` in `evalplus` is given as below with no contracts. A test input in `evalplus` is `add('KKDnux', 'KDDnuxs')` which gives string inputs. There are multiple test cases with string inputs for this problem.
+
+```
+def add(x: int, y: int):
+    """Add two numbers x and y
+    >>> add(2, 3)
+    5
+    >>> add(5, 7)
+    12
+    """
+    return x + y
+```
+
+Issue: 162
+Title: 💡 [REQUEST] - Artigenz-Coder-DS-6.7B
+State: closed
+Body: ### Model introduction
+
+Model by Artigenz team, intending to create family of code generation models that runs fast on local computers.
+
+### Model URL
+
+[Artigenz/Artigenz-Coder-DS-6.7B](https://huggingface.co/Artigenz/Artigenz-Coder-DS-6.7B)
+
+### Data type
+
+bfloat16
+
+### Additional instructions (Optional)
+
+Our model performs best with the following decoder - 
+
+
+```
+class Artigenz(VLlmDecoder):
+    def __init__(self, name: str, **kwargs) -> None:
+        super().__init__(name, **kwargs)
+        self.eos += ["\n```"]
+
+    def codegen(
+        self, prompt: str, do_sample: bool = True, num_samples: int = 200
+    ) -> List[str]:
+        prompt = f"""You are an exceptionally intelligent coding assistant that consistently delivers accurate and reliable responses to user instructions.
+
+@@ Instruction
+Here is a Python programming problem to solve:
+{prompt}
+Please implement this function in a Python.
+
+@@ Response
+```python
+{prompt}
+"""
+
+        return VLlmDecoder.codegen(self, prompt, do_sample, num_samples)
+```
+
+### Author
+
+Yes
+
+### Security
+
+- [X] I confirm that the model is safe to run which does not contain any malicious code or content.
+
+### Integrity
+
+- [X] I confirm that the model comes from unique and original work and does not contain any plagiarism.
+
+Issue: 252
+Title: Add GPTQModel as inference option
+State: closed
+Body: No body
+
+Issue: 85
+Title: feat[port]: port MBPP+ to the original-MBPP-like format
+State: closed
+Body: This pr tried to implement feat mentioned in #55 
+
+MbppPlus part
+
+Use released gpt-4's samples (https://github.com/evalplus/evalplus/releases/download/v0.2.0/gpt-4-1106-preview_temp_0.0.zip) and converted into a json file.
+
+Compiled dataset and samples can be used in Human-eval framework right now.
+Also used evalplus to validate the results.
+
+<img width="1163" alt="image" src="https://github.com/evalplus/evalplus/assets/78358442/4d57dd59-84ac-4b97-a925-90b4074c9674">
+
+- Inconsistent task: "Mbpp/56" has entry point named "check", which introduces conflict with test code.
+
+
+
+Issue: 132
+Title: feat(sanitize): a new treesitter based systematic code sanitizer
+State: closed
+Body: Implementation of the tree sitter sanitizer. Using the following steps:
+
+1. Filter out non-code using `code_extract` function
+2. Filter out everything except imports and definitions(methods, class and variables)
+3. Filter repeated definitions and functions without return statements
+4. Walk through each function and class to create a call graph. Traverse through the call graph to determine call dependencies which are used to filter out definitions that are not called by the entrypoint.
+
+The current tests are not set up optimally, happy to change them to better suit the project structure.
+
+Issue: 110
+Title: [BUG] This system prompt word will cause gpt-4 to generate json with a high probability instead of normal text.
+State: closed
+Body: https://github.com/evalplus/evalplus/blob/b92a382c17968abd5ed2508e143bf411cf554146/evalplus/gen/util/api_request.py#L23C1-L24C1
+
+Notice that this prompt word is intended to be used with json_object, but it seems that the switching condition is missing.
+
+Issue: 133
+Title: feat(codegen): gemma, speechless, code-290k-6.7b-instruct ...
+State: closed
+Body: No body
+
+Issue: 47
+Title: Keep getting IndentationError from the ground truth answers for HUMANEVAL_PLUS_VERSION = "v0.1.9", but works when set to 0.1.8
+State: closed
+Body: Kept getting this error on all machines I tested, regardless of installation method:
+
+```
+Traceback (most recent call last):
+  File "/mnt/data/FastEval/.venv/bin/evalplus.evaluate", line 8, in <module>
+    sys.exit(main())
+  File "/mnt/data/FastEval/.venv/src/evalplus/evalplus/evaluate.py", line 275, in main
+    evaluate_humaneval(args)
+  File "/mnt/data/FastEval/.venv/src/evalplus/evalplus/evaluate.py", line 136, in evaluate_humaneval
+    expected_output = get_groundtruth(problems, dataset_hash)
+  File "/mnt/data/FastEval/.venv/src/evalplus/evalplus/evaluate.py", line 48, in get_groundtruth
+    oracle["base"], oracle["base_time"] = trusted_exec(
+  File "/mnt/data/FastEval/.venv/src/evalplus/evalplus/gen/util/__init__.py", line 7, in trusted_exec
+    exec(code, exec_globals)
+  File "<string>", line 39
+    ans = 0    
+               ^
+IndentationError: unindent does not match any outer indentation level
+```
+
+Was only able to fix it by changing HUMANEVAL_PLUS_VERSION = "v0.1.9" to  "v0.1.8"
+
+Issue: 199
+Title: fix: chat template response typo
+State: closed
+Body: Just a typo `correpsonding` -> `corresponding` , but it may slightly affect model performance.
+
+Issue: 241
+Title: fix bug for find_zero
+State: closed
+Body: Before continue, we should update some stats.
+
+Issue: 256
+Title: Simplify GPTQModel api usage
+State: closed
+Body: No body
+
+Issue: 212
+Title: fix(mbpp): add special oracles
+State: closed
+Body: fix #210 
+Add special oracles for 
+- Mbpp/581 
+- Mbpp/558 
+
+
+They have more than one solutions which could be accepted.
+
+- [x] Tested with `base_input` and `plus_input`
+- [x] Tested with evaluate framework
+
+Issue: 7
+Title: add flag `gt_multiplier` to evaluator
+State: closed
+Body: Users are allowed to fully configure the time limit. If `gt_multiplier=K`, then the time limit would be `max(min_time_limit, K * gt_time)`.
+Partly resolve #5.
+
+Issue: 52
+Title: Fix sanitizer loading and sanitizing issue
+State: closed
+Body: Before the `maxsplit=1` fix, the sanitizer would be unsound in some case, e.g. a solution like the following one:
+```python
+def f(n):
+    def factorial(i):
+        ...
+```
+
+When sanitizing this code, the variable `def_left` would match both `def f` and `def factorial`, and then this code would be split into 3 parts, and the original logic would drop `def f` and keep `def factorial` when doing `new_code.split(def_left)[-1]`.
+
+Issue: 53
+Title: Refactor: test-suite reduction
+State: closed
+Body: * Fix minor bugs
+* Update `mutmut` version
+* Add README
+
+cc @ganler 
+
+Issue: 118
+Title: feat(codegen): starcoder2 series, codegemma series
+State: closed
+Body: use VLlmDecoder and left-right codegen for starcoder2
+
+Issue: 12
+Title: HumanEval/75 & HumanEval/116 Prompt-Solution-Test Alignment
+State: open
+Body: Dear EvalPlus team,
+
+Thanks for fixing the bug in this task! I have noticed this issue (https://huggingface.co/datasets/openai_humaneval/discussions/2) for a while and it seems to me the actual problem is that the **Prompt** contradicts the **Canonical Solution** and **Test Cases**.
+
+The **Prompt**, says **"(a) is less then 100"** (yes, there's a typo). However, the **Canonical Solution** and **Test Cases** clearly show that it should be the **"3 prime numbers"** which are less than 100. Therefore, I think it makes more sense to modify the **Prompt** instead of changing the **Canonical Solution** and **Test Cases**, since in this way EvalPlus can remain aligned with the Original HumanEval on testing results of this task. Moreover, intuitively it makes more sense for **"3 prime numbers"** to be less than 100, as there're only 25 prime numbers under 100, and **"(a) less than 100"** makes the problem way too easy.
+
+Here is a fix I proposed (https://github.com/openai/human-eval/pull/23/files#diff-63aa2f5a019591563ff023fce184aee3a9a0b404aedea28e3387193558d8370cR179) for your reference.
+
+In addition, **the Original HumanEval has a few more typos or wrong prompts** (like the **"less then"** case in this task), but they seem still unsolved in EvalPlus. I have made a PR earlier (https://github.com/openai/human-eval/pull/23) regarding these issues. I would be happy to help solve them in EvalPlus if you think it makes sense : )
+
+Thanks again for your time reviewing this issue. Any feedback would be much appreciated!
+
+Sincerely,
+
+marcusm117
+
+**Prompt**
+```
+def is_multiply_prime(a):
+    """Write a function that returns true if the given number is the multiplication of 3 prime numbers
+    and false otherwise.
+    Knowing that (a) is less then 100.
+    Example:
+    is_multiply_prime(30) == True
+    30 = 2 * 3 * 5
+    """
+```
+
+**Original Canonical Solution**
+```
+    def is_prime(n):
+        for j in range(2,n):
+            if n%j == 0:
+                return False
+        return True
+
+    for i in range(2,101):
+        if not is_prime(i): continue
+        for j in range(2,101):
+            if not is_prime(j): continue
+            for k in range(2,101):
+                if not is_prime(k): continue
+                if i*j*k == a: return True
+    return False
+```
+
+**Original Test Cases**
+```
+def check(candidate):
+    assert candidate(5) == False
+    assert candidate(30) == True
+    assert candidate(8) == True
+    assert candidate(10) == False
+    assert candidate(125) == True
+    assert candidate(3 * 5 * 7) == True
+    assert candidate(3 * 6 * 7) == False
+    assert candidate(9 * 9 * 9) == False
+    assert candidate(11 * 9 * 9) == False
+    assert candidate(11 * 13 * 7) == True
+```
+
+**EvalPlus Contract v0.1.3**
+```
+    assert type(a) == int, "invalid inputs" # $_CONTRACT_$
+    assert a < 100, "invalid inputs" # $_CONTRACT_$
+```
+
+**EvalPlus Canonical Solution v0.1.3**
+```
+    if a <= 1: return False
+    isprime = [True] * (a + 1)
+    for i in range(2, a + 1):
+        if isprime[i]:
+            for j in range(i + i, a + 1, i):
+                isprime[j] = False
+    cnt, tmp = 0, a
+    for i in range(2, a + 1):
+        while isprime[i] and tmp % i == 0:
+            tmp //= i
+            cnt += 1
+    return cnt == 3
+```
+
+**EvalPlusMini Test Cases v0.1.3**
+`[[5], [30], [8], [10], [33], [-98], [2], [98], [99], [-56]]`
+
+Issue: 189
+Title: fix: sanitizer handling extra statements outside the function to complete
+State: closed
+Body: Fix #188 
+
+Issue: 131
+Title: feat(tools): filter extreme time-consuming inputs
+State: closed
+Body: No body
+
+Issue: 143
+Title: Fix magicoder prompt
+State: closed
+Body: There seems to be another bug in the input prompt formatting for magicoder
+
+Issue: 202
+Title: fix: hf direct completion check
+State: closed
+Body: having `chat_template` -> instruction-tuned models
+
+Issue: 45
+Title: Fix broken link to utility tools
+State: closed
+Body: No body
+
+Issue: 238
+Title: feat(codegen): only initialize the model when generation is incomplete
+State: closed
+Body: If complete the codegen, next time we skip it.
+![image](https://github.com/user-attachments/assets/5dafa7b7-5dfa-4fc5-af9e-4cb2e530c3cd)
+
+
