@@ -1,0 +1,24 @@
+flowchart LR
+    subgraph Build_Workflow
+        direction TB
+        A["build_doc (Docs Job)"] 
+        B["build_doc_r (Docs Job)"]
+        C["mlflow-recipes (MLFlow Job)"]
+        D["windows (Windows Testing Job)"]
+    end
+
+    A -->|Checkout & Fetch Merge Ref| A1["Install Java & Pandoc"]
+    A1 -->|Install Python dependencies & Build Docs| A2["Store artifacts"]
+
+    B -->|Checkout & Fetch Merge Ref| B1["Build Documentation R"]
+    B1 -->|Check Git Status| B2["Store artifacts"]
+
+    C -->|Checkout & Fetch Merge Ref| C1["Pull Submodule & Install Dependencies"]
+    C1 -->|Run CLI & Execute Notebooks| C2["Store artifacts"]
+
+    D -->|Checkout| D1["SSH Access for Testing"]
+
+    A2 --> E["Final Processing"]
+    B2 --> E
+    C2 --> E
+    E --> D1

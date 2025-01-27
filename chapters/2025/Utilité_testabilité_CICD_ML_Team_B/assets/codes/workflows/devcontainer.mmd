@@ -1,0 +1,15 @@
+flowchart TD
+    subgraph Configurations["Configurations"]
+        C1["Dockerfile.devcontainer"]
+        C2["docker-compose.yml"]
+        C3[".devcontainer/settings.json"]
+    end
+    A["VSCode avec Remote - Containers"] -- Ouvre le projet --> B["Docker"]
+    B -- "Construit l'image DevContainer avec Dockerfile.devcontainer" --> C["DevContainer"]
+    C -- "Prend en charge les outils préinstallés: Python, MLflow, Node.js, etc." --> D["Environnement de développement"]
+    D -- "Code, exécute et teste: Pytest, pre-commit hooks" --> E["MLflow Project"]
+    E -- Pousse les changements --> F["GitHub Repository"]
+    F -- Déclenche des workflows CI/CD: GitHub Actions --> G["Pipeline CI/CD"]
+    G -- Exécute les tests et déploie les artefacts --> H["Résultats reproductibles"]
+    B --> Configurations
+    Configurations --> C
