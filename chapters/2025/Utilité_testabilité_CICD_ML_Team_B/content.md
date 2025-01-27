@@ -148,10 +148,11 @@ L’analyse des pipelines MLOps pourrait être influencée par une connaissance 
 
 .
 
-![image](https://github.com/user-attachments/assets/8a0d448a-dcc7-4e66-8a0e-c471712017b3)
+![image](./assets/images/407102322-8a0d448a-dcc7-4e66-8a0e-c471712017b3.png)
 <div style="text-align: center;">
   <p><em>Figure  : Workflow d'une application DevOps [2] </em></p>
 </div>
+
 
 .
 
