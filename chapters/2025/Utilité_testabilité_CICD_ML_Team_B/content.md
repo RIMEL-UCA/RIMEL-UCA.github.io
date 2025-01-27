@@ -406,7 +406,7 @@ Utilisé pour sa puissance et sa flexibilité dans l'exécution des pipelines CI
 <table style="width: 100%;">
   <tr>
     <td style="width: 50%; text-align: center;">
-      <img src="./assets/images/mlflow/circleci/jobs.png" style="width: 100%; max-width: 600px;">
+      <img src="./assets/images/mlflow/circleci/jobs.png" style="width: 100%; max-width: 300px;">
       <p><em>Figure XX.</em> circleCI jobs</p>
     </td>
     <td style="width: 50%; font-size: 0.85em;">
