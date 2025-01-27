@@ -1,0 +1,128 @@
+[
+  {
+    "tool": "cml",
+    "query": "iterative/setup-cml@v1",
+    "extensions": ["yml", "yaml"],
+    "purpose": ["global"]
+  },
+  {
+    "tool": "cml",
+    "query": "cml comment create",
+    "extensions": ["yml", "yaml", "sh"],
+    "purpose": ["metric"]
+  },
+  {
+    "tool": "cml",
+    "query": "cml check create",
+    "extensions": ["yml", "yaml", "sh"],
+    "purpose": ["metric"]
+  },
+  {
+    "tool": "cml",
+    "query": "cml tensorboard connect",
+    "extensions": ["yml", "yaml", "sh"],
+    "purpose": ["metric"]
+  },
+  {
+    "tool": "ClearML",
+    "query": "/from clearml import Task[\\s\\S]*?Task\\.init\\([\\s\\S]*?auto_connect_frameworks\\s*=\\s*True/",
+    "extensions": ["py", "ipynb"],
+    "purpose": ["logging", "metric"]
+  },
+  {
+    "tool": "ClearML",
+    "query": "/(?:import clearml(?:\\s+as\\s+\\w+)?|from clearml import)(\\s|\\S)*(\\.report_scalar|\\.report_single_value|\\.report_histogram|\\.report_vector|\\.report_table|\\.report_line_plot|\\.report_scatter2d|\\.report_confusion_matrix|\\.report_scatter3d|\\.report_surface)/",
+    "extensions": ["py", "ipynb"],
+    "purpose": ["metric"]
+  },
+  {
+    "tool": "ClearML",
+    "query": "/(?:import clearml(?:\\s+as\\s+\\w+)?|from clearml import)(\\s|\\S)*OutputModel/",
+    "extensions": ["py", "ipynb"],
+    "purpose": ["logging"]
+  },
+  {
+    "tool": "ClearML",
+    "query": "/from clearml import|import clearml/",
+    "extensions": ["py", "ipynb"],
+    "purpose": ["global"]
+  },
+  {
+    "tool": "MLflow",
+    "query": "/(?:import mlflow(?:\\s+as\\s+\\w+)?|from mlflow import)(\\s|\\S)*log_params/",
+    "extensions": ["py", "ipynb"],
+    "purpose": ["metric"]
+  },
+  {
+    "tool": "MLflow",
+    "query": "/(?:import mlflow(?:\\s+as\\s+\\w+)?|from mlflow import)(\\s|\\S)*log_metrics/",
+    "extensions": ["py", "ipynb"],
+    "purpose": ["metric"]
+  },
+  {
+    "tool": "MLflow",
+    "query": "/(?:import mlflow(?:\\s+as\\s+\\w+)?|from mlflow import)(\\s|\\S)*register_model/",
+    "extensions": ["py", "ipynb"],
+    "purpose": ["logging"]
+  },
+  {
+    "tool": "MLflow",
+    "query": "/(from mlflow import|import mlflow)(.|,|\\s\\S)*pyfunc(,.*)?[\\s\\S]*?[\\s\\S]*?save_model/",
+    "extensions": ["py", "ipynb"],
+    "purpose": ["logging"]
+  },
+  {
+    "tool": "MLflow",
+    "query": "/(from mlflow import|import mlflow)(.|,|\\s\\S)*pyfunc(,.*)?[\\s\\S]*?[\\s\\S]*?log_model/",
+    "extensions": ["py", "ipynb"],
+    "purpose": ["logging"]
+  },
+  {
+    "tool": "MLflow",
+    "query": "/from mlflow import|import mlflow/",
+    "extensions": ["py", "ipynb"],
+    "purpose": ["global"]
+  },
+  {
+    "tool": "Kubeflow",
+    "query": "/apiVersion( )*:( )*kubeflow\\.org\/v1beta1(\\s|\\S)*kind( )*:( )*Experiment/",
+    "extensions": ["yaml","yml"],
+    "purpose": ["logging", "metric", "tuning"]
+  },
+  {
+    "tool": "Kubeflow",
+    "query": "/(?:import kubeflow(?:\\s+as\\s+\\w+)?|from kubeflow import)(\\s|\\S)*katib(\\s|\\S|\\w)*\\.tune/",
+    "extensions": ["py","ipynb"],
+    "purpose": ["logging", "metric", "tuning"]
+  },
+  {
+    "tool": "Kubeflow",
+    "query": "/^(from kfp|import kfp|from kubeflow|import kubeflow|from model_registry|import model_registry)/",
+    "extensions": ["py","ipynb"],
+    "purpose": ["global"]
+  },
+  {
+    "tool": "Wandb",
+    "query": "/import wandb|from wandb/",
+    "extensions": ["py", "ipynb"],
+    "purpose": ["global"]
+  },
+  {
+    "tool": "Wandb",
+    "query": "/(import wandb|from wandb)(\\s|\\S|\\w)*\\.log_artifact\\(/",
+    "extensions": ["py", "ipynb"],
+    "purpose": ["logging"]
+  },
+  {
+    "tool": "Wandb",
+    "query": "/(import wandb|from wandb)(\\s|\\S|\\w)*\\.log\\(/",
+    "extensions": ["py", "ipynb"],
+    "purpose": ["metric"]
+  },
+  {
+    "tool": "Wandb",
+    "query": "/(?:import wandb(?:\\s+as\\s+\\w+)?|from wandb import)(\\s|\\S)*sweep/",
+    "extensions": ["py", "ipynb"],
+    "purpose": ["tuning"]
+  }
+]
