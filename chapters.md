@@ -16,7 +16,7 @@ date: 2022-11-18 6:00:00 +0100
 
 ### Variabilité des benchmarks pour IA génératives
 #### [Variabilité des benchmarks pour IA génératives]({{site.url}}/chapters/2025/Variabilite_des_benchmarks_pour_IA_generatives_Team_G/content)
-#### [Facteurs impactant les résultats de benchmark de géneration de code]({{site.url}}/chapters/2025/Variabilite_des_benchmarks-TeamF/content)
+#### [Facteurs impactant les résultats de benchmark de géneration de code]({{site.url}}/chapters/2025/old_Variabilite_des_benchmarks-TeamF/content)
 
 
 ### Analysis of experience tracking tools usage for Machine Learning
