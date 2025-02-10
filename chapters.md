@@ -7,23 +7,13 @@ date: 2022-11-18 6:00:00 +0100
 ## 2025
 
 
-### SLM vs LLM
-#### [Enjeux et cas d’usage des SLM et des LLM  ]({{site.url}}/chapters/2025/SLM_vs_LLM-Team_C/content)
-#### [Analyse énergétique et financière des LLM vs SLM]({{site.url}}/chapters/2025/SLM_vs_LLM-Team_E/content)
-
-### Modèles de Machine Learning et documentation sur les propriétés FATES 
-#### [projetModel]({{site.url}}/chapters/2025/ChapterModel/content)
-
-### Variabilité des benchmarks pour IA génératives
-#### [Variabilité des benchmarks pour IA génératives]({{site.url}}/chapters/2025/Variabilite_des_benchmarks_pour_IA_generatives_Team_G/content)
-#### [Facteurs impactant les résultats de benchmark de géneration de code]({{site.url}}/chapters/2025/old_Variabilite_des_benchmarks-TeamF/content)
+### SLM vs LLM : [Enjeux et cas d’usage des SLM et des LLM  ]({{site.url}}/chapters/2025/SLM_vs_LLM-Team_C/content)
+### SLM vs LLM : [Analyse énergétique et financière des LLM vs SLM]({{site.url}}/chapters/2025/SLM_vs_LLM-Team_E/content)
 
 
-### Analysis of experience tracking tools usage for Machine Learning
-#### [Analysis of experience tracking tools usage for Machine Learning]({{site.url}}/chapters/2025/Analysis_of_experience_tracking_tools_usage_for_Machine_Learning_Team_H/content)
+### [Variabilité des benchmarks pour IA génératives]({{site.url}}/chapters/2025/Variabilite_des_benchmarks_pour_IA_generatives_Team_G/content)
 
-### Analyse des Outils CI/CD pour le Machine Learning
-#### [projetModel]({{site.url}}/chapters/2025/ChapterModel/content)
+### [Analysis of experience tracking tools usage for Machine Learning]({{site.url}}/chapters/2025/Analysis_of_experience_tracking_tools_usage_for_Machine_Learning_Team_H/content)
 
 ### [Utilité et testabilité des pipelines CI/CD ML]({{site.url}}/chapters/2025/Utilité_testabilité_CICD_ML_Team_B/content)
 
