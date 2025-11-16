@@ -9,7 +9,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   
 permalink: /:year/:month/:day/:title.html
 redirects: yes
-exclude: [ _posts/source/, _posts/_private/ ]
+exclude: [ _posts/source/, _posts/_private/, _posts/POUB ]
 
 plugins::
   - jekyll-pandoc
