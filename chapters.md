@@ -3,6 +3,11 @@ layout: default
 title: "Chapters"
 date: 2022-11-18 6:00:00 +0100
 ---
+## 2026
+
+### MODEL : [MODELE DE CHAPITRE 2026]({{site.url}}/chapters/2026/ChapterModel/content)
+
+### Bonnes pratiques des charts Helm : [Analyse des bonnes pratiques dans les charts Helm]({{site.url}}/chapters/2026/Helm_Charts_Best_Practices_Team_A/content)
 
 ## 2025
 

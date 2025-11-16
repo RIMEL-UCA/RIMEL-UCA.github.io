@@ -1,7 +1,7 @@
 ---
 layout: default
-title : Modèle de chapitre pour 2024-25
-date:   2024-11
+title : Modèle de chapitre pour 2025-26
+date:   2025-11
 ---
 
 ---
@@ -18,7 +18,7 @@ date:   2024-11
 
 ---
 
-**_février 2025_**
+**_février 2026_**
 
 ## Authors
 
