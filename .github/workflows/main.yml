@@ -19,10 +19,10 @@ jobs:
       - name: Install System Dependencies (GSL & Nokogiri) 
         run: |
           sudo apt-get update
-          sudo apt-get install -y build-essential libgsl-dev libxml2-dev libxslt-dev zlib1g-dev
+          sudo apt-get install -y build-essential libgsl-dev ruby-nokogiri libxml2-dev libxslt-dev zlib1g-dev
           
       - name: Install dependencies (Bundle)
-        run: bundle install --path vendor/bundle
+        run: bundle install --path vendor/bundle --no-install-cleanup
       
       - name: Build Jekyll Site
         run: bundle exec jekyll build
