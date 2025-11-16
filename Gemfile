@@ -25,6 +25,8 @@ gem "pygments.rb"
 ## Working locally only
 gem "garb" #, "~> 0.9.8"    # Google Analytics API
 
+gem "kramdown-parser-gfm"
+
 #gem 'classifier-reborn'
 #gem 'classifier-reborn', :git => "https://github.com/jekyll/classifier-reborn"
 #gem 'rb-gsl'
