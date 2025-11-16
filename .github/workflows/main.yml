@@ -16,7 +16,11 @@ jobs:
         with:
           ruby-version: '3.1' # Assurez-vous que la version correspond à ce que bundle utilise
           bundler-cache: true # Installe les dépendances avec Bundler
-
+      - name: Install System Dependencies (GSL & Nokogiri) 
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgsl-dev libxml2-dev libxslt-dev zlib1g-dev
+          
       - name: Install dependencies (Bundle)
         run: bundle install --path vendor/bundle
       
