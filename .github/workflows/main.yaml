@@ -1,0 +1,42 @@
+name: Build and Deploy Jekyll Site
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  jekyll:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1' # Assurez-vous que la version correspond à ce que bundle utilise
+          bundler-cache: true # Installe les dépendances avec Bundler
+
+      - name: Install dependencies (Bundle)
+        run: bundle install --path vendor/bundle
+      
+      - name: Build Jekyll Site
+        run: bundle exec jekyll build
+        env:
+          PAGES_REPO_NWO: ${{ github.repository }} 
+          
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site # Chemin vers le dossier construit
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: jekyll
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
