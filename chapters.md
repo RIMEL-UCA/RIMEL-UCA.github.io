@@ -9,6 +9,8 @@ date: 2022-11-18 6:00:00 +0100
 
 ### Bonnes pratiques des charts Helm : [Analyse des bonnes pratiques dans les charts Helm]({{site.url}}/chapters/2026/Helm_Charts_Best_Practices_Team_A/content)
 
+### Bonnes pratiques des charts Helm : [Quelles pratiques liées à l'utilisation d'HELM peuvent être dégagés des projets l'utilisant ?]({{site.url}}/chapters/2026/Extraire_Bonnes_Pratiques_Helm_Team_F/content)
+
 ## 2025
 
 
