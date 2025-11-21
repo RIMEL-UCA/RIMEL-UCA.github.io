@@ -9,6 +9,8 @@ date: 2022-11-18 6:00:00 +0100
 
 ### Bonnes pratiques des charts Helm : [Analyse des bonnes pratiques dans les charts Helm]({{site.url}}/chapters/2026/Helm_Charts_Best_Practices_Team_A/content)
 
+### [Evolution de la testabilité et de la documentation dans les projets Data For Good]({{site.url}}/chapters/2026/evolution_testabilite_documentation_dfg_A/content)
+
 ## 2025
 
 
