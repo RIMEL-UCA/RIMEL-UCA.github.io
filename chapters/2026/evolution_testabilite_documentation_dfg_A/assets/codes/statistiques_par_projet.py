@@ -39,15 +39,15 @@ print("📊 Étape 1 : Calcul ICC par projet")
 print("=" * 80)
 
 # Chargement des données des 4 personnes (fichiers corrigés)
-df_theo = pd.read_csv('analyse_dataforgood_repos_theo_corrected.csv')
-df_baptiste = pd.read_csv('analyse_dataforgood_repos_baptiste_corrected.csv')
-df_antoine = pd.read_csv('analyse_dataforgood_repos_antoine_corrected.csv')
-df_roxx = pd.read_csv('analyse_dataforgood_repos_roxx_corrected.csv')
+df_theo = pd.read_csv('../results/notes_theo.csv')
+df_baptiste = pd.read_csv('../results/notes_baptiste.csv')
+df_antoine = pd.read_csv('../results/notes_antoine.csv')
+df_roxane = pd.read_csv('../results/notes_roxane.csv')
 
 # Liste des dépôts
 repos = df_theo['Dépôt'].tolist()
 
-# Colonnes pour les tests (sans LICENSE)
+# Colonnes pour les tests
 test_columns = [
     'Présence tests (/15)',
     'Niveaux UT/IT/E2E (/25)',
@@ -56,7 +56,7 @@ test_columns = [
     'Entretien Git (/10)'
 ]
 
-# Colonnes pour la documentation (avec LICENSE)
+# Colonnes pour la documentation
 doc_columns = [
     'README Description (/25)',
     'README Architecture (/20)',
@@ -76,7 +76,7 @@ for i, repo in enumerate(repos):
     theo_row = df_theo.iloc[i]
     baptiste_row = df_baptiste.iloc[i]
     antoine_row = df_antoine.iloc[i]
-    roxx_row = df_roxx.iloc[i]
+    roxane_row = df_roxane.iloc[i]
 
     # === TESTS ===
     # Collecte des notes de test pour chaque jury
@@ -84,7 +84,7 @@ for i, repo in enumerate(repos):
         "Theo": [float(theo_row[col]) for col in test_columns],
         "Baptiste": [float(baptiste_row[col]) for col in test_columns],
         "Antoine": [float(antoine_row[col]) for col in test_columns],
-        "Roxx": [float(roxx_row[col]) for col in test_columns]
+        "Roxane": [float(roxane_row[col]) for col in test_columns]
     }
 
     # Moyenne de test par jury
@@ -104,7 +104,7 @@ for i, repo in enumerate(repos):
         "Theo": [float(theo_row[col]) for col in doc_columns],
         "Baptiste": [float(baptiste_row[col]) for col in doc_columns],
         "Antoine": [float(antoine_row[col]) for col in doc_columns],
-        "Roxx": [float(roxx_row[col]) for col in doc_columns]
+        "Roxane": [float(roxane_row[col]) for col in doc_columns]
     }
 
     # Moyenne de documentation par jury
@@ -130,7 +130,7 @@ for i, repo in enumerate(repos):
     })
 
 # Sauvegarde du résultat
-output_file = 'etape1_icc_par_projet.csv'
+output_file = '../results/statistiques_par_projet.csv'
 df_results = pd.DataFrame(results)
 df_results.to_csv(output_file, index=False, encoding='utf-8')
 

@@ -4,10 +4,10 @@ print("📊 Étape 2 : Création des fichiers par question de recherche")
 print("=" * 80)
 
 # Chargement des données de l'étape 1
-df_etape1 = pd.read_csv('etape1_icc_par_projet.csv')
+df_etape1 = pd.read_csv('../results/etape1_icc_par_projet.csv')
 
 # Chargement du mapping
-df_mapping = pd.read_csv('mapping_projets.csv')
+df_mapping = pd.read_csv('../results/mapping_projets.csv')
 
 # Fusion des données
 df_merged = pd.merge(df_mapping, df_etape1, on='Projet', how='inner')
