@@ -39,10 +39,10 @@ print("📊 Étape 1 : Calcul ICC par projet")
 print("=" * 80)
 
 # Chargement des données des 4 personnes (fichiers corrigés)
-df_theo = pd.read_csv('../results/notes_theo.csv')
-df_baptiste = pd.read_csv('../results/notes_baptiste.csv')
-df_antoine = pd.read_csv('../results/notes_antoine.csv')
-df_roxane = pd.read_csv('../results/notes_roxane.csv')
+df_theo = pd.read_csv('../results/1_notes_per_judge/notes_theo.csv')
+df_baptiste = pd.read_csv('../results/1_notes_per_judge/notes_baptiste.csv')
+df_antoine = pd.read_csv('../results/1_notes_per_judge/notes_antoine.csv')
+df_roxane = pd.read_csv('../results/1_notes_per_judge/notes_roxane.csv')
 
 # Liste des dépôts
 repos = df_theo['Dépôt'].tolist()
@@ -89,10 +89,8 @@ for i, repo in enumerate(repos):
 
     # Somme de test par jury
     test_sommes = {jury: pd.Series(notes).sum() for jury, notes in notes_tests.items()}
-    print(repo, " - Somme par jury:", test_sommes)
     # Moyenne globale de test
     test_moyenne_globale = pd.Series(test_sommes.values()).mean()
-    print(repo, " - Moyenne globale:", test_moyenne_globale)
 
     # Calcul ICC pour les tests
     icc_tests = calculate_icc_for_criteria(notes_tests, repo)
@@ -111,10 +109,8 @@ for i, repo in enumerate(repos):
 
     # Somme de documentation par jury
     doc_sommes = {jury: pd.Series(notes).sum() for jury, notes in notes_doc.items()}
-    print(repo, " - Sommes par jury:", doc_sommes)
     # Moyenne globale de documentation
     doc_moyenne_globale = pd.Series(doc_sommes.values()).mean()
-    print(repo, " - Moyenne globale:", doc_moyenne_globale)
 
     # Calcul ICC pour la documentation
     icc_doc = calculate_icc_for_criteria(notes_doc, repo)
@@ -134,7 +130,7 @@ for i, repo in enumerate(repos):
     })
 
 # Sauvegarde du résultat
-output_file = '../results/statistiques_par_projet.csv'
+output_file = '../results/2_statistics/statistiques_par_projet.csv'
 df_results = pd.DataFrame(results)
 df_results.to_csv(output_file, index=False, encoding='utf-8')
 

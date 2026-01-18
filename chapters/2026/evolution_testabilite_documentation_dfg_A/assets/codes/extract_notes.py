@@ -7,7 +7,7 @@ print("=" * 80)
 # Lecture du fichier all.csv
 data = defaultdict(lambda: defaultdict(dict))
 
-with open('../results/all.csv', 'r', encoding='utf-8-sig') as f:
+with open('../results/0_input/all.csv', 'r', encoding='utf-8-sig') as f:
     reader = csv.DictReader(f)
     for row in reader:
         personne = row['Personne']
@@ -97,7 +97,7 @@ for personne in ['Theo', 'Baptiste', 'Antoine', 'Roxane']:
         ])
 
     # Écriture du CSV
-    filename = f'../results/notes_{personne.lower()}.csv'
+    filename = f'../results/1_notes_per_judge/notes_{personne.lower()}.csv'
     with open(filename, 'w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
         writer.writerow([
