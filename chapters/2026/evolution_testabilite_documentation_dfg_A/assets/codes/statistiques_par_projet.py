@@ -87,10 +87,12 @@ for i, repo in enumerate(repos):
         "Roxane": [float(roxane_row[col]) for col in test_columns]
     }
 
-    # Moyenne de test par jury
-    test_moyennes = {jury: sum(notes)/len(notes) for jury, notes in notes_tests.items()}
+    # Somme de test par jury
+    test_sommes = {jury: pd.Series(notes).sum() for jury, notes in notes_tests.items()}
+    print(repo, " - Somme par jury:", test_sommes)
     # Moyenne globale de test
-    test_moyenne_globale = sum(test_moyennes.values()) / len(test_moyennes)
+    test_moyenne_globale = pd.Series(test_sommes.values()).mean()
+    print(repo, " - Moyenne globale:", test_moyenne_globale)
 
     # Calcul ICC pour les tests
     icc_tests = calculate_icc_for_criteria(notes_tests, repo)
@@ -107,10 +109,12 @@ for i, repo in enumerate(repos):
         "Roxane": [float(roxane_row[col]) for col in doc_columns]
     }
 
-    # Moyenne de documentation par jury
-    doc_moyennes = {jury: sum(notes)/len(notes) for jury, notes in notes_doc.items()}
+    # Somme de documentation par jury
+    doc_sommes = {jury: pd.Series(notes).sum() for jury, notes in notes_doc.items()}
+    print(repo, " - Sommes par jury:", doc_sommes)
     # Moyenne globale de documentation
-    doc_moyenne_globale = sum(doc_moyennes.values()) / len(doc_moyennes)
+    doc_moyenne_globale = pd.Series(doc_sommes.values()).mean()
+    print(repo, " - Moyenne globale:", doc_moyenne_globale)
 
     # Calcul ICC pour la documentation
     icc_doc = calculate_icc_for_criteria(notes_doc, repo)

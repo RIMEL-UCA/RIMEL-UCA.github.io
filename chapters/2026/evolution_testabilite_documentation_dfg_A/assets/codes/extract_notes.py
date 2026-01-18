@@ -24,7 +24,6 @@ repos = [
     '13_democratiser_sobriete',
     'offseason_missiontransition_categorisation',
     'shiftdataportal',
-    '13_ecoskills',
     'batch4_diafoirus_fleming',
     'website2022',
     'batch5_phenix_happymeal',
