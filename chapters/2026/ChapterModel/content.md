@@ -6,11 +6,11 @@ date:   2025-11
 
 ---
 
-   **Date de rendu finale : fin février**
+   **Date de rendu finale : fin janvier**
    - Respecter la structure pour que les chapitres soient bien indépendants
    - Remarques :
         - La structure proposée est là pour vous aider, mais peut-être adaptée à votre projet
-        - Les titres peuvent être modifiés pour être en adéquation avec votre étude. 
+        - Les titres peuvent être modifiés afin d’être en adéquation avec votre étude. 
         - Utiliser des références pour justifier votre argumentaire, vos choix, etc.
         - Vous avez le choix d'utiliser le français ou l'anglais.
 
