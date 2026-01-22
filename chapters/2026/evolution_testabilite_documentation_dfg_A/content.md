@@ -225,100 +225,42 @@ En conséquence, malgré ces itérations successives, certains projets présente
 
 ### Analyse détaillée des désaccords entre juges
 
-Afin de mieux comprendre les sources de divergence dans les notations et d'identifier les patterns de sévérité entre les membres du jury, nous avons conduit une analyse statistique des désaccords. Cette analyse s'appuie sur un script Python développé spécifiquement ([analyse_desaccords_juges.py](assets/codes/analyse_desaccords_juges.py)), qui calcule diverses métriques de comparaison entre les quatre juges.
+Pour mieux comprendre les divergences dans les notations, nous avons analysé statistiquement les désaccords entre les quatre juges à l'aide d'un script Python ([analyse_desaccords_juges.py](assets/codes/analyse_desaccords_juges.py)).
 
-#### Sévérité générale des juges
+#### Sévérité des juges
 
-L'analyse des moyennes et médianes des scores attribués par chaque juge révèle des différences dans leur sévérité :
+L'analyse révèle des différences notables de sévérité entre les juges :
 
-**Pour les tests :**
-| Juge | Moyenne | Médiane | Écart-type |
-|---------|---------|---------|------------|
-| Antoine | 15.8 | 0.0 | 20.1 |
-| Baptiste | 22.9 | 27.5 | 22.5 |
-| Roxane | 16.3 | 3.0 | 18.7 |
-| Théo | 24.7 | 26.5 | 20.4 |
-
-**Pour la documentation :**
-| Juge | Moyenne | Médiane | Écart-type |
-|---------|---------|---------|------------|
-| Antoine | 54.4 | 60.0 | 22.2 |
-| Baptiste | 49.3 | 47.5 | 18.9 |
-| Roxane | 51.0 | 57.0 | 19.1 |
-| Théo | 59.0 | 62.0 | 16.3 |
-
-Ces statistiques montrent que **Théo** et **Baptiste** sont généralement les plus généreux dans leurs notations des tests (moyennes de 24.7 et 22.9 respectivement), tandis qu'**Antoine** et **Roxane** sont plus sévères (moyennes de 15.8 et 16.3). Pour la documentation, **Théo** reste le plus généreux (moyenne de 59.0), tandis que **Baptiste** est le plus strict (moyenne de 49.3).
+- **Tests** : Théo (moyenne 24.7) et Baptiste (22.9) sont les plus généreux, tandis qu'Antoine (15.8) et Roxane (16.3) sont plus sévères.
+- **Documentation** : Théo (moyenne 59.0) reste le plus généreux, Baptiste (49.3) est le plus strict.
 
 ![Graphique de sévérité des juges](assets/results/4_inter_rater_analysis/images/severite_juges.png)
 
-#### Analyse des différences par paires de juges
+#### Accord entre juges
 
-Pour identifier les couples de juges en accord ou en désaccord, nous avons calculé les différences moyennes absolues entre chaque paire de juges :
+L'analyse des différences entre paires de juges montre que :
 
-**Pour les tests :**
-| Paire de juges | Différence moyenne absolue | Différence maximale | Différence signée moyenne |
-|----------------|---------------------------|---------------------|---------------------------|
-| Antoine - Baptiste | 9.6 | 45.0 | -7.1 |
-| Antoine - Roxane | 2.8 | 8.0 | -0.5 |
-| Antoine - Théo | 9.7 | 45.0 | -8.8 |
-| Baptiste - Roxane | 10.4 | 42.0 | +6.6 |
-| Baptiste - Théo | 6.6 | 20.0 | -1.8 |
-| Roxane - Théo | 9.2 | 42.0 | -8.3 |
-
-**Pour la documentation :**
-| Paire de juges | Différence moyenne absolue | Différence maximale | Différence signée moyenne |
-|----------------|---------------------------|---------------------|---------------------------|
-| Antoine - Baptiste | 14.9 | 30.0 | +5.1 |
-| Antoine - Roxane | 4.3 | 12.0 | +3.4 |
-| Antoine - Théo | 6.6 | 19.0 | -4.6 |
-| Baptiste - Roxane | 12.3 | 33.0 | -1.7 |
-| Baptiste - Théo | 13.3 | 29.0 | -9.7 |
-| Roxane - Théo | 8.7 | 18.0 | -8.0 |
-
-Ces résultats révèlent plusieurs observations importantes :
-
-1. **Meilleur accord** : **Antoine et Roxane** présentent le meilleur accord sur les tests (différence moyenne de 2.8) et sur la documentation (différence moyenne de 4.3), ce qui suggère une interprétation similaire des critères de notation.
-
-2. **Plus grand désaccord** : **Baptiste et Roxane** montrent le plus grand désaccord sur les tests (différence moyenne de 10.4), tandis que **Antoine et Baptiste** divergent le plus sur la documentation (différence moyenne de 14.9).
-
-3. **Différences signées** : Les différences signées moyennes indiquent des tendances systématiques. Par exemple, Baptiste note systématiquement plus haut que Roxane pour les tests (+6.6), tandis que Théo note systématiquement plus haut que Baptiste pour la documentation (-9.7, ce qui signifie que Théo est plus généreux).
+- **Meilleur accord** : Antoine et Roxane s'accordent le mieux sur les tests (différence moyenne de 2.8 points) et la documentation (4.3 points)
+- **Plus grand désaccord** : Baptiste et Roxane divergent le plus sur les tests (10.4 points), Antoine et Baptiste sur la documentation (14.9 points)
 
 ![Matrices de désaccord entre juges](assets/results/4_inter_rater_analysis/images/matrices_desaccord.png)
 
-#### Projets avec les plus grands désaccords
+#### Projets controversés
 
-Certains projets ont généré des désaccords particulièrement importants entre les juges :
+Certains projets ont généré des désaccords importants, notamment :
 
-**Top 5 des projets avec le plus de désaccord sur les tests :**
-1. **offseason_ogre** : écart-type = 21.8, range = 45 points (de 0 à 45)
-2. **13_ia_financement** : écart-type = 10.7, range = 25 points (de 0 à 25)
-3. **website2022** : écart-type = 8.3, range = 20 points (de 0 à 20)
-4. **13_democratiser_sobriete** : écart-type = 7.2, range = 17 points
-5. **bechdelai** : écart-type = 6.5, range = 16 points
+1. **offseason_ogre** : écart de 45 points sur les tests (de 0 à 45)
+2. **13_ia_financement** : écart de 25 points sur les tests
+3. **offseason_missiontransition_categorisation** : écart de 33 points sur la documentation
 
 ![Classement des projets par désaccord](assets/results/4_inter_rater_analysis/images/classement_desaccords.png)
 
-Une analyse plus détaillée révèle les patterns suivants concernant les juges qui attribuent les scores minimaux et maximaux :
+Ces désaccords s'expliquent principalement par des interprétations différentes sur :
+- La présence effective de tests dans le projet
+- Le niveau de qualité minimal acceptable
+- L'évaluation de l'entretien des tests dans le temps
 
-- **Antoine** a systématiquement attribué le score minimal pour les tests dans 9 projets sur 12, confirmant sa position de juge le plus sévère sur cet axe
-- **Baptiste** et **Théo** se partagent les scores maximaux, avec une tendance de Baptiste à être plus généreux sur les projets avec tests présents
-- Pour la documentation, **Théo** domine avec les scores maximaux (7 fois sur 12), tandis que **Baptiste** est le plus strict (5 fois avec le score minimal)
-
-Ces désaccords s'expliquent principalement par :
-- L'interprétation de la présence ou non de tests (certains juges considérant des fichiers comme des tests quand d'autres ne les considèrent pas)
-- L'évaluation de la qualité des tests présents
-- La difficulté à évaluer l'entretien dans le temps via l'historique Git
-- Les attentes différentes concernant le niveau de détail de la documentation
-
-![Tableau détaillé des scores](assets/results/4_inter_rater_analysis/images/tableau_scores_detailles.png)
-
-Le tableau ci-dessus présente une vue d'ensemble complète des scores attribués par chaque juge pour chaque projet, permettant d'identifier visuellement les zones de consensus (scores similaires, en vert) et de désaccord (scores divergents, en rouge).
-
-#### Synthèse et implications
-
-Cette analyse détaillée des désaccords révèle que malgré l'utilisation d'une grille de notation commune et des itérations de calibration, une part irréductible de subjectivité demeure dans l'évaluation de la qualité logicielle. Les différences de sévérité entre juges (notamment entre Théo/Baptiste et Antoine/Roxane) et les désaccords sur certains projets spécifiques (comme offseason_ogre) illustrent les défis inhérents à l'évaluation manuelle de la qualité du code.
-
-Néanmoins, le bon accord entre certaines paires de juges (notamment Antoine-Roxane) et les ICC globalement acceptables pour la documentation suggèrent que la méthodologie est robuste pour cet axe d'évaluation. Pour les tests, la variabilité plus importante suggère qu'une automatisation partielle de l'évaluation (par exemple, via l'analyse automatique de la couverture de code) pourrait améliorer la reproductibilité des mesures dans de futures études.
+Malgré une grille commune et des calibrations, une part de subjectivité persiste. Le bon accord entre certaines paires de juges et les ICC acceptables pour la documentation valident néanmoins la robustesse globale de la méthodologie. Pour améliorer la reproductibilité future, l'automatisation partielle de l'évaluation des tests serait bénéfique.
 
 # Résultats
 
