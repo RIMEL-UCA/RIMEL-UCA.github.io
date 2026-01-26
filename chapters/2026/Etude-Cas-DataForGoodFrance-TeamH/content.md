@@ -1,3 +1,9 @@
+---
+layout: default
+title : Modèle de chapitre pour 2025-26
+date:   2025-11
+---
+
 # Collecte, Qualité et Pérennité des Données : une Exploration des Pratiques Data For Good
 
 ## Authors
