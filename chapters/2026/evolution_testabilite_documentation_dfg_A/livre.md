@@ -2,7 +2,7 @@
 
 Nous sommes quatre étudiants en dernière année d’ingénierie informatique à Polytech Nice Sophia, spécialisé dans l’architecture logicielle et l’ingénierie logicielle durable.
 
-- Roxane Bacon : [roxane.bacon@etu.unice.fr](mailto:roxane.bacon@etu.unice.fr)
+- Roxane Bacon : [rox.bacon@gmail.com](mailto:rox.bacon@gmail.com)
 - Antoine Fadda Rodriguez : [fadda.rodriguez.antoine@gmail.com](mailto:fadda.rodriguez.antoine@gmail.com)
 - Théo Vidal : [theo.vidal@etu.unice.fr](mailto:theo.vidal@etu.unice.fr)
 - Baptiste Lacroix : [contact@baptiste-lacroix.fr](https://baptiste-lacroix.fr/)
