@@ -1,27 +1,3 @@
-# Chapitre de livre
-
-> Dans le rendu sur moodle, un étudiant du groupe, met uniquement le lien vers le chapitre de son équipe sous https://rimel-uca.github.io/
-> 
-
-> Voici quelques-uns des critères utilisés pour évaluer les chapitres
-> 
-
-> Critères d'évaluation :
-> 
-> 1. Format : structure, forme adaptée au contenu d'un livre en ligne…
-> 2. Contexte dont la motivation
-> 3. Observations/Question générale : formulation, intérêt, limites éventuelles.
-> 4. Quelle est votre base d'information
-> 5. Quelles sous-questions et hypothèses et expériences, vous allez mener
->     1. Quelles expérimentations, démarches choisies pour vérifier ou non vos hypothèses, justifications.
->     2. Quels outils sont utilisés (référence si besoin aux scripts)
->     3. Justification des choix
-> 6. Résultats
->     1. visualisations
->     2. Analyse des résultats (et des limites si nécessaires)
->     3. conclusion relativement aux hypothèses
-> 7. Conclusion globale intégrant les perspectives à ce travail
-
 # Auteurs
 
 Nous sommes quatre étudiants en dernière année d’ingénierie informatique à Polytech Nice Sophia, spécialisé dans l’architecture logicielle et l’ingénierie logicielle durable.
