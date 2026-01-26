@@ -79,7 +79,7 @@ Les dépôts à analyser ont été choisis de manière aléatoire tout en s’as
 
 La première question cherche à étudier l’impact de l’IA générative sur les projets de [dataforgoodfr](https://dataforgood.fr/). À défaut de pouvoir analyser précisément quels projets ont utilisé de tels outils, nous nous sommes basé pour cette étude sur la capacité des développeurs à utiliser l’IA générative. En nous basant sur la courbe [trends.google.com](http://trends.google.com) des termes “chatgpt", “chat gpt” et “gpt” disponible ci-dessous. Ces termes concernent tous l’outil leader de l’IA générative ChatGPT.com. 
 
-![image.png](attachment:a5760369-f6c8-4c9b-89a1-0d9757f42e22:f53d7461-e759-4dfa-b959-1d46d6f11c22.png)
+![trends-google-chatgpt.png](./assets/images/trends_google_chatgpt.png)
 
 Celle-ci met en évidence deux dates : novembre 2022, date de publication du site [ChatGPT.com](http://ChatGPT.com) et août 2024 qui semble correspondre à une nouvelle hause d’utilisation de la plateforme. Ces dates, par extension, indiquent les phases qu’à connu l’IA générative : avant l’entrée dans le quotidien de la GenAI, pendant cette entrée et après l’admission à grande échelle de cette technologie.
 
@@ -89,7 +89,7 @@ Après vérification de la répartition de l’ensemble des projets de [dataforg
 
 La deuxième question permet de se pencher sur l’impact du nombre de contributeurs sur les projets. Nous avons développé un script python ([analyse_number_of_contributors.py](./assets/codes/analyse_number_of_contributors.py)) qui nous a permis de calculer des statistiques sur le nombre de contributeurs des projets de l’organisation [dataforgoodfr](https://dataforgood.fr/). Les résultats sont présents ci-dessous.
 
-![image.png](attachment:9eb9c0e6-345a-4c77-8794-f4aac3fe497f:28c11324-f7a3-4408-858c-4a3283ff2477.png)
+![contributors_analysis.png](./assets/images/contributors_analysis.png))
 
 On peut voir que la moyenne du nombre de contributeurs sur un dépôt est de 5.54. Nous considérons donc les projets ayant 5 contributeurs ou moins comme des petits projets et ceux ayant 6 ou plus comme des gros projets.
 
@@ -354,7 +354,7 @@ Ce fichier est le premier des 2 principaux ayant permis de faire nos analyses. C
 
 - [**analysis_per_question.py**](./assets/codes/analysis_per_question.py)
 
-Ce dernier fichier est le deuxième fichier d’analyse principal. Il permet de traiter concrètement le fichier récapitulatif en groupant les projets par catégories pour chacune de nos questions à l’aide du fichier [mapping_projet.csv](./assets/codes/mapping_projet.csv). Celui permet de générer l’ensemble des fichiers de résultats  (infographie et résultats bruts) présents dans le dossier [3_analysis](./assets/results/3_analysis) :
+Ce dernier fichier est le deuxième fichier d’analyse principal. Il permet de traiter concrètement le fichier récapitulatif en groupant les projets par catégories pour chacune de nos questions à l’aide du fichier [mapping_projet.csv](./assets/codes/mapping_projets.csv). Celui permet de générer l’ensemble des fichiers de résultats  (infographie et résultats bruts) présents dans le dossier [3_analysis](./assets/results/3_analysis) :
 
 - Les courbes de l’évolution temporelle de la qualité de la documentation et de la qualité de test (avant/pendant/après l’émergence de la GenAI)
 - La matrice de qualité des 2 axes selon la taille du projet (peu de contributeurs/beaucoup de contributeurs)
