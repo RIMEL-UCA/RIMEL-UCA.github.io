@@ -7,7 +7,7 @@ print("=" * 80)
 df_etape1 = pd.read_csv('../results/2_statistics/statistiques_par_projet.csv')
 
 # Chargement du mapping
-df_mapping = pd.read_csv('../results/3_analysis/mapping_projets.csv')
+df_mapping = pd.read_csv('./mapping_projets.csv')
 
 output_dir = '../results/3_analysis/'
 
