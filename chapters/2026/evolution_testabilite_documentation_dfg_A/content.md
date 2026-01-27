@@ -1,6 +1,6 @@
 ---
 layout: default
-title : Modèle de chapitre pour 2025-26
+title : Évolution de la qualité de la testabilité et de la documentation des projets Data For Good
 date:   2025-11
 ---
 
