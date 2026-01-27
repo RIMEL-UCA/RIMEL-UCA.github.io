@@ -158,7 +158,7 @@ question 3.
 ## Q1 : Impact de l’IA générative
 
 Nous pensons que l’émergence de l’IA générative va conduire à des projets mieux documentés et mieux testés. L’efficacité
-des LLMs à la réalisation des ces tâches a déjà été démontré, notamment par Karlsson, Daniel, et Abraham
+des LLMs à la réalisation de ces tâches a déjà été démontré, notamment par Karlsson, Daniel, et Abraham
 dans "[ChatGPT: A gateway to AI generated unit testing.](https://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1784598&dswid=-5401)"
 et par Cui, Xing, et al.
 dans "[RMGenie: An LLM-Based Agent Framework for Open Source Software README Generation.](https://ieeexplore.ieee.org/abstract/document/11186105)".
@@ -207,13 +207,13 @@ claires et précises de nos axes d’études : la qualité des tests et la quali
     - Pertinents
     - Utiles
 - Le pourcentage de **coverage des tests est indiqué** (5 points), la couverture des tests (si indiqué ou mesurable) *
-  *est bon** (de 0 à 20).
+  *est bonne** (de 0 à 20).
 - Les **tests sont entretenus dans le temps**, la date de modification d'un fichier de tests est égale ou ultérieure à
   celle du fichier testé.
 
 ### **Barèmes de notation**
 
-Une fois les définitions fixée, nous avons attribué un nombre de points maximal à chacun des critères en fonction de
+Une fois les définitions fixées, nous avons attribué un nombre de points maximal à chacun des critères en fonction de
 leur importance et la profondeur attendue en nous basant sur nos avis de futurs ingénieurs logiciels.
 
 **Barème de la qualité de la documentation**
