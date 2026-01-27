@@ -1,7 +1,7 @@
 ---
 layout: default
-title : Évolution de la qualité de la testabilité et de la documentation des projets Data For Good
-date:   2025-11
+title: Évolution de la qualité de la testabilité et de la documentation des projets Data For Good
+date: 2025-11
 ---
 
 **_février 2026_**
@@ -55,7 +55,8 @@ effet, il nous semble naturel qu’un projet réunissant de nombreux individus s
 collaboration qu’un projet développé par un seul ou deux contributeurs. Ce sera donc notre deuxième critère d’étude.
 
 Enfin, en explorant les projets de [dataforgoodfr](https://dataforgood.fr/), nous avons remarqué que de nombreux projets
-étaient liés à l’IA (comme outil). Nous avons donc souhaité nous pencher sur ce cas particulier, en comparant les projets
+étaient liés à l’IA (comme outil). Nous avons donc souhaité nous pencher sur ce cas particulier, en comparant les
+projets
 AI-related et ceux non AI-related.
 
 Nous répondrons donc aux questions suivantes :
@@ -95,7 +96,8 @@ générative ChatGPT.com.
 
 Celle-ci met en évidence deux dates : novembre 2022, date de publication du site [ChatGPT.com](http://ChatGPT.com) et
 août 2024 qui semble correspondre à une nouvelle hause d’utilisation de la plateforme. Ces dates, par extension,
-indiquent les phases qu’a connues l’IA générative : avant l’entrée dans le quotidien de la GenAI, pendant cette entrée et
+indiquent les phases qu’a connues l’IA générative : avant l’entrée dans le quotidien de la GenAI, pendant cette entrée
+et
 après l’admission à grande échelle de cette technologie.
 
 Après vérification de la répartition de l’ensemble des projets de [dataforgoodfr](https://dataforgood.fr/) projets, nous
@@ -218,25 +220,25 @@ leur importance et la profondeur attendue en nous basant sur nos avis de futurs 
 
 **Barème de la qualité de la documentation**
 
-| **Critère**                                | **Nombre de point** |
-|--------------------------------------------|---------------------|
-| README description fonctionnelle du projet | 25                  |
-| README Explication architecture technique  | 20                  |
-| README instruction installation            | 25                  |
-| README nom et contact des contributeurs    | 5                   |
-| CHANGELOG à jour                           | 10                  |
-| CONTRIBUTING complet                       | 10                  |
-| LICENCE présente                           | 5                   |
+| **Critère**                                | **Coefficient** |
+|--------------------------------------------|-----------------|
+| README description fonctionnelle du projet | 25              |
+| README Explication architecture technique  | 20              |
+| README instruction installation            | 25              |
+| README nom et contact des contributeurs    | 5               |
+| CHANGELOG à jour                           | 10              |
+| CONTRIBUTING complet                       | 10              |
+| LICENCE présente                           | 5               |
 
 **Barème de la qualité des tests**
 
-| Critères                      | Poids |
-|-------------------------------|-------|
-| Présence de tests             | 15    |
-| Niveaux présents (UT/IT/E2E)  | 25    |
-| Qualité des tests             | 25    |
-| Coverage dispo + couverture   | 25    |
-| Entretien dans le temps (Git) | 10    |
+| **Critères**                  | **Coefficient** |
+|-------------------------------|-----------------|
+| Présence de tests             | 15              |
+| Niveaux présents (UT/IT/E2E)  | 25              |
+| Qualité des tests             | 25              |
+| Coverage dispo + couverture   | 25              |
+| Entretien dans le temps (Git) | 10              |
 
 ### Moyennage des notes
 
@@ -244,15 +246,15 @@ Une fois chaque projet noté par chaque jury selon les critères définis, nous 
 récapitulatifs de nos notes brutes ([all.csv](./assets/results/0_input/all.csv)).
 
 À partir des fichiers mentionnés ci-dessus, nous avons calculé et agrégé les moyennes des jurys afin d’obtenir, pour
-chaque projet, une note de qualité des tests et de la documentation. Dans un même temps, nous avons calculer
+chaque projet, une note de qualité des tests et de la documentation. Dans un même temps, nous avons calculé
 le [coefficient de corrélation intraclasse](https://en.wikipedia.org/wiki/Intraclass_correlation) de chaque projet pour
 chaque axe ainsi que son interprétation selon la table n°7 du papier de HAN,
 Xiaoxia. ["On statistical measures for data quality evaluation. *Journal of Geographic Information
 System*, 2020, vol. 12, no 3, p. 178-187."](https://www.researchgate.net/publication/342070777_On_Statistical_Measures_for_Data_Quality_Evaluation).
 Ce coefficient nous permet de mesurer l’accord entre les notations des jurys. Nous avons donc développé un script
 python ([statistiques_par_projet.py](./assets/codes/statistiques_par_projet.py)), qui traite
-les [quatre fichiers CSV](./assets/results/1_notes_per_judge) de notation de chaque jury pour générer un csv présenter dans
-le tableau suivant.
+les [quatre fichiers CSV](./assets/results/1_notes_per_judge) de notation de chaque jury pour générer un csv présenté
+dans le tableau suivant.
 
 | **Projet**                                 | **Moyenne test** | **ICC test** | **Interprétation ICC test** | **Moyenne doc** | **ICC doc** | **Interprétation ICC doc** |
 |--------------------------------------------|------------------|--------------|-----------------------------|-----------------|-------------|----------------------------|
@@ -442,13 +444,16 @@ Il requiert l’utilisation d’un Personnal Access Token Github pour éviter le
 - [**extract_notes.py**](./assets/codes/extract_notes.py)
 
 Ce fichier n’est pas primordial, il nous a permis de convertir le seul fichier CSV (extrait depuis une base de donnée
-Notion dans laquelle nous avons rassemblé nos notes) qui incluait les notes de tous les jurys en quatre fichiers CSV pour en
+Notion dans laquelle nous avons rassemblé nos notes) qui incluait les notes de tous les jurys en quatre fichiers CSV
+pour en
 avoir un par jury et ainsi simplifier les traitements ultérieurs.
 
 - [**statistiques_par_projet.py**](./assets/codes/statistiques_par_projet.py)
 
-Ce fichier est le premier des deux principaux ayant permis de faire nos analyses. C’est celui qui nous a permis d’agréger
-et de moyenner l’ensemble des notations. Il parcourt les quatre fichiers de notation des jurys pour faire la somme du nombre
+Ce fichier est le premier des deux principaux ayant permis de faire nos analyses. C’est celui qui nous a permis
+d’agréger
+et de moyenner l’ensemble des notations. Il parcourt les quatre fichiers de notation des jurys pour faire la somme du
+nombre
 de points par chaque axe et par projet de chaque jury avant de calculer la note moyenne, ainsi que son ICC et son
 interprétation par axe par projet pour générer un fichier CSV récapitulatif.
 
@@ -473,7 +478,8 @@ Site web: [DataForGood](https://dataforgood.fr/)
 ## Test unitaire de code via LLMs
 
 Fiallos Karlsson, Daniel, and Philip
-Abraham. [ChatGPT: A gateway to AI generated unit testing.](https://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1784598&dswid=-5401) (2023).
+Abraham. [ChatGPT: A gateway to AI generated unit testing.](https://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1784598&dswid=-5401) (
+2023).
 
 ## Documentation de répository via LLMs
 
