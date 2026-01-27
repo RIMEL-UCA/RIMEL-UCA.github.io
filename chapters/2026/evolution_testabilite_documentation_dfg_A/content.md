@@ -1,17 +1,18 @@
 ---
 layout: default
-title: Évolution de la qualité de la testabilité et de la documentation des projets Data For Good
-date: 2025-11
+title : Évolution de la qualité de la testabilité et de la documentation des projets Data For Good
+date:   2025-11
 ---
 
-> # Évolution de la qualité de la testabilité et de la documentation des projets Data For Good
+**_février 2026_**
 
 # Auteurs
 
 Nous sommes quatre étudiants en dernière année d’ingénierie informatique à Polytech Nice Sophia, spécialisé dans
 l’architecture logicielle et l’ingénierie logicielle durable.
 
-- Roxane Bacon : [contact@roxanebacon.fr](mailto:contact@roxanebacon.fr)
+- Roxane Bacon : [rox.bacon@gmail.com](mailto:rox.bacon@gmail.com)
+
 - Antoine Fadda Rodriguez : [contact@antoine-fadda.fr](mailto:contact@antoine-fadda.fr)
 - Théo Vidal : [theo.vidal@etu.unice.fr](mailto:theo.vidal@etu.unice.fr)
 - Baptiste Lacroix : [contact@baptiste-lacroix.fr](https://baptiste-lacroix.fr/)
