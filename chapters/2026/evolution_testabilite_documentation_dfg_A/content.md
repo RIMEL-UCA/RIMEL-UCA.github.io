@@ -157,20 +157,20 @@ question 3.
 
 ## Q1 : Impact de l’IA générative
 
-Nous pensons que l’émergence de l’IA générative va conduire à des projets mieux documenté et mieux testé l’efficacité
-des LLMs à la réalisation des ses tâches a déjà été démontré, notamment par Karlsson, Daniel, et Abraham
+Nous pensons que l’émergence de l’IA générative va conduire à des projets mieux documentés et mieux testés. L’efficacité
+des LLMs à la réalisation des ces tâches a déjà été démontré, notamment par Karlsson, Daniel, et Abraham
 dans "[ChatGPT: A gateway to AI generated unit testing.](https://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1784598&dswid=-5401)"
 et par Cui, Xing, et al.
 dans "[RMGenie: An LLM-Based Agent Framework for Open Source Software README Generation.](https://ieeexplore.ieee.org/abstract/document/11186105)".
 
 ## Q2 : Impact du nombre de contributeurs
 
-Il nous semble naturel que les projets avec un grand nombre de contributeurs seront à la fois mieux testé et mieux
-documenté pour assurer le bon travail d’équipe des nombreux collaborateurs.
+Il nous semble naturel que les projets avec un grand nombre de contributeurs seront à la fois mieux testés et mieux
+documentés pour assurer le bon travail d’équipe des nombreux collaborateurs.
 
 ## Q3 : Impact de la nature du projet
 
-Nous pensons que les projets AI-related seront moins bien testé que les autres à cause de la complexité existante pour
+Nous pensons que les projets AI-related seront moins bien testés que les autres à cause de la complexité existante pour
 produire des tests pour des réseaux de neurones ou des RAGs.
 
 # Protocole expérimental
