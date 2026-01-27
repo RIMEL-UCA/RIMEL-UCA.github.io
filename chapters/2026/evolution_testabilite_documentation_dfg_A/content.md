@@ -1,3 +1,11 @@
+---
+layout: default
+title : Modèle de chapitre pour 2025-26
+date:   2025-11
+---
+
+**_février 2026_**
+
 # Auteurs
 
 Nous sommes quatre étudiants en dernière année d’ingénierie informatique à Polytech Nice Sophia, spécialisé dans l’architecture logicielle et l’ingénierie logicielle durable.
