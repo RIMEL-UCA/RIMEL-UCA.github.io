@@ -8,11 +8,10 @@ date: 2025-11
 
 # Auteurs
 
-Nous sommes quatre étudiants en dernière année d’ingénierie informatique à Polytech Nice Sophia, spécialisé dans
+Nous sommes quatre étudiants en dernière année d’ingénierie informatique à Polytech Nice Sophia, spécialisés dans
 l’architecture logicielle et l’ingénierie logicielle durable.
 
 - Roxane Bacon : [rox.bacon@gmail.com](mailto:rox.bacon@gmail.com)
-
 - Antoine Fadda Rodriguez : [contact@antoine-fadda.fr](mailto:contact@antoine-fadda.fr)
 - Théo Vidal : [theo.vidal@etu.unice.fr](mailto:theo.vidal@etu.unice.fr)
 - Baptiste Lacroix : [contact@baptiste-lacroix.fr](https://baptiste-lacroix.fr/)
@@ -23,8 +22,8 @@ Ce chapitre présente notre étude de la maintenabilité sur les projets de [dat
 étudierons celle-ci à travers deux axes : la qualité des tests et la qualité de la documentation. Ces deux axes sont
 primordiaux pour assurer la qualité et donc la continuité d’un projet.
 
-Nous avons choisi de réaliser une étude exploratoire à cause de limitations qui seront approfondie plus loin dans ce
-document. Celles-ci nous ont notamment poussé à faire une analyse manuelle des dépôts de code. Notre objectif principal
+Nous avons choisi de réaliser une étude exploratoire à cause de limitations qui seront approfondies plus loin dans ce
+document. Celles-ci nous ont notamment poussés à faire une analyse manuelle des dépôts de code. Notre objectif principal
 sera donc la production d’hypothèses préalable à l’étude confirmatoire qui pourrait être réalisée dans la continuité de
 notre travail.
 
@@ -47,7 +46,7 @@ dont la qualité ne cesse de croître. Nous pensons donc que son émergence peut
 d’étude : la qualité des tests et la qualité de la documentation.
 
 Le deuxième critère repose sur la nature de l’organisation [dataforgoodfr](https://dataforgood.fr/) qui met en avant la
-collaboration entre développeur. Nous sommes donc en position de nous demander si l’identité des développeurs
+collaboration entre développeurs. Nous sommes donc en position de nous demander si l’identité des développeurs
 contribuant à chaque projet a un impact sur nos axes d’analyse. Malheureusement, nous sommes limités techniquement car
 il est difficile, voire impossible, de connaître le niveau ou l’expérience de n’importe quel contributeur dans n’importe
 quel domaine. Nous sommes donc retourné vers un critère plus concret et plus simple : le nombre de contributeurs. En
@@ -56,19 +55,17 @@ collaboration qu’un projet développé par un seul ou deux contributeurs. Ce s
 
 Enfin, en explorant les projets de [dataforgoodfr](https://dataforgood.fr/), nous avons remarqué que de nombreux projets
 étaient liés à l’IA (comme outil). Nous avons donc souhaité nous pencher sur ce cas particulier, en comparant les
-projets
-AI-related et ceux non AI-related.
+projets AI-related et ceux non AI-related.
 
 Nous répondrons donc aux questions suivantes :
 
 > 1. L’entrée de l’IA générative dans le quotidien a-t-elle eu un impact dans ces deux domaines ?
 
-
 > 2. Quel impact le nombre de collaborateurs a-t-il sur la qualité des tests et la documentation ?
 
 > 3. Quelles différences de qualité de tests sont présentes entre les projets incluant des composants d'IA et les
      autres ?
->
+
 
 ## Objectifs
 
@@ -86,7 +83,7 @@ composants d’IA.
 
 La première question cherche à étudier l’impact de l’IA générative sur les projets
 de [dataforgoodfr](https://dataforgood.fr/). À défaut de pouvoir analyser précisément quels projets ont utilisé de tels
-outils, nous nous sommes basé pour cette étude sur la capacité des développeurs à utiliser l’IA générative. En nous
+outils, nous nous sommes basés pour cette étude sur la capacité des développeurs à utiliser l’IA générative. En nous
 basant sur la
 courbe [trends.google.com](https://trends.google.com/explore?q=chatgpt%2Cchat%2520gpt%2Cgpt&date=today%205-y&geo=Worldwide)
 des termes “chatgpt", “chat gpt” et “gpt” disponible ci-dessous. Ces termes concernent tous l’outil leader de l’IA
@@ -95,14 +92,13 @@ générative ChatGPT.com.
 ![trends-google-chatgpt.png](./assets/images/trends_google_chatgpt.png)
 
 Celle-ci met en évidence deux dates : novembre 2022, date de publication du site [ChatGPT.com](http://ChatGPT.com) et
-août 2024 qui semble correspondre à une nouvelle hause d’utilisation de la plateforme. Ces dates, par extension,
+août 2024 qui semble correspondre à une nouvelle hausse d’utilisation de la plateforme. Ces dates, par extension,
 indiquent les phases qu’a connues l’IA générative : avant l’entrée dans le quotidien de la GenAI, pendant cette entrée
-et
-après l’admission à grande échelle de cette technologie.
+et après l’admission à grande échelle de cette technologie.
 
-Après vérification de la répartition de l’ensemble des projets de [dataforgoodfr](https://dataforgood.fr/) projets, nous
-avons pu observer que leurs dates d’activités sont quasiment répartie avec un tier des projets avant l’émergence de l’IA
-générative, un tier pendant son émergence et un dernier tier après celle-ci. Cette répartition justifie ainsi de prendre
+Après vérification de la répartition de l’ensemble des projets de [dataforgoodfr](https://dataforgood.fr/), nous
+avons pu observer que leurs dates d’activités sont quasiment réparties avec un tiers des projets avant l’émergence de l’IA
+générative, un tiers pendant son émergence et un dernier tiers après celle-ci. Cette répartition justifie ainsi de prendre
 le même nombre de projets pour chacune de ses catégories dans notre échantillon.
 
 ### Catégories de la question 2
@@ -160,7 +156,7 @@ question 3.
 ## Q1 : Impact de l’IA générative
 
 Nous pensons que l’émergence de l’IA générative va conduire à des projets mieux documentés et mieux testés. L’efficacité
-des LLMs à la réalisation de ces tâches a déjà été démontré, notamment par Karlsson, Daniel, et Abraham
+des LLMs à la réalisation de ces tâches a déjà été démontrée, notamment par Karlsson, Daniel, et Abraham
 dans "[ChatGPT: A gateway to AI generated unit testing.](https://www.diva-portal.org/smash/record.jsf?pid=diva2%3A1784598&dswid=-5401)"
 et par Cui, Xing, et al.
 dans "[RMGenie: An LLM-Based Agent Framework for Open Source Software README Generation.](https://ieeexplore.ieee.org/abstract/document/11186105)".
@@ -202,14 +198,14 @@ claires et précises de nos axes d’études : la qualité des tests et la quali
 **Critères de la qualité de tests**
 
 - Des **tests sont présents**, dans un dossier tests, des fichiers avec l'extension de test selon le langage utilisé.
-- Des tests de **niveaux de test pertinent sont présents** selon les besoins (unitaires, intégration, de bout en bout).
+- Des **niveaux de test pertinent sont présents** selon les besoins (unitaires, intégration, de bout en bout).
 - Les **tests sont de bonne qualité** s’ils sont :
     - Lisibles
     - Bien nommés
     - Pertinents
     - Utiles
-- Le pourcentage de **coverage des tests est indiqué** (5 points), la couverture des tests (si indiqué ou mesurable) *
-  *est bonne** (de 0 à 20).
+- Le pourcentage de **coverage des tests est indiqué** (5 points), la couverture des tests (si indiqué ou mesurable)
+  **est bonne** (de 0 à 20).
 - Les **tests sont entretenus dans le temps**, la date de modification d'un fichier de tests est égale ou ultérieure à
   celle du fichier testé.
 
@@ -284,11 +280,11 @@ aspects de notre méthodologie doivent être automatisés pour atteindre un tel 
 
 - La classification de chaque projet selon les critères mentionnés dans chaque question (avant/pendant/après l’entrée de
   l’IA générative dans le quotidien, le nombre de collaborateurs, le lien du projet avec l’IA)
-    - Pour la catégorisation par date, un script python analysant les date pourrait classer les dépôts
-    - Le nombre de contributeurs pourraient surement être analysé pour chaque dépôt de la même manière.
+    - Pour la catégorisation par date, un script python analysant les dates pourrait classer les dépôts
+    - Le nombre de contributeurs pourraient sûrement être analysé pour chaque dépôt de la même manière.
     - Le classement par nature AI-related de chaque dépôt semble moins trivial. On pourrait imaginer par exemple
       imaginer utiliser un classificateur basé sur un réseau de neurones si cela existe.
-- L’application de la notation de la qualité de la documentation et la qualité des tests devrait être automatisé pour
+- L’application de la notation de la qualité de la documentation et la qualité des tests devrait être automatisée pour
   deux raisons :
     - La première est la limite temporelle de cette étude : la notation manuelle est très chronophage, noter plus de 150
       dépôts manuellement semble difficilement concevable.
@@ -299,7 +295,7 @@ aspects de notre méthodologie doivent être automatisés pour atteindre un tel 
 
 Nous avons choisi pour notre étude de catégoriser les projets étudiés selon chacune de nos sous-questions (par date, par
 tailles, par nature). Il pourrait être intéressant, si l’ensemble des dépôts est analysé de faire des analyses de
-manières plus continue, sans catégoriser les projets. Il serait ainsi possible d’avoir l’évolution de la qualité de la
+manières plus continues, sans catégoriser les projets. Il serait ainsi possible d’avoir l’évolution de la qualité de la
 documentation dans le temps, mises en perspective par les dates clé de l’IA générative que nous avons identifié, ou de
 trouver le nombre de contributeurs idéal dans un dépôt pour espérer obtenir les tests les plus qualitatifs possibles. En
 résumé, s’abstraire des catégories (avant/pendant/après GenAI, peu/beaucoup de contributeurs et AI-related/non
@@ -403,7 +399,7 @@ générative.
 ## Question 2
 
 Comme le montre le résultat produit par notre script, la qualité de la documentation sur les 12 dépôts analysés ne
-semble pas impact par le nombre de collaborateurs. Sur ce même échantillon, la qualité des tests est par contre
+semble pas impactée par le nombre de collaborateurs. Sur ce même échantillon, la qualité des tests est par contre
 grandement amélioré (multiplié par 3.5)
 ![matrice_volume_contributeurs.png](./assets/results/3_analysis/question_2/matrice_volume_contributeurs.png)
 
@@ -445,16 +441,13 @@ Il requiert l’utilisation d’un Personnal Access Token Github pour éviter le
 
 Ce fichier n’est pas primordial, il nous a permis de convertir le seul fichier CSV (extrait depuis une base de donnée
 Notion dans laquelle nous avons rassemblé nos notes) qui incluait les notes de tous les jurys en quatre fichiers CSV
-pour en
-avoir un par jury et ainsi simplifier les traitements ultérieurs.
+pour en avoir un par jury et ainsi simplifier les traitements ultérieurs.
 
 - [**statistiques_par_projet.py**](./assets/codes/statistiques_par_projet.py)
 
 Ce fichier est le premier des deux principaux ayant permis de faire nos analyses. C’est celui qui nous a permis
-d’agréger
-et de moyenner l’ensemble des notations. Il parcourt les quatre fichiers de notation des jurys pour faire la somme du
-nombre
-de points par chaque axe et par projet de chaque jury avant de calculer la note moyenne, ainsi que son ICC et son
+d’agréger et de moyenner l’ensemble des notations. Il parcourt les quatre fichiers de notation des jurys pour faire la somme du
+nombre de points par chaque axe et par projet de chaque jury avant de calculer la note moyenne, ainsi que son ICC et son
 interprétation par axe par projet pour générer un fichier CSV récapitulatif.
 
 - [**analysis_per_question.py**](./assets/codes/analysis_per_question.py)
