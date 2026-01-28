@@ -1,10 +1,8 @@
 ---
 layout: default
-title: Modèle de chapitre pour 2025-26
+title: L’évolution des données dans les projets open-source de Data For Good : une étude de cas historique
 date: 2025-11
 ---
-
-# L’évolution des données dans les projets open-source de Data For Good : une étude de cas historique
 
 ## Auteurs
 
