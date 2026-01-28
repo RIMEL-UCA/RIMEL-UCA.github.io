@@ -1,6 +1,6 @@
 ---
 layout: default
-title: L’évolution des données dans les projets open-source de Data For Good : une étude de cas historique
+title: L’évolution des données dans les projets open-source de Data For Good, une étude de cas historique
 date: 2025-11
 ---
 
