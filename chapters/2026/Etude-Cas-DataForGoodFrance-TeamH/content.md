@@ -6,7 +6,7 @@ date: 2025-11
 
 ## Auteurs
 
-Nous sommes 4 étudiants de Polytech Nice Sophia spécialisés en SSE (Sciences et Systèmes Embarqués) :
+Nous sommes 4 étudiants de Polytech Nice Sophia spécialisés en SSE (Sustainable Software Engineering) :
 
 - ALLAIN Emma : [emma.allain@etu.unice.fr](mailto:emma.allain@etu.unice.fr)
 - HESCHUNG Erwan : [erwan.heschung@etu.unice.fr](mailto:erwan.heschung@etu.unice.fr)
