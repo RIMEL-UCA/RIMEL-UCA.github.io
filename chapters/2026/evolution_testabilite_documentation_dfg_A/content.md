@@ -282,13 +282,13 @@ aspects de notre méthodologie doivent être automatisés pour atteindre un tel 
   l’IA générative dans le quotidien, le nombre de collaborateurs, le lien du projet avec l’IA)
     - Pour la catégorisation par date, un script python analysant les dates pourrait classer les dépôts
     - Le nombre de contributeurs pourraient sûrement être analysé pour chaque dépôt de la même manière.
-    - Le classement par nature AI-related de chaque dépôt semble moins trivial. On pourrait imaginer par exemple
+    - Le classement par nature AI-related de chaque dépôt semble moins trivial. On pourrait par exemple
       imaginer utiliser un classificateur basé sur un réseau de neurones si cela existe.
 - L’application de la notation de la qualité de la documentation et la qualité des tests devrait être automatisée pour
   deux raisons :
     - La première est la limite temporelle de cette étude : la notation manuelle est très chronophage, noter plus de 150
       dépôts manuellement semble difficilement concevable.
-    - La deuxième concerne une autre limite mentionnée plus loin : l’interprétation de chaque critère de notation menant
+    - La deuxième concerne une autre limite [mentionnée plus loin](#limites-liées-à-la-fiabilité-inter-juge-et-aux-itérations-de-notation) : l’interprétation de chaque critère de notation menant
       à d’important désaccord entre les juges.
 
 ### Catégorisation des dépôts
@@ -305,7 +305,7 @@ AI-related) ouvrirait la porte à des analyses plus précises.
 
 Afin d’évaluer la fiabilité des notations produites par les quatre membres du jury, nous avons calculé, pour chaque
 projet et pour chacun des deux axes (tests et documentation), un coefficient de corrélation intraclasse (ICC). Comme
-expliqué précédemment.
+expliqué [précédemment](#moyennage-des-notes).
 
 Lors de la première itération de notation, nous avons observé pour plusieurs projets des valeurs d’ICC faibles, montrant
 un désaccord important entre les jurys. Cette situation nous a amenés à discuter nos résultats collectivement afin
@@ -461,6 +461,26 @@ résultats (infographies et résultats bruts) présents dans le dossier [3_analy
   l’émergence de la GenAI)
 - La matrice de qualité des 2 axes selon la taille du projet (peu de contributeurs/beaucoup de contributeurs)
 - La matrice de qualité des axes d’étude selon la nature AI-related du projet (AI-related/non AI-related).
+
+* [**analyse_desaccords_juges.py**](./assets/codes/analyse_desaccords_juges.py)
+
+Ce script est dédié à l’analyse des désaccords entre les membres du jury.
+Il permet notamment :
+
+- de mesurer la sévérité relative de chaque juge sur les axes tests et documentation,
+- d’analyser les écarts moyens entre paires de juges,
+- d’identifier les projets générant les désaccords les plus importants,
+- de produire des visualisations synthétiques (graphiques de sévérité, matrices de désaccords, classements des projets).
+
+* [**visualisation_detaillee_desaccords.py**](./assets/codes/visualisation_detaillee_desaccords.py)
+
+Ce script génère des visualisations détaillées, projet par projet, des notations attribuées par chaque juge.
+Il propose une représentation, incluant :
+
+- les scores individuels par juge,
+- les moyennes et écarts-types par projet et par axe,
+- les écarts maximaux entre juges,
+- un classement des projets selon leur niveau de désaccord.
 
 # Références
 
