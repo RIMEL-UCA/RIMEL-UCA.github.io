@@ -84,6 +84,14 @@ Voici quelques pistes :
 3. les jeux de données/codes que vous allez utiliser, pourquoi ceux-ci, ...
 
      :bulb: Cette étape est fortement liée à la suivante. Vous ne pouvez émettre d'hypothèses à vérifier que si vous avez les informations. inversement, vous cherchez à recueillir des informations en fonction de vos hypothèses. 
+
+### Sous-question 3
+
+Plusieurs études [1] montrent que 30 à 60 % des messages de commit ne suivent aucun standard
+Les messages sont souvent :
+- très courts (update, wip, fix)
+- contextuels (typo, changes, final)
+- en langage naturel, parfois multilingues
  
 ## IV. Expérimentation
 
@@ -98,6 +106,54 @@ Vous **explicitez les expérimentations que vous allez mener** pour vérifier si
         Pour Hypothèse 2 => Expériences 
         
         ou Vous présentez l'ensemble des hypothèses puis vous expliquer comment les expériences prévues permettront de démontrer vos hypothèses.
+
+### Sous-question 3
+
+Pour classifier les différents messages de commits, nous avons commencé par utiliser des patterns simples avec un script reproductible pour avoir une première idée de la répartition et des tendances :
+
+![Patterns de la V1 pour la classification des commits](assets/images/pattern_V1_classification.png)
+
+![Premiers résulmtats pour la classification des commits](assets/images/resultat_V1_classification.png)
+
+On peut constater que les patterns regex simples plafonnent rapidement ce qui confirme l’état de l’art pour une approche rule-based naïve [2].
+
+Pour renforcer nos patterns, nous avons choisi de nous tourner vers une méthode hybride avec des règles statiques pour les cas de base comme actuellement et du machine learning pour le reste.
+
+Pour cela, on va garder les règles permettent de classer les commits explicites, tandis qu’un classifieur TF-IDF et de la régression logistique vont traiter les messages restants de la catégories others.
+
+Voici donc la pipeline finale pour extraire des les schémas avec les ratios refactor/feat et fix/commits des dépôts de l'échantillon.
+
+#### Pipeline de classification
+
+1. Extraction des commits bruts
+Les messages de commits sont collectés pour chaque dépôt depuis les historiques Git et stockés dans un fichier JSON. Chaque commit est associé à son dépôt pour permettre un suivi précis de la répartition des types de commits. Un fichier raw_commits_data.json est disponible dans le code fourni (version datant de janvier 2026) et est utilisé si présent par la pipeline pour éviter le processus de query à Github des commits des dépôts de code qui est assez long à cause du nombre de query possible (à peu près 1h de duré).
+
+2. Classification par patterns
+Un ensemble de regex simples détecte les catégories explicites : feat, fix, refactor, ci, chore. Tout commit qui ne correspond à aucun pattern est marqué comme other.
+Cette étape fournit une première répartition fiable des commits et permet de réduire la charge sur le classifieur ML.
+
+3. Préparation des données pour le ML
+Les commits other sont extraits dans un fichier CSV intermédiaire (commits_unclassified.json) qui sera fournie au ML pour les reclasser plus tard. On prend un extrait de ce fichier qu'on va annoter manuellement dans un csv (commits_other_for_ml.csv). Ces données annotées servent ensuite à entraîner le modèle de machine learning.
+
+4. Entraînement du classifieur TF-IDF et régression logistique
+TF-IDF transforme le texte des messages en vecteurs numériques en pondérant les termes les plus significatifs. Cette représentation capture les mots et combinaisons de mots les plus discriminants pour chaque type de commit.
+
+La régression logistique est choisie pour sa simplicité, son interprétabilité et sa robustesse sur des données textuelles peu volumineuses. Elle permet de prédire la probabilité que chaque commit appartienne à chaque catégorie.
+
+5. Application du modèle et mise à jour des résultats
+Le classifieur prédit les labels des commits non reconnus, qui sont ensuite fusionnés avec les résultats issus des patterns. Le CSV final (commits_types.csv) contient pour chaque dépôt le nombre de commits par catégorie (feat, fix, refactor, ci, chore, other, …), prêt pour l’analyse statistique et la génération de graphiques avec plotnine.
+
+#### Améliorations possibles
+
+L’approche hybride actuelle apporte un gain de précision et de rappel d’environ 10 à 15 % par rapport aux seules règles statiques. Cependant, le jeu de données d’entraînement utilisé pour le classifieur ML est encore très limité (une centaine de commits annotés), ce qui restreint la capacité du modèle à généraliser à des messages plus variés.
+
+Des pistes d’amélioration incluent :
+
+- Augmenter la taille du jeu d’entraînement : annoter davantage de commits other permettra au modèle d’apprendre plus de variations linguistiques et d’identifier des patterns plus subtils.
+
+- Optimisation des hyperparamètres : tester différents poids de classes, plages de n-grams ou paramètres de régularisation pour la régression logistique pourrait améliorer la précision sur les classes moins fréquentes.
+
+- Exploration d’autres modèles : des modèles plus complexes comme les forêts aléatoires ou des embeddings textuels pourraient capter des relations sémantiques que TF-IDF ne détecte pas.
 
 ## V. Analyse & Réponse aux hypothèses
 
@@ -131,4 +187,6 @@ Nos codes sont disponibles ici : [Team B - Codes](https://github.com/RIMEL-UCA/R
 
 [Debret 2020] Debret, J. (2020) La démarche scientifique : tout ce que vous devez savoir ! Available at: https://www.scribbr.fr/article-scientifique/demarche-scientifique/ (Accessed: 18 November 2022).
 
+[1] Hattori, L. & Lanza, M. (2008). On the nature of commits. *Proceedings of the 2008 International Working Conference on Mining Software Repositories (MSR)*, 1–4. Available at: https://www.inf.usi.ch/lanza/Downloads/Hatt2008a.pdf (Accessed: 29 January 2026).
 
+[2] Amit, R. & Feitelson, D. G. (2021). Commit classification revisited. *Empirical Software Engineering*, 26, 1–30. Available at: https://cris.huji.ac.il/en/publications/corrective-commit-probability-a-measure-of-the-effort-invested-in/ (Accessed: 29 January 2026).
