@@ -31,7 +31,7 @@ Ces fichiers constituent la base des analyses statistiques ultérieures et sont 
 
 ### `statistiques_par_projet.py`
 
-📄 [`codes/statistiques_par_projet.py`](./codes/statistiques_par_projet.py)
+[`codes/statistiques_par_projet.py`](./codes/statistiques_par_projet.py)
 
 Ce script agrège les notes attribuées par les quatre jurys pour chaque projet.
 À partir des fichiers de notes individuels, il calcule :
@@ -44,7 +44,7 @@ Le script génère un fichier CSV récapitulatif par projet, utilisé ensuite co
 
 ### `analysis_per_question.py`
 
-📄 [`codes/analysis_per_question.py`](./codes/analysis_per_question.py)
+[`codes/analysis_per_question.py`](./codes/analysis_per_question.py)
 
 Ce script permet d'analyser et et de répondre aux trois questions de recherche de l’étude.
 
@@ -61,7 +61,7 @@ Les résultats sont sauvegardés dans le dossier `results/3_analysis/` et corres
 
 ### `mapping_projets.csv`
 
-📄 [`codes/mapping_projets.csv`](./codes/mapping_projets.csv)
+[`codes/mapping_projets.csv`](./codes/mapping_projets.csv)
 
 Ce fichier CSV définit les métadonnées utilisées pour catégoriser chaque projet analysé.
 Il associe à chaque dépôt trois dimensions clés :
@@ -77,7 +77,7 @@ Il constitue un élément central pour relier les résultats statistiques aux qu
 
 ### `analyse_desaccords_juges.py`
 
-📄 [`codes/analyse_desaccords_juges.py`](./codes/analyse_desaccords_juges.py)
+[`codes/analyse_desaccords_juges.py`](./codes/analyse_desaccords_juges.py)
 
 Ce script est dédié à l’analyse des désaccords entre les membres du jury lors de la notation des projets.
 À partir des fichiers de notes individuels, il calcule les scores globaux par juge pour les axes tests et documentation,
@@ -89,7 +89,7 @@ sauvegardés dans le dossier `results/4_inter_rater_analysis/`.
 
 ### `visualisation_detaillee_desaccords.py`
 
-📄 [`.codes/visualisation_detaillee_desaccords.py`](./codes/visualisation_detaillee_desaccords.py)
+[`.codes/visualisation_detaillee_desaccords.py`](./codes/visualisation_detaillee_desaccords.py)
 
 Ce script génère des visualisations détaillées des notations, projet par projet, à partir des résultats de l’analyse
 des désaccords entre juges.
