@@ -1,0 +1,11 @@
+file,line,url
+13_pollution_eau\pipelines\tasks\download_database.py,81,https://{self.s3.bucket_name}.{self.s3.endpoint_url.split(
+13_pollution_eau\pipelines\tasks\download_pmtiles.py,55,https://{self.s3.bucket_name}.{self.s3.endpoint_url.split(
+13_pollution_eau\pipelines\tasks\client\datagouv_client.py,26,https://www.data.gouv.fr/
+13_pollution_eau\pipelines\tasks\client\geojson_processor.py,108,https://{s3.bucket_name}.{s3.endpoint_url.split(
+13_pollution_eau\pipelines\tasks\client\pmtiles_processor.py,62,https://{s3.bucket_name}.{s3.endpoint_url.split(
+13_pollution_eau\pipelines\tasks\config\config_edc.py,17,https://www.data.gouv.fr/fr/datasets/r/
+13_pollution_eau\pipelines\tasks\config\config_geojson.py,10,https://public.opendatasoft.com/api/explore/v2.1/catalog/datasets/
+13_pollution_eau\pipelines\tasks\config\config_insee.py,5,https://www.insee.fr/fr/statistiques/fichier/7766585/
+13_pollution_eau\pipelines\utils\storage_client.py,18,https://s3.fr-par.scw.cloud
+13_pollution_eau\pipelines\utils\storage_client.py,93,https://{self.bucket_name}.{self.endpoint_url.split(

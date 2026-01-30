@@ -9,7 +9,7 @@ date: 2025-11
 Nous sommes 4 étudiants de Polytech Nice Sophia spécialisés en SSE (Sustainable Software Engineering) :
 
 - ALLAIN Emma : [emma.allain@etu.unice.fr](mailto:emma.allain@etu.unice.fr)
-- HESCHUNG Erwan : [erwan.heschung@etu.unice.fr](mailto:erwan.heschung@etu.unice.fr)
+- HESCHUNG Erwan : [mailme@heschungerwan.dev](mailto:mailme@heschungerwan.dev)
 - KAHUNGU Jessica : [jessica.kahungu@etu.unice.fr](mailto:jessica.kahungu@etu.unice.fr)
 - MAGNIN Mathis : [mathis.magnin1@etu.unice.fr](mailto:mathis.magnin1@etu.unice.fr)
 
@@ -174,7 +174,7 @@ Ici vous trouverez le lien de notre repository github où tous les scripts et r�
 
 → **Phase 0 - Sélection des objets d'étude :** Identifier et sélectionner les projets les plus pertinents pour notre analyse parmi les 164 dépôts Data For Good.
 
-- **Script** : [https://github.com/emmaallain/RIMEL_SCRIPTS/tree/main/common/Phase0](https://github.com/emmaallain/RIMEL_SCRIPTS/tree/main/common/Phase0)
+- **Script** : [assets/code/common/Phase0](assets/code/common/Phase0)
 - **Critères quantitatifs** :
   - Au moins 10 mois d'ancienneté (permet d'observer des évolutions)
   - Au moins 100 commits (garantit une historique suffisant)
@@ -192,7 +192,7 @@ Ici vous trouverez le lien de notre repository github où tous les scripts et r�
 
 → **Phase 1 - Exploration des projets :** Caractériser finement chaque projet pour comprendre son contexte, son architecture et ses particularités.
 
-- **Script :** [https://github.com/emmaallain/RIMEL_SCRIPTS/tree/main/common/Phase1](https://github.com/emmaallain/RIMEL_SCRIPTS/tree/main/common/Phase1)
+- **Script :** [assets/code/common/Phase1](assets/code/common/Phase1)
 - **Résultat du script** : Le script global génère 5 fichiers JSON/CSV dans le dossier `results/` de chaque repo : (1) l'arborescence complète du repository, (2) la distribution des fichiers par extension, (3) l'inventaire détaillé des fichiers de données avec leur taille, (4) un profil synthétique du repository (nombre total de fichiers, ratio de fichiers de données), et (5) un résumé statistique calculant les ratios data/code/notebooks pour caractériser la nature du projet. Ces résultats permettent de comprendre rapidement l'architecture, les technologies utilisées, et la répartition entre code et données de chaque projet étudié.
 
 → **Phase 2 - Évolution de l'accès aux données** : Analyser comment les sources de données sont ajoutées, modifiées ou abandonnées au fil du temps.
@@ -207,7 +207,7 @@ Ici vous trouverez le lien de notre repository github où tous les scripts et r�
 
 → **Phase 4 -** Évolution des contributions **:** Identifier les profils de contributeurs et leur intervention dans le cycle de vie du projet.(sampling ?)
 
-- **Script:** [https://github.com/emmaallain/RIMEL_SCRIPTS/tree/main/common/Phase4](https://github.com/emmaallain/RIMEL_SCRIPTS/tree/main/common/Phase4)
+- **Script:** [assets/code/common/Phase4](assets/code/common/Phase4)
 - **Résultat du script :** Le script génère un fichier CSV (`contributors_jobs_inferred.csv`) contenant pour chaque contributeur unique (identifié par nom canonique) son nom, son email et son métier inféré automatiquement (Data Scientist, Backend Developer, DevOps, etc.) basé sur l'analyse de ses contributions par catégorie de fichiers (données, infrastructure, frontend, documentation). Ce résultat permet de tracer l'évolution temporelle de la présence des différents profils tout au long du cycle de vie du projet et de valider l'hypothèse selon laquelle les profils orientés données interviennent principalement en début de projet tandis que les profils infra/backend apparaissent plus tard pour pérenniser les pipelines.
 
 ### V. Analyse des résultats et conclusion
@@ -216,11 +216,11 @@ Cette partie va s’organiser de la manière suivante : une partie pour chaque p
 
 ### **Phase 0 - Sélection des objets d’étude**
 
-![image.png](assets/image.png)
+![image.png](assets/images/image.png)
 
 **Résultats**
 
-Nous avons lancé notre script et nous avons obtenu 14 dépôts qui répondaient à nos critères de sélection ([https://github.com/emmaallain/RIMEL_SCRIPTS/tree/main/KENDALL](https://github.com/emmaallain/RIMEL_SCRIPTS/tree/main/KENDALL)) . Ensuite, nous avons attribué une note totale sur 20 sur l’ensemble des critères qualitatifs pour extraire 4 dépôts finaux d’étude. L’accord entre les évaluateurs a été mesuré à l’aide du coefficient de concordance de Kendall (W, compris entre 0 et 1) et nous avons obtenu :
+Nous avons lancé notre script et nous avons obtenu 14 dépôts qui répondaient à nos critères de sélection ([assets/code/KENDALL](assets/code/KENDALL)) . Ensuite, nous avons attribué une note totale sur 20 sur l’ensemble des critères qualitatifs pour extraire 4 dépôts finaux d’étude. L’accord entre les évaluateurs a été mesuré à l’aide du coefficient de concordance de Kendall (W, compris entre 0 et 1) et nous avons obtenu :
 
 | **Critère**                 | **Kendall’s W** |
 | --------------------------- | --------------- |
@@ -258,7 +258,7 @@ Sur le plan technique, l’architecture repose sur des pipelines Python pour l�
 
 → Dashboard récapitulatif :
 
-![image.png](assets/image%201.png)
+![image.png](assets/images/image%201.png)
 
 - **13_reveler_inegalites_cinema** : Projet d'analyse sociologique
 
@@ -270,7 +270,7 @@ Pour cela, le projet vise à développer une application web permettant de colle
 
 → Dashboard récapitulatif :
 
-![image.png](assets/image%202.png)
+![image.png](assets/images/image%202.png)
 
 - **ShiftDataPortal** : Projet de visualisation de données énergétiques
 
@@ -282,7 +282,7 @@ L’architecture du projet repose sur une chaîne de traitement des données str
 
 → Dashboard récapitulatif :
 
-![image.png](assets/image%203.png)
+![image.png](assets/images/image%203.png)
 
 - **13_eclaireur_public** : Projet d'analyse de marchés publics
 
@@ -294,13 +294,13 @@ Sur le plan technique, le backend s'articule autour d'un pipeline d'ingénierie 
 
 → Dashboard récapitulatif :
 
-![image.png](assets/image%204.png)
+![image.png](assets/images/image%204.png)
 
 **Bilan :**
 
 Dans le but de rendre l’analyse plus concrète, nous les avons regroupés :
 
-![image.png](assets/image%205.png)
+![image.png](assets/images/image%205.png)
 
 Les repositories étudiés partagent une base technologique et méthodologique commune (manipulation de données structurée par exemple), ce qui justifie leur mise en comparaison et garantit la pertinence de nos outils d'analyse. Toutefois, les différences de volumétrie, de répartition données/code et de formats utilisés indiquent des contextes et des objectifs distincts. Il y a une diversité des profils de projets identifiés, on peut en distinguer 3 principaux :
 
@@ -324,7 +324,7 @@ Cette phase présente plusieurs limitations, d’un point de vue qualitatif, les
 
 → Résultat script :
 
-![image.png](assets/image%206.png)
+![image.png](assets/images/image%206.png)
 
 → Commentaire analyse manuelle :
 Le projet de pollution de l’eau utilise des références HTTP définies dans différents clients (`/pipelines/tasks/client`), chacun étant associé à une source de données précise (data.gouv.fr, OpenDataSoft, INSEE, Atlasanté). Ces sources étant structurellement stables, les URLs qu’elles exposent ne changent pas ou très peu une fois les clients en place, ce qui explique que l’évolution des références se stabilise après environ trois mois.
@@ -335,7 +335,7 @@ En complément, certaines données ne proviennent pas d’appels HTTP mais de se
 
 → Résultat script :
 
-![image.png](assets/image%207.png)
+![image.png](assets/images/image%207.png)
 
 → Commentaire analyse manuelle :
 
@@ -347,7 +347,7 @@ Cette distribution temporelle reflète un contexte où les données ne sont pas 
 
 → Résultat script :
 
-![image.png](assets/image%208.png)
+![image.png](assets/images/image%208.png)
 
 → Commentaire analyse manuelle :
 
@@ -357,7 +357,7 @@ ShiftDataPortal adopte une architecture centralisée pour la gestion des sources
 
 → Résultat script :
 
-![image.png](assets/image%209.png)
+![image.png](assets/images/image%209.png)
 
 → Commentaire analyse manuelle :
 
@@ -387,7 +387,7 @@ Ici, les graphiques montrent le nombre de sources ajoutées, mais ne distinguent
 
 → Résultat script :
 
-![image.png](assets/image%2010.png)
+![image.png](assets/images/image%2010.png)
 
 → Commentaire analyse manuelle :
 Le projet de pollution de l’eau repose sur un traitement structuré des données. Les données brutes sont d’abord insérées dans DuckDB via des clients spécifiques, puis transformées à travers plusieurs couches DBT : staging, pour le nettoyage, le typage et la validation des données brutes, intermediate, pour les jointures complexes, les agrégations et les calculs de conformité au niveau des UDI et des communes, et enfin website, où les modèles sont optimisés pour la consommation front-end.
@@ -398,7 +398,7 @@ L’activité de traitement, illustrée sur le graphique, montre que les modific
 
 → Résultat script :
 
-![image.png](assets/image%2011.png)
+![image.png](assets/images/image%2011.png)
 
 → Commentaire analyse manuelle :
 
@@ -412,7 +412,7 @@ L’apparition tardive de fichiers de type Machine Learning correspond à une ph
 
 → Résultat script :
 
-![image.png](assets/image%2012.png)
+![image.png](assets/images/image%2012.png)
 
 → Commentaire analyse manuelle :
 L’analyse du dossier `data-preparation/` montre une pipeline ETL structurée en trois couches : scripts d'ingestion (fetch), scripts de nettoyage/normalisation (clean), et scripts de transformation finale (transform), avec une évolution marquée par des refactorings réguliers pour harmoniser les formats hétérogènes des sources internationales. La prédominance des modifications (MODIFY) s'explique par les adaptations constantes aux changements de schémas des APIs externes et l'enrichissement progressif des règles métier pour calculer de nouveaux indicateurs climatiques à partir des données brutes.
@@ -421,7 +421,7 @@ L’analyse du dossier `data-preparation/` montre une pipeline ETL structurée e
 
 → Résultat script :
 
-![image.png](assets/image%2013.png)
+![image.png](assets/images/image%2013.png)
 
 → Commentaire analyse manuelle :
 
@@ -447,31 +447,31 @@ L’analyse ne permet pas de savoir si les modifications améliorent effectiveme
 
 → Résultat script :
 
-![image.png](assets/image%2014.png)
+![image.png](assets/images/image%2014.png)
 
 - **13_reveler_inegalites_cinema** : Projet d'analyse sociologique
 
 → Résultat script :
 
-![image.png](assets/image%2015.png)
+![image.png](assets/images/image%2015.png)
 
 - **ShiftDataPortal** : Projet de visualisation de données énergétiques
 
 → Résultat script :
 
-![image.png](assets/image%2016.png)
+![image.png](assets/images/image%2016.png)
 
 - **13_eclaireur_public** : Projet d'analyse de marchés publics
 
 → Résultat script :
 
-![image.png](assets/image%2017.png)
+![image.png](assets/images/image%2017.png)
 
 **Bilan**
 
 Nous avons développé un script permettant de visualiser l'évolution moyenne des métiers sur l'ensemble des projets analysés, avec une normalisation temporelle sur un an. Ce graphique agrégé confirme les observations issues de nos quatre graphiques individuels : on constate un pic d'activité des Data Engineers ( rose fluorescent) et des Data Scientists ( bleu ciel fluorescent) en phase initiale de projet. Bien que de nouvelles contributions apparaissent au cours du cycle de développement pour assurer le suivi du projet, nos résultats confirment cette tendance initiale de forte mobilisation des profils data en début de projet.
 
-![image.png](assets/image%2018.png)
+![image.png](assets/images/image%2018.png)
 
 En conclusion de notre phase expérimentale, l’évolution des contributions met en évidence un cycle de vie en trois phases, marqué par une forte implication des profils orientés données en début de projet.
 

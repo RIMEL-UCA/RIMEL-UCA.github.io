@@ -1,0 +1,441 @@
+{
+  ".git": {
+    "hooks": {
+      "applypatch-msg.sample": null,
+      "commit-msg.sample": null,
+      "fsmonitor-watchman.sample": null,
+      "post-update.sample": null,
+      "pre-applypatch.sample": null,
+      "pre-commit.sample": null,
+      "pre-merge-commit.sample": null,
+      "pre-push.sample": null,
+      "pre-rebase.sample": null,
+      "pre-receive.sample": null,
+      "prepare-commit-msg.sample": null,
+      "push-to-checkout.sample": null,
+      "sendemail-validate.sample": null,
+      "update.sample": null
+    },
+    "info": {
+      "exclude": null
+    },
+    "logs": {
+      "refs": {
+        "heads": {
+          "main": null
+        },
+        "remotes": {
+          "origin": {
+            "HEAD": null
+          }
+        }
+      },
+      "HEAD": null
+    },
+    "objects": {
+      "info": {},
+      "pack": {
+        "pack-1e716d61d1323c8e41894f7f9f24f7782c07d032.idx": null,
+        "pack-1e716d61d1323c8e41894f7f9f24f7782c07d032.pack": null,
+        "pack-1e716d61d1323c8e41894f7f9f24f7782c07d032.rev": null
+      }
+    },
+    "refs": {
+      "heads": {
+        "main": null
+      },
+      "remotes": {
+        "origin": {
+          "HEAD": null
+        }
+      },
+      "tags": {}
+    },
+    "config": null,
+    "description": null,
+    "HEAD": null,
+    "index": null,
+    "packed-refs": null
+  },
+  ".github": {
+    "workflows": {
+      "lint_nextjs.yml": null,
+      "pre-commit.yaml": null,
+      "test_dbt.yaml": null,
+      "test_pipelines.yaml": null,
+      "unified_pipeline.yml": null
+    }
+  },
+  ".vscode": {
+    "extensions.json": null,
+    "settings.json": null,
+    "tasks.json": null
+  },
+  "analytics": {
+    "notebooks": {
+      "exemple": {
+        "exemple_duckdb.ipynb": null,
+        "exemple_ibis.ipynb": null,
+        "exemple_jupysql.ipynb": null
+      },
+      "bdd_edr_cap.ipynb": null,
+      "bdd_edr_ttp.ipynb": null,
+      "bdd_edr_udi.ipynb": null,
+      "Check_rqana_valtraduite.ipynb": null,
+      "cvm_calcul_annuel_all_communes": null,
+      "cvm_calcul_conformite_par_commune.ipynb": null,
+      "cvm_etude_cas_particulier.ipynb": null,
+      "etude_cvm.ipynb": null,
+      "Exploration communes.ipynb": null,
+      "exploration_different_udi.ipynb": null,
+      "exploration_udi.ipynb": null,
+      "explo_14_dioxane.ipynb": null,
+      "extraction_parametres.ipynb": null,
+      "Laurent_167_etude_nitrites.ipynb": null,
+      "Laurent_179_referenceanl.ipynb": null,
+      "Lise-AJT_P1_EXPLO_SEUILS.ipynb": null,
+      "Prelevements_unique_exploration.ipynb": null,
+      "recuperer_rapidement_pfas.ipynb": null,
+      "resultats_cvm_udi_annuel.ipynb": null,
+      "resultats_cvm_udi_annuel_add percent.ipynb": null,
+      "resultats_cvm_udi_dernier.ipynb": null,
+      "resultats_metaux_lourds.ipynb": null,
+      "resultats_nitrates.ipynb": null,
+      "resultats_nitrates_annuel.ipynb": null,
+      "resultats_sub_indus.ipynb": null,
+      "Tache110_Polluants_le_plus_souvent_non_conformes.ipynb": null,
+      "Tache132_Etude_limite_de_qualite.ipynb": null,
+      "Tache165_Join-resultat-categorie.ipynb": null,
+      "Tache177_resultats-pfas-dbt-model.ipynb": null,
+      "Tache_141_ExploDesign.ipynb": null,
+      "TEST_ana__resultats_udi.ipynb": null,
+      "Test_depassements_no2vsno3.ipynb": null,
+      "__init__.py": null
+    },
+    "__init__.py": null
+  },
+  "database": {
+    ".gitkeep": null
+  },
+  "dbt_": {
+    "analyses": {
+      ".gitkeep": null
+    },
+    "macros": {
+      ".gitkeep": null
+    },
+    "models": {
+      "intermediate": {
+        "cvm": {
+          "int__resultats_cvm_commune_annuel.sql": null,
+          "int__resultats_cvm_commune_dernier.sql": null,
+          "int__resultats_cvm_udi_annuel.sql": null,
+          "int__resultats_cvm_udi_dernier.sql": null,
+          "_int__cvm_models.yaml": null
+        },
+        "metaux_lourds": {
+          "int__resultats_metaux_lourds_commune_annuel.sql": null,
+          "int__resultats_metaux_lourds_commune_dernier.sql": null,
+          "int__resultats_metaux_lourds_udi_annuel.sql": null,
+          "int__resultats_metaux_lourds_udi_dernier.sql": null,
+          "_int__metaux_lourds_models.yaml": null
+        },
+        "nitrate": {
+          "int__resultats_nitrate_commune_annuel.sql": null,
+          "int__resultats_nitrate_commune_dernier.sql": null,
+          "int__resultats_nitrate_udi_annuel.sql": null,
+          "int__resultats_nitrate_udi_dernier.sql": null,
+          "_int__nitrate_models.yaml": null
+        },
+        "pesticide": {
+          "metabolite": {
+            "int__resultats_metabolite_commune_annuel.sql": null,
+            "int__resultats_metabolite_commune_dernier.sql": null,
+            "int__resultats_metabolite_udi_annuel.sql": null,
+            "int__resultats_metabolite_udi_dernier.sql": null,
+            "_int__metabolite_models.yml": null
+          },
+          "metabolite_specifique": {
+            "int__resultats_metabolite_specifique_commune_annuel.sql": null,
+            "int__resultats_metabolite_specifique_commune_dernier.sql": null,
+            "int__resultats_metabolite_specifique_udi_annuel.sql": null,
+            "int__resultats_metabolite_specifique_udi_dernier.sql": null,
+            "_int__metabolite_specifique_models.yml": null
+          },
+          "sub_active": {
+            "int__resultats_sub_active_commune_annuel.sql": null,
+            "int__resultats_sub_active_commune_dernier.sql": null,
+            "int__resultats_sub_active_udi_annuel.sql": null,
+            "int__resultats_sub_active_udi_dernier.sql": null,
+            "_int__sub_active_models.yml": null
+          },
+          "int__resultats_pesticide_commune_annuel.sql": null,
+          "int__resultats_pesticide_commune_dernier.sql": null,
+          "int__resultats_pesticide_udi_annuel.sql": null,
+          "int__resultats_pesticide_udi_dernier.sql": null,
+          "_int__pesticide_models.yml": null
+        },
+        "pfas": {
+          "int__resultats_pfas_commune_annuel.sql": null,
+          "int__resultats_pfas_commune_dernier.sql": null,
+          "int__resultats_pfas_udi_annuel.sql": null,
+          "int__resultats_pfas_udi_dernier.sql": null,
+          "_int__pfas_models.yml": null
+        },
+        "sub_indus": {
+          "int__resultats_sub_indus_commune_annuel.sql": null,
+          "int__resultats_sub_indus_commune_dernier.sql": null,
+          "int__resultats_sub_indus_udi_annuel.sql": null,
+          "int__resultats_sub_indus_udi_dernier.sql": null,
+          "_int__sub_indus_models.yaml": null
+        },
+        "tous": {
+          "int__resultats_tous_commune_annuel.sql": null,
+          "int__resultats_tous_commune_dernier.sql": null,
+          "int__resultats_tous_udi_annuel.sql": null,
+          "int__resultats_tous_udi_dernier.sql": null,
+          "_int__tous_models.yml": null
+        },
+        "int__commune_geom.sql": null,
+        "int__lien_cdreseau_refreneceprel.sql": null,
+        "int__lien_commune_cdreseau.sql": null,
+        "int__parametres_non_references.sql": null,
+        "int__prelevements_uniques.sql": null,
+        "int__resultats_udi_communes.sql": null,
+        "int__udi.sql": null,
+        "int__udi_geom.sql": null,
+        "int__union_resultats_commune.sql": null,
+        "int__union_resultats_udi.sql": null,
+        "int__valeurs_de_reference.sql": null,
+        "_int__models.yml": null
+      },
+      "sources": {
+        "__sources.yml": null
+      },
+      "staging": {
+        "atlasante": {
+          "stg_atlasante_udi_2023.sql": null,
+          "stg_atlasante_udi_2024.sql": null,
+          "stg_atlasante_udi_corse.sql": null,
+          "_atlasante_models.yml": null
+        },
+        "communes": {
+          "stg_communes__cog.sql": null,
+          "stg_communes__opendatasoft.sql": null,
+          "_communes_models.yml": null
+        },
+        "edc": {
+          "stg_edc__communes.sql": null,
+          "stg_edc__prevelevements.sql": null,
+          "stg_edc__resultats.sql": null,
+          "val_traduite__docs.md": null,
+          "_edc__models.yml": null
+        }
+      },
+      "website": {
+        "web__franceinfo.sql": null,
+        "web__resultats_communes.sql": null,
+        "web__resultats_udi.sql": null,
+        "web__stats_udi.sql": null,
+        "_web__models.yml": null
+      }
+    },
+    "seeds": {
+      ".gitkeep": null,
+      "references_generations_futures.csv": null,
+      "schema.yml": null,
+      "udi_population_from_infofactures.csv": null
+    },
+    "snapshots": {
+      ".gitkeep": null
+    },
+    "tests": {
+      ".gitkeep": null,
+      "test_cvm_results.sql": null,
+      "test_metabolite_results.sql": null,
+      "test_metabolite_specifique_results.sql": null,
+      "test_nitrates_results.sql": null,
+      "test_pesticide_results.sql": null,
+      "test_pfas_results.sql": null,
+      "test_sub_active_results.sql": null,
+      "test_sub_indus_results.sql": null,
+      "test_tous_results.sql": null,
+      "test_valeur_saniraire_2.sql": null,
+      "test__coverage_20pfas_4pfas_98pct.sql": null,
+      "unique_datetimeprel_per_cdreseau_referenceprel.sql": null
+    },
+    ".gitignore": null,
+    "dbt_project.yml": null,
+    "packages.yml": null,
+    "profiles.yml": null
+  },
+  "pipelines": {
+    "config": {
+      ".env.example": null,
+      "config.py": null,
+      "__init__.py": null
+    },
+    "notebooks": {
+      "download_infofactures.ipynb": null,
+      "extract_population_from_infofactures.ipynb": null,
+      "test_atlasante_udi.ipynb": null,
+      "test_geojson.ipynb": null,
+      "test_geojson_from_db.ipynb": null,
+      "test_opendatasoft_communes.ipynb": null,
+      "test_storage_utils.ipynb": null
+    },
+    "tasks": {
+      "client": {
+        "core": {
+          "duckdb_client.py": null,
+          "https_client.py": null,
+          "https_to_duck_client.py": null
+        },
+        "commune_client.py": null,
+        "datagouv_client.py": null,
+        "geojson_processor.py": null,
+        "opendatasoft_client.py": null,
+        "pmtiles_client.py": null,
+        "pmtiles_processor.py": null,
+        "uploaded_geojson_client.py": null
+      },
+      "config": {
+        "common.py": null,
+        "config_edc.py": null,
+        "config_geojson.py": null,
+        "config_insee.py": null,
+        "config_pmtiles.py": null,
+        "config_uploaded_geojson.py": null
+      },
+      "build_database.py": null,
+      "download_database.py": null,
+      "download_pmtiles.py": null,
+      "generate_pmtiles.py": null,
+      "generate_pmtiles_legacy.py": null,
+      "trim_database_for_website.py": null,
+      "upload_database.py": null,
+      "__init__.py": null
+    },
+    "utils": {
+      "logger.py": null,
+      "storage_client.py": null,
+      "utils.py": null,
+      "__init__.py": null
+    },
+    "run.py": null,
+    "test_pipelines.py": null,
+    "__init__.py": null
+  },
+  "results": {
+    "http_references_history.csv": null
+  },
+  "webapp": {
+    "app": {
+      "api": {
+        "db-example": {
+          "route.ts": null
+        },
+        "franceinfo": {
+          "route.tsx": null
+        },
+        "udi": {
+          "dummy": {
+            "route.ts": null
+          },
+          "find": {
+            "route.tsx": null
+          },
+          "[udi_id]": {
+            "route.ts": null
+          }
+        }
+      },
+      "duckdb-example": {
+        "loading.tsx": null,
+        "page.tsx": null
+      },
+      "embed": {
+        "page.tsx": null
+      },
+      "embed-external": {
+        "page.tsx": null
+      },
+      "lib": {
+        "data.ts": null,
+        "duckdb.ts": null,
+        "mock-data.ts": null
+      },
+      "config.ts": null,
+      "globals.css": null,
+      "layout.tsx": null,
+      "page.tsx": null
+    },
+    "components": {
+      "ui": {
+        "button.tsx": null,
+        "card.tsx": null,
+        "command.tsx": null,
+        "dialog.tsx": null,
+        "hover-card.tsx": null,
+        "input.tsx": null,
+        "popover.tsx": null,
+        "scroll-area.tsx": null,
+        "select.tsx": null,
+        "switch.tsx": null,
+        "tooltip.tsx": null
+      },
+      "CVMInfoModal.tsx": null,
+      "EmbedBanner.tsx": null,
+      "MapZoneSelector.tsx": null,
+      "PollutionMap.tsx": null,
+      "PollutionMapBase.tsx": null,
+      "PollutionMapFilters.tsx": null,
+      "PollutionMapLegend.tsx": null,
+      "PollutionMapMarker.tsx": null,
+      "PollutionMapSearchBox.tsx": null,
+      "PollutionSidePanel.tsx": null
+    },
+    "lib": {
+      "colorMapping.ts": null,
+      "iframe-scroll.ts": null,
+      "mapLocale.ts": null,
+      "polluants.ts": null,
+      "property.ts": null,
+      "utils.ts": null
+    },
+    "public": {
+      "fonts": {
+        "raleway-v37-latin-300.woff2": null,
+        "raleway-v37-latin-600.woff2": null,
+        "raleway-v37-latin-700.woff2": null,
+        "raleway-v37-latin-regular.woff2": null
+      },
+      "images": {
+        "dfg.png": null
+      }
+    },
+    ".env": null,
+    ".gitignore": null,
+    ".prettierrc.json": null,
+    "components.json": null,
+    "eslint.config.mjs": null,
+    "next.config.ts": null,
+    "package-lock.json": null,
+    "package.json": null,
+    "postcss.config.mjs": null,
+    "tailwind.config.ts": null,
+    "tsconfig.json": null
+  },
+  ".dockerignore": null,
+  ".gitignore": null,
+  ".pre-commit-config.yaml": null,
+  ".python-version": null,
+  ".sqlfluff": null,
+  "Dockerfile.clevercloud": null,
+  "Dockerfile.unified": null,
+  "LICENSE": null,
+  "pyproject.toml": null,
+  "README.md": null,
+  "TECHNICAL.md": null,
+  "uv.lock": null
+}

@@ -1,0 +1,421 @@
+{
+  ".git": {
+    "hooks": {
+      "applypatch-msg.sample": null,
+      "commit-msg.sample": null,
+      "fsmonitor-watchman.sample": null,
+      "post-update.sample": null,
+      "pre-applypatch.sample": null,
+      "pre-commit.sample": null,
+      "pre-merge-commit.sample": null,
+      "pre-push.sample": null,
+      "pre-rebase.sample": null,
+      "pre-receive.sample": null,
+      "prepare-commit-msg.sample": null,
+      "push-to-checkout.sample": null,
+      "sendemail-validate.sample": null,
+      "update.sample": null
+    },
+    "info": {
+      "exclude": null
+    },
+    "logs": {
+      "refs": {
+        "heads": {
+          "main": null
+        },
+        "remotes": {
+          "origin": {
+            "HEAD": null
+          }
+        }
+      },
+      "HEAD": null
+    },
+    "objects": {
+      "info": {},
+      "pack": {
+        "pack-fb740d4d7cfb841d640a74931c2bb8936f17abd5.idx": null,
+        "pack-fb740d4d7cfb841d640a74931c2bb8936f17abd5.pack": null,
+        "pack-fb740d4d7cfb841d640a74931c2bb8936f17abd5.rev": null
+      }
+    },
+    "refs": {
+      "heads": {
+        "main": null
+      },
+      "remotes": {
+        "origin": {
+          "HEAD": null
+        }
+      },
+      "tags": {}
+    },
+    "config": null,
+    "description": null,
+    "HEAD": null,
+    "index": null,
+    "packed-refs": null
+  },
+  ".github": {
+    "workflows": {
+      "d4g-utils.yml": null,
+      "deploy.yml": null,
+      "frontend-checks.yml": null,
+      "pre-commit.yaml": null
+    }
+  },
+  "backend": {
+    "constants": {
+      "festival_award_constants.csv": null,
+      "festival_constants.py": null,
+      "role_constants.py": null
+    },
+    "entities": {
+      "credit_holder_entity.py": null,
+      "festival_award_entity.py": null,
+      "film_entity.py": null,
+      "poster_entity.py": null,
+      "trailer_entity.py": null
+    },
+    "repositories": {
+      "award_nomination_repository.py": null,
+      "country_repository.py": null,
+      "credit_holder_repository.py": null,
+      "festival_award_repository.py": null,
+      "festival_repository.py": null,
+      "film_country_budget_allocation_repository.py": null,
+      "film_credit_repository.py": null,
+      "film_repository.py": null,
+      "genre_repository.py": null,
+      "poster_character_repository.py": null,
+      "poster_repository.py": null,
+      "role_repository.py": null,
+      "trailer_character_repository.py": null,
+      "trailer_repository.py": null
+    },
+    "routers": {
+      "festival.py": null,
+      "film.py": null,
+      "metabase.py": null
+    },
+    "services": {
+      "festival_metrics_calculator.py": null,
+      "film_metrics_calculator.py": null
+    },
+    "use_cases": {
+      "get_festival_details.py": null,
+      "get_film_details.py": null,
+      "search_films.py": null
+    },
+    "utils": {
+      "age_utils.py": null,
+      "date_utils.py": null,
+      "name_utils.py": null
+    },
+    "Dockerfile": null,
+    "Dockerfile.prod": null,
+    "main.py": null,
+    "README.md": null
+  },
+  "certbot": {
+    "Dockerfile": null,
+    "entrypoint.sh": null
+  },
+  "d4g-utils": {
+    "install_poetry.sh": null
+  },
+  "database": {
+    "alembic": {
+      "versions": {
+        "165c9a285a71_add_allocine_name_to_roles.py": null,
+        "1b85fcd5a62e_create_trailer_characters_table.py": null,
+        "230802dd9cec_create_award_nominations_table.py": null,
+        "2eedb52b923f_create_film_country_budget_allocations_.py": null,
+        "4bd9e4bb5bc3_add_inclusive_name_to_roles.py": null,
+        "4ccb0b5574a8_enable_unaccent_extension.py": null,
+        "52f50b4aed4f_create_festivals_table.py": null,
+        "6352fe8a8250_add_attributes_to_festival_awards.py": null,
+        "6df58c273a80_create_festival_awards_table.py": null,
+        "70d997a5cc43_create_posters_table.py": null,
+        "8babdd0aeb7b_create_genres_table.py": null,
+        "9acf3149fef3_add_additional_attributes_to_films.py": null,
+        "9cf40267d373_create_roles_table.py": null,
+        "a41a851372bf_create_films_genres_table.py": null,
+        "a932df5ac027_add_index_on_films_original_names.py": null,
+        "b0c6222108ff_create_credit_holders_table.py": null,
+        "b50425a00467_create_countries_table.py": null,
+        "bf1b7d423a36_adjust_several_film_attributes.py": null,
+        "c6fb92e4e96f_create_poster_characters_table.py": null,
+        "d471dd7a5deb_create_trailers_table.py": null,
+        "d5ecbb43840b_create_film_credits_table.py": null,
+        "e9f855b8ad1c_create_films_table.py": null
+      },
+      "env.py": null,
+      "README": null,
+      "script.py.mako": null
+    },
+    "data": {
+      "allocine": {
+        "allocine_film_enricher.py": null,
+        "allocine_film_matcher.py": null,
+        "allocine_matches_enriched.csv": null,
+        "allocine_runner.py": null,
+        "allocine_scraper.py": null
+      },
+      "cnc": {
+        "cnc_constants.py": null,
+        "dataset5050_cnc_films_agrees_2003_2024.xlsx": null,
+        "extract_cnc_data_from_excel.py": null
+      },
+      "machine_learning_predictions": {
+        "poster_predictions.csv": null,
+        "trailer_predictions.csv": null
+      },
+      "mubi": {
+        "films_all_awards.csv": null,
+        "mubi_all_festival_films_to_csv.py": null,
+        "mubi_all_film_awards_to_csv.py": null,
+        "mubi_page_scraper.py": null,
+        "mubi_scraping_sandbox.ipynb": null
+      },
+      "old_db_init": {
+        "0_init_database.sql": null,
+        "1_insert_festivals.sql": null,
+        "2_insert_films.sql": null,
+        "3_insert_cheffes_postes.sql": null,
+        "4_insert_film_cheffes_postes.sql": null,
+        "getdata.py": null
+      },
+      "sample": {
+        "sample.sql": null,
+        "seed_sample.py": null
+      },
+      ".gitignore": null,
+      "README.md": null,
+      "scraping_browser.py": null
+    },
+    "models": {
+      "award_nomination.py": null,
+      "country.py": null,
+      "credit_holder.py": null,
+      "festival.py": null,
+      "festival_award.py": null,
+      "film.py": null,
+      "film_country_budget_allocation.py": null,
+      "film_credit.py": null,
+      "film_genre.py": null,
+      "genre.py": null,
+      "poster.py": null,
+      "poster_character.py": null,
+      "role.py": null,
+      "trailer.py": null,
+      "trailer_character.py": null,
+      "__init__.py": null
+    },
+    "notebooks": {
+      "1_parsing_dataset_festival.ipynb": null,
+      "2_parsing_dataset_cheffes_postes.ipynb": null,
+      "3_insert_tmdb_data.ipynb": null,
+      "4_parse_dataset_cnc.ipynb": null,
+      "5_parse_dataset_cesars.ipynb": null,
+      "cleaning_existing_datasets.ipynb": null,
+      "exploration.ipynb": null,
+      "Testing Bechdelai librairy.ipynb": null
+    },
+    "seed": {
+      "seed_allocine_movies_details.py": null,
+      "seed_cnc_movies.py": null,
+      "seed_film_awards.py": null,
+      "seed_poster_predictions.py": null,
+      "seed_trailer_predictions.py": null,
+      "__init__.py": null
+    },
+    "utils": {
+      "matching.py": null
+    },
+    "alembic.ini": null,
+    "database.py": null,
+    "Dockerfile": null,
+    "README.md": null
+  },
+  "docs": {
+    "setup.md": null
+  },
+  "frontend": {
+    "public": {
+      "bluesky.svg": null,
+      "copy_link.svg": null,
+      "facebook.png": null,
+      "home.jpg": null,
+      "info.svg": null,
+      "instagram.png": null,
+      "instagram.svg": null,
+      "linkedin.png": null,
+      "logo_5050.png": null,
+      "logo_d4g.png": null,
+      "mail.svg": null,
+      "placeholder_image.svg": null,
+      "search.svg": null,
+      "twitter.svg": null,
+      "whatsapp.svg": null,
+      "youtube.png": null
+    },
+    "src": {
+      "app": {
+        "about": {
+          "page.tsx": null
+        },
+        "festivals": {
+          "[slug]": {
+            "page.tsx": null
+          }
+        },
+        "films": {
+          "[slug]": {
+            "page.tsx": null
+          }
+        },
+        "statistics": {
+          "page.tsx": null
+        },
+        "favicon.ico": null,
+        "globals.css": null,
+        "layout.tsx": null,
+        "page.tsx": null
+      },
+      "components": {
+        "atoms": {
+          "CncDialog.tsx": null,
+          "Footer.tsx": null,
+          "Navbar.tsx": null,
+          "PosterAnalysisDialog.tsx": null,
+          "ShareDialog.tsx": null,
+          "TrailerAnalysisDialog.tsx": null
+        },
+        "ui": {
+          "accordion.tsx": null,
+          "badge.tsx": null,
+          "button.tsx": null,
+          "card.tsx": null,
+          "carousel.tsx": null,
+          "dialog.tsx": null,
+          "drawer.tsx": null,
+          "input.tsx": null,
+          "menubar.tsx": null,
+          "select.tsx": null,
+          "sonner.tsx": null
+        }
+      },
+      "contexts": {
+        "SearchContext.tsx": null
+      },
+      "dto": {
+        "festival": {
+          "award.dto.ts": null,
+          "festival-api-response.dto.ts": null,
+          "festival.dto.ts": null,
+          "metrics.dto.ts": null,
+          "nomination.dto.ts": null,
+          "reduced-award.dto.ts": null,
+          "reduced-film.dto.ts": null
+        },
+        "film": {
+          "award.dto.ts": null,
+          "credit.dto.ts": null,
+          "credits.dto.ts": null,
+          "distribution.dto.ts": null,
+          "film-api-response.dto.ts": null,
+          "film.dto.ts": null,
+          "metrics.dto.ts": null,
+          "search-film-result.dto.ts": null
+        }
+      },
+      "hooks": {
+        "useMediaQuery.ts": null,
+        "useSearch.ts": null
+      },
+      "icons": {
+        "frame_search.tsx": null,
+        "share.tsx": null,
+        "video_search.tsx": null
+      },
+      "lib": {
+        "utils.ts": null
+      },
+      "locales": {
+        "fr-FR.json": null
+      },
+      "utils": {
+        "api-url.ts": null,
+        "cn.ts": null,
+        "i18n.ts": null,
+        "name-to-uppercase.ts": null
+      }
+    },
+    ".dockerignore": null,
+    ".gitignore": null,
+    "components.json": null,
+    "Dockerfile": null,
+    "Dockerfile.prod": null,
+    "eslint.config.mjs": null,
+    "index.html": null,
+    "next.config.ts": null,
+    "nginx.conf": null,
+    "package.json": null,
+    "pnpm-lock.yaml": null,
+    "postcss.config.mjs": null,
+    "README.md": null,
+    "tsconfig.json": null
+  },
+  "ml-image": {
+    "install": {
+      "download_models.sh": null
+    },
+    "scripts": {
+      "evaluation_annotation.py": null,
+      "faces_clustering.py": null,
+      "filter_detections.py": null,
+      "model_architectures.py": null,
+      "utils.py": null,
+      "vision_classifiers.py": null,
+      "vision_detection.py": null,
+      "__init__.py": null
+    },
+    ".gitignore": null,
+    "Dockerfile": null,
+    "main.py": null,
+    "README.md": null,
+    "requirements.txt": null,
+    "requirements_windows.txt": null
+  },
+  "nginx": {
+    "Dockerfile": null,
+    "entrypoint.sh": null,
+    "prod.conf": null
+  },
+  "python_template": {
+    ".empty": null,
+    "__init__.py": null
+  },
+  "tests": {
+    "backend": {
+      "utils": {
+        "test_age_utils.py": null,
+        "test_date_utils.py": null,
+        "test_name_utils.py": null
+      }
+    }
+  },
+  ".env.example": null,
+  ".gitignore": null,
+  ".pre-commit-config.yaml": null,
+  "docker-compose.prod.yaml": null,
+  "docker-compose.yaml": null,
+  "LICENSE": null,
+  "poetry.lock": null,
+  "pyproject.toml": null,
+  "README.md": null,
+  "test.http": null,
+  "tox.ini": null
+}
