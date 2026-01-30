@@ -98,30 +98,90 @@ Les messages sont souvent :
 Nous avons choisi d'utiliser Sonarqube pour évaluer certaines métriques de la qualité de code car il n'est pas présent par défaut sur les dépôts de code de Data For Good France ce qui réduit les biais potentiels et que c'est un standard de l'industrie pour évaluer la santé d'un dépôt.
 
 ### Sous question 1 : 
-     Pour notre premiere sous question nous avons besoin de mesuré la qualité d'un dépot de code. pour cela nous avons eu l'idée d'utilisé Sonarqube car c'est le standard du marché en terme d'analyse statique de code. nous avions aussi réfléchi a des alternatives tel que CodeClimate pour une alternative du même style mais moins complexe ce qui nous satifesais pas  pareil pour un linter spécifique par langague qui été compliqué a mettre en place par rapport a juste un serveur SonarQube. pour automatisé ça on va crée une pipeline pour va lancé le serveur sonar sur un docker puis on va cloner chaqu'un des repos qu'on a prevu d'analysé, run une annalyse sonar puis grace a l'api on va récupéré les mesures de docker. on a ensuite décidé d'un score avec ces mesure pour normalisé pour tout les repos et avoir un valeur de mesure concrete. pour faire ce score nous avons chosi de nous basé sur 5 critères: 
-     - la fiabilité 
-     - la maintanbilité 
-     - la sécurité 
-     - la duplication de code 
-     - la complexité cognitive moyenne
+#### Mesure de la qualité d’un dépôt de code
 
-     nous avons choisi ces critères car ce sont des mesures qui nous ont semblé être une bonne base de mesure pour la qualité de code 
-     pour la fiablité, maintabilité et sécurité nous allons utilisé les notes de sonar allant de A à E pour les transformé de nombre de 5 a 1 puis le multiplié par 20 pour avoir une note entre 20 et 100. pour la duplications de code c'est une mesure que sonar va nous données mais nous avons décidé de faire max(0,100 - 5* valeur de duplication). on fait le *5  afin d'accentuer l'effet du code dupliqué car 20 % est un gros pourcentage de code duppliqué mais été trop faiblement pris en compte dans la notation et l'impact été dans la note été pas assez fort. enfin pour la complexité cognitive. cette mesure represnete a quel points un ficher est complexe a comprendre pour un nouveau developper. pour cela on va récupéré la complexité cognitives et le nombre de fichers global puis le divisé pour obtenire le score moyen par fichers. on va aussi faire max(0,(100 - 5* notre valeur)) pour cette metrique car on va obtenir de petit score peu représerentatif du vrai impact d'un gros score de complexité cognitve. 
-     on va donc finir avec 5 valeur comprise entre 0 et 100. 
-     avec ces 5 score on va faire 
-     ```0.25* fiabilité + 0.20* maintanbilité  + 0.15 * sécurité + 0.20 * duplication de code + 0.20 * complexité cognitive moyenne```
-     cela va nous donnée un score de global sur 100 qui va nous permettre d'avoir un bonne repesentativité de la qualité d'un repos. 
-      
-Vous **explicitez les expérimentations que vous allez mener** pour vérifier si vos hypothèses sont vraies ou fausses. Il y a forcément des choix, des limites, explicitez-les.
 
-     :bulb: Structurez cette partie à votre convenance : 
-     Par exemples : 
-        Pour Hypothèse 1 => 
-            Nous ferons les Expériences suivantes pour la démontrer
-        Pour Hypothèse 2 => Expériences 
-        
-        ou Vous présentez l'ensemble des hypothèses puis vous expliquer comment les expériences prévues permettront de démontrer vos hypothèses.
+#### Automatisation de l’analyse
 
+Afin d’automatiser le processus, nous avons décidé de mettre en place une **pipeline** qui :
+
+1. Lance un serveur SonarQube via Docker  
+2. Clone chacun des dépôts que nous avons prévu d’analyser  
+3. Exécute une analyse SonarQube sur chaque dépôt  
+4. Récupère les métriques produites grâce à l’API de SonarQube  
+
+À partir de ces métriques, nous avons défini un **score normalisé**, commun à tous les dépôts, afin d’obtenir une valeur de mesure concrète et comparable.
+
+
+
+#### Critères retenus
+
+Le score global est basé sur **cinq critères** :
+
+- la fiabilité  
+- la maintenabilité  
+- la sécurité  
+- la duplication de code  
+- la complexité cognitive moyenne  
+
+Ces critères nous ont semblé constituer une base pertinente pour évaluer la qualité globale d’un code.
+
+---
+
+#### Calcul des scores individuels
+
+##### Fiabilité, maintenabilité et sécurité
+
+Pour ces trois critères, nous utilisons les **notes SonarQube allant de A à E**.  
+Elles sont transformées en valeurs numériques de **5 à 1**, puis multipliées par 20 afin d’obtenir une note comprise entre **20 et 100**.
+
+---
+
+##### Duplication de code
+
+SonarQube fournit directement un pourcentage de duplication de code.  
+Nous avons choisi de calculer le score de la manière suivante :
+
+```
+max(0, 100 - 5 × valeur_de_duplication)
+```
+
+Le facteur multiplicatif `5` permet d’accentuer l’impact du code dupliqué.  
+En effet, un taux de duplication de 20 % est déjà très élevé, mais son influence était trop faible dans la notation par défaut.
+
+---
+
+#### Complexité cognitive moyenne
+
+La complexité cognitive mesure à quel point un fichier est difficile à comprendre pour un nouveau développeur.
+
+Pour ce critère, nous :
+1. Récupérons la complexité cognitive totale  
+2. La divisons par le nombre total de fichiers afin d’obtenir une moyenne par fichier  
+
+Le score est ensuite calculé comme suit :
+
+```
+0.25 × fiabilité
+
+0.20 × maintenabilité
+
+0.15 × sécurité
+
+0.20 × duplication de code
+
+0.20 × complexité cognitive moyenne
+ ```
+
+Ce calcul produit un **score final sur 100**, offrant une bonne représentativité de la qualité globale d’un dépôt.
+
+---
+
+### Exploitation et reproductibilité
+
+Ce score nous permettra d’analyser la **répartition de la qualité de code** des dépôts *Data For Good* et ainsi de répondre à notre sous-question.
+
+Afin de garantir la **reproductibilité des résultats**, nous stockons le **SHA du commit analysé** et ajoutons une option `-R` dans la pipeline permettant de rejouer les analyses à l’identique.
 
 ### Sous question 2 :
 
@@ -179,7 +239,10 @@ Sur cet échantillon, il n'existe pas de seuil unique au-delà duquel la qualit�
 - Découpage en intervalles : bornes choisies pour l'équilibre des groupes (16–20 non exploité).
 - Corrélation ≠ causalité : d'autres facteurs (maturité, langage, gouvernance) peuvent influer sur la qualité.
 
-### Sous-question 3
+
+
+
+## Sous-question 3
 
 Pour classifier les différents messages de commits, nous avons commencé par utiliser des patterns simples avec un script reproductible pour avoir une première idée de la répartition et des tendances :
 
@@ -233,9 +296,14 @@ Les graphiques ci-dessous ont été réalisé par nos soins.
 
 ### Présentation des résultats
 
-![Figure 1: Nuage de points du ratio du nombre de commits de fix par rapport au nombre de contributeurs](assets/results/ratio_fix_vs_contributeurs.png)
+#### Sous question 1 : 
+![Figure 1: Distribution de la qualité de cod ](images/)
 
-![Figure 2: Nuage de points du ratio du nombre de commits de refactor sur le nombre de commits de feat par rapport au nombre de contributeurs](assets/results/ratio_refactor_feat_vs_contributeurs.png)
+
+#### Sous question 3 
+![Figure x: Nuage de points du ratio du nombre de commits de fix par rapport au nombre de contributeurs](assets/results/ratio_fix_vs_contributeurs.png)
+
+![Figure x: Nuage de points du ratio du nombre de commits de refactor sur le nombre de commits de feat par rapport au nombre de contributeurs](assets/results/ratio_refactor_feat_vs_contributeurs.png)
 
 ### Interprétation et analyse des résultats en fonction des hypothèses
 
