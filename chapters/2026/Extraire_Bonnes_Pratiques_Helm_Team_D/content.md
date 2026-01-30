@@ -179,10 +179,13 @@ Pour automatiser cette analyse, nous avons développé une suite logicielle int�
 2. **Module statistique (Python).** Un pipeline d'agrégation traitant les distributions de données et générant les visualisations statistiques nécessaires à la validation des hypothèses.
 3. **Interface interactive (Angular).** Un tableau de bord permettant l'exploration visuelle des graphes individuels et la comparaison des métriques d'un chart par rapport à l'ensemble du dataset.
 
+![2026-01-3022-15-21-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/4c2fd595-8ebe-41b7-9199-71bc0b3db7b0)
+
+
 
 ## VI. Résultats
 
-Nous avons établi les distributions statistiques de chaque métrique sur l'intégralité du jeu de données (dataset).
+Nous avons établi les distributions statistiques de chaque métrique sur l'intégralité du jeu de données (dataset). Nous avons trouver que le choix de nos seuils est validé par leur capacité à assurer une distinction nette au sein des distributions observées.
 
 <div align="center">
 
