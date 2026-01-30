@@ -170,7 +170,7 @@ Une fois le protocole ajusté et validé, nous l'avons appliqué à **4 autres p
 
 Pour chaque phase, en plus de ce qui va être détaillé juste en dessous, une analyse manuelle va être effectuée étant donné l’analyse historique et qualitative que l’on souhaite mener.
 
-Ici vous trouverez le lien de notre repository github où tous les scripts et résultats sont disponibles : https://github.com/emmaallain/RIMEL_SCRIPTS
+Vous trouverez tous les scripts et résultats dans le dossier [assets/code](assets/code)
 
 → **Phase 0 - Sélection des objets d'étude :** Identifier et sélectionner les projets les plus pertinents pour notre analyse parmi les 164 dépôts Data For Good.
 
