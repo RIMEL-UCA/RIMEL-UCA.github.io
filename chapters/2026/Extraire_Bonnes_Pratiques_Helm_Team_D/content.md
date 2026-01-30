@@ -3,9 +3,6 @@ layout: default
 title: "Hell ou Helm : étude sur la complexité structurelle, cognitive et syntaxique des charts Helm."
 date: 2026-01
 ---
-# Hell ou Helm : étude sur la complexité structurelle, cognitive et syntaxique des charts Helm.
-
-<div style = "text-align: justify">
 
 ## Auteurs
 * AL Mounayar Mouhamad &lt;mouhamad.al-mounayar@etu.unice.fr&gt;
@@ -288,4 +285,3 @@ Malgré ces limites, cette étude pose les bases d'une évaluation objective de 
 
 5. **Andaloussi, A. A., Burattin, A., Slaats, T., Kindler, E., & Weber, B.** (2023). Complexity in declarative process models: Metrics and multi-modal assessment of cognitive load. *Expert Systems with Applications*, 233, 120924.
 
-</div>
