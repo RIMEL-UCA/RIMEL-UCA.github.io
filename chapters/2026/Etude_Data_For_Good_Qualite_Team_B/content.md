@@ -288,7 +288,6 @@ Afin de faciliter l’observation, nous utilisons **quatre diagrammes** avec  :
 #### Limites spécifiques
 
 - Effectifs par groupe modestes : interprétations exploratoires, sensibles aux valeurs isolées.
-- Découpage en intervalles : bornes choisies pour l'équilibre des groupes (16–20 non exploité).
 - Corrélation ≠ causalité : d'autres facteurs (maturité, langage, gouvernance) peuvent influer sur la qualité.
 
 ## Sous-question 3
@@ -348,11 +347,23 @@ Les graphiques ci-dessous ont été réalisé par nos soins avec l'aide du packa
 
 ### Présentation des résultats
 
-#### Sous question 1 : 
+#### Sous-question 1 : 
 ![Figure 1: Distribution de la qualité de code pour les repos](assets/results/1-qualite/sonarqube_scores_distribution.png)
 
 ![Figure 2: Diagrame en violon du score de qualité](assets/results/1-qualite/sonarqube_scores_violin.png)
+#### Sous-question 2 : 
 
+![Figure 3 : Diagramme pour le groupe 4-9 ](assets/results/2-nombre-contributeurs/qualite_groupe_1.png)
+
+![Figure 3 : Diagramme pour le groupe 10-15 ](assets/results/2-nombre-contributeurs/qualite_groupe_2.png)
+
+![Figure 3 : Diagramme pour le groupe 19-32 ](assets/results/2-nombre-contributeurs/qualite_groupe_3.png)
+
+![Figure 3 : Diagramme moustache ](assets/results/2-nombre-contributeurs/qualite_boxplot_groupes.png)
+
+
+
+#### Sous-question 3 : 
 ![Figure 3: Nuage de points du ratio du nombre de commits de fix par rapport au nombre de contributeurs](assets/results/3-activite-contributeurs/ratio_fix_vs_contributeurs.png)
 
 ![Figure 2: Nuage de points du ratio du nombre de commits de refactor sur le nombre de commits de feat par rapport au nombre de contributeurs](assets/results/3-activite-contributeurs/ratio_refactor_feat_vs_contributeurs.png)
@@ -370,6 +381,20 @@ Une large majorité des dépôts obtient un score compris entre **60 et 80**, av
 Ces résultats indiquent que la qualité du code des dépôts analysés est globalement satisfaisante.  
 Ils tendent ainsi à confirmer notre hypothèse, selon laquelle les projets étudiés présentent un niveau de qualité relativement élevé.
 
+#### Sous-question 2 : 
+Pour la sous-question 2, notre intuition initiale était que plus un dépôt possède de contributeurs, meilleure serait la qualité du code.  
+Cependant, nos analyses semblent montrer une tendance inverse.
+
+En effet, le groupe comprenant **4 à 9 contributeurs** tire fortement la moyenne vers le haut, tandis que le groupe **10 à 15 contributeurs** présente une baisse notable de la qualité médiane.  
+Le groupe **19 à 32 contributeurs**, quant à lui, semble se situer autour de la moyenne globale du jeu de données.
+
+Ces résultats suggèrent qu’un **nombre plus restreint de contributeurs** est associé à une meilleure qualité du code, jusqu’à atteindre une **stabilisation autour de 74 %** lorsque le nombre de contributeurs augmente.
+
+Néanmoins, cette étude présente une limite importante : le **manque de données**.  
+Le groupe 4–9 contributeurs, en particulier, montre une **forte variabilité** entre ses dépôts, ce qui réduit la robustesse des conclusions et invite à interpréter ces résultats avec prudence.
+
+
+#### Sous-question 3 :
 Pour la sous-question 3, nous avions l'intuition qu'un dépôt de code avec beaucoup de contributeurs va naturellement avoir beaucoup de commit refactor et fix pour maintenir sa qualité.
 On peut voir sur la classification qu'on a fait que pour les dépôts avec plus de 20 contributeurs, les commits refactor et fix représentent en moyenne un quart des commits totaux :
 | repo                            | feat | fix | refactor | ci   | chore | other | total_commits | contributeurs |
