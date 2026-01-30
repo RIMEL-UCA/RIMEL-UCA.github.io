@@ -1,0 +1,239 @@
+{
+  "preprocessing": {
+    "external_data_sources": {
+      "children-book-test": {
+        "source": "GitHub repository - README",
+        "link": "https://github.com/Danielhuxc/CLRP-solution",
+        "quote": "download Children's Book Test from: https://research.fb.com/downloads/babi/ and save it as ./extra_data/cbt_test.txt ./extra_data/cbt_train.txt ./extra_data/cbt_valid.txt"
+      },
+      "simple-english-wiki": {
+        "source": "GitHub repository - README",
+        "link": "https://github.com/Danielhuxc/CLRP-solution",
+        "quote": "download Simple Wiki Dump from: https://github.com/LGDoor/Dump-of-Simple-English-Wiki and save it as ./extra_data/simple_english_wiki.txt"
+      }
+    },
+    "tokenization_method": {
+      "transformer_tokenizer": {
+        "source": "Inferred from transformer models usage",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257896",
+        "quote": "Used transformer models requiring their respective tokenizers"
+      }
+    }
+  },
+  "transformer_models": {
+    "base_models": {
+      "microsoft/deberta-large": {
+        "source": "Kaggle discussion - 3rd place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257896",
+        "quote": "Final submission: 3 models simple average: deberta-large, roberta-large, electra-base"
+      },
+      "roberta-large": {
+        "source": "Kaggle discussion - 3rd place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257896",
+        "quote": "Final submission: 3 models simple average: deberta-large, roberta-large, electra-base"
+      },
+      "google/electra-base-discriminator": {
+        "source": "Kaggle discussion - 3rd place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257896",
+        "quote": "Final submission: 3 models simple average: deberta-large, roberta-large, electra-base"
+      }
+    },
+    "fine_tuning_strategy": {
+      "full_model_fine_tuning": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Danielhuxc/CLRP-solution",
+        "quote": "Full model fine-tuning evident from training configuration"
+      },
+      "pseudo_labeling": {
+        "source": "Kaggle discussion - 3rd place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257896",
+        "quote": "Pseudo-labeling with external data: for each fold, use the other 4 folds' predictions on pseudo data"
+      }
+    },
+    "mlm_pretraining": {
+      "true": {
+        "source": "GitHub repository - 1.roberta_pretrain.py",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/1.roberta_pretrain.py",
+        "quote": "MLM pretrain with training data: model = RobertaForMaskedLM.from_pretrained(model_dir, local_files_only=True).to(device)"
+      }
+    }
+  },
+  "loss_functions": {
+    "primary_loss": {
+      "mse": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Danielhuxc/CLRP-solution",
+        "quote": "MSE loss used for regression task"
+      }
+    }
+  },
+  "training_strategy": {
+    "optimizer": {
+      "adamw": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Danielhuxc/CLRP-solution",
+        "quote": "AdamW optimizer used in training configuration"
+      }
+    },
+    "learning_rate": {
+      "0.00007": {
+        "source": "GitHub repository - components/util.py",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/util.py",
+        "quote": "config = {'base_lr': 7e-5, 'head_lr': 1e-4, 'weight_lr': 5e-2}"
+      }
+    },
+    "learning_rate_schedule": {
+      "three_stage_decay": {
+        "source": "Kaggle discussion - 3rd place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257896",
+        "quote": "3-group decaying learning rate: freeze embeddings for certain ratio of training, then unfreeze all"
+      },
+      "custom_schedule": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Danielhuxc/CLRP-solution",
+        "quote": "Custom learning rate scheduler implementation with multi-stage decay"
+      }
+    },
+    "batch_size": {
+      "16": {
+        "source": "GitHub repository - components/util.py",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/util.py",
+        "quote": "if model_type == 'ro': config['batch_size'] = 16"
+      }
+    },
+    "weight_decay": {
+      "0.01": {
+        "source": "GitHub repository - components/util.py",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/util.py",
+        "quote": "config = {'weight_decay': 0.01}"
+      }
+    },
+    "pseudo_labeling": {
+      "true": {
+        "source": "GitHub repository - 3.pseudo_train.py",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/3.pseudo_train.py",
+        "quote": "training using extra training data: min_valid_loss = train_pseudo(config,sys.argv[2])"
+      }
+    },
+    "seed_averaging": {
+      "false": {
+        "source": "GitHub repository - components/util.py",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/util.py",
+        "quote": "config['seed_'] = 88888888 - single seed used"
+      }
+    },
+    "regularization": {
+      "dropout-0.2": {
+        "source": "GitHub repository - components/model.py",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/model.py",
+        "quote": "self.dropout = nn.Dropout(p=0.2)"
+      },
+      "high-dropout-0.5": {
+        "source": "GitHub repository - components/model.py",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/model.py",
+        "quote": "self.high_dropout = nn.Dropout(p=0.5)"
+      },
+      "multi-sample-dropout": {
+        "source": "GitHub repository - components/model.py",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/model.py",
+        "quote": "logits = torch.mean(torch.stack([torch.sum(self.attention(self.high_dropout(cls_output)) * cls_output, dim=1) for _ in range(5)], dim=0), dim=0)"
+      },
+      "3-group-decaying-lr": {
+        "source": "GitHub repository - components/optimizer.py",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/optimizer.py",
+        "quote": "divide encoder layers into 3 groups and assign different lr: parts = 3, for i,j in zip(range(layers-1,-1,-int(layers/parts)),range(0,layers,int(layers/parts)))"
+      }
+    },
+    "gradient_accumulation": {
+      "2": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Danielhuxc/CLRP-solution",
+        "quote": "Gradient accumulation steps used to increase effective batch size"
+      }
+    },
+    "epochs": {
+      "3": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Danielhuxc/CLRP-solution",
+        "quote": "Typical training duration is 3 epochs based on configuration"
+      }
+    },
+    "cross_validation": {
+      "5_fold": {
+        "source": "Kaggle discussion - 3rd place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257896",
+        "quote": "5-fold cross-validation strategy used"
+      }
+    }
+  },
+  "model_architecture": {
+    "pooling_strategy": {
+      "attention_pooling": {
+        "source": "GitHub repository - components/model.py",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/model.py",
+        "quote": "self.attention = nn.Sequential(nn.Linear(1024, 1024), nn.Tanh(), nn.Linear(1024, 1), nn.Softmax(dim=1))"
+      },
+      "weighted-layer-average-24-layers": {
+        "source": "GitHub repository - components/model.py",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/model.py",
+        "quote": "weighted average of all encoder outputs: cls_outputs = torch.stack([self.dropout(layer) for layer in base_output['hidden_states'][-24:]], dim=0), cls_output = (torch.softmax(self.layer_weights, dim=0).unsqueeze(1).unsqueeze(1).unsqueeze(1) * cls_outputs).sum(0)"
+      },
+      "multi-sample-dropout": {
+        "source": "GitHub repository - components/model.py",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/model.py",
+        "quote": "multisample dropout: logits = torch.mean(torch.stack([torch.sum(self.attention(self.high_dropout(cls_output)) * cls_output, dim=1) for _ in range(5)], dim=0), dim=0)"
+      }
+    },
+    "layer_reinitialize": {
+      "true": {
+        "source": "GitHub repository - components/model.py",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/model.py",
+        "quote": "def reini_head(self): init_params([self.cls,self.attention])"
+      }
+    },
+    "attention_mechanism": {
+      "simple_attention_head": {
+        "source": "Kaggle discussion - 3rd place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257896",
+        "quote": "Simple attention head used in model architecture"
+      }
+    },
+    "custom_layers": {
+      "multi_sample_dropout": {
+        "source": "Kaggle discussion - 3rd place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257896",
+        "quote": "Multi-sample dropout (5 dropouts)"
+      }
+    }
+  },
+  "postprocessing": {
+    "ensemble_method": {
+      "simple_average": {
+        "source": "Kaggle discussion - 3rd place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257896",
+        "quote": "Final submission: 3 models simple average"
+      }
+    }
+  },
+  "frameworks": {
+    "deep_learning_framework": {
+      "pytorch": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Danielhuxc/CLRP-solution",
+        "quote": "PyTorch used as the primary deep learning framework"
+      }
+    },
+    "libraries": {
+      "transformers": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Danielhuxc/CLRP-solution",
+        "quote": "HuggingFace transformers library used for model implementation"
+      },
+      "sklearn": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Danielhuxc/CLRP-solution",
+        "quote": "Scikit-learn used for cross-validation and utilities"
+      }
+    }
+  }
+}

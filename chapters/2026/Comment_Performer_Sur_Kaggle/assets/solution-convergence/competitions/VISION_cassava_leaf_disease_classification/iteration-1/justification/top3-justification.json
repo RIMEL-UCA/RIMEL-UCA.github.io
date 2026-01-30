@@ -1,0 +1,67 @@
+{
+  "augmentation_techniques": {
+    "source": "Top3 solution description",
+    "link": "solutions/top3.txt",
+    "quote": "return Compose([ RandomResizedCrop(img_size, img_size), Transpose(p=0.5), HorizontalFlip(p=0.5), VerticalFlip(p=0.5), ShiftScaleRotate(p=0.5), Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5]), ToTensorV2(), ])"
+  },
+  "base_models": {
+    "source": "Top3 solution description",
+    "link": "solutions/top3.txt",
+    "quote": "My final submission is ensemble of three ViT models... vit_base_patch16_384... vit_base_patch16_224 - A... vit_base_patch16_224 - B"
+  },
+  "primary_loss": {
+    "source": "Top3 solution code",
+    "link": "solutions/top3.txt",
+    "quote": "self.criterion = CrossEntropyLoss().to(self.device) if not self.config.label_smooth else CrossEntropyLossWithLabelSmooth(epsilon=self.config.label_smooth_alpha).to(self.device)"
+  },
+  "optimizer": {
+    "source": "Top3 solution code",
+    "link": "solutions/top3.txt",
+    "quote": "self.optimizer = Adam(self.model.parameters(), lr=self.settings.LR)"
+  },
+  "learning_rate_schedule": {
+    "source": "Top3 solution description",
+    "link": "solutions/top3.txt",
+    "quote": "LR Scheduler: LambdaLR self.scheduler = LambdaLR(self.optimizer, lr_lambda=lambda epoch: 1.0 / (1.0 + epoch))"
+  },
+  "regularization": {
+    "source": "Top3 solution description",
+    "link": "solutions/top3.txt",
+    "quote": "label smoothing, alpha=0.01... multi_drop_rate=0.5"
+  },
+  "cross_validation": {
+    "source": "Top3 solution description",
+    "link": "solutions/top3.txt",
+    "quote": "5fold StratifiedKFold... Using 2020 & 2019 data"
+  },
+  "additional_layers": {
+    "source": "Top3 solution description",
+    "link": "solutions/top3.txt",
+    "quote": "vit_base_patch16_384's final layer is not multi-drop but simple linear... Multi-Dropout Linear"
+  },
+  "dropout_rate": {
+    "source": "Top3 solution code",
+    "link": "solutions/top3.txt",
+    "quote": "multi_drop_rate=0.5"
+  },
+  "ensemble_method": {
+    "source": "Top3 solution description",
+    "link": "solutions/top3.txt",
+    "quote": "Weighted Averaging... they are adapted the weighted average using calculated weights at attention layer"
+  },
+  "prediction_averaging": {
+    "source": "Top3 solution description",
+    "link": "solutions/top3.txt",
+    "quote": "5x TTA"
+  },
+  "deep_learning_framework": {
+    "source": "Top3 solution code",
+    "link": "solutions/top3.txt",
+    "quote": "import torch"
+  },
+  "libraries": {
+    "source": "Top3 solution code",
+    "link": "solutions/top3.txt",
+    "quote": "from albumentations import (Compose, Normalize, Resize, RandomResizedCrop, HorizontalFlip, VerticalFlip, ShiftScaleRotate, Transpose,)"
+  }
+}

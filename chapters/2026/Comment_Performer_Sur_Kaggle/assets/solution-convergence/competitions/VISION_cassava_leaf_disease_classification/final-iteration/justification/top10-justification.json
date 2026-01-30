@@ -1,0 +1,164 @@
+{
+  "image_size": {
+    "384x384": {
+      "source": "Top10 solution description",
+      "link": "solutions/top10.txt",
+      "quote": "model-1 DeiT-base-384 2020 + 2019 data... TTA gave me a stable 0.001-0.002 improvement in all experiments for both CV and LB. I used horizontal/vertical flips + zoom (crop 384 -> resize to 512)."
+    },
+    "512x512": {
+      "source": "Top10 solution description",
+      "link": "solutions/top10.txt",
+      "quote": "I used horizontal/vertical flips + zoom (crop 384 -> resize to 512)"
+    }
+  },
+  "crop": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "I used horizontal/vertical flips + zoom (crop 384 -> resize to 512)"
+  },
+  "cutmix": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "Mixup/Cutmix (I also disable it completely for the last 3 epochs). Unfortunately, I tried it too late… and just trained 2 models with some default parameters. But after looking at the private LB scores it turned out to be an important part of my best model (both CV and private LB)."
+  },
+  "flip": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "I used horizontal/vertical flips + zoom (crop 384 -> resize to 512)"
+  },
+  "horizontalflip": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "I used horizontal/vertical flips + zoom (crop 384 -> resize to 512)"
+  },
+  "mixup": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "Mixup/Cutmix (I also disable it completely for the last 3 epochs)... In the mixup paper ( https://arxiv.org/pdf/1710.09412.pdf ) you can also find that it helps in training with corrupted labels."
+  },
+  "resize": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "I used horizontal/vertical flips + zoom (crop 384 -> resize to 512)"
+  },
+  "tta": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "Single models (5 folds, 4xTTA)... TTA gave me a stable 0.001-0.002 improvement in all experiments for both CV and LB. I used horizontal/vertical flips + zoom (crop 384 -> resize to 512)."
+  },
+  "verticalflip": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "I used horizontal/vertical flips + zoom (crop 384 -> resize to 512)"
+  },
+  "zoom": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "I used horizontal/vertical flips + zoom (crop 384 -> resize to 512)... \"Zoom\" augmentation was especially good for both DeiT and EffNet."
+  },
+  "deit-base-384": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "model-1 DeiT-base-384 2020 + 2019 data 0.901 0.9043 0.8950"
+  },
+  "efficientnet-b4": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "model-2 EffNet-B4 2020 data 0.901 0.9048 0.8975... model-3 EffNet-B4 2020 + 2019 data 0.906 0.9025 0.9010"
+  },
+  "crossentropyloss": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "Sometimes Taylor Loss (+label smoothing) was better than Cross-Entropy, I didn't try Bi-Tempered loss."
+  },
+  "ousm-loss": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "Key things that worked for me: noise removal (~2-3%), OUSM loss, mixup/cutmix, TTA... Use part of OUSM loss (without re-weighting) - https://arxiv.org/pdf/1901.07759.pdf . I enable it after N epochs to let the model normally train before it starts to memorize the noise, and I also modified it a little bit to use with a smaller batch size of 16 (i.e. remove a loss even for 1 sample per batch is too much)."
+  },
+  "taylor-loss": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "Sometimes Taylor Loss (+label smoothing) was better than Cross-Entropy, I didn't try Bi-Tempered loss."
+  },
+  "adam": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "Training: GPU: I used my 2080TI and Colab Pro. PyTorch, Adam, cosine annealing with a warmup, 16 batch size, gradient accumulation, fp16."
+  },
+  "cosine-annealing-with-warmup": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "Adam, cosine annealing with a warmup, 16 batch size, gradient accumulation, fp16."
+  },
+  "batch_size": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "Adam, cosine annealing with a warmup, 16 batch size, gradient accumulation, fp16... I also modified it a little bit to use with a smaller batch size of 16"
+  },
+  "early-stopping": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "Early stopping. At some point, I noticed that my valid accuracy is still improving slightly, but train accuracy is already too high, it didn't look like classic overfitting. So I tried early-stopping by max train accuracy, and it helped to climb LB with the same CV score."
+  },
+  "gradient-accumulation": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "Adam, cosine annealing with a warmup, 16 batch size, gradient accumulation, fp16."
+  },
+  "label-smoothing": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "Other things that worked well for me: Label smoothing (0.2 - 0.3)... Sometimes Taylor Loss (+label smoothing) was better than Cross-Entropy"
+  },
+  "mixed-precision-training": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "Adam, cosine annealing with a warmup, 16 batch size, gradient accumulation, fp16."
+  },
+  "5-fold": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "Single models (5 folds, 4xTTA)"
+  },
+  "2019-data": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "model-1 DeiT-base-384 2020 + 2019 data... model-3 EffNet-B4 2020 + 2019 data... \"2020 + 2019 data\" means upsampling for minor classes using the 2019 dataset (duplicates were removed, use only 2020 for testing)"
+  },
+  "2020-data": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "model-2 EffNet-B4 2020 data... \"2020 + 2019 data\" means upsampling for minor classes using the 2019 dataset (duplicates were removed, use only 2020 for testing)"
+  },
+  "mixed_precision": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "Adam, cosine annealing with a warmup, 16 batch size, gradient accumulation, fp16."
+  },
+  "data-removal": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "Key things that worked for me: noise removal (~2-3%), OUSM loss, mixup/cutmix, TTA... Remove only ~2-3% of data (noise) using OOF confident predictions to reduce the overall % of noise in the dataset, but keep \"useful\" noise."
+  },
+  "ousm-loss": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "Use part of OUSM loss (without re-weighting) - https://arxiv.org/pdf/1901.07759.pdf . I enable it after N epochs to let the model normally train before it starts to memorize the noise"
+  },
+  "simple-averaging-ensemble": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "Ensembles (just avg): model-1 + model-2 + model-3... model-1 + model-2... model-1 + model-3"
+  },
+  "tta": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "Single models (5 folds, 4xTTA)... TTA gave me a stable 0.001-0.002 improvement in all experiments for both CV and LB."
+  },
+  "pytorch": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "Training: GPU: I used my 2080TI and Colab Pro. PyTorch, Adam, cosine annealing with a warmup, 16 batch size, gradient accumulation, fp16."
+  }
+}

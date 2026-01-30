@@ -1,0 +1,22 @@
+{
+  "competition": "csiro-biomass",
+  "stratum": "top_1%",
+  "ref": "mattiaangeli/csiro-swinv2",
+  "local_main_file": "corpus\\csiro-biomass\\notebooks\\top_1%\\mattiaangeli__csiro-swinv2\\csiro-swinv2.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 15,
+    "B_modularite": 20,
+    "C_reproductibilite": 15,
+    "D_lisibilite": 10,
+    "E_hygiene": 15
+  },
+  "score_total_100": 75,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline d'inférence structuré: CONFIG → image utils → dataset → model blocks → BiomassSwinV2 → inference helpers → run.",
+    "B_modularite": "Architecture très modulaire: 10+ classes (Local2DTokenMixerConvNextBlock, GeM2d, StereoCrossGate2D, FuseToP16, SeamBlend2D, BiomassSwinV2), fonctions utilitaires.",
+    "C_reproductibilite": "CONFIG centralisée (MODEL_NAME, IMG_SIZE=384), constants MEAN/STD, allow_tf32, set_float32_matmul_precision.",
+    "D_lisibilite": "Sections commentées mais très denses, architecture complexe, pas de markdown explicatif.",
+    "E_hygiene": "Gestion NHWC/NCHW (_ensure_nchw), fallback images, strict=False, autocast cuda."
+  },
+  "summary": "Notebook d'inférence SwinV2 avec architecture la plus complexe des trois (eva02, convnext, swinv2). Modularité exemplaire avec 10+ classes spécialisées. Configuration robuste avec optimisations GPU. Code dense mais bien structuré. Manque de documentation pour l'architecture complexe."
+}

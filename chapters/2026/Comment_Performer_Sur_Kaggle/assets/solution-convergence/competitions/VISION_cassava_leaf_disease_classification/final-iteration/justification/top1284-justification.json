@@ -1,0 +1,127 @@
+{
+  "brightness": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "I started off with the basic image augmentations like random resized cropping, transposing the image, horizontal and vertical flipping, random hue, saturation, value,brightness and contrast adjustments."
+  },
+  "clahe": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "I got a significant boost in the f1 scores across all the classes after adding CoarseDropout, CutOut and CLAHE."
+  },
+  "coarsedropout": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "I got a significant boost in the f1 scores across all the classes after adding CoarseDropout, CutOut and CLAHE."
+  },
+  "contrast": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "I started off with the basic image augmentations like random resized cropping, transposing the image, horizontal and vertical flipping, random hue, saturation, value,brightness and contrast adjustments."
+  },
+  "cutmix": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "Finally using CutMix boosted class 0's and 1's f1-scores."
+  },
+  "cutout": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "I got a significant boost in the f1 scores across all the classes after adding CoarseDropout, CutOut and CLAHE."
+  },
+  "horizontalflip": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "I started off with the basic image augmentations like random resized cropping, transposing the image, horizontal and vertical flipping, random hue, saturation, value,brightness and contrast adjustments."
+  },
+  "hue": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "I started off with the basic image augmentations like random resized cropping, transposing the image, horizontal and vertical flipping, random hue, saturation, value,brightness and contrast adjustments."
+  },
+  "random-resized-cropping": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "I started off with the basic image augmentations like random resized cropping, transposing the image, horizontal and vertical flipping"
+  },
+  "saturation": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "I started off with the basic image augmentations like random resized cropping, transposing the image, horizontal and vertical flipping, random hue, saturation, value,brightness and contrast adjustments."
+  },
+  "transpose": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "I started off with the basic image augmentations like random resized cropping, transposing the image, horizontal and vertical flipping"
+  },
+  "tta": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "I saw an increase in my public score accuracy after using test time augmentations. I used 10 rounds of predictions for each image, where every time random augmentations are applied to it and then the predictions are averaged."
+  },
+  "value": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "I started off with the basic image augmentations like random resized cropping, transposing the image, horizontal and vertical flipping, random hue, saturation, value,brightness and contrast adjustments."
+  },
+  "verticalflip": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "I started off with the basic image augmentations like random resized cropping, transposing the image, horizontal and vertical flipping"
+  },
+  "efficientnet-b4": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "One being ResNet50_32x4 and the other EfficientNet-B4. Both were initialized with pretrained ImageNet weights."
+  },
+  "resnext50-32x4d": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "One being ResNet50_32x4 and the other EfficientNet-B4... resnet_model = models.resnext50_32x4d(pretrained=False)"
+  },
+  "imagenet": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "Both were initialized with pretrained ImageNet weights."
+  },
+  "crossentropyloss": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "I tried using a weighted cross entropy loss to overcome the class imbalance, but it did not show any f1-score improvement over cross entropy loss. So I went with the plain cross entropy loss."
+  },
+  "sgd": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "I used SGD optimizer with Cosine Annealing learning rate scheduler, decaying the lr every epoch."
+  },
+  "cosine-annealing": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "I used SGD optimizer with Cosine Annealing learning rate scheduler, decaying the lr every epoch. I also tried cosine annealing with restarts but I saw no reduction in convergence time."
+  },
+  "5-fold-stratified": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "Since the dataset is imbalanced and to maintain the same class distribution across the folds, I used stratified K-fold that makes sure that the percentage of samples for each class are preserved across the folds. I used 5-folds to estimate the best performing model"
+  },
+  "linear-layer": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "resnet_model.fc = nn.Linear(2048, 5)"
+  },
+  "soft-voting-ensemble": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "To boost my accuracy I used a soft voting ensemble on my best performing Resnet50_32x4 and EfficientNet-B4 model. I tried a number of weights for combining their predictions. The best score I got with was Resnext50 weighted 0.6 and EfficientNet-B4 weighted 0.4"
+  },
+  "pytorch": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "import torch, import torch.nn as nn, from torchvision import models, transforms"
+  },
+  "albumentations": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "import albumentations"
+  }
+}

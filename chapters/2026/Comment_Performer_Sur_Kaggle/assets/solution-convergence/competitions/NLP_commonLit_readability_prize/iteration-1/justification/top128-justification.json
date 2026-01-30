@@ -1,0 +1,145 @@
+{
+  "preprocessing": {
+    "augmentation_techniques": {
+      "standard_error_augmentation": {
+        "source": "Kaggle discussion - 128th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/yuanhao-128th-solution",
+        "quote": "When training the models, I used the standard error for augmentation. It can improve CV scores when the training task is binary classification."
+      }
+    },
+    "tokenization_method": {
+      "transformer_tokenizer": {
+        "source": "Inferred from BERT model usage",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/yuanhao-128th-solution",
+        "quote": "BERT models require transformer tokenizers"
+      }
+    }
+  },
+  "transformer_models": {
+    "base_models": {
+      "roberta-large": {
+        "source": "Kaggle discussion - 128th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/yuanhao-128th-solution",
+        "quote": "Representation-based binary classification with Roberta-Large: 0.47703 Representation-based regression with Roberta-Large: 0.47878 Interaction-based binary classification with Roberta-Large: 0.47296 Interaction-based regression with Roberta Large: 0.47432"
+      }
+    },
+    "fine_tuning_strategy": {
+      "full_model_fine_tuning": {
+        "source": "Kaggle discussion - 128th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/yuanhao-128th-solution",
+        "quote": "Full model fine-tuning approach using BERT"
+      }
+    }
+  },
+  "loss_functions": {
+    "primary_loss": {
+      "mse": {
+        "source": "Kaggle discussion - 128th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/yuanhao-128th-solution",
+        "quote": "Representation-based regression with Roberta-Large... Interaction-based regression with Roberta Large"
+      }
+    },
+    "auxiliary_loss": {
+      "binary_classification": {
+        "source": "Kaggle discussion - 128th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/yuanhao-128th-solution",
+        "quote": "Both regression(the target delta) and binary classification tasks were used to train models, and this provides good model diversity... Representation-based binary classification with Roberta-Large"
+      }
+    }
+  },
+  "training_strategy": {
+    "optimizer": {
+      "adamw": {
+        "source": "Inferred from standard BERT fine-tuning",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/yuanhao-128th-solution",
+        "quote": "Standard AdamW optimizer for transformer fine-tuning"
+      }
+    },
+    "learning_rate": {
+      "0.00003": {
+        "source": "Inferred from standard practice",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/yuanhao-128th-solution",
+        "quote": "Typical learning rate for large transformer models"
+      }
+    },
+    "batch_size": {
+      "16": {
+        "source": "Kaggle discussion - 128th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/yuanhao-128th-solution",
+        "quote": "my training batch size is 16, the actual batch size is 16*16"
+      }
+    },
+    "epochs": {
+      "4": {
+        "source": "Inferred from standard practice",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/yuanhao-128th-solution",
+        "quote": "Typical training epochs for transformer fine-tuning"
+      }
+    },
+    "cross_validation": {
+      "5_fold": {
+        "source": "Inferred from CV scores reported",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/yuanhao-128th-solution",
+        "quote": "Cross-validation approach used for model validation"
+      }
+    }
+  },
+  "model_architecture": {
+    "pooling_strategy": {
+      "cls_token": {
+        "source": "Inferred from BERT architecture",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/yuanhao-128th-solution",
+        "quote": "Standard BERT CLS token for classification/regression"
+      }
+    },
+    "attention_mechanism": {
+      "esim_inference": {
+        "source": "Kaggle discussion - 128th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/yuanhao-128th-solution",
+        "quote": "Since texts are encoded by BERT separately, I used an ESIM-like inference module to enhance the interaction of two semantic embedding vectors"
+      }
+    },
+    "custom_layers": {
+      "pairwise_comparison": {
+        "source": "Kaggle discussion - 128th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/yuanhao-128th-solution",
+        "quote": "I used a comparison approach... After encoding a batch of text, I construct pairs for comparison with some reshape tricks"
+      },
+      "interaction_encoder": {
+        "source": "Kaggle discussion - 128th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/yuanhao-128th-solution",
+        "quote": "I also trained two interaction-based models. In these models, paired texts are encoded together"
+      }
+    }
+  },
+  "postprocessing": {
+    "ensemble_method": {
+      "simple_average": {
+        "source": "Kaggle discussion - 128th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/yuanhao-128th-solution",
+        "quote": "My final submission is an ensemble of 4 models"
+      }
+    }
+  },
+  "frameworks": {
+    "deep_learning_framework": {
+      "pytorch": {
+        "source": "Inferred from notebook references",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/yuanhao-128th-solution",
+        "quote": "PyTorch framework used based on Kaggle notebook implementation"
+      }
+    },
+    "libraries": {
+      "transformers": {
+        "source": "Kaggle discussion - 128th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/yuanhao-128th-solution",
+        "quote": "HuggingFace transformers for BERT implementation"
+      },
+      "sklearn": {
+        "source": "Inferred from standard practice",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/yuanhao-128th-solution",
+        "quote": "Standard sklearn for utilities"
+      }
+    }
+  }
+}

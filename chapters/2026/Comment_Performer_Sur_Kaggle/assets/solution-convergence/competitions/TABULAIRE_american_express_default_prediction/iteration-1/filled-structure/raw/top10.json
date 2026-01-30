@@ -1,0 +1,43 @@
+{
+  "embeddings": {
+    "word_embeddings": [],
+    "contextual_embeddings": []
+  },
+  "preprocessing": {
+    "text_cleaning": [],
+    "tokenization_method": [],
+    "lowercase": null,
+    "augmentation_techniques": []
+  },
+  "transformer_models": {
+    "base_models": [],
+    "pretrained_checkpoints": [],
+    "fine_tuning_strategy": []
+  },
+  "loss_functions": {
+    "primary_loss": ["binary_logloss", "RMSE"],
+    "auxiliary_losses": []
+  },
+  "training_strategy": {
+    "optimizer": [],
+    "learning_rate": 0.01,
+    "learning_rate_schedule": [],
+    "batch_size": null,
+    "epochs": null,
+    "regularization": ["lambda_l2", "feature_fraction", "bagging_fraction"],
+    "cross_validation": ["5-fold_stratified"]
+  },
+  "model_architecture": {
+    "pooling_strategy": [],
+    "additional_layers": ["GRU", "FC"],
+    "dropout_rate": null
+  },
+  "postprocessing": {
+    "ensemble_method": ["weighted_average"],
+    "prediction_averaging": ["7_XGB_models", "seed_blend_42_52_62"]
+  },
+  "frameworks": {
+    "deep_learning_framework": ["PyTorch_Lightning"],
+    "libraries": ["XGBoost", "RAPIDS_cudf", "sklearn", "pandas", "numpy"]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "embeddings": {
+    "word_embeddings": [],
+    "contextual_embeddings": []
+  },
+  "preprocessing": {
+    "text_cleaning": [],
+    "tokenization_method": [],
+    "lowercase": null,
+    "augmentation_techniques": [
+      "random resized cropping",
+      "transpose",
+      "horizontal flip",
+      "vertical flip",
+      "random hue",
+      "saturation",
+      "value",
+      "brightness",
+      "contrast",
+      "CoarseDropout",
+      "CutOut",
+      "CLAHE",
+      "CutMix"
+    ]
+  },
+  "transformer_models": {
+    "base_models": [
+      "ResNeXt50_32x4d",
+      "EfficientNet-B4"
+    ],
+    "pretrained_checkpoints": [
+      "ImageNet"
+    ],
+    "fine_tuning_strategy": []
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "CrossEntropyLoss"
+    ],
+    "auxiliary_losses": []
+  },
+  "training_strategy": {
+    "optimizer": [
+      "SGD"
+    ],
+    "learning_rate": null,
+    "learning_rate_schedule": [
+      "Cosine Annealing"
+    ],
+    "batch_size": null,
+    "epochs": null,
+    "regularization": [],
+    "cross_validation": [
+      "5-fold stratified"
+    ]
+  },
+  "model_architecture": {
+    "pooling_strategy": [],
+    "additional_layers": [],
+    "dropout_rate": null
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "Soft-Voting Ensemble"
+    ],
+    "prediction_averaging": [
+      "TTA"
+    ]
+  },
+  "frameworks": {
+    "deep_learning_framework": [
+      "PyTorch"
+    ],
+    "libraries": [
+      "Albumentations"
+    ]
+  }
+}

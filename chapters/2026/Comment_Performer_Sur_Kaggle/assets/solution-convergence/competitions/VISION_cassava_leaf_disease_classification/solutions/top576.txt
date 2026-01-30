@@ -1,0 +1,420 @@
+Hi everyone!
+
+First of all, congratulations to all the winners and did a great job on all participants' hard works!
+
+Overview
+
+I selected two versions based on best CV & LB scores because I'm really worried about a huge shakeup. (However, I did not make it out :cool_crying:)
+
+Public LB: 34th, 0.907
+Private LB: 606th, 0.898
+Base Model
+
+I only got Kaggle GPU, so I couldn't experiment with many models with various recipes.
+I tried 6 models (ResNeSt50, ResNeSt50 4s2x40d, EffNet-B3, 4, ViT-L/16, DeiT-B/16) and decided to use ResNeSt50 4s2x40d, EffNet-B4 based on LB & CV scores.
+
+arch	CV	Public LB	Private LB
+ResNeSt50-fast-4s2x40d (tta4)	0.891	0.898	0.895
+EfficientNet-B3 NS (tta4)	0.895	0.896	0.895
+EfficientNet-B4 NS (tta4)	0.891	0.900	0.893
+To increase the robustness, I trained the model on different training recipes with the same architecture. I chose to use focal cosine loss & cross-entropy w/ label smoothing 0.2.
+
+arch	loss	CV	Public LB	Private LB
+EfficientNet-B4 NS (tta3)	focal cosine	0.890	0.900	0.895
+EfficientNet-B4 NS (tta4)	cross entropy w/ label smooth	0.891	0.900	0.893
+Lastly, the pseudo label boosts the CV score +0.007. (I generated a pseudo label based on my best CV score, 0.9051)
+
+arch	pseudo	CV	Public LB	Private LB
+EfficientNet-B4 NS (tta4)	no	0.891	0.900	0.893
+EfficientNet-B4 NS (tta4)	yes	0.898	0.898	0.893
+Ensemble
+
+Weights
+
+Single model's CV & LB scores seem not good, But, ensembling raises the CV & LB scores to 0.005. Also, TTA increases LB scores +0.002.
+
+I tuned the ensemble weights with Optuna & Simple on CV.
+
+Here is the script : optimive cv
+
+Combinations
+
+best LB : 2 x ResNeSt50-fast-4s2x40d + 2 x EffNet-B4
+best CV : 3 x ResNeSt50-fast-4s2x40d + 3 x EffNet-B4 + 1 x EffNet-B3
+baseline	CV	Public LB	Private LB
+best LB	0.9003	0.907	0.897
+best CV	0.9051	0.905	0.896
+Here is the script : inference
+
+TTA
+
+Simply using CenterCrop + horizontal & vertical flop achieves better CV & LB scores.
+
+Training Recipe
+
+Data : 2019 + 2020 datasets, only 2020, w/ pseudo labels
+Validation : stratified kfold - 5 folds
+Augmentations : FMix, CutMix, SnapMix, MixUp, Cutout, etc…
+Optimizer : AdamW, AdamP, RAdam
+Loss : focal cosine, cross-entropy w/ label smoothing, bi-tempered
+Scheduler : Cosine Anealling w/o warm-up (1e-4 to 1e-6)
+Epochs : 10 ~ 20
+Resolution : 512x512
+Auxiliary : freeze BN layer
+TTA : n_iters 4 is best in my case.
+Experiment : note
+
+Works
+
+Label Smoothing (alpha = 0.2)
+TTA (n_iters 4 is best)
+Adam, AdamW to RAdam (slight improvement)
+external dataset (2019 dataset)
+Not Works
+
+noise-tolerant(?) loss like bi-tempered loss
+Reflections
+
+ensemble weights
+I guess tuning ensemble weights might be one of the reasons, especially where there're noisy labels. Usually, the tuned versions tend to have a lower score than the average one. (-0.001 ~ -0.002 gap on Private LB score). But, Ironically best Private score is the tuned version (not the selected one).
+
+multiple scales (image resolution)
+I think training & inferencing with multiple scales would be helpful to improve the score. On several experiments, a lower resolution (384x384) works better than a higher resolution (512x512).
+
+Thank you very much!
+
+assava Leaf Disease Classification¶
+Challenge is HERE
+
+Data
+Train Image Resolution : (500 ~ 800)x(500 ~ 800)
+Test Image Resolution : 800x600
+Total 5 classes (4 for the diseases, 1 for healthy)
+There are lots of noisy labels (both train & test)
+Label Distribution
+
+class	label	cleaned label
+0	1492	1381
+1	3476	3389
+2	3017	2836
+3	15462	15905
+4	2890	2826
+cleaned 19 + 20 datasets : here
+% cleaned label : pseudo label (got from my best lb models, 0.905)
+
+To-Do
+clean the whole train dataset
+Works
+extra data (using 2019 + 2020 data)
+TTA (n_iter = 4 is best)
+smooth cross entropy loss (maybe...?)
+heavy augmentations (brightness, contrastive, flip, etc...) (?)
+CutMix + FMix (?)
+Not Works
+SnapMix Augmentations
+too small or big backbone (ResNeXt50~, EffNet-B5~ )
+bi-tempered loss
+taylor category cross entropy loss
+some augmentations (e.g. ChannelDropout, GridDistortion, RGDShift)
+tuning on 2020 validation dataset
+Local Performance
+ResNeSt50
+
+fold	res	fmix	cutmix	snapmix	loss	epochs	lr	lr scheduler	optimizer	dataset	cv
+0/5	512	x	x	o	focal cosine	20	1e-4	cosine	AdamW	20	0.88598
+1/5	512	x	x	o	focal cosine	20	1e-4	cosine	AdamW	20	0.88037
+2/5	512	x	x	o	focal cosine	20	1e-4	cosine	AdamW	20	0.88268
+3/5	512	x	x	o	focal cosine	20	1e-4	cosine	AdamW	20	0.89297
+4/5	512	x	x	o	focal cosine	20	1e-4	cosine	AdamW	20	0.89133
+ResNeSt50-fast-4s2x40d
+
+fold	res	fmix	cutmix	snapmix	loss	epochs	lr	lr scheduler	optimizer	dataset	cv
+0/5	512	o	o	x	scce	20	1e-4	cosine	AdamW	20	0.88318
+1/5	512	o	o	x	scce	20	1e-4	cosine	AdamW	20	0.89136
+2/5	512	o	o	x	scce	20	1e-4	cosine	AdamW	20	0.88666
+3/5	512	o	o	x	scce	20	1e-4	cosine	AdamW	20	0.89437
+4/5	512	o	o	x	scce	20	1e-4	cosine	AdamW	20	???
+0/5	512	x	x	x	bi-tempered	20	1e-4	cosine	AdamW	19 + 20	0.88800
+1/5	512	x	x	x	bi-tempered	20	1e-4	cosine	AdamW	19 + 20	0.88591
+2/5	512	x	x	x	bi-tempered	20	1e-4	cosine	AdamW	19 + 20	0.89140
+3/5	512	x	x	x	bi-tempered	20	1e-4	cosine	AdamW	19 + 20	0.89026
+4/5	512	x	x	x	bi-tempered	20	1e-4	cosine	AdamW	19 + 20	0.88874
+0/5	512	x	x	x	focal cosine	20	1e-4	cosine	RAdam	19 + 20	0.88990
+1/5	512	x	x	x	focal cosine	20	1e-4	cosine	RAdam	19 + 20	0.88610
+2/5	512	x	x	x	focal cosine	20	1e-4	cosine	RAdam	19 + 20	0.89254
+3/5	512	x	x	x	focal cosine	20	1e-4	cosine	RAdam	19 + 20	0.88950
+4/5	512	x	x	x	focal cosine	20	1e-4	cosine	RAdam	19 + 20	0.89216
+0/5	512	o	o	x	scce .2	15	1e-4	cosine	AdamP	19 + 20	0.89863
+1/5	512	o	o	x	scce .2	15	1e-4	cosine	AdamP	19 + 20	0.89617
+2/5	512	o	o	x	scce .2	15	1e-4	cosine	AdamP	19 + 20	0.89596
+3/5	512	o	o	x	scce .2	15	1e-4	cosine	AdamP	19 + 20	0.90184
+4/5	512	o	o	x	scce .2	15	1e-4	cosine	AdamP	19 + 20	0.89956
+EfficientNet-B3
+
+w	fold	res	fmix	cutmix	snapmix	loss	epochs	lr	lr scheduler	optimizer	dataset	cv
+ns	0/5	512	x	o	x	scce .2	20	1e-4	cosine	RAdam	19 + 20	0.89066
+ns	1/5	512	x	o	x	scce .2	20	1e-4	cosine	RAdam	19 + 20	0.89560
+ns	2/5	512	x	o	x	scce .2	20	1e-4	cosine	RAdam	19 + 20	0.89539
+ns	3/5	512	x	o	x	scce .2	20	1e-4	cosine	RAdam	19 + 20	0.89368
+ns	4/5	512	x	o	x	scce .2	20	1e-4	cosine	RAdam	19 + 20	0.89349
+EfficientNet-B4
+
+w	fold	res	fmix	cutmix	snapmix	loss	epochs	lr	lr scheduler	optimizer	dataset	cv
+ns	0/5	512	x	x	x	focal cosine	25	1e-4	cosine	AdamW	20	0.88879
+ns	0/5	512	x	x	x	focal cosine	20	1e-4	cosine	RAdam	19 + 20	0.88876
+ns	1/5	512	x	x	x	focal cosine	20	1e-4	cosine	RAdam	19 + 20	0.89123
+ns	2/5	512	x	x	x	focal cosine	20	1e-4	cosine	RAdam	19 + 20	0.89330
+ns	3/5	512	x	x	x	focal cosine	20	1e-4	cosine	RAdam	19 + 20	0.89216
+ns	4/5	512	x	x	x	focal cosine	20	1e-4	cosine	RAdam	19 + 20	0.88798
+ns	0/5	512	o	o	x	scce .2	10	1e-4	cosine	AdamP	19 + 20	0.88573
+ns	1/5	512	o	o	x	scce .2	10	1e-4	cosine	AdamP	19 + 20	0.88838
+ns	2/5	512	o	o	x	scce .2	10	1e-4	cosine	AdamP	19 + 20	0.89235
+ns	3/5	512	o	o	x	scce .2	10	1e-4	cosine	AdamP	19 + 20	0.89444
+ns	4/5	512	o	o	x	scce .2	10	1e-4	cosine	AdamP	19 + 20	0.89216
+ns	0/5	512	o	o	x	scce .1	15	1e-4	cosine	AdamP	pseudo	0.95539
+ns	1/5	512	o	o	x	scce .1	15	1e-4	cosine	AdamP	pseudo	0.96071
+ns	2/5	512	o	o	x	scce .1	15	1e-4	cosine	AdamP	pseudo	0.95671
+ns	3/5	512	o	o	x	scce .1	15	1e-4	cosine	AdamP	pseudo	0.95842
+ns	4/5	512	o	o	x	scce .1	15	1e-4	cosine	AdamP	pseudo	0.95633
+ViT-L
+
+p	fold	res	fmix	cutmix	snapmix	loss	epochs	lr	lr scheduler	optimizer	dataset	cv
+16	0/5	384	x	x	x	bi-tempered	7	1e-4	cosine anl	AdamW	19 + 20	0.88453
+16	1/5	384	x	x	x	bi-tempered	7	1e-4	cosine anl	AdamW	19 + 20	0.89024
+16	2/5	384	x	x	x	bi-tempered	7	1e-4	cosine anl	AdamW	19 + 20	0.89024
+16	3/5	384	x	x	x	bi-tempered	7	1e-4	cosine anl	AdamW	19 + 20	0.89005
+16	4/5	384	x	x	x	bi-tempered	7	1e-4	cosine anl	AdamW	19 + 20	0.89043
+DeiT-B
+
+p	fold	res	fmix	cutmix	snapmix	loss	epochs	lr	lr scheduler	optimizer	dataset	cv
+16	0/5	384	x	x	x	scce .2	10	1e-4	cosine	AdamP	19 + 20	0.88724
+16	1/5	384	x	x	x	scce .2	10	1e-4	cosine	AdamP	19 + 20	0.88990
+16	2/5	384	x	x	x	scce .2	10	1e-4	cosine	AdamP	19 + 20	0.88893
+16	3/5	384	x	x	x	scce .2	10	1e-4	cosine	AdamP	19 + 20	0.88969
+16	4/5	384	x	x	x	scce .2	10	1e-4	cosine	AdamP	19 + 20	0.89235
+16	0/5	384	o	o	x	scce .2	10	1e-4	cosine	AdamP	19 + 20	0.88838
+16	1/5	384	o	o	x	scce .2	10	1e-4	cosine	AdamP	19 + 20	0.88762
+16	2/5	384	o	o	x	scce .2	10	1e-4	cosine	AdamP	19 + 20	0.88570
+16	3/5	384	o	o	x	scce .2	10	1e-4	cosine	AdamP	19 + 20	0.89026
+16	4/5	384	o	o	x	scce .2	10	1e-4	cosine	AdamP	19 + 20	x
+LB Performance
+ResNeSt50
+ResNeSt50-fast-4s2x40d
+EfficientNet-B4
+ResNeXt50-32x4d (public)
+EfficientNet-B3
+ViT-L/16
+DeiT-B/16
+Single Models
+
+no	arch	folds	res	data	n_tta	lb
+0	ResNeSt50 fc	5	512	20	3	0.892
+1	ResNeSt50-fast-4s2x40d cutmix + fmix scce	5	512	20	3	0.898
+2	1-(1, 3, 4 folds)	3	512	20	3	0.894
+3	EffNet-B4 fc	5	512	19 + 20	5	0.900
+4	ResNeSt50-fast-4s2x40d bi-tempered	5	512	19 + 20	5	0.895
+5	ResNeSt50-fast-4s2x40d fc	5	512	19 + 20	5	0.900
+6	ResNeXt50-32x4d cce	5	512	19 + 20	4	0.894
+7	EffNet-B3 cutmix + scce	5	512	19 + 20	4	0.896
+8	ViT-L/16 bi-tempered	5	384	19 + 20	4	0.882
+9	DeiT-B/16 scce	5	384	19 + 20	4	0.894
+10	DeiT-B/16 cutmix + fmix scce	5	384	19 + 20	4	x
+11	EffNet-B4 cutmix + fmix scce	5	512	19 + 20	4	0.900
+12	ResNeSt50-fast-4s2x40d cutmix + fmix scce	5	512	19 + 20	4	0.898
+13	EffNet-B4 cutmix + fmix scce pseudo	5	512	19 + 20	4	0.898
+Ensembles
+
+no	arch	folds	res	data	n_tta	lb
+0	No 0 + No 1	5 + 5	512	20	3	0.896
+1	No 1 + No 3	5 + 5	512	19 + 20	3	0.903
+2	No 1 + No 3	5 + 5	512	19 + 20	5	0.905
+3	No 1 + No 3	5 + 5	512	19 + 20	7	0.903
+4	No 3 + No 4	5 + 5	512	19 + 20	5	0.901
+5	No 1 + No 3 + No 4	5 + 5 + 5	512	19 + 20	5	0.902
+6	No 3 + No 5	5 + 5	512	19 + 20	5	0.904
+7	No 3 + No 5	5 + 5	512	19 + 20	7	0.904
+8	No 1 + No 3 + No 5	5 + 5 + 5	512	19 + 20	5	0.905
+9	No 1 + No 3 + No 5	5 + 5 + 5	512	19 + 20	4	0.906
+10	No 3 + No 5 + No 6	5 + 5 + 5	512	19 + 20	4	0.902
+11	No 1 + No 3 + No 5 + No 6	5 + 5 + 5 + 5	512	19 + 20	4	0.905
+12	No 3 + No 5 + No 7	5 + 5 + 5	512	19 + 20	4	0.902
+13	No 1 + No 3 + No 5 + No 7	5 + 5 + 5 + 5	512	19 + 20	4	0.903
+14	No 1 + No 3 + No 5 + No 7	5 + 5 + 5 + 5	512	19 + 20	5	0.904
+15	No 1 + No 3 + No 5 + No 8	5 + 5 + 5 + 5	512, 384	19 + 20	4, 2	0.905
+16	No 1 + No 3 + No 5 + No 9	5 + 5 + 5 + 5	512, 384	19 + 20	4	0.903
+17	No 3 + No 5 + No 9	5 + 5 + 5	512, 384	19 + 20	4	0.901
+18	No 3 + No 5 + No 9 + No 7	5 + 5 + 5 + 5	512, 384	19 + 20	4	0.900
+19	No 1 + No 3 + No 5 + No 9	5 + 5 + 5 + 4	512, 384	19 + 20	4	0.904
+no	arch	folds	res	data	n_tta	lb
+20	No 1 + No 5 + No 11	5 + 5 + 5	512	19 + 20	4	0.906
+21	No 1 + No 3 + No 5 + No 11	5 + 5 + 5 + 5	512	19 + 20	4	0.907
+22	No 1 + No 3 + No 5 + No 7 + No 11	5 + 5 + 5 + 5 + 5	512	19 + 20	4	0.905
+23	No 3 + No 5 + No 7 + No 11	5 + 5 + 5 + 5	512	19 + 20	4	0.903
+24	No 3 + No 5 + No 11 + No 12	5 + 5 + 5 + 5	512	19 + 20	4	0.905
+25	No 1 + No 3 + No 5 + No 11 + No 12	5 + 5 + 5 + 5 + 5	512	19 + 20	4	0.907
+26	No 3 + No 5 + No 7 + No 11 + No 12	5 + 5 + 5 + 5 + 5	512	19 + 20	4	0.904
+27	No 1 + No 3 + No 5 + No 7 + No 11 + No 12	5 + 5 + 5 + 5 + 5 + 5	512	19 + 20	4	0.905
+28	No 1 + No 3 + No 11 + No 12	5 + 5 + 5 + 5	512	19 + 20	4	0.905
+29	No 3 + No 5 + No 12 + No 13	5 + 5 + 5 + 5	512	19 + 20	4	0.903
+30	No 1 + No 3 + No 5 + No 7 + No 11 + No 13	5 + 5 + 5 + 5 + 5 + 5	512	19 + 20	4	0.905
+31	No 3 + No 5 + No 7 + No 11 + No 12 + No 13	5 + 5 + 5 + 5 + 5 + 5	512	19 + 20	4	0.904
+32	No 1 + No 3 + No 5 + No 11 + No 12 + No 13	5 + 5 + 5 + 5 + 5 + 5	512	19 + 20	4	0.905
+33	No 1 + No 3 + No 5 + No 7 + No 11 + No 12 + No 13	5 + 5 + 5 + 5 + 5 + 5 + 5	512	19 + 20	4	0.905
+34	No 1 + No 3 + No 5 + No 13	5 + 5 + 5 + 5	512	19 + 20	4	0.902
+35	No 1 + No 3 + No 5 + No 11 + No 13	5 + 5 + 5 + 5 + 5	512	19 + 20	4	0.905
+Fold Selection
+
+based on best LB scores Ensembles 9
+
+model power : RST50 cutmix + fmix scce > Effnet-B4 > RST50 fc
+
+However, several experiments show that the following model power doesn't proportionate with the ensemble weights.
+folds	n_tta	lb
+0 + 1 + 2	4	0.905
+0 + 2 + 3	4	0.903
+0 + 2 + 4	4	0.903
+0 + 1 + 2 + 3	4	0.904
+4 + 5 + 5	4	0.903
+5 + 4 + 5	4	0.905
+5 + 5 + 4	4	0.904
+CV Performance
+arch	model	class 0 acc	class 1 acc	class 2 acc	class 3 acc	class 4 acc	macro f1	weighted f1	acc
+RST50 cf v1	No 1	62.2654	80.1496	82.1346	95.8932	80.7266	80.5728	88.6871	88.6699
+EffNet-b4 fc	No 3	61.7962	82.5086	78.9857	97.5553	75.6401	80.5967	88.8362	89.0117
+RST50 fc	No 5	60.7239	83.4292	80.5767	97.2255	76.4014	80.7895	88.9890	89.1445
+EffNet-b3 c	No 7	68.1635	83.1991	81.1734	97.5100	74.0484	81.7483	89.3790	89.5129
+ViT-L16 bi	No 8	65.2815	82.7100	79.0852	97.2384	74.5675	80.7256	88.8202	88.9433
+EffNet-b4 cf	No 11	60.8579	85.4430	82.9632	96.8439	73.2180	80.7463	88.9672	89.1180
+RST50 cf v2	No 12	62.8016	85.8170	82.3003	97.4648	76.4706	82.0774	89.7713	89.9229
+EffNet-b4 cf pseudo	No 13	63.5389	84.5800	82.3334	97.2707	77.4740	82.1038	89.6712	89.8014
+model	class 0 acc	class 1 acc	class 2 acc	class 3 acc	class 4 acc	macro f1	weighted f1	acc
+Ensembles 9	64.8794	84.1197	81.7700	97.8140	78.8235	82.6708	90.0947	90.2191
+Ensembles 9 tuned	64.5442	84.3498	81.7700	97.8399	78.7889	82.6716	90.1123	90.2419
+Ensembles 11	66.2869	84.7526	81.7368	97.9110	77.9239	82.9196	90.2023	90.3368
+Ensembles 11 tuned	66.5550	84.7814	82.2672	97.8787	78.5121	83.1136	90.3413	90.4621
+Ensembles 15 tuned	65.4826	84.2060	82.0351	97.8011	79.2734	82.8680	90.2281	90.3368
+Ensembles 9 weights : [0.33547759, 0.30181755, 0.28914882]
+Ensembles 11 weights : [0.32264375, 0.19517635, 0.10858799, 0.33353971]
+Ensembles 15 weights : [0.15093364, 0.15979473, 0.38676311, 0.26914147]
+Ensembles 20 weights : [0.31301767, 0.29456512, 0.31728454]
+model	class 0 acc	class 1 acc	class 2 acc	class 3 acc	class 4 acc	macro f1	weighted f1	acc
+Ensembles 20	63.6729	85.1266	82.6318	97.5553	78.5813	82.6335	90.0737	90.2039
+Ensembles 20 tuned	63.6059	85.1841	82.6318	97.5553	78.7543	82.6726	90.0974	90.2267
+Ensembles 21	64.3432	85.2417	82.1014	97.8011	78.1315	82.7324	90.1517	90.2912
+Ensembles 21 tuned	64.8794	85.1266	81.9357	97.8463	78.6851	82.9210	90.2426	90.3748
+Ensembles 22	65.8177	85.3280	82.3003	97.8593	77.8547	83.0168	90.2767	90.4127
+Ensembles 22 tuned	66.9571	85.2417	82.2340	97.8851	78.3737	83.3007	90.4056	90.5304
+Ensembles 23	66.2869	84.9252	81.7368	97.8399	76.0900	82.5127	89.9713	90.1166
+Ensembles 23 tuned	66.8231	84.4937	81.8694	97.8916	76.5052	82.6741	90.0376	90.1811
+Ensembles 24	64.0751	85.3855	81.9357	97.8399	77.0242	82.4735	90.0215	90.1773
+Ensembles 24 tuned	64.4102	85.5869	82.2009	97.8657	77.6471	82.7948	90.1814	90.3368
+Ensembles 25	64.5442	85.7307	82.1677	97.8269	78.5121	82.9857	90.2875	90.4317
+Ensembles 25 tuned	64.8794	85.9609	83.0958	97.7429	79.4118	83.3772	90.5082	90.6367
+Ensembles 27	65.4155	85.4718	82.1677	97.8787	78.4775	83.0997	90.3339	90.4735
+Ensembles 27 tuned	66.3539	85.7595	82.8969	97.7687	79.2042	83.5287	90.5402	90.6633
+Ensembles 28	64.5442	86.0184	82.3334	97.8011	78.7543	83.0754	90.3645	90.5001
+Ensembles 28 tuned	64.9464	85.9609	82.9632	97.7623	79.0311	83.3157	90.4593	90.5950
+Ensembles 21 weights v1 : [0.21145703, 0.18271946, 0.26915887, 0.29597817]
+Ensembles 21 weights v2 : [0.30978996, 0.22192819, 0.17375666, 0.29452519]
+Ensembles 21 weights v3 : [0.10884351, 0.2009535, 0.18187667, 0.20405396]
+Ensembles 21 weights v4 : [0.21411924, 0.18756664, 0.26507698, 0.31649887]
+Ensembles 22 weights v1 : [0.28008428, 0.08930099, 0.19287446, 0.13415098, 0.2855688]
+Ensembles 22 weights v2 : [0.22772560, 0.10498674, 0.19491591, 0.18363636, 0.2887354]
+Ensembles 23 weights : [0.33566536, 0.10897427, 0.19606722, 0.31792425]
+Ensembles 24 weights v1 : [0.22155271, 0.1881944, 0.38943474, 0.1644162]
+Ensembles 24 weights v2 : [0.29872177, 0.41167376, 0.92104135, 0.51346469]
+Ensembles 25 weights v1 : [0.16956903, 0.11774465, 0.3500565, 0.06345556, 0.27596693]
+Ensembles 25 weights v2 : [0.40763181, 0.23739473, 0.89755062, 0.15559366, 0.78777895]
+Ensembles 25 weights v3 : [0.213048, 0.1057116, 0.37792647, 0.10013445, 0.33992517]
+Ensembles 27 weights v1 : [0.17215925, 0.06356686, 0.09478203, 0.29867107, 0.12876395, 0.23019573]
+Ensembles 27 weights v2 : [0.34618164, 0.19092364, 0.38515934, 0.91232422, 0.00026995, 0.70023081]
+Ensembles 28 weights v1 : [0.17911332, 0.10146231, 0.40657403, 0.30869513]
+Ensembles 28 weights v2 : [0.13729324, 0.19570104, 0.81195183, 0.38014906]
+Corrected No. 1 CV
+
+model	class 0 acc	class 1 acc	class 2 acc	class 3 acc	class 4 acc	macro f1	weighted f1	acc
+Ensembles 21	62.8016	84.7238	81.5711	97.6782	77.3702	82.0227	89.7710	89.9191
+Ensembles 21 v1	63.4048	85.2417	81.7037	97.7364	77.0242	82.2381	89.8789	90.0330
+Ensembles 21 v2	63.6729	85.2417	81.9357	97.7299	77.0588	82.3207	89.9247	90.0748
+Ensembles 25	63.6059	85.2129	81.9357	97.7558	77.7509	82.4575	90.0111	90.1583
+Ensembles 25 v1	64.0751	85.8458	82.4992	97.7817	77.4740	82.7302	90.1680	90.3178
+Ensembles 25 v2	64.4772	85.5869	82.4992	97.7687	77.7509	82.7749	90.1875	90.3292
+Ensembles 27	65.2815	85.1841	81.9688	97.8140	77.9239	82.8437	90.1635	90.3064
+Ensembles 27 v2	66.4879	85.5293	82.3666	97.8528	78.0277	83.2241	90.3626	90.5001
+Ensembles 29	65.2145	85.2992	81.9688	97.7881	77.8547	82.8115	90.1542	90.2950
+Ensembles 29 v1	64.8794	85.4430	82.2672	97.8075	78.0623	82.9062	90.2181	90.3634
+Ensembles 29 v2	65.1475	85.4718	82.5323	97.7558	78.0623	82.9704	90.2405	90.3824
+Ensembles 30	65.0134	85.0115	82.2009	97.8011	78.1661	82.8279	90.1728	90.3140
+Ensembles 30 v2	66.3539	85.3855	82.6318	97.8011	78.3391	83.2327	90.3764	90.5077
+Ensembles 31	65.5496	85.0690	82.2009	97.7881	77.1626	82.7226	90.0923	90.2343
+Ensembles 31 v1	65.8177	85.5869	82.4992	97.8011	77.7163	83.0625	90.2783	90.4203
+Ensembles 31 v2	66.0188	85.7307	82.4992	97.8140	77.8547	83.1540	90.3332	90.4735
+Ensembles 32	64.1421	85.2417	82.1677	97.7429	78.0969	82.6899	90.1047	90.2495
+Ensembles 32 v1	64.6783	85.4143	82.3997	97.8011	78.0969	82.8833	90.2178	90.3634
+Ensembles 32 v2	65.1475	85.3280	82.3003	97.8399	78.5467	83.0375	90.2989	90.4393
+Ensembles 33								
+Ensembles 33 v2	66.4209	85.5581	82.5323	97.8205	78.1315	83.2456	90.3761	90.5114
+Ensembles 34	63.8070	84.4649	81.8363	97.7429	78.1315	82.3955	89.9517	90.0938
+Ensembles 34 v2	64.3432	84.7238	82.1346	97.7623	77.9931	82.5808	90.0474	90.1887
+Ensembles 35	63.8070	85.0403	82.0683	97.6717	77.8547	82.4988	89.9779	90.1242
+Ensembles 35 v2	64.2761	84.7814	82.1677	97.7558	77.9585	82.5788	90.0460	90.1887
+Ensembles 21 weighted v1 : [0.31792425, 0.33566536, 0.19606722, 0.10897427]
+Ensembles 21 weighted v2 : [0.90971052, 0.82730546, 0.38318065, 0.26230337]
+Ensembles 25 weighted v1 : [0.16892105, 0.13211221, 0.54735528, 0.06826233, 0.06961585]
+Ensembles 25 weighted v2 : [0.3306592, 0.25242486, 0.8238158, 0.11380859, 0.22893606]
+Ensembles 27 weighted v1 : x
+Ensembles 27 weighted v2 : [0.64438387, 0.06787352, 0.21374317, 0.92894338, 0.30073056, 0.25681572]
+Ensembles 29 weighted v1 : [0.16127426, 0.14639634, 0.40610428, 0.25388546]
+Ensembles 29 weighted v2 : [0.14392024, 0.26999754, 0.66471911, 0.10123768]
+Ensembles 30 weighted v2 : [0.62811276, 0.23633465, 0.25867451, 0.95243224, 0.10789748, 0.5444512]
+Ensembles 31 weighted v1 : [0.15856572, 0.03564624, 0.09446308, 0.06490467, 0.51857468, 0.12564358]
+Ensembles 31 weighted v2 : [0.37460579, 0.06460235, 0.06938154, 0.22316517, 0.83760474, 0.26799389]
+Ensembles 32 weighted v1 : [0.03564624, 0.15856572, 0.12564358, 0.51857468, 0.06490467, 0.09446308]
+Ensembles 32 weighted v2 : [2.47e-05, 0.58436138, 0.5120863, 0.87538525, 0.61622132, 0.31402191]
+Ensembles 33 weighted v2 : [0.50718439, 0.16996559, 0.25776149, 0.13448321, 0.92798265, 0.2179295, 0.22300932]
+Ensembles 34 weighted v2 : [0.72592935, 0.90095763, 0.65667935, 0.53306918]
+Ensembles 35 weighted v2 : [0.29556101, 0.95351582, 0.96590418, 0.82782731, 0.73989029]
+Ensembles 35 weighted v3 : [0.24627387, 0.12512951, 0.18096359, 0.07093961, 0.37141577]
+% Usually, v1 is a version of Simplex method, v2+ are versions of Optuna.
+
+2020 validation
+
+model	class 0 acc	class 1 acc	class 2 acc	class 3 acc	class 4 acc	macro f1	weighted f1	acc
+Ensembles 21 tuned	67.7093	83.3714	81.5172	97.7504	77.3768	82.4344	90.4021	90.4893
+Ensembles 22 tuned	69.2732	82.9603	81.3495	97.8416	77.4932	82.6708	90.4903	90.5781
+Ensembles 21 weights v1 (20) : [0.23779558, 0.24279284, 0.10746264, 0.41194895]
+Ensembles 22 weights v1 (20) : [0.22084675, 0.08012831, 0.24442862, 0.07493153, 0.37966478]
+Orders
+
+effnetb3-cutmix
+effnetb4-cutmix-fmix
+effnetb4-fcl
+resnest50_fast_4s2x40d-cutmix-fmix
+resnest50_fast_4s2x40d-fcl
+resnest50_fast_4s2x40d-fmix-cutmix
+vit_l16
+Validation
+validation kernel : here
+leaf_disease_validation : here
+Trained Models
+leaf_disease_resnest50 : here
+leaf_disease_effnet : here
+leaf_disease_vit : here
+leaf_disease_deit : here
+Inference
+inference kernel : here
+try	num of models	description	n_tta	time
+0	5	ResNeSt50-fast-4s2x40d	5	about 2 hours
+1	10 (5 + 5)	EffNet-B4 + ResNeSt50-fast-4s2x40d	3	about 2 ~ 3 hours
+2	10 (5 + 5)	EffNet-B4 + ResNeSt50-fast-4s2x40d	5	about 4 hours
+3	15 (5 + 5 + 5)	EffNet-B4 + ResNeSt50-fast-4s2x40d x 2	5	about 6 hours
+4	5	ViT-L/16	4	about 6 hours
+5	5	DeiT-B/16	4	about 2 hours
+Term
+cce : category cross entropy loss
+scce : smooth category cross entropy loss
+fc : focal cosine loss
+taylor : taylor category cross entropy loss
+bi-tempered : bi-tempered loss
+anl : annealing
+cf : cutmix + fmix

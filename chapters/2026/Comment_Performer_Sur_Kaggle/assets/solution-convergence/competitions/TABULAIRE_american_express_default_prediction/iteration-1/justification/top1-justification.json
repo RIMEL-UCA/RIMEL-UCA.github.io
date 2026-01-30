@@ -1,0 +1,72 @@
+{
+  "primary_loss": {
+    "source": "Kaggle 1st place solution code",
+    "link": "https://github.com/jxzly/Kaggle-American-Express-Default-Prediction-1st-solution",
+    "quote": "'objective' : 'binary', 'metric' : 'binary_logloss'"
+  },
+  "optimizer": {
+    "source": "Kaggle 1st place solution code - PyTorch NN training",
+    "link": "https://github.com/jxzly/Kaggle-American-Express-Default-Prediction-1st-solution",
+    "quote": "Neural network training typically uses Adam optimizer in PyTorch (inferred from PyTorch usage and 'lr': 3e-4 configuration)"
+  },
+  "learning_rate": {
+    "source": "Kaggle 1st place solution code",
+    "link": "https://github.com/jxzly/Kaggle-American-Express-Default-Prediction-1st-solution",
+    "quote": "'learning_rate' : 0.035 (for LightGBM)"
+  },
+  "batch_size": {
+    "source": "Kaggle 1st place solution code",
+    "link": "https://github.com/jxzly/Kaggle-American-Express-Default-Prediction-1st-solution",
+    "quote": "'batch_size': 256"
+  },
+  "epochs": {
+    "source": "Kaggle 1st place solution code",
+    "link": "https://github.com/jxzly/Kaggle-American-Express-Default-Prediction-1st-solution",
+    "quote": "'epochs': 10"
+  },
+  "regularization": {
+    "source": "Kaggle 1st place solution code",
+    "link": "https://github.com/jxzly/Kaggle-American-Express-Default-Prediction-1st-solution",
+    "quote": "'lambda_l1' : 0.1, 'lambda_l2' : 30 and dropout_rate=0.5 in model definition"
+  },
+  "cross_validation": {
+    "source": "Kaggle 1st place solution code",
+    "link": "https://github.com/jxzly/Kaggle-American-Express-Default-Prediction-1st-solution",
+    "quote": "'folds':5"
+  },
+  "pooling_strategy": {
+    "source": "Kaggle 1st place solution code",
+    "link": "https://github.com/jxzly/Kaggle-American-Express-Default-Prediction-1st-solution",
+    "quote": "self.gru_series = nn.GRU(hidden_dim, hidden_dim, batch_first=True, bidirectional=True) and nn.utils.rnn.pack_padded_sequence to pad"
+  },
+  "additional_layers": {
+    "source": "Kaggle 1st place solution code",
+    "link": "https://github.com/jxzly/Kaggle-American-Express-Default-Prediction-1st-solution",
+    "quote": "nn.Linear(series_dim, hidden_dim), nn.LayerNorm(hidden_dim), nn.BatchNorm1d(hidden_dim), nn.LeakyReLU()"
+  },
+  "dropout_rate": {
+    "source": "Kaggle 1st place solution code",
+    "link": "https://github.com/jxzly/Kaggle-American-Express-Default-Prediction-1st-solution",
+    "quote": "drop_rate=0.5"
+  },
+  "ensemble_method": {
+    "source": "Kaggle 1st place solution code",
+    "link": "https://github.com/jxzly/Kaggle-American-Express-Default-Prediction-1st-solution",
+    "quote": "p0['prediction'] = p0['prediction']*0.3 + p1['prediction']*0.35 + p2['prediction']*0.15 + p3['prediction']*0.1"
+  },
+  "prediction_averaging": {
+    "source": "Kaggle 1st place solution code",
+    "link": "https://github.com/jxzly/Kaggle-American-Express-Default-Prediction-1st-solution",
+    "quote": "p0['prediction'] = p0['prediction']*0.3 + p1['prediction']*0.35 + p2['prediction']*0.15 + p3['prediction']*0.1 where p0=LGB_manual, p1=LGB_manual_series, p2=NN_series, p3=NN_series_all"
+  },
+  "deep_learning_framework": {
+    "source": "Kaggle 1st place solution code",
+    "link": "https://github.com/jxzly/Kaggle-American-Express-Default-Prediction-1st-solution",
+    "quote": "import torch, import torch.nn as nn, import torch.nn.functional as F"
+  },
+  "libraries": {
+    "source": "Kaggle 1st place solution code",
+    "link": "https://github.com/jxzly/Kaggle-American-Express-Default-Prediction-1st-solution",
+    "quote": "Using LightGBM for gradient boosting models, sklearn for preprocessing, pandas and numpy for data manipulation"
+  }
+}

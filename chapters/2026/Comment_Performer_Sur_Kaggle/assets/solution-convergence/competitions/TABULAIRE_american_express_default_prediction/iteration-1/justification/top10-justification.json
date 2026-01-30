@@ -1,0 +1,47 @@
+{
+  "primary_loss": {
+    "source": "Kaggle 10th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348103",
+    "quote": "'metric': 'binary_logloss' and 'In terms of RMSE of all 178 numerical features, the GRU achieves validation RMSE 0.019'"
+  },
+  "learning_rate": {
+    "source": "Kaggle 10th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348103",
+    "quote": "'learning_rate': 0.01"
+  },
+  "regularization": {
+    "source": "Kaggle 10th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348103",
+    "quote": "'lambda_l2': 2, 'feature_fraction': 0.20, 'bagging_freq': 10, 'bagging_fraction': 0.50"
+  },
+  "cross_validation": {
+    "source": "Kaggle 10th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348103",
+    "quote": "kfold = StratifiedKFold(n_splits = CFG.n_folds, shuffle = True, random_state = CFG.seed) where CFG.n_folds = 5"
+  },
+  "additional_layers": {
+    "source": "Kaggle 10th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348103",
+    "quote": "The RNN structure is very simple: just one GRU layer and some FC layers"
+  },
+  "ensemble_method": {
+    "source": "Kaggle 10th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348103",
+    "quote": "By varying RNN hyperparameters, XGB hyperparameters and different combination of features, I end up with 7 XGB models, whose ensemble is 0.7993 CV and 0.799 public LB"
+  },
+  "prediction_averaging": {
+    "source": "Kaggle 10th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348103",
+    "quote": "If we use seed blend (train three different models using seed 42, 52, 62 and then average predictions) the LB boost niceley"
+  },
+  "deep_learning_framework": {
+    "source": "Kaggle 10th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348103",
+    "quote": "My solution is based on RAPIDS cudf for dataframe processing, XGB for training, and pytorch lightning for feature extraction"
+  },
+  "libraries": {
+    "source": "Kaggle 10th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348103",
+    "quote": "My solution is based on RAPIDS cudf for dataframe processing, XGB for training, and pytorch lightning for feature extraction"
+  }
+}

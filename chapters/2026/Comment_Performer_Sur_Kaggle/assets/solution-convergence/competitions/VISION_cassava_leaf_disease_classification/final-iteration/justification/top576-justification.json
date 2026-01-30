@@ -1,0 +1,204 @@
+{
+  "image_size": {
+    "384x384": {
+      "source": "Top576 solution description",
+      "link": "solutions/top576.txt",
+      "quote": "ViT-L/16, p 16, fold 0/5, res 384, x x x, bi-tempered, 7, 1e-4, cosine anl, AdamW, 19 + 20"
+    },
+    "512x512": {
+      "source": "Top576 solution description",
+      "link": "solutions/top576.txt",
+      "quote": "Resolution : 512x512"
+    }
+  },
+  "centercrop": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "Simply using CenterCrop + horizontal & vertical flop achieves better CV & LB scores."
+  },
+  "cutmix": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "Augmentations : FMix, CutMix, SnapMix, MixUp, Cutout, etc..."
+  },
+  "cutout": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "Augmentations : FMix, CutMix, SnapMix, MixUp, Cutout, etc..."
+  },
+  "flip": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "Simply using CenterCrop + horizontal & vertical flop achieves better CV & LB scores."
+  },
+  "fmix": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "Augmentations : FMix, CutMix, SnapMix, MixUp, Cutout, etc..."
+  },
+  "horizontalflip": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "Simply using CenterCrop + horizontal & vertical flop achieves better CV & LB scores."
+  },
+  "mixup": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "Augmentations : FMix, CutMix, SnapMix, MixUp, Cutout, etc..."
+  },
+  "snapmix": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "Augmentations : FMix, CutMix, SnapMix, MixUp, Cutout, etc..."
+  },
+  "tta": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "TTA (n_iters 4 is best)"
+  },
+  "verticalflip": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "Simply using CenterCrop + horizontal & vertical flop achieves better CV & LB scores."
+  },
+  "deit-b/16": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "I tried 6 models (ResNeSt50, ResNeSt50 4s2x40d, EffNet-B3, 4, ViT-L/16, DeiT-B/16)"
+  },
+  "efficientnet-b3": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "I tried 6 models (ResNeSt50, ResNeSt50 4s2x40d, EffNet-B3, 4, ViT-L/16, DeiT-B/16) and decided to use ResNeSt50 4s2x40d, EffNet-B4 based on LB & CV scores... EfficientNet-B3 NS (tta4) 0.895 0.896 0.895"
+  },
+  "efficientnet-b4": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "decided to use ResNeSt50 4s2x40d, EffNet-B4 based on LB & CV scores... EfficientNet-B4 NS (tta4) 0.891 0.900 0.893"
+  },
+  "efficientnet-b4-ns": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "EfficientNet-B3 NS (tta4) 0.895 0.896 0.895, EfficientNet-B4 NS (tta4) 0.891 0.900 0.893"
+  },
+  "resnest50": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "I tried 6 models (ResNeSt50, ResNeSt50 4s2x40d, EffNet-B3, 4, ViT-L/16, DeiT-B/16)"
+  },
+  "resnest50-fast-4s2x40d": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "decided to use ResNeSt50 4s2x40d, EffNet-B4 based on LB & CV scores. ResNeSt50-fast-4s2x40d (tta4) 0.891 0.898 0.895"
+  },
+  "resnext50-32x4d": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "ResNeXt50-32x4d (public), no 6, ResNeXt50-32x4d cce, 5, 512, 19 + 20, 4, 0.894"
+  },
+  "vit-l/16": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "I tried 6 models (ResNeSt50, ResNeSt50 4s2x40d, EffNet-B3, 4, ViT-L/16, DeiT-B/16)"
+  },
+  "imagenet": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "I tried 6 models (ResNeSt50, ResNeSt50 4s2x40d, EffNet-B3, 4, ViT-L/16, DeiT-B/16) and decided to use ResNeSt50 4s2x40d, EffNet-B4 based on LB & CV scores"
+  },
+  "noisystudent": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "EfficientNet-B3 NS (tta4) 0.895 0.896 0.895, EfficientNet-B4 NS (tta4) 0.891 0.900 0.893"
+  },
+  "frozen-batchnorm-layers": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "Auxiliary : freeze BN layer"
+  },
+  "bi-tempered-logistic-loss": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "Loss : focal cosine, cross-entropy w/ label smoothing, bi-tempered"
+  },
+  "cross-entropy-with-label-smoothing": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "I chose to use focal cosine loss & cross-entropy w/ label smoothing 0.2... Loss : focal cosine, cross-entropy w/ label smoothing, bi-tempered"
+  },
+  "focal-cosine": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "I chose to use focal cosine loss & cross-entropy w/ label smoothing 0.2. EfficientNet-B4 NS (tta3) focal cosine 0.890 0.900 0.895"
+  },
+  "adamp": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "Optimizer : AdamW, AdamP, RAdam"
+  },
+  "adamw": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "Optimizer : AdamW, AdamP, RAdam"
+  },
+  "radam": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "Adam, AdamW to RAdam (slight improvement)"
+  },
+  "learning_rate": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "Scheduler : Cosine Anealling w/o warm-up (1e-4 to 1e-6)"
+  },
+  "cosine-annealing": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "Scheduler : Cosine Anealling w/o warm-up (1e-4 to 1e-6)"
+  },
+  "epochs": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "Epochs : 10 ~ 20"
+  },
+  "label-smoothing": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "Label Smoothing (alpha = 0.2)"
+  },
+  "pseudo-labeling": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "the pseudo label boosts the CV score +0.007. (I generated a pseudo label based on my best CV score, 0.9051)"
+  },
+  "5-fold-stratified": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "Validation : stratified kfold - 5 folds"
+  },
+  "2019-data": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "Data : 2019 + 2020 datasets, only 2020, w/ pseudo labels... external dataset (2019 dataset)"
+  },
+  "2020-data": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "Data : 2019 + 2020 datasets, only 2020, w/ pseudo labels"
+  },
+  "simple-averaging-ensemble": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "Ensembles, Weights, Single model's CV & LB scores seem not good, But, ensembling raises the CV & LB scores to 0.005."
+  },
+  "weighted-ensemble": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "I tuned the ensemble weights with Optuna & Simple on CV... Ensembles 9 weights : [0.33547759, 0.30181755, 0.28914882]"
+  },
+  "pytorch": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "I only got Kaggle GPU, so I couldn't experiment with many models with various recipes."
+  }
+}

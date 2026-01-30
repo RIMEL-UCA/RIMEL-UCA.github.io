@@ -1,0 +1,154 @@
+{
+  "image_size": {
+    "384x384": {
+      "source": "Top7 solution description",
+      "link": "solutions/top7.txt",
+      "quote": "VIT_base16 focalcos 384... VIT_base16 bi-tempered 384... efficientnet_b4_ns focalcos 384"
+    },
+    "512x512": {
+      "source": "Top7 solution description",
+      "link": "solutions/top7.txt",
+      "quote": "efficientnet_b4_ns bi-tempered 512... seresnext101 bi-tempered 512... seresnext101 focalcos 512... seresnext50 bi-tempered 512... regnety120 focalcos 512... efficientnet_b4_ns CE 512... seresnext101 CE 512... resnext101 CE 512... resnest101 CE 512"
+    }
+  },
+  "cutout": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "It uses a lot of augmentation, including randomcrop, H/V flip, a large number of RGB transform, cutout, grid distortion, etc.,"
+  },
+  "flip": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "It uses a lot of augmentation, including randomcrop, H/V flip, a large number of RGB transform, cutout, grid distortion, etc.,"
+  },
+  "grid-distortion": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "It uses a lot of augmentation, including randomcrop, H/V flip, a large number of RGB transform, cutout, grid distortion, etc.,"
+  },
+  "horizontalflip": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "It uses a lot of augmentation, including randomcrop, H/V flip, a large number of RGB transform, cutout, grid distortion, etc.,"
+  },
+  "randomcrop": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "It uses a lot of augmentation, including randomcrop, H/V flip, a large number of RGB transform, cutout, grid distortion, etc.,"
+  },
+  "rgb-transform": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "It uses a lot of augmentation, including randomcrop, H/V flip, a large number of RGB transform, cutout, grid distortion, etc.,"
+  },
+  "snapmix": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "simply aug + snapmix, and gradually increase the probability of snapmix by epoch. PB 0.896"
+  },
+  "tta": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "6modelx4TTA... 3model and 5xrandomTTA... 5model and 5xTTA... 6 student model and 4xTTA... efficientnet-b4 5fold 5tta"
+  },
+  "verticalflip": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "It uses a lot of augmentation, including randomcrop, H/V flip, a large number of RGB transform, cutout, grid distortion, etc.,"
+  },
+  "efficientnet-b4-ns": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "efficientnet_b4_ns bi-tempered 512... efficientnet_b4_ns focalcos 384... efficientnet_b4_ns CE 512"
+  },
+  "regnety120": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "regnety120 focalcos 512... RegNet PB is higher than LB, but RegNet LB is too low, RegNet is not selected for submit."
+  },
+  "resnest101": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "resnest101 CE 512"
+  },
+  "resnext101": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "resnext101 CE 512"
+  },
+  "seresnext101": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "seresnext101 bi-tempered 512... seresnext101 focalcos 512... seresnext101 CE 512"
+  },
+  "seresnext50": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "seresnext50 bi-tempered 512"
+  },
+  "vit-b/16": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "VIT_base16 focalcos 384... VIT_base16 bi-tempered 384... VIT_base16 CE 384"
+  },
+  "noisystudent": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "efficientnet_b4_ns (NoisyStudent)"
+  },
+  "bi-tempered-logistic-loss": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "efficientnet_b4_ns bi-tempered 512... seresnext101 bi-tempered 512... seresnext50 bi-tempered 512... VIT_base16 bi-tempered 384"
+  },
+  "crossentropyloss": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "efficientnet_b4_ns CE 512... seresnext101 CE 512... VIT_base16 CE 384... resnext101 CE 512... resnest101 CE 512"
+  },
+  "focal-cosine": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "seresnext101 focalcos 512... VIT_base16 focalcos 384... efficientnet_b4_ns focalcos 384... regnety120 focalcos 512... focalcos loss will increase CV, but some models will reduce the prediction probability of true label."
+  },
+  "knowledge-distillation": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "the second submission: based on the prediction results of the first scheme, knowledge distillation is carried out, and the student model results and the teacher model results are weighted by a ratio of 4:6"
+  },
+  "5-fold": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "efficientnet-b4 5fold 5tta: PB 0.894"
+  },
+  "data-removal": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "images with prediction probability greater than 0.9 and incorrect predictions are deleted. PB 0.895"
+  },
+  "simple-averaging-ensemble": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "6modelx4TTA... 3model and 5xrandomTTA... 5model and 5xTTA"
+  },
+  "weighted-arithmetic-mean": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "the second submission: based on the prediction results of the first scheme, knowledge distillation is carried out, and the student model results and the teacher model results are weighted by a ratio of 4:6"
+  },
+  "5x-tta": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "3model and 5xrandomTTA... 5model and 5xTTA... efficientnet-b4 5fold 5tta"
+  },
+  "random-tta": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "3model and 5xrandomTTA... randomTTA is the same as the augmentation method in training, randomly 5 times... in my submit, when using random TTA, the score of PB and LB are close."
+  },
+  "tta": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "6modelx4TTA... 6 student model and 4xTTA"
+  }
+}

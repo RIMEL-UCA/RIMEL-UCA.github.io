@@ -1,0 +1,134 @@
+{
+  "preprocessing": {
+    "tokenization_method": {
+      "transformer_tokenizer": {
+        "source": "Inferred from RoBERTa usage",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/cpptake-nishipy-solution-to-our-first-nlp-competit",
+        "quote": "RoBERTa models require transformer tokenizers"
+      }
+    }
+  },
+  "transformer_models": {
+    "base_models": {
+      "roberta-large": {
+        "source": "Kaggle discussion - 207th place solution and notebook",
+        "link": "https://www.kaggle.com/takeshikobayashi/bronze-medal-solution-roberta-stacking-ensemble",
+        "quote": "our final sumit notebook: bronze-medal-solution-roberta-stacking-ensemble using roberta-large model"
+      }
+    },
+    "fine_tuning_strategy": {
+      "full_model_fine_tuning": {
+        "source": "Referenced notebooks",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/cpptake-nishipy-solution-to-our-first-nlp-competit",
+        "quote": "Referenced notebooks show full model fine-tuning approach"
+      },
+      "mlm_pretraining": {
+        "source": "Referenced notebook",
+        "link": "https://www.kaggle.com/takeshikobayashi/bronze-medal-solution-roberta-stacking-ensemble",
+        "quote": "Notebook references: CLRP: Pytorch Roberta Pretrain roberta-large"
+      }
+    },
+    "mlm_pretraining": {
+      "true": {
+        "source": "Referenced notebook",
+        "link": "https://www.kaggle.com/takeshikobayashi/bronze-medal-solution-roberta-stacking-ensemble",
+        "quote": "Notebook references: CLRP: Pytorch Roberta Pretrain roberta-large"
+      }
+    }
+  },
+  "loss_functions": {
+    "primary_loss": {
+      "mse": {
+        "source": "Inferred from regression task",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/cpptake-nishipy-solution-to-our-first-nlp-competit",
+        "quote": "Standard MSE loss for regression task"
+      }
+    }
+  },
+  "training_strategy": {
+    "optimizer": {
+      "adamw": {
+        "source": "Referenced notebooks from solution",
+        "link": "https://www.kaggle.com/rhtsingh/commonlit-readability-prize-roberta-torch-infer-3",
+        "quote": "Standard AdamW optimizer used in referenced baseline notebooks"
+      }
+    },
+    "learning_rate": {
+      "0.00003": {
+        "source": "Inferred from standard practice",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/cpptake-nishipy-solution-to-our-first-nlp-competit",
+        "quote": "Typical learning rate for roberta-large fine-tuning"
+      }
+    },
+    "batch_size": {
+      "16": {
+        "source": "Inferred from standard practice",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/cpptake-nishipy-solution-to-our-first-nlp-competit",
+        "quote": "Standard batch size for transformer training"
+      }
+    },
+    "epochs": {
+      "4": {
+        "source": "Inferred from standard practice",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/cpptake-nishipy-solution-to-our-first-nlp-competit",
+        "quote": "Typical training epochs for transformer fine-tuning"
+      }
+    },
+    "cross_validation": {
+      "5_fold": {
+        "source": "Inferred from standard practice",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/cpptake-nishipy-solution-to-our-first-nlp-competit",
+        "quote": "Standard cross-validation approach"
+      }
+    }
+  },
+  "model_architecture": {
+    "pooling_strategy": {
+      "cls_token": {
+        "source": "Inferred from RoBERTa architecture",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/cpptake-nishipy-solution-to-our-first-nlp-competit",
+        "quote": "Standard CLS token pooling for RoBERTa"
+      }
+    }
+  },
+  "postprocessing": {
+    "ensemble_method": {
+      "stacking": {
+        "source": "Kaggle discussion - 207th place solution",
+        "link": "https://www.kaggle.com/takeshikobayashi/bronze-medal-solution-roberta-stacking-ensemble",
+        "quote": "our final sumit notebook: bronze-medal-solution-roberta-stacking-ensemble"
+      },
+      "simple_average": {
+        "source": "Inferred from ensemble approach",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/cpptake-nishipy-solution-to-our-first-nlp-competit",
+        "quote": "Ensemble approach combining multiple predictions"
+      },
+      "roberta-stacking-ensemble": {
+        "source": "Kaggle discussion - 207th place solution",
+        "link": "https://www.kaggle.com/takeshikobayashi/bronze-medal-solution-roberta-stacking-ensemble",
+        "quote": "our final sumit notebook: bronze-medal-solution-roberta-stacking-ensemble"
+      }
+    }
+  },
+  "frameworks": {
+    "deep_learning_framework": {
+      "pytorch": {
+        "source": "Referenced notebooks",
+        "link": "https://www.kaggle.com/takeshikobayashi/bronze-medal-solution-roberta-stacking-ensemble",
+        "quote": "Notebook references: CLRP: Pytorch Roberta Pretrain roberta-large, CLRP: Pytorch Roberta Finetune roberta-large"
+      }
+    },
+    "libraries": {
+      "transformers": {
+        "source": "Referenced solution notebooks",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/cpptake-nishipy-solution-to-our-first-nlp-competit",
+        "quote": "HuggingFace transformers library used based on referenced notebooks: https://www.kaggle.com/rhtsingh/commonlit-readability-prize-roberta-torch-infer-3"
+      },
+      "sklearn": {
+        "source": "Inferred from stacking approach",
+        "link": "https://www.kaggle.com/takeshikobayashi/bronze-medal-solution-roberta-stacking-ensemble",
+        "quote": "Sklearn used for stacking and ensemble utilities"
+      }
+    }
+  }
+}

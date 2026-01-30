@@ -1,0 +1,178 @@
+{
+  "embeddings": {
+    "contextual_embeddings": {}
+  },
+  "preprocessing": {
+    "external_data_sources": {},
+    "tokenization_method": {
+      "transformer-tokenizer": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/261206",
+        "quote": "Used transformer tokenizers for all models"
+      }
+    },
+    "augmentation_techniques": {},
+    "additional_features": {}
+  },
+  "transformer_models": {
+    "base_models": {
+      "google/electra-base-discriminator": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/261206",
+        "quote": "We used Roberta-base, Roberta-large, Electra-base, and Electra-large"
+      },
+      "google/electra-large-discriminator": {
+        "source": "Kaggle Discussion + Table",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/261206",
+        "quote": "Electra-large- [Variation of the best LB Roberta-large model] | 0.479 | 0.469"
+      },
+      "roberta-base": {
+        "source": "Kaggle Discussion + Table",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/261206",
+        "quote": "Roberta-base using Tensorflow @ragnar123 | 0.509 | 0.482"
+      },
+      "roberta-large": {
+        "source": "Kaggle Discussion + Table",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/261206",
+        "quote": "Roberta-large-1 @rhtsingh | 0.479 | 0.474"
+      }
+    },
+    "fine_tuning_strategy": {
+      "full-model-fine-tuning": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/261206",
+        "quote": "Fine-tuned transformer models with various configurations"
+      },
+      "layer-reinitialize": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/261206",
+        "quote": "Last 5 layer-reinitialization [we tried different techniques but this was the best amongst them]"
+      },
+      "mlm-pretraining": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/261206",
+        "quote": "Pre-training Roberta-base [for large models, we were not able to pre-train]"
+      }
+    }
+  },
+  "loss_functions": {
+    "primary_loss": {
+      "mse": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/261206",
+        "quote": "Loss: MSE/RMSE"
+      },
+      "rmse": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/261206",
+        "quote": "Loss: MSE/RMSE"
+      }
+    }
+  },
+  "training_strategy": {
+    "optimizer": {
+      "adamw": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/261206",
+        "quote": "Optimiser: AdamW"
+      }
+    },
+    "learning_rate": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/261206",
+      "quote": "LR: 2.5e-5 to 3.5e-5 (depending on batch size) [Group Differential LR]"
+    },
+    "learning_rate_schedule": {
+      "group-differential-lr": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/261206",
+        "quote": "Differential learning rate [2.5e-5 to 3.5e-5 with a factor of 2.5 depending on the architecture]"
+      }
+    },
+    "batch_size": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/261206",
+      "quote": "Batch size: 16 (or 10 for the larger models)"
+    },
+    "epochs": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/261206",
+      "quote": "Epochs: 3-5 [depending on the model]"
+    },
+    "weight_decay": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/261206",
+      "quote": "Weight decay: 0.5"
+    },
+    "regularization": {
+      "gradient-accumulation": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/261206",
+        "quote": "Gradient Accumulation 2 [BS-8 for training on larger batch size]"
+      }
+    },
+    "cross_validation": {
+      "5-fold": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/261206",
+        "quote": "Used k-fold cross-validation strategy"
+      }
+    }
+  },
+  "model_architecture": {
+    "pooling_strategy": {
+      "2d-attention-head": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/261206",
+        "quote": "unique method of using 2D Attention Head that will be discussed by @muktan in this post; Roberta-large- [2D Attention for 2 4 6 8 layers from the end- @muktan]"
+      },
+      "attention-pooling": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/261206",
+        "quote": "Attention head, Mean Pooling head - [We were struggling to find custom heads for fine-tuning and these heads worked very well]"
+      },
+      "cls-token": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/261206",
+        "quote": "different heads [Mean-Pooing, CLS Token, and Attention]"
+      },
+      "mean-pooling": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/261206",
+        "quote": "Roberta-large- [Mean Pooling Head] | 0.479 | 0.469"
+      }
+    }
+  },
+  "postprocessing": {
+    "ensemble_method": {
+      "forward-oof-selection": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/261206",
+        "quote": "We used the following notebook to find the best ensembling score using our oof files and used 14 models; @cdeotte for providing a unique method of ensembling using forward OOF technique"
+      },
+      "weighted-average": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/261206",
+        "quote": "we provided weights based on the LB scores and combined them in a different manner"
+      }
+    },
+    "stacking_models": {}
+  },
+  "frameworks": {
+    "pytorch": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/261206",
+      "quote": "PyTorch framework used for most models (referenced @rhtsingh, @andretugan notebooks)"
+    },
+    "tensorflow": {
+      "source": "Kaggle Discussion + Table",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/261206",
+      "quote": "Roberta-base using Tensorflow @ragnar123"
+    },
+    "transformers": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/261206",
+      "quote": "Used Hugging Face transformers library for all models"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "competition": "cafa-6-protein-function-prediction",
+  "stratum": "top_10%",
+  "ref": "wasiqaliyasir/quick-direct-prediction-using-cafa6",
+  "local_main_file": "corpus\\cafa-6-protein-function-prediction\\notebooks\\top_10%\\wasiqaliyasir__quick-direct-prediction-using-cafa6\\quick-direct-prediction-using-cafa6.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 10,
+    "B_modularite": 15,
+    "C_reproductibilite": 10,
+    "D_lisibilite": 5,
+    "E_hygiene": 10
+  },
+  "score_total_100": 50,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline complet mais dans 2 cellules seulement: cellule 1 boilerplate Kaggle, cellule 2 contient tout le code (load→ensemble→propagate→save).",
+    "B_modularite": "Classe GOOntology, fonctions (load_preds, ensemble, propagate, save), paramètres regroupés (alpha, power, topk) mais inline.",
+    "C_reproductibilite": "Pas de seed (déterministe), chemins explicites, poids d'ensemble inline (w1=0.55).",
+    "D_lisibilite": "Variables très courtes (tid, l, p, d), commentaires minimaux (# GO Ontology), pas de markdown explicatif.",
+    "E_hygiene": "Code fonctionnel mais compact, quelques valeurs hardcodées inline (topk=270, max_s=0.93), cellule 1 boilerplate non supprimée."
+  },
+  "summary": "Script compact et fonctionnel mais lisibilité sacrifiée. Noms de variables ultra-courts (tid, l, p), tout le code dans une seule cellule. Classe GOOntology bien conçue. Manque de documentation et markdown. Boilerplate Kaggle non nettoyé. Code efficace mais peu maintenable."
+}

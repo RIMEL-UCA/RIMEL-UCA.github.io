@@ -1,0 +1,92 @@
+{
+  "base_models": {
+    "source": "Kaggle 72nd place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348128",
+    "quote": "Based on the public notebook here, we trained NN models... multiple layers of GRU or TransformerEncoder(4~8 layers)"
+  },
+  "primary_loss": {
+    "source": "Kaggle 72nd place solution - code",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348128",
+    "quote": "loss = tf.keras.losses.BinaryCrossentropy()"
+  },
+  "optimizer": {
+    "source": "Kaggle 72nd place solution - code",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348128",
+    "quote": "opt = tf.keras.optimizers.Adam(learning_rate=0.001)"
+  },
+  "learning_rate": {
+    "source": "Kaggle 72nd place solution - code",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348128",
+    "quote": "opt = tf.keras.optimizers.Adam(learning_rate=0.001)"
+  },
+  "learning_rate_schedule": {
+    "source": "Kaggle 72nd place solution - code",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348128",
+    "quote": "def lrfn(epoch): lr = [1e-3]*5 + [1e-4]*2 + [1e-5]*1 return lr[epoch]. LR = tf.keras.callbacks.LearningRateScheduler(lrfn, verbose = False)"
+  },
+  "epochs": {
+    "source": "Kaggle 72nd place solution - code",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348128",
+    "quote": "We train 5 folds for 8 epochs each"
+  },
+  "cross_validation": {
+    "source": "Kaggle 72nd place solution - code",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348128",
+    "quote": "We train 5 folds for 8 epochs each"
+  },
+  "pooling_strategy": {
+    "source": "Kaggle 72nd place solution - code",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348128",
+    "quote": "x = tf.keras.layers.GRU(units=128, return_sequences=False)(x)"
+  },
+  "additional_layers": {
+    "source": "Kaggle 72nd place solution - code",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348128",
+    "quote": "emb = tf.keras.layers.Embedding(10,4)... x = tf.keras.layers.GRU(units=128, return_sequences=False)(x). x = tf.keras.layers.Dense(64,activation='relu')(x). x = tf.keras.layers.Dense(32,activation='relu')(x)"
+  },
+  "ensemble_method": {
+    "source": "Kaggle 72nd place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348128",
+    "quote": "We then experimented with ensemble patterns of multiple models and found that Stacking by LogisticRegression or MLP yielded particularly high scores"
+  },
+  "prediction_averaging": {
+    "source": "Kaggle 72nd place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348128",
+    "quote": "NN models by themselves had only a low score on the Public Leaderboard, but we noticed that the public score improved from 0.799 to 0.800 by ensembling the LightGBM and NN models"
+  },
+  "deep_learning_framework": {
+    "source": "Kaggle 72nd place solution - code",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348128",
+    "quote": "import tensorflow as tf"
+  },
+  "libraries": {
+    "source": "Kaggle 72nd place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348128",
+    "quote": "we trained lightgbm(dart) models... Using RAPIDS and GPU... import cudf"
+  },
+  "aggregation_features": {
+    "source": "Kaggle 72nd place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348128",
+    "quote": "basic aggregation per customer (mean, std, max, min, first, last, count, nunique)"
+  },
+  "time_series_features": {
+    "source": "Kaggle 72nd place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348128",
+    "quote": "combinations of aggregated features (diff as last - mean, fraction as last / mean, etc.) / last difference features(aggregation with diff(1).iloc[-1], diff(2).iloc[-1], …)"
+  },
+  "fillna_strategy": {
+    "source": "Kaggle 72nd place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348128",
+    "quote": "filling NA by linear interpolation"
+  },
+  "categorical_encoding": {
+    "source": "Kaggle 72nd place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348128",
+    "quote": "one hot encoding of each category features"
+  },
+  "boosting_type": {
+    "source": "Kaggle 72nd place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348128",
+    "quote": "we trained lightgbm(dart) models"
+  }
+}

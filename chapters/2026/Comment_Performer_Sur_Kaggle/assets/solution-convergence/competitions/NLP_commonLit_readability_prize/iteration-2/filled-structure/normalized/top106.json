@@ -1,0 +1,79 @@
+{
+  "embeddings": {
+    "sentence_embeddings": [],
+    "contextual_embeddings": []
+  },
+  "preprocessing": {
+    "external_data_sources": [],
+    "tokenization_method": [
+      "transformer-tokenizer"
+    ],
+    "augmentation_techniques": []
+  },
+  "transformer_models": {
+    "base_models": [
+      "roberta-base",
+      "roberta-large",
+      "google/electra-base-discriminator",
+      "google/electra-large-discriminator"
+    ],
+    "mlm_pretraining": true,
+    "fine_tuning_strategy": [
+      "full-model-fine-tuning",
+      "mlm-pretraining",
+      "layer-reinitialize"
+    ]
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "mse",
+      "rmse"
+    ]
+  },
+  "training_strategy": {
+    "optimizer": [
+      "adamw"
+    ],
+    "learning_rate": 2.5e-05,
+    "learning_rate_schedule": [
+      "group-differential-lr"
+    ],
+    "batch_size": 16,
+    "epochs": 5,
+    "weight_decay": 0.5,
+    "pseudo_labeling": false,
+    "seed_averaging": false,
+    "regularization": [
+      "gradient-accumulation"
+    ],
+    "cross_validation": [
+      "5-fold"
+    ]
+  },
+  "model_architecture": {
+    "pooling_strategy": [
+      "mean-pooling",
+      "cls-token",
+      "attention-pooling",
+      "2d-attention-head"
+    ],
+    "layer_reinitialize": true
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "weighted-average",
+      "forward-oof-selection"
+    ],
+    "stacking_models": []
+  },
+  "frameworks": {
+    "deep_learning_framework": [
+      "pytorch",
+      "tensorflow"
+    ],
+    "libraries": [
+      "transformers",
+      "sklearn"
+    ]
+  }
+}

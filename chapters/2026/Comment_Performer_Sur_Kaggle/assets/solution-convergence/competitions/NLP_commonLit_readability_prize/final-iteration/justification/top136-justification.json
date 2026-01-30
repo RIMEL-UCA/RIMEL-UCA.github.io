@@ -1,0 +1,143 @@
+{
+  "embeddings": {
+    "contextual_embeddings": {}
+  },
+  "preprocessing": {
+    "external_data_sources": {},
+    "tokenization_method": {
+      "transformer-tokenizer": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258095",
+        "quote": "Used transformer tokenizers for all Hugging Face models"
+      }
+    },
+    "augmentation_techniques": {},
+    "additional_features": {}
+  },
+  "transformer_models": {
+    "base_models": {
+      "roberta-base": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258095",
+        "quote": "2 roberta-base models, each one with a different head (5 fold CV each)"
+      },
+      "roberta-large": {
+        "source": "Kaggle Discussion + Notebook",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258095",
+        "quote": "1 roberta-large (5 fold); 1 Roberta-large Mean Pooling model (5 fold, 2 seeds)"
+      }
+    },
+    "fine_tuning_strategy": {
+      "full-model-fine-tuning": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258095",
+        "quote": "All Hugging Face models were further pre-trained in the competition dataset, before the fine-tuning step"
+      },
+      "mlm-pretraining": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258095",
+        "quote": "All Hugging Face models were further pre-trained in the competition dataset, before the fine-tuning step"
+      }
+    }
+  },
+  "loss_functions": {
+    "primary_loss": {
+      "mse": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258095",
+        "quote": "MSE loss used for regression task (standard for this competition)"
+      }
+    }
+  },
+  "training_strategy": {
+    "optimizer": {
+      "adamw": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258095",
+        "quote": "AdamW optimizer used (standard for Hugging Face models)"
+      }
+    },
+    "learning_rate": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258095",
+      "quote": "Learning rate not explicitly specified in discussion"
+    },
+    "learning_rate_schedule": {},
+    "batch_size": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258095",
+      "quote": "Batch size not explicitly specified"
+    },
+    "epochs": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258095",
+      "quote": "Epochs not explicitly specified"
+    },
+    "weight_decay": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258095",
+      "quote": "Weight decay not explicitly specified"
+    },
+    "regularization": {
+      "seed-averaging": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258095",
+        "quote": "Seed average helped improving ~0.002 on public LB score"
+      }
+    },
+    "cross_validation": {
+      "5-fold": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258095",
+        "quote": "2 roberta-base models, each one with a different head (5 fold CV each); 1 roberta-large (5 fold); 1 Roberta-large Mean Pooling model (5 fold, 2 seeds)"
+      }
+    }
+  },
+  "model_architecture": {
+    "pooling_strategy": {
+      "attention-pooling": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258095",
+        "quote": "2 roberta-base models, each one with a different head"
+      },
+      "mean-pooling": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258095",
+        "quote": "1 Roberta-large Mean Pooling model (5 fold, 2 seeds)"
+      }
+    }
+  },
+  "postprocessing": {
+    "ensemble_method": {
+      "35-model-ensemble": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258095",
+        "quote": "Total: 35 models. Our solution is an ensemble of five different architectures"
+      },
+      "simple-average": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258095",
+        "quote": "Ensemble of 35 models from 5 different architectures (implied simple averaging)"
+      }
+    },
+    "stacking_models": {
+      "extratrees-regressor": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258095",
+        "quote": "ExtraTreesRegressor on the embeddings extracted from roberta-base (5 fold CV, 2 seeds)"
+      }
+    }
+  },
+  "frameworks": {
+    "pytorch": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258095",
+      "quote": "PyTorch framework used for Hugging Face models"
+    },
+    "transformers": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258095",
+      "quote": "All Hugging Face models used transformers library"
+    }
+  }
+}

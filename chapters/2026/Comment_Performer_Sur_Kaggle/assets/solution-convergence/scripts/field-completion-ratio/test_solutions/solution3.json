@@ -1,0 +1,43 @@
+{
+  "embeddings": {
+    "word_embeddings": [],
+    "contextual_embeddings": ["bert"]
+  },
+  "preprocessing": {
+    "text_cleaning": ["lowercase"],
+    "tokenization_method": [],
+    "lowercase": true,
+    "augmentation_techniques": []
+  },
+  "transformer_models": {
+    "base_models": ["bert"],
+    "pretrained_checkpoints": [],
+    "fine_tuning_strategy": []
+  },
+  "loss_functions": {
+    "primary_loss": [],
+    "auxiliary_losses": []
+  },
+  "training_strategy": {
+    "optimizer": ["adam"],
+    "learning_rate": null,
+    "learning_rate_schedule": [],
+    "batch_size": null,
+    "epochs": null,
+    "regularization": [],
+    "cross_validation": []
+  },
+  "model_architecture": {
+    "pooling_strategy": [],
+    "additional_layers": [],
+    "dropout_rate": null
+  },
+  "postprocessing": {
+    "ensemble_method": [],
+    "prediction_averaging": []
+  },
+  "frameworks": {
+    "deep_learning_framework": ["tensorflow"],
+    "libraries": []
+  }
+}

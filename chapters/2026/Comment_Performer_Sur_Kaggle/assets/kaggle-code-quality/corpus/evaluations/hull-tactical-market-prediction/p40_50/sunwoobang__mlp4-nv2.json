@@ -1,0 +1,22 @@
+{
+  "competition": "hull-tactical-market-prediction",
+  "stratum": "p40_50",
+  "ref": "sunwoobang/mlp4-nv2",
+  "local_main_file": "corpus\\hull-tactical-market-prediction\\notebooks\\p40_50\\sunwoobang__mlp4-nv2\\mlp4-nv2.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 20,
+    "B_modularite": 15,
+    "C_reproductibilite": 15,
+    "D_lisibilite": 15,
+    "E_hygiene": 15
+  },
+  "score_total_100": 80,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline très structuré avec sections numérotées: 1. CONFIGURATION → 2. FEATURE ENGINEERING → 3. DATA LOADING → 4. HYBRID MODEL TRAINING → 5. INFERENCE LOOP → 6. SERVER START.",
+    "B_modularite": "Classe Config centralisée, fonction feature_engineering(), fonction load_data(), 3 modèles (SGD, LGBM, CatBoost), predict() pour inference.",
+    "C_reproductibilite": "Config.SEED = 42 utilisé partout (random_seed, random_state), paramètres d'ensemble explicites (W_LINEAR=0.3, W_LGBM=0.4, W_CAT=0.3).",
+    "D_lisibilite": "Markdown header SOTA détaillé, sections commentées, docstrings en coréen/anglais, noms explicites (GLOBAL_HISTORY, TARGET_VOL).",
+    "E_hygiene": "Online learning (partial_fit), gestion GLOBAL_HISTORY avec limite 200, try/except pour partial_fit, chemins explicites."
+  },
+  "summary": "Notebook SOTA bien documenté avec approche hybride (Linear + Boost + Volatility Scaling). Configuration centralisée avec tous les hyperparamètres. Online learning via SGDRegressor.partial_fit. Sections bien structurées. Documentation markdown détaillée de la stratégie."
+}

@@ -1,0 +1,31 @@
+{
+  "comment": "Peu similaire (score ~0.08)",
+  "models": {
+    "transformers": {
+      "xlnet": true,
+      "bert": false,
+      "gpt": false,
+      "roberta": true
+    },
+    "embeddings": ["fasttext", "elmo"],
+    "model_name": "XLNet + RoBERTa"
+  },
+  "preprocessing": {
+    "techniques": ["lowercase", "stemming"],
+    "custom_cleaning": false,
+    "normalization": "unicode"
+  },
+  "training": {
+    "epochs": 15,
+    "batch_size": 64,
+    "learning_rate": 0.0001,
+    "optimizer": "adamw",
+    "early_stopping": false,
+    "cross_validation": true
+  },
+  "postprocessing": {
+    "ensemble_method": "stacking",
+    "calibration": false,
+    "threshold_tuning": true
+  }
+}

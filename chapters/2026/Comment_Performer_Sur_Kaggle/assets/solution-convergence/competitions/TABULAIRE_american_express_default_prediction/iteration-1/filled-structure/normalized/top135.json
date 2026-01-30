@@ -1,0 +1,69 @@
+{
+  "embeddings": {
+    "word_embeddings": [],
+    "contextual_embeddings": []
+  },
+  "preprocessing": {
+    "text_cleaning": [],
+    "tokenization_method": [],
+    "lowercase": null,
+    "augmentation_techniques": []
+  },
+  "transformer_models": {
+    "base_models": [
+      "transformer"
+    ],
+    "pretrained_checkpoints": [],
+    "fine_tuning_strategy": []
+  },
+  "loss_functions": {
+    "primary_loss": [],
+    "auxiliary_losses": []
+  },
+  "training_strategy": {
+    "optimizer": [],
+    "learning_rate": null,
+    "learning_rate_schedule": [],
+    "batch_size": null,
+    "epochs": null,
+    "regularization": [],
+    "cross_validation": [
+      "5-fold",
+      "10-fold",
+      "20-fold"
+    ]
+  },
+  "model_architecture": {
+    "pooling_strategy": [
+      "bi-gru"
+    ],
+    "additional_layers": [
+      "5-layer-nn",
+      "stacked-bi-gru",
+      "transformer"
+    ],
+    "dropout_rate": null
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "weighted-log10-odds"
+    ],
+    "prediction_averaging": [
+      "50-models-ensemble",
+      "3-gbdt-+-3-nn",
+      "xgboost-+-catboost-+-lightgbm-+-nn-+-bi-gru-+-transformer"
+    ]
+  },
+  "frameworks": {
+    "deep_learning_framework": [],
+    "libraries": [
+      "xgboost",
+      "catboost",
+      "lightgbm",
+      "sklearn",
+      "pandas",
+      "numpy",
+      "optuna"
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "embeddings": {
+    "word_embeddings": [],
+    "contextual_embeddings": []
+  },
+  "preprocessing": {
+    "text_cleaning": [],
+    "tokenization_method": [],
+    "lowercase": null,
+    "augmentation_techniques": [
+      "randomcrop",
+      "horizontalflip",
+      "verticalflip",
+      "rgb-transform",
+      "cutout",
+      "grid-distortion",
+      "snapmix"
+    ]
+  },
+  "transformer_models": {
+    "base_models": [
+      "efficientnet-b4",
+      "seresnext101",
+      "seresnext50",
+      "vit-b/16",
+      "regnety120",
+      "resnext101",
+      "resnest101"
+    ],
+    "pretrained_checkpoints": [
+      "noisystudent"
+    ],
+    "fine_tuning_strategy": []
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "bi-tempered-logistic-loss",
+      "focalcos",
+      "crossentropyloss"
+    ],
+    "auxiliary_losses": []
+  },
+  "training_strategy": {
+    "optimizer": [],
+    "learning_rate": null,
+    "learning_rate_schedule": [],
+    "batch_size": null,
+    "epochs": null,
+    "regularization": [
+      "knowledge-distillation"
+    ],
+    "cross_validation": [
+      "5-fold"
+    ]
+  },
+  "model_architecture": {
+    "pooling_strategy": [],
+    "additional_layers": [],
+    "dropout_rate": null
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "weighted-ensemble"
+    ],
+    "prediction_averaging": [
+      "tta",
+      "random-tta"
+    ]
+  },
+  "frameworks": {
+    "deep_learning_framework": [],
+    "libraries": []
+  }
+}

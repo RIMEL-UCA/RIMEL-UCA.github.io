@@ -1,0 +1,22 @@
+{
+  "competition": "house-prices-advanced-regression-techniques",
+  "stratum": "p40_50",
+  "ref": "thol123/lpt-13-01-2026",
+  "local_main_file": "corpus\\house-prices-advanced-regression-techniques\\notebooks\\p40_50\\thol123__lpt-13-01-2026\\lpt-13-01-2026.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 10,
+    "B_modularite": 5,
+    "C_reproductibilite": 10,
+    "D_lisibilite": 5,
+    "E_hygiene": 5
+  },
+  "score_total_100": 35,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline basique: load → fillna → get_dummies → split → Lasso → predict. Pas de sections ni EDA.",
+    "B_modularite": "Aucune fonction, tout en cellules linéaires, variables globales (train, test, y, X_train).",
+    "C_reproductibilite": "random_state=42 dans Lasso, cv=5 pour cross_val_score, log transform target.",
+    "D_lisibilite": "Cellule 1 boilerplate Kaggle non nettoyée, aucun commentaire, aucun markdown explicatif.",
+    "E_hygiene": "Hardcoding alpha=0.0005, chemins /kaggle/input hardcodés, cellule os.listdir inutile, boilerplate non supprimé."
+  },
+  "summary": "Notebook minimaliste et basique. Pipeline simple mais fonctionnel (Lasso regression). Aucune modularité, tout en cellules linéaires. Boilerplate Kaggle non nettoyé. Aucune documentation. Alpha hardcodé sans justification. Code de débutant fonctionnel mais non maintenable."
+}

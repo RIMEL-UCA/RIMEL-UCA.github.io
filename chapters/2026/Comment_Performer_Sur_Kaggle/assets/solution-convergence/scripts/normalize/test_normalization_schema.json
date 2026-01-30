@@ -1,0 +1,64 @@
+{
+  "comment": "Schéma de référence pour tester la normalisation",
+  
+  "test_cases": {
+    "strings": {
+      "string_with_spaces": "",
+      "string_with_mixed_case": "",
+      "string_with_special_chars": "",
+      "string_with_multiple_dashes": "",
+      "string_empty": "",
+      "string_null_text": "",
+      "string_none_text": "",
+      "string_na_text": "",
+      "string_dash": "",
+      "string_normal": ""
+    },
+    
+    "booleans": {
+      "boolean_true": false,
+      "boolean_false": false,
+      "boolean_null": false,
+      "boolean_string_true": false,
+      "boolean_string_false": false,
+      "boolean_string_yes": false,
+      "boolean_string_no": false,
+      "boolean_string_one": false,
+      "boolean_string_zero": false
+    },
+    
+    "numbers": {
+      "number_int": 0,
+      "number_float": 0.0,
+      "number_zero": 0,
+      "number_null": null,
+      "number_string_int": 0,
+      "number_string_float": 0.0,
+      "number_string_invalid": null,
+      "number_string_empty": null
+    },
+    
+    "lists": {
+      "list_strings": [],
+      "list_with_duplicates": [],
+      "list_with_empty_values": [],
+      "list_with_special_chars": [],
+      "list_mixed_types": [],
+      "list_empty": [],
+      "list_null": []
+    },
+    
+    "nested_objects": {
+      "level1": {
+        "level2": {
+          "nested_string": "",
+          "nested_number": 0,
+          "nested_boolean": false,
+          "nested_list": []
+        }
+      }
+    },
+    
+    "missing_in_input": "This field will be added to output if missing in input"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "preprocessing": {
+    "image_size": [
+      "320x320",
+      "384x384"
+    ],
+    "normalization": {},
+    "augmentation_techniques": [
+      "cutmix"
+    ]
+  },
+  "transformer_models": {
+    "base_models": [
+      "seresnext50-32x4d",
+      "efficientnet-b4",
+      "vit-b/16",
+      "seresnet152d"
+    ],
+    "pretrained_checkpoints": [],
+    "fine_tuning_strategy": []
+  },
+  "loss_functions": {
+    "primary_loss": []
+  },
+  "training_strategy": {
+    "optimizer": [
+      "adam"
+    ],
+    "learning_rate": null,
+    "learning_rate_schedule": [],
+    "batch_size": null,
+    "epochs": null,
+    "regularization": [],
+    "cross_validation": [],
+    "external_data": [],
+    "mixed_precision": null,
+    "progressive_resizing": null,
+    "noise_handling": []
+  },
+  "model_architecture": {
+    "pooling_strategy": [],
+    "additional_layers": [],
+    "dropout_rate": null
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "weighted-ensemble"
+    ],
+    "prediction_averaging": []
+  },
+  "frameworks": {
+    "deep_learning_framework": [],
+    "libraries": []
+  }
+}

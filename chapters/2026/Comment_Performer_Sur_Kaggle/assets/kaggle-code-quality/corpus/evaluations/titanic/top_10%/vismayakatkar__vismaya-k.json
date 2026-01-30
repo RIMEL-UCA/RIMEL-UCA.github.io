@@ -1,0 +1,22 @@
+{
+  "competition": "titanic",
+  "stratum": "top_10%",
+  "ref": "vismayakatkar/vismaya-k",
+  "local_main_file": "corpus\\titanic\\notebooks\\top_10%\\vismayakatkar__vismaya-k\\vismaya-k.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 15,
+    "B_modularite": 15,
+    "C_reproductibilite": 15,
+    "D_lisibilite": 15,
+    "E_hygiene": 15
+  },
+  "score_total_100": 75,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline PyTorch: prepare function → DataLoader → CustomMLP class → train function → eval_acc → retrain full → inference.",
+    "B_modularite": "Classe CustomMLP, fonctions (prepare, train, eval_acc), scaler/onehot globaux préservés pour test.",
+    "C_reproductibilite": "random_state=42 dans train_test_split, hyperparamètres documentés (lr=0.1, lr_decay=0.99, num_epochs=100).",
+    "D_lisibilite": "Commentaires inline pédagogiques ('# unsqueeze(1) inserts...'), noms explicites, structure claire.",
+    "E_hygiene": "test_set flag pour éviter leakage scaler, pin_memory conditionnel, fillna(0), device detection."
+  },
+  "summary": "Notebook PyTorch MLP pour Titanic avec approche pédagogique. CustomMLP class, prepare function avec scaler/onehot globaux. train/eval_acc functions bien structurées. Commentaires explicatifs. Attention au leakage (test_set flag). Hyperparamètres documentés."
+}

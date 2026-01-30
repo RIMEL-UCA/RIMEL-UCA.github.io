@@ -1,0 +1,22 @@
+{
+  "competition": "hull-tactical-market-prediction",
+  "stratum": "top_1%",
+  "ref": "wasiqaliyasir/increase-public-lb-optimization",
+  "local_main_file": "corpus\\hull-tactical-market-prediction\\notebooks\\top_1%\\wasiqaliyasir__increase-public-lb-optimization\\increase-public-lb-optimization.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 15,
+    "B_modularite": 15,
+    "C_reproductibilite": 5,
+    "D_lisibilite": 15,
+    "E_hygiene": 10
+  },
+  "score_total_100": 60,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline structuré en sections: CONFIG → LOAD → BUILD SOLUTION → COMPUTE POSITIONS → PREDICTOR → INFERENCE SERVER.",
+    "B_modularite": "Classe FixedPositionPredictor, fonction predict(), configuration centralisée (K_OPT, MIN_POS, MAX_POS).",
+    "C_reproductibilite": "Utilise K_OPT précalculé (leakage intentionnel sur Public LB), pas de seed explicite car déterministe.",
+    "D_lisibilite": "Sections commentées avec == borders ==, noms explicites, cellule unique mais bien organisée.",
+    "E_hygiene": "Exploit de leakage documenté comme intentionnel ('LEAKAGE - INTENTIONAL'), np.clip pour positions valides."
+  },
+  "summary": "Notebook d'exploitation de leakage Public LB (documenté comme intentionnel). Pipeline clair avec FixedPositionPredictor. K_OPT précalculé à partir des forward_returns. Approche non généralisable mais technique bien implémentée. Compatible inference server Kaggle."
+}

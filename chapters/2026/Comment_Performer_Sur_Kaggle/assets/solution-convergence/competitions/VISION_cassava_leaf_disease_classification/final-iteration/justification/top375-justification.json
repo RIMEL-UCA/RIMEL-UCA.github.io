@@ -1,0 +1,119 @@
+{
+  "image_size": {
+    "224x224": {
+      "source": "Top375 solution description",
+      "link": "solutions/top375.txt",
+      "quote": "Vision Transformer (vit_base_patch16_224) image size 224 by 224"
+    },
+    "456x456": {
+      "source": "Top375 solution description",
+      "link": "solutions/top375.txt",
+      "quote": "EfficientNet-B5 (i.e. not noisy student, somehow my noisy student version seemed worse on CV - I failed to figure out why) on image size 456 by 456 with TTA"
+    },
+    "512x512": {
+      "source": "Top375 solution description",
+      "link": "solutions/top375.txt",
+      "quote": "EfficientNet-B4-noisy student on image size 512 by 512 with TTA, ResNeXt-50 (32x4d) with image size 512 by 512"
+    }
+  },
+  "tta": {
+    "source": "Top375 solution description",
+    "link": "solutions/top375.txt",
+    "quote": "EfficientNet-B5 (i.e. not noisy student, somehow my noisy student version seemed worse on CV - I failed to figure out why) on image size 456 by 456 with TTA, EfficientNet-B4-noisy student on image size 512 by 512 with TTA"
+  },
+  "efficientnet-b4-ns": {
+    "source": "Top375 solution description",
+    "link": "solutions/top375.txt",
+    "quote": "EfficientNet-B4-noisy student on image size 512 by 512 with TTA"
+  },
+  "efficientnet-b5": {
+    "source": "Top375 solution description",
+    "link": "solutions/top375.txt",
+    "quote": "EfficientNet-B5 (i.e. not noisy student, somehow my noisy student version seemed worse on CV - I failed to figure out why) on image size 456 by 456 with TTA"
+  },
+  "resnext50-32x4d": {
+    "source": "Top375 solution description",
+    "link": "solutions/top375.txt",
+    "quote": "ResNeXt-50 (32x4d) with image size 512 by 512"
+  },
+  "vit-b/16": {
+    "source": "Top375 solution description",
+    "link": "solutions/top375.txt",
+    "quote": "Vision Transformer (vit_base_patch16_224) image size 224 by 224"
+  },
+  "imagenet": {
+    "source": "Top375 solution description",
+    "link": "solutions/top375.txt",
+    "quote": "My choice of architectures was perhaps a bit limited I mostly picked these architectures based on what I could get as pre-trained models via timm"
+  },
+  "noisystudent": {
+    "source": "Top375 solution description",
+    "link": "solutions/top375.txt",
+    "quote": "EfficientNet-B4-noisy student on image size 512 by 512 with TTA"
+  },
+  "cross-entropy-with-label-smoothing": {
+    "source": "Top375 solution description",
+    "link": "solutions/top375.txt",
+    "quote": "label smoothing cross-entropy with epsilon of 0.1 to 0.2 or so as a loss function (not surprising, given that it was originally proposed for noisy labels)"
+  },
+  "focal-loss": {
+    "source": "Top375 solution description",
+    "link": "solutions/top375.txt",
+    "quote": "focal loss (not in my selected solutions, but in CV it was very similar to label smoothing cross-entropy)"
+  },
+  "flat-learning-rate-before-cosine-annealing": {
+    "source": "Top375 solution description",
+    "link": "solutions/top375.txt",
+    "quote": "flat learning rate before cosine annealing learning rate schedule that I learnt about from Abishek Thakur's notebook"
+  },
+  "batch_size": {
+    "source": "Top375 solution description",
+    "link": "solutions/top375.txt",
+    "quote": "Gradient accumulation to use bigger batch sizes (72) with EfficientNet-B5"
+  },
+  "gradient-accumulation": {
+    "source": "Top375 solution description",
+    "link": "solutions/top375.txt",
+    "quote": "Gradient accumulation to use bigger batch sizes (72) with EfficientNet-B5 (necessary when using a GPU on Kaggle or my own 1080-Ti)"
+  },
+  "label-smoothing": {
+    "source": "Top375 solution description",
+    "link": "solutions/top375.txt",
+    "quote": "label smoothing cross-entropy with epsilon of 0.1 to 0.2 or so as a loss function"
+  },
+  "weight-decay": {
+    "source": "Top375 solution description",
+    "link": "solutions/top375.txt",
+    "quote": "Weight decay - whenever I tried it, it helped."
+  },
+  "rank-averaging": {
+    "source": "Top375 solution description",
+    "link": "solutions/top375.txt",
+    "quote": "I got some even better private LB numbers with rank averaging (in silver territory, but I did not select it)"
+  },
+  "weighted-arithmetic-mean": {
+    "source": "Top375 solution description",
+    "link": "solutions/top375.txt",
+    "quote": "my very best private LB score was a simple weighted arithmetic mean of two of the models"
+  },
+  "weighted-power-averaging": {
+    "source": "Top375 solution description",
+    "link": "solutions/top375.txt",
+    "quote": "My best selected solution was a weighted power averaging ensemble (i.e. squaring the predictions of each model and then averaging, followed by picking the class with the highest score)"
+  },
+  "pytorch": {
+    "source": "Top375 solution description",
+    "link": "solutions/top375.txt",
+    "quote": "fastai + timm as e.g. described in this great notebook by @muellerzr (thanks, again, for that nice starter kit) and PyTorch"
+  },
+  "fastai": {
+    "source": "Top375 solution description",
+    "link": "solutions/top375.txt",
+    "quote": "fastai + timm as e.g. described in this great notebook by @muellerzr (thanks, again, for that nice starter kit) and PyTorch"
+  },
+  "timm": {
+    "source": "Top375 solution description",
+    "link": "solutions/top375.txt",
+    "quote": "fastai + timm as e.g. described in this great notebook by @muellerzr (thanks, again, for that nice starter kit) and PyTorch. My choice of architectures was perhaps a bit limited I mostly picked these architectures based on what I could get as pre-trained models via timm"
+  }
+}

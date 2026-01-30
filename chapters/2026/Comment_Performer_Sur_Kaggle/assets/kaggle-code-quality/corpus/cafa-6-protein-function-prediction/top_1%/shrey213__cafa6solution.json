@@ -1,0 +1,22 @@
+{
+  "competition": "cafa-6-protein-function-prediction",
+  "stratum": "top_1%",
+  "ref": "shrey213/cafa6solution",
+  "local_main_file": "corpus\\cafa-6-protein-function-prediction\\notebooks\\top_1%\\shrey213__cafa6solution\\cafa6solution.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 15,
+    "B_modularite": 15,
+    "C_reproductibilite": 10,
+    "D_lisibilite": 15,
+    "E_hygiene": 15
+  },
+  "score_total_100": 70,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline clair en sections numérotées [1/4] à [4/4]: setup → load → propagate → save. Pas d'EDA explicite mais structure logique.",
+    "B_modularite": "Fonctions réutilisables (build_go_graph, propagate_hard_max), configuration centralisée (OBO_PATH, MIN_SCORE_THRESHOLD), paramètres regroupés en haut.",
+    "C_reproductibilite": "Pas de seed explicite (traitement déterministe par design), chemins explicites /kaggle/input/, types dtype={'score': np.float32}.",
+    "D_lisibilite": "Commentaires de section clairs (# CONFIGURATION, # FAST GRAPH BUILDER), noms explicites (term_parents_map, topo_order), documentation inline.",
+    "E_hygiene": "Gestion d'erreurs (FileNotFoundError, on_bad_lines='skip'), import gc pour mémoire, seuils configurables, pas de hardcoding critique."
+  },
+  "summary": "Notebook d'inférence bien structuré avec pipeline clair en 4 étapes. Bonne modularité avec fonctions réutilisables et config centralisée. Manque un seed explicite (non nécessaire pour ce traitement déterministe). Documentation claire mais pas de markdown explicatif. Code propre sans dette technique."
+}

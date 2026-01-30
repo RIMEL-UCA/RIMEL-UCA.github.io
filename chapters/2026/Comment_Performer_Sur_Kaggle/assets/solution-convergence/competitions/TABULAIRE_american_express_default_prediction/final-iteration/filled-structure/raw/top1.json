@@ -1,0 +1,241 @@
+{
+  "tabular_features": {
+    "aggregation_features": {
+      "avg": false,
+      "count": true,
+      "first": false,
+      "last": true,
+      "max": true,
+      "mean": true,
+      "median": false,
+      "min": true,
+      "nunique": true,
+      "slope": false,
+      "std": true,
+      "sum": true
+    },
+    "time_series_features": {
+      "autoregressive-features": false,
+      "diff": true,
+      "diff-last-mean": false,
+      "diff1": false,
+      "diff2": false,
+      "diff3": false,
+      "diff4": false,
+      "diff5": false,
+      "ewm": true,
+      "fraction-last-mean": false,
+      "lag-1-month": false,
+      "lag-2-months": false,
+      "lag-3-months": false,
+      "lag-div": false,
+      "lag-features": false,
+      "lag-sub": false,
+      "lags": false,
+      "lags-divisions": false,
+      "last-10-statements": false,
+      "last-11-statements": false,
+      "last-12-statements": false,
+      "last-2-statements": false,
+      "last-3-statements": false,
+      "last-4-statements": false,
+      "last-5-statements": false,
+      "last-6-statements": false,
+      "last-7-statements": false,
+      "last-8-statements": false,
+      "last-9-statements": false,
+      "last-mean-diff": false,
+      "last3": true,
+      "last6": true,
+      "meta-features": false,
+      "moving-average": false,
+      "rank": true,
+      "ratio": false,
+      "trends": false,
+      "unstacked-13-months": false,
+      "ym-rank": true
+    }
+  },
+  "preprocessing": {
+    "data_denoising": {
+      "categorical-mapping": true,
+      "floor-multiplication": true,
+      "isle-identification": false,
+      "kmeans": false,
+      "pca": false
+    },
+    "fillna_strategy": {
+      "fill-with-1": false,
+      "fillna-0": true,
+      "linear-interpolation": false,
+      "log-transform-fillna-0": false,
+      "missing-value-embedding": false
+    },
+    "categorical_encoding": {
+      "label-encoding": true,
+      "one-hot-encoding": true,
+      "order-encoding": false,
+      "weight-of-evidence": false
+    },
+    "feature_scaling": {
+      "clip-95-percentile": false,
+      "clip-99-percentile": false,
+      "division-0.01": true,
+      "float16-conversion": false,
+      "normalization": false,
+      "rank-gauss": false,
+      "round-2-decimal": false,
+      "standardization": false
+    }
+  },
+  "transformer_models": {
+    "base_models": {
+      "transformer": false,
+      "transformerencoder": false
+    },
+    "fine_tuning_strategy": {
+      "pretrain-finetune": false
+    }
+  },
+  "loss_functions": {
+    "primary_loss": {
+      "auc": false,
+      "bcewithlogitsloss": false,
+      "binary-logloss": true,
+      "binarycrossentropy": false,
+      "cross-entropy": false,
+      "hinge-loss": false,
+      "huber-loss": false,
+      "rank-loss": false,
+      "rmse": false
+    }
+  },
+  "training_strategy": {
+    "optimizer": {
+      "adam": true,
+      "adamw": false
+    },
+    "learning_rate": 0.035,
+    "learning_rate_schedule": {
+      "cosineannealinglr": false,
+      "custom-schedule": false
+    },
+    "batch_size": 256,
+    "epochs": 10,
+    "regularization": {
+      "bagging-fraction": false,
+      "batchnorm1d": false,
+      "colsample-bylevel": false,
+      "colsample-bynode": false,
+      "colsample-bytree": false,
+      "dropout": true,
+      "feature-fraction": false,
+      "feature-fraction-bynode": false,
+      "gradient-clipping": false,
+      "lambda-l1": true,
+      "lambda-l2": true,
+      "min-child-weight": false,
+      "min-data-in-leaf": false,
+      "subsample": false,
+      "weight-decay": false
+    },
+    "cross_validation": {
+      "10-fold": false,
+      "10-fold-stratified": false,
+      "20-fold": false,
+      "5-fold": true,
+      "5-fold-stratified": false
+    }
+  },
+  "model_architecture": {
+    "pooling_strategy": {
+      "bi-gru": false,
+      "gru": true,
+      "gru-return-sequences-false": false,
+      "last-node": false,
+      "pack-padded-sequence": true
+    },
+    "additional_layers": {
+      "5-layer-nn": false,
+      "dense": false,
+      "embedding": false,
+      "fc": false,
+      "layernorm": true,
+      "leakyrelu": true,
+      "linear": true,
+      "mlp": false,
+      "softplus": false,
+      "stacked-bi-gru": false,
+      "transformblock": false
+    },
+    "dropout_rate": 0.5
+  },
+  "postprocessing": {
+    "ensemble_method": {
+      "ensemble": false,
+      "power-rank-blend": false,
+      "rank-ensemble": false,
+      "scipy-optimize-weights": false,
+      "simple-average": false,
+      "stacking-logisticregression": false,
+      "stacking-mlp": false,
+      "weighted-average": true,
+      "weighted-log10-odds": false
+    },
+    "prediction_averaging": {
+      "0.3-lgb-manual-+-0.35-lgb-manual-series-+-0.15-nn-series-+-0.1-nn-series-all": true,
+      "21-models-ensemble": false,
+      "3-gbdt-+-3-nn": false,
+      "3-lightgbm-models": false,
+      "4-xgboost-1-+-4-xgboost-2-+-4-keras-mlp": false,
+      "40-models-xgb-lgbm-catboost": false,
+      "50-models-ensemble": false,
+      "7-xgb-models": false,
+      "dart-+-nn": false,
+      "dart-lgbm-0.801-+-gbdt-lgbm-0.799-+-catboost-0.799": false,
+      "ensemble-with-public-dart": false,
+      "lightgbm-dart-0.799-+-nn-0.792": false,
+      "model-1:model-2:model-3-=-4:4:2": false,
+      "seed-blend-42-52-62": false,
+      "tabular-nn-+-gru-+-transformer-+-stack-model": false,
+      "xgboost-+-catboost-+-lightgbm-+-nn-+-bi-gru-+-transformer": false
+    }
+  },
+  "model_specific": {
+    "boosting_type": {
+      "dart": true,
+      "gbdt": false
+    }
+  },
+  "feature_engineering": {
+    "feature_selection_method": {
+      "adversarial-validation": false,
+      "feature-importance": true,
+      "forward-feature-selection": false,
+      "null-importance": false,
+      "permutation-importance": false,
+      "shap-importance": false,
+      "stepped-hierarchical-permutation-importance": false,
+      "time-series-cv": false
+    }
+  },
+  "frameworks": {
+    "deep_learning_framework": {
+      "keras": false,
+      "pytorch": true,
+      "pytorch-lightning": false,
+      "tensorflow": false
+    },
+    "libraries": {
+      "catboost": false,
+      "lightgbm": true,
+      "numpy": true,
+      "optuna": false,
+      "pandas": true,
+      "rapids-cudf": false,
+      "scipy": false,
+      "sklearn": true,
+      "xgboost": false
+    }
+  }
+}

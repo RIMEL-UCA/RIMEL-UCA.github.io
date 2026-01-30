@@ -1,0 +1,64 @@
+{
+  "comment": "Fichier JSON d'exemple illustrant tous les cas traités par le script de normalisation",
+  
+  "test_cases": {
+    "strings": {
+      "string_with_spaces": "  Text With Spaces  ",
+      "string_with_mixed_case": "MiXeD CaSe TeXt",
+      "string_with_special_chars": "Text_With—Different–Separators'And\"Quotes\"",
+      "string_with_multiple_dashes": "text---with---many---dashes",
+      "string_empty": "",
+      "string_null_text": "null",
+      "string_none_text": "None",
+      "string_na_text": "N/A",
+      "string_dash": "-",
+      "string_normal": "normal-text"
+    },
+    
+    "booleans": {
+      "boolean_true": true,
+      "boolean_false": false,
+      "boolean_null": null,
+      "boolean_string_true": "True",
+      "boolean_string_false": "false",
+      "boolean_string_yes": "yes",
+      "boolean_string_no": "NO",
+      "boolean_string_one": "1",
+      "boolean_string_zero": "0"
+    },
+    
+    "numbers": {
+      "number_int": 42,
+      "number_float": 3.14,
+      "number_zero": 0,
+      "number_null": null,
+      "number_string_int": "123",
+      "number_string_float": "45.67",
+      "number_string_invalid": "not a number",
+      "number_string_empty": ""
+    },
+    
+    "lists": {
+      "list_strings": ["XLNet", "xlnet", "XL Net", "BERT", "bert", "GPT"],
+      "list_with_duplicates": ["model-1", "Model 1", "MODEL_1", "model-2"],
+      "list_with_empty_values": ["valid", "", "null", "another", "-", "N/A", "last"],
+      "list_with_special_chars": ["Text_One", "Text—Two", "Text'Three", "text one"],
+      "list_mixed_types": ["text", 123, true, "null", null, "false"],
+      "list_empty": [],
+      "list_null": null
+    },
+    
+    "nested_objects": {
+      "level1": {
+        "level2": {
+          "nested_string": "  Nested TEXT  ",
+          "nested_number": "789",
+          "nested_boolean": "true",
+          "nested_list": ["Item_1", "item-1", "ITEM 1", "Item_2"]
+        }
+      }
+    },
+    
+    "hallucinated_field_example": "This field is not in the schema and should be removed"
+  }
+}

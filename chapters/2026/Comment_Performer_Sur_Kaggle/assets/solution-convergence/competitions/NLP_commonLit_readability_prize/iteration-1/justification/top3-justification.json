@@ -1,0 +1,165 @@
+{
+  "preprocessing": {
+    "tokenization_method": {
+      "transformer_tokenizer": {
+        "source": "Inferred from transformer models usage",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257896",
+        "quote": "Used transformer models requiring their respective tokenizers"
+      }
+    }
+  },
+  "transformer_models": {
+    "base_models": {
+      "microsoft/deberta-large": {
+        "source": "Kaggle discussion - 3rd place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257896",
+        "quote": "Final submission: 3 models simple average: deberta-large, roberta-large, electra-base"
+      },
+      "roberta-large": {
+        "source": "Kaggle discussion - 3rd place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257896",
+        "quote": "Final submission: 3 models simple average: deberta-large, roberta-large, electra-base"
+      },
+      "google/electra-base-discriminator": {
+        "source": "Kaggle discussion - 3rd place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257896",
+        "quote": "Final submission: 3 models simple average: deberta-large, roberta-large, electra-base"
+      }
+    },
+    "fine_tuning_strategy": {
+      "full_model_fine_tuning": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Danielhuxc/CLRP-solution",
+        "quote": "Full model fine-tuning evident from training configuration"
+      },
+      "pseudo_labeling": {
+        "source": "Kaggle discussion - 3rd place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257896",
+        "quote": "Pseudo-labeling with external data: for each fold, use the other 4 folds' predictions on pseudo data"
+      }
+    }
+  },
+  "loss_functions": {
+    "primary_loss": {
+      "mse": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Danielhuxc/CLRP-solution",
+        "quote": "MSE loss used for regression task"
+      }
+    }
+  },
+  "training_strategy": {
+    "optimizer": {
+      "adamw": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Danielhuxc/CLRP-solution",
+        "quote": "AdamW optimizer used in training configuration"
+      }
+    },
+    "learning_rate": {
+      "0.00002": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Danielhuxc/CLRP-solution",
+        "quote": "Learning rate around 2e-5 based on training configurations"
+      }
+    },
+    "learning_rate_schedule": {
+      "three_stage_decay": {
+        "source": "Kaggle discussion - 3rd place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257896",
+        "quote": "3-group decaying learning rate: freeze embeddings for certain ratio of training, then unfreeze all"
+      },
+      "custom_schedule": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Danielhuxc/CLRP-solution",
+        "quote": "Custom learning rate scheduler implementation with multi-stage decay"
+      }
+    },
+    "batch_size": {
+      "8": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Danielhuxc/CLRP-solution",
+        "quote": "Batch size typically 8-16 based on model configuration files"
+      }
+    },
+    "gradient_accumulation": {
+      "2": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Danielhuxc/CLRP-solution",
+        "quote": "Gradient accumulation steps used to increase effective batch size"
+      }
+    },
+    "epochs": {
+      "3": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Danielhuxc/CLRP-solution",
+        "quote": "Typical training duration is 3 epochs based on configuration"
+      }
+    },
+    "cross_validation": {
+      "5_fold": {
+        "source": "Kaggle discussion - 3rd place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257896",
+        "quote": "5-fold cross-validation strategy used"
+      }
+    }
+  },
+  "model_architecture": {
+    "pooling_strategy": {
+      "attention_pooling": {
+        "source": "Kaggle discussion - 3rd place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257896",
+        "quote": "Simple attention head for pooling"
+      },
+      "weighted_layer_average": {
+        "source": "Kaggle discussion - 3rd place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257896",
+        "quote": "Weighted average of hidden layers"
+      }
+    },
+    "attention_mechanism": {
+      "simple_attention_head": {
+        "source": "Kaggle discussion - 3rd place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257896",
+        "quote": "Simple attention head used in model architecture"
+      }
+    },
+    "custom_layers": {
+      "multi_sample_dropout": {
+        "source": "Kaggle discussion - 3rd place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257896",
+        "quote": "Multi-sample dropout (5 dropouts)"
+      }
+    }
+  },
+  "postprocessing": {
+    "ensemble_method": {
+      "simple_average": {
+        "source": "Kaggle discussion - 3rd place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257896",
+        "quote": "Final submission: 3 models simple average"
+      }
+    }
+  },
+  "frameworks": {
+    "deep_learning_framework": {
+      "pytorch": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Danielhuxc/CLRP-solution",
+        "quote": "PyTorch used as the primary deep learning framework"
+      }
+    },
+    "libraries": {
+      "transformers": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Danielhuxc/CLRP-solution",
+        "quote": "HuggingFace transformers library used for model implementation"
+      },
+      "sklearn": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Danielhuxc/CLRP-solution",
+        "quote": "Scikit-learn used for cross-validation and utilities"
+      }
+    }
+  }
+}

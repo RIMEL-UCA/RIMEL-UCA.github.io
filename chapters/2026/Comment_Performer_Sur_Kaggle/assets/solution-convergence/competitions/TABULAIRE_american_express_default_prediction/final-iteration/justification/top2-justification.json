@@ -1,0 +1,72 @@
+{
+  "primary_loss": {
+    "source": "Kaggle 2nd place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "'objective': 'cross_entropy'"
+  },
+  "learning_rate": {
+    "source": "Kaggle 2nd place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "'learning_rate': 0.01"
+  },
+  "regularization": {
+    "source": "Kaggle 2nd place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "'subsample': 0.8, 'subsample_freq': 1, 'feature_fraction': 0.2, 'feature_fraction_bynode':0.3, 'min_data_in_leaf': 2 ** 11"
+  },
+  "cross_validation": {
+    "source": "Kaggle 2nd place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "Our best single lgbm model was trained on 29xx features. 5 folds CV - no stratification by any option"
+  },
+  "ensemble_method": {
+    "source": "Kaggle 2nd place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "Blend -> Power (2) rank blend of Dart lgbm (0.801 public) / GBDT lgbm (0.799 public) / Catboost models (0.799 public)"
+  },
+  "prediction_averaging": {
+    "source": "Kaggle 2nd place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "Blend -> Power (2) rank blend of Dart lgbm (0.801 public) / GBDT lgbm (0.799 public) / Catboost models (0.799 public)"
+  },
+  "libraries": {
+    "source": "Kaggle 2nd place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "Our best single lgbm model... Blend -> Power (2) rank blend of Dart lgbm (0.801 public) / GBDT lgbm (0.799 public) / Catboost models (0.799 public)"
+  },
+  "aggregation_features": {
+    "source": "Kaggle 2nd place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "Aggregations -> { 'last', 'mean', 'std', 'median', 'min', 'max', 'nunique' }"
+  },
+  "time_series_features": {
+    "source": "Kaggle 2nd place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "Diffs -> diff between last and mean, last and min, last and max, last and std / Ratios -> ratio between last and mean, last and min, last and max, last and std / Lags -> Lag 1 / EWM -> Exponential Weighted Mean features (alpha = 0.2) / Normalization -> CustomerID normalization by mean / PCA -> PCA dim reduction to 20 and 40 features"
+  },
+  "data_denoising": {
+    "source": "Kaggle 2nd place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "Isle identification -> Features for checking if customer is Isle"
+  },
+  "categorical_encoding": {
+    "source": "Kaggle 2nd place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "Ordinal encoding for B_30, B_38, D_114, D_116, D_117, D_120, D_126, D_63, D_64, D_66, D_68 / Onehot encoding for Ordinal features"
+  },
+  "feature_scaling": {
+    "source": "Kaggle 2nd place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "Normalization -> CustomerID normalization by mean / Standardization -> Normalization for NaN values"
+  },
+  "boosting_type": {
+    "source": "Kaggle 2nd place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "Blend -> Power (2) rank blend of Dart lgbm (0.801 public) / GBDT lgbm (0.799 public)"
+  },
+  "feature_selection_method": {
+    "source": "Kaggle 2nd place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "Stepped Hierarchical Permutation Importance -> Drop low importance features at every iterations / Forward feature selection / Adversarial validation / 5-fold stratified time series split"
+  }
+}

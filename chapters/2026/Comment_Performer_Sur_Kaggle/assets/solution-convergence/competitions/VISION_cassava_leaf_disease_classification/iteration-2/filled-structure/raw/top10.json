@@ -1,0 +1,81 @@
+{
+  "preprocessing": {
+    "image_size": [
+      "384x384",
+      "512x512"
+    ],
+    "normalization": {},
+    "augmentation_techniques": [
+      "horizontal-flip",
+      "vertical-flip",
+      "zoom",
+      "crop",
+      "resize",
+      "mixup",
+      "cutmix"
+    ]
+  },
+  "transformer_models": {
+    "base_models": [
+      "deit-base-384",
+      "efficientnet-b4"
+    ],
+    "pretrained_checkpoints": [],
+    "fine_tuning_strategy": []
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "ousm-loss",
+      "taylor-loss",
+      "crossentropyloss"
+    ]
+  },
+  "training_strategy": {
+    "optimizer": [
+      "adam"
+    ],
+    "learning_rate": null,
+    "learning_rate_schedule": [
+      "cosine-annealing-with-warmup"
+    ],
+    "batch_size": 16,
+    "epochs": null,
+    "regularization": [
+      "label-smoothing",
+      "early-stopping",
+      "gradient-accumulation",
+      "fp16"
+    ],
+    "cross_validation": [
+      "5-fold"
+    ],
+    "external_data": [
+      "2019-data"
+    ],
+    "mixed_precision": true,
+    "progressive_resizing": null,
+    "noise_handling": [
+      "ousm-loss",
+      "data-removal"
+    ]
+  },
+  "model_architecture": {
+    "pooling_strategy": [],
+    "additional_layers": [],
+    "dropout_rate": null
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "averaging"
+    ],
+    "prediction_averaging": [
+      "tta"
+    ]
+  },
+  "frameworks": {
+    "deep_learning_framework": [
+      "pytorch"
+    ],
+    "libraries": []
+  }
+}

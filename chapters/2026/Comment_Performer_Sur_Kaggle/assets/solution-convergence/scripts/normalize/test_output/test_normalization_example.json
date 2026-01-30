@@ -1,0 +1,81 @@
+{
+  "comment": "fichier-json-d-exemple-illustrant-tous-les-cas-traités-par-le-script-de-normalisation",
+  "test_cases": {
+    "strings": {
+      "string_with_spaces": "text-with-spaces",
+      "string_with_mixed_case": "mixed-case-text",
+      "string_with_special_chars": "text-with-different-separators-and-quotes",
+      "string_with_multiple_dashes": "text-with-many-dashes",
+      "string_empty": "",
+      "string_null_text": "",
+      "string_none_text": "",
+      "string_na_text": "",
+      "string_dash": "",
+      "string_normal": "normal-text"
+    },
+    "booleans": {
+      "boolean_true": true,
+      "boolean_false": false,
+      "boolean_null": false,
+      "boolean_string_true": true,
+      "boolean_string_false": false,
+      "boolean_string_yes": true,
+      "boolean_string_no": false,
+      "boolean_string_one": true,
+      "boolean_string_zero": false
+    },
+    "numbers": {
+      "number_int": 42,
+      "number_float": 3.14,
+      "number_zero": 0,
+      "number_null": null,
+      "number_string_int": 123,
+      "number_string_float": 45.67,
+      "number_string_invalid": null,
+      "number_string_empty": null
+    },
+    "lists": {
+      "list_strings": [
+        "xlnet",
+        "bert",
+        "gpt"
+      ],
+      "list_with_duplicates": [
+        "model-1",
+        "model-2"
+      ],
+      "list_with_empty_values": [
+        "valid",
+        "another",
+        "last"
+      ],
+      "list_with_special_chars": [
+        "text-one",
+        "text-two",
+        "text-three"
+      ],
+      "list_mixed_types": [
+        "text",
+        123,
+        true,
+        "false"
+      ],
+      "list_empty": [],
+      "list_null": []
+    },
+    "nested_objects": {
+      "level1": {
+        "level2": {
+          "nested_string": "nested-text",
+          "nested_number": 789,
+          "nested_boolean": true,
+          "nested_list": [
+            "item-1",
+            "item-2"
+          ]
+        }
+      }
+    },
+    "missing_in_input": ""
+  }
+}

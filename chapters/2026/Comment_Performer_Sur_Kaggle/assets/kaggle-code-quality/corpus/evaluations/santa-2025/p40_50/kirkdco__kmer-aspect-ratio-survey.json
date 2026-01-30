@@ -1,0 +1,22 @@
+{
+  "competition": "santa-2025",
+  "stratum": "p40_50",
+  "ref": "kirkdco/kmer-aspect-ratio-survey",
+  "local_main_file": "corpus\\santa-2025\\notebooks\\p40_50\\kirkdco__kmer-aspect-ratio-survey\\kmer-aspect-ratio-survey.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 20,
+    "B_modularite": 20,
+    "C_reproductibilite": 20,
+    "D_lisibilite": 20,
+    "E_hygiene": 15
+  },
+  "score_total_100": 95,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline pédagogique exemplaire: ## Competition Context → ## K-mer Strategy → ## Setup → ## Tree Geometry → ## Core Functions. Storytelling complet.",
+    "B_modularite": "Classe ChristmasTree avec docstrings détaillées, fonctions réutilisables, KMER_NAMES dict, OUTPUT_DIR configurable.",
+    "C_reproductibilite": "getcontext().prec=25, SCALE=1e15 documenté, CMA-ES optimizer, OUTPUT_DIR pour sauvegarde résultats.",
+    "D_lisibilite": "Documentation markdown exceptionnelle avec formules LaTeX, explications K-mer, visualisations. Docstrings complets.",
+    "E_hygiene": "warnings.filterwarnings('ignore'), os.makedirs(exist_ok=True), Decimal pour précision, Shapely pour géométrie."
+  },
+  "summary": "Notebook pédagogique exemplaire sur K-mer optimization pour tree packing. Documentation markdown exceptionnelle avec formules LaTeX et explications détaillées. Classe ChristmasTree avec docstrings complets. CMA-ES optimizer. Visualisations matplotlib. Qualité tutoriel académique."
+}

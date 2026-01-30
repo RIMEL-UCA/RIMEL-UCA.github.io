@@ -1,0 +1,91 @@
+{
+  "fields_to_add": [
+    {
+      "field_path": "tabular_features.aggregation_features",
+      "type": "list",
+      "rationale": "Tabular time-series competitions require aggregation features (mean, std, min, max, last, first). This was critical in all solutions for this competition, replacing NLP embeddings.",
+      "sources": [
+        "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348097: basic aggregation per customer (mean, std, max, min, first, last, count, nunique)",
+        "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348103: train_num_agg = train.groupby('customer_ID')[num_features].agg(['mean', 'std', 'min', 'max', 'last'])",
+        "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111: train_num_agg = train.groupby('customer_ID')[num_features].agg(['first', 'mean', 'std', 'min', 'max', 'last'])",
+        "https://github.com/jxzly/Kaggle-American-Express-Default-Prediction-1st-solution: all_aggregations = {'agg_func': ['last','mean','std','median','min','max','nunique']}"
+      ]
+    },
+    {
+      "field_path": "tabular_features.time_series_features",
+      "type": "list",
+      "rationale": "Time-series specific features like lags, diffs, rolling statistics were used extensively across solutions, replacing contextual embeddings concept for tabular data.",
+      "sources": [
+        "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348097: last difference features(aggregation with diff(1).iloc[-1], diff(2).iloc[-1], …)",
+        "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111: Lag Features: Last - First, Last / First, lag_sub, lag_div",
+        "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348140: Avg / Max / Min / Std / Slope of the last 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 and 12 statements",
+        "https://github.com/jxzly/Kaggle-American-Express-Default-Prediction-1st-solution: 'diff_func': ['first','mean','std','median','min','max'], 'lags': [1,2,3,6,11]"
+      ]
+    },
+    {
+      "field_path": "preprocessing.data_denoising",
+      "type": "list",
+      "rationale": "Data denoising was critical in this competition to remove injected noise, replacing text_cleaning for tabular data.",
+      "sources": [
+        "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111: Remove detected noise -> (we had options here but ended with unified single one). We used 'isle' identification",
+        "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111: There is no doubt that some Noise was injected in data",
+        "https://github.com/jxzly/Kaggle-American-Express-Default-Prediction-1st-solution: denoise function: df['D_63'] = df['D_63'].apply(lambda t: {'CR':0, 'XZ':1, 'XM':2, 'CO':3, 'CL':4, 'XL':5}[t])"
+      ]
+    },
+    {
+      "field_path": "preprocessing.fillna_strategy",
+      "type": "list",
+      "rationale": "Handling missing values is crucial in tabular data, with various strategies used (fillna(0), fillna(-1), linear interpolation), replacing tokenization for tabular data.",
+      "sources": [
+        "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348128: filling NA by linear interpolation",
+        "https://github.com/jxzly/Kaggle-American-Express-Default-Prediction-1st-solution: for NN model, all data fillna(0)",
+        "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348128: train = train.fillna(-0.5)",
+        "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348230: Adding Embeddings to the Missing values"
+      ]
+    },
+    {
+      "field_path": "preprocessing.categorical_encoding",
+      "type": "list",
+      "rationale": "Categorical feature encoding (label encoding, one-hot, ordinal) was used across all solutions, replacing lowercase for tabular data.",
+      "sources": [
+        "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348128: one hot encoding of each category features",
+        "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348140: Categorical features Weight of Evidence encoding",
+        "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111: order encoding, onehot encoding",
+        "https://github.com/jxzly/Kaggle-American-Express-Default-Prediction-1st-solution: df = one_hot_encoding(df,cat_features,False)"
+      ]
+    },
+    {
+      "field_path": "preprocessing.feature_scaling",
+      "type": "list",
+      "rationale": "Feature scaling/normalization strategies (standardization, rank gauss, clipping) were essential for neural network models, replacing augmentation techniques.",
+      "sources": [
+        "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348140: For the MLP I scaled the data using rank gauss",
+        "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348230: Clip the values of the features to 95th or 99th percentile",
+        "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111: Normalizations (x - m) / s. We did temporal shift normalization",
+        "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348230: x_train = np.clip(x_train, -3.0, 3.0)"
+      ]
+    },
+    {
+      "field_path": "model_specific.boosting_type",
+      "type": "list",
+      "rationale": "Boosting type (DART vs GBDT vs gbtree) was a critical hyperparameter discussed across all tree-based solutions, replacing pretrained checkpoints for tabular models.",
+      "sources": [
+        "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111: 'boosting_type': 'dart'. DART never worked better and here we have proof that in DS 'all depends'",
+        "https://github.com/jxzly/Kaggle-American-Express-Default-Prediction-1st-solution: 'boosting': 'dart'",
+        "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348152: LightGBM (w/ dart, w/o dart)",
+        "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348189: I could not get dart boosting to outperform gbtree on my setup"
+      ]
+    },
+    {
+      "field_path": "feature_engineering.feature_selection_method",
+      "type": "list",
+      "rationale": "Feature selection methods (permutation importance, SHAP, adversarial validation, null importance) were critical in managing 1000s-6000s of features, replacing auxiliary losses concept.",
+      "sources": [
+        "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111: Stepped hierarchical permutation importance, Forward feature selection, Adversarial validation",
+        "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348140: I created an iterative process using shap feature importances and drop the bad ones. Then I did some Aversarial Validation",
+        "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348128: Adversarial validation. Null importance. Delete features of high importance in train/private adversarial validation",
+        "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348189: Selected features by permutation importances on the validation set"
+      ]
+    }
+  ]
+}

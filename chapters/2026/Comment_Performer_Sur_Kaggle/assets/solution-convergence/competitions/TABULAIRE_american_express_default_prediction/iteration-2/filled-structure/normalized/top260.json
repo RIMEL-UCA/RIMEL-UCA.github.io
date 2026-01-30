@@ -1,0 +1,98 @@
+{
+  "tabular_features": {
+    "aggregation_features": [
+      "mean",
+      "std",
+      "min",
+      "max",
+      "last"
+    ],
+    "time_series_features": []
+  },
+  "preprocessing": {
+    "data_denoising": [],
+    "fillna_strategy": [
+      "missing-value-embedding",
+      "fill-with-1"
+    ],
+    "categorical_encoding": [],
+    "feature_scaling": [
+      "clip-95-percentile",
+      "clip-99-percentile"
+    ]
+  },
+  "transformer_models": {
+    "base_models": [
+      "transformer"
+    ],
+    "fine_tuning_strategy": []
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "bcewithlogitsloss",
+      "hinge-loss",
+      "rank-loss"
+    ]
+  },
+  "training_strategy": {
+    "optimizer": [
+      "adamw"
+    ],
+    "learning_rate": 0.001,
+    "learning_rate_schedule": [
+      "cosineannealinglr"
+    ],
+    "batch_size": 4096,
+    "epochs": 12,
+    "regularization": [
+      "weight-decay",
+      "dropout",
+      "batchnorm1d",
+      "gradient-clipping"
+    ],
+    "cross_validation": [
+      "5-fold-stratified"
+    ]
+  },
+  "model_architecture": {
+    "pooling_strategy": [
+      "gru"
+    ],
+    "additional_layers": [
+      "embedding",
+      "transformblock",
+      "linear",
+      "softplus",
+      "batchnorm1d"
+    ],
+    "dropout_rate": 0.5
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "ensemble"
+    ],
+    "prediction_averaging": [
+      "dart-+-nn",
+      "tabular-nn-+-gru-+-transformer-+-stack-model"
+    ]
+  },
+  "model_specific": {
+    "boosting_type": [
+      "dart"
+    ]
+  },
+  "feature_engineering": {
+    "feature_selection_method": []
+  },
+  "frameworks": {
+    "deep_learning_framework": [
+      "pytorch"
+    ],
+    "libraries": [
+      "lightgbm",
+      "sklearn",
+      "pandas",
+      "numpy"
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "embeddings": {
+    "sentence_embeddings": [],
+    "contextual_embeddings": []
+  },
+  "preprocessing": {
+    "external_data_sources": [],
+    "tokenization_method": [],
+    "augmentation_techniques": []
+  },
+  "transformer_models": {
+    "base_models": [],
+    "mlm_pretraining": false,
+    "fine_tuning_strategy": []
+  },
+  "loss_functions": {
+    "primary_loss": []
+  },
+  "training_strategy": {
+    "optimizer": [],
+    "learning_rate": null,
+    "learning_rate_schedule": [],
+    "batch_size": null,
+    "epochs": null,
+    "weight_decay": null,
+    "pseudo_labeling": false,
+    "seed_averaging": false,
+    "regularization": [],
+    "cross_validation": []
+  },
+  "model_architecture": {
+    "pooling_strategy": [],
+    "layer_reinitialize": false
+  },
+  "postprocessing": {
+    "ensemble_method": [],
+    "stacking_models": []
+  },
+  "frameworks": {
+    "deep_learning_framework": [],
+    "libraries": []
+  }
+}

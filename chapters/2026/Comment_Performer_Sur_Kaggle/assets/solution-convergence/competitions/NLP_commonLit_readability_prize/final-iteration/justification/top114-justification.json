@@ -1,0 +1,173 @@
+{
+  "embeddings": {
+    "contextual_embeddings": {}
+  },
+  "preprocessing": {
+    "external_data_sources": {},
+    "tokenization_method": {
+      "transformer-tokenizer": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258554",
+        "quote": "Used transformer tokenizers for BERT variants"
+      }
+    },
+    "augmentation_techniques": {
+      "standard-error-augmentation": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258554",
+        "quote": "I noticed the standard_error is a key feature 3 days before the deadline; Standard Error as a Feature (MOST IMPORTANT)"
+      }
+    },
+    "additional_features": {}
+  },
+  "transformer_models": {
+    "base_models": {
+      "funnel-transformer/large": {
+        "source": "Kaggle Discussion + Table",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258554",
+        "quote": "Funnel | large | Attention | 0.4836"
+      },
+      "google/electra-large-discriminator": {
+        "source": "Kaggle Discussion + Table",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258554",
+        "quote": "Electra | large | Attentions (using last 4 layers) | 0.4760; Electra | large | Attentions-Conv1D | 0.4818"
+      },
+      "roberta-base": {
+        "source": "Kaggle Discussion + Table",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258554",
+        "quote": "Roberta | base | Attention | 0.4746"
+      },
+      "roberta-large": {
+        "source": "Kaggle Discussion + Table",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258554",
+        "quote": "Roberta | large | Attentions (using last 4 layers) | 0.4757; Roberta | large | Attentions-Conv1D | 0.4761; Roberta | large | Meanpooling | 0.4772"
+      },
+      "xlnet-large-cased": {
+        "source": "Kaggle Discussion + Table",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258554",
+        "quote": "XLNet | large | Attentions (using last 4 layers) | 0.4850"
+      }
+    },
+    "fine_tuning_strategy": {
+      "full-model-fine-tuning": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258554",
+        "quote": "I did not use MLM pretraining nor external datasets. Just train dataset only."
+      }
+    }
+  },
+  "loss_functions": {
+    "primary_loss": {
+      "mse": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258554",
+        "quote": "MSE loss used for BERT variants"
+      }
+    }
+  },
+  "training_strategy": {
+    "optimizer": {
+      "adamw": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258554",
+        "quote": "AdamW optimizer implied by transformer training"
+      }
+    },
+    "learning_rate": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258554",
+      "quote": "Learning rate not explicitly mentioned in discussion"
+    },
+    "learning_rate_schedule": {},
+    "batch_size": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258554",
+      "quote": "Batch size not explicitly specified"
+    },
+    "epochs": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258554",
+      "quote": "Epochs not explicitly specified"
+    },
+    "weight_decay": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258554",
+      "quote": "Weight decay not explicitly specified"
+    },
+    "regularization": {},
+    "cross_validation": {
+      "5-fold": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258554",
+        "quote": "Used k-fold cross-validation (implied by OOF predictions)"
+      },
+      "stratified-kfold": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258554",
+        "quote": "Stratify the dataset on prediction error; Stratified K Fold on target, s.e. and target & s.e."
+      }
+    }
+  },
+  "model_architecture": {
+    "pooling_strategy": {
+      "attention-conv1d": {
+        "source": "Kaggle Discussion + Table",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258554",
+        "quote": "Roberta | large | Attentions-Conv1D | 0.4761; Electra | large | Attentions-Conv1D | 0.4818"
+      },
+      "attention-last-4-layers": {
+        "source": "Kaggle Discussion + Table",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258554",
+        "quote": "Roberta | large | Attentions (using last 4 layers) | 0.4757; Electra | large | Attentions (using last 4 layers) | 0.4760; XLNet | large | Attentions (using last 4 layers) | 0.4850"
+      },
+      "attention-pooling": {
+        "source": "Kaggle Discussion + Table",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258554",
+        "quote": "Roberta | base | Attention | 0.4746; Funnel | large | Attention | 0.4836"
+      },
+      "mean-pooling": {
+        "source": "Kaggle Discussion + Table",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258554",
+        "quote": "Roberta | large | Meanpooling | 0.4772"
+      }
+    }
+  },
+  "postprocessing": {
+    "ensemble_method": {
+      "stacking": {
+        "source": "Kaggle Discussion + Image",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258554",
+        "quote": "Here is the stacking scheme figure.It is very complicated, especially standard_error prediction part; Stacking Strategy (weighted ensemble)"
+      },
+      "stacking-lightgbm": {
+        "source": "Kaggle Discussion + Table",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258554",
+        "quote": "I deal with this problem by using LightGBM for standard_error prediction; LGBM using BERTs Prediction + S.E. | 0.454 | 0.458 | 0.459; Stacking BERTs + LGBM | 0.452 | 0.456 | 0.458"
+      },
+      "weighted-average": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258554",
+        "quote": "Stacking Strategy (weighted ensemble)"
+      }
+    },
+    "stacking_models": {
+      "lightgbm": {
+        "source": "Kaggle Discussion + Table",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258554",
+        "quote": "I deal with this problem by using LightGBM for standard_error prediction; The features for the model were engineered from the excerpts (for example, number of sentences) and BERT variants predictions"
+      }
+    }
+  },
+  "frameworks": {
+    "pytorch": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258554",
+      "quote": "PyTorch framework used (referenced @rhtsingh, @maunish, @andretugan notebooks)"
+    },
+    "transformers": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258554",
+      "quote": "Used Hugging Face transformers library for BERT variants"
+    }
+  }
+}

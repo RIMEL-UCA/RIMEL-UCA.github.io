@@ -1,0 +1,86 @@
+{
+  "embeddings": {
+    "word_embeddings": [
+      "glove-300d"
+    ],
+    "contextual_embeddings": [
+      "sentence-transformers/paraphrase-minilm-l6-v2"
+    ]
+  },
+  "preprocessing": {
+    "text_cleaning": [
+      "remove-stopwords"
+    ],
+    "tokenization_method": [
+      "sentencepiece"
+    ],
+    "augmentation_techniques": [
+      "backtranslation"
+    ]
+  },
+  "transformer_models": {
+    "base_models": [
+      "albert-base-v2",
+      "electra-small"
+    ],
+    "fine_tuning_strategy": [
+      "lora",
+      "adapter-tuning"
+    ]
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "mse"
+    ],
+    "auxiliary_losses": [
+      "contrastive-loss"
+    ]
+  },
+  "training_strategy": {
+    "optimizer": [
+      "adamw"
+    ],
+    "learning_rate": 5e-05,
+    "learning_rate_schedule": [
+      "linear-warmup-decay"
+    ],
+    "epochs": 5,
+    "regularization": [
+      "weight-decay",
+      "layer-normalization"
+    ],
+    "cross_validation": [
+      "stratified-kfold"
+    ]
+  },
+  "model_architecture": {
+    "pooling_strategy": [
+      "cls-token",
+      "max-pooling"
+    ],
+    "additional_layers": [
+      "lstm-layer",
+      "attention-layer"
+    ],
+    "dropout_rate": 0.2
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "exemple",
+      "stacking"
+    ],
+    "prediction_averaging": [
+      "geometric-mean"
+    ]
+  },
+  "frameworks": {
+    "deep_learning_framework": [
+      "tensorflow"
+    ],
+    "libraries": [
+      "transformers",
+      "sentence-transformers",
+      "keras"
+    ]
+  }
+}

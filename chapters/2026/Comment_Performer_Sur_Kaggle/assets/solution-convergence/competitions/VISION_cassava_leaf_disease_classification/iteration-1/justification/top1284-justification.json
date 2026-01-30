@@ -1,0 +1,57 @@
+{
+  "augmentation_techniques": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "I started off with the basic image augmentations like random resized cropping, transposing the image, horizontal and vertical flipping, random hue, saturation, value,brightness and contrast adjustments... I got a significant boost in the f1 scores across all the classes after adding CoarseDropout, CutOut and CLAHE... Finally using CutMix boosted class 0's and 1's f1-scores"
+  },
+  "base_models": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "I decided to train two separate models. One being ResNet50_32x4 and the other EfficientNet-B4"
+  },
+  "pretrained_checkpoints": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "Both were initialized with pretrained ImageNet weights"
+  },
+  "primary_loss": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "I tried using a weighted cross entropy loss to overcome the class imbalance, but it did not show any f1-score improvement over cross entropy loss. So I went with the plain cross entropy loss"
+  },
+  "optimizer": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "I used SGD optimizer with Cosine Annealing learning rate scheduler"
+  },
+  "learning_rate_schedule": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "I used SGD optimizer with Cosine Annealing learning rate scheduler, decaying the lr every epoch"
+  },
+  "cross_validation": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "I used 5-folds to estimate the best performing model, data augmentation schemes and hyper-parameters, by averaging the predictions on the hold out across all k-folds... I used stratified K-fold that makes sure that the percentage of samples for each class are preserved across the folds"
+  },
+  "ensemble_method": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "To boost my accuracy I used a soft voting ensemble on my best performing Resnet50_32x4 and EfficientNet-B4 model... The best score I got with was Resnext50 weighted 0.6 and EfficientNet-B4 weighted 0.4"
+  },
+  "prediction_averaging": {
+    "source": "Top1284 solution description",
+    "link": "solutions/top1284.txt",
+    "quote": "I saw an increase in my public score accuracy after using test time augmentations. I used 10 rounds of predictions for each image, where every time random augmentations are applied to it and then the predictions are averaged"
+  },
+  "deep_learning_framework": {
+    "source": "Top1284 solution code",
+    "link": "solutions/top1284.txt",
+    "quote": "import torch"
+  },
+  "libraries": {
+    "source": "Top1284 solution code",
+    "link": "solutions/top1284.txt",
+    "quote": "import albumentations"
+  }
+}

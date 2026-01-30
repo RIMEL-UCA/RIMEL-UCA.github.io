@@ -1,0 +1,44 @@
+{
+  "image_size": {
+    "320x320": {
+      "source": "Top637 solution description",
+      "link": "solutions/top637.txt",
+      "quote": "The ensemble SEResNeXt50_32x4d + SEResNet152d_320"
+    },
+    "384x384": {
+      "source": "Top637 solution description",
+      "link": "solutions/top637.txt",
+      "quote": "ViT_base_384 public : 0.899 -> private : 0.890"
+    }
+  },
+  "cutmix": {
+    "source": "Top637 solution description",
+    "link": "solutions/top637.txt",
+    "quote": "And, I think the cause of weak model is below: using cutmix"
+  },
+  "deit-base-384": {
+    "source": "Top637 solution description",
+    "link": "solutions/top637.txt",
+    "quote": "ViT_base_384 public : 0.899 -> private : 0.890"
+  },
+  "efficientnet-b4": {
+    "source": "Top637 solution description",
+    "link": "solutions/top637.txt",
+    "quote": "EfficientNetB4 public : 0.899 -> private : 0.890"
+  },
+  "seresnet152d": {
+    "source": "Top637 solution description",
+    "link": "solutions/top637.txt",
+    "quote": "The ensemble SEResNeXt50_32x4d + SEResNet152d_320"
+  },
+  "seresnext50-32x4d": {
+    "source": "Top637 solution description",
+    "link": "solutions/top637.txt",
+    "quote": "SEResNext50 32x_4d public : 0.898 -> private : 0.895"
+  },
+  "weighted-ensemble": {
+    "source": "Top637 solution description",
+    "link": "solutions/top637.txt",
+    "quote": "In final, I weights each model with 1 : 1.2 : 1.2 for ensemble."
+  }
+}

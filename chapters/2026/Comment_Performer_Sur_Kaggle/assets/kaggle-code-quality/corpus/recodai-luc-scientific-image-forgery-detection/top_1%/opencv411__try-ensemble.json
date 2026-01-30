@@ -1,0 +1,22 @@
+{
+  "competition": "recodai-luc-scientific-image-forgery-detection",
+  "stratum": "top_1%",
+  "ref": "opencv411/try-ensemble",
+  "local_main_file": "corpus\\recodai-luc-scientific-image-forgery-detection\\notebooks\\top_1%\\opencv411__try-ensemble\\try-ensemble.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 15,
+    "B_modularite": 20,
+    "C_reproductibilite": 20,
+    "D_lisibilite": 15,
+    "E_hygiene": 15
+  },
+  "score_total_100": 85,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline DL: Overview markdown → GPU utils → Dataset → Model (DINOv2+Decoder) → Inference. Sections # commentées.",
+    "B_modularite": "Classes (ForgerySegDataset, DinoTinyDecoder, DinoSegmenter), fonction clear() GPU cleanup, seed_everything(). Architecture PyTorch propre.",
+    "C_reproductibilite": "seed_everything(42) avec cudnn.deterministic=True, cudnn.benchmark=False. Chemins constants (BASE_DIR, DINO_PATH).",
+    "D_lisibilite": "Markdown overview anglais, commentaires chinois inline ('# 释放GPU辅助函数'), noms explicites (IMG_SIZE, BATCH_SIZE).",
+    "E_hygiene": "clear() fonction GPU cleanup complète (gc.collect, cuda.empty_cache, synchronize, reset_stats), with torch.no_grad()."
+  },
+  "summary": "Notebook DINOv2+UNet pour forgery detection avec architecture hybride CNN-Transformer. seed_everything robuste. Fonction clear() GPU exemplaire. Dataset class et model class bien structurés. Commentaires bilingues (anglais/chinois). Inference avec TTA optionnel."
+}

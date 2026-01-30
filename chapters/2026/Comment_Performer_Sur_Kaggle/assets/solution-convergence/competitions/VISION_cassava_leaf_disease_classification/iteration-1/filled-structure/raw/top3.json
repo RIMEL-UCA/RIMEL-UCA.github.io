@@ -1,0 +1,73 @@
+{
+  "embeddings": {
+    "word_embeddings": [],
+    "contextual_embeddings": []
+  },
+  "preprocessing": {
+    "text_cleaning": [],
+    "tokenization_method": [],
+    "lowercase": null,
+    "augmentation_techniques": [
+      "RandomResizedCrop",
+      "Transpose",
+      "HorizontalFlip",
+      "VerticalFlip",
+      "ShiftScaleRotate",
+      "Resize"
+    ]
+  },
+  "transformer_models": {
+    "base_models": [
+      "ViT-B/16"
+    ],
+    "pretrained_checkpoints": [],
+    "fine_tuning_strategy": []
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "CrossEntropyLoss"
+    ],
+    "auxiliary_losses": []
+  },
+  "training_strategy": {
+    "optimizer": [
+      "Adam"
+    ],
+    "learning_rate": null,
+    "learning_rate_schedule": [
+      "LambdaLR"
+    ],
+    "batch_size": null,
+    "epochs": null,
+    "regularization": [
+      "label smoothing",
+      "Multi-Dropout"
+    ],
+    "cross_validation": [
+      "5-fold StratifiedKFold"
+    ]
+  },
+  "model_architecture": {
+    "pooling_strategy": [],
+    "additional_layers": [
+      "Linear"
+    ],
+    "dropout_rate": 0.5
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "Weighted Averaging"
+    ],
+    "prediction_averaging": [
+      "5x TTA"
+    ]
+  },
+  "frameworks": {
+    "deep_learning_framework": [
+      "PyTorch"
+    ],
+    "libraries": [
+      "Albumentations"
+    ]
+  }
+}

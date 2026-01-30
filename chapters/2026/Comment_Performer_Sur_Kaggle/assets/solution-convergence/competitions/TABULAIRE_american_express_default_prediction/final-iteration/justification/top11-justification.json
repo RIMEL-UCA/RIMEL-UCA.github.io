@@ -1,0 +1,67 @@
+{
+  "primary_loss": {
+    "source": "Kaggle 11th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "'metric': 'binary_logloss'"
+  },
+  "learning_rate": {
+    "source": "Kaggle 11th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "'learning_rate': 0.01"
+  },
+  "regularization": {
+    "source": "Kaggle 11th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "'lambda_l2': 2, 'feature_fraction': 0.20, 'bagging_freq': 10, 'bagging_fraction': 0.50"
+  },
+  "cross_validation": {
+    "source": "Kaggle 11th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "Use stratfiedKfold(k=5). kfold = StratifiedKFold(n_splits = CFG.n_folds, shuffle = True, random_state = CFG.seed) where CFG.n_folds = 5"
+  },
+  "ensemble_method": {
+    "source": "Kaggle 11th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "Use 3 LightGBM models and rank ensemble (weighted average). Each model use different feature set"
+  },
+  "prediction_averaging": {
+    "source": "Kaggle 11th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "Ensemble weight model_1:model_2:model_3 = 4:4:2. Model_1: Not use meta features. Model_2: Use meta features & large features (not use null importance feature selection). Model_3: Use meta features & small features (use null importance feature selection)"
+  },
+  "libraries": {
+    "source": "Kaggle 11th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "import lightgbm as lgb, sklearn, pandas, numpy"
+  },
+  "aggregation_features": {
+    "source": "Kaggle 11th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "Aggregation features using mean, std, min, max, last, count, nunique, and first"
+  },
+  "time_series_features": {
+    "source": "Kaggle 11th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "Lag features (last - first, last / first), lag_sub, lag_div interactions"
+  },
+  "categorical_encoding": {
+    "source": "Kaggle 11th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "Label encoding for categorical features"
+  },
+  "feature_scaling": {
+    "source": "Kaggle 11th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "float16 conversion and standardization"
+  },
+  "boosting_type": {
+    "source": "Kaggle 11th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "'boosting_type': 'dart'"
+  },
+  "feature_selection_method": {
+    "source": "Kaggle 11th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "Use adversarial validation, null importance feature selection, and permutation importance"
+  }
+}

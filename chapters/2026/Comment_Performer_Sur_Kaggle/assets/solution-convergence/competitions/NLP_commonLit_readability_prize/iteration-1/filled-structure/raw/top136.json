@@ -1,0 +1,45 @@
+{
+  "embeddings": {
+    "contextual_embeddings": []
+  },
+  "preprocessing": {
+    "text_cleaning": [],
+    "augmentation_techniques": [],
+    "tokenization_method": ["transformer_tokenizer"]
+  },
+  "transformer_models": {
+    "base_models": [
+      "roberta-base",
+      "roberta-large"
+    ],
+    "fine_tuning_strategy": ["full_model_fine_tuning", "mlm_pretraining"]
+  },
+  "loss_functions": {
+    "primary_loss": ["mse"],
+    "auxiliary_loss": []
+  },
+  "training_strategy": {
+    "optimizer": ["adamw"],
+    "learning_rate": 0.00003,
+    "learning_rate_schedule": [],
+    "batch_size": 16,
+    "gradient_accumulation": [],
+    "epochs": 4,
+    "cross_validation": ["5_fold"],
+    "regularization": ["seed_averaging"]
+  },
+  "model_architecture": {
+    "pooling_strategy": ["cls_token", "mean_pooling"],
+    "attention_mechanism": [],
+    "custom_layers": ["custom_head"]
+  },
+  "postprocessing": {
+    "ensemble_method": ["simple_average"],
+    "prediction_refinement": [],
+    "external_models": ["extratrees_on_embeddings"]
+  },
+  "frameworks": {
+    "deep_learning_framework": ["pytorch"],
+    "libraries": ["transformers", "sklearn"]
+  }
+}

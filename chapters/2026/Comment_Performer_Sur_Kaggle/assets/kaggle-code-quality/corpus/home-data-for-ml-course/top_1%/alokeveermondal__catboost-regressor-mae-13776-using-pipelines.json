@@ -1,0 +1,22 @@
+{
+  "competition": "home-data-for-ml-course",
+  "stratum": "top_1%",
+  "ref": "alokeveermondal/catboost-regressor-mae-13776-using-pipelines",
+  "local_main_file": "corpus\\home-data-for-ml-course\\notebooks\\top_1%\\alokeveermondal__catboost-regressor-mae-13776-using-pipelines\\catboost-regressor-mae-13776-using-pipelines.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 10,
+    "B_modularite": 10,
+    "C_reproductibilite": 10,
+    "D_lisibilite": 5,
+    "E_hygiene": 5
+  },
+  "score_total_100": 40,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline sklearn (preprocessor + model) mais structure désordonnée. Import CatBoost mais utilise RandomForest. Pas de sections claires.",
+    "B_modularite": "ColumnTransformer et Pipeline sklearn, fonction score(), mais code commenté partout, peu de structure.",
+    "C_reproductibilite": "random_state=0, cv=5, mais n_estimators=400 sans justification, pas de seed global.",
+    "D_lisibilite": "Aucun markdown, aucun commentaire explicatif, noms génériques (my_pipeline, my_cols).",
+    "E_hygiene": "Code mort massif (10+ cellules commentées), titre mentionne CatBoost mais utilise RandomForest, chemin relatif '../input/'."
+  },
+  "summary": "Notebook désorganisé avec titre trompeur (mentionne CatBoost mais utilise RandomForest). Code mort massif (nombreuses cellules commentées). Pipeline sklearn fonctionnel mais mal documenté. Aucune explication ni markdown. Incohérence entre titre et contenu réel."
+}

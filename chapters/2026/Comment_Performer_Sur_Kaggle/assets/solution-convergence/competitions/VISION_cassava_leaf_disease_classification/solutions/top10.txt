@@ -1,0 +1,62 @@
+It was my first Kaggle competition, and my goal was to jump into the top 200 and get a silver medal, but luckily I ended up with gold, and I'm very happy with the result. On the other hand, I understand that it was a lottery, and many participants have better models, but they did not choose it. I decided to select my best LB (0.9079, 23rd) and one of the best CV with a high LB score (0.9066 LB, top-70). The last one, as I expected, gave me 10th place at the private LB, funny that this was my final submission in the competition, and I even called it "good_luck" :)
+
+But anyway, it looks like the guys from 1st place (and probably others, will see) have built something special, and many other solutions in the 0.899-0.903 range are very close. It's also sad that some people who shared good ideas and notebooks didn't get the expected place. I want to thank @piantic (Heroseo) for the great notebooks and @hengck23 for so many ideas shared.
+
+Below you can find the key items of my solution. My solution is pretty simple, and I think many participants used a similar approach, but probably someone finds it to be useful.
+
+Approach (tldr)
+
+Prevent overfitting on noise, but don't clean or re-label the dataset.
+Trust your CV, but use public LB as a double-check (but towards the end of the competition, when I saw such close results, I decided to trust CV even more, especially given the number of test samples in LB and CV).
+Key things that worked for me: noise removal (~2-3%), OUSM loss, mixup/cutmix, TTA
+Submissions
+
+Single models (5 folds, 4xTTA)
+
+#	Model	Dataset	CV	LB	Private
+model-1	DeiT-base-384	2020 + 2019 data	0.901	0.9043	0.8950
+model-2	EffNet-B4	2020 data	0.901	0.9048	0.8975
+model-3	EffNet-B4	2020 + 2019 data	0.906	0.9025	0.9010
+Note: "2020 + 2019 data" means upsampling for minor classes using the 2019 dataset (duplicates were removed, use only 2020 for testing), and model-3 is better not only because of 2019 data, but rather due to mixup/cutmix. And yes, as others have already mentioned, there are many unexpected scores at private LB for models I didn't select, e.g. one of the model-1 fold has 0.899 private score (while 5 folds ensemble 0.895).
+
+Ensembles
+
+(just avg)	LB	Private
+model-1 + model-2 + model-3	0.9066	0.9017
+model-1 + model-2	0.9079	0.8998
+model-1 + model-3 (not selected, CV=0.907)	0.9066	0.9013
+Due to my vacation, for the last 2 weeks, I didn't train new models (but there was some potential in improving the 3rd model), but only tried to make an ensemble from what I already had.
+
+Noisy data
+
+It was quite obvious that private data is also noisy. After analyzing the dataset and reading various articles on cassava diseases, I assumed that there are different types of noise, so eliminating all of the noise can be risky. My approach was:
+
+Remove only ~2-3% of data (noise) using OOF confident predictions to reduce the overall % of noise in the dataset, but keep "useful" noise.
+Use part of OUSM loss (without re-weighting) - https://arxiv.org/pdf/1901.07759.pdf . I enable it after N epochs to let the model normally train before it starts to memorize the noise, and I also modified it a little bit to use with a smaller batch size of 16 (i.e. remove a loss even for 1 sample per batch is too much).
+Standard but strong augmentations to prevent overfitting (to train longer).
+Early stopping. At some point, I noticed that my valid accuracy is still improving slightly, but train accuracy is already too high, it didn't look like classic overfitting. So I tried early-stopping by max train accuracy, and it helped to climb LB with the same CV score. Later, when I added mixup/cutmix, that behavior disappeared (less overfit).
+Mixup/Cutmix (I also disable it completely for the last 3 epochs). Unfortunately, I tried it too late… and just trained 2 models with some default parameters. But after looking at the private LB scores it turned out to be an important part of my best model (both CV and private LB). In the mixup paper ( https://arxiv.org/pdf/1710.09412.pdf ) you can also find that it helps in training with corrupted labels.
+There are other noise-robust losses and loss correction techniques, but I didn't try them due to lack of time.
+
+TTA
+
+I rarely use TTA in my work due to performance reasons (except when it is offline processing and it provides significant improvements), so it was a surprise that it can help so much in competitions.
+TTA gave me a stable 0.001-0.002 improvement in all experiments for both CV and LB. I used horizontal/vertical flips + zoom (crop 384 -> resize to 512).
+"Zoom" augmentation was especially good for both DeiT and EffNet. When I found that, I even tried to build an additional classifier to pre-process all images (both for training&testing) to crop not close-ups samples. The classifier (close-up or not) worked very well, but CV score slightly dropped, so I decided to not proceed with that idea.
+
+Distillation
+
+I previously used knowledge distillation, self-distillation, … several times at work https://towardsdatascience.com/distilling-bert-using-unlabeled-qa-dataset-4670085cc18 , and it gave me the highest single model CV score (0.91+) in this competition. But I didn't use it because I was afraid of an implicit leak through the soft labels (or weighted soft+ground truth) that I generated from the OOF predictions. But all my distillation experiments were done with a weaker model/teacher, and later I did not try to use it again, perhaps it could help.
+
+Other things that worked well for me
+
+Label smoothing (0.2 - 0.3)
+Sometimes Taylor Loss (+label smoothing) was better than Cross-Entropy, I didn't try Bi-Tempered loss.
+Training
+
+GPU: I used my 2080TI and Colab Pro.
+PyTorch
+Adam, cosine annealing with a warmup, 16 batch size, gradient accumulation, fp16.
+The most important thing I want to point out is that I learned something useful from this competition - various strategies for dealing with noisy data. I have not tried many of them due to lack of time, but I am sure that knowledge will help in my work.
+
+Thank you to the organizers and all the participants. Let me know if you have any questions and see you in the next competitions!

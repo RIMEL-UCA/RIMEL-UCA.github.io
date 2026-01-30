@@ -1,0 +1,219 @@
+{
+  "image_size": {
+    "256x256": {
+      "source": "Top483 solution description",
+      "link": "solutions/top483.txt",
+      "quote": "Progressive image size, start_size=256, final_size=512, size_step=32. Size starts increasing after the warm up stage finishes."
+    },
+    "512x512": {
+      "source": "Top483 solution description",
+      "link": "solutions/top483.txt",
+      "quote": "Progressive image size, start_size=256, final_size=512, size_step=32. Size starts increasing after the warm up stage finishes."
+    }
+  },
+  "blur": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "Successful: Horizontal Flip, Vertical Flip, Blur"
+  },
+  "cutmix": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "CutMix, MixUp, FMix, 25% probability for each of past three augmentations."
+  },
+  "fmix": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "CutMix, MixUp, FMix, 25% probability for each of past three augmentations."
+  },
+  "horizontalflip": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "Successful: Horizontal Flip, Vertical Flip"
+  },
+  "huesaturationvalue": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "Successful: Horizontal Flip, Vertical Flip, Blur, 360 rotates, RandomBrigtnessContrast, ShiftScaleRotate, HueSaturationValue"
+  },
+  "mixup": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "CutMix, MixUp, FMix, 25% probability for each of past three augmentations."
+  },
+  "randombrightnesscontrast": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "Successful: Horizontal Flip, Vertical Flip, Blur, 360 rotates, RandomBrigtnessContrast"
+  },
+  "rotate": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "Successful: Horizontal Flip, Vertical Flip, Blur, 360 rotates"
+  },
+  "shiftscalerotate": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "Successful: Horizontal Flip, Vertical Flip, Blur, 360 rotates, RandomBrigtnessContrast, ShiftScaleRotate"
+  },
+  "tta": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "We used simple technique for our TTA: average of the default image and horizontally flipped image."
+  },
+  "verticalflip": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "Successful: Horizontal Flip, Vertical Flip"
+  },
+  "densenet161": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "Models: SWSL ResNeXt 101 8D, SWSL ResNeXt 50, Efficient Net B4, Efficient Net B4 NS, Inception V4, DenseNet 161"
+  },
+  "efficientnet-b4": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "Then we trained Efficient Net B4 with obtained labels and got the CV boost from 0.899 to 0.915. Models: SWSL ResNeXt 101 8D, SWSL ResNeXt 50, Efficient Net B4"
+  },
+  "efficientnet-b4-ns": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "Models: SWSL ResNeXt 101 8D, SWSL ResNeXt 50, Efficient Net B4, Efficient Net B4 NS"
+  },
+  "inception-v4": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "Models: SWSL ResNeXt 101 8D, SWSL ResNeXt 50, Efficient Net B4, Efficient Net B4 NS, Inception V4"
+  },
+  "swsl-resnext101-8d": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "We trained 5 folds of SWSL ResNeXt 101 8D and predicted labels for all images from each validation part"
+  },
+  "swsl-resnext50": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "Models: SWSL ResNeXt 101 8D, SWSL ResNeXt 50"
+  },
+  "imagenet": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "pretrained - True"
+  },
+  "noisystudent": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "Efficient Net B4 NS"
+  },
+  "swsl": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "SWSL ResNeXt 101 8D, SWSL ResNeXt 50"
+  },
+  "frozen-batchnorm-layers": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "Frozen BatchNorm layers"
+  },
+  "cross-entropy-with-label-smoothing": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "Loss Function - Cross Entropy loss with label smoothing (0.2 smoothing before using knowledge distillation and 0.1 after it)"
+  },
+  "ranger": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "optimizer - Ranger"
+  },
+  "learning_rate": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "learning rate - 0.003"
+  },
+  "cosinebatchdecayscheduler-with-gradual-warm-up": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "scheduler - CosineBatchDecayScheduler with gradual warm up (custom impelementation)"
+  },
+  "batch_size": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "Args: optimizer (torch.optim.Optimizer): PyTorch Optimizer, steps (int): total number of steps, epochs (int): total number of epochs, batchsize (int): current training batchsize. Default: 128"
+  },
+  "epochs": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "epoch - 30"
+  },
+  "early-stopping": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "early stopping - 8"
+  },
+  "gradient-accumulation": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "Mixed precision training with gradient accumulation (iters_to_accumulate=8) ==> big boost on CV"
+  },
+  "knowledge-distillation": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "We did a really soft knowledge distillation. We hadn't time to do a lot of experiments, so we had only one take to relable the dataset... Then we trained Efficient Net B4 with obtained labels and got the CV boost from 0.899 to 0.915."
+  },
+  "label-smoothing": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "Loss Function - Cross Entropy loss with label smoothing (0.2 smoothing before using knowledge distillation and 0.1 after it)"
+  },
+  "mixed-precision-training": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "Mixed precision training with gradient accumulation (iters_to_accumulate=8) ==> big boost on CV"
+  },
+  "pseudo-labeling": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "This dataset contains images of other plants. The dataset is not fully labeled... So the second part had to be pseudo-labeled to be able to use it for training. We used 5 folds of SWSL ResNeXt 101 8D for this task."
+  },
+  "5-fold": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "We trained 5 folds of SWSL ResNeXt 101 8D... We submitted two different ensemble approaches with the same 6 models (5 folds each one)."
+  },
+  "2019-data": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "We used 2019 data with removed duplicates for training. We used it only for training and didn't put it in the validation part. We've also applied soft relabling for it."
+  },
+  "mendeley-leaves": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "We also used Mendeley Leaves for training. This dataset contains images of other plants."
+  },
+  "progressive_resizing": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "Progressive image size, start_size=256, final_size=512, size_step=32. Size starts increasing after the warm up stage finishes."
+  },
+  "maxprob-ensemble": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "2) MaxProb Ensemble. Max Probability (or Max Confidence) ensemble allows us to choose the dominating model in the prediction process. In this case, if several models predict different labels, we take the prediction from a model with the biggest confidence."
+  },
+  "simple-averaging-ensemble": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "1) Simple Averaging Ensemble, 2019 Private LB: 0.92712; 2020 Public LB: 0.898; 2020 Private LB: 0.896"
+  },
+  "pytorch": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "Fast&Automated clean PyTorch pipeline [Train]"
+  },
+  "apex": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "Checkpoints for Apex have been added."
+  }
+}

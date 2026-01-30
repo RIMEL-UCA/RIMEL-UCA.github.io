@@ -1,0 +1,22 @@
+{
+  "competition": "cafa-6-protein-function-prediction",
+  "stratum": "top_1%",
+  "ref": "ymuroya47/cafa-6-goa-prott5-ensemble-0-370",
+  "local_main_file": "corpus\\cafa-6-protein-function-prediction\\notebooks\\top_1%\\ymuroya47__cafa-6-goa-prott5-ensemble-0-370\\cafa-6-goa-prott5-ensemble-0-370.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 20,
+    "B_modularite": 15,
+    "C_reproductibilite": 10,
+    "D_lisibilite": 20,
+    "E_hygiene": 15
+  },
+  "score_total_100": 80,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline très structuré avec sections markdown numérotées: ## 1. Parse GO Ontology → ## 2. Load Predictions → ## 3. Create Ensemble → ## 4. Apply GOA+ Propagation → ## 5. Write Submission",
+    "B_modularite": "Fonctions réutilisables (load_predictions, process_protein, get_ancestors), CONFIG dict centralisé avec tous les hyperparamètres (NEG_PROP_ALPHA, SCALING_POWER, etc.).",
+    "C_reproductibilite": "Pas de seed (traitement déterministe), chemins explicites, poids d'ensemble documentés (WEIGHT_GOA=0.55, WEIGHT_PROTT5=0.45).",
+    "D_lisibilite": "Excellente documentation markdown avec titres, explications de l'approche, cellule Summary finale. Noms très explicites (ancestors_map, term_parents).",
+    "E_hygiene": "Peu de hardcoding, CONFIG centralisé, gestion des ROOTS explicite, filtrage des scores faibles (>=0.001)."
+  },
+  "summary": "Notebook exemplaire avec excellente structure en sections markdown numérotées et storytelling clair. Config centralisée avec tous les hyperparamètres. Documentation riche expliquant l'approche (GOA + ProtT5 + propagation). Code propre et maintenable. Score 0.370 atteint avec méthode bien documentée."
+}
