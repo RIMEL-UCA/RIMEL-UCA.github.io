@@ -491,7 +491,9 @@ Observation : La distribution est relativement concentree autour de 75/100, avec
 
 ### Scores Moyens par Strate
 
-Voir graphique : data/results/sq3_bar_mean_by_stratum.png
+![Score moyen par strate](data/results/sq3_bar_mean_by_stratum.png)
+
+*Figure 1 : Score moyen de qualite du code (/100) par strate du leaderboard.*
 
 | Strate | Nombre | Moyenne | Mediane | Ecart-type |
 |--------|--------|---------|---------|------------|
@@ -506,7 +508,9 @@ Observation surprenante :
 
 ### Distribution par Strate (Boxplot)
 
-Voir graphique : data/results/sq3_boxplot_by_stratum.png
+![Boxplot par strate](data/results/sq3_boxplot_by_stratum.png)
+
+*Figure 2 : Distribution des scores de qualite par strate (boxplot).*
 
 Observations :
 - top_1% : Distribution concentree, peu d'outliers
@@ -534,7 +538,11 @@ Observation cle :
 
 ### Analyse par Critere
 
-Voir graphique : data/results/sq3_heatmap_criteria_by_stratum.png
+![Heatmap des criteres](data/results/sq3_heatmap_criteria_by_stratum.png)
+
+*Figure 3 : Moyennes des 5 criteres (sur 20) par strate. Couleurs claires = scores eleves.*
+
+Scores moyens par critere et par strate :
 
 Scores moyens par critere et par strate :
 
