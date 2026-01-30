@@ -315,8 +315,7 @@ Scripts développés en Python
 * Utilisation d’Artifact Hub pour récupérer les charts
 
 ## VI. Références
-[1] ArtifactHub : https://artifacthub.io/ 
-Lien permettant de retrouver notre Dataset :  https://artifacthub.io/packages/search?kind=0&verified_publisher=true&official=true&cncf=true&sort=relevance&page=1 
+[1] ArtifactHub : https://artifacthub.io/ (en particulier, lien permettant de retrouver notre Dataset :  https://artifacthub.io/packages/search?kind=0&verified_publisher=true&official=true&cncf=true&sort=relevance&page=1)
 
 [2] Article LevelUp : https://levelup.gitconnected.com/helms-horrible-hyphens-of-hell-3713c6d989bf
 
