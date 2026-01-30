@@ -1,4 +1,26 @@
+---
+layout: default
+title : Modèle de chapitre pour 2025-26
+date:   2025-11
+---
+
+---
+
+   **Date de rendu finale : fin février**
+   - Respecter la structure pour que les chapitres soient bien indépendants
+   - Remarques :
+        - La structure proposée est là pour vous aider, mais peut-être adaptée à votre projet
+        - Les titres peuvent être modifiés pour être en adéquation avec votre étude. 
+        - Utiliser des références pour justifier votre argumentaire, vos choix, etc.
+        - Vous avez le choix d'utiliser le français ou l'anglais.
+
+    Dans l'article de Blog [Debret 2020], l'auteure donne les éléments principaux de la démarche d'une manière simple et très facile à lire, dans la partie [Quelles sont les étapes d’une bonne démarche scientifique ?](https://www.scribbr.fr/article-scientifique/demarche-scientifique/#:~:text=La%20d%C3%A9marche%20scientifique%20permet%20d,de%20nouvelles%20hypoth%C3%A8ses%20%C3%A0%20tester.)
+
+---
+
 # Est-ce que les tops du leaderboard se spécialisent ?
+
+Cette partie a été réalisé par : ***Ascari Yannick*** - Groupe G.
 
 ## Sommaire
 
@@ -9,6 +31,7 @@
 5. [Conclusion](#conclusion)
 6. [Limites](#limites)
 7. [Notions acquises](#notions-acquises)
+8. [Références](#références)
 
 ## Introduction
 
@@ -22,6 +45,10 @@ On peut alors s'intéresser, si à travers toutes ces compétitions, on peut obs
 se spécialisent dans un domaine spécifique précis, et donc si cette stratégie de spécialisation est payante pour être dans le podium.
 
 La question que l'on se pose est donc : *Est-ce que les tops du leaderboard se spécialisent ?*
+
+### Hypothèse
+
+L'hypothèse principale, est que la ***focalisation dans un domaine précis de compétition *Kaggle* est une stratégie gagnante pour être dans le podium***.
 
 ## Méthodologie
 
@@ -69,20 +96,20 @@ J'ai décidé de me concentrer sur le ***taux de spécialisation*** des compéti
 auxquelles ils ont participé. J'ai aussi décidé de regarder la ***distribution*** des participations par domaine pour chaque compétiteur, pour voir s'il y a une tendance à se spécialiser
 dans un domaine précis. Ces métriques me semblaient les plus pertinentes pour répondre à ma question.
 - **Mise en place du système de traitement** : Dans cette étape, j'ai utilisé l'*API Kaggle* pour extraire les données des compétitions et des compétiteurs. J'ai écrit un script en *Python* qui
-pouvait automatiser le processus de collecte des données, et calculer les métriques que j'avais choisies. On peut retrouver le code de script dans le fichier *Python* [src/kaggle/analyze_specialization.py](src/kaggle/analyze_specialization.py),
+pouvait automatiser le processus de collecte des données, et calculer les métriques que j'avais choisies. On peut retrouver le code de script dans le fichier *Python* [src/kaggle/analyze_specialization.py](./assets/kaggle-analyze-specialization/src/kaggle/analyze_specialization.py),
 celui-ci contient donc le code complet pour calculer notre métrique, le taux de spécialisation des compétiteurs. Dans ce code il y a trois parties, qui sont des fonctions :
     - `get_filtered_competitions()` (l.18) : Permet de récupérer les compétitions filtrées selon les domaines de spécialisation. (ex : NLP, tabulaire, etc.)
     - `get_leaderboard_for_competitions()` (l.66) : Récupère les leaderboards pour chaque compétition filtrée.
     - `build_specialization_matrix()` (l.111) : Calcule la matrice de spécialisation des compétiteurs en fonction des domaines, depuis notre métrique principale.
 
     La fonction `main()` (l.141) s'occupe d'appeller ses fonctions, et de sauvergarder la métrique dans un fichier au format ***csv*** pour pouvoir l'utiliser dans l'étape suivante. On peut retrouver ces fichiers 
-dans le dossier [/data](/kaggle-analyze-specialization/data). Il y a donc deux fichiers ***csv*** générés :
+dans le dossier [/data](./assets/kaggle-analyze-specialization/data). Il y a donc deux fichiers ***csv*** générés :
   - `/data/filtered_competitions.csv` : Contient la liste des compétitions filtrées selon les domaines de spécialisation.
   - `/data/specialization_matrix.csv` : Contient la matrice de spécialisation des compétiteurs, calculée depuis le script.
 
   À savoir que j'ai fait le choix de bien séparer le code python avec deux scripts, un pour le ***calcul des métriques***, et un autre pour ***les visualisations***, afin de garder un code propre, organisé et structuré.
 - **Création des visualisations** : Une fois que j'ai pu calculer mes métriques, on peut maintenant se focaliser sur la création des graphiques, et des schémas. J'ai donc écrit le code dans le
-fichier [src/kaggle/visualize_specialization.py](src/kaggle/visualize_specialization.py), qui contient l'implémentation des visualisations à partir du fichier précèdent en s'appuyant des métriques
+fichier [src/kaggle/visualize_specialization.py](./assets/kaggle-analyze-specialization/src/kaggle/visualize_specialization.py), qui contient l'implémentation des visualisations à partir du fichier précèdent en s'appuyant des métriques
 calculées danns ce dernier. Comme dans l'étape précédente, on peut découper le code de cette implémentation en plusieurs parties principales :
     - `load_data()` (l.19) : Permet de charger la métrique, calculé par le script précédent depuis le fichier csv, dans le script en mémoire.
     - `plot_top_competitors_heatmap(df, top_n=50)` (l.27) : Crée une heatmap pour visualiser la spécialisation des meilleurs compétiteurs. Ce qui est particulièrement utile pour observer les tendances de spécialisation.
@@ -103,29 +130,34 @@ voir qu'il y a un forte concentration de compétiteur qui se spécialisent dans 
 
 <br>
 
-   ![Heatmap des meilleurs compétiteurs](/kaggle-analyze-specialization/data/heatmap_specialization.png)
+   ![Heatmap des meilleurs compétiteurs](./data/heatmap_specialization.png)
 
 2. **Distribution des taux de spécialisation** : Pour chaque histogramme par catégorie, parmi les 3 catégories, on peut observer que les compétiteurs ont tendance à se spécialiser plutôt dans le domaine du ***tabulaire***, avec une majorité de compétiteurs ayant un taux de spécialisation élevé dans ce domaine en moyenne avec $74.9\%$.
 Ce qui confirme encore une fois que les compétiteurs se spécialisent et se focalisent beaucoup dans ce domaine. Pour ce qui est des autres domaines, on à un taux de $15.0 \%$ pour le domaine du *NLP*, et $10.1\%$ pour le domaine des *séries temporelles*. Ce qui est nettement moins élevé que le domaine du *tabulaire*.
 
 <br>
 
-   ![Distribution des taux de spécialisation](/kaggle-analyze-specialization/data/distribution_specialization.png)
+   ![Distribution des taux de spécialisation](./data/distribution_specialization.png)
    
 3. **Taux de spécialisation moyen par domaine** : Le graphique à barres montre que le taux de spécialisation moyen est le plus élevé dans le domaine du *tabulaire*, avec une moyenne de $74.9\%$. Ce qui est nettement plus élevé que les autres domaines, avec $15.0\%$ pour le *NLP* et $10.1\%$ pour les *séries temporelles*.
 Cela suggère que les compétiteurs qui se spécialisent dans le domaine du *tabulaire* ont un avantage significatif pour être dans le podium.
 
 <br>
 
-   ![Taux de spécialisation moyen par domaine](/kaggle-analyze-specialization/data/average_specialization.png)
+   ![Taux de spécialisation moyen par domaine](./data/average_specialization.png)
    
 4. **Comparaison entre les meilleurs compétiteurs et le reste** : Le graphique comparant les meilleurs compétiteurs au reste montre que les meilleurs compétiteurs ont un taux de spécialisation significativement plus élevé que les autres. En moyenne, les meilleurs compétiteurs ont un taux de spécialisation très élevé de $82.4\%$ contre $74.8\%$
 dans le domaine du *tabulaire*. Ce qui confirme encore une fois que la spécialisation est une stratégie gagnante pour être dans le podium.
 
 <br>
 
-   ![Comparaison des taux de spécialisation](/kaggle-analyze-specialization/data/top_vs_rest.png)
-   
+   ![Comparaison des taux de spécialisation](./data/top_vs_rest.png)
+
+### Reproductibilité
+
+À savoir que ce code à été écrit de manière à être reproductible, c'est-à-dire que n'importe qui peut exécuter ce code pour obtenir les mêmes résultats. En outre, le code est aussi écrit
+de manière générique, ce qui permet de facilement modifier les paramètres, comme par exemple les domaines de spécialisation, ou le nombre de meilleurs compétiteurs à analyser.
+
 Une fois avoir analysé ces résultats, on peut en tirer une conclusion pertinente.
 
 ## Conclusion
@@ -156,3 +188,92 @@ lire la documentation associée, afin de pouvoir atteindre mon objectif.
 - ***Création des visualisations*** : J'ai amélioré mes compétences en création de visualisations de données, en utilisant des bibliothèques comme *Matplotlib* pour créer des graphiques clairs et informatifs.
 Tout ça à l'aide du travail de la création des métriques (étape précédente).
 - ***Analyse des résultats*** : J'ai appris à analyser les résultats obtenus à partir des visualisations, et à tirer des conclusions pertinentes basées sur ces résultats.
+
+## Références
+
+Voici les quelques références utilisées pour ce travail :
+
+1. ***Competing AI: How does competitoon feedback affect machine learning ?*** (Stanford HAI).
+[Article](https://arxiv.org/pdf/2009.06797) - Étude qui démontre que lorsque des algos d'IA entrent en compétition, ils se spécialisent pour des sous-populations d'utilisateurs.
+2. ***Learnings from Kaggle's Forecasting Competitions*** (arXiv, 2020).
+[Article](https://arxiv.org/pdf/2009.07701) - Analyse les stratégies gagnantes dans les compétitions *Kaggle*, l'essor de XGBoost et des ensembles de modèles.
+3. ***The Ladder: A Reliable Leaderboard for Machine Learning Competitions*** (MLR Press).
+[Article](https://proceedings.mlr.press/v37/blum15.pdf) - Traite la méthodologie d'analyse des leaderboards et des analyses post-compétitions, confirmant la méthodologie utilisée dans ce travail.
+4. ***Data competition design and analysis*** (arXiv, 2019).
+[Article](https://arxiv.org/pdf/1901.05356) - Discute des stratégies de conception et d'analyses des compétitions de data science.
+
+---
+
+**_février 2026_**
+
+## Authors
+
+We are four students in M2 or in last year of Polytech' Nice-Sophia specialized in Software Architecture :
+
+* Malik MOUSSA &lt;merwan-malik.moussa-boudjemaa@etu.unice.fr&gt;
+* Baptiste ROYER &lt;baptiste.royer@etu.unice.fr&gt;
+* Sacha CHANTOISEAU &lt;sacha.chantoiseau@etu.unice.fr&gt;
+* Yannick ASCARI &lt;yannick.ascari@etu.unice.fr&gt;
+
+## I. Research context /Project
+
+Préciser ici votre contexte et Pourquoi il est intéressant. **
+
+
+## II. Observations/General question
+
+1. Commencez par formuler une question sur quelque chose que vous observez ou constatez ou encore une idée émergente. 
+    
+2. Préciser pourquoi cette question est intéressante de votre point de vue.
+
+Attention pour répondre à cette question, vous devrez être capable d'émettre des hypothèses vérifiables, de quantifier vos réponses, ...
+
+     :bulb: Cette première étape nécessite beaucoup de réflexion pour définir la bonne question qui permet de diriger la suite de vos travaux.
+
+## III. Information gathering
+
+Préciser vos zones de recherches en fonction de votre projet, les informations dont vous disposez, ... 
+
+Voici quelques pistes : 
+
+1. les articles ou documents utiles à votre projet 
+2. les outils que vous souhaitez utiliser
+3. les jeux de données/codes que vous allez utiliser, pourquoi ceux-ci, ...
+
+     :bulb: Cette étape est fortement liée à la suivante. Vous ne pouvez émettre d'hypothèses à vérifier que si vous avez les informations. inversement, vous cherchez à recueillir des informations en fonction de vos hypothèses. 
+ 
+## IV. Hypothesis & Experiences
+
+1. Il s'agit ici d'**énoncer sous forme d'hypothèses** ce que vous allez chercher à démontrer. Vous devez définir vos hypothèses de façon à pouvoir les _mesurer/vérifier facilement._ Bien sûr, votre hypothèse devrait être construite de manière à _vous aider à répondre à votre question initiale_. Explicitez ces différents points.
+2. Vous **explicitez les expérimentations que vous allez mener** pour vérifier si vos hypothèses sont vraies ou fausses. Il y a forcément des choix, des limites, explicitez-les.
+
+     :bulb: Structurez cette partie à votre convenance : 
+     Par exemples : 
+        Pour Hypothèse 1 => 
+            Nous ferons les Expériences suivantes pour la démontrer
+        Pour Hypothèse 2 => Expériences 
+        
+        ou Vous présentez l'ensemble des hypothèses puis vous expliquer comment les expériences prévues permettront de démontrer vos hypothèses.
+
+
+## V. Result Analysis and Conclusion
+
+1. Présentation des résultats
+2. Interprétation/Analyse des résultats en fonction de vos hypothèses
+3. Construction d’une conclusion 
+
+     :bulb:  Vos résultats et donc votre analyse sont nécessairement limités. Préciser bien ces limites : par exemple, jeux de données insuffisants, analyse réduite à quelques critères, dépendance aux projets analysés, ...
+
+## VI. Tools \(facultatif\)
+
+Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à \(1\) pouvoir reproduire vos expérimentations, \(2\) partager/expliquer à d'autres l'usage des outils.
+
+![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](assets/images/logo_uca.png){:height="12px"}
+
+
+## VI. References
+
+[Debret 2020] Debret, J. (2020) La démarche scientifique : tout ce que vous devez savoir ! Available at: https://www.scribbr.fr/article-scientifique/demarche-scientifique/ (Accessed: 18 November 2022).
+
+
+

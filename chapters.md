@@ -7,6 +7,8 @@ date: 2022-11-18 6:00:00 +0100
 
 ### MODEL : [MODELE DE CHAPITRE 2026]({{site.url}}/chapters/2026/ChapterModel/content)
 
+### [Comment performer dans les compétitions Kaggle ?]({{site.url}}/chapters/2026/Etudes_Cas_Competitions_Kaggle_G/content)
+
 ### [L’évolution des données dans les projets open-source de Data For Good : une étude de cas historique]({{site.url}}/chapters/2026/Etude-Cas-DataForGoodFrance-TeamH/content)
 
 ### Le nombre de contributeurs influence-t-il la qualité des repository de Data For Good France ? : [Le nombre de contributeurs influence-t-il la qualité des repository de Data For Good France ?]({{site.url}}/chapters/2026/Etude_Data_For_Good_b/content)

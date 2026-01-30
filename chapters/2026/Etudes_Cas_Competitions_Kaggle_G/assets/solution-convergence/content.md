@@ -3,6 +3,29 @@
 
 La question centrale que nous abordons ici est la suivante : les solutions gagnantes présentent-elles une similarité architecturale entre elles, et se distinguent-elles des solutions moins performantes ? Cette problématique revêt un intérêt pratique important : elle permet de déterminer si la réussite dans ces compétitions repose davantage sur l'innovation architecturale ou sur la maîtrise et l'optimisation de composants techniques éprouvés (modèles établis, techniques de prétraitement standardisées, embeddings reconnus).
 
+## Sommaire
+
+1. [Hypothèses de recherche](#hypothèses-de-recherche)
+   - [Opérationnalisation des hypothèses](#opérationnalisation-des-hypothèses)
+2. [Méthodologie](#méthodologie)
+   - [Sélection des compétitions](#sélection-des-compétitions)
+   - [Sélection des solutions](#sélection-des-solutions)
+   - [Sélection des critères architecturaux](#sélection-des-critères-architecturaux)
+   - [Composition des prompts](#composition-des-prompts)
+   - [Sélection du LLM](#sélection-du-llm)
+   - [Calcul du score de similarité](#calcul-du-score-de-similarité)
+3. [Menaces à la validité et stratégies d'atténuation](#menaces-à-la-validité-et-stratégies-datténuation)
+   - [Normalisation des données extraites](#normalisation-des-données-extraites)
+   - [Représentation structurée : approche booléenne](#représentation-structurée--approche-booléenne)
+   - [Cross Validation LLM](#cross-validation-llm)
+   - [Protocole de validation manuelle](#protocole-de-validation-manuelle)
+4. [Résultats et interprétations](#résultats-et-interprétations)
+   - [Visualisations](#visualisations)
+   - [Validation des hypothèses](#validation-des-hypothèses)
+   - [Limites](#limites)
+   - [Conclusion](#conclusion)
+5. [Ressources](#ressources)
+
 ## Hypothèses de recherche
 
 Nous formulons deux hypothèses complémentaires pour guider notre étude :
