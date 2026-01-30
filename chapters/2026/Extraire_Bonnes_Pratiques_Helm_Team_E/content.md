@@ -34,20 +34,21 @@ Pour répondre à cette question, nous adoptons une démarche exploratoire fond�
 ### 1) Limitation de la zone de recherche (via des répertoires GitHub)
 
 Notre étude se limite à des projets open-source hébergés sur GitHub, sélectionnés de manière à disposer d’un historique de développement exploitable et d’un usage explicite de Helm. Nous retenons uniquement les projets dont les charts Helm sont **présents dans le dépôt principal**, et non dans un repository séparé. Ce choix permet d’observer l’évolution des charts dans le même contexte que l’évolution du projet (organisation du dépôt, changements fonctionnels, releases).
+#### 1.1 Les projets étudiés pour la premiére sous question 
 
 Les **11 dépôts étudiés pour l'adoption de Helm** sont les suivants :
-- `linkerd2` — https://github.com/linkerd/linkerd2.git  
-- `cilium` — https://github.com/cilium/cilium.git  
-- `crossplane` — https://github.com/crossplane/crossplane.git  
-- `istio` — https://github.com/istio/istio.git  
-- `gatekeeper` — https://github.com/open-policy-agent/gatekeeper.git  
-- `rook` — https://github.com/rook/rook.git  
-- `kyverno` — https://github.com/kyverno/kyverno.git  
-- `flagger` — https://github.com/fluxcd/flagger.git  
-- `cert-manager` — https://github.com/cert-manager/cert-manager.git  
-- `trivy-operator` — https://github.com/aquasecurity/trivy-operator.git  
-- `openfaas-faas-netes` — https://github.com/openfaas/faas-netes.git  
-
+- `linkerd2`  https://github.com/linkerd/linkerd2.git  
+- `cilium`  https://github.com/cilium/cilium.git  
+- `crossplane`  https://github.com/crossplane/crossplane.git  
+- `istio`  https://github.com/istio/istio.git  
+- `gatekeeper`  https://github.com/open-policy-agent/gatekeeper.git  
+- `rook`  https://github.com/rook/rook.git  
+- `kyverno`  https://github.com/kyverno/kyverno.git  
+- `flagger`  https://github.com/fluxcd/flagger.git  
+- `cert-manager`  https://github.com/cert-manager/cert-manager.git  
+- `trivy-operator`  https://github.com/aquasecurity/trivy-operator.git  
+- `openfaas-faas-netes`  https://github.com/openfaas/faas-netes.git  
+#### 1.2 Les projets étudiés pour la deuxime sous question 
 En complément, nous exploitons un panel de plus de 50 charts parmi les plus populaires disponibles sur Artifact Hub (https://artifacthub.io/)
 , une plateforme de référence pour la publication et la découverte de charts Helm utilisés dans des environnements Kubernetes. Une part importante de ces charts est liée à la CNCF (Cloud Native Computing Foundation), organisation qui regroupe et soutient de nombreux projets open-source majeurs du cloud-native (outillage Kubernetes, observabilité, sécurité, réseau, etc.).
 Parmi les 72 dépôts analysés, voici quelques exemples représentatifs :
@@ -153,10 +154,10 @@ L’analyse repose sur une chaîne de scripts Python permettant d’extraire aut
 
 -`mine_fresh.py` : Ce script parcourt l'historique Git de chaque dépôt et extrait les métriques suivantes pour chaque commit touchant un chart (template_lines, template_files, has_helpers ,template_definitions , includes, values_nesting,control_structures, labels_compliance)
 
--`best_practices.py` — Règles de conformité:
+-`best_practices.py`  Règles de conformité:
 Définit les règles de scoring pour évaluer la conformité aux bonnes pratiques .
 
--`validate_hypotheses.py` — Validation statistique :
+-`validate_hypotheses.py`  Validation statistique :
 Ce script charge les données et effectue :
 - Tests de corrélation de Spearman (non-paramétrique)
 - Tests de Mann-Whitney U pour comparaisons de groupes
@@ -228,7 +229,7 @@ Pour valider ces hypothèses nous avons mis en place la pipeline de traitement s
 
 ##  V. Analyse des résultats et conclusion
 
-### 1. Analyse des résultats — Dynamique d’adoption de Helm
+### 1. Analyse des résultats  Dynamique d’adoption de Helm
 
 
 ### 1.1 Résultat global : absence d’un schéma d’adoption unique
@@ -244,7 +245,7 @@ Au contraire, les projets suivent des **logiques d’adoption distinctes**, fort
 
 À partir de ces observations, trois **patterns temporels d’adoption** ont été identifiés.
 
-### 1.2 Pattern A — Helm arrive tardivement (migration)
+### 1.2 Pattern A  Helm arrive tardivement (migration)
 
 Le **pattern A** correspond aux projets où Kubernetes est utilisé **longuement** via des manifests YAML statiques avant l’introduction de Helm.  
 Dans ce cas, le décalage temporel **M3 est important**, indiquant une adoption tardive de Helm.
@@ -262,7 +263,7 @@ Des projets comme *Cilium* ou *Rook* illustrent cette trajectoire, avec une long
 
 
 
-### 1.3 Pattern B — Helm comme premier mécanisme d’installation structuré
+### 1.3 Pattern B  Helm comme premier mécanisme d’installation structuré
 
 Le **pattern B** correspond aux projets dans lesquels Kubernetes est déjà présent dans le dépôt,
 mais sans constituer une véritable solution d’installation pour les utilisateurs.
@@ -290,7 +291,7 @@ Ce type de trajectoire est notamment observé dans des projets comme *Linkerd2* 
 où Helm devient le premier outil d’installation sérieux, souvent intégré à une interface
 en ligne de commande (CLI).
 
-### 1.4 Pattern C — Helm dès le départ (approche multi-modale)
+### 1.4 Pattern C  Helm dès le départ (approche multi-modale)
 
 Le **pattern C** correspond aux projets où Kubernetes et Helm sont introduits **simultanément**, dès les premiers commits significatifs.  
 Dans ce cas, le décalage M3 est nul ou quasi nul.
@@ -334,7 +335,7 @@ Une fois Helm introduit, la question centrale devient celle de l’évolution de
 
 Dans cette continuité, l’analyse automatisée complète l’analyse manuelle en étudiant les effets structurels de l’adoption de Helm sur les charts : modularisation des templates, complexité logique, documentation et conformité aux standards.
 
-### 3. Analyse des résultats — Alignement avec les bonnes pratiques Helm
+### 3. Analyse des résultats  Alignement avec les bonnes pratiques Helm
 #### 3.1 Résultat de l'échantillonnage
 
 - **Commits originaux** : ~15 000+ (avant échantillonnage)
@@ -458,11 +459,12 @@ Dans cette continuité, l’analyse automatisée complète l’analyse manuelle 
      <img src="assets/best_practices_dashboard.png" alt="best_practices_dashboard">
 </p>
 
-### 4. Conclusion générale — Retour à la question de recherche
+### 4. Conclusion générale  Retour à la question de recherche
 
 En conclusion, adopter Helm change radicalement la gestion d'un projet open-source. L'outil agit comme un cadre structurant qui clarifie le mécanisme d'installation et centralise la configuration.
 
 Nous avons démontré que l'alignement avec les bonnes pratiques n'est pas immédiat. C'est un processus qui accompagne la maturité du projet : les mécanismes de validation et de sécurité s'imposent d'eux-mêmes dès que l'échelle du déploiement l'exige. Helm transforme ainsi un ensemble de manifests disparates en un produit industriel cohérent.
+### Limites et critiques 
 Il convient toutefois de nuancer ces conclusions, car malgré la solidité des tendances observées, nos résultats comportent certaines limites :
 
 - Biais de maturité : Notre échantillon est principalement composé de projets de la CNCF, qui appliquent des standards plus stricts que la moyenne des dépôts GitHub.
@@ -475,9 +477,62 @@ Il convient toutefois de nuancer ces conclusions, car malgré la solidité des t
 
 ## VI. Scripts
 L’ensemble des scripts implémentant l’analyse est disponible dans le dossier `scripts` du projet.
+## VII. Structure du livrable
+
+```
+livrable_partie2/
+├── README.md                    ← Ce fichier
+├── scripts/
+│   ├── mine_fresh.py            ← Extraction des métriques depuis Git (406 lignes)
+│   ├── best_practices.py        ← Définition des règles de scoring (273 lignes)
+│   ├── validate_hypotheses.py   ← Validation statistique des hypothèses (1313 lignes)
+│   └── generate_french_plots.py ← Génération des graphiques en français
+├── data/
+│   └── all_metrics.csv          ← Données brutes (6376 commits, 54 charts)
+└── resultats/
+    ├── french_graphs/           ← Graphiques en français
+    │   ├── h1_modularisation.png
+    │   ├── h2_complexite_imbrication.png
+    │   ├── h3_organisation.png
+    │   └── h4_maturite.png
+    ├── h1_modularization.png
+    ├── h2_nesting_complexity.png
+    ├── h3_organization.png
+    ├── h4_dependencies.png
+    ├── h4_maturity.png
+    ├── best_practices_dashboard.png
+    └── summary.png
+```
+
+---
+
+## Reproduction
+
+```bash
+# 1. Extraction des métriques (nécessite les repos clonés)
+cd scripts
+python mine_fresh.py
+
+# 2. Validation des hypothèses
+python validate_hypotheses.py
+
+# 3. Génération des graphiques français
+python generate_french_plots.py
+```
+
+**Dépendances Python** :
+```
+pandas
+numpy
+matplotlib
+scipy
+pyyaml
+```
 
 
-![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](assets/images/logo_uca.png){:height="12px"}
+
+
+![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](assets/images/logo_uca.png)
 
 
 ## VII. References
