@@ -95,11 +95,47 @@ La pipeline couvre les étapes suivantes :
 Depuis la racine du dépôt, lancer :
 
 ```bash
-./run_pipeline.sh
+./run_pipeline.sh -t YOUR_SONAR_TOKEN
 ```
 
 Options utiles :
 - `./run_pipeline.sh --replay` : réutilise les identifiants de commits enregistrés dans `repos_url.csv` (mode replay).
+
+Préparer SonarQube et générer un token (faire avant de lancer la pipeline)
+---------------------------------------------------------------------
+
+Avant d'exécuter la pipeline, démarrez SonarQube et générez un token d'analyse global :
+
+1. Démarrer SonarQube avec Docker Compose :
+
+```bash
+docker-compose up -d
+```
+
+2. Ouvrir votre navigateur sur `http://localhost:9000`.
+
+3. Se connecter avec le compte administrateur par défaut :
+
+   - **login:** `admin`
+   - **mot de passe:** `admin`
+
+4. En haut à droite, cliquer sur **My Account**, puis l'onglet **Security**.
+
+5. Sous **Tokens**, générer un nouveau token de type *Global Analysis* (choisir un nom explicite), puis copier la valeur générée.
+
+6. Lancer la pipeline en passant le token comme argument `-t` (ou `--token`) :
+
+```bash
+./chapters/2026/Etude_Data_For_Good_Qualite_Team_B/assets/run_pipeline.sh -t sqa_XXXXXXXXXXXXXXXXXXXX
+```
+
+Remarque: le script exige le paramètre `-t|--token`. Sans ce token, l'exécution échouera.
+
+Exemple d'exécution (depuis la racine du dépôt) :
+
+```bash
+./run_pipeline.sh -t YOUR_SONAR_TOKEN
+```
 
 Remarque sur la reproductibilité : les identifiants de commit (SHA) produits par un run sont sauvegardés dans `repos_url.csv`. En lançant `./run_pipeline.sh --replay` le pipeline réanalyse chaque dépôt au SHA enregistré (point de référence : 30 janvier 2026) ; les graphiques doivent être identiques à ceux du run de référence. En revanche, lancer le pipeline sans `--replay` mettra à jour les SHA dans `repos_url.csv` avec les HEAD actuels, et les résultats correspondront à la date d’exécution.
 

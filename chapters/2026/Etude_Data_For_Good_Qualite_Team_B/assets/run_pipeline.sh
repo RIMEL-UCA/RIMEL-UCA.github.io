@@ -4,9 +4,40 @@ set -e
 echo "=== Pipeline d'analyse automatique ==="
 echo ""
 REPLAY=0
-if [ "$1" = "--replay" ] || [ "$1" = "-r" ]; then
-    REPLAY=1
-    echo "Mode replay: utilisation des SHA dans repos_url.csv"
+SONAR_TOKEN=""
+
+print_usage() {
+    echo "Usage: $0 -t|--token SONAR_TOKEN [--replay|-r]"
+    exit 1
+}
+
+while [ "$#" -gt 0 ]; do
+    case "$1" in
+        -t|--token)
+            shift
+            if [ -z "$1" ]; then
+                echo "ERREUR: argument manquant pour $0 $1"
+                print_usage
+            fi
+            SONAR_TOKEN="$1"
+            shift
+            ;;
+        --replay|-r)
+            REPLAY=1
+            shift
+            ;;
+        -h|--help)
+            print_usage
+            ;;
+        *)
+            shift
+            ;;
+    esac
+done
+
+if [ -z "$SONAR_TOKEN" ]; then
+    echo "ERREUR: Sonar token requis pour lancer le pipeline."
+    print_usage
 fi
 echo "Construction de l'image Docker..."
 # Supprimer les warnings bruyants de docker-compose
@@ -16,9 +47,9 @@ echo ""
 
 echo "=== Etape 0/1: Analyse SonarQube + commits + contributeurs ==="
 if [ "$REPLAY" -eq 1 ]; then
-    bash 1-qualite/scan_repos.sh --replay
+    bash 1-qualite/scan_repos.sh -t "$SONAR_TOKEN" --replay
 else
-    bash 1-qualite/scan_repos.sh
+    bash 1-qualite/scan_repos.sh -t "$SONAR_TOKEN"
 fi
 echo ""
 

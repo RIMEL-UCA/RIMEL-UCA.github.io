@@ -9,8 +9,9 @@ case "$(uname -s 2>/dev/null || echo)" in
   *)
     ;;
 esac
-
-SONAR_TOKEN="sqa_ad1b7bb27fdb49b882502b90d5833b081dff42d3"
+ 
+# Sonar token will be provided via command-line (required)
+SONAR_TOKEN=""
 OUT_ROOT="1-qualite/outputs"
 REPORT_DIR="$OUT_ROOT/reports"
 SRC_BASE="$OUT_ROOT/src"
@@ -22,12 +23,41 @@ mkdir -p "$REPORT_DIR" "$SRC_BASE" "3-activite-contributeurs/data"
 echo "=== Analyse SonarQube des dépôts ==="
 echo ""
 
-# Parse options
+# Parse options: require Sonar token via -t|--token; optional --replay|-r
 REPLAY=0
-if [ "$1" = "--replay" ] || [ "$1" = "-r" ]; then
-  REPLAY=1
-  shift
-  echo "Mode replay activé — utilisation des SHA depuis $SUMMARY_CSV"
+print_usage() {
+  echo "Usage: $0 -t|--token SONAR_TOKEN [--replay|-r]"
+  exit 1
+}
+
+while [ "$#" -gt 0 ]; do
+  case "$1" in
+    -t|--token)
+      shift
+      if [ -z "$1" ]; then
+        echo "ERREUR: argument manquant pour $0 $1"
+        print_usage
+      fi
+      SONAR_TOKEN="$1"
+      shift
+      ;;
+    --replay|-r)
+      REPLAY=1
+      shift
+      ;;
+    -h|--help)
+      print_usage
+      ;;
+    *)
+      # ignore unknown positional arguments
+      shift
+      ;;
+  esac
+done
+
+if [ -z "$SONAR_TOKEN" ]; then
+  echo "ERREUR: Sonar token requis."
+  print_usage
 fi
 
 # Démarrer SonarQube si nécessaire
