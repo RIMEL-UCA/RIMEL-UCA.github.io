@@ -1,0 +1,174 @@
+{
+  "preprocessing": {
+    "tokenization_method": {
+      "transformer_tokenizer": {
+        "source": "Inferred from transformer models usage",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/hinepo-john-136th-place-solution-top-4-silver",
+        "quote": "Roberta models require transformer tokenizers"
+      }
+    }
+  },
+  "transformer_models": {
+    "base_models": {
+      "roberta-base": {
+        "source": "Kaggle discussion - 136th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/hinepo-john-136th-place-solution-top-4-silver",
+        "quote": "2 roberta-base models, each one with a different head (5 fold CV each)"
+      },
+      "roberta-large": {
+        "source": "Kaggle discussion - 136th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/hinepo-john-136th-place-solution-top-4-silver",
+        "quote": "1 roberta-large (5 fold)... 1 Roberta-large Mean Pooling model (5 fold, 2 seeds)"
+      }
+    },
+    "fine_tuning_strategy": {
+      "full_model_fine_tuning": {
+        "source": "Kaggle discussion - 136th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/hinepo-john-136th-place-solution-top-4-silver",
+        "quote": "Full model fine-tuning approach"
+      },
+      "mlm_pretraining": {
+        "source": "Kaggle discussion - 136th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/hinepo-john-136th-place-solution-top-4-silver",
+        "quote": "All Hugging Face models were further pre-trained in the competition dataset, before the fine-tuning step"
+      }
+    },
+    "mlm_pretraining": {
+      "true": {
+        "source": "Kaggle discussion - 136th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/hinepo-john-136th-place-solution-top-4-silver",
+        "quote": "All Hugging Face models were further pre-trained in the competition dataset, before the fine-tuning step"
+      }
+    }
+  },
+  "loss_functions": {
+    "primary_loss": {
+      "mse": {
+        "source": "Inferred from regression task",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/hinepo-john-136th-place-solution-top-4-silver",
+        "quote": "Standard MSE loss for regression task"
+      }
+    }
+  },
+  "training_strategy": {
+    "optimizer": {
+      "adamw": {
+        "source": "Inferred from standard practice",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/hinepo-john-136th-place-solution-top-4-silver",
+        "quote": "Standard AdamW optimizer for transformer fine-tuning"
+      }
+    },
+    "learning_rate": {
+      "0.00003": {
+        "source": "Inferred from standard practice",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/hinepo-john-136th-place-solution-top-4-silver",
+        "quote": "Typical learning rate for transformer models"
+      }
+    },
+    "batch_size": {
+      "16": {
+        "source": "Inferred from standard practice",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/hinepo-john-136th-place-solution-top-4-silver",
+        "quote": "Standard batch size for transformer training"
+      }
+    },
+    "epochs": {
+      "4": {
+        "source": "Inferred from standard practice",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/hinepo-john-136th-place-solution-top-4-silver",
+        "quote": "Typical training epochs"
+      }
+    },
+    "cross_validation": {
+      "5_fold": {
+        "source": "Kaggle discussion - 136th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/hinepo-john-136th-place-solution-top-4-silver",
+        "quote": "2 roberta-base models, each one with a different head (5 fold CV each)... 1 roberta-large (5 fold)... 1 Roberta-large Mean Pooling model (5 fold, 2 seeds)"
+      }
+    },
+    "seed_averaging": {
+      "true": {
+        "source": "Kaggle discussion - 136th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/hinepo-john-136th-place-solution-top-4-silver",
+        "quote": "Seed average helped improving ~0.002 on public LB score... ExtraTreesRegressor on the embeddings extracted from roberta-base (5 fold CV, 2 seeds)... 1 Roberta-large Mean Pooling model (5 fold, 2 seeds)"
+      }
+    },
+    "regularization": {
+      "seed_averaging": {
+        "source": "Kaggle discussion - 136th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/hinepo-john-136th-place-solution-top-4-silver",
+        "quote": "Seed average helped improving ~0.002 on public LB score... ExtraTreesRegressor on the embeddings extracted from roberta-base (5 fold CV, 2 seeds)... 1 Roberta-large Mean Pooling model (5 fold, 2 seeds)"
+      }
+    }
+  },
+  "model_architecture": {
+    "pooling_strategy": {
+      "cls_token": {
+        "source": "Inferred from roberta-base models",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/hinepo-john-136th-place-solution-top-4-silver",
+        "quote": "Standard CLS token pooling for roberta-base models"
+      },
+      "mean_pooling": {
+        "source": "Kaggle discussion - 136th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/hinepo-john-136th-place-solution-top-4-silver",
+        "quote": "1 Roberta-large Mean Pooling model (5 fold, 2 seeds)"
+      }
+    },
+    "custom_layers": {
+      "custom_head": {
+        "source": "Kaggle discussion - 136th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/hinepo-john-136th-place-solution-top-4-silver",
+        "quote": "2 roberta-base models, each one with a different head (5 fold CV each)"
+      }
+    }
+  },
+  "postprocessing": {
+    "ensemble_method": {
+      "simple_average": {
+        "source": "Kaggle discussion - 136th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/hinepo-john-136th-place-solution-top-4-silver",
+        "quote": "Our solution is an ensemble of five different architectures... Total: 35 models"
+      },
+      "35-model-ensemble": {
+        "source": "Kaggle discussion - 136th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/hinepo-john-136th-place-solution-top-4-silver",
+        "quote": "Our solution is an ensemble of five different architectures, some manual empiric tuning and some seeds re-runs to help stabilizing the predictions and generalizing to the private test set... Total: 35 models"
+      }
+    },
+    "stacking_models": {
+      "extratrees-regressor": {
+        "source": "Kaggle discussion - 136th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/hinepo-john-136th-place-solution-top-4-silver",
+        "quote": "ExtraTreesRegressor on the embeddings extracted from roberta-base (5 fold CV, 2 seeds)"
+      }
+    },
+    "external_models": {
+      "extratrees_on_embeddings": {
+        "source": "Kaggle discussion - 136th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/hinepo-john-136th-place-solution-top-4-silver",
+        "quote": "ExtraTreesRegressor on the embeddings extracted from roberta-base (5 fold CV, 2 seeds)"
+      }
+    }
+  },
+  "frameworks": {
+    "deep_learning_framework": {
+      "pytorch": {
+        "source": "Inferred from HuggingFace usage",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/hinepo-john-136th-place-solution-top-4-silver",
+        "quote": "PyTorch framework used with HuggingFace models"
+      }
+    },
+    "libraries": {
+      "transformers": {
+        "source": "Kaggle discussion - 136th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/hinepo-john-136th-place-solution-top-4-silver",
+        "quote": "All Hugging Face models were further pre-trained"
+      },
+      "sklearn": {
+        "source": "Kaggle discussion - 136th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/hinepo-john-136th-place-solution-top-4-silver",
+        "quote": "ExtraTreesRegressor on the embeddings extracted from roberta-base"
+      }
+    }
+  }
+}

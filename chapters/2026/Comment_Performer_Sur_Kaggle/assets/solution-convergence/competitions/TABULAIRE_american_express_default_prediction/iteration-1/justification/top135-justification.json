@@ -1,0 +1,37 @@
+{
+  "base_models": {
+    "source": "Kaggle 135th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348152",
+    "quote": "I built 6 models (3 gbtm, 3 nn) to secure the variousity and roboustness... stacked bi-GRU, Transformer"
+  },
+  "cross_validation": {
+    "source": "Kaggle 135th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348152",
+    "quote": "Also, a few models (LightGBM, CatBoost) are trained on multiple seeds (1, 42, 1337) with the same training recipe. Lastly, some models are trained with 10, 20 folds. num of folds doesn't matter (5 folds are enough)"
+  },
+  "pooling_strategy": {
+    "source": "Kaggle 135th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348152",
+    "quote": "stacked bi-GRU"
+  },
+  "additional_layers": {
+    "source": "Kaggle 135th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348152",
+    "quote": "5-layers NN, stacked bi-GRU, Transformer"
+  },
+  "ensemble_method": {
+    "source": "Kaggle 135th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348152",
+    "quote": "Inspired by the discussion log-odds, I found weighted ensemble with log-odds probability is better than a normal weighted ensemble (I tuned the weights with Optuna library based on the OOF). But, one difference is not ln, but log10"
+  },
+  "prediction_averaging": {
+    "source": "Kaggle 135th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348152",
+    "quote": "I ensembled about 50 models... I built 6 models (3 gbtm, 3 nn). Xgboost, CatBoost, LightGBM (w/ dart, w/o dart), 5-layers NN, stacked bi-GRU, Transformer"
+  },
+  "libraries": {
+    "source": "Kaggle 135th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348152",
+    "quote": "I built 6 models (3 gbtm, 3 nn). Xgboost, CatBoost, LightGBM (w/ dart, w/o dart). I tuned the weights with Optuna library"
+  }
+}

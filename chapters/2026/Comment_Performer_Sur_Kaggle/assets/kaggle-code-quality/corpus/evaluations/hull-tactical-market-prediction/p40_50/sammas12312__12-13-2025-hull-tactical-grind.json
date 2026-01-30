@@ -1,0 +1,22 @@
+{
+  "competition": "hull-tactical-market-prediction",
+  "stratum": "p40_50",
+  "ref": "sammas12312/12-13-2025-hull-tactical-grind",
+  "local_main_file": "corpus\\hull-tactical-market-prediction\\notebooks\\p40_50\\sammas12312__12-13-2025-hull-tactical-grind\\12-13-2025-hull-tactical-grind.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 10,
+    "B_modularite": 10,
+    "C_reproductibilite": 15,
+    "D_lisibilite": 10,
+    "E_hygiene": 10
+  },
+  "score_total_100": 55,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline basique en 2 cellules: boilerplate Kaggle → feature engineering + training + predict dans une cellule.",
+    "B_modularite": "Fonction func_rolling(), modèle LGBM séparé, fonction predict(). Code mort commenté massif.",
+    "C_reproductibilite": "random_state=42 dans LGBMRegressor, hyperparamètres explicites (n_estimators=100, learning_rate=0.05).",
+    "D_lisibilite": "Markdown minimal ('# Simply Throwing in LGBM'), commentaires inline corrects, noms explicites (V7_rel_20, target_vol).",
+    "E_hygiene": "Code mort massif (fonctions predict commentées), nan_to_num fallback, clip(0.0, 2.0), volatility fallback 0.15."
+  },
+  "summary": "Notebook fonctionnel mais avec code mort massif (anciennes versions de predict() commentées). Approche volatility-adjusted intéressante. LGBM simple. Feature engineering rolling basique. Manque de structure et nettoyage du code commenté."
+}

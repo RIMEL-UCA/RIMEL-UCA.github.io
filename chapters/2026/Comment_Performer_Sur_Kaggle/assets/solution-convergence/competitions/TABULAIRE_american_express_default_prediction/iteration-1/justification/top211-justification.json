@@ -1,0 +1,22 @@
+{
+  "cross_validation": {
+    "source": "Kaggle 211th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348189",
+    "quote": "Single models metrics (5 fold)"
+  },
+  "ensemble_method": {
+    "source": "Kaggle 211th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348189",
+    "quote": "Ensembled everything with different seeds (simple average of ~40 models)"
+  },
+  "prediction_averaging": {
+    "source": "Kaggle 211th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348189",
+    "quote": "Used XGB, LGBM, Catboost models with different preprocessing strategies, feature sets, hyperparameters. Ensembled everything with different seeds (simple average of ~40 models). XGB was always the best model for me"
+  },
+  "libraries": {
+    "source": "Kaggle 211th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348189",
+    "quote": "Used XGB, LGBM, Catboost models with different preprocessing strategies"
+  }
+}

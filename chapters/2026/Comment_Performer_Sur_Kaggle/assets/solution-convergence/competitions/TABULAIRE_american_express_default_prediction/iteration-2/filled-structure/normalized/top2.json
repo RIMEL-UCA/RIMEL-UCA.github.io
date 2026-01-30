@@ -1,0 +1,97 @@
+{
+  "tabular_features": {
+    "aggregation_features": [
+      "last",
+      "mean",
+      "std",
+      "median",
+      "min",
+      "max",
+      "nunique"
+    ],
+    "time_series_features": [
+      "diff",
+      "ratio",
+      "lags",
+      "ewm",
+      "normalization",
+      "pca"
+    ]
+  },
+  "preprocessing": {
+    "data_denoising": [
+      "isle-identification"
+    ],
+    "fillna_strategy": [],
+    "categorical_encoding": [
+      "order-encoding",
+      "onehot-encoding"
+    ],
+    "feature_scaling": [
+      "normalization",
+      "standardization"
+    ]
+  },
+  "transformer_models": {
+    "base_models": [],
+    "fine_tuning_strategy": []
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "cross-entropy"
+    ]
+  },
+  "training_strategy": {
+    "optimizer": [],
+    "learning_rate": 0.01,
+    "learning_rate_schedule": [],
+    "batch_size": null,
+    "epochs": null,
+    "regularization": [
+      "subsample",
+      "feature-fraction",
+      "feature-fraction-bynode",
+      "min-data-in-leaf"
+    ],
+    "cross_validation": [
+      "5-fold"
+    ]
+  },
+  "model_architecture": {
+    "pooling_strategy": [],
+    "additional_layers": [],
+    "dropout_rate": null
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "power-rank-blend"
+    ],
+    "prediction_averaging": [
+      "dart-lgbm-0.801-+-gbdt-lgbm-0.799-+-catboost-0.799"
+    ]
+  },
+  "model_specific": {
+    "boosting_type": [
+      "dart",
+      "gbdt"
+    ]
+  },
+  "feature_engineering": {
+    "feature_selection_method": [
+      "stepped-hierarchical-permutation-importance",
+      "forward-feature-selection",
+      "adversarial-validation",
+      "time-series-cv"
+    ]
+  },
+  "frameworks": {
+    "deep_learning_framework": [],
+    "libraries": [
+      "lightgbm",
+      "catboost",
+      "sklearn",
+      "pandas",
+      "numpy"
+    ]
+  }
+}

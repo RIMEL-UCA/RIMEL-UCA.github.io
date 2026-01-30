@@ -1,0 +1,27 @@
+{
+  "augmentation_techniques": {
+    "source": "Top637 solution description",
+    "link": "solutions/top637.txt",
+    "quote": "using cutmix"
+  },
+  "base_models": {
+    "source": "Top637 solution description",
+    "link": "solutions/top637.txt",
+    "quote": "I used 3 type CNN. SEResNext50 32x_4d... EfficientNetB4... ViT_base_384... The ensemble SEResNeXt50_32x4d + SEResNet152d_320"
+  },
+  "ensemble_method": {
+    "source": "Top637 solution description",
+    "link": "solutions/top637.txt",
+    "quote": "In final, I weights each model with 1 : 1.2 : 1.2 for ensemble"
+  },
+  "image_size": {
+    "source": "Top637 solution description",
+    "link": "solutions/top637.txt",
+    "quote": "ViT_base_384... SEResNet152d_320"
+  },
+  "optimizer": {
+    "source": "Top637 solution description - PyTorch default",
+    "link": "solutions/top637.txt",
+    "quote": "standard training approach with CNN models"
+  }
+}

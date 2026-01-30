@@ -1,0 +1,22 @@
+{
+  "competition": "playground-series-s6e1",
+  "stratum": "top_1%",
+  "ref": "nina2025/ps-s6e1-hb32g",
+  "local_main_file": "corpus\\playground-series-s6e1\\notebooks\\top_1%\\nina2025__ps-s6e1-hb32g\\ps-s6e1-hb32g.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 5,
+    "B_modularite": 15,
+    "C_reproductibilite": 10,
+    "D_lisibilite": 5,
+    "E_hygiene": 10
+  },
+  "score_total_100": 45,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline de blending complexe mais structure difficile à suivre. Fonctions nombreuses mais organisation confuse.",
+    "B_modularite": "Nombreuses fonctions (bokeh_show, matrix_vs, seaborn_Show, display_distances, arr_colors, convert, h_blend). Réutilisables mais couplées.",
+    "C_reproductibilite": "Dépend de tida_desc.csv externe, poids de blending dans params dict.",
+    "D_lisibilite": "Variables cryptiques (dskb, mvr, sg), noms courts (qs, mm, js), Bokeh visualization complexe, pas de markdown explicatif.",
+    "E_hygiene": "Shutil copy, chemins configurables, mais logique de blending obscure, nested list comprehensions."
+  },
+  "summary": "Notebook de blending Bokeh avec visualisations sophistiquées mais code difficile à suivre. Nombreuses fonctions mais couplage fort. Variables cryptiques (dskb, mvr, qs). Dépend de fichiers externes (tida_desc.csv). Visualization rich mais lisibilité code faible."
+}

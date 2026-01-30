@@ -1,0 +1,90 @@
+{
+  "embeddings": {
+    "contextual_embeddings": []
+  },
+  "preprocessing": {
+    "external_data_sources": [],
+    "tokenization_method": [
+      "transformer-tokenizer"
+    ],
+    "augmentation_techniques": [],
+    "additional_features": []
+  },
+  "transformer_models": {
+    "base_models": [
+      "roberta-base",
+      "roberta-large",
+      "muppet-roberta-large",
+      "facebook/bart-large",
+      "google/electra-large-discriminator",
+      "google/electra-base-discriminator",
+      "funnel-transformer/large-base",
+      "funnel-transformer/large",
+      "microsoft/deberta-large",
+      "microsoft/deberta-v2-xlarge",
+      "microsoft/deberta-v2-xxlarge",
+      "sentence-transformers/all-mpnet-base-v2",
+      "albert-xxlarge-v2",
+      "gpt2-medium",
+      "bert-base-uncased",
+      "t5-large",
+      "distilbart-cnn-12-6"
+    ],
+    "mlm_pretraining": true,
+    "fine_tuning_strategy": [
+      "full-model-fine-tuning"
+    ]
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "mse"
+    ]
+  },
+  "training_strategy": {
+    "optimizer": [
+      "adamw"
+    ],
+    "learning_rate": 2e-05,
+    "learning_rate_schedule": [
+      "linear-warmup-decay"
+    ],
+    "batch_size": 8,
+    "epochs": 5,
+    "weight_decay": null,
+    "pseudo_labeling": false,
+    "seed_averaging": false,
+    "regularization": [
+      "dropout-zero"
+    ],
+    "cross_validation": [
+      "5-fold"
+    ]
+  },
+  "model_architecture": {
+    "pooling_strategy": [
+      "cls-token",
+      "mean-pooling"
+    ],
+    "layer_reinitialize": false
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "weighted-average",
+      "nelder-mead-optimization",
+      "post-processing-multipliers"
+    ],
+    "stacking_models": [
+      "svr",
+      "ridge"
+    ]
+  },
+  "frameworks": {
+    "deep_learning_framework": [
+      "pytorch"
+    ],
+    "libraries": [
+      "transformers",
+      "sklearn"
+    ]
+  }
+}

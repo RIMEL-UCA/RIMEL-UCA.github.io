@@ -1,0 +1,11 @@
+Dans content.md je ne suis pas fan de mon expliquation de la méthodologie, je la trouve imcomplète et réductrice, j'aimerai que tu te base sur le contenu du fichier reproductability
+pour améliorer la méthodologie de content.md pour qu'elle prenne en compte toutes les étapes, mais formulée de sorte à ce que ça reste toujours la partie méthodologie d'un papier scientifique (écrit dans le meme style que le reste de content.md)
+
+Limites et biais:
+- La conception du dataset est une grosse limite à cette étude, les solutions/notebooks/github passé le top100 sont très rarerement ou mal documenté (voir jamais), 
+un échantillon de 10 solutions viables par compétition est le maximum que l'on a pu faire mais n'est surement pas assez représentatif, d'autres sites de compétitions en ligne similaire à
+Kaggle exigent de rendre public le notebook final, la méthodologie de cette étude pourrait être reprise en se focalisant sur ces sites et pas Kaggle.
+- Malgrès les mesures prisent pour limiter les erreurs du LLM lors de l'extraction des charactéristiques l'étude manque de validation des potentiels oublis que LLM pourrait faire lors de l'extraction des charactéristiques.
+- L'étude ne compare pas les résultats d'itérations effectuées dans le même context textuel avec un LLM avec des résultats obtenus en utilisant un nouveau chat à chaque itération.
+- La vérification manuelle des critères relevés bien que facilité par les fichiers de justification reste longue, fastidieuse et soumise aux erreurs humaines
+

@@ -1,0 +1,654 @@
+First time be a solo winner, I must say there is luck in winning the competition.
+
+My best result is a heavy ensemble with LGB and NN.
+
+Data
+
+
+Model
+
+
+
+for NN model, all data fillna(0) and using nn.utils.rnn.pack_padded_sequence to pad.
+
+I have to look for my early stage model, sorry for small font size in figure.
+
+update: I release a clean code at https://github.com/jxzly/Kaggle-American-Express-Default-Prediction-1st-solution.
+note: You may not be able to reproduce the best result due to random fluctuations.
+
+mport torch
+import torch.nn as nn
+import torch.nn.functional as F
+from typing import Optional, Callable, List
+import math
+
+class Amodel(nn.Module):
+    def __init__(self, series_dim, feature_dim, target_num, hidden_num, hidden_dim, drop_rate=0.5, use_series_oof=False):
+        super(Amodel, self).__init__()
+        self.use_series_oof = use_series_oof
+        self.input_series_block = nn.Sequential(
+                                        nn.Linear(series_dim, hidden_dim)
+                                        ,nn.LayerNorm(hidden_dim)
+                                        )
+        self.input_feature_block = nn.Sequential(
+                                        nn.Linear(feature_dim, hidden_dim)
+                                        ,nn.BatchNorm1d(hidden_dim)
+                                        ,nn.LeakyReLU()
+                                        )
+        self.gru_series = nn.GRU(hidden_dim, hidden_dim, batch_first=True, bidirectional=True)
+        self.hidden_feature_block = []
+        for h in range(hidden_num-1):
+            self.hidden_feature_block.extend([
+                                     nn.Linear(hidden_dim, hidden_dim)
+                                     ,nn.BatchNorm1d(hidden_dim)
+                                     ,nn.Dropout(drop_rate)
+                                     ,nn.LeakyReLU()
+                                     ])
+        self.hidden_feature_block = nn.Sequential(*self.hidden_feature_block)
+
+        self.output_block = nn.Sequential(
+                                         nn.Linear(3*hidden_dim if use_series_oof else 2*hidden_dim, 1*hidden_dim)
+                                         ,nn.LeakyReLU()
+
+                                         ,nn.Linear(1*hidden_dim, 1*hidden_dim)
+                                         ,nn.LeakyReLU()
+                                         
+                                         ,nn.Linear(1*hidden_dim, target_num)
+                                         ,nn.Sigmoid()
+                                         )
+
+    def batch_gru(self,series,mask):
+        node_num = mask.sum(dim=-1).detach().cpu()
+        pack = nn.utils.rnn.pack_padded_sequence(series, node_num, batch_first=True, enforce_sorted=False)
+        message,hidden = self.gru_series(pack)
+        pooling_feature = []
+
+        for i,n in enumerate(node_num.numpy()):
+            n = int(n)
+            bi = 0
+
+            si = message.unsorted_indices[i]
+            for k in range(n):
+
+                if k == n-1:
+                    sample_feature = message.data[bi+si]
+                bi = bi + message.batch_sizes[k]
+
+            pooling_feature.append(sample_feature)
+        return torch.stack(pooling_feature,0)
+
+    def forward(self, data):
+        x1 = self.input_series_block(data['batch_series'])
+
+        x1 = self.batch_gru(x1,data['batch_mask'])
+        if self.use_series_oof:
+            x2 = self.input_feature_block(data['batch_feature'])
+            x2 = self.hidden_feature_block(x2)
+            x = torch.cat([x1,x2],axis=1)
+            y = self.output_block(x)
+        else:
+            y = self.output_block(x1)
+        return y
+
+        import warnings
+warnings.simplefilter('ignore')
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from tqdm import tqdm
+
+def denoise(df):
+    df['D_63'] = df['D_63'].apply(lambda t: {'CR':0, 'XZ':1, 'XM':2, 'CO':3, 'CL':4, 'XL':5}[t]).astype(np.int8)
+    df['D_64'] = df['D_64'].apply(lambda t: {np.nan:-1, 'O':0, '-1':1, 'R':2, 'U':3}[t]).astype(np.int8)
+    for col in tqdm(df.columns):
+        if col not in ['customer_ID','S_2','D_63','D_64']:
+            df[col] = np.floor(df[col]*100)
+    return df
+
+train = pd.read_csv('./input/train_data.csv')
+train = denoise(train)
+train.to_feather('./input/train.feather')
+
+del train
+
+test = pd.read_csv('./input/test_data.csv')
+test = denoise(test)
+test.to_feather('./input/test.feather')
+
+import warnings
+warnings.simplefilter('ignore')
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import gc,os,random
+import time,datetime
+from tqdm import tqdm
+from multiprocessing import Pool as ThreadPool
+
+
+def one_hot_encoding(df,cols,is_drop=True):
+    for col in cols:
+        print('one hot encoding:',col)
+        dummies = pd.get_dummies(pd.Series(df[col]),prefix='oneHot_%s'%col)
+        df = pd.concat([df,dummies],axis=1)
+    if is_drop:
+        df.drop(cols,axis=1,inplace=True)
+    return df
+
+def cat_feature(df):
+    one_hot_features = [col for col in df.columns if 'oneHot' in col]
+    if lastk is None:
+        num_agg_df = df.groupby("customer_ID",sort=False)[one_hot_features].agg(['mean', 'std', 'sum', 'last'])
+    else:
+        num_agg_df = df.groupby("customer_ID",sort=False)[one_hot_features].agg(['mean', 'std', 'sum'])
+    num_agg_df.columns = ['_'.join(x) for x in num_agg_df.columns]
+
+    if lastk is None:
+        cat_agg_df = df.groupby("customer_ID",sort=False)[cat_features].agg(['last', 'nunique'])
+    else:
+        cat_agg_df = df.groupby("customer_ID",sort=False)[cat_features].agg(['nunique'])
+    cat_agg_df.columns = ['_'.join(x) for x in cat_agg_df.columns]
+
+    count_agg_df = df.groupby("customer_ID",sort=False)[['S_2']].agg(['count'])
+    count_agg_df.columns = ['_'.join(x) for x in count_agg_df.columns]
+    df = pd.concat([num_agg_df, cat_agg_df,count_agg_df], axis=1).reset_index()
+    print('cat feature shape after engineering', df.shape )
+
+    return df
+
+def num_feature(df):
+    if num_features[0][:5] == 'rank_':
+        num_agg_df = df.groupby("customer_ID",sort=False)[num_features].agg(['last'])
+    else:
+        if lastk is None:
+            num_agg_df = df.groupby("customer_ID",sort=False)[num_features].agg(['mean', 'std', 'min', 'max', 'sum', 'last'])
+        else:
+            num_agg_df = df.groupby("customer_ID",sort=False)[num_features].agg(['mean', 'std', 'min', 'max', 'sum'])
+    num_agg_df.columns = ['_'.join(x) for x in num_agg_df.columns]
+    if num_features[0][:5] != 'rank_':
+        for col in num_agg_df.columns:
+            num_agg_df[col] = num_agg_df[col] // 0.01
+    df = num_agg_df.reset_index()
+    print('num feature shape after engineering', df.shape )
+
+    return df
+
+def diff_feature(df):
+    diff_num_features = [f'diff_{col}' for col in num_features]
+    cids = df['customer_ID'].values
+    df = df.groupby('customer_ID')[num_features].diff().add_prefix('diff_')
+    df.insert(0,'customer_ID',cids)
+    if lastk is None:
+        num_agg_df = df.groupby("customer_ID",sort=False)[diff_num_features].agg(['mean', 'std', 'min', 'max', 'sum', 'last'])
+    else:
+        num_agg_df = df.groupby("customer_ID",sort=False)[diff_num_features].agg(['mean', 'std', 'min', 'max', 'sum'])
+    num_agg_df.columns = ['_'.join(x) for x in num_agg_df.columns]
+    for col in num_agg_df.columns:
+        num_agg_df[col] = num_agg_df[col] // 0.01
+
+    df = num_agg_df.reset_index()
+    print('diff feature shape after engineering', df.shape )
+
+    return df
+
+n_cpu = 16
+transform = [['','rank_','ym_rank_'],[''],['']]
+
+for li, lastk in enumerate([None,3,6]):
+    for prefix in transform[li]:
+        df = pd.read_feather(f'./input/train.feather').append(pd.read_feather(f'./input/test.feather')).reset_index(drop=True)
+        all_cols = [c for c in list(df.columns) if c not in ['customer_ID','S_2']]
+        cat_features = ["B_30","B_38","D_114","D_116","D_117","D_120","D_126","D_63","D_64","D_66","D_68"]
+        num_features = [col for col in all_cols if col not in cat_features]
+        for col in [col for col in df.columns if 'S_' in col or 'P_' in col]:
+            if col != 'S_2':
+                df[col] = df[col].fillna(0)
+
+        if lastk is not None:
+            prefix = f'last{lastk}_' + prefix
+            print('all df shape',df.shape)
+            df['rank'] = df.groupby('customer_ID')['S_2'].rank(ascending=False)
+            df = df.loc[df['rank']<=lastk].reset_index(drop=True)
+            df = df.drop(['rank'],axis=1)
+            print(f'last {lastk} shape',df.shape)
+
+        if prefix == 'rank_':
+            cids = df['customer_ID'].values
+            df = df.groupby('customer_ID')[num_features].rank(pct=True).add_prefix('rank_')
+            df.insert(0,'customer_ID',cids)
+            num_features = [f'rank_{col}' for col in num_features]
+
+        if prefix == 'ym_rank_':
+            cids = df['customer_ID'].values
+            df['ym'] = df['S_2'].apply(lambda x:x[:7])
+            df = df.groupby('ym')[num_features].rank(pct=True).add_prefix('ym_rank_')
+            num_features = [f'ym_rank_{col}' for col in num_features]
+            df.insert(0,'customer_ID',cids)
+
+        if prefix in ['','last3_']:
+            df = one_hot_encoding(df,cat_features,False)
+
+        vc = df['customer_ID'].value_counts(sort=False).cumsum()
+        batch_size = int(np.ceil(len(vc) / n_cpu))
+        dfs = []
+        start = 0
+        for i in range(min(n_cpu,int(np.ceil(len(vc) / batch_size)))):
+            vc_ = vc[i*batch_size:(i+1)*batch_size]
+            dfs.append(df[start:vc_[-1]])
+            start = vc_[-1]
+
+        pool = ThreadPool(n_cpu)
+
+        if prefix in ['','last3_']:
+            cat_feature_df = pd.concat(pool.map(cat_feature,tqdm(dfs,desc='cat_feature'))).reset_index(drop=True)
+
+            cat_feature_df.to_feather(f'./input/{prefix}cat_feature.feather')
+
+        if prefix in ['','last3_','last6_','rank_','ym_rank_']:
+            num_feature_df = pd.concat(pool.map(num_feature,tqdm(dfs,desc='num_feature'))).reset_index(drop=True)
+            num_feature_df.to_feather(f'./input/{prefix}num_feature.feather')
+
+        if prefix in ['','last3_']:
+            diff_feature_df = pd.concat(pool.map(diff_feature,tqdm(dfs,desc='diff_feature'))).reset_index(drop=True)
+            diff_feature_df.to_feather(f'./input/{prefix}diff_feature.feather')
+
+        pool.close()
+
+        import warnings
+warnings.simplefilter('ignore')
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import gc,os,random
+import time,datetime
+from tqdm import tqdm
+from sklearn.preprocessing import LabelEncoder
+
+from utils import *
+root = args.root
+seed = args.seed
+
+
+train = pd.read_feather(f'./input/train.feather')
+test = pd.read_feather(f'./input/test.feather')
+
+def one_hot_encoding(df,cols,is_drop=True):
+    for col in cols:
+        print('one hot encoding:',col)
+        dummies = pd.get_dummies(pd.Series(df[col]),prefix='oneHot_%s'%col)
+        df = pd.concat([df,dummies],axis=1)
+    if is_drop:
+        df.drop(cols,axis=1,inplace=True)
+    return df
+cat_features = ["B_30","B_38","D_114","D_116","D_117","D_120","D_126","D_63","D_64","D_66","D_68"]
+eps = 1e-3
+
+
+train_y =  pd.read_csv(f'{root}/train_labels.csv')
+train = train.merge(train_y,how='left',on=id_name)
+
+print(train.shape,test.shape)
+
+lgb_config = {
+    'lgb_params':{
+                  'objective' : 'binary',
+                  'metric' : 'binary_logloss',
+                  'boosting': 'dart',
+                  'max_depth' : -1,
+                  'num_leaves' : 64,
+                  'learning_rate' : 0.035,
+                  'bagging_freq': 5,
+                  'bagging_fraction' : 0.7,
+                  'feature_fraction' : 0.7,
+                  'min_data_in_leaf': 256,
+                  'max_bin': 63,
+                  'min_data_in_bin': 256,
+                  # 'min_sum_heassian_in_leaf': 10,
+                  'tree_learner': 'serial',
+                  'boost_from_average': 'false',
+                  'lambda_l1' : 0.1,
+                  'lambda_l2' : 30,
+                  'num_threads': 24,
+                  'verbosity' : 1,
+    },
+    'feature_name':[col for col in train.columns if col not in [id_name,label_name,'S_2']],
+    'rounds':4500,
+    'early_stopping_rounds':100,
+    'verbose_eval':50,
+    'folds':5,
+    'seed':seed
+}
+
+
+Lgb_train_and_predict(train,test,lgb_config,gkf=True,aug=None,run_id='LGB_with_series_feature')
+
+import warnings
+warnings.simplefilter('ignore')
+
+import pandas as pd
+from tqdm import tqdm
+
+from utils import *
+
+root = args.root
+
+oof = pd.read_csv('./output/LGB_with_series_feature/oof.csv')
+sub = pd.read_csv('./output/LGB_with_series_feature/submission.csv.zip')
+
+def pad_target(x):
+    t = np.zeros(13)
+    t[:-len(x)] = np.nan
+    t[-len(x):] = x
+    return list(t)
+
+tmp1 = oof.groupby('customer_ID',sort=False)['target'].agg(lambda x:pad_target(x))
+tmp2 = sub.groupby('customer_ID',sort=False)['prediction'].agg(lambda x:pad_target(x))
+
+tmp = tmp1.append(tmp2)
+
+tmp = pd.DataFrame(data=tmp.tolist(),columns=['target%s'%i for i in range(1,14)])
+
+
+df = []
+for fn in ['cat','num','diff','rank_num','last3_cat','last3_num','last3_diff', 'last6_num','ym_rank_num']:
+    if len(df) == 0:
+        df.append(pd.read_feather(f'{root}/{fn}_feature.feather'))
+    else:
+        df.append(pd.read_feather(f'{root}/{fn}_feature.feather').drop([id_name],axis=1))
+    if 'last' in fn :
+        df[-1] = df[-1].add_prefix('_'.join(fn.split('_')[:-1])+'_')
+
+df.append(tmp)
+
+df = pd.concat(df,axis=1)
+print(df.shape)
+df.to_feather(f'{root}/all_feature.feather')
+
+del df
+
+def one_hot_encoding(df,cols,is_drop=True):
+    for col in cols:
+        print('one hot encoding:',col)
+        dummies = pd.get_dummies(pd.Series(df[col]),prefix='oneHot_%s'%col)
+        df = pd.concat([df,dummies],axis=1)
+    if is_drop:
+        df.drop(cols,axis=1,inplace=True)
+    return df
+
+cat_features = ["B_30","B_38","D_114","D_116","D_117","D_120","D_126","D_63","D_64","D_66","D_68"]
+
+df = pd.read_feather(f'./input/train.feather').append(pd.read_feather(f'./input/test.feather')).reset_index(drop=True)
+df = df.drop(['S_2'],axis=1)
+df = one_hot_encoding(df,cat_features,True)
+for col in tqdm(df.columns):
+    if col not in ['customer_ID','S_2']:
+        df[col] /= 100
+    df[col] = df[col].fillna(0)
+
+df.to_feather('./input/nn_series.feather')
+
+def GreedyFindBin(distinct_values, counts,num_distinct_values, max_bin, total_cnt, min_data_in_bin=3):
+#INPUT:
+#   distinct_values 保存特征取值的数组，特征取值单调递增
+#   counts 特征的取值对应的样本数目
+#   num_distinct_values 特征取值的数量
+#   max_bin 分桶的最大数量
+#   total_cnt 样本数量
+#   min_data_in_bin 桶包含的最小样本数
+
+# bin_upper_bound就是记录桶分界的数组
+    bin_upper_bound=list();
+    assert(max_bin>0)
+
+    # 特征取值数比max_bin数量少，直接取distinct_values的中点放置
+    if num_distinct_values <= max_bin:
+        cur_cnt_inbin = 0
+        for i in range(num_distinct_values-1):
+            cur_cnt_inbin += counts[i]
+            #若一个特征的取值比min_data_in_bin小，则累积下一个取值，直到比min_data_in_bin大，进入循环。
+            if cur_cnt_inbin >= min_data_in_bin:
+                #取当前值和下一个值的均值作为该桶的分界点bin_upper_bound
+                bin_upper_bound.append((distinct_values[i] + distinct_values[i + 1]) / 2.0)
+                cur_cnt_inbin = 0
+        # 对于最后一个桶的上界则为无穷大
+        cur_cnt_inbin += counts[num_distinct_values - 1];
+        bin_upper_bound.append(float('Inf'))
+        # 特征取值数比max_bin来得大，说明几个特征值要共用一个bin
+    else:
+        if min_data_in_bin>0:
+            max_bin=min(max_bin,total_cnt//min_data_in_bin)
+            max_bin=max(max_bin,1)
+        #mean size for one bin
+        mean_bin_size=total_cnt/max_bin
+        rest_bin_cnt = max_bin
+        rest_sample_cnt = total_cnt
+        #定义is_big_count_value数组：初始设定特征每一个不同的值的数量都小（false）
+        is_big_count_value=[False]*num_distinct_values
+        #如果一个特征值的数目比mean_bin_size大，那么这些特征需要单独一个bin
+        for i in range(num_distinct_values):
+        #如果一个特征值的数目比mean_bin_size大，则设定这个特征值对应的is_big_count_value为真。。
+            if counts[i] >= mean_bin_size:
+                is_big_count_value[i] = True
+                rest_bin_cnt-=1
+                rest_sample_cnt -= counts[i]
+        #剩下的特征取值的样本数平均每个剩下的bin：mean size for one bin
+        mean_bin_size = rest_sample_cnt/rest_bin_cnt
+        upper_bounds=[float('Inf')]*max_bin
+        lower_bounds=[float('Inf')]*max_bin
+
+        bin_cnt = 0
+        lower_bounds[bin_cnt] = distinct_values[0]
+        cur_cnt_inbin = 0
+        #重新遍历所有的特征值（包括数目大和数目小的）
+        for i in range(num_distinct_values-1):
+            #如果当前的特征值数目是小的
+            if not is_big_count_value[i]:
+                rest_sample_cnt -= counts[i]
+            cur_cnt_inbin += counts[i]
+
+            # 若cur_cnt_inbin太少，则累积下一个取值，直到满足条件，进入循环。
+            # need a new bin 当前的特征如果是需要单独成一个bin，或者当前几个特征计数超过了mean_bin_size，或者下一个是需要独立成桶的
+            if is_big_count_value[i] or cur_cnt_inbin >= mean_bin_size or \
+            is_big_count_value[i + 1] and cur_cnt_inbin >= max(1.0, mean_bin_size * 0.5):
+                upper_bounds[bin_cnt] = distinct_values[i] # 第i个bin的最大就是 distinct_values[i]了
+                bin_cnt+=1
+                lower_bounds[bin_cnt] = distinct_values[i + 1] # 下一个bin的最小就是distinct_values[i + 1]，注意先++bin了
+                if bin_cnt >= max_bin - 1:
+                    break
+                cur_cnt_inbin = 0
+                if not is_big_count_value[i]:
+                    rest_bin_cnt-=1
+                    mean_bin_size = rest_sample_cnt / rest_bin_cnt
+#             bin_cnt+=1
+        # update bin upper bound 与特征取值数比max_bin数量少的操作类似，取当前值和下一个值的均值作为该桶的分界点
+        for i in range(bin_cnt-1):
+            bin_upper_bound.append((upper_bounds[i] + lower_bounds[i + 1]) / 2.0)
+        bin_upper_bound.append(float('Inf'))
+    return bin_upper_bound
+
+cat_features = ["B_30","B_38","D_114","D_116","D_117","D_120","D_126","D_63","D_64","D_66","D_68"]
+eps = 1e-3
+
+dfs = []
+for fn in ['cat','num','diff','rank_num','last3_cat','last3_num','last3_diff', 'last6_num','ym_rank_num']:
+    if len(dfs) == 0:
+        dfs.append(pd.read_feather(f'{root}/{fn}_feature.feather'))
+    else:
+        dfs.append(pd.read_feather(f'{root}/{fn}_feature.feather').drop(['customer_ID'],axis=1))
+
+    if 'last' in fn:
+        dfs[-1] = dfs[-1].add_prefix('_'.join(fn.split('_')[:-1])+'_')
+
+for df in dfs:
+    for col in tqdm(df.columns):
+        if col not in ['customer_ID','S_2']:
+            # v_min = df[col].min()
+            # v_max = df[col].max()
+            # df[col] = (df[col]-v_min+eps) / (v_max-v_min+eps)
+            vc = df[col].value_counts().sort_index()
+            bins = GreedyFindBin(vc.index.values,vc.values,len(vc),255,vc.sum())
+            df[col] = np.digitize(df[col],[-np.inf]+bins)
+            df.loc[df[col]==len(bins)+1,col] = 0
+            df[col] = df[col] / df[col].max()
+
+tmp = tmp.fillna(0)
+dfs.append(tmp)
+df = pd.concat(dfs,axis=1)
+
+df.to_feather('./input/nn_all_feature.feather')
+import warnings
+warnings.simplefilter('ignore')
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import gc,os,random
+import time,datetime
+from tqdm import tqdm
+from sklearn.preprocessing import LabelEncoder
+
+from utils import *
+from model import *
+root = args.root
+seed = args.seed
+
+
+df = pd.read_feather(f'{root}/all_feature.feather')
+
+train_y =  pd.read_csv(f'{root}/train_labels.csv')
+train = df[:train_y.shape[0]]
+train['target'] = train_y['target']
+test = df[train_y.shape[0]:].reset_index(drop=True)
+del df
+
+print(train.shape,test.shape)
+
+lgb_config = {
+    'lgb_params':{
+                  'objective' : 'binary',
+                  'metric' : 'binary_logloss',
+                  'boosting': 'dart',
+                  'max_depth' : -1,
+                  'num_leaves' : 64,
+                  'learning_rate' : 0.035,
+                  'bagging_freq': 5,
+                  'bagging_fraction' : 0.75,
+                  'feature_fraction' : 0.05,
+                  'min_data_in_leaf': 256,
+                  'max_bin': 63,
+                  'min_data_in_bin': 256,
+                  # 'min_sum_heassian_in_leaf': 10,
+                  'tree_learner': 'serial',
+                  'boost_from_average': 'false',
+                  'lambda_l1' : 0.1,
+                  'lambda_l2' : 30,
+                  'num_threads': 24,
+                  'verbosity' : 1,
+    },
+    'feature_name':[],
+    'rounds':4500,
+    'early_stopping_rounds':100,
+    'verbose_eval':50,
+    'folds':5,
+    'seed':seed
+}
+
+lgb_config = {
+    'lgb_params':{
+                  'objective' : 'binary',
+                  'metric' : 'binary_logloss',
+                  'boosting': 'dart',
+                  'max_depth' : -1,
+                  'num_leaves' : 64,
+                  'learning_rate' : 0.035,
+                  'bagging_freq': 5,
+                  'bagging_fraction' : 0.75,
+                  'feature_fraction' : 0.05,
+                  'min_data_in_leaf': 256,
+                  'max_bin': 63,
+                  'min_data_in_bin': 256,
+                  # 'min_sum_heassian_in_leaf': 10,
+                  'tree_learner': 'serial',
+                  'boost_from_average': 'false',
+                  'lambda_l1' : 0.1,
+                  'lambda_l2' : 30,
+                  'num_threads': 24,
+                  'verbosity' : 1,
+    },
+    'feature_name':[col for col in train.columns if col not in [id_name,label_name,'S_2'] and 'skew' not in col and 'kurt' not in col and 'sub_mean' not in col and 'div_mean' not in col],
+    'rounds':4500,
+    'early_stopping_rounds':100,
+    'verbose_eval':50,
+    'folds':5,
+    'seed':seed
+}
+lgb_config['feature_name'] = [col for col in train.columns if col not in [id_name,label_name,'S_2'] and 'target' not in col]
+Lgb_train_and_predict(train,test,lgb_config,aug=None,run_id='LGB_with_manual_feature')
+
+lgb_config['feature_name'] = [col for col in train.columns if col not in [id_name,label_name,'S_2']]
+Lgb_train_and_predict(train,test,lgb_config,aug=None,run_id='LGB_with_manual_feature_and_series_oof')
+import warnings
+warnings.simplefilter('ignore')
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import gc,os,random
+import time,datetime
+from tqdm import tqdm
+
+from utils import *
+from model import *
+root = args.root
+seed = args.seed
+
+df =  pd.read_feather('./input/nn_series.feather')
+y = pd.read_csv('./input/train_labels.csv')
+
+f = pd.read_feather('./input/nn_all_feature.feather')
+df['idx'] = df.index
+series_idx = df.groupby('customer_ID',sort=False).idx.agg(['min','max'])
+series_idx['feature_idx'] = np.arange(len(series_idx))
+df = df.drop(['idx'],axis=1)
+print(f.head())
+nn_config = {
+    'id_name':id_name,
+    'feature_name':[],
+    'label_name':label_name,
+    'obj_max': 1,
+    'epochs': 10,
+    'smoothing': 0.001,
+    'clipnorm': 1,
+    'patience': 100,
+    'lr': 3e-4,
+    'batch_size': 256,
+    'folds': 5,
+    'seed': seed,
+    'remark': args.remark
+}
+
+NN_train_and_predict([df,f,y,series_idx.values[:y.shape[0]]],[df,f,series_idx.values[y.shape[0]:]],Amodel,nn_config,use_series_oof=False,run_id='NN_with_series_feature')
+
+NN_train_and_predict([df,f,y,series_idx.values[:y.shape[0]]],[df,f,series_idx.values[y.shape[0]:]],Amodel,nn_config,use_series_oof=True,run_id='NN_with_series_and_all_feature')
+
+import warnings
+warnings.simplefilter('ignore')
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import gc,os,random
+import time,datetime
+from tqdm import tqdm
+
+p0 = pd.read_csv('./output/LGB_with_manual_feature/submission.csv.zip')
+p1 = pd.read_csv('./output/LGB_with_manual_feature_and_series_oof/submission.csv.zip')
+p2 = pd.read_csv('./output/NN_with_series_feature/submission.csv.zip')
+p3 = pd.read_csv('./output/NN_with_series_and_all_feature/submission.csv.zip')
+
+p0['prediction'] = p0['prediction']*0.3 + p1['prediction']*0.35 + p2['prediction']*0.15 + p3['prediction']*0.1
+
+p0.to_csv('./output/final_submission.csv.zip',index=False, compression='zip')

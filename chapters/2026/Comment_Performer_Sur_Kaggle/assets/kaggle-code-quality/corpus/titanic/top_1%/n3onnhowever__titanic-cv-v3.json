@@ -1,0 +1,22 @@
+{
+  "competition": "titanic",
+  "stratum": "top_1%",
+  "ref": "n3onnhowever/titanic-cv-v3",
+  "local_main_file": "corpus\\titanic\\notebooks\\top_1%\\n3onnhowever__titanic-cv-v3\\titanic-cv-v3.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 15,
+    "B_modularite": 20,
+    "C_reproductibilite": 20,
+    "D_lisibilite": 15,
+    "E_hygiene": 15
+  },
+  "score_total_100": 85,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline sklearn: add_features → ColumnTransformer → Pipeline → oof_predict_proba → blend 3 models → submit.",
+    "B_modularite": "Classe DenseTransformer, fonctions (add_features, make_pipeline, oof_predict_proba, tune_threshold, safe_logloss). ColumnTransformer pipeline.",
+    "C_reproductibilite": "SEED=42, N_SPLITS=10, rng=default_rng(SEED), all models with random_state=SEED.",
+    "D_lisibilite": "Markdown minimal ('# Titanic — CV v3'), code compact, noms corrects.",
+    "E_hygiene": "DenseTransformer pour sparse→dense, handle_unknown='ignore', SimpleImputer, log1p transform, clip pour safe_logloss."
+  },
+  "summary": "Notebook Titanic v3 avec sklearn Pipeline et ColumnTransformer. Ensemble 3 modèles (LogisticRegression, HistGradientBoosting, LightGBM). DenseTransformer helper pour compatibilité. OOF blending avec threshold tuning. Architecture plus modulaire que v2."
+}

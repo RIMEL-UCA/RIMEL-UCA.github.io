@@ -1,0 +1,76 @@
+{
+  "embeddings": {
+    "word_embeddings": [],
+    "contextual_embeddings": []
+  },
+  "preprocessing": {
+    "text_cleaning": [],
+    "tokenization_method": [],
+    "lowercase": null,
+    "augmentation_techniques": []
+  },
+  "transformer_models": {
+    "base_models": [
+      "transformer"
+    ],
+    "pretrained_checkpoints": [],
+    "fine_tuning_strategy": [
+      "pretrain-finetune"
+    ]
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "binary-logloss",
+      "huber-loss"
+    ],
+    "auxiliary_losses": []
+  },
+  "training_strategy": {
+    "optimizer": [],
+    "learning_rate": 0.01,
+    "learning_rate_schedule": [],
+    "batch_size": null,
+    "epochs": 200,
+    "regularization": [
+      "lambda-l2",
+      "feature-fraction",
+      "bagging-fraction"
+    ],
+    "cross_validation": [
+      "5-fold",
+      "10-fold-stratified"
+    ]
+  },
+  "model_architecture": {
+    "pooling_strategy": [
+      "last-node"
+    ],
+    "additional_layers": [
+      "mlp",
+      "linear",
+      "transformer-encoder"
+    ],
+    "dropout_rate": null
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "weighted-average"
+    ],
+    "prediction_averaging": [
+      "21-models-ensemble",
+      "seed-blend-42-52-62"
+    ]
+  },
+  "frameworks": {
+    "deep_learning_framework": [
+      "pytorch"
+    ],
+    "libraries": [
+      "lightgbm",
+      "catboost",
+      "sklearn",
+      "pandas",
+      "numpy"
+    ]
+  }
+}

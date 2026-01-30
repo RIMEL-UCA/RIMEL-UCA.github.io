@@ -1,0 +1,23 @@
+loguru
+kaggle
+# Web scraping - Sites statiques
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=5.0.0
+
+# Web scraping - Sites dynamiques (JavaScript)
+playwright>=1.40.0
+
+# Parsing et extraction de donnees
+parsel>=1.8.0
+
+# Gestion des donnees
+pandas>=2.0.0
+
+# Utilitaires
+python-dotenv>=1.0.0
+fake-useragent>=1.4.0
+tenacity>=8.2.0
+
+# Export
+openpyxl>=3.1.0

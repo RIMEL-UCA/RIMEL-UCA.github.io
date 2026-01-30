@@ -1,0 +1,37 @@
+{
+  "primary_loss": {
+    "source": "Kaggle 2nd place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "'objective': 'cross_entropy'"
+  },
+  "learning_rate": {
+    "source": "Kaggle 2nd place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "'learning_rate': 0.01"
+  },
+  "regularization": {
+    "source": "Kaggle 2nd place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "'subsample': 0.8, 'subsample_freq': 1, 'feature_fraction': 0.2, 'feature_fraction_bynode':0.3, 'min_data_in_leaf': 2 ** 11"
+  },
+  "cross_validation": {
+    "source": "Kaggle 2nd place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "Our best single lgbm model was trained on 29xx features. 5 folds CV - no stratification by any option"
+  },
+  "ensemble_method": {
+    "source": "Kaggle 2nd place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "Blend -> Power (2) rank blend of Dart lgbm (0.801 public) / GBDT lgbm (0.799 public) / Catboost models (0.799 public)"
+  },
+  "prediction_averaging": {
+    "source": "Kaggle 2nd place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "Blend -> Power (2) rank blend of Dart lgbm (0.801 public) / GBDT lgbm (0.799 public) / Catboost models (0.799 public)"
+  },
+  "libraries": {
+    "source": "Kaggle 2nd place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348111",
+    "quote": "Our best single lgbm model... Blend -> Power (2) rank blend of Dart lgbm (0.801 public) / GBDT lgbm (0.799 public) / Catboost models (0.799 public)"
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "preprocessing": {
+    "tokenization_method": {
+      "transformer_tokenizer": {
+        "source": "Inferred from transformer models usage",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257844",
+        "quote": "Transformer models require their respective tokenizers"
+      }
+    },
+    "feature_engineering": {
+      "textstat_features": {
+        "source": "Kaggle discussion - 4th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257897",
+        "quote": "Textstat features like flesch_reading_ease, smog_index, etc. were concatenated with transformer outputs"
+      }
+    }
+  },
+  "transformer_models": {
+    "base_models": {
+      "microsoft/deberta-large": {
+        "source": "Kaggle discussion - 4th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257897",
+        "quote": "Used multiple transformer models including deberta-large, deberta-xlarge, roberta-large, funnel-xlarge, albert-xxlarge, electra-large"
+      },
+      "microsoft/deberta-xlarge": {
+        "source": "Kaggle discussion - 4th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257897",
+        "quote": "Used multiple transformer models including deberta-large, deberta-xlarge, roberta-large, funnel-xlarge, albert-xxlarge, electra-large"
+      },
+      "roberta-large": {
+        "source": "Kaggle discussion - 4th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257897",
+        "quote": "Used multiple transformer models including deberta-large, deberta-xlarge, roberta-large, funnel-xlarge, albert-xxlarge, electra-large"
+      },
+      "funnel-transformer/xlarge-base": {
+        "source": "Kaggle discussion - 4th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257897",
+        "quote": "Used multiple transformer models including deberta-large, deberta-xlarge, roberta-large, funnel-xlarge, albert-xxlarge, electra-large"
+      },
+      "albert-xxlarge-v2": {
+        "source": "Kaggle discussion - 4th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257897",
+        "quote": "Used multiple transformer models including deberta-large, deberta-xlarge, roberta-large, funnel-xlarge, albert-xxlarge, electra-large"
+      },
+      "google/electra-large-discriminator": {
+        "source": "Kaggle discussion - 4th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257897",
+        "quote": "Used multiple transformer models including deberta-large, deberta-xlarge, roberta-large, funnel-xlarge, albert-xxlarge, electra-large"
+      }
+    },
+    "fine_tuning_strategy": {
+      "full_model_fine_tuning": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize",
+        "quote": "Full model fine-tuning approach from training scripts"
+      }
+    }
+  },
+  "loss_functions": {
+    "primary_loss": {
+      "mse": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize",
+        "quote": "MSE loss used for regression: criterion = nn.MSELoss()"
+      },
+      "kl_divergence": {
+        "source": "Kaggle discussion - 4th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257897",
+        "quote": "KL divergence loss also experimented with for some models"
+      }
+    }
+  },
+  "training_strategy": {
+    "optimizer": {
+      "adamw": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize",
+        "quote": "optimizer = AdamW(model.parameters(), lr=0.00005, weight_decay=1.0)"
+      }
+    },
+    "learning_rate": {
+      "0.00005": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize",
+        "quote": "Learning rate set to 0.00005 or 0.000025: lr=0.00005"
+      }
+    },
+    "learning_rate_schedule": {
+      "cosine_annealing": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize",
+        "quote": "scheduler = CosineAnnealingLR(optimizer, T_max=epochs)"
+      }
+    },
+    "batch_size": {
+      "16": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize",
+        "quote": "batch_size = 16 for most models, 12 for larger models"
+      }
+    },
+    "epochs": {
+      "6": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize",
+        "quote": "epochs = 6, with SWA starting after epoch 3"
+      }
+    },
+    "cross_validation": {
+      "5_fold": {
+        "source": "Kaggle discussion - 4th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257897",
+        "quote": "5-fold cross-validation used for model training"
+      }
+    },
+    "regularization": {
+      "swa": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize",
+        "quote": "Stochastic Weight Averaging (SWA) applied after epoch 3"
+      }
+    }
+  },
+  "model_architecture": {
+    "pooling_strategy": {
+      "attention_pooling": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize",
+        "quote": "AttentionBlock used for pooling sequence outputs"
+      }
+    },
+    "attention_mechanism": {
+      "attention_block": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize",
+        "quote": "class AttentionBlock: custom attention mechanism for pooling"
+      }
+    },
+    "custom_layers": {
+      "attention_head": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize",
+        "quote": "Custom attention head on top of transformer output"
+      }
+    }
+  },
+  "postprocessing": {
+    "ensemble_method": {
+      "ridge_regression": {
+        "source": "Kaggle discussion - 4th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257897",
+        "quote": "RidgeCV used for ensembling 38 models"
+      },
+      "bayesian_ridge": {
+        "source": "Kaggle discussion - 4th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257897",
+        "quote": "BayesianRidge regression used for stacking"
+      },
+      "netflix_method": {
+        "source": "Kaggle discussion - 4th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257897",
+        "quote": "Netflix method (collaborative filtering approach) for ensembling"
+      },
+      "weighted_average": {
+        "source": "Kaggle discussion - 4th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257897",
+        "quote": "Weighted averaging of predictions from different stacking methods"
+      }
+    }
+  },
+  "frameworks": {
+    "deep_learning_framework": {
+      "pytorch": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize",
+        "quote": "import torch, torch.nn as nn"
+      },
+      "pytorch_lightning": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize",
+        "quote": "PyTorch Lightning used for training: import pytorch_lightning as pl"
+      }
+    },
+    "libraries": {
+      "transformers": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize",
+        "quote": "from transformers import AutoModel, AutoTokenizer"
+      },
+      "sklearn": {
+        "source": "GitHub repository",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize",
+        "quote": "from sklearn.linear_model import RidgeCV, BayesianRidge"
+      },
+      "textstat": {
+        "source": "Kaggle discussion - 4th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257897",
+        "quote": "textstat library used for feature extraction: flesch_reading_ease, smog_index"
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "image_size": {
+    "384x384": {
+      "source": "Top5 solution description",
+      "link": "solutions/top5.txt",
+      "quote": "vit-b16 + img_size = 384 + augmentations + bi-tempered logistic loss (t1=0.8, t2=1.4)... deit-b16 + img_size = 384 + augmentations + bi-tempered logistic loss (t1=0.8, t2=1.4)"
+    },
+    "512x512": {
+      "source": "Top5 solution description",
+      "link": "solutions/top5.txt",
+      "quote": "efn-b4 + img_size = 512 + augmentations + bi-tempered logistic loss (t1=0.8, t2=1.4) + cutmix"
+    }
+  },
+  "brightness": {
+    "source": "Top5 solution description",
+    "link": "solutions/top5.txt",
+    "quote": "tta: random crop, transpose, h/v flip, hue, random brightness, normalize"
+  },
+  "cutmix": {
+    "source": "Top5 solution description",
+    "link": "solutions/top5.txt",
+    "quote": "efn-b4 + img_size = 512 + augmentations + bi-tempered logistic loss (t1=0.8, t2=1.4) + cutmix... Cutmix improves classification performace for small models, like efn-b4."
+  },
+  "flip": {
+    "source": "Top5 solution description",
+    "link": "solutions/top5.txt",
+    "quote": "tta: random crop, transpose, h/v flip, hue, random brightness, normalize"
+  },
+  "horizontalflip": {
+    "source": "Top5 solution description",
+    "link": "solutions/top5.txt",
+    "quote": "tta: random crop, transpose, h/v flip, hue, random brightness, normalize"
+  },
+  "hue": {
+    "source": "Top5 solution description",
+    "link": "solutions/top5.txt",
+    "quote": "tta: random crop, transpose, h/v flip, hue, random brightness, normalize"
+  },
+  "randomcrop": {
+    "source": "Top5 solution description",
+    "link": "solutions/top5.txt",
+    "quote": "tta: random crop, transpose, h/v flip, hue, random brightness, normalize"
+  },
+  "transpose": {
+    "source": "Top5 solution description",
+    "link": "solutions/top5.txt",
+    "quote": "tta: random crop, transpose, h/v flip, hue, random brightness, normalize"
+  },
+  "tta": {
+    "source": "Top5 solution description",
+    "link": "solutions/top5.txt",
+    "quote": "tta: random crop, transpose, h/v flip, hue, random brightness, normalize"
+  },
+  "verticalflip": {
+    "source": "Top5 solution description",
+    "link": "solutions/top5.txt",
+    "quote": "tta: random crop, transpose, h/v flip, hue, random brightness, normalize"
+  },
+  "deit-b/16": {
+    "source": "Top5 solution description",
+    "link": "solutions/top5.txt",
+    "quote": "Training model_10: Dataset: Cassava 2020 only, deit-b16 + img_size = 384 + augmentations + bi-tempered logistic loss (t1=0.8, t2=1.4)"
+  },
+  "efficientnet-b4": {
+    "source": "Top5 solution description",
+    "link": "solutions/top5.txt",
+    "quote": "model_13 (efn-b4-cmix)... efn-b4 + img_size = 512 + augmentations + bi-tempered logistic loss (t1=0.8, t2=1.4) + cutmix"
+  },
+  "vit-b/16": {
+    "source": "Top5 solution description",
+    "link": "solutions/top5.txt",
+    "quote": "model_8 (vit16)... vit-b16 + img_size = 384 + augmentations + bi-tempered logistic loss (t1=0.8, t2=1.4)"
+  },
+  "freeze-non-classifier-layers": {
+    "source": "Top5 solution description",
+    "link": "solutions/top5.txt",
+    "quote": "Training model_13_ft_2: Dataset: Cassava 2019 + 2020 merged dataset, finetune model_13 with: freeze non-classifier layers + bi-tempered logistic loss (t1=0.8, t2=1.4) + cutmix"
+  },
+  "bi-tempered-logistic-loss": {
+    "source": "Top5 solution description",
+    "link": "solutions/top5.txt",
+    "quote": "vit-b16 + img_size = 384 + augmentations + bi-tempered logistic loss (t1=0.8, t2=1.4)... efn-b4 + img_size = 512 + augmentations + bi-tempered logistic loss (t1=0.8, t2=1.4) + cutmix... Proper-parametered bi-tempered logistic loss works better than other losses (like Taylor Cross Entropy loss or Label Smoothing loss) in most cases, no matter training or finetuning."
+  },
+  "2019-data": {
+    "source": "Top5 solution description",
+    "link": "solutions/top5.txt",
+    "quote": "Training model_13_ft_2: Dataset: Cassava 2019 + 2020 merged dataset"
+  },
+  "2020-data": {
+    "source": "Top5 solution description",
+    "link": "solutions/top5.txt",
+    "quote": "Training model_8: Dataset: Cassava 2020 only... Training model_13: Dataset: Cassava 2020 only... Cassava 2020 dataset works better than Cassava 2019+2020 merged dataset when training models"
+  },
+  "weighted-arithmetic-mean": {
+    "source": "Top5 solution description",
+    "link": "solutions/top5.txt",
+    "quote": "model_8 (vit16) + model_13_ft_2 (efn-b4-cmix) + model_10 (deit) (3-model ensemble)... ensemble weight=[0.5, 0.3, 0.2]"
+  },
+  "random-tta": {
+    "source": "Top5 solution description",
+    "link": "solutions/top5.txt",
+    "quote": "tta: random crop, transpose, h/v flip, hue, random brightness, normalize"
+  },
+  "tta": {
+    "source": "Top5 solution description",
+    "link": "solutions/top5.txt",
+    "quote": "tta: random crop, transpose, h/v flip, hue, random brightness, normalize"
+  }
+}

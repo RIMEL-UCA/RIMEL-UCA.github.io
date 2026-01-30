@@ -1,0 +1,104 @@
+{
+  "preprocessing": {
+    "image_size": [
+      "512x512",
+      "384x384",
+      "224x224"
+    ],
+    "normalization": {},
+    "augmentation_techniques": [
+      "randomresizedcrop",
+      "transpose",
+      "horizontalflip",
+      "verticalflip",
+      "shiftscalerotate",
+      "huesaturationvalue",
+      "randombrightnesscontrast",
+      "coarsedropout",
+      "cutout",
+      "centercrop",
+      "rotate",
+      "flip",
+      "resize"
+    ]
+  },
+  "transformer_models": {
+    "base_models": [
+      "resnext50-32x4d",
+      "vit-b/16",
+      "efficientnet-b4",
+      "mobilenetv3"
+    ],
+    "pretrained_checkpoints": [
+      "imagenet",
+      "noisystudent",
+      "cropnet"
+    ],
+    "fine_tuning_strategy": []
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "crossentropyloss",
+      "bit-tempered-logistic-loss",
+      "sigmoid-focal-loss"
+    ]
+  },
+  "training_strategy": {
+    "optimizer": [
+      "adam"
+    ],
+    "learning_rate": 0.0001,
+    "learning_rate_schedule": [
+      "reducelronplateau",
+      "cosine-annealing-warm-restarts",
+      "warmup-and-cosine-decay"
+    ],
+    "batch_size": null,
+    "epochs": 15,
+    "regularization": [
+      "dropout",
+      "label-smoothing",
+      "early-stopping",
+      "drop-connect"
+    ],
+    "cross_validation": [
+      "5-fold"
+    ],
+    "external_data": [],
+    "mixed_precision": true,
+    "progressive_resizing": null,
+    "noise_handling": []
+  },
+  "model_architecture": {
+    "pooling_strategy": [
+      "global-average-pooling"
+    ],
+    "additional_layers": [
+      "linear-layer",
+      "dropout-layer"
+    ],
+    "dropout_rate": 0.5
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "stacked-mean",
+      "averaging"
+    ],
+    "prediction_averaging": [
+      "test-time-augmentation",
+      "multi-crop"
+    ]
+  },
+  "frameworks": {
+    "deep_learning_framework": [
+      "pytorch",
+      "tensorflow"
+    ],
+    "libraries": [
+      "timm",
+      "albumentations",
+      "tensorflow-hub",
+      "keras"
+    ]
+  }
+}

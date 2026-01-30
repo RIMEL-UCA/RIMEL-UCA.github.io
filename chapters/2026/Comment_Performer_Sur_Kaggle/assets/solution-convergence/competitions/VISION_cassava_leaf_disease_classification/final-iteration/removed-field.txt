@@ -1,0 +1,16 @@
+preprocessing.augmentation_techniques.horizontal-flip
+preprocessing.augmentation_techniques.vertical-flip
+preprocessing.augmentation_techniques.random-crop
+preprocessing.augmentation_techniques.random-hue
+preprocessing.augmentation_techniques.random-brightness
+transformer_models.fine_tuning_strategy.freeze-bn-layer
+loss_functions.primary_loss.bi-tempered
+loss_functions.primary_loss.bit-tempered-logistic-loss
+loss_functions.primary_loss.focalcos
+loss_functions.primary_loss.label-smoothing-cross-entropy
+training_strategy.cross_validation.5-fold-stratifiedkfold
+model_architecture.additional_layers.linear
+postprocessing.ensemble_method.averaging
+postprocessing.ensemble_method.weighted-averaging
+postprocessing.prediction_averaging.test-time-augmentation
+training_strategy.regularization.fp16

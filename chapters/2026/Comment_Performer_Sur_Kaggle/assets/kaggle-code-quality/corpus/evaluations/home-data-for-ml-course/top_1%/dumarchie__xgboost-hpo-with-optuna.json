@@ -1,0 +1,22 @@
+{
+  "competition": "home-data-for-ml-course",
+  "stratum": "top_1%",
+  "ref": "dumarchie/xgboost-hpo-with-optuna",
+  "local_main_file": "corpus\\home-data-for-ml-course\\notebooks\\top_1%\\dumarchie__xgboost-hpo-with-optuna\\xgboost-hpo-with-optuna.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 20,
+    "B_modularite": 15,
+    "C_reproductibilite": 20,
+    "D_lisibilite": 20,
+    "E_hygiene": 15
+  },
+  "score_total_100": 90,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline exemplaire avec sections markdown: Introduction → Data Preparation → Optuna Study → Refit and Predict. Séparation nette des étapes.",
+    "B_modularite": "Module utils externe (ames_housing_utils), fonction objective() pour Optuna, FIXED_PARAMS séparés des params tunés, mais peu de fonctions custom.",
+    "C_reproductibilite": "seed=42 dans xgb.cv, warm start avec enqueue_trial, CV 5-folds, early_stopping_rounds=50, logs MAE+SE, best_iteration sauvegardé.",
+    "D_lisibilite": "Excellente documentation markdown avec explications claires, storytelling complet, titres descriptifs, code bien commenté.",
+    "E_hygiene": "Peu de hardcoding (FIXED_PARAMS centralisé), chemins via utils, mais dépendance externe (ames_housing_utils) non fournie dans le dossier."
+  },
+  "summary": "Notebook pédagogique exemplaire avec excellent storytelling markdown. Pipeline HPO Optuna très bien structuré avec multi-objectif (MAE+SE). Reproductibilité parfaite (seed, CV, early stopping). Dépend d'un module utils externe. Documentation claire sur les objectifs et la méthodologie."
+}

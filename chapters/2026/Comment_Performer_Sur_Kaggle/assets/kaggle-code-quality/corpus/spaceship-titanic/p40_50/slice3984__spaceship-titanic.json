@@ -1,0 +1,22 @@
+{
+  "competition": "spaceship-titanic",
+  "stratum": "p40_50",
+  "ref": "slice3984/spaceship-titanic",
+  "local_main_file": "corpus\\spaceship-titanic\\notebooks\\p40_50\\slice3984__spaceship-titanic\\spaceship-titanic.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 15,
+    "B_modularite": 10,
+    "C_reproductibilite": 15,
+    "D_lisibilite": 15,
+    "E_hygiene": 15
+  },
+  "score_total_100": 70,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline structuré avec markdown: # EDA → ## Missingness → # Feature engineering → # Predictions → ## Train/Val splits. Sections claires.",
+    "B_modularite": "Peu de fonctions, code linéaire mais organisé. Pipeline sklearn potentiel (import mais non implémenté dans extrait).",
+    "C_reproductibilite": "random_state=42 dans train_test_split, stratify=y, feature engineering reproductible.",
+    "D_lisibilite": "Markdown explicatif (- Missignness is uniformally distributed), titres hiérarchiques, analyses documentées.",
+    "E_hygiene": "Gestion MAR (CryoSleep→ShoppingMall), cabin_missing flag, astype('Int64'), fillna conditionnel basé sur analyse."
+  },
+  "summary": "Notebook avec bonne analyse EDA de missingness. Feature engineering justifié par l'analyse (MAR detection). Markdown explicatif. Manque de modularité (code linéaire). Approche data-driven pour imputation. Visualisations de corrélation."
+}

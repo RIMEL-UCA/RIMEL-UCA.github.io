@@ -1,0 +1,82 @@
+{
+  "base_models": {
+    "source": "Kaggle 260th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348230",
+    "quote": "Neural Network models: Tabular data(same used for Tree learners), Gru, Transformer and Stack Model(Gru+Tabular Model)"
+  },
+  "primary_loss": {
+    "source": "Kaggle 260th place solution - code",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348230",
+    "quote": "criterion = nn.BCEWithLogitsLoss()... binary_loss = criterion(yhat, y). hinge_loss = get_hinge_loss(yhat, y). rank_loss = get_rank_loss(yhat, y). loss = binary_loss + hinge_loss + rank_loss"
+  },
+  "optimizer": {
+    "source": "Kaggle 260th place solution - code",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348230",
+    "quote": "optimizer = torch.optim.AdamW(model.parameters(), lr=1e-3, weight_decay=1e-3)"
+  },
+  "learning_rate": {
+    "source": "Kaggle 260th place solution - code",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348230",
+    "quote": "optimizer = torch.optim.AdamW(model.parameters(), lr=1e-3, weight_decay=1e-3)"
+  },
+  "learning_rate_schedule": {
+    "source": "Kaggle 260th place solution - code",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348230",
+    "quote": "scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max = CFG.N_EPOCHS * len(train_dataloader), eta_min=1e-7)"
+  },
+  "batch_size": {
+    "source": "Kaggle 260th place solution - code",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348230",
+    "quote": "BATCH_SIZE = 4096"
+  },
+  "epochs": {
+    "source": "Kaggle 260th place solution - code",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348230",
+    "quote": "N_EPOCHS=12"
+  },
+  "regularization": {
+    "source": "Kaggle 260th place solution - code",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348230",
+    "quote": "optimizer = torch.optim.AdamW(model.parameters(), lr=1e-3, weight_decay=1e-3)... self.dropout = nn.Dropout(dropout)... self.bn = nn.BatchNorm1d(insize)... torch.nn.utils.clip_grad_norm_(model.parameters(), 5)"
+  },
+  "cross_validation": {
+    "source": "Kaggle 260th place solution - code",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348230",
+    "quote": "skf = StratifiedKFold(n_splits=5, random_state=88471, shuffle=True)"
+  },
+  "pooling_strategy": {
+    "source": "Kaggle 260th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348230",
+    "quote": "Neural Network models: Tabular data(same used for Tree learners), Gru, Transformer and Stack Model(Gru+Tabular Model)"
+  },
+  "additional_layers": {
+    "source": "Kaggle 260th place solution - code",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348230",
+    "quote": "self.missing_embedd = nn.Embedding(3, 5)... self.layer1 = TransformBlock(1401, 1024, dropout = 0.5). self.bn = nn.BatchNorm1d(insize). self.linear = nn.Linear(insize, outsize). self.activation = nn.Softplus()"
+  },
+  "dropout_rate": {
+    "source": "Kaggle 260th place solution - code",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348230",
+    "quote": "self.layer1 = TransformBlock(1401, 1024, dropout = 0.5)"
+  },
+  "ensemble_method": {
+    "source": "Kaggle 260th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348230",
+    "quote": "My model is the enesemble of DART and Neural networks"
+  },
+  "prediction_averaging": {
+    "source": "Kaggle 260th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348230",
+    "quote": "My model is the enesemble of DART and Neural networks. Neural Network models: Tabular data(same used for Tree learners), Gru, Transformer and Stack Model(Gru+Tabular Model)"
+  },
+  "deep_learning_framework": {
+    "source": "Kaggle 260th place solution - code",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348230",
+    "quote": "import torch, import torch.nn as nn"
+  },
+  "libraries": {
+    "source": "Kaggle 260th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348230",
+    "quote": "My model is the enesemble of DART and Neural networks (DART refers to LightGBM DART)"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "embeddings": {
+    "contextual_embeddings": []
+  },
+  "preprocessing": {
+    "external_data_sources": [],
+    "tokenization_method": [
+      "transformer-tokenizer"
+    ],
+    "augmentation_techniques": [],
+    "additional_features": [
+      "standard-error",
+      "engineered-features"
+    ]
+  },
+  "transformer_models": {
+    "base_models": [
+      "roberta-base",
+      "roberta-large",
+      "google/electra-large-discriminator",
+      "xlnet-large-cased",
+      "funnel-transformer/large"
+    ],
+    "mlm_pretraining": false,
+    "fine_tuning_strategy": [
+      "full-model-fine-tuning"
+    ]
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "mse"
+    ]
+  },
+  "training_strategy": {
+    "optimizer": [
+      "adamw"
+    ],
+    "learning_rate": 3e-05,
+    "learning_rate_schedule": [],
+    "batch_size": 16,
+    "epochs": 4,
+    "weight_decay": null,
+    "pseudo_labeling": false,
+    "seed_averaging": false,
+    "regularization": [],
+    "cross_validation": [
+      "stratified-kfold"
+    ]
+  },
+  "model_architecture": {
+    "pooling_strategy": [
+      "attention-pooling",
+      "mean-pooling",
+      "attention-last-4-layers",
+      "attention-conv1d"
+    ],
+    "layer_reinitialize": false
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "weighted-average",
+      "stacking-lightgbm"
+    ],
+    "stacking_models": [
+      "lightgbm"
+    ]
+  },
+  "frameworks": {
+    "deep_learning_framework": [
+      "pytorch"
+    ],
+    "libraries": [
+      "transformers",
+      "lightgbm",
+      "sklearn"
+    ]
+  }
+}

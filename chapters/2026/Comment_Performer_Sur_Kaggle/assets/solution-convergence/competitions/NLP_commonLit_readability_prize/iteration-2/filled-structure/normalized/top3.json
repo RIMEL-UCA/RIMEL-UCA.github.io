@@ -1,0 +1,79 @@
+{
+  "embeddings": {
+    "sentence_embeddings": [],
+    "contextual_embeddings": []
+  },
+  "preprocessing": {
+    "external_data_sources": [
+      "children-book-test",
+      "simple-english-wiki"
+    ],
+    "tokenization_method": [
+      "transformer-tokenizer"
+    ],
+    "augmentation_techniques": []
+  },
+  "transformer_models": {
+    "base_models": [
+      "microsoft/deberta-large",
+      "roberta-large"
+    ],
+    "mlm_pretraining": true,
+    "fine_tuning_strategy": [
+      "full-model-fine-tuning",
+      "pseudo-labeling"
+    ]
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "mse"
+    ]
+  },
+  "training_strategy": {
+    "optimizer": [
+      "adamw"
+    ],
+    "learning_rate": 7e-05,
+    "learning_rate_schedule": [
+      "three-stage-decay",
+      "custom-schedule-warmup-decay",
+      "3-group-decaying-lr"
+    ],
+    "batch_size": 16,
+    "epochs": 3,
+    "weight_decay": 0.01,
+    "pseudo_labeling": true,
+    "seed_averaging": false,
+    "regularization": [
+      "dropout-0.2",
+      "high-dropout-0.5",
+      "multi-sample-dropout"
+    ],
+    "cross_validation": [
+      "5-fold"
+    ]
+  },
+  "model_architecture": {
+    "pooling_strategy": [
+      "attention-pooling",
+      "weighted-layer-average-24-layers",
+      "multi-sample-dropout"
+    ],
+    "layer_reinitialize": true
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "simple-average"
+    ],
+    "stacking_models": []
+  },
+  "frameworks": {
+    "deep_learning_framework": [
+      "pytorch"
+    ],
+    "libraries": [
+      "transformers",
+      "sklearn"
+    ]
+  }
+}

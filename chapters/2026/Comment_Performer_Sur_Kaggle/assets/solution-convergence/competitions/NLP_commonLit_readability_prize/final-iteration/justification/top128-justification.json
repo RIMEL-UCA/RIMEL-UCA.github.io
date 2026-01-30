@@ -1,0 +1,136 @@
+{
+  "embeddings": {
+    "contextual_embeddings": {}
+  },
+  "preprocessing": {
+    "external_data_sources": {},
+    "tokenization_method": {
+      "transformer-tokenizer": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "Used transformer tokenizers for encoding text"
+      }
+    },
+    "augmentation_techniques": {
+      "pairwise-comparison": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "I used a comparison approach; After encoding a batch of text, I construct pairs for comparison with some reshape tricks"
+      },
+      "standard-error-augmentation": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "When training the models, I used the standard error for augmentation. It can improve CV scores when the training task is binary classification."
+      }
+    },
+    "additional_features": {}
+  },
+  "transformer_models": {
+    "base_models": {
+      "roberta-large": {
+        "source": "Kaggle Discussion + Notebooks",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "Representation-based binary classification with Roberta-Large: 0.47703; Representation-based regression with Roberta-Large: 0.47878; Interaction-based binary classification with Roberta-Large: 0.47296; Interaction-based regression with Roberta Large: 0.47432"
+      }
+    },
+    "fine_tuning_strategy": {
+      "full-model-fine-tuning": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "Fine-tuned Roberta-Large models for both approaches"
+      }
+    }
+  },
+  "loss_functions": {
+    "primary_loss": {
+      "binary-classification": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "Both regression(the target delta) and binary classification tasks were used to train models"
+      },
+      "mse": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "regression(the target delta) and binary classification tasks were used"
+      }
+    }
+  },
+  "training_strategy": {
+    "optimizer": {
+      "adamw": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "AdamW optimizer implied by Roberta-Large training"
+      }
+    },
+    "learning_rate": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+      "quote": "Learning rate not explicitly mentioned"
+    },
+    "learning_rate_schedule": {},
+    "batch_size": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+      "quote": "Though my training batch size is 16, the actual batch size is 16*16"
+    },
+    "epochs": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+      "quote": "Epochs not explicitly specified"
+    },
+    "weight_decay": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+      "quote": "Weight decay not explicitly specified"
+    },
+    "regularization": {},
+    "cross_validation": {}
+  },
+  "model_architecture": {
+    "pooling_strategy": {
+      "esim-like-inference": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "Since texts are encoded by BERT separately, I used an ESIM-like inference module to enhance the interaction of two semantic embedding vectors"
+      },
+      "interaction-based-comparison": {
+        "source": "Kaggle Discussion + Notebooks",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "I also trained two interaction-based models. In these models, paired texts are encoded together; Code of this approach can be found in this notebook (OneBertxxx)"
+      },
+      "representation-based-comparison": {
+        "source": "Kaggle Discussion + Notebooks",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "The first approach is a representation-based one. After encoding a batch of text, I construct pairs for comparison with some reshape tricks"
+      }
+    }
+  },
+  "postprocessing": {
+    "ensemble_method": {
+      "4-model-ensemble": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "My final submission is an ensemble of 4 models"
+      },
+      "simple-average": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "ensemble of 4 models (implied simple averaging based on CV results)"
+      }
+    },
+    "stacking_models": {}
+  },
+  "frameworks": {
+    "pytorch": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+      "quote": "PyTorch framework used for training Roberta-Large models"
+    },
+    "transformers": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+      "quote": "Used Hugging Face transformers library for BERT models"
+    }
+  }
+}

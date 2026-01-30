@@ -1,0 +1,189 @@
+{
+  "embeddings": {
+    "contextual_embeddings": {}
+  },
+  "preprocessing": {
+    "external_data_sources": {},
+    "tokenization_method": {
+      "transformer-tokenizer": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "Used transformer tokenizers for all models"
+      }
+    },
+    "augmentation_techniques": {},
+    "additional_features": {}
+  },
+  "transformer_models": {
+    "base_models": {
+      "funnel-transformer/large": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "Models: roberta-large, roberta-base, deberta-large, roberta-large-mnli, funnel-large, electra-large"
+      },
+      "google/electra-large-discriminator": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "Models: roberta-large, roberta-base, deberta-large, roberta-large-mnli, funnel-large, electra-large"
+      },
+      "microsoft/deberta-large": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "Models: roberta-large, roberta-base, deberta-large, roberta-large-mnli, funnel-large, electra-large"
+      },
+      "roberta-base": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "Models: roberta-large, roberta-base, deberta-large, roberta-large-mnli, funnel-large, electra-large"
+      },
+      "roberta-large": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "Models: roberta-large, roberta-base, deberta-large, roberta-large-mnli, funnel-large, electra-large"
+      },
+      "roberta-large-mnli": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "Models: roberta-large, roberta-base, deberta-large, roberta-large-mnli, funnel-large, electra-large"
+      }
+    },
+    "fine_tuning_strategy": {
+      "full-model-fine-tuning": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "Fine-tuned all transformer models with full model training"
+      },
+      "layer-reinitialize": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "Layer re-initialization"
+      }
+    }
+  },
+  "loss_functions": {
+    "primary_loss": {
+      "rmse": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "Used RMSE loss for training"
+      }
+    }
+  },
+  "training_strategy": {
+    "optimizer": {
+      "adamw": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "AdamW optimizer"
+      }
+    },
+    "learning_rate": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+      "quote": "Learning rate not explicitly mentioned in discussion"
+    },
+    "learning_rate_schedule": {
+      "cosine-annealing": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "AdamW, 5 epochs, cosine LR scheduler"
+      },
+      "exponential-layer-lr": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "Exponential LR across layers"
+      }
+    },
+    "batch_size": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+      "quote": "Batch size not explicitly specified in discussion"
+    },
+    "epochs": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+      "quote": "AdamW, 5 epochs, cosine LR scheduler"
+    },
+    "weight_decay": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+      "quote": "Weight decay not explicitly specified in discussion"
+    },
+    "regularization": {
+      "dropout-train-mode-inference": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "Dropout in train mode for inference (averaged predictions with different seeds)"
+      },
+      "gradient-accumulation": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "Gradient accumulation"
+      },
+      "seed-averaging": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "Dropout in train mode for inference (averaged predictions with different seeds)"
+      }
+    },
+    "cross_validation": {
+      "kfold-no-shuffle": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "K-fold without shuffle"
+      }
+    }
+  },
+  "model_architecture": {
+    "pooling_strategy": {
+      "linear-head": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "Mean pooling on last hidden state with linear head"
+      },
+      "mean-pooling": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "Mean pooling on last hidden state with linear head"
+      }
+    }
+  },
+  "postprocessing": {
+    "ensemble_method": {
+      "ridge-regression": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "Ridge regression + LightGBM ensemble"
+      },
+      "stacking-lightgbm": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "Ridge regression + LightGBM ensemble; Manual features helped with LightGBM"
+      }
+    },
+    "stacking_models": {
+      "lightgbm": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "Ridge regression + LightGBM ensemble; Manual features helped with LightGBM"
+      },
+      "ridge": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "Ridge regression + LightGBM ensemble"
+      }
+    }
+  },
+  "frameworks": {
+    "pytorch": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "PyTorch framework implied by transformer usage"
+    },
+    "transformers": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+      "quote": "Used transformer models from Hugging Face"
+    }
+  }
+}

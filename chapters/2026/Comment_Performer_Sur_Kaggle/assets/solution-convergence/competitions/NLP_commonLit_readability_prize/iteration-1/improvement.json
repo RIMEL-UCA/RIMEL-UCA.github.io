@@ -1,0 +1,78 @@
+{
+  "fields_to_add": [
+    {
+      "field_path": "preprocessing.external_data_sources",
+      "type": "list",
+      "rationale": "Replaces 'text_cleaning' which had 0% completion. Multiple solutions used external data for pretraining and pseudo-labeling (Wikipedia, BookCorpus, SimpleWiki, test set unlabeled data). This is more relevant to NLP competition solutions than basic text cleaning operations.",
+      "sources": [
+        "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257844: External data used by 1st place - Wikipedia, BookCorpus, SimpleWiki",
+        "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257896: 3rd place used pseudo-labeling with external data",
+        "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257897: 4th place experimented with external datasets"
+      ]
+    },
+    {
+      "field_path": "embeddings.sentence_embeddings",
+      "type": "list",
+      "rationale": "Replaces 'word_embeddings' which had 0% completion. Solutions used sentence-level embeddings (sentence-transformers) rather than word-level embeddings for semantic similarity and pseudo-labeling tasks.",
+      "sources": [
+        "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257844: 1st place used sentence-transformers/paraphrase-MiniLM-L6-v2 for generating sentence embeddings"
+      ]
+    },
+    {
+      "field_path": "training_strategy.weight_decay",
+      "type": "number",
+      "rationale": "Replaces 'preprocessing.lowercase' which had 0% completion. Weight decay is a critical regularization parameter explicitly mentioned in multiple solutions with specific values (0.5, 1.0).",
+      "sources": [
+        "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3: Weight decay: 0.5 for AdamW optimizer",
+        "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257897: weight_decay=1.0 used in top solutions"
+      ]
+    },
+    {
+      "field_path": "transformer_models.mlm_pretraining",
+      "type": "boolean",
+      "rationale": "Replaces 'pretrained_checkpoints' which had 0% completion. Multiple solutions explicitly mentioned MLM (Masked Language Model) pretraining on competition or external data as a key technique.",
+      "sources": [
+        "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3: Pre-training Roberta-base [for large models, we were not able to pre-train]",
+        "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/hinepo-john-136th-place-solution-top-4-silver: All Hugging Face models were further pre-trained in the competition dataset, before the fine-tuning step",
+        "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257844: MLM pretraining on external data mentioned"
+      ]
+    },
+    {
+      "field_path": "training_strategy.pseudo_labeling",
+      "type": "boolean",
+      "rationale": "Replaces 'loss_functions.auxiliary_losses' which had 0% completion. Pseudo-labeling was a critical technique in top solutions (1st, 3rd place) using unlabeled data for training.",
+      "sources": [
+        "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257844: 1st place - I trained a single model just on the pseudo-labeled data",
+        "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257896: 3rd place - Pseudo-labeling with external data: for each fold, use the other 4 folds' predictions on pseudo data"
+      ]
+    },
+    {
+      "field_path": "model_architecture.layer_reinitialize",
+      "type": "boolean",
+      "rationale": "Replaces 'additional_layers' which had 0% completion. Layer reinitialization (reinitializing last N layers of pretrained models) was explicitly used by multiple top solutions.",
+      "sources": [
+        "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3: Last 5 layer-reinitialization [we tried different techniques but this was the best amongst them]",
+        "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257896: Layer reinitialization mentioned as a technique"
+      ]
+    },
+    {
+      "field_path": "training_strategy.seed_averaging",
+      "type": "boolean",
+      "rationale": "Replaces 'model_architecture.dropout_rate' which had 0% completion. Multiple solutions used seed averaging (training same model with different random seeds and averaging predictions) as a regularization technique.",
+      "sources": [
+        "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/hinepo-john-136th-place-solution-top-4-silver: Seed average helped improving ~0.002 on public LB score",
+        "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257897: Multiple seeds (5 seeds with 5-fold = 25 models total)"
+      ]
+    },
+    {
+      "field_path": "postprocessing.stacking_models",
+      "type": "list",
+      "rationale": "Replaces 'prediction_averaging' which had 0% completion. Multiple solutions used stacking with meta-models (Ridge, BayesianRidge, LightGBM, ExtraTreesRegressor) rather than simple averaging.",
+      "sources": [
+        "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro: LightGBM using BERT predictions and standard error as features",
+        "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257897: RidgeCV, BayesianRidge for stacking 38 models",
+        "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/hinepo-john-136th-place-solution-top-4-silver: ExtraTreesRegressor on the embeddings"
+      ]
+    }
+  ]
+}

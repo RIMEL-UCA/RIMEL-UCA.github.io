@@ -1,0 +1,22 @@
+{
+  "competition": "titanic",
+  "stratum": "top_1%",
+  "ref": "n3onnhowever/titanic-cv-v2",
+  "local_main_file": "corpus\\titanic\\notebooks\\top_1%\\n3onnhowever__titanic-cv-v2\\titanic-cv-v2.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 20,
+    "B_modularite": 20,
+    "C_reproductibilite": 20,
+    "D_lisibilite": 15,
+    "E_hygiene": 15
+  },
+  "score_total_100": 90,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline complet: Markdown intro → Imports → Load → Feature Engineering → Quick EDA → Threshold Tuning → CV (CatBoost+LightGBM) → Blend → Submit.",
+    "B_modularite": "Fonctions (add_features, impute, tune_threshold), configuration centralisée (SEED, N_SPLITS, paths), Pipeline sklearn compatible.",
+    "C_reproductibilite": "SEED=42 partout, N_SPLITS=10, rng=np.random.default_rng(SEED), StratifiedKFold shuffle=True random_state=SEED.",
+    "D_lisibilite": "Markdown minimal mais descriptif, noms explicites (FamilySize, IsAlone, CabinKnown), visualisations EDA.",
+    "E_hygiene": "cat_features indices, Pool pour CatBoost, dropna errors='ignore', mode(dropna=True)[0], fillna cascade (g1→g2→median)."
+  },
+  "summary": "Notebook Titanic professionnel avec CV ensemble CatBoost+LightGBM. Feature engineering complet (Title, FamilySize, Deck, TicketPrefix). Threshold tuning sur OOF. Reproductibilité exemplaire (SEED partout). EDA compact avec visualisations. Code production-ready."
+}

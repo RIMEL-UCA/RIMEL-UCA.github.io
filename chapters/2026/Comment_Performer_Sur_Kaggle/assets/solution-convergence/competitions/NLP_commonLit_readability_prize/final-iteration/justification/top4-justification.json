@@ -1,0 +1,245 @@
+{
+  "embeddings": {
+    "contextual_embeddings": {}
+  },
+  "preprocessing": {
+    "external_data_sources": {},
+    "tokenization_method": {
+      "transformer-tokenizer": {
+        "source": "GitHub Code",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/src/datasets.py",
+        "quote": "tokenizer = AutoTokenizer.from_pretrained(str(p.parent))"
+      }
+    },
+    "augmentation_techniques": {},
+    "additional_features": {
+      "flesch-reading-ease": {
+        "source": "Kaggle Discussion + GitHub",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/writeup.md#L24-L35",
+        "quote": "I also added a couple of features using `textstat`, `flesch_reading_ease` and `smog_index`"
+      },
+      "smog-index": {
+        "source": "Kaggle Discussion + GitHub",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/writeup.md#L24-L35",
+        "quote": "I also added a couple of features using `textstat`, `flesch_reading_ease` and `smog_index`"
+      }
+    }
+  },
+  "transformer_models": {
+    "base_models": {
+      "albert-large-v2": {
+        "source": "GitHub Code",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/src/model_folders.py#L96-L115",
+        "quote": "# independent-discerning-earthworm - albert-large-v2"
+      },
+      "bert-large-cased": {
+        "source": "GitHub Code",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/src/model_folders.py",
+        "quote": "bert-large-cased mentioned in model folders"
+      },
+      "bert-large-uncased": {
+        "source": "GitHub Code",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/src/model_folders.py",
+        "quote": "bert-large-uncased mentioned in model folders"
+      },
+      "deepset/roberta-large-squad2": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257844",
+        "quote": "roberta-large-squad2 used in ensemble"
+      },
+      "distilroberta-base": {
+        "source": "GitHub Code",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/src/model_folders.py#L96-L115",
+        "quote": "# swift-of-amazing-pride - distilroberta-base - 0.5053"
+      },
+      "facebook/bart-base": {
+        "source": "GitHub Code",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/src/model_folders.py#L58-L77",
+        "quote": "# gregarious-brass-perch - bart-base - 0.5445"
+      },
+      "facebook/bart-large": {
+        "source": "GitHub Code",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/src/model_folders.py#L58-L77",
+        "quote": "# military-firefly-of-apotheosis - bart-large - 0.5301"
+      },
+      "funnel-transformer/large-base": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257844",
+        "quote": "funnel-large-base used in ensemble"
+      },
+      "google/electra-large-discriminator": {
+        "source": "GitHub Code + Writeup",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/writeup.md#L98-L100",
+        "quote": "google/electra-large-discriminator | 0.514033"
+      },
+      "microsoft/deberta-base": {
+        "source": "GitHub Code",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/src/model_folders.py#L0-L20",
+        "quote": "# scrupulous-mink-of-amplitude - deberta-base - 0.4934"
+      },
+      "microsoft/deberta-large": {
+        "source": "GitHub Code",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/src/model_folders.py#L0-L20",
+        "quote": "# cherubic-nifty-serval - deberta-large - 0.4836"
+      },
+      "roberta-base": {
+        "source": "GitHub Code",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/src/model_folders.py#L77-L96",
+        "quote": "# nonchalant-quaint-termite - roberta-base - 0.4951"
+      },
+      "sentence-transformers/labse": {
+        "source": "GitHub Code",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/src/model_folders.py#L58-L77",
+        "quote": "# eccentric-lemur-of-tenacity - sentence-transformers/LaBSE - 0.5230"
+      },
+      "sentence-transformers/paraphrase-mpnet-base-v2": {
+        "source": "GitHub Writeup",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/writeup.md#L98-L100",
+        "quote": "sentence-transformers/paraphrase-mpnet-base-v2 | 0.510096"
+      },
+      "xlm-roberta-large": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257844",
+        "quote": "xlm-roberta-large mentioned in discussion"
+      }
+    },
+    "fine_tuning_strategy": {
+      "full-model-fine-tuning": {
+        "source": "GitHub Code",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/train.py#L14-L50",
+        "quote": "model = CommonLitModel(**args.__dict__); trainer.fit(model, datamodule=dm)"
+      }
+    }
+  },
+  "loss_functions": {
+    "primary_loss": {
+      "mse": {
+        "source": "GitHub Code",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/src/models.py#L84-L92",
+        "quote": "self.loss_fn = nn.MSELoss()"
+      }
+    }
+  },
+  "training_strategy": {
+    "optimizer": {
+      "adamw": {
+        "source": "GitHub Code + Writeup",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/writeup.md#L24-L35",
+        "quote": "Optimiser: AdamW"
+      }
+    },
+    "learning_rate": {
+      "source": "GitHub Writeup",
+      "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/writeup.md#L24-L35",
+      "quote": "LR: 0.00005 or 0.000025 (depending on batch size)"
+    },
+    "learning_rate_schedule": {
+      "cosine-annealing": {
+        "source": "GitHub Code",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/src/models.py#L200-L231",
+        "quote": "sch = torch.optim.lr_scheduler.CosineAnnealingLR(opt, T_max=1000, eta_min=self.hparams.lr / 10)"
+      }
+    },
+    "batch_size": {
+      "source": "GitHub Writeup",
+      "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/writeup.md#L24-L35",
+      "quote": "Batch size: 16 (or 12 for the larger models)"
+    },
+    "epochs": {
+      "source": "GitHub Writeup",
+      "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/writeup.md#L24-L35",
+      "quote": "Epochs: 6 with SWA after epoch 3"
+    },
+    "weight_decay": {
+      "source": "GitHub Writeup",
+      "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/writeup.md#L24-L35",
+      "quote": "Weight decay: 1.0"
+    },
+    "regularization": {
+      "dropout-zero": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257844",
+        "quote": "MSE loss, no dropout"
+      },
+      "no-dropout": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257844",
+        "quote": "MSE loss, no dropout"
+      },
+      "swa-after-epoch-3": {
+        "source": "GitHub Writeup + Code",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/writeup.md#L24-L35",
+        "quote": "Epochs: 6 with SWA after epoch 3"
+      }
+    },
+    "cross_validation": {
+      "5-fold": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257844",
+        "quote": "5-fold CV with 5 seeds (25 runs per experiment)"
+      },
+      "stratified-kfold": {
+        "source": "GitHub Code",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/src/stacking.py#L13-L26",
+        "quote": "cv = StratifiedKFold(n_splits=n_splits, random_state=random_state, shuffle=True)"
+      }
+    }
+  },
+  "model_architecture": {
+    "pooling_strategy": {
+      "attention-block": {
+        "source": "GitHub Code + Discussion",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/submissions/submission_netflix.py#L72-L101",
+        "quote": "class AttentionBlock(nn.Module): ... AttentionBlock pooling strategy"
+      },
+      "linear-head": {
+        "source": "GitHub Code",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/src/models.py#L84-L92",
+        "quote": "self.regressor = nn.Linear(n_hidden + 2, 2 if kl_loss else 1)"
+      }
+    }
+  },
+  "postprocessing": {
+    "ensemble_method": {
+      "bayesian-ridge": {
+        "source": "GitHub Code + Discussion",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/src/stacking.py",
+        "quote": "from sklearn.linear_model import BayesianRidge, RidgeCV; def scorer_bayesian_ridge(oofs, folders, folds=10)"
+      },
+      "netflix-method": {
+        "source": "GitHub Code + Discussion",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/submissions/submission_netflix.py#L444-L465",
+        "quote": "ensemble, weights = netflix(rmses, oof_preds, 1.4100)"
+      },
+      "ridge-regression": {
+        "source": "GitHub Code + Discussion",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/submissions/submission.py#L441-L470",
+        "quote": "reg = RidgeCV(alphas=(0.0001, 0.0005, 0.001, 0.005, ...))"
+      }
+    },
+    "stacking_models": {
+      "ridge": {
+        "source": "GitHub Code",
+        "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/src/stacking.py",
+        "quote": "from sklearn.linear_model import BayesianRidge, RidgeCV"
+      }
+    }
+  },
+  "frameworks": {
+    "pytorch": {
+      "source": "GitHub Code",
+      "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/src/models.py#L0-L30",
+      "quote": "import torch; import torch.nn as nn"
+    },
+    "pytorch-lightning": {
+      "source": "GitHub Code + Discussion",
+      "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/train.py#L0-L65",
+      "quote": "import pytorch_lightning as pl; class CommonLitModel(pl.LightningModule)"
+    },
+    "transformers": {
+      "source": "GitHub Code",
+      "link": "https://github.com/Anjum48/commonlitreadabilityprize/blob/main/src/models.py#L5",
+      "quote": "from transformers import AutoConfig, AutoModel, AdamW, get_cosine_schedule_with_warmup"
+    }
+  }
+}

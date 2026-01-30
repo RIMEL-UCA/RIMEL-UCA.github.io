@@ -1,0 +1,22 @@
+{
+  "competition": "hull-tactical-market-prediction",
+  "stratum": "p40_50",
+  "ref": "hausch11/hull-tactical-exp-02-inference-server",
+  "local_main_file": "corpus\\hull-tactical-market-prediction\\notebooks\\p40_50\\hausch11__hull-tactical-exp-02-inference-server\\hull-tactical-exp-02-inference-server.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 20,
+    "B_modularite": 15,
+    "C_reproductibilite": 15,
+    "D_lisibilite": 20,
+    "E_hygiene": 15
+  },
+  "score_total_100": 85,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline très structuré: ## Setup → ## Configuration → ## Train Model → ## Define Predict → ## Run Server. Sections markdown.",
+    "B_modularite": "LGBM_PARAMS dict, LAG_PERIODS/ROLLING_WINDOWS configurables, inference_state dict, predict() function bien isolée.",
+    "C_reproductibilite": "random_state=42, feature_medians sauvegardés, hyperparamètres documentés (num_leaves=31, learning_rate=0.05).",
+    "D_lisibilite": "Header avec performance metrics (Adjusted Sharpe 1.7461), docstrings pour predict(), sections markdown claires.",
+    "E_hygiene": "warnings.filterwarnings('ignore'), np.inf/nan handling, feature_medians fallback, returns_history limité à 300."
+  },
+  "summary": "Notebook inference server professionnel avec header performance (Adjusted Sharpe 1.7461, +273% vs baseline). LightGBM avec feature engineering rolling. Configuration centralisée. Gestion d'état inference_state pour rolling features. Documentation excellente avec metrics IC."
+}

@@ -1,0 +1,22 @@
+{
+  "competition": "house-prices-advanced-regression-techniques",
+  "stratum": "top_10%",
+  "ref": "eu1234/cv-score-predict-categoryembedding-houses-prices",
+  "local_main_file": "corpus\\house-prices-advanced-regression-techniques\\notebooks\\top_10%\\eu1234__cv-score-predict-categoryembedding-houses-prices\\cv-score-predict-categoryembedding-houses-prices.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 15,
+    "B_modularite": 20,
+    "C_reproductibilite": 15,
+    "D_lisibilite": 15,
+    "E_hygiene": 15
+  },
+  "score_total_100": 80,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline structuré avec sections markdown: Load → Select features → Encoder tuning → Category encoding → Models tuning. Séparation claire.",
+    "B_modularite": "Fonctions bien conçues (columns_types, feature_selector, enc_objective, model_objective), enc_params centralisés, utilisation cv-score-predict library.",
+    "C_reproductibilite": "random_state=42 partout, Optuna sampler avec seed=42, log1p target transform, best_features listés explicitement.",
+    "D_lisibilite": "Sections markdown (#### Select features, #### Encoder tuning), docstrings ('Return lists of columns types'), noms explicites.",
+    "E_hygiene": "Flags tune_encoder/select_feats pour skip, paramètres précédemment tunés sauvegardés, device detection GPU/CPU."
+  },
+  "summary": "Notebook avancé utilisant CategoryEmbedding et Optuna pour HPO. Bonne modularité avec fonctions réutilisables. Pipeline clair avec sections markdown. Reproductibilité assurée (seeds, params sauvegardés). Utilisation de libraries externes spécialisées (cv-score-predict, category-embedding)."
+}

@@ -1,0 +1,80 @@
+{
+  "embeddings": {
+    "word_embeddings": [
+      "fasttext"
+    ],
+    "contextual_embeddings": [
+      "roberta-large"
+    ]
+  },
+  "preprocessing": {
+    "text_cleaning": [
+      "lowercase",
+      "remove-html-tags"
+    ],
+    "tokenization_method": [
+      "bpe"
+    ],
+    "augmentation_techniques": [
+      "synonym-replacement"
+    ]
+  },
+  "transformer_models": {
+    "base_models": [
+      "roberta-base",
+      "deberta-v3-base"
+    ],
+    "fine_tuning_strategy": [
+      "full-model-fine-tuning"
+    ]
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "huber-loss"
+    ],
+    "auxiliary_losses": []
+  },
+  "training_strategy": {
+    "optimizer": [
+      "sgd"
+    ],
+    "learning_rate": 0.001,
+    "learning_rate_schedule": [
+      "step-decay"
+    ],
+    "epochs": 8,
+    "regularization": [
+      "dropout"
+    ],
+    "cross_validation": [
+      "5-fold",
+      "leave-one-out"
+    ]
+  },
+  "model_architecture": {
+    "pooling_strategy": [
+      "mean-pooling"
+    ],
+    "additional_layers": [],
+    "dropout_rate": 0.15
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "weighted-average",
+      "voting"
+    ],
+    "prediction_averaging": [
+      "arithmetic-mean"
+    ]
+  },
+  "frameworks": {
+    "deep_learning_framework": [
+      "pytorch",
+      "jax"
+    ],
+    "libraries": [
+      "transformers",
+      "numpy"
+    ]
+  }
+}

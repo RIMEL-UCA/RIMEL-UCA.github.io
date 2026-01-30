@@ -1,0 +1,22 @@
+{
+  "competition": "csiro-biomass",
+  "stratum": "top_1%",
+  "ref": "mattiaangeli/eva02-inference",
+  "local_main_file": "corpus\\csiro-biomass\\notebooks\\top_1%\\mattiaangeli__eva02-inference\\eva02-inference.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 15,
+    "B_modularite": 20,
+    "C_reproductibilite": 15,
+    "D_lisibilite": 10,
+    "E_hygiene": 15
+  },
+  "score_total_100": 75,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline d'inférence clair: CONFIG → utils → dataset → model → load folds + infer → run. Sections commentées mais pas de markdown.",
+    "B_modularite": "Classes modulaires (Local2DTokenMixerBlock, BiomassModel, TestDS), fonctions réutilisables (clean_image, preprocess_half, resolve_path, load_sd, predict_one_checkpoint, postprocess_3_to_5).",
+    "C_reproductibilite": "Constants définies (MODEL_NAME, IMG_SIZE, BATCH_SIZE), MEAN/STD explicites, chemins configurables, torch.backends.cudnn.benchmark.",
+    "D_lisibilite": "Commentaires de section (# CONFIG, # model, # run), noms explicites, mais pas de markdown ni docstrings détaillées.",
+    "E_hygiene": "Gestion des images nulles (fallback zeros), chemins multiples testés (resolve_path), torch.inference_mode, pin_memory."
+  },
+  "summary": "Notebook d'inférence professionnel avec architecture modulaire exemplaire (classes PyTorch, fonctions utilitaires). Configuration centralisée et gestion robuste des chemins. Manque de documentation markdown mais code bien organisé en sections. Inference optimisée avec autocast et pin_memory."
+}

@@ -1,0 +1,28 @@
+Thank you all and congrats to the winners!
+
+My solution is very simple and straight-forward:
+
+Created ~6000 features: aggregations, diff(1 to 5), moving average and statistics, lags divisions, trends, many interactions among the top 100 features, KMeans, PCA etc.
+Selected features by permutation importances on the validation set (ended up with ~5 different features sets with ~650 to ~1400 features)
+Used XGB, LGBM, Catboost models with different preprocessing strategies, feature sets, hyperparameters
+Ensembled everything with different seeds (simple average of ~40 models)
+XGB was always the best model for me
+time spent: 10% struggling with data volume, 10% algorithms and ensemble, 80% feature engineering and selection
+Single models metrics (5 fold):
+
+amex ~ 0.797xx
+roc_auc ~ 0.877xx
+accuracy ~ 0.905xx
+f1 ~ 0.816xx
+precision ~ 0.813xx
+recall ~ 0.819xx
+What did not work:
+
+I could not get dart boosting to outperform gbtree on my setup
+Stacking features
+Knowledge distillation
+OOF and confusion matrix analysis (false negatives and false positives): could not find any insight that I could be sure it led to better performance (I blame the anonymized features for that 😆)
+Denoising autoencoder (not sure if I implemented it correctly)
+TabNet
+GRU
+MLP (keras)

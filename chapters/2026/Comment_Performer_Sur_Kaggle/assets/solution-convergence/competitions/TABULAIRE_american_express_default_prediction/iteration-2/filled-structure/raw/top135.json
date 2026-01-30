@@ -1,0 +1,88 @@
+{
+  "tabular_features": {
+    "aggregation_features": [
+      "mean",
+      "std",
+      "min",
+      "max",
+      "last",
+      "count",
+      "nunique"
+    ],
+    "time_series_features": [
+      "lag_1_month",
+      "lag_2_months",
+      "lag_3_months"
+    ]
+  },
+  "preprocessing": {
+    "data_denoising": [],
+    "fillna_strategy": [],
+    "categorical_encoding": [],
+    "feature_scaling": []
+  },
+  "transformer_models": {
+    "base_models": [
+      "transformer"
+    ],
+    "fine_tuning_strategy": []
+  },
+  "loss_functions": {
+    "primary_loss": []
+  },
+  "training_strategy": {
+    "optimizer": [],
+    "learning_rate": null,
+    "learning_rate_schedule": [],
+    "batch_size": null,
+    "epochs": null,
+    "regularization": [],
+    "cross_validation": [
+      "5-fold",
+      "10-fold",
+      "20-fold"
+    ]
+  },
+  "model_architecture": {
+    "pooling_strategy": [
+      "bi-gru"
+    ],
+    "additional_layers": [
+      "5-layer-nn",
+      "stacked-bi-gru",
+      "transformer"
+    ],
+    "dropout_rate": null
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "weighted-log10-odds"
+    ],
+    "prediction_averaging": [
+      "50-models-ensemble",
+      "3-gbdt-+-3-nn",
+      "xgboost-+-catboost-+-lightgbm-+-nn-+-bi-gru-+-transformer"
+    ]
+  },
+  "model_specific": {
+    "boosting_type": [
+      "dart",
+      "gbdt"
+    ]
+  },
+  "feature_engineering": {
+    "feature_selection_method": []
+  },
+  "frameworks": {
+    "deep_learning_framework": [],
+    "libraries": [
+      "xgboost",
+      "catboost",
+      "lightgbm",
+      "sklearn",
+      "pandas",
+      "numpy",
+      "optuna"
+    ]
+  }
+}

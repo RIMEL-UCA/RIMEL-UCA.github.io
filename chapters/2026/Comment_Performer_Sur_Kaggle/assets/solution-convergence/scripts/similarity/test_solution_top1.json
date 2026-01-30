@@ -1,0 +1,31 @@
+{
+  "comment": "Solution de référence complète",
+  "models": {
+    "transformers": {
+      "xlnet": true,
+      "bert": true,
+      "gpt": false,
+      "roberta": false
+    },
+    "embeddings": ["word2vec", "glove", "fasttext"],
+    "model_name": "XLNet + BERT ensemble"
+  },
+  "preprocessing": {
+    "techniques": ["lowercase", "lemmatization", "stopword-removal"],
+    "custom_cleaning": true,
+    "normalization": ""
+  },
+  "training": {
+    "epochs": 10,
+    "batch_size": 32,
+    "learning_rate": 0.001,
+    "optimizer": "adam",
+    "early_stopping": true,
+    "cross_validation": false
+  },
+  "postprocessing": {
+    "ensemble_method": "weighted-average",
+    "calibration": true,
+    "threshold_tuning": false
+  }
+}

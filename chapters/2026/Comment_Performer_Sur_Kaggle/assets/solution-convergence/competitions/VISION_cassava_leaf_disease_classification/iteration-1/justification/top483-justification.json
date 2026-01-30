@@ -1,0 +1,82 @@
+{
+  "augmentation_techniques": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "Successful: Horizontal Flip, Vertical Flip, Blur, 360 rotates, RandomBrigtnessContrast, ShiftScaleRotate, HueSaturationValue, CutMix, MixUp, FMix, 25% probability for each of past three augmentations"
+  },
+  "base_models": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "SWSL ResNeXt 101 8D, SWSL ResNeXt 50, Efficient Net B4, Efficient Net B4 NS, Inception V4, DenseNet 161"
+  },
+  "pretrained_checkpoints": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "We trained 5 folds of SWSL ResNeXt 101 8D... Efficient Net B4 NS"
+  },
+  "fine_tuning_strategy": {
+    "source": "Top483 solution code",
+    "link": "solutions/top483.txt",
+    "quote": "Frozen BatchNorm layers"
+  },
+  "primary_loss": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "Loss Function - Cross Entropy loss with label smoothing (0.2 smoothing before using knowledge distillation and 0.1 after it)"
+  },
+  "optimizer": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "optimizer - Ranger"
+  },
+  "learning_rate": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "learning rate - 0.003"
+  },
+  "learning_rate_schedule": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "scheduler - CosineBatchDecayScheduler with gradual warm up (custom impelementation)"
+  },
+  "batch_size": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "Mixed precision training with gradient accumulation (iters_to_accumulate=8) ==> big boost on CV"
+  },
+  "epochs": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "epoch - 30"
+  },
+  "regularization": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "Cross Entropy loss with label smoothing (0.2 smoothing before using knowledge distillation and 0.1 after it)... early stopping - 8... Mixed precision training with gradient accumulation (iters_to_accumulate=8)... We did a really soft knowledge distillation"
+  },
+  "cross_validation": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "We trained 5 folds of SWSL ResNeXt 101 8D"
+  },
+  "ensemble_method": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "1) Simple Averaging Ensemble... 2) MaxProb Ensemble - Max Probability (or Max Confidence) ensemble allows us to choose the dominating model in the prediction process. In this case, if several models predict different labels, we take the prediction from a model with the biggest confidence"
+  },
+  "prediction_averaging": {
+    "source": "Top483 solution description",
+    "link": "solutions/top483.txt",
+    "quote": "We used simple technique for our TTA: average of the default image and horizontally flipped image"
+  },
+  "deep_learning_framework": {
+    "source": "Top483 solution code",
+    "link": "solutions/top483.txt",
+    "quote": "import torch"
+  },
+  "libraries": {
+    "source": "Top483 solution code",
+    "link": "solutions/top483.txt",
+    "quote": "import albumentations as A... from apex import amp"
+  }
+}

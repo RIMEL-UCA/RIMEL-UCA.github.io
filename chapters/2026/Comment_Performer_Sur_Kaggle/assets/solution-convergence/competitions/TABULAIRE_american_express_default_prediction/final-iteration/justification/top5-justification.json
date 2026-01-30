@@ -1,0 +1,97 @@
+{
+  "base_models": {
+    "source": "Kaggle 5th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348097",
+    "quote": "Our solution is the result of ensembling several GBDT models, Transfomr, 2d-CNN, and GRU"
+  },
+  "fine_tuning_strategy": {
+    "source": "Kaggle 5th place solution - Patrick's part",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348118",
+    "quote": "Pretrain + Finetune approach. I decided to first let the NN learn how to do feature engineering in the pretrain stage, then finetune the model with the target after that"
+  },
+  "primary_loss": {
+    "source": "Kaggle 5th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348097",
+    "quote": "'metric': 'binary_logloss' for LightGBM and 'We use Huber loss to train the standardized target' for Transformer pretraining"
+  },
+  "learning_rate": {
+    "source": "Kaggle 5th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348097",
+    "quote": "'learning_rate': 0.01"
+  },
+  "epochs": {
+    "source": "Kaggle 5th place solution - Patrick's part",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348118",
+    "quote": "The number of epochs is around 200 in this stage (pretrain stage)"
+  },
+  "regularization": {
+    "source": "Kaggle 5th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348097",
+    "quote": "'lambda_l2': 2, 'feature_fraction': 0.20, 'bagging_freq': 10, 'bagging_fraction': 0.50"
+  },
+  "cross_validation": {
+    "source": "Kaggle 5th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348097",
+    "quote": "stratfiedKfold: 10 for LightGBM and 'n_folds = 5' in the code"
+  },
+  "pooling_strategy": {
+    "source": "Kaggle 5th place solution - Patrick's part",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348118",
+    "quote": "After the encoding part, we take the latest node and get the outputs through a linear layer"
+  },
+  "additional_layers": {
+    "source": "Kaggle 5th place solution - Patrick's part",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348118",
+    "quote": "We use different MLP layers to handle different types of inputs (Delinquency, Spend, Payment, Balance, Risk variables), then concatenate them and pass them to the transformer encoder"
+  },
+  "ensemble_method": {
+    "source": "Kaggle 5th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348097",
+    "quote": "Use 21 models. Ensemble weight Determined based on Public LB. Weights are not complicated. (For example, 0.1,0.2,… etc.)"
+  },
+  "prediction_averaging": {
+    "source": "Kaggle 5th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348097",
+    "quote": "If we use seed blend (train three different models using seed 42, 52, 62 and then average predictions) the LB boost niceley"
+  },
+  "deep_learning_framework": {
+    "source": "Kaggle 5th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348097",
+    "quote": "Transformer model architecture indicates PyTorch usage"
+  },
+  "libraries": {
+    "source": "Kaggle 5th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348097",
+    "quote": "import lightgbm as lgb, Use GPU for CatBoost, sklearn, pandas, numpy"
+  },
+  "aggregation_features": {
+    "source": "Kaggle 5th place solution - raddar's Notebook",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348097",
+    "quote": "Reference to raddar's notebook which uses aggregations: mean, std, min, max, last, count, nunique"
+  },
+  "time_series_features": {
+    "source": "Kaggle 5th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348097",
+    "quote": "Diff -> last - mean / Meta-features -> Reference to DSB2019 for meta features"
+  },
+  "categorical_encoding": {
+    "source": "Kaggle 5th place solution - Code",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348097",
+    "quote": "Label encoding for categorical features"
+  },
+  "feature_scaling": {
+    "source": "Kaggle 5th place solution - Code",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348097",
+    "quote": "float16 conversion, round2 for features, standardization through (x - mean) / std"
+  },
+  "boosting_type": {
+    "source": "Kaggle 5th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348097",
+    "quote": "'boosting_type': 'dart' in LightGBM parameters"
+  },
+  "feature_selection_method": {
+    "source": "Kaggle 5th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348097",
+    "quote": "Use permutation importance to select features"
+  }
+}

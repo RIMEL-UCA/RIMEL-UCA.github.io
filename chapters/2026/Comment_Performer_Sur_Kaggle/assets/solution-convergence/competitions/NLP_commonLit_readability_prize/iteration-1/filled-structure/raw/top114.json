@@ -1,0 +1,47 @@
+{
+  "embeddings": {
+    "contextual_embeddings": []
+  },
+  "preprocessing": {
+    "text_cleaning": [],
+    "augmentation_techniques": [],
+    "tokenization_method": ["transformer_tokenizer"],
+    "feature_engineering": ["standard_error_feature", "text_statistics"]
+  },
+  "transformer_models": {
+    "base_models": [
+      "roberta-base",
+      "roberta-large",
+      "google/electra-large-discriminator",
+      "xlnet-large-cased",
+      "funnel-transformer/large"
+    ],
+    "fine_tuning_strategy": ["full_model_fine_tuning"]
+  },
+  "loss_functions": {
+    "primary_loss": ["mse"],
+    "auxiliary_loss": []
+  },
+  "training_strategy": {
+    "optimizer": ["adamw"],
+    "learning_rate": 0.00003,
+    "learning_rate_schedule": [],
+    "batch_size": 16,
+    "gradient_accumulation": [],
+    "epochs": 4,
+    "cross_validation": ["stratified_kfold"]
+  },
+  "model_architecture": {
+    "pooling_strategy": ["attention_pooling", "mean_pooling"],
+    "attention_mechanism": ["multi_layer_attention", "attention_conv1d"],
+    "custom_layers": ["attention_head", "conv1d_head"]
+  },
+  "postprocessing": {
+    "ensemble_method": ["weighted_average", "stacking_lightgbm"],
+    "prediction_refinement": ["lightgbm_standard_error_prediction"]
+  },
+  "frameworks": {
+    "deep_learning_framework": ["pytorch"],
+    "libraries": ["transformers", "lightgbm", "sklearn"]
+  }
+}

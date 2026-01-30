@@ -1,0 +1,98 @@
+{
+  "tabular_features": {
+    "aggregation_features": [
+      "avg",
+      "max",
+      "min",
+      "std",
+      "slope"
+    ],
+    "time_series_features": [
+      "last-2-statements",
+      "last-3-statements",
+      "last-4-statements",
+      "last-5-statements",
+      "last-6-statements",
+      "last-7-statements",
+      "last-8-statements",
+      "last-9-statements",
+      "last-10-statements",
+      "last-11-statements",
+      "last-12-statements"
+    ]
+  },
+  "preprocessing": {
+    "data_denoising": [],
+    "fillna_strategy": [],
+    "categorical_encoding": [
+      "weight-of-evidence"
+    ],
+    "feature_scaling": [
+      "rank-gauss"
+    ]
+  },
+  "transformer_models": {
+    "base_models": [],
+    "fine_tuning_strategy": []
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "auc"
+    ]
+  },
+  "training_strategy": {
+    "optimizer": [],
+    "learning_rate": 0.01096,
+    "learning_rate_schedule": [],
+    "batch_size": null,
+    "epochs": null,
+    "regularization": [
+      "subsample",
+      "colsample-bytree",
+      "colsample-bylevel",
+      "colsample-bynode",
+      "min-child-weight"
+    ],
+    "cross_validation": [
+      "10-fold"
+    ]
+  },
+  "model_architecture": {
+    "pooling_strategy": [],
+    "additional_layers": [
+      "mlp"
+    ],
+    "dropout_rate": null
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "scipy-optimize-weights"
+    ],
+    "prediction_averaging": [
+      "4-xgboost-1-+-4-xgboost-2-+-4-keras-mlp",
+      "ensemble-with-public-dart"
+    ]
+  },
+  "model_specific": {
+    "boosting_type": []
+  },
+  "feature_engineering": {
+    "feature_selection_method": [
+      "shap-importance",
+      "adversarial-validation"
+    ]
+  },
+  "frameworks": {
+    "deep_learning_framework": [
+      "keras"
+    ],
+    "libraries": [
+      "xgboost",
+      "sklearn",
+      "pandas",
+      "numpy",
+      "optuna",
+      "scipy"
+    ]
+  }
+}

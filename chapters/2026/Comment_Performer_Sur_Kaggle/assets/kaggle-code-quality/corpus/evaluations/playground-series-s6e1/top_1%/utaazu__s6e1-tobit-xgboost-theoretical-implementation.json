@@ -1,0 +1,22 @@
+{
+  "competition": "playground-series-s6e1",
+  "stratum": "top_1%",
+  "ref": "utaazu/s6e1-tobit-xgboost-theoretical-implementation",
+  "local_main_file": "corpus\\playground-series-s6e1\\notebooks\\top_1%\\utaazu__s6e1-tobit-xgboost-theoretical-implementation\\s6e1-tobit-xgboost-theoretical-implementation.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 20,
+    "B_modularite": 20,
+    "C_reproductibilite": 15,
+    "D_lisibilite": 20,
+    "E_hygiene": 15
+  },
+  "score_total_100": 90,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline académique: ## 1. Setup → ## 2. Tobit Theory → ## 3. Feature Engineering → ## 4. Data Loading → ## 5. Stage 1 Ridge. Sections numérotées.",
+    "B_modularite": "Classe CFG, classe CategoryMeanTransformer avec fit/transform, fonctions (bayes_optimal_pred, tobit_objective, fe_basic). Architecture ML standard.",
+    "C_reproductibilite": "CFG.SEED=42, N_FOLDS=10, Y_L/Y_H/SIGMA explicites, alphas grid documenté.",
+    "D_lisibilite": "Markdown mathématique (formules LaTeX), explications théoriques détaillées, docstrings ('Converts latent Tobit output...').",
+    "E_hygiene": "Stability clipping hess, np.clip(1e-6, 1e2), is_censored buffers (1e-4), gc.collect(), warnings.filterwarnings."
+  },
+  "summary": "Notebook académique exemplaire implémentant Tobit regression avec XGBoost. Documentation mathématique complète (formules LaTeX). Custom objective gradient+hessian dérivés théoriquement. CFG class centralisée. CategoryMeanTransformer pour target encoding. Approche théorique rigoureuse."
+}

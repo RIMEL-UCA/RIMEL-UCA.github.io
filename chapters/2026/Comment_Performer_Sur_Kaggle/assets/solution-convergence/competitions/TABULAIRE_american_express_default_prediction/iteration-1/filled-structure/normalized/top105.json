@@ -1,0 +1,69 @@
+{
+  "embeddings": {
+    "word_embeddings": [],
+    "contextual_embeddings": []
+  },
+  "preprocessing": {
+    "text_cleaning": [],
+    "tokenization_method": [],
+    "lowercase": null,
+    "augmentation_techniques": []
+  },
+  "transformer_models": {
+    "base_models": [],
+    "pretrained_checkpoints": [],
+    "fine_tuning_strategy": []
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "auc"
+    ],
+    "auxiliary_losses": []
+  },
+  "training_strategy": {
+    "optimizer": [],
+    "learning_rate": 0.01096,
+    "learning_rate_schedule": [],
+    "batch_size": null,
+    "epochs": null,
+    "regularization": [
+      "subsample",
+      "colsample-bytree",
+      "colsample-bylevel",
+      "colsample-bynode",
+      "min-child-weight"
+    ],
+    "cross_validation": [
+      "10-fold"
+    ]
+  },
+  "model_architecture": {
+    "pooling_strategy": [],
+    "additional_layers": [
+      "mlp"
+    ],
+    "dropout_rate": null
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "scipy-optimize-weights"
+    ],
+    "prediction_averaging": [
+      "4-xgboost-1-+-4-xgboost-2-+-4-keras-mlp",
+      "ensemble-with-public-dart"
+    ]
+  },
+  "frameworks": {
+    "deep_learning_framework": [
+      "keras"
+    ],
+    "libraries": [
+      "xgboost",
+      "sklearn",
+      "pandas",
+      "numpy",
+      "optuna",
+      "scipy"
+    ]
+  }
+}

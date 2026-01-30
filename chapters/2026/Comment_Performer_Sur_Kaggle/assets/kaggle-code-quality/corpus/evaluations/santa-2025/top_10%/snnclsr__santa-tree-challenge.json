@@ -1,0 +1,22 @@
+{
+  "competition": "santa-2025",
+  "stratum": "top_10%",
+  "ref": "snnclsr/santa-tree-challenge",
+  "local_main_file": "corpus\\santa-2025\\notebooks\\top_10%\\snnclsr__santa-tree-challenge\\santa-tree-challenge.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 20,
+    "B_modularite": 20,
+    "C_reproductibilite": 15,
+    "D_lisibilite": 15,
+    "E_hygiene": 15
+  },
+  "score_total_100": 85,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline complet: ## Key Techniques markdown → CONFIG → Setup → NUMBA functions → Shapely classes → Optimization loops.",
+    "B_modularite": "Classe ChristmasTree, fonctions Numba (score_group_fast, find_boundary_trees), helpers (create_trees_from_arrays, has_overlap_arrays).",
+    "C_reproductibilite": "DEBUG flag, MAX_HOURS configurable, getcontext().prec=30, backup.csv pour recovery.",
+    "D_lisibilite": "Markdown header avec Key Techniques, sections commentées (# ====), docstrings dans classes.",
+    "E_hygiene": "shutil.copy pour backup, os.chmod pour permissions, scale_factor Decimal('1'), overlap auto-fix."
+  },
+  "summary": "Notebook Santa optimisation avancé avec Numba + Shapely hybride. Key Techniques documentées (Global Rotation, SA, Boundary Trees, Overlap auto-fix). ChristmasTree class avec Decimal precision. Backup recovery system. DEBUG mode pour testing."
+}

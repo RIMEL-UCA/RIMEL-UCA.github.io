@@ -1,0 +1,22 @@
+{
+  "competition": "santa-2025",
+  "stratum": "top_10%",
+  "ref": "nikitakuznetsof/just-luck",
+  "local_main_file": "corpus\\santa-2025\\notebooks\\top_10%\\nikitakuznetsof__just-luck\\just-luck.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 15,
+    "B_modularite": 15,
+    "C_reproductibilite": 15,
+    "D_lisibilite": 10,
+    "E_hygiene": 15
+  },
+  "score_total_100": 70,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline identique à hossam82/santa-submission-bbox3: CONFIGURATION → Setup → Ensemble module → optimization.",
+    "B_modularite": "Même module ensemble_submissions.py réutilisé. Fonctions identiques.",
+    "C_reproductibilite": "GRADIENT_STEPS=20 (vs 15), BASIN_HOP_PERTURBATION=0.04 (vs 0.05). Hyperparamètres différents.",
+    "D_lisibilite": "Titre ironique 'just-luck', sinon identique à hossam82.",
+    "E_hygiene": "Code quasi-identique à hossam82, mêmes protections."
+  },
+  "summary": "Notebook quasi-identique à hossam82/santa-submission-bbox3 avec hyperparamètres légèrement différents (GRADIENT_STEPS=20, BASIN_HOP_PERTURBATION=0.04). Titre 'just-luck' suggère variation expérimentale. Même module ensemble_submissions.py."
+}

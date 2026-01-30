@@ -1,0 +1,43 @@
+{
+  "embeddings": {
+    "word_embeddings": ["word2vec", "glove"],
+    "contextual_embeddings": ["bert"]
+  },
+  "preprocessing": {
+    "text_cleaning": ["lowercase", "remove-punctuation"],
+    "tokenization_method": ["wordpiece"],
+    "lowercase": true,
+    "augmentation_techniques": []
+  },
+  "transformer_models": {
+    "base_models": ["bert"],
+    "pretrained_checkpoints": ["bert-base-uncased"],
+    "fine_tuning_strategy": []
+  },
+  "loss_functions": {
+    "primary_loss": ["mse"],
+    "auxiliary_losses": []
+  },
+  "training_strategy": {
+    "optimizer": ["adam"],
+    "learning_rate": 0.001,
+    "learning_rate_schedule": ["warmup"],
+    "batch_size": 32,
+    "epochs": 5,
+    "regularization": ["dropout"],
+    "cross_validation": ["stratified-kfold"]
+  },
+  "model_architecture": {
+    "pooling_strategy": ["mean-pooling"],
+    "additional_layers": ["dense"],
+    "dropout_rate": 0.1
+  },
+  "postprocessing": {
+    "ensemble_method": [],
+    "prediction_averaging": []
+  },
+  "frameworks": {
+    "deep_learning_framework": ["pytorch"],
+    "libraries": ["transformers"]
+  }
+}

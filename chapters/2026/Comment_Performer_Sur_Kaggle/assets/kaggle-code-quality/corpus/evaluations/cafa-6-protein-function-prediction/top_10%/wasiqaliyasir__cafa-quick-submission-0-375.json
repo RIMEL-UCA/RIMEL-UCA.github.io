@@ -1,0 +1,22 @@
+{
+  "competition": "cafa-6-protein-function-prediction",
+  "stratum": "top_10%",
+  "ref": "wasiqaliyasir/cafa-quick-submission-0-375",
+  "local_main_file": "corpus\\cafa-6-protein-function-prediction\\notebooks\\top_10%\\wasiqaliyasir__cafa-quick-submission-0-375\\cafa-quick-submission-0-375.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 20,
+    "B_modularite": 20,
+    "C_reproductibilite": 15,
+    "D_lisibilite": 15,
+    "E_hygiene": 5
+  },
+  "score_total_100": 75,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline très structuré avec sections: CONFIGURATION → CACHED ONTOLOGY LOADER → OPTIMIZED DATA LOADER → VECTORIZED ENSEMBLING → QUICK PREDICTION → MAIN EXECUTION",
+    "B_modularite": "Classes OOP (OntologyCache, ProteinEnsembler), CONFIG dict centralisé avec 15+ paramètres, fonctions batch_predict et make_quick_predictions réutilisables.",
+    "C_reproductibilite": "CONFIG centralisé avec valeurs explicites (WEIGHT_GOA: 0.68, UP_DECAY: 0.985), cache pickle pour ontologie, TOP_K et SCORE_THRESHOLD définis.",
+    "D_lisibilite": "Sections délimitées avec commentaires, docstrings pour classes ('Cache ontology to avoid re-parsing'), noms explicites.",
+    "E_hygiene": "Code mort massif dans cellule 2 (200+ lignes commentées avec approche alternative), sinon code actif propre avec batch_size et gestion mémoire."
+  },
+  "summary": "Excellente architecture OOP avec classes bien conçues (OntologyCache, ProteinEnsembler) et configuration très complète. Pipeline clair avec cache et optimisations. Point faible majeur: cellule 2 contient 200+ lignes de code commenté (approche alternative abandonnée), réduisant significativement le score d'hygiène."
+}

@@ -1,0 +1,22 @@
+{
+  "competition": "playground-series-s6e1",
+  "stratum": "top_1%",
+  "ref": "manasi197/ps6e1-meta-ensemble",
+  "local_main_file": "corpus\\playground-series-s6e1\\notebooks\\top_1%\\manasi197__ps6e1-meta-ensemble\\ps6e1-meta-ensemble.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 20,
+    "B_modularite": 15,
+    "C_reproductibilite": 15,
+    "D_lisibilite": 20,
+    "E_hygiene": 15
+  },
+  "score_total_100": 85,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline meta-learning clair: # Imports → # Discover Models → # Deduplicate → # Load → # Filter → # RidgeCV → # Rank Normalize → # Blend → # Submit.",
+    "B_modularite": "Fonction rank_normalize(), glob discovery, hashlib deduplication. KFold loop réutilisable.",
+    "C_reproductibilite": "RANDOM_STATE=42, KFold shuffle=True, alphas grid logspace(-4,3,30), THRESH=0.885 documenté.",
+    "D_lisibilite": "Sections markdown numérotées (# 1. RAW META RIDGE, # 2. Rank Normalization), print statements RMSE.",
+    "E_hygiene": "Deduplication via MD5 hash, correlation filtering (THRESH=0.885), clip(LOW, HIGH), best_w search grid."
+  },
+  "summary": "Notebook meta-ensemble sophistiqué avec RidgeCV stacking. Déduplication intelligente via MD5. Filtrage par corrélation. Blend search raw+rank. Pipeline bien structuré avec sections markdown. Approche mathématiquement solide pour ensembling."
+}

@@ -1,0 +1,97 @@
+{
+  "tabular_features": {
+    "aggregation_features": [
+      "mean",
+      "std",
+      "max",
+      "min",
+      "first",
+      "last",
+      "count",
+      "nunique"
+    ],
+    "time_series_features": [
+      "diff-last-mean",
+      "fraction-last-mean",
+      "diff1",
+      "diff2"
+    ]
+  },
+  "preprocessing": {
+    "data_denoising": [],
+    "fillna_strategy": [
+      "linear-interpolation"
+    ],
+    "categorical_encoding": [
+      "onehot-encoding"
+    ],
+    "feature_scaling": []
+  },
+  "transformer_models": {
+    "base_models": [
+      "transformerencoder"
+    ],
+    "fine_tuning_strategy": []
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "binarycrossentropy"
+    ]
+  },
+  "training_strategy": {
+    "optimizer": [
+      "adam"
+    ],
+    "learning_rate": 0.001,
+    "learning_rate_schedule": [
+      "custom-schedule"
+    ],
+    "batch_size": null,
+    "epochs": 8,
+    "regularization": [],
+    "cross_validation": [
+      "5-fold"
+    ]
+  },
+  "model_architecture": {
+    "pooling_strategy": [
+      "gru-return-sequences-false"
+    ],
+    "additional_layers": [
+      "embedding",
+      "dense",
+      "gru",
+      "transformerencoder"
+    ],
+    "dropout_rate": null
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "stacking-logisticregression",
+      "stacking-mlp"
+    ],
+    "prediction_averaging": [
+      "lightgbm-dart-0.799-+-nn-0.792"
+    ]
+  },
+  "model_specific": {
+    "boosting_type": [
+      "dart"
+    ]
+  },
+  "feature_engineering": {
+    "feature_selection_method": []
+  },
+  "frameworks": {
+    "deep_learning_framework": [
+      "tensorflow"
+    ],
+    "libraries": [
+      "lightgbm",
+      "rapids-cudf",
+      "sklearn",
+      "pandas",
+      "numpy"
+    ]
+  }
+}

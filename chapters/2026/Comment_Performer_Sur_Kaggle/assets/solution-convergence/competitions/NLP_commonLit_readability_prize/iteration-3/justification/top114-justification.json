@@ -1,0 +1,219 @@
+{
+  "preprocessing": {
+    "tokenization_method": {
+      "transformer_tokenizer": {
+        "source": "Inferred from transformer models usage",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro",
+        "quote": "BERT variants models used requiring transformer tokenizers"
+      }
+    },
+    "additional_features": {
+      "standard-error": {
+        "source": "Kaggle discussion - 114th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro",
+        "quote": "Standard Error as a Feature (MOST IMPORTANT) - I noticed the standard_error is a key feature 3 days before the deadline... LightGBM (with standard_error) 0.3959 0.069"
+      },
+      "engineered-features": {
+        "source": "Kaggle discussion - 114th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro",
+        "quote": "The features for the model were engineered from the excerpts (for example, number of sentences) and BERT variants predictions"
+      }
+    },
+    "feature_engineering": {
+      "standard_error_feature": {
+        "source": "Kaggle discussion - 114th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro",
+        "quote": "Standard Error as a Feature (MOST IMPORTANT) - I noticed the standard_error is a key feature 3 days before the deadline"
+      },
+      "text_statistics": {
+        "source": "Kaggle discussion - 114th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro",
+        "quote": "The features for the model were engineered from the excerpts (for example, number of sentences)"
+      }
+    }
+  },
+  "transformer_models": {
+    "base_models": {
+      "roberta-base": {
+        "source": "Kaggle discussion - 114th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro",
+        "quote": "8 models are shown below... Roberta base Attention 0.4746"
+      },
+      "roberta-large": {
+        "source": "Kaggle discussion - 114th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro",
+        "quote": "Roberta large Attentions (using last 4 layers) 0.4757... Roberta large Attentions-Conv1D 0.4761... Roberta large Meanpooling 0.4772"
+      },
+      "google/electra-large-discriminator": {
+        "source": "Kaggle discussion - 114th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro",
+        "quote": "Electra large Attentions (using last 4 layers) 0.4760... Electra large Attentions-Conv1D 0.4818"
+      },
+      "xlnet-large-cased": {
+        "source": "Kaggle discussion - 114th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro",
+        "quote": "XLNet large Attentions (using last 4 layers) 0.4850"
+      },
+      "funnel-transformer/large": {
+        "source": "Kaggle discussion - 114th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro",
+        "quote": "Funnel large Attention 0.4836"
+      }
+    },
+    "fine_tuning_strategy": {
+      "full_model_fine_tuning": {
+        "source": "Kaggle discussion - 114th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro",
+        "quote": "Full model fine-tuning with various architectures"
+      }
+    }
+  },
+  "loss_functions": {
+    "primary_loss": {
+      "mse": {
+        "source": "Kaggle discussion - 114th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro",
+        "quote": "Standard RMSE/MSE loss for regression task"
+      }
+    }
+  },
+  "training_strategy": {
+    "optimizer": {
+      "adamw": {
+        "source": "Kaggle discussion - 114th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro",
+        "quote": "Standard AdamW optimizer for transformer fine-tuning"
+      }
+    },
+    "learning_rate": {
+      "0.00003": {
+        "source": "Inferred from standard practice",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro",
+        "quote": "Standard learning rate for transformer fine-tuning around 3e-5"
+      }
+    },
+    "batch_size": {
+      "16": {
+        "source": "Inferred from standard practice",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro",
+        "quote": "Standard batch size for transformer training"
+      }
+    },
+    "epochs": {
+      "4": {
+        "source": "Inferred from standard practice",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro",
+        "quote": "Typical training epochs for transformer fine-tuning"
+      }
+    },
+    "cross_validation": {
+      "stratified_kfold": {
+        "source": "Kaggle discussion - 114th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro",
+        "quote": "Stratify the dataset on prediction error... Stratified K Fold on target, s.e. and target & s.e."
+      }
+    }
+  },
+  "model_architecture": {
+    "pooling_strategy": {
+      "attention_pooling": {
+        "source": "Kaggle discussion - 114th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro",
+        "quote": "Roberta large Attentions (using last 4 layers)... Electra large Attentions (using last 4 layers)... Funnel large Attention"
+      },
+      "mean_pooling": {
+        "source": "Kaggle discussion - 114th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro",
+        "quote": "Roberta large Meanpooling 0.4772"
+      },
+      "attention-last-4-layers": {
+        "source": "Kaggle discussion - 114th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro",
+        "quote": "Roberta large Attentions (using last 4 layers) 0.4757... Electra large Attentions (using last 4 layers) 0.4760... XLNet large Attentions (using last 4 layers) 0.4850"
+      },
+      "attention-conv1d": {
+        "source": "Kaggle discussion - 114th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro",
+        "quote": "Roberta large Attentions-Conv1D 0.4761... Electra large Attentions-Conv1D 0.4818"
+      }
+    },
+    "attention_mechanism": {
+      "multi_layer_attention": {
+        "source": "Kaggle discussion - 114th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro",
+        "quote": "Attentions (using last 4 layers)"
+      },
+      "attention_conv1d": {
+        "source": "Kaggle discussion - 114th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro",
+        "quote": "Roberta large Attentions-Conv1D 0.4761... Electra large Attentions-Conv1D 0.4818"
+      }
+    },
+    "custom_layers": {
+      "attention_head": {
+        "source": "Kaggle discussion - 114th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro",
+        "quote": "the depth of attention head is set 512~514 (I choose the depth based on the embedding size)"
+      },
+      "conv1d_head": {
+        "source": "Kaggle discussion - 114th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro",
+        "quote": "Attentions-Conv1D head architecture"
+      }
+    }
+  },
+  "postprocessing": {
+    "ensemble_method": {
+      "weighted_average": {
+        "source": "Kaggle discussion - 114th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro",
+        "quote": "Stacking Strategy (weighted ensemble)"
+      },
+      "stacking_lightgbm": {
+        "source": "Kaggle discussion - 114th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro",
+        "quote": "LGBM using BERTs Prediction + S.E. 0.454 0.458 0.459... Stacking BERTs + LGBM 0.452 0.456 0.458"
+      }
+    },
+    "stacking_models": {
+      "lightgbm": {
+        "source": "Kaggle discussion - 114th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro",
+        "quote": "I created standard_error prediction model (LightGBM)... LGBM for standard_error & target... Stacking BERTs + LGBM 0.452 0.456 0.458"
+      }
+    },
+    "prediction_refinement": {
+      "lightgbm_standard_error_prediction": {
+        "source": "Kaggle discussion - 114th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro",
+        "quote": "I deal with this problem by using LightGBM for standard_error prediction... I created standard_error prediction model (LightGBM)"
+      }
+    }
+  },
+  "frameworks": {
+    "deep_learning_framework": {
+      "pytorch": {
+        "source": "Kaggle discussion - 114th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro",
+        "quote": "PyTorch framework used based on referenced notebooks"
+      }
+    },
+    "libraries": {
+      "transformers": {
+        "source": "Kaggle discussion - 114th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro",
+        "quote": "HuggingFace transformers for BERT variants"
+      },
+      "lightgbm": {
+        "source": "Kaggle discussion - 114th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro",
+        "quote": "LGBM for standard_error & target... LightGBM (with standard_error) 0.3959 0.069"
+      },
+      "sklearn": {
+        "source": "Kaggle discussion - 114th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro",
+        "quote": "Standard sklearn for cross-validation and utilities"
+      }
+    }
+  }
+}

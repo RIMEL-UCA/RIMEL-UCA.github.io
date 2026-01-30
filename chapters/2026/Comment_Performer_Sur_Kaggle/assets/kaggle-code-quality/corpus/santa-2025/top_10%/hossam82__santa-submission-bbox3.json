@@ -1,0 +1,22 @@
+{
+  "competition": "santa-2025",
+  "stratum": "top_10%",
+  "ref": "hossam82/santa-submission-bbox3",
+  "local_main_file": "corpus\\santa-2025\\notebooks\\top_10%\\hossam82__santa-submission-bbox3\\santa-submission-bbox3.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 15,
+    "B_modularite": 20,
+    "C_reproductibilite": 15,
+    "D_lisibilite": 15,
+    "E_hygiene": 15
+  },
+  "score_total_100": 80,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline hybride: CONFIGURATION → Setup → # Ensemble markdown → %%writefile ensemble_submissions.py → optimization.",
+    "B_modularite": "Module externe ensemble_submissions.py avec fonctions (get_polygon_bounds, calculate_score, load_submission, analyze_submission, create_ensemble, save_ensemble).",
+    "C_reproductibilite": "Constants TX/TY explicites, Decimal precision=25, MAX_TIME_SECONDS configurable.",
+    "D_lisibilite": "Docstrings complets dans module externe, type hints (Dict, List, Tuple), print statements avec emojis.",
+    "E_hygiene": "try/except dans load_submission, 's' prefix handling, sort by index, shutil.copy, os.chmod."
+  },
+  "summary": "Notebook Santa avec module ensemble externe bien documenté. %%writefile pour créer ensemble_submissions.py. Functions avec type hints et docstrings. TX/TY constants from C++ code. Error handling robuste. Decimal precision pour calculs géométriques."
+}

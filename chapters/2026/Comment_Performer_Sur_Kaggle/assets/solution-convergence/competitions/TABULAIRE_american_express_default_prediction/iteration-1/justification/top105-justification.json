@@ -1,0 +1,47 @@
+{
+  "primary_loss": {
+    "source": "Kaggle 105th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348140",
+    "quote": "I used optuna to get 2 different sets of optimal hyperparameters for the leaf-wise growth xgboost model and an optimal keras MLP layout, always based on the AUC score to measure the overall discrimination"
+  },
+  "learning_rate": {
+    "source": "Kaggle 105th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348140",
+    "quote": "XGBClassifier(tree_method='gpu_hist', grow_policy='lossguide', eval_metric='auc', min_child_weight=50, subsample=0.65, colsample_bytree=0.6, colsample_bylevel=0.6, colsample_bynode=0.55, learning_rate=0.01096, max_depth=8, max_bin=320, max_leaves=0)"
+  },
+  "regularization": {
+    "source": "Kaggle 105th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348140",
+    "quote": "min_child_weight=50, subsample=0.65, colsample_bytree=0.6, colsample_bylevel=0.6, colsample_bynode=0.55"
+  },
+  "cross_validation": {
+    "source": "Kaggle 105th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348140",
+    "quote": "4x xgboost 1 (Full sample + 10 CV Folds) * 5 Seeds = 4x 55 models"
+  },
+  "additional_layers": {
+    "source": "Kaggle 105th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348140",
+    "quote": "I used optuna to get 2 different sets of optimal hyperparameters for the leaf-wise growth xgboost model and an optimal keras MLP layout"
+  },
+  "ensemble_method": {
+    "source": "Kaggle 105th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348140",
+    "quote": "Ensembling was done using oof predictions and finding the best weights using scipy minimizing the negative amex metric"
+  },
+  "prediction_averaging": {
+    "source": "Kaggle 105th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348140",
+    "quote": "4x xgboost 1 (Full sample + 10 CV Folds) * 5 Seeds = 4x 55 models. 4x xgboost 2 (Full sample + 10 CV Folds) * 5 Seeds = 4x 55 models. 4x Keras MLP (Full sample + 10 CV Folds) * 10 Seeds = 4x 110 models. Ensembling with public DART score"
+  },
+  "deep_learning_framework": {
+    "source": "Kaggle 105th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348140",
+    "quote": "4x Keras MLP (Full sample + 10 CV Folds) * 10 Seeds = 4x 110 models"
+  },
+  "libraries": {
+    "source": "Kaggle 105th place solution",
+    "link": "https://www.kaggle.com/competitions/amex-default-prediction/discussion/348140",
+    "quote": "XGBClassifier... I used optuna to get 2 different sets of optimal hyperparameters... finding the best weights using scipy"
+  }
+}

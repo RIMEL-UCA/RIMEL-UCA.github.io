@@ -1,0 +1,77 @@
+{
+  "augmentation_techniques": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "Standard but strong augmentations to prevent overfitting... I used horizontal/vertical flips + zoom (crop 384 -> resize to 512)... Mixup/Cutmix (I also disable it completely for the last 3 epochs)"
+  },
+  "base_models": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "DeiT-base-384... EffNet-B4"
+  },
+  "primary_loss": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "Use part of OUSM loss (without re-weighting) - https://arxiv.org/pdf/1901.07759.pdf... Sometimes Taylor Loss (+label smoothing) was better than Cross-Entropy"
+  },
+  "optimizer": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "Adam, cosine annealing with a warmup, 16 batch size, gradient accumulation, fp16"
+  },
+  "learning_rate_schedule": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "Adam, cosine annealing with a warmup"
+  },
+  "batch_size": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "16 batch size"
+  },
+  "regularization": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "Label smoothing (0.2 - 0.3)... Early stopping... gradient accumulation, fp16"
+  },
+  "cross_validation": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "Single models (5 folds, 4xTTA)"
+  },
+  "ensemble_method": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "Ensembles (just avg): model-1 + model-2 + model-3"
+  },
+  "prediction_averaging": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "TTA gave me a stable 0.001-0.002 improvement in all experiments for both CV and LB. I used horizontal/vertical flips + zoom (crop 384 -> resize to 512)"
+  },
+  "image_size": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "DeiT-base-384... crop 384 -> resize to 512"
+  },
+  "external_data": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "2020 + 2019 data means upsampling for minor classes using the 2019 dataset (duplicates were removed, use only 2020 for testing)"
+  },
+  "mixed_precision": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "fp16"
+  },
+  "noise_handling": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "Remove only ~2-3% of data (noise) using OOF confident predictions... Use part of OUSM loss (without re-weighting)"
+  },
+  "deep_learning_framework": {
+    "source": "Top10 solution description",
+    "link": "solutions/top10.txt",
+    "quote": "PyTorch"
+  }
+}

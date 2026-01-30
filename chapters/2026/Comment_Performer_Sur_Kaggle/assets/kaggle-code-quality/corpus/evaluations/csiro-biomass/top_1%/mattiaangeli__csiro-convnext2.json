@@ -1,0 +1,22 @@
+{
+  "competition": "csiro-biomass",
+  "stratum": "top_1%",
+  "ref": "mattiaangeli/csiro-convnext2",
+  "local_main_file": "corpus\\csiro-biomass\\notebooks\\top_1%\\mattiaangeli__csiro-convnext2\\csiro-convnext2.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 15,
+    "B_modularite": 20,
+    "C_reproductibilite": 15,
+    "D_lisibilite": 10,
+    "E_hygiene": 15
+  },
+  "score_total_100": 75,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline d'inférence: CONFIG → utils → dataset → model (BiomassConvNeXt) → load + infer → run. Structure similaire à eva02.",
+    "B_modularite": "Classes (Local2DTokenMixerBlock, BiomassConvNeXt, TestDS), fonctions (clean_image, preprocess_half, predict_ckpt), architecture réutilisable.",
+    "C_reproductibilite": "CONFIG centralisée (MODEL_NAME, IMG_SIZE=512, BATCH_SIZE=8), MEAN/STD ImageNet, chemins explicites.",
+    "D_lisibilite": "Sections commentées (# CONFIG, # utils, # model), noms corrects mais variables courtes (k, g, c), pas de markdown.",
+    "E_hygiene": "Gestion images nulles, strict=False pour load_state_dict, autocast bfloat16, fillna(0.0) pour submission."
+  },
+  "summary": "Notebook d'inférence ConvNeXtV2 très similaire à eva02-inference. Architecture modulaire professionnelle avec classes PyTorch bien structurées. Configuration centralisée. Manque de markdown mais code propre. Optimisations GPU (autocast, pin_memory)."
+}

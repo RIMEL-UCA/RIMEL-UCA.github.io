@@ -1,0 +1,42 @@
+{
+  "augmentation_techniques": {
+    "source": "Top5 solution description",
+    "link": "solutions/top5.txt",
+    "quote": "tta: random crop, transpose, h/v flip, hue, random brightness, normalize... efn-b4 + img_size = 512 + augmentations + bi-tempered logistic loss (t1=0.8, t2=1.4) + cutmix"
+  },
+  "base_models": {
+    "source": "Top5 solution description",
+    "link": "solutions/top5.txt",
+    "quote": "model_8 (vit16) + model_13 (efn-b4-cmix) (2-model ensemble)... vit-b16 + img_size = 384... efn-b4 + img_size = 512... model_10 (deit)... deit-b16 + img_size = 384"
+  },
+  "fine_tuning_strategy": {
+    "source": "Top5 solution description",
+    "link": "solutions/top5.txt",
+    "quote": "Training model_13_ft_2: Dataset: Cassava 2019 + 2020 merged dataset, finetune model_13 with: freeze non-classifier layers + bi-tempered logistic loss (t1=0.8, t2=1.4) + cutmix"
+  },
+  "primary_loss": {
+    "source": "Top5 solution description",
+    "link": "solutions/top5.txt",
+    "quote": "bi-tempered logistic loss (t1=0.8, t2=1.4)... Proper-parametered bi-tempered logistic loss works better than other losses (like Taylor Cross Entropy loss or Label Smoothing loss) in most cases"
+  },
+  "ensemble_method": {
+    "source": "Top5 solution description",
+    "link": "solutions/top5.txt",
+    "quote": "model_8 (vit16) + model_13_ft_2 (efn-b4-cmix) + model_10 (deit) (3-model ensemble)... ensemble weight=[0.5, 0.3, 0.2]"
+  },
+  "prediction_averaging": {
+    "source": "Top5 solution description",
+    "link": "solutions/top5.txt",
+    "quote": "tta: random crop, transpose, h/v flip, hue, random brightness, normalize"
+  },
+  "image_size": {
+    "source": "Top5 solution description",
+    "link": "solutions/top5.txt",
+    "quote": "vit-b16 + img_size = 384... efn-b4 + img_size = 512... deit-b16 + img_size = 384"
+  },
+  "external_data": {
+    "source": "Top5 solution description",
+    "link": "solutions/top5.txt",
+    "quote": "Training model_13_ft_2: Dataset: Cassava 2019 + 2020 merged dataset"
+  }
+}

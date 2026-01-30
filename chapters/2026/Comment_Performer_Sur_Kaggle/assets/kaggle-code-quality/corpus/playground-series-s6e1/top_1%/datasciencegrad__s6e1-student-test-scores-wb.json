@@ -1,0 +1,22 @@
+{
+  "competition": "playground-series-s6e1",
+  "stratum": "top_1%",
+  "ref": "datasciencegrad/s6e1-student-test-scores-wb",
+  "local_main_file": "corpus\\playground-series-s6e1\\notebooks\\top_1%\\datasciencegrad__s6e1-student-test-scores-wb\\s6e1-student-test-scores-wb.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 20,
+    "B_modularite": 20,
+    "C_reproductibilite": 15,
+    "D_lisibilite": 20,
+    "E_hygiene": 15
+  },
+  "score_total_100": 90,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline parfait avec sections: ## Import → ## Submissions Analysis → ## Weight Optimization → ## Blending. Très structuré.",
+    "B_modularite": "Fonctions bien conçues (analyze_submissions, calculate_correlation, optimize_weights, hill_climb_optimization, scipy_optimization, blend_submissions). Paramétrisées.",
+    "C_reproductibilite": "random_state implicite dans permutation, validation_split paramétrable, weights explicites.",
+    "D_lisibilite": "Docstrings absentes mais markdown sections clairs, print statements informatifs, noms explicites (model_cols, corr_matrix).",
+    "E_hygiene": "warnings.filterwarnings('ignore'), dropna/isfinite checks, np.clip, validation des données."
+  },
+  "summary": "Notebook de weight blending exemplaire avec pipeline très structuré. Fonctions bien découpées (analyze, correlate, optimize, blend). Trois méthodes d'optimisation (equal, hill_climb, scipy). Print statements informatifs pour debugging. Code professionnel et maintenable."
+}

@@ -1,0 +1,342 @@
+Thank to AMEX for this competition and thank to @raddar for his wonedful data compression notebook.
+My model is the enesemble of DART and Neural networks.
+
+Neural Network models: Tabular data(same used for Tree learners), Gru, Transformer and Stack Model(Gru+Tabular Model).
+
+Following are the scenarios where neural nets struggled compared to the tree based learners.
+1 . Outlier numbers in some features.(lightgbm process it as quantiles, hence roboust)
+2 . Understanding if the value is missing; even if we fix it as -1, still will be difficult to process.
+3 . Dominant easy examples.(Gradients are not getting propogated to hard/varied examples as most examples are easy to classify).
+
+1. Preprocessing:
+Clip the values of the features to 95th or 99th percentile of the feature. Tabular Data Clip values, Sequential Data Clip values
+
+2. Add Embeddings to the Missing values
+For both FFN (tabular) and sequential data(GRU, transformer), for each feature given more information that the values are missing or not. Adding this information helps the model to converge faster and better generalization.
+
+Tabular Model: here
+Gru Model: here
+Stack Model: here
+Transformer Model: here
+
+import os
+import gc
+import pickle
+
+import numpy as np # linear algebra
+import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
+import torch
+
+import torch.nn as nn
+import matplotlib.pyplot as plt
+    
+from sklearn.model_selection import StratifiedKFold
+from sklearn.metrics import f1_score
+from collections import Counter
+device=torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+print(device)
+cuda
+loading dataset
+%%time
+customer_ids = np.load("../input/amex-tabular-train-nn-dataset-v3/train_data/customer_ids.npy")
+x_train = np.load("../input/amex-tabular-train-nn-dataset-v3/train_data/x_train.npy")
+y_train = np.load("../input/amex-tabular-train-nn-dataset-v3/train_data/y_train.npy")
+x_miss_train = np.load("../input/amex-tabular-train-nn-dataset-v3/train_data/x_miss_train.npy")
+x_count = np.load("../input/amex-tabular-train-nn-dataset-v3/train_data/x_count.npy")
+
+x_train = np.clip(x_train, -3.0, 3.0)
+
+print(x_train.shape, x_count.shape, x_miss_train.shape, y_train.shape)
+print()
+print(x_train.dtype)
+gc.collect()
+(458913, 1225) (458913,) (458913, 175) (458913,)
+
+float32
+CPU times: user 748 ms, sys: 1.62 s, total: 2.37 s
+Wall time: 16.1 s
+49
+Config
+class CFG:
+    BATCH_SIZE = 4096
+    N_EPOCHS=12
+Dataset
+class AmexDataset(torch.utils.data.Dataset):
+    def __init__(self, X, xcount, xmiss_count, y, idxs, phase='train'):
+        self.idxs=idxs
+        self.X = X
+        self.xcount = xcount
+        self.xmiss_count = xmiss_count
+        self.y = y
+        self.phase=phase
+    
+    def __getitem__(self, idx):
+        idx = self.idxs[idx]
+        x = torch.tensor(self.X[idx], dtype=torch.float32)
+        xmissing = 1+(x==-1).type(torch.long)
+        
+        x_count = torch.tensor(self.xcount[idx]/13, dtype=torch.float32)
+        xmiss_count = torch.tensor(self.xmiss_count[idx]/13, dtype=torch.float32)
+        
+        
+        if self.phase == 'train':
+            y = torch.tensor(self.y[idx], dtype=torch.float32)
+            return (x, xmissing, x_count, xmiss_count, y)
+        return x, xmissing, x_count, xmiss_count
+    
+    def __len__(self):
+        return len(self.idxs)
+model
+class TransformBlock(nn.Module):
+    def __init__(self, insize, outsize, dropout=0.1):
+        super().__init__()
+        self.bn = nn.BatchNorm1d(insize)
+        self.linear = nn.Linear(insize, outsize)
+        self.activation = nn.Softplus()
+        self.dropout = nn.Dropout(dropout)
+    
+    def forward(self, x):
+        x = self.bn(x)
+        x = self.linear(x)
+        x = self.activation(x)
+        x = self.dropout(x)
+        return x
+    
+class TabularModel(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.pre_bn = nn.BatchNorm1d(1401)
+        self.missing_embedd = nn.Embedding(3, 5)
+        self.preprocess_layer = nn.Linear(6, 1)
+        self.dropout=nn.Dropout(0.01)
+        
+        self.layer1 = TransformBlock(1401, 1024, dropout = 0.5)
+        self.layer2 = TransformBlock(1024, 512, dropout = 0.5)
+        self.layer3 = TransformBlock(512, 256, dropout = 0.5)
+        
+        self.head = nn.Sequential(
+            nn.Linear(256, 1)
+        )
+        
+    def forward(self, x, xmissing, x_count, xmiss_count):
+        xmissing = self.missing_embedd(xmissing)
+        x = x.unsqueeze(dim=-1)
+        x = torch.cat([x, xmissing], dim=-1)
+        
+        xmeta = torch.cat([x_count.unsqueeze(dim=-1), xmiss_count], dim=-1)
+        x = self.preprocess_layer(x).squeeze(dim=-1)
+        x = torch.cat([x, xmeta], dim=-1)
+        
+        x = self.dropout(x)
+        
+        x = self.layer1(x)
+        x = self.layer2(x)
+        x = self.layer3(x)
+        
+        y = self.head(x).view(-1)
+        return {'y': y}
+ 
+metrics
+def top_4percent(pred_df):
+    df = pred_df.copy()
+    df = df.sort_values('pred', ascending=False)
+    df['weight'] = df['target'].apply(lambda v: 20 if v==0 else 1)
+    four_percent_cutoff = 0.04 * sum(df['weight'])
+    df['weight_cumsum'] = df['weight'].cumsum()
+    df_cutoff = df[df.weight_cumsum <= four_percent_cutoff]
+    
+    return df_cutoff['target'].sum()/df['target'].sum()
+
+def weighted_gini(pred_df):
+    df = pred_df.copy()
+    df = df.sort_values('pred', ascending=False)
+    df['weight'] = df['target'].apply(lambda v: 20 if v==0 else 1)
+    df['random'] = (df['weight'] / df['weight'].sum()).cumsum()
+    total_pos = (df['target'] * df['weight']).sum()
+    df['cum_pos_found'] = (df['target'] * df['weight']).cumsum()
+    df['lorentz'] = df['cum_pos_found'] / total_pos
+    df['gini'] = (df['lorentz'] - df['random']) * df['weight']
+    return df['gini'].sum()
+
+
+def normalized_gini(df):
+    df_true=df[['target']].copy()
+    df_true['pred'] = df_true['target'].copy()
+    
+    G = weighted_gini(df)/weighted_gini(df_true)
+    return G
+evaluate
+def evaluate(foldnum, val_index, model, val_dataloader):
+    model.eval()
+    ytrue=[]
+    ypred=[]
+    
+    for (x, xmissing, x_count, xmiss_count, y) in val_dataloader:
+        x = x.to(device)
+        xmissing = xmissing.to(device)
+        x_count = x_count.to(device)
+        xmiss_count = xmiss_count.to(device)
+        y = y.to(device)
+        
+        with torch.no_grad():
+            outputs=model(x, xmissing, x_count, xmiss_count)
+            yhat = outputs['y']
+            ytrue += y.cpu().tolist()
+            ypred += yhat.cpu().tolist()
+    
+    df = pd.DataFrame.from_dict({
+        'customer_ids': customer_ids[val_index],
+        'target': ytrue,
+        'pred': ypred
+    })
+    df['predlabel'] = (df['pred'] > 0.5).astype(int)
+    
+    
+    
+    ypred0 = (df[df.target==0].pred).mean()
+    ypred1 = (df[df.target==1].pred).mean()
+    
+    print()
+    print()
+    print()
+    print("avg non-defaulter prob:{:.4f}".format(ypred0))
+    print("avg defaulter prob:{:.4f}".format(ypred1))
+    
+    print("f1_score:{:.4f}".format(f1_score(df.target, df.predlabel)))
+    print("proportion of non defaulter >0.5: {:.4f}".format(len(df[(df.target==0) & (df.pred>=0.5)])/len(df) ))
+    print("proportion of defaulter < 0.5: {:.4f}".format(len(df[(df.target==1) & (df.pred <= 0.5)])/len(df) ))
+    print()
+    print()
+    print()
+    
+    
+    df.to_csv("eval_{}.csv".format(foldnum), index=False)
+    G = normalized_gini(df[['target', 'pred']])
+    D = top_4percent(df[['target', 'pred']])
+    M = (G+D)/2
+    
+    return (G, D, M)
+train model
+def get_rank_loss(yhat, y):
+    loss = torch.tensor(0.0, device=device)
+    ypos = yhat[y==1]
+    yneg = yhat[y==0]
+    
+    if len(ypos) == 0 or len(yneg) == 0:
+        return loss
+    
+    yneg = yneg.repeat((len(ypos), 1))
+    ypos = ypos.unsqueeze(dim=-1)
+    loss1 = -torch.log( torch.sigmoid( ypos.detach()-yneg) ).mean()
+    loss2 = -torch.log( torch.sigmoid( ypos-yneg.detach()) ).mean()
+    loss = (loss1+loss2)/2
+    
+    return loss
+def get_hinge_loss(yhat, y):
+    yhat = torch.clamp(yhat, -3, 3)
+    yerr = y*(1 - yhat) + (1-y) * (1+yhat)
+    yerr = torch.clamp(yerr, 0, 3)
+    loss = torch.mean(yerr)
+    return loss
+def train_ops(X, xmissing, x_count, xmiss_count, y, criterion, model, optimizer, scheduler):
+    X = X.to(device)
+    xmissing = xmissing.to(device)
+    x_count=x_count.to(device)
+    xmiss_count = xmiss_count.to(device)
+    y = y.to(device)
+    
+    model.train()
+    outputs = model(X, xmissing, x_count, xmiss_count)
+    yhat = outputs['y']
+    
+    binary_loss = criterion(yhat, y)
+    hinge_loss = get_hinge_loss(yhat, y)
+    rank_loss = get_rank_loss(yhat, y)
+    loss = binary_loss + hinge_loss + rank_loss
+    
+    
+    optimizer.zero_grad(set_to_none=True)
+    loss.backward()
+    torch.nn.utils.clip_grad_norm_(model.parameters(), 5)
+    optimizer.step()
+    scheduler.step()
+    
+    losses = {
+        'loss': loss.item(),
+        'binary_loss': binary_loss.item(),
+        'hinge_loss': hinge_loss.item(),
+        'rank_loss': rank_loss.item()
+    }
+    return losses
+
+def train_fold(s, foldnum, val_index, train_dataloader, val_dataloader):
+    model = TabularModel().to(device)
+    criterion = nn.BCEWithLogitsLoss()
+    optimizer = torch.optim.AdamW(model.parameters(), lr=1e-3, weight_decay=1e-3)
+    scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, 
+                                                           T_max = CFG.N_EPOCHS * len(train_dataloader), 
+                                                           eta_min=1e-7)
+    
+    best_eval=None
+    evals=[]
+    for e in range(CFG.N_EPOCHS):
+        epoch_loss=[]
+        epoch_binary_loss=[]
+        epoch_hinge_loss=[]
+        epoch_rank_loss=[]
+        
+        for it, (X, xmissing, x_count, xmiss_count, y) in enumerate(train_dataloader):
+            losses = train_ops(X, xmissing, x_count, xmiss_count, y, criterion, model, optimizer, scheduler)
+            loss = losses['loss']
+            hinge_loss = losses['hinge_loss']
+            rank_loss = losses['rank_loss']
+            binary_loss = losses['binary_loss']
+            
+            epoch_loss.append(loss)
+            epoch_binary_loss.append(binary_loss)
+            epoch_hinge_loss.append(hinge_loss)
+            epoch_rank_loss.append(rank_loss)
+        
+        (G, D, M) = evaluate(foldnum, val_index, model, val_dataloader)
+        if best_eval is None or best_eval < M:
+            best_eval = M
+            torch.save(model, "models/tabular_model_{}_{}.pt".format(s, foldnum))
+            
+        evals.append(M)
+        print("epoch:{} | train loss:{:.4f} | rankloss: {:.4f}".format(e, np.mean(epoch_loss), np.mean(epoch_rank_loss)))
+        print("hinge loss:{:.4f}".format(np.mean(epoch_hinge_loss)))
+        print("binary loss:{:.4f}".format(np.mean(epoch_binary_loss)))
+        print("Eval:{:.6f} | best eval:{:.6f}".format(M, best_eval))
+        print("Gini:{:.6f} | Default Rate:{:.6f}".format(G, D))
+    
+    print("End of training foldnumber:", foldnum)
+    print("Best Eval:",best_eval)
+    plt.title("evals...")
+    plt.plot(evals)
+    plt.show()
+if not os.path.exists("models"):
+    os.mkdir("models")
+skf = StratifiedKFold(n_splits=5, random_state=88471, shuffle=True)
+for foldnum, (train_index, val_index) in enumerate(skf.split(y_train, y_train)):
+    train_dataset = AmexDataset(x_train, x_count, x_miss_train, y_train, train_index)
+    val_dataset = AmexDataset(x_train, x_count, x_miss_train, y_train, val_index)
+    
+    train_dataloader = torch.utils.data.DataLoader(train_dataset, 
+                                                   batch_size=CFG.BATCH_SIZE, 
+                                                   shuffle=True)
+    
+    val_dataloader = torch.utils.data.DataLoader(val_dataset, batch_size=CFG.BATCH_SIZE, 
+                                                 shuffle=False,
+                                                 drop_last=False)
+    
+    
+    print("====================================================")
+    print("Foldnumber:", foldnum)
+    print("number of train batches:", len(train_dataloader))
+    print("number of val batches:", len(val_dataloader))
+    
+    for s in range(1):
+        train_fold(s, foldnum, val_index, train_dataloader, val_dataloader)
+    gc.collect()
+    print()
+    print()

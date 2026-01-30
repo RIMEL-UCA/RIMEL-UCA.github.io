@@ -1,0 +1,43 @@
+{
+  "embeddings": {
+    "word_embeddings": [],
+    "contextual_embeddings": []
+  },
+  "preprocessing": {
+    "text_cleaning": [],
+    "tokenization_method": [],
+    "lowercase": null,
+    "augmentation_techniques": []
+  },
+  "transformer_models": {
+    "base_models": [],
+    "pretrained_checkpoints": [],
+    "fine_tuning_strategy": []
+  },
+  "loss_functions": {
+    "primary_loss": ["cross_entropy"],
+    "auxiliary_losses": []
+  },
+  "training_strategy": {
+    "optimizer": [],
+    "learning_rate": 0.01,
+    "learning_rate_schedule": [],
+    "batch_size": null,
+    "epochs": null,
+    "regularization": ["subsample", "feature_fraction", "feature_fraction_bynode", "min_data_in_leaf"],
+    "cross_validation": ["5-fold"]
+  },
+  "model_architecture": {
+    "pooling_strategy": [],
+    "additional_layers": [],
+    "dropout_rate": null
+  },
+  "postprocessing": {
+    "ensemble_method": ["power_rank_blend"],
+    "prediction_averaging": ["DART_LGBM_0.801 + GBDT_LGBM_0.799 + CatBoost_0.799"]
+  },
+  "frameworks": {
+    "deep_learning_framework": [],
+    "libraries": ["LightGBM", "CatBoost", "sklearn", "pandas", "numpy"]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "competition": "hull-tactical-market-prediction",
+  "stratum": "top_1%",
+  "ref": "xxxxyyyy80008/hull-tactical-full-eda",
+  "local_main_file": "corpus\\hull-tactical-market-prediction\\notebooks\\top_1%\\xxxxyyyy80008__hull-tactical-full-eda\\hull-tactical-full-eda.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 20,
+    "B_modularite": 15,
+    "C_reproductibilite": 15,
+    "D_lisibilite": 20,
+    "E_hygiene": 15
+  },
+  "score_total_100": 85,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline EDA complet avec sections numérotées: 0. Load → 1. Data Overview → 2. Target Analysis. Storytelling excellent.",
+    "B_modularite": "Fonction analyze_returns(), feature_categories dict, reconstruct_price() function. Structure dictionnaire pour catégories.",
+    "C_reproductibilite": "Données yfinance pour validation externe (S&P500), percentiles documentés, statistiques complètes.",
+    "D_lisibilite": "Markdown sections (#0, #1, #2), explications détaillées des features (M*, E*, I*, P*, etc.), commentaires inline.",
+    "E_hygiene": "warnings.filterwarnings('ignore'), pd.set_option pour affichage, plt.style.use('seaborn'), gestion mémoire implicite."
+  },
+  "summary": "Notebook EDA exemplaire avec analyse exhaustive des features Hull Tactical. Catégorisation complète des features (Market, Economic, Interest, etc.). Comparaison avec S&P500 via yfinance. Statistiques détaillées (skewness, kurtosis, VaR, normality tests). Documentation markdown excellente."
+}

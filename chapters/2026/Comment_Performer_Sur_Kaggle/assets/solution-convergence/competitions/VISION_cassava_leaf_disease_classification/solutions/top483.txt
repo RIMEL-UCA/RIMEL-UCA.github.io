@@ -1,0 +1,704 @@
+The lost solution
+
+Hello! Time to share our solution for this competition. Why did we call it lost? Because it's 900+ place on the noisy public LB and… and we don't know what to expect from the private part. We didn't know our private place while writing this report. Our team just wants to share an example of advanced solution based on training with denoised data and huge ensemble method. So, if we landed low on the private LB when you're reading this, it means that we've got a noisy private set and our ideas haven't worked. Otherwise, if we're high enough on the LB it means that the private part is clear and we handled noise successfully. Since we're going all-in and taking two denoised solutions as the final submissions, we wanna believe that private data won't contain as much noise as the public set does. Let's review our solution by steps.
+
+Let's start from the most interesting part.
+
+Knowledge distillation
+
+We did a really soft knowledge distillation. We hadn't time to do a lot of experiments, so we had only one take to relable the dataset. We explored the forum and found out that there are at least 500 diseased images which are labeled as healthy. Other types of mistakes weren't frequently mentioned. So we decided to make knowledge distillation soft targets only for 500 samples. We trained 5 folds of SWSL ResNeXt 101 8D and predicted labels for all images from each validation part and for each label. Then we saved the predictions and confidences for each image and chose a threshold for confidence, which was used to find ~500 samples where extremely confident predictions didn't match ground truth labels. Then we trained Efficient Net B4 with obtained labels and got the CV boost from 0.899 to 0.915. Relabeled data was used in validation part as well.
+
+External data
+
+2019 data
+
+We used 2019 data with removed duplicates for training. We used it only for training and didn't put it in the validation part. We've also applied soft relabling for it.
+
+Mendeley Leaves
+
+We also used Mendeley Leaves for training. This dataset contains images of other plants. The dataset is not fully labeled. The first part of the all images are labeled just as healthy and the rest of them are labeled just as diseased. So the second part had to be pseudo-labeled to be able to use it for training. We used 5 folds of SWSL ResNeXt 101 8D for this task. We predicted labels for each diseased image and checked model confidence for each one. I used a 0.55 confidence threshold - the same was calculated for relabeling ~500 samples in the source train set. (It’s NOT ranged from 0 to 1, it has much more amplitude including negative values.). Finally, we get 2767 / 4334 samples, including the healthy ones. The external data images weren’t used in the validation and placed only in the training part.
+
+TTA
+
+We used simple technique for our TTA: average of the default image and horizontally flipped image. There are two reasons of selecting such a small number of transforms for TTA: time limit - well-structured ensemble usually performs better than TTA, double TTA is the most stable variant in this competition according to our experiments - averaged and weighted 4x or 16x TTA aren't that good to be considered for our solution, LB scores might differ with them in range [-0.007, +0.007].
+
+Augmetations
+
+Successful:
+
+Horizontal Flip
+Vertical Flip
+Blur
+360 rotates
+RandomBrigtnessContrast
+ShiftScaleRotate
+HueSaturationValue
+CutMix
+MixUp
+FMix
+25% probability for each of past three augmentations.
+
+Unsuccessful:
+
+ElasticTransform
+Grid Distortion
+RandomSunFlare
+GaussNoise
+Coarse dropout
+Optical Distortion
+During warm up stage only horizontal flip was used.
+
+Training
+
+optimizer - Ranger
+learning rate - 0.003
+epoch - 30
+warm up epochs - 3
+early stopping - 8
+Loss Function - Cross Entropy loss with label smoothing (0.2 smoothing before using knowledge distillation and 0.1 after it)
+Progressive image size, start_size=256, final_size=512, size_step=32. Size starts increasing after the warm up stage finishes.
+pretrained - True
+Frozen BatchNorm layers
+scheduler - CosineBatchDecayScheduler with gradual warm up (custom impelementation)
+Initially, we tried to impelement Cosine Decay Scheduler that steps every batch and has wide range of customization ways, but finally we created the custom scheduler we used here. Here is the code and a plotted learning rate:
+
+import math
+from torch.optim.lr_scheduler import _LRScheduler
+
+
+class CosineBatchDecayScheduler(_LRScheduler):
+    """
+    Custom scheduler with calculating learning rate according batchsize
+    based on Cosine Decay scheduler. Designed to use scheduler.step() every batch.
+    """
+
+    def __init__(self, optimizer, steps, epochs, batchsize=128, decay=128, startepoch=1, minlr=1e-8, last_epoch=-1):
+        """
+        Args:
+            optimizer (torch.optim.Optimizer): PyTorch Optimizer
+            steps (int): total number of steps
+            epochs (int): total number of epochs
+            batchsize (int): current training batchsize. Default: 128
+            decay (int): batchsize based on which the learning rate will be calculated. Default: 128
+            startepoch (int): number of epoch when the scheduler turns on. Default: 1
+            minlr (float): the lower threshold of learning rate. Default: 1e-8
+            last_epoch (int): The index of last epoch. Default: -1.
+        """
+        decay = decay * math.sqrt(batchsize)
+        self.stepsize = batchsize / decay
+        self.startstep = steps / epochs * (startepoch - 1) * self.stepsize
+        self.minlr = minlr
+        self.steps = steps
+        self.stepnum = 0
+        super(CosineBatchDecayScheduler, self).__init__(optimizer, last_epoch)
+
+    def get_lr(self):
+        """Formula for calculating the learning rate."""
+        self.stepnum += self.stepsize
+        if self.stepnum < self.startstep:
+            return [baselr for baselr in self.base_lrs]
+        return [max(self.minlr, 1/2 * (1 + math.cos(self.stepnum * math.pi / self.steps)) * self.optimizer.param_groups[0]['lr']) for t in range(len(self.base_lrs))]
+
+
+Mixed precision training with gradient accumulation (iters_to_accumulate=8) ==> big boost on CV
+
+Models
+
+SWSL ResNeXt 101 8D
+SWSL ResNeXt 50
+Efficient Net B4
+Efficient Net B4 NS
+Inception V4
+DenseNet 161
+Here are the table representing perfomance of these and some others models:
+
+
+Final ensembles
+
+We submitted two different ensemble approaches with the same 6 models (5 folds each one).
+
+1) Simple Averaging Ensemble
+2019 Private LB: 0.92712; 2020 Public LB: 0.898; 2020 Private LB: 0.896
+
+2) MaxProb Ensemble
+Max Probability (or Max Confidence) ensemble allows us to choose the dominating model in the prediction process. In this case, if several models predict different labels, we take the prediction from a model with the biggest confidence.
+2019 Private LB: 0.93197; 2020 Public LB: 0.893; 2020 Private LB: 0.897
+
+Here is the scheme of our ensembles:
+
+
+You can find our full report (33 pages) about this competition here. Each step, score and submit are described there.
+
+Thank you to my team, the organizers and all the participants! We had a great time and learned a lot. In a few days, we will publish our code, but in the meantime, you can check the base version of my pipeline. See you in the next competitions!
+
+Don't deal with the noise…
+
+Fast&Automated clean PyTorch pipeline [Train]¶
+VERSION 5:
+Checkpoints for Apex have been added.
+Inference has been also updated.
+
+VERSION 4 features:
+
+Now it's even faster with persistent workers and turned off Pin Memory!
+Added support for custom loss functions, optimizer, schedulers via config
+Getting last layer bug fix
+Testloader bug in test function fix
+Added code for creating a working repository (but it's commented)
+Warnings filter turned on
+Now early stopping depends on f1-score, not validation loss.
+Checkpoint system improvements and bug fixes
+Description formatting
+VERSION 3: stopflag bug fixed
+
+Hello!
+
+I had two goals in mind when I was writing this notebook:
+1) Сreate the fastest possible pipeline with which you can quickly test your ideas.
+2) Make it fully automated so that ideas can be checked by changing only the config.
+
+So what are the features of this pipeline?
+1) Using Apex to speed up your training.
+2) Using multiprocessing to speed up your training as well.
+3) The presence of very convenient config that allows you to change everything from hyperparams to augmentations and even add custom ones.
+4) Variability - you can try whatever PyTorch model just by changing its name in the config.
+5) Simplicity - almost no extra packages, just Python, Pytorch and Albumentations.
+6) Using f1 score instead of accuracy because of huge class imbalance.
+
+Inference is here.
+
+It's possible to achieve 0.75+ accuracy with training model (resnet18) for only 3 minutes and 0.85+ accuracy with training model (resnext101_32x8d) for only 15 minutes, just with only flip augmentation. You should keep in mind that the best way to check all of your ideas is to do it with small model like resnet18 (its set as default here), then you'll just be able to move it to bigger models.
+
+At the same you should understand that the key to the victory in this competition is data processing. You can easily add new augmentations, loss functions, schedulers and optimizers in config to use them during the training. Moreover you can create custom ones by starting its name in the config from "/custom/" and creating fuction or class with the same name which returns an augmentation or just representing loss fucntion, scheduler or optimizer and takes parameters if needed (example below).
+
+Set up
+Config
+
+class cfg:
+    """Main config."""
+    
+    seed = 42  # random seed
+    
+    experiment_name = "Default"  # Name of the current approach
+    debug = False  # Debug flag. If set to True, train data will be decreased for faster experiments.
+    pathtoimgs = "../input/cassava-leaf-disease-classification/train_images"  # Path to folder with train images
+    pathtocsv = "../input/cassava-leaf-disease-classification/train.csv"  # Path to csv-file with targets
+    path = ""  # Working directory, the place where the logs and the weigths will be saved
+    log = "log.txt"  # If exists, all the logs will be saved in this txt-file as well
+    chk = ""  # Path to model checkpoint (weights).
+              # If exists, the model will be uploaded from this checkpoint.
+    device = "cuda"  # Device
+    
+    # Model's config
+    modelname = "resnet18"  # PyTorch model
+    pretrained = True               # Pretrained flag
+    
+    # Training config
+    numepochs = 5       # Number of epochs
+    earlystopping = 7     # Interrupts training after a certain number of epochs if the valloss stops decreasing,
+                           # set the value to "-1" if you want to turn off this option.
+    trainbatchsize = 128    # Train Batch Size
+    trainshuffle = True    # Shuffle during training
+    valbatchsize = 128      # Validation Batch Size
+    valshuffle = False     # Shuffle during validation
+    testbatchsize = 1      # Test Batch Size
+    testshuffle = False    # Shuffle during testing
+    verbose = True         # If set to True draws plots of loss changes and test metric changes.
+    savestep = 10          # Number of epochs in loop before saving model. 
+                           # 10 means that weights will be saved each 10 epochs.
+    numworkers = 4         # Number of workers
+    apex = True            # Using Apex for training flag
+    apexoptlvl = "O2"      # Apex optimization level. O3 breaks the training.
+    trainsize, valsize, testsize = 0.9, 0.1, 0.0  # Sizes for split. You can set 0.0 value for testsize,
+                                                  # in this case test won't be used. 
+
+    # Transforms' config
+    pretransforms = [     # Pre-transforms 
+        dict(
+            name="Resize",
+            params=dict(
+                height=256,
+                width=256,
+                p=1.0,
+            )
+        ),
+        dict(
+            name="Normalize",
+            params=dict(
+                mean=[0.485, 0.456, 0.406],
+                std=[0.229, 0.224, 0.225],
+                max_pixel_value=255.0,
+                p=1.0
+            )
+        ),
+    ]
+    
+    augmentations = [     # Training augmentations
+        dict(
+            name="HorizontalFlip",
+            params=dict(
+                always_apply=False,
+                p=0.5,
+            )
+        ),
+    ]
+    
+    posttransforms = [    # Post-transforms
+        dict(
+            name="/custom/totensor",
+            params=dict(
+            )
+        ),
+    ]
+    
+    # Optimizer's config
+    optimizer = "AdamW"  # PyTorch optimizer
+    optimizerparams = dict(
+        lr=0.001,           # Learning rate
+        weight_decay=0.01,  # Weight decay
+    )
+    
+    # Scheduler's confing
+    scheduler = "ReduceLROnPlateau"  # PyTorch scheduler
+    schedulerparams = dict(
+        mode="min",    # Mode
+        patience=5,    # Number of epochs before decreasing learning rate
+        factor=0.1,    # Factor of changing learning rate
+        verbose=True,  # The stdout message about reducing learning rate
+    )
+    
+    # Loss function's config
+    lossfn = "CrossEntropyLoss"  # PyTorch loss fucntion
+    lossfnparams = {}
+    
+    # Don't change
+    NUMCLASSES = 5  # CONST
+    # Can be changed only with uploading the model from the checkpoint
+    stopflag = 0    
+    schedulerstate = None 
+    optimdict = None
+Imports
+
+import numpy as np
+import cv2
+import gc
+import random
+import torch
+import os
+import pandas as pd
+import torchvision.models as models
+import torch.optim as optim
+import torch.nn as nn
+import albumentations as A
+from albumentations.pytorch import ToTensor
+import time
+from tqdm.notebook import tqdm
+from matplotlib import pyplot as plt
+from sklearn.metrics import f1_score
+from sklearn.model_selection import train_test_split
+from torch.nn.modules.module import ModuleAttributeError
+import warnings
+warnings.filterwarnings("ignore")
+%matplotlib inline
+Reproducibility
+
+def fullseed(seed=42):
+    """Sets the random seeds."""
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed(seed)
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = True
+    os.environ['PYTHONHASHSEED'] = str(seed)
+
+    
+fullseed(cfg.seed)
+Initializing device
+
+assert torch.cuda.is_available() or not cfg.device == "cuda", "cuda isn't available"
+device = torch.device(cfg.device)
+print(device)
+Installing apex
+
+if cfg.apex:    
+    !git clone https://github.com/NVIDIA/apex && cd apex && pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" . --user && cd .. && rm -rf apex
+    from apex import amp
+Custom fucntions and classes
+
+def totensor():
+    """An example of custom transform function."""
+    return A.pytorch.ToTensor()
+Initializing functions
+def get_model(cfg):
+    """Get PyTorch model."""
+    if cfg.chk:   # Loading model from the checkpoint
+        model = getattr(models, cfg.modelname)(pretrained=False)
+        # Changing the last layer according the number of classes
+        lastlayer = list(model._modules)[-1]
+        try:
+            setattr(model, lastlayer, nn.Linear(in_features=getattr(model, lastlayer).in_features,
+                                                out_features=cfg.NUMCLASSES, bias=True))
+        except ModuleAttributeError:
+            setattr(model, lastlayer, nn.Linear(in_features=getattr(model, lastlayer)[1].in_features,
+                                    out_features=cfg.NUMCLASSES, bias=True))
+        cp = torch.load(cfg.chk)
+        if 'model' in cp:
+            model.load_state_dict(cp['model'])
+        else:
+            model.load_state_dict(cp)
+        if 'epoch' in cp:
+            epoch = int(cp['epoch'])
+        if 'trainloss' in cp:
+            trainloss = cp['trainloss']
+        if 'valloss' in cp:
+            valloss = cp['valloss']
+        if 'metric' in cp:
+            metric = cp['metric']
+        if 'optimizer' in cp:
+            cfg.optimdict = cp['optimizer']
+            lr = cp['optimizer']["param_groups"][0]['lr']
+        if 'stopflag' in cp:
+            stopflag = cp['stopflag']
+            cfg.stopflag = stopflag
+        if 'scheduler' in cp:
+            cfg.schedulerstate = cp['scheduler']
+        print("Uploading model from the checkpoint...",
+              "\nEpoch:", epoch,
+              "\nTrain Loss:", trainloss,
+              "\nVal Loss:", valloss,
+              "\nMetrics:", metric,
+              "\nlr:", lr,
+              "\nstopflag:", stopflag)
+    else:    # Creating a new model
+        model = getattr(models, cfg.modelname)(pretrained=cfg.pretrained)
+        # Changing the last layer according the number of classes
+        lastlayer = list(model._modules)[-1]
+        try:
+            setattr(model, lastlayer, nn.Linear(in_features=getattr(model, lastlayer).in_features,
+                                                out_features=cfg.NUMCLASSES, bias=True))
+        except ModuleAttributeError:
+            setattr(model, lastlayer, nn.Linear(in_features=getattr(model, lastlayer)[1].in_features,
+                                                out_features=cfg.NUMCLASSES, bias=True))
+    return model.to(cfg.device)
+
+
+def get_optimizer(model, cfg):
+    "Get PyTorch optimizer."
+    optimizer =  globals()[cfg.optimizer[8:]](model.parameters(), **cfg.optimizerparams) \
+    if cfg.optimizer.startswith("/custom/") \
+    else getattr(optim, cfg.optimizer)(model.parameters(), **cfg.optimizerparams)
+    if cfg.optimdict:
+        optimizer.load_state_dict(cfg.optimdict)
+    return optimizer
+
+
+def get_scheduler(optimizer, cfg):
+    """Get PyTorch scheduler."""
+    if cfg.schedulerstate:
+        return cfg.schedulerstate
+    return  globals()[cfg.scheduler[8:]](optimizer, **cfg.schedulerparams) \
+    if cfg.scheduler.startswith("/custom/") \
+    else getattr(optim.lr_scheduler, cfg.scheduler)(optimizer, **cfg.schedulerparams)
+    
+
+def get_lossfn(cfg):
+    """Get PyTorch loss function."""
+    return  globals()[cfg.lossfn[8:]](**cfg.lossfnparams) \
+    if cfg.lossfn.startswith("/custom/") \
+    else getattr(nn, cfg.lossfn)(**cfg.lossfnparams)
+    
+
+def get_transforms(cfg):
+    """Get train and test augmentations."""
+    pretransforms = [globals()[item["name"][8:]](**item["params"]) if item["name"].startswith("/custom/") 
+                     else getattr(A, item["name"])(**item["params"]) for item in cfg.pretransforms]
+    augmentations = [globals()[item["name"][8:]](**item["params"]) if item["name"].startswith("/custom/") 
+                     else getattr(A, item["name"])(**item["params"]) for item in cfg.augmentations]
+    posttransforms = [globals()[item["name"][8:]](**item["params"]) if item["name"].startswith("/custom/") 
+                     else getattr(A, item["name"])(**item["params"]) for item in cfg.posttransforms]
+    train = A.Compose(pretransforms + augmentations + posttransforms)
+    test = A.Compose(pretransforms + posttransforms)
+    return train, test
+def datagenerator(cfg):
+    """Generates data (images and targets) for train and test."""
+    
+    print("Getting the data...")
+    assert cfg.trainsize + cfg.valsize + cfg.testsize == 1, "the sum of the split size must be equal to 1."
+    data = pd.read_csv(cfg.pathtocsv)
+    if cfg.debug:
+        data = data.sample(n=1000, random_state=cfg.seed).reset_index(drop=True)
+    targets = list(data["label"])
+    files = list(data["image_id"])
+    
+    # If test size is equal zero, we split the data only into train and validation parts, 
+    # otherwise we split it into train, validation and test parts.
+    trainimgs, testimgs, traintargets, testtargets = train_test_split(files, targets, train_size=cfg.trainsize,
+                                                                      test_size=cfg.valsize+cfg.testsize,
+                                                                      random_state=cfg.seed, stratify=targets)
+    if cfg.testsize == 0:
+        return trainimgs, traintargets, testimgs, testtargets
+    
+    valimgs,testimgs, valtargets, testtargets = train_test_split(testimgs, testtargets,
+                                                                  train_size=cfg.valsize,
+                                                                  test_size=cfg.testsize,
+                                                                  random_state=cfg.seed, 
+                                                                  stratify=testtargets)
+    return trainimgs, traintargets, valimgs, valtargets, testimgs, testtargets 
+class CassavaDataset(torch.utils.data.Dataset):
+    """Cassava Dataset for uploading images and targets."""
+    
+    def __init__(self, cfg, images, targets, transforms):
+        self.images = images           # List with images
+        self.targets = targets         # List with targets
+        self.transforms = transforms   # Transforms
+        self.cfg = cfg                 # Config
+        
+    def __getitem__(self, idx):
+        img = cv2.imread(os.path.join(self.cfg.pathtoimgs, self.images[idx]))
+        img = torch.FloatTensor(self.transforms(image=img)["image"])
+        target = torch.LongTensor([int(self.targets[idx])])
+        return img, target
+
+    def __len__(self):
+        return len(self.targets)
+def get_loaders(cfg):
+    """Getting dataloaders for train, validation (and test, if needed)."""
+    trainforms, testforms = get_transforms(cfg)
+    
+    # If test size is equal zero, we create the loaders only for train and validation parts, 
+    # otherwise we create the loaders for train, validation and test parts.
+    if cfg.testsize != 0.0:
+        trainimgs, traintargets, valimgs, valtargets, testimgs, testtargets = datagenerator(cfg)
+        traindataset = CassavaDataset(cfg, trainimgs, traintargets, trainforms)
+        valdataset = CassavaDataset(cfg, valimgs, valtargets, testforms)
+        testdataset = CassavaDataset(cfg, testimgs, testtargets, testforms)
+        trainloader = torch.utils.data.DataLoader(traindataset,
+                                                  shuffle=cfg.trainshuffle,
+                                                  batch_size=cfg.trainbatchsize,
+                                                  pin_memory=False,
+                                                  num_workers=cfg.numworkers,
+                                                  persistent_workers=True)
+        valloader = torch.utils.data.DataLoader(valdataset,
+                                                shuffle=cfg.valshuffle,
+                                                batch_size=cfg.valbatchsize,
+                                                pin_memory=False,
+                                                num_workers=cfg.numworkers,
+                                                persistent_workers=True)
+        testloader = torch.utils.data.DataLoader(testdataset,
+                                                 shuffle=cfg.testshuffle,
+                                                 batch_size=cfg.testbatchsize,
+                                                 pin_memory=False,
+                                                 num_workers=cfg.numworkers,
+                                                 persistent_workers=True)
+        return trainloader, valloader, testloader
+    
+    else:
+        trainimgs, traintargets, valimgs, valtargets = datagenerator(cfg)
+        traindataset = CassavaDataset(cfg, trainimgs, traintargets, trainforms)
+        valdataset = CassavaDataset(cfg, valimgs, valtargets, testforms)
+        trainloader = torch.utils.data.DataLoader(traindataset,
+                                                  shuffle=cfg.trainshuffle,
+                                                  batch_size=cfg.trainbatchsize,
+                                                  pin_memory=False,
+                                                  num_workers=cfg.numworkers,
+                                                  persistent_workers=True)
+        valloader = torch.utils.data.DataLoader(valdataset,
+                                                shuffle=cfg.valshuffle,
+                                                batch_size=cfg.valbatchsize,
+                                                pin_memory=False,
+                                                num_workers=cfg.numworkers,
+                                                persistent_workers=True)
+        return trainloader, valloader
+def savemodel(model, epoch, trainloss, valloss, metric, optimizer, stopflag, name, scheduler):
+    """Saves PyTorch model."""
+    chk = {
+        'model': model.state_dict(),
+        'epoch': epoch,
+        'trainloss': trainloss,
+        'valloss': valloss,
+        'metric': metric,
+        'optimizer': optimizer.state_dict(),
+        'stopflag': stopflag,
+        'scheduler': scheduler,
+    }
+    if cfg.apex:
+        chk["amp"] = amp.state_dict()
+    torch.save(chk, os.path.join(cfg.path, name))
+
+
+def drawplot(trainlosses, vallosses, metrics):
+    """Draws plots of loss changes and test metric changes."""
+    # Validation and train loss changes
+    plt.plot(range(len(trainlosses)), trainlosses, label='Train Loss')
+    plt.plot(range(len(vallosses)), vallosses, label='Val Loss')
+    plt.legend()
+    plt.title("Validation and train loss changes")
+    plt.show()
+    # Test metrics changes
+    plt.plot(range(len(metrics)), metrics, label='Metrics')
+    plt.legend()
+    plt.title("Test metrics changes")
+    plt.show()
+    
+    
+def printreport(t, trainloss, valloss, metric, record):
+    """Prints epoch's report."""
+    print(f'Time: {t} s')
+    print(f'Train Loss: {trainloss:.4f}')
+    print(f'Val Loss: {valloss:.4f}')
+    print(f'Metrics: {metric:.4f}')
+    print(f'Current best Val Loss: {record:.4f}')
+
+    
+def savelog(path, epoch, trainloss, valloss, metric):
+    """Saves the epoch's log."""
+    with open(path, "a") as file:
+        file.write("epoch: " + str(epoch) + " trainloss: " + str(
+            trainloss) + " valloss: " + str(valloss) + " metrics: " + str(metric) + "\n")
+def train(model, trainloader, optimizer, lossfn):
+    """Train loop."""
+    print("Training")
+    model.train()
+    totalloss = 0.0
+    
+    for batch in tqdm(trainloader):
+        inputs, labels = batch
+        labels = labels.squeeze(1).to(cfg.device)
+        optimizer.zero_grad()
+        outputs = model(inputs.to(cfg.device))
+        loss = lossfn(outputs, labels)
+        loss.backward()
+        optimizer.step()
+        totalloss += loss.item()
+        
+    return totalloss / len(trainloader)
+
+
+def validation(model, valloader, lossfn):
+    """Validation loop."""
+    print("Validating")
+    model.eval()
+    totalloss = 0.0
+    preds, targets = [], []
+    
+    with torch.no_grad():
+        for batch in tqdm(valloader):
+            inputs, labels = batch
+            labels = labels.squeeze(1).to(cfg.device)
+            outputs = model(inputs.to(cfg.device))
+            for idx in np.argmax(outputs.cpu(), axis=1):
+                preds.append([1 if idx == i else 0 for i in range(5)])
+            for j in labels:
+                targets.append([1 if i == j else 0 for i in range(5)])
+            loss = lossfn(outputs, labels)
+            totalloss += loss.item()
+    
+    score = f1_score(targets, preds, average='weighted')
+    return totalloss / len(valloader), score
+
+
+def test(model, testloader, lossfn):
+    """Testing loop."""
+    print("Testing")
+    model.eval()
+    totalloss = 0.0
+    preds, targets = [], []
+    
+    with torch.no_grad():
+        for batch in tqdm(testloader):
+            inputs, labels = batch
+            labels = labels.squeeze(1).to(cfg.device)
+            outputs = model(inputs.to(cfg.device))
+            for idx in np.argmax(outputs.cpu(), axis=1):
+                preds.append([1 if idx == i else 0 for i in range(5)])
+            for j in labels:
+                targets.append([1 if i == j else 0 for i in range(5)])
+            loss = lossfn(outputs, labels)
+            totalloss += loss.item()
+
+    score = f1_score(targets, preds, average='weighted')
+    print("Test Loss:", totalloss / len(testloader),
+          "\nTest metrics:", score)
+Training
+def run(cfg):
+    """Main function."""
+    
+    # Turned off for Kaggle kernels
+#     if not os.path.exists(cfg.path):
+#         os.makedirs(cfg.path)
+    
+    # Getting the objects
+    torch.cuda.empty_cache()
+    if cfg.testsize != 0.0:
+        trainloader, valloader, testloader = get_loaders(cfg)
+    else:
+        trainloader, valloader = get_loaders(cfg)
+    model = get_model(cfg)
+    optimizer = get_optimizer(model, cfg)
+    if cfg.apex:
+        model, optimizer = amp.initialize(model, optimizer, opt_level=cfg.apexoptlvl, verbosity=0)
+    if cfg.chk and cfg.apex:
+        model.load_state_dict(torch.load(cfg.chk)['model'])
+        optimizer.load_state_dict(torch.load(cfg.chk)['optimizer'])
+        amp.load_state_dict(torch.load(cfg.chk)['amp'])
+    scheduler = get_scheduler(optimizer, cfg)
+    lossfn = get_lossfn(cfg)
+
+    # Initializing metrics
+    trainlosses, vallosses, metrics = [], [], []
+    record = 0
+    stopflag = cfg.stopflag if cfg.stopflag else 0
+    print('Testing "' + cfg.experiment_name + '" approach.')
+    if cfg.log:
+        with open(os.path.join(cfg.path, cfg.log), "w") as file:
+            file.write('Testing "' + cfg.experiment_name + '" approach.\n')
+    
+    # Training
+    print("Have a nice training!")
+    for epoch in range(1, cfg.numepochs + 1):
+        print("Epoch:", epoch)
+        start_time = time.time()
+        trainloss = train(model, trainloader, optimizer, lossfn)
+        valloss, metric = validation(model, valloader, lossfn)
+        trainlosses.append(trainloss)
+        vallosses.append(valloss)
+        metrics.append(metric)
+        if cfg.scheduler == "ReduceLROnPlateau":
+            scheduler.step(valloss)
+        else:
+            scheduler.step()
+        if metric > record:
+            stopflag = 0
+            record = metric
+            savemodel(model, epoch, trainloss, valloss, metric,
+                      optimizer, stopflag, os.path.join(cfg.path, 'thebest.pt'), scheduler)
+            print('New record!')
+        else:
+            stopflag += 1
+            if epoch % cfg.savestep == 0:
+                savemodel(model, epoch, trainloss, valloss, metric,
+                      optimizer, stopflag, os.path.join(cfg.path, f'{epoch}epoch.pt'), scheduler)
+        t = int(time.time() - start_time)
+        printreport(t, trainloss, valloss, metric, record)
+        
+        # Saving to the log
+        if cfg.log:
+            savelog(os.path.join(cfg.path, cfg.log), epoch, trainloss, valloss, metric)
+        
+        torch.cuda.empty_cache()
+        gc.collect()
+        
+        # Early stopping
+        if stopflag == cfg.earlystopping:
+            print("Training has been interrupted because of early stopping.")
+            break
+    
+    # Test
+    if cfg.testsize != 0.0:
+        test(model, testloader, lossfn)
+    
+    # Verbose
+    if cfg.verbose:  
+        drawplot(trainlosses, vallosses, metrics)
+run(cfg)

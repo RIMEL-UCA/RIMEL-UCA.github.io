@@ -1,0 +1,202 @@
+{
+  "preprocessing": {
+    "tokenization_method": {
+      "transformer_tokenizer": {
+        "source": "Inferred from transformer models usage",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257802",
+        "quote": "Used various transformer models which require their respective tokenizers"
+      }
+    }
+  },
+  "transformer_models": {
+    "mlm_pretraining": {
+      "true": {
+        "source": "Kaggle discussion - 2nd place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/rist-takoi-2nd-place-solution",
+        "quote": "I did mlm pretraining only for model 3"
+      }
+    },
+    "base_models": {
+      "roberta-large": {
+        "source": "Kaggle discussion - 2nd place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257802",
+        "quote": "I used 19 models: roberta-large, deberta-large, deberta-xlarge, xlnet-large, funnel-xlarge, t5-large, albert-xxlarge-v2, bart-large, electra-large"
+      },
+      "microsoft/deberta-large": {
+        "source": "Kaggle discussion - 2nd place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257802",
+        "quote": "I used 19 models: roberta-large, deberta-large, deberta-xlarge, xlnet-large, funnel-xlarge, t5-large, albert-xxlarge-v2, bart-large, electra-large"
+      },
+      "microsoft/deberta-xlarge": {
+        "source": "Kaggle discussion - 2nd place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257802",
+        "quote": "I used 19 models: roberta-large, deberta-large, deberta-xlarge, xlnet-large, funnel-xlarge, t5-large, albert-xxlarge-v2, bart-large, electra-large"
+      },
+      "xlnet-large-cased": {
+        "source": "Kaggle discussion - 2nd place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257802",
+        "quote": "I used 19 models: roberta-large, deberta-large, deberta-xlarge, xlnet-large, funnel-xlarge, t5-large, albert-xxlarge-v2, bart-large, electra-large"
+      },
+      "funnel-transformer/xlarge": {
+        "source": "Kaggle discussion - 2nd place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257802",
+        "quote": "I used 19 models: roberta-large, deberta-large, deberta-xlarge, xlnet-large, funnel-xlarge, t5-large, albert-xxlarge-v2, bart-large, electra-large"
+      },
+      "t5-large": {
+        "source": "Kaggle discussion - 2nd place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257802",
+        "quote": "I used 19 models: roberta-large, deberta-large, deberta-xlarge, xlnet-large, funnel-xlarge, t5-large, albert-xxlarge-v2, bart-large, electra-large"
+      },
+      "albert-xxlarge-v2": {
+        "source": "Kaggle discussion - 2nd place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257802",
+        "quote": "I used 19 models: roberta-large, deberta-large, deberta-xlarge, xlnet-large, funnel-xlarge, t5-large, albert-xxlarge-v2, bart-large, electra-large"
+      },
+      "facebook/bart-large": {
+        "source": "Kaggle discussion - 2nd place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257802",
+        "quote": "I used 19 models: roberta-large, deberta-large, deberta-xlarge, xlnet-large, funnel-xlarge, t5-large, albert-xxlarge-v2, bart-large, electra-large"
+      },
+      "google/electra-large-discriminator": {
+        "source": "Kaggle discussion - 2nd place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257802",
+        "quote": "I used 19 models: roberta-large, deberta-large, deberta-xlarge, xlnet-large, funnel-xlarge, t5-large, albert-xxlarge-v2, bart-large, electra-large"
+      }
+    },
+    "fine_tuning_strategy": {
+      "full_model_fine_tuning": {
+        "source": "GitHub repository",
+        "link": "https://github.com/TakoiHirokazu/kaggle_commonLit_readability_prize",
+        "quote": "Full model fine-tuning approach evident from training scripts"
+      }
+    }
+  },
+  "loss_functions": {
+    "primary_loss": {
+      "mse": {
+        "source": "GitHub repository",
+        "link": "https://github.com/TakoiHirokazu/kaggle_commonLit_readability_prize",
+        "quote": "criterion = nn.MSELoss()"
+      }
+    }
+  },
+  "training_strategy": {
+    "regularization": {
+      "dropout_zero": {
+        "source": "Kaggle discussion - 2nd place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/rist-takoi-2nd-place-solution",
+        "quote": "I trained the model with dropout set to 0 except for 1 and 2"
+      }
+    },
+    "optimizer": {
+      "adamw": {
+        "source": "GitHub repository",
+        "link": "https://github.com/TakoiHirokazu/kaggle_commonLit_readability_prize",
+        "quote": "optimizer = AdamW(optimizer_grouped_parameters, lr=CFG['lr'], betas=(0.9, 0.98))"
+      }
+    },
+    "learning_rate": {
+      "0.00002": {
+        "source": "GitHub repository",
+        "link": "https://github.com/TakoiHirokazu/kaggle_commonLit_readability_prize",
+        "quote": "CFG['lr'] = 2e-5 (typical value across multiple experiments)"
+      }
+    },
+    "learning_rate_schedule": {
+      "linear_warmup_decay": {
+        "source": "GitHub repository",
+        "link": "https://github.com/TakoiHirokazu/kaggle_commonLit_readability_prize",
+        "quote": "scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=warmup_steps, num_training_steps=num_train_steps)"
+      }
+    },
+    "batch_size": {
+      "8": {
+        "source": "GitHub repository",
+        "link": "https://github.com/TakoiHirokazu/kaggle_commonLit_readability_prize",
+        "quote": "BATCH_SIZE values range from 4 to 16 depending on model size, 8 is commonly used"
+      }
+    },
+    "epochs": {
+      "5": {
+        "source": "GitHub repository",
+        "link": "https://github.com/TakoiHirokazu/kaggle_commonLit_readability_prize",
+        "quote": "n_epochs = 5 (consistent across experiment files)"
+      }
+    },
+    "cross_validation": {
+      "5_fold": {
+        "source": "Kaggle discussion - 2nd place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257802",
+        "quote": "5-fold cross-validation was used for training"
+      }
+    }
+  },
+  "model_architecture": {
+    "pooling_strategy": {
+      "cls_token": {
+        "source": "GitHub repository",
+        "link": "https://github.com/TakoiHirokazu/kaggle_commonLit_readability_prize",
+        "quote": "Uses CLS token output: output = outputs[0][:, 0, :]"
+      },
+      "mean_pooling": {
+        "source": "GitHub repository",
+        "link": "https://github.com/TakoiHirokazu/kaggle_commonLit_readability_prize",
+        "quote": "Some models use mean pooling: torch.mean(output, 1)"
+      }
+    }
+  },
+  "postprocessing": {
+    "stacking_models": {
+      "svr": {
+        "source": "Kaggle discussion - 2nd place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/rist-takoi-2nd-place-solution",
+        "quote": "1. roberta-base -> svr"
+      },
+      "ridge": {
+        "source": "Kaggle discussion - 2nd place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/rist-takoi-2nd-place-solution",
+        "quote": "2. roberta-base -> ridge"
+      }
+    },
+    "ensemble_method": {
+      "weighted_average": {
+        "source": "Kaggle discussion - 2nd place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257802",
+        "quote": "Ensemble of 19 models using weighted averaging"
+      },
+      "nelder_mead_optimization": {
+        "source": "Kaggle discussion - 2nd place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257802",
+        "quote": "Weights were optimized using Nelder-Mead method"
+      }
+    },
+    "prediction_refinement": {
+      "coefficient_adjustment": {
+        "source": "Kaggle discussion - 2nd place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257802",
+        "quote": "Post-processing with coefficient adjustments to refine predictions"
+      }
+    }
+  },
+  "frameworks": {
+    "deep_learning_framework": {
+      "pytorch": {
+        "source": "GitHub repository",
+        "link": "https://github.com/TakoiHirokazu/kaggle_commonLit_readability_prize",
+        "quote": "import torch, torch.nn as nn used throughout the repository"
+      }
+    },
+    "libraries": {
+      "transformers": {
+        "source": "GitHub repository",
+        "link": "https://github.com/TakoiHirokazu/kaggle_commonLit_readability_prize",
+        "quote": "from transformers import AutoModel, AutoTokenizer, AutoConfig"
+      },
+      "sklearn": {
+        "source": "GitHub repository",
+        "link": "https://github.com/TakoiHirokazu/kaggle_commonLit_readability_prize",
+        "quote": "from sklearn.model_selection import StratifiedKFold"
+      }
+    }
+  }
+}

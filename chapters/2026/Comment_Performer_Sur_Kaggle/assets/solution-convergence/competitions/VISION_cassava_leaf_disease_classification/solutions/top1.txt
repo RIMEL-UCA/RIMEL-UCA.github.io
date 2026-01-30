@@ -1,0 +1,473 @@
+Our overall strategy was to test as many models as possible and spend less time on fine-tuning. The goal was to have many diverse models for ensembling rather than some highly tuned ones.
+
+In the end, we had tried a variety of different architectures (e.g., all EfficientNet architectures, Resnet, ResNext, Xception, ViT, DeiT, Inception and MobileNet) while working with different pre-trained weights (trained e.g. on Imagenet, NoisyStudent, Plantvillage, iNaturalist…) some of which were available on Tensorflow Hub.
+
+Our winning submission was an ensemble of four different models.
+Final Model
+
+The final score on the public leaderboard was 91.36% and 91.32% on the private leaderboard. We opted to turn in this combination as it achieved a higher CV score than other combinations (which sometimes scored slightly better on the public leaderboard). We tested some of the models separately on the leaderboard (public/private): B4: 89.4%/89.5% , MobileNet: 89.5%/89.4%, ViT:~89.0%/88.8%
+
+The others were only evaluated using cross-validation.
+
+Overall, we can conclude that the key to victory was the use of CropNet from Tensorflow Hub, as it brought a lot of diversity to our ensemble. Although it did not perform better on the leaderboard as a standalone model than the other models, the ensembles that used this model brought a significant boost on the leaderboard.
+
+At this point I would like to thank hengck23, whose discussion post brought this model to our attention (as well as other pre-trained models for image classification available on Tensorflow Hub).
+
+Furthermore, we would like to thank all the participants who have helped us learn a lot in this contest through their contributions here in the board and their published notebooks. Finally, we would also like to thank the Competition Host, who made this exciting competition possible by releasing the data.
+
+You can find our inference code in this notebook: Inference Notebook
+
+And you can find the according training code in these notebooks:
+
+ResNext50_32x4d (GPU Training)
+ViT (TPU Training)
+EfficientNet B4 (TPU Training)
+Detailed information about the configuration & fine-tuning of our used models:
+
+We used a ResNeXt model of the structure “resnext50_32x4d” with the following configurations:
+
+image size of (512,512)
+CrossEntropyLoss with default parameters
+Learning rate of 1e-4 with “ReduceLROnPlateau” scheduler based on average validation loss (mode=’min’, factor=0.2, patience=5, eps=1e-6)
+Train augmentations (from the Albumentations Python library): RandomResizedCrop, Transpose, HorizontalFlip. VerticalFlip, ShiftScaleRotate, Normalize
+Validation augmentations (from the Albumentations Python library): Resize, Normalize
+5-fold-CV with 15 epochs (after the 15 training epochs, we always chose the model with the best validation accuracy) (same data partitioning as for the other trained models)
+For inference we used the same augmentations as for validation (i.e., Resize, Normalize)
+We used the Vision Transformer Architecture with ImageNet weights (ViT-B/16)
+
+Custom top with Linear layer; Image size of (384,384)
+Bit Tempered Logistic Loss (t1 = 0.8, t2 = 1.4) and label smoothing factor of 0.06
+We chose a learning rate with a Cosine annealing warm restarts scheduler (LR = 1e-4 / 7 [7: Warm up factor], T0= 10, Tmult= 1, eta_min=1e-4, last_epoch=-1). A batch accumulation for backprop with effectively larger batch size
+Train Augmentations (RandomResizedCrop, Transpose, Horizontal and vertical flip, ShiftScaleRotate, HueSaturationValue, RandomBrightnessContrast, Normalization, CoarseDropout, Cutout)
+Validation Augmentations (Horizontal and vertical flop, CenterCrop, Resize, Normalization)
+5-fold-CV with 10 epochs, we took for each fold the best model (based on the validation accuracy)
+For inference we used the following augmentations: CenterCrop, Resize, Normalization
+We tried different EfficientNet architectures but finally only used a B4 with NoisyStudent weights:
+
+Drop connect rate 0.4, custom top with global average pooling and dropout layer (0.5)
+Sigmoid Focal Loss with Label Smoothing (Gamma=2.0, alpha=0.25 and label smoothing factor 0.1)
+Learning rate with warmup and cosine decay scheduler (ranging from 1e-6 to a maximum of 0.0002 and back to 3.17e-6)
+Augmentations (Flip, Transpose, Rotate, Saturation, Contrast and Brightness and some random cropping)
+Adapting the normalization layer with the global mean and deviation of the 2020 Cassava dataset
+5-fold-CV with 20 epochs with early stopping and callback for restoring weights of best epoch
+Final model was trained for 14 epochs on whole competition data set
+For inference we used simple test time augmentations (Flip, Rotate, Transpose). To do so, we cropped 4 overlapping patches of size 512x512px from the .jpg images (800x600px) and applied 2 augmentations to each patch. We retained two additional center-cropped patches of the image to which no augmentations were applied. To get an overall prediction, we took the average of all these image tiles.
+Finally, our ensemble included a pretrained CropNet (MobileNetv3) Model from Tensorflow Hub:
+
+We used a pretrained model from TensorFlow Hub called CropNet which was specifically trained to detect Cassava leaf diseases
+The CropNet model is based on the MobileNetV3 architecture. We decided not to do any additional fine-tuning of that model.
+As stated in the description the images must be rescaled to 224x224 pixel which is pretty small. We achieved good results by not just resizing our 512x512 training images but to center crop them first.
+As the notebooks had to be submitted without internet access, it was necessary to cache the model before including it. You can find more information on this on the official TF Hub website or alternatively in this post on Medium.
+For the ensembling, we experimented with different methods and found that in our case a stacked-mean approach worked best. For this purpose, the class probabilities returned by the models were averaged on several levels and finally the class with the highest probability was returned.
+
+Our final submission first averaged the probabilities of the predicted classes of ViT and ResNext. This averaged probability vector was then merged with the predicted probabilities of EfficientnetB4 and CropNet in the second stage. For this purpose, the values were simply summed up.
+
+Another solution which also generated good results on the leaderboard was finding weights before calculating the mean of models using an optimization. You can find the code for that in our published notebooks. Generally, we were surprised how stable the solutions with optimized weights were. It turned out that they only had small differences (often +/-0.1%) between our CV scores and the leaderboard score.
+
+One thing which didn’t work out in our use case was an ensemble approach with an additional classifier (Gradient Boosted Trees) stack on top of our models. We did several experiments using also additional features, like e.g., the entropy of the model’s prediction, however we were not able to build a solution which generalized good enough.
+
+Thanks for reading.
+
+linkcode
+1st Place Solution "Cassava Leaf Disease Classification"
+This is the inference notebook of our final submission which scored ~91.3% on public and private leaderboard. We used an ensemble of four different models and stacked those models together using a mean approach.
+
+You can find the according training code in these notebooks:
+
+EfficientNet B4 (TPU Training)
+ResNext50_32x4d (GPU Training)
+ViT (TPU Training)
+In order to find the final combination of all the models we tested, we iteratively tried different ensembles using this notebook:
+
+Ensembling by using OOF predictions
+Our final submission first averaged the probabilities of the predicted classes of ViT and ResNext. This averaged probability vector was then merged with the predicted probabilities of EfficientnetB4 and MobileNet(CropNet) in a second stage. For this purpose, the values were simply summed up.
+
+Finally, we would like to thank all the Kagglers who posted their notebooks and gave valuable hints on which models to try!
+
+import sys
+import os
+import random
+import json
+import gc
+import cv2
+import pandas as pd
+import numpy as np
+import tensorflow as tf
+
+from tqdm import tqdm
+from PIL import Image
+from sklearn.metrics import accuracy_score
+from functools import partial
+from albumentations import (Compose, OneOf, Normalize, Resize, RandomResizedCrop, RandomCrop, CenterCrop, 
+                            HorizontalFlip, VerticalFlip, Rotate, ShiftScaleRotate, Transpose)
+from albumentations.pytorch import ToTensorV2
+from albumentations import ImageOnlyTransform
+
+from tensorflow import keras
+
+sys.path.append('../input/timm-pytorch-image-models/pytorch-image-models-master')
+sys.path.append('../input/pytorch-image-models/pytorch-image-models-master')
+
+import timm
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import torchvision.models as models
+from torch.utils.data import DataLoader, Dataset
+path = "/kaggle/input/cassava-leaf-disease-classification/"
+image_path = path+"test_images/"
+
+IMAGE_SIZE = (512,512)
+submission_df = pd.DataFrame(columns={"image_id","label"})
+submission_df["image_id"] = os.listdir(image_path)
+submission_df["label"] = 0
+Used models in the final submission
+# We used this flag to test combinations using only TF.Keras models
+onlykeras = False
+        
+used_models_pytorch = {"vit2020": [f'../input/cassava-leaf-disease-1st-place-models/vit/vit_base_patch16_384_fold_{fold}.h5' for fold in [0,1,2,3,4]],
+                       "resnext": [f'../input/cassava-leaf-disease-1st-place-models/resnext50_32x4d/resnext50_32x4d_fold{fold}_best.pth' for fold in [0,1,2,3,4]]}
+
+used_models_keras = {"mobilenet": "../input/cassava-leaf-disease-1st-place-models/cropnet_mobilenetv3/cropnet",
+                     "efficientnetb4": "../input/cassava-leaf-disease-1st-place-models/efficientnetb4/efficientnetb4_all_e14.h5"}
+
+# We used this flag for testing different ensembling approaches
+stacked_mean = True
+ResNext50_32x4d
+class CustomResNext(nn.Module):
+        def __init__(self, model_name='resnext50_32x4d', pretrained=False):
+            super().__init__()
+            self.model = timm.create_model(model_name, pretrained=pretrained)
+            n_features = self.model.fc.in_features
+            self.model.fc = nn.Linear(n_features, 5)
+
+        def forward(self, x):
+            x = self.model(x)
+            return x
+
+class TestDataset(Dataset):
+    def __init__(self, df, transform=None):
+        self.df = df
+        self.file_names = df['image_path_id'].values
+        self.transform = transform
+
+    def __len__(self):
+        return len(self.df)
+
+    def __getitem__(self, idx):
+        file_name = self.file_names[idx]
+        image = cv2.imread(file_name)
+        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        if self.transform:
+            augmented = self.transform(image=image)
+            image = augmented['image']
+        return image
+
+if "resnext" in used_models_pytorch:
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
+    def get_transforms():
+        return Compose([Resize(512, 512),
+                        Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
+                        ToTensorV2()])
+
+    def inference(model, states, test_loader, device):
+        model.to(device)
+
+        probabilities = []
+        for i, (images) in enumerate(test_loader):
+            images = images.to(device)
+            avg_preds = []
+            for state in states:
+                model.load_state_dict(state['model'])
+                model.eval()
+                with torch.no_grad():
+                    y_preds = model(images)
+                avg_preds.append(y_preds.softmax(1).to('cpu').numpy())
+            avg_preds = np.mean(avg_preds, axis=0)
+            probabilities.append(avg_preds)
+        return np.concatenate(probabilities)
+    
+
+    predictions_resnext = pd.DataFrame(columns={"image_id"})
+    predictions_resnext["image_id"] = submission_df["image_id"].values
+    predictions_resnext['image_path_id'] = image_path + predictions_resnext['image_id'].astype(str)
+
+    model = CustomResNext('resnext50_32x4d', pretrained=False)
+    states = [torch.load(f) for f in used_models_pytorch["resnext"]]
+
+    test_dataset = TestDataset(predictions_resnext, transform=get_transforms())
+    test_loader = DataLoader(test_dataset, batch_size=16, shuffle=False, num_workers=4, pin_memory=True)
+    predictions = inference(model, states, test_loader, device)
+
+    predictions_resnext['resnext'] = [np.squeeze(p) for p in predictions]
+    predictions_resnext = predictions_resnext.drop(["image_path_id"], axis=1)
+    
+
+    torch.cuda.empty_cache()
+    try:
+        del(model)
+        del(states)
+    except:
+        pass
+    gc.collect()
+ViT
+if "vit2020" in used_models_pytorch:
+    
+    vit_image_size = 384
+    
+    class CustomViT(nn.Module):
+        def __init__(self, model_arch, n_class, pretrained=False):
+            super().__init__()
+            self.model = timm.create_model(model_arch, pretrained=pretrained)
+            n_features = self.model.head.in_features
+            self.model.head = nn.Linear(n_features, n_class)
+
+        def forward(self, x):
+            x = self.model(x)
+            return x
+        
+    class TestDataset(Dataset):
+        def __init__(self, df, transform=None):
+            self.df = df
+            self.file_names = df['image_path_id'].values
+            self.transform = transform
+
+        def __len__(self):
+            return len(self.df)
+
+        def __getitem__(self, idx):
+            file_name = self.file_names[idx]
+            im_bgr = cv2.imread(file_name)
+            image = im_bgr[:, :, ::-1]
+            if self.transform:
+                augmented = self.transform(image=image)
+                image = augmented['image']
+            return image
+
+    def get_tta_transforms():
+        return Compose([CenterCrop(vit_image_size, vit_image_size, p=1.),
+                Resize(vit_image_size, vit_image_size),
+                Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225], max_pixel_value=255.0, p=1.0),
+                ToTensorV2(p=1.0)], p=1.)
+
+    def inference(models, test_loader, device):
+        tk0 = tqdm(enumerate(test_loader), total=len(test_loader))
+        probs = []
+        for i, (images) in tk0:
+            avg_preds = []
+            for model in models:
+                images = images.to(device)
+                model.to(device)
+                model.eval()
+                with torch.no_grad():
+                    y_preds = model(images)
+                avg_preds.append(y_preds.softmax(1).to('cpu').numpy())
+            avg_preds = np.mean(avg_preds, axis=0)
+            probs.append(avg_preds)
+        probs = np.concatenate(probs)
+        return probs
+
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
+    predictions_vit = pd.DataFrame(columns={"image_id"})
+    predictions_vit["image_id"] = submission_df["image_id"].values
+    predictions_vit['image_path_id'] = image_path + predictions_vit['image_id'].astype(str)
+
+    def load_cassava_vit(modelpath):
+        _model = CustomViT('vit_base_patch16_384', 5, pretrained=False)
+        _model.load_state_dict(torch.load(modelpath))
+        _model.eval()
+        return _model
+
+    models = [load_cassava_vit(f) for f in used_models_pytorch["vit2020"]]
+
+    test_dataset = TestDataset(predictions_vit, transform=get_tta_transforms())
+    test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False, num_workers=4, pin_memory=True)
+
+    predictions_raw_vit = inference(models, test_loader, device)
+
+    predictions_vit['vit2020'] = [np.squeeze(p) for p in predictions_raw_vit]
+    predictions_vit = predictions_vit.drop(["image_path_id"], axis=1)
+    
+    torch.cuda.empty_cache()
+    try:
+        for model in models:
+            del(model)
+    except:
+        pass
+    models = []
+    gc.collect()
+100%|██████████| 1/1 [00:00<00:00,  1.34it/s]
+Mobilenet V3 (CropNet)
+There are multiple ways to include pretrained models from TensorFlow Hub, if internet has to be turned of during submission:
+
+Accessing and storing the .tar.gz file (see this Medium post) 
+!curl -LO https://storage.googleapis.com/tfhub-modules/google/cropnet/classifier/cassava_disease_V1/2.tar.gz
+!mkdir cropnet_mobilenetv3
+!tar -xf 2.tar.gz  --directory cropnet_mobilenetv3    
+
+
+Downloading and caching the weights using 
+os.environ["TFHUB_CACHE_DIR"] = "/kaggle/working"
+hub.KerasLayer('https://tfhub.dev/google/cropnet/classifier/cassava_disease_V1/2', trainable=False)
+
+
+You can find more information on caching on the official tfhub website and more information on the pretrained CropNet model . For the offline submissions we included these weights into a Kaggle Dataset bucket.
+
+Remark: In the meantime, TFHub models can apparently be integrated directly into the TPU training via Kaggle. Check out the Kaggle TPU FAQs
+
+import tensorflow_hub as hub
+
+def build_mobilenet3(img_size=(224,224), weights="../input/cassava-leaf-disease-1st-place-models/cropnet_mobilenetv3/cropnet"):
+    classifier = hub.KerasLayer(weights)
+    model = tf.keras.Sequential([
+    tf.keras.layers.InputLayer(input_shape=img_size + (3,)),
+    hub.KerasLayer(classifier, trainable=False)])
+    return model
+Keras Inference with TTA
+For the included EfficientNets we used simple test time augmentations (Flip, Rotate, Transpose). To do this, we cropped 4 overlapping patches of size 512x512 from the .jpg images and applied 2 augmentations to each patch. We retain two additional center-cropped patches of the image to which no augmentations were applied. To get an overall prediction, we took the average of all these image tiles.
+
+For the CropNet, we just center-cropped and resized the image. In addition, we distributed the unknown class evenly over the 5 leaf diseases.
+
+def image_augmentations(image):
+    p_spatial = tf.random.uniform([], 0, 1.0, dtype = tf.float32)
+    p_rotate = tf.random.uniform([], 0, 1.0, dtype = tf.float32)
+    
+    image = tf.image.random_flip_left_right(image)
+    image = tf.image.random_flip_up_down(image)
+    
+    if p_spatial > 0.75:
+        image = tf.image.transpose(image)
+        
+    if p_rotate > 0.75:
+        image = tf.image.rot90(image, k = 3)
+    elif p_rotate > 0.5:
+        image = tf.image.rot90(image, k = 2)
+    elif p_rotate > 0.25:
+        image = tf.image.rot90(image, k = 1)
+
+    image = tf.image.resize(image, size = IMAGE_SIZE)
+    image = tf.reshape(image, [*IMAGE_SIZE, 3])
+    
+    return image
+
+def read_preprocess_file(img_path, normalize=False):
+    image = Image.open(img_path)
+    if normalize:
+        img_scaled = np.array(image)/ 255.0
+    else:
+        img_scaled = np.array(image)
+    img_scaled = img_scaled.astype(np.float32)
+    return (image.size[0], image.size[1]), img_scaled
+
+def create_image_tiles(origin_dim, processed_img):
+    crop_size = 512
+    img_list = []
+    # Cut image into 4 overlapping patches
+    for x in [0, origin_dim[1] - crop_size]:
+        for y in [0, origin_dim[0] - crop_size]:
+            img_list.append(processed_img[x:x+crop_size , y:y+crop_size,:])
+    # Keep one additional center cropped image 
+    img_list.append(cv2.resize(processed_img[:, 100:700 ,:], dsize=(crop_size, crop_size)))
+    return np.array(img_list)
+
+def augment_tiles_light(tiles, ttas=2):
+  # Copy central croped image to have same ratio to augmented images
+  holdout = np.broadcast_to(tiles[-1,:,:,:],(ttas,) + tiles.shape[1:])
+  augmented_batch = tf.map_fn(lambda x: image_augmentations(x), tf.concat(
+      [tiles[:-1,:,:,:] for _ in range(ttas)], axis=0))
+  return tf.concat([augmented_batch, holdout], axis=0)
+
+def cut_crop_image(processed_img):
+    image = tf.image.central_crop(processed_img, 0.8)
+    image = tf.image.resize(image, (224, 224))
+    return np.expand_dims(image, 0)
+
+# CropNet class 6 (unknown) is distributed evenly over all 5 classes to match problem setting
+def distribute_unknown(propabilities):
+    return propabilities[:,:-1] + np.expand_dims(propabilities[:,-1]/5, 1)
+
+def multi_predict_tfhublayer(img_path, modelinstance):
+    img = cut_crop_image(read_preprocess_file(img_path, True)[1])
+    yhat = modelinstance.predict(img)
+    return np.mean(distribute_unknown(yhat), axis=0)
+
+def multi_predict_keras(img_path, modelinstance, *args):
+    augmented_batch = augment_tiles_light(create_image_tiles(
+        *read_preprocess_file(img_path)))
+    Yhat = modelinstance.predict(augmented_batch)
+    return np.mean(Yhat, axis=0)
+
+def predict_and_vote(image_list, modelinstances, onlykeras):
+    predictions = [] 
+    with tqdm(total=len(image_list)) as process_bar:       
+      for img_path in image_list:
+        process_bar.update(1)  
+        Yhats = np.vstack([func(img_path, modelinstance) for func, modelinstance in modelinstances])
+        if onlykeras:
+            predictions.append(np.argmax(np.sum(Yhats, axis=0)))
+        else:
+            predictions.append(Yhats)    
+    return predictions
+
+
+inference_models = []
+
+if "mobilenet" in used_models_keras:
+    model_mobilenet = build_mobilenet3(weights=used_models_keras["mobilenet"])
+    inference_models.append((multi_predict_tfhublayer, model_mobilenet))
+    
+if "efficientnetb4" in used_models_keras:
+    model_efficientnetb4 =  keras.models.load_model(used_models_keras["efficientnetb4"], compile=False)
+    inference_models.append((multi_predict_keras, model_efficientnetb4))
+    
+if "efficientnetb5" in used_models_keras:
+    model_efficientnetb5 =  keras.models.load_model(used_models_keras["efficientnetb5"])
+    inference_models.append((multi_predict_keras, model_efficientnetb5))
+
+submission_df["label"] = predict_and_vote([image_path+id for id in submission_df["image_id"].values], inference_models, onlykeras)
+100%|██████████| 1/1 [00:06<00:00,  6.29s/it]
+tf.keras.backend.clear_session()
+
+try:
+    del inference_models[:]
+except:
+    pass
+
+gc.collect()
+746
+Final Ensembling
+Our winning submission just included CropNet, EfficientNet B4, ResNext50 and ViT and a mean approach. We took the mean of the class weights from the ResNext and ViT model and combined this combination with the MobileNet and the EfficientnetB4 in the second stage.
+
+if len(list(used_models_keras.keys())) <= 1:
+    submission_df.loc[:,list(used_models_keras)[0]] = submission_df["label"].explode()
+else:
+    tmp = (submission_df['label'].transform([lambda x:x[0], lambda x:x[1]]).set_axis(list(used_models_keras.keys()), axis=1, inplace=False))
+    submission_df = submission_df.merge(tmp, right_index=True, left_index=True)
+    
+submission_df["label"] = 0
+
+if "resnext" in used_models_pytorch:
+    submission_df = submission_df.merge(predictions_resnext, on="image_id")
+    
+if "efficientnetb3" in used_models_pytorch:
+    submission_df = submission_df.merge(predictions_cutmix, on="image_id")
+    
+if "vit2020" in used_models_pytorch:
+    submission_df = submission_df.merge(predictions_vit, on="image_id")
+    
+if "vit2019" in used_models_pytorch:
+    submission_df = submission_df.merge(predictions_vit2019, on="image_id")
+if stacked_mean:
+    submission_df["stage_1"] = submission_df.apply(lambda row: [np.mean(e) for e in zip(row["vit2020"], row["resnext"])], axis=1)
+    submission_df["label"] = submission_df.apply(lambda row: np.argmax(
+        [np.sum(e) for e in zip(row["mobilenet"],row["stage_1"], row["efficientnetb4"])]), axis=1)        
+else:
+    submission_df["label"] = submission_df.apply(lambda row: np.argmax(
+        [np.sum(e) for e in zip(*[row[m] for m in list(used_models_pytorch.keys())+list(used_models_keras.keys())])]), axis=1)
+submission_df.head(1)
+label	image_id	mobilenet	efficientnetb4	resnext	vit2020	stage_1
+0	2	2216849948.jpg	[0.0039915927, 0.0037076094, 0.8709406, 0.0065...	[0.09700597, 0.11728189, 0.30893248, 0.0855296...	[0.030495385, 0.008266998, 0.5979506, 0.034923...	[0.0029346456, 0.011939395, 0.6290571, 0.01440...	[0.016715014, 0.010103197, 0.6135038, 0.024666...
+submission_df[["image_id","label"]].to_csv("submission.csv", index=False)
+!head submission.csv
