@@ -39,13 +39,9 @@ Nous proposons de modéliser un Helm chart sous forme de graphe de dépendances 
 
 Dans notre modèle, les arêtes représentent les relations de référencement entre ces éléments. L'intuition derrière cette modélisation est de capturer le degré d'indirection nécessaire à l'utilisateur pour appréhender l'état final d'une ressource. En effet, cette modélisation permet d'objectiver l'opacité structurelle de Helm, en transformant une sensation subjective de complexité en une distance topologique mesurable.
 
-<div align="center">
-
 ![Chart Hello World](./assets/hello.svg)
 
 *Figure 1 : Représentation graphique du chart "Hello World" proposé par défaut par Helm.*
-
-</div>
 
 Ce chart déploie trois ressources : un Service, un Deployment et un ServiceAccount. Les nœuds en vert représentent les helpers, des fonctions qui génèrent des fragments de configuration selon une logique pouvant elle-même dépendre des valeurs définies dans le fichier values.yaml.
 
@@ -61,13 +57,10 @@ Cette organisation en couches (valeurs, helpers, ressources) constitue le fondem
 
 Les graphes deviennent rapidement complexes pour des charts considérés comme modérés par l'industrie, comme le montre la Figure 2 représentant le chart ingress-nginx.
 
-<div align="center">
-
 ![Chart Ingress](./assets/ingress-nginx.svg)
 
 *Figure 2 : Graphe de dépendances du chart ingress-nginx.*
 
-</div>
 
 Ce chart est particulièrement intéressant car il est maintenu officiellement par la communauté Kubernetes et constitue l'une des solutions de référence pour exposer des services HTTP vers l'extérieur d'un cluster. À ce titre, il est raisonnable de supposer qu'il incarne les bonnes pratiques de structuration recommandées par l'écosystème Helm. Or, malgré la relative simplicité fonctionnelle de ce qu'il accomplit (déployer un contrôleur ingress et ses composants associés), le graphe de dépendances résultant révèle une structure dense et fortement interconnectée.
 
@@ -184,13 +177,9 @@ Pour automatiser cette analyse, nous avons développé une suite logicielle int�
 
 Nous avons établi les distributions statistiques de chaque métrique sur l'intégralité du jeu de données (dataset). Nous avons trouver que le choix de nos seuils est validé par leur capacité à assurer une distinction nette au sein des distributions observées.
 
-<div align="center">
-
 ![Resultats](./assets/all_metrics_combined.png)
 
 *Figure 3 : Distributions statistiques des métriques sur l'ensemble du jeu de données.*
-
-</div>
 
 ### Retour sur les hypothèses
 
@@ -236,22 +225,15 @@ La robustesse est également sacrifiée. Avec plus de 21 accès non protégés p
 
 L'analyse agrégée du jeu de données permet de dessiner le profil du « Chart Moyen » (Figure 4), dont la structure se caractérise par une forme de sablier composée d'environ 48 nœuds. En amont, on observe une large couche de Values, dont une part significative reste inutilisée, créant un bruit informationnel dès l'entrée du graphe. Cette configuration converge ensuite vers un goulot d'étranglement structurel constitué d'une dizaine de helpers. Ce nœud central est particulièrement rigide. Il se divise entre 3 et 4 "hubs" hautement connectés (assurant la cohérence globale comme les labels ou les noms) et 6 ou 7 fonctions à usage unique qui ajoutent de l'indirection sans bénéfice de mutualisation. Enfin, le graphe s'évase sur 5 à 8 ressources Kubernetes qui, bien que distinctes, se retrouvent systématiquement couplées entre elles par leur dépendance commune aux mêmes hubs centraux.
 
-<div align="center">
-
 ![Average Chart](./assets/average_chart.svg)
 
 *Figure 4 : Structure type du "Chart Moyen" en forme de sablier.*
 
-</div>
-
 Le chart idéal (Figure 5) privilégie une **architecture en couches localisées** qui substitue le modèle monolithique actuel par une structure segmentée et modulaire. Contrairement au "Chart Moyen" en forme de sablier où les ressources sont couplées par des hubs centraux, le modèle idéal organise les valeurs par objet (exemple : `.Values.Service`, `.Values.Deployment`) pour rendre l'impact des modifications explicite et isolé. Les helpers y sont stratifiés : un socle minimal gère les éléments transversaux communs, tandis que des extensions spécifiques permettent de personnaliser chaque ressource sans affecter les autres. En limitant strictement la taille du graphe à 30 nœuds et en supprimant les abstractions injustifiées, cette approche garantit une compréhension incrémentale tout en préservant une isolation élevée des modifications.
-<div align="center">
 
 ![Ideal Chart](./assets/IdealChart.svg)
 
 *Figure 5 : Architecture en couches localisées du chart idéal.*
-
-</div>
 
 ## VII. Conclusion
 Cette étude a proposé une approche empirique pour évaluer la complexité cognitive des Helm charts à travers une modélisation en graphe de dépendances et un ensemble de sept métriques quantifiables. L'analyse de 78 charts révèle un paradoxe central. Les Helm charts sont faciles à lire mais difficiles à modifier. Les métriques de compréhension (Comprehension Scope = 0.13, Cognitive Diameter = 2.83) indiquent que les développeurs peuvent naviguer les charts de manière incrémentale, mais les métriques de maintenance (Modification Isolation = 0.29, Hub Dominance = 0.48, Helper Justification = 0.36) démontrent que cette lisibilité ne se traduit pas en maintenabilité. La structure hub-and-spoke, omniprésente dans les charts analysés, concentre les dépendances dans quelques helpers centraux qui deviennent simultanément des points d'entrée pour la compréhension et des goulots d'étranglement pour la modification.
