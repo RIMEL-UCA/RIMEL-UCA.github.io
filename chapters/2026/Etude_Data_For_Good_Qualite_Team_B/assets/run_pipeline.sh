@@ -39,6 +39,10 @@ if [ -z "$SONAR_TOKEN" ]; then
     echo "ERREUR: Sonar token requis pour lancer le pipeline."
     print_usage
 fi
+
+if [ "$REPLAY" -eq 1 ]; then
+    echo "Mode replay activé — utilisation des identifiants de commits depuis repos_url.csv"
+fi
 echo "Construction de l'image Docker..."
 # Supprimer les warnings bruyants de docker-compose
 docker-compose build --quiet >/dev/null 2>&1 || true
