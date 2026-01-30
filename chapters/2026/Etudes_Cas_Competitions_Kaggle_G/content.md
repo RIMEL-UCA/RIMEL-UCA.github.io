@@ -96,6 +96,7 @@ Cette sous-question identifie les **leviers stratégiques** (volume, collaborati
 ### SQ2 : Est-ce que les tops du leaderboard global se spécialisent ?
 
 **Auteur** : Yannick Ascari
+
 **Lien** : [content.md](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/blob/master/chapters/2026/Etudes_Cas_Competitions_Kaggle_G/assets/kaggle-analyze-specialization/content.md)
 
 #### Objectif
