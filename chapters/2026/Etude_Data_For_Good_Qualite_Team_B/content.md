@@ -253,58 +253,29 @@ Afin de garantir la **reproductibilité des résultats**, nous stockons le **SHA
 
 ### Sous question 2 :
 
-#### Objectif et hypothèse
+Pour cette sous-question, nous nous appuyons sur les données récoltées précédemment.
 
-Déterminer si, et à partir de quel volume de contributeurs, la qualité d’un dépôt s’écarte notablement de la médiane de l’échantillon.
+Pour cette analyse, nous avons également besoin du **nombre de contributeurs par dépôt**.  
+Afin de récupérer cette information, nous nous greffons à la pipeline mise en place pour la première question et extrayons le nombre de contributeurs directement à partir du répertoire `.git`.
 
-#### Protocole expérimental
+Une fois ces données collectées, nous classons automatiquement les **22 dépôts** en **trois groupes** présentant des tailles de contributeurs homogènes.
 
-1. Mesure du nombre de contributeurs
+Lors de notre exécution, cette répartition a donné les groupes suivants :
 
-     - Pour chaque dépôt retenu, nous comptons les contributeurs distincts à partir de l'historique Git/GitHub (voir `2-nombre-contributeurs/data/contributors.csv`).
-     - Choix méthodologique : comptage « brut » d’identités uniques (pas de pondération par nombre de commits).
+- **Groupe 1 :** 4 à 9 contributeurs  
+- **Groupe 2 :** 10 à 15 contributeurs  
+- **Groupe 3 :** 19 à 36 contributeurs  
 
-2. Construction de groupes comparables
+Une fois cette classification effectuée, nous pouvons produire les graphiques permettant d’analyser l’évolution de la qualité du code en fonction du nombre de contributeurs.  
+Pour chaque groupe, nous calculons la **qualité médiane**, que nous comparons à la médiane de l’ensemble du jeu de données.
 
-     - Regroupement des dépôts en intervalles de taille d'équipe pour comparer des ensembles homogènes :
-
-       - **Groupe 1 :** 4–9 contributeurs
-       - **Groupe 2 :** 10–15 contributeurs
-       - **Groupe 3 :** 21–36 contributeurs
-
-3. Mesure de la qualité et indicateurs d’écart
-
-     - Utilisation du score de qualité normalisé (sous-question 1, basé sur SonarQube).
-     - Indicateurs calculés :
-       - médiane globale des scor  es (tous dépôts) — référence : **74.24**
-       - médiane par groupe (comparée à la médiane globale)
-       - dispersion par groupe (boxplot — IQR et outliers)
-
-     - Interprétation attendue si l'hypothèse est vraie : augmentation de la médiane de groupe et boxplots plus resserrés quand l’effectif augmente.
-
-#### Résultats (par groupe)
-
-Les figures (qualite_groupe_1/2/3) montrent les scores dépôt par dépôt, avec la médiane globale en référence.
-
-- **Groupe 1 (4–9 contributeurs)** : médiane = **78.97** (+4.73 vs médiane globale). Majorité des dépôts au-dessus de la médiane, mais présence d'un dépôt faible (~52) indiquant une dispersion.
-
-- **Groupe 2 (10–15 contributeurs)** : médiane = **69.36** (−4.88 vs médiane globale). Scores regroupés autour de ~67–74, un dépôt isolé faible (~61).
-
-- **Groupe 3 (21–36 contributeurs)** : médiane = **75.16** (+0.92 vs médiane globale). Scores proches de la médiane globale, dispersion modérée, un outlier faible (~57).
-
-#### Distribution et validation de l'hypothèse
-
-- Le boxplot (`qualite_boxplot_groupes`) montre qu'il n'y a pas de progression monotone de la médiane avec le nombre de contributeurs : le groupe 10–15 a une médiane plus basse que le groupe 4–9.
-- On observe une légère tendance au recentrage pour les très grands projets (21–36), mais la présence d'outliers indique que le seul nombre de contributeurs n'explique pas entièrement la qualité.
-
-#### Conclusion (sous-question 2)
-
-Sur cet échantillon, il n'existe pas de seuil unique au-delà duquel la qualité augmente systématiquement avec le nombre de contributeurs. Les dépôts avec 10–15 contributeurs présentent l'écart négatif le plus marqué, tandis que les projets 21–36 tendent à se rapprocher de la médiane globale.
+Afin de faciliter l’observation, nous utilisons **quatre diagrammes** avec  :
+- **trois histogrammes**, un par groupe de contributeurs ;
+- **un diagramme en boîte (boîte à moustaches)** regroupant les trois groupes, afin de visualiser et comparer l’évolution des médianes.
 
 #### Limites spécifiques
 
-- Effectifs par groupe modestes : interprétations exploratoires, sensibles aux outliers.
-- Découpage en intervalles : bornes choisies pour l'équilibre des groupes (16–20 non exploité).
+- Effectifs par groupe modestes : interprétations exploratoires, sensibles aux valeurs isolées.
 - Corrélation ≠ causalité : d'autres facteurs (maturité, langage, gouvernance) peuvent influer sur la qualité.
 
 ## Sous-question 3
@@ -364,9 +335,24 @@ Les graphiques ci-dessous ont été réalisé par nos soins avec l'aide du packa
 
 ### Présentation des résultats
 
-#### Résultats de la sous-question 3
+#### Sous-question 1 : 
+![Figure 1: Distribution de la qualité de code pour les repos](assets/results/1-qualite/sonarqube_scores_distribution.png)
 
-![Figure 1: Nuage de points du ratio du nombre de commits de fix par rapport au nombre de contributeurs](assets/results/3-activite-contributeurs/ratio_fix_vs_contributeurs.png)
+![Figure 2: Diagrame en violon du score de qualité](assets/results/1-qualite/sonarqube_scores_violin.png)
+#### Sous-question 2 : 
+
+![Figure 3 : Diagramme pour le groupe 4-9 ](assets/results/2-nombre-contributeurs/qualite_groupe_1.png)
+
+![Figure 3 : Diagramme pour le groupe 10-15 ](assets/results/2-nombre-contributeurs/qualite_groupe_2.png)
+
+![Figure 3 : Diagramme pour le groupe 19-32 ](assets/results/2-nombre-contributeurs/qualite_groupe_3.png)
+
+![Figure 3 : Diagramme moustache ](assets/results/2-nombre-contributeurs/qualite_boxplot_groupes.png)
+
+
+
+#### Sous-question 3 : 
+![Figure 3: Nuage de points du ratio du nombre de commits de fix par rapport au nombre de contributeurs](assets/results/3-activite-contributeurs/ratio_fix_vs_contributeurs.png)
 
 ![Figure 2: Nuage de points du ratio du nombre de commits de refactor sur le nombre de commits de feat par rapport au nombre de contributeurs](assets/results/3-activite-contributeurs/ratio_refactor_feat_vs_contributeurs.png)
 
@@ -375,6 +361,28 @@ Cette piste a été abandonnée par manque de temps.
 
 ### Interprétation et analyse des résultats en fonction des hypothèses
 
+#### Sous-question 1 :
+
+Comme le montrent les diagrammes, la qualité du code se situe globalement entre moyenne et bonne.  
+Une large majorité des dépôts obtient un score compris entre **60 et 80**, avec une **médiane autour de 75**.
+
+Ces résultats indiquent que la qualité du code des dépôts analysés est globalement satisfaisante.  
+Ils tendent ainsi à confirmer notre hypothèse, selon laquelle les projets étudiés présentent un niveau de qualité relativement élevé.
+
+#### Sous-question 2 : 
+Pour la sous-question 2, notre intuition initiale était que plus un dépôt possède de contributeurs, meilleure serait la qualité du code.  
+Cependant, nos analyses semblent montrer une tendance inverse.
+
+En effet, le groupe comprenant **4 à 9 contributeurs** tire fortement la moyenne vers le haut, tandis que le groupe **10 à 15 contributeurs** présente une baisse notable de la qualité médiane.  
+Le groupe **19 à 32 contributeurs**, quant à lui, semble se situer autour de la moyenne globale du jeu de données.
+
+Ces résultats suggèrent qu’un **nombre plus restreint de contributeurs** est associé à une meilleure qualité du code, jusqu’à atteindre une **stabilisation autour de 74 %** lorsque le nombre de contributeurs augmente.
+
+Néanmoins, cette étude présente une limite importante : le **manque de données**.  
+Le groupe 4–9 contributeurs, en particulier, montre une **forte variabilité** entre ses dépôts, ce qui réduit la robustesse des conclusions et invite à interpréter ces résultats avec prudence.
+
+
+#### Sous-question 3 :
 Pour la sous-question 3, nous avions l'intuition qu'un dépôt de code avec beaucoup de contributeurs va naturellement avoir beaucoup de commit refactor et fix pour maintenir sa qualité.
 On peut voir sur la classification qu'on a fait que pour les dépôts avec plus de 20 contributeurs, les commits refactor et fix représentent en moyenne un quart des commits totaux :
 | repo                            | feat | fix | refactor | ci   | chore | other | total_commits | contributeurs |
