@@ -80,72 +80,33 @@ Nous avons donc d'abord commencé par déterminer l'échantillon de dépôts de 
 - Ils ont le tag saison 10 ou plus récent, batch 6 ou plus récent ou hors-saison
 - Si classé “hors-saison”, ils doivent avoir un dernier commit datant de l’année en cours
 
-Avec ces critères de sélection nous avons réuni une liste de 22 dépôts pour notre étude :
+Avec ces critères de sélection nous avons réuni une liste de **22 dépôts** pour notre étude :
 
-- **[offseason-shelter-for-science](https://github.com/dataforgoodfr/offseason-shelter-for-science)**  
-  *Shelter for Science* — Python (9 contributeurs)
+- **[offseason-shelter-for-science](https://github.com/dataforgoodfr/offseason-shelter-for-science)** — 12 contributeurs
+- **[13_potentiel_solaire](https://github.com/dataforgoodfr/13_potentiel_solaire)** — 22 contributeurs
+- **[13_democratiser_sobriete](https://github.com/dataforgoodfr/13_democratiser_sobriete)** — 15 contributeurs
+- **[13_empreinte_souffrance](https://github.com/dataforgoodfr/13_empreinte_souffrance)** — 6 contributeurs
+- **[13_pollution_eau](https://github.com/dataforgoodfr/13_pollution_eau)** — 14 contribueurs
+- **[13_eclaireur_public](https://github.com/dataforgoodfr/13_eclaireur_public)** — 22 contributeurs
+- **[13_brigade_coupes_rases](https://github.com/dataforgoodfr/13_brigade_coupes_rases)** — 21 contributeurs
+- **[13_odis](https://github.com/dataforgoodfr/13_odis)** — 25 contributeurs
+- **[13_reveler_inegalites_cinema](https://github.com/dataforgoodfr/13_reveler_inegalites_cinema)** — 14 contributeurs
+- **[13_ia_financement](https://github.com/dataforgoodfr/13_ia_financement)** — 4 contributeurs
+- **[CarbonBombs](https://github.com/dataforgoodfr/CarbonBombs)** — 11 contributeurs
+- **[12_bloom](https://github.com/dataforgoodfr/12_bloom)** — 35 contributeurs
+- **[quotaclimat](https://github.com/dataforgoodfr/quotaclimat)** — 19 contributeurs
+- **[13_stop_cyberviolence](https://github.com/dataforgoodfr/13_stop_cyberviolence)** — 9 contributeurs
+- **[offseason_greenlobby](https://github.com/dataforgoodfr/offseason_greenlobby)** — 4 contributeurs
+- **[13_ecoskills](https://github.com/dataforgoodfr/13_ecoskills)** — 36 contributeurs
+- **[12_zero_dechet_sauvage](https://github.com/dataforgoodfr/12_zero_dechet_sauvage)** — 8 contributeurs
+- **[12_pinkbombs](https://github.com/dataforgoodfr/12_pinkbombs)** — 4 contributeurs
+- **[12_observatoire_des_imaginaires](https://github.com/dataforgoodfr/12_observatoire_des_imaginaires)** — 7 contributeurs
+- **[batch7_satellite_ges](https://github.com/dataforgoodfr/batch7_satellite_ges)** — 10 contributeurs
+- **[batch10_notaclimat](https://github.com/dataforgoodfr/batch10_notaclimat)** — 9 contributeurs
+- **[batch8_worldbank](https://github.com/dataforgoodfr/batch8_worldbank)** — 13 contributeurs
 
-- **[13_potentiel_solaire](https://github.com/dataforgoodfr/13_potentiel_solaire)**  
-  *Potentiel s(c)olaire* — Notebook, Python, TypeScript (21 contributeurs)
-
-- **[13_democratiser_sobriete](https://github.com/dataforgoodfr/13_democratiser_sobriete)**  
-  *Démocratiser la Sobriété* — Notebook Python (11 contributeurs)
-
-- **[13_empreinte_souffrance](https://github.com/dataforgoodfr/13_empreinte_souffrance)**  
-  *Empreinte souffrance* — Python, TypeScript, Notebook (13 contributeurs, projet test)
-
-- **[13_pollution_eau](https://github.com/dataforgoodfr/13_pollution_eau)**  
-  *Dans mon eau* — Notebook (29 contributeurs)
-
-- **[13_eclaireur_public](https://github.com/dataforgoodfr/13_eclaireur_public)**  
-  *Éclaireur public* — TypeScript (42 contributeurs)
-
-- **[13_brigade_coupes_rases](https://github.com/dataforgoodfr/13_brigade_coupes_rases)**  
-  *Brigade de surveillance des coupes rases* — Notebook (21 contributeurs)
-
-- **[13_odis](https://github.com/dataforgoodfr/13_odis)**  
-  *OD&IS* — Notebook (20 contributeurs)
-
-- **[13_reveler_inegalites_cinema](https://github.com/dataforgoodfr/13_reveler_inegalites_cinema)**  
-  *Révéler les inégalités dans le cinéma* — Notebook Python (15 contributeurs)
-
-- **[13_ia_financement](https://github.com/dataforgoodfr/13_ia_financement)**  
-  *SOS Financement* — Notebook, HTML (5 contributeurs)
-
-- **[CarbonBombs](https://github.com/dataforgoodfr/CarbonBombs)**  
-  *CarbonBombs* — Notebook Python (7 contributeurs)
-
-- **[batch7_satellite_ges](https://github.com/dataforgoodfr/batch7_satellite_ges)**  
-  *Trawl Watch / Satellite GES* — Python, TypeScript, Notebook (22 contributeurs)
-
-- **[quotaclimat](https://github.com/dataforgoodfr/quotaclimat)**  
-  *Quota Climat* — Python, Notebook (20 contributeurs)
-
-- **[13_stop_cyberviolence](https://github.com/dataforgoodfr/13_stop_cyberviolence)**  
-  *Stop Cyberviolence* — Notebook (8 contributeurs)
-
-- **[offseason_greenlobby](https://github.com/dataforgoodfr/offseason_greenlobby)**  
-  *GreenLobby* — Notebook (3 contributeurs)
-
-- **[13_ecoskills](https://github.com/dataforgoodfr/13_ecoskills)**  
-  *Écose plus que kills* — Python (40 contributeurs)
-
-- **[12_zero_dechet_sauvage](https://github.com/dataforgoodfr/12_zero_dechet_sauvage)**  
-  *Zéro déchet sauvage* — Python (7 contributeurs)
-
-- **[12_pinkbombs](https://github.com/dataforgoodfr/12_pinkbombs)**  
-  *Pink Bombs* — Notebook / HTML (5 contributeurs)
-
-- **[12_observatoire_des_imaginaires](https://github.com/dataforgoodfr/12_observatoire_des_imaginaires)**  
-  *L’observatoire des imaginaires* — Notebook (6 contributeurs)
-
-- **[batch10_notaclimat](https://github.com/dataforgoodfr/batch10_notaclimat)**  
-  *Notaclimat* — Notebook (9 contributeurs)
-
-- **[worldbank](https://github.com/dataforgoodfr/worldbank)**  
-  *Worldbank* — Notebook (10 contributeurs)
-
-Ces critères de sélection permettent de concentrer l’analyse sur des repositories pertinents et représentatifs de l’activité actuelle de l’organisation. En filtrant sur la date du dernier commit, on s’assure d’étudier des projets encore maintenus ou récemment actifs. Le choix des catégories (Saison 10 ou plus récent, batch-6 ou hors-saison) garantit que les dépôts retenus appartiennent aux initiatives les plus récentes et donc aux méthodes de travail actuelles de Data for Good France. 
+Ces critères permettent de se concentrer sur des projets encore maintenus, suffisamment développés et représentatifs des pratiques actuelles de Data For Good France.
+En filtrant sur la date du dernier commit, on s’assure d’étudier des projets encore maintenus ou récemment actifs. Le choix des catégories (Saison 10 ou plus récent, batch-6 ou hors-saison) garantit que les dépôts retenus appartiennent aux initiatives les plus récentes et donc aux méthodes de travail actuelles de Data For Good France. 
 Enfin, imposer un minimum de 20 commits permet d’écarter les dépôts trop peu développés, tels que les templates ou les dépôts créés mais jamais réellement exploités, afin de ne conserver que des projets substantiels et suffisamment documentés pour une analyse cohérente. Nous excluons le dépôt du site web de notre sélection car nous souhaitons étudier les pratiques de l’association pour les projets qu’ils développent et leur site n’en fait pas partie
 
 Pour un développeur, la qualité de code se mesure intuitivement selon à quel point le code est lisible, compréhensible et facile à maintenir. Un code de qualité est structuré, cohérent et clair, ce qui permet à un autre développeur (ou à soi-même plus tard) de comprendre rapidement son fonctionnement, de corriger les bugs, d’ajouter de nouvelles fonctionnalités et de collaborer efficacement. Elle reflète aussi la robustesse du code, sa sécurité, et l’absence de duplications inutiles ou de complexité excessive.
@@ -153,14 +114,14 @@ C'est en partant de cette intuition que nous avons cherché des outils pôur mes
 
 ### Sous-question 1 & 2
 
-Pour ces questions, l'enjeu principal portait sur la définition de la qualité de code. On a donc porté nos recherches du côté de la documentation [Sonarqube](https://docs.sonarsource.com/sonarqube-server/quality-standards-administration/managing-quality-gates/introduction-to-quality-gates) pour comprendre comment la qualité était évaluer par un standard de l'industrie.
+Pour ces questions, l'enjeu principal portait sur la définition de la qualité de code. On a donc porté nos recherches du côté de la documentation [Sonarqube](https://docs.sonarsource.com/sonarqube-server/quality-standards-administration/managing-quality-gates/introduction-to-quality-gates) pour comprendre comment la qualité était évaluée par un standard de l'industrie.
 
 ### Sous-question 3
 
 Plusieurs études [1] montrent que 30 à 60 % des messages de commit ne suivent aucun standard.
-Les messages sont souvent :
-- très courts (update, wip, fix)
-- contextuels (typo, changes, final)
+
+Le défi dans cette sous-question va donc de capter les catégories auxquelles appartiennent les messages de commits pour suffisament de commits par dépôt de code pour avoir des tendances claires qui sortent de leur analyse.
+ 
 - en langage naturel, parfois multilingues
 
 Le défi dans cette sous-question va donc de capter les catégories auxquelles appartiennent les messages de commits pour suffisament de commits par dépôt de code pour avoir des tendances claires qui sortent de leur analyse.
@@ -171,12 +132,21 @@ Nous avons choisi d'utiliser Sonarqube pour évaluer certaines métriques de la 
 
 ### Sous question 1 : 
 
-Pour notre premiere sous question nous avons besoin de mesuré la qualité d'un dépot de code. pour cela nous avons eu l'idée d'utilisé Sonarqube car c'est le standard du marché en terme d'analyse statique de code. nous avions aussi réfléchi a des alternatives tel que CodeClimate pour une alternative du même style mais moins complexe ce qui nous satifesais pas  pareil pour un linter spécifique par langague qui été compliqué a mettre en place par rapport a juste un serveur SonarQube. pour automatisé ça on va crée une pipeline pour va lancé le serveur sonar sur un docker puis on va cloner chaqu'un des repos qu'on a prevu d'analysé, run une annalyse sonar puis grace a l'api on va récupéré les mesures de docker. on a ensuite décidé d'un score avec ces mesure pour normalisé pour tout les repos et avoir un valeur de mesure concrete. pour faire ce score nous avons chosi de nous basé sur 5 critères: 
-     - la fiabilité 
-     - la maintanbilité 
-     - la sécurité 
-     - la duplication de code 
-     - la complexité cognitive moyenne
+Pour répondre à notre première sous-question, nous devons disposer d’une mesure objective et comparable de la qualité d’un dépôt de code. Nous avons choisi d’utiliser SonarQube, car il s’agit d’un outil largement utilisé dans l’industrie pour l’analyse statique et l’évaluation de la santé d’un code.
+
+Nous avons envisagé d’autres solutions, comme CodeClimate, mais celles-ci nous semblaient moins adaptées à notre besoin d’analyse détaillée et de contrôle fin des métriques. De même, l’utilisation de linters spécifiques à chaque langage aurait nécessité la mise en place de configurations différentes selon les dépôts, rendant l’approche moins homogène et plus difficile à automatiser à l’échelle de notre échantillon.
+
+Afin d’automatiser l’évaluation, nous mettons en place une pipeline reproductible qui :
+1. lance un serveur SonarQube via Docker,
+2. clone chacun des dépôts sélectionnés,
+3. exécute une analyse SonarQube,
+4. récupère automatiquement les mesures via l’API
+
+À partir de ces mesures, nous calculons ensuite un score de qualité normalisé, permettant de comparer les dépôts entre eux. Ce score repose sur cinq critères principaux :
+- la fiabilité,
+- la maintenabilité,
+- la sécurité,
+- la duplication de code
 
 #### Automatisation de l’analyse
 
@@ -343,20 +313,20 @@ Les graphiques ci-dessous ont été réalisé par nos soins avec l'aide du packa
 
 ![Figure 3 : Diagramme pour le groupe 4-9 ](assets/results/2-nombre-contributeurs/qualite_groupe_1.png)
 
-![Figure 3 : Diagramme pour le groupe 10-15 ](assets/results/2-nombre-contributeurs/qualite_groupe_2.png)
+![Figure 4 : Diagramme pour le groupe 10-15 ](assets/results/2-nombre-contributeurs/qualite_groupe_2.png)
 
-![Figure 3 : Diagramme pour le groupe 19-32 ](assets/results/2-nombre-contributeurs/qualite_groupe_3.png)
+![Figure 5 : Diagramme pour le groupe 19-32 ](assets/results/2-nombre-contributeurs/qualite_groupe_3.png)
 
-![Figure 3 : Diagramme moustache ](assets/results/2-nombre-contributeurs/qualite_boxplot_groupes.png)
+![Figure 6 : Boîte à moustaches ](assets/results/2-nombre-contributeurs/qualite_boxplot_groupes.png)
 
 
 
 #### Sous-question 3 : 
-![Figure 3: Nuage de points du ratio du nombre de commits de fix par rapport au nombre de contributeurs](assets/results/3-activite-contributeurs/ratio_fix_vs_contributeurs.png)
+![Figure 7: Nuage de points du ratio du nombre de commits de fix par rapport au nombre de contributeurs](assets/results/3-activite-contributeurs/ratio_fix_vs_contributeurs.png)
 
-![Figure 2: Nuage de points du ratio du nombre de commits de refactor sur le nombre de commits de feat par rapport au nombre de contributeurs](assets/results/3-activite-contributeurs/ratio_refactor_feat_vs_contributeurs.png)
+![Figure 8: Nuage de points du ratio du nombre de commits de refactor sur le nombre de commits de feat par rapport au nombre de contributeurs](assets/results/3-activite-contributeurs/ratio_refactor_feat_vs_contributeurs.png)
 
-Nous avions pour projet de faire des statistiques sur les tailles de commits des dépôts de code en récupérant les lignes ajoutées et enlevées pour chaque commit. L'addition des lignes ajoutées et enlevées aurait donner le nombre de lignes modifiés par un commit et nous aurait permis de voir à l'aide d'un graphique si le nombre de contributeurs influent les tailles de commits (on peut supposer que plus il y a de contributeurs, plus les commits sont petits pour faciliter les review et car le travail est mieux réparti). En allant plus loin, on aurait pû corréler taille des commits et nature des commits pour analyser les pratiques selon les types de commits et le nombre de contributeurs.
+Nous avions pour projet de faire des statistiques sur les tailles de commits des dépôts de code en récupérant les lignes ajoutées et enlevées pour chaque commit. L'addition des lignes ajoutées et enlevées aurait donner le nombre de lignes modifiés par un commit et nous aurait permis de voir à l'aide d'un graphique si le nombre de contributeurs influent les tailles de commits (on peut supposer que plus il y a de contributeurs, plus les commits sont petits pour faciliter les revues et car le travail est mieux réparti). En allant plus loin, on aurait pû corréler taille des commits et nature des commits pour analyser les pratiques selon les types de commits et le nombre de contributeurs.
 Cette piste a été abandonnée par manque de temps.
 
 ### Interprétation et analyse des résultats en fonction des hypothèses
@@ -370,16 +340,17 @@ Ces résultats indiquent que la qualité du code des dépôts analysés est glob
 Ils tendent ainsi à confirmer notre hypothèse, selon laquelle les projets étudiés présentent un niveau de qualité relativement élevé.
 
 #### Sous-question 2 : 
-Pour la sous-question 2, notre intuition initiale était que plus un dépôt possède de contributeurs, meilleure serait la qualité du code.  
-Cependant, nos analyses semblent montrer une tendance inverse.
+Pour la sous-question 2, notre intuition initiale était que plus un dépôt possède de contributeurs, meilleure serait la qualité du code. Cependant, nos analyses semblent montrer une tendance inverse.
 
-En effet, le groupe comprenant **4 à 9 contributeurs** tire fortement la moyenne vers le haut, tandis que le groupe **10 à 15 contributeurs** présente une baisse notable de la qualité médiane.  
-Le groupe **19 à 32 contributeurs**, quant à lui, semble se situer autour de la moyenne globale du jeu de données.
+En effet, lorsque l’on compare les médianes, on observe que :
+- la médiane globale (tous dépôts confondus) est de **74.17** ;
+- la médiane du groupe 4–9 contributeurs est de **78.97** (soit +4.80 par rapport à la médiane globale) ;
+- la médiane du groupe 10–15 contributeurs est de **69.36** (soit −4.81) ;
+- la médiane du groupe 19–36 contributeurs est de **73.19** (soit −0.98).
 
-Ces résultats suggèrent qu’un **nombre plus restreint de contributeurs** est associé à une meilleure qualité du code, jusqu’à atteindre une **stabilisation autour de 74 %** lorsque le nombre de contributeurs augmente.
+Ces résultats montrent qu’il n’existe pas de progression monotone de la qualité avec le nombre de contributeurs : le groupe intermédiaire **10–15** présente la médiane la plus faible, tandis que le groupe **4–9** obtient la médiane la plus élevée. Une interprétation plausible est l’existence d’une **“zone de friction”** autour d’une dizaine de contributeurs : la coordination devient plus coûteuse (revues, cohérence de code, alignement sur des conventions), sans que des mécanismes de stabilisation (gouvernance, relectures systématiques, automatisation CI, règles de contribution) ne soient encore suffisamment consolidés. À l’inverse, les projets très contributifs **(19–36)** reviennent vers un niveau proche de la médiane globale, ce qui suggère **un effet de stabilisation** possible, sans pour autant garantir une qualité systématiquement supérieure.
 
-Néanmoins, cette étude présente une limite importante : le **manque de données**.  
-Le groupe 4–9 contributeurs, en particulier, montre une **forte variabilité** entre ses dépôts, ce qui réduit la robustesse des conclusions et invite à interpréter ces résultats avec prudence.
+Enfin, il convient d’interpréter ces résultats avec prudence : certains groupes présentent une dispersion notable, et l’effectif limité de l’échantillon réduit la robustesse statistique des conclusions.
 
 
 #### Sous-question 3 :
@@ -387,33 +358,33 @@ Pour la sous-question 3, nous avions l'intuition qu'un dépôt de code avec beau
 On peut voir sur la classification qu'on a fait que pour les dépôts avec plus de 20 contributeurs, les commits refactor et fix représentent en moyenne un quart des commits totaux :
 | repo                            | feat | fix | refactor | ci   | chore | other | total_commits | contributeurs |
 | ------------------------------- | ---- | --- | -------- | ---- | ----- | ----- | ------------- | ------------- |
-| offseason-shelter-for-science   | 43   | 23  | 5        | 5    | 7     | 102   | 185           | 9             |
-| 13_potentiel_solaire            | 322  | 183 | 26       | 27   | 61    | 215   | 834           | 21            |
-| 13_democratiser_sobriete        | 88   | 81  | 24       | 16   | 30    | 106   | 345           | 11            |
-| 13_empreinte_souffrance         | 68   | 58  | 4        | 4    | 7     | 59    | 200           | 13            |
-| 13_pollution_eau                | 113  | 75  | 28       | 15   | 24    | 201   | 456           | 29            |
-| 13_eclaireur_public             | 144  | 199 | 51       | 15   | 25    | 211   | 645           | 42            |
+| offseason-shelter-for-science   | 43   | 23  | 5        | 5    | 7     | 102   | 185           | 12            |
+| 13_potentiel_solaire            | 322  | 183 | 26       | 27   | 61    | 215   | 834           | 22            |
+| 13_democratiser_sobriete        | 88   | 81  | 24       | 16   | 30    | 106   | 345           | 15            |
+| 13_empreinte_souffrance         | 68   | 58  | 4        | 4    | 7     | 59    | 200           | 6             |
+| 13_pollution_eau                | 113  | 75  | 28       | 15   | 24    | 201   | 456           | 14            |
+| 13_eclaireur_public             | 144  | 199 | 51       | 15   | 25    | 211   | 645           | 22            |
 | 13_brigade_coupes_rases         | 202  | 148 | 35       | 18   | 90    | 177   | 670           | 21            |
-| 13_odis                         | 159  | 99  | 30       | 13   | 38    | 283   | 622           | 20            |
-| 13_reveler_inegalites_cinema    | 114  | 141 | 28       | 15   | 18    | 80    | 396           | 15            |
-| 13_ia_financement               | 4    | 1   | 0        | 1    | 1     | 65    | 72            | 5             |
-| CarbonBombs                     | 100  | 52  | 39       | 3    | 15    | 129   | 338           | 7             |
-| 12_bloom                        | 212  | 342 | 65       | 9    | 18    | 360   | 1006          | 22            |
-| quotaclimat                     | 318  | 220 | 40       | 1086 | 49    | 221   | 1934          | 20            |
-| 13_stop_cyberviolence           | 39   | 2   | 12       | 8    | 13    | 134   | 208           | 8             |
-| offseason_greenlobby            | 29   | 7   | 5        | 0    | 2     | 9     | 52            | 3             |
-| 13_ecoskills                    | 127  | 103 | 13       | 25   | 9     | 105   | 382           | 40            |
-| 12_zero_dechet_sauvage          | 39   | 19  | 5        | 0    | 3     | 127   | 193           | 7             |
-| 12_pinkbombs                    | 13   | 16  | 5        | 1    | 4     | 33    | 72            | 5             |
-| 12_observatoire_des_imaginaires | 31   | 34  | 9        | 10   | 19    | 156   | 259           | 6             |
-| batch7_satellite_ges            | 78   | 10  | 3        | 7    | 21    | 257   | 376           | 22            |
+| 13_odis                         | 159  | 99  | 30       | 13   | 38    | 283   | 622           | 25            |
+| 13_reveler_inegalites_cinema    | 114  | 141 | 28       | 15   | 18    | 80    | 396           | 14            |
+| 13_ia_financement               | 4    | 1   | 0        | 1    | 1     | 65    | 72            | 4             |
+| CarbonBombs                     | 100  | 52  | 39       | 3    | 15    | 129   | 338           | 11            |
+| 12_bloom                        | 212  | 342 | 65       | 9    | 18    | 360   | 1006          | 35            |
+| quotaclimat                     | 318  | 220 | 40       | 1086 | 49    | 221   | 1934          | 19            |
+| 13_stop_cyberviolence           | 39   | 2   | 12       | 8    | 13    | 134   | 208           | 9             |
+| offseason_greenlobby            | 29   | 7   | 5        | 0    | 2     | 9     | 52            | 4             |
+| 13_ecoskills                    | 127  | 103 | 13       | 25   | 9     | 105   | 382           | 36            |
+| 12_zero_dechet_sauvage          | 39   | 19  | 5        | 0    | 3     | 127   | 193           | 8             |
+| 12_pinkbombs                    | 13   | 16  | 5        | 1    | 4     | 33    | 72            | 4             |
+| 12_observatoire_des_imaginaires | 31   | 34  | 9        | 10   | 19    | 156   | 259           | 7             |
+| batch7_satellite_ges            | 78   | 10  | 3        | 7    | 21    | 257   | 376           | 10            |
 | batch10_notaclimat              | 36   | 24  | 10       | 3    | 26    | 153   | 252           | 9             |
-| batch8_worldbank                | 51   | 8   | 12       | 14   | 14    | 299   | 398           | 10            |
+| batch8_worldbank                | 51   | 8   | 12       | 14   | 14    | 299   | 398           | 13            |
 
 Alors que pour les dépôts de code avec moins de 20 contributeurs, les commits refactor et fix représentent en moyenne 10 à 15% des commits totaux.
 Ces données viennent confirmer notre intuition.
 
-De plus nous avons analysé le ratio du nombre de commits de fix par rapport au nombre de contributeurs avec un nuage de points (visible dans la section "Résultats de la sous-question 3"). On observe une claire tendance que plus on a de contributeurs plus il y a de refactor par rapport aux feats. Cela peut être expliqué par le changement de nature des dépôts avec plus de contributeurs, ils investissement plus dans la qualité du code et le maintient d'une base de code compréhensible et durable ce qui traduit une certaine maturité des dépôts.
+De plus nous avons analysé le ratio du nombre de commits de fix par rapport au nombre de contributeurs avec un nuage de points (visible dans la section "Résultats de la sous-question 3"). On observe une claire tendance que plus on a de contributeurs plus il y a de refactor par rapport aux feats. Cela peut être expliqué par le changement de nature des dépôts avec plus de contributeurs, ils investissent plus dans la qualité du code et le maintien d'une base de code compréhensible et durable ce qui traduit une certaine maturité des dépôts.
 
 Nous avons aussi analysé le ratio du nombre de commits de refactor sur le nombre de commits de feat par rapport au nombre de contributeurs avec un nuage de point (visible dans la section "Résultats de la sous-question 3") mais les résultats ne montrant pas de variations selon le nombre de contributeurs, nous ne pouvons pas conclure.
 
