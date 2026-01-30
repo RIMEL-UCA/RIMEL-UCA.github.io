@@ -1,6 +1,6 @@
 ---
 layout: default
-title : Extraire des bonnes pratiques des charts HELM (SM,PC)
+title : Les charts de référence Helm sont-elles irréprochables ?
 date:   2026-02
 ---
 
