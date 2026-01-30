@@ -1,0 +1,46 @@
+<p-card>
+  <div class="flex flex-col gap-4">
+    <div class="flex flex-col gap-2">
+      <label for="metric-select" class="font-semibold text-lg">Select Metric:</label>
+      <p-select
+        id="metric-select"
+        [ngModel]="selectedMetricKey"
+        [options]="metricOptions"
+        optionLabel="label"
+        optionValue="value"
+        (onChange)="onMetricSelect($event)"
+        placeholder="Choose a metric...">
+      </p-select>
+    </div>
+
+    @if (selectedMetricDescription$ | async; as description) {
+      <p class="text-sm text-gray-400 italic">{{ description }}</p>
+    }
+
+    <div class="mt-4">
+      <h3 class="text-md font-semibold mb-2">Distribution</h3>
+      <div class="bg-surface-50 dark:bg-surface-900 rounded-lg p-4" style="height: 600px;">
+        <p-chart 
+          #distributionChart
+          type="bar" 
+          [data]="chartData" 
+          [options]="chartOptions"
+          [style]="{ 'width': '100%', 'height': '100%' }">
+        </p-chart>
+      </div>
+    </div>
+
+    <div class="flex items-center gap-4 mt-2 text-sm">
+      @if (selectedChartName && highlightedBinIndex >= 0) {
+        <div class="flex items-center gap-2">
+          <div class="w-4 h-4 rounded" style="background-color: rgba(239, 68, 68, 0.9);"></div>
+          <span class="text-gray-600 dark:text-gray-300">{{ selectedChartName }} (selected)</span>
+        </div>
+      }
+      <div class="flex items-center gap-2">
+        <div class="w-4 h-4 rounded" style="background-color: rgba(99, 102, 241, 0.6);"></div>
+        <span class="text-gray-600 dark:text-gray-300">Other charts</span>
+      </div>
+    </div>
+  </div>
+</p-card>
