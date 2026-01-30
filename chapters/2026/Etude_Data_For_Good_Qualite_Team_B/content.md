@@ -447,6 +447,8 @@ Ce script définit un ordre d’exécution clair et documenté.
 
 Cette approche permet de rejouer l’intégralité de l’analyse avec une seule commande, de limiter les erreurs humaines liées à l’exécution manuelle et de rendre explicite la dépendance entre les différentes étapes.
 
+Le processus d'exécution de la pipeline est décrit dans le Readme sous le dossier 'codes'.
+
 ### Python : langage central pour l’analyse et le machine learning
 
 Python a été choisi comme langage principal pour sa large adoption dans l’analyse de données et le machine learning, ainsi que pour la richesse de son écosystème. Il permet de traiter à la fois :
