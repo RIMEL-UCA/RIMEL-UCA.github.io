@@ -166,28 +166,34 @@ Les résultats sont ensuite agrégés sous forme de séries temporelles, une par
 ### 1. Présentation des résultats
 #### Question 1 : Des corrélations peuvent-elles être faites entre les caractéristiques des charts et leur irréprochabilité ?
 ##### Résultat 1 : Date de la dernière release
-**INSERER IMAGE**
+![Ratio de mauvaises pratiques par ligne en fonction de la date de la dernière release](assets/images/days_ago.png)
+<p align="center">Ratio de mauvaises pratiques par ligne en fonction de la date de la dernière release</p>
+
 Pour chaque chart, nous avons calculé le ratio de mauvaises pratiques par ligne de configuration, puis l’avons mis en relation avec la date de sa dernière release, exprimée en nombre de jours écoulés depuis cette release. Chaque point du graphique correspond à une chart Helm de référence.
 Les ratios observés s’étendent d’environ 0,001 à 0,04, aussi bien pour des charts récemment mises à jour que pour des charts dont la dernière release remonte à plus de 100 jours.
 Le nuage de points obtenu présente une forte dispersion, sans tendance monotone claire. Les charts récemment mises à jour comme celles dont la dernière release est plus ancienne peuvent présenter des ratios faibles ou élevés de mauvaises pratiques. Aucun lien évident n’apparaît entre l’ancienneté d’une chart et son niveau l'irréprochabilité.
 
 ##### Résultat 2: Origine du projet
-**INSERER IMAGE**
+![ Ratio moyen de mauvaises pratiques par ligne selon l’origine du projet](assets/images/origine.png)
+<p align="center"> Ratio moyen de mauvaises pratiques par ligne selon l’origine du projet</p>
 Les charts ont été regroupées selon l’origine de leur projet : communautaire ou entreprise. Pour chaque groupe, nous avons calculé la moyenne du ratio de mauvaises pratiques par ligne afin de comparer globalement les deux catégories.
 Les charts issues de projets communautaires présentent en moyenne un ratio légèrement plus élevé de mauvaises pratiques par ligne que celles provenant d’entreprises, environ 0,012 contre 0,009. Toutefois, l’écart observé reste modéré et ne permet pas de conclure à une différence marquée entre les deux origines.
 
 ##### Résultat 3 : Taille de la chart
-**INSERER IMAGE**
+![Ratio de mauvaises pratiques par ligne en fonction du nombre total de lignes de configuration](assets/images/lignes_totales.png)
+<p align="center">Ratio de mauvaises pratiques par ligne en fonction du nombre total de lignes de configuration</p>
 Ce graphique met en relation le ratio de mauvaises pratiques par ligne avec la taille de la chart, mesurée par le nombre total de lignes de fichiers YAML. Les points sont distingués selon l’origine du projet (communautaire ou entreprise). 
 Les charts analysées présentent des tailles très variables, allant de quelques centaines à plus de 70 000 lignes de configuration. Les ratios de mauvaises pratiques par ligne observés restent compris majoritairement entre 0,001 et 0,025, quelle que soit la taille de la chart.
 Aucune corrélation nette n’apparaît entre la taille d’une chart et son niveau d’irréprochabilité. Les charts de petite comme de grande taille présentent des ratios très variables. La taille du projet ne semble donc pas constituer un indicateur pertinent de la qualité des charts Helm.
 
 ##### Résultat 4 : Nombre d'étoiles sur Artifact Hub
-**INSERER IMAGE**
+![Ratio de mauvaises pratiques par ligne en fonction du nombre d’étoiles sur ArtifactHub](assets/images/etoiles.png)
+<p align="center">Ratio de mauvaises pratiques par ligne en fonction du nombre d’étoiles sur ArtifactHub</p>
 Pour chaque chart, le ratio de mauvaises pratiques par ligne a été comparé au nombre d’étoiles attribuées sur ArtifactHub. Une distinction par origine du projet est également représentée afin d’identifier d’éventuelles différences. Le nombre d’étoiles des charts varie de 0 à plus de 700 étoiles. Le graphique montre une dispersion importante des valeurs, indépendamment du nombre d’étoiles. Les charts les plus populaires ne présentent pas systématiquement moins de mauvaises pratiques que celles disposant de peu d’étoiles, suggérant que le nombre d’étoile n’est pas un indicateur fiable d’irréprochabilité pour les résultats trouvés.
 
 ##### Résultat 5: Répartition des mauvaises pratiques par chart
-**INSERER IMAGE**
+![Répartition des mauvaises pratiques par chart](assets/images/repartition.jpg)
+<p align="center">Répartition des mauvaises pratiques par chart</p>
 Le graphique présente, pour chacune des 62 charts Helm de référence, la répartition des mauvaises pratiques détectées, exprimée en ratio de mauvaises pratiques par ligne de configuration. Chaque barre correspond à une chart et est décomposée en segments colorés, chaque segment représentant une mauvaise pratique spécifique.
 
 
@@ -208,7 +214,8 @@ Ces trois pratiques représentent la majorité des mauvaises pratiques détecté
 Ainsi, nos résultats ne nous ont pas permis d’établir de corrélation significative entre les caractéristiques étudiées des charts Helm de référence (date de release, origine du projet, taille, nombre d’étoiles) et leur irréprochabilité. Afin de vérifier que cette absence de corrélation ne résulte pas d’un effet de valeurs extrêmes, plusieurs analyses complémentaires ont été menées, notamment en excluant les charts présentant des valeurs atypiques (fortes tailles, très grand nombre d’étoiles ou ratios extrêmes de mauvaises pratiques). Ces traitements n’ont pas modifié les tendances observées, et les graphiques obtenus conservent une dispersion similaire sans faire émerger de relation plus marquée.
 
 #### Question 2 : Les charts Helm de référence présentent-elles moins de mauvaises pratiques au fil du temps ?
-**INSERER IMAGE**
+![Évolution du ratio de mauvaises pratiques par ligne](assets/images/per_line_over_time.png)
+<p align="center">Évolution du ratio de mauvaises pratiques par ligne</p>
 Le graphique représente, pour chaque chart Helm de référence, l’évolution du ratio de mauvaises pratiques par ligne entre le premier et le dernier commit apportant des modifications à la chart. Chaque point correspond à une chart, identifiée sur l’axe des abscisses. L’axe des ordonnées représente le ratio d’évolution, calculé comme la différence entre le ratio mesuré au dernier commit et celui mesuré au premier commit. Une valeur négative indique une diminution du ratio de mauvaises pratiques par ligne, tandis qu’une valeur positive indique une augmentation.
 
 La majorité des points se situe en dessous de zéro, traduisant une diminution du ratio de mauvaises pratiques par ligne pour la plupart des charts. Sur les 62 charts analysées, 82,25 % présentent une diminution de ce ratio, tandis que 16,13 % montrent une augmentation. Les variations observées sont généralement proches de zéro, indiquant des évolutions modérées dans la majorité des cas.
@@ -222,7 +229,8 @@ Nos données nous présentent donc une évolution majoritairement à la baisse d
 
 La première chart que nous avons décidé d’analyser est celle avec la plus forte augmentation de proportions de mauvaises pratiques, la chart open-feature-operator, avec une augmentation de 455%. La figure ci-dessous correspond au graphique généré par notre script d’analyse.
 
-**INSERER IMAGE**
+![Évolution des mauvaises pratiques de open-feature-operator](assets/images/result_openfeature.png)
+<p align="center">Évolution des mauvaises pratiques de open-feature-operator</p>
 
 Cette chart comporte 3 mauvaises pratiques. La première est l'absence d’un fichier `_helper.tpl` dans la template. La deuxième est la non utilisation des labels standards, dont l’utilisation est recommandée dans toutes les charts Helm, et la dernière est l’utilisation d’objets imbriqués.
 
@@ -234,7 +242,9 @@ Cette chart s’apparente donc plus à un cas particulier mesuré par notre scri
 
 Nous avons ensuite décidé de tourner notre attention vers la deuxième chart avec le plus grand taux d’évolution, la chart kuadrant-operator, qui présente elle une augmentation de 47%.
 
-**INSERER IMAGE**
+
+![Évolution des mauvaises pratiques de kuadrant-operator](assets/images/result_kuadrant_operator.png)
+<p align="center">Évolution des mauvaises pratiques de kuadrant-operator</p>
 
 En termes de mauvaises pratiques mesurées, on en retrouve 2 communes à la chart open-feature-operator : la non utilisation des labels standards ainsi que le manque de fichier `_helper.tpl`. Cette chart comporte aussi une 3e mauvaise pratique : l’utilisation de versions fixes, et non des range de versions, ce qui peut poser un gros problème notamment lorsque l’on n’utilise pas que cette chart.
 
@@ -249,7 +259,8 @@ En explorant plus précisément les commits aux dates des fluctuations, on remar
 
 La dernière chart que nous avons analysé est la chart argo-workflow, avec une diminution de 98% de la proportion de mauvaises pratiques au cours de son développement, faisant d’elle la chart avec la meilleure évolution.
 
-**INSERER IMAGE**
+![Évolution des mauvaises pratiques de argo-workflow](assets/images/result_argo_workflow.png)
+<p align="center">Évolution des mauvaises pratiques de argo-workflow</p>
 
 Au cours de son développement, la chart argo-workflow n’a présenté que 2 mauvaises pratiques : l’utilisation d’objets imbriqués, et la non-utilisation de labels standards.
 
@@ -283,8 +294,11 @@ Compte tenu de la dispersion observée au sein de chaque groupe et de l’absenc
 
 ## Conclusion
 L’objectif de cette étude était d’évaluer l’irréprochabilité des charts Helm dites de référence publiées sur Artifact Hub, en analysant la présence de mauvaises pratiques détectables automatiquement, ainsi que leur évolution dans le temps. Pour cela, nous avons formulé deux sous-questions de recherche et mené une analyse empirique sur un ensemble de 62 charts Helm associées à des projets CNCF.
+
 Concernant la première sous-question — des corrélations peuvent-elles être établies entre les caractéristiques des charts et leur irréprochabilité ? — les résultats obtenus ne mettent en évidence aucune corrélation significative entre le niveau d’irréprochabilité d’une chart et les caractéristiques étudiées. Ni le nombre d’étoiles sur Artifact Hub, ni la taille de la chart, ni l’ancienneté de la dernière release, ni l’origine du projet (communautaire ou entreprise) ne semblent constituer des indicateurs fiables de la présence ou de l’absence de mauvaises pratiques.
+
 Les ratios de mauvaises pratiques par ligne observés varient entre 0 et environ 0,035, soit en moyenne une mauvaise pratique toutes les 28 lignes de configuration, avec une moyenne de 3,29 mauvaises pratiques par chart. Il apparaît également que quasiment aucune chart de référence n’est totalement exempte de mauvaises pratiques. Néanmoins, l’analyse fine montre que la majorité des pratiques détectées relèvent de problèmes de lisibilité, de structuration ou de maintenabilité, et non de failles critiques affectant directement la sécurité ou les performances.
+
 La seconde sous-question — les charts Helm de référence présentent-elles moins de mauvaises pratiques au fil du temps ? — met en évidence une tendance plus nette. Dans une large majorité des cas, les charts étudiées voient leur ratio de mauvaises pratiques par ligne diminuer au cours du temps, alors même que leur volume de configuration augmente. Cette observation suggère que, malgré l’ajout progressif de nouvelles fonctionnalités et de nouveaux templates, les mainteneurs tendent globalement à améliorer la qualité structurelle de leurs charts. Les analyses détaillées de certains cas extrêmes montrent toutefois que ces évolutions peuvent être fortement influencées par des facteurs techniques, tels que de fortes variations du nombre de lignes ou des restructurations de fichiers, plutôt que par la correction explicite de mauvaises pratiques.
 
 Au regard de ces résultats, aucune de nos hypothèses initiales n’a pu être clairement validée ni infirmée. Les indicateurs étudiés ne permettent pas de prédire l’irréprochabilité d’une chart à un instant donné, tandis que l’évolution temporelle montre une amélioration globale, mais hétérogène, de la qualité des charts de référence.
