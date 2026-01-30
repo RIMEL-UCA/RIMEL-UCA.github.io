@@ -173,26 +173,156 @@ Le défi dans cette sous-question va donc de capter les catégories auxquelles a
 Nous avons choisi d'utiliser Sonarqube pour évaluer certaines métriques de la qualité de code car il n'est pas présent par défaut sur les dépôts de code de Data For Good France ce qui réduit les biais potentiels et que c'est un standard de l'industrie pour évaluer la santé d'un dépôt.
 
 ### Sous question 1 : 
-     Pour notre premiere sous question nous avons besoin de mesuré la qualité d'un dépot de code. pour cela nous avons eu l'idée d'utilisé Sonarqube car c'est le standard du marché en terme d'analyse statique de code. nous avions aussi réfléchi a des alternatives tel que CodeClimate pour une alternative du même style mais moins complexe ce qui nous satifesais pas  pareil pour un linter spécifique par langague qui été compliqué a mettre en place par rapport a juste un serveur SonarQube. pour automatisé ça on va crée une pipeline pour va lancé le serveur sonar sur un docker puis on va cloner chaqu'un des repos qu'on a prevu d'analysé, run une annalyse sonar puis grace a l'api on va récupéré les mesures de docker. on a ensuite décidé d'un score avec ces mesure pour normalisé pour tout les repos et avoir un valeur de mesure concrete. pour faire ce score nous avons chosi de nous basé sur 5 critères: 
+
+Pour notre premiere sous question nous avons besoin de mesuré la qualité d'un dépot de code. pour cela nous avons eu l'idée d'utilisé Sonarqube car c'est le standard du marché en terme d'analyse statique de code. nous avions aussi réfléchi a des alternatives tel que CodeClimate pour une alternative du même style mais moins complexe ce qui nous satifesais pas  pareil pour un linter spécifique par langague qui été compliqué a mettre en place par rapport a juste un serveur SonarQube. pour automatisé ça on va crée une pipeline pour va lancé le serveur sonar sur un docker puis on va cloner chaqu'un des repos qu'on a prevu d'analysé, run une annalyse sonar puis grace a l'api on va récupéré les mesures de docker. on a ensuite décidé d'un score avec ces mesure pour normalisé pour tout les repos et avoir un valeur de mesure concrete. pour faire ce score nous avons chosi de nous basé sur 5 critères: 
      - la fiabilité 
      - la maintanbilité 
      - la sécurité 
      - la duplication de code 
      - la complexité cognitive moyenne
 
-     nous avons choisi ces critères 
+#### Automatisation de l’analyse
 
-Vous **explicitez les expérimentations que vous allez mener** pour vérifier si vos hypothèses sont vraies ou fausses. Il y a forcément des choix, des limites, explicitez-les.
+Afin d’automatiser le processus, nous avons décidé de mettre en place une **pipeline** qui :
 
-     :bulb: Structurez cette partie à votre convenance : 
-     Par exemples : 
-        Pour Hypothèse 1 => 
-            Nous ferons les Expériences suivantes pour la démontrer
-        Pour Hypothèse 2 => Expériences 
-        
-        ou Vous présentez l'ensemble des hypothèses puis vous expliquer comment les expériences prévues permettront de démontrer vos hypothèses.
+1. Lance un serveur SonarQube via Docker  
+2. Clone chacun des dépôts que nous avons prévu d’analyser  
+3. Exécute une analyse SonarQube sur chaque dépôt  
+4. Récupère les métriques produites grâce à l’API de SonarQube  
 
-### Sous-question 3
+À partir de ces métriques, nous avons défini un **score normalisé**, commun à tous les dépôts, afin d’obtenir une valeur de mesure concrète et comparable.
+
+
+
+#### Critères retenus
+
+Le score global est basé sur **cinq critères** :
+
+- la fiabilité  
+- la maintenabilité  
+- la sécurité  
+- la duplication de code  
+- la complexité cognitive moyenne  
+
+Ces critères nous ont semblé constituer une base pertinente pour évaluer la qualité globale d’un code.
+
+---
+
+#### Calcul des scores individuels
+
+##### Fiabilité, maintenabilité et sécurité
+
+Pour ces trois critères, nous utilisons les **notes SonarQube allant de A à E**.  
+Elles sont transformées en valeurs numériques de **5 à 1**, puis multipliées par 20 afin d’obtenir une note comprise entre **20 et 100**.
+
+---
+
+##### Duplication de code
+
+SonarQube fournit directement un pourcentage de duplication de code.  
+Nous avons choisi de calculer le score de la manière suivante :
+
+```
+max(0, 100 - 5 × valeur_de_duplication)
+```
+
+Le facteur multiplicatif `5` permet d’accentuer l’impact du code dupliqué.  
+En effet, un taux de duplication de 20 % est déjà très élevé, mais son influence était trop faible dans la notation par défaut.
+
+---
+
+#### Complexité cognitive moyenne
+
+La complexité cognitive mesure à quel point un fichier est difficile à comprendre pour un nouveau développeur.
+
+Pour ce critère, nous :
+1. Récupérons la complexité cognitive totale  
+2. La divisons par le nombre total de fichiers afin d’obtenir une moyenne par fichier  
+
+Le score est ensuite calculé comme suit :
+
+```
+0.25 × fiabilité
+
+0.20 × maintenabilité
+
+0.15 × sécurité
+
+0.20 × duplication de code
+
+0.20 × complexité cognitive moyenne
+ ```
+
+Ce calcul produit un **score final sur 100**, offrant une bonne représentativité de la qualité globale d’un dépôt.
+
+---
+
+### Exploitation et reproductibilité
+
+Ce score nous permettra d’analyser la **répartition de la qualité de code** des dépôts *Data For Good* et ainsi de répondre à notre sous-question.
+
+Afin de garantir la **reproductibilité des résultats**, nous stockons le **SHA du commit analysé** et ajoutons une option `-R` dans la pipeline permettant de rejouer les analyses à l’identique.
+
+### Sous question 2 :
+
+#### Objectif et hypothèse
+
+Déterminer si, et à partir de quel volume de contributeurs, la qualité d’un dépôt s’écarte notablement de la médiane de l’échantillon.
+
+#### Protocole expérimental
+
+1. Mesure du nombre de contributeurs
+
+     - Pour chaque dépôt retenu, nous comptons les contributeurs distincts à partir de l'historique Git/GitHub (voir `2-nombre-contributeurs/data/contributors.csv`).
+     - Choix méthodologique : comptage « brut » d’identités uniques (pas de pondération par nombre de commits).
+
+2. Construction de groupes comparables
+
+     - Regroupement des dépôts en intervalles de taille d'équipe pour comparer des ensembles homogènes :
+
+       - **Groupe 1 :** 4–9 contributeurs
+       - **Groupe 2 :** 10–15 contributeurs
+       - **Groupe 3 :** 21–36 contributeurs
+
+3. Mesure de la qualité et indicateurs d’écart
+
+     - Utilisation du score de qualité normalisé (sous-question 1, basé sur SonarQube).
+     - Indicateurs calculés :
+       - médiane globale des scor  es (tous dépôts) — référence : **74.24**
+       - médiane par groupe (comparée à la médiane globale)
+       - dispersion par groupe (boxplot — IQR et outliers)
+
+     - Interprétation attendue si l'hypothèse est vraie : augmentation de la médiane de groupe et boxplots plus resserrés quand l’effectif augmente.
+
+#### Résultats (par groupe)
+
+Les figures (qualite_groupe_1/2/3) montrent les scores dépôt par dépôt, avec la médiane globale en référence.
+
+- **Groupe 1 (4–9 contributeurs)** : médiane = **78.97** (+4.73 vs médiane globale). Majorité des dépôts au-dessus de la médiane, mais présence d'un dépôt faible (~52) indiquant une dispersion.
+
+- **Groupe 2 (10–15 contributeurs)** : médiane = **69.36** (−4.88 vs médiane globale). Scores regroupés autour de ~67–74, un dépôt isolé faible (~61).
+
+- **Groupe 3 (21–36 contributeurs)** : médiane = **75.16** (+0.92 vs médiane globale). Scores proches de la médiane globale, dispersion modérée, un outlier faible (~57).
+
+#### Distribution et validation de l'hypothèse
+
+- Le boxplot (`qualite_boxplot_groupes`) montre qu'il n'y a pas de progression monotone de la médiane avec le nombre de contributeurs : le groupe 10–15 a une médiane plus basse que le groupe 4–9.
+- On observe une légère tendance au recentrage pour les très grands projets (21–36), mais la présence d'outliers indique que le seul nombre de contributeurs n'explique pas entièrement la qualité.
+
+#### Conclusion (sous-question 2)
+
+Sur cet échantillon, il n'existe pas de seuil unique au-delà duquel la qualité augmente systématiquement avec le nombre de contributeurs. Les dépôts avec 10–15 contributeurs présentent l'écart négatif le plus marqué, tandis que les projets 21–36 tendent à se rapprocher de la médiane globale.
+
+#### Limites spécifiques
+
+- Effectifs par groupe modestes : interprétations exploratoires, sensibles aux outliers.
+- Découpage en intervalles : bornes choisies pour l'équilibre des groupes (16–20 non exploité).
+- Corrélation ≠ causalité : d'autres facteurs (maturité, langage, gouvernance) peuvent influer sur la qualité.
+
+
+
+
+## Sous-question 3
 
 Pour classifier les différents messages de commits, nous avons commencé par utiliser des patterns simples avec un script reproductible pour avoir une première idée de la répartition et des tendances :
 
