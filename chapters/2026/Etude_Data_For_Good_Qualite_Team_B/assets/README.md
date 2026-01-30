@@ -87,36 +87,54 @@ La pipeline couvre les étapes suivantes :
 
 ### Prérequis
 
-* Docker
-* Docker Compose
+- Git
+- Docker
 
 ### Exécution
 
-Depuis la **racine du dépôt**, lancer simplement :
+Depuis la racine du dépôt, lancer :
 
 ```bash
 ./run_pipeline.sh
 ```
 
-Le script orchestre automatiquement l’ensemble de la chaîne de traitement. Certaines étapes (notamment la collecte des données brutes GitHub) ne sont exécutées que si les fichiers nécessaires ne sont pas déjà présents, afin d’éviter des calculs inutiles.
+Options utiles :
+- `./run_pipeline.sh --replay` : réutilise les identifiants de commits enregistrés dans `repos_url.csv` (mode replay).
+
+Remarque sur la reproductibilité : les identifiants de commit (SHA) produits par un run sont sauvegardés dans `repos_url.csv`. En lançant `./run_pipeline.sh --replay` le pipeline réanalyse chaque dépôt au SHA enregistré (point de référence : 30 janvier 2026) ; les graphiques doivent être identiques à ceux du run de référence. En revanche, lancer le pipeline sans `--replay` mettra à jour les SHA dans `repos_url.csv` avec les HEAD actuels, et les résultats correspondront à la date d’exécution.
+
+Le script construit et utilise une image `analysis` via `docker-compose`. La sortie console est volontairement minimaliste (messages Docker et warnings masqués) pour rester lisible.
+
+### Exécution ciblée / débogage
+
+Pour exécuter une étape seule (par ex. génération de graphes) :
+
+```bash
+docker-compose run --rm analysis python 1-qualite/generate-graphs.py
+```
+
+Si vous avez besoin des logs complets (création/exécution des conteneurs), exécutez manuellement la commande `docker-compose` ou lancez les scripts Python directement dans le conteneur ou en local.
+
+Sur Windows (Git Bash), le script gère la conversion de chemins (`MSYS_NO_PATHCONV`) pour éviter les erreurs de montage.
 
 ---
 
-## Consulter les résultats
+## Résultats produits
 
-À l’issue de l’exécution de la pipeline, les résultats sont disponibles sous forme de fichiers CSV et de graphiques :
+Les fichiers produits par la pipeline se trouvent aux emplacements suivants :
 
-* **Nombre de contributeurs par dépôt**
-  `2-nombre-contributeurs/data/contributors.csv`
+- `1-qualite/outputs/summary.csv` — synthèse SonarQube par dépôt
+- `1-qualite/outputs/reports/*.csv` — rapports SonarQube individuels
+- `1-qualite/outputs/*.png` — graphiques qualité (question 1)
+- `2-nombre-contributeurs/data/contributors.csv` — nombre de contributeurs par dépôt
+- `2-nombre-contributeurs/repos_groups.csv` — groupement des dépôts par taille d’équipe
+- `2-nombre-contributeurs/graphs/*.png` — graphiques qualité par groupe (question 2)
+- `3-activite-contributeurs/data/commits_types.csv` — répartition des types de commits (feat, fix, ...)
+- `3-activite-contributeurs/outputs/graphs/*.png` — graphiques d’activité (question 3)
+- `3-activite-contributeurs/data/commits_unclassified.json` — commits non étiquetés initialement
+- `3-activite-contributeurs/models/commit_classifier.joblib` — modèle ML (si l’étape ML a été lancée)
 
-* **Répartition des types de commits**
-  `3-activite-contributeurs/data/commits_types.csv`
-
-Les graphiques produits permettent notamment :
-
-* d’analyser le lien entre le nombre de contributeurs et la proportion de commits correctifs
-* d’étudier le ratio entre refactorisation et ajout de fonctionnalités en fonction de la taille des équipes
-* de comparer l’activité des projets selon différents profils de contribution
+Tous les graphiques et CSV sont écrits localement dans les dossiers ci-dessus après exécution complète de la pipeline.
 
 ---
 
