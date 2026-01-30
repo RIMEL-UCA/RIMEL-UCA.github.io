@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Hell ou Helm : étude sur la complexité structurelle, cognitive et syntaxique des charts Helm."
-date: 2026-01-30 
+date: 2026-01
 ---
 # Hell ou Helm : étude sur la complexité structurelle, cognitive et syntaxique des charts Helm.
 
