@@ -1,0 +1,73 @@
+{
+  "embeddings": {
+    "word_embeddings": [],
+    "contextual_embeddings": []
+  },
+  "preprocessing": {
+    "text_cleaning": [],
+    "tokenization_method": [],
+    "lowercase": null,
+    "augmentation_techniques": []
+  },
+  "transformer_models": {
+    "base_models": [
+      "transformerencoder"
+    ],
+    "pretrained_checkpoints": [],
+    "fine_tuning_strategy": []
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "binarycrossentropy"
+    ],
+    "auxiliary_losses": []
+  },
+  "training_strategy": {
+    "optimizer": [
+      "adam"
+    ],
+    "learning_rate": 0.001,
+    "learning_rate_schedule": [
+      "custom-schedule"
+    ],
+    "batch_size": null,
+    "epochs": 8,
+    "regularization": [],
+    "cross_validation": [
+      "5-fold"
+    ]
+  },
+  "model_architecture": {
+    "pooling_strategy": [
+      "gru-return-sequences-false"
+    ],
+    "additional_layers": [
+      "embedding",
+      "dense",
+      "gru",
+      "transformerencoder"
+    ],
+    "dropout_rate": null
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "stacking-logisticregression",
+      "stacking-mlp"
+    ],
+    "prediction_averaging": [
+      "lightgbm-dart-0.799-+-nn-0.792"
+    ]
+  },
+  "frameworks": {
+    "deep_learning_framework": [
+      "tensorflow"
+    ],
+    "libraries": [
+      "lightgbm",
+      "rapids-cudf",
+      "sklearn",
+      "pandas",
+      "numpy"
+    ]
+  }
+}

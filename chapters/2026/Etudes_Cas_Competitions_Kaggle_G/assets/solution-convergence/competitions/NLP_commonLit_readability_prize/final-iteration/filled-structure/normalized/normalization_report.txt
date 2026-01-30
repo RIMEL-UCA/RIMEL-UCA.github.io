@@ -1,0 +1,45 @@
+NORMALIZATION REPORT
+============================================================
+
+Total files processed: 10
+Successful: 10
+Errors: 0
+Files with extra fields: 8
+
+MODIFICATIONS SUMMARY
+============================================================
+
+  missing_fields_added....................     80
+  null_to_false...........................     64
+  string_to_float.........................      6
+  string_to_int...........................     32
+
+============================================================
+
+ERRORS AND WARNINGS
+============================================================
+
+[WARNING] top106.json
+  Extra fields: frameworks.pytorch, frameworks.pytorch-lightning, frameworks.tensorflow, frameworks.transformers
+
+[WARNING] top114.json
+  Extra fields: frameworks.pytorch, frameworks.pytorch-lightning, frameworks.tensorflow, frameworks.transformers
+
+[WARNING] top128.json
+  Extra fields: frameworks.pytorch, frameworks.pytorch-lightning, frameworks.tensorflow, frameworks.transformers
+
+[WARNING] top136.json
+  Extra fields: frameworks.pytorch, frameworks.pytorch-lightning, frameworks.tensorflow, frameworks.transformers
+
+[WARNING] top207.json
+  Extra fields: frameworks.pytorch, frameworks.pytorch-lightning, frameworks.tensorflow, frameworks.transformers
+
+[WARNING] top3.json
+  Extra fields: frameworks.pytorch, frameworks.pytorch-lightning, frameworks.tensorflow, frameworks.transformers
+
+[WARNING] top4.json
+  Extra fields: frameworks.pytorch, frameworks.pytorch-lightning, frameworks.tensorflow, frameworks.transformers
+
+[WARNING] top5.json
+  Extra fields: frameworks.pytorch, frameworks.pytorch-lightning, frameworks.tensorflow, frameworks.transformers
+

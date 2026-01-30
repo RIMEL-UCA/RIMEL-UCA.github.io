@@ -1,0 +1,31 @@
+{
+  "comment": "Complètement différente (score 0.00)",
+  "models": {
+    "transformers": {
+      "xlnet": false,
+      "bert": false,
+      "gpt": true,
+      "roberta": true
+    },
+    "embeddings": ["elmo"],
+    "model_name": "GPT-3 fine-tuned"
+  },
+  "preprocessing": {
+    "techniques": ["tokenization", "bpe-encoding"],
+    "custom_cleaning": false,
+    "normalization": "nfkc"
+  },
+  "training": {
+    "epochs": 5,
+    "batch_size": 128,
+    "learning_rate": 0.00001,
+    "optimizer": "sgd",
+    "early_stopping": false,
+    "cross_validation": false
+  },
+  "postprocessing": {
+    "ensemble_method": "voting",
+    "calibration": false,
+    "threshold_tuning": true
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "embeddings": {
+    "sentence_embeddings": [],
+    "contextual_embeddings": []
+  },
+  "preprocessing": {
+    "external_data_sources": [],
+    "tokenization_method": [
+      "transformer-tokenizer"
+    ],
+    "augmentation_techniques": []
+  },
+  "transformer_models": {
+    "base_models": [
+      "roberta-large"
+    ],
+    "mlm_pretraining": true,
+    "fine_tuning_strategy": [
+      "full-model-fine-tuning",
+      "mlm-pretraining"
+    ]
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "mse"
+    ]
+  },
+  "training_strategy": {
+    "optimizer": [
+      "adamw"
+    ],
+    "learning_rate": 3e-05,
+    "learning_rate_schedule": [],
+    "batch_size": 16,
+    "epochs": 4,
+    "weight_decay": null,
+    "pseudo_labeling": false,
+    "seed_averaging": false,
+    "regularization": [],
+    "cross_validation": [
+      "5-fold"
+    ]
+  },
+  "model_architecture": {
+    "pooling_strategy": [
+      "cls-token"
+    ],
+    "layer_reinitialize": false
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "stacking",
+      "simple-average",
+      "roberta-stacking-ensemble"
+    ],
+    "stacking_models": []
+  },
+  "frameworks": {
+    "deep_learning_framework": [
+      "pytorch"
+    ],
+    "libraries": [
+      "transformers",
+      "sklearn"
+    ]
+  }
+}

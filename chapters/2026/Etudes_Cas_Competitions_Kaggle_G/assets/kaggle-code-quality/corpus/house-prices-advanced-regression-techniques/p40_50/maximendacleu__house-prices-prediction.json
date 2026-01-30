@@ -1,0 +1,22 @@
+{
+  "competition": "house-prices-advanced-regression-techniques",
+  "stratum": "p40_50",
+  "ref": "maximendacleu/house-prices-prediction",
+  "local_main_file": "corpus\\house-prices-advanced-regression-techniques\\notebooks\\p40_50\\maximendacleu__house-prices-prediction\\house-prices-prediction.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 20,
+    "B_modularite": 10,
+    "C_reproductibilite": 15,
+    "D_lisibilite": 20,
+    "E_hygiene": 15
+  },
+  "score_total_100": 80,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline exemplaire avec sections markdown numérotées: 1. Setup → 2. EDA → 3. Preprocessing → 4. Modeling → 5. Submission. Excellent storytelling.",
+    "B_modularite": "Code linéaire mais bien organisé en cellules thématiques. Pas de fonctions réutilisables explicites.",
+    "C_reproductibilite": "random_state=42 dans train_test_split et GradientBoostingRegressor, log1p transform documenté.",
+    "D_lisibilite": "Excellent markdown pédagogique avec interprétations ('Interpretation:', 'Result:'). Explications de chaque étape. Visualisations annotées.",
+    "E_hygiene": "fillna(median) pour numériques, fillna('Missing') pour catégoriels, log transform target, get_dummies avec concat train+test."
+  },
+  "summary": "Notebook pédagogique exemplaire avec excellent storytelling markdown. Pipeline complet et bien documenté (EDA→Preprocess→Model→Submit). Chaque étape expliquée avec interprétations. Code linéaire mais très lisible. Approche classique GradientBoosting bien exécutée. Idéal pour apprentissage."
+}

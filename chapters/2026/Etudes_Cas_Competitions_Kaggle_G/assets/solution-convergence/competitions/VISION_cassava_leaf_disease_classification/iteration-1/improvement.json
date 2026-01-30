@@ -1,0 +1,67 @@
+{
+  "fields_to_add": [
+    {
+      "field_path": "preprocessing.image_size",
+      "type": "list",
+      "rationale": "Image size is crucial in computer vision competitions and varies across solutions (224x224, 384x384, 448x448, 512x512, 456x456). This field replaces 'embeddings.word_embeddings' which is specific to NLP tasks.",
+      "sources": [
+        "solutions/top1.txt: image size of (512,512)... Image size of (384,384)... image size of 224x224",
+        "solutions/top3.txt: img_size = 384 x 384... img_size = 448 x 448",
+        "solutions/top5.txt: vit-b16 + img_size = 384... efn-b4 + img_size = 512",
+        "solutions/top375.txt: EfficientNet-B5 on image size 456 by 456... image size 512 by 512... image size 224 by 224",
+        "solutions/top576.txt: Resolution : 512x512"
+      ]
+    },
+    {
+      "field_path": "preprocessing.normalization",
+      "type": "object",
+      "rationale": "Normalization parameters (mean and std values) are consistently used across solutions for preprocessing images. This field replaces 'embeddings.contextual_embeddings' which is specific to NLP tasks.",
+      "sources": [
+        "solutions/top1.txt: Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])",
+        "solutions/top3.txt: Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5])",
+        "solutions/top1.txt: Adapting the normalization layer with the global mean and deviation of the 2020 Cassava dataset",
+        "solutions/top1284.txt: albumentations.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])"
+      ]
+    },
+    {
+      "field_path": "training_strategy.external_data",
+      "type": "list",
+      "rationale": "Multiple solutions used external datasets (2019 competition data, Mendeley Leaves) to augment training. This field replaces 'preprocessing.text_cleaning' which is specific to NLP tasks.",
+      "sources": [
+        "solutions/top3.txt: Using 2020 & 2019 data",
+        "solutions/top483.txt: We used 2019 data with removed duplicates for training... We also used Mendeley Leaves for training",
+        "solutions/top576.txt: Data : 2019 + 2020 datasets",
+        "solutions/top10.txt: 2019 + 2020 data"
+      ]
+    },
+    {
+      "field_path": "training_strategy.mixed_precision",
+      "type": "boolean",
+      "rationale": "Mixed precision training (FP16, Apex) was used by multiple solutions for faster training and memory efficiency. This field replaces 'preprocessing.tokenization_method' which is specific to NLP tasks.",
+      "sources": [
+        "solutions/top483.txt: Mixed precision training with gradient accumulation (iters_to_accumulate=8) ==> big boost on CV",
+        "solutions/top483.txt: apex = True... apexoptlvl = 'O2'... from apex import amp",
+        "solutions/top10.txt: Adam, cosine annealing with a warmup, 16 batch size, gradient accumulation, fp16"
+      ]
+    },
+    {
+      "field_path": "training_strategy.progressive_resizing",
+      "type": "boolean",
+      "rationale": "Progressive image resizing technique was used to gradually increase image size during training. This field replaces 'preprocessing.lowercase' which is specific to NLP tasks.",
+      "sources": [
+        "solutions/top483.txt: Progressive image size, start_size=256, final_size=512, size_step=32. Size starts increasing after the warm up stage finishes"
+      ]
+    },
+    {
+      "field_path": "training_strategy.noise_handling",
+      "type": "list",
+      "rationale": "Handling noisy labels was a critical aspect mentioned across solutions with techniques like pseudo-labeling, knowledge distillation, and label cleaning. This field replaces 'loss_functions.auxiliary_losses' which had 0% completion.",
+      "sources": [
+        "solutions/top483.txt: We did a really soft knowledge distillation... We explored the forum and found out that there are at least 500 diseased images which are labeled as healthy",
+        "solutions/top10.txt: Remove only ~2-3% of data (noise) using OOF confident predictions... Use part of OUSM loss",
+        "solutions/top576.txt: the pseudo label boosts the CV score +0.007",
+        "solutions/top7.txt: knowledge distillation is carried out, and the student model results and the teacher model results are weighted by a ratio of 4:6"
+      ]
+    }
+  ]
+}

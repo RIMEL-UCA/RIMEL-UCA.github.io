@@ -1,0 +1,36 @@
+So, after the latest updates, I moved up a few places on the LB and slipped into the bronze medals. Within two days I've gone from zero medals to my second bronze medal. 😃 On this competition, I worked on my own, while on the Rainforest Connection Species Audio Detection competition](https://www.kaggle.com/c/rfcx-species-audio-detection) I had the pleasure to work with a great team. So, I thought I'd write up some of the more interesting things I tried on this competition.
+
+My best selected solution was a weighted power averaging ensemble (i.e. squaring the predictions of each model and then averaging, followed by picking the class with the highest score) of
+
+EfficientNet-B5 (i.e. not noisy student, somehow my noisy student version seemed worse on CV - I failed to figure out why) on image size 456 by 456 with TTA
+EfficientNet-B4-noisy student on image size 512 by 512 with TTA
+ResNeXt-50 (32x4d) with image size 512 by 512
+Vision Transformer (vit_base_patch16_224) image size 224 by 224
+I did two different test-time augmentation approaches for the two EfficientNets and no TTA for the others (yes, yes, I clearly have an EfficientNet bias).
+
+Things that worked:
+
+label smoothing cross-entropy with epsilon of 0.1 to 0.2 or so as a loss function (not surprising, given that it was originally proposed for noisy labels)
+focal loss (not in my selected solutions, but in CV it was very similar to label smoothing cross-entropy)
+Ensembling (not surprise there, either)
+Power averaging was behind my best selected submission. This looked somewhat promising on CV and not that bad on the public LB (while I selected a weighted arithmetic mean based on LB, which did worse - in part, I also just wanted to select a second submission that was not too similar to the other one).
+I got some even better private LB numbers with rank averaging (in silver territory, but I did not select it), but admittedly my very best private LB score was a simple weighted arithmetic mean of two of the models. See below for what did not work so well (i.e. selection the best submission)…
+Why did I think power and rank averaging would work? I kind of figured that accuracy is in some sense a rank based metric (you only care about the first rank of course) and those methods had just been helpful in the Rainforest Connection Species Audio Detection competition that used mean average precision (a very rank based metric).
+Using diverse models in my ensemble, even if it does hurt on the public LB (I hedged my bets a bit and tried to bet on a half-way house that probably relied on the public LB to much, which cost me a bit in ranks).
+The idea was to have diverse image sizes as inputs, somewhat diverse models and diverse augmentations during training (and TTA).
+Nevertheless, it seems the two EfficientNets were different enough that having both helped. I probably would not have added the EfficientNet-B4-NS, if it had not been for the public LB score of this notebook. That notebook also made me stop trying other ResNet-types and just go with ResNeXt-50 (32x4d) (who knows whether that was the right decision).
+My choice of architectures was perhaps a bit limited I mostly picked these architectures based on what I could get as pre-trained models via timm and perhaps payed too much attention to what others did.
+Gradient accumulation to use bigger batch sizes (72) with EfficientNet-B5 (necessary when using a GPU on Kaggle or my own 1080-Ti). It appeared to help a tiny bit in CV to use a batch size >32 despite the whole "Friends dont let friends use minibatches larger than 32" thing.
+flat learning rate before cosine annealing learning rate schedule that I learnt about from Abishek Thakur's notebook
+Weight decay - whenever I tried it, it helped.
+fastai + timm as e.g. described in this great notebook by @muellerzr (thanks, again, for that nice starter kit) and PyTorch. You only appreciate how smoothly that works with CPU and GPU when you try to use the TPU with PyTorch, which kind of worked, but was a bit painful.
+Things that did not work for me (mostly my fault, some of these clearly worked out better for others):
+
+Selecting the best submissions - I did 27 submission before the deadline and I selected in terms of the private LB the 17th and 20th best of these.
+I suspect I was not sufficiently disciplined with running everything I tried in the last few days through a proper CV (yes, yes, I know, that's a terrible sin…) and was too influenced by the public LB.
+I wonder whether those that did best that were super disciplined and perhaps even used repeated k-fold?!
+To some extent the ordering of my various submissions may have had a strong element of luck (accuracy is such a low information content metric and I did not manage to) and dropping 97 places is not that bad, but I aspire to do better next time.
+Getting value out of the 2019 competition data, but I probably just invested insufficient time. It just always made my CV worse even after de-duplication, so I gave up.
+Stochastic weight averaging: it kept reliably improving my loss function in CV, but not accuracy (it seemed I got the best accuracy when very slightly overfitting in terms of (label-smoothing) cross-entropy - which I understand is sort of expected). I wonder whether I should nevertheless put a model with SWA in my ensemble.
+Really large models: I initially thought that the biggest EfficientNet I could train with TPU would be best, then I scaled my "ambitions" back to the largest one I could comfortably cross-validate (B5) some experiments for…
+Doing two competitions that ended within 24 hours of each other. Yes, I got two medals, but I am left feeling I would have liked to rather do one of them more deeply and do a better job / contribute more to the one where I teamed up.

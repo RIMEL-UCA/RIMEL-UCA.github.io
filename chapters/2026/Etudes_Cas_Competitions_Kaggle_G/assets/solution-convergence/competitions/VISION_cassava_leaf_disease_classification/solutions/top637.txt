@@ -1,0 +1,35 @@
+Firstly, congratulation to all competitors!
+
+This is my regret for large shake down.
+
+I used 3 type CNN.
+
+SEResNext50 32x_4d public : 0.898 -> private : 0.895
+EfficientNetB4 public : 0.899 -> private : 0.890
+ViT_base_384 public : 0.899 -> private : 0.890
+In final, I weights each model with 1 : 1.2 : 1.2 for ensemble.
+
+Public LB : 0.905
+Private LB : 0.896
+I regret to overfit to public LB…
+
+I thought this competition is my first silver, but result is reflecting my current ability.
+
+And, I think the cause of weak model is below
+
+using cutmix
+don't use tempered loss
+fixed random seed for cv through all model
+I doubt seed ensemble can help me a little, but the bird has flown :(
+
+The ensemble SEResNeXt50_32x4d + SEResNet152d_320
+
+Public LB : 0.900
+Pirvate LB : 0.899
+The ensemble 1SEResNext50 32x_4d + EfficientNetB4 + ViT_base_384 (public:0.895, private:0.891)
+
+Public LB : 0.902
+Pirvate LB : 0.899
+These model can get medal zone private score, but I don't know why bad score ViT is essential for good score. This competition definiely needs for early stopping for not perfect fitting training data?
+
+Please tell me how do you think cutmix , tempered loss, seed and so on and your preventing shake method.

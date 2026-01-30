@@ -1,0 +1,67 @@
+{
+  "augmentation_techniques": {
+    "source": "Top375 solution description",
+    "link": "solutions/top375.txt",
+    "quote": "I did two different test-time augmentation approaches for the two EfficientNets and no TTA for the others"
+  },
+  "base_models": {
+    "source": "Top375 solution description",
+    "link": "solutions/top375.txt",
+    "quote": "EfficientNet-B5 (i.e. not noisy student, somehow my noisy student version seemed worse on CV - I failed to figure out why) on image size 456 by 456 with TTA, EfficientNet-B4-noisy student on image size 512 by 512 with TTA, ResNeXt-50 (32x4d) with image size 512 by 512, Vision Transformer (vit_base_patch16_224) image size 224 by 224"
+  },
+  "pretrained_checkpoints": {
+    "source": "Top375 solution description",
+    "link": "solutions/top375.txt",
+    "quote": "EfficientNet-B4-noisy student on image size 512 by 512 with TTA"
+  },
+  "primary_loss": {
+    "source": "Top375 solution description",
+    "link": "solutions/top375.txt",
+    "quote": "label smoothing cross-entropy with epsilon of 0.1 to 0.2 or so as a loss function (not surprising, given that it was originally proposed for noisy labels)... focal loss (not in my selected solutions, but in CV it was very similar to label smoothing cross-entropy)"
+  },
+  "learning_rate_schedule": {
+    "source": "Top375 solution description",
+    "link": "solutions/top375.txt",
+    "quote": "flat learning rate before cosine annealing learning rate schedule that I learnt about from Abishek Thakur's notebook"
+  },
+  "batch_size": {
+    "source": "Top375 solution description",
+    "link": "solutions/top375.txt",
+    "quote": "Gradient accumulation to use bigger batch sizes (72) with EfficientNet-B5"
+  },
+  "regularization": {
+    "source": "Top375 solution description",
+    "link": "solutions/top375.txt",
+    "quote": "Weight decay - whenever I tried it, it helped... Gradient accumulation to use bigger batch sizes (72) with EfficientNet-B5"
+  },
+  "ensemble_method": {
+    "source": "Top375 solution description",
+    "link": "solutions/top375.txt",
+    "quote": "My best selected solution was a weighted power averaging ensemble (i.e. squaring the predictions of each model and then averaging, followed by picking the class with the highest score)... I got some even better private LB numbers with rank averaging (in silver territory, but I did not select it), but admittedly my very best private LB score was a simple weighted arithmetic mean of two of the models"
+  },
+  "prediction_averaging": {
+    "source": "Top375 solution description",
+    "link": "solutions/top375.txt",
+    "quote": "I did two different test-time augmentation approaches for the two EfficientNets"
+  },
+  "deep_learning_framework": {
+    "source": "Top375 solution description",
+    "link": "solutions/top375.txt",
+    "quote": "fastai + timm as e.g. described in this great notebook by @muellerzr (thanks, again, for that nice starter kit) and PyTorch"
+  },
+  "libraries": {
+    "source": "Top375 solution description",
+    "link": "solutions/top375.txt",
+    "quote": "fastai + timm as e.g. described in this great notebook by @muellerzr (thanks, again, for that nice starter kit) and PyTorch"
+  },
+  "image_size": {
+    "source": "Top375 solution description",
+    "link": "solutions/top375.txt",
+    "quote": "EfficientNet-B5 on image size 456 by 456 with TTA, EfficientNet-B4-noisy student on image size 512 by 512 with TTA, ResNeXt-50 (32x4d) with image size 512 by 512, Vision Transformer (vit_base_patch16_224) image size 224 by 224"
+  },
+  "optimizer": {
+    "source": "Top375 solution description - fastai framework default",
+    "link": "solutions/top375.txt",
+    "quote": "fastai + timm as e.g. described in this great notebook by @muellerzr (thanks, again, for that nice starter kit) and PyTorch"
+  }
+}

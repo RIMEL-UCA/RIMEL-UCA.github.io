@@ -1,0 +1,115 @@
+{
+  "embeddings": {
+    "contextual_embeddings": {}
+  },
+  "preprocessing": {
+    "external_data_sources": {},
+    "tokenization_method": {
+      "transformer-tokenizer": {
+        "source": "Kaggle Discussion + Notebook",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "Used transformer tokenizers for RoBERTa models"
+      }
+    },
+    "augmentation_techniques": {},
+    "additional_features": {}
+  },
+  "transformer_models": {
+    "base_models": {
+      "roberta-large": {
+        "source": "Kaggle Discussion + Notebook",
+        "link": "https://www.kaggle.com/takeshikobayashi/bronze-medal-solution-roberta-stacking-ensemble",
+        "quote": "Bronze medal solution🥉RoBERTa stacking & ensemble; CLRP: Pytorch Roberta Pretrain roberta-large; CLRP: Pytorch Roberta Finetune roberta-large"
+      }
+    },
+    "fine_tuning_strategy": {
+      "full-model-fine-tuning": {
+        "source": "Kaggle Notebook",
+        "link": "https://www.kaggle.com/takeshikobayashi/bronze-medal-solution-roberta-stacking-ensemble",
+        "quote": "CLRP: Pytorch Roberta Finetune roberta-large"
+      },
+      "mlm-pretraining": {
+        "source": "Kaggle Notebook",
+        "link": "https://www.kaggle.com/takeshikobayashi/bronze-medal-solution-roberta-stacking-ensemble",
+        "quote": "CLRP: Pytorch Roberta Pretrain roberta-large"
+      }
+    }
+  },
+  "loss_functions": {
+    "primary_loss": {
+      "mse": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "MSE loss used for RoBERTa regression (standard approach)"
+      }
+    }
+  },
+  "training_strategy": {
+    "optimizer": {
+      "adamw": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "AdamW optimizer used (standard for RoBERTa training)"
+      }
+    },
+    "learning_rate": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+      "quote": "Learning rate not explicitly specified in discussion"
+    },
+    "learning_rate_schedule": {},
+    "batch_size": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+      "quote": "Batch size not explicitly specified"
+    },
+    "epochs": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+      "quote": "Epochs not explicitly specified"
+    },
+    "weight_decay": {
+      "source": "Kaggle Discussion",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+      "quote": "Weight decay not explicitly specified"
+    },
+    "regularization": {},
+    "cross_validation": {}
+  },
+  "model_architecture": {
+    "pooling_strategy": {}
+  },
+  "postprocessing": {
+    "ensemble_method": {
+      "roberta-stacking-ensemble": {
+        "source": "Kaggle Notebook Title",
+        "link": "https://www.kaggle.com/takeshikobayashi/bronze-medal-solution-roberta-stacking-ensemble",
+        "quote": "Bronze medal solution🥉RoBERTa stacking & ensemble"
+      },
+      "stacking": {
+        "source": "Kaggle Notebook Title",
+        "link": "https://www.kaggle.com/takeshikobayashi/bronze-medal-solution-roberta-stacking-ensemble",
+        "quote": "Bronze medal solution🥉RoBERTa stacking & ensemble"
+      }
+    },
+    "stacking_models": {
+      "svr": {
+        "source": "Kaggle Discussion + References",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+        "quote": "Referenced notebooks using SVM/SVR for stacking: https://www.kaggle.com/maunish/clrp-roberta-svm; https://www.kaggle.com/gilfernandes/commonlit-pytorch-t5-large-svm"
+      }
+    }
+  },
+  "frameworks": {
+    "pytorch": {
+      "source": "Kaggle Notebook",
+      "link": "https://www.kaggle.com/takeshikobayashi/bronze-medal-solution-roberta-stacking-ensemble",
+      "quote": "CLRP: Pytorch Roberta Pretrain roberta-large; CLRP: Pytorch Roberta Finetune roberta-large"
+    },
+    "transformers": {
+      "source": "Kaggle Discussion + References",
+      "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/257850",
+      "quote": "Used Hugging Face transformers library (referenced rhtsingh and andretugan notebooks)"
+    }
+  }
+}

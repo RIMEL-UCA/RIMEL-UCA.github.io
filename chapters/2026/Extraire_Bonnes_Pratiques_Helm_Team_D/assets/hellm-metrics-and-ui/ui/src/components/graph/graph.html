@@ -1,0 +1,11 @@
+<p-card>
+  <p-button
+    (click)="toggleLabels()"
+    [label]="showLabels ? 'Hide Labels' : 'Show Labels'"
+    icon="pi pi-eye"
+    severity="secondary"
+    size="small"
+    styleClass="mb-4">
+  </p-button>
+  <div #graph class="chart-graph"></div>
+</p-card>

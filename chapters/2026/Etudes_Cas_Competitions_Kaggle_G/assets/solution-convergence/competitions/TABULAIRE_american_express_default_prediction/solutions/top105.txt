@@ -1,0 +1,44 @@
+Hi there,
+
+Congratulations to everyone who did some genuine own work at this competition, given the private lb score distribution and that the difference between the top 1 and top 1000 solutions is less than 0.35% I believe many people here would do well in a real life credit risk modelling reality, even if you are rank-wise far away from a medal.
+
+My solution was quite simple compared to what I’ve seen so far, decided to share to show people we don't need to reinvent the wheel to get a good score. What I basically did was:
+
+1) FEATURE ENGINEERING AND INITIAL MODEL
+
+I spent some time on feature engineering and models experimentation, here I noticed the feature engineering was working but I wasn’t able to beat the public DART model score, also the dart model training time on my computer was way too long so I decided to stay away from that, do something completely uncorrelated and at the end ensemble my models to the best public DART model score, then select one submission with my own work and another with my work + public work, that decision paid off.
+
+I created a total of 30K+ features considering:
+- The initial 188 features Avg / Max / Min / Std / Slope of the last 2, 3, 4, 5, 6, 7, 8, 9, 10, 11 and 12 statements.
+- Transpose of the 188 features per customer and statement.
+- Categorical features Weight of Evidence encoding.
+- Ratio and Difference of previous engineered features.
+
+The Model I used initially was a leaf-wise growth xgboost:
+
+XGBClassifier(tree_method='gpu_hist', grow_policy='lossguide', eval_metric='auc', min_child_weight=50, subsample=0.65, colsample_bytree=0.6, colsample_bylevel=0.6, colsample_bynode=0.55, learning_rate=0.01096, max_depth=8, max_bin=320, max_leaves=0)
+
+2) FEATURE SELECTION
+
+As I had way too many features to work with, I created an iterative process to get rid of the less important ones. It consisted in randomly allocate features to different “buckets” then use the initial xgboost model to get the shap feature importances and drop the bad ones, I repeated until I had 4 final buckets with ~550 features in each. Then I did some Aversarial Validation to drop unstable features.
+
+https://www.kaggle.com/code/pabuoro/amex-ultra-fast-adversarial-validation-shap
+
+3) MODELLING
+
+I used optuna to get 2 different sets of optimal hyperparameters for the leaf-wise growth xgboost model and an optimal keras MLP layout, always based on the AUC score to measure the overall discrimination and not only the top 4% as in the amex metric. For the MLP I scaled the data using rank gauss. In total fitted:
+- 4x xgboost 1 (Full sample + 10 CV Folds) * 5 Seeds = 4x 55 models
+- 4x xgboost 2 (Full sample + 10 CV Folds) * 5 Seeds = 4x 55 models
+- 4x Keras MLP (Full sample + 10 CV Folds) * 10 Seeds = 4x 110 models
+
+4) ENSEMBLE
+
+Ensembling was done using oof predictions and finding the best weights using scipy minimizing the negative amex metric.
+Ensembling with public DART score ,instead, the weights which optimize public lb score.
+
+That was it on summary. Hope to see you guys in future competitions.
+
+
+
+Best Regards,
+Paulo

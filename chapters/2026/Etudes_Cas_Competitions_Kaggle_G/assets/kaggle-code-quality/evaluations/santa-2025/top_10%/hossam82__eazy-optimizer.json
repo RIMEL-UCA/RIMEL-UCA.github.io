@@ -1,0 +1,22 @@
+{
+  "competition": "santa-2025",
+  "stratum": "top_10%",
+  "ref": "hossam82/eazy-optimizer",
+  "local_main_file": "corpus\\santa-2025\\notebooks\\top_10%\\hossam82__eazy-optimizer\\eazy-optimizer.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 15,
+    "B_modularite": 15,
+    "C_reproductibilite": 10,
+    "D_lisibilite": 10,
+    "E_hygiene": 15
+  },
+  "score_total_100": 65,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline C++ compilé: %%writefile eazy.cpp → compile → run → validate. Trois cellules principales.",
+    "B_modularite": "Code C++ structuré: CONSTANTS → GEOMETRY ENGINE → CALCULUS → MASTER HYBRID CYCLE → IO → main. Struct Cfg pour configuration.",
+    "C_reproductibilite": "thread_local mt19937_64 rng, scales multiples [1e-3, 1e-5, 1e-7, 1e-9], mais random_device{} non seedé.",
+    "D_lisibilite": "Commentaires de section C++ (// --- CONSTANTS ---), noms courts (Pt, Poly, Cfg), fonction calculate_score Python.",
+    "E_hygiene": "OpenMP parallel, -fsanitize=address, fixed/setprecision(18), schedule(dynamic), gestion timeout 20s."
+  },
+  "summary": "Notebook d'optimisation C++ haute performance avec OpenMP. Code C++ bien structuré avec sections. Approche 'Powerhouse Cycle' pour optimisation. Compilation avec sanitizers. Visualisation Python pour validation. Random non seedé explicitement."
+}

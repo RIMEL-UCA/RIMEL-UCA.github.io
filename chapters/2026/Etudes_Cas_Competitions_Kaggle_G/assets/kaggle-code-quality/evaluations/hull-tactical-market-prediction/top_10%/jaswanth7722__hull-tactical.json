@@ -1,0 +1,22 @@
+{
+  "competition": "hull-tactical-market-prediction",
+  "stratum": "top_10%",
+  "ref": "jaswanth7722/hull-tactical",
+  "local_main_file": "corpus\\hull-tactical-market-prediction\\notebooks\\top_10%\\jaswanth7722__hull-tactical\\hull-tactical.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 15,
+    "B_modularite": 15,
+    "C_reproductibilite": 10,
+    "D_lisibilite": 10,
+    "E_hygiene": 10
+  },
+  "score_total_100": 60,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline structuré: imports → load → feature engineering → TimeSeriesSplit training (LGB+XGB+CAT) → ensemble_pred → adaptive_alloc → predict.",
+    "B_modularite": "Fonctions (ensemble_predict, ensemble_pred, adaptive_alloc, approx_sharpe), models stockés en listes (models_lgb, models_xgb, models_cat).",
+    "C_reproductibilite": "TimeSeriesSplit(n_splits=8), mais pas de seed global explicite, early_stopping dans training.",
+    "D_lisibilite": "Commentaires de section (#CELL 1 — IMPORTS), mais certains commentaires obsolètes, noms corrects.",
+    "E_hygiene": "Global variable prev_alloc, fillna(method='ffill') deprecated, chemins hardcodés, feature_cols dynamiques."
+  },
+  "summary": "Pipeline ML complet avec ensemble 3 modèles (LGB+XGB+CAT) et allocation adaptative. TimeSeriesSplit pour validation temporelle. Feature engineering sur données de breadth. Quelques problèmes: variable globale prev_alloc, fillna deprecated, pas de seed global."
+}

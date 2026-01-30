@@ -1,0 +1,479 @@
+Dear Kagglers.
+
+Thank you to the competition organizers hosting this interesting competition.
+Thank you to everyone involved in this competition. We learned a lot from public notebooks and discussions.
+
+Our Final Result
+
+Our submission
+Local CV：0.80011
+Public: 0.80040
+Private: 0.80780
+Result
+Public: 61st → Private 72nd
+Summary of Our Solution
+
+
+
+Single Models
+
+LightGBM(DART)
+
+Based on the public notebook here, we trained lightgbm(dart) models with several feature patterns and achieved a public score of 0.799.
+
+feature engineering patterns
+basic aggregation per customer (mean, std, max, min, first, last, count, nunique)
+combinations of aggregated features (diff as last - mean, fraction as last / mean, etc.)
+last difference features(aggregation with diff(1).iloc[-1], diff(2).iloc[-1], …)
+we made about 1,000~3,000 features for each model.
+
+GRU or Transformer Encoder Model
+
+Based on the public notebook here, we trained NN models and achieved a public score of 0.792.
+
+Improvements from the public notebook
+one hot encoding of each category features
+adding NA indication columns of features that have NA
+filling NA by linear interpolation
+multiple layers of GRU or TransformerEncoder(4~8 layers)
+Ensemble
+
+NN models by themselves had only a low score on the Public Leaderboard, but we noticed that the public score improved from 0.799 to 0.800 by ensembling the LightGBM and NN models.
+We then experimented with ensemble patterns of multiple models and found that Stacking by LogisticRegression or MLP yielded particularly high scores.
+
+finally
+
+Advice is always welcome!
+Thank you for your attention.
+
+Time Series GRU TensorFlow Starter Notebook¶
+In this notebook we present starter code for a time series GRU model and starter code for processing Kaggle's 50GB CSV files into multiple saved NumPy files. Using a time series GRU allows us to use all the provided customer data and not just the customer's last data point. We published plots of time series data here. In this notebook we
+
+Processes the train data from dataframes into 3D NumPy array of dimensions num_of_customers x 13 x 188
+Save processed arrays as multiple NumPy files on disk
+Next we build and train a GRU from the multiple files on disk
+We compute validation score and achieve 0.787
+Finally we process and save test data, infer test, and create a submission
+It is important to note that you do not need to process the train and test files every time you run this notebook. Only process the data again when you engineer new features. Otherwise, upload your saved NumPy arrays to a Kaggle dataset (or use my Kaggle dataset here). Then as you customize and improve your GRU model, set the variable PROCESS_DATA = False and PATH_TO_DATA = [the path to your kaggle dataset].
+
+To view time series EDA which can help give you intuition about feature engineering and improving model architecture, see my other notebook here. Note in the code below, we partition the GPU into 8GB for RAPIDS (feature engineering) and 8GB for TensorFlow (model build and train).
+
+Show hidden cell
+Process Train Data
+We process both train and test data in chunks. We split train data into 10 parts and process each part separately and save to disk. We split test into 20 parts. This allows us to avoid memory errors during processing. We can also perform processing on GPU which is faster than CPU. Discussions about data preprocessing are here and here
+
+# LOADING JUST FIRST COLUMN OF TRAIN OR TEST IS SLOW
+# INSTEAD YOU CAN LOAD FIRST COLUMN FROM MY DATASET
+# OTHERWISE SET VARIABLE TO NONE TO LOAD FROM KAGGLE'S ORIGINAL DATAFRAME
+PATH_TO_CUSTOMER_HASHES = '../input/amex-data-files/'
+
+# AFTER PROCESSING DATA ONCE, UPLOAD TO KAGGLE DATASET
+# THEN SET VARIABLE BELOW TO FALSE
+# AND ATTACH DATASET TO NOTEBOOK AND PUT PATH TO DATASET BELOW
+PROCESS_DATA = True
+PATH_TO_DATA = './data/'
+#PATH_TO_DATA = '../input/amex-data-for-transformers-and-rnns/data/'
+
+# AFTER TRAINING MODEL, UPLOAD TO KAGGLE DATASET
+# THEN SET VARIABLE BELOW TO FALSE
+# AND ATTACH DATASET TO NOTEBOOK AND PUT PATH TO DATASET BELOW
+TRAIN_MODEL = True
+PATH_TO_MODEL = './model/'
+#PATH_TO_MODEL = '../input/amex-data-for-transformers-and-rnns/model/'
+
+INFER_TEST = True
+Show hidden code
+There are 458913 train targets
+There are 190 train dataframe columns
+There are 458913 unique customers in train.
+Show hidden code
+We will split train data into 10 separate files.
+There will be 45891 customers in each file (except the last file).
+Below are number of rows in each file:
+[553403, 552855, 554025, 554330, 552004, 552378, 552822, 553151, 553493, 552990]
+Preprocess and Feature Engineering
+The function below processes the data. Discussions describing the process are here and here. Currently the code below uses RAPIDS and GPU to
+
+Reduces memory usage of customer_ID column by converting to int64
+Reduces memory usage of date time column (then deletes the column).
+We fill NANs
+Label encodes the categorical columns
+We reduce memory usage dtypes of columns
+Converts every customer into a 3D array with sequence length 13 and feature length 188
+To improve this model, try adding new feautures. The columns have been rearanged to have the 11 categorical features first. This makes building the TensorFlow model later easier. We can also try adding Standard Scaler. Currently the data is being used without scaling from the original Kaggle train data.
+
+def feature_engineer(train, PAD_CUSTOMER_TO_13_ROWS = True, targets = None):
+        
+    # REDUCE STRING COLUMNS 
+    # from 64 bytes to 8 bytes, and 10 bytes to 3 bytes respectively
+    train['customer_ID'] = train['customer_ID'].str[-16:].str.hex_to_int().astype('int64')
+    train.S_2 = cudf.to_datetime( train.S_2 )
+    train['year'] = (train.S_2.dt.year-2000).astype('int8')
+    train['month'] = (train.S_2.dt.month).astype('int8')
+    train['day'] = (train.S_2.dt.day).astype('int8')
+    del train['S_2']
+        
+    # LABEL ENCODE CAT COLUMNS (and reduce to 1 byte)
+    # with 0: padding, 1: nan, 2,3,4,etc: values
+    d_63_map = {'CL':2, 'CO':3, 'CR':4, 'XL':5, 'XM':6, 'XZ':7}
+    train['D_63'] = train.D_63.map(d_63_map).fillna(1).astype('int8')
+
+    d_64_map = {'-1':2,'O':3, 'R':4, 'U':5}
+    train['D_64'] = train.D_64.map(d_64_map).fillna(1).astype('int8')
+    
+    CATS = ['B_30', 'B_38', 'D_114', 'D_116', 'D_117', 'D_120', 'D_126', 'D_66', 'D_68']
+    OFFSETS = [2,1,2,2,3,2,3,2,2] #2 minus minimal value in full train csv
+    # then 0 will be padding, 1 will be NAN, 2,3,4,etc will be values
+    for c,s in zip(CATS,OFFSETS):
+        train[c] = train[c] + s
+        train[c] = train[c].fillna(1).astype('int8')
+    CATS += ['D_63','D_64']
+    
+    # ADD NEW FEATURES HERE
+    # EXAMPLE: train['feature_189'] = etc etc etc
+    # EXAMPLE: train['feature_190'] = etc etc etc
+    # IF CATEGORICAL, THEN ADD TO CATS WITH: CATS += ['feaure_190'] etc etc etc
+    
+    # REDUCE MEMORY DTYPE
+    SKIP = ['customer_ID','year','month','day']
+    for c in train.columns:
+        if c in SKIP: continue
+        if str( train[c].dtype )=='int64':
+            train[c] = train[c].astype('int32')
+        if str( train[c].dtype )=='float64':
+            train[c] = train[c].astype('float32')
+            
+    # PAD ROWS SO EACH CUSTOMER HAS 13 ROWS
+    if PAD_CUSTOMER_TO_13_ROWS:
+        tmp = train[['customer_ID']].groupby('customer_ID').customer_ID.agg('count')
+        more = cupy.array([],dtype='int64') 
+        for j in range(1,13):
+            i = tmp.loc[tmp==j].index.values
+            more = cupy.concatenate([more,cupy.repeat(i,13-j)])
+        df = train.iloc[:len(more)].copy().fillna(0)
+        df = df * 0 - 1 #pad numerical columns with -1
+        df[CATS] = (df[CATS] * 0).astype('int8') #pad categorical columns with 0
+        df['customer_ID'] = more
+        train = cudf.concat([train,df],axis=0,ignore_index=True)
+        
+    # ADD TARGETS (and reduce to 1 byte)
+    if targets is not None:
+        train = train.merge(targets,on='customer_ID',how='left')
+        train.target = train.target.astype('int8')
+        
+    # FILL NAN
+    train = train.fillna(-0.5) #this applies to numerical columns
+    
+    # SORT BY CUSTOMER THEN DATE
+    train = train.sort_values(['customer_ID','year','month','day']).reset_index(drop=True)
+    train = train.drop(['year','month','day'],axis=1)
+    
+    # REARRANGE COLUMNS WITH 11 CATS FIRST
+    COLS = list(train.columns[1:])
+    COLS = ['customer_ID'] + CATS + [c for c in COLS if c not in CATS]
+    train = train[COLS]
+    
+    return train
+Show hidden code
+Train_File_1 has 45891 customers and shape (596583, 190)
+Train_File_2 has 45891 customers and shape (596583, 190)
+Train_File_3 has 45891 customers and shape (596583, 190)
+Train_File_4 has 45891 customers and shape (596583, 190)
+Train_File_5 has 45891 customers and shape (596583, 190)
+Train_File_6 has 45891 customers and shape (596583, 190)
+Train_File_7 has 45891 customers and shape (596583, 190)
+Train_File_8 has 45891 customers and shape (596583, 190)
+Train_File_9 has 45891 customers and shape (596583, 190)
+Train_File_10 has 45894 customers and shape (596622, 190)
+Build Model
+We will just input the sequence data into a basic GRU. We will follow that we two dense layers and finally a sigmoid output to predict default. Try improving the model architecture.
+
+# SIMPLE GRU MODEL
+def build_model():
+    
+    # INPUT - FIRST 11 COLUMNS ARE CAT, NEXT 177 ARE NUMERIC
+    inp = tf.keras.Input(shape=(13,188))
+    embeddings = []
+    for k in range(11):
+        emb = tf.keras.layers.Embedding(10,4)
+        embeddings.append( emb(inp[:,:,k]) )
+    x = tf.keras.layers.Concatenate()([inp[:,:,11:]]+embeddings)
+    
+    # SIMPLE RNN BACKBONE
+    x = tf.keras.layers.GRU(units=128, return_sequences=False)(x)
+    x = tf.keras.layers.Dense(64,activation='relu')(x)
+    x = tf.keras.layers.Dense(32,activation='relu')(x)
+    
+    # OUTPUT
+    x = tf.keras.layers.Dense(1,activation='sigmoid')(x)
+    
+    # COMPILE MODEL
+    model = tf.keras.Model(inputs=inp, outputs=x)
+    opt = tf.keras.optimizers.Adam(learning_rate=0.001)
+    loss = tf.keras.losses.BinaryCrossentropy()
+    model.compile(loss=loss, optimizer = opt)
+    
+    return model
+# CUSTOM LEARNING SCHEUDLE
+def lrfn(epoch):
+    lr = [1e-3]*5 + [1e-4]*2 + [1e-5]*1
+    return lr[epoch]
+LR = tf.keras.callbacks.LearningRateScheduler(lrfn, verbose = False)
+Competition Metric Code
+The code below is from Konstantin Yakovlev's discussion post here
+
+# COMPETITION METRIC FROM Konstantin Yakovlev
+# https://www.kaggle.com/kyakovlev
+# https://www.kaggle.com/competitions/amex-default-prediction/discussion/327534
+def amex_metric_mod(y_true, y_pred):
+
+    labels     = np.transpose(np.array([y_true, y_pred]))
+    labels     = labels[labels[:, 1].argsort()[::-1]]
+    weights    = np.where(labels[:,0]==0, 20, 1)
+    cut_vals   = labels[np.cumsum(weights) <= int(0.04 * np.sum(weights))]
+    top_four   = np.sum(cut_vals[:,0]) / np.sum(labels[:,0])
+
+    gini = [0,0]
+    for i in [1,0]:
+        labels         = np.transpose(np.array([y_true, y_pred]))
+        labels         = labels[labels[:, i].argsort()[::-1]]
+        weight         = np.where(labels[:,0]==0, 20, 1)
+        weight_random  = np.cumsum(weight / np.sum(weight))
+        total_pos      = np.sum(labels[:, 0] *  weight)
+        cum_pos_found  = np.cumsum(labels[:, 0] * weight)
+        lorentz        = cum_pos_found / total_pos
+        gini[i]        = np.sum((lorentz - weight_random) * weight)
+
+    return 0.5 * (gini[1]/gini[0] + top_four)
+Train Model
+We train 5 folds for 8 epochs each. We save the 5 fold models for test inference later. If you only want to infer without training, then set variable TRAIN_MODEL = False in the beginning of this notebook.
+
+Show hidden code
+#########################
+### Fold 1 with valid files [1, 2]
+### Training data shapes (367131, 13, 188) (367131,)
+### Validation data shapes (91782, 13, 188) (91782,)
+#########################
+2022-05-30 17:58:15.708431: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 3589072656 exceeds 10% of free system memory.
+2022-05-30 17:58:19.930114: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 3589072656 exceeds 10% of free system memory.
+2022-05-30 17:58:22.681200: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:185] None of the MLIR Optimization Passes are enabled (registered 2)
+Epoch 1/8
+2022-05-30 17:58:26.193627: I tensorflow/stream_executor/cuda/cuda_dnn.cc:369] Loaded cuDNN version 8005
+2022-05-30 17:58:36.542571: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 897260832 exceeds 10% of free system memory.
+2022-05-30 17:58:37.736819: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 897260832 exceeds 10% of free system memory.
+718/718 - 17s - loss: 0.2380 - val_loss: 0.2303
+Epoch 2/8
+718/718 - 9s - loss: 0.2269 - val_loss: 0.2285
+Epoch 3/8
+718/718 - 10s - loss: 0.2237 - val_loss: 0.2276
+Epoch 4/8
+718/718 - 9s - loss: 0.2209 - val_loss: 0.2255
+Epoch 5/8
+718/718 - 9s - loss: 0.2187 - val_loss: 0.2249
+Epoch 6/8
+718/718 - 9s - loss: 0.2125 - val_loss: 0.2228
+Epoch 7/8
+718/718 - 9s - loss: 0.2112 - val_loss: 0.2227
+Epoch 8/8
+718/718 - 9s - loss: 0.2099 - val_loss: 0.2227
+Inferring validation data...
+2022-05-30 17:59:47.144854: W tensorflow/core/framework/cpu_allocator_impl.cc:80] Allocation of 897260832 exceeds 10% of free system memory.
+180/180 - 1s
+
+Fold 1 CV= 0.78799191353603
+
+#########################
+### Fold 2 with valid files [3, 4]
+### Training data shapes (367131, 13, 188) (367131,)
+### Validation data shapes (91782, 13, 188) (91782,)
+#########################
+Epoch 1/8
+718/718 - 14s - loss: 0.2415 - val_loss: 0.2318
+Epoch 2/8
+718/718 - 9s - loss: 0.2271 - val_loss: 0.2285
+Epoch 3/8
+718/718 - 9s - loss: 0.2238 - val_loss: 0.2267
+Epoch 4/8
+718/718 - 9s - loss: 0.2213 - val_loss: 0.2260
+Epoch 5/8
+718/718 - 10s - loss: 0.2189 - val_loss: 0.2266
+Epoch 6/8
+718/718 - 9s - loss: 0.2129 - val_loss: 0.2230
+Epoch 7/8
+718/718 - 9s - loss: 0.2117 - val_loss: 0.2229
+Epoch 8/8
+718/718 - 10s - loss: 0.2105 - val_loss: 0.2227
+Inferring validation data...
+180/180 - 1s
+
+Fold 2 CV= 0.7838323128060836
+
+#########################
+### Fold 3 with valid files [5, 6]
+### Training data shapes (367131, 13, 188) (367131,)
+### Validation data shapes (91782, 13, 188) (91782,)
+#########################
+Epoch 1/8
+718/718 - 14s - loss: 0.2414 - val_loss: 0.2303
+Epoch 2/8
+718/718 - 9s - loss: 0.2276 - val_loss: 0.2258
+Epoch 3/8
+718/718 - 9s - loss: 0.2242 - val_loss: 0.2242
+Epoch 4/8
+718/718 - 9s - loss: 0.2216 - val_loss: 0.2243
+Epoch 5/8
+718/718 - 10s - loss: 0.2191 - val_loss: 0.2238
+Epoch 6/8
+718/718 - 10s - loss: 0.2131 - val_loss: 0.2210
+Epoch 7/8
+718/718 - 9s - loss: 0.2119 - val_loss: 0.2215
+Epoch 8/8
+718/718 - 10s - loss: 0.2107 - val_loss: 0.2211
+Inferring validation data...
+180/180 - 1s
+
+Fold 3 CV= 0.7859509438158216
+
+#########################
+### Fold 4 with valid files [7, 8]
+### Training data shapes (367131, 13, 188) (367131,)
+### Validation data shapes (91782, 13, 188) (91782,)
+#########################
+Epoch 1/8
+718/718 - 14s - loss: 0.2397 - val_loss: 0.2352
+Epoch 2/8
+718/718 - 9s - loss: 0.2274 - val_loss: 0.2315
+Epoch 3/8
+718/718 - 9s - loss: 0.2244 - val_loss: 0.2226
+Epoch 4/8
+718/718 - 10s - loss: 0.2219 - val_loss: 0.2226
+Epoch 5/8
+718/718 - 9s - loss: 0.2196 - val_loss: 0.2225
+Epoch 6/8
+718/718 - 9s - loss: 0.2136 - val_loss: 0.2193
+Epoch 7/8
+718/718 - 10s - loss: 0.2124 - val_loss: 0.2191
+Epoch 8/8
+718/718 - 10s - loss: 0.2112 - val_loss: 0.2190
+Inferring validation data...
+180/180 - 1s
+
+Fold 4 CV= 0.787544771437652
+
+#########################
+### Fold 5 with valid files [9, 10]
+### Training data shapes (367128, 13, 188) (367128,)
+### Validation data shapes (91785, 13, 188) (91785,)
+#########################
+Epoch 1/8
+718/718 - 14s - loss: 0.2397 - val_loss: 0.2400
+Epoch 2/8
+718/718 - 9s - loss: 0.2281 - val_loss: 0.2240
+Epoch 3/8
+718/718 - 10s - loss: 0.2245 - val_loss: 0.2237
+Epoch 4/8
+718/718 - 9s - loss: 0.2220 - val_loss: 0.2225
+Epoch 5/8
+718/718 - 9s - loss: 0.2199 - val_loss: 0.2212
+Epoch 6/8
+718/718 - 10s - loss: 0.2138 - val_loss: 0.2195
+Epoch 7/8
+718/718 - 9s - loss: 0.2124 - val_loss: 0.2197
+Epoch 8/8
+718/718 - 10s - loss: 0.2112 - val_loss: 0.2195
+Inferring validation data...
+180/180 - 1s
+
+Fold 5 CV= 0.7887652111643455
+
+#########################
+Overall CV = 0.7866580398847685
+Process Test Data
+We process the test data in the same way as train data.
+
+if PROCESS_DATA:
+    # GET TEST COLUMN NAMES
+    test = cudf.read_csv('../input/amex-default-prediction/test_data.csv', nrows=1)
+    T_COLS = test.columns
+    print(f'There are {len(T_COLS)} test dataframe columns')
+    
+    # GET TEST CUSTOMER NAMES (use pandas to avoid memory error)
+    if PATH_TO_CUSTOMER_HASHES:
+        test = cudf.read_parquet(f'{PATH_TO_CUSTOMER_HASHES}test_customer_hashes.pqt')
+    else:
+        test = pd.read_csv('/raid/Kaggle/amex/test_data.csv', usecols=['customer_ID'])
+        test['customer_ID'] = test['customer_ID'].apply(lambda x: int(x[-16:],16) ).astype('int64')
+    customers = test.drop_duplicates().sort_index().values.flatten()
+    print(f'There are {len(customers)} unique customers in test.')
+There are 190 test dataframe columns
+There are 924621 unique customers in test.
+NUM_FILES = 20
+if PROCESS_DATA:
+    # CALCULATE SIZE OF EACH SEPARATE FILE
+    rows = get_rows(customers, test, NUM_FILES = NUM_FILES, verbose = 'test')
+We will split test data into 20 separate files.
+There will be 46231 customers in each file (except the last file).
+Below are number of rows in each file:
+[567933, 568482, 569369, 567886, 567539, 568041, 568138, 567596, 568543, 567539, 568421, 568745, 568279, 568333, 568327, 568901, 568300, 568001, 567372, 568017]
+Show hidden code
+Test_File_1 has 46231 customers and shape (601003, 189)
+Test_File_2 has 46231 customers and shape (601003, 189)
+Test_File_3 has 46231 customers and shape (601003, 189)
+Test_File_4 has 46231 customers and shape (601003, 189)
+Test_File_5 has 46231 customers and shape (601003, 189)
+Test_File_6 has 46231 customers and shape (601003, 189)
+Test_File_7 has 46231 customers and shape (601003, 189)
+Test_File_8 has 46231 customers and shape (601003, 189)
+Test_File_9 has 46231 customers and shape (601003, 189)
+Test_File_10 has 46231 customers and shape (601003, 189)
+Test_File_11 has 46231 customers and shape (601003, 189)
+Test_File_12 has 46231 customers and shape (601003, 189)
+Test_File_13 has 46231 customers and shape (601003, 189)
+Test_File_14 has 46231 customers and shape (601003, 189)
+Test_File_15 has 46231 customers and shape (601003, 189)
+Test_File_16 has 46231 customers and shape (601003, 189)
+Test_File_17 has 46231 customers and shape (601003, 189)
+Test_File_18 has 46231 customers and shape (601003, 189)
+Test_File_19 has 46231 customers and shape (601003, 189)
+Test_File_20 has 46232 customers and shape (601016, 189)
+Infer Test Data
+We infer the test data from our saved fold models. If you don't wish to infer test but you only want your notebook to compute a validation score to evaluate model changes, then set variable INFER_TEST = False in the beginning of this notebook. Also if you wish to infer from previously trained models, then add the path to the Kaggle dataset in the variable PATH_TO_MODEL in the beginning of this notebook.
+
+Show hidden code
+Inferring Test_File_1
+Inferring Test_File_2
+Inferring Test_File_3
+Inferring Test_File_4
+Inferring Test_File_5
+Inferring Test_File_6
+Inferring Test_File_7
+Inferring Test_File_8
+Inferring Test_File_9
+Inferring Test_File_10
+Inferring Test_File_11
+Inferring Test_File_12
+Inferring Test_File_13
+Inferring Test_File_14
+Inferring Test_File_15
+Inferring Test_File_16
+Inferring Test_File_17
+Inferring Test_File_18
+Inferring Test_File_19
+Inferring Test_File_20
+Create Submission
+if INFER_TEST:
+    sub.to_csv('submission.csv',index=False)
+    print('Submission file shape is', sub.shape )
+    display( sub.head() )
+Submission file shape is (924621, 2)
+customer_ID	prediction
+0	038be0571bd6b3776cb8512731968f4de302c811030124...	0.003422
+1	0074a0233ef766b52884608cc8cf9098f59d885b5d59fc...	0.000194
+2	060b8b7f30f795a0e93995d45b29461ffa6ece0eeb5c3d...	0.102515
+3	03a1d125bdd776000bf0b28238d0bea240ad581d332e70...	0.126610
+4	0290f245dd35ba899af52316ccc62b2627e7ae18cd76a2...	0.330832
+if INFER_TEST:
+    # DISPLAY SUBMISSION PREDICTIONS
+    plt.hist(sub.to_pandas().prediction, bins=100)
+    plt.title('Test Predictions')
+    plt.show()

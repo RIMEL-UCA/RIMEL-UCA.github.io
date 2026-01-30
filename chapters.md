@@ -7,6 +7,8 @@ date: 2022-11-18 6:00:00 +0100
 
 ### MODEL : [MODELE DE CHAPITRE 2026]({{site.url}}/chapters/2026/ChapterModel/content)
 
+### [Comment performer dans les compétitions Kaggle ?]({{site.url}}/chapters/2026/Etudes_Cas_Competitions_Kaggle_G/content)
+
 ### [L’évolution des données dans les projets open-source de Data For Good : une étude de cas historique]({{site.url}}/chapters/2026/Etude-Cas-DataForGoodFrance-TeamH/content)
 
 ### Le nombre de contributeurs influence-t-il la qualité des repository de Data For Good France ? : [Le nombre de contributeurs influence-t-il la qualité des repository de Data For Good France ?]({{site.url}}/chapters/2026/Etude_Data_For_Good_b/content)
@@ -14,7 +16,7 @@ date: 2022-11-18 6:00:00 +0100
 ### Bonnes pratiques des charts Helm : [Analyse des bonnes pratiques dans les charts Helm]({{site.url}}/chapters/2026/Helm_Charts_Best_Practices_Team_A/content)
 
 ### [Evolution de la testabilité et de la documentation dans les projets Data For Good]({{site.url}}/chapters/2026/evolution_testabilite_documentation_dfg_A/content)
-### Bonnes pratiques des charts Helm : [Quelles pratiques liées à l'utilisation d'HELM peuvent être dégagés des projets l'utilisant ?]({{site.url}}/chapters/2026/Extraire_Bonnes_Pratiques_Helm_Team_F/content)
+### Bonnes pratiques des charts Helm : [Les charts de référence Helm sont-elles irréprochables ?]({{site.url}}/chapters/2026/Extraire_Bonnes_Pratiques_Helm_Team_F/content)
 
 ## 2025
 

@@ -1,0 +1,82 @@
+{
+  "augmentation_techniques": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Train augmentations (from the Albumentations Python library): RandomResizedCrop, Transpose, HorizontalFlip. VerticalFlip, ShiftScaleRotate, Normalize... Train Augmentations (RandomResizedCrop, Transpose, Horizontal and vertical flip, ShiftScaleRotate, HueSaturationValue, RandomBrightnessContrast, Normalization, CoarseDropout, Cutout)... Augmentations (Flip, Transpose, Rotate, Saturation, Contrast and Brightness and some random cropping)"
+  },
+  "base_models": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "We used a ResNeXt model of the structure 'resnext50_32x4d'... We used the Vision Transformer Architecture with ImageNet weights (ViT-B/16)... We tried different EfficientNet architectures but finally only used a B4 with NoisyStudent weights... our ensemble included a pretrained CropNet (MobileNetv3) Model from Tensorflow Hub"
+  },
+  "pretrained_checkpoints": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "We used the Vision Transformer Architecture with ImageNet weights (ViT-B/16)... We tried different EfficientNet architectures but finally only used a B4 with NoisyStudent weights... We used a pretrained model from TensorFlow Hub called CropNet which was specifically trained to detect Cassava leaf diseases"
+  },
+  "primary_loss": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "CrossEntropyLoss with default parameters... Bit Tempered Logistic Loss (t1 = 0.8, t2 = 1.4) and label smoothing factor of 0.06... Sigmoid Focal Loss with Label Smoothing (Gamma=2.0, alpha=0.25 and label smoothing factor 0.1)"
+  },
+  "learning_rate": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Learning rate of 1e-4 with 'ReduceLROnPlateau' scheduler... We chose a learning rate with a Cosine annealing warm restarts scheduler (LR = 1e-4 / 7 [7: Warm up factor]... Learning rate with warmup and cosine decay scheduler (ranging from 1e-6 to a maximum of 0.0002 and back to 3.17e-6)"
+  },
+  "learning_rate_schedule": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Learning rate of 1e-4 with 'ReduceLROnPlateau' scheduler based on average validation loss (mode='min', factor=0.2, patience=5, eps=1e-6)... We chose a learning rate with a Cosine annealing warm restarts scheduler (LR = 1e-4 / 7 [7: Warm up factor], T0= 10, Tmult= 1, eta_min=1e-4, last_epoch=-1)... Learning rate with warmup and cosine decay scheduler"
+  },
+  "epochs": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "5-fold-CV with 15 epochs (after the 15 training epochs, we always chose the model with the best validation accuracy)... 5-fold-CV with 10 epochs... 5-fold-CV with 20 epochs with early stopping"
+  },
+  "regularization": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Drop connect rate 0.4, custom top with global average pooling and dropout layer (0.5)... label smoothing factor of 0.06... Sigmoid Focal Loss with Label Smoothing (Gamma=2.0, alpha=0.25 and label smoothing factor 0.1)... 5-fold-CV with 20 epochs with early stopping and callback for restoring weights of best epoch"
+  },
+  "cross_validation": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "5-fold-CV with 15 epochs... 5-fold-CV with 10 epochs... 5-fold-CV with 20 epochs with early stopping"
+  },
+  "pooling_strategy": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Drop connect rate 0.4, custom top with global average pooling and dropout layer (0.5)"
+  },
+  "additional_layers": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Custom top with Linear layer... Drop connect rate 0.4, custom top with global average pooling and dropout layer (0.5)"
+  },
+  "dropout_rate": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Drop connect rate 0.4, custom top with global average pooling and dropout layer (0.5)"
+  },
+  "ensemble_method": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "For the ensembling, we experimented with different methods and found that in our case a stacked-mean approach worked best. For this purpose, the class probabilities returned by the models were averaged on several levels and finally the class with the highest probability was returned. Our final submission first averaged the probabilities of the predicted classes of ViT and ResNext. This averaged probability vector was then merged with the predicted probabilities of EfficientnetB4 and CropNet in the second stage."
+  },
+  "prediction_averaging": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "For inference we used simple test time augmentations (Flip, Rotate, Transpose). To do so, we cropped 4 overlapping patches of size 512x512px from the .jpg images (800x600px) and applied 2 augmentations to each patch. We retained two additional center-cropped patches of the image to which no augmentations were applied. To get an overall prediction, we took the average of all these image tiles."
+  },
+  "deep_learning_framework": {
+    "source": "Top1 solution code",
+    "link": "solutions/top1.txt",
+    "quote": "import torch... import tensorflow as tf"
+  },
+  "libraries": {
+    "source": "Top1 solution code",
+    "link": "solutions/top1.txt",
+    "quote": "import timm... from albumentations import... import tensorflow_hub as hub... from tensorflow import keras"
+  }
+}

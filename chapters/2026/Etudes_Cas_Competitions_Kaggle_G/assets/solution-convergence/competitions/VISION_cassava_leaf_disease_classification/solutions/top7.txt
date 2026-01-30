@@ -1,0 +1,72 @@
+The experience of this competition is extraordinary for me, due to the noise data of PB, I think I am really lucky to enter the gold medal zone, because most people's PB scores are very close. I really appreciate all the discussion topics and public notebooks, and I learn a lot from it. Thank you very much！Congratulations to all the people and teams who won the medals !
+Solution
+
+two schemes were selected to submit:
+
+1. the first submission: no secondary processing for noise label
+
+CV 0.90398 | LB 0.906 | PB 0.901
+
+this scheme is the best CV in local. It uses a lot of augmentation, including randomcrop, H/V flip, a large number of RGB transform, cutout, grid distortion, etc.,
+
+6modelx4TTA:
+
+model	loss	size
+efficientnet_b4_ns	bi-tempered	512
+seresnext101	bi-tempered	512
+seresnext101	focalcos	512
+seresnext50	bi-tempered	512
+VIT_base16	focalcos	384
+VIT_base16	bi-tempered	384
+the results show that the scores of all ensemble submitted PB without secondary processing for noise label were between 0.898 and 0.902.
+
+there are two results of PB 0.902:
+
+3model and 5xrandomTTA:
+CV --- | LB 0.902 | PB 0.902
+
+model	loss	size
+efficientnet_b4_ns	bi-tempered	512
+seresnext101	bi-tempered	512
+VIT_base16	bi-tempered	384
+randomTTA is the same as the augmentation method in training, randomly 5 times
+
+5model and 5xTTA:
+CV --- | LB 0.901 | PB 0.902
+
+model	loss	size
+efficientnet_b4_ns	bi-tempered	512
+efficientnet_b4_ns	focalcos	384
+seresnext101	bi-tempered	512
+VIT_base16	focalcos	384
+regnety120	focalcos	512
+2. the second submission: based on the prediction results of the first scheme, knowledge distillation is carried out, and the student model results and the teacher model results are weighted by a ratio of 4:6
+
+CV 0.9063 | LB 0.902 | PB 0.900
+
+the augmentation and the model structure is unchanged
+
+6 student model and 4xTTA
+CV 0.9079 | LB 0.901 | PB 0.898
+
+model	loss	size
+efficientnet_b4_ns	CE	512
+seresnext101	CE	512
+VIT_base16	CE	384
+resnext101	CE	512
+resnest101	CE	512
+I think the student model overfitting the training set, so I tried various weighting methods with the predicted probability of the first scheme. The range of pb is between 0.898 and 0.902
+
+3. something else (all changes to labels or delete labels are only for the training set, not the label of the validation set, keep the TRUE label in validation set)
+
+(as a comparison of the following, no processing has been applied to the noisy label:
+efficientnet-b4 5fold 5tta: PB 0.894, the following attempts all use this benchmark)
+
+images with prediction probability greater than 0.9 and incorrect predictions are deleted. PB 0.895
+the labels of images with prediction probability greater than 0.9 and incorrect predictions are changed. PB 0.896
+simply aug + snapmix, and gradually increase the probability of snapmix by epoch. PB 0.896
+2019+2020 Dataset, since the 2019 data set contains multiple sizes, and any resize/crop form will affect the final CV, I finally did not use the 2019 data ( The data for 2019 was deleted in the verification set) PB 0.895
+focalcos loss will increase CV, but some models will reduce the prediction probability of true label.
+in my submit, when using random TTA, the score of PB and LB are close.
+RegNet PB is higher than LB, but RegNet LB is too low, RegNet is not selected for submit.
+I am very glad to get my first solo gold, and I really look forward to 1st solution

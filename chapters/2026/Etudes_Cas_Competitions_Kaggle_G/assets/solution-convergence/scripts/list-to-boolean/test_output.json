@@ -1,0 +1,118 @@
+{
+  "embeddings": {
+    "word_embeddings": {
+      "fasttext": false,
+      "glove-300d": false
+    },
+    "contextual_embeddings": {
+      "bert-base-uncased": false,
+      "roberta-large": false,
+      "sentence-transformers/paraphrase-minilm-l6-v2": false
+    }
+  },
+  "preprocessing": {
+    "text_cleaning": {
+      "lowercase": false,
+      "remove-html-tags": false,
+      "remove-punctuation": false,
+      "remove-stopwords": false
+    },
+    "tokenization_method": {
+      "bpe": false,
+      "sentencepiece": false,
+      "wordpiece": false
+    },
+    "augmentation_techniques": {
+      "backtranslation": false,
+      "synonym-replacement": false
+    }
+  },
+  "transformer_models": {
+    "base_models": {
+      "albert-base-v2": false,
+      "bert-base-uncased": false,
+      "deberta-v3-base": false,
+      "electra-small": false,
+      "roberta-base": false
+    },
+    "fine_tuning_strategy": {
+      "adapter-tuning": false,
+      "full-model-fine-tuning": false,
+      "lora": false
+    }
+  },
+  "loss_functions": {
+    "primary_loss": {
+      "cross-entropy": false,
+      "huber-loss": false,
+      "mse": false
+    },
+    "auxiliary_losses": {
+      "contrastive-loss": false
+    }
+  },
+  "training_strategy": {
+    "optimizer": {
+      "adam": false,
+      "adamw": false,
+      "sgd": false
+    },
+    "learning_rate": null,
+    "learning_rate_schedule": {
+      "cosine-annealing": false,
+      "linear-warmup-decay": false,
+      "step-decay": false
+    },
+    "epochs": null,
+    "regularization": {
+      "dropout": false,
+      "layer-normalization": false,
+      "weight-decay": false
+    },
+    "cross_validation": {
+      "5-fold": false,
+      "leave-one-out": false,
+      "stratified-kfold": false
+    }
+  },
+  "model_architecture": {
+    "pooling_strategy": {
+      "cls-token": false,
+      "max-pooling": false,
+      "mean-pooling": false
+    },
+    "additional_layers": {
+      "attention-layer": false,
+      "dense-layer": false,
+      "lstm-layer": false
+    },
+    "dropout_rate": null
+  },
+  "postprocessing": {
+    "ensemble_method": {
+      "exemple": false,
+      "ridge-regression": false,
+      "stacking": false,
+      "voting": false,
+      "weighted-average": false
+    },
+    "prediction_averaging": {
+      "arithmetic-mean": false,
+      "geometric-mean": false
+    }
+  },
+  "frameworks": {
+    "deep_learning_framework": {
+      "jax": false,
+      "pytorch": false,
+      "tensorflow": false
+    },
+    "libraries": {
+      "keras": false,
+      "numpy": false,
+      "sentence-transformers": false,
+      "sklearn": false,
+      "transformers": false
+    }
+  }
+}

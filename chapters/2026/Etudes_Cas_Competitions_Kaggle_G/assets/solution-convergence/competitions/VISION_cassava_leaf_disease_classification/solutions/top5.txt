@@ -1,0 +1,44 @@
+This is the first time that I participate in a real and entire kaggle competition. As this is the last chance for me to write something on my unremarkable resume for the upcoming recruitment season in my location, what I expect is to achieve a place around top 10%, but definitely the higher the better. I never ever imagine I could be in the gold area before the time that private leaderboard was released. For me, this is really a valuable as well as unforgettable experience.
+Thankful to those kind even selfless kagglers who contributes their questions, thoughts, insights and techniques to every kernel and every discussion, they really enlighted me and helped me learn a lot. Special thanks to @Heroseo, @khyeh0719, @szuzhangzhi, @serigne, @debarshichanda, @prvnkmr (forgive me for not listing more due to page limit) as your works and answers bring me real progress and improvements for my LB and PB scores.
+Back to the topic, I'd like to share my solutions selected for final submissions, just for reference since the best solution of the 1st team for this competition is obviously more delicate and robust.
+
+First Final Selection (5th place):
+
+PB: 0.9019, LB: 0.9030
+Inference kernel:
+img_size = 384
+model_8 (vit16) + model_13 (efn-b4-cmix) (2-model ensemble)
+tta: random crop, transpose, h/v flip, hue, random brightness, normalize
+Training kernels:
+Training model_8:
+Dataset: Cassava 2020 only
+vit-b16 + img_size = 384 + augmentations + bi-tempered logistic loss (t1=0.8, t2=1.4)
+Training model_13:
+Dataset: Cassava 2020 only
+efn-b4 + img_size = 512 + augmentations + bi-tempered logistic loss (t1=0.8, t2=1.4) + cutmix
+Second Final Selection:
+
+PB: 0.9002, LB: 0.9039
+Inference kernel:
+img_size = 384
+model_8 (vit16) + model_13_ft_2 (efn-b4-cmix) + model_10 (deit) (3-model ensemble)
+tta: random crop, transpose, h/v flip, hue, random brightness, normalize
+ensemble weight=[0.5, 0.3, 0.2]
+Training Kernels:
+Training model_8:
+Dataset: Cassava 2020 only
+vit-b16 + img_size = 384 + augmentations + bi-tempered logistic loss (t1=0.8, t2=1.4)
+Training model_13_ft_2
+Dataset: Cassava 2019 + 2020 merged dataset
+finetune model_13 with: freeze non-classifier layers + bi-tempered logistic loss (t1=0.8, t2=1.4) + cutmix
+Training model_10:
+Dataset: Cassava 2020 only
+deit-b16 + img_size = 384 + augmentations + bi-tempered logistic loss (t1=0.8, t2=1.4)
+Some preliminary conclusions from my experience for this competition:
+
+Ensemble works better than single model inference in most cases.
+Cutmix improves classification performace for small models, like efn-b4.
+Label deleting/denoising using oof may be useful for LB (achieve the second hightest LB score for me), but may not for PB.
+Cassava 2020 dataset works better than Cassava 2019+2020 merged dataset when training models, probably because of the size difference between the two datasets.
+Proper-parametered bi-tempered logistic loss works better than other losses (like Taylor Cross Entropy loss or Label Smoothing loss) in most cases, no matter training or finetuning.
+Last but not the least, I'd like to appreciate Makerere University AI Lab and Kaggle platform for organizing such a competition that all kagglers can implement their ideas and show their thoughts. In my future career, I will join more kaggle competitions, trying to be a better kaggler and data science researcher.

@@ -1,0 +1,47 @@
+NORMALIZATION REPORT
+============================================================
+
+Total files processed: 10
+Successful: 10
+Errors: 0
+Files with extra fields: 9
+
+MODIFICATIONS SUMMARY
+============================================================
+
+  lowercased..............................      1
+  missing_fields_added....................     70
+  separators_normalized...................     83
+
+============================================================
+
+ERRORS AND WARNINGS
+============================================================
+
+[WARNING] top106.json
+  Extra fields: loss_functions.auxiliary_loss, training_strategy.gradient_accumulation, model_architecture.attention_mechanism, model_architecture.custom_layers, postprocessing.prediction_refinement
+
+[WARNING] top114.json
+  Extra fields: preprocessing.feature_engineering, loss_functions.auxiliary_loss, training_strategy.gradient_accumulation, model_architecture.attention_mechanism, model_architecture.custom_layers, postprocessing.prediction_refinement
+
+[WARNING] top128.json
+  Extra fields: loss_functions.auxiliary_loss, training_strategy.gradient_accumulation, model_architecture.attention_mechanism, model_architecture.custom_layers, postprocessing.prediction_refinement
+
+[WARNING] top136.json
+  Extra fields: loss_functions.auxiliary_loss, training_strategy.gradient_accumulation, model_architecture.attention_mechanism, model_architecture.custom_layers, postprocessing.prediction_refinement, postprocessing.external_models
+
+[WARNING] top2.json
+  Extra fields: loss_functions.auxiliary_loss, training_strategy.gradient_accumulation, model_architecture.attention_mechanism, model_architecture.custom_layers, postprocessing.prediction_refinement
+
+[WARNING] top207.json
+  Extra fields: loss_functions.auxiliary_loss, training_strategy.gradient_accumulation, model_architecture.attention_mechanism, model_architecture.custom_layers, postprocessing.prediction_refinement
+
+[WARNING] top3.json
+  Extra fields: loss_functions.auxiliary_loss, training_strategy.gradient_accumulation, model_architecture.attention_mechanism, model_architecture.custom_layers, postprocessing.prediction_refinement
+
+[WARNING] top4.json
+  Extra fields: preprocessing.feature_engineering, loss_functions.auxiliary_loss, training_strategy.gradient_accumulation, model_architecture.attention_mechanism, model_architecture.custom_layers, postprocessing.prediction_refinement
+
+[WARNING] top5.json
+  Extra fields: loss_functions.auxiliary_loss, training_strategy.gradient_accumulation, model_architecture.attention_mechanism, model_architecture.custom_layers, model_architecture.regularization, postprocessing.prediction_refinement
+

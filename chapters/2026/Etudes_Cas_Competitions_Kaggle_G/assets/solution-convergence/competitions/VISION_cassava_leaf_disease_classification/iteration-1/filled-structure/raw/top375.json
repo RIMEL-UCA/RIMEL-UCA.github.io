@@ -1,0 +1,71 @@
+{
+  "embeddings": {
+    "word_embeddings": [],
+    "contextual_embeddings": []
+  },
+  "preprocessing": {
+    "text_cleaning": [],
+    "tokenization_method": [],
+    "lowercase": null,
+    "augmentation_techniques": [
+      "TTA"
+    ]
+  },
+  "transformer_models": {
+    "base_models": [
+      "EfficientNet-B5",
+      "EfficientNet-B4",
+      "ResNeXt-50",
+      "ViT-B/16"
+    ],
+    "pretrained_checkpoints": [
+      "NoisyStudent"
+    ],
+    "fine_tuning_strategy": []
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "label smoothing cross-entropy",
+      "focal loss"
+    ],
+    "auxiliary_losses": []
+  },
+  "training_strategy": {
+    "optimizer": [],
+    "learning_rate": null,
+    "learning_rate_schedule": [
+      "flat learning rate before cosine annealing"
+    ],
+    "batch_size": 72,
+    "epochs": null,
+    "regularization": [
+      "weight decay",
+      "gradient accumulation"
+    ],
+    "cross_validation": []
+  },
+  "model_architecture": {
+    "pooling_strategy": [],
+    "additional_layers": [],
+    "dropout_rate": null
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "weighted power averaging",
+      "rank averaging",
+      "weighted arithmetic mean"
+    ],
+    "prediction_averaging": [
+      "TTA"
+    ]
+  },
+  "frameworks": {
+    "deep_learning_framework": [
+      "PyTorch"
+    ],
+    "libraries": [
+      "fastai",
+      "timm"
+    ]
+  }
+}

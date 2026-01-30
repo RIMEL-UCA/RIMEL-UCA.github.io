@@ -1,0 +1,62 @@
+{
+  "embeddings": {
+    "word_embeddings": [],
+    "contextual_embeddings": []
+  },
+  "preprocessing": {
+    "text_cleaning": [],
+    "tokenization_method": [],
+    "lowercase": null,
+    "augmentation_techniques": []
+  },
+  "transformer_models": {
+    "base_models": [],
+    "pretrained_checkpoints": [],
+    "fine_tuning_strategy": []
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "cross-entropy"
+    ],
+    "auxiliary_losses": []
+  },
+  "training_strategy": {
+    "optimizer": [],
+    "learning_rate": 0.01,
+    "learning_rate_schedule": [],
+    "batch_size": null,
+    "epochs": null,
+    "regularization": [
+      "subsample",
+      "feature-fraction",
+      "feature-fraction-bynode",
+      "min-data-in-leaf"
+    ],
+    "cross_validation": [
+      "5-fold"
+    ]
+  },
+  "model_architecture": {
+    "pooling_strategy": [],
+    "additional_layers": [],
+    "dropout_rate": null
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "power-rank-blend"
+    ],
+    "prediction_averaging": [
+      "dart-lgbm-0.801-+-gbdt-lgbm-0.799-+-catboost-0.799"
+    ]
+  },
+  "frameworks": {
+    "deep_learning_framework": [],
+    "libraries": [
+      "lightgbm",
+      "catboost",
+      "sklearn",
+      "pandas",
+      "numpy"
+    ]
+  }
+}

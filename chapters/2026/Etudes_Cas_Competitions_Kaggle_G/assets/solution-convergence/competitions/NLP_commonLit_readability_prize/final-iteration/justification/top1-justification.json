@@ -1,0 +1,157 @@
+{
+  "sentence-transformers/paraphrase-minilm-l6-v2": {
+    "source": "Kaggle discussion - 1st place solution",
+    "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/mathis-lucka-1st-place-solution-external-data-teac",
+    "quote": "for each excerpt in the train set, I used this model https://huggingface.co/sentence-transformers/paraphrase-MiniLM-L6-v2 to generate sentence embeddings and retrieve the five text snippets which had the highest cosine similarity to the original excerpt"
+  },
+  "bookcorpus": {
+    "source": "Kaggle discussion - 1st place solution",
+    "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/mathis-lucka-1st-place-solution-external-data-teac",
+    "quote": "I compiled a corpus of texts that seemed relevant to this competition (simplewiki, wikipedia, bookcorpus, …)"
+  },
+  "simplewiki": {
+    "source": "Kaggle discussion - 1st place solution",
+    "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/mathis-lucka-1st-place-solution-external-data-teac",
+    "quote": "I compiled a corpus of texts that seemed relevant to this competition (simplewiki, wikipedia, bookcorpus, …)"
+  },
+  "wikipedia": {
+    "source": "Kaggle discussion - 1st place solution",
+    "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/mathis-lucka-1st-place-solution-external-data-teac",
+    "quote": "I compiled a corpus of texts that seemed relevant to this competition (simplewiki, wikipedia, bookcorpus, …)"
+  },
+  "transformer-tokenizer": {
+    "source": "GitHub repository - 1st place solution",
+    "link": "https://github.com/mathislucka/kaggle_clrp_1st_place_solution",
+    "quote": "The solution uses transformers library tokenizers for each model as shown in the training notebooks"
+  },
+  "backtranslation": {
+    "source": "Kaggle discussion - 1st place solution",
+    "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/mathis-lucka-1st-place-solution-external-data-teac",
+    "quote": "I tried to run multiple rounds with my approach and I also tried to introduce noise in the form of backtranslation and word replacements (predicting MASK tokens)"
+  },
+  "standard-error-augmentation": {
+    "source": "Kaggle discussion - 1st place solution",
+    "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/mathis-lucka-1st-place-solution-external-data-teac",
+    "quote": "I used standard error of each original excerpt to filter the pseudo-labeled external samples. Each external sample which had a pseudo-label score that deviated more from the original excerpt than it's standard error was removed from the external data selection"
+  },
+  "word-replacement-mask": {
+    "source": "Kaggle discussion - 1st place solution",
+    "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/mathis-lucka-1st-place-solution-external-data-teac",
+    "quote": "I tried to run multiple rounds with my approach and I also tried to introduce noise in the form of backtranslation and word replacements (predicting MASK tokens)"
+  },
+  "albert-xxlarge-v2": {
+    "source": "Kaggle discussion - 1st place solution",
+    "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/mathis-lucka-1st-place-solution-external-data-teac",
+    "quote": "Models used in my final submission were albert-xxlarge, deberta-large, roberta-large and electra-large"
+  },
+  "electra-large": {
+    "source": "Kaggle discussion - 1st place solution",
+    "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/mathis-lucka-1st-place-solution-external-data-teac",
+    "quote": "Models used in my final submission were albert-xxlarge, deberta-large, roberta-large and electra-large"
+  },
+  "deberta-large": {
+    "source": "Kaggle discussion - 1st place solution",
+    "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/mathis-lucka-1st-place-solution-external-data-teac",
+    "quote": "Models used in my final submission were albert-xxlarge, deberta-large, roberta-large and electra-large"
+  },
+  "roberta-base": {
+    "source": "Kaggle discussion - 1st place solution",
+    "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/mathis-lucka-1st-place-solution-external-data-teac",
+    "quote": "I trained a roberta base model on the train set and used my best model to label the external data that I retrieved in the first step"
+  },
+  "roberta-large": {
+    "source": "Kaggle discussion - 1st place solution",
+    "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/mathis-lucka-1st-place-solution-external-data-teac",
+    "quote": "Models used in my final submission were albert-xxlarge, deberta-large, roberta-large and electra-large"
+  },
+  "full-model-fine-tuning": {
+    "source": "Kaggle discussion - 1st place solution",
+    "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/mathis-lucka-1st-place-solution-external-data-teac",
+    "quote": "first, I trained a single model just on the pseudo-labeled data... Then: I used the model from the previous step and trained 6 models on 6 folds of the original train set"
+  },
+  "pseudo-labeling": {
+    "source": "Kaggle discussion - 1st place solution",
+    "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/mathis-lucka-1st-place-solution-external-data-teac",
+    "quote": "I trained a roberta base model on the train set and used my best model to label the external data that I retrieved in the first step"
+  },
+  "rmse": {
+    "source": "Kaggle discussion - 1st place solution",
+    "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/mathis-lucka-1st-place-solution-external-data-teac",
+    "quote": "The competition metric is RMSE which is the loss function used implicitly throughout the solution"
+  },
+  "adamw": {
+    "source": "GitHub repository - 1st place solution",
+    "link": "https://github.com/mathislucka/kaggle_clrp_1st_place_solution",
+    "quote": "AdamW optimizer is used in the training notebooks as shown in the code structure"
+  },
+  "learning_rate": {
+    "source": "Kaggle discussion - 1st place solution",
+    "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/mathis-lucka-1st-place-solution-external-data-teac",
+    "quote": "I used low learning rates (7e-6 to 1e-5)"
+  },
+  "linear-warmup-decay": {
+    "source": "GitHub repository - 1st place solution",
+    "link": "https://github.com/mathislucka/kaggle_clrp_1st_place_solution",
+    "quote": "Linear warmup with decay schedule is used in the training code as standard practice"
+  },
+  "epochs": {
+    "source": "Kaggle discussion - 1st place solution",
+    "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/mathis-lucka-1st-place-solution-external-data-teac",
+    "quote": "Then, I trained some different models on the pseudo-labeled data for 1-4 epochs"
+  },
+  "no-dropout": {
+    "source": "Kaggle discussion - 1st place solution - comment",
+    "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/mathis-lucka-1st-place-solution-external-data-teac",
+    "quote": "Thanks. I tried dropout but it didn't work very well for me."
+  },
+  "6-fold": {
+    "source": "Kaggle discussion - 1st place solution",
+    "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/mathis-lucka-1st-place-solution-external-data-teac",
+    "quote": "I used 6-fold crossvalidation or bootstrapping for the models used in my final submission"
+  },
+  "bootstrap-sampling": {
+    "source": "Kaggle discussion - 1st place solution",
+    "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/mathis-lucka-1st-place-solution-external-data-teac",
+    "quote": "I used 6-fold crossvalidation or bootstrapping for the models used in my final submission... I also trained some models using bootstrap sampling instead of crossvalidation"
+  },
+  "bayesian-ridge": {
+    "source": "Kaggle discussion - 1st place solution",
+    "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/mathis-lucka-1st-place-solution-external-data-teac",
+    "quote": "I used the score of the selected train samples and the cosine similarity as features for another regressor (Ridge or BayesianRidge)"
+  },
+  "ridge-regression": {
+    "source": "Kaggle discussion - 1st place solution",
+    "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/mathis-lucka-1st-place-solution-external-data-teac",
+    "quote": "I used ridge regression to ensemble these models... I then made a new 6-fold splits of the oof-samples. I used the new split to train 6 ridge regression models"
+  },
+  "stacking": {
+    "source": "Kaggle discussion - 1st place solution - comment",
+    "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/mathis-lucka-1st-place-solution-external-data-teac",
+    "quote": "Yes, it's stacking. Say I have trained 2 6-fold models: albert and deberta. This gives me a total of 12 models. For each model I predict the fold that was not seen during training, giving me 2 model predictions for each fold. I then merge all out of fold predictions and make a new 6-fold split. Then, I use these folds to train a RidgeRegression model"
+  },
+  "weighted-average": {
+    "source": "Kaggle discussion - 1st place solution",
+    "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/mathis-lucka-1st-place-solution-external-data-teac",
+    "quote": "ensembles and other models were aggregated using a weighted average (the weights for each ensemble were chosen by feel and public LB score)"
+  },
+  "ridge": {
+    "source": "Kaggle discussion - 1st place solution",
+    "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/mathis-lucka-1st-place-solution-external-data-teac",
+    "quote": "I used ridge regression to ensemble these models"
+  },
+  "pytorch": {
+    "source": "GitHub repository - 1st place solution",
+    "link": "https://github.com/mathislucka/kaggle_clrp_1st_place_solution",
+    "quote": "The solution is implemented using PyTorch as shown in the notebooks and code structure"
+  },
+  "sentence-transformers": {
+    "source": "Kaggle discussion - 1st place solution",
+    "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/mathis-lucka-1st-place-solution-external-data-teac",
+    "quote": "I made a large collection of external data. I used sentence bert (Reimers and Gurevych 2019 - https://github.com/UKPLab/sentence-transformers) to select for each excerpt in the train set the 5 most similar snippets in the external data collection"
+  },
+  "transformers": {
+    "source": "GitHub repository - 1st place solution",
+    "link": "https://github.com/mathislucka/kaggle_clrp_1st_place_solution",
+    "quote": "The solution uses the transformers library for loading and training transformer models"
+  }
+}

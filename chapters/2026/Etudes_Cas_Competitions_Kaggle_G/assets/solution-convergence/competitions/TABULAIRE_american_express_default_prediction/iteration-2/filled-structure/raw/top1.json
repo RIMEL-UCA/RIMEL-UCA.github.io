@@ -1,0 +1,76 @@
+{
+  "tabular_features": {
+    "aggregation_features": ["mean", "std", "min", "max", "sum", "last", "nunique", "count"],
+    "time_series_features": ["diff", "rank", "ym_rank", "last3", "last6", "ewm"]
+  },
+  "preprocessing": {
+    "data_denoising": ["floor_multiplication", "categorical_mapping"],
+    "fillna_strategy": ["fillna_0"],
+    "categorical_encoding": ["one_hot_encoding", "label_encoding"],
+    "feature_scaling": ["division_0.01"]
+  },
+  "transformer_models": {
+    "base_models": [],
+    "fine_tuning_strategy": []
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "binary-logloss"
+    ]
+  },
+  "training_strategy": {
+    "optimizer": [
+      "adam"
+    ],
+    "learning_rate": 0.035,
+    "learning_rate_schedule": [],
+    "batch_size": 256,
+    "epochs": 10,
+    "regularization": [
+      "lambda-l1",
+      "lambda-l2",
+      "dropout"
+    ],
+    "cross_validation": [
+      "5-fold"
+    ]
+  },
+  "model_architecture": {
+    "pooling_strategy": [
+      "gru",
+      "pack-padded-sequence"
+    ],
+    "additional_layers": [
+      "linear",
+      "layernorm",
+      "batchnorm1d",
+      "leakyrelu"
+    ],
+    "dropout_rate": 0.5
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "weighted-average"
+    ],
+    "prediction_averaging": [
+      "0.3-lgb-manual-+-0.35-lgb-manual-series-+-0.15-nn-series-+-0.1-nn-series-all"
+    ]
+  },
+  "model_specific": {
+    "boosting_type": ["dart"]
+  },
+  "feature_engineering": {
+    "feature_selection_method": ["feature_importance"]
+  },
+  "frameworks": {
+    "deep_learning_framework": [
+      "pytorch"
+    ],
+    "libraries": [
+      "lightgbm",
+      "sklearn",
+      "pandas",
+      "numpy"
+    ]
+  }
+}

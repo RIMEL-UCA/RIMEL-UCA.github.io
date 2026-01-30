@@ -1,0 +1,43 @@
+{
+  "embeddings": {
+    "word_embeddings": [],
+    "contextual_embeddings": []
+  },
+  "preprocessing": {
+    "text_cleaning": [],
+    "tokenization_method": [],
+    "lowercase": null,
+    "augmentation_techniques": []
+  },
+  "transformer_models": {
+    "base_models": ["Transformer"],
+    "pretrained_checkpoints": [],
+    "fine_tuning_strategy": []
+  },
+  "loss_functions": {
+    "primary_loss": ["BCEWithLogitsLoss", "hinge_loss", "rank_loss"],
+    "auxiliary_losses": []
+  },
+  "training_strategy": {
+    "optimizer": ["AdamW"],
+    "learning_rate": 0.001,
+    "learning_rate_schedule": ["CosineAnnealingLR"],
+    "batch_size": 4096,
+    "epochs": 12,
+    "regularization": ["weight_decay", "dropout", "BatchNorm1d", "gradient_clipping"],
+    "cross_validation": ["5-fold_stratified"]
+  },
+  "model_architecture": {
+    "pooling_strategy": ["GRU"],
+    "additional_layers": ["Embedding", "TransformBlock", "Linear", "Softplus", "BatchNorm1d"],
+    "dropout_rate": 0.5
+  },
+  "postprocessing": {
+    "ensemble_method": ["ensemble"],
+    "prediction_averaging": ["DART + NN", "Tabular_NN + GRU + Transformer + Stack_Model"]
+  },
+  "frameworks": {
+    "deep_learning_framework": ["PyTorch"],
+    "libraries": ["LightGBM", "sklearn", "pandas", "numpy"]
+  }
+}

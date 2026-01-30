@@ -1,0 +1,76 @@
+{
+  "embeddings": {
+    "word_embeddings": [],
+    "contextual_embeddings": []
+  },
+  "preprocessing": {
+    "text_cleaning": [],
+    "tokenization_method": [
+      "transformer-tokenizer"
+    ],
+    "lowercase": null,
+    "augmentation_techniques": []
+  },
+  "transformer_models": {
+    "base_models": [
+      "roberta-large",
+      "microsoft/deberta-large",
+      "microsoft/deberta-xlarge",
+      "xlnet-large-cased",
+      "funnel-transformer/xlarge",
+      "t5-large",
+      "albert-xxlarge-v2",
+      "facebook/bart-large",
+      "google/electra-large-discriminator"
+    ],
+    "pretrained_checkpoints": [],
+    "fine_tuning_strategy": [
+      "full-model-fine-tuning"
+    ]
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "mse"
+    ],
+    "auxiliary_losses": []
+  },
+  "training_strategy": {
+    "optimizer": [
+      "adamw"
+    ],
+    "learning_rate": 2e-05,
+    "learning_rate_schedule": [
+      "linear-warmup-decay"
+    ],
+    "batch_size": 8,
+    "epochs": 5,
+    "regularization": [],
+    "cross_validation": [
+      "5-fold"
+    ]
+  },
+  "model_architecture": {
+    "pooling_strategy": [
+      "cls-token",
+      "mean-pooling"
+    ],
+    "additional_layers": [],
+    "dropout_rate": null
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "weighted-average",
+      "nelder-mead-optimization"
+    ],
+    "prediction_averaging": []
+  },
+  "frameworks": {
+    "deep_learning_framework": [
+      "pytorch"
+    ],
+    "libraries": [
+      "transformers",
+      "sklearn"
+    ]
+  }
+}

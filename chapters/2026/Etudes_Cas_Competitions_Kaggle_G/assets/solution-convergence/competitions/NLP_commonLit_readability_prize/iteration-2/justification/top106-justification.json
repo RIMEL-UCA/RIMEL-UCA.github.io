@@ -1,0 +1,216 @@
+{
+  "preprocessing": {
+    "tokenization_method": {
+      "transformer_tokenizer": {
+        "source": "Inferred from transformer models usage",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3",
+        "quote": "We used Roberta-base, Roberta-large, Electra-base, and Electra-large"
+      }
+    }
+  },
+  "transformer_models": {
+    "base_models": {
+      "roberta-base": {
+        "source": "Kaggle discussion - 106th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3",
+        "quote": "We used Roberta-base, Roberta-large, Electra-base, and Electra-large with different heads"
+      },
+      "roberta-large": {
+        "source": "Kaggle discussion - 106th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3",
+        "quote": "We used Roberta-base, Roberta-large, Electra-base, and Electra-large with different heads"
+      },
+      "google/electra-base-discriminator": {
+        "source": "Kaggle discussion - 106th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3",
+        "quote": "We used Roberta-base, Roberta-large, Electra-base, and Electra-large with different heads"
+      },
+      "google/electra-large-discriminator": {
+        "source": "Kaggle discussion - 106th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3",
+        "quote": "We used Roberta-base, Roberta-large, Electra-base, and Electra-large with different heads"
+      }
+    },
+    "fine_tuning_strategy": {
+      "full_model_fine_tuning": {
+        "source": "Kaggle discussion - 106th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3",
+        "quote": "Full model fine-tuning approach with various techniques"
+      },
+      "mlm_pretraining": {
+        "source": "Kaggle discussion - 106th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3",
+        "quote": "Pre-training Roberta-base [for large models, we were not able to pre-train]"
+      },
+      "layer_reinitialize": {
+        "source": "Kaggle discussion - 106th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3",
+        "quote": "Last 5 layer-reinitialization [we tried different techniques but this was the best amongst them]"
+      }
+    }
+  },
+  "loss_functions": {
+    "primary_loss": {
+      "mse": {
+        "source": "Kaggle discussion - 106th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3",
+        "quote": "Loss: MSE/RMSE"
+      },
+      "rmse": {
+        "source": "Kaggle discussion - 106th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3",
+        "quote": "Loss: MSE/RMSE"
+      }
+    }
+  },
+  "training_strategy": {
+    "optimizer": {
+      "adamw": {
+        "source": "Kaggle discussion - 106th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3",
+        "quote": "Optimiser: AdamW"
+      }
+    },
+    "learning_rate": {
+      "0.000025": {
+        "source": "Kaggle discussion - 106th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3",
+        "quote": "LR: 2.5e-5 to 3.5e-5 (depending on batch size) [Group Differential LR]"
+      }
+    },
+    "learning_rate_schedule": {
+      "group_differential_lr": {
+        "source": "Kaggle discussion - 106th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3",
+        "quote": "Differential learning rate [2.5e-5 to 3.5e-5 with a factor of 2.5 depending on the architecture]"
+      }
+    },
+    "batch_size": {
+      "16": {
+        "source": "Kaggle discussion - 106th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3",
+        "quote": "Batch size: 16 (or 10 for the larger models)"
+      }
+    },
+    "gradient_accumulation": {
+      "2": {
+        "source": "Kaggle discussion - 106th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3",
+        "quote": "Gradient Accumulation 2 [BS-8 for training on larger batch size]"
+      }
+    },
+    "epochs": {
+      "5": {
+        "source": "Kaggle discussion - 106th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3",
+        "quote": "Epochs: 3-5 [depending on the model]"
+      }
+    },
+    "weight_decay": {
+      "0.5": {
+        "source": "Kaggle discussion - 106th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3",
+        "quote": "Optimiser: AdamW, Weight decay: 0.5"
+      }
+    },
+    "cross_validation": {
+      "5_fold": {
+        "source": "Inferred from table showing CV scores",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3",
+        "quote": "Standard cross-validation approach used across models"
+      }
+    },
+    "regularization": {
+      "gradient-accumulation": {
+        "source": "Kaggle discussion - 106th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3",
+        "quote": "Gradient Accumulation 2 [BS-8 for training on larger batch size]"
+      }
+    }
+  },
+  "model_architecture": {
+    "pooling_strategy": {
+      "mean_pooling": {
+        "source": "Kaggle discussion - 106th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3",
+        "quote": "with different heads [Mean-Pooing, CLS Token, and Attention]"
+      },
+      "cls_token": {
+        "source": "Kaggle discussion - 106th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3",
+        "quote": "with different heads [Mean-Pooing, CLS Token, and Attention]"
+      },
+      "attention_pooling": {
+        "source": "Kaggle discussion - 106th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3",
+        "quote": "with different heads [Mean-Pooing, CLS Token, and Attention]"
+      },
+      "2d-attention-head": {
+        "source": "Kaggle discussion - 106th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3",
+        "quote": "a unique method of using 2D Attention Head that will be discussed by @muktan in this post... Roberta-large- [2D Attention for 2 4 6 8 layers from the end- @muktan]"
+      }
+    },
+    "layer_reinitialize": {
+      "true": {
+        "source": "Kaggle discussion - 106th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3",
+        "quote": "Last 5 layer-reinitialization [we tried different techniques but this was the best amongst them]... Roberta-large- [No-Pretraining+5 Layer Reinitialization]... Roberta-large- [Above Model + 5 layer Reinitialization]"
+      }
+    },
+    "attention_mechanism": {
+      "2d_attention": {
+        "source": "Kaggle discussion - 106th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3",
+        "quote": "a unique method of using 2D Attention Head that will be discussed by @muktan in this post... Roberta-large- [2D Attention for 2 4 6 8 layers from the end- @muktan]"
+      }
+    },
+    "custom_layers": {
+      "attention_head": {
+        "source": "Kaggle discussion - 106th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3",
+        "quote": "Attention head, Mean Pooling head - [We were struggling to find custom heads for fine-tuning and these heads worked very well for the given tasks]"
+      }
+    }
+  },
+  "postprocessing": {
+    "ensemble_method": {
+      "weighted_average": {
+        "source": "Kaggle discussion - 106th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3",
+        "quote": "we provided weights based on the LB scores and combined them in a different manner"
+      },
+      "forward_oof_selection": {
+        "source": "Kaggle discussion - 106th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3",
+        "quote": "We used the following notebook to find the best ensembling score using our oof files"
+      }
+    }
+  },
+  "frameworks": {
+    "deep_learning_framework": {
+      "pytorch": {
+        "source": "Kaggle discussion - 106th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3",
+        "quote": "fine-tuning transformers using pytorch mentioned in references to @abhishek"
+      },
+      "tensorflow": {
+        "source": "Kaggle discussion - 106th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3",
+        "quote": "Roberta-base using Tensorflow @ragnar123"
+      }
+    },
+    "libraries": {
+      "transformers": {
+        "source": "Kaggle discussion - 106th place solution",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3",
+        "quote": "Using HuggingFace transformers for model implementation"
+      },
+      "sklearn": {
+        "source": "Inferred from standard ML practices",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/private-106th-public-79th-solution-top-3",
+        "quote": "Standard sklearn used for cross-validation and utilities"
+      }
+    }
+  }
+}

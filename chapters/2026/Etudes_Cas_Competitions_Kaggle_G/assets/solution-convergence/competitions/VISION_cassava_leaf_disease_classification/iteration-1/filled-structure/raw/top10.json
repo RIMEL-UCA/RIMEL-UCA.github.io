@@ -1,0 +1,75 @@
+{
+  "embeddings": {
+    "word_embeddings": [],
+    "contextual_embeddings": []
+  },
+  "preprocessing": {
+    "text_cleaning": [],
+    "tokenization_method": [],
+    "lowercase": null,
+    "augmentation_techniques": [
+      "horizontal flip",
+      "vertical flip",
+      "zoom",
+      "crop",
+      "resize",
+      "mixup",
+      "cutmix"
+    ]
+  },
+  "transformer_models": {
+    "base_models": [
+      "DeiT-base-384",
+      "EfficientNet-B4"
+    ],
+    "pretrained_checkpoints": [],
+    "fine_tuning_strategy": []
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "OUSM loss",
+      "Taylor Loss",
+      "CrossEntropyLoss"
+    ],
+    "auxiliary_losses": []
+  },
+  "training_strategy": {
+    "optimizer": [
+      "Adam"
+    ],
+    "learning_rate": null,
+    "learning_rate_schedule": [
+      "cosine annealing with warmup"
+    ],
+    "batch_size": 16,
+    "epochs": null,
+    "regularization": [
+      "label smoothing",
+      "early stopping",
+      "gradient accumulation",
+      "fp16"
+    ],
+    "cross_validation": [
+      "5-fold"
+    ]
+  },
+  "model_architecture": {
+    "pooling_strategy": [],
+    "additional_layers": [],
+    "dropout_rate": null
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "averaging"
+    ],
+    "prediction_averaging": [
+      "TTA"
+    ]
+  },
+  "frameworks": {
+    "deep_learning_framework": [
+      "PyTorch"
+    ],
+    "libraries": []
+  }
+}

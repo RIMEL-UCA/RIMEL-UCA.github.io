@@ -1,0 +1,75 @@
+{
+  "preprocessing": {
+    "image_size": [
+      "224x224",
+      "456x456",
+      "512x512"
+    ],
+    "normalization": {},
+    "augmentation_techniques": [
+      "tta"
+    ]
+  },
+  "transformer_models": {
+    "base_models": [
+      "efficientnet-b5",
+      "efficientnet-b4",
+      "resnext-50",
+      "vit-b/16"
+    ],
+    "pretrained_checkpoints": [
+      "noisystudent"
+    ],
+    "fine_tuning_strategy": []
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "label-smoothing-cross-entropy",
+      "focal-loss"
+    ]
+  },
+  "training_strategy": {
+    "optimizer": [
+      "adam"
+    ],
+    "learning_rate": null,
+    "learning_rate_schedule": [
+      "flat-learning-rate-before-cosine-annealing"
+    ],
+    "batch_size": 72,
+    "epochs": null,
+    "regularization": [
+      "weight-decay",
+      "gradient-accumulation"
+    ],
+    "cross_validation": [],
+    "external_data": [],
+    "mixed_precision": null,
+    "progressive_resizing": null,
+    "noise_handling": []
+  },
+  "model_architecture": {
+    "pooling_strategy": [],
+    "additional_layers": [],
+    "dropout_rate": null
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "weighted-power-averaging",
+      "rank-averaging",
+      "weighted-arithmetic-mean"
+    ],
+    "prediction_averaging": [
+      "tta"
+    ]
+  },
+  "frameworks": {
+    "deep_learning_framework": [
+      "pytorch"
+    ],
+    "libraries": [
+      "fastai",
+      "timm"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "competition": "csiro-biomass",
+  "stratum": "p40_50",
+  "ref": "taharf/biomass-challenge-training-notebook",
+  "local_main_file": "corpus\\csiro-biomass\\notebooks\\p40_50\\taharf__biomass-challenge-training-notebook\\biomass-challenge-training-notebook.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 20,
+    "B_modularite": 20,
+    "C_reproductibilite": 20,
+    "D_lisibilite": 15,
+    "E_hygiene": 20
+  },
+  "score_total_100": 95,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline complet et exemplaire: CONFIG → seed_everything → DATA PREPARATION → DATASET → TRANSFORMS → MODELS → EVALUATION → TRAINING → EXTRACT → ENSEMBLE → MAIN avec sections claires.",
+    "B_modularite": "Classe Config centralisée, classes PyTorch (BiomassDataset, SwinRegressor, DINOv3Regressor, SigLIPRegressor, LearnableEnsemble), fonctions réutilisables (seed_everything, clear_gpu_memory, get_transforms, evaluate_r2, train_single_model).",
+    "C_reproductibilite": "seed_everything(42) avec torch.backends.cudnn.deterministic=True, Config.SEED, StratifiedGroupKFold(random_state=Config.SEED), TARGET_MEAN/TARGET_STD sauvegardés, ensemble_config.json généré.",
+    "D_lisibilite": "Sections markdown (# CONFIG, # MODELS), docstrings ('Plot training/validation loss'), noms explicites, mais commentaires parfois minimaux.",
+    "E_hygiene": "Aucun hardcoding (tout dans Config), clear_gpu_memory(), gc.collect(), warnings.filterwarnings('ignore'), sauvegarde artefacts (json, pth, pkl), gestion images None."
+  },
+  "summary": "Notebook de référence avec qualité production. Pipeline complet train→eval→ensemble avec 3 modèles (Swin, DINOv3, SigLIP). Reproductibilité exemplaire (seeds partout, configs sauvegardées). Architecture très modulaire avec Config centralisée. Gestion mémoire optimisée. Seul point perfectible: plus de markdown explicatif."
+}

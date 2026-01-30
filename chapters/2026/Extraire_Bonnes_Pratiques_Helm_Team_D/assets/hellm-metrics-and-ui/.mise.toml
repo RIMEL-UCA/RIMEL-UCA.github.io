@@ -1,0 +1,14 @@
+[tools]
+python = "3.12"
+
+[env]
+_.python.venv = { path = ".venv", create = true }
+
+[tasks.install]
+description = "Install Python dependencies"
+run = "pip install -r requirements.txt"
+
+[tasks.plot]
+description = "Run the histogram plotting script"
+depends = ["install"]
+run = "python plot_histograms.py"

@@ -1,0 +1,22 @@
+{
+  "competition": "santa-2025",
+  "stratum": "top_10%",
+  "ref": "hossam82/santa-tree-high-score",
+  "local_main_file": "corpus\\santa-2025\\notebooks\\top_10%\\hossam82__santa-tree-high-score\\santa-tree-high-score.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 15,
+    "B_modularite": 15,
+    "C_reproductibilite": 15,
+    "D_lisibilite": 10,
+    "E_hygiene": 15
+  },
+  "score_total_100": 70,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline identique aux autres notebooks Santa: CONFIGURATION → Setup → Ensemble module.",
+    "B_modularite": "Même module ensemble_submissions.py réutilisé.",
+    "C_reproductibilite": "GRADIENT_STEPS=20, BASIN_HOP_PERTURBATION=0.05. Configuration légèrement différente.",
+    "D_lisibilite": "Titre 'high-score' descriptif, sinon identique aux autres.",
+    "E_hygiene": "Code quasi-identique, mêmes protections et gestion d'erreurs."
+  },
+  "summary": "Notebook quasi-identique à santa-submission-bbox3 et just-luck. Variation sur hyperparamètres (GRADIENT_STEPS=20, BASIN_HOP_PERTURBATION=0.05). Pattern de forking commun dans compétitions Kaggle. Module ensemble réutilisé."
+}

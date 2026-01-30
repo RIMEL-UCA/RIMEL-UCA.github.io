@@ -1,0 +1,80 @@
+{
+  "embeddings": {
+    "sentence_embeddings": [],
+    "contextual_embeddings": []
+  },
+  "preprocessing": {
+    "external_data_sources": [],
+    "tokenization_method": [
+      "transformer-tokenizer"
+    ],
+    "augmentation_techniques": []
+  },
+  "transformer_models": {
+    "base_models": [
+      "roberta-large",
+      "roberta-base",
+      "roberta-large-mnli",
+      "microsoft/deberta-large",
+      "funnel-transformer/large",
+      "google/electra-large-discriminator"
+    ],
+    "mlm_pretraining": true,
+    "fine_tuning_strategy": [
+      "full-model-fine-tuning",
+      "layer-reinitialize"
+    ]
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "mse"
+    ]
+  },
+  "training_strategy": {
+    "optimizer": [
+      "adamw"
+    ],
+    "learning_rate": 3e-05,
+    "learning_rate_schedule": [
+      "cosine-annealing",
+      "exponential-layer-lr"
+    ],
+    "batch_size": 32,
+    "epochs": 5,
+    "weight_decay": null,
+    "pseudo_labeling": false,
+    "seed_averaging": true,
+    "regularization": [
+      "dropout-train-mode-inference",
+      "gradient-accumulation"
+    ],
+    "cross_validation": [
+      "kfold-no-shuffle"
+    ]
+  },
+  "model_architecture": {
+    "pooling_strategy": [
+      "mean-pooling",
+      "linear-head"
+    ],
+    "layer_reinitialize": true
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "ridge-regression",
+      "weighted-average"
+    ],
+    "stacking_models": [
+      "lightgbm"
+    ]
+  },
+  "frameworks": {
+    "deep_learning_framework": [
+      "pytorch"
+    ],
+    "libraries": [
+      "transformers",
+      "sklearn"
+    ]
+  }
+}

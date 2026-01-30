@@ -1,0 +1,72 @@
+{
+  "embeddings": {
+    "word_embeddings": [],
+    "contextual_embeddings": []
+  },
+  "preprocessing": {
+    "text_cleaning": [],
+    "tokenization_method": [],
+    "lowercase": null,
+    "augmentation_techniques": []
+  },
+  "transformer_models": {
+    "base_models": [],
+    "pretrained_checkpoints": [],
+    "fine_tuning_strategy": []
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "binary-logloss"
+    ],
+    "auxiliary_losses": []
+  },
+  "training_strategy": {
+    "optimizer": [
+      "adam"
+    ],
+    "learning_rate": 0.035,
+    "learning_rate_schedule": [],
+    "batch_size": 256,
+    "epochs": 10,
+    "regularization": [
+      "lambda-l1",
+      "lambda-l2",
+      "dropout"
+    ],
+    "cross_validation": [
+      "5-fold"
+    ]
+  },
+  "model_architecture": {
+    "pooling_strategy": [
+      "gru",
+      "pack-padded-sequence"
+    ],
+    "additional_layers": [
+      "linear",
+      "layernorm",
+      "batchnorm1d",
+      "leakyrelu"
+    ],
+    "dropout_rate": 0.5
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "weighted-average"
+    ],
+    "prediction_averaging": [
+      "0.3-lgb-manual-+-0.35-lgb-manual-series-+-0.15-nn-series-+-0.1-nn-series-all"
+    ]
+  },
+  "frameworks": {
+    "deep_learning_framework": [
+      "pytorch"
+    ],
+    "libraries": [
+      "lightgbm",
+      "sklearn",
+      "pandas",
+      "numpy"
+    ]
+  }
+}

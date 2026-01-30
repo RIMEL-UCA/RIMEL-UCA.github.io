@@ -1,0 +1,304 @@
+date,commit,author,file,change_type,lines_added,lines_removed,msg
+2025-01-23,a19fc67ff5e9112d3c7f1c65bc8f310c008eabe6,Jeremy Greze,analytics/evidence/sources/local_duckdb/sise_communes.sql,ADD,1,0,repo setup
+2025-01-23,a19fc67ff5e9112d3c7f1c65bc8f310c008eabe6,Jeremy Greze,analytics/evidence/sources/local_duckdb/sise_prelevements.sql,ADD,1,0,repo setup
+2025-02-05,4a5b0932b207c4419fa5d8110b2abc2a60d9aaed,Jeremy Greze,analytics/evidence/sources/local_duckdb/edc_communes.sql,ADD,1,0,fix: update SQL queries in evidence
+2025-02-05,4a5b0932b207c4419fa5d8110b2abc2a60d9aaed,Jeremy Greze,analytics/evidence/sources/local_duckdb/edc_prelevements.sql,ADD,1,0,fix: update SQL queries in evidence
+2025-02-05,4a5b0932b207c4419fa5d8110b2abc2a60d9aaed,Jeremy Greze,analytics/evidence/sources/local_duckdb/sise_communes.sql,DELETE,0,1,fix: update SQL queries in evidence
+2025-02-05,4a5b0932b207c4419fa5d8110b2abc2a60d9aaed,Jeremy Greze,analytics/evidence/sources/local_duckdb/sise_prelevements.sql,DELETE,0,1,fix: update SQL queries in evidence
+2025-02-11,ba69a8d1898ef93e4a18706e0a5233d73a2dffce,Julien Vansteenkiste,dbt_/models/staging/edc/stg_edc__communes.sql,ADD,9,0,Setup dbt (#23)
+2025-02-11,ba69a8d1898ef93e4a18706e0a5233d73a2dffce,Julien Vansteenkiste,dbt_/models/staging/edc/stg_edc__prevelevements.sql,ADD,20,0,Setup dbt (#23)
+2025-02-11,ba69a8d1898ef93e4a18706e0a5233d73a2dffce,Julien Vansteenkiste,dbt_/models/staging/edc/stg_edc__resultats.sql,ADD,19,0,Setup dbt (#23)
+2025-02-26,443adcd4b82210972bdc0d3084fc26c76dcb5287,pppp56,dbt_/models/staging/communes/stg_communes__cog.sql,ADD,16,0,Feature/add cog communes dataset (#47)
+2025-02-26,443adcd4b82210972bdc0d3084fc26c76dcb5287,pppp56,dbt_/models/staging/communes/stg_communes__laposte.sql,ADD,16,0,Feature/add cog communes dataset (#47)
+2025-02-26,4c48b9e65aba07849d9a751fb881187213b0cf2c,NicolasDuchenne,dbt_/models/staging/communes/stg_communes__laposte.sql,MODIFY,8,14,add laposte data (#72)
+2025-02-27,823f016d9c1591cbf604450a2ace04a7d42097b9,Jeremy Greze,analytics/evidence/sources/local_duckdb/edc_communes.sql,DELETE,0,1,"Clean evidence, and example for jupysql (#74)"
+2025-02-27,823f016d9c1591cbf604450a2ace04a7d42097b9,Jeremy Greze,analytics/evidence/sources/local_duckdb/edc_prelevements.sql,DELETE,0,1,"Clean evidence, and example for jupysql (#74)"
+2025-02-27,1213b54d7e91704a8e0563fd8ce460857c82fd29,NicolasDuchenne,dbt_/models/analytics/ana__resultats_communes.sql,ADD,71,0,"create dbt models for resultats commune, add dbt test when dbt folder… (#75)"
+2025-02-27,1213b54d7e91704a8e0563fd8ce460857c82fd29,NicolasDuchenne,dbt_/models/staging/communes/stg_communes__cog.sql,MODIFY,14,15,"create dbt models for resultats commune, add dbt test when dbt folder… (#75)"
+2025-02-27,1213b54d7e91704a8e0563fd8ce460857c82fd29,NicolasDuchenne,dbt_/models/staging/communes/stg_communes__laposte.sql,MODIFY,8,8,"create dbt models for resultats commune, add dbt test when dbt folder… (#75)"
+2025-02-27,1213b54d7e91704a8e0563fd8ce460857c82fd29,NicolasDuchenne,dbt_/models/staging/edc/stg_edc__communes.sql,MODIFY,8,8,"create dbt models for resultats commune, add dbt test when dbt folder… (#75)"
+2025-02-27,1213b54d7e91704a8e0563fd8ce460857c82fd29,NicolasDuchenne,dbt_/models/staging/edc/stg_edc__prevelevements.sql,MODIFY,19,18,"create dbt models for resultats commune, add dbt test when dbt folder… (#75)"
+2025-02-27,1213b54d7e91704a8e0563fd8ce460857c82fd29,NicolasDuchenne,dbt_/models/staging/edc/stg_edc__resultats.sql,MODIFY,19,18,"create dbt models for resultats commune, add dbt test when dbt folder… (#75)"
+2025-02-27,bb953a687fecec0fb72ea177b4fb8525da105143,julien,dbt_/models/intermediate/int_prelevements_uniques.sql,ADD,31,0,Create prelevements uniques table
+2025-03-07,8815a2931fefe421147d19a73119d7fddec3e898,V. Prana,dbt_/models/intermediate/int_prelevements_uniques.sql,DELETE,0,31,Delete dbt_/models/intermediate/int_prelevements_uniques.sql
+2025-03-07,a78ba807707b6d97f1818fb2d7673535aecec75f,Vinca PRANA,dbt_/models/intermediate/int__mapping_categorie_uniques.sql,ADD,16,0,feat: add dbt file for new table proposal
+2025-03-07,76f3e6e286a29849241d2964ffe11957eb54415a,Vinca PRANA,dbt_/models/intermediate/int__mapping_categorie_uniques.sql,DELETE,0,16,fix: simplify SQL for mapping_category_simple
+2025-03-07,76f3e6e286a29849241d2964ffe11957eb54415a,Vinca PRANA,dbt_/models/intermediate/int__mapping_category_simple.sql,ADD,8,0,fix: simplify SQL for mapping_category_simple
+2025-03-08,00af3e8f46d5a9ee4ffae4623a1a08d8e6919111,Julien Vansteenkiste,dbt_/models/intermediate/int__prelevements_uniques.sql,ADD,40,0,Create prelevement_unique table (#78)
+2025-03-16,febc4a74ae1493ca81a4f01d30b3b998b2d875c4,Jeremy Greze,dbt_/models/intermediate/int__lien_cdreseau_refreneceprel.sql,ADD,29,0,Dbt models update (#100)
+2025-03-16,febc4a74ae1493ca81a4f01d30b3b998b2d875c4,Jeremy Greze,dbt_/models/intermediate/int__lien_commune_cdreseau.sql,ADD,28,0,Dbt models update (#100)
+2025-03-16,febc4a74ae1493ca81a4f01d30b3b998b2d875c4,Jeremy Greze,dbt_/models/intermediate/int__resultats_udi_communes.sql,ADD,53,0,Dbt models update (#100)
+2025-03-16,febc4a74ae1493ca81a4f01d30b3b998b2d875c4,Jeremy Greze,dbt_/models/staging/edc/stg_edc__communes.sql,MODIFY,3,1,Dbt models update (#100)
+2025-03-16,febc4a74ae1493ca81a4f01d30b3b998b2d875c4,Jeremy Greze,dbt_/models/staging/edc/stg_edc__prevelevements.sql,MODIFY,3,1,Dbt models update (#100)
+2025-03-16,febc4a74ae1493ca81a4f01d30b3b998b2d875c4,Jeremy Greze,dbt_/models/staging/edc/stg_edc__resultats.sql,MODIFY,3,1,Dbt models update (#100)
+2025-03-24,37bfe154fd3778f5ebd35d23df2513bc38edd7a6,Jeremy Greze,dbt_/models/intermediate/int__lien_cdreseau_refreneceprel.sql,MODIFY,13,5,Improve datetimeprel handling to remove null values (#121)
+2025-03-24,0efb95d05dba2e3c31977bbd405b49c859da8f91,Jeremy Greze,dbt_/models/intermediate/int__resultats_udi_communes.sql,MODIFY,9,3,Refine category filtering in query and update ref table (#123)
+2025-03-24,869ec273c012ac08095f2b5f0de66ca67bba5d29,Jeremy Greze,dbt_/models/intermediate/int__resultats_udi_communes.sql,MODIFY,19,1,Fix cases when valtraduite = 1 (#122)
+2025-03-25,299b38f1d9b52da810f80547106c16662f88314e,Jeremy Greze,dbt_/models/intermediate/int__resultats_udi_communes.sql,MODIFY,1,1,Fix/valtraduite non quantifiees (#125)
+2025-03-26,c0dc95a93555f31a1ed2d81d8e8fd3f18edf1faa,V. Prana,dbt_/models/intermediate/cvm/int__resultats_cvm_commune_annuel.sql,ADD,48,0,Vinca tache178 update table cvm (#102)
+2025-03-26,c0dc95a93555f31a1ed2d81d8e8fd3f18edf1faa,V. Prana,dbt_/models/intermediate/cvm/int__resultats_cvm_commune_dernier.sql,ADD,46,0,Vinca tache178 update table cvm (#102)
+2025-03-26,c0dc95a93555f31a1ed2d81d8e8fd3f18edf1faa,V. Prana,dbt_/models/intermediate/cvm/int__resultats_cvm_udi_annuel.sql,ADD,48,0,Vinca tache178 update table cvm (#102)
+2025-03-26,c0dc95a93555f31a1ed2d81d8e8fd3f18edf1faa,V. Prana,dbt_/models/intermediate/cvm/int__resultats_cvm_udi_dernier.sql,ADD,46,0,Vinca tache178 update table cvm (#102)
+2025-03-26,73a906fccd7761754c35aa091972cff54d7de87d,LounesAbd,dbt_/models/intermediate/pfas/int__resultats_pfas_udi_dernier.sql,ADD,130,0,Task/177_results-pfas_data-model (#115)
+2025-03-27,e035946e99b7e0760fc92140ae17a729b28ad891,lfan3,dbt_/models/staging/udi/stg_udi.sql,ADD,7,0,Feature/geographic coordinates to udi (#120)
+2025-03-31,747117c8f8e143e5d4cf75dec12e1f3b5e16789d,Jeremy Greze,dbt_/models/analytics/ana__resultats_communes.sql,DELETE,0,71,Create data model for website (#130)
+2025-03-31,747117c8f8e143e5d4cf75dec12e1f3b5e16789d,Jeremy Greze,dbt_/models/intermediate/cvm/int__resultats_cvm_commune_annuel.sql,MODIFY,1,1,Create data model for website (#130)
+2025-03-31,747117c8f8e143e5d4cf75dec12e1f3b5e16789d,Jeremy Greze,dbt_/models/intermediate/cvm/int__resultats_cvm_commune_dernier.sql,MODIFY,4,3,Create data model for website (#130)
+2025-03-31,747117c8f8e143e5d4cf75dec12e1f3b5e16789d,Jeremy Greze,dbt_/models/intermediate/cvm/int__resultats_cvm_udi_annuel.sql,MODIFY,1,1,Create data model for website (#130)
+2025-03-31,747117c8f8e143e5d4cf75dec12e1f3b5e16789d,Jeremy Greze,dbt_/models/intermediate/cvm/int__resultats_cvm_udi_dernier.sql,MODIFY,4,3,Create data model for website (#130)
+2025-03-31,747117c8f8e143e5d4cf75dec12e1f3b5e16789d,Jeremy Greze,dbt_/models/intermediate/int__lien_commune_cdreseau.sql,MODIFY,3,3,Create data model for website (#130)
+2025-03-31,747117c8f8e143e5d4cf75dec12e1f3b5e16789d,Jeremy Greze,dbt_/models/intermediate/int__udi.sql,ADD,13,0,Create data model for website (#130)
+2025-03-31,747117c8f8e143e5d4cf75dec12e1f3b5e16789d,Jeremy Greze,dbt_/models/intermediate/int__union_resultats_commune.sql,ADD,23,0,Create data model for website (#130)
+2025-03-31,747117c8f8e143e5d4cf75dec12e1f3b5e16789d,Jeremy Greze,dbt_/models/intermediate/int__union_resultats_udi.sql,ADD,35,0,Create data model for website (#130)
+2025-03-31,747117c8f8e143e5d4cf75dec12e1f3b5e16789d,Jeremy Greze,dbt_/models/intermediate/pfas/int__resultats_pfas_udi_dernier.sql,MODIFY,4,3,Create data model for website (#130)
+2025-03-31,747117c8f8e143e5d4cf75dec12e1f3b5e16789d,Jeremy Greze,dbt_/models/website/web__resultats_communes.sql,ADD,66,0,Create data model for website (#130)
+2025-03-31,747117c8f8e143e5d4cf75dec12e1f3b5e16789d,Jeremy Greze,dbt_/models/website/web__resultats_udi.sql,ADD,66,0,Create data model for website (#130)
+2025-04-01,b27c065a9fc0f2928aa97149d272064b058d77de,NicolasDuchenne,dbt_/models/staging/communes/stg_communes__opendatasoft.sql,ADD,5,0,Feature/udi pmtiles (#132)
+2025-04-01,b27c065a9fc0f2928aa97149d272064b058d77de,NicolasDuchenne,dbt_/models/staging/communes/stg_communes__opendatasoft_json.sql,ADD,5,0,Feature/udi pmtiles (#132)
+2025-04-01,b27c065a9fc0f2928aa97149d272064b058d77de,NicolasDuchenne,dbt_/models/staging/udi/stg_udi_json.sql,ADD,7,0,Feature/udi pmtiles (#132)
+2025-04-11,1d013a1edbb8c3f1d07287092db62b9b9a442159,lfan3,dbt_/models/intermediate/int__valeurs_de_reference.sql,ADD,19,0,Intégrer valeurs de référennce de GF (#131)
+2025-04-11,4561e55584c89ec118e9adf2c11f1cf597adbbfe,Jeremy Greze,dbt_/models/intermediate/int__resultats_udi_communes.sql,MODIFY,24,27,use fichier ref gf (#158)
+2025-04-11,1592e9714312fc858253492028c61e53099b1edd,Jeremy Greze,dbt_/models/intermediate/int__resultats_udi_communes.sql,MODIFY,1,1,Fix table fichier de ref (#159)
+2025-04-11,17b41c4a003ea862d5acf6d780617d7e87b7e39d,V. Prana,dbt_/models/intermediate/cvm/int__resultats_cvm_commune_annuel.sql,MODIFY,3,2,feat: use new file GF (#161)
+2025-04-11,17b41c4a003ea862d5acf6d780617d7e87b7e39d,V. Prana,dbt_/models/intermediate/cvm/int__resultats_cvm_commune_dernier.sql,MODIFY,3,2,feat: use new file GF (#161)
+2025-04-11,17b41c4a003ea862d5acf6d780617d7e87b7e39d,V. Prana,dbt_/models/intermediate/cvm/int__resultats_cvm_udi_annuel.sql,MODIFY,3,2,feat: use new file GF (#161)
+2025-04-11,17b41c4a003ea862d5acf6d780617d7e87b7e39d,V. Prana,dbt_/models/intermediate/cvm/int__resultats_cvm_udi_dernier.sql,MODIFY,3,2,feat: use new file GF (#161)
+2025-04-13,1455bbe17ad564b2649a6d08b5226ba6bc9ab059,V. Prana,dbt_/models/intermediate/int__union_resultats_commune.sql,MODIFY,24,0,Analyst/vinca substances indus (#142)
+2025-04-13,1455bbe17ad564b2649a6d08b5226ba6bc9ab059,V. Prana,dbt_/models/intermediate/int__union_resultats_udi.sql,MODIFY,24,0,Analyst/vinca substances indus (#142)
+2025-04-13,1455bbe17ad564b2649a6d08b5226ba6bc9ab059,V. Prana,dbt_/models/intermediate/sub_indus/int__resultats_sub_indus_commune_annuel.sql,ADD,53,0,Analyst/vinca substances indus (#142)
+2025-04-13,1455bbe17ad564b2649a6d08b5226ba6bc9ab059,V. Prana,dbt_/models/intermediate/sub_indus/int__resultats_sub_indus_commune_dernier.sql,ADD,57,0,Analyst/vinca substances indus (#142)
+2025-04-13,1455bbe17ad564b2649a6d08b5226ba6bc9ab059,V. Prana,dbt_/models/intermediate/sub_indus/int__resultats_sub_indus_udi_annuel.sql,ADD,53,0,Analyst/vinca substances indus (#142)
+2025-04-13,1455bbe17ad564b2649a6d08b5226ba6bc9ab059,V. Prana,dbt_/models/intermediate/sub_indus/int__resultats_sub_indus_udi_dernier.sql,ADD,57,0,Analyst/vinca substances indus (#142)
+2025-04-13,dd38bcde122d8de0ecd9d81987720d51c400fe6b,Jeremy Greze,dbt_/models/website/web__resultats_communes.sql,MODIFY,3,1,Update substances industrielles to make it available on website (#165)
+2025-04-13,dd38bcde122d8de0ecd9d81987720d51c400fe6b,Jeremy Greze,dbt_/models/website/web__resultats_udi.sql,MODIFY,3,1,Update substances industrielles to make it available on website (#165)
+2025-04-15,67947a86a712f9cd2473265736abb8e4422f7843,LounesAbd,dbt_/models/intermediate/pfas/int__resultats_pfas_udi_dernier.sql,MODIFY,21,45,feat: use new file GF pfas udi dernier (#163)
+2025-04-16,02afb919c653b9f31287777f53b03ba63b175cbf,Lounès Abdou,dbt_/models/intermediate/pfas/int__resultats_pfas_udi_annuel.sql,ADD,74,0,Analyst/lounes_pfas_udi_annuel (#148)
+2025-04-16,02afb919c653b9f31287777f53b03ba63b175cbf,Lounès Abdou,dbt_/models/intermediate/pfas/int__resultats_pfas_udi_dernier.sql,MODIFY,4,2,Analyst/lounes_pfas_udi_annuel (#148)
+2025-04-16,8350af023b89d7d7843ad183ffaf45c08039f35b,Jeremy Greze,dbt_/models/intermediate/cvm/int__resultats_cvm_commune_annuel.sql,MODIFY,1,1,enhance and harmonize results for existing categories (#175)
+2025-04-16,8350af023b89d7d7843ad183ffaf45c08039f35b,Jeremy Greze,dbt_/models/intermediate/cvm/int__resultats_cvm_udi_annuel.sql,MODIFY,1,1,enhance and harmonize results for existing categories (#175)
+2025-04-16,8350af023b89d7d7843ad183ffaf45c08039f35b,Jeremy Greze,dbt_/models/intermediate/int__union_resultats_commune.sql,MODIFY,18,6,enhance and harmonize results for existing categories (#175)
+2025-04-16,8350af023b89d7d7843ad183ffaf45c08039f35b,Jeremy Greze,dbt_/models/intermediate/int__union_resultats_udi.sql,MODIFY,41,12,enhance and harmonize results for existing categories (#175)
+2025-04-16,8350af023b89d7d7843ad183ffaf45c08039f35b,Jeremy Greze,dbt_/models/intermediate/pfas/int__resultats_pfas_udi_dernier.sql,MODIFY,14,0,enhance and harmonize results for existing categories (#175)
+2025-04-16,8350af023b89d7d7843ad183ffaf45c08039f35b,Jeremy Greze,dbt_/models/intermediate/sub_indus/int__resultats_sub_indus_commune_annuel.sql,MODIFY,1,1,enhance and harmonize results for existing categories (#175)
+2025-04-16,8350af023b89d7d7843ad183ffaf45c08039f35b,Jeremy Greze,dbt_/models/intermediate/sub_indus/int__resultats_sub_indus_udi_annuel.sql,MODIFY,1,1,enhance and harmonize results for existing categories (#175)
+2025-04-16,8350af023b89d7d7843ad183ffaf45c08039f35b,Jeremy Greze,dbt_/models/website/web__resultats_communes.sql,MODIFY,3,1,enhance and harmonize results for existing categories (#175)
+2025-04-16,8350af023b89d7d7843ad183ffaf45c08039f35b,Jeremy Greze,dbt_/models/website/web__resultats_udi.sql,MODIFY,3,1,enhance and harmonize results for existing categories (#175)
+2025-04-17,463a3ebaaab44365464c0a1f8051fcc456d811ed,Jeremy Greze,dbt_/models/intermediate/int__union_resultats_commune.sql,MODIFY,15,0,calcul resultats metabolites (#162)
+2025-04-17,463a3ebaaab44365464c0a1f8051fcc456d811ed,Jeremy Greze,dbt_/models/intermediate/int__union_resultats_udi.sql,MODIFY,15,0,calcul resultats metabolites (#162)
+2025-04-17,463a3ebaaab44365464c0a1f8051fcc456d811ed,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite/int__resultats_metabolite_specifique_commune_dernier.sql,ADD,71,0,calcul resultats metabolites (#162)
+2025-04-17,463a3ebaaab44365464c0a1f8051fcc456d811ed,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite/int__resultats_metabolite_specifique_udi_dernier.sql,ADD,71,0,calcul resultats metabolites (#162)
+2025-04-17,463a3ebaaab44365464c0a1f8051fcc456d811ed,Jeremy Greze,dbt_/models/website/web__resultats_communes.sql,MODIFY,6,1,calcul resultats metabolites (#162)
+2025-04-17,463a3ebaaab44365464c0a1f8051fcc456d811ed,Jeremy Greze,dbt_/models/website/web__resultats_udi.sql,MODIFY,6,1,calcul resultats metabolites (#162)
+2025-04-17,463a3ebaaab44365464c0a1f8051fcc456d811ed,Jeremy Greze,dbt_/tests/unique_datetimeprel_per_cdreseau_referenceprel.sql,ADD,17,0,calcul resultats metabolites (#162)
+2025-04-21,e329cc9e5773d1ac69c3636d320722012c2b5d54,Lounès Abdou,dbt_/models/intermediate/tous/int__resultats_tous_udi_dernier.sql,ADD,34,0,Analyst/lounes tous polluants udi dernier (#164)
+2025-04-21,e329cc9e5773d1ac69c3636d320722012c2b5d54,Lounès Abdou,dbt_/models/website/web__resultats_udi.sql,MODIFY,32,2,Analyst/lounes tous polluants udi dernier (#164)
+2025-04-22,80ab2b7e3a653a05a94069f1e133e1810df0be13,V. Prana,dbt_/models/intermediate/cvm/int__resultats_cvm_commune_dernier.sql,MODIFY,1,1,Analyst/vinca nitrates (#143)
+2025-04-22,80ab2b7e3a653a05a94069f1e133e1810df0be13,V. Prana,dbt_/models/intermediate/cvm/int__resultats_cvm_udi_dernier.sql,MODIFY,1,1,Analyst/vinca nitrates (#143)
+2025-04-22,80ab2b7e3a653a05a94069f1e133e1810df0be13,V. Prana,dbt_/models/intermediate/int__union_resultats_udi.sql,MODIFY,15,0,Analyst/vinca nitrates (#143)
+2025-04-22,80ab2b7e3a653a05a94069f1e133e1810df0be13,V. Prana,dbt_/models/intermediate/nitrate/int__resultats_nitrate_udi_dernier.sql,ADD,171,0,Analyst/vinca nitrates (#143)
+2025-04-23,05ee1ba3f16a80a74ba4868376cd9669fe46e30c,Jeremy Greze,dbt_/models/website/web__resultats_udi.sql,MODIFY,1,0,add notrate to website
+2025-05-22,20099deb2fe9cc63b9e1d2224d57737077d123ea,V. Prana,dbt_/models/intermediate/int__union_resultats_udi.sql,MODIFY,29,14,Analyst/vinca nitrates annuel (#151)
+2025-05-22,20099deb2fe9cc63b9e1d2224d57737077d123ea,V. Prana,dbt_/models/intermediate/nitrate/int__resultats_nitrate_udi_annuel.sql,ADD,109,0,Analyst/vinca nitrates annuel (#151)
+2025-06-11,e2cba5d563e1066e33a7fa0ba0af54d75cc3ab97,Jeremy Greze,dbt_/models/intermediate/int__union_resultats_udi.sql,MODIFY,45,0,Feat/resultats_pesticides (#179)
+2025-06-11,e2cba5d563e1066e33a7fa0ba0af54d75cc3ab97,Jeremy Greze,dbt_/models/intermediate/pesticide/int__resultats_pesticide_udi_dernier.sql,ADD,53,0,Feat/resultats_pesticides (#179)
+2025-06-11,e2cba5d563e1066e33a7fa0ba0af54d75cc3ab97,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite/int__resultats_metabolite_udi_dernier.sql,ADD,52,0,Feat/resultats_pesticides (#179)
+2025-06-11,e2cba5d563e1066e33a7fa0ba0af54d75cc3ab97,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite_specifique/int__resultats_metabolite_specifique_commune_dernier.sql,RENAME,0,0,Feat/resultats_pesticides (#179)
+2025-06-11,e2cba5d563e1066e33a7fa0ba0af54d75cc3ab97,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite_specifique/int__resultats_metabolite_specifique_udi_dernier.sql,RENAME,0,0,Feat/resultats_pesticides (#179)
+2025-06-11,e2cba5d563e1066e33a7fa0ba0af54d75cc3ab97,Jeremy Greze,dbt_/models/intermediate/pesticide/sub_active/int__resultats_sub_active_udi_dernier.sql,ADD,52,0,Feat/resultats_pesticides (#179)
+2025-06-11,e2cba5d563e1066e33a7fa0ba0af54d75cc3ab97,Jeremy Greze,dbt_/models/website/web__resultats_udi.sql,MODIFY,3,0,Feat/resultats_pesticides (#179)
+2025-06-20,37c983d0cf8dd8887ad94c6f568bbb3ced92ffa7,Jeremy Greze,dbt_/models/intermediate/cvm/int__resultats_cvm_commune_dernier.sql,MODIFY,8,3,Ajout détails des paramètres sur dernier prélèvements (#181)
+2025-06-20,37c983d0cf8dd8887ad94c6f568bbb3ced92ffa7,Jeremy Greze,dbt_/models/intermediate/cvm/int__resultats_cvm_udi_dernier.sql,MODIFY,8,3,Ajout détails des paramètres sur dernier prélèvements (#181)
+2025-06-20,37c983d0cf8dd8887ad94c6f568bbb3ced92ffa7,Jeremy Greze,dbt_/models/intermediate/int__union_resultats_commune.sql,MODIFY,15,15,Ajout détails des paramètres sur dernier prélèvements (#181)
+2025-06-20,37c983d0cf8dd8887ad94c6f568bbb3ced92ffa7,Jeremy Greze,dbt_/models/intermediate/int__union_resultats_udi.sql,MODIFY,36,36,Ajout détails des paramètres sur dernier prélèvements (#181)
+2025-06-20,37c983d0cf8dd8887ad94c6f568bbb3ced92ffa7,Jeremy Greze,dbt_/models/intermediate/nitrate/int__resultats_nitrate_udi_dernier.sql,MODIFY,10,5,Ajout détails des paramètres sur dernier prélèvements (#181)
+2025-06-20,37c983d0cf8dd8887ad94c6f568bbb3ced92ffa7,Jeremy Greze,dbt_/models/intermediate/pesticide/int__resultats_pesticide_udi_dernier.sql,MODIFY,30,5,Ajout détails des paramètres sur dernier prélèvements (#181)
+2025-06-20,37c983d0cf8dd8887ad94c6f568bbb3ced92ffa7,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite/int__resultats_metabolite_udi_dernier.sql,MODIFY,30,5,Ajout détails des paramètres sur dernier prélèvements (#181)
+2025-06-20,37c983d0cf8dd8887ad94c6f568bbb3ced92ffa7,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite_specifique/int__resultats_metabolite_specifique_commune_dernier.sql,MODIFY,4,3,Ajout détails des paramètres sur dernier prélèvements (#181)
+2025-06-20,37c983d0cf8dd8887ad94c6f568bbb3ced92ffa7,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite_specifique/int__resultats_metabolite_specifique_udi_dernier.sql,MODIFY,4,3,Ajout détails des paramètres sur dernier prélèvements (#181)
+2025-06-20,37c983d0cf8dd8887ad94c6f568bbb3ced92ffa7,Jeremy Greze,dbt_/models/intermediate/pesticide/sub_active/int__resultats_sub_active_udi_dernier.sql,MODIFY,30,5,Ajout détails des paramètres sur dernier prélèvements (#181)
+2025-06-20,37c983d0cf8dd8887ad94c6f568bbb3ced92ffa7,Jeremy Greze,dbt_/models/intermediate/pfas/int__resultats_pfas_udi_dernier.sql,MODIFY,17,16,Ajout détails des paramètres sur dernier prélèvements (#181)
+2025-06-20,37c983d0cf8dd8887ad94c6f568bbb3ced92ffa7,Jeremy Greze,dbt_/models/intermediate/sub_indus/int__resultats_sub_indus_commune_dernier.sql,MODIFY,4,3,Ajout détails des paramètres sur dernier prélèvements (#181)
+2025-06-20,37c983d0cf8dd8887ad94c6f568bbb3ced92ffa7,Jeremy Greze,dbt_/models/intermediate/sub_indus/int__resultats_sub_indus_udi_dernier.sql,MODIFY,4,3,Ajout détails des paramètres sur dernier prélèvements (#181)
+2025-06-20,37c983d0cf8dd8887ad94c6f568bbb3ced92ffa7,Jeremy Greze,dbt_/models/intermediate/tous/int__resultats_tous_udi_dernier.sql,MODIFY,1,1,Ajout détails des paramètres sur dernier prélèvements (#181)
+2025-06-20,37c983d0cf8dd8887ad94c6f568bbb3ced92ffa7,Jeremy Greze,dbt_/models/website/web__resultats_communes.sql,MODIFY,3,3,Ajout détails des paramètres sur dernier prélèvements (#181)
+2025-06-20,37c983d0cf8dd8887ad94c6f568bbb3ced92ffa7,Jeremy Greze,dbt_/models/website/web__resultats_udi.sql,MODIFY,9,9,Ajout détails des paramètres sur dernier prélèvements (#181)
+2025-06-25,3e37818eb8f4667a9b2e2d1187019993b0bf1bc9,Jeremy Greze,dbt_/models/intermediate/int__union_resultats_commune.sql,MODIFY,6,0,Resultats pesticides bilans annuels (#180)
+2025-06-25,3e37818eb8f4667a9b2e2d1187019993b0bf1bc9,Jeremy Greze,dbt_/models/intermediate/int__union_resultats_udi.sql,MODIFY,62,0,Resultats pesticides bilans annuels (#180)
+2025-06-25,3e37818eb8f4667a9b2e2d1187019993b0bf1bc9,Jeremy Greze,dbt_/models/intermediate/pesticide/int__resultats_pesticide_udi_annuel.sql,ADD,65,0,Resultats pesticides bilans annuels (#180)
+2025-06-25,3e37818eb8f4667a9b2e2d1187019993b0bf1bc9,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite/int__resultats_metabolite_udi_annuel.sql,ADD,57,0,Resultats pesticides bilans annuels (#180)
+2025-06-25,3e37818eb8f4667a9b2e2d1187019993b0bf1bc9,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite_specifique/int__resultats_metabolite_specifique_udi_annuel.sql,ADD,70,0,Resultats pesticides bilans annuels (#180)
+2025-06-25,3e37818eb8f4667a9b2e2d1187019993b0bf1bc9,Jeremy Greze,dbt_/models/intermediate/pesticide/sub_active/int__resultats_sub_active_udi_annuel.sql,ADD,57,0,Resultats pesticides bilans annuels (#180)
+2025-07-16,45200186502722a01277bf877bf4ed0c6ce3c087,Jeremy Greze,dbt_/models/website/web__stats_udi.sql,ADD,102,0,Add web__stats_udi model and integrate  statistics into the side panel
+2025-07-17,d049d717d008dd2d2f6d116e44b07da7b3756a53,Jeremy Greze,dbt_/models/website/web__stats_udi.sql,MODIFY,23,1,New PFAS stat in PollutionSidePanel
+2025-07-21,5a0339a11772538ab6ab3668e97d5905c6707239,Simon Da Costa,dbt_/models/intermediate/int__union_resultats_commune.sql,MODIFY,29,0,Ajour des résultats des metaux lourds (#169)
+2025-07-21,5a0339a11772538ab6ab3668e97d5905c6707239,Simon Da Costa,dbt_/models/intermediate/int__union_resultats_udi.sql,MODIFY,29,0,Ajour des résultats des metaux lourds (#169)
+2025-07-21,5a0339a11772538ab6ab3668e97d5905c6707239,Simon Da Costa,dbt_/models/intermediate/metaux_lourds/int__resultats_metaux_lourds_commune_annuel.sql,ADD,66,0,Ajour des résultats des metaux lourds (#169)
+2025-07-21,5a0339a11772538ab6ab3668e97d5905c6707239,Simon Da Costa,dbt_/models/intermediate/metaux_lourds/int__resultats_metaux_lourds_commune_dernier.sql,ADD,85,0,Ajour des résultats des metaux lourds (#169)
+2025-07-21,5a0339a11772538ab6ab3668e97d5905c6707239,Simon Da Costa,dbt_/models/intermediate/metaux_lourds/int__resultats_metaux_lourds_udi_annuel.sql,ADD,66,0,Ajour des résultats des metaux lourds (#169)
+2025-07-21,5a0339a11772538ab6ab3668e97d5905c6707239,Simon Da Costa,dbt_/models/intermediate/metaux_lourds/int__resultats_metaux_lourds_udi_dernier.sql,ADD,85,0,Ajour des résultats des metaux lourds (#169)
+2025-07-21,5a0339a11772538ab6ab3668e97d5905c6707239,Simon Da Costa,dbt_/models/intermediate/tous/int__resultats_tous_udi_dernier.sql,MODIFY,1,0,Ajour des résultats des metaux lourds (#169)
+2025-07-21,5a0339a11772538ab6ab3668e97d5905c6707239,Simon Da Costa,dbt_/models/website/web__resultats_communes.sql,MODIFY,3,1,Ajour des résultats des metaux lourds (#169)
+2025-07-21,5a0339a11772538ab6ab3668e97d5905c6707239,Simon Da Costa,dbt_/models/website/web__resultats_udi.sql,MODIFY,2,0,Ajour des résultats des metaux lourds (#169)
+2025-07-21,5a0339a11772538ab6ab3668e97d5905c6707239,Simon Da Costa,dbt_/models/website/web__stats_udi.sql,MODIFY,3,3,Ajour des résultats des metaux lourds (#169)
+2025-07-22,33052375d84058b5bdbfac625b9e670afe675568,Jeremy Greze,dbt_/models/intermediate/pesticide/int__resultats_pesticide_udi_annuel.sql,MODIFY,0,3,Remove exclusion of PESTOT parameter from pesticide results
+2025-07-22,33052375d84058b5bdbfac625b9e670afe675568,Jeremy Greze,dbt_/models/intermediate/pesticide/int__resultats_pesticide_udi_dernier.sql,MODIFY,0,3,Remove exclusion of PESTOT parameter from pesticide results
+2025-07-31,0e907cf583f38d1e2fb188fc9ed5638fb0a8aba9,Jeremy Greze,dbt_/models/intermediate/int__commune_geom.sql,ADD,19,0,Ajout des UDIs de Corse + des changements sur la gestion des tracés/geom (#182)
+2025-07-31,0e907cf583f38d1e2fb188fc9ed5638fb0a8aba9,Jeremy Greze,dbt_/models/intermediate/int__udi_geom.sql,ADD,29,0,Ajout des UDIs de Corse + des changements sur la gestion des tracés/geom (#182)
+2025-07-31,0e907cf583f38d1e2fb188fc9ed5638fb0a8aba9,Jeremy Greze,dbt_/models/staging/atlasante/stg_atlasante_udi_2023.sql,ADD,9,0,Ajout des UDIs de Corse + des changements sur la gestion des tracés/geom (#182)
+2025-07-31,0e907cf583f38d1e2fb188fc9ed5638fb0a8aba9,Jeremy Greze,dbt_/models/staging/atlasante/stg_atlasante_udi_corse.sql,ADD,7,0,Ajout des UDIs de Corse + des changements sur la gestion des tracés/geom (#182)
+2025-07-31,0e907cf583f38d1e2fb188fc9ed5638fb0a8aba9,Jeremy Greze,dbt_/models/staging/communes/stg_communes__laposte.sql,DELETE,0,10,Ajout des UDIs de Corse + des changements sur la gestion des tracés/geom (#182)
+2025-07-31,0e907cf583f38d1e2fb188fc9ed5638fb0a8aba9,Jeremy Greze,dbt_/models/staging/communes/stg_communes__opendatasoft.sql,MODIFY,2,2,Ajout des UDIs de Corse + des changements sur la gestion des tracés/geom (#182)
+2025-07-31,0e907cf583f38d1e2fb188fc9ed5638fb0a8aba9,Jeremy Greze,dbt_/models/staging/communes/stg_communes__opendatasoft_json.sql,DELETE,0,5,Ajout des UDIs de Corse + des changements sur la gestion des tracés/geom (#182)
+2025-07-31,0e907cf583f38d1e2fb188fc9ed5638fb0a8aba9,Jeremy Greze,dbt_/models/staging/udi/stg_udi.sql,DELETE,0,7,Ajout des UDIs de Corse + des changements sur la gestion des tracés/geom (#182)
+2025-07-31,0e907cf583f38d1e2fb188fc9ed5638fb0a8aba9,Jeremy Greze,dbt_/models/staging/udi/stg_udi_json.sql,DELETE,0,7,Ajout des UDIs de Corse + des changements sur la gestion des tracés/geom (#182)
+2025-08-11,be0b59aec2c9cbae12c9fe1c3207e5e417665623,Jeremy Greze,dbt_/models/intermediate/int__union_resultats_udi.sql,MODIFY,4,4,"Fix nb_sup_valeur_sanitaire for ""pesticide"" in ""bilan annuel"""
+2025-08-12,bc8c32807b1c042841fa79bb3020655b514fb064,Jeremy Greze,dbt_/models/website/web__stats_udi.sql,MODIFY,70,54,"Update stats: display in legend + compute for ""bilan annuel"""
+2025-08-13,a0cf7cf9299ee6a8e1ce6e74015cb7124a797526,Jeremy Greze,dbt_/models/intermediate/pfas/int__resultats_pfas_udi_annuel.sql,MODIFY,6,5,"Fix logic in PFAS results to compute number of ""dépassement de valeur sanitaire"""
+2025-08-13,903b667ca5b6066a750d44c4f824ef8f824f3aca,Jeremy Greze,dbt_/models/intermediate/int__mapping_category_simple.sql,DELETE,0,8,Update limits for R471811 and ESA-metolachlore (#184)
+2025-08-13,903b667ca5b6066a750d44c4f824ef8f824f3aca,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite_specifique/int__resultats_metabolite_specifique_commune_dernier.sql,MODIFY,6,1,Update limits for R471811 and ESA-metolachlore (#184)
+2025-08-13,903b667ca5b6066a750d44c4f824ef8f824f3aca,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite_specifique/int__resultats_metabolite_specifique_udi_dernier.sql,MODIFY,6,1,Update limits for R471811 and ESA-metolachlore (#184)
+2025-08-13,903b667ca5b6066a750d44c4f824ef8f824f3aca,Jeremy Greze,dbt_/models/intermediate/tous/int__resultats_tous_udi_dernier.sql,MODIFY,2,1,Update limits for R471811 and ESA-metolachlore (#184)
+2025-08-25,177a1a63096a8a0a77d5a9625ca5b152acacc798,Jeremy Greze,dbt_/models/intermediate/tous/int__resultats_tous_udi_dernier.sql,MODIFY,1,1,"Fix inf_limite_qualite_sup_0_1 in ""tous"""
+2025-08-25,199390c3427a5c6b0f6929018da436033a6be6e7,Jeremy Greze,dbt_/models/intermediate/nitrate/int__resultats_nitrate_udi_annuel.sql,MODIFY,23,83,Nouvelles règles pour les nitrates (#185)
+2025-08-25,199390c3427a5c6b0f6929018da436033a6be6e7,Jeremy Greze,dbt_/models/intermediate/nitrate/int__resultats_nitrate_udi_dernier.sql,MODIFY,33,150,Nouvelles règles pour les nitrates (#185)
+2025-08-25,199390c3427a5c6b0f6929018da436033a6be6e7,Jeremy Greze,dbt_/models/intermediate/tous/int__resultats_tous_udi_dernier.sql,MODIFY,3,1,Nouvelles règles pour les nitrates (#185)
+2025-08-27,05862ce58eb9030b251c6485563dec3ee3051f3f,Jeremy Greze,dbt_/models/intermediate/int__resultats_udi_communes.sql,MODIFY,1,0,Mise à jour fichier référence et calculs pesticides/metabolites (#186)
+2025-08-27,05862ce58eb9030b251c6485563dec3ee3051f3f,Jeremy Greze,dbt_/models/intermediate/int__valeurs_de_reference.sql,MODIFY,2,0,Mise à jour fichier référence et calculs pesticides/metabolites (#186)
+2025-08-27,05862ce58eb9030b251c6485563dec3ee3051f3f,Jeremy Greze,dbt_/models/intermediate/pesticide/int__resultats_pesticide_udi_dernier.sql,MODIFY,7,4,Mise à jour fichier référence et calculs pesticides/metabolites (#186)
+2025-08-27,05862ce58eb9030b251c6485563dec3ee3051f3f,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite/int__resultats_metabolite_udi_dernier.sql,MODIFY,12,2,Mise à jour fichier référence et calculs pesticides/metabolites (#186)
+2025-08-27,05862ce58eb9030b251c6485563dec3ee3051f3f,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite_specifique/int__resultats_metabolite_specifique_commune_dernier.sql,MODIFY,7,7,Mise à jour fichier référence et calculs pesticides/metabolites (#186)
+2025-08-27,05862ce58eb9030b251c6485563dec3ee3051f3f,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite_specifique/int__resultats_metabolite_specifique_udi_dernier.sql,MODIFY,7,7,Mise à jour fichier référence et calculs pesticides/metabolites (#186)
+2025-08-27,05862ce58eb9030b251c6485563dec3ee3051f3f,Jeremy Greze,dbt_/models/intermediate/tous/int__resultats_tous_udi_dernier.sql,MODIFY,4,3,Mise à jour fichier référence et calculs pesticides/metabolites (#186)
+2025-08-28,453e9401f6fe631846780265cf29ee845d611a9b,Jeremy Greze,dbt_/models/intermediate/pesticide/int__resultats_pesticide_udi_dernier.sql,MODIFY,29,4,total pesticide dernier prelèvement
+2025-08-28,4a15991f62e07bd6ddd04daace9bcbb112e85d26,Jeremy Greze,dbt_/models/intermediate/pesticide/int__resultats_pesticide_udi_dernier.sql,MODIFY,7,0,remove PESTOT from int__resultats_pesticide_udi_dernier
+2025-08-28,b9f9e958efc2d9b486baee61394304fea1624773,Jeremy Greze,dbt_/models/intermediate/pfas/int__resultats_pfas_udi_dernier.sql,MODIFY,2,2,"""somme 4 pfas"" in popin"
+2025-08-28,3972ca60c597987872908ab09be1d3b4d5c7d6ee,Jeremy Greze,dbt_/models/intermediate/cvm/int__resultats_cvm_commune_annuel.sql,MODIFY,4,1,"Display max values in ""bilan annuels"""
+2025-08-28,3972ca60c597987872908ab09be1d3b4d5c7d6ee,Jeremy Greze,dbt_/models/intermediate/cvm/int__resultats_cvm_udi_annuel.sql,MODIFY,4,1,"Display max values in ""bilan annuels"""
+2025-08-28,3972ca60c597987872908ab09be1d3b4d5c7d6ee,Jeremy Greze,dbt_/models/intermediate/int__union_resultats_commune.sql,MODIFY,2,2,"Display max values in ""bilan annuels"""
+2025-08-28,3972ca60c597987872908ab09be1d3b4d5c7d6ee,Jeremy Greze,dbt_/models/intermediate/int__union_resultats_udi.sql,MODIFY,5,5,"Display max values in ""bilan annuels"""
+2025-08-28,3972ca60c597987872908ab09be1d3b4d5c7d6ee,Jeremy Greze,dbt_/models/intermediate/nitrate/int__resultats_nitrate_udi_annuel.sql,MODIFY,4,1,"Display max values in ""bilan annuels"""
+2025-08-28,3972ca60c597987872908ab09be1d3b4d5c7d6ee,Jeremy Greze,dbt_/models/intermediate/pesticide/int__resultats_pesticide_udi_annuel.sql,MODIFY,6,1,"Display max values in ""bilan annuels"""
+2025-08-28,3972ca60c597987872908ab09be1d3b4d5c7d6ee,Jeremy Greze,dbt_/models/intermediate/pfas/int__resultats_pfas_udi_annuel.sql,MODIFY,5,1,"Display max values in ""bilan annuels"""
+2025-08-28,3972ca60c597987872908ab09be1d3b4d5c7d6ee,Jeremy Greze,dbt_/models/intermediate/sub_indus/int__resultats_sub_indus_commune_annuel.sql,MODIFY,4,1,"Display max values in ""bilan annuels"""
+2025-08-28,3972ca60c597987872908ab09be1d3b4d5c7d6ee,Jeremy Greze,dbt_/models/intermediate/sub_indus/int__resultats_sub_indus_udi_annuel.sql,MODIFY,4,1,"Display max values in ""bilan annuels"""
+2025-08-29,6ada14865c2e346d25e9d34ef2de55470c5cc120,Jeremy Greze,dbt_/models/intermediate/cvm/int__resultats_cvm_commune_dernier.sql,MODIFY,2,2,"fix ""tous"" results"
+2025-08-29,6ada14865c2e346d25e9d34ef2de55470c5cc120,Jeremy Greze,dbt_/models/intermediate/cvm/int__resultats_cvm_udi_dernier.sql,MODIFY,2,2,"fix ""tous"" results"
+2025-08-29,6ada14865c2e346d25e9d34ef2de55470c5cc120,Jeremy Greze,dbt_/models/intermediate/pesticide/int__resultats_pesticide_udi_dernier.sql,MODIFY,1,1,"fix ""tous"" results"
+2025-08-29,6ada14865c2e346d25e9d34ef2de55470c5cc120,Jeremy Greze,dbt_/models/intermediate/tous/int__resultats_tous_udi_dernier.sql,MODIFY,15,5,"fix ""tous"" results"
+2025-08-29,5624b97e6a368d04f856ec83144a2acdc42bcfeb,Jeremy Greze,dbt_/models/intermediate/tous/int__resultats_tous_udi_annuel.sql,ADD,22,0,"calculations for ""tous + bilan annuel"" results"
+2025-08-29,5624b97e6a368d04f856ec83144a2acdc42bcfeb,Jeremy Greze,dbt_/models/website/web__resultats_udi.sql,MODIFY,13,0,"calculations for ""tous + bilan annuel"" results"
+2025-08-29,2a9e58abce75027db4df69ab0b5a401ed1660491,Jeremy Greze,dbt_/models/intermediate/int__parametres_non_references.sql,ADD,34,0,Add model to get parameters present in results but absent from references
+2025-09-05,f45d94562bef2ba2e8fd37ca9d6345b674369d9b,Jeremy Greze,dbt_/models/intermediate/tous/int__resultats_tous_udi_dernier.sql,MODIFY,8,4,"add a new situation for ""tous + dernier relevé"""
+2025-09-10,5b92f098ee6d185998892afd1fea65944bdca9b5,Jeremy Greze,dbt_/models/website/web__stats_udi.sql,MODIFY,0,26,"we no longer have the situation ""au moins 1 dépassement de valeur sanitaire au cours de l'année"""
+2025-09-10,d34806d5fa9c9ea4be663e0a1d97b2120f6cdc45,Jeremy Greze,dbt_/models/intermediate/pesticide/int__resultats_pesticide_udi_annuel.sql,MODIFY,64,0,Add hard-coded quality limits for specific metabolites in annual results
+2025-09-10,d34806d5fa9c9ea4be663e0a1d97b2120f6cdc45,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite/int__resultats_metabolite_udi_annuel.sql,MODIFY,64,0,Add hard-coded quality limits for specific metabolites in annual results
+2025-09-10,d34806d5fa9c9ea4be663e0a1d97b2120f6cdc45,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite_specifique/int__resultats_metabolite_specifique_udi_annuel.sql,MODIFY,32,0,Add hard-coded quality limits for specific metabolites in annual results
+2025-09-15,b643ea243a54f3a487776103e7d9c30bbe1f0da2,Jeremy Greze,dbt_/models/intermediate/pesticide/int__resultats_pesticide_udi_dernier.sql,MODIFY,16,3,Add new total pesticide calculation
+2025-09-15,214b7013af868c5dad6f46c467702e4257f1690b,Jeremy Greze,dbt_/models/intermediate/pfas/int__resultats_pfas_udi_annuel.sql,MODIFY,12,1,"Add calculation for sum of 4 PFAS in ""bilan annuel"""
+2025-09-15,8afc65452f187ade96c42e06819e3094a4550301,Jeremy Greze,dbt_/models/intermediate/int__union_resultats_udi.sql,MODIFY,1,1,Add max value in metabolite specifique model
+2025-09-15,8afc65452f187ade96c42e06819e3094a4550301,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite_specifique/int__resultats_metabolite_specifique_udi_annuel.sql,MODIFY,14,1,Add max value in metabolite specifique model
+2025-09-16,8d70609df0cd3bf4044637d0dd595df634cfc883,Jeremy Greze,dbt_/models/intermediate/int__union_resultats_commune.sql,MODIFY,28,28,"Deactivate ""metaux lourds"""
+2025-09-16,8d70609df0cd3bf4044637d0dd595df634cfc883,Jeremy Greze,dbt_/models/intermediate/int__union_resultats_udi.sql,MODIFY,28,28,"Deactivate ""metaux lourds"""
+2025-09-16,8d70609df0cd3bf4044637d0dd595df634cfc883,Jeremy Greze,dbt_/models/website/web__resultats_communes.sql,MODIFY,3,3,"Deactivate ""metaux lourds"""
+2025-09-16,8d70609df0cd3bf4044637d0dd595df634cfc883,Jeremy Greze,dbt_/models/website/web__resultats_udi.sql,MODIFY,2,2,"Deactivate ""metaux lourds"""
+2025-09-16,8d1db663510a4a338487bfea60470fc96dc01cf5,Jeremy Greze,dbt_/models/intermediate/sub_indus/int__resultats_sub_indus_commune_annuel.sql,MODIFY,5,1,Deactivate sub_indus_14dioxane
+2025-09-16,8d1db663510a4a338487bfea60470fc96dc01cf5,Jeremy Greze,dbt_/models/intermediate/sub_indus/int__resultats_sub_indus_commune_dernier.sql,MODIFY,5,1,Deactivate sub_indus_14dioxane
+2025-09-16,8d1db663510a4a338487bfea60470fc96dc01cf5,Jeremy Greze,dbt_/models/intermediate/sub_indus/int__resultats_sub_indus_udi_annuel.sql,MODIFY,5,1,Deactivate sub_indus_14dioxane
+2025-09-16,8d1db663510a4a338487bfea60470fc96dc01cf5,Jeremy Greze,dbt_/models/intermediate/sub_indus/int__resultats_sub_indus_udi_dernier.sql,MODIFY,5,1,Deactivate sub_indus_14dioxane
+2025-09-16,8d1db663510a4a338487bfea60470fc96dc01cf5,Jeremy Greze,dbt_/models/website/web__resultats_communes.sql,MODIFY,2,1,Deactivate sub_indus_14dioxane
+2025-09-16,8d1db663510a4a338487bfea60470fc96dc01cf5,Jeremy Greze,dbt_/models/website/web__resultats_udi.sql,MODIFY,2,1,Deactivate sub_indus_14dioxane
+2025-09-24,dfe02fe1a42e6fc04ac0fb3bcbd484be7ccc9263,Jeremy Greze,dbt_/models/intermediate/int__union_resultats_commune.sql,MODIFY,159,0,all calculations on commune level
+2025-09-24,dfe02fe1a42e6fc04ac0fb3bcbd484be7ccc9263,Jeremy Greze,dbt_/models/intermediate/nitrate/int__resultats_nitrate_commune_annuel.sql,ADD,52,0,all calculations on commune level
+2025-09-24,dfe02fe1a42e6fc04ac0fb3bcbd484be7ccc9263,Jeremy Greze,dbt_/models/intermediate/nitrate/int__resultats_nitrate_commune_dernier.sql,ADD,59,0,all calculations on commune level
+2025-09-24,dfe02fe1a42e6fc04ac0fb3bcbd484be7ccc9263,Jeremy Greze,dbt_/models/intermediate/pesticide/int__resultats_pesticide_commune_annuel.sql,ADD,131,0,all calculations on commune level
+2025-09-24,dfe02fe1a42e6fc04ac0fb3bcbd484be7ccc9263,Jeremy Greze,dbt_/models/intermediate/pesticide/int__resultats_pesticide_commune_dernier.sql,ADD,123,0,all calculations on commune level
+2025-09-24,dfe02fe1a42e6fc04ac0fb3bcbd484be7ccc9263,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite/int__resultats_metabolite_commune_annuel.sql,ADD,121,0,all calculations on commune level
+2025-09-24,dfe02fe1a42e6fc04ac0fb3bcbd484be7ccc9263,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite/int__resultats_metabolite_commune_dernier.sql,ADD,87,0,all calculations on commune level
+2025-09-24,dfe02fe1a42e6fc04ac0fb3bcbd484be7ccc9263,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite_specifique/int__resultats_metabolite_specifique_commune_annuel.sql,ADD,115,0,all calculations on commune level
+2025-09-24,dfe02fe1a42e6fc04ac0fb3bcbd484be7ccc9263,Jeremy Greze,dbt_/models/intermediate/pesticide/sub_active/int__resultats_sub_active_commune_annuel.sql,ADD,57,0,all calculations on commune level
+2025-09-24,dfe02fe1a42e6fc04ac0fb3bcbd484be7ccc9263,Jeremy Greze,dbt_/models/intermediate/pesticide/sub_active/int__resultats_sub_active_commune_dernier.sql,ADD,77,0,all calculations on commune level
+2025-09-24,dfe02fe1a42e6fc04ac0fb3bcbd484be7ccc9263,Jeremy Greze,dbt_/models/intermediate/pfas/int__resultats_pfas_commune_annuel.sql,ADD,90,0,all calculations on commune level
+2025-09-24,dfe02fe1a42e6fc04ac0fb3bcbd484be7ccc9263,Jeremy Greze,dbt_/models/intermediate/pfas/int__resultats_pfas_commune_dernier.sql,ADD,124,0,all calculations on commune level
+2025-09-24,dfe02fe1a42e6fc04ac0fb3bcbd484be7ccc9263,Jeremy Greze,dbt_/models/intermediate/tous/int__resultats_tous_commune_annuel.sql,ADD,22,0,all calculations on commune level
+2025-09-24,dfe02fe1a42e6fc04ac0fb3bcbd484be7ccc9263,Jeremy Greze,dbt_/models/intermediate/tous/int__resultats_tous_commune_dernier.sql,ADD,53,0,all calculations on commune level
+2025-09-24,dfe02fe1a42e6fc04ac0fb3bcbd484be7ccc9263,Jeremy Greze,dbt_/models/website/web__resultats_communes.sql,MODIFY,52,4,all calculations on commune level
+2025-10-06,03bf2df2c35a2cca5e01ab1d89856793f8adee34,Jeremy Greze,dbt_/models/intermediate/cvm/int__resultats_cvm_commune_annuel.sql,MODIFY,2,2,égalités strictes dans les calculs
+2025-10-06,03bf2df2c35a2cca5e01ab1d89856793f8adee34,Jeremy Greze,dbt_/models/intermediate/cvm/int__resultats_cvm_commune_dernier.sql,MODIFY,2,2,égalités strictes dans les calculs
+2025-10-06,03bf2df2c35a2cca5e01ab1d89856793f8adee34,Jeremy Greze,dbt_/models/intermediate/cvm/int__resultats_cvm_udi_annuel.sql,MODIFY,2,2,égalités strictes dans les calculs
+2025-10-06,03bf2df2c35a2cca5e01ab1d89856793f8adee34,Jeremy Greze,dbt_/models/intermediate/cvm/int__resultats_cvm_udi_dernier.sql,MODIFY,2,2,égalités strictes dans les calculs
+2025-10-06,03bf2df2c35a2cca5e01ab1d89856793f8adee34,Jeremy Greze,dbt_/models/intermediate/pesticide/int__resultats_pesticide_commune_annuel.sql,MODIFY,11,11,égalités strictes dans les calculs
+2025-10-06,03bf2df2c35a2cca5e01ab1d89856793f8adee34,Jeremy Greze,dbt_/models/intermediate/pesticide/int__resultats_pesticide_commune_dernier.sql,MODIFY,5,5,égalités strictes dans les calculs
+2025-10-06,03bf2df2c35a2cca5e01ab1d89856793f8adee34,Jeremy Greze,dbt_/models/intermediate/pesticide/int__resultats_pesticide_udi_annuel.sql,MODIFY,11,11,égalités strictes dans les calculs
+2025-10-06,03bf2df2c35a2cca5e01ab1d89856793f8adee34,Jeremy Greze,dbt_/models/intermediate/pesticide/int__resultats_pesticide_udi_dernier.sql,MODIFY,5,5,égalités strictes dans les calculs
+2025-10-06,03bf2df2c35a2cca5e01ab1d89856793f8adee34,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite/int__resultats_metabolite_commune_annuel.sql,MODIFY,11,11,égalités strictes dans les calculs
+2025-10-06,03bf2df2c35a2cca5e01ab1d89856793f8adee34,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite/int__resultats_metabolite_commune_dernier.sql,MODIFY,4,4,égalités strictes dans les calculs
+2025-10-06,03bf2df2c35a2cca5e01ab1d89856793f8adee34,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite/int__resultats_metabolite_udi_annuel.sql,MODIFY,11,11,égalités strictes dans les calculs
+2025-10-06,03bf2df2c35a2cca5e01ab1d89856793f8adee34,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite/int__resultats_metabolite_udi_dernier.sql,MODIFY,4,4,égalités strictes dans les calculs
+2025-10-06,03bf2df2c35a2cca5e01ab1d89856793f8adee34,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite_specifique/int__resultats_metabolite_specifique_commune_annuel.sql,MODIFY,7,7,égalités strictes dans les calculs
+2025-10-06,03bf2df2c35a2cca5e01ab1d89856793f8adee34,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite_specifique/int__resultats_metabolite_specifique_commune_dernier.sql,MODIFY,6,6,égalités strictes dans les calculs
+2025-10-06,03bf2df2c35a2cca5e01ab1d89856793f8adee34,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite_specifique/int__resultats_metabolite_specifique_udi_annuel.sql,MODIFY,7,7,égalités strictes dans les calculs
+2025-10-06,03bf2df2c35a2cca5e01ab1d89856793f8adee34,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite_specifique/int__resultats_metabolite_specifique_udi_dernier.sql,MODIFY,6,6,égalités strictes dans les calculs
+2025-10-06,03bf2df2c35a2cca5e01ab1d89856793f8adee34,Jeremy Greze,dbt_/models/intermediate/pesticide/sub_active/int__resultats_sub_active_commune_annuel.sql,MODIFY,3,3,égalités strictes dans les calculs
+2025-10-06,03bf2df2c35a2cca5e01ab1d89856793f8adee34,Jeremy Greze,dbt_/models/intermediate/pesticide/sub_active/int__resultats_sub_active_commune_dernier.sql,MODIFY,3,3,égalités strictes dans les calculs
+2025-10-06,03bf2df2c35a2cca5e01ab1d89856793f8adee34,Jeremy Greze,dbt_/models/intermediate/pesticide/sub_active/int__resultats_sub_active_udi_annuel.sql,MODIFY,3,3,égalités strictes dans les calculs
+2025-10-06,03bf2df2c35a2cca5e01ab1d89856793f8adee34,Jeremy Greze,dbt_/models/intermediate/pesticide/sub_active/int__resultats_sub_active_udi_dernier.sql,MODIFY,3,3,égalités strictes dans les calculs
+2025-10-06,03bf2df2c35a2cca5e01ab1d89856793f8adee34,Jeremy Greze,dbt_/models/intermediate/pfas/int__resultats_pfas_commune_annuel.sql,MODIFY,2,2,égalités strictes dans les calculs
+2025-10-06,03bf2df2c35a2cca5e01ab1d89856793f8adee34,Jeremy Greze,dbt_/models/intermediate/pfas/int__resultats_pfas_commune_dernier.sql,MODIFY,4,4,égalités strictes dans les calculs
+2025-10-06,03bf2df2c35a2cca5e01ab1d89856793f8adee34,Jeremy Greze,dbt_/models/intermediate/pfas/int__resultats_pfas_udi_annuel.sql,MODIFY,2,2,égalités strictes dans les calculs
+2025-10-06,03bf2df2c35a2cca5e01ab1d89856793f8adee34,Jeremy Greze,dbt_/models/intermediate/pfas/int__resultats_pfas_udi_dernier.sql,MODIFY,4,4,égalités strictes dans les calculs
+2025-10-06,03bf2df2c35a2cca5e01ab1d89856793f8adee34,Jeremy Greze,dbt_/models/intermediate/sub_indus/int__resultats_sub_indus_commune_annuel.sql,MODIFY,2,2,égalités strictes dans les calculs
+2025-10-06,03bf2df2c35a2cca5e01ab1d89856793f8adee34,Jeremy Greze,dbt_/models/intermediate/sub_indus/int__resultats_sub_indus_commune_dernier.sql,MODIFY,4,4,égalités strictes dans les calculs
+2025-10-06,03bf2df2c35a2cca5e01ab1d89856793f8adee34,Jeremy Greze,dbt_/models/intermediate/sub_indus/int__resultats_sub_indus_udi_annuel.sql,MODIFY,2,2,égalités strictes dans les calculs
+2025-10-06,03bf2df2c35a2cca5e01ab1d89856793f8adee34,Jeremy Greze,dbt_/models/intermediate/sub_indus/int__resultats_sub_indus_udi_dernier.sql,MODIFY,4,4,égalités strictes dans les calculs
+2025-10-08,673673d9380a4a458f481be4d1bb7b5803dfa5e2,Jeremy Greze,dbt_/models/website/web__franceinfo.sql,ADD,80,0,add API route for aggregated data retrieval
+2025-10-10,b9af1de9099f0aaca2563668585b09f24241aba6,Jeremy Greze,dbt_/models/intermediate/int__valeurs_de_reference.sql,MODIFY,1,0,Add parameter limit coloring in PollutionMapMarker and consolidate parameter metadata to database source
+2025-10-10,fa9589e0905d89551d96a9b834e739e2c05ae6c8,Jeremy Greze,dbt_/models/intermediate/int__valeurs_de_reference.sql,MODIFY,6,0,materialized table int__valeurs_de_reference.sql
+2025-10-11,0942788c1ffd6c53e51023610161c379eed72771,Jeremy Greze,dbt_/models/intermediate/pesticide/int__resultats_pesticide_commune_dernier.sql,MODIFY,4,2,changements calculs metabolites non pertinents
+2025-10-11,0942788c1ffd6c53e51023610161c379eed72771,Jeremy Greze,dbt_/models/intermediate/pesticide/int__resultats_pesticide_udi_dernier.sql,MODIFY,4,2,changements calculs metabolites non pertinents
+2025-10-11,0942788c1ffd6c53e51023610161c379eed72771,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite_specifique/int__resultats_metabolite_specifique_commune_dernier.sql,MODIFY,7,0,changements calculs metabolites non pertinents
+2025-10-11,0942788c1ffd6c53e51023610161c379eed72771,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite_specifique/int__resultats_metabolite_specifique_udi_dernier.sql,MODIFY,7,0,changements calculs metabolites non pertinents
+2025-10-12,84e70be19e6ee1dd89b23418f6d974f11e18baaa,Jeremy Greze,dbt_/models/intermediate/cvm/int__resultats_cvm_commune_dernier.sql,MODIFY,5,2,Update date filtering logic
+2025-10-12,84e70be19e6ee1dd89b23418f6d974f11e18baaa,Jeremy Greze,dbt_/models/intermediate/cvm/int__resultats_cvm_udi_dernier.sql,MODIFY,5,2,Update date filtering logic
+2025-10-12,84e70be19e6ee1dd89b23418f6d974f11e18baaa,Jeremy Greze,dbt_/models/intermediate/metaux_lourds/int__resultats_metaux_lourds_commune_dernier.sql,MODIFY,5,3,Update date filtering logic
+2025-10-12,84e70be19e6ee1dd89b23418f6d974f11e18baaa,Jeremy Greze,dbt_/models/intermediate/metaux_lourds/int__resultats_metaux_lourds_udi_dernier.sql,MODIFY,5,3,Update date filtering logic
+2025-10-12,84e70be19e6ee1dd89b23418f6d974f11e18baaa,Jeremy Greze,dbt_/models/intermediate/nitrate/int__resultats_nitrate_commune_dernier.sql,MODIFY,5,2,Update date filtering logic
+2025-10-12,84e70be19e6ee1dd89b23418f6d974f11e18baaa,Jeremy Greze,dbt_/models/intermediate/nitrate/int__resultats_nitrate_udi_dernier.sql,MODIFY,5,2,Update date filtering logic
+2025-10-12,84e70be19e6ee1dd89b23418f6d974f11e18baaa,Jeremy Greze,dbt_/models/intermediate/pesticide/int__resultats_pesticide_commune_dernier.sql,MODIFY,5,2,Update date filtering logic
+2025-10-12,84e70be19e6ee1dd89b23418f6d974f11e18baaa,Jeremy Greze,dbt_/models/intermediate/pesticide/int__resultats_pesticide_udi_dernier.sql,MODIFY,5,2,Update date filtering logic
+2025-10-12,84e70be19e6ee1dd89b23418f6d974f11e18baaa,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite/int__resultats_metabolite_commune_dernier.sql,MODIFY,5,2,Update date filtering logic
+2025-10-12,84e70be19e6ee1dd89b23418f6d974f11e18baaa,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite/int__resultats_metabolite_udi_dernier.sql,MODIFY,5,2,Update date filtering logic
+2025-10-12,84e70be19e6ee1dd89b23418f6d974f11e18baaa,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite_specifique/int__resultats_metabolite_specifique_commune_dernier.sql,MODIFY,5,2,Update date filtering logic
+2025-10-12,84e70be19e6ee1dd89b23418f6d974f11e18baaa,Jeremy Greze,dbt_/models/intermediate/pesticide/metabolite_specifique/int__resultats_metabolite_specifique_udi_dernier.sql,MODIFY,5,2,Update date filtering logic
+2025-10-12,84e70be19e6ee1dd89b23418f6d974f11e18baaa,Jeremy Greze,dbt_/models/intermediate/pesticide/sub_active/int__resultats_sub_active_commune_dernier.sql,MODIFY,5,2,Update date filtering logic
+2025-10-12,84e70be19e6ee1dd89b23418f6d974f11e18baaa,Jeremy Greze,dbt_/models/intermediate/pesticide/sub_active/int__resultats_sub_active_udi_dernier.sql,MODIFY,5,2,Update date filtering logic
+2025-10-12,84e70be19e6ee1dd89b23418f6d974f11e18baaa,Jeremy Greze,dbt_/models/intermediate/pfas/int__resultats_pfas_commune_dernier.sql,MODIFY,5,2,Update date filtering logic
+2025-10-12,84e70be19e6ee1dd89b23418f6d974f11e18baaa,Jeremy Greze,dbt_/models/intermediate/pfas/int__resultats_pfas_udi_dernier.sql,MODIFY,5,2,Update date filtering logic
+2025-10-12,84e70be19e6ee1dd89b23418f6d974f11e18baaa,Jeremy Greze,dbt_/models/intermediate/sub_indus/int__resultats_sub_indus_commune_dernier.sql,MODIFY,5,2,Update date filtering logic
+2025-10-12,84e70be19e6ee1dd89b23418f6d974f11e18baaa,Jeremy Greze,dbt_/models/intermediate/sub_indus/int__resultats_sub_indus_udi_dernier.sql,MODIFY,5,2,Update date filtering logic
+2025-10-14,8ed87fb43bcef039201566cd0db13db3bf528d8c,Jeremy Greze,dbt_/models/intermediate/pesticide/int__resultats_pesticide_udi_annuel.sql,MODIFY,26,4,ajout max concentration par pesticide sur bilan annuel
+2025-10-14,e18fa0f80b7826af20cd536d711c7e2b5dfee939,Jeremy Greze,dbt_/models/intermediate/pesticide/int__resultats_pesticide_udi_annuel.sql,MODIFY,4,4,fix
+2025-10-14,5ade80f5f92a281095c3238ef3ce44e4f736f425,Jeremy Greze,dbt_/models/intermediate/pesticide/int__resultats_pesticide_commune_annuel.sql,MODIFY,27,4,restrict number of parameters visible + port last change to communes
+2025-10-14,5ade80f5f92a281095c3238ef3ce44e4f736f425,Jeremy Greze,dbt_/models/intermediate/pesticide/int__resultats_pesticide_udi_annuel.sql,MODIFY,1,0,restrict number of parameters visible + port last change to communes
+2025-10-14,6c67810c8b953bb5778b081b9652277e0daa51bd,Jeremy Greze,dbt_/models/intermediate/pesticide/int__resultats_pesticide_commune_annuel.sql,MODIFY,4,27,rollback change on bilan annuel pesticide
+2025-10-14,6c67810c8b953bb5778b081b9652277e0daa51bd,Jeremy Greze,dbt_/models/intermediate/pesticide/int__resultats_pesticide_udi_annuel.sql,MODIFY,4,27,rollback change on bilan annuel pesticide
+2025-10-15,f9a23cda709f0a4c3332bfa5a0f6c8cb33c445fd,Jeremy Greze,dbt_/models/intermediate/cvm/int__resultats_cvm_commune_annuel.sql,MODIFY,2,1,ajout date derniere analyse pour API
+2025-10-15,f9a23cda709f0a4c3332bfa5a0f6c8cb33c445fd,Jeremy Greze,dbt_/models/intermediate/cvm/int__resultats_cvm_udi_annuel.sql,MODIFY,2,1,ajout date derniere analyse pour API
+2025-10-15,f9a23cda709f0a4c3332bfa5a0f6c8cb33c445fd,Jeremy Greze,dbt_/models/intermediate/int__union_resultats_commune.sql,MODIFY,5,5,ajout date derniere analyse pour API
+2025-10-15,f9a23cda709f0a4c3332bfa5a0f6c8cb33c445fd,Jeremy Greze,dbt_/models/intermediate/int__union_resultats_udi.sql,MODIFY,5,5,ajout date derniere analyse pour API
+2025-10-15,f9a23cda709f0a4c3332bfa5a0f6c8cb33c445fd,Jeremy Greze,dbt_/models/intermediate/nitrate/int__resultats_nitrate_commune_annuel.sql,MODIFY,2,1,ajout date derniere analyse pour API
+2025-10-15,f9a23cda709f0a4c3332bfa5a0f6c8cb33c445fd,Jeremy Greze,dbt_/models/intermediate/nitrate/int__resultats_nitrate_udi_annuel.sql,MODIFY,2,1,ajout date derniere analyse pour API
+2025-10-15,f9a23cda709f0a4c3332bfa5a0f6c8cb33c445fd,Jeremy Greze,dbt_/models/intermediate/pesticide/int__resultats_pesticide_commune_annuel.sql,MODIFY,2,1,ajout date derniere analyse pour API
+2025-10-15,f9a23cda709f0a4c3332bfa5a0f6c8cb33c445fd,Jeremy Greze,dbt_/models/intermediate/pesticide/int__resultats_pesticide_udi_annuel.sql,MODIFY,2,1,ajout date derniere analyse pour API
+2025-10-15,f9a23cda709f0a4c3332bfa5a0f6c8cb33c445fd,Jeremy Greze,dbt_/models/intermediate/pfas/int__resultats_pfas_commune_annuel.sql,MODIFY,4,2,ajout date derniere analyse pour API
+2025-10-15,f9a23cda709f0a4c3332bfa5a0f6c8cb33c445fd,Jeremy Greze,dbt_/models/intermediate/pfas/int__resultats_pfas_udi_annuel.sql,MODIFY,4,2,ajout date derniere analyse pour API
+2025-10-15,f9a23cda709f0a4c3332bfa5a0f6c8cb33c445fd,Jeremy Greze,dbt_/models/intermediate/sub_indus/int__resultats_sub_indus_commune_annuel.sql,MODIFY,2,1,ajout date derniere analyse pour API
+2025-10-15,f9a23cda709f0a4c3332bfa5a0f6c8cb33c445fd,Jeremy Greze,dbt_/models/intermediate/sub_indus/int__resultats_sub_indus_udi_annuel.sql,MODIFY,2,1,ajout date derniere analyse pour API
+2025-10-15,f9a23cda709f0a4c3332bfa5a0f6c8cb33c445fd,Jeremy Greze,dbt_/models/website/web__franceinfo.sql,MODIFY,22,6,ajout date derniere analyse pour API
+2025-11-05,9af555c6d50c6f68eb38121d10c094146ea7c115,Jeremy Greze,dbt_/models/intermediate/nitrate/int__resultats_nitrate_commune_dernier.sql,MODIFY,3,3,MAJ nitrate
+2025-11-05,9af555c6d50c6f68eb38121d10c094146ea7c115,Jeremy Greze,dbt_/models/intermediate/nitrate/int__resultats_nitrate_udi_dernier.sql,MODIFY,3,3,MAJ nitrate
+2025-11-13,34bde09ff99ae93a6ba2ff5ef73450edf5356df0,Jeremy Greze,dbt_/models/intermediate/tous/int__resultats_tous_commune_dernier.sql,MODIFY,1,1,dépassement CVM en orange
+2025-11-13,34bde09ff99ae93a6ba2ff5ef73450edf5356df0,Jeremy Greze,dbt_/models/intermediate/tous/int__resultats_tous_udi_dernier.sql,MODIFY,1,1,dépassement CVM en orange
+2025-11-21,32ace5e8be9575ad36c1ecbbee14bb06295969c9,Jeremy Greze,dbt_/models/intermediate/int__udi_geom.sql,MODIFY,11,6,tracés udis depuis infofactures 2024
+2025-11-21,32ace5e8be9575ad36c1ecbbee14bb06295969c9,Jeremy Greze,dbt_/models/staging/atlasante/stg_atlasante_udi_2024.sql,ADD,9,0,tracés udis depuis infofactures 2024
+2026-01-02,cd7194b3440f1d853e27b66d537b885a99d0fa52,Jeremy Greze,dbt_/models/website/web__resultats_udi.sql,MODIFY,9,3,ajout données population
+2026-01-02,cd7194b3440f1d853e27b66d537b885a99d0fa52,Jeremy Greze,dbt_/models/website/web__stats_udi.sql,MODIFY,80,0,ajout données population

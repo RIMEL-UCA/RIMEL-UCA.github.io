@@ -1,0 +1,40 @@
+{
+  "embeddings": {
+    "word_embeddings": ["word2vec"],
+    "sentence_embeddings": [],
+    "contextual_embeddings": []
+  },
+  "preprocessing": {
+    "text_cleaning": [],
+    "tokenization": ["wordpiece"],
+    "normalization": [],
+    "augmentation_techniques": []
+  },
+  "transformer_models": {
+    "base_models": ["bert"],
+    "pretrained_variants": [],
+    "ensemble_combinations": []
+  },
+  "training_strategy": {
+    "loss_functions": [],
+    "optimizers": ["adam"],
+    "learning_rate_schedule": [],
+    "regularization_techniques": [],
+    "cross_validation_strategy": []
+  },
+  "model_architecture": {
+    "layers_configuration": [],
+    "attention_mechanisms": [],
+    "pooling_strategies": ["mean-pooling"]
+  },
+  "postprocessing": {
+    "prediction_aggregation": [],
+    "output_smoothing": [],
+    "ensemble_methods": []
+  },
+  "frameworks_and_libraries": {
+    "deep_learning_frameworks": ["pytorch"],
+    "nlp_libraries": [],
+    "utility_libraries": []
+  }
+}

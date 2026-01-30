@@ -1,0 +1,173 @@
+{
+  "embeddings": {
+    "contextual_embeddings": {
+      "sentence-transformers/paraphrase-minilm-l6-v2": false
+    }
+  },
+  "preprocessing": {
+    "external_data_sources": {
+      "bookcorpus": false,
+      "children-book-test": false,
+      "simple-english-wiki": false,
+      "simplewiki": false,
+      "wikipedia": false
+    },
+    "tokenization_method": {
+      "transformer-tokenizer": false
+    },
+    "augmentation_techniques": {
+      "backtranslation": false,
+      "pairwise-comparison": false,
+      "standard-error-augmentation": false,
+      "word-replacement-mask": false
+    },
+    "additional_features": {
+      "flesch-reading-ease": false,
+      "smog-index": false
+    }
+  },
+  "transformer_models": {
+    "base_models": {
+      "albert-large-v2": false,
+      "albert-xxlarge-v2": false,
+      "bert-base-uncased": false,
+      "bert-large-cased": false,
+      "bert-large-cased-whole-word-masking": false,
+      "bert-large-uncased": false,
+      "deepset/roberta-base-squad2": false,
+      "deepset/roberta-large-squad2": false,
+      "distilbart-cnn-12-6": false,
+      "distilroberta-base": false,
+      "facebook/bart-base": false,
+      "facebook/bart-large": false,
+      "funnel-transformer/large": false,
+      "funnel-transformer/large-base": false,
+      "google/electra-base-discriminator": false,
+      "google/electra-large-discriminator": false,
+      "gpt2-medium": false,
+      "microsoft/deberta-base": false,
+      "microsoft/deberta-large": false,
+      "microsoft/deberta-v2-xlarge": false,
+      "microsoft/deberta-v2-xxlarge": false,
+      "muppet-roberta-large": false,
+      "roberta-base": false,
+      "roberta-large": false,
+      "roberta-large-mnli": false,
+      "sentence-transformers/all-mpnet-base-v2": false,
+      "sentence-transformers/labse": false,
+      "sentence-transformers/paraphrase-mpnet-base-v2": false,
+      "t5-large": false,
+      "xlm-roberta-large": false,
+      "xlnet-large-cased": false
+    },
+    "mlm_pretraining": null,
+    "fine_tuning_strategy": {
+      "full-model-fine-tuning": false,
+      "layer-reinitialize": false,
+      "mlm-pretraining": false,
+      "pseudo-labeling": false
+    }
+  },
+  "loss_functions": {
+    "primary_loss": {
+      "binary-classification": false,
+      "kl-divergence": false,
+      "mse": false,
+      "rmse": false
+    }
+  },
+  "training_strategy": {
+    "optimizer": {
+      "adamw": false
+    },
+    "learning_rate": null,
+    "learning_rate_schedule": {
+      "3-group-decaying-lr": false,
+      "cosine-annealing": false,
+      "custom-schedule-warmup-decay": false,
+      "exponential-layer-lr": false,
+      "group-differential-lr": false,
+      "linear-warmup-decay": false,
+      "three-stage-decay": false
+    },
+    "batch_size": null,
+    "epochs": null,
+    "weight_decay": null,
+    "pseudo_labeling": null,
+    "seed_averaging": null,
+    "regularization": {
+      "dropout-0.2": false,
+      "dropout-train-mode-inference": false,
+      "dropout-zero": false,
+      "gradient-accumulation": false,
+      "high-dropout-0.5": false,
+      "multi-sample-dropout": false,
+      "no-dropout": false,
+      "seed-averaging": false,
+      "swa-after-epoch-3": false
+    },
+    "cross_validation": {
+      "5-fold": false,
+      "6-fold": false,
+      "bootstrap-sampling": false,
+      "kfold-no-shuffle": false,
+      "stratified-kfold": false
+    }
+  },
+  "model_architecture": {
+    "pooling_strategy": {
+      "2d-attention-head": false,
+      "attention-block": false,
+      "attention-conv1d": false,
+      "attention-last-4-layers": false,
+      "attention-pooling": false,
+      "cls-token": false,
+      "esim-like-inference": false,
+      "interaction-based-comparison": false,
+      "linear-head": false,
+      "mean-pooling": false,
+      "multi-sample-dropout": false,
+      "representation-based-comparison": false,
+      "sequence-last-hidden-state": false,
+      "weighted-layer-average-24-layers": false
+    },
+    "layer_reinitialize": null
+  },
+  "postprocessing": {
+    "ensemble_method": {
+      "35-model-ensemble": false,
+      "4-model-ensemble": false,
+      "bayesian-ridge": false,
+      "forward-oof-selection": false,
+      "nelder-mead-optimization": false,
+      "netflix-method": false,
+      "post-processing-multipliers": false,
+      "ridge-regression": false,
+      "roberta-stacking-ensemble": false,
+      "simple-average": false,
+      "stacking": false,
+      "stacking-lightgbm": false,
+      "weighted-average": false
+    },
+    "stacking_models": {
+      "extratrees-regressor": false,
+      "lightgbm": false,
+      "ridge": false,
+      "svr": false
+    }
+  },
+  "frameworks": {
+    "deep_learning_framework": {
+      "pytorch": false,
+      "pytorch-lightning": false,
+      "tensorflow": false
+    },
+    "libraries": {
+      "lightgbm": false,
+      "sentence-transformers": false,
+      "sklearn": false,
+      "textstat": false,
+      "transformers": false
+    }
+  }
+}

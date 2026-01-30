@@ -1,0 +1,43 @@
+{
+  "embeddings": {
+    "word_embeddings": ["fasttext"],
+    "contextual_embeddings": ["roberta", "xlnet"]
+  },
+  "preprocessing": {
+    "text_cleaning": [],
+    "tokenization_method": ["sentencepiece"],
+    "lowercase": false,
+    "augmentation_techniques": ["backtranslation"]
+  },
+  "transformer_models": {
+    "base_models": ["roberta", "xlnet"],
+    "pretrained_checkpoints": ["roberta-large"],
+    "fine_tuning_strategy": ["layer-wise-lr"]
+  },
+  "loss_functions": {
+    "primary_loss": ["rmse"],
+    "auxiliary_losses": []
+  },
+  "training_strategy": {
+    "optimizer": ["adamw"],
+    "learning_rate": 0.0001,
+    "learning_rate_schedule": ["cosine"],
+    "batch_size": 16,
+    "epochs": 10,
+    "regularization": [],
+    "cross_validation": ["kfold"]
+  },
+  "model_architecture": {
+    "pooling_strategy": ["cls-token"],
+    "additional_layers": [],
+    "dropout_rate": 0.2
+  },
+  "postprocessing": {
+    "ensemble_method": ["stacking"],
+    "prediction_averaging": ["weighted"]
+  },
+  "frameworks": {
+    "deep_learning_framework": ["pytorch"],
+    "libraries": ["transformers", "scikit-learn"]
+  }
+}

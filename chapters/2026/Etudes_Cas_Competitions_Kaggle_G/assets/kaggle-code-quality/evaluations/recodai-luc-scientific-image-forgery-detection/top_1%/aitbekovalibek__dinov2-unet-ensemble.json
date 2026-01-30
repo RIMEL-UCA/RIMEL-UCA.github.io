@@ -1,0 +1,22 @@
+{
+  "competition": "recodai-luc-scientific-image-forgery-detection",
+  "stratum": "top_1%",
+  "ref": "aitbekovalibek/dinov2-unet-ensemble",
+  "local_main_file": "corpus\\recodai-luc-scientific-image-forgery-detection\\notebooks\\top_1%\\aitbekovalibek__dinov2-unet-ensemble\\dinov2-unet-ensemble.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 20,
+    "B_modularite": 20,
+    "C_reproductibilite": 15,
+    "D_lisibilite": 20,
+    "E_hygiene": 15
+  },
+  "score_total_100": 90,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline documenté académiquement: ### Model Architecture → ### Loss Function → ### Post-processing Pipeline → code implementation.",
+    "B_modularite": "Classes (ImgDataset, model classes), fonctions utilitaires (rle_encode, load_mask, combine_masks). Transforms séparés.",
+    "C_reproductibilite": "Seed implicite dans transforms, hyperparamètres documentés (AREA_THR=300, MEAN_THR=0.25, alpha=0.35).",
+    "D_lisibilite": "Documentation mathématique exceptionnelle (formules LaTeX pour Loss, TTA, Adaptive Thresholding). Markdown pédagogique.",
+    "E_hygiene": "warnings.filterwarnings('ignore'), checks existence os.path.exists, epsilon=1e-6 pour stabilité numérique."
+  },
+  "summary": "Notebook académique exemplaire avec documentation mathématique complète. Formules LaTeX pour architecture encoder-decoder, loss BCE+Dice, post-processing. Pipeline rigoureux avec TTA, adaptive thresholding, morphological ops. Code production-ready avec gestion erreurs."
+}

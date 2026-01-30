@@ -1,0 +1,98 @@
+{
+  "embeddings": {
+    "word_embeddings": [],
+    "contextual_embeddings": []
+  },
+  "preprocessing": {
+    "text_cleaning": [],
+    "tokenization_method": [],
+    "lowercase": null,
+    "augmentation_techniques": [
+      "RandomResizedCrop",
+      "Transpose",
+      "HorizontalFlip",
+      "VerticalFlip",
+      "ShiftScaleRotate",
+      "HueSaturationValue",
+      "RandomBrightnessContrast",
+      "CoarseDropout",
+      "Cutout",
+      "CenterCrop",
+      "Rotate",
+      "Flip"
+    ]
+  },
+  "transformer_models": {
+    "base_models": [
+      "ResNeXt50_32x4d",
+      "ViT-B/16",
+      "EfficientNet-B4",
+      "MobileNetV3"
+    ],
+    "pretrained_checkpoints": [
+      "ImageNet",
+      "NoisyStudent",
+      "CropNet"
+    ],
+    "fine_tuning_strategy": []
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "CrossEntropyLoss",
+      "Bit Tempered Logistic Loss",
+      "Sigmoid Focal Loss"
+    ],
+    "auxiliary_losses": []
+  },
+  "training_strategy": {
+    "optimizer": [],
+    "learning_rate": 0.0001,
+    "learning_rate_schedule": [
+      "ReduceLROnPlateau",
+      "Cosine annealing warm restarts",
+      "warmup and cosine decay"
+    ],
+    "batch_size": null,
+    "epochs": 15,
+    "regularization": [
+      "dropout",
+      "label smoothing",
+      "early stopping"
+    ],
+    "cross_validation": [
+      "5-fold"
+    ]
+  },
+  "model_architecture": {
+    "pooling_strategy": [
+      "global average pooling"
+    ],
+    "additional_layers": [
+      "Linear layer",
+      "dropout layer"
+    ],
+    "dropout_rate": 0.5
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "stacked-mean",
+      "averaging"
+    ],
+    "prediction_averaging": [
+      "test time augmentation",
+      "multi-crop"
+    ]
+  },
+  "frameworks": {
+    "deep_learning_framework": [
+      "PyTorch",
+      "TensorFlow"
+    ],
+    "libraries": [
+      "timm",
+      "Albumentations",
+      "TensorFlow Hub",
+      "Keras"
+    ]
+  }
+}

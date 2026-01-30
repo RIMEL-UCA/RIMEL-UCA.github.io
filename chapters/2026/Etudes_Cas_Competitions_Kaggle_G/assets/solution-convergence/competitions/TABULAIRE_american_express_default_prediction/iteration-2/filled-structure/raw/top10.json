@@ -1,0 +1,72 @@
+{
+  "tabular_features": {
+    "aggregation_features": ["mean", "std", "min", "max", "last", "count", "nunique"],
+    "time_series_features": ["diff", "autoregressive_features", "unstacked_13_months"]
+  },
+  "preprocessing": {
+    "data_denoising": [],
+    "fillna_strategy": ["log_transform_fillna_0"],
+    "categorical_encoding": ["label_encoding"],
+    "feature_scaling": ["float16_conversion", "round_2_decimal"]
+  },
+  "transformer_models": {
+    "base_models": [],
+    "fine_tuning_strategy": []
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "binary-logloss",
+      "rmse"
+    ]
+  },
+  "training_strategy": {
+    "optimizer": [],
+    "learning_rate": 0.01,
+    "learning_rate_schedule": [],
+    "batch_size": null,
+    "epochs": null,
+    "regularization": [
+      "lambda-l2",
+      "feature-fraction",
+      "bagging-fraction"
+    ],
+    "cross_validation": [
+      "5-fold-stratified"
+    ]
+  },
+  "model_architecture": {
+    "pooling_strategy": [],
+    "additional_layers": [
+      "gru",
+      "fc"
+    ],
+    "dropout_rate": null
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "weighted-average"
+    ],
+    "prediction_averaging": [
+      "7-xgb-models",
+      "seed-blend-42-52-62"
+    ]
+  },
+  "model_specific": {
+    "boosting_type": ["dart"]
+  },
+  "feature_engineering": {
+    "feature_selection_method": ["permutation_importance"]
+  },
+  "frameworks": {
+    "deep_learning_framework": [
+      "pytorch-lightning"
+    ],
+    "libraries": [
+      "xgboost",
+      "rapids-cudf",
+      "sklearn",
+      "pandas",
+      "numpy"
+    ]
+  }
+}

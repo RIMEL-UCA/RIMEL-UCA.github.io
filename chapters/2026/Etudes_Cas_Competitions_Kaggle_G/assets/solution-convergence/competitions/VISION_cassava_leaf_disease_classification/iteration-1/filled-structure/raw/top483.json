@@ -1,0 +1,90 @@
+{
+  "embeddings": {
+    "word_embeddings": [],
+    "contextual_embeddings": []
+  },
+  "preprocessing": {
+    "text_cleaning": [],
+    "tokenization_method": [],
+    "lowercase": null,
+    "augmentation_techniques": [
+      "HorizontalFlip",
+      "VerticalFlip",
+      "Blur",
+      "Rotate",
+      "RandomBrightnessContrast",
+      "ShiftScaleRotate",
+      "HueSaturationValue",
+      "CutMix",
+      "MixUp",
+      "FMix"
+    ]
+  },
+  "transformer_models": {
+    "base_models": [
+      "SWSL ResNeXt101 8D",
+      "SWSL ResNeXt50",
+      "EfficientNet-B4",
+      "EfficientNet-B4 NS",
+      "Inception V4",
+      "DenseNet161"
+    ],
+    "pretrained_checkpoints": [
+      "SWSL",
+      "NoisyStudent"
+    ],
+    "fine_tuning_strategy": [
+      "Frozen BatchNorm layers"
+    ]
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "CrossEntropyLoss"
+    ],
+    "auxiliary_losses": []
+  },
+  "training_strategy": {
+    "optimizer": [
+      "Ranger"
+    ],
+    "learning_rate": 0.003,
+    "learning_rate_schedule": [
+      "CosineBatchDecayScheduler with gradual warm up"
+    ],
+    "batch_size": 128,
+    "epochs": 30,
+    "regularization": [
+      "label smoothing",
+      "early stopping",
+      "gradient accumulation",
+      "mixed precision training",
+      "knowledge distillation"
+    ],
+    "cross_validation": [
+      "5-fold"
+    ]
+  },
+  "model_architecture": {
+    "pooling_strategy": [],
+    "additional_layers": [],
+    "dropout_rate": null
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "Simple Averaging Ensemble",
+      "MaxProb Ensemble"
+    ],
+    "prediction_averaging": [
+      "TTA"
+    ]
+  },
+  "frameworks": {
+    "deep_learning_framework": [
+      "PyTorch"
+    ],
+    "libraries": [
+      "Albumentations",
+      "Apex"
+    ]
+  }
+}

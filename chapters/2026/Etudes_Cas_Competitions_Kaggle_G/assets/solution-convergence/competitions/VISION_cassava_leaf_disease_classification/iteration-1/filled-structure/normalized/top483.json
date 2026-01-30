@@ -1,0 +1,90 @@
+{
+  "embeddings": {
+    "word_embeddings": [],
+    "contextual_embeddings": []
+  },
+  "preprocessing": {
+    "text_cleaning": [],
+    "tokenization_method": [],
+    "lowercase": null,
+    "augmentation_techniques": [
+      "horizontalflip",
+      "verticalflip",
+      "blur",
+      "rotate",
+      "randombrightnesscontrast",
+      "shiftscalerotate",
+      "huesaturationvalue",
+      "cutmix",
+      "mixup",
+      "fmix"
+    ]
+  },
+  "transformer_models": {
+    "base_models": [
+      "swsl-resnext101-8d",
+      "swsl-resnext50",
+      "efficientnet-b4",
+      "efficientnet-b4-ns",
+      "inception-v4",
+      "densenet161"
+    ],
+    "pretrained_checkpoints": [
+      "swsl",
+      "noisystudent"
+    ],
+    "fine_tuning_strategy": [
+      "frozen-batchnorm-layers"
+    ]
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "crossentropyloss"
+    ],
+    "auxiliary_losses": []
+  },
+  "training_strategy": {
+    "optimizer": [
+      "ranger"
+    ],
+    "learning_rate": 0.003,
+    "learning_rate_schedule": [
+      "cosinebatchdecayscheduler-with-gradual-warm-up"
+    ],
+    "batch_size": 128,
+    "epochs": 30,
+    "regularization": [
+      "label-smoothing",
+      "early-stopping",
+      "gradient-accumulation",
+      "mixed-precision-training",
+      "knowledge-distillation"
+    ],
+    "cross_validation": [
+      "5-fold"
+    ]
+  },
+  "model_architecture": {
+    "pooling_strategy": [],
+    "additional_layers": [],
+    "dropout_rate": null
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "simple-averaging-ensemble",
+      "maxprob-ensemble"
+    ],
+    "prediction_averaging": [
+      "tta"
+    ]
+  },
+  "frameworks": {
+    "deep_learning_framework": [
+      "pytorch"
+    ],
+    "libraries": [
+      "albumentations",
+      "apex"
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "competition": "playground-series-s6e1",
+  "stratum": "top_1%",
+  "ref": "datasciencegrad/s6e1-hill-climbing-and-ridgecv",
+  "local_main_file": "corpus\\playground-series-s6e1\\notebooks\\top_1%\\datasciencegrad__s6e1-hill-climbing-and-ridgecv\\s6e1-hill-climbing-and-ridgecv.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 15,
+    "B_modularite": 15,
+    "C_reproductibilite": 10,
+    "D_lisibilite": 15,
+    "E_hygiene": 10
+  },
+  "score_total_100": 65,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline de blending: Import → blend_submissions function → create_visualization → generate_oof → Execute Pipeline. Pas de train/model.",
+    "B_modularite": "Fonctions bien conçues (blend_submissions, create_visualization, generate_oof), weight_dict paramétrable.",
+    "C_reproductibilite": "Pas de seed (blending déterministe), poids explicites dans weight_dict, output paths configurables.",
+    "D_lisibilite": "Sections markdown (## Blending Function, ## OOF Generation), docstrings ('Create ensemble by selecting best'), noms explicites.",
+    "E_hygiene": "Gestion NaN et infinite, visualize=True flag, mais dépend de submissions externes non fournies ('/kaggle/input/student-test-scores-vault/')."
+  },
+  "summary": "Notebook de blending/ensembling pur (pas de training). Fonctions bien documentées pour blend et OOF generation. Visualisations intégrées. Dépend de submissions externes. Pipeline simple mais propre. Pas applicable pour évaluation train/model complète."
+}

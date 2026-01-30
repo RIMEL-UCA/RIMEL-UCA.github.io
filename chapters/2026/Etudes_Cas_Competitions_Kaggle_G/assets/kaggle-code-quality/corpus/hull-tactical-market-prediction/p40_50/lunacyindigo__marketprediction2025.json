@@ -1,0 +1,22 @@
+{
+  "competition": "hull-tactical-market-prediction",
+  "stratum": "p40_50",
+  "ref": "lunacyindigo/marketprediction2025",
+  "local_main_file": "corpus\\hull-tactical-market-prediction\\notebooks\\p40_50\\lunacyindigo__marketprediction2025\\marketprediction2025.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 15,
+    "B_modularite": 20,
+    "C_reproductibilite": 15,
+    "D_lisibilite": 10,
+    "E_hygiene": 15
+  },
+  "score_total_100": 75,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline structuré: PATH+CONFIGS → LOAD → DATASET → SPLIT → TRAIN → PREDICT → SERVER. Sections commentées.",
+    "B_modularite": "Dataclasses (DatasetOutput, RetToSignalParameters), fonctions (load_trainset, create_example_dataset, split_dataset, convert_ret_to_signal). Architecture modulaire.",
+    "C_reproductibilite": "StandardScaler préservé entre train/test, XGBoost params explicites, ewm_mean pour imputation.",
+    "D_lisibilite": "Commentaires en japonais ('# 最大深さ'), variables CAPS pour config, structure Polars moderne.",
+    "E_hygiene": "Polars pour performance, head(-10) pour éviter leakage, drop_nulls(), cast Float64, scaler.transform preservé."
+  },
+  "summary": "Notebook moderne avec Polars et dataclasses. Architecture très modulaire (DatasetOutput, RetToSignalParameters). XGBoost avec feature selection explicite. Commentaires mixtes anglais/japonais. Pipeline de données propre avec StandardScaler persistant."
+}

@@ -1,0 +1,47 @@
+{
+  "augmentation_techniques": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "It uses a lot of augmentation, including randomcrop, H/V flip, a large number of RGB transform, cutout, grid distortion, etc... simply aug + snapmix, and gradually increase the probability of snapmix by epoch"
+  },
+  "base_models": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "efficientnet_b4_ns... seresnext101... seresnext50... VIT_base16... regnety120... resnext101... resnest101"
+  },
+  "pretrained_checkpoints": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "efficientnet_b4_ns (NoisyStudent)"
+  },
+  "primary_loss": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "loss: bi-tempered... loss: focalcos... loss: CE"
+  },
+  "regularization": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "based on the prediction results of the first scheme, knowledge distillation is carried out, and the student model results and the teacher model results are weighted by a ratio of 4:6"
+  },
+  "cross_validation": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "efficientnet-b4 5fold 5tta"
+  },
+  "ensemble_method": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "6modelx4TTA... 3model and 5xrandomTTA... 5model and 5xTTA... the student model results and the teacher model results are weighted by a ratio of 4:6"
+  },
+  "prediction_averaging": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "6modelx4TTA... 3model and 5xrandomTTA... 5model and 5xTTA... randomTTA is the same as the augmentation method in training, randomly 5 times"
+  },
+  "image_size": {
+    "source": "Top7 solution description",
+    "link": "solutions/top7.txt",
+    "quote": "efficientnet_b4_ns bi-tempered 512... seresnext101 bi-tempered 512... VIT_base16 focalcos 384... VIT_base16 bi-tempered 384... regnety120 focalcos 512"
+  }
+}

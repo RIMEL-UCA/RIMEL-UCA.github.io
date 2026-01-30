@@ -1,0 +1,22 @@
+{
+  "competition": "titanic",
+  "stratum": "top_1%",
+  "ref": "djenkivanov/top-5-simple-neural-network-solution",
+  "local_main_file": "corpus\\titanic\\notebooks\\top_1%\\djenkivanov__top-5-simple-neural-network-solution\\top-5-simple-neural-network-solution.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 20,
+    "B_modularite": 15,
+    "C_reproductibilite": 15,
+    "D_lisibilite": 20,
+    "E_hygiene": 15
+  },
+  "score_total_100": 85,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline complet avec markdown: Preprocessing → Prepare splits → Custom Neural Network → Training → Evaluation → Retrain on full → Predictions.",
+    "B_modularite": "Classe CustomMLP, fonctions (prepare, train, eval_acc), scaler/onehot globaux préservés pour transform test.",
+    "C_reproductibilite": "random_state=42 dans train_test_split, hyperparamètres explicites (lr=0.1, num_epochs=100, lr_decay=0.99), device detection.",
+    "D_lisibilite": "Excellent markdown pédagogique avec intro, explications, exercices suggérés ('Tweak and experiment'), commentaires inline détaillés.",
+    "E_hygiene": "test_set flag pour éviter data leakage, fillna(0), handle_unknown='ignore', pin_memory conditionnel, Path() pour chemins."
+  },
+  "summary": "Notebook pédagogique exemplaire avec excellent storytelling. Pipeline complet de bout en bout avec explications claires. Classe CustomMLP bien conçue. Attention au data leakage (test_set flag). Suggestions d'exercices pour apprentissage. Documentation de qualité cours."
+}

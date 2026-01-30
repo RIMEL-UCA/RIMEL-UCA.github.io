@@ -1,0 +1,77 @@
+{
+  "augmentation_techniques": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "Augmentations : FMix, CutMix, SnapMix, MixUp, Cutout, etc... Simply using CenterCrop + horizontal & vertical flop achieves better CV & LB scores"
+  },
+  "base_models": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "I tried 6 models (ResNeSt50, ResNeSt50 4s2x40d, EffNet-B3, 4, ViT-L/16, DeiT-B/16) and decided to use ResNeSt50 4s2x40d, EffNet-B4 based on LB & CV scores"
+  },
+  "pretrained_checkpoints": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "EfficientNet-B3 NS... EfficientNet-B4 NS"
+  },
+  "fine_tuning_strategy": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "Auxiliary : freeze BN layer"
+  },
+  "primary_loss": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "I chose to use focal cosine loss & cross-entropy w/ label smoothing 0.2... bi-tempered"
+  },
+  "optimizer": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "Optimizer : AdamW, AdamP, RAdam"
+  },
+  "learning_rate": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "Scheduler : Cosine Anealling w/o warm-up (1e-4 to 1e-6)"
+  },
+  "learning_rate_schedule": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "Scheduler : Cosine Anealling w/o warm-up (1e-4 to 1e-6)"
+  },
+  "epochs": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "Epochs : 10 ~ 20"
+  },
+  "regularization": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "Label Smoothing (alpha = 0.2)... the pseudo label boosts the CV score +0.007"
+  },
+  "cross_validation": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "Validation : stratified kfold - 5 folds"
+  },
+  "ensemble_method": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "I tuned the ensemble weights with Optuna & Simple on CV"
+  },
+  "prediction_averaging": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "TTA : n_iters 4 is best in my case... Simply using CenterCrop + horizontal & vertical flop achieves better CV & LB scores"
+  },
+  "image_size": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "Resolution : 512x512"
+  },
+  "external_data": {
+    "source": "Top576 solution description",
+    "link": "solutions/top576.txt",
+    "quote": "Data : 2019 + 2020 datasets, only 2020, w/ pseudo labels... external dataset (2019 dataset)"
+  }
+}

@@ -1,0 +1,188 @@
+{
+  "preprocessing": {
+    "tokenization_method": {
+      "transformer_tokenizer": {
+        "source": "Inferred from transformer models usage",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257918",
+        "quote": "Transformer models require their respective tokenizers"
+      }
+    }
+  },
+  "transformer_models": {
+    "base_models": {
+      "microsoft/deberta-large": {
+        "source": "Kaggle discussion - 5th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257918",
+        "quote": "Used transformer models including deberta-large, roberta-large, funnel-xlarge"
+      },
+      "roberta-large": {
+        "source": "Kaggle discussion - 5th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257918",
+        "quote": "Used transformer models including deberta-large, roberta-large, funnel-xlarge"
+      },
+      "funnel-transformer/xlarge": {
+        "source": "Kaggle discussion - 5th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257918",
+        "quote": "Used transformer models including deberta-large, roberta-large, funnel-xlarge"
+      }
+    },
+    "fine_tuning_strategy": {
+      "full_model_fine_tuning": {
+        "source": "Kaggle discussion - 5th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257918",
+        "quote": "Full model fine-tuning with specific techniques"
+      },
+      "layer_reinitialize": {
+        "source": "Kaggle discussion - 5th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257918",
+        "quote": "Re-initialize some layers before training"
+      },
+      "masked_language_modeling": {
+        "source": "Kaggle discussion - 5th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257844",
+        "quote": "Each model was MLM pre-trained before fine-tuning on the competition data"
+      }
+    }
+  },
+  "loss_functions": {
+    "primary_loss": {
+      "mse": {
+        "source": "Kaggle discussion - 5th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257918",
+        "quote": "MSE loss used for regression task"
+      }
+    }
+  },
+  "training_strategy": {
+    "optimizer": {
+      "adamw": {
+        "source": "Kaggle discussion - 5th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257918",
+        "quote": "AdamW optimizer used for training"
+      }
+    },
+    "learning_rate": {
+      "0.00001": {
+        "source": "Kaggle discussion - 5th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257844",
+        "quote": "Training parameters: Batch size 32, Learning rate 1e-5"
+      }
+    },
+    "learning_rate_schedule": {
+      "cosine_annealing": {
+        "source": "Kaggle discussion - 5th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257918",
+        "quote": "Cosine learning rate scheduler used"
+      },
+      "exponential_layer_lr": {
+        "source": "Kaggle discussion - 5th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257918",
+        "quote": "Exponential learning rate change across layers"
+      }
+    },
+    "batch_size": {
+      "32": {
+        "source": "Kaggle discussion - 5th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257844",
+        "quote": "Training parameters: Batch size 32, Learning rate 1e-5"
+      }
+    },
+    "gradient_accumulation": {
+      "4": {
+        "source": "Kaggle discussion - 5th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257844",
+        "quote": "Used gradient accumulation of 4 steps to simulate larger batch sizes"
+      }
+    },
+    "epochs": {
+      "5": {
+        "source": "Kaggle discussion - 5th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257918",
+        "quote": "5 epochs used for training"
+      }
+    },
+    "cross_validation": {
+      "kfold_no_shuffle": {
+        "source": "Kaggle discussion - 5th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257918",
+        "quote": "K-fold without shuffle to maintain data order"
+      }
+    }
+  },
+  "model_architecture": {
+    "pooling_strategy": {
+      "cls-mean-max-pooling": {
+        "source": "Kaggle discussion - 5th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257844",
+        "quote": "Combined CLS token, mean pooling, and max pooling of last hidden states"
+      }
+    },
+    "layer_reinitialize": {
+      "last-2-layers": {
+        "source": "Kaggle discussion - 5th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257844",
+        "quote": "Reinitialize the last 2 transformer layers before fine-tuning to help model adapt better to target task"
+      }
+    },
+      "mean_pooling": {
+        "source": "Kaggle discussion - 5th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257918",
+        "quote": "Mean pooling used with linear head"
+      }
+    },
+    "custom_layers": {
+      "linear_head": {
+        "source": "Kaggle discussion - 5th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257918",
+        "quote": "Linear head on top of pooled features"
+      }
+    },
+    "regularization": {
+      "dropout_train_mode_inference": {
+        "source": "Kaggle discussion - 5th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257844",
+        "quote": "At inference time, I used a trick: keep dropout layers in training mode and average predictions over multiple forward passes (similar to test-time augmentation but with dropout randomness)"
+      },
+      "multi-forward-pass-averaging": {
+        "source": "Kaggle discussion - 5th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257844",
+        "quote": "At inference time, I used a trick: keep dropout layers in training mode and average predictions over multiple forward passes"
+      }
+    }
+  },
+  "postprocessing": {
+    "ensemble_method": {
+      "lightgbm-stacking": {
+        "source": "Kaggle discussion - 5th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257844",
+        "quote": "Final ensemble: used LightGBM as a stacking model to combine predictions from all 14 transformer models. The meta-model learned optimal weights and interactions between base model predictions"
+      },
+      "14-model-predictions": {
+        "source": "Kaggle discussion - 5th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257844",
+        "quote": "Final ensemble: used LightGBM as a stacking model to combine predictions from all 14 transformer models"
+      }
+    }
+  },
+  "frameworks": {
+    "deep_learning_framework": {
+      "pytorch": {
+        "source": "Kaggle discussion - 5th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257918",
+        "quote": "PyTorch framework used for implementation"
+      }
+    },
+    "libraries": {
+      "transformers": {
+        "source": "Kaggle discussion - 5th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257918",
+        "quote": "HuggingFace transformers library for model implementation"
+      },
+      "sklearn": {
+        "source": "Kaggle discussion - 5th place solution",
+        "link": "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257918",
+        "quote": "Scikit-learn for cross-validation utilities"
+      }
+    }
+  }
+}

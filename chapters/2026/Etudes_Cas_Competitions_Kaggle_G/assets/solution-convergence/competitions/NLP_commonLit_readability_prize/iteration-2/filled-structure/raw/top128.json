@@ -1,0 +1,72 @@
+{
+  "embeddings": {
+    "sentence_embeddings": [],
+    "contextual_embeddings": []
+  },
+  "preprocessing": {
+    "external_data_sources": [],
+    "tokenization_method": [
+      "transformer-tokenizer"
+    ],
+    "augmentation_techniques": [
+      "standard-error-augmentation",
+      "pairwise-comparison"
+    ]
+  },
+  "transformer_models": {
+    "base_models": [
+      "roberta-large"
+    ],
+    "mlm_pretraining": false,
+    "fine_tuning_strategy": [
+      "full-model-fine-tuning"
+    ]
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "mse",
+      "binary-classification"
+    ]
+  },
+  "training_strategy": {
+    "optimizer": [
+      "adamw"
+    ],
+    "learning_rate": 3e-05,
+    "learning_rate_schedule": [],
+    "batch_size": 16,
+    "epochs": 4,
+    "weight_decay": null,
+    "pseudo_labeling": false,
+    "seed_averaging": false,
+    "regularization": [],
+    "cross_validation": [
+      "5-fold"
+    ]
+  },
+  "model_architecture": {
+    "pooling_strategy": [
+      "cls-token",
+      "esim-like-inference",
+      "representation-based-comparison",
+      "interaction-based-comparison"
+    ],
+    "layer_reinitialize": false
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "simple-average",
+      "4-model-ensemble"
+    ],
+    "stacking_models": []
+  },
+  "frameworks": {
+    "deep_learning_framework": [
+      "pytorch"
+    ],
+    "libraries": [
+      "transformers",
+      "sklearn"
+    ]
+  }
+}

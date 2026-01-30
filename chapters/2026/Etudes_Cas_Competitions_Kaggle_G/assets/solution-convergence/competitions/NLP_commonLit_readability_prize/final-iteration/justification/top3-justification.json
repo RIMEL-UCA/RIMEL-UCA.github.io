@@ -1,0 +1,204 @@
+{
+  "embeddings": {
+    "contextual_embeddings": {}
+  },
+  "preprocessing": {
+    "external_data_sources": {
+      "children-book-test": {
+        "source": "GitHub Code + Kaggle Discussion",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/0.prepare_data.py",
+        "quote": "with open('./extra_data/cbt_valid.txt') as f: cbt_v = f.read()"
+      },
+      "simplewiki": {
+        "source": "GitHub Code + Kaggle Discussion",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/0.prepare_data.py",
+        "quote": "with open('./extra_data/simple_english_wiki.txt') as f: contents = f.read()"
+      }
+    },
+    "tokenization_method": {
+      "transformer-tokenizer": {
+        "source": "GitHub Code",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/dataset.py#L62-L65",
+        "quote": "tokenized = self.tokenizer(self.excerpt[idx],return_tensors='pt', max_length=256, padding='max_length',truncation=True)"
+      }
+    },
+    "augmentation_techniques": {},
+    "additional_features": {}
+  },
+  "transformer_models": {
+    "base_models": {
+      "microsoft/deberta-base": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258095",
+        "quote": "3 models simple average ensemble: Roberta-large, Roberta-base, Deberta-large"
+      },
+      "microsoft/deberta-large": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258095",
+        "quote": "3 models simple average ensemble: Roberta-large, Roberta-base, Deberta-large"
+      },
+      "roberta-base": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258095",
+        "quote": "3 models simple average ensemble: Roberta-large, Roberta-base, Deberta-large"
+      },
+      "roberta-large": {
+        "source": "Kaggle Discussion + GitHub",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258095",
+        "quote": "3 models simple average ensemble: Roberta-large, Roberta-base, Deberta-large"
+      }
+    },
+    "fine_tuning_strategy": {
+      "full-model-fine-tuning": {
+        "source": "GitHub Code",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/train.py#L15-L38",
+        "quote": "model = Custom_bert(config['model_dir']).to(device); model.load_state_dict(torch.load(config['pretrained_path']), strict=False)"
+      },
+      "mlm-pretraining": {
+        "source": "GitHub Code + README",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/1.roberta_pretrain.py",
+        "quote": "model = RobertaForMaskedLM.from_pretrained(model_dir, local_files_only=True).to(device); train_dataset = MLMDataset(True,texts,tokenizer)"
+      },
+      "pseudo-labeling": {
+        "source": "Kaggle Discussion + GitHub",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258095",
+        "quote": "OneStopEnglishCorpus, simplewiki, children's book test - 5-fold specific pseudo label"
+      }
+    }
+  },
+  "loss_functions": {
+    "primary_loss": {
+      "mse": {
+        "source": "GitHub Code",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/train.py#L57",
+        "quote": "cls_loss = nn.MSELoss()(torch.squeeze(outputs,1),target)"
+      }
+    }
+  },
+  "training_strategy": {
+    "optimizer": {
+      "adamw": {
+        "source": "GitHub Code",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/optimizer.py#L60",
+        "quote": "optimizer = AdamW(params_lst, betas = config['betas'])"
+      }
+    },
+    "learning_rate": {
+      "source": "GitHub Code",
+      "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/util.py#L97-L110",
+      "quote": "config['base_lr']= 3e-5, config['head_lr']= 5e-5, config['weight_lr']= 2e-3 for setting 3"
+    },
+    "learning_rate_schedule": {
+      "3-group-decaying-lr": {
+        "source": "GitHub Code + Kaggle Discussion",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/optimizer.py#L23-L43",
+        "quote": "divide encoder layers into 3 groups and assign different lr; parts = 3; for i,j in zip(range(layers-1,-1,-int(layers/parts))..."
+      },
+      "group-differential-lr": {
+        "source": "GitHub Code",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/optimizer.py#L43-L60",
+        "quote": "'lr':pow(config['layerwise_decay_rate'],j)*config['base_lr']"
+      },
+      "three-stage-decay": {
+        "source": "GitHub Code + Kaggle Discussion",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/optimizer.py#L138-L145",
+        "quote": "def lr_lambda_2(step): if step <= total_train_steps * (1/3): return 1; if step <= total_train_steps * (2/3): return 0.5; if step <= total_train_steps * (3/3): return 0.25"
+      }
+    },
+    "batch_size": {
+      "source": "GitHub Code",
+      "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/util.py#L97",
+      "quote": "config['batch_size'] = 16 for roberta, config['batch_size'] = 8 for deberta"
+    },
+    "epochs": {
+      "source": "GitHub Code + Discussion",
+      "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/util.py#L102",
+      "quote": "config['num_epoch'] = 2 for lr_setting 2, num_epoch = 3 for lr_setting 1"
+    },
+    "weight_decay": {
+      "source": "GitHub Code",
+      "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/util.py#L66",
+      "quote": "'weight_decay': 0.01"
+    },
+    "regularization": {
+      "dropout-0.2": {
+        "source": "GitHub Code",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/model.py#L20",
+        "quote": "self.dropout = nn.Dropout(p=0.2)"
+      },
+      "gradient-accumulation": {
+        "source": "GitHub Code",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/train.py#L184-L194",
+        "quote": "if (count+1) % config['accumulation_steps'] == 0: optimizer.step()"
+      },
+      "high-dropout-0.5": {
+        "source": "GitHub Code",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/model.py#L21",
+        "quote": "self.high_dropout = nn.Dropout(p=0.5)"
+      },
+      "multi-sample-dropout": {
+        "source": "GitHub Code + Discussion",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/model.py#L54-L60",
+        "quote": "logits = torch.mean(torch.stack([torch.sum(self.attention(self.high_dropout(cls_output)) * cls_output, dim=1) for _ in range(5)], dim=0), dim=0)"
+      }
+    },
+    "cross_validation": {
+      "5-fold": {
+        "source": "GitHub Code + Discussion",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/util.py#L19-L44",
+        "quote": "kf = StratifiedKFold(n_splits=num_splits)"
+      },
+      "stratified-kfold": {
+        "source": "GitHub Code",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/util.py#L37",
+        "quote": "kf = StratifiedKFold(n_splits=num_splits)"
+      }
+    }
+  },
+  "model_architecture": {
+    "pooling_strategy": {
+      "attention-pooling": {
+        "source": "GitHub Code + Discussion",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/model.py#L27-L33",
+        "quote": "self.attention = nn.Sequential(nn.Linear(1024, 1024), nn.Tanh(), nn.Linear(1024, 1), nn.Softmax(dim=1))"
+      },
+      "linear-head": {
+        "source": "GitHub Code",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/model.py#L35-L37",
+        "quote": "self.cls = nn.Sequential(nn.Linear(dim,1))"
+      },
+      "weighted-layer-average-24-layers": {
+        "source": "GitHub Code + Discussion",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/model.py#L47-L51",
+        "quote": "cls_outputs = torch.stack([self.dropout(layer) for layer in base_output['hidden_states'][-24:]], dim=0); cls_output = (torch.softmax(self.layer_weights, dim=0).unsqueeze(1).unsqueeze(1).unsqueeze(1) * cls_outputs).sum(0)"
+      }
+    }
+  },
+  "postprocessing": {
+    "ensemble_method": {
+      "simple-average": {
+        "source": "Kaggle Discussion",
+        "link": "https://www.kaggle.com/competitions/commonlitreadabilityprize/discussion/258095",
+        "quote": "3 models simple average ensemble"
+      },
+      "weighted-average": {
+        "source": "GitHub Code",
+        "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/4.predict.py#L35-L44",
+        "quote": "preds_0 = preds_fold0[0] * 0.33 + preds_fold0[1] * 0.67"
+      }
+    },
+    "stacking_models": {}
+  },
+  "frameworks": {
+    "pytorch": {
+      "source": "GitHub Code",
+      "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/train.py",
+      "quote": "import torch; import torch.nn as nn"
+    },
+    "transformers": {
+      "source": "GitHub Code",
+      "link": "https://github.com/Danielhuxc/CLRP-solution/blob/main/components/model.py#L3",
+      "quote": "from transformers import AutoModel, AutoConfig"
+    }
+  }
+}

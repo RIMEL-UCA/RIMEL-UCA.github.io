@@ -1,0 +1,96 @@
+{
+  "embeddings": {
+    "sentence_embeddings": [],
+    "contextual_embeddings": []
+  },
+  "preprocessing": {
+    "external_data_sources": [],
+    "tokenization_method": [
+      "transformer-tokenizer"
+    ],
+    "augmentation_techniques": []
+  },
+  "transformer_models": {
+    "base_models": [
+      "microsoft/deberta-large",
+      "microsoft/deberta-base",
+      "deepset/roberta-base-squad2",
+      "deepset/roberta-large-squad2",
+      "distilroberta-base",
+      "funnel-transformer/large-base",
+      "bert-large-uncased",
+      "bert-large-cased",
+      "bert-large-cased-whole-word-masking",
+      "facebook/bart-base",
+      "facebook/bart-large",
+      "roberta-base",
+      "albert-large-v2",
+      "google/electra-large-discriminator",
+      "xlm-roberta-large",
+      "sentence-transformers/LaBSE",
+      "sentence-transformers/paraphrase-mpnet-base-v2"
+    ],
+    "mlm_pretraining": false,
+    "fine_tuning_strategy": [
+      "full-model-fine-tuning"
+    ]
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "mse",
+      "kl-divergence"
+    ]
+  },
+  "training_strategy": {
+    "optimizer": [
+      "adamw"
+    ],
+    "learning_rate": 5e-05,
+    "learning_rate_schedule": [
+      "cosine-annealing"
+    ],
+    "batch_size": 16,
+    "epochs": 6,
+    "weight_decay": 1.0,
+    "pseudo_labeling": false,
+    "seed_averaging": true,
+    "regularization": [
+      "swa-after-epoch-3",
+      "no-dropout"
+    ],
+    "cross_validation": [
+      "5-fold"
+    ]
+  },
+  "model_architecture": {
+    "pooling_strategy": [
+      "attention-block",
+      "sequence-last-hidden-state"
+    ],
+    "layer_reinitialize": false,
+    "additional_features": [
+      "flesch-reading-ease",
+      "smog-index"
+    ]
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "ridge-regression",
+      "bayesian-ridge",
+      "netflix-method",
+      "weighted-average"
+    ],
+    "stacking_models": []
+  },
+  "frameworks": {
+    "deep_learning_framework": [
+      "pytorch",
+      "pytorch-lightning"
+    ],
+    "libraries": [
+      "transformers",
+      "sklearn",
+      "textstat"
+    ]
+  }
+}

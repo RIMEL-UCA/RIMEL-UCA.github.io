@@ -1,0 +1,14 @@
+{
+  "fields_to_add": [
+    {
+      "field_path": "preprocessing.additional_features",
+      "type": "list",
+      "rationale": "Multiple solutions use additional engineered features beyond transformer embeddings, such as statistical text features (textstat), standard error as a feature, and other readability metrics. This field better captures the actual practice of combining transformer outputs with handcrafted features.",
+      "sources": [
+        "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro: Standard Error as a Feature (MOST IMPORTANT) - I noticed the standard_error is a key feature 3 days before the deadline... LightGBM (with standard_error) 0.3959 0.069",
+        "https://www.kaggle.com/competitions/commonlitreadabilityprize/writeups/atsushi-iwasaki-114th-place-solution-standard-erro: The features for the model were engineered from the excerpts (for example, number of sentences) and BERT variants predictions",
+        "https://www.kaggle.com/c/commonlitreadabilityprize/discussion/257897: I also added a couple of features using textstat, flesch_reading_ease and smog_index and concatenated them to the output of the AttentionBlock before the regression head"
+      ]
+    }
+  ]
+}

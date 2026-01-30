@@ -1,0 +1,94 @@
+{
+  "preprocessing": {
+    "image_size": [
+      "256x256",
+      "512x512"
+    ],
+    "normalization": {},
+    "augmentation_techniques": [
+      "horizontalflip",
+      "verticalflip",
+      "blur",
+      "rotate",
+      "randombrightnesscontrast",
+      "shiftscalerotate",
+      "huesaturationvalue",
+      "cutmix",
+      "mixup",
+      "fmix"
+    ]
+  },
+  "transformer_models": {
+    "base_models": [
+      "swsl-resnext101-8d",
+      "swsl-resnext50",
+      "efficientnet-b4",
+      "efficientnet-b4-ns",
+      "inception-v4",
+      "densenet161"
+    ],
+    "pretrained_checkpoints": [
+      "swsl",
+      "noisystudent"
+    ],
+    "fine_tuning_strategy": [
+      "frozen-batchnorm-layers"
+    ]
+  },
+  "loss_functions": {
+    "primary_loss": [
+      "crossentropyloss"
+    ]
+  },
+  "training_strategy": {
+    "optimizer": [
+      "ranger"
+    ],
+    "learning_rate": 0.003,
+    "learning_rate_schedule": [
+      "cosinebatchdecayscheduler-with-gradual-warm-up"
+    ],
+    "batch_size": 128,
+    "epochs": 30,
+    "regularization": [
+      "label-smoothing",
+      "early-stopping",
+      "gradient-accumulation",
+      "mixed-precision-training",
+      "knowledge-distillation"
+    ],
+    "cross_validation": [
+      "5-fold"
+    ],
+    "external_data": [
+      "2019-data",
+      "mendeley-leaves"
+    ],
+    "mixed_precision": true,
+    "progressive_resizing": true,
+    "noise_handling": []
+  },
+  "model_architecture": {
+    "pooling_strategy": [],
+    "additional_layers": [],
+    "dropout_rate": null
+  },
+  "postprocessing": {
+    "ensemble_method": [
+      "simple-averaging-ensemble",
+      "maxprob-ensemble"
+    ],
+    "prediction_averaging": [
+      "tta"
+    ]
+  },
+  "frameworks": {
+    "deep_learning_framework": [
+      "pytorch"
+    ],
+    "libraries": [
+      "albumentations",
+      "apex"
+    ]
+  }
+}

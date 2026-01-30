@@ -1,0 +1,294 @@
+{
+  "image_size": {
+    "224x224": {
+      "source": "Top1 solution description",
+      "link": "solutions/top1.txt",
+      "quote": "CropNet (MobileNetv3) Model from Tensorflow Hub... As stated in the description the images must be rescaled to 224x224 pixel"
+    },
+    "384x384": {
+      "source": "Top1 solution description",
+      "link": "solutions/top1.txt",
+      "quote": "We used the Vision Transformer Architecture with ImageNet weights (ViT-B/16)... Custom top with Linear layer; Image size of (384,384)"
+    },
+    "512x512": {
+      "source": "Top1 solution description",
+      "link": "solutions/top1.txt",
+      "quote": "We used a ResNeXt model of the structure \"resnext50_32x4d\" with the following configurations: image size of (512,512)"
+    }
+  },
+  "brightness": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Augmentations (Flip, Transpose, Rotate, Saturation, Contrast and Brightness and some random cropping)"
+  },
+  "centercrop": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Validation Augmentations (Horizontal and vertical flop, CenterCrop, Resize, Normalization)... For inference we used the following augmentations: CenterCrop, Resize, Normalization"
+  },
+  "coarsedropout": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Train Augmentations (RandomResizedCrop, Transpose, Horizontal and vertical flip, ShiftScaleRotate, HueSaturationValue, RandomBrightnessContrast, Normalization, CoarseDropout, Cutout)"
+  },
+  "contrast": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Augmentations (Flip, Transpose, Rotate, Saturation, Contrast and Brightness and some random cropping)"
+  },
+  "cutout": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Train Augmentations (RandomResizedCrop, Transpose, Horizontal and vertical flip, ShiftScaleRotate, HueSaturationValue, RandomBrightnessContrast, Normalization, CoarseDropout, Cutout)"
+  },
+  "flip": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Augmentations (Flip, Transpose, Rotate, Saturation, Contrast and Brightness and some random cropping)... For inference we used simple test time augmentations (Flip, Rotate, Transpose)"
+  },
+  "horizontalflip": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Train augmentations (from the Albumentations Python library): RandomResizedCrop, Transpose, HorizontalFlip. VerticalFlip, ShiftScaleRotate, Normalize"
+  },
+  "huesaturationvalue": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Train Augmentations (RandomResizedCrop, Transpose, Horizontal and vertical flip, ShiftScaleRotate, HueSaturationValue, RandomBrightnessContrast, Normalization, CoarseDropout, Cutout)"
+  },
+  "random-resized-cropping": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Augmentations (Flip, Transpose, Rotate, Saturation, Contrast and Brightness and some random cropping)"
+  },
+  "randombrightnesscontrast": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Train Augmentations (RandomResizedCrop, Transpose, Horizontal and vertical flip, ShiftScaleRotate, HueSaturationValue, RandomBrightnessContrast, Normalization, CoarseDropout, Cutout)"
+  },
+  "randomcrop": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Augmentations (Flip, Transpose, Rotate, Saturation, Contrast and Brightness and some random cropping)"
+  },
+  "randomresizedcrop": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Train augmentations (from the Albumentations Python library): RandomResizedCrop, Transpose, HorizontalFlip. VerticalFlip, ShiftScaleRotate, Normalize"
+  },
+  "resize": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Validation augmentations (from the Albumentations Python library): Resize, Normalize... For inference we used the same augmentations as for validation (i.e., Resize, Normalize)"
+  },
+  "rotate": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Augmentations (Flip, Transpose, Rotate, Saturation, Contrast and Brightness and some random cropping)... For inference we used simple test time augmentations (Flip, Rotate, Transpose)"
+  },
+  "saturation": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Augmentations (Flip, Transpose, Rotate, Saturation, Contrast and Brightness and some random cropping)"
+  },
+  "shiftscalerotate": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Train augmentations (from the Albumentations Python library): RandomResizedCrop, Transpose, HorizontalFlip. VerticalFlip, ShiftScaleRotate, Normalize"
+  },
+  "transpose": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Train augmentations (from the Albumentations Python library): RandomResizedCrop, Transpose, HorizontalFlip. VerticalFlip, ShiftScaleRotate, Normalize... For inference we used simple test time augmentations (Flip, Rotate, Transpose)"
+  },
+  "tta": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "For inference we used simple test time augmentations (Flip, Rotate, Transpose)"
+  },
+  "verticalflip": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Train augmentations (from the Albumentations Python library): RandomResizedCrop, Transpose, HorizontalFlip. VerticalFlip, ShiftScaleRotate, Normalize"
+  },
+  "efficientnet-b4": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "We tested some of the models separately on the leaderboard (public/private): B4: 89.4%/89.5%"
+  },
+  "efficientnet-b4-ns": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "We tried different EfficientNet architectures but finally only used a B4 with NoisyStudent weights"
+  },
+  "mobilenetv3": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Finally, our ensemble included a pretrained CropNet (MobileNetv3) Model from Tensorflow Hub... The CropNet model is based on the MobileNetV3 architecture"
+  },
+  "resnext50-32x4d": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "We used a ResNeXt model of the structure \"resnext50_32x4d\" with the following configurations"
+  },
+  "vit-b/16": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "We used the Vision Transformer Architecture with ImageNet weights (ViT-B/16)"
+  },
+  "cropnet": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Finally, our ensemble included a pretrained CropNet (MobileNetv3) Model from Tensorflow Hub: We used a pretrained model from TensorFlow Hub called CropNet which was specifically trained to detect Cassava leaf diseases"
+  },
+  "imagenet": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "We used the Vision Transformer Architecture with ImageNet weights (ViT-B/16)"
+  },
+  "noisystudent": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "We tried different EfficientNet architectures but finally only used a B4 with NoisyStudent weights"
+  },
+  "bi-tempered-logistic-loss": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Bit Tempered Logistic Loss (t1 = 0.8, t2 = 1.4) and label smoothing factor of 0.06"
+  },
+  "crossentropyloss": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "CrossEntropyLoss with default parameters"
+  },
+  "sigmoid-focal-loss": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Sigmoid Focal Loss with Label Smoothing (Gamma=2.0, alpha=0.25 and label smoothing factor 0.1)"
+  },
+  "adam": {
+    "source": "Top1 solution description - default PyTorch/TensorFlow optimizer",
+    "link": "solutions/top1.txt",
+    "quote": "Learning rate of 1e-4 with \"ReduceLROnPlateau\" scheduler... We chose a learning rate with a Cosine annealing warm restarts scheduler (LR = 1e-4 / 7 [7: Warm up factor]"
+  },
+  "learning_rate": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Learning rate of 1e-4 with \"ReduceLROnPlateau\" scheduler... We chose a learning rate with a Cosine annealing warm restarts scheduler (LR = 1e-4 / 7 [7: Warm up factor], T0= 10, Tmult= 1, eta_min=1e-4, last_epoch=-1)"
+  },
+  "cosine-annealing-warm-restarts": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "We chose a learning rate with a Cosine annealing warm restarts scheduler (LR = 1e-4 / 7 [7: Warm up factor], T0= 10, Tmult= 1, eta_min=1e-4, last_epoch=-1)"
+  },
+  "reducelronplateau": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Learning rate of 1e-4 with \"ReduceLROnPlateau\" scheduler based on average validation loss (mode='min', factor=0.2, patience=5, eps=1e-6)"
+  },
+  "warmup-and-cosine-decay": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Learning rate with warmup and cosine decay scheduler (ranging from 1e-6 to a maximum of 0.0002 and back to 3.17e-6)"
+  },
+  "epochs": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "5-fold-CV with 15 epochs... 5-fold-CV with 10 epochs... 5-fold-CV with 20 epochs with early stopping... Final model was trained for 14 epochs on whole competition data set"
+  },
+  "drop-connect": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Drop connect rate 0.4, custom top with global average pooling and dropout layer (0.5)"
+  },
+  "dropout": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Drop connect rate 0.4, custom top with global average pooling and dropout layer (0.5)"
+  },
+  "early-stopping": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "5-fold-CV with 20 epochs with early stopping and callback for restoring weights of best epoch"
+  },
+  "gradient-accumulation": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "A batch accumulation for backprop with effectively larger batch size"
+  },
+  "label-smoothing": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Bit Tempered Logistic Loss (t1 = 0.8, t2 = 1.4) and label smoothing factor of 0.06... Sigmoid Focal Loss with Label Smoothing (Gamma=2.0, alpha=0.25 and label smoothing factor 0.1)"
+  },
+  "5-fold": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "5-fold-CV with 15 epochs (after the 15 training epochs, we always chose the model with the best validation accuracy) (same data partitioning as for the other trained models)"
+  },
+  "global-average-pooling": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Drop connect rate 0.4, custom top with global average pooling and dropout layer (0.5)"
+  },
+  "dropout-layer": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Drop connect rate 0.4, custom top with global average pooling and dropout layer (0.5)"
+  },
+  "linear-layer": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Custom top with Linear layer; Image size of (384,384)"
+  },
+  "dropout_rate": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Drop connect rate 0.4, custom top with global average pooling and dropout layer (0.5)"
+  },
+  "stacked-mean": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "For the ensembling, we experimented with different methods and found that in our case a stacked-mean approach worked best. For this purpose, the class probabilities returned by the models were averaged on several levels and finally the class with the highest probability was returned."
+  },
+  "multi-crop": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "To do so, we cropped 4 overlapping patches of size 512x512px from the .jpg images (800x600px) and applied 2 augmentations to each patch. We retained two additional center-cropped patches of the image to which no augmentations were applied."
+  },
+  "tta": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "For inference we used simple test time augmentations (Flip, Rotate, Transpose). To do so, we cropped 4 overlapping patches of size 512x512px from the .jpg images (800x600px) and applied 2 augmentations to each patch."
+  },
+  "pytorch": {
+    "source": "Top1 solution code",
+    "link": "solutions/top1.txt",
+    "quote": "import timm, import torch, import torch.nn as nn, import torch.nn.functional as F, import torchvision.models as models"
+  },
+  "tensorflow": {
+    "source": "Top1 solution code",
+    "link": "solutions/top1.txt",
+    "quote": "import tensorflow as tf... from tensorflow import keras"
+  },
+  "albumentations": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Train augmentations (from the Albumentations Python library): RandomResizedCrop, Transpose, HorizontalFlip. VerticalFlip, ShiftScaleRotate, Normalize"
+  },
+  "keras": {
+    "source": "Top1 solution code",
+    "link": "solutions/top1.txt",
+    "quote": "from tensorflow import keras"
+  },
+  "tensorflow-hub": {
+    "source": "Top1 solution description",
+    "link": "solutions/top1.txt",
+    "quote": "Finally, our ensemble included a pretrained CropNet (MobileNetv3) Model from Tensorflow Hub"
+  },
+  "timm": {
+    "source": "Top1 solution code",
+    "link": "solutions/top1.txt",
+    "quote": "import timm... self.model = timm.create_model(model_name, pretrained=pretrained)"
+  }
+}

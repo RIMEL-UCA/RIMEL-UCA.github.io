@@ -1,0 +1,22 @@
+{
+  "competition": "hull-tactical-market-prediction",
+  "stratum": "top_1%",
+  "ref": "abhinavsharma0706/hull-2",
+  "local_main_file": "corpus\\hull-tactical-market-prediction\\notebooks\\top_1%\\abhinavsharma0706__hull-2\\hull-2.ipynb",
+  "scores_20": {
+    "A_structure_pipeline": 15,
+    "B_modularite": 15,
+    "C_reproductibilite": 15,
+    "D_lisibilite": 10,
+    "E_hygiene": 15
+  },
+  "score_total_100": 70,
+  "evidence": {
+    "A_structure_pipeline": "Pipeline clair: setup → AdjustedSharpe function → TimeSeriesPredictor class → data loading → predict function → optimization → inference_server.",
+    "B_modularite": "Classe TimeSeriesPredictor avec méthodes predict/set_position, fonction AdjustedSharpe réutilisable, paramètres (window, defined_positions).",
+    "C_reproductibilite": "Optimisation scipy.minimize documentée avec résultat k, positions calculées à partir de formule explicite, COLUMNS définis.",
+    "D_lisibilite": "Pas de markdown, commentaires minimaux ('# Define customized score functions'), noms corrects mais pas de docstrings.",
+    "E_hygiene": "EXEC_OPTIM flag, chemins Path(), gestion is_scored, np.clip(position, 0, 2), run_local_gateway fallback."
+  },
+  "summary": "Notebook d'optimisation de positions avec classe TimeSeriesPredictor bien conçue. Approche mathématique documentée (AdjustedSharpe). Optimisation scipy avec résultat k sauvegardé. Manque de markdown explicatif mais code structuré. Compatible Kaggle inference server."
+}

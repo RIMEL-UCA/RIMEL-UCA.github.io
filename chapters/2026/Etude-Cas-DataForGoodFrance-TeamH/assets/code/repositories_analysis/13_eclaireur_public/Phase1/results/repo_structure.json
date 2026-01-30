@@ -1,0 +1,1286 @@
+{
+  ".git": {
+    "hooks": {
+      "applypatch-msg.sample": null,
+      "commit-msg.sample": null,
+      "fsmonitor-watchman.sample": null,
+      "post-update.sample": null,
+      "pre-applypatch.sample": null,
+      "pre-commit.sample": null,
+      "pre-merge-commit.sample": null,
+      "pre-push.sample": null,
+      "pre-rebase.sample": null,
+      "pre-receive.sample": null,
+      "prepare-commit-msg.sample": null,
+      "push-to-checkout.sample": null,
+      "sendemail-validate.sample": null,
+      "update.sample": null
+    },
+    "info": {
+      "exclude": null
+    },
+    "logs": {
+      "refs": {
+        "heads": {
+          "main": null
+        },
+        "remotes": {
+          "origin": {
+            "HEAD": null
+          }
+        }
+      },
+      "HEAD": null
+    },
+    "objects": {
+      "info": {},
+      "pack": {
+        "pack-9afd27f4ef3d8f16249705c42cc158f70b7d408a.idx": null,
+        "pack-9afd27f4ef3d8f16249705c42cc158f70b7d408a.pack": null,
+        "pack-9afd27f4ef3d8f16249705c42cc158f70b7d408a.rev": null
+      }
+    },
+    "refs": {
+      "heads": {
+        "main": null
+      },
+      "remotes": {
+        "origin": {
+          "HEAD": null
+        }
+      },
+      "tags": {}
+    },
+    "config": null,
+    "description": null,
+    "HEAD": null,
+    "index": null,
+    "packed-refs": null
+  },
+  ".github": {
+    "workflows": {
+      "d4g-utils.yml": null,
+      "pre-commit.yaml": null,
+      "review.yml": null,
+      "run-main.yaml": null,
+      "test-run.yaml": null
+    }
+  },
+  "back": {
+    "data": {
+      "communities": {
+        "scrapped_data": {
+          "gouv_colloc": {
+            "epcicom2023.xlsx": null
+          }
+        }
+      },
+      "cpv_labels": {
+        "cpv_2008.xls": null
+      },
+      "datasets": {
+        "subventions": {
+          "inputs": {
+            "dataset_dict.csv": null,
+            "single_urls.csv": null
+          }
+        }
+      }
+    },
+    "scripts": {
+      "adapters": {
+        "workflow": {
+          "financial_accounts.py": null,
+          "ofgl.py": null
+        },
+        "http_downloader.py": null,
+        "url_data_source.py": null
+      },
+      "communities": {
+        "loaders": {
+          "ofgl.py": null
+        },
+        "__pycache__": {
+          "community.cpython-311.pyc": null
+        },
+        "communities_selector.py": null
+      },
+      "datasets": {
+        "communities_contacts.py": null,
+        "communities_financial_accounts.csv": null,
+        "constants.py": null,
+        "cpv_labels.py": null,
+        "datagouv_catalog.py": null,
+        "datagouv_catalog_columns.txt": null,
+        "datagouv_searcher.py": null,
+        "dataset_aggregator.py": null,
+        "declaration_interet.py": null,
+        "elected_officials.py": null,
+        "entities.py": null,
+        "marches.py": null,
+        "odf.csv": null,
+        "ofgl_urls.csv": null,
+        "single_urls_builder.py": null,
+        "sirene.py": null,
+        "topic_aggregator.py": null,
+        "utils.py": null
+      },
+      "enrichment": {
+        "utils": {
+          "cpv_utils.py": null
+        },
+        "bareme_enricher.py": null,
+        "base_enricher.py": null,
+        "communities_enricher.py": null,
+        "elected_officials_enricher.py": null,
+        "financial_account_enricher.py": null,
+        "marches_enricher.py": null,
+        "subventions_enricher.py": null
+      },
+      "entities": {
+        "ofgl.py": null
+      },
+      "interfaces": {
+        "data_source.py": null,
+        "file_downloader.py": null,
+        "file_parser.py": null,
+        "workflow.py": null
+      },
+      "loaders": {
+        "base_loader.py": null,
+        "csv_loader.py": null,
+        "excel_loader.py": null,
+        "json_loader.py": null,
+        "parquet_loader.py": null,
+        "utils.py": null,
+        "xml_loader.py": null,
+        "zip_loader.py": null,
+        "__init__.py": null
+      },
+      "utils": {
+        "__pycache__": {
+          "utils.cpython-311.pyc": null
+        },
+        "argument_parser.py": null,
+        "beautifulsoup_utils.py": null,
+        "config.py": null,
+        "config_manager.py": null,
+        "dataframe_operation.py": null,
+        "datagouv_api.py": null,
+        "decorators.py": null,
+        "geolocator.py": null,
+        "logger_manager.py": null,
+        "polars_operation.py": null,
+        "psql_connector.py": null,
+        "typing.py": null
+      },
+      "workflow": {
+        "data_warehouse.py": null,
+        "workflow_manager.py": null
+      }
+    },
+    "tests": {
+      "adapters": {
+        "workflow": {
+          "test_financial_accounts.py": null,
+          "test_ofgl.py": null
+        },
+        "test_http_downloader.py": null,
+        "test_url_data_source.py": null
+      },
+      "data": {
+        "communities": {
+          "communities.parquet": null
+        },
+        "marches_publics": {
+          "34ad127d2c6e13d4d3f50f75c4ddff0559c908a7f6147e7c4d344fb035a26683": {
+            "raw.json": null
+          }
+        }
+      },
+      "inputs": {
+        "ci_communities_financial_accounts.csv": null,
+        "ci_raw_marches.json": null,
+        "communities_contact.tar.bz2": null,
+        "datagouv-datafiles-10000.csv": null,
+        "datagouv_catalog.csv": null,
+        "decp-2019-10000.json": null,
+        "ofgl-base-communes-consolidee.test.csv": null,
+        "ofgl-base-departement.test.csv": null,
+        "ofgl-base-epci.test.csv": null,
+        "ofgl-base-region.test.csv": null,
+        "ofgl_urls_ci.csv": null,
+        "single_urls_2.csv": null
+      },
+      "select_test_citites.py": null,
+      "test_utils_dataframe_operation.py": null
+    },
+    "config-test.yaml": null,
+    "config.yaml": null,
+    "main.py": null,
+    "README.md": null
+  },
+  "d4g-utils": {
+    "install_poetry.sh": null
+  },
+  "docs": {
+    "glossaire.md": null
+  },
+  "front": {
+    ".storybook": {
+      "decorators.tsx": null,
+      "main.ts": null,
+      "preview.tsx": null,
+      "utils.tsx": null
+    },
+    ".yarn": {
+      "releases": {
+        "yarn-4.7.0.cjs": null
+      }
+    },
+    "app": {
+      "(a-propos)": {
+        "aide-aux-elus": {
+          "page.tsx": null
+        },
+        "benevoles": {
+          "page.tsx": null
+        },
+        "faq": {
+          "page.tsx": null
+        },
+        "le-projet": {
+          "page.tsx": null
+        },
+        "qui-sommes-nous": {
+          "page.tsx": null
+        }
+      },
+      "(comprendre)": {
+        "cadre-reglementaire": {
+          "page.tsx": null
+        },
+        "contexte": {
+          "page.tsx": null
+        },
+        "methodologie": {
+          "page.tsx": null
+        }
+      },
+      "(visualiser)": {
+        "interpeller": {
+          "Contexts": {
+            "SelectedContactsContext.tsx": null
+          },
+          "[siren]": {
+            "step1": {
+              "page.tsx": null
+            },
+            "step2": {
+              "page.tsx": null
+            },
+            "step3": {
+              "page.tsx": null
+            },
+            "step4": {
+              "page.tsx": null
+            }
+          },
+          "layout.tsx": null,
+          "page.tsx": null
+        },
+        "perspectives": {
+          "page.tsx": null
+        }
+      },
+      "advanced-search": {
+        "components": {
+          "Filters": {
+            "FilterButton.tsx": null,
+            "FilterModal.tsx": null,
+            "Filters.stories.tsx": null,
+            "Filters.tsx": null,
+            "PopulationSlider.tsx": null,
+            "PopulationSliderFilter.tsx": null,
+            "SelectCommunityType.tsx": null,
+            "SelectMarchesPublicsScore.tsx": null,
+            "Selector.tsx": null,
+            "SelectPopulation.tsx": null,
+            "SelectSubventionsScore.tsx": null
+          },
+          "AdvancedSearchDataTable.stories.tsx": null,
+          "AdvancedSearchDataTable.tsx": null,
+          "AdvancedSearchPageContent.tsx": null,
+          "CommunitiesTableWithLoader.tsx": null,
+          "CustomDataTableToolbar.tsx": null,
+          "DownloadingButton.tsx": null,
+          "GoBackHome.tsx": null,
+          "NeedFilterValue.tsx": null,
+          "NoResults.tsx": null,
+          "SelectionStatus.tsx": null,
+          "TableContext.tsx": null,
+          "ViewOptionsButton.tsx": null
+        },
+        "hooks": {
+          "useFilterOptions.ts": null,
+          "useFiltersParams.ts": null,
+          "usePaginationParams.ts": null
+        },
+        "page.tsx": null
+      },
+      "api": {
+        "advanced-search": {
+          "filter-options": {
+            "route.ts": null
+          }
+        },
+        "advanced_search": {
+          "download": {
+            "route.ts": null
+          },
+          "advancedSearchUtils.ts": null,
+          "route.ts": null
+        },
+        "communities": {
+          "[siren]": {
+            "marches_publics": {
+              "by_cpv_2": {
+                "download": {
+                  "route.ts": null
+                },
+                "route.ts": null
+              },
+              "comparison": {
+                "route.ts": null
+              },
+              "contrats": {
+                "download": {
+                  "route.ts": null
+                }
+              },
+              "paginated": {
+                "route.ts": null
+              },
+              "yearly_amounts": {
+                "route.ts": null
+              },
+              "yearly_counts": {
+                "route.ts": null
+              }
+            },
+            "mp-subv-comparison": {
+              "route.ts": null
+            },
+            "subventions": {
+              "by_naf2": {
+                "download": {
+                  "route.ts": null
+                },
+                "route.ts": null
+              },
+              "comparison": {
+                "route.ts": null
+              },
+              "paginated": {
+                "route.ts": null
+              },
+              "yearly_amounts": {
+                "route.ts": null
+              },
+              "yearly_counts": {
+                "route.ts": null
+              }
+            },
+            "transparency-score": {
+              "route.ts": null
+            }
+          }
+        },
+        "communities_neighbours": {
+          "route.ts": null
+        },
+        "communities_search": {
+          "route.ts": null
+        },
+        "csv-stream": {
+          "route.ts": null,
+          "utils.ts": null
+        },
+        "elus": {
+          "route.ts": null
+        },
+        "interpellate": {
+          "confirm": {
+            "route.ts": null
+          },
+          "courrier-interpellation": {
+            "route.tsx": null
+          },
+          "route.ts": null
+        },
+        "mailing": {
+          "route.ts": null
+        },
+        "map": {
+          "communes": {
+            "route.tsx": null
+          },
+          "departements": {
+            "route.tsx": null
+          },
+          "regions": {
+            "route.tsx": null
+          }
+        },
+        "selected_communities": {
+          "route.ts": null
+        }
+      },
+      "community": {
+        "[siren]": {
+          "comparison": {
+            "[comparedSiren]": {
+              "components": {
+                "hooks": {
+                  "useComparisonYear.ts": null
+                },
+                "shared": {
+                  "CompareActionButtons.tsx": null,
+                  "ComparisonCard.tsx": null,
+                  "ComparisonHeader.tsx": null,
+                  "ComparisonModificationCard.tsx": null,
+                  "index.ts": null,
+                  "InfoBlock.tsx": null,
+                  "ScoreIndicator.tsx": null,
+                  "SectionHeader.tsx": null,
+                  "SideBySideComparison.tsx": null,
+                  "YearSelector.tsx": null
+                },
+                "skeletons": {
+                  "TransparencySkeleton.tsx": null
+                },
+                "ComparisonType.tsx": null,
+                "Header.tsx": null,
+                "HeaderComparison.tsx": null,
+                "MPSubvComparison.tsx": null,
+                "TableInfoBlock.tsx": null,
+                "TransparencyComparison.tsx": null
+              },
+              "page.tsx": null
+            }
+          },
+          "components": {
+            "DataViz": {
+              "GraphSwitch.tsx": null
+            },
+            "FicheHeader": {
+              "hooks": {
+                "useIsOpen.ts": null
+              },
+              "FicheActionButtons.tsx": null,
+              "FicheComparisonInput.tsx": null,
+              "FicheHeader.stories.tsx": null,
+              "FicheHeader.tsx": null,
+              "FicheSearchModal.tsx": null
+            },
+            "FicheIdentite": {
+              "FicheIdentite.stories.tsx": null,
+              "FicheIdentite.tsx": null
+            },
+            "FicheMarchesPublics": {
+              "Comparison.stories.tsx": null,
+              "Comparison.tsx": null,
+              "Contracts.stories.tsx": null,
+              "Contracts.tsx": null,
+              "DesktopComparisonChart.tsx": null,
+              "Distribution.stories.tsx": null,
+              "Distribution.tsx": null,
+              "Evolution.stories.tsx": null,
+              "Evolution.tsx": null,
+              "FicheMarchesPublics.stories.tsx": null,
+              "FicheMarchesPublics.tsx": null,
+              "IndiceTransparenceBadge.stories.tsx": null,
+              "MarchesPublicsChart.tsx": null,
+              "MarchesPublicsSectorTable.tsx": null,
+              "MarchesPublicsSectorTreeMap.tsx": null,
+              "MarchesPublicsTable.tsx": null,
+              "MarchesPublicsWithState.tsx": null,
+              "MarchesPublicsYearlyAmountsChart.tsx": null,
+              "MarchesPublicsYearlyCountsChart.tsx": null
+            },
+            "FicheSubventions": {
+              "__mocks__": {
+                "FicheSubventions.tsx": null
+              },
+              "Comparison.tsx": null,
+              "DesktopComparisonChart.tsx": null,
+              "Distribution.tsx": null,
+              "DownloadButton.tsx": null,
+              "Evolution.tsx": null,
+              "FicheSubventions.stories.tsx": null,
+              "FicheSubventions.tsx": null,
+              "MobileComparisonChart.tsx": null,
+              "Ranking.tsx": null,
+              "RankingTable.tsx": null,
+              "SubventionsChart.tsx": null,
+              "SubventionsSectorTable.tsx": null,
+              "SubventionsSectorTreemap.tsx": null,
+              "SubventionsWithState.tsx": null,
+              "SubventionYearlyAmountsChart.tsx": null,
+              "SubventionYearlyCountsChart.tsx": null
+            },
+            "hooks": {
+              "useChartData.ts": null
+            },
+            "NeighboursMap": {
+              "MapWithCityMarkers.tsx": null,
+              "NeighboursMap.tsx": null,
+              "Pin.tsx": null
+            },
+            "SectorTable": {
+              "PercentageBarCell.tsx": null,
+              "SectorTable.tsx": null,
+              "SectorTablePagination.tsx": null
+            },
+            "Skeletons": {
+              "FicheIdentiteSkeleton.stories.tsx": null,
+              "FicheIdentiteSkeleton.tsx": null,
+              "FicheMarchesPublicsSkeleton.stories.tsx": null,
+              "FicheMarchesPublicsSkeleton.tsx": null,
+              "FicheSubventionsSkeleton.stories.tsx": null,
+              "FicheSubventionsSkeleton.tsx": null,
+              "MarchesPublicsMobileSkeleton.tsx": null,
+              "MarchesPublicsTableSkeleton.tsx": null,
+              "SectorTableSkeleton.tsx": null,
+              "TransparencySkeleton.tsx": null
+            },
+            "TransparencyScore": {
+              "TooltipScore.tsx": null,
+              "TransparencyScore.tsx": null
+            },
+            "ChartSkeleton.tsx": null,
+            "CommunityDetails.tsx": null,
+            "constants.ts": null,
+            "DesktopEvolutionChart.tsx": null,
+            "DownloadChartDropDown.tsx": null,
+            "DownloadDataButton.tsx": null,
+            "DownloadDropDown.tsx": null,
+            "EvolutionChart.stories.tsx": null,
+            "EvolutionChart.tsx": null,
+            "FicheCard.tsx": null,
+            "GoBack.tsx": null,
+            "MobileChart.tsx": null,
+            "TabHeader.tsx": null,
+            "YearSelector.tsx": null
+          },
+          "types": {
+            "interface.ts": null
+          },
+          "page.tsx": null
+        }
+      },
+      "components": {
+        "cta": {
+          "CtaCard.tsx": null,
+          "CtaGroup.tsx": null
+        },
+        "Navbar": {
+          "AccordionMenu.tsx": null,
+          "index.tsx": null,
+          "MobileMenu.tsx": null,
+          "NavigationMenuGroup.tsx": null,
+          "SearchButton.tsx": null,
+          "SearchModal.tsx": null
+        },
+        "ArticleBox.tsx": null,
+        "Footer.stories.tsx": null,
+        "Footer.tsx": null,
+        "FrequentlyAskedQuestions.tsx": null,
+        "HomePageHeader.stories.tsx": null,
+        "HomePageHeader.tsx": null,
+        "KPIs.tsx": null,
+        "Navbar.stories.tsx": null,
+        "OurMethodology.tsx": null,
+        "OurMethodologyExtended.tsx": null,
+        "ProjectDescription.tsx": null,
+        "SectionCard.tsx": null,
+        "SectionHeader.tsx": null,
+        "WhyChallenge.tsx": null
+      },
+      "contact": {
+        "page.tsx": null
+      },
+      "legal": {
+        "page.tsx": null
+      },
+      "license": {
+        "page.tsx": null
+      },
+      "map": {
+        "page.tsx": null
+      },
+      "models": {
+        "bareme.ts": null,
+        "community.ts": null,
+        "communityAccount.ts": null,
+        "communityContact.ts": null,
+        "comparison.ts": null,
+        "elu.ts": null,
+        "graphs.ts": null,
+        "marchePublic.ts": null,
+        "pagination.ts": null,
+        "subvention.ts": null
+      },
+      "error.tsx": null,
+      "globals.css": null,
+      "layout.tsx": null,
+      "not-found.tsx": null,
+      "page.tsx": null,
+      "Providers.tsx": null,
+      "ReactScanWrapper.tsx": null,
+      "robots.tsx": null
+    },
+    "backstop_data": {
+      "bitmaps_reference": {
+        "eclaireur_public_visual_tests_components-navbar--default_0_document_0_phone.png": null,
+        "eclaireur_public_visual_tests_components-navbar--default_0_document_1_tablet.png": null,
+        "eclaireur_public_visual_tests_components-navbar--default_0_document_2_desktop.png": null,
+        "eclaireur_public_visual_tests_components-navbar--mobile-menu-open_0_document_0_phone.png": null,
+        "eclaireur_public_visual_tests_components-navbar--mobile-menu-open_0_document_1_tablet.png": null,
+        "eclaireur_public_visual_tests_components-navbar--mobile-menu-open_0_document_2_desktop.png": null,
+        "eclaireur_public_visual_tests_components-navbar--mobile_0_document_0_phone.png": null,
+        "eclaireur_public_visual_tests_components-navbar--mobile_0_document_1_tablet.png": null,
+        "eclaireur_public_visual_tests_components-navbar--mobile_0_document_2_desktop.png": null,
+        "eclaireur_public_visual_tests_components-navbar--with-background_0_document_0_phone.png": null,
+        "eclaireur_public_visual_tests_components-navbar--with-background_0_document_1_tablet.png": null,
+        "eclaireur_public_visual_tests_components-navbar--with-background_0_document_2_desktop.png": null,
+        "eclaireur_public_visual_tests_components-searchbar--default_0_document_0_phone.png": null,
+        "eclaireur_public_visual_tests_components-searchbar--default_0_document_1_tablet.png": null,
+        "eclaireur_public_visual_tests_components-searchbar--default_0_document_2_desktop.png": null,
+        "eclaireur_public_visual_tests_components-searchbar--with-container_0_document_0_phone.png": null,
+        "eclaireur_public_visual_tests_components-searchbar--with-container_0_document_1_tablet.png": null,
+        "eclaireur_public_visual_tests_components-searchbar--with-container_0_document_2_desktop.png": null,
+        "eclaireur_public_visual_tests_pages-homepageheader--default_0_document_0_phone.png": null,
+        "eclaireur_public_visual_tests_pages-homepageheader--default_0_document_1_tablet.png": null,
+        "eclaireur_public_visual_tests_pages-homepageheader--default_0_document_2_desktop.png": null,
+        "eclaireur_public_visual_tests_ui-button--default_0_document_0_phone.png": null,
+        "eclaireur_public_visual_tests_ui-button--default_0_document_1_tablet.png": null,
+        "eclaireur_public_visual_tests_ui-button--default_0_document_2_desktop.png": null,
+        "eclaireur_public_visual_tests_ui-button--destructive_0_document_0_phone.png": null,
+        "eclaireur_public_visual_tests_ui-button--destructive_0_document_1_tablet.png": null,
+        "eclaireur_public_visual_tests_ui-button--destructive_0_document_2_desktop.png": null,
+        "eclaireur_public_visual_tests_ui-button--ghost_0_document_0_phone.png": null,
+        "eclaireur_public_visual_tests_ui-button--ghost_0_document_1_tablet.png": null,
+        "eclaireur_public_visual_tests_ui-button--ghost_0_document_2_desktop.png": null,
+        "eclaireur_public_visual_tests_ui-button--link_0_document_0_phone.png": null,
+        "eclaireur_public_visual_tests_ui-button--link_0_document_1_tablet.png": null,
+        "eclaireur_public_visual_tests_ui-button--link_0_document_2_desktop.png": null,
+        "eclaireur_public_visual_tests_ui-button--outline_0_document_0_phone.png": null,
+        "eclaireur_public_visual_tests_ui-button--outline_0_document_1_tablet.png": null,
+        "eclaireur_public_visual_tests_ui-button--outline_0_document_2_desktop.png": null,
+        "eclaireur_public_visual_tests_ui-button--secondary_0_document_0_phone.png": null,
+        "eclaireur_public_visual_tests_ui-button--secondary_0_document_1_tablet.png": null,
+        "eclaireur_public_visual_tests_ui-button--secondary_0_document_2_desktop.png": null
+      },
+      "engine_scripts": {
+        "playwright": {
+          "clickAndHoverHelper.js": null,
+          "onBefore.js": null,
+          "onReady.js": null
+        }
+      }
+    },
+    "components": {
+      "animate-ui": {
+        "text": {
+          "sliding-number.tsx": null
+        }
+      },
+      "Communities": {
+        "BadgeCommunity.tsx": null,
+        "BadgeCommunityPage.tsx": null,
+        "BudgetGlobal.tsx": null,
+        "CommunityBasics.tsx": null,
+        "MiniFicheCommunity.tsx": null,
+        "RankingCommunity.tsx": null
+      },
+      "Contacts": {
+        "ContactList.tsx": null
+      },
+      "data-table": {
+        "data-table-column-header.tsx": null,
+        "data-table-date-filter.tsx": null,
+        "data-table-faceted-filter.tsx": null,
+        "data-table-pagination.tsx": null,
+        "data-table-skeleton.tsx": null,
+        "data-table-slider-filter.tsx": null,
+        "data-table-toolbar.tsx": null,
+        "data-table-view-options.tsx": null,
+        "data-table.tsx": null
+      },
+      "DataViz": {
+        "ComparisonChart.tsx": null,
+        "ComparisonContainer.tsx": null,
+        "EvolutionChart.tsx": null,
+        "EvolutionContainer.tsx": null,
+        "MobileComparisonChart.tsx": null,
+        "MobileEvolutionChart.tsx": null,
+        "Treemap.stories.tsx": null,
+        "Treemap.tsx": null,
+        "TreemapSkeleton.tsx": null,
+        "TreemapTooltip.tsx": null,
+        "TreemapZoomButtons.tsx": null
+      },
+      "Interpellate": {
+        "ButtonBackAndForth.tsx": null,
+        "CopyPasteButtons.tsx": null,
+        "InterpellateFAQ.tsx": null,
+        "InterpellateForm.tsx": null,
+        "Stepper.tsx": null,
+        "types.ts": null
+      },
+      "Map": {
+        "hooks": {
+          "useMapUrlState.ts": null
+        },
+        "utils": {
+          "createMapPointFeatures.ts": null,
+          "getAdminTypeFromLayerId.ts": null,
+          "getAdminTypeFromZoom.ts": null,
+          "getAvailableLevels.ts": null,
+          "getCommunityDataFromFeature.ts": null,
+          "getFeaturesByLevel.ts": null,
+          "perspectiveFunctions.ts": null,
+          "scoreToNumber.ts": null,
+          "updateFeatureState.ts": null,
+          "updateVisibleCodes.ts": null,
+          "useFranceMapHanders.ts": null
+        },
+        "AdminLevelControl.tsx": null,
+        "AdminLevelSelector.tsx": null,
+        "AdminLevelSlider.tsx": null,
+        "ChoroplethLayer.tsx": null,
+        "constants.ts": null,
+        "DotsLayer.tsx": null,
+        "FranceMap.tsx": null,
+        "FrenchTerritorySelect.tsx": null,
+        "Legend.tsx": null,
+        "LegendDesktop.tsx": null,
+        "MapLayout.stories.tsx": null,
+        "MapLayout.tsx": null,
+        "MapSearch.tsx": null,
+        "MapTooltip.tsx": null,
+        "PerspectiveSelector.tsx": null,
+        "TransparencyScoreControls.tsx": null,
+        "types.ts": null,
+        "YearSelector.tsx": null
+      },
+      "Pagination": {
+        "index.tsx": null,
+        "Pagination.stories.tsx": null,
+        "Pagination.tsx": null,
+        "WithPagination.tsx": null
+      },
+      "pdfs": {
+        "CourrierTypeInterpellation.tsx": null
+      },
+      "SearchBar": {
+        "SearchBar.stories.tsx": null,
+        "SearchBar.tsx": null,
+        "SearchCommunity.tsx": null,
+        "SearchSuggestions.tsx": null,
+        "Suggestion.tsx": null
+      },
+      "TransparencyScore": {
+        "constants.ts": null,
+        "TransparencyScoreBar.stories.tsx": null,
+        "TransparencyScoreBar.tsx": null
+      },
+      "ui": {
+        "accordion.tsx": null,
+        "action-button.stories.tsx": null,
+        "action-button.tsx": null,
+        "badge.tsx": null,
+        "button.stories.tsx": null,
+        "button.tsx": null,
+        "calendar.tsx": null,
+        "card.tsx": null,
+        "checkbox.tsx": null,
+        "command.tsx": null,
+        "dialog.tsx": null,
+        "DownloadingButton.tsx": null,
+        "dropdown-menu.tsx": null,
+        "ErrorFetching.tsx": null,
+        "form.tsx": null,
+        "input.tsx": null,
+        "interpeller-button.tsx": null,
+        "label.tsx": null,
+        "Loading.tsx": null,
+        "LoadingOverlay.tsx": null,
+        "navigation-menu.tsx": null,
+        "pagination.tsx": null,
+        "popover.tsx": null,
+        "radio-group.tsx": null,
+        "select.tsx": null,
+        "separator.tsx": null,
+        "sheet.tsx": null,
+        "skeleton.tsx": null,
+        "slider.tsx": null,
+        "switch.tsx": null,
+        "table.tsx": null,
+        "tabs.tsx": null,
+        "toast.tsx": null,
+        "toaster.tsx": null,
+        "tooltip.tsx": null
+      },
+      "utils": {
+        "CopyUrlButton.tsx": null,
+        "ErrorBoundary.tsx": null,
+        "GoToPrevPage.tsx": null,
+        "SectionSeparator.tsx": null
+      },
+      "ContactForm.tsx": null,
+      "EmptyState.stories.tsx": null,
+      "EmptyState.tsx": null,
+      "ErrorPage.tsx": null,
+      "FaqWithSchema.tsx": null,
+      "SelectCommunityType.tsx": null,
+      "TestComponent.stories.tsx": null,
+      "TestComponent.tsx": null
+    },
+    "config": {
+      "data-table.ts": null
+    },
+    "email-templates": {
+      "confirm-interpellate.html": null,
+      "interpellate-community.html": null
+    },
+    "hooks": {
+      "use-callback-ref.ts": null,
+      "use-data-table.ts": null,
+      "use-debounced-callback.ts": null,
+      "use-toast.ts": null,
+      "useMediaQuery.ts": null,
+      "usePaginationState.ts": null,
+      "useTabState.ts": null
+    },
+    "public": {
+      "contexte": {
+        "bulb.png": null,
+        "bulb.svg": null,
+        "commune.png": null,
+        "commune.svg": null,
+        "departement.png": null,
+        "departement.svg": null,
+        "region.png": null,
+        "region.svg": null
+      },
+      "data": {
+        "communes.json": null,
+        "departements.json": null,
+        "regions.json": null
+      },
+      "eclaireur": {
+        "404.png": null,
+        "500.png": null,
+        "call_icon.png": null,
+        "eclaireur-footeur.svg": null,
+        "eclaireur-header-pdf.png": null,
+        "error_icon.png": null,
+        "eyes_left.svg": null,
+        "eyes_right.svg": null,
+        "favicon.ico": null,
+        "fix-mobile.png": null,
+        "interpeller.png": null,
+        "interpeller.svg": null,
+        "logo-e.svg": null,
+        "logo-navmenu-desktop.svg": null,
+        "logo-navmenu-mobile-1.png": null,
+        "logo-navmenu-mobile-2.png": null,
+        "logo-navmenu-mobile-2.svg": null,
+        "logo.png": null,
+        "logo.svg": null,
+        "map_icon.png": null,
+        "Mascotte-appel.png": null,
+        "mascotte-faq.svg": null,
+        "mascotte_a.svg": null,
+        "mascotte_b.svg": null,
+        "mascotte_c.svg": null,
+        "mascotte_call.svg": null,
+        "mascotte_d.svg": null,
+        "mascotte_e.svg": null,
+        "mascotte_reward.png": null,
+        "mascotte_search.svg": null,
+        "one.png": null,
+        "partager_EP.png": null,
+        "project_background.jpg": null,
+        "project_background.webp": null,
+        "search_icon.png": null,
+        "three.png": null,
+        "two.png": null,
+        "volunteer_activism.svg": null
+      },
+      "fonts": {
+        "Kanit-Regular.ttf": null
+      },
+      "logos": {
+        "assos": {
+          "Anticor.svg": null,
+          "Data for Good.svg": null,
+          "Transparency international.svg": null
+        },
+        "rs": {
+          "Facebook.png": null,
+          "Instagram.png": null,
+          "Linkedin.png": null
+        }
+      },
+      "advancedSearchImg.png": null,
+      "anticor.png": null,
+      "anticorLogo.png": null,
+      "carteImg.png": null,
+      "collectivite-header.jpg": null,
+      "collectivite-header.png": null,
+      "collectivite-header.webp": null,
+      "dataforgood.jpg": null,
+      "dataforgood.webp": null,
+      "dataforgoodLogo.png": null,
+      "error.svg": null,
+      "favicon.ico": null,
+      "index-mp.png": null,
+      "index-subventions.png": null,
+      "interpellateImg.png": null,
+      "mockServiceWorker.js": null,
+      "placeholder-collectivite-selectionnee.png": null,
+      "placeholder-stepper.png": null,
+      "placeholder.jpg": null,
+      "placeholder.webp": null,
+      "telecharger.png": null,
+      "transparency-international-france.png": null,
+      "transparency.png": null,
+      "transparency2.jpg": null,
+      "transparency2.webp": null,
+      "transparencyLogo.png": null
+    },
+    "scripts": {
+      "python": {
+        "analyze_scores.py": null,
+        "check_all_communities_max.py": null,
+        "check_department_names.py": null,
+        "check_max_values.py": null,
+        "check_subventions_schema.py": null,
+        "collectivites_avec_scores.csv": null,
+        "collectivites_scores.csv": null,
+        "explore_db.py": null,
+        "extract_collectivites.py": null,
+        "extract_collectivites_with_scores.py": null,
+        "extract_comparison_data.py": null,
+        "marches_publics_comparison_217402817_d\u00e9partemental.csv": null,
+        "marches_publics_comparison_217402817_national.csv": null,
+        "marches_publics_comparison_217402817_r\u00e9gional.csv": null,
+        "README.md": null
+      },
+      "visual-regression-config.ts": null,
+      "visual-regression.ts": null,
+      "VISUAL_REGRESSION_README.md": null
+    },
+    "stories": {
+      "assets": {
+        "accessibility.png": null,
+        "accessibility.svg": null,
+        "addon-library.png": null,
+        "assets.png": null,
+        "avif-test-image.avif": null,
+        "context.png": null,
+        "discord.svg": null,
+        "docs.png": null,
+        "figma-plugin.png": null,
+        "github.svg": null,
+        "share.png": null,
+        "styling.png": null,
+        "testing.png": null,
+        "theming.png": null,
+        "tutorials.svg": null,
+        "youtube.svg": null
+      },
+      "button.css": null,
+      "Button.tsx": null,
+      "Configure.mdx": null,
+      "header.css": null,
+      "Header.tsx": null,
+      "page.css": null,
+      "Page.tsx": null
+    },
+    "tests": {
+      "homepage.spec.ts": null,
+      "README.md": null
+    },
+    "types": {
+      "data-table.ts": null
+    },
+    "utils": {
+      "constants": {
+        "years.ts": null
+      },
+      "downloader": {
+        "downloadSVGChart.ts": null,
+        "downloadURL.ts": null,
+        "types.ts": null
+      },
+      "emails": {
+        "emailRendering-server.ts": null,
+        "emailRendering.ts": null,
+        "send-email.ts": null
+      },
+      "fetchers": {
+        "advanced-search": {
+          "download": {
+            "downloadAdvancedSearch-client.ts": null
+          },
+          "fetchCommunitiesAdvancedSearch-client.ts": null,
+          "fetchCommunitiesAdvancedSearch-server.ts": null
+        },
+        "communities": {
+          "createSQLQueryParams.ts": null,
+          "fetchCommunities-client.ts": null,
+          "fetchCommunities-server.ts": null,
+          "fetchCommunitiesByRadius-client.ts": null,
+          "fetchCommunitiesByRadius-server.ts": null,
+          "fetchCommunitiesBySearch-client.ts": null,
+          "fetchCommunitiesBySearch-server.ts": null,
+          "fetchMPSubvComparison-client.ts": null,
+          "fetchMPSubvComparison-server.ts": null,
+          "fetchSimilarCommunityList-server.ts": null,
+          "fetchTransparencyScore-client.ts": null,
+          "fetchTransparencyScore-server.ts": null
+        },
+        "communities-accounts": {
+          "createSQLQueryParams.ts": null,
+          "fetchCommunityAccounts-client.ts": null,
+          "fetchCommunityAccounts-server.ts": null,
+          "fetchCommunityBudgetTotal.ts": null
+        },
+        "contacts": {
+          "createSQLQueryParams.ts": null,
+          "fetchContacts-client.ts": null,
+          "fetchContacts-server.ts": null
+        },
+        "csv": {
+          "fetchCSV-client.ts": null
+        },
+        "elus": {
+          "createSQLQueryParams.ts": null,
+          "fetchElus-client.ts": null,
+          "fetchElus-server.ts": null
+        },
+        "functions": {
+          "stringifySelectors.ts": null
+        },
+        "interpellate": {
+          "postInterpellate.ts": null
+        },
+        "kpis": {
+          "fetchCommunitiesGoodScoresCount.ts": null,
+          "fetchCommunitiesTotalCount.ts": null,
+          "fetchKPIs.tsx": null,
+          "fetchPublishedMarchesPublicsTotal.ts": null,
+          "fetchPublishedMarchesPublicsTotalmmm.ts": null,
+          "fetchPublishedSubventionsTotal.ts": null,
+          "fetchSubventionsTotalBudget.ts": null
+        },
+        "map": {
+          "map-fetchers.ts": null
+        },
+        "marches-publics": {
+          "download": {
+            "downloadMarchesPublicsByCPV2.ts": null,
+            "downloadMarchesPublicsContrats.ts": null
+          },
+          "__mocks__": {
+            "fetchMarchesPublics-server.ts": null,
+            "fetchMarchesPublicsAvailableYears.ts": null
+          },
+          "createSQLQueryParams.ts": null,
+          "fetchMarchesPublics-server.ts": null,
+          "fetchMarchesPublicsAvailableYears.ts": null,
+          "fetchMarchesPublicsByCPV2-client.ts": null,
+          "fetchMarchesPublicsByCPV2-server.ts": null,
+          "fetchMarchesPublicsComparison-server.ts": null,
+          "fetchMarchesPublicsGrandTotal-server.ts": null,
+          "fetchMarchesPublicsPaginated-client.ts": null,
+          "fetchMarchesPublicsPaginated-server.ts": null,
+          "fetchMarchesPublicsYearlyAmounts-client.ts": null,
+          "fetchMarchesPublicsYearlyAmounts-server.ts": null,
+          "fetchMarchesPublicsYearlyCounts-client.ts": null,
+          "fetchMarchesPublicsYearlyCounts-server.ts": null,
+          "fetchTopMarchesPublicsByTitulaire.ts": null
+        },
+        "subventions": {
+          "download": {
+            "downloadSubventionsByNaf.ts": null
+          },
+          "__mocks__": {
+            "fetchSubventions-server.ts": null,
+            "fetchSubventionsAvailableYears.ts": null
+          },
+          "createSQLQueryParams.ts": null,
+          "fetchSubventionPaginated-client.ts": null,
+          "fetchSubventionPaginated-server.ts": null,
+          "fetchSubventions-server.ts": null,
+          "fetchSubventionsAvailableYears.ts": null,
+          "fetchSubventionsByNaf-client.ts": null,
+          "fetchSubventionsByNaf-server.ts": null,
+          "fetchSubventionsComparison-server.ts": null,
+          "fetchSubventionsGrandTotal-server.ts": null,
+          "fetchSubventionYearlyAmounts-client.ts": null,
+          "fetchSubventionYearlyAmounts-server.ts": null,
+          "fetchSubventionYearlyCounts-client.ts": null,
+          "fetchSubventionYearlyCounts-server.ts": null,
+          "fetchTopSubventions-server.ts": null
+        },
+        "constants.ts": null,
+        "types.ts": null
+      },
+      "helpers": {
+        "getDefaultComparisonScope.ts": null
+      },
+      "hooks": {
+        "comparison": {
+          "useMPSubvComparison.ts": null,
+          "useTransparencyScore.ts": null
+        },
+        "map": {
+          "useCommunes.ts": null,
+          "useDepartements.ts": null,
+          "useRegions.ts": null
+        },
+        "useAdvancedSearch.ts": null,
+        "useCommunities.ts": null,
+        "useCommunitiesBySearch.ts": null,
+        "useMarchesPublicsByCPV2.ts": null,
+        "useMarchesPublicsPaginated.ts": null,
+        "useMarchesPublicsYearlyAmounts.ts": null,
+        "useMarchesPublicsYearlyCounts.ts": null,
+        "usePagination.ts": null,
+        "useStreamingChart.ts": null,
+        "useSubventionPaginated.ts": null,
+        "useSubventionsByNaf.ts": null,
+        "useSubventionYearlyAmounts.ts": null,
+        "useSubventionYearlyCounts.ts": null
+      },
+      "__mocks__": {
+        "db.ts": null
+      },
+      "comparisonThemes.ts": null,
+      "constants.ts": null,
+      "data-table.ts": null,
+      "db.ts": null,
+      "evolutionThemes.ts": null,
+      "format.ts": null,
+      "nodeStreamToStream.ts": null,
+      "parsers.ts": null,
+      "placeholderDataGenerators.ts": null,
+      "session.mock.ts": null,
+      "session.ts": null,
+      "slug.test.ts": null,
+      "slug.ts": null,
+      "types.ts": null,
+      "utils.ts": null
+    },
+    ".gitignore": null,
+    "backstop.json": null,
+    "components.json": null,
+    "eslint.config.mjs": null,
+    "image copy.png": null,
+    "image.png": null,
+    "IMPLEMENT_RSC_STORIES.md": null,
+    "next.config.ts": null,
+    "package.json": null,
+    "playwright.config.ts": null,
+    "postcss.config.mjs": null,
+    "prettier.config.js": null,
+    "README.md": null,
+    "tab-evol.png": null,
+    "tailwind.config.ts": null,
+    "TAILWINDCSS-CONVERSIONS.md": null,
+    "tsconfig.json": null,
+    "vitest.config.ts": null,
+    "yarn.lock": null
+  },
+  "results": {},
+  "tests": {
+    "back": {
+      "datasets": {
+        "fixtures": {
+          "complete_decla.csv": null,
+          "declaration.xml": null,
+          "exp_mandat_revenus_0.csv": null,
+          "mandat_revenus_0.xml": null,
+          "mandat_revenus_com_only.xml": null,
+          "mandat_revenus_empty.xml": null,
+          "mandat_revenus_empty2.xml": null,
+          "mandat_revenus_inversion.xml": null,
+          "marche_direct.json": null,
+          "marche_nested.json": null,
+          "sirene_raw.parquet": null,
+          "subvention_schema.json": null
+        },
+        "test_datagouv_search.py": null,
+        "test_declaration_interet.py": null,
+        "test_marches.py": null,
+        "test_topic_aggregator.py": null,
+        "__init__.py": null
+      },
+      "enrichement": {
+        "utils": {
+          "test_cpv_utils.py": null
+        }
+      },
+      "loaders": {
+        "fixtures": {
+          "OD.SUBVENTION_CONVENTION_CODAH.json.zip": null,
+          "out_decp-2019-10000.csv": null,
+          "out_jsonl_features.csv": null,
+          "out_json_features.csv": null,
+          "out_test_xml.rdf": null,
+          "reduced_decp_2019.json": null,
+          "test_jsonl_features.jsonl": null,
+          "test_json_features.json": null,
+          "test_loader_file.txt": null,
+          "test_loader_xls.xls": null,
+          "test_loader_xls_exp.csv": null,
+          "test_loader_xls_with_cols_exp.csv": null,
+          "test_sniffer_error.csv": null,
+          "test_xml.rdf": null,
+          "test_zip_loader.json": null
+        },
+        "test_base_loader.py": null,
+        "test_csv_loaders.py": null,
+        "test_excel_loader.py": null,
+        "test_json_loader.py": null,
+        "test_xml_loader.py": null,
+        "test_zip_loader.py": null
+      },
+      "utils": {
+        "test_dataframe_operations.py": null,
+        "test_geolocator.py": null
+      },
+      "test_config_structure.py": null
+    }
+  },
+  ".dockerignore": null,
+  ".gitattributes": null,
+  ".gitignore": null,
+  ".pre-commit-config.yaml": null,
+  "docker-compose.yaml": null,
+  "Dockerfile": null,
+  "get_http_sources_from_creation.py": null,
+  "lefthook.yml": null,
+  "LICENSE": null,
+  "package.json": null,
+  "poetry.lock": null,
+  "pyproject.toml": null,
+  "README.md": null,
+  "Taskfile.yml": null,
+  "tox.ini": null
+}

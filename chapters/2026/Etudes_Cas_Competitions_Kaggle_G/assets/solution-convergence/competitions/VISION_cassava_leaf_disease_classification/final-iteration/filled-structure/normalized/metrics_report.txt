@@ -1,0 +1,48 @@
+================================================================================
+ARCHITECTURAL CONVERGENCE ANALYSIS - GROUP METRICS REPORT
+================================================================================
+
+Total solutions analyzed: 10
+Top 5 solutions (best): 5 (top1, top3, top5, top7, top10)
+Bottom 5 solutions (worst): 5 (top375, top483, top576, top637, top1284)
+
+================================================================================
+INTRA-GROUP SIMILARITY (Top 5 - Best Solutions)
+================================================================================
+Mean similarity:     0.2353
+Standard deviation:  0.0354
+Minimum similarity:  0.1915
+Maximum similarity:  0.3077
+Number of pairs:     10
+
+================================================================================
+INTRA-GROUP SIMILARITY (Bottom 5 - Worst Solutions)
+================================================================================
+Mean similarity:     0.1304
+Standard deviation:  0.0848
+Minimum similarity:  0.0000
+Maximum similarity:  0.2969
+Number of pairs:     10
+
+================================================================================
+INTER-GROUP SIMILARITY (Top 5 vs Bottom 5)
+================================================================================
+Mean similarity:     0.1691
+Standard deviation:  0.0735
+Minimum similarity:  0.0270
+Maximum similarity:  0.2727
+Number of pairs:     25
+
+================================================================================
+COMPARATIVE ANALYSIS
+================================================================================
+Top 5 intra-group mean:      0.2353
+Bottom 5 intra-group mean:   0.1304
+Difference (Top5 - Bottom5): 0.1050
+Ratio (Top5 / Bottom5):      1.8050x
+
+Top 5 intra-group mean:      0.2353
+Inter-group mean:            0.1691
+Difference (Intra - Inter):  0.0662
+
+================================================================================

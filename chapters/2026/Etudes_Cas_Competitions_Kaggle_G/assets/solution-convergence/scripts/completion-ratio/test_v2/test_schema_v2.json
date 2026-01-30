@@ -1,0 +1,40 @@
+{
+  "embeddings": {
+    "word_embeddings": ["word2vec", "glove", "fasttext"],
+    "sentence_embeddings": ["sentence-transformers"],
+    "contextual_embeddings": ["bert", "roberta"]
+  },
+  "preprocessing": {
+    "text_cleaning": ["lowercase", "remove-punctuation"],
+    "tokenization": ["wordpiece", "sentencepiece"],
+    "normalization": ["lemmatization"],
+    "augmentation_techniques": ["backtranslation", "synonym-replacement"]
+  },
+  "transformer_models": {
+    "base_models": ["bert", "roberta", "xlnet"],
+    "pretrained_variants": ["bert-base-uncased", "roberta-large"],
+    "ensemble_combinations": ["bert+roberta"]
+  },
+  "training_strategy": {
+    "loss_functions": ["mse", "rmse"],
+    "optimizers": ["adam", "adamw"],
+    "learning_rate_schedule": ["cosine-annealing", "warmup"],
+    "regularization_techniques": ["dropout", "layer-normalization"],
+    "cross_validation_strategy": ["stratified-kfold"]
+  },
+  "model_architecture": {
+    "layers_configuration": ["lstm-head", "dense-layers"],
+    "attention_mechanisms": ["multi-head-attention", "self-attention"],
+    "pooling_strategies": ["mean-pooling", "max-pooling", "cls-token"]
+  },
+  "postprocessing": {
+    "prediction_aggregation": ["weighted-average", "median"],
+    "output_smoothing": ["moving-average"],
+    "ensemble_methods": ["stacking", "blending"]
+  },
+  "frameworks_and_libraries": {
+    "deep_learning_frameworks": ["pytorch", "tensorflow"],
+    "nlp_libraries": ["transformers", "spacy", "nltk"],
+    "utility_libraries": ["numpy", "pandas", "scikit-learn"]
+  }
+}
