@@ -105,7 +105,13 @@ Nous avons choisi d'utiliser Sonarqube pour évaluer certaines métriques de la 
      - la duplication de code 
      - la complexité cognitive moyenne
 
-     nous avons choisi ces critères 
+     nous avons choisi ces critères car ce sont des mesures qui nous ont semblé être une bonne base de mesure pour la qualité de code 
+     pour la fiablité, maintabilité et sécurité nous allons utilisé les notes de sonar allant de A à E pour les transformé de nombre de 5 a 1 puis le multiplié par 20 pour avoir une note entre 20 et 100. pour la duplications de code c'est une mesure que sonar va nous données mais nous avons décidé de faire max(0,100 - 5* valeur de duplication). on fait le *5  afin d'accentuer l'effet du code dupliqué car 20 % est un gros pourcentage de code duppliqué mais été trop faiblement pris en compte dans la notation et l'impact été dans la note été pas assez fort. enfin pour la complexité cognitive. cette mesure represnete a quel points un ficher est complexe a comprendre pour un nouveau developper. pour cela on va récupéré la complexité cognitives et le nombre de fichers global puis le divisé pour obtenire le score moyen par fichers. on va aussi faire max(0,(100 - 5* notre valeur)) pour cette metrique car on va obtenir de petit score peu représerentatif du vrai impact d'un gros score de complexité cognitve. 
+     on va donc finir avec 5 valeur comprise entre 0 et 100. 
+     avec ces 5 score on va faire 
+     ```0.25* fiabilité + 0.20* maintanbilité  + 0.15 * sécurité + 0.20 * duplication de code + 0.20 * complexité cognitive moyenne```
+     cela va nous donnée un score de global sur 100 qui va nous permettre d'avoir un bonne repesentativité de la qualité d'un repos. 
+      
 Vous **explicitez les expérimentations que vous allez mener** pour vérifier si vos hypothèses sont vraies ou fausses. Il y a forcément des choix, des limites, explicitez-les.
 
      :bulb: Structurez cette partie à votre convenance : 
