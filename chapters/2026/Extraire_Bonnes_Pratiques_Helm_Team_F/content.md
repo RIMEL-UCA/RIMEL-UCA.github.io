@@ -6,8 +6,6 @@ date:   2026-02
 
 ---
 
----
-
 **_février 2026_**
 
 ## Auteurs
@@ -225,7 +223,7 @@ Ces résultats montrent que, dans la majorité des cas, les charts Helm de réf�
 Nos données nous présentent donc une évolution majoritairement à la baisse des proportions de mauvaises pratiques au cours du temps. Nous avons par la suite décidé d’explorer plus en détail les différents pics présents sur le graphique, afin de chercher s’il existait des raisons communes à ces variations.
 
 ##### Les extremum en détail
-###### La chart open-feature-operator
+***La chart open-feature-operator***
 
 La première chart que nous avons décidé d’analyser est celle avec la plus forte augmentation de proportions de mauvaises pratiques, la chart open-feature-operator, avec une augmentation de 455%. La figure ci-dessous correspond au graphique généré par notre script d’analyse.
 
@@ -238,7 +236,7 @@ Une analyse rapide nous permet rapidement de comprendre la forte évolution mesu
 
 Cette chart s’apparente donc plus à un cas particulier mesuré par notre script. Notre mesure aurait été différente si le premier commit mesuré avait été un commit de Mai 2023, où le ratio mesuré est quasi identique à celui du dernier commit mesuré.
 
-###### La chart kuadrant-operator
+***La chart kuadrant-operator***
 
 Nous avons ensuite décidé de tourner notre attention vers la deuxième chart avec le plus grand taux d’évolution, la chart kuadrant-operator, qui présente elle une augmentation de 47%.
 
@@ -255,7 +253,7 @@ Cette fluctuation s’explique par la façon dont la chart est écrite. En effet
 En explorant plus précisément les commits aux dates des fluctuations, on remarque que l’évolution de la proportion n’est pas dûe à l’introduction de mauvaises pratiques, mais bien à une fluctuation du nombre de lignes. La forte augmentation d’octobre 2024 s’explique en fait par la suppression de 6 400 lignes de configuration du fichier manifests.yaml.
 
 
-###### La chart argo-workflow
+***La chart argo-workflow***
 
 La dernière chart que nous avons analysé est la chart argo-workflow, avec une diminution de 98% de la proportion de mauvaises pratiques au cours de son développement, faisant d’elle la chart avec la meilleure évolution.
 
