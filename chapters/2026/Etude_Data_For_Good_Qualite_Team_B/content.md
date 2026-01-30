@@ -148,15 +148,12 @@ Avec ces critères de sélection nous avons réuni une liste de 22 dépôts pour
 Ces critères de sélection permettent de concentrer l’analyse sur des repositories pertinents et représentatifs de l’activité actuelle de l’organisation. En filtrant sur la date du dernier commit, on s’assure d’étudier des projets encore maintenus ou récemment actifs. Le choix des catégories (Saison 10 ou plus récent, batch-6 ou hors-saison) garantit que les dépôts retenus appartiennent aux initiatives les plus récentes et donc aux méthodes de travail actuelles de Data for Good France. 
 Enfin, imposer un minimum de 20 commits permet d’écarter les dépôts trop peu développés, tels que les templates ou les dépôts créés mais jamais réellement exploités, afin de ne conserver que des projets substantiels et suffisamment documentés pour une analyse cohérente. Nous excluons le dépôt du site web de notre sélection car nous souhaitons étudier les pratiques de l’association pour les projets qu’ils développent et leur site n’en fait pas partie
 
-TODO: Expliquer le score de qualité
+Pour un développeur, la qualité de code se mesure intuitivement selon à quel point le code est lisible, compréhensible et facile à maintenir. Un code de qualité est structuré, cohérent et clair, ce qui permet à un autre développeur (ou à soi-même plus tard) de comprendre rapidement son fonctionnement, de corriger les bugs, d’ajouter de nouvelles fonctionnalités et de collaborer efficacement. Elle reflète aussi la robustesse du code, sa sécurité, et l’absence de duplications inutiles ou de complexité excessive.
+C'est en partant de cette intuition que nous avons cherché des outils pôur mesurer la qualité de code.
 
-### Sous-question 1
+### Sous-question 1 & 2
 
-TODO: Trouver articles ou étude pour justifier nos démarches
-
-### Sous-question 2
-
-TODO: Trouver articles ou étude pour justifier nos démarches
+Pour ces questions, l'enjeu principal portait sur la définition de la qualité de code. On a donc porté nos recherches du côté de la documentation [Sonarqube](https://docs.sonarsource.com/sonarqube-server/quality-standards-administration/managing-quality-gates/introduction-to-quality-gates) pour comprendre comment la qualité était évaluer par un standard de l'industrie.
 
 ### Sous-question 3
 
@@ -192,8 +189,6 @@ Afin d’automatiser le processus, nous avons décidé de mettre en place une **
 
 À partir de ces métriques, nous avons défini un **score normalisé**, commun à tous les dépôts, afin d’obtenir une valeur de mesure concrète et comparable.
 
-
-
 #### Critères retenus
 
 Le score global est basé sur **cinq critères** :
@@ -206,8 +201,6 @@ Le score global est basé sur **cinq critères** :
 
 Ces critères nous ont semblé constituer une base pertinente pour évaluer la qualité globale d’un code.
 
----
-
 #### Calcul des scores individuels
 
 ##### Fiabilité, maintenabilité et sécurité
@@ -215,7 +208,6 @@ Ces critères nous ont semblé constituer une base pertinente pour évaluer la q
 Pour ces trois critères, nous utilisons les **notes SonarQube allant de A à E**.  
 Elles sont transformées en valeurs numériques de **5 à 1**, puis multipliées par 20 afin d’obtenir une note comprise entre **20 et 100**.
 
----
 
 ##### Duplication de code
 
@@ -228,8 +220,6 @@ max(0, 100 - 5 × valeur_de_duplication)
 
 Le facteur multiplicatif `5` permet d’accentuer l’impact du code dupliqué.  
 En effet, un taux de duplication de 20 % est déjà très élevé, mais son influence était trop faible dans la notation par défaut.
-
----
 
 #### Complexité cognitive moyenne
 
@@ -254,8 +244,6 @@ Le score est ensuite calculé comme suit :
  ```
 
 Ce calcul produit un **score final sur 100**, offrant une bonne représentativité de la qualité globale d’un dépôt.
-
----
 
 ### Exploitation et reproductibilité
 
@@ -318,9 +306,6 @@ Sur cet échantillon, il n'existe pas de seuil unique au-delà duquel la qualit�
 - Effectifs par groupe modestes : interprétations exploratoires, sensibles aux outliers.
 - Découpage en intervalles : bornes choisies pour l'équilibre des groupes (16–20 non exploité).
 - Corrélation ≠ causalité : d'autres facteurs (maturité, langage, gouvernance) peuvent influer sur la qualité.
-
-
-
 
 ## Sous-question 3
 
@@ -426,9 +411,29 @@ Nous avons aussi analysé le ratio du nombre de commits de refactor sur le nombr
 
 ### Conclusion 
 
-Vos résultats et donc votre analyse sont nécessairement limités. Préciser bien ces limites : par exemple, jeux de données insuffisants, analyse réduite à quelques critères, dépendance aux projets analysés, ...
+Cette étude a permis d’explorer de manière systématique l’impact de l’activité des contributeurs sur la qualité des dépôts de code au sein de l’association Data For Good France.
+
+Nous avons mis en place une méthodologie reproductible combinant des outils standardisés (Docker, SonarQube, Python, CSV/JSON, Plotnine) et une approche hybride pour la classification des commits (règles statiques + machine learning). Cette pipeline a permis de produire des mesures de qualité comparables entre projets, d’analyser la répartition des types de commits et d’étudier la corrélation avec le nombre et le comportement des contributeurs.
+
+Les principaux enseignements de cette études sont que :
+
+- La qualité des dépôts n’augmente pas de manière strictement monotone avec le nombre de contributeurs. Cependant, les projets très collaboratifs tendent à présenter une qualité centrée autour de la médiane globale, suggérant que la coordination et l’organisation ont un effet stabilisateur.
+
+- La classification des commits montre que les contributions correctives (fix/refactor) et fonctionnelles (feat) sont bien représentées et que l’usage d’une approche hybride permet d’obtenir des résultats plus complets et fiables qu’avec des règles statiques seules.
+
+- L’analyse met en évidence des pratiques de code variées et des différences dans la gestion des projets open source bénévoles, ce qui est précieux pour identifier des standards ou des bonnes pratiques à partager dans des contextes associatifs.
+
+L'étude en l'état ne permet pas de conclure avec certitude sur le fait qu'un grand nombre de contributeurs a un effet positif ou non sur la qualité des dépôts de code collaboratifs mais des éléments nous laisse penser que peu de contributeurs permet un code plus qualitatif car moins volumineux et beaucoup de contributeurs incitent à porter attention à la qualité sans forcément l'améliorer significativement.
 
 ### Ouverture
+
+Plusieurs axes d’évolution peuvent être envisagés pour approfondir cette étude et dépasser ses limites.
+On pourrait commencer par augmenter la taille et la diversité des données : annoter davantage de commits et inclure plus de dépôts permettra de mieux capturer la diversité des pratiques de contribution et d’améliorer les performances du classifieur.
+Il faudrait aussi affiner la classification des commits en testant d’autres techniques de machine learning ou de traitement du langage (embeddings, modèles de type BERT) pour mieux détecter les nuances entre types de contributions, en particulier pour les catégories minoritaires.
+Un moyen d'agrandir notre échantillon d'étude serait d'étendre l’étude à d’autres organisations open source pour comparer les pratiques et la qualité des dépôts au-delà de Data For Good France et généraliser les enseignements en identifiant des facteurs communs de succès ou de risque dans la gestion de projets collaboratifs bénévoles.
+Un objectif final pourrait être la production à partir des résultats observés d'un guide ou de recommandations pour structurer les dépôts, rédiger les commits et organiser les contributions afin de faciliter la collaboration et la maintenabilité dans des contextes associatifs ou open source.
+
+En combinant ces perspectives, cette étude peut devenir un outil pour mieux comprendre la dynamique collaborative et contribuer à l’amélioration continue de la qualité des projets open source dans le cadre associatif.
 
 ## VI. Outils utilisés & Reproductibilitée
 
