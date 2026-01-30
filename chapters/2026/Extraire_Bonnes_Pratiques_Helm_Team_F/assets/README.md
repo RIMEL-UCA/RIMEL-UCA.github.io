@@ -12,7 +12,7 @@ cd helm-best-practices
 ```
 
 
-<span style="color: red;">**Première étape : décompressez le fichiers `repos_charts.zip`.**</span>
+<span style="color: red;">**Première étape : [cliquez ici pour télécharger le fichier `repos_charts.zip`.](https://unice-my.sharepoint.com/:u:/g/personal/camille_antonios_etu_unice_fr/IQDtdRmt7FUtQZjRQlw504x_AYE6U5M9Cmqi1-caMQrPTnw?e=0rRrg6)**</span>
 Décompressez-le à la racine du projet, c'est-à-dire qu'une fois décompressé, il faut obtenir cette structure :
 ```
 helm-best-practices/
