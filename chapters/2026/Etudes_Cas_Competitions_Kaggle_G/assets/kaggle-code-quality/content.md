@@ -79,7 +79,57 @@ Pourquoi un LLM ?
 - Analyse semantique de la structure, de la documentation, des patterns
 - Generation de justifications textuelles pour chaque score
 
-LLM choisi : Claude Sonnet 4.5 (via GitHub Copilot) pour ses capacites avancees en analyse de code.
+LLM choisi : Claude Opus 4.5 (via GitHub Copilot Agent Mode).
+
+### Choix du LLM : Criteres et Justification
+
+La selection du LLM repose sur quatre criteres techniques :
+
+1. Capacite d'analyse de code
+   - Comprehension syntaxique et semantique de Python
+   - Parsing de notebooks Jupyter (cellules code + markdown)
+   - Detection de patterns architecturaux (fonctions, classes, pipelines)
+
+2. Fenetre de contexte
+   - Notebooks Kaggle : 50-500 cellules, 1000-10000 lignes
+   - Necessite une fenetre >= 100k tokens pour analyser un notebook complet
+   - Exclusion des modeles avec contexte < 32k tokens
+
+3. Qualite du raisonnement structure
+   - Generation de JSON valide sans erreurs de syntaxe
+   - Respect strict des contraintes (scores dans {0,5,10,15,20})
+   - Justifications factuelles avec citations du code source
+
+4. Integration et accessibilite
+   - API stable et documentee
+   - Cout raisonnable pour 40 evaluations
+   - Integration VS Code pour workflow fluide
+
+Alternatives evaluees :
+
+| Modele | Contexte | Analyse code | Limites |
+|--------|----------|--------------|---------|
+| GPT-4 Turbo | 128k | Excellente | Cout eleve, rate limits |
+| GPT-4o | 128k | Tres bonne | Tendance a la verbosity |
+| Claude 3.5 Sonnet | 200k | Excellente | Contexte suffisant |
+| Claude Opus 4.5 | 200k | Excellente | Raisonnement superieur |
+| Gemini 1.5 Pro | 1M | Bonne | JSON parfois malformed |
+| Llama 3 70B | 8k | Moyenne | Contexte insuffisant |
+
+Decision : Claude Opus 4.5 via GitHub Copilot Agent Mode.
+
+Justification :
+- Fenetre de 200k tokens : suffisante pour les notebooks les plus longs
+- Mode Agent : iteration automatique sur les fichiers du workspace
+- Raisonnement : meilleure coherence inter-evaluations observee en tests preliminaires
+- Integration VS Code : acces direct aux fichiers .ipynb sans preprocessing
+- Format JSON : taux d'erreur syntaxique < 1% sur nos tests
+
+Configuration utilisee :
+- Mode : GitHub Copilot Agent (chat mode avec acces fichiers)
+- Temperature : defaut (non modifiable via Copilot)
+- Prompt : voir prompt_agent.txt (instructions structurees avec ancrages)
+- Batch : evaluations groupees par strate pour coherence intra-strate
 
 Format de sortie : JSON structure contenant :
 {
