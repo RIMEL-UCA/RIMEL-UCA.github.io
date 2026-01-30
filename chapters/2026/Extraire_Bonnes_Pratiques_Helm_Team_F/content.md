@@ -1,6 +1,6 @@
 ---
 layout: default
-title : Les charts de référence Helm sont-elles irréprochables ?
+title : Les charts de référence Helm sont-elles irréprochables ? - Equipe F
 date:   2026-02
 ---
 
