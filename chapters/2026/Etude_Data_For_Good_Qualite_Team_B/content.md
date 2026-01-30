@@ -97,6 +97,15 @@ Les messages sont souvent :
 
 Nous avons choisi d'utiliser Sonarqube pour évaluer certaines métriques de la qualité de code car il n'est pas présent par défaut sur les dépôts de code de Data For Good France ce qui réduit les biais potentiels et que c'est un standard de l'industrie pour évaluer la santé d'un dépôt.
 
+### Sous question 1 : 
+     Pour notre premiere sous question nous avons besoin de mesuré la qualité d'un dépot de code. pour cela nous avons eu l'idée d'utilisé Sonarqube car c'est le standard du marché en terme d'analyse statique de code. nous avions aussi réfléchi a des alternatives tel que CodeClimate pour une alternative du même style mais moins complexe ce qui nous satifesais pas  pareil pour un linter spécifique par langague qui été compliqué a mettre en place par rapport a juste un serveur SonarQube. pour automatisé ça on va crée une pipeline pour va lancé le serveur sonar sur un docker puis on va cloner chaqu'un des repos qu'on a prevu d'analysé, run une annalyse sonar puis grace a l'api on va récupéré les mesures de docker. on a ensuite décidé d'un score avec ces mesure pour normalisé pour tout les repos et avoir un valeur de mesure concrete. pour faire ce score nous avons chosi de nous basé sur 5 critères: 
+     - la fiabilité 
+     - la maintanbilité 
+     - la sécurité 
+     - la duplication de code 
+     - la complexité cognitive moyenne
+
+     nous avons choisi ces critères 
 Vous **explicitez les expérimentations que vous allez mener** pour vérifier si vos hypothèses sont vraies ou fausses. Il y a forcément des choix, des limites, explicitez-les.
 
      :bulb: Structurez cette partie à votre convenance : 
