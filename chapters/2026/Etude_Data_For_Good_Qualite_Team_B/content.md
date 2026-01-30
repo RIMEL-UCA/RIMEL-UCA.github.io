@@ -116,6 +116,63 @@ Vous **explicitez les expérimentations que vous allez mener** pour vérifier si
         
         ou Vous présentez l'ensemble des hypothèses puis vous expliquer comment les expériences prévues permettront de démontrer vos hypothèses.
 
+
+### Sous question 2 :
+
+#### Objectif et hypothèse
+
+Déterminer si, et à partir de quel volume de contributeurs, la qualité d’un dépôt s’écarte notablement de la médiane de l’échantillon.
+
+#### Protocole expérimental
+
+1. Mesure du nombre de contributeurs
+
+     - Pour chaque dépôt retenu, nous comptons les contributeurs distincts à partir de l'historique Git/GitHub (voir `2-nombre-contributeurs/data/contributors.csv`).
+     - Choix méthodologique : comptage « brut » d’identités uniques (pas de pondération par nombre de commits).
+
+2. Construction de groupes comparables
+
+     - Regroupement des dépôts en intervalles de taille d'équipe pour comparer des ensembles homogènes :
+
+       - **Groupe 1 :** 4–9 contributeurs
+       - **Groupe 2 :** 10–15 contributeurs
+       - **Groupe 3 :** 21–36 contributeurs
+
+3. Mesure de la qualité et indicateurs d’écart
+
+     - Utilisation du score de qualité normalisé (sous-question 1, basé sur SonarQube).
+     - Indicateurs calculés :
+       - médiane globale des scor  es (tous dépôts) — référence : **74.24**
+       - médiane par groupe (comparée à la médiane globale)
+       - dispersion par groupe (boxplot — IQR et outliers)
+
+     - Interprétation attendue si l'hypothèse est vraie : augmentation de la médiane de groupe et boxplots plus resserrés quand l’effectif augmente.
+
+#### Résultats (par groupe)
+
+Les figures (qualite_groupe_1/2/3) montrent les scores dépôt par dépôt, avec la médiane globale en référence.
+
+- **Groupe 1 (4–9 contributeurs)** : médiane = **78.97** (+4.73 vs médiane globale). Majorité des dépôts au-dessus de la médiane, mais présence d'un dépôt faible (~52) indiquant une dispersion.
+
+- **Groupe 2 (10–15 contributeurs)** : médiane = **69.36** (−4.88 vs médiane globale). Scores regroupés autour de ~67–74, un dépôt isolé faible (~61).
+
+- **Groupe 3 (21–36 contributeurs)** : médiane = **75.16** (+0.92 vs médiane globale). Scores proches de la médiane globale, dispersion modérée, un outlier faible (~57).
+
+#### Distribution et validation de l'hypothèse
+
+- Le boxplot (`qualite_boxplot_groupes`) montre qu'il n'y a pas de progression monotone de la médiane avec le nombre de contributeurs : le groupe 10–15 a une médiane plus basse que le groupe 4–9.
+- On observe une légère tendance au recentrage pour les très grands projets (21–36), mais la présence d'outliers indique que le seul nombre de contributeurs n'explique pas entièrement la qualité.
+
+#### Conclusion (sous-question 2)
+
+Sur cet échantillon, il n'existe pas de seuil unique au-delà duquel la qualité augmente systématiquement avec le nombre de contributeurs. Les dépôts avec 10–15 contributeurs présentent l'écart négatif le plus marqué, tandis que les projets 21–36 tendent à se rapprocher de la médiane globale.
+
+#### Limites spécifiques
+
+- Effectifs par groupe modestes : interprétations exploratoires, sensibles aux outliers.
+- Découpage en intervalles : bornes choisies pour l'équilibre des groupes (16–20 non exploité).
+- Corrélation ≠ causalité : d'autres facteurs (maturité, langage, gouvernance) peuvent influer sur la qualité.
+
 ### Sous-question 3
 
 Pour classifier les différents messages de commits, nous avons commencé par utiliser des patterns simples avec un script reproductible pour avoir une première idée de la répartition et des tendances :
