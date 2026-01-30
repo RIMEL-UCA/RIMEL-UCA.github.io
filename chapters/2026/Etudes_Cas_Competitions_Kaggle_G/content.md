@@ -1,279 +1,325 @@
 ---
 layout: default
-title : Modèle de chapitre pour 2025-26
-date:   2025-11
----
-
----
-
-   **Date de rendu finale : fin février**
-   - Respecter la structure pour que les chapitres soient bien indépendants
-   - Remarques :
-        - La structure proposée est là pour vous aider, mais peut-être adaptée à votre projet
-        - Les titres peuvent être modifiés pour être en adéquation avec votre étude. 
-        - Utiliser des références pour justifier votre argumentaire, vos choix, etc.
-        - Vous avez le choix d'utiliser le français ou l'anglais.
-
-    Dans l'article de Blog [Debret 2020], l'auteure donne les éléments principaux de la démarche d'une manière simple et très facile à lire, dans la partie [Quelles sont les étapes d’une bonne démarche scientifique ?](https://www.scribbr.fr/article-scientifique/demarche-scientifique/#:~:text=La%20d%C3%A9marche%20scientifique%20permet%20d,de%20nouvelles%20hypoth%C3%A8ses%20%C3%A0%20tester.)
-
----
-
-# Est-ce que les tops du leaderboard se spécialisent ?
-
-Cette partie a été réalisé par : ***Ascari Yannick*** - Groupe G.
-
-## Sommaire
-
-1. [Introduction](#introduction)
-2. [Méthodologie](#méthodologie)
-3. [Mis en œuvre](#mise-en-œuvre)
-4. [Résultats](#résultats)
-5. [Conclusion](#conclusion)
-6. [Limites](#limites)
-7. [Notions acquises](#notions-acquises)
-8. [Références](#références)
-
-## Introduction
-
-[Kaggle](https://www.kaggle.com/) est une plateforme, permettant aux data scientists de pouvoir s'affronter dans des compétitions
-d'intelligence artificielle (IA). Cette plateforme permet aux data scientists de se mesurer et ainsi, de trouver de nouvelles idées
-pour améliorer l'écriture de code, pour avoir des meilleurs modèles tout en restant très performants. Kaggle met à disposition ces
-compétitions à tout le monde, en libre-service, et aussi depuis une *API* pour pouvoir étudier plus en profondeur tout les aspects
-de chaque compétition.
-
-On peut alors s'intéresser, si à travers toutes ces compétitions, on peut observer si dans chaque compétition, les meilleurs compétiteurs
-se spécialisent dans un domaine spécifique précis, et donc si cette stratégie de spécialisation est payante pour être dans le podium.
-
-La question que l'on se pose est donc : *Est-ce que les tops du leaderboard se spécialisent ?*
-
-### Hypothèse
-
-L'hypothèse principale, est que la ***focalisation dans un domaine précis de compétition *Kaggle* est une stratégie gagnante pour être dans le podium***.
-
-## Méthodologie
-
-Afin de répondre à cette question, nous allons suivre la ***méthodologie suivante***, dans l'*ordre chronologique*.
-
-- **Tout d'abord**, s'accommoder avec la plateforme *Kaggle*, essayer de comprendre comment fonctionne les compétitions et comment
-sont traitées les différentes données  pour pouvoir mieux les analyser. Notamment comment est-ce que les compétitions
-classent les compétiteurs et trouver la catégorie de la compétition, par exemple si c'est une compétition *NLP*, *tabulaire*,
-*séries temporelles*, etc. Cela permet de pouvoir mieux comprendre le *système* avant de le traiter.
-- **Une fois** que l'on s'est bien accommodé avec *Kaggle*, et que l'on a bien compris son système, on essaye de mettre en place
-notre propre système de traitement des données. C'est-à-dire que l'on fait un choix, de comment est-ce qu'on va pouvoir visualiser
-les données, et quelles sont les ***métriques*** que l'on va utiliser pour pouvoir répondre à la question que l'on se pose. Dans notre cas, 
-pour chaque compétition, on va extraire les ***compétiteurs*** et le ***domaine*** associé, pour pouvoir calculer pour chaque compétiteur, sa ***distribution***
-de participations par *domaine* et déterminer son ***taux de spécialisation***, ce sera notre principale métrique. Cette étape consiste surtout à
-bien comprendre quels métriques nous allons décider d'utiliser pour répondre à la question, ce qui est très important pour bien répondre à cette dernière. (C'est
-comme un plan, on explique comment est-ce que l'il faut procéder pour construire notre réponse).
-- **Après avoir** bien construit notre plan, et identifier les métriques, il faut donc pouvoir mettre en place le système de traitement des données, permettant
-de calculer les métriques que l'on a décidées d'utiliser. Dans notre cas, on va utiliser l'*API Kaggle*, et utiliser *Python* pour mettre en place un système
-automatisé qui pourra calculer la métrique. On utilisera *Python*, car c'est le langage le plus simple et adapté pour utiliser pleinement l'*API Kaggle*, et
-aussi le plus simple pour faire ce genre de scripts et systèmes automatisés. À noter que cela demande aussi d'avoir une très bonne connaissance de la documentation de
-l'*API Kaggle*.
-- **Une fois** que notre système pourra calculer nos métriques, on pourra répondre à notre problématique, en créant des visualisations. En s'appuyant depuis
-nos métriques, on pourra créer des schémas et des graphiques pour bien observer nos résultats et pouvoir tirer une conclusion, si oui ou non est-ce que le fait
-de spécialiser dans un domaine précis est une stratégie gagnante pour être dans le podium. Ces graphiques et schémas seront réalisés aussi grâce au langage de programmation
-*Python*, qui est aussi très adapté pour faire des visualisations de données. On utilisera des bibliothèques comme *Matplotlib*, qui nous permet facilement de faire des graphiques.
-Les différents types de graphiques que l'on mettra en place seront surtout des histogrammes, et une heatmap pour bien visualiser la spécialisation des compétiteurs.
-- **Finalement**, une fois que l'on aura obtenu nos résultats depuis ces différentes *visualisations*, on pourra en tirer une conclusion, et donc répondre à la problématique de base. 
-Cela demande de bien analyser les résultats, et de savoir interpréter les graphiques que l'on a mis en place, pour pouvoir en tirer une conclusion pertinente. On pourra grâce à
-ces *visualisations* donner une réponse précise avec des chiffres et des pourcentages à l'appui, pour avoir une réponse plus nuancée et pas forcément binaire. Cela permet d'apporter
-une réponse beaucoup plus ***scientifique*** à notre problématique et participer au travail de ***rétro-ingénierie***.
-
-Une fois que nous avons bien défini notre ***méthodologie***, on peut passer à la prochaine étape, qui consiste à la *mise en œuvre* de celle-ci.
-
-## Mise en œuvre
-
-Afin de mettre la méthodologie en œuvre, on a suivi les points suivants :
-
-- **Accommodement avec Kaggle** : J'ai tout d'abord commencé par bien m'accommoder au système de *Kaggle*, en parcourant notamment les différentes compétitions et
-en explorant les *leaderboards*. J'ai essayé de voir comment est-ce que les compétitions sont classées, et comment est-ce que les compétiteurs sont notés. Cela m'a permis
-d'identifier les différentes catégories de compétitions, et aussi de comprendre comment est-ce que les compétiteurs sont classés dans chaque compétition. Ce qui est très
-important pour identifier mes métriques, et comment est-ce que je pouvais bien mettre en place mon système de traitement des compétitions Kaggle. Cela m'a amené à l'étape
-d'après sur le choix des métriques.
-- **Choix des métriques** : Une fois que j'ai bien compris le système de *Kaggle*, j'ai pu choisir les métriques que j'allais utiliser pour répondre à ma problématique. 
-J'ai décidé de me concentrer sur le ***taux de spécialisation*** des compétiteurs, c'est-à-dire la proportion de compétitions dans un domaine précis par rapport au total des compétitions
-auxquelles ils ont participé. J'ai aussi décidé de regarder la ***distribution*** des participations par domaine pour chaque compétiteur, pour voir s'il y a une tendance à se spécialiser
-dans un domaine précis. Ces métriques me semblaient les plus pertinentes pour répondre à ma question.
-- **Mise en place du système de traitement** : Dans cette étape, j'ai utilisé l'*API Kaggle* pour extraire les données des compétitions et des compétiteurs. J'ai écrit un script en *Python* qui
-pouvait automatiser le processus de collecte des données, et calculer les métriques que j'avais choisies. On peut retrouver le code de script dans le fichier *Python* [src/kaggle/analyze_specialization.py](./assets/kaggle-analyze-specialization/src/kaggle/analyze_specialization.py),
-celui-ci contient donc le code complet pour calculer notre métrique, le taux de spécialisation des compétiteurs. Dans ce code il y a trois parties, qui sont des fonctions :
-    - `get_filtered_competitions()` (l.18) : Permet de récupérer les compétitions filtrées selon les domaines de spécialisation. (ex : NLP, tabulaire, etc.)
-    - `get_leaderboard_for_competitions()` (l.66) : Récupère les leaderboards pour chaque compétition filtrée.
-    - `build_specialization_matrix()` (l.111) : Calcule la matrice de spécialisation des compétiteurs en fonction des domaines, depuis notre métrique principale.
-
-    La fonction `main()` (l.141) s'occupe d'appeller ses fonctions, et de sauvergarder la métrique dans un fichier au format ***csv*** pour pouvoir l'utiliser dans l'étape suivante. On peut retrouver ces fichiers 
-dans le dossier [/data](./assets/kaggle-analyze-specialization/data). Il y a donc deux fichiers ***csv*** générés :
-  - `/data/filtered_competitions.csv` : Contient la liste des compétitions filtrées selon les domaines de spécialisation.
-  - `/data/specialization_matrix.csv` : Contient la matrice de spécialisation des compétiteurs, calculée depuis le script.
-
-  À savoir que j'ai fait le choix de bien séparer le code python avec deux scripts, un pour le ***calcul des métriques***, et un autre pour ***les visualisations***, afin de garder un code propre, organisé et structuré.
-- **Création des visualisations** : Une fois que j'ai pu calculer mes métriques, on peut maintenant se focaliser sur la création des graphiques, et des schémas. J'ai donc écrit le code dans le
-fichier [src/kaggle/visualize_specialization.py](./assets/kaggle-analyze-specialization/src/kaggle/visualize_specialization.py), qui contient l'implémentation des visualisations à partir du fichier précèdent en s'appuyant des métriques
-calculées danns ce dernier. Comme dans l'étape précédente, on peut découper le code de cette implémentation en plusieurs parties principales :
-    - `load_data()` (l.19) : Permet de charger la métrique, calculé par le script précédent depuis le fichier csv, dans le script en mémoire.
-    - `plot_top_competitors_heatmap(df, top_n=50)` (l.27) : Crée une heatmap pour visualiser la spécialisation des meilleurs compétiteurs. Ce qui est particulièrement utile pour observer les tendances de spécialisation.
-    - `plot_specialization_distribution(df)` (l.61) : Crée un histogramme pour visualiser la distribution des taux de spécialisation parmi tous les compétiteurs. Cela permet de voir si la majorité des compétiteurs se spécialisent ou non,
-avec des chiffres précis, pour avoir un résultat moins binaire et scientifique.
-    - `plot_average_specialization_bars(df)` (l.86) : Crée un graphique à barres pour visualiser le taux de spécialisation moyen par domaine. Cela permet de voir quels domaines sont les plus prisés parmi les meilleurs compétiteurs.
-    - `plot_top_vs_rest(df, threshold=10)` (l.118) : Crée un graphique comparant le taux de spécialisation des meilleurs compétiteurs par rapport au reste. Cela permet de voir si les meilleurs compétiteurs ont tendance à se spécialiser plus que les autres.
-    - `generate_summary_stats()` (l.163) : Génère des statistiques résumées sur les taux de spécialisation, pour avoir une vue d'ensemble des tendances observées, cette visualisation n'est pas une image, seulement des logs dans la console.
-- **Analyse des résultats et conclusion** : Après avoir généré les visualisations, j'ai analysé les résultats obtenus. J'ai observé les graphiques et les schémas pour voir s'il y avait des tendances claires, et si oui ou non les meilleurs compétiteurs avaient
-tendance à se spécialiser dans un domaine précis. Cela me permet donc de passer à la prochaine partie, c'est-à-dire les résultats obtenus.
-
-## Résultats
-
-Après avoir mis en place le système de traitement des données et généré les visualisations, voici les résultats obtenus. Pour chaque visualisation, on peut observer les tendances suivantes :
-
-1. **Heatmap de spécialisation des meilleurs compétiteurs** : La heatmap montre clairement que les meilleurs compétiteurs ont tendance à se spécialiser dans certains domaines, parmis les 3 domaines que j'ai sélectionnés (*NLP*, *Tabulaire*, *Time Series Analysis*), on peut
-voir qu'il y a un forte concentration de compétiteur qui se spécialisent dans le domaine du ***tabulaire***. Ce qui suggère que la spécialisation est une stratégie gagnante pour être dans le podium.
-
-<br>
-
-   ![Heatmap des meilleurs compétiteurs](./assets/kaggle-analyze-specialization/data/heatmap_specialization.png)
-
-2. **Distribution des taux de spécialisation** : Pour chaque histogramme par catégorie, parmi les 3 catégories, on peut observer que les compétiteurs ont tendance à se spécialiser plutôt dans le domaine du ***tabulaire***, avec une majorité de compétiteurs ayant un taux de spécialisation élevé dans ce domaine en moyenne avec $74.9\%$.
-Ce qui confirme encore une fois que les compétiteurs se spécialisent et se focalisent beaucoup dans ce domaine. Pour ce qui est des autres domaines, on à un taux de $15.0 \%$ pour le domaine du *NLP*, et $10.1\%$ pour le domaine des *séries temporelles*. Ce qui est nettement moins élevé que le domaine du *tabulaire*.
-
-<br>
-
-   ![Distribution des taux de spécialisation](./assets/kaggle-analyze-specialization/data/distribution_specialization.png)
-   
-3. **Taux de spécialisation moyen par domaine** : Le graphique à barres montre que le taux de spécialisation moyen est le plus élevé dans le domaine du *tabulaire*, avec une moyenne de $74.9\%$. Ce qui est nettement plus élevé que les autres domaines, avec $15.0\%$ pour le *NLP* et $10.1\%$ pour les *séries temporelles*.
-Cela suggère que les compétiteurs qui se spécialisent dans le domaine du *tabulaire* ont un avantage significatif pour être dans le podium.
-
-<br>
-
-   ![Taux de spécialisation moyen par domaine](./assets/kaggle-analyze-specialization/data/average_specialization.png)
-   
-4. **Comparaison entre les meilleurs compétiteurs et le reste** : Le graphique comparant les meilleurs compétiteurs au reste montre que les meilleurs compétiteurs ont un taux de spécialisation significativement plus élevé que les autres. En moyenne, les meilleurs compétiteurs ont un taux de spécialisation très élevé de $82.4\%$ contre $74.8\%$
-dans le domaine du *tabulaire*. Ce qui confirme encore une fois que la spécialisation est une stratégie gagnante pour être dans le podium.
-
-<br>
-
-   ![Comparaison des taux de spécialisation](./assets/kaggle-analyze-specialization/data/top_vs_rest.png)
-
-### Reproductibilité
-
-À savoir que ce code à été écrit de manière à être reproductible, c'est-à-dire que n'importe qui peut exécuter ce code pour obtenir les mêmes résultats. En outre, le code est aussi écrit
-de manière générique, ce qui permet de facilement modifier les paramètres, comme par exemple les domaines de spécialisation, ou le nombre de meilleurs compétiteurs à analyser.
-
-Une fois avoir analysé ces résultats, on peut en tirer une conclusion pertinente.
-
-## Conclusion
-
-Après avoir analysé les résultats obtenus, on peut conclure que les meilleurs compétiteurs sur *Kaggle* ont tendance à se spécialiser dans certains domaines précis, notamment dans le domaine du *tabulaire*. La spécialisation semble être une stratégie gagnante pour être dans le podium, avec des taux de spécialisation significativement plus élevés parmi les meilleurs compétiteurs.
-Cependant, il est important de noter que cette spécialisation n'est pas exclusive, et que certains compétiteurs peuvent également participer à des compétitions dans d'autres domaines. On le voit bien avec les résultats obtenus, qui montrent une tendance claire à la spécialisation avec $\simeq 75\%$. 
-
-Donc au final, on peut répondre à la question initiale : ***Est-ce que les tops du leaderboard se spécialisent ?*** 
-
-Par un relatif **oui**, les tops du leaderboard ont bien tendance à se spécialiser, notamment dans le domaine du *tabulaire*, mais cette spécialisation n'est pas absolue, et il y a toujours une part de compétiteurs qui participent à des compétitions dans d'autres domaines. La spécialisation est donc une stratégie gagnante, mais elle n'est pas la seule voie vers le succès sur *Kaggle*.
-
-
-## Limites
-
-Cependant, il est important de noter certaines limites dans cette analyse :
-
-- **Biais du survivant** : L'analyse se base uniquement sur les compétiteurs actuellement au leaderboard, ignorant ceux qui ont abandonné *Kaggle*, ce qui peut créer un ***biais du survivant***, et donc créer du bruit dans les résultats.
-- **Temporalité du leaderboard** : Le leaderboard évolue constamment, et les résultats peuvent varier en fonction du moment où l'analyse est effectuée. Une analyse à un autre moment pourrait donner des résultats différents. Et ce qui rendrait cette analyse un peu obsolète, cependant le leaderboard n'évolue pas aussi vite que ça, donc l'analyse reste pertinente pour un certain temps.
-
-## Notions acquises
-
-Grace à ce travail de rétro-ingénierie et d'analyse du système *Kaggle*, j'ai pu acquérir plusieurs notions importantes :
-
-- ***Accommodation avec le système existant (Kaggle)*** : J'ai appris lors de ce travail, à bien comprendre un système existant, en l'occurrence *Kaggle*, et à m'accommoder avec ses particularités pour pouvoir mieux l'analyser.
-Et surtout comprendre comment est-ce que fonctionnaient les compétitions, et comment est-ce que les compétiteurs étaient classés. J'ai du aussi m'accomoder à l'API *Kaggle* pour pouvoir extraire les données nécessaires, et pouvoir
-lire la documentation associée, afin de pouvoir atteindre mon objectif.
-- ***Choisir les bonnes métriques*** : J'ai appris l'importance de choisir les bonnes métriques pour répondre à une problématique spécifique, et comment ces métriques peuvent influencer les résultats obtenus.
-- ***Création des visualisations*** : J'ai amélioré mes compétences en création de visualisations de données, en utilisant des bibliothèques comme *Matplotlib* pour créer des graphiques clairs et informatifs.
-Tout ça à l'aide du travail de la création des métriques (étape précédente).
-- ***Analyse des résultats*** : J'ai appris à analyser les résultats obtenus à partir des visualisations, et à tirer des conclusions pertinentes basées sur ces résultats.
-
-## Références
-
-Voici les quelques références utilisées pour ce travail :
-
-1. ***Competing AI: How does competitoon feedback affect machine learning ?*** (Stanford HAI).
-[Article](https://arxiv.org/pdf/2009.06797) - Étude qui démontre que lorsque des algos d'IA entrent en compétition, ils se spécialisent pour des sous-populations d'utilisateurs.
-2. ***Learnings from Kaggle's Forecasting Competitions*** (arXiv, 2020).
-[Article](https://arxiv.org/pdf/2009.07701) - Analyse les stratégies gagnantes dans les compétitions *Kaggle*, l'essor de XGBoost et des ensembles de modèles.
-3. ***The Ladder: A Reliable Leaderboard for Machine Learning Competitions*** (MLR Press).
-[Article](https://proceedings.mlr.press/v37/blum15.pdf) - Traite la méthodologie d'analyse des leaderboards et des analyses post-compétitions, confirmant la méthodologie utilisée dans ce travail.
-4. ***Data competition design and analysis*** (arXiv, 2019).
-[Article](https://arxiv.org/pdf/1901.05356) - Discute des stratégies de conception et d'analyses des compétitions de data science.
-
+title: "Facteurs de réussite dans les compétitions Kaggle"
+date: 2026-02
 ---
 
 **_février 2026_**
 
 ## Authors
 
-We are four students in M2 or in last year of Polytech' Nice-Sophia specialized in Software Architecture :
+Nous sommes quatre étudiants en M2 à Polytech Nice-Sophia, spécialisés en Architecture Logicielle :
 
-* Malik MOUSSA &lt;merwan-malik.moussa-boudjemaa@etu.unice.fr&gt;
-* Baptiste ROYER &lt;baptiste.royer@etu.unice.fr&gt;
-* Sacha CHANTOISEAU &lt;sacha.chantoiseau@etu.unice.fr&gt;
-* Yannick ASCARI &lt;yannick.ascari@etu.unice.fr&gt;
+* **Ascari Yannick** - yannick.ascari@etu.univ-cotedazur.fr
+* **Chantoiseau Sacha** - sacha.chantoiseau@etu.univ-cotedazur.fr
+* **Moussa Boudjemaa Merwan Malik** - merwan-malik.moussa-boudjemaa@etu.univ-cotedazur.fr
+* **Royer Baptiste** - baptiste.royer@etu.univ-cotedazur.fr
 
-## I. Research context /Project
+---
 
-Préciser ici votre contexte et Pourquoi il est intéressant. **
+## I. Contexte de recherche
 
+[Kaggle](https://www.kaggle.com/) est la plateforme de référence mondiale pour les compétitions de data science et de machine learning. Avec plus de **201 000 compétiteurs classés**, elle représente un environnement hautement compétitif où seuls quelques développeurs parviennent à rester constamment au sommet du classement.
 
-## II. Observations/General question
+En tant que compétiteurs nous-mêmes, nous cherchons à comprendre ce qui différencie les participants ordinaires des membres du top 10 mondial. Comprendre leurs stratégies, leurs méthodes de travail et leurs parcours est un moyen direct d'améliorer nos propres performances.
 
-1. Commencez par formuler une question sur quelque chose que vous observez ou constatez ou encore une idée émergente. 
-    
-2. Préciser pourquoi cette question est intéressante de votre point de vue.
+Notre objectif est de découvrir les **pratiques, stratégies ou routines** qui permettent à certains de passer de débutant à expert et d'enchaîner les podiums. Cette étude s'inscrit dans une démarche de rétro-ingénierie : analyser les patterns de réussite pour en extraire des enseignements exploitables.
 
-Attention pour répondre à cette question, vous devrez être capable d'émettre des hypothèses vérifiables, de quantifier vos réponses, ...
+---
 
-     :bulb: Cette première étape nécessite beaucoup de réflexion pour définir la bonne question qui permet de diriger la suite de vos travaux.
+## II. Question générale
 
-## III. Information gathering
+> **Comment performer dans les compétitions Kaggle ?**
 
-Préciser vos zones de recherches en fonction de votre projet, les informations dont vous disposez, ... 
+Cette question générale se décline en plusieurs dimensions que nous explorons à travers quatre sous-questions complémentaires :
 
-Voici quelques pistes : 
+1. **Stratégies de progression** : Quels leviers permettent une montée fulgurante au classement ?
+2. **Spécialisation vs polyvalence** : Faut-il se concentrer sur un domaine ou rester généraliste ?
+3. **Qualité d'ingénierie** : Le code des meilleurs est-il mieux structuré ?
+4. **Convergence des solutions** : Les gagnants arrivent-ils aux mêmes architectures ?
 
-1. les articles ou documents utiles à votre projet 
-2. les outils que vous souhaitez utiliser
-3. les jeux de données/codes que vous allez utiliser, pourquoi ceux-ci, ...
+Ces quatre axes couvrent à la fois les **aspects stratégiques** (comment participer, avec qui, à quelle fréquence) et les **aspects techniques** (qualité du code, choix architecturaux).
 
-     :bulb: Cette étape est fortement liée à la suivante. Vous ne pouvez émettre d'hypothèses à vérifier que si vous avez les informations. inversement, vous cherchez à recueillir des informations en fonction de vos hypothèses. 
- 
-## IV. Hypothesis & Experiences
+---
 
-1. Il s'agit ici d'**énoncer sous forme d'hypothèses** ce que vous allez chercher à démontrer. Vous devez définir vos hypothèses de façon à pouvoir les _mesurer/vérifier facilement._ Bien sûr, votre hypothèse devrait être construite de manière à _vous aider à répondre à votre question initiale_. Explicitez ces différents points.
-2. Vous **explicitez les expérimentations que vous allez mener** pour vérifier si vos hypothèses sont vraies ou fausses. Il y a forcément des choix, des limites, explicitez-les.
+## III. Sources d'information
 
-     :bulb: Structurez cette partie à votre convenance : 
-     Par exemples : 
-        Pour Hypothèse 1 => 
-            Nous ferons les Expériences suivantes pour la démontrer
-        Pour Hypothèse 2 => Expériences 
-        
-        ou Vous présentez l'ensemble des hypothèses puis vous expliquer comment les expériences prévues permettront de démontrer vos hypothèses.
+Nos analyses reposent principalement sur les données publiques de la plateforme Kaggle :
 
+| Source | Description | Utilisation |
+|--------|-------------|-------------|
+| **Profils publics** | Historique des compétitions, rangs, médailles | Analyse des trajectoires et collaborations |
+| **Leaderboards** | Classements détaillés avec composition des équipes | Étude solo vs équipe, performance par décile |
+| **Notebooks publics** | Code source des solutions | Analyse de la qualité du code |
+| **Write-ups** | Descriptions techniques des solutions gagnantes | Extraction des critères architecturaux |
+| **API Kaggle** | Accès programmatique aux métadonnées | Automatisation de la collecte |
 
-## V. Result Analysis and Conclusion
+**Outils utilisés** :
+- **Python** (pandas, matplotlib) pour l'analyse et la visualisation
+- **Playwright** pour le web scraping des pages Kaggle (rendu JavaScript)
+- **LLM (Claude)** pour l'extraction automatisée de critères qualitatifs
+- **API Kaggle** pour la récupération des métadonnées de compétitions
 
-1. Présentation des résultats
-2. Interprétation/Analyse des résultats en fonction de vos hypothèses
-3. Construction d’une conclusion 
+---
 
-     :bulb:  Vos résultats et donc votre analyse sont nécessairement limités. Préciser bien ces limites : par exemple, jeux de données insuffisants, analyse réduite à quelques critères, dépendance aux projets analysés, ...
+## IV. Sous-questions et hypothèses
 
-## VI. Tools \(facultatif\)
+Notre question générale se décline en **quatre sous-questions**, chacune traitée par un membre de l'équipe avec une méthodologie dédiée.
 
-Précisez votre utilisation des outils ou les développements \(e.g. scripts\) réalisés pour atteindre vos objectifs. Ce chapitre doit viser à \(1\) pouvoir reproduire vos expérimentations, \(2\) partager/expliquer à d'autres l'usage des outils.
+---
 
-![Figure 1: Logo UCA, exemple, vous pouvez l'enlever](assets/images/logo_uca.png){:height="12px"}
+### SQ1 : Comment le numéro 1 du leaderboard global est-il passé de 0 à héros ?
 
+**Auteur** : Sacha Chantoiseau
+**Lien** : [assets/zero-to-hero/content.md](assets/zero-to-hero/content.md)
 
-## VI. References
+#### Objectif
+Comprendre si la progression spectaculaire d'un compétiteur (de top 300 à top 1 mondial) s'explique par des facteurs mesurables : volume d'activité et pratiques de collaboration.
 
-[Debret 2020] Debret, J. (2020) La démarche scientifique : tout ce que vous devez savoir ! Available at: https://www.scribbr.fr/article-scientifique/demarche-scientifique/ (Accessed: 18 November 2022).
+#### Hypothèses testées
+- **H1** : Intensification du volume de participations au fil du temps
+- **H2** : Passage de participations solo à des équipes avec coéquipiers bien classés
+- **H2.1** : Rotation fréquente des coéquipiers pour maximiser les participations
+- **H2.2** : Corrélation entre la "force" des équipes et les performances
 
+#### Méthodologie
+- Scraping automatisé des profils Kaggle via Playwright
+- Analyse de 8 leaderboards de compétitions majeures (19 897 participants)
+- Calcul de métriques de collaboration (team_ratio, rotation, force d'équipe)
+- Généralisation à 6 "fast risers" et au top 25 mondial
 
+#### Contribution à la question principale
+Cette sous-question identifie les **leviers stratégiques** (volume, collaboration, diversification) qui permettent une progression rapide. Elle répond au "comment" de la réussite en termes d'engagement et de pratiques collaboratives.
 
+---
+
+### SQ2 : Est-ce que les tops du leaderboard global se spécialisent ?
+
+**Auteur** : Yannick Ascari
+**Lien** : [assets/kaggle-analyze-specialization/content.md](assets/kaggle-analyze-specialization/content.md)
+
+#### Objectif
+Déterminer si les meilleurs compétiteurs obtiennent leurs résultats grâce à une maîtrise générale du ML ou s'ils se focalisent sur un domaine précis (tabulaire, vision, NLP, séries temporelles).
+
+#### Hypothèse testée
+Les tops du leaderboard se spécialisent dans un domaine précis, et cette spécialisation est corrélée à leur performance.
+
+#### Méthodologie
+- Utilisation de l'API Kaggle pour extraire les compétitions par domaine
+- Calcul du taux de spécialisation (% de compétitions dans chaque domaine) par compétiteur
+- Visualisations : heatmap de spécialisation, distribution des taux, comparaison top vs reste
+
+#### Contribution à la question principale
+Cette sous-question explore la dimension **expertise technique** : faut-il être généraliste ou spécialiste pour performer ? Elle identifie les domaines les plus propices à la spécialisation (tabulaire notamment).
+
+---
+
+### SQ3 : La qualité du code varie-t-elle selon le rang au leaderboard ?
+
+**Auteur** : Moussa Boudjemaa Merwan Malik
+**Lien** : [assets/kaggle-code-quality/content.md](assets/kaggle-code-quality/content.md)
+
+#### Objectif
+Déterminer si la performance ML est associée à une meilleure maturité d'ingénierie dans le code : structure, modularité, reproductibilité, lisibilité.
+
+#### Hypothèse testée
+Les solutions du top 1% se distinguent par un code plus propre et structuré que celles du top 40-50%.
+
+#### Méthodologie
+- Constitution d'un corpus de 40 notebooks répartis sur 10 compétitions et 3 strates (top 1%, top 10%, p40-50%)
+- Définition d'un rubrique d'évaluation à 5 critères (structure, modularité, reproductibilité, lisibilité, hygiène)
+- Évaluation automatisée via LLM avec validation multi-niveaux en Python
+- Score de confiance calculé pour chaque évaluation
+
+#### Contribution à la question principale
+Cette sous-question explore la dimension **qualité d'ingénierie** : l'excellence ML implique-t-elle l'excellence en développement ? Elle questionne l'hypothèse implicite que "mieux classé = mieux codé".
+
+---
+
+### SQ4 : Les solutions gagnantes convergent-elles entre elles ?
+
+**Auteur** : Baptiste Royer
+**Lien** : [assets/solution-convergence/content.md](assets/solution-convergence/content.md)
+
+#### Objectif
+Déterminer si les solutions gagnantes présentent une similarité architecturale entre elles et se distinguent des solutions faiblement classées. Cette problématique permet d'identifier si la réussite repose sur l'optimisation de composants techniques éprouvés ou sur l'innovation architecturale radicale.
+
+#### Hypothèses testées
+- **H1 (Convergence intra-groupe)** : Le score de similarité moyen intra-top 5 est significativement supérieur au score intra-bottom 5, démontrant que les solutions performantes convergent architecturalement entre elles
+- **H2 (Divergence inter-groupes)** : Le score de similarité moyen intra-top 5 est significativement supérieur au score inter-groupes (top 5 vs bottom 5), quantifiant la divergence architecturale entre solutions performantes et faiblement classées
+
+#### Méthodologie
+- Sélection de 3 compétitions représentatives (NLP, Tabulaire, Vision) avec 10 solutions chacune (5 meilleures + 5 moins performantes)
+- Protocole itératif en 5 phases : (1) définition d'un schéma JSON de critères architecturaux issus de la littérature, (2) extraction automatisée par LLM (Claude Opus 4.5) avec traçabilité complète (source, lien, citation), (3) normalisation automatique et validation manuelle approfondie, (4) raffinement itératif du schéma jusqu'à convergence (absence de champs à 0%), (5) transformation en représentation booléenne structurée
+- Calcul de scores de similarité via Jaccard (comparaison champ par champ des structures JSON) et génération de heatmaps
+- Validation manuelle systématique facilitée par les fichiers de justification parallèles
+
+#### Contribution à la question principale
+Cette sous-question explore la dimension **convergence architecturale** : les gagnants convergent-ils vers des configurations optimales identifiées par la communauté (composants établis, embeddings reconnus) ou explorent-ils des espaces architecturaux diversifiés ? Elle révèle si l'excellence repose sur la maîtrise collective ou l'innovation individuelle, avec une validation domaine-dépendante.
+
+---
+
+## V. Résultats et Analyse
+
+### Synthèse des résultats par sous-question
+
+#### SQ1 — Stratégies de progression (Sacha)
+
+| Hypothèse | Statut | Résultat clé |
+|-----------|--------|--------------|
+| H1 - Intensification | **Validée** | x7 compétitions/an, x6.7 score de performance |
+| H2 - Solo vers équipe | **Validée** | Passage de 0% à 100% équipe entre 2020 et 2022 |
+| H2.1 - Rotation | **Validée** | 23 coéquipiers uniques pour 12 compétitions |
+| H2.2 - Force équipe | **Validée** | Équipes fortes = top 1% régulier |
+
+**Généralisation** :
+- Les équipes sont sur-représentées dans le top (+5.4pp vs bottom, sur 19 897 participants)
+- Les 6 "fast risers" du top 25 montrent tous une intensification de la collaboration
+- Cependant, le top 25 présente des profils variés : la stratégie de yuanzhezhou est la plus extrême mais pas l'unique chemin
+
+**Conclusion SQ1** : La progression rapide s'explique par une **stratégie d'engagement intensive et collective** : multiplication du volume, basculement vers le travail d'équipe, diversification des collaborations, et sélection de coéquipiers forts.
+
+---
+
+#### SQ2 — Spécialisation (Yannick)
+
+| Métrique | Résultat |
+|----------|----------|
+| Taux moyen - Tabulaire | **74.9%** |
+| Taux moyen - NLP | 15.0% |
+| Taux moyen - Séries temporelles | 10.1% |
+| Top 10 vs reste (tabulaire) | 82.4% vs 74.8% |
+
+**Observations** :
+- Les meilleurs compétiteurs se spécialisent majoritairement dans le domaine **tabulaire**
+- Le top 10 montre un taux de spécialisation plus élevé que la moyenne
+- La spécialisation n'est pas absolue : ~25% de participations dans d'autres domaines
+
+**Conclusion SQ2** : **Oui**, les tops du leaderboard se spécialisent, principalement dans le tabulaire. Cette spécialisation semble être une stratégie gagnante, mais elle n'est pas exclusive.
+
+---
+
+#### SQ3 — Qualité du code (Malik)
+
+| Strate | Score moyen | Observation |
+|--------|-------------|-------------|
+| top_1% | 76.3/100 | Distribution concentrée |
+| top_10% | 72.3/100 | Plus de variabilité |
+| p40_50 | 75.6/100 | Les 2 meilleurs notebooks (95/100) sont ici ! |
+
+**Observations** :
+- **Aucune corrélation significative** entre rang au leaderboard et qualité du code
+- Les notebooks les mieux notés (95/100) sont dans la strate p40_50, pas dans le top_1%
+- La variance intra-strate est élevée, surtout dans p40_50
+
+**Conclusion SQ3** : **Non**, l'excellence en ML ne va pas de pair avec l'excellence en ingénierie logicielle. Les compétiteurs du podium peuvent sacrifier la qualité du code au profit de l'expérimentation rapide. Ce sont deux dimensions distinctes.
+
+---
+
+#### SQ4 — Convergence des solutions (Baptiste)
+
+| Domaine | Top 5 (intra) | Bottom 5 (intra) | Ratio | Inter-groupes | Écart (Intra-Inter) |
+|---------|---------------|------------------|-------|---------------|---------------------|
+| **Tabulaire** | 33.76% (±10.55%) | 18.02% (±6.56%) | **1.87x** | 19.67% (±5.45%) | 14.09 pts |
+| **Vision** | 23.53% (±3.54%) | 13.04% (±8.48%) | **1.81x** | 16.91% (±7.35%) | 6.62 pts |
+| **NLP** | 21.81% (±2.79%) | 29.65% (±6.88%) | **0.74x** | 19.74% (±7.28%) | 2.07 pts |
+
+**Observations** :
+- Pour Tabulaire et Vision, les solutions du top 5 convergent architecturalement entre elles, démontrant une maîtrise collective de composants techniques établis
+- La divergence inter-groupes est significative pour ces domaines, confirmant que les gagnants adoptent des configurations distinctes des solutions faiblement classées
+- NLP présente un pattern inversé : le bottom 5 converge plus que le top 5, suggérant une standardisation des approches sous-optimales tandis que les gagnants explorent des espaces architecturaux diversifiés
+- Les heatmaps confirment visuellement ces tendances : blocs de haute similarité dans le quadrant top 5 pour Tabulaire/Vision, cluster du bottom 5 pour NLP
+
+**Conclusion SQ4** : La convergence architecturale est **domaine-dépendante**. Pour Tabulaire et Vision, la réussite repose sur l'optimisation d'architectures éprouvées plutôt que sur l'innovation radicale. Pour NLP, l'exploration architecturale constitue un avantage compétitif face à la standardisation des approches conventionnelles.
+
+---
+
+### Analyse transversale
+
+En croisant les résultats des 4 sous-questions, plusieurs enseignements émergent :
+
+1. **Le volume et la collaboration priment** (SQ1) : La stratégie d'engagement est un levier majeur de progression, souvent plus visible que les choix techniques.
+
+2. **La spécialisation paie** (SQ2) : Se concentrer sur un domaine (tabulaire notamment) est corrélé au succès, mais une polyvalence résiduelle reste présente.
+
+3. **La qualité du code est orthogonale** (SQ3) : Performer en ML ne signifie pas écrire du code propre. Ce sont deux compétences distinctes.
+
+4. **Les patterns gagnants existent** (SQ4) : Bien que les chemins diffèrent, certains choix architecturaux sont récurrents chez les gagnants.
+
+---
+
+## VI. Outils et reproductibilité
+
+Chaque sous-question dispose de scripts permettant de reproduire les analyses :
+
+| Sous-question | Dossier | Scripts clés |
+|---------------|---------|--------------|
+| SQ1 | `zero-to-hero/assets/scripts/` | `reproduce.sh`, `sq1_*.py` |
+| SQ2 | `kaggle-analyze-specialization/src/` | `analyze_specialization.py`, `visualize_specialization.py` |
+| SQ3 | `kaggle-code-quality/scripts/` | `validate_llm_evaluations.py`, `aggregate_evaluations.py` |
+| SQ4 | `solution-convergence/scripts/` | `similarity/`, `normalize/`, `field-completion-ratio/` |
+
+**Pré-requis communs** :
+- Python 3.10+
+- Compte Kaggle (pour l'API et le scraping authentifié)
+- Dépendances : pandas, matplotlib, playwright (SQ1), kaggle CLI (SQ2)
+
+---
+
+## VII. Conclusion générale
+
+### Réponse à la question principale
+
+> **Comment performer dans les compétitions Kaggle ?**
+
+Pour un utilisateur de Kaggle souhaitant performer dans les compétitions, notre étude identifie quatre leviers concrets. **D'abord, participez intensivement** : multipliez les compétitions et formez des équipes avec des partenaires diversifiés et bien classés, en évitant de vous enfermer dans un noyau fixe. **Ensuite, spécialisez-vous** : concentrez-vous sur un domaine précis (le tabulaire offre le plus d'opportunités) tout en restant capable de vous adapter. **Concernant le code, privilégiez l'expérimentation** : la qualité d'ingénierie n'est pas corrélée au classement ; les meilleurs sacrifient la propreté du code au profit de l'itération rapide. **Enfin, adaptez votre stratégie architecturale au domaine** : en Tabulaire et Vision, maîtrisez les composants éprouvés par la communauté ; en NLP, osez l'exploration architecturale pour vous distinguer des approches standardisées.
+
+### Limites de l'étude
+
+- **Biais de survie** : Nous analysons les compétiteurs qui ont réussi, pas ceux qui ont échoué malgré de bonnes pratiques.
+- **Données partielles** : Le scraping et l'API ne donnent pas accès à tout (code privé, communications internes).
+- **Échantillons modestes** : 40 notebooks (SQ3), 6 fast risers (SQ1), 3 compétitions, 10 solutions par compétitions (SQ4).
+- **Causalité non établie** : Nous observons des corrélations, pas des liens de cause à effet.
+
+### Perspectives
+
+- **Étude longitudinale** : Suivre des compétiteurs *avant* leur progression pour établir la causalité.
+- **Groupe de contrôle** : Analyser des compétiteurs ayant adopté les mêmes stratégies sans réussir.
+- **Entretiens qualitatifs** : Interviewer des membres du top mondial pour valider les patterns observés.
+- **Extension du corpus** : Augmenter le nombre de compétitions et de notebooks analysés.
+
+---
+
+## VIII. Références
+
+- Kaggle. (2026). *Competitions Rankings*. https://www.kaggle.com/rankings
+- Kaggle API documentation. https://www.kaggle.com/docs/api
+- Playwright. (2025). *Browser automation library for Python*. https://playwright.dev/python/
+- Debret, J. (2020). *La démarche scientifique : tout ce que vous devez savoir !* https://www.scribbr.fr/article-scientifique/demarche-scientifique/
+
+---
+
+## Annexe : Structure du dépôt
+
+```
+rimel-2025-2026/
+├── content.md                          # Ce fichier (chapitre commun)
+├── content-template.md                 # Template fourni
+├── zero-to-hero/                       # SQ1 - Sacha
+│   ├── content.md                      # Chapitre détaillé
+│   └── assets/scripts/                 # Scripts de reproduction
+├── kaggle-analyze-specialization/      # SQ2 - Yannick
+│   ├── book.md                         # Chapitre détaillé
+│   ├── src/                            # Scripts Python
+│   └── data/                           # Données et visualisations
+├── kaggle-code-quality/                # SQ3 - Malik
+│   ├── content.md                      # Chapitre détaillé
+│   ├── scripts/                        # Scripts de validation et agrégation
+│   ├── corpus/                         # Notebooks et évaluations
+│   └── data/                           # Résultats et graphiques
+└── solution-convergence/               # SQ4 - Baptiste
+    ├── content.md                      # Chapitre détaillé
+    ├── scripts/                        # Scripts de similarité et normalisation
+    ├── prompts/                        # Prompts LLM
+    └── competitions/                   # Résultats par compétition
+```
