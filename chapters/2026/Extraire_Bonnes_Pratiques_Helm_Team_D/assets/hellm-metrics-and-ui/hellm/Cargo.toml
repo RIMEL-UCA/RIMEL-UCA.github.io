@@ -1,0 +1,11 @@
+[package]
+name = "hellm"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+metrics = {path = "../metrics/"}
+collector = {path = "../collector/"}
+anyhow = "1.0.100"
+regex = "1.12.2"
+serde_json = "1.0"
