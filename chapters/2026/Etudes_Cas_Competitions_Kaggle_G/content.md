@@ -71,7 +71,7 @@ Notre question générale se décline en **quatre sous-questions**, chacune trai
 ### SQ1 : Comment le numéro 1 du leaderboard global est-il passé de 0 à héros ?
 
 **Auteur** : Sacha Chantoiseau
-**Lien** : [assets/zero-to-hero/content.md](assets/zero-to-hero/content.md)
+**Lien** : [content.md](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/blob/master/chapters/2026/Etudes_Cas_Competitions_Kaggle_G/assets/zero-to-hero/content.md)
 
 #### Objectif
 Comprendre si la progression spectaculaire d'un compétiteur (de top 300 à top 1 mondial) s'explique par des facteurs mesurables : volume d'activité et pratiques de collaboration.
@@ -96,7 +96,7 @@ Cette sous-question identifie les **leviers stratégiques** (volume, collaborati
 ### SQ2 : Est-ce que les tops du leaderboard global se spécialisent ?
 
 **Auteur** : Yannick Ascari
-**Lien** : [assets/kaggle-analyze-specialization/content.md](assets/kaggle-analyze-specialization/content.md)
+**Lien** : [content.md](content-4.md)
 
 #### Objectif
 Déterminer si les meilleurs compétiteurs obtiennent leurs résultats grâce à une maîtrise générale du ML ou s'ils se focalisent sur un domaine précis (tabulaire, vision, NLP, séries temporelles).
@@ -117,7 +117,7 @@ Cette sous-question explore la dimension **expertise technique** : faut-il être
 ### SQ3 : La qualité du code varie-t-elle selon le rang au leaderboard ?
 
 **Auteur** : Moussa Boudjemaa Merwan Malik
-**Lien** : [assets/kaggle-code-quality/content.md](assets/kaggle-code-quality/content.md)
+**Lien** : [content.md](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/blob/master/chapters/2026/Etudes_Cas_Competitions_Kaggle_G/assets/kaggle-code-quality/content.md)
 
 #### Objectif
 Déterminer si la performance ML est associée à une meilleure maturité d'ingénierie dans le code : structure, modularité, reproductibilité, lisibilité.
@@ -139,7 +139,7 @@ Cette sous-question explore la dimension **qualité d'ingénierie** : l'excellen
 ### SQ4 : Les solutions gagnantes convergent-elles entre elles ?
 
 **Auteur** : Baptiste Royer
-**Lien** : [assets/solution-convergence/content.md](assets/solution-convergence/content.md)
+**Lien** : [content.md](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/blob/master/chapters/2026/Etudes_Cas_Competitions_Kaggle_G/assets/solution-convergence/content.md)
 
 #### Objectif
 Déterminer si les solutions gagnantes présentent une similarité architecturale entre elles et se distinguent des solutions faiblement classées. Cette problématique permet d'identifier si la réussite repose sur l'optimisation de composants techniques éprouvés ou sur l'innovation architecturale radicale.
