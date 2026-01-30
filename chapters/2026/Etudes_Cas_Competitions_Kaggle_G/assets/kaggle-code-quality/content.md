@@ -1,5 +1,7 @@
 # La qualite du code varie-t-elle selon le rang au leaderboard Kaggle ?
 
+## Auteur : Malik MOUSSA - merwan-malik.moussa-boudjemaa@etu.univ-cotedazur.fr
+
 ## Sommaire
 
 1. Introduction
@@ -876,10 +878,3 @@ Principe : L'IA augmente les capacites humaines, mais ne les remplace pas. La su
 - Kaggle : https://www.kaggle.com/
 - API Kaggle : https://github.com/Kaggle/kaggle-api
 - Claude AI (Anthropic) : https://www.anthropic.com/claude
-- Cours RIMEL 2025-2026
-
----
-
-Date de redaction : Janvier 2026
-Auteur(s) : [Votre nom]
-Encadrant(s) : [Nom des encadrants]
