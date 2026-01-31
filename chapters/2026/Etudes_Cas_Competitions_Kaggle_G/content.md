@@ -64,14 +64,14 @@ Nos analyses reposent principalement sur les données publiques de la plateforme
 
 ## IV. Sous-questions et hypothèses
 
-Notre question générale se décline en **quatre sous-questions**, chacune traitée par un membre de l'équipe avec une méthodologie dédiée.
+Notre question générale se décline en **quatre sous-questions**, chacune étant traitée par un membre de l'équipe selon une méthodologie dédiée.
 
 ---
 
 ### SQ1 : Comment le numéro 1 du leaderboard global est-il passé de 0 à héros ?
 
 **Auteur** : Sacha Chantoiseau  
-**Lien** : [content.md]({{site.url}}/chapters/2026/Etudes_Cas_Competitions_Kaggle_G/assets/zero-to-hero/content.md)
+**Lien** : [content.md]({{site.url}}/chapters/2026/Etudes_Cas_Competitions_Kaggle_G/assets/zero-to-hero/content)
 
 #### Objectif
 Comprendre si la progression spectaculaire d'un compétiteur (de top 300 à top 1 mondial) s'explique par des facteurs mesurables : volume d'activité et pratiques de collaboration.
@@ -97,7 +97,7 @@ Cette sous-question identifie les **leviers stratégiques** (volume, collaborati
 
 **Auteur** : Yannick Ascari
 
-**Lien** : [content.md]({{site.url}}/chapters/2026/Etudes_Cas_Competitions_Kaggle_G/assets/kaggle-analyze-specialization/content.md)
+**Lien** : [content.md]({{site.url}}/chapters/2026/Etudes_Cas_Competitions_Kaggle_G/assets/kaggle-analyze-specialization/content)
 
 #### Objectif
 Déterminer si les meilleurs compétiteurs obtiennent leurs résultats grâce à une maîtrise générale du ML ou s'ils se focalisent sur un domaine précis (tabulaire, vision, NLP, séries temporelles).
@@ -111,17 +111,17 @@ Les tops du leaderboard se spécialisent dans un domaine précis, et cette spéc
 - Visualisations : heatmap de spécialisation, distribution des taux, comparaison top vs reste
 
 #### Contribution à la question principale
-Cette sous-question explore la dimension **expertise technique** : faut-il être généraliste ou spécialiste pour performer ? Elle identifie les domaines les plus propices à la spécialisation (tabulaire notamment).
+Cette sous-question explore la dimension **expertise technique** : faut-il être généraliste ou spécialiste pour performer ? Elle identifie les domaines les plus propices à la spécialisation, notamment le tabulaire.
 
 ---
 
-### SQ3 : La qualité du code varie-t-elle selon le rang au leaderboard ?
+### SQ3 : La qualité du code varie-t-elle selon le classement au leaderboard ?
 
 **Auteur** : Moussa Boudjemaa Merwan Malik
-**Lien** : [content.md]({{site.url}}/chapters/2026/Etudes_Cas_Competitions_Kaggle_G/assets/kaggle-code-quality/content.md)
+**Lien** : [content.md]({{site.url}}/chapters/2026/Etudes_Cas_Competitions_Kaggle_G/assets/kaggle-code-quality/content)
 
 #### Objectif
-Déterminer si la performance ML est associée à une meilleure maturité d'ingénierie dans le code : structure, modularité, reproductibilité, lisibilité.
+Déterminer si la performance ML est associée à une plus grande maturité d'ingénierie dans le code : structure, modularité, reproductibilité, lisibilité.
 
 #### Hypothèse testée
 Les solutions du top 1% se distinguent par un code plus propre et structuré que celles du top 40-50%.
@@ -133,14 +133,14 @@ Les solutions du top 1% se distinguent par un code plus propre et structuré que
 - Score de confiance calculé pour chaque évaluation
 
 #### Contribution à la question principale
-Cette sous-question explore la dimension **qualité d'ingénierie** : l'excellence ML implique-t-elle l'excellence en développement ? Elle questionne l'hypothèse implicite que "mieux classé = mieux codé".
+Cette sous-question explore la dimension de la **qualité d'ingénierie** : l'excellence en ML implique-t-elle l'excellence en développement ? Elle questionne l'hypothèse implicite selon laquelle "mieux classé = mieux codé".
 
 ---
 
 ### SQ4 : Les solutions gagnantes convergent-elles entre elles ?
 
 **Auteur** : Baptiste Royer  
-**Lien** : [content.md]({{site.url}}/chapters/2026/Etudes_Cas_Competitions_Kaggle_G/assets/solution-convergence/content.md)
+**Lien** : [content.md]({{site.url}}/chapters/2026/Etudes_Cas_Competitions_Kaggle_G/assets/solution-convergence/content)
 
 #### Objectif
 Déterminer si les solutions gagnantes présentent une similarité architecturale entre elles et se distinguent des solutions faiblement classées. Cette problématique permet d'identifier si la réussite repose sur l'optimisation de composants techniques éprouvés ou sur l'innovation architecturale radicale.
