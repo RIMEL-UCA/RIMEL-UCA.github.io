@@ -70,8 +70,8 @@ Notre question générale se décline en **quatre sous-questions**, chacune trai
 
 ### SQ1 : Comment le numéro 1 du leaderboard global est-il passé de 0 à héros ?
 
-**Auteur** : Sacha Chantoiseau
-**Lien** : [content.md](({{site.url}}/chapters/2026/Etudes_Cas_Competitions_Kaggle_G/assets/zero-to-hero/content.md)
+**Auteur** : Sacha Chantoiseau  
+**Lien** : [content.md]({{site.url}}/chapters/2026/Etudes_Cas_Competitions_Kaggle_G/assets/zero-to-hero/content.md)
 
 #### Objectif
 Comprendre si la progression spectaculaire d'un compétiteur (de top 300 à top 1 mondial) s'explique par des facteurs mesurables : volume d'activité et pratiques de collaboration.
@@ -97,7 +97,7 @@ Cette sous-question identifie les **leviers stratégiques** (volume, collaborati
 
 **Auteur** : Yannick Ascari
 
-**Lien** : [content.md](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/blob/master/chapters/2026/Etudes_Cas_Competitions_Kaggle_G/assets/kaggle-analyze-specialization/content.md)
+**Lien** : [content.md]({{site.url}}/chapters/2026/Etudes_Cas_Competitions_Kaggle_G/assets/kaggle-analyze-specialization/content.md)
 
 #### Objectif
 Déterminer si les meilleurs compétiteurs obtiennent leurs résultats grâce à une maîtrise générale du ML ou s'ils se focalisent sur un domaine précis (tabulaire, vision, NLP, séries temporelles).
@@ -118,7 +118,7 @@ Cette sous-question explore la dimension **expertise technique** : faut-il être
 ### SQ3 : La qualité du code varie-t-elle selon le rang au leaderboard ?
 
 **Auteur** : Moussa Boudjemaa Merwan Malik
-**Lien** : [content.md](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/blob/master/chapters/2026/Etudes_Cas_Competitions_Kaggle_G/assets/kaggle-code-quality/content.md)
+**Lien** : [content.md]({{site.url}}/chapters/2026/Etudes_Cas_Competitions_Kaggle_G/assets/kaggle-code-quality/content.md)
 
 #### Objectif
 Déterminer si la performance ML est associée à une meilleure maturité d'ingénierie dans le code : structure, modularité, reproductibilité, lisibilité.
@@ -139,8 +139,8 @@ Cette sous-question explore la dimension **qualité d'ingénierie** : l'excellen
 
 ### SQ4 : Les solutions gagnantes convergent-elles entre elles ?
 
-**Auteur** : Baptiste Royer
-**Lien** : [content.md](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/blob/master/chapters/2026/Etudes_Cas_Competitions_Kaggle_G/assets/solution-convergence/content.md)
+**Auteur** : Baptiste Royer  
+**Lien** : [content.md]({{site.url}}/chapters/2026/Etudes_Cas_Competitions_Kaggle_G/assets/solution-convergence/content.md)
 
 #### Objectif
 Déterminer si les solutions gagnantes présentent une similarité architecturale entre elles et se distinguent des solutions faiblement classées. Cette problématique permet d'identifier si la réussite repose sur l'optimisation de composants techniques éprouvés ou sur l'innovation architecturale radicale.
@@ -156,7 +156,7 @@ Déterminer si les solutions gagnantes présentent une similarité architectural
 - Validation manuelle systématique facilitée par les fichiers de justification parallèles
 
 #### Contribution à la question principale
-Cette sous-question explore la dimension **convergence architecturale** : les gagnants convergent-ils vers des configurations optimales identifiées par la communauté (composants établis, embeddings reconnus) ou explorent-ils des espaces architecturaux diversifiés ? Elle révèle si l'excellence repose sur la maîtrise collective ou l'innovation individuelle, avec une validation domaine-dépendante.
+Cette sous-question explore la dimension de **convergence architecturale** : les gagnants convergent-ils vers des configurations optimales identifiées par la communauté (composants établis, embeddings reconnus) ou explorent-ils des espaces architecturaux diversifiés ? Elle révèle si l'excellence repose sur la maîtrise collective ou l'innovation individuelle, avec une validation domaine-dépendante.
 
 ---
 
@@ -196,7 +196,7 @@ Cette sous-question explore la dimension **convergence architecturale** : les ga
 - Le top 10 montre un taux de spécialisation plus élevé que la moyenne
 - La spécialisation n'est pas absolue : ~25% de participations dans d'autres domaines
 
-**Conclusion SQ2** : **Oui**, les tops du leaderboard se spécialisent, principalement dans le tabulaire. Cette spécialisation semble être une stratégie gagnante, mais elle n'est pas exclusive.
+**Conclusion SQ2** : **Oui**, les tops du leaderboard se spécialisent principalement dans le tabulaire. Cette spécialisation semble être une stratégie gagnante, mais elle n'est pas exclusive.
 
 ---
 
@@ -263,7 +263,7 @@ Chaque sous-question dispose de scripts permettant de reproduire les analyses :
 **Pré-requis communs** :
 - Python 3.10+
 - Compte Kaggle (pour l'API et le scraping authentifié)
-- Dépendances : pandas, matplotlib, playwright (SQ1), kaggle CLI (SQ2)
+- Dépendances: pandas, matplotlib, playwright (SQ1), kaggle CLI (SQ2)
 
 ---
 
@@ -273,19 +273,19 @@ Chaque sous-question dispose de scripts permettant de reproduire les analyses :
 
 > **Comment performer dans les compétitions Kaggle ?**
 
-Pour un utilisateur de Kaggle souhaitant performer dans les compétitions, notre étude identifie quatre leviers concrets. **D'abord, participez intensivement** : multipliez les compétitions et formez des équipes avec des partenaires diversifiés et bien classés, en évitant de vous enfermer dans un noyau fixe. **Ensuite, spécialisez-vous** : concentrez-vous sur un domaine précis (le tabulaire offre le plus d'opportunités) tout en restant capable de vous adapter. **Concernant le code, privilégiez l'expérimentation** : la qualité d'ingénierie n'est pas corrélée au classement ; les meilleurs sacrifient la propreté du code au profit de l'itération rapide. **Enfin, adaptez votre stratégie architecturale au domaine** : en Tabulaire et Vision, maîtrisez les composants éprouvés par la communauté ; en NLP, osez l'exploration architecturale pour vous distinguer des approches standardisées.
+Pour un utilisateur de Kaggle souhaitant performer dans les compétitions, notre étude identifie quatre leviers concrets. **D'abord, participez intensivement** : multipliez les compétitions et formez des équipes avec des partenaires diversifiés et bien classés, en évitant de vous enfermer dans un noyau fixe. **Ensuite, spécialisez-vous** : concentrez-vous sur un domaine précis (le tabulaire offre le plus d'opportunités) tout en restant capable de vous adapter. **Concernant le code, privilégiez l'expérimentation** : la qualité d'ingénierie n'est pas corrélée au classement ; les meilleurs sacrifient la propreté du code au profit d'une itération rapide. **Enfin, adaptez votre stratégie architecturale au domaine** : en Tabulaire et en Vision, maîtrisez les composants éprouvés par la communauté ; en NLP, osez l'exploration architecturale pour vous distinguer des approches standardisées.
 
 ### Limites de l'étude
 
-- **Biais de survie** : Nous analysons les compétiteurs qui ont réussi, pas ceux qui ont échoué malgré de bonnes pratiques.
+- **Biais de survie** : Nous analysons les compétiteurs qui ont réussi, et non ceux qui ont échoué malgré de bonnes pratiques.
 - **Données partielles** : Le scraping et l'API ne donnent pas accès à tout (code privé, communications internes).
-- **Échantillons modestes** : 40 notebooks (SQ3), 6 fast risers (SQ1), 3 compétitions, 10 solutions par compétitions (SQ4).
+- **Échantillons modestes** : 40 notebooks (SQ3), 6 fast risers (SQ1), 3 compétitions, 10 solutions par compétition (SQ4).
 - **Causalité non établie** : Nous observons des corrélations, pas des liens de cause à effet.
 
 ### Perspectives
 
 - **Étude longitudinale** : Suivre des compétiteurs *avant* leur progression pour établir la causalité.
-- **Groupe de contrôle** : Analyser des compétiteurs ayant adopté les mêmes stratégies sans réussir.
+- **Groupe de contrôle** : Analyser des concurrents ayant adopté les mêmes stratégies sans y parvenir.
 - **Entretiens qualitatifs** : Interviewer des membres du top mondial pour valider les patterns observés.
 - **Extension du corpus** : Augmenter le nombre de compétitions et de notebooks analysés.
 
