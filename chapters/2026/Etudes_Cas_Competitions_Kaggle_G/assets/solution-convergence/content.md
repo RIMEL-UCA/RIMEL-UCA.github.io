@@ -1,3 +1,9 @@
+---
+layout: default
+title : Convergence architecturale des solutions dans les compétitions Kaggle
+date:   2025-11
+---
+
 # Convergence architecturale des solutions dans les compétitions Kaggle
 **Auteur : Baptiste Royer** · baptiste.royer@etu.univ-cotedazur.fr
 
