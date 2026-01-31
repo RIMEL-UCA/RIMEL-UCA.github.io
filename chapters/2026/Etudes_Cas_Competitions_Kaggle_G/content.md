@@ -71,7 +71,7 @@ Notre question générale se décline en **quatre sous-questions**, chacune trai
 ### SQ1 : Comment le numéro 1 du leaderboard global est-il passé de 0 à héros ?
 
 **Auteur** : Sacha Chantoiseau
-**Lien** : [content.md](https://github.com/RIMEL-UCA/RIMEL-UCA.github.io/blob/master/chapters/2026/Etudes_Cas_Competitions_Kaggle_G/assets/zero-to-hero/content.md)
+**Lien** : [content.md](({{site.url}}/chapters/2026/Etudes_Cas_Competitions_Kaggle_G/assets/zero-to-hero/content.md)
 
 #### Objectif
 Comprendre si la progression spectaculaire d'un compétiteur (de top 300 à top 1 mondial) s'explique par des facteurs mesurables : volume d'activité et pratiques de collaboration.
