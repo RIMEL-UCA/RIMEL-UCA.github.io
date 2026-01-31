@@ -1,26 +1,12 @@
 ---
 layout: default
-title : Modèle de chapitre pour 2025-26
+title : Est-ce que les tops du leaderboard se spécialisent
 date:   2025-11
----
-
----
-
-   **Date de rendu finale : fin février**
-   - Respecter la structure pour que les chapitres soient bien indépendants
-   - Remarques :
-        - La structure proposée est là pour vous aider, mais peut-être adaptée à votre projet
-        - Les titres peuvent être modifiés pour être en adéquation avec votre étude. 
-        - Utiliser des références pour justifier votre argumentaire, vos choix, etc.
-        - Vous avez le choix d'utiliser le français ou l'anglais.
-
-    Dans l'article de Blog [Debret 2020], l'auteure donne les éléments principaux de la démarche d'une manière simple et très facile à lire, dans la partie [Quelles sont les étapes d’une bonne démarche scientifique ?](https://www.scribbr.fr/article-scientifique/demarche-scientifique/#:~:text=La%20d%C3%A9marche%20scientifique%20permet%20d,de%20nouvelles%20hypoth%C3%A8ses%20%C3%A0%20tester.)
-
 ---
 
 # Est-ce que les tops du leaderboard se spécialisent ?
 
-Cette partie a été réalisé par : ***Ascari Yannick*** - Groupe G.
+Cette partie a été réalisée par : ***Ascari Yannick*** - Groupe G.
 
 ## Sommaire
 
