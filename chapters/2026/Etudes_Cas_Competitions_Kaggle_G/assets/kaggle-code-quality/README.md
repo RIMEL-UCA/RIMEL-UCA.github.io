@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Kaggle Code Quality"
+date: 2025-01
+---
+
 # Kaggle Code Quality - RIMEL 2025-2026
 
 ## Question de recherche
