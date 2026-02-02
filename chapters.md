@@ -11,7 +11,7 @@ date: 2022-11-18 6:00:00 +0100
 
 ### [L’évolution des données dans les projets open-source de Data For Good : une étude de cas historique]({{site.url}}/chapters/2026/Etude-Cas-DataForGoodFrance-TeamH/content)
 
-### Le nombre de contributeurs influence-t-il la qualité des repository de Data For Good France ? : [Le nombre de contributeurs influence-t-il la qualité des repository de Data For Good France ?]({{site.url}}/chapters/2026/Etude_Data_For_Good_b/content)
+### Le nombre de contributeurs influence-t-il la qualité des repository de Data For Good France ? : [Le nombre de contributeurs influence-t-il la qualité des repository de Data For Good France ?]({{site.url}}/chapters/2026/Etude_Data_For_Good_Qualite_Team_B/content)
 
 ### Bonnes pratiques des charts Helm : [Analyse des bonnes pratiques dans les charts Helm]({{site.url}}/chapters/2026/Helm_Charts_Best_Practices_Team_A/content)
 
