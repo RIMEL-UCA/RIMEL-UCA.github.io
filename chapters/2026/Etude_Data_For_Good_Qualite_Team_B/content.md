@@ -356,30 +356,8 @@ Enfin, il convient d’interpréter ces résultats avec prudence : certains grou
 #### Sous-question 3 :
 Pour la sous-question 3, nous avions l'intuition qu'un dépôt de code avec beaucoup de contributeurs va naturellement avoir beaucoup de commit refactor et fix pour maintenir sa qualité.
 On peut voir sur la classification qu'on a fait que pour les dépôts avec plus de 20 contributeurs, les commits refactor et fix représentent en moyenne un quart des commits totaux :
-| repo                            | feat | fix | refactor | ci   | chore | other | total_commits | contributeurs |
-| ------------------------------- | ---- | --- | -------- | ---- | ----- | ----- | ------------- | ------------- |
-| offseason-shelter-for-science   | 43   | 23  | 5        | 5    | 7     | 102   | 185           | 12            |
-| 13_potentiel_solaire            | 322  | 183 | 26       | 27   | 61    | 215   | 834           | 22            |
-| 13_democratiser_sobriete        | 88   | 81  | 24       | 16   | 30    | 106   | 345           | 15            |
-| 13_empreinte_souffrance         | 68   | 58  | 4        | 4    | 7     | 59    | 200           | 6             |
-| 13_pollution_eau                | 113  | 75  | 28       | 15   | 24    | 201   | 456           | 14            |
-| 13_eclaireur_public             | 144  | 199 | 51       | 15   | 25    | 211   | 645           | 22            |
-| 13_brigade_coupes_rases         | 202  | 148 | 35       | 18   | 90    | 177   | 670           | 21            |
-| 13_odis                         | 159  | 99  | 30       | 13   | 38    | 283   | 622           | 25            |
-| 13_reveler_inegalites_cinema    | 114  | 141 | 28       | 15   | 18    | 80    | 396           | 14            |
-| 13_ia_financement               | 4    | 1   | 0        | 1    | 1     | 65    | 72            | 4             |
-| CarbonBombs                     | 100  | 52  | 39       | 3    | 15    | 129   | 338           | 11            |
-| 12_bloom                        | 212  | 342 | 65       | 9    | 18    | 360   | 1006          | 35            |
-| quotaclimat                     | 318  | 220 | 40       | 1086 | 49    | 221   | 1934          | 19            |
-| 13_stop_cyberviolence           | 39   | 2   | 12       | 8    | 13    | 134   | 208           | 9             |
-| offseason_greenlobby            | 29   | 7   | 5        | 0    | 2     | 9     | 52            | 4             |
-| 13_ecoskills                    | 127  | 103 | 13       | 25   | 9     | 105   | 382           | 36            |
-| 12_zero_dechet_sauvage          | 39   | 19  | 5        | 0    | 3     | 127   | 193           | 8             |
-| 12_pinkbombs                    | 13   | 16  | 5        | 1    | 4     | 33    | 72            | 4             |
-| 12_observatoire_des_imaginaires | 31   | 34  | 9        | 10   | 19    | 156   | 259           | 7             |
-| batch7_satellite_ges            | 78   | 10  | 3        | 7    | 21    | 257   | 376           | 10            |
-| batch10_notaclimat              | 36   | 24  | 10       | 3    | 26    | 153   | 252           | 9             |
-| batch8_worldbank                | 51   | 8   | 12       | 14   | 14    | 299   | 398           | 13            |
+
+![Figure 9: Tableau de répartition des commits](assets/images/repartition_commits.png)
 
 Alors que pour les dépôts de code avec moins de 20 contributeurs, les commits refactor et fix représentent en moyenne 10 à 15% des commits totaux.
 Ces données viennent confirmer notre intuition.
